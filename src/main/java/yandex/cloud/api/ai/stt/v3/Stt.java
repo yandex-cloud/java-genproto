@@ -3537,6 +3537,2043 @@ public final class Stt {
 
   }
 
+  public interface RecognitionClassifierOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.RecognitionClassifier)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Classifier name
+     * </pre>
+     *
+     * <code>string classifier = 1;</code>
+     * @return The classifier.
+     */
+    java.lang.String getClassifier();
+    /**
+     * <pre>
+     * Classifier name
+     * </pre>
+     *
+     * <code>string classifier = 1;</code>
+     * @return The bytes for classifier.
+     */
+    com.google.protobuf.ByteString
+        getClassifierBytes();
+
+    /**
+     * <pre>
+     * Describes the types of responses to which the classification results will come
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifier.TriggerType triggers = 2;</code>
+     * @return A list containing the triggers.
+     */
+    java.util.List<yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.TriggerType> getTriggersList();
+    /**
+     * <pre>
+     * Describes the types of responses to which the classification results will come
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifier.TriggerType triggers = 2;</code>
+     * @return The count of triggers.
+     */
+    int getTriggersCount();
+    /**
+     * <pre>
+     * Describes the types of responses to which the classification results will come
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifier.TriggerType triggers = 2;</code>
+     * @param index The index of the element to return.
+     * @return The triggers at the given index.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.TriggerType getTriggers(int index);
+    /**
+     * <pre>
+     * Describes the types of responses to which the classification results will come
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifier.TriggerType triggers = 2;</code>
+     * @return A list containing the enum numeric values on the wire for triggers.
+     */
+    java.util.List<java.lang.Integer>
+    getTriggersValueList();
+    /**
+     * <pre>
+     * Describes the types of responses to which the classification results will come
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifier.TriggerType triggers = 2;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of triggers at the given index.
+     */
+    int getTriggersValue(int index);
+  }
+  /**
+   * Protobuf type {@code speechkit.stt.v3.RecognitionClassifier}
+   */
+  public static final class RecognitionClassifier extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.stt.v3.RecognitionClassifier)
+      RecognitionClassifierOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RecognitionClassifier.newBuilder() to construct.
+    private RecognitionClassifier(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RecognitionClassifier() {
+      classifier_ = "";
+      triggers_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecognitionClassifier();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RecognitionClassifier(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              classifier_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                triggers_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              triggers_.add(rawValue);
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int rawValue = input.readEnum();
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  triggers_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                triggers_.add(rawValue);
+              }
+              input.popLimit(oldLimit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          triggers_ = java.util.Collections.unmodifiableList(triggers_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifier_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifier_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.class, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code speechkit.stt.v3.RecognitionClassifier.TriggerType}
+     */
+    public enum TriggerType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * Do not use
+       * </pre>
+       *
+       * <code>TRIGGER_TYPE_UNSPECIFIED = 0;</code>
+       */
+      TRIGGER_TYPE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Apply classifier to utterance responses
+       * </pre>
+       *
+       * <code>ON_UTTERANCE = 1;</code>
+       */
+      ON_UTTERANCE(1),
+      /**
+       * <pre>
+       * Apply classifier to final responses
+       * </pre>
+       *
+       * <code>ON_FINAL = 2;</code>
+       */
+      ON_FINAL(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * Do not use
+       * </pre>
+       *
+       * <code>TRIGGER_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int TRIGGER_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Apply classifier to utterance responses
+       * </pre>
+       *
+       * <code>ON_UTTERANCE = 1;</code>
+       */
+      public static final int ON_UTTERANCE_VALUE = 1;
+      /**
+       * <pre>
+       * Apply classifier to final responses
+       * </pre>
+       *
+       * <code>ON_FINAL = 2;</code>
+       */
+      public static final int ON_FINAL_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TriggerType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static TriggerType forNumber(int value) {
+        switch (value) {
+          case 0: return TRIGGER_TYPE_UNSPECIFIED;
+          case 1: return ON_UTTERANCE;
+          case 2: return ON_FINAL;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<TriggerType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          TriggerType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<TriggerType>() {
+              public TriggerType findValueByNumber(int number) {
+                return TriggerType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final TriggerType[] VALUES = values();
+
+      public static TriggerType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private TriggerType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:speechkit.stt.v3.RecognitionClassifier.TriggerType)
+    }
+
+    public static final int CLASSIFIER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object classifier_;
+    /**
+     * <pre>
+     * Classifier name
+     * </pre>
+     *
+     * <code>string classifier = 1;</code>
+     * @return The classifier.
+     */
+    @java.lang.Override
+    public java.lang.String getClassifier() {
+      java.lang.Object ref = classifier_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classifier_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Classifier name
+     * </pre>
+     *
+     * <code>string classifier = 1;</code>
+     * @return The bytes for classifier.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassifierBytes() {
+      java.lang.Object ref = classifier_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classifier_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRIGGERS_FIELD_NUMBER = 2;
+    private java.util.List<java.lang.Integer> triggers_;
+    private static final com.google.protobuf.Internal.ListAdapter.Converter<
+        java.lang.Integer, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.TriggerType> triggers_converter_ =
+            new com.google.protobuf.Internal.ListAdapter.Converter<
+                java.lang.Integer, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.TriggerType>() {
+              public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.TriggerType convert(java.lang.Integer from) {
+                @SuppressWarnings("deprecation")
+                yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.TriggerType result = yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.TriggerType.valueOf(from);
+                return result == null ? yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.TriggerType.UNRECOGNIZED : result;
+              }
+            };
+    /**
+     * <pre>
+     * Describes the types of responses to which the classification results will come
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifier.TriggerType triggers = 2;</code>
+     * @return A list containing the triggers.
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.TriggerType> getTriggersList() {
+      return new com.google.protobuf.Internal.ListAdapter<
+          java.lang.Integer, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.TriggerType>(triggers_, triggers_converter_);
+    }
+    /**
+     * <pre>
+     * Describes the types of responses to which the classification results will come
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifier.TriggerType triggers = 2;</code>
+     * @return The count of triggers.
+     */
+    @java.lang.Override
+    public int getTriggersCount() {
+      return triggers_.size();
+    }
+    /**
+     * <pre>
+     * Describes the types of responses to which the classification results will come
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifier.TriggerType triggers = 2;</code>
+     * @param index The index of the element to return.
+     * @return The triggers at the given index.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.TriggerType getTriggers(int index) {
+      return triggers_converter_.convert(triggers_.get(index));
+    }
+    /**
+     * <pre>
+     * Describes the types of responses to which the classification results will come
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifier.TriggerType triggers = 2;</code>
+     * @return A list containing the enum numeric values on the wire for triggers.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+    getTriggersValueList() {
+      return triggers_;
+    }
+    /**
+     * <pre>
+     * Describes the types of responses to which the classification results will come
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifier.TriggerType triggers = 2;</code>
+     * @param index The index of the value to return.
+     * @return The enum numeric value on the wire of triggers at the given index.
+     */
+    @java.lang.Override
+    public int getTriggersValue(int index) {
+      return triggers_.get(index);
+    }
+    private int triggersMemoizedSerializedSize;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classifier_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classifier_);
+      }
+      if (getTriggersList().size() > 0) {
+        output.writeUInt32NoTag(18);
+        output.writeUInt32NoTag(triggersMemoizedSerializedSize);
+      }
+      for (int i = 0; i < triggers_.size(); i++) {
+        output.writeEnumNoTag(triggers_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classifier_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classifier_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < triggers_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeEnumSizeNoTag(triggers_.get(i));
+        }
+        size += dataSize;
+        if (!getTriggersList().isEmpty()) {  size += 1;
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(dataSize);
+        }triggersMemoizedSerializedSize = dataSize;
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier other = (yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier) obj;
+
+      if (!getClassifier()
+          .equals(other.getClassifier())) return false;
+      if (!triggers_.equals(other.triggers_)) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASSIFIER_FIELD_NUMBER;
+      hash = (53 * hash) + getClassifier().hashCode();
+      if (getTriggersCount() > 0) {
+        hash = (37 * hash) + TRIGGERS_FIELD_NUMBER;
+        hash = (53 * hash) + triggers_.hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code speechkit.stt.v3.RecognitionClassifier}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.RecognitionClassifier)
+        yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifier_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifier_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.class, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        classifier_ = "";
+
+        triggers_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifier_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier build() {
+        yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier buildPartial() {
+        yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier result = new yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier(this);
+        int from_bitField0_ = bitField0_;
+        result.classifier_ = classifier_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          triggers_ = java.util.Collections.unmodifiableList(triggers_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.triggers_ = triggers_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier) {
+          return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier other) {
+        if (other == yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.getDefaultInstance()) return this;
+        if (!other.getClassifier().isEmpty()) {
+          classifier_ = other.classifier_;
+          onChanged();
+        }
+        if (!other.triggers_.isEmpty()) {
+          if (triggers_.isEmpty()) {
+            triggers_ = other.triggers_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureTriggersIsMutable();
+            triggers_.addAll(other.triggers_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classifier_ = "";
+      /**
+       * <pre>
+       * Classifier name
+       * </pre>
+       *
+       * <code>string classifier = 1;</code>
+       * @return The classifier.
+       */
+      public java.lang.String getClassifier() {
+        java.lang.Object ref = classifier_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classifier_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Classifier name
+       * </pre>
+       *
+       * <code>string classifier = 1;</code>
+       * @return The bytes for classifier.
+       */
+      public com.google.protobuf.ByteString
+          getClassifierBytes() {
+        java.lang.Object ref = classifier_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classifier_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Classifier name
+       * </pre>
+       *
+       * <code>string classifier = 1;</code>
+       * @param value The classifier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassifier(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        classifier_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Classifier name
+       * </pre>
+       *
+       * <code>string classifier = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassifier() {
+        
+        classifier_ = getDefaultInstance().getClassifier();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Classifier name
+       * </pre>
+       *
+       * <code>string classifier = 1;</code>
+       * @param value The bytes for classifier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassifierBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        classifier_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> triggers_ =
+        java.util.Collections.emptyList();
+      private void ensureTriggersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          triggers_ = new java.util.ArrayList<java.lang.Integer>(triggers_);
+          bitField0_ |= 0x00000001;
+        }
+      }
+      /**
+       * <pre>
+       * Describes the types of responses to which the classification results will come
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier.TriggerType triggers = 2;</code>
+       * @return A list containing the triggers.
+       */
+      public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.TriggerType> getTriggersList() {
+        return new com.google.protobuf.Internal.ListAdapter<
+            java.lang.Integer, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.TriggerType>(triggers_, triggers_converter_);
+      }
+      /**
+       * <pre>
+       * Describes the types of responses to which the classification results will come
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier.TriggerType triggers = 2;</code>
+       * @return The count of triggers.
+       */
+      public int getTriggersCount() {
+        return triggers_.size();
+      }
+      /**
+       * <pre>
+       * Describes the types of responses to which the classification results will come
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier.TriggerType triggers = 2;</code>
+       * @param index The index of the element to return.
+       * @return The triggers at the given index.
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.TriggerType getTriggers(int index) {
+        return triggers_converter_.convert(triggers_.get(index));
+      }
+      /**
+       * <pre>
+       * Describes the types of responses to which the classification results will come
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier.TriggerType triggers = 2;</code>
+       * @param index The index to set the value at.
+       * @param value The triggers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTriggers(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.TriggerType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTriggersIsMutable();
+        triggers_.set(index, value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes the types of responses to which the classification results will come
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier.TriggerType triggers = 2;</code>
+       * @param value The triggers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTriggers(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.TriggerType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTriggersIsMutable();
+        triggers_.add(value.getNumber());
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes the types of responses to which the classification results will come
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier.TriggerType triggers = 2;</code>
+       * @param values The triggers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTriggers(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.TriggerType> values) {
+        ensureTriggersIsMutable();
+        for (yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.TriggerType value : values) {
+          triggers_.add(value.getNumber());
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes the types of responses to which the classification results will come
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier.TriggerType triggers = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTriggers() {
+        triggers_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes the types of responses to which the classification results will come
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier.TriggerType triggers = 2;</code>
+       * @return A list containing the enum numeric values on the wire for triggers.
+       */
+      public java.util.List<java.lang.Integer>
+      getTriggersValueList() {
+        return java.util.Collections.unmodifiableList(triggers_);
+      }
+      /**
+       * <pre>
+       * Describes the types of responses to which the classification results will come
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier.TriggerType triggers = 2;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of triggers at the given index.
+       */
+      public int getTriggersValue(int index) {
+        return triggers_.get(index);
+      }
+      /**
+       * <pre>
+       * Describes the types of responses to which the classification results will come
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier.TriggerType triggers = 2;</code>
+       * @param index The index of the value to return.
+       * @return The enum numeric value on the wire of triggers at the given index.
+       * @return This builder for chaining.
+       */
+      public Builder setTriggersValue(
+          int index, int value) {
+        ensureTriggersIsMutable();
+        triggers_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes the types of responses to which the classification results will come
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier.TriggerType triggers = 2;</code>
+       * @param value The enum numeric value on the wire for triggers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTriggersValue(int value) {
+        ensureTriggersIsMutable();
+        triggers_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Describes the types of responses to which the classification results will come
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier.TriggerType triggers = 2;</code>
+       * @param values The enum numeric values on the wire for triggers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTriggersValue(
+          java.lang.Iterable<java.lang.Integer> values) {
+        ensureTriggersIsMutable();
+        for (int value : values) {
+          triggers_.add(value);
+        }
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.RecognitionClassifier)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.stt.v3.RecognitionClassifier)
+    private static final yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier();
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RecognitionClassifier>
+        PARSER = new com.google.protobuf.AbstractParser<RecognitionClassifier>() {
+      @java.lang.Override
+      public RecognitionClassifier parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RecognitionClassifier(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RecognitionClassifier> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RecognitionClassifier> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RecognitionClassifierOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.RecognitionClassifierOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of classifiers to use
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier> 
+        getClassifiersList();
+    /**
+     * <pre>
+     * List of classifiers to use
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier getClassifiers(int index);
+    /**
+     * <pre>
+     * List of classifiers to use
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+     */
+    int getClassifiersCount();
+    /**
+     * <pre>
+     * List of classifiers to use
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOrBuilder> 
+        getClassifiersOrBuilderList();
+    /**
+     * <pre>
+     * List of classifiers to use
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOrBuilder getClassifiersOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code speechkit.stt.v3.RecognitionClassifierOptions}
+   */
+  public static final class RecognitionClassifierOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.stt.v3.RecognitionClassifierOptions)
+      RecognitionClassifierOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RecognitionClassifierOptions.newBuilder() to construct.
+    private RecognitionClassifierOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RecognitionClassifierOptions() {
+      classifiers_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecognitionClassifierOptions();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RecognitionClassifierOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                classifiers_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              classifiers_.add(
+                  input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          classifiers_ = java.util.Collections.unmodifiableList(classifiers_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifierOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifierOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.class, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.Builder.class);
+    }
+
+    public static final int CLASSIFIERS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier> classifiers_;
+    /**
+     * <pre>
+     * List of classifiers to use
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier> getClassifiersList() {
+      return classifiers_;
+    }
+    /**
+     * <pre>
+     * List of classifiers to use
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOrBuilder> 
+        getClassifiersOrBuilderList() {
+      return classifiers_;
+    }
+    /**
+     * <pre>
+     * List of classifiers to use
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+     */
+    @java.lang.Override
+    public int getClassifiersCount() {
+      return classifiers_.size();
+    }
+    /**
+     * <pre>
+     * List of classifiers to use
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier getClassifiers(int index) {
+      return classifiers_.get(index);
+    }
+    /**
+     * <pre>
+     * List of classifiers to use
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOrBuilder getClassifiersOrBuilder(
+        int index) {
+      return classifiers_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < classifiers_.size(); i++) {
+        output.writeMessage(1, classifiers_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < classifiers_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, classifiers_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions other = (yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions) obj;
+
+      if (!getClassifiersList()
+          .equals(other.getClassifiersList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getClassifiersCount() > 0) {
+        hash = (37 * hash) + CLASSIFIERS_FIELD_NUMBER;
+        hash = (53 * hash) + getClassifiersList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code speechkit.stt.v3.RecognitionClassifierOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.RecognitionClassifierOptions)
+        yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifierOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifierOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.class, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getClassifiersFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (classifiersBuilder_ == null) {
+          classifiers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          classifiersBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifierOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions build() {
+        yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions buildPartial() {
+        yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions result = new yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions(this);
+        int from_bitField0_ = bitField0_;
+        if (classifiersBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            classifiers_ = java.util.Collections.unmodifiableList(classifiers_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.classifiers_ = classifiers_;
+        } else {
+          result.classifiers_ = classifiersBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions) {
+          return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions other) {
+        if (other == yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.getDefaultInstance()) return this;
+        if (classifiersBuilder_ == null) {
+          if (!other.classifiers_.isEmpty()) {
+            if (classifiers_.isEmpty()) {
+              classifiers_ = other.classifiers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureClassifiersIsMutable();
+              classifiers_.addAll(other.classifiers_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.classifiers_.isEmpty()) {
+            if (classifiersBuilder_.isEmpty()) {
+              classifiersBuilder_.dispose();
+              classifiersBuilder_ = null;
+              classifiers_ = other.classifiers_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              classifiersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getClassifiersFieldBuilder() : null;
+            } else {
+              classifiersBuilder_.addAllMessages(other.classifiers_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier> classifiers_ =
+        java.util.Collections.emptyList();
+      private void ensureClassifiersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          classifiers_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier>(classifiers_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOrBuilder> classifiersBuilder_;
+
+      /**
+       * <pre>
+       * List of classifiers to use
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier> getClassifiersList() {
+        if (classifiersBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(classifiers_);
+        } else {
+          return classifiersBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of classifiers to use
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+       */
+      public int getClassifiersCount() {
+        if (classifiersBuilder_ == null) {
+          return classifiers_.size();
+        } else {
+          return classifiersBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of classifiers to use
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier getClassifiers(int index) {
+        if (classifiersBuilder_ == null) {
+          return classifiers_.get(index);
+        } else {
+          return classifiersBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of classifiers to use
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+       */
+      public Builder setClassifiers(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier value) {
+        if (classifiersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClassifiersIsMutable();
+          classifiers_.set(index, value);
+          onChanged();
+        } else {
+          classifiersBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of classifiers to use
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+       */
+      public Builder setClassifiers(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.Builder builderForValue) {
+        if (classifiersBuilder_ == null) {
+          ensureClassifiersIsMutable();
+          classifiers_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          classifiersBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of classifiers to use
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+       */
+      public Builder addClassifiers(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier value) {
+        if (classifiersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClassifiersIsMutable();
+          classifiers_.add(value);
+          onChanged();
+        } else {
+          classifiersBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of classifiers to use
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+       */
+      public Builder addClassifiers(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier value) {
+        if (classifiersBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureClassifiersIsMutable();
+          classifiers_.add(index, value);
+          onChanged();
+        } else {
+          classifiersBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of classifiers to use
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+       */
+      public Builder addClassifiers(
+          yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.Builder builderForValue) {
+        if (classifiersBuilder_ == null) {
+          ensureClassifiersIsMutable();
+          classifiers_.add(builderForValue.build());
+          onChanged();
+        } else {
+          classifiersBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of classifiers to use
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+       */
+      public Builder addClassifiers(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.Builder builderForValue) {
+        if (classifiersBuilder_ == null) {
+          ensureClassifiersIsMutable();
+          classifiers_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          classifiersBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of classifiers to use
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+       */
+      public Builder addAllClassifiers(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier> values) {
+        if (classifiersBuilder_ == null) {
+          ensureClassifiersIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, classifiers_);
+          onChanged();
+        } else {
+          classifiersBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of classifiers to use
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+       */
+      public Builder clearClassifiers() {
+        if (classifiersBuilder_ == null) {
+          classifiers_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          classifiersBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of classifiers to use
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+       */
+      public Builder removeClassifiers(int index) {
+        if (classifiersBuilder_ == null) {
+          ensureClassifiersIsMutable();
+          classifiers_.remove(index);
+          onChanged();
+        } else {
+          classifiersBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of classifiers to use
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.Builder getClassifiersBuilder(
+          int index) {
+        return getClassifiersFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of classifiers to use
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOrBuilder getClassifiersOrBuilder(
+          int index) {
+        if (classifiersBuilder_ == null) {
+          return classifiers_.get(index);  } else {
+          return classifiersBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of classifiers to use
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOrBuilder> 
+           getClassifiersOrBuilderList() {
+        if (classifiersBuilder_ != null) {
+          return classifiersBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(classifiers_);
+        }
+      }
+      /**
+       * <pre>
+       * List of classifiers to use
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.Builder addClassifiersBuilder() {
+        return getClassifiersFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of classifiers to use
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.Builder addClassifiersBuilder(
+          int index) {
+        return getClassifiersFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of classifiers to use
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifier classifiers = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.Builder> 
+           getClassifiersBuilderList() {
+        return getClassifiersFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOrBuilder> 
+          getClassifiersFieldBuilder() {
+        if (classifiersBuilder_ == null) {
+          classifiersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifier.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOrBuilder>(
+                  classifiers_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          classifiers_ = null;
+        }
+        return classifiersBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.RecognitionClassifierOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.stt.v3.RecognitionClassifierOptions)
+    private static final yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions();
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RecognitionClassifierOptions>
+        PARSER = new com.google.protobuf.AbstractParser<RecognitionClassifierOptions>() {
+      @java.lang.Override
+      public RecognitionClassifierOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RecognitionClassifierOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RecognitionClassifierOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RecognitionClassifierOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface RawAudioOrBuilder extends
       // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.RawAudio)
       com.google.protobuf.MessageOrBuilder {
@@ -8794,6 +10831,33 @@ public final class Stt {
      * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
      */
     yandex.cloud.api.ai.stt.v3.Stt.EouClassifierOptionsOrBuilder getEouClassifierOrBuilder();
+
+    /**
+     * <pre>
+     *  Configuration for classifiers over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
+     * @return Whether the recognitionClassifier field is set.
+     */
+    boolean hasRecognitionClassifier();
+    /**
+     * <pre>
+     *  Configuration for classifiers over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
+     * @return The recognitionClassifier.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions getRecognitionClassifier();
+    /**
+     * <pre>
+     *  Configuration for classifiers over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptionsOrBuilder getRecognitionClassifierOrBuilder();
   }
   /**
    * Protobuf type {@code speechkit.stt.v3.StreamingOptions}
@@ -8862,6 +10926,19 @@ public final class Stt {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(eouClassifier_);
                 eouClassifier_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.Builder subBuilder = null;
+              if (recognitionClassifier_ != null) {
+                subBuilder = recognitionClassifier_.toBuilder();
+              }
+              recognitionClassifier_ = input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(recognitionClassifier_);
+                recognitionClassifier_ = subBuilder.buildPartial();
               }
 
               break;
@@ -8974,6 +11051,44 @@ public final class Stt {
       return getEouClassifier();
     }
 
+    public static final int RECOGNITION_CLASSIFIER_FIELD_NUMBER = 3;
+    private yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions recognitionClassifier_;
+    /**
+     * <pre>
+     *  Configuration for classifiers over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
+     * @return Whether the recognitionClassifier field is set.
+     */
+    @java.lang.Override
+    public boolean hasRecognitionClassifier() {
+      return recognitionClassifier_ != null;
+    }
+    /**
+     * <pre>
+     *  Configuration for classifiers over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
+     * @return The recognitionClassifier.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions getRecognitionClassifier() {
+      return recognitionClassifier_ == null ? yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.getDefaultInstance() : recognitionClassifier_;
+    }
+    /**
+     * <pre>
+     *  Configuration for classifiers over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptionsOrBuilder getRecognitionClassifierOrBuilder() {
+      return getRecognitionClassifier();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8994,6 +11109,9 @@ public final class Stt {
       if (eouClassifier_ != null) {
         output.writeMessage(2, getEouClassifier());
       }
+      if (recognitionClassifier_ != null) {
+        output.writeMessage(3, getRecognitionClassifier());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -9010,6 +11128,10 @@ public final class Stt {
       if (eouClassifier_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getEouClassifier());
+      }
+      if (recognitionClassifier_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRecognitionClassifier());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9036,6 +11158,11 @@ public final class Stt {
         if (!getEouClassifier()
             .equals(other.getEouClassifier())) return false;
       }
+      if (hasRecognitionClassifier() != other.hasRecognitionClassifier()) return false;
+      if (hasRecognitionClassifier()) {
+        if (!getRecognitionClassifier()
+            .equals(other.getRecognitionClassifier())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9054,6 +11181,10 @@ public final class Stt {
       if (hasEouClassifier()) {
         hash = (37 * hash) + EOU_CLASSIFIER_FIELD_NUMBER;
         hash = (53 * hash) + getEouClassifier().hashCode();
+      }
+      if (hasRecognitionClassifier()) {
+        hash = (37 * hash) + RECOGNITION_CLASSIFIER_FIELD_NUMBER;
+        hash = (53 * hash) + getRecognitionClassifier().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -9200,6 +11331,12 @@ public final class Stt {
           eouClassifier_ = null;
           eouClassifierBuilder_ = null;
         }
+        if (recognitionClassifierBuilder_ == null) {
+          recognitionClassifier_ = null;
+        } else {
+          recognitionClassifier_ = null;
+          recognitionClassifierBuilder_ = null;
+        }
         return this;
       }
 
@@ -9235,6 +11372,11 @@ public final class Stt {
           result.eouClassifier_ = eouClassifier_;
         } else {
           result.eouClassifier_ = eouClassifierBuilder_.build();
+        }
+        if (recognitionClassifierBuilder_ == null) {
+          result.recognitionClassifier_ = recognitionClassifier_;
+        } else {
+          result.recognitionClassifier_ = recognitionClassifierBuilder_.build();
         }
         onBuilt();
         return result;
@@ -9289,6 +11431,9 @@ public final class Stt {
         }
         if (other.hasEouClassifier()) {
           mergeEouClassifier(other.getEouClassifier());
+        }
+        if (other.hasRecognitionClassifier()) {
+          mergeRecognitionClassifier(other.getRecognitionClassifier());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9627,6 +11772,161 @@ public final class Stt {
           eouClassifier_ = null;
         }
         return eouClassifierBuilder_;
+      }
+
+      private yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions recognitionClassifier_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptionsOrBuilder> recognitionClassifierBuilder_;
+      /**
+       * <pre>
+       *  Configuration for classifiers over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
+       * @return Whether the recognitionClassifier field is set.
+       */
+      public boolean hasRecognitionClassifier() {
+        return recognitionClassifierBuilder_ != null || recognitionClassifier_ != null;
+      }
+      /**
+       * <pre>
+       *  Configuration for classifiers over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
+       * @return The recognitionClassifier.
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions getRecognitionClassifier() {
+        if (recognitionClassifierBuilder_ == null) {
+          return recognitionClassifier_ == null ? yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.getDefaultInstance() : recognitionClassifier_;
+        } else {
+          return recognitionClassifierBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       *  Configuration for classifiers over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
+       */
+      public Builder setRecognitionClassifier(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions value) {
+        if (recognitionClassifierBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          recognitionClassifier_ = value;
+          onChanged();
+        } else {
+          recognitionClassifierBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       *  Configuration for classifiers over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
+       */
+      public Builder setRecognitionClassifier(
+          yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.Builder builderForValue) {
+        if (recognitionClassifierBuilder_ == null) {
+          recognitionClassifier_ = builderForValue.build();
+          onChanged();
+        } else {
+          recognitionClassifierBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       *  Configuration for classifiers over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
+       */
+      public Builder mergeRecognitionClassifier(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions value) {
+        if (recognitionClassifierBuilder_ == null) {
+          if (recognitionClassifier_ != null) {
+            recognitionClassifier_ =
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.newBuilder(recognitionClassifier_).mergeFrom(value).buildPartial();
+          } else {
+            recognitionClassifier_ = value;
+          }
+          onChanged();
+        } else {
+          recognitionClassifierBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       *  Configuration for classifiers over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
+       */
+      public Builder clearRecognitionClassifier() {
+        if (recognitionClassifierBuilder_ == null) {
+          recognitionClassifier_ = null;
+          onChanged();
+        } else {
+          recognitionClassifier_ = null;
+          recognitionClassifierBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       *  Configuration for classifiers over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.Builder getRecognitionClassifierBuilder() {
+        
+        onChanged();
+        return getRecognitionClassifierFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       *  Configuration for classifiers over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptionsOrBuilder getRecognitionClassifierOrBuilder() {
+        if (recognitionClassifierBuilder_ != null) {
+          return recognitionClassifierBuilder_.getMessageOrBuilder();
+        } else {
+          return recognitionClassifier_ == null ?
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.getDefaultInstance() : recognitionClassifier_;
+        }
+      }
+      /**
+       * <pre>
+       *  Configuration for classifiers over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptionsOrBuilder> 
+          getRecognitionClassifierFieldBuilder() {
+        if (recognitionClassifierBuilder_ == null) {
+          recognitionClassifierBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptionsOrBuilder>(
+                  getRecognitionClassifier(),
+                  getParentForChildren(),
+                  isClean());
+          recognitionClassifier_ = null;
+        }
+        return recognitionClassifierBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -21169,6 +23469,4210 @@ public final class Stt {
 
   }
 
+  public interface PhraseHighlightOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.PhraseHighlight)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Text transcription of the highlighted audio segment
+     * </pre>
+     *
+     * <code>string text = 1;</code>
+     * @return The text.
+     */
+    java.lang.String getText();
+    /**
+     * <pre>
+     * Text transcription of the highlighted audio segment
+     * </pre>
+     *
+     * <code>string text = 1;</code>
+     * @return The bytes for text.
+     */
+    com.google.protobuf.ByteString
+        getTextBytes();
+
+    /**
+     * <pre>
+     * Start time of the highlighted audio segment
+     * </pre>
+     *
+     * <code>int64 start_time_ms = 2;</code>
+     * @return The startTimeMs.
+     */
+    long getStartTimeMs();
+
+    /**
+     * <pre>
+     * End time of the highlighted audio segment
+     * </pre>
+     *
+     * <code>int64 end_time_ms = 3;</code>
+     * @return The endTimeMs.
+     */
+    long getEndTimeMs();
+  }
+  /**
+   * Protobuf type {@code speechkit.stt.v3.PhraseHighlight}
+   */
+  public static final class PhraseHighlight extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.stt.v3.PhraseHighlight)
+      PhraseHighlightOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PhraseHighlight.newBuilder() to construct.
+    private PhraseHighlight(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PhraseHighlight() {
+      text_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PhraseHighlight();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PhraseHighlight(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              text_ = s;
+              break;
+            }
+            case 16: {
+
+              startTimeMs_ = input.readInt64();
+              break;
+            }
+            case 24: {
+
+              endTimeMs_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_PhraseHighlight_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_PhraseHighlight_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight.class, yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight.Builder.class);
+    }
+
+    public static final int TEXT_FIELD_NUMBER = 1;
+    private volatile java.lang.Object text_;
+    /**
+     * <pre>
+     * Text transcription of the highlighted audio segment
+     * </pre>
+     *
+     * <code>string text = 1;</code>
+     * @return The text.
+     */
+    @java.lang.Override
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        text_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Text transcription of the highlighted audio segment
+     * </pre>
+     *
+     * <code>string text = 1;</code>
+     * @return The bytes for text.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int START_TIME_MS_FIELD_NUMBER = 2;
+    private long startTimeMs_;
+    /**
+     * <pre>
+     * Start time of the highlighted audio segment
+     * </pre>
+     *
+     * <code>int64 start_time_ms = 2;</code>
+     * @return The startTimeMs.
+     */
+    @java.lang.Override
+    public long getStartTimeMs() {
+      return startTimeMs_;
+    }
+
+    public static final int END_TIME_MS_FIELD_NUMBER = 3;
+    private long endTimeMs_;
+    /**
+     * <pre>
+     * End time of the highlighted audio segment
+     * </pre>
+     *
+     * <code>int64 end_time_ms = 3;</code>
+     * @return The endTimeMs.
+     */
+    @java.lang.Override
+    public long getEndTimeMs() {
+      return endTimeMs_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, text_);
+      }
+      if (startTimeMs_ != 0L) {
+        output.writeInt64(2, startTimeMs_);
+      }
+      if (endTimeMs_ != 0L) {
+        output.writeInt64(3, endTimeMs_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, text_);
+      }
+      if (startTimeMs_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, startTimeMs_);
+      }
+      if (endTimeMs_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, endTimeMs_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight other = (yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight) obj;
+
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (getStartTimeMs()
+          != other.getStartTimeMs()) return false;
+      if (getEndTimeMs()
+          != other.getEndTimeMs()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getText().hashCode();
+      hash = (37 * hash) + START_TIME_MS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStartTimeMs());
+      hash = (37 * hash) + END_TIME_MS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEndTimeMs());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code speechkit.stt.v3.PhraseHighlight}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.PhraseHighlight)
+        yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlightOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_PhraseHighlight_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_PhraseHighlight_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight.class, yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        text_ = "";
+
+        startTimeMs_ = 0L;
+
+        endTimeMs_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_PhraseHighlight_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight build() {
+        yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight buildPartial() {
+        yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight result = new yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight(this);
+        result.text_ = text_;
+        result.startTimeMs_ = startTimeMs_;
+        result.endTimeMs_ = endTimeMs_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight) {
+          return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight other) {
+        if (other == yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight.getDefaultInstance()) return this;
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
+          onChanged();
+        }
+        if (other.getStartTimeMs() != 0L) {
+          setStartTimeMs(other.getStartTimeMs());
+        }
+        if (other.getEndTimeMs() != 0L) {
+          setEndTimeMs(other.getEndTimeMs());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object text_ = "";
+      /**
+       * <pre>
+       * Text transcription of the highlighted audio segment
+       * </pre>
+       *
+       * <code>string text = 1;</code>
+       * @return The text.
+       */
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          text_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Text transcription of the highlighted audio segment
+       * </pre>
+       *
+       * <code>string text = 1;</code>
+       * @return The bytes for text.
+       */
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Text transcription of the highlighted audio segment
+       * </pre>
+       *
+       * <code>string text = 1;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Text transcription of the highlighted audio segment
+       * </pre>
+       *
+       * <code>string text = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearText() {
+        
+        text_ = getDefaultInstance().getText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Text transcription of the highlighted audio segment
+       * </pre>
+       *
+       * <code>string text = 1;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        text_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long startTimeMs_ ;
+      /**
+       * <pre>
+       * Start time of the highlighted audio segment
+       * </pre>
+       *
+       * <code>int64 start_time_ms = 2;</code>
+       * @return The startTimeMs.
+       */
+      @java.lang.Override
+      public long getStartTimeMs() {
+        return startTimeMs_;
+      }
+      /**
+       * <pre>
+       * Start time of the highlighted audio segment
+       * </pre>
+       *
+       * <code>int64 start_time_ms = 2;</code>
+       * @param value The startTimeMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartTimeMs(long value) {
+        
+        startTimeMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Start time of the highlighted audio segment
+       * </pre>
+       *
+       * <code>int64 start_time_ms = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartTimeMs() {
+        
+        startTimeMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long endTimeMs_ ;
+      /**
+       * <pre>
+       * End time of the highlighted audio segment
+       * </pre>
+       *
+       * <code>int64 end_time_ms = 3;</code>
+       * @return The endTimeMs.
+       */
+      @java.lang.Override
+      public long getEndTimeMs() {
+        return endTimeMs_;
+      }
+      /**
+       * <pre>
+       * End time of the highlighted audio segment
+       * </pre>
+       *
+       * <code>int64 end_time_ms = 3;</code>
+       * @param value The endTimeMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndTimeMs(long value) {
+        
+        endTimeMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * End time of the highlighted audio segment
+       * </pre>
+       *
+       * <code>int64 end_time_ms = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEndTimeMs() {
+        
+        endTimeMs_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.PhraseHighlight)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.stt.v3.PhraseHighlight)
+    private static final yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight();
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PhraseHighlight>
+        PARSER = new com.google.protobuf.AbstractParser<PhraseHighlight>() {
+      @java.lang.Override
+      public PhraseHighlight parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PhraseHighlight(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PhraseHighlight> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PhraseHighlight> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RecognitionClassifierLabelOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.RecognitionClassifierLabel)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The label of the class predicted by the classifier
+     * </pre>
+     *
+     * <code>string label = 1;</code>
+     * @return The label.
+     */
+    java.lang.String getLabel();
+    /**
+     * <pre>
+     * The label of the class predicted by the classifier
+     * </pre>
+     *
+     * <code>string label = 1;</code>
+     * @return The bytes for label.
+     */
+    com.google.protobuf.ByteString
+        getLabelBytes();
+
+    /**
+     * <pre>
+     * The prediction confidence
+     * </pre>
+     *
+     * <code>double confidence = 2;</code>
+     * @return The confidence.
+     */
+    double getConfidence();
+  }
+  /**
+   * Protobuf type {@code speechkit.stt.v3.RecognitionClassifierLabel}
+   */
+  public static final class RecognitionClassifierLabel extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.stt.v3.RecognitionClassifierLabel)
+      RecognitionClassifierLabelOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RecognitionClassifierLabel.newBuilder() to construct.
+    private RecognitionClassifierLabel(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RecognitionClassifierLabel() {
+      label_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecognitionClassifierLabel();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RecognitionClassifierLabel(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              label_ = s;
+              break;
+            }
+            case 17: {
+
+              confidence_ = input.readDouble();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifierLabel_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifierLabel_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel.class, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel.Builder.class);
+    }
+
+    public static final int LABEL_FIELD_NUMBER = 1;
+    private volatile java.lang.Object label_;
+    /**
+     * <pre>
+     * The label of the class predicted by the classifier
+     * </pre>
+     *
+     * <code>string label = 1;</code>
+     * @return The label.
+     */
+    @java.lang.Override
+    public java.lang.String getLabel() {
+      java.lang.Object ref = label_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        label_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The label of the class predicted by the classifier
+     * </pre>
+     *
+     * <code>string label = 1;</code>
+     * @return The bytes for label.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getLabelBytes() {
+      java.lang.Object ref = label_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        label_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONFIDENCE_FIELD_NUMBER = 2;
+    private double confidence_;
+    /**
+     * <pre>
+     * The prediction confidence
+     * </pre>
+     *
+     * <code>double confidence = 2;</code>
+     * @return The confidence.
+     */
+    @java.lang.Override
+    public double getConfidence() {
+      return confidence_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, label_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(confidence_) != 0) {
+        output.writeDouble(2, confidence_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(label_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, label_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(confidence_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, confidence_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel other = (yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel) obj;
+
+      if (!getLabel()
+          .equals(other.getLabel())) return false;
+      if (java.lang.Double.doubleToLongBits(getConfidence())
+          != java.lang.Double.doubleToLongBits(
+              other.getConfidence())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LABEL_FIELD_NUMBER;
+      hash = (53 * hash) + getLabel().hashCode();
+      hash = (37 * hash) + CONFIDENCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getConfidence()));
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code speechkit.stt.v3.RecognitionClassifierLabel}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.RecognitionClassifierLabel)
+        yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabelOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifierLabel_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifierLabel_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel.class, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        label_ = "";
+
+        confidence_ = 0D;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifierLabel_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel build() {
+        yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel buildPartial() {
+        yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel result = new yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel(this);
+        result.label_ = label_;
+        result.confidence_ = confidence_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel) {
+          return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel other) {
+        if (other == yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel.getDefaultInstance()) return this;
+        if (!other.getLabel().isEmpty()) {
+          label_ = other.label_;
+          onChanged();
+        }
+        if (other.getConfidence() != 0D) {
+          setConfidence(other.getConfidence());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object label_ = "";
+      /**
+       * <pre>
+       * The label of the class predicted by the classifier
+       * </pre>
+       *
+       * <code>string label = 1;</code>
+       * @return The label.
+       */
+      public java.lang.String getLabel() {
+        java.lang.Object ref = label_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          label_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The label of the class predicted by the classifier
+       * </pre>
+       *
+       * <code>string label = 1;</code>
+       * @return The bytes for label.
+       */
+      public com.google.protobuf.ByteString
+          getLabelBytes() {
+        java.lang.Object ref = label_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          label_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The label of the class predicted by the classifier
+       * </pre>
+       *
+       * <code>string label = 1;</code>
+       * @param value The label to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLabel(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        label_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The label of the class predicted by the classifier
+       * </pre>
+       *
+       * <code>string label = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLabel() {
+        
+        label_ = getDefaultInstance().getLabel();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The label of the class predicted by the classifier
+       * </pre>
+       *
+       * <code>string label = 1;</code>
+       * @param value The bytes for label to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLabelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        label_ = value;
+        onChanged();
+        return this;
+      }
+
+      private double confidence_ ;
+      /**
+       * <pre>
+       * The prediction confidence
+       * </pre>
+       *
+       * <code>double confidence = 2;</code>
+       * @return The confidence.
+       */
+      @java.lang.Override
+      public double getConfidence() {
+        return confidence_;
+      }
+      /**
+       * <pre>
+       * The prediction confidence
+       * </pre>
+       *
+       * <code>double confidence = 2;</code>
+       * @param value The confidence to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfidence(double value) {
+        
+        confidence_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The prediction confidence
+       * </pre>
+       *
+       * <code>double confidence = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConfidence() {
+        
+        confidence_ = 0D;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.RecognitionClassifierLabel)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.stt.v3.RecognitionClassifierLabel)
+    private static final yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel();
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RecognitionClassifierLabel>
+        PARSER = new com.google.protobuf.AbstractParser<RecognitionClassifierLabel>() {
+      @java.lang.Override
+      public RecognitionClassifierLabel parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RecognitionClassifierLabel(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RecognitionClassifierLabel> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RecognitionClassifierLabel> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RecognitionClassifierResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.RecognitionClassifierResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Name of the triggered classifier
+     * </pre>
+     *
+     * <code>string classifier = 1;</code>
+     * @return The classifier.
+     */
+    java.lang.String getClassifier();
+    /**
+     * <pre>
+     * Name of the triggered classifier
+     * </pre>
+     *
+     * <code>string classifier = 1;</code>
+     * @return The bytes for classifier.
+     */
+    com.google.protobuf.ByteString
+        getClassifierBytes();
+
+    /**
+     * <pre>
+     * List of highlights, i.e. parts of phrase that determine the result of the classification
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight> 
+        getHighlightsList();
+    /**
+     * <pre>
+     * List of highlights, i.e. parts of phrase that determine the result of the classification
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight getHighlights(int index);
+    /**
+     * <pre>
+     * List of highlights, i.e. parts of phrase that determine the result of the classification
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+     */
+    int getHighlightsCount();
+    /**
+     * <pre>
+     * List of highlights, i.e. parts of phrase that determine the result of the classification
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlightOrBuilder> 
+        getHighlightsOrBuilderList();
+    /**
+     * <pre>
+     * List of highlights, i.e. parts of phrase that determine the result of the classification
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlightOrBuilder getHighlightsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Classifier predictions
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel> 
+        getLabelsList();
+    /**
+     * <pre>
+     * Classifier predictions
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel getLabels(int index);
+    /**
+     * <pre>
+     * Classifier predictions
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Classifier predictions
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabelOrBuilder> 
+        getLabelsOrBuilderList();
+    /**
+     * <pre>
+     * Classifier predictions
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabelOrBuilder getLabelsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code speechkit.stt.v3.RecognitionClassifierResult}
+   */
+  public static final class RecognitionClassifierResult extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.stt.v3.RecognitionClassifierResult)
+      RecognitionClassifierResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RecognitionClassifierResult.newBuilder() to construct.
+    private RecognitionClassifierResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RecognitionClassifierResult() {
+      classifier_ = "";
+      highlights_ = java.util.Collections.emptyList();
+      labels_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecognitionClassifierResult();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RecognitionClassifierResult(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              classifier_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                highlights_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              highlights_.add(
+                  input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight.parser(), extensionRegistry));
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                labels_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              labels_.add(
+                  input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          highlights_ = java.util.Collections.unmodifiableList(highlights_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          labels_ = java.util.Collections.unmodifiableList(labels_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifierResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifierResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult.class, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult.Builder.class);
+    }
+
+    public static final int CLASSIFIER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object classifier_;
+    /**
+     * <pre>
+     * Name of the triggered classifier
+     * </pre>
+     *
+     * <code>string classifier = 1;</code>
+     * @return The classifier.
+     */
+    @java.lang.Override
+    public java.lang.String getClassifier() {
+      java.lang.Object ref = classifier_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        classifier_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the triggered classifier
+     * </pre>
+     *
+     * <code>string classifier = 1;</code>
+     * @return The bytes for classifier.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClassifierBytes() {
+      java.lang.Object ref = classifier_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        classifier_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HIGHLIGHTS_FIELD_NUMBER = 2;
+    private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight> highlights_;
+    /**
+     * <pre>
+     * List of highlights, i.e. parts of phrase that determine the result of the classification
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight> getHighlightsList() {
+      return highlights_;
+    }
+    /**
+     * <pre>
+     * List of highlights, i.e. parts of phrase that determine the result of the classification
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlightOrBuilder> 
+        getHighlightsOrBuilderList() {
+      return highlights_;
+    }
+    /**
+     * <pre>
+     * List of highlights, i.e. parts of phrase that determine the result of the classification
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+     */
+    @java.lang.Override
+    public int getHighlightsCount() {
+      return highlights_.size();
+    }
+    /**
+     * <pre>
+     * List of highlights, i.e. parts of phrase that determine the result of the classification
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight getHighlights(int index) {
+      return highlights_.get(index);
+    }
+    /**
+     * <pre>
+     * List of highlights, i.e. parts of phrase that determine the result of the classification
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlightOrBuilder getHighlightsOrBuilder(
+        int index) {
+      return highlights_.get(index);
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 3;
+    private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel> labels_;
+    /**
+     * <pre>
+     * Classifier predictions
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel> getLabelsList() {
+      return labels_;
+    }
+    /**
+     * <pre>
+     * Classifier predictions
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabelOrBuilder> 
+        getLabelsOrBuilderList() {
+      return labels_;
+    }
+    /**
+     * <pre>
+     * Classifier predictions
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+     */
+    @java.lang.Override
+    public int getLabelsCount() {
+      return labels_.size();
+    }
+    /**
+     * <pre>
+     * Classifier predictions
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel getLabels(int index) {
+      return labels_.get(index);
+    }
+    /**
+     * <pre>
+     * Classifier predictions
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabelOrBuilder getLabelsOrBuilder(
+        int index) {
+      return labels_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classifier_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, classifier_);
+      }
+      for (int i = 0; i < highlights_.size(); i++) {
+        output.writeMessage(2, highlights_.get(i));
+      }
+      for (int i = 0; i < labels_.size(); i++) {
+        output.writeMessage(3, labels_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(classifier_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, classifier_);
+      }
+      for (int i = 0; i < highlights_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, highlights_.get(i));
+      }
+      for (int i = 0; i < labels_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, labels_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult other = (yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult) obj;
+
+      if (!getClassifier()
+          .equals(other.getClassifier())) return false;
+      if (!getHighlightsList()
+          .equals(other.getHighlightsList())) return false;
+      if (!getLabelsList()
+          .equals(other.getLabelsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CLASSIFIER_FIELD_NUMBER;
+      hash = (53 * hash) + getClassifier().hashCode();
+      if (getHighlightsCount() > 0) {
+        hash = (37 * hash) + HIGHLIGHTS_FIELD_NUMBER;
+        hash = (53 * hash) + getHighlightsList().hashCode();
+      }
+      if (getLabelsCount() > 0) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + getLabelsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code speechkit.stt.v3.RecognitionClassifierResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.RecognitionClassifierResult)
+        yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifierResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifierResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult.class, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getHighlightsFieldBuilder();
+          getLabelsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        classifier_ = "";
+
+        if (highlightsBuilder_ == null) {
+          highlights_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          highlightsBuilder_.clear();
+        }
+        if (labelsBuilder_ == null) {
+          labels_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          labelsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifierResult_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult build() {
+        yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult buildPartial() {
+        yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult result = new yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult(this);
+        int from_bitField0_ = bitField0_;
+        result.classifier_ = classifier_;
+        if (highlightsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            highlights_ = java.util.Collections.unmodifiableList(highlights_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.highlights_ = highlights_;
+        } else {
+          result.highlights_ = highlightsBuilder_.build();
+        }
+        if (labelsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            labels_ = java.util.Collections.unmodifiableList(labels_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.labels_ = labels_;
+        } else {
+          result.labels_ = labelsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult) {
+          return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult other) {
+        if (other == yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult.getDefaultInstance()) return this;
+        if (!other.getClassifier().isEmpty()) {
+          classifier_ = other.classifier_;
+          onChanged();
+        }
+        if (highlightsBuilder_ == null) {
+          if (!other.highlights_.isEmpty()) {
+            if (highlights_.isEmpty()) {
+              highlights_ = other.highlights_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureHighlightsIsMutable();
+              highlights_.addAll(other.highlights_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.highlights_.isEmpty()) {
+            if (highlightsBuilder_.isEmpty()) {
+              highlightsBuilder_.dispose();
+              highlightsBuilder_ = null;
+              highlights_ = other.highlights_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              highlightsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getHighlightsFieldBuilder() : null;
+            } else {
+              highlightsBuilder_.addAllMessages(other.highlights_);
+            }
+          }
+        }
+        if (labelsBuilder_ == null) {
+          if (!other.labels_.isEmpty()) {
+            if (labels_.isEmpty()) {
+              labels_ = other.labels_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureLabelsIsMutable();
+              labels_.addAll(other.labels_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.labels_.isEmpty()) {
+            if (labelsBuilder_.isEmpty()) {
+              labelsBuilder_.dispose();
+              labelsBuilder_ = null;
+              labels_ = other.labels_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              labelsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLabelsFieldBuilder() : null;
+            } else {
+              labelsBuilder_.addAllMessages(other.labels_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object classifier_ = "";
+      /**
+       * <pre>
+       * Name of the triggered classifier
+       * </pre>
+       *
+       * <code>string classifier = 1;</code>
+       * @return The classifier.
+       */
+      public java.lang.String getClassifier() {
+        java.lang.Object ref = classifier_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          classifier_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the triggered classifier
+       * </pre>
+       *
+       * <code>string classifier = 1;</code>
+       * @return The bytes for classifier.
+       */
+      public com.google.protobuf.ByteString
+          getClassifierBytes() {
+        java.lang.Object ref = classifier_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          classifier_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the triggered classifier
+       * </pre>
+       *
+       * <code>string classifier = 1;</code>
+       * @param value The classifier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassifier(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        classifier_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the triggered classifier
+       * </pre>
+       *
+       * <code>string classifier = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClassifier() {
+        
+        classifier_ = getDefaultInstance().getClassifier();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the triggered classifier
+       * </pre>
+       *
+       * <code>string classifier = 1;</code>
+       * @param value The bytes for classifier to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClassifierBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        classifier_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight> highlights_ =
+        java.util.Collections.emptyList();
+      private void ensureHighlightsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          highlights_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight>(highlights_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight, yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight.Builder, yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlightOrBuilder> highlightsBuilder_;
+
+      /**
+       * <pre>
+       * List of highlights, i.e. parts of phrase that determine the result of the classification
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight> getHighlightsList() {
+        if (highlightsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(highlights_);
+        } else {
+          return highlightsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of highlights, i.e. parts of phrase that determine the result of the classification
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+       */
+      public int getHighlightsCount() {
+        if (highlightsBuilder_ == null) {
+          return highlights_.size();
+        } else {
+          return highlightsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of highlights, i.e. parts of phrase that determine the result of the classification
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight getHighlights(int index) {
+        if (highlightsBuilder_ == null) {
+          return highlights_.get(index);
+        } else {
+          return highlightsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of highlights, i.e. parts of phrase that determine the result of the classification
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+       */
+      public Builder setHighlights(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight value) {
+        if (highlightsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHighlightsIsMutable();
+          highlights_.set(index, value);
+          onChanged();
+        } else {
+          highlightsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of highlights, i.e. parts of phrase that determine the result of the classification
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+       */
+      public Builder setHighlights(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight.Builder builderForValue) {
+        if (highlightsBuilder_ == null) {
+          ensureHighlightsIsMutable();
+          highlights_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          highlightsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of highlights, i.e. parts of phrase that determine the result of the classification
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+       */
+      public Builder addHighlights(yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight value) {
+        if (highlightsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHighlightsIsMutable();
+          highlights_.add(value);
+          onChanged();
+        } else {
+          highlightsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of highlights, i.e. parts of phrase that determine the result of the classification
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+       */
+      public Builder addHighlights(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight value) {
+        if (highlightsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureHighlightsIsMutable();
+          highlights_.add(index, value);
+          onChanged();
+        } else {
+          highlightsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of highlights, i.e. parts of phrase that determine the result of the classification
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+       */
+      public Builder addHighlights(
+          yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight.Builder builderForValue) {
+        if (highlightsBuilder_ == null) {
+          ensureHighlightsIsMutable();
+          highlights_.add(builderForValue.build());
+          onChanged();
+        } else {
+          highlightsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of highlights, i.e. parts of phrase that determine the result of the classification
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+       */
+      public Builder addHighlights(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight.Builder builderForValue) {
+        if (highlightsBuilder_ == null) {
+          ensureHighlightsIsMutable();
+          highlights_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          highlightsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of highlights, i.e. parts of phrase that determine the result of the classification
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+       */
+      public Builder addAllHighlights(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight> values) {
+        if (highlightsBuilder_ == null) {
+          ensureHighlightsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, highlights_);
+          onChanged();
+        } else {
+          highlightsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of highlights, i.e. parts of phrase that determine the result of the classification
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+       */
+      public Builder clearHighlights() {
+        if (highlightsBuilder_ == null) {
+          highlights_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          highlightsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of highlights, i.e. parts of phrase that determine the result of the classification
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+       */
+      public Builder removeHighlights(int index) {
+        if (highlightsBuilder_ == null) {
+          ensureHighlightsIsMutable();
+          highlights_.remove(index);
+          onChanged();
+        } else {
+          highlightsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of highlights, i.e. parts of phrase that determine the result of the classification
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight.Builder getHighlightsBuilder(
+          int index) {
+        return getHighlightsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of highlights, i.e. parts of phrase that determine the result of the classification
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlightOrBuilder getHighlightsOrBuilder(
+          int index) {
+        if (highlightsBuilder_ == null) {
+          return highlights_.get(index);  } else {
+          return highlightsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of highlights, i.e. parts of phrase that determine the result of the classification
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlightOrBuilder> 
+           getHighlightsOrBuilderList() {
+        if (highlightsBuilder_ != null) {
+          return highlightsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(highlights_);
+        }
+      }
+      /**
+       * <pre>
+       * List of highlights, i.e. parts of phrase that determine the result of the classification
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight.Builder addHighlightsBuilder() {
+        return getHighlightsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of highlights, i.e. parts of phrase that determine the result of the classification
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight.Builder addHighlightsBuilder(
+          int index) {
+        return getHighlightsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of highlights, i.e. parts of phrase that determine the result of the classification
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.PhraseHighlight highlights = 2;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight.Builder> 
+           getHighlightsBuilderList() {
+        return getHighlightsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight, yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight.Builder, yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlightOrBuilder> 
+          getHighlightsFieldBuilder() {
+        if (highlightsBuilder_ == null) {
+          highlightsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight, yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlight.Builder, yandex.cloud.api.ai.stt.v3.Stt.PhraseHighlightOrBuilder>(
+                  highlights_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          highlights_ = null;
+        }
+        return highlightsBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel> labels_ =
+        java.util.Collections.emptyList();
+      private void ensureLabelsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          labels_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel>(labels_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabelOrBuilder> labelsBuilder_;
+
+      /**
+       * <pre>
+       * Classifier predictions
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel> getLabelsList() {
+        if (labelsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(labels_);
+        } else {
+          return labelsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Classifier predictions
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+       */
+      public int getLabelsCount() {
+        if (labelsBuilder_ == null) {
+          return labels_.size();
+        } else {
+          return labelsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Classifier predictions
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel getLabels(int index) {
+        if (labelsBuilder_ == null) {
+          return labels_.get(index);
+        } else {
+          return labelsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Classifier predictions
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+       */
+      public Builder setLabels(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel value) {
+        if (labelsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLabelsIsMutable();
+          labels_.set(index, value);
+          onChanged();
+        } else {
+          labelsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Classifier predictions
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+       */
+      public Builder setLabels(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel.Builder builderForValue) {
+        if (labelsBuilder_ == null) {
+          ensureLabelsIsMutable();
+          labels_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          labelsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Classifier predictions
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+       */
+      public Builder addLabels(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel value) {
+        if (labelsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLabelsIsMutable();
+          labels_.add(value);
+          onChanged();
+        } else {
+          labelsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Classifier predictions
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+       */
+      public Builder addLabels(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel value) {
+        if (labelsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLabelsIsMutable();
+          labels_.add(index, value);
+          onChanged();
+        } else {
+          labelsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Classifier predictions
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+       */
+      public Builder addLabels(
+          yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel.Builder builderForValue) {
+        if (labelsBuilder_ == null) {
+          ensureLabelsIsMutable();
+          labels_.add(builderForValue.build());
+          onChanged();
+        } else {
+          labelsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Classifier predictions
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+       */
+      public Builder addLabels(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel.Builder builderForValue) {
+        if (labelsBuilder_ == null) {
+          ensureLabelsIsMutable();
+          labels_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          labelsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Classifier predictions
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+       */
+      public Builder addAllLabels(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel> values) {
+        if (labelsBuilder_ == null) {
+          ensureLabelsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, labels_);
+          onChanged();
+        } else {
+          labelsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Classifier predictions
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+       */
+      public Builder clearLabels() {
+        if (labelsBuilder_ == null) {
+          labels_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          labelsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Classifier predictions
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+       */
+      public Builder removeLabels(int index) {
+        if (labelsBuilder_ == null) {
+          ensureLabelsIsMutable();
+          labels_.remove(index);
+          onChanged();
+        } else {
+          labelsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Classifier predictions
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel.Builder getLabelsBuilder(
+          int index) {
+        return getLabelsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Classifier predictions
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabelOrBuilder getLabelsOrBuilder(
+          int index) {
+        if (labelsBuilder_ == null) {
+          return labels_.get(index);  } else {
+          return labelsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Classifier predictions
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabelOrBuilder> 
+           getLabelsOrBuilderList() {
+        if (labelsBuilder_ != null) {
+          return labelsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(labels_);
+        }
+      }
+      /**
+       * <pre>
+       * Classifier predictions
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel.Builder addLabelsBuilder() {
+        return getLabelsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Classifier predictions
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel.Builder addLabelsBuilder(
+          int index) {
+        return getLabelsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Classifier predictions
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.RecognitionClassifierLabel labels = 3;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel.Builder> 
+           getLabelsBuilderList() {
+        return getLabelsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabelOrBuilder> 
+          getLabelsFieldBuilder() {
+        if (labelsBuilder_ == null) {
+          labelsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabel.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierLabelOrBuilder>(
+                  labels_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          labels_ = null;
+        }
+        return labelsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.RecognitionClassifierResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.stt.v3.RecognitionClassifierResult)
+    private static final yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult();
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RecognitionClassifierResult>
+        PARSER = new com.google.protobuf.AbstractParser<RecognitionClassifierResult>() {
+      @java.lang.Override
+      public RecognitionClassifierResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RecognitionClassifierResult(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RecognitionClassifierResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RecognitionClassifierResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RecognitionClassifierUpdateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.RecognitionClassifierUpdate)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Response window type
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierUpdate.WindowType window_type = 1;</code>
+     * @return The enum numeric value on the wire for windowType.
+     */
+    int getWindowTypeValue();
+    /**
+     * <pre>
+     * Response window type
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierUpdate.WindowType window_type = 1;</code>
+     * @return The windowType.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.WindowType getWindowType();
+
+    /**
+     * <pre>
+     * Start time of the audio segment used for classification
+     * </pre>
+     *
+     * <code>int64 start_time_ms = 2;</code>
+     * @return The startTimeMs.
+     */
+    long getStartTimeMs();
+
+    /**
+     * <pre>
+     * End time of the audio segment used for classification
+     * </pre>
+     *
+     * <code>int64 end_time_ms = 3;</code>
+     * @return The endTimeMs.
+     */
+    long getEndTimeMs();
+
+    /**
+     * <pre>
+     * Result for dictionary-based classifier
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierResult classifier_result = 4;</code>
+     * @return Whether the classifierResult field is set.
+     */
+    boolean hasClassifierResult();
+    /**
+     * <pre>
+     * Result for dictionary-based classifier
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierResult classifier_result = 4;</code>
+     * @return The classifierResult.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult getClassifierResult();
+    /**
+     * <pre>
+     * Result for dictionary-based classifier
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierResult classifier_result = 4;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResultOrBuilder getClassifierResultOrBuilder();
+  }
+  /**
+   * Protobuf type {@code speechkit.stt.v3.RecognitionClassifierUpdate}
+   */
+  public static final class RecognitionClassifierUpdate extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.stt.v3.RecognitionClassifierUpdate)
+      RecognitionClassifierUpdateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RecognitionClassifierUpdate.newBuilder() to construct.
+    private RecognitionClassifierUpdate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RecognitionClassifierUpdate() {
+      windowType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecognitionClassifierUpdate();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RecognitionClassifierUpdate(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              windowType_ = rawValue;
+              break;
+            }
+            case 16: {
+
+              startTimeMs_ = input.readInt64();
+              break;
+            }
+            case 24: {
+
+              endTimeMs_ = input.readInt64();
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult.Builder subBuilder = null;
+              if (classifierResult_ != null) {
+                subBuilder = classifierResult_.toBuilder();
+              }
+              classifierResult_ = input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(classifierResult_);
+                classifierResult_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifierUpdate_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifierUpdate_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.class, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code speechkit.stt.v3.RecognitionClassifierUpdate.WindowType}
+     */
+    public enum WindowType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * Never used
+       * </pre>
+       *
+       * <code>WINDOW_TYPE_UNSPECIFIED = 0;</code>
+       */
+      WINDOW_TYPE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * The result of applying the classifier to the last utterance response
+       * </pre>
+       *
+       * <code>LAST_UTTERANCE = 1;</code>
+       */
+      LAST_UTTERANCE(1),
+      /**
+       * <pre>
+       * The result of applying the classifier to the last final response
+       * </pre>
+       *
+       * <code>LAST_FINAL = 2;</code>
+       */
+      LAST_FINAL(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * Never used
+       * </pre>
+       *
+       * <code>WINDOW_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int WINDOW_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * The result of applying the classifier to the last utterance response
+       * </pre>
+       *
+       * <code>LAST_UTTERANCE = 1;</code>
+       */
+      public static final int LAST_UTTERANCE_VALUE = 1;
+      /**
+       * <pre>
+       * The result of applying the classifier to the last final response
+       * </pre>
+       *
+       * <code>LAST_FINAL = 2;</code>
+       */
+      public static final int LAST_FINAL_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static WindowType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static WindowType forNumber(int value) {
+        switch (value) {
+          case 0: return WINDOW_TYPE_UNSPECIFIED;
+          case 1: return LAST_UTTERANCE;
+          case 2: return LAST_FINAL;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<WindowType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          WindowType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<WindowType>() {
+              public WindowType findValueByNumber(int number) {
+                return WindowType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final WindowType[] VALUES = values();
+
+      public static WindowType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private WindowType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:speechkit.stt.v3.RecognitionClassifierUpdate.WindowType)
+    }
+
+    public static final int WINDOW_TYPE_FIELD_NUMBER = 1;
+    private int windowType_;
+    /**
+     * <pre>
+     * Response window type
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierUpdate.WindowType window_type = 1;</code>
+     * @return The enum numeric value on the wire for windowType.
+     */
+    @java.lang.Override public int getWindowTypeValue() {
+      return windowType_;
+    }
+    /**
+     * <pre>
+     * Response window type
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierUpdate.WindowType window_type = 1;</code>
+     * @return The windowType.
+     */
+    @java.lang.Override public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.WindowType getWindowType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.WindowType result = yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.WindowType.valueOf(windowType_);
+      return result == null ? yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.WindowType.UNRECOGNIZED : result;
+    }
+
+    public static final int START_TIME_MS_FIELD_NUMBER = 2;
+    private long startTimeMs_;
+    /**
+     * <pre>
+     * Start time of the audio segment used for classification
+     * </pre>
+     *
+     * <code>int64 start_time_ms = 2;</code>
+     * @return The startTimeMs.
+     */
+    @java.lang.Override
+    public long getStartTimeMs() {
+      return startTimeMs_;
+    }
+
+    public static final int END_TIME_MS_FIELD_NUMBER = 3;
+    private long endTimeMs_;
+    /**
+     * <pre>
+     * End time of the audio segment used for classification
+     * </pre>
+     *
+     * <code>int64 end_time_ms = 3;</code>
+     * @return The endTimeMs.
+     */
+    @java.lang.Override
+    public long getEndTimeMs() {
+      return endTimeMs_;
+    }
+
+    public static final int CLASSIFIER_RESULT_FIELD_NUMBER = 4;
+    private yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult classifierResult_;
+    /**
+     * <pre>
+     * Result for dictionary-based classifier
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierResult classifier_result = 4;</code>
+     * @return Whether the classifierResult field is set.
+     */
+    @java.lang.Override
+    public boolean hasClassifierResult() {
+      return classifierResult_ != null;
+    }
+    /**
+     * <pre>
+     * Result for dictionary-based classifier
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierResult classifier_result = 4;</code>
+     * @return The classifierResult.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult getClassifierResult() {
+      return classifierResult_ == null ? yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult.getDefaultInstance() : classifierResult_;
+    }
+    /**
+     * <pre>
+     * Result for dictionary-based classifier
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierResult classifier_result = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResultOrBuilder getClassifierResultOrBuilder() {
+      return getClassifierResult();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (windowType_ != yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.WindowType.WINDOW_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, windowType_);
+      }
+      if (startTimeMs_ != 0L) {
+        output.writeInt64(2, startTimeMs_);
+      }
+      if (endTimeMs_ != 0L) {
+        output.writeInt64(3, endTimeMs_);
+      }
+      if (classifierResult_ != null) {
+        output.writeMessage(4, getClassifierResult());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (windowType_ != yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.WindowType.WINDOW_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, windowType_);
+      }
+      if (startTimeMs_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, startTimeMs_);
+      }
+      if (endTimeMs_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, endTimeMs_);
+      }
+      if (classifierResult_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getClassifierResult());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate other = (yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate) obj;
+
+      if (windowType_ != other.windowType_) return false;
+      if (getStartTimeMs()
+          != other.getStartTimeMs()) return false;
+      if (getEndTimeMs()
+          != other.getEndTimeMs()) return false;
+      if (hasClassifierResult() != other.hasClassifierResult()) return false;
+      if (hasClassifierResult()) {
+        if (!getClassifierResult()
+            .equals(other.getClassifierResult())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + WINDOW_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + windowType_;
+      hash = (37 * hash) + START_TIME_MS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStartTimeMs());
+      hash = (37 * hash) + END_TIME_MS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEndTimeMs());
+      if (hasClassifierResult()) {
+        hash = (37 * hash) + CLASSIFIER_RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getClassifierResult().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code speechkit.stt.v3.RecognitionClassifierUpdate}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.RecognitionClassifierUpdate)
+        yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifierUpdate_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifierUpdate_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.class, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        windowType_ = 0;
+
+        startTimeMs_ = 0L;
+
+        endTimeMs_ = 0L;
+
+        if (classifierResultBuilder_ == null) {
+          classifierResult_ = null;
+        } else {
+          classifierResult_ = null;
+          classifierResultBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognitionClassifierUpdate_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate build() {
+        yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate buildPartial() {
+        yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate result = new yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate(this);
+        result.windowType_ = windowType_;
+        result.startTimeMs_ = startTimeMs_;
+        result.endTimeMs_ = endTimeMs_;
+        if (classifierResultBuilder_ == null) {
+          result.classifierResult_ = classifierResult_;
+        } else {
+          result.classifierResult_ = classifierResultBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate) {
+          return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate other) {
+        if (other == yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.getDefaultInstance()) return this;
+        if (other.windowType_ != 0) {
+          setWindowTypeValue(other.getWindowTypeValue());
+        }
+        if (other.getStartTimeMs() != 0L) {
+          setStartTimeMs(other.getStartTimeMs());
+        }
+        if (other.getEndTimeMs() != 0L) {
+          setEndTimeMs(other.getEndTimeMs());
+        }
+        if (other.hasClassifierResult()) {
+          mergeClassifierResult(other.getClassifierResult());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int windowType_ = 0;
+      /**
+       * <pre>
+       * Response window type
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierUpdate.WindowType window_type = 1;</code>
+       * @return The enum numeric value on the wire for windowType.
+       */
+      @java.lang.Override public int getWindowTypeValue() {
+        return windowType_;
+      }
+      /**
+       * <pre>
+       * Response window type
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierUpdate.WindowType window_type = 1;</code>
+       * @param value The enum numeric value on the wire for windowType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWindowTypeValue(int value) {
+        
+        windowType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Response window type
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierUpdate.WindowType window_type = 1;</code>
+       * @return The windowType.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.WindowType getWindowType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.WindowType result = yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.WindowType.valueOf(windowType_);
+        return result == null ? yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.WindowType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Response window type
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierUpdate.WindowType window_type = 1;</code>
+       * @param value The windowType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWindowType(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.WindowType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        windowType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Response window type
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierUpdate.WindowType window_type = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWindowType() {
+        
+        windowType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long startTimeMs_ ;
+      /**
+       * <pre>
+       * Start time of the audio segment used for classification
+       * </pre>
+       *
+       * <code>int64 start_time_ms = 2;</code>
+       * @return The startTimeMs.
+       */
+      @java.lang.Override
+      public long getStartTimeMs() {
+        return startTimeMs_;
+      }
+      /**
+       * <pre>
+       * Start time of the audio segment used for classification
+       * </pre>
+       *
+       * <code>int64 start_time_ms = 2;</code>
+       * @param value The startTimeMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartTimeMs(long value) {
+        
+        startTimeMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Start time of the audio segment used for classification
+       * </pre>
+       *
+       * <code>int64 start_time_ms = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartTimeMs() {
+        
+        startTimeMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long endTimeMs_ ;
+      /**
+       * <pre>
+       * End time of the audio segment used for classification
+       * </pre>
+       *
+       * <code>int64 end_time_ms = 3;</code>
+       * @return The endTimeMs.
+       */
+      @java.lang.Override
+      public long getEndTimeMs() {
+        return endTimeMs_;
+      }
+      /**
+       * <pre>
+       * End time of the audio segment used for classification
+       * </pre>
+       *
+       * <code>int64 end_time_ms = 3;</code>
+       * @param value The endTimeMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndTimeMs(long value) {
+        
+        endTimeMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * End time of the audio segment used for classification
+       * </pre>
+       *
+       * <code>int64 end_time_ms = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEndTimeMs() {
+        
+        endTimeMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult classifierResult_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResultOrBuilder> classifierResultBuilder_;
+      /**
+       * <pre>
+       * Result for dictionary-based classifier
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierResult classifier_result = 4;</code>
+       * @return Whether the classifierResult field is set.
+       */
+      public boolean hasClassifierResult() {
+        return classifierResultBuilder_ != null || classifierResult_ != null;
+      }
+      /**
+       * <pre>
+       * Result for dictionary-based classifier
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierResult classifier_result = 4;</code>
+       * @return The classifierResult.
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult getClassifierResult() {
+        if (classifierResultBuilder_ == null) {
+          return classifierResult_ == null ? yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult.getDefaultInstance() : classifierResult_;
+        } else {
+          return classifierResultBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Result for dictionary-based classifier
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierResult classifier_result = 4;</code>
+       */
+      public Builder setClassifierResult(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult value) {
+        if (classifierResultBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          classifierResult_ = value;
+          onChanged();
+        } else {
+          classifierResultBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Result for dictionary-based classifier
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierResult classifier_result = 4;</code>
+       */
+      public Builder setClassifierResult(
+          yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult.Builder builderForValue) {
+        if (classifierResultBuilder_ == null) {
+          classifierResult_ = builderForValue.build();
+          onChanged();
+        } else {
+          classifierResultBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Result for dictionary-based classifier
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierResult classifier_result = 4;</code>
+       */
+      public Builder mergeClassifierResult(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult value) {
+        if (classifierResultBuilder_ == null) {
+          if (classifierResult_ != null) {
+            classifierResult_ =
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult.newBuilder(classifierResult_).mergeFrom(value).buildPartial();
+          } else {
+            classifierResult_ = value;
+          }
+          onChanged();
+        } else {
+          classifierResultBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Result for dictionary-based classifier
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierResult classifier_result = 4;</code>
+       */
+      public Builder clearClassifierResult() {
+        if (classifierResultBuilder_ == null) {
+          classifierResult_ = null;
+          onChanged();
+        } else {
+          classifierResult_ = null;
+          classifierResultBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Result for dictionary-based classifier
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierResult classifier_result = 4;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult.Builder getClassifierResultBuilder() {
+        
+        onChanged();
+        return getClassifierResultFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Result for dictionary-based classifier
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierResult classifier_result = 4;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResultOrBuilder getClassifierResultOrBuilder() {
+        if (classifierResultBuilder_ != null) {
+          return classifierResultBuilder_.getMessageOrBuilder();
+        } else {
+          return classifierResult_ == null ?
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult.getDefaultInstance() : classifierResult_;
+        }
+      }
+      /**
+       * <pre>
+       * Result for dictionary-based classifier
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierResult classifier_result = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResultOrBuilder> 
+          getClassifierResultFieldBuilder() {
+        if (classifierResultBuilder_ == null) {
+          classifierResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResult.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierResultOrBuilder>(
+                  getClassifierResult(),
+                  getParentForChildren(),
+                  isClean());
+          classifierResult_ = null;
+        }
+        return classifierResultBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.RecognitionClassifierUpdate)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.stt.v3.RecognitionClassifierUpdate)
+    private static final yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate();
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RecognitionClassifierUpdate>
+        PARSER = new com.google.protobuf.AbstractParser<RecognitionClassifierUpdate>() {
+      @java.lang.Override
+      public RecognitionClassifierUpdate parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RecognitionClassifierUpdate(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RecognitionClassifierUpdate> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RecognitionClassifierUpdate> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface StreamingResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.StreamingResponse)
       com.google.protobuf.MessageOrBuilder {
@@ -21383,6 +27887,33 @@ public final class Stt {
 
     /**
      * <pre>
+     *  Result of the triggered classifier
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
+     * @return Whether the classifierUpdate field is set.
+     */
+    boolean hasClassifierUpdate();
+    /**
+     * <pre>
+     *  Result of the triggered classifier
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
+     * @return The classifierUpdate.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate getClassifierUpdate();
+    /**
+     * <pre>
+     *  Result of the triggered classifier
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdateOrBuilder getClassifierUpdateOrBuilder();
+
+    /**
+     * <pre>
      * Tag for distinguish audio channels.
      * </pre>
      *
@@ -21563,6 +28094,20 @@ public final class Stt {
               channelTag_ = s;
               break;
             }
+            case 82: {
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.Builder subBuilder = null;
+              if (eventCase_ == 10) {
+                subBuilder = ((yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate) event_).toBuilder();
+              }
+              event_ =
+                  input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate) event_);
+                event_ = subBuilder.buildPartial();
+              }
+              eventCase_ = 10;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -21605,6 +28150,7 @@ public final class Stt {
       EOU_UPDATE(6),
       FINAL_REFINEMENT(7),
       STATUS_CODE(8),
+      CLASSIFIER_UPDATE(10),
       EVENT_NOT_SET(0);
       private final int value;
       private EventCase(int value) {
@@ -21627,6 +28173,7 @@ public final class Stt {
           case 6: return EOU_UPDATE;
           case 7: return FINAL_REFINEMENT;
           case 8: return STATUS_CODE;
+          case 10: return CLASSIFIER_UPDATE;
           case 0: return EVENT_NOT_SET;
           default: return null;
         }
@@ -21957,6 +28504,49 @@ public final class Stt {
       return yandex.cloud.api.ai.stt.v3.Stt.StatusCode.getDefaultInstance();
     }
 
+    public static final int CLASSIFIER_UPDATE_FIELD_NUMBER = 10;
+    /**
+     * <pre>
+     *  Result of the triggered classifier
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
+     * @return Whether the classifierUpdate field is set.
+     */
+    @java.lang.Override
+    public boolean hasClassifierUpdate() {
+      return eventCase_ == 10;
+    }
+    /**
+     * <pre>
+     *  Result of the triggered classifier
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
+     * @return The classifierUpdate.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate getClassifierUpdate() {
+      if (eventCase_ == 10) {
+         return (yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate) event_;
+      }
+      return yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     *  Result of the triggered classifier
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdateOrBuilder getClassifierUpdateOrBuilder() {
+      if (eventCase_ == 10) {
+         return (yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate) event_;
+      }
+      return yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.getDefaultInstance();
+    }
+
     public static final int CHANNEL_TAG_FIELD_NUMBER = 9;
     private volatile java.lang.Object channelTag_;
     /**
@@ -22044,6 +28634,9 @@ public final class Stt {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channelTag_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, channelTag_);
       }
+      if (eventCase_ == 10) {
+        output.writeMessage(10, (yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate) event_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -22087,6 +28680,10 @@ public final class Stt {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(channelTag_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, channelTag_);
+      }
+      if (eventCase_ == 10) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, (yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate) event_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -22139,6 +28736,10 @@ public final class Stt {
           if (!getStatusCode()
               .equals(other.getStatusCode())) return false;
           break;
+        case 10:
+          if (!getClassifierUpdate()
+              .equals(other.getClassifierUpdate())) return false;
+          break;
         case 0:
         default:
       }
@@ -22186,6 +28787,10 @@ public final class Stt {
         case 8:
           hash = (37 * hash) + STATUS_CODE_FIELD_NUMBER;
           hash = (53 * hash) + getStatusCode().hashCode();
+          break;
+        case 10:
+          hash = (37 * hash) + CLASSIFIER_UPDATE_FIELD_NUMBER;
+          hash = (53 * hash) + getClassifierUpdate().hashCode();
           break;
         case 0:
         default:
@@ -22420,6 +29025,13 @@ public final class Stt {
             result.event_ = statusCodeBuilder_.build();
           }
         }
+        if (eventCase_ == 10) {
+          if (classifierUpdateBuilder_ == null) {
+            result.event_ = event_;
+          } else {
+            result.event_ = classifierUpdateBuilder_.build();
+          }
+        }
         result.channelTag_ = channelTag_;
         result.eventCase_ = eventCase_;
         onBuilt();
@@ -22502,6 +29114,10 @@ public final class Stt {
           }
           case STATUS_CODE: {
             mergeStatusCode(other.getStatusCode());
+            break;
+          }
+          case CLASSIFIER_UPDATE: {
+            mergeClassifierUpdate(other.getClassifierUpdate());
             break;
           }
           case EVENT_NOT_SET: {
@@ -23817,6 +30433,183 @@ public final class Stt {
         return statusCodeBuilder_;
       }
 
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdateOrBuilder> classifierUpdateBuilder_;
+      /**
+       * <pre>
+       *  Result of the triggered classifier
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
+       * @return Whether the classifierUpdate field is set.
+       */
+      @java.lang.Override
+      public boolean hasClassifierUpdate() {
+        return eventCase_ == 10;
+      }
+      /**
+       * <pre>
+       *  Result of the triggered classifier
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
+       * @return The classifierUpdate.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate getClassifierUpdate() {
+        if (classifierUpdateBuilder_ == null) {
+          if (eventCase_ == 10) {
+            return (yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate) event_;
+          }
+          return yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.getDefaultInstance();
+        } else {
+          if (eventCase_ == 10) {
+            return classifierUpdateBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       *  Result of the triggered classifier
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
+       */
+      public Builder setClassifierUpdate(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate value) {
+        if (classifierUpdateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          event_ = value;
+          onChanged();
+        } else {
+          classifierUpdateBuilder_.setMessage(value);
+        }
+        eventCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       *  Result of the triggered classifier
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
+       */
+      public Builder setClassifierUpdate(
+          yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.Builder builderForValue) {
+        if (classifierUpdateBuilder_ == null) {
+          event_ = builderForValue.build();
+          onChanged();
+        } else {
+          classifierUpdateBuilder_.setMessage(builderForValue.build());
+        }
+        eventCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       *  Result of the triggered classifier
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
+       */
+      public Builder mergeClassifierUpdate(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate value) {
+        if (classifierUpdateBuilder_ == null) {
+          if (eventCase_ == 10 &&
+              event_ != yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.getDefaultInstance()) {
+            event_ = yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.newBuilder((yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate) event_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            event_ = value;
+          }
+          onChanged();
+        } else {
+          if (eventCase_ == 10) {
+            classifierUpdateBuilder_.mergeFrom(value);
+          }
+          classifierUpdateBuilder_.setMessage(value);
+        }
+        eventCase_ = 10;
+        return this;
+      }
+      /**
+       * <pre>
+       *  Result of the triggered classifier
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
+       */
+      public Builder clearClassifierUpdate() {
+        if (classifierUpdateBuilder_ == null) {
+          if (eventCase_ == 10) {
+            eventCase_ = 0;
+            event_ = null;
+            onChanged();
+          }
+        } else {
+          if (eventCase_ == 10) {
+            eventCase_ = 0;
+            event_ = null;
+          }
+          classifierUpdateBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       *  Result of the triggered classifier
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.Builder getClassifierUpdateBuilder() {
+        return getClassifierUpdateFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       *  Result of the triggered classifier
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdateOrBuilder getClassifierUpdateOrBuilder() {
+        if ((eventCase_ == 10) && (classifierUpdateBuilder_ != null)) {
+          return classifierUpdateBuilder_.getMessageOrBuilder();
+        } else {
+          if (eventCase_ == 10) {
+            return (yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate) event_;
+          }
+          return yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       *  Result of the triggered classifier
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdateOrBuilder> 
+          getClassifierUpdateFieldBuilder() {
+        if (classifierUpdateBuilder_ == null) {
+          if (!(eventCase_ == 10)) {
+            event_ = yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.getDefaultInstance();
+          }
+          classifierUpdateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdateOrBuilder>(
+                  (yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate) event_,
+                  getParentForChildren(),
+                  isClean());
+          event_ = null;
+        }
+        eventCase_ = 10;
+        onChanged();;
+        return classifierUpdateBuilder_;
+      }
+
       private java.lang.Object channelTag_ = "";
       /**
        * <pre>
@@ -23986,6 +30779,16 @@ public final class Stt {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_speechkit_stt_v3_EouClassifierOptions_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_RecognitionClassifier_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_RecognitionClassifier_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_RecognitionClassifierOptions_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_RecognitionClassifierOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_speechkit_stt_v3_RawAudio_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -24081,6 +30884,26 @@ public final class Stt {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_speechkit_stt_v3_SessionUuid_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_PhraseHighlight_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_PhraseHighlight_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_RecognitionClassifierLabel_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_RecognitionClassifierLabel_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_RecognitionClassifierResult_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_RecognitionClassifierResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_RecognitionClassifierUpdate_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_RecognitionClassifierUpdate_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_speechkit_stt_v3_StreamingResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -24117,87 +30940,114 @@ public final class Stt {
       "default_classifier\030\001 \001(\0132&.speechkit.stt" +
       ".v3.DefaultEouClassifierH\000\022F\n\023external_c" +
       "lassifier\030\002 \001(\0132\'.speechkit.stt.v3.Exter" +
-      "nalEouClassifierH\000B\014\n\nClassifier\"\307\001\n\010Raw" +
-      "Audio\022@\n\016audio_encoding\030\001 \001(\0162(.speechki" +
-      "t.stt.v3.RawAudio.AudioEncoding\022\031\n\021sampl" +
-      "e_rate_hertz\030\002 \001(\003\022\033\n\023audio_channel_coun" +
-      "t\030\003 \001(\003\"A\n\rAudioEncoding\022\036\n\032AUDIO_ENCODI" +
-      "NG_UNSPECIFIED\020\000\022\020\n\014LINEAR16_PCM\020\001\"\277\001\n\016C" +
-      "ontainerAudio\022Q\n\024container_audio_type\030\001 " +
-      "\001(\01623.speechkit.stt.v3.ContainerAudio.Co" +
-      "ntainerAudioType\"Z\n\022ContainerAudioType\022$" +
-      "\n CONTAINER_AUDIO_TYPE_UNSPECIFIED\020\000\022\007\n\003" +
-      "WAV\020\001\022\014\n\010OGG_OPUS\020\002\022\007\n\003MP3\020\003\"\221\001\n\022AudioFo" +
-      "rmatOptions\022/\n\traw_audio\030\001 \001(\0132\032.speechk" +
-      "it.stt.v3.RawAudioH\000\022;\n\017container_audio\030" +
-      "\002 \001(\0132 .speechkit.stt.v3.ContainerAudioH" +
-      "\000B\r\n\013AudioFormat\"\367\001\n\032LanguageRestriction" +
-      "Options\022^\n\020restriction_type\030\001 \001(\0162D.spee" +
-      "chkit.stt.v3.LanguageRestrictionOptions." +
-      "LanguageRestrictionType\022\025\n\rlanguage_code" +
-      "\030\002 \003(\t\"b\n\027LanguageRestrictionType\022)\n%LAN" +
-      "GUAGE_RESTRICTION_TYPE_UNSPECIFIED\020\000\022\r\n\t" +
-      "WHITELIST\020\001\022\r\n\tBLACKLIST\020\002\"\262\003\n\027Recogniti" +
-      "onModelOptions\022\r\n\005model\030\001 \001(\t\022:\n\014audio_f" +
-      "ormat\030\002 \001(\0132$.speechkit.stt.v3.AudioForm" +
-      "atOptions\022F\n\022text_normalization\030\003 \001(\0132*." +
-      "speechkit.stt.v3.TextNormalizationOption" +
-      "s\022J\n\024language_restriction\030\004 \001(\0132,.speech" +
-      "kit.stt.v3.LanguageRestrictionOptions\022\\\n" +
-      "\025audio_processing_type\030\005 \001(\0162=.speechkit" +
-      ".stt.v3.RecognitionModelOptions.AudioPro" +
-      "cessingType\"Z\n\023AudioProcessingType\022%\n!AU" +
-      "DIO_PROCESSING_TYPE_UNSPECIFIED\020\000\022\r\n\tREA" +
-      "L_TIME\020\001\022\r\n\tFULL_DATA\020\002\"\230\001\n\020StreamingOpt" +
-      "ions\022D\n\021recognition_model\030\001 \001(\0132).speech" +
-      "kit.stt.v3.RecognitionModelOptions\022>\n\016eo" +
-      "u_classifier\030\002 \001(\0132&.speechkit.stt.v3.Eo" +
-      "uClassifierOptions\"\032\n\nAudioChunk\022\014\n\004data" +
-      "\030\001 \001(\014\"#\n\014SilenceChunk\022\023\n\013duration_ms\030\001 " +
-      "\001(\003\"\005\n\003Eou\"\350\001\n\020StreamingRequest\022=\n\017sessi" +
-      "on_options\030\001 \001(\0132\".speechkit.stt.v3.Stre" +
-      "amingOptionsH\000\022-\n\005chunk\030\002 \001(\0132\034.speechki" +
-      "t.stt.v3.AudioChunkH\000\0227\n\rsilence_chunk\030\003" +
-      " \001(\0132\036.speechkit.stt.v3.SilenceChunkH\000\022$" +
-      "\n\003eou\030\004 \001(\0132\025.speechkit.stt.v3.EouH\000B\007\n\005" +
-      "Event\"@\n\004Word\022\014\n\004text\030\001 \001(\t\022\025\n\rstart_tim" +
-      "e_ms\030\002 \001(\003\022\023\n\013end_time_ms\030\003 \001(\003\"@\n\022Langu" +
-      "ageEstimation\022\025\n\rlanguage_code\030\001 \001(\t\022\023\n\013" +
-      "probability\030\002 \001(\001\"\273\001\n\013Alternative\022%\n\005wor" +
-      "ds\030\001 \003(\0132\026.speechkit.stt.v3.Word\022\014\n\004text" +
-      "\030\002 \001(\t\022\025\n\rstart_time_ms\030\003 \001(\003\022\023\n\013end_tim" +
-      "e_ms\030\004 \001(\003\022\022\n\nconfidence\030\005 \001(\001\0227\n\tlangua" +
-      "ges\030\006 \003(\0132$.speechkit.stt.v3.LanguageEst" +
-      "imation\"\034\n\tEouUpdate\022\017\n\007time_ms\030\002 \001(\003\"a\n" +
-      "\021AlternativeUpdate\0223\n\014alternatives\030\001 \003(\013" +
-      "2\035.speechkit.stt.v3.Alternative\022\027\n\013chann" +
-      "el_tag\030\002 \001(\tB\002\030\001\"\231\001\n\014AudioCursors\022\030\n\020rec" +
-      "eived_data_ms\030\001 \001(\003\022\025\n\rreset_time_ms\030\002 \001" +
-      "(\003\022\027\n\017partial_time_ms\030\003 \001(\003\022\025\n\rfinal_tim" +
-      "e_ms\030\004 \001(\003\022\023\n\013final_index\030\005 \001(\003\022\023\n\013eou_t" +
-      "ime_ms\030\006 \001(\003\"n\n\017FinalRefinement\022\023\n\013final" +
-      "_index\030\001 \001(\003\022>\n\017normalized_text\030\002 \001(\0132#." +
-      "speechkit.stt.v3.AlternativeUpdateH\000B\006\n\004" +
-      "Type\"L\n\nStatusCode\022-\n\tcode_type\030\001 \001(\0162\032." +
-      "speechkit.stt.v3.CodeType\022\017\n\007message\030\002 \001" +
-      "(\t\"4\n\013SessionUuid\022\014\n\004uuid\030\001 \001(\t\022\027\n\017user_" +
-      "request_id\030\002 \001(\t\"\321\003\n\021StreamingResponse\0223" +
-      "\n\014session_uuid\030\001 \001(\0132\035.speechkit.stt.v3." +
-      "SessionUuid\0225\n\raudio_cursors\030\002 \001(\0132\036.spe" +
-      "echkit.stt.v3.AudioCursors\022\035\n\025response_w" +
-      "all_time_ms\030\003 \001(\003\0226\n\007partial\030\004 \001(\0132#.spe" +
-      "echkit.stt.v3.AlternativeUpdateH\000\0224\n\005fin" +
-      "al\030\005 \001(\0132#.speechkit.stt.v3.AlternativeU" +
-      "pdateH\000\0221\n\neou_update\030\006 \001(\0132\033.speechkit." +
-      "stt.v3.EouUpdateH\000\022=\n\020final_refinement\030\007" +
-      " \001(\0132!.speechkit.stt.v3.FinalRefinementH" +
-      "\000\0223\n\013status_code\030\010 \001(\0132\034.speechkit.stt.v" +
-      "3.StatusCodeH\000\022\023\n\013channel_tag\030\t \001(\tB\007\n\005E" +
-      "vent*K\n\010CodeType\022\031\n\025CODE_TYPE_UNSPECIFIE" +
-      "D\020\000\022\013\n\007WORKING\020\001\022\013\n\007WARNING\020\002\022\n\n\006CLOSED\020" +
-      "\003B\\\n\032yandex.cloud.api.ai.stt.v3Z>github." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/ai/stt/v3;sttb\006proto3"
+      "nalEouClassifierH\000B\014\n\nClassifier\"\277\001\n\025Rec" +
+      "ognitionClassifier\022\022\n\nclassifier\030\001 \001(\t\022E" +
+      "\n\010triggers\030\002 \003(\01623.speechkit.stt.v3.Reco" +
+      "gnitionClassifier.TriggerType\"K\n\013Trigger" +
+      "Type\022\034\n\030TRIGGER_TYPE_UNSPECIFIED\020\000\022\020\n\014ON" +
+      "_UTTERANCE\020\001\022\014\n\010ON_FINAL\020\002\"\\\n\034Recognitio" +
+      "nClassifierOptions\022<\n\013classifiers\030\001 \003(\0132" +
+      "\'.speechkit.stt.v3.RecognitionClassifier" +
+      "\"\307\001\n\010RawAudio\022@\n\016audio_encoding\030\001 \001(\0162(." +
+      "speechkit.stt.v3.RawAudio.AudioEncoding\022" +
+      "\031\n\021sample_rate_hertz\030\002 \001(\003\022\033\n\023audio_chan" +
+      "nel_count\030\003 \001(\003\"A\n\rAudioEncoding\022\036\n\032AUDI" +
+      "O_ENCODING_UNSPECIFIED\020\000\022\020\n\014LINEAR16_PCM" +
+      "\020\001\"\277\001\n\016ContainerAudio\022Q\n\024container_audio" +
+      "_type\030\001 \001(\01623.speechkit.stt.v3.Container" +
+      "Audio.ContainerAudioType\"Z\n\022ContainerAud" +
+      "ioType\022$\n CONTAINER_AUDIO_TYPE_UNSPECIFI" +
+      "ED\020\000\022\007\n\003WAV\020\001\022\014\n\010OGG_OPUS\020\002\022\007\n\003MP3\020\003\"\221\001\n" +
+      "\022AudioFormatOptions\022/\n\traw_audio\030\001 \001(\0132\032" +
+      ".speechkit.stt.v3.RawAudioH\000\022;\n\017containe" +
+      "r_audio\030\002 \001(\0132 .speechkit.stt.v3.Contain" +
+      "erAudioH\000B\r\n\013AudioFormat\"\367\001\n\032LanguageRes" +
+      "trictionOptions\022^\n\020restriction_type\030\001 \001(" +
+      "\0162D.speechkit.stt.v3.LanguageRestriction" +
+      "Options.LanguageRestrictionType\022\025\n\rlangu" +
+      "age_code\030\002 \003(\t\"b\n\027LanguageRestrictionTyp" +
+      "e\022)\n%LANGUAGE_RESTRICTION_TYPE_UNSPECIFI" +
+      "ED\020\000\022\r\n\tWHITELIST\020\001\022\r\n\tBLACKLIST\020\002\"\262\003\n\027R" +
+      "ecognitionModelOptions\022\r\n\005model\030\001 \001(\t\022:\n" +
+      "\014audio_format\030\002 \001(\0132$.speechkit.stt.v3.A" +
+      "udioFormatOptions\022F\n\022text_normalization\030" +
+      "\003 \001(\0132*.speechkit.stt.v3.TextNormalizati" +
+      "onOptions\022J\n\024language_restriction\030\004 \001(\0132" +
+      ",.speechkit.stt.v3.LanguageRestrictionOp" +
+      "tions\022\\\n\025audio_processing_type\030\005 \001(\0162=.s" +
+      "peechkit.stt.v3.RecognitionModelOptions." +
+      "AudioProcessingType\"Z\n\023AudioProcessingTy" +
+      "pe\022%\n!AUDIO_PROCESSING_TYPE_UNSPECIFIED\020" +
+      "\000\022\r\n\tREAL_TIME\020\001\022\r\n\tFULL_DATA\020\002\"\350\001\n\020Stre" +
+      "amingOptions\022D\n\021recognition_model\030\001 \001(\0132" +
+      ").speechkit.stt.v3.RecognitionModelOptio" +
+      "ns\022>\n\016eou_classifier\030\002 \001(\0132&.speechkit.s" +
+      "tt.v3.EouClassifierOptions\022N\n\026recognitio" +
+      "n_classifier\030\003 \001(\0132..speechkit.stt.v3.Re" +
+      "cognitionClassifierOptions\"\032\n\nAudioChunk" +
+      "\022\014\n\004data\030\001 \001(\014\"#\n\014SilenceChunk\022\023\n\013durati" +
+      "on_ms\030\001 \001(\003\"\005\n\003Eou\"\350\001\n\020StreamingRequest\022" +
+      "=\n\017session_options\030\001 \001(\0132\".speechkit.stt" +
+      ".v3.StreamingOptionsH\000\022-\n\005chunk\030\002 \001(\0132\034." +
+      "speechkit.stt.v3.AudioChunkH\000\0227\n\rsilence" +
+      "_chunk\030\003 \001(\0132\036.speechkit.stt.v3.SilenceC" +
+      "hunkH\000\022$\n\003eou\030\004 \001(\0132\025.speechkit.stt.v3.E" +
+      "ouH\000B\007\n\005Event\"@\n\004Word\022\014\n\004text\030\001 \001(\t\022\025\n\rs" +
+      "tart_time_ms\030\002 \001(\003\022\023\n\013end_time_ms\030\003 \001(\003\"" +
+      "@\n\022LanguageEstimation\022\025\n\rlanguage_code\030\001" +
+      " \001(\t\022\023\n\013probability\030\002 \001(\001\"\273\001\n\013Alternativ" +
+      "e\022%\n\005words\030\001 \003(\0132\026.speechkit.stt.v3.Word" +
+      "\022\014\n\004text\030\002 \001(\t\022\025\n\rstart_time_ms\030\003 \001(\003\022\023\n" +
+      "\013end_time_ms\030\004 \001(\003\022\022\n\nconfidence\030\005 \001(\001\0227" +
+      "\n\tlanguages\030\006 \003(\0132$.speechkit.stt.v3.Lan" +
+      "guageEstimation\"\034\n\tEouUpdate\022\017\n\007time_ms\030" +
+      "\002 \001(\003\"a\n\021AlternativeUpdate\0223\n\014alternativ" +
+      "es\030\001 \003(\0132\035.speechkit.stt.v3.Alternative\022" +
+      "\027\n\013channel_tag\030\002 \001(\tB\002\030\001\"\231\001\n\014AudioCursor" +
+      "s\022\030\n\020received_data_ms\030\001 \001(\003\022\025\n\rreset_tim" +
+      "e_ms\030\002 \001(\003\022\027\n\017partial_time_ms\030\003 \001(\003\022\025\n\rf" +
+      "inal_time_ms\030\004 \001(\003\022\023\n\013final_index\030\005 \001(\003\022" +
+      "\023\n\013eou_time_ms\030\006 \001(\003\"n\n\017FinalRefinement\022" +
+      "\023\n\013final_index\030\001 \001(\003\022>\n\017normalized_text\030" +
+      "\002 \001(\0132#.speechkit.stt.v3.AlternativeUpda" +
+      "teH\000B\006\n\004Type\"L\n\nStatusCode\022-\n\tcode_type\030" +
+      "\001 \001(\0162\032.speechkit.stt.v3.CodeType\022\017\n\007mes" +
+      "sage\030\002 \001(\t\"4\n\013SessionUuid\022\014\n\004uuid\030\001 \001(\t\022" +
+      "\027\n\017user_request_id\030\002 \001(\t\"K\n\017PhraseHighli" +
+      "ght\022\014\n\004text\030\001 \001(\t\022\025\n\rstart_time_ms\030\002 \001(\003" +
+      "\022\023\n\013end_time_ms\030\003 \001(\003\"?\n\032RecognitionClas" +
+      "sifierLabel\022\r\n\005label\030\001 \001(\t\022\022\n\nconfidence" +
+      "\030\002 \001(\001\"\246\001\n\033RecognitionClassifierResult\022\022" +
+      "\n\nclassifier\030\001 \001(\t\0225\n\nhighlights\030\002 \003(\0132!" +
+      ".speechkit.stt.v3.PhraseHighlight\022<\n\006lab" +
+      "els\030\003 \003(\0132,.speechkit.stt.v3.Recognition" +
+      "ClassifierLabel\"\261\002\n\033RecognitionClassifie" +
+      "rUpdate\022M\n\013window_type\030\001 \001(\01628.speechkit" +
+      ".stt.v3.RecognitionClassifierUpdate.Wind" +
+      "owType\022\025\n\rstart_time_ms\030\002 \001(\003\022\023\n\013end_tim" +
+      "e_ms\030\003 \001(\003\022H\n\021classifier_result\030\004 \001(\0132-." +
+      "speechkit.stt.v3.RecognitionClassifierRe" +
+      "sult\"M\n\nWindowType\022\033\n\027WINDOW_TYPE_UNSPEC" +
+      "IFIED\020\000\022\022\n\016LAST_UTTERANCE\020\001\022\016\n\nLAST_FINA" +
+      "L\020\002\"\235\004\n\021StreamingResponse\0223\n\014session_uui" +
+      "d\030\001 \001(\0132\035.speechkit.stt.v3.SessionUuid\0225" +
+      "\n\raudio_cursors\030\002 \001(\0132\036.speechkit.stt.v3" +
+      ".AudioCursors\022\035\n\025response_wall_time_ms\030\003" +
+      " \001(\003\0226\n\007partial\030\004 \001(\0132#.speechkit.stt.v3" +
+      ".AlternativeUpdateH\000\0224\n\005final\030\005 \001(\0132#.sp" +
+      "eechkit.stt.v3.AlternativeUpdateH\000\0221\n\neo" +
+      "u_update\030\006 \001(\0132\033.speechkit.stt.v3.EouUpd" +
+      "ateH\000\022=\n\020final_refinement\030\007 \001(\0132!.speech" +
+      "kit.stt.v3.FinalRefinementH\000\0223\n\013status_c" +
+      "ode\030\010 \001(\0132\034.speechkit.stt.v3.StatusCodeH" +
+      "\000\022J\n\021classifier_update\030\n \001(\0132-.speechkit" +
+      ".stt.v3.RecognitionClassifierUpdateH\000\022\023\n" +
+      "\013channel_tag\030\t \001(\tB\007\n\005Event*K\n\010CodeType\022" +
+      "\031\n\025CODE_TYPE_UNSPECIFIED\020\000\022\013\n\007WORKING\020\001\022" +
+      "\013\n\007WARNING\020\002\022\n\n\006CLOSED\020\003B\\\n\032yandex.cloud" +
+      ".api.ai.stt.v3Z>github.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/ai/stt/v3;sttb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -24227,126 +31077,162 @@ public final class Stt {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_EouClassifierOptions_descriptor,
         new java.lang.String[] { "DefaultClassifier", "ExternalClassifier", "Classifier", });
-    internal_static_speechkit_stt_v3_RawAudio_descriptor =
+    internal_static_speechkit_stt_v3_RecognitionClassifier_descriptor =
       getDescriptor().getMessageTypes().get(4);
+    internal_static_speechkit_stt_v3_RecognitionClassifier_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_RecognitionClassifier_descriptor,
+        new java.lang.String[] { "Classifier", "Triggers", });
+    internal_static_speechkit_stt_v3_RecognitionClassifierOptions_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_speechkit_stt_v3_RecognitionClassifierOptions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_RecognitionClassifierOptions_descriptor,
+        new java.lang.String[] { "Classifiers", });
+    internal_static_speechkit_stt_v3_RawAudio_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_speechkit_stt_v3_RawAudio_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_RawAudio_descriptor,
         new java.lang.String[] { "AudioEncoding", "SampleRateHertz", "AudioChannelCount", });
     internal_static_speechkit_stt_v3_ContainerAudio_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_speechkit_stt_v3_ContainerAudio_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_ContainerAudio_descriptor,
         new java.lang.String[] { "ContainerAudioType", });
     internal_static_speechkit_stt_v3_AudioFormatOptions_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_speechkit_stt_v3_AudioFormatOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_AudioFormatOptions_descriptor,
         new java.lang.String[] { "RawAudio", "ContainerAudio", "AudioFormat", });
     internal_static_speechkit_stt_v3_LanguageRestrictionOptions_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_speechkit_stt_v3_LanguageRestrictionOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_LanguageRestrictionOptions_descriptor,
         new java.lang.String[] { "RestrictionType", "LanguageCode", });
     internal_static_speechkit_stt_v3_RecognitionModelOptions_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_speechkit_stt_v3_RecognitionModelOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_RecognitionModelOptions_descriptor,
         new java.lang.String[] { "Model", "AudioFormat", "TextNormalization", "LanguageRestriction", "AudioProcessingType", });
     internal_static_speechkit_stt_v3_StreamingOptions_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_speechkit_stt_v3_StreamingOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_StreamingOptions_descriptor,
-        new java.lang.String[] { "RecognitionModel", "EouClassifier", });
+        new java.lang.String[] { "RecognitionModel", "EouClassifier", "RecognitionClassifier", });
     internal_static_speechkit_stt_v3_AudioChunk_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_speechkit_stt_v3_AudioChunk_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_AudioChunk_descriptor,
         new java.lang.String[] { "Data", });
     internal_static_speechkit_stt_v3_SilenceChunk_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_speechkit_stt_v3_SilenceChunk_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_SilenceChunk_descriptor,
         new java.lang.String[] { "DurationMs", });
     internal_static_speechkit_stt_v3_Eou_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_speechkit_stt_v3_Eou_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_Eou_descriptor,
         new java.lang.String[] { });
     internal_static_speechkit_stt_v3_StreamingRequest_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_speechkit_stt_v3_StreamingRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_StreamingRequest_descriptor,
         new java.lang.String[] { "SessionOptions", "Chunk", "SilenceChunk", "Eou", "Event", });
     internal_static_speechkit_stt_v3_Word_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_speechkit_stt_v3_Word_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_Word_descriptor,
         new java.lang.String[] { "Text", "StartTimeMs", "EndTimeMs", });
     internal_static_speechkit_stt_v3_LanguageEstimation_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_speechkit_stt_v3_LanguageEstimation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_LanguageEstimation_descriptor,
         new java.lang.String[] { "LanguageCode", "Probability", });
     internal_static_speechkit_stt_v3_Alternative_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_speechkit_stt_v3_Alternative_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_Alternative_descriptor,
         new java.lang.String[] { "Words", "Text", "StartTimeMs", "EndTimeMs", "Confidence", "Languages", });
     internal_static_speechkit_stt_v3_EouUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_speechkit_stt_v3_EouUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_EouUpdate_descriptor,
         new java.lang.String[] { "TimeMs", });
     internal_static_speechkit_stt_v3_AlternativeUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_speechkit_stt_v3_AlternativeUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_AlternativeUpdate_descriptor,
         new java.lang.String[] { "Alternatives", "ChannelTag", });
     internal_static_speechkit_stt_v3_AudioCursors_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_speechkit_stt_v3_AudioCursors_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_AudioCursors_descriptor,
         new java.lang.String[] { "ReceivedDataMs", "ResetTimeMs", "PartialTimeMs", "FinalTimeMs", "FinalIndex", "EouTimeMs", });
     internal_static_speechkit_stt_v3_FinalRefinement_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_speechkit_stt_v3_FinalRefinement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_FinalRefinement_descriptor,
         new java.lang.String[] { "FinalIndex", "NormalizedText", "Type", });
     internal_static_speechkit_stt_v3_StatusCode_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_speechkit_stt_v3_StatusCode_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_StatusCode_descriptor,
         new java.lang.String[] { "CodeType", "Message", });
     internal_static_speechkit_stt_v3_SessionUuid_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_speechkit_stt_v3_SessionUuid_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_SessionUuid_descriptor,
         new java.lang.String[] { "Uuid", "UserRequestId", });
+    internal_static_speechkit_stt_v3_PhraseHighlight_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_speechkit_stt_v3_PhraseHighlight_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_PhraseHighlight_descriptor,
+        new java.lang.String[] { "Text", "StartTimeMs", "EndTimeMs", });
+    internal_static_speechkit_stt_v3_RecognitionClassifierLabel_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_speechkit_stt_v3_RecognitionClassifierLabel_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_RecognitionClassifierLabel_descriptor,
+        new java.lang.String[] { "Label", "Confidence", });
+    internal_static_speechkit_stt_v3_RecognitionClassifierResult_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_speechkit_stt_v3_RecognitionClassifierResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_RecognitionClassifierResult_descriptor,
+        new java.lang.String[] { "Classifier", "Highlights", "Labels", });
+    internal_static_speechkit_stt_v3_RecognitionClassifierUpdate_descriptor =
+      getDescriptor().getMessageTypes().get(28);
+    internal_static_speechkit_stt_v3_RecognitionClassifierUpdate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_RecognitionClassifierUpdate_descriptor,
+        new java.lang.String[] { "WindowType", "StartTimeMs", "EndTimeMs", "ClassifierResult", });
     internal_static_speechkit_stt_v3_StreamingResponse_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_speechkit_stt_v3_StreamingResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_StreamingResponse_descriptor,
-        new java.lang.String[] { "SessionUuid", "AudioCursors", "ResponseWallTimeMs", "Partial", "Final", "EouUpdate", "FinalRefinement", "StatusCode", "ChannelTag", "Event", });
+        new java.lang.String[] { "SessionUuid", "AudioCursors", "ResponseWallTimeMs", "Partial", "Final", "EouUpdate", "FinalRefinement", "StatusCode", "ClassifierUpdate", "ChannelTag", "Event", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

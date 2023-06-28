@@ -3763,7 +3763,7 @@ public final class Config {
      * <pre>
      * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -3774,7 +3774,7 @@ public final class Config {
      * <pre>
      * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -3785,7 +3785,7 @@ public final class Config {
      * <pre>
      * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -3796,7 +3796,7 @@ public final class Config {
      * <pre>
      * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -3807,7 +3807,7 @@ public final class Config {
      * <pre>
      * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -3818,7 +3818,7 @@ public final class Config {
      * <pre>
      * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -3833,7 +3833,7 @@ public final class Config {
      * Set to zero to disable the limit.
      * Master session reloads if the parameter changes.
      * Default value is 10000.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -3848,7 +3848,7 @@ public final class Config {
      * Set to zero to disable the limit.
      * Master session reloads if the parameter changes.
      * Default value is 10000.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -3863,7 +3863,7 @@ public final class Config {
      * Set to zero to disable the limit.
      * Master session reloads if the parameter changes.
      * Default value is 10000.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -3903,7 +3903,7 @@ public final class Config {
     /**
      * <pre>
      * Whether the spill files are compressed or not.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -3913,7 +3913,7 @@ public final class Config {
     /**
      * <pre>
      * Whether the spill files are compressed or not.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -3923,7 +3923,7 @@ public final class Config {
     /**
      * <pre>
      * Whether the spill files are compressed or not.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -4183,7 +4183,7 @@ public final class Config {
      * <pre>
      * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -4197,7 +4197,7 @@ public final class Config {
      * <pre>
      * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -4211,7 +4211,7 @@ public final class Config {
      * <pre>
      * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -4227,7 +4227,7 @@ public final class Config {
      * <pre>
      * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -4241,7 +4241,7 @@ public final class Config {
      * <pre>
      * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -4255,7 +4255,7 @@ public final class Config {
      * <pre>
      * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -4275,7 +4275,7 @@ public final class Config {
      * Set to zero to disable the limit.
      * Master session reloads if the parameter changes.
      * Default value is 10000.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -4293,7 +4293,7 @@ public final class Config {
      * Set to zero to disable the limit.
      * Master session reloads if the parameter changes.
      * Default value is 10000.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -4311,7 +4311,7 @@ public final class Config {
      * Set to zero to disable the limit.
      * Master session reloads if the parameter changes.
      * Default value is 10000.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -4367,7 +4367,7 @@ public final class Config {
     /**
      * <pre>
      * Whether the spill files are compressed or not.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -4380,7 +4380,7 @@ public final class Config {
     /**
      * <pre>
      * Whether the spill files are compressed or not.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -4393,7 +4393,7 @@ public final class Config {
     /**
      * <pre>
      * Whether the spill files are compressed or not.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -5224,7 +5224,7 @@ public final class Config {
        * <pre>
        * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -5237,7 +5237,7 @@ public final class Config {
        * <pre>
        * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -5254,7 +5254,7 @@ public final class Config {
        * <pre>
        * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -5276,7 +5276,7 @@ public final class Config {
        * <pre>
        * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -5296,7 +5296,7 @@ public final class Config {
        * <pre>
        * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -5320,7 +5320,7 @@ public final class Config {
        * <pre>
        * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -5340,7 +5340,7 @@ public final class Config {
        * <pre>
        * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -5354,7 +5354,7 @@ public final class Config {
        * <pre>
        * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -5371,7 +5371,7 @@ public final class Config {
        * <pre>
        * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -5397,7 +5397,7 @@ public final class Config {
        * <pre>
        * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -5410,7 +5410,7 @@ public final class Config {
        * <pre>
        * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -5427,7 +5427,7 @@ public final class Config {
        * <pre>
        * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -5449,7 +5449,7 @@ public final class Config {
        * <pre>
        * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -5469,7 +5469,7 @@ public final class Config {
        * <pre>
        * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -5493,7 +5493,7 @@ public final class Config {
        * <pre>
        * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -5513,7 +5513,7 @@ public final class Config {
        * <pre>
        * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -5527,7 +5527,7 @@ public final class Config {
        * <pre>
        * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -5544,7 +5544,7 @@ public final class Config {
        * <pre>
        * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -5574,7 +5574,7 @@ public final class Config {
        * Set to zero to disable the limit.
        * Master session reloads if the parameter changes.
        * Default value is 10000.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -5591,7 +5591,7 @@ public final class Config {
        * Set to zero to disable the limit.
        * Master session reloads if the parameter changes.
        * Default value is 10000.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -5612,7 +5612,7 @@ public final class Config {
        * Set to zero to disable the limit.
        * Master session reloads if the parameter changes.
        * Default value is 10000.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -5638,7 +5638,7 @@ public final class Config {
        * Set to zero to disable the limit.
        * Master session reloads if the parameter changes.
        * Default value is 10000.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -5662,7 +5662,7 @@ public final class Config {
        * Set to zero to disable the limit.
        * Master session reloads if the parameter changes.
        * Default value is 10000.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -5690,7 +5690,7 @@ public final class Config {
        * Set to zero to disable the limit.
        * Master session reloads if the parameter changes.
        * Default value is 10000.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -5714,7 +5714,7 @@ public final class Config {
        * Set to zero to disable the limit.
        * Master session reloads if the parameter changes.
        * Default value is 10000.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -5732,7 +5732,7 @@ public final class Config {
        * Set to zero to disable the limit.
        * Master session reloads if the parameter changes.
        * Default value is 10000.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -5753,7 +5753,7 @@ public final class Config {
        * Set to zero to disable the limit.
        * Master session reloads if the parameter changes.
        * Default value is 10000.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -5942,7 +5942,7 @@ public final class Config {
       /**
        * <pre>
        * Whether the spill files are compressed or not.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -5954,7 +5954,7 @@ public final class Config {
       /**
        * <pre>
        * Whether the spill files are compressed or not.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -5970,7 +5970,7 @@ public final class Config {
       /**
        * <pre>
        * Whether the spill files are compressed or not.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -5991,7 +5991,7 @@ public final class Config {
       /**
        * <pre>
        * Whether the spill files are compressed or not.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -6010,7 +6010,7 @@ public final class Config {
       /**
        * <pre>
        * Whether the spill files are compressed or not.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -6033,7 +6033,7 @@ public final class Config {
       /**
        * <pre>
        * Whether the spill files are compressed or not.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -6052,7 +6052,7 @@ public final class Config {
       /**
        * <pre>
        * Whether the spill files are compressed or not.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -6065,7 +6065,7 @@ public final class Config {
       /**
        * <pre>
        * Whether the spill files are compressed or not.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -6081,7 +6081,7 @@ public final class Config {
       /**
        * <pre>
        * Whether the spill files are compressed or not.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -6217,7 +6217,7 @@ public final class Config {
      * <pre>
      * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -6228,7 +6228,7 @@ public final class Config {
      * <pre>
      * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -6239,7 +6239,7 @@ public final class Config {
      * <pre>
      * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -6250,7 +6250,7 @@ public final class Config {
      * <pre>
      * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -6261,7 +6261,7 @@ public final class Config {
      * <pre>
      * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -6272,7 +6272,7 @@ public final class Config {
      * <pre>
      * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -6287,7 +6287,7 @@ public final class Config {
      * Set to zero to disable the limit.
      * Master session reloads if the parameter changes.
      * Default value is 10000.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -6302,7 +6302,7 @@ public final class Config {
      * Set to zero to disable the limit.
      * Master session reloads if the parameter changes.
      * Default value is 10000.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -6317,7 +6317,7 @@ public final class Config {
      * Set to zero to disable the limit.
      * Master session reloads if the parameter changes.
      * Default value is 10000.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -6357,7 +6357,7 @@ public final class Config {
     /**
      * <pre>
      * Whether the spill files are compressed or not.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -6367,7 +6367,7 @@ public final class Config {
     /**
      * <pre>
      * Whether the spill files are compressed or not.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -6377,7 +6377,7 @@ public final class Config {
     /**
      * <pre>
      * Whether the spill files are compressed or not.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -6430,7 +6430,7 @@ public final class Config {
      * <pre>
      * Logged SQL statements.
      * `PREPARE` and `EXPLAIN ANALYZE` statements are also logged if their contained command belongs to an appropriate type.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
@@ -6441,7 +6441,7 @@ public final class Config {
      * <pre>
      * Logged SQL statements.
      * `PREPARE` and `EXPLAIN ANALYZE` statements are also logged if their contained command belongs to an appropriate type.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
@@ -6722,7 +6722,7 @@ public final class Config {
      * <pre>
      * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -6736,7 +6736,7 @@ public final class Config {
      * <pre>
      * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -6750,7 +6750,7 @@ public final class Config {
      * <pre>
      * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -6766,7 +6766,7 @@ public final class Config {
      * <pre>
      * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -6780,7 +6780,7 @@ public final class Config {
      * <pre>
      * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -6794,7 +6794,7 @@ public final class Config {
      * <pre>
      * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0 (no limit).
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -6814,7 +6814,7 @@ public final class Config {
      * Set to zero to disable the limit.
      * Master session reloads if the parameter changes.
      * Default value is 10000.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -6832,7 +6832,7 @@ public final class Config {
      * Set to zero to disable the limit.
      * Master session reloads if the parameter changes.
      * Default value is 10000.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -6850,7 +6850,7 @@ public final class Config {
      * Set to zero to disable the limit.
      * Master session reloads if the parameter changes.
      * Default value is 10000.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -6906,7 +6906,7 @@ public final class Config {
     /**
      * <pre>
      * Whether the spill files are compressed or not.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -6919,7 +6919,7 @@ public final class Config {
     /**
      * <pre>
      * Whether the spill files are compressed or not.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -6932,7 +6932,7 @@ public final class Config {
     /**
      * <pre>
      * Whether the spill files are compressed or not.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -7001,7 +7001,7 @@ public final class Config {
      * <pre>
      * Logged SQL statements.
      * `PREPARE` and `EXPLAIN ANALYZE` statements are also logged if their contained command belongs to an appropriate type.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
@@ -7014,7 +7014,7 @@ public final class Config {
      * <pre>
      * Logged SQL statements.
      * `PREPARE` and `EXPLAIN ANALYZE` statements are also logged if their contained command belongs to an appropriate type.
-     * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement).
+     * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement).
      * </pre>
      *
      * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
@@ -7893,7 +7893,7 @@ public final class Config {
        * <pre>
        * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -7906,7 +7906,7 @@ public final class Config {
        * <pre>
        * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -7923,7 +7923,7 @@ public final class Config {
        * <pre>
        * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -7945,7 +7945,7 @@ public final class Config {
        * <pre>
        * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -7965,7 +7965,7 @@ public final class Config {
        * <pre>
        * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -7989,7 +7989,7 @@ public final class Config {
        * <pre>
        * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -8009,7 +8009,7 @@ public final class Config {
        * <pre>
        * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -8023,7 +8023,7 @@ public final class Config {
        * <pre>
        * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -8040,7 +8040,7 @@ public final class Config {
        * <pre>
        * The maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -8066,7 +8066,7 @@ public final class Config {
        * <pre>
        * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -8079,7 +8079,7 @@ public final class Config {
        * <pre>
        * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -8096,7 +8096,7 @@ public final class Config {
        * <pre>
        * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -8118,7 +8118,7 @@ public final class Config {
        * <pre>
        * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -8138,7 +8138,7 @@ public final class Config {
        * <pre>
        * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -8162,7 +8162,7 @@ public final class Config {
        * <pre>
        * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -8182,7 +8182,7 @@ public final class Config {
        * <pre>
        * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -8196,7 +8196,7 @@ public final class Config {
        * <pre>
        * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -8213,7 +8213,7 @@ public final class Config {
        * <pre>
        * The maximum disk size that an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0 (no limit).
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -8243,7 +8243,7 @@ public final class Config {
        * Set to zero to disable the limit.
        * Master session reloads if the parameter changes.
        * Default value is 10000.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -8260,7 +8260,7 @@ public final class Config {
        * Set to zero to disable the limit.
        * Master session reloads if the parameter changes.
        * Default value is 10000.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -8281,7 +8281,7 @@ public final class Config {
        * Set to zero to disable the limit.
        * Master session reloads if the parameter changes.
        * Default value is 10000.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -8307,7 +8307,7 @@ public final class Config {
        * Set to zero to disable the limit.
        * Master session reloads if the parameter changes.
        * Default value is 10000.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -8331,7 +8331,7 @@ public final class Config {
        * Set to zero to disable the limit.
        * Master session reloads if the parameter changes.
        * Default value is 10000.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -8359,7 +8359,7 @@ public final class Config {
        * Set to zero to disable the limit.
        * Master session reloads if the parameter changes.
        * Default value is 10000.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -8383,7 +8383,7 @@ public final class Config {
        * Set to zero to disable the limit.
        * Master session reloads if the parameter changes.
        * Default value is 10000.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -8401,7 +8401,7 @@ public final class Config {
        * Set to zero to disable the limit.
        * Master session reloads if the parameter changes.
        * Default value is 10000.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -8422,7 +8422,7 @@ public final class Config {
        * Set to zero to disable the limit.
        * Master session reloads if the parameter changes.
        * Default value is 10000.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query).
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
@@ -8611,7 +8611,7 @@ public final class Config {
       /**
        * <pre>
        * Whether the spill files are compressed or not.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -8623,7 +8623,7 @@ public final class Config {
       /**
        * <pre>
        * Whether the spill files are compressed or not.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -8639,7 +8639,7 @@ public final class Config {
       /**
        * <pre>
        * Whether the spill files are compressed or not.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -8660,7 +8660,7 @@ public final class Config {
       /**
        * <pre>
        * Whether the spill files are compressed or not.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -8679,7 +8679,7 @@ public final class Config {
       /**
        * <pre>
        * Whether the spill files are compressed or not.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -8702,7 +8702,7 @@ public final class Config {
       /**
        * <pre>
        * Whether the spill files are compressed or not.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -8721,7 +8721,7 @@ public final class Config {
       /**
        * <pre>
        * Whether the spill files are compressed or not.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -8734,7 +8734,7 @@ public final class Config {
       /**
        * <pre>
        * Whether the spill files are compressed or not.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -8750,7 +8750,7 @@ public final class Config {
       /**
        * <pre>
        * Whether the spill files are compressed or not.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression).
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -8974,7 +8974,7 @@ public final class Config {
        * <pre>
        * Logged SQL statements.
        * `PREPARE` and `EXPLAIN ANALYZE` statements are also logged if their contained command belongs to an appropriate type.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
@@ -8987,7 +8987,7 @@ public final class Config {
        * <pre>
        * Logged SQL statements.
        * `PREPARE` and `EXPLAIN ANALYZE` statements are also logged if their contained command belongs to an appropriate type.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
@@ -9004,7 +9004,7 @@ public final class Config {
        * <pre>
        * Logged SQL statements.
        * `PREPARE` and `EXPLAIN ANALYZE` statements are also logged if their contained command belongs to an appropriate type.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
@@ -9020,7 +9020,7 @@ public final class Config {
        * <pre>
        * Logged SQL statements.
        * `PREPARE` and `EXPLAIN ANALYZE` statements are also logged if their contained command belongs to an appropriate type.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
@@ -9040,7 +9040,7 @@ public final class Config {
        * <pre>
        * Logged SQL statements.
        * `PREPARE` and `EXPLAIN ANALYZE` statements are also logged if their contained command belongs to an appropriate type.
-       * More info in [Greenplum® documentation](https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement).
+       * More info in [Greenplum® documentation](https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement).
        * </pre>
        *
        * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
@@ -9170,7 +9170,7 @@ public final class Config {
      * <pre>
      * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -9181,7 +9181,7 @@ public final class Config {
      * <pre>
      * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -9192,7 +9192,7 @@ public final class Config {
      * <pre>
      * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -9203,7 +9203,7 @@ public final class Config {
      * <pre>
      * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -9214,7 +9214,7 @@ public final class Config {
      * <pre>
      * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -9225,7 +9225,7 @@ public final class Config {
      * <pre>
      * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -9238,7 +9238,7 @@ public final class Config {
      * Spill files are created when executing a query that requires more memory than it is allocated.
      * The current query is terminated when the limit is exceeded.
      * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
      * Default value is 10000
      * </pre>
      *
@@ -9252,7 +9252,7 @@ public final class Config {
      * Spill files are created when executing a query that requires more memory than it is allocated.
      * The current query is terminated when the limit is exceeded.
      * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
      * Default value is 10000
      * </pre>
      *
@@ -9266,7 +9266,7 @@ public final class Config {
      * Spill files are created when executing a query that requires more memory than it is allocated.
      * The current query is terminated when the limit is exceeded.
      * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
      * Default value is 10000
      * </pre>
      *
@@ -9307,7 +9307,7 @@ public final class Config {
     /**
      * <pre>
      * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -9317,7 +9317,7 @@ public final class Config {
     /**
      * <pre>
      * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -9327,7 +9327,7 @@ public final class Config {
     /**
      * <pre>
      * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -9381,7 +9381,7 @@ public final class Config {
      * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
      * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
      * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement
      * Default value is ddl
      * </pre>
      *
@@ -9394,7 +9394,7 @@ public final class Config {
      * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
      * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
      * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement
      * Default value is ddl
      * </pre>
      *
@@ -9716,7 +9716,7 @@ public final class Config {
      * <pre>
      * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -9730,7 +9730,7 @@ public final class Config {
      * <pre>
      * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -9744,7 +9744,7 @@ public final class Config {
      * <pre>
      * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -9760,7 +9760,7 @@ public final class Config {
      * <pre>
      * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -9774,7 +9774,7 @@ public final class Config {
      * <pre>
      * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -9788,7 +9788,7 @@ public final class Config {
      * <pre>
      * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -9806,7 +9806,7 @@ public final class Config {
      * Spill files are created when executing a query that requires more memory than it is allocated.
      * The current query is terminated when the limit is exceeded.
      * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
      * Default value is 10000
      * </pre>
      *
@@ -9823,7 +9823,7 @@ public final class Config {
      * Spill files are created when executing a query that requires more memory than it is allocated.
      * The current query is terminated when the limit is exceeded.
      * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
      * Default value is 10000
      * </pre>
      *
@@ -9840,7 +9840,7 @@ public final class Config {
      * Spill files are created when executing a query that requires more memory than it is allocated.
      * The current query is terminated when the limit is exceeded.
      * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
      * Default value is 10000
      * </pre>
      *
@@ -9897,7 +9897,7 @@ public final class Config {
     /**
      * <pre>
      * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -9910,7 +9910,7 @@ public final class Config {
     /**
      * <pre>
      * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -9923,7 +9923,7 @@ public final class Config {
     /**
      * <pre>
      * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -9993,7 +9993,7 @@ public final class Config {
      * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
      * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
      * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement
      * Default value is ddl
      * </pre>
      *
@@ -10008,7 +10008,7 @@ public final class Config {
      * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
      * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
      * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement
      * Default value is ddl
      * </pre>
      *
@@ -10956,7 +10956,7 @@ public final class Config {
        * <pre>
        * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -10969,7 +10969,7 @@ public final class Config {
        * <pre>
        * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -10986,7 +10986,7 @@ public final class Config {
        * <pre>
        * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -11008,7 +11008,7 @@ public final class Config {
        * <pre>
        * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -11028,7 +11028,7 @@ public final class Config {
        * <pre>
        * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -11052,7 +11052,7 @@ public final class Config {
        * <pre>
        * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -11072,7 +11072,7 @@ public final class Config {
        * <pre>
        * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -11086,7 +11086,7 @@ public final class Config {
        * <pre>
        * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -11103,7 +11103,7 @@ public final class Config {
        * <pre>
        * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -11129,7 +11129,7 @@ public final class Config {
        * <pre>
        * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -11142,7 +11142,7 @@ public final class Config {
        * <pre>
        * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -11159,7 +11159,7 @@ public final class Config {
        * <pre>
        * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -11181,7 +11181,7 @@ public final class Config {
        * <pre>
        * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -11201,7 +11201,7 @@ public final class Config {
        * <pre>
        * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -11225,7 +11225,7 @@ public final class Config {
        * <pre>
        * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -11245,7 +11245,7 @@ public final class Config {
        * <pre>
        * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -11259,7 +11259,7 @@ public final class Config {
        * <pre>
        * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -11276,7 +11276,7 @@ public final class Config {
        * <pre>
        * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -11304,7 +11304,7 @@ public final class Config {
        * Spill files are created when executing a query that requires more memory than it is allocated.
        * The current query is terminated when the limit is exceeded.
        * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
        * Default value is 10000
        * </pre>
        *
@@ -11320,7 +11320,7 @@ public final class Config {
        * Spill files are created when executing a query that requires more memory than it is allocated.
        * The current query is terminated when the limit is exceeded.
        * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
        * Default value is 10000
        * </pre>
        *
@@ -11340,7 +11340,7 @@ public final class Config {
        * Spill files are created when executing a query that requires more memory than it is allocated.
        * The current query is terminated when the limit is exceeded.
        * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
        * Default value is 10000
        * </pre>
        *
@@ -11365,7 +11365,7 @@ public final class Config {
        * Spill files are created when executing a query that requires more memory than it is allocated.
        * The current query is terminated when the limit is exceeded.
        * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
        * Default value is 10000
        * </pre>
        *
@@ -11388,7 +11388,7 @@ public final class Config {
        * Spill files are created when executing a query that requires more memory than it is allocated.
        * The current query is terminated when the limit is exceeded.
        * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
        * Default value is 10000
        * </pre>
        *
@@ -11415,7 +11415,7 @@ public final class Config {
        * Spill files are created when executing a query that requires more memory than it is allocated.
        * The current query is terminated when the limit is exceeded.
        * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
        * Default value is 10000
        * </pre>
        *
@@ -11438,7 +11438,7 @@ public final class Config {
        * Spill files are created when executing a query that requires more memory than it is allocated.
        * The current query is terminated when the limit is exceeded.
        * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
        * Default value is 10000
        * </pre>
        *
@@ -11455,7 +11455,7 @@ public final class Config {
        * Spill files are created when executing a query that requires more memory than it is allocated.
        * The current query is terminated when the limit is exceeded.
        * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
        * Default value is 10000
        * </pre>
        *
@@ -11475,7 +11475,7 @@ public final class Config {
        * Spill files are created when executing a query that requires more memory than it is allocated.
        * The current query is terminated when the limit is exceeded.
        * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
        * Default value is 10000
        * </pre>
        *
@@ -11665,7 +11665,7 @@ public final class Config {
       /**
        * <pre>
        * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -11677,7 +11677,7 @@ public final class Config {
       /**
        * <pre>
        * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -11693,7 +11693,7 @@ public final class Config {
       /**
        * <pre>
        * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -11714,7 +11714,7 @@ public final class Config {
       /**
        * <pre>
        * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -11733,7 +11733,7 @@ public final class Config {
       /**
        * <pre>
        * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -11756,7 +11756,7 @@ public final class Config {
       /**
        * <pre>
        * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -11775,7 +11775,7 @@ public final class Config {
       /**
        * <pre>
        * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -11788,7 +11788,7 @@ public final class Config {
       /**
        * <pre>
        * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -11804,7 +11804,7 @@ public final class Config {
       /**
        * <pre>
        * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -12029,7 +12029,7 @@ public final class Config {
        * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
        * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
        * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement
        * Default value is ddl
        * </pre>
        *
@@ -12044,7 +12044,7 @@ public final class Config {
        * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
        * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
        * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement
        * Default value is ddl
        * </pre>
        *
@@ -12063,7 +12063,7 @@ public final class Config {
        * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
        * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
        * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement
        * Default value is ddl
        * </pre>
        *
@@ -12081,7 +12081,7 @@ public final class Config {
        * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
        * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
        * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement
        * Default value is ddl
        * </pre>
        *
@@ -12103,7 +12103,7 @@ public final class Config {
        * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
        * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
        * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement
        * Default value is ddl
        * </pre>
        *
@@ -12389,7 +12389,7 @@ public final class Config {
      * <pre>
      * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -12400,7 +12400,7 @@ public final class Config {
      * <pre>
      * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -12411,7 +12411,7 @@ public final class Config {
      * <pre>
      * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -12422,7 +12422,7 @@ public final class Config {
      * <pre>
      * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -12433,7 +12433,7 @@ public final class Config {
      * <pre>
      * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -12444,7 +12444,7 @@ public final class Config {
      * <pre>
      * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -12457,7 +12457,7 @@ public final class Config {
      * Spill files are created when executing a query that requires more memory than it is allocated.
      * The current query is terminated when the limit is exceeded.
      * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
      * Default value is 10000
      * </pre>
      *
@@ -12471,7 +12471,7 @@ public final class Config {
      * Spill files are created when executing a query that requires more memory than it is allocated.
      * The current query is terminated when the limit is exceeded.
      * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
      * Default value is 10000
      * </pre>
      *
@@ -12485,7 +12485,7 @@ public final class Config {
      * Spill files are created when executing a query that requires more memory than it is allocated.
      * The current query is terminated when the limit is exceeded.
      * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
      * Default value is 10000
      * </pre>
      *
@@ -12526,7 +12526,7 @@ public final class Config {
     /**
      * <pre>
      * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -12536,7 +12536,7 @@ public final class Config {
     /**
      * <pre>
      * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -12546,7 +12546,7 @@ public final class Config {
     /**
      * <pre>
      * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -12600,7 +12600,7 @@ public final class Config {
      * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
      * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
      * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement
      * Default value is ddl
      * </pre>
      *
@@ -12613,7 +12613,7 @@ public final class Config {
      * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
      * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
      * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement
      * Default value is ddl
      * </pre>
      *
@@ -12935,7 +12935,7 @@ public final class Config {
      * <pre>
      * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -12949,7 +12949,7 @@ public final class Config {
      * <pre>
      * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -12963,7 +12963,7 @@ public final class Config {
      * <pre>
      * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -12979,7 +12979,7 @@ public final class Config {
      * <pre>
      * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -12993,7 +12993,7 @@ public final class Config {
      * <pre>
      * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -13007,7 +13007,7 @@ public final class Config {
      * <pre>
      * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
      * The default value is 0, which means a limit is not enforced.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
      * </pre>
      *
      * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -13025,7 +13025,7 @@ public final class Config {
      * Spill files are created when executing a query that requires more memory than it is allocated.
      * The current query is terminated when the limit is exceeded.
      * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
      * Default value is 10000
      * </pre>
      *
@@ -13042,7 +13042,7 @@ public final class Config {
      * Spill files are created when executing a query that requires more memory than it is allocated.
      * The current query is terminated when the limit is exceeded.
      * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
      * Default value is 10000
      * </pre>
      *
@@ -13059,7 +13059,7 @@ public final class Config {
      * Spill files are created when executing a query that requires more memory than it is allocated.
      * The current query is terminated when the limit is exceeded.
      * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
      * Default value is 10000
      * </pre>
      *
@@ -13116,7 +13116,7 @@ public final class Config {
     /**
      * <pre>
      * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -13129,7 +13129,7 @@ public final class Config {
     /**
      * <pre>
      * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -13142,7 +13142,7 @@ public final class Config {
     /**
      * <pre>
      * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
      * </pre>
      *
      * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -13212,7 +13212,7 @@ public final class Config {
      * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
      * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
      * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement
      * Default value is ddl
      * </pre>
      *
@@ -13227,7 +13227,7 @@ public final class Config {
      * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
      * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
      * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+     * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement
      * Default value is ddl
      * </pre>
      *
@@ -14175,7 +14175,7 @@ public final class Config {
        * <pre>
        * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -14188,7 +14188,7 @@ public final class Config {
        * <pre>
        * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -14205,7 +14205,7 @@ public final class Config {
        * <pre>
        * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -14227,7 +14227,7 @@ public final class Config {
        * <pre>
        * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -14247,7 +14247,7 @@ public final class Config {
        * <pre>
        * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -14271,7 +14271,7 @@ public final class Config {
        * <pre>
        * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -14291,7 +14291,7 @@ public final class Config {
        * <pre>
        * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -14305,7 +14305,7 @@ public final class Config {
        * <pre>
        * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -14322,7 +14322,7 @@ public final class Config {
        * <pre>
        * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_segment
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
@@ -14348,7 +14348,7 @@ public final class Config {
        * <pre>
        * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -14361,7 +14361,7 @@ public final class Config {
        * <pre>
        * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -14378,7 +14378,7 @@ public final class Config {
        * <pre>
        * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -14400,7 +14400,7 @@ public final class Config {
        * <pre>
        * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -14420,7 +14420,7 @@ public final class Config {
        * <pre>
        * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -14444,7 +14444,7 @@ public final class Config {
        * <pre>
        * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -14464,7 +14464,7 @@ public final class Config {
        * <pre>
        * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -14478,7 +14478,7 @@ public final class Config {
        * <pre>
        * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -14495,7 +14495,7 @@ public final class Config {
        * <pre>
        * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
        * The default value is 0, which means a limit is not enforced.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_per_query
        * </pre>
        *
        * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
@@ -14523,7 +14523,7 @@ public final class Config {
        * Spill files are created when executing a query that requires more memory than it is allocated.
        * The current query is terminated when the limit is exceeded.
        * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
        * Default value is 10000
        * </pre>
        *
@@ -14539,7 +14539,7 @@ public final class Config {
        * Spill files are created when executing a query that requires more memory than it is allocated.
        * The current query is terminated when the limit is exceeded.
        * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
        * Default value is 10000
        * </pre>
        *
@@ -14559,7 +14559,7 @@ public final class Config {
        * Spill files are created when executing a query that requires more memory than it is allocated.
        * The current query is terminated when the limit is exceeded.
        * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
        * Default value is 10000
        * </pre>
        *
@@ -14584,7 +14584,7 @@ public final class Config {
        * Spill files are created when executing a query that requires more memory than it is allocated.
        * The current query is terminated when the limit is exceeded.
        * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
        * Default value is 10000
        * </pre>
        *
@@ -14607,7 +14607,7 @@ public final class Config {
        * Spill files are created when executing a query that requires more memory than it is allocated.
        * The current query is terminated when the limit is exceeded.
        * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
        * Default value is 10000
        * </pre>
        *
@@ -14634,7 +14634,7 @@ public final class Config {
        * Spill files are created when executing a query that requires more memory than it is allocated.
        * The current query is terminated when the limit is exceeded.
        * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
        * Default value is 10000
        * </pre>
        *
@@ -14657,7 +14657,7 @@ public final class Config {
        * Spill files are created when executing a query that requires more memory than it is allocated.
        * The current query is terminated when the limit is exceeded.
        * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
        * Default value is 10000
        * </pre>
        *
@@ -14674,7 +14674,7 @@ public final class Config {
        * Spill files are created when executing a query that requires more memory than it is allocated.
        * The current query is terminated when the limit is exceeded.
        * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
        * Default value is 10000
        * </pre>
        *
@@ -14694,7 +14694,7 @@ public final class Config {
        * Spill files are created when executing a query that requires more memory than it is allocated.
        * The current query is terminated when the limit is exceeded.
        * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_limit_files_per_query
        * Default value is 10000
        * </pre>
        *
@@ -14884,7 +14884,7 @@ public final class Config {
       /**
        * <pre>
        * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -14896,7 +14896,7 @@ public final class Config {
       /**
        * <pre>
        * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -14912,7 +14912,7 @@ public final class Config {
       /**
        * <pre>
        * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -14933,7 +14933,7 @@ public final class Config {
       /**
        * <pre>
        * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -14952,7 +14952,7 @@ public final class Config {
       /**
        * <pre>
        * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -14975,7 +14975,7 @@ public final class Config {
       /**
        * <pre>
        * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -14994,7 +14994,7 @@ public final class Config {
       /**
        * <pre>
        * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -15007,7 +15007,7 @@ public final class Config {
       /**
        * <pre>
        * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -15023,7 +15023,7 @@ public final class Config {
       /**
        * <pre>
        * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#gp_workfile_compression
        * </pre>
        *
        * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
@@ -15248,7 +15248,7 @@ public final class Config {
        * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
        * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
        * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement
        * Default value is ddl
        * </pre>
        *
@@ -15263,7 +15263,7 @@ public final class Config {
        * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
        * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
        * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement
        * Default value is ddl
        * </pre>
        *
@@ -15282,7 +15282,7 @@ public final class Config {
        * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
        * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
        * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement
        * Default value is ddl
        * </pre>
        *
@@ -15300,7 +15300,7 @@ public final class Config {
        * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
        * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
        * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement
        * Default value is ddl
        * </pre>
        *
@@ -15322,7 +15322,7 @@ public final class Config {
        * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
        * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
        * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
-       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * https://docs.vmware.com/en/VMware-Greenplum/6/greenplum-database/ref_guide-config_params-guc-list.html#log_statement
        * Default value is ddl
        * </pre>
        *

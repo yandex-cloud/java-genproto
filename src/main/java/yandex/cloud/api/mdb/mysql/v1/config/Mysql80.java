@@ -255,7 +255,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Authentication plugin used in the managed MySQL cluster.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_authentication_plugin for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_authentication_plugin) for details.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
@@ -265,7 +265,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Authentication plugin used in the managed MySQL cluster.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_authentication_plugin for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_authentication_plugin) for details.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
@@ -276,7 +276,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Transaction log flush behaviour.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_flush_log_at_trx_commit = 9 [(.yandex.cloud.value) = "1-2"];</code>
@@ -286,7 +286,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Transaction log flush behaviour.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_flush_log_at_trx_commit = 9 [(.yandex.cloud.value) = "1-2"];</code>
@@ -296,7 +296,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Transaction log flush behaviour.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_flush_log_at_trx_commit = 9 [(.yandex.cloud.value) = "1-2"];</code>
@@ -306,7 +306,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Max time in seconds for a transaction to wait for a row lock.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_lock_wait_timeout = 10 [(.yandex.cloud.value) = "1-28800"];</code>
@@ -316,7 +316,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Max time in seconds for a transaction to wait for a row lock.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_lock_wait_timeout = 10 [(.yandex.cloud.value) = "1-28800"];</code>
@@ -326,7 +326,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Max time in seconds for a transaction to wait for a row lock.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_lock_wait_timeout = 10 [(.yandex.cloud.value) = "1-28800"];</code>
@@ -336,7 +336,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Default transaction isolation level.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_isolation for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_isolation) for details.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.TransactionIsolation transaction_isolation = 11;</code>
@@ -346,7 +346,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Default transaction isolation level.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_isolation for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_isolation) for details.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.TransactionIsolation transaction_isolation = 11;</code>
@@ -357,7 +357,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Print information about deadlocks in error log.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_print_all_deadlocks = 12;</code>
@@ -367,7 +367,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Print information about deadlocks in error log.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_print_all_deadlocks = 12;</code>
@@ -377,7 +377,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Print information about deadlocks in error log.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_print_all_deadlocks = 12;</code>
@@ -387,7 +387,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of seconds to wait for more data from a connection before aborting the read.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value net_read_timeout = 13 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -397,7 +397,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of seconds to wait for more data from a connection before aborting the read.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value net_read_timeout = 13 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -407,7 +407,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of seconds to wait for more data from a connection before aborting the read.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value net_read_timeout = 13 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -417,7 +417,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of seconds to wait for a block to be written to a connection before aborting the write.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value net_write_timeout = 14 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -427,7 +427,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of seconds to wait for a block to be written to a connection before aborting the write.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value net_write_timeout = 14 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -437,7 +437,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of seconds to wait for a block to be written to a connection before aborting the write.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value net_write_timeout = 14 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -447,7 +447,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The maximum permitted result length in bytes for the GROUP_CONCAT() function.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_concat_max_len = 15 [(.yandex.cloud.value) = "4-33554432"];</code>
@@ -457,7 +457,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The maximum permitted result length in bytes for the GROUP_CONCAT() function.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_concat_max_len = 15 [(.yandex.cloud.value) = "4-33554432"];</code>
@@ -467,7 +467,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The maximum permitted result length in bytes for the GROUP_CONCAT() function.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_concat_max_len = 15 [(.yandex.cloud.value) = "4-33554432"];</code>
@@ -477,7 +477,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The maximum size of internal in-memory temporary tables.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
@@ -487,7 +487,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The maximum size of internal in-memory temporary tables.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
@@ -497,7 +497,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The maximum size of internal in-memory temporary tables.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
@@ -507,7 +507,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * This variable sets the maximum size to which user-created MEMORY tables are permitted to grow.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
@@ -517,7 +517,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * This variable sets the maximum size to which user-created MEMORY tables are permitted to grow.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
@@ -527,7 +527,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * This variable sets the maximum size to which user-created MEMORY tables are permitted to grow.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
@@ -537,7 +537,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The servers default time zone.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_default-time-zone for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_default-time-zone) for details.
      * </pre>
      *
      * <code>string default_time_zone = 18;</code>
@@ -547,7 +547,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The servers default time zone.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_default-time-zone for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_default-time-zone) for details.
      * </pre>
      *
      * <code>string default_time_zone = 18;</code>
@@ -559,7 +559,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The servers default character set.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_server for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_server) for details.
      * </pre>
      *
      * <code>string character_set_server = 19;</code>
@@ -569,7 +569,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The servers default character set.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_server for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_server) for details.
      * </pre>
      *
      * <code>string character_set_server = 19;</code>
@@ -581,7 +581,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The server default collation.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_collation_server for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_collation_server) for details.
      * </pre>
      *
      * <code>string collation_server = 20;</code>
@@ -591,7 +591,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The server default collation.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_collation_server for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_collation_server) for details.
      * </pre>
      *
      * <code>string collation_server = 20;</code>
@@ -603,7 +603,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Enables InnoDB adaptive hash index.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
@@ -613,7 +613,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Enables InnoDB adaptive hash index.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
@@ -623,7 +623,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Enables InnoDB adaptive hash index.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
@@ -633,7 +633,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
@@ -643,7 +643,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
@@ -653,7 +653,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
@@ -663,7 +663,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
@@ -673,7 +673,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
@@ -683,7 +683,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
@@ -693,7 +693,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The size in bytes of the single InnoDB Redo log file.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
@@ -703,7 +703,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The size in bytes of the single InnoDB Redo log file.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
@@ -713,7 +713,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The size in bytes of the single InnoDB Redo log file.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
@@ -723,7 +723,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Limits IO available for InnoDB background tasks.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -733,7 +733,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Limits IO available for InnoDB background tasks.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -743,7 +743,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Limits IO available for InnoDB background tasks.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -753,7 +753,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Limits IO available for InnoDB background tasks.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -763,7 +763,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Limits IO available for InnoDB background tasks.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -773,7 +773,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Limits IO available for InnoDB background tasks.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -783,7 +783,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of I/O threads for read operations in InnoDB.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
@@ -793,7 +793,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of I/O threads for read operations in InnoDB.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
@@ -803,7 +803,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of I/O threads for read operations in InnoDB.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
@@ -813,7 +813,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of I/O threads for write operations in InnoDB.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
@@ -823,7 +823,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of I/O threads for write operations in InnoDB.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
@@ -833,7 +833,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of I/O threads for write operations in InnoDB.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
@@ -843,7 +843,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of background threads devoted to the InnoDB purge operation.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
@@ -853,7 +853,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of background threads devoted to the InnoDB purge operation.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
@@ -863,7 +863,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of background threads devoted to the InnoDB purge operation.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
@@ -873,7 +873,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Defines the maximum number of threads permitted inside of InnoDB.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -883,7 +883,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Defines the maximum number of threads permitted inside of InnoDB.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -893,7 +893,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Defines the maximum number of threads permitted inside of InnoDB.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -903,7 +903,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Limits the max size of InnoDB temp tablespace.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
@@ -913,7 +913,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Limits the max size of InnoDB temp tablespace.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
@@ -923,7 +923,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Limits the max size of InnoDB temp tablespace.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
@@ -1173,7 +1173,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Can be used to control the operation of AUTO_INCREMENT columns.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_increment) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_increment) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -1183,7 +1183,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Can be used to control the operation of AUTO_INCREMENT columns.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_increment) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_increment) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -1193,7 +1193,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Can be used to control the operation of AUTO_INCREMENT columns.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_increment) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_increment) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -1203,7 +1203,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Can be used to control the operation of AUTO_INCREMENT columns.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_offset) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_offset) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -1213,7 +1213,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Can be used to control the operation of AUTO_INCREMENT columns.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_offset) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_offset) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -1223,7 +1223,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Can be used to control the operation of AUTO_INCREMENT columns.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_offset) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_offset) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -1374,7 +1374,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of replica acknowledgments the source must receive per transaction before proceeding.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
@@ -1384,7 +1384,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of replica acknowledgments the source must receive per transaction before proceeding.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
@@ -1394,7 +1394,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of replica acknowledgments the source must receive per transaction before proceeding.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
@@ -2355,8 +2355,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The system variable enables control over optimizer behavior.
-     * For details, see [MySQL documentation for the variable]
-     * https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch)
      * https://dev.mysql.com/doc/refman/8.0/en/switchable-optimizations.html
      * </pre>
      *
@@ -2367,8 +2366,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The system variable enables control over optimizer behavior.
-     * For details, see [MySQL documentation for the variable]
-     * https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch)
      * https://dev.mysql.com/doc/refman/8.0/en/switchable-optimizations.html
      * </pre>
      *
@@ -5048,7 +5046,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Authentication plugin used in the managed MySQL cluster.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_authentication_plugin for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_authentication_plugin) for details.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
@@ -5060,7 +5058,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Authentication plugin used in the managed MySQL cluster.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_authentication_plugin for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_authentication_plugin) for details.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
@@ -5077,7 +5075,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Transaction log flush behaviour.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_flush_log_at_trx_commit = 9 [(.yandex.cloud.value) = "1-2"];</code>
@@ -5090,7 +5088,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Transaction log flush behaviour.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_flush_log_at_trx_commit = 9 [(.yandex.cloud.value) = "1-2"];</code>
@@ -5103,7 +5101,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Transaction log flush behaviour.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_flush_log_at_trx_commit = 9 [(.yandex.cloud.value) = "1-2"];</code>
@@ -5118,7 +5116,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Max time in seconds for a transaction to wait for a row lock.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_lock_wait_timeout = 10 [(.yandex.cloud.value) = "1-28800"];</code>
@@ -5131,7 +5129,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Max time in seconds for a transaction to wait for a row lock.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_lock_wait_timeout = 10 [(.yandex.cloud.value) = "1-28800"];</code>
@@ -5144,7 +5142,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Max time in seconds for a transaction to wait for a row lock.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_lock_wait_timeout = 10 [(.yandex.cloud.value) = "1-28800"];</code>
@@ -5159,7 +5157,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Default transaction isolation level.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_isolation for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_isolation) for details.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.TransactionIsolation transaction_isolation = 11;</code>
@@ -5171,7 +5169,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Default transaction isolation level.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_isolation for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_isolation) for details.
      * </pre>
      *
      * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.TransactionIsolation transaction_isolation = 11;</code>
@@ -5188,7 +5186,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Print information about deadlocks in error log.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_print_all_deadlocks = 12;</code>
@@ -5201,7 +5199,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Print information about deadlocks in error log.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_print_all_deadlocks = 12;</code>
@@ -5214,7 +5212,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Print information about deadlocks in error log.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_print_all_deadlocks = 12;</code>
@@ -5229,7 +5227,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of seconds to wait for more data from a connection before aborting the read.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value net_read_timeout = 13 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -5242,7 +5240,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of seconds to wait for more data from a connection before aborting the read.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value net_read_timeout = 13 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -5255,7 +5253,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of seconds to wait for more data from a connection before aborting the read.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value net_read_timeout = 13 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -5270,7 +5268,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of seconds to wait for a block to be written to a connection before aborting the write.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value net_write_timeout = 14 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -5283,7 +5281,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of seconds to wait for a block to be written to a connection before aborting the write.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value net_write_timeout = 14 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -5296,7 +5294,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of seconds to wait for a block to be written to a connection before aborting the write.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value net_write_timeout = 14 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -5311,7 +5309,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The maximum permitted result length in bytes for the GROUP_CONCAT() function.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_concat_max_len = 15 [(.yandex.cloud.value) = "4-33554432"];</code>
@@ -5324,7 +5322,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The maximum permitted result length in bytes for the GROUP_CONCAT() function.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_concat_max_len = 15 [(.yandex.cloud.value) = "4-33554432"];</code>
@@ -5337,7 +5335,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The maximum permitted result length in bytes for the GROUP_CONCAT() function.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value group_concat_max_len = 15 [(.yandex.cloud.value) = "4-33554432"];</code>
@@ -5352,7 +5350,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The maximum size of internal in-memory temporary tables.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
@@ -5365,7 +5363,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The maximum size of internal in-memory temporary tables.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
@@ -5378,7 +5376,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The maximum size of internal in-memory temporary tables.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
@@ -5393,7 +5391,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * This variable sets the maximum size to which user-created MEMORY tables are permitted to grow.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
@@ -5406,7 +5404,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * This variable sets the maximum size to which user-created MEMORY tables are permitted to grow.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
@@ -5419,7 +5417,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * This variable sets the maximum size to which user-created MEMORY tables are permitted to grow.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
@@ -5434,7 +5432,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The servers default time zone.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_default-time-zone for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_default-time-zone) for details.
      * </pre>
      *
      * <code>string default_time_zone = 18;</code>
@@ -5456,7 +5454,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The servers default time zone.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_default-time-zone for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_default-time-zone) for details.
      * </pre>
      *
      * <code>string default_time_zone = 18;</code>
@@ -5482,7 +5480,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The servers default character set.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_server for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_server) for details.
      * </pre>
      *
      * <code>string character_set_server = 19;</code>
@@ -5504,7 +5502,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The servers default character set.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_server for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_server) for details.
      * </pre>
      *
      * <code>string character_set_server = 19;</code>
@@ -5530,7 +5528,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The server default collation.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_collation_server for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_collation_server) for details.
      * </pre>
      *
      * <code>string collation_server = 20;</code>
@@ -5552,7 +5550,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The server default collation.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_collation_server for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_collation_server) for details.
      * </pre>
      *
      * <code>string collation_server = 20;</code>
@@ -5578,7 +5576,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Enables InnoDB adaptive hash index.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
@@ -5591,7 +5589,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Enables InnoDB adaptive hash index.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
@@ -5604,7 +5602,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Enables InnoDB adaptive hash index.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
@@ -5619,7 +5617,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
@@ -5632,7 +5630,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
@@ -5645,7 +5643,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave) for details.
      * </pre>
      *
      * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
@@ -5660,7 +5658,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
@@ -5673,7 +5671,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
@@ -5686,7 +5684,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
@@ -5701,7 +5699,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The size in bytes of the single InnoDB Redo log file.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
@@ -5714,7 +5712,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The size in bytes of the single InnoDB Redo log file.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
@@ -5727,7 +5725,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The size in bytes of the single InnoDB Redo log file.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
@@ -5742,7 +5740,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Limits IO available for InnoDB background tasks.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -5755,7 +5753,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Limits IO available for InnoDB background tasks.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -5768,7 +5766,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Limits IO available for InnoDB background tasks.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -5783,7 +5781,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Limits IO available for InnoDB background tasks.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -5796,7 +5794,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Limits IO available for InnoDB background tasks.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -5809,7 +5807,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Limits IO available for InnoDB background tasks.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -5824,7 +5822,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of I/O threads for read operations in InnoDB.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
@@ -5837,7 +5835,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of I/O threads for read operations in InnoDB.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
@@ -5850,7 +5848,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of I/O threads for read operations in InnoDB.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
@@ -5865,7 +5863,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of I/O threads for write operations in InnoDB.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
@@ -5878,7 +5876,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of I/O threads for write operations in InnoDB.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
@@ -5891,7 +5889,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of I/O threads for write operations in InnoDB.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
@@ -5906,7 +5904,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of background threads devoted to the InnoDB purge operation.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
@@ -5919,7 +5917,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of background threads devoted to the InnoDB purge operation.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
@@ -5932,7 +5930,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of background threads devoted to the InnoDB purge operation.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
@@ -5947,7 +5945,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Defines the maximum number of threads permitted inside of InnoDB.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -5960,7 +5958,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Defines the maximum number of threads permitted inside of InnoDB.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -5973,7 +5971,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Defines the maximum number of threads permitted inside of InnoDB.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -5988,7 +5986,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Limits the max size of InnoDB temp tablespace.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
@@ -6001,7 +5999,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Limits the max size of InnoDB temp tablespace.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
@@ -6014,7 +6012,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Limits the max size of InnoDB temp tablespace.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
@@ -6357,7 +6355,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Can be used to control the operation of AUTO_INCREMENT columns.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_increment) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_increment) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -6370,7 +6368,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Can be used to control the operation of AUTO_INCREMENT columns.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_increment) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_increment) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -6383,7 +6381,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Can be used to control the operation of AUTO_INCREMENT columns.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_increment) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_increment) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -6398,7 +6396,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Can be used to control the operation of AUTO_INCREMENT columns.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_offset) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_offset) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -6411,7 +6409,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Can be used to control the operation of AUTO_INCREMENT columns.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_offset) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_offset) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -6424,7 +6422,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * Can be used to control the operation of AUTO_INCREMENT columns.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_offset) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_offset) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -6632,7 +6630,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of replica acknowledgments the source must receive per transaction before proceeding.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
@@ -6645,7 +6643,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of replica acknowledgments the source must receive per transaction before proceeding.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
@@ -6658,7 +6656,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The number of replica acknowledgments the source must receive per transaction before proceeding.
-     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
+     * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
@@ -7985,8 +7983,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The system variable enables control over optimizer behavior.
-     * For details, see [MySQL documentation for the variable]
-     * https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch)
      * https://dev.mysql.com/doc/refman/8.0/en/switchable-optimizations.html
      * </pre>
      *
@@ -8009,8 +8006,7 @@ public final class Mysql80 {
     /**
      * <pre>
      * The system variable enables control over optimizer behavior.
-     * For details, see [MySQL documentation for the variable]
-     * https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch)
      * https://dev.mysql.com/doc/refman/8.0/en/switchable-optimizations.html
      * </pre>
      *
@@ -11869,7 +11865,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Authentication plugin used in the managed MySQL cluster.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_authentication_plugin for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_authentication_plugin) for details.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
@@ -11881,7 +11877,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Authentication plugin used in the managed MySQL cluster.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_authentication_plugin for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_authentication_plugin) for details.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
@@ -11897,7 +11893,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Authentication plugin used in the managed MySQL cluster.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_authentication_plugin for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_authentication_plugin) for details.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
@@ -11912,7 +11908,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Authentication plugin used in the managed MySQL cluster.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_authentication_plugin for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_authentication_plugin) for details.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
@@ -11931,7 +11927,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Authentication plugin used in the managed MySQL cluster.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_authentication_plugin for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_default_authentication_plugin) for details.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.AuthPlugin default_authentication_plugin = 8;</code>
@@ -11950,7 +11946,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Transaction log flush behaviour.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_flush_log_at_trx_commit = 9 [(.yandex.cloud.value) = "1-2"];</code>
@@ -11962,7 +11958,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Transaction log flush behaviour.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_flush_log_at_trx_commit = 9 [(.yandex.cloud.value) = "1-2"];</code>
@@ -11978,7 +11974,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Transaction log flush behaviour.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_flush_log_at_trx_commit = 9 [(.yandex.cloud.value) = "1-2"];</code>
@@ -11999,7 +11995,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Transaction log flush behaviour.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_flush_log_at_trx_commit = 9 [(.yandex.cloud.value) = "1-2"];</code>
@@ -12018,7 +12014,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Transaction log flush behaviour.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_flush_log_at_trx_commit = 9 [(.yandex.cloud.value) = "1-2"];</code>
@@ -12041,7 +12037,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Transaction log flush behaviour.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_flush_log_at_trx_commit = 9 [(.yandex.cloud.value) = "1-2"];</code>
@@ -12060,7 +12056,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Transaction log flush behaviour.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_flush_log_at_trx_commit = 9 [(.yandex.cloud.value) = "1-2"];</code>
@@ -12073,7 +12069,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Transaction log flush behaviour.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_flush_log_at_trx_commit = 9 [(.yandex.cloud.value) = "1-2"];</code>
@@ -12089,7 +12085,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Transaction log flush behaviour.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_flush_log_at_trx_commit) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_flush_log_at_trx_commit = 9 [(.yandex.cloud.value) = "1-2"];</code>
@@ -12114,7 +12110,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Max time in seconds for a transaction to wait for a row lock.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_lock_wait_timeout = 10 [(.yandex.cloud.value) = "1-28800"];</code>
@@ -12126,7 +12122,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Max time in seconds for a transaction to wait for a row lock.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_lock_wait_timeout = 10 [(.yandex.cloud.value) = "1-28800"];</code>
@@ -12142,7 +12138,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Max time in seconds for a transaction to wait for a row lock.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_lock_wait_timeout = 10 [(.yandex.cloud.value) = "1-28800"];</code>
@@ -12163,7 +12159,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Max time in seconds for a transaction to wait for a row lock.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_lock_wait_timeout = 10 [(.yandex.cloud.value) = "1-28800"];</code>
@@ -12182,7 +12178,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Max time in seconds for a transaction to wait for a row lock.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_lock_wait_timeout = 10 [(.yandex.cloud.value) = "1-28800"];</code>
@@ -12205,7 +12201,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Max time in seconds for a transaction to wait for a row lock.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_lock_wait_timeout = 10 [(.yandex.cloud.value) = "1-28800"];</code>
@@ -12224,7 +12220,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Max time in seconds for a transaction to wait for a row lock.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_lock_wait_timeout = 10 [(.yandex.cloud.value) = "1-28800"];</code>
@@ -12237,7 +12233,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Max time in seconds for a transaction to wait for a row lock.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_lock_wait_timeout = 10 [(.yandex.cloud.value) = "1-28800"];</code>
@@ -12253,7 +12249,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Max time in seconds for a transaction to wait for a row lock.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_lock_wait_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_lock_wait_timeout = 10 [(.yandex.cloud.value) = "1-28800"];</code>
@@ -12276,7 +12272,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Default transaction isolation level.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_isolation for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_isolation) for details.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.TransactionIsolation transaction_isolation = 11;</code>
@@ -12288,7 +12284,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Default transaction isolation level.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_isolation for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_isolation) for details.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.TransactionIsolation transaction_isolation = 11;</code>
@@ -12304,7 +12300,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Default transaction isolation level.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_isolation for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_isolation) for details.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.TransactionIsolation transaction_isolation = 11;</code>
@@ -12319,7 +12315,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Default transaction isolation level.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_isolation for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_isolation) for details.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.TransactionIsolation transaction_isolation = 11;</code>
@@ -12338,7 +12334,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Default transaction isolation level.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_isolation for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_transaction_isolation) for details.
        * </pre>
        *
        * <code>.yandex.cloud.mdb.mysql.v1.config.MysqlConfig8_0.TransactionIsolation transaction_isolation = 11;</code>
@@ -12357,7 +12353,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Print information about deadlocks in error log.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_print_all_deadlocks = 12;</code>
@@ -12369,7 +12365,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Print information about deadlocks in error log.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_print_all_deadlocks = 12;</code>
@@ -12385,7 +12381,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Print information about deadlocks in error log.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_print_all_deadlocks = 12;</code>
@@ -12406,7 +12402,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Print information about deadlocks in error log.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_print_all_deadlocks = 12;</code>
@@ -12425,7 +12421,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Print information about deadlocks in error log.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_print_all_deadlocks = 12;</code>
@@ -12448,7 +12444,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Print information about deadlocks in error log.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_print_all_deadlocks = 12;</code>
@@ -12467,7 +12463,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Print information about deadlocks in error log.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_print_all_deadlocks = 12;</code>
@@ -12480,7 +12476,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Print information about deadlocks in error log.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_print_all_deadlocks = 12;</code>
@@ -12496,7 +12492,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Print information about deadlocks in error log.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_print_all_deadlocks) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_print_all_deadlocks = 12;</code>
@@ -12521,7 +12517,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of seconds to wait for more data from a connection before aborting the read.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value net_read_timeout = 13 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -12533,7 +12529,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of seconds to wait for more data from a connection before aborting the read.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value net_read_timeout = 13 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -12549,7 +12545,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of seconds to wait for more data from a connection before aborting the read.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value net_read_timeout = 13 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -12570,7 +12566,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of seconds to wait for more data from a connection before aborting the read.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value net_read_timeout = 13 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -12589,7 +12585,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of seconds to wait for more data from a connection before aborting the read.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value net_read_timeout = 13 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -12612,7 +12608,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of seconds to wait for more data from a connection before aborting the read.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value net_read_timeout = 13 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -12631,7 +12627,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of seconds to wait for more data from a connection before aborting the read.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value net_read_timeout = 13 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -12644,7 +12640,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of seconds to wait for more data from a connection before aborting the read.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value net_read_timeout = 13 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -12660,7 +12656,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of seconds to wait for more data from a connection before aborting the read.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_read_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value net_read_timeout = 13 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -12685,7 +12681,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of seconds to wait for a block to be written to a connection before aborting the write.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value net_write_timeout = 14 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -12697,7 +12693,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of seconds to wait for a block to be written to a connection before aborting the write.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value net_write_timeout = 14 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -12713,7 +12709,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of seconds to wait for a block to be written to a connection before aborting the write.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value net_write_timeout = 14 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -12734,7 +12730,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of seconds to wait for a block to be written to a connection before aborting the write.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value net_write_timeout = 14 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -12753,7 +12749,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of seconds to wait for a block to be written to a connection before aborting the write.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value net_write_timeout = 14 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -12776,7 +12772,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of seconds to wait for a block to be written to a connection before aborting the write.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value net_write_timeout = 14 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -12795,7 +12791,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of seconds to wait for a block to be written to a connection before aborting the write.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value net_write_timeout = 14 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -12808,7 +12804,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of seconds to wait for a block to be written to a connection before aborting the write.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value net_write_timeout = 14 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -12824,7 +12820,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of seconds to wait for a block to be written to a connection before aborting the write.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_net_write_timeout) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value net_write_timeout = 14 [(.yandex.cloud.value) = "1-1200"];</code>
@@ -12849,7 +12845,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The maximum permitted result length in bytes for the GROUP_CONCAT() function.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_concat_max_len = 15 [(.yandex.cloud.value) = "4-33554432"];</code>
@@ -12861,7 +12857,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The maximum permitted result length in bytes for the GROUP_CONCAT() function.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_concat_max_len = 15 [(.yandex.cloud.value) = "4-33554432"];</code>
@@ -12877,7 +12873,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The maximum permitted result length in bytes for the GROUP_CONCAT() function.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_concat_max_len = 15 [(.yandex.cloud.value) = "4-33554432"];</code>
@@ -12898,7 +12894,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The maximum permitted result length in bytes for the GROUP_CONCAT() function.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_concat_max_len = 15 [(.yandex.cloud.value) = "4-33554432"];</code>
@@ -12917,7 +12913,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The maximum permitted result length in bytes for the GROUP_CONCAT() function.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_concat_max_len = 15 [(.yandex.cloud.value) = "4-33554432"];</code>
@@ -12940,7 +12936,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The maximum permitted result length in bytes for the GROUP_CONCAT() function.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_concat_max_len = 15 [(.yandex.cloud.value) = "4-33554432"];</code>
@@ -12959,7 +12955,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The maximum permitted result length in bytes for the GROUP_CONCAT() function.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_concat_max_len = 15 [(.yandex.cloud.value) = "4-33554432"];</code>
@@ -12972,7 +12968,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The maximum permitted result length in bytes for the GROUP_CONCAT() function.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_concat_max_len = 15 [(.yandex.cloud.value) = "4-33554432"];</code>
@@ -12988,7 +12984,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The maximum permitted result length in bytes for the GROUP_CONCAT() function.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value group_concat_max_len = 15 [(.yandex.cloud.value) = "4-33554432"];</code>
@@ -13013,7 +13009,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The maximum size of internal in-memory temporary tables.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
@@ -13025,7 +13021,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The maximum size of internal in-memory temporary tables.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
@@ -13041,7 +13037,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The maximum size of internal in-memory temporary tables.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
@@ -13062,7 +13058,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The maximum size of internal in-memory temporary tables.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
@@ -13081,7 +13077,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The maximum size of internal in-memory temporary tables.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
@@ -13104,7 +13100,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The maximum size of internal in-memory temporary tables.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
@@ -13123,7 +13119,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The maximum size of internal in-memory temporary tables.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
@@ -13136,7 +13132,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The maximum size of internal in-memory temporary tables.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
@@ -13152,7 +13148,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The maximum size of internal in-memory temporary tables.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmp_table_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value tmp_table_size = 16 [(.yandex.cloud.value) = "1024-536870912"];</code>
@@ -13177,7 +13173,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * This variable sets the maximum size to which user-created MEMORY tables are permitted to grow.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
@@ -13189,7 +13185,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * This variable sets the maximum size to which user-created MEMORY tables are permitted to grow.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
@@ -13205,7 +13201,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * This variable sets the maximum size to which user-created MEMORY tables are permitted to grow.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
@@ -13226,7 +13222,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * This variable sets the maximum size to which user-created MEMORY tables are permitted to grow.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
@@ -13245,7 +13241,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * This variable sets the maximum size to which user-created MEMORY tables are permitted to grow.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
@@ -13268,7 +13264,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * This variable sets the maximum size to which user-created MEMORY tables are permitted to grow.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
@@ -13287,7 +13283,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * This variable sets the maximum size to which user-created MEMORY tables are permitted to grow.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
@@ -13300,7 +13296,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * This variable sets the maximum size to which user-created MEMORY tables are permitted to grow.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
@@ -13316,7 +13312,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * This variable sets the maximum size to which user-created MEMORY tables are permitted to grow.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_max_heap_table_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_heap_table_size = 17 [(.yandex.cloud.value) = "16384-536870912"];</code>
@@ -13339,7 +13335,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The servers default time zone.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_default-time-zone for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_default-time-zone) for details.
        * </pre>
        *
        * <code>string default_time_zone = 18;</code>
@@ -13360,7 +13356,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The servers default time zone.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_default-time-zone for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_default-time-zone) for details.
        * </pre>
        *
        * <code>string default_time_zone = 18;</code>
@@ -13382,7 +13378,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The servers default time zone.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_default-time-zone for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_default-time-zone) for details.
        * </pre>
        *
        * <code>string default_time_zone = 18;</code>
@@ -13402,7 +13398,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The servers default time zone.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_default-time-zone for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_default-time-zone) for details.
        * </pre>
        *
        * <code>string default_time_zone = 18;</code>
@@ -13417,7 +13413,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The servers default time zone.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_default-time-zone for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-options.html#option_mysqld_default-time-zone) for details.
        * </pre>
        *
        * <code>string default_time_zone = 18;</code>
@@ -13440,7 +13436,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The servers default character set.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_server for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_server) for details.
        * </pre>
        *
        * <code>string character_set_server = 19;</code>
@@ -13461,7 +13457,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The servers default character set.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_server for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_server) for details.
        * </pre>
        *
        * <code>string character_set_server = 19;</code>
@@ -13483,7 +13479,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The servers default character set.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_server for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_server) for details.
        * </pre>
        *
        * <code>string character_set_server = 19;</code>
@@ -13503,7 +13499,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The servers default character set.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_server for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_server) for details.
        * </pre>
        *
        * <code>string character_set_server = 19;</code>
@@ -13518,7 +13514,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The servers default character set.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_server for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_character_set_server) for details.
        * </pre>
        *
        * <code>string character_set_server = 19;</code>
@@ -13541,7 +13537,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The server default collation.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_collation_server for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_collation_server) for details.
        * </pre>
        *
        * <code>string collation_server = 20;</code>
@@ -13562,7 +13558,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The server default collation.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_collation_server for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_collation_server) for details.
        * </pre>
        *
        * <code>string collation_server = 20;</code>
@@ -13584,7 +13580,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The server default collation.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_collation_server for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_collation_server) for details.
        * </pre>
        *
        * <code>string collation_server = 20;</code>
@@ -13604,7 +13600,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The server default collation.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_collation_server for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_collation_server) for details.
        * </pre>
        *
        * <code>string collation_server = 20;</code>
@@ -13619,7 +13615,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The server default collation.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_collation_server for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_collation_server) for details.
        * </pre>
        *
        * <code>string collation_server = 20;</code>
@@ -13644,7 +13640,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Enables InnoDB adaptive hash index.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
@@ -13656,7 +13652,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Enables InnoDB adaptive hash index.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
@@ -13672,7 +13668,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Enables InnoDB adaptive hash index.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
@@ -13693,7 +13689,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Enables InnoDB adaptive hash index.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
@@ -13712,7 +13708,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Enables InnoDB adaptive hash index.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
@@ -13735,7 +13731,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Enables InnoDB adaptive hash index.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
@@ -13754,7 +13750,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Enables InnoDB adaptive hash index.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
@@ -13767,7 +13763,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Enables InnoDB adaptive hash index.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
@@ -13783,7 +13779,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Enables InnoDB adaptive hash index.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_adaptive_hash_index) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_adaptive_hash_index = 21;</code>
@@ -13808,7 +13804,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
@@ -13820,7 +13816,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
@@ -13836,7 +13832,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
@@ -13857,7 +13853,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
@@ -13876,7 +13872,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
@@ -13899,7 +13895,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
@@ -13918,7 +13914,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
@@ -13931,7 +13927,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
@@ -13947,7 +13943,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Enables the NUMA interleave memory policy for allocation of the InnoDB buffer pool.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_numa_interleave) for details.
        * </pre>
        *
        * <code>.google.protobuf.BoolValue innodb_numa_interleave = 22;</code>
@@ -13972,7 +13968,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
@@ -13984,7 +13980,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
@@ -14000,7 +13996,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
@@ -14021,7 +14017,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
@@ -14040,7 +14036,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
@@ -14063,7 +14059,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
@@ -14082,7 +14078,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
@@ -14095,7 +14091,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
@@ -14111,7 +14107,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The size in bytes of the buffer that InnoDB uses to write to the log files on disk.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_buffer_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_log_buffer_size = 23 [(.yandex.cloud.value) = "1048576-268435456"];</code>
@@ -14136,7 +14132,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The size in bytes of the single InnoDB Redo log file.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
@@ -14148,7 +14144,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The size in bytes of the single InnoDB Redo log file.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
@@ -14164,7 +14160,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The size in bytes of the single InnoDB Redo log file.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
@@ -14185,7 +14181,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The size in bytes of the single InnoDB Redo log file.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
@@ -14204,7 +14200,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The size in bytes of the single InnoDB Redo log file.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
@@ -14227,7 +14223,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The size in bytes of the single InnoDB Redo log file.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
@@ -14246,7 +14242,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The size in bytes of the single InnoDB Redo log file.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
@@ -14259,7 +14255,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The size in bytes of the single InnoDB Redo log file.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
@@ -14275,7 +14271,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The size in bytes of the single InnoDB Redo log file.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_log_file_size) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_log_file_size = 24 [(.yandex.cloud.value) = "268435456-4294967296"];</code>
@@ -14300,7 +14296,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits IO available for InnoDB background tasks.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -14312,7 +14308,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits IO available for InnoDB background tasks.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -14328,7 +14324,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits IO available for InnoDB background tasks.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -14349,7 +14345,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits IO available for InnoDB background tasks.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -14368,7 +14364,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits IO available for InnoDB background tasks.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -14391,7 +14387,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits IO available for InnoDB background tasks.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -14410,7 +14406,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits IO available for InnoDB background tasks.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -14423,7 +14419,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits IO available for InnoDB background tasks.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -14439,7 +14435,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits IO available for InnoDB background tasks.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_io_capacity = 25 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -14464,7 +14460,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits IO available for InnoDB background tasks.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -14476,7 +14472,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits IO available for InnoDB background tasks.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -14492,7 +14488,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits IO available for InnoDB background tasks.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -14513,7 +14509,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits IO available for InnoDB background tasks.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -14532,7 +14528,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits IO available for InnoDB background tasks.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -14555,7 +14551,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits IO available for InnoDB background tasks.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -14574,7 +14570,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits IO available for InnoDB background tasks.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -14587,7 +14583,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits IO available for InnoDB background tasks.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -14603,7 +14599,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits IO available for InnoDB background tasks.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_io_capacity_max) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_io_capacity_max = 26 [(.yandex.cloud.value) = "100-100000"];</code>
@@ -14628,7 +14624,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of I/O threads for read operations in InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
@@ -14640,7 +14636,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of I/O threads for read operations in InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
@@ -14656,7 +14652,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of I/O threads for read operations in InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
@@ -14677,7 +14673,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of I/O threads for read operations in InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
@@ -14696,7 +14692,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of I/O threads for read operations in InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
@@ -14719,7 +14715,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of I/O threads for read operations in InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
@@ -14738,7 +14734,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of I/O threads for read operations in InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
@@ -14751,7 +14747,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of I/O threads for read operations in InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
@@ -14767,7 +14763,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of I/O threads for read operations in InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_read_io_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_read_io_threads = 27 [(.yandex.cloud.value) = "1-16"];</code>
@@ -14792,7 +14788,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of I/O threads for write operations in InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
@@ -14804,7 +14800,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of I/O threads for write operations in InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
@@ -14820,7 +14816,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of I/O threads for write operations in InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
@@ -14841,7 +14837,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of I/O threads for write operations in InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
@@ -14860,7 +14856,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of I/O threads for write operations in InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
@@ -14883,7 +14879,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of I/O threads for write operations in InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
@@ -14902,7 +14898,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of I/O threads for write operations in InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
@@ -14915,7 +14911,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of I/O threads for write operations in InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
@@ -14931,7 +14927,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of I/O threads for write operations in InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_write_io_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_write_io_threads = 28 [(.yandex.cloud.value) = "1-16"];</code>
@@ -14956,7 +14952,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of background threads devoted to the InnoDB purge operation.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
@@ -14968,7 +14964,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of background threads devoted to the InnoDB purge operation.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
@@ -14984,7 +14980,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of background threads devoted to the InnoDB purge operation.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
@@ -15005,7 +15001,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of background threads devoted to the InnoDB purge operation.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
@@ -15024,7 +15020,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of background threads devoted to the InnoDB purge operation.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
@@ -15047,7 +15043,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of background threads devoted to the InnoDB purge operation.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
@@ -15066,7 +15062,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of background threads devoted to the InnoDB purge operation.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
@@ -15079,7 +15075,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of background threads devoted to the InnoDB purge operation.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
@@ -15095,7 +15091,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of background threads devoted to the InnoDB purge operation.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_purge_threads) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_purge_threads = 29 [(.yandex.cloud.value) = "1-16"];</code>
@@ -15120,7 +15116,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Defines the maximum number of threads permitted inside of InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -15132,7 +15128,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Defines the maximum number of threads permitted inside of InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -15148,7 +15144,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Defines the maximum number of threads permitted inside of InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -15169,7 +15165,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Defines the maximum number of threads permitted inside of InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -15188,7 +15184,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Defines the maximum number of threads permitted inside of InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -15211,7 +15207,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Defines the maximum number of threads permitted inside of InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -15230,7 +15226,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Defines the maximum number of threads permitted inside of InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -15243,7 +15239,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Defines the maximum number of threads permitted inside of InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -15259,7 +15255,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Defines the maximum number of threads permitted inside of InnoDB.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_thread_concurrency) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_thread_concurrency = 30 [(.yandex.cloud.value) = "0-1000"];</code>
@@ -15284,7 +15280,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits the max size of InnoDB temp tablespace.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
@@ -15296,7 +15292,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits the max size of InnoDB temp tablespace.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
@@ -15312,7 +15308,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits the max size of InnoDB temp tablespace.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
@@ -15333,7 +15329,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits the max size of InnoDB temp tablespace.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
@@ -15352,7 +15348,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits the max size of InnoDB temp tablespace.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
@@ -15375,7 +15371,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits the max size of InnoDB temp tablespace.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
@@ -15394,7 +15390,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits the max size of InnoDB temp tablespace.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
@@ -15407,7 +15403,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits the max size of InnoDB temp tablespace.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
@@ -15423,7 +15419,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Limits the max size of InnoDB temp tablespace.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-parameters.html#sysvar_innodb_temp_data_file_path) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value innodb_temp_data_file_max_size = 31 [(.yandex.cloud.value) = "0-107374182400"];</code>
@@ -16760,7 +16756,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Can be used to control the operation of AUTO_INCREMENT columns.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_increment) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_increment) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -16772,7 +16768,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Can be used to control the operation of AUTO_INCREMENT columns.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_increment) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_increment) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -16788,7 +16784,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Can be used to control the operation of AUTO_INCREMENT columns.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_increment) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_increment) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -16809,7 +16805,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Can be used to control the operation of AUTO_INCREMENT columns.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_increment) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_increment) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -16828,7 +16824,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Can be used to control the operation of AUTO_INCREMENT columns.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_increment) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_increment) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -16851,7 +16847,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Can be used to control the operation of AUTO_INCREMENT columns.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_increment) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_increment) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -16870,7 +16866,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Can be used to control the operation of AUTO_INCREMENT columns.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_increment) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_increment) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -16883,7 +16879,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Can be used to control the operation of AUTO_INCREMENT columns.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_increment) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_increment) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -16899,7 +16895,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Can be used to control the operation of AUTO_INCREMENT columns.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_increment) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_increment) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value auto_increment_increment = 40 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -16924,7 +16920,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Can be used to control the operation of AUTO_INCREMENT columns.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_offset) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_offset) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -16936,7 +16932,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Can be used to control the operation of AUTO_INCREMENT columns.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_offset) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_offset) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -16952,7 +16948,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Can be used to control the operation of AUTO_INCREMENT columns.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_offset) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_offset) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -16973,7 +16969,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Can be used to control the operation of AUTO_INCREMENT columns.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_offset) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_offset) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -16992,7 +16988,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Can be used to control the operation of AUTO_INCREMENT columns.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_offset) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_offset) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -17015,7 +17011,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Can be used to control the operation of AUTO_INCREMENT columns.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_offset) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_offset) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -17034,7 +17030,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Can be used to control the operation of AUTO_INCREMENT columns.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_offset) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_offset) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -17047,7 +17043,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Can be used to control the operation of AUTO_INCREMENT columns.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_offset) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_offset) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -17063,7 +17059,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * Can be used to control the operation of AUTO_INCREMENT columns.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_auto_increment_offset) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_offset) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value auto_increment_offset = 41 [(.yandex.cloud.value) = "1-65535"];</code>
@@ -17823,7 +17819,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of replica acknowledgments the source must receive per transaction before proceeding.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
@@ -17835,7 +17831,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of replica acknowledgments the source must receive per transaction before proceeding.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
@@ -17851,7 +17847,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of replica acknowledgments the source must receive per transaction before proceeding.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
@@ -17872,7 +17868,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of replica acknowledgments the source must receive per transaction before proceeding.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
@@ -17891,7 +17887,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of replica acknowledgments the source must receive per transaction before proceeding.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
@@ -17914,7 +17910,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of replica acknowledgments the source must receive per transaction before proceeding.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
@@ -17933,7 +17929,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of replica acknowledgments the source must receive per transaction before proceeding.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
@@ -17946,7 +17942,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of replica acknowledgments the source must receive per transaction before proceeding.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
@@ -17962,7 +17958,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The number of replica acknowledgments the source must receive per transaction before proceeding.
-       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-master.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
+       * See [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_rpl_semi_sync_master_wait_for_slave_count) for details.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value rpl_semi_sync_master_wait_for_slave_count = 47 [(.yandex.cloud.value) = "1-2"];</code>
@@ -22996,8 +22992,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The system variable enables control over optimizer behavior.
-       * For details, see [MySQL documentation for the variable]
-       * https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch)
        * https://dev.mysql.com/doc/refman/8.0/en/switchable-optimizations.html
        * </pre>
        *
@@ -23019,8 +23014,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The system variable enables control over optimizer behavior.
-       * For details, see [MySQL documentation for the variable]
-       * https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch)
        * https://dev.mysql.com/doc/refman/8.0/en/switchable-optimizations.html
        * </pre>
        *
@@ -23043,8 +23037,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The system variable enables control over optimizer behavior.
-       * For details, see [MySQL documentation for the variable]
-       * https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch)
        * https://dev.mysql.com/doc/refman/8.0/en/switchable-optimizations.html
        * </pre>
        *
@@ -23065,8 +23058,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The system variable enables control over optimizer behavior.
-       * For details, see [MySQL documentation for the variable]
-       * https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch)
        * https://dev.mysql.com/doc/refman/8.0/en/switchable-optimizations.html
        * </pre>
        *
@@ -23082,8 +23074,7 @@ public final class Mysql80 {
       /**
        * <pre>
        * The system variable enables control over optimizer behavior.
-       * For details, see [MySQL documentation for the variable]
-       * https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_optimizer_switch)
        * https://dev.mysql.com/doc/refman/8.0/en/switchable-optimizations.html
        * </pre>
        *
