@@ -14,6 +14,579 @@ public final class SttService {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface GetRecognitionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.GetRecognitionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string operation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The operationId.
+     */
+    java.lang.String getOperationId();
+    /**
+     * <code>string operation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for operationId.
+     */
+    com.google.protobuf.ByteString
+        getOperationIdBytes();
+  }
+  /**
+   * Protobuf type {@code speechkit.stt.v3.GetRecognitionRequest}
+   */
+  public static final class GetRecognitionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.stt.v3.GetRecognitionRequest)
+      GetRecognitionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetRecognitionRequest.newBuilder() to construct.
+    private GetRecognitionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetRecognitionRequest() {
+      operationId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetRecognitionRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetRecognitionRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              operationId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.stt.v3.SttService.internal_static_speechkit_stt_v3_GetRecognitionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.stt.v3.SttService.internal_static_speechkit_stt_v3_GetRecognitionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest.class, yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest.Builder.class);
+    }
+
+    public static final int OPERATION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object operationId_;
+    /**
+     * <code>string operation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The operationId.
+     */
+    @java.lang.Override
+    public java.lang.String getOperationId() {
+      java.lang.Object ref = operationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        operationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string operation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for operationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOperationIdBytes() {
+      java.lang.Object ref = operationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        operationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, operationId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(operationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, operationId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest other = (yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest) obj;
+
+      if (!getOperationId()
+          .equals(other.getOperationId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OPERATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOperationId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code speechkit.stt.v3.GetRecognitionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.GetRecognitionRequest)
+        yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.SttService.internal_static_speechkit_stt_v3_GetRecognitionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.SttService.internal_static_speechkit_stt_v3_GetRecognitionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest.class, yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        operationId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.stt.v3.SttService.internal_static_speechkit_stt_v3_GetRecognitionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest build() {
+        yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest buildPartial() {
+        yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest result = new yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest(this);
+        result.operationId_ = operationId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest) {
+          return mergeFrom((yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest other) {
+        if (other == yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest.getDefaultInstance()) return this;
+        if (!other.getOperationId().isEmpty()) {
+          operationId_ = other.operationId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object operationId_ = "";
+      /**
+       * <code>string operation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The operationId.
+       */
+      public java.lang.String getOperationId() {
+        java.lang.Object ref = operationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          operationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string operation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for operationId.
+       */
+      public com.google.protobuf.ByteString
+          getOperationIdBytes() {
+        java.lang.Object ref = operationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          operationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string operation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The operationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperationId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        operationId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string operation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOperationId() {
+        
+        operationId_ = getDefaultInstance().getOperationId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string operation_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for operationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOperationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        operationId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.GetRecognitionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.stt.v3.GetRecognitionRequest)
+    private static final yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest();
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetRecognitionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetRecognitionRequest>() {
+      @java.lang.Override
+      public GetRecognitionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetRecognitionRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetRecognitionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetRecognitionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.SttService.GetRecognitionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_GetRecognitionRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_GetRecognitionRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -25,19 +598,54 @@ public final class SttService {
     java.lang.String[] descriptorData = {
       "\n(yandex/cloud/ai/stt/v3/stt_service.pro" +
       "to\022\020speechkit.stt.v3\032 yandex/cloud/ai/st" +
-      "t/v3/stt.proto2q\n\nRecognizer\022c\n\022Recogniz" +
-      "eStreaming\022\".speechkit.stt.v3.StreamingR" +
-      "equest\032#.speechkit.stt.v3.StreamingRespo" +
-      "nse\"\000(\0010\001B\\\n\032yandex.cloud.api.ai.stt.v3Z" +
-      ">github.com/yandex-cloud/go-genproto/yan" +
-      "dex/cloud/ai/stt/v3;sttb\006proto3"
+      "t/v3/stt.proto\032\034google/api/annotations.p" +
+      "roto\032\035yandex/cloud/validation.proto\032 yan" +
+      "dex/cloud/api/operation.proto\032&yandex/cl" +
+      "oud/operation/operation.proto\";\n\025GetReco" +
+      "gnitionRequest\022\"\n\014operation_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=502q\n\nRecognizer\022c\n\022RecognizeStr" +
+      "eaming\022\".speechkit.stt.v3.StreamingReque" +
+      "st\032#.speechkit.stt.v3.StreamingResponse\"" +
+      "\000(\0010\0012\263\002\n\017AsyncRecognizer\022\234\001\n\rRecognizeF" +
+      "ile\022&.speechkit.stt.v3.RecognizeFileRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"@" +
+      "\262\322*\027\022\025google.protobuf.Empty\202\323\344\223\002\037\"\032/stt/" +
+      "v3/recognizeFileAsync:\001*\022\200\001\n\016GetRecognit" +
+      "ion\022\'.speechkit.stt.v3.GetRecognitionReq" +
+      "uest\032#.speechkit.stt.v3.StreamingRespons" +
+      "e\"\036\202\323\344\223\002\030\022\026/stt/v3/getRecognition0\001B\\\n\032y" +
+      "andex.cloud.api.ai.stt.v3Z>github.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/ai/s" +
+      "tt/v3;sttb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.ai.stt.v3.Stt.getDescriptor(),
+          com.google.api.AnnotationsProto.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
+          yandex.cloud.api.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
         });
+    internal_static_speechkit_stt_v3_GetRecognitionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_speechkit_stt_v3_GetRecognitionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_GetRecognitionRequest_descriptor,
+        new java.lang.String[] { "OperationId", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(yandex.cloud.api.OperationOuterClass.operation);
+    registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.required);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     yandex.cloud.api.ai.stt.v3.Stt.getDescriptor();
+    com.google.api.AnnotationsProto.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
+    yandex.cloud.api.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

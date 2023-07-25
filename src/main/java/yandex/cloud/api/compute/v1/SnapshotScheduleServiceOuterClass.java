@@ -637,7 +637,7 @@ public final class SnapshotScheduleServiceOuterClass {
      * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
-     * <code>string folder_id = 1;</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
@@ -647,7 +647,7 @@ public final class SnapshotScheduleServiceOuterClass {
      * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
-     * <code>string folder_id = 1;</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
@@ -660,7 +660,7 @@ public final class SnapshotScheduleServiceOuterClass {
      * that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
-     * <code>int64 page_size = 2;</code>
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     long getPageSize();
@@ -671,7 +671,7 @@ public final class SnapshotScheduleServiceOuterClass {
      * [ListSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3;</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -681,7 +681,7 @@ public final class SnapshotScheduleServiceOuterClass {
      * [ListSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3;</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
@@ -697,7 +697,7 @@ public final class SnapshotScheduleServiceOuterClass {
      * Example of a filter: `name=my-schedule`.
      * </pre>
      *
-     * <code>string filter = 4;</code>
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The filter.
      */
     java.lang.String getFilter();
@@ -711,7 +711,7 @@ public final class SnapshotScheduleServiceOuterClass {
      * Example of a filter: `name=my-schedule`.
      * </pre>
      *
-     * <code>string filter = 4;</code>
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
@@ -725,7 +725,7 @@ public final class SnapshotScheduleServiceOuterClass {
      * Default value: `id asc`.
      * </pre>
      *
-     * <code>string order_by = 5;</code>
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The orderBy.
      */
     java.lang.String getOrderBy();
@@ -737,7 +737,7 @@ public final class SnapshotScheduleServiceOuterClass {
      * Default value: `id asc`.
      * </pre>
      *
-     * <code>string order_by = 5;</code>
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for orderBy.
      */
     com.google.protobuf.ByteString
@@ -861,7 +861,7 @@ public final class SnapshotScheduleServiceOuterClass {
      * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
-     * <code>string folder_id = 1;</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     @java.lang.Override
@@ -883,7 +883,7 @@ public final class SnapshotScheduleServiceOuterClass {
      * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
-     * <code>string folder_id = 1;</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
     @java.lang.Override
@@ -910,7 +910,7 @@ public final class SnapshotScheduleServiceOuterClass {
      * that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
-     * <code>int64 page_size = 2;</code>
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     @java.lang.Override
@@ -926,7 +926,7 @@ public final class SnapshotScheduleServiceOuterClass {
      * [ListSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3;</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -948,7 +948,7 @@ public final class SnapshotScheduleServiceOuterClass {
      * [ListSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3;</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -978,7 +978,7 @@ public final class SnapshotScheduleServiceOuterClass {
      * Example of a filter: `name=my-schedule`.
      * </pre>
      *
-     * <code>string filter = 4;</code>
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The filter.
      */
     @java.lang.Override
@@ -1004,7 +1004,7 @@ public final class SnapshotScheduleServiceOuterClass {
      * Example of a filter: `name=my-schedule`.
      * </pre>
      *
-     * <code>string filter = 4;</code>
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for filter.
      */
     @java.lang.Override
@@ -1032,7 +1032,7 @@ public final class SnapshotScheduleServiceOuterClass {
      * Default value: `id asc`.
      * </pre>
      *
-     * <code>string order_by = 5;</code>
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The orderBy.
      */
     @java.lang.Override
@@ -1056,7 +1056,7 @@ public final class SnapshotScheduleServiceOuterClass {
      * Default value: `id asc`.
      * </pre>
      *
-     * <code>string order_by = 5;</code>
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for orderBy.
      */
     @java.lang.Override
@@ -1452,7 +1452,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1;</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The folderId.
        */
       public java.lang.String getFolderId() {
@@ -1473,7 +1473,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1;</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
@@ -1495,7 +1495,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1;</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
        */
@@ -1515,7 +1515,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1;</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFolderId() {
@@ -1530,7 +1530,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1;</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
        */
@@ -1554,7 +1554,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
-       * <code>int64 page_size = 2;</code>
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return The pageSize.
        */
       @java.lang.Override
@@ -1568,7 +1568,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
-       * <code>int64 page_size = 2;</code>
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
        */
@@ -1585,7 +1585,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
-       * <code>int64 page_size = 2;</code>
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageSize() {
@@ -1602,7 +1602,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * [ListSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3;</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -1623,7 +1623,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * [ListSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3;</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -1645,7 +1645,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * [ListSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3;</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -1665,7 +1665,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * [ListSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3;</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -1680,7 +1680,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * [ListSnapshotSchedulesResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3;</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -1707,7 +1707,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * Example of a filter: `name=my-schedule`.
        * </pre>
        *
-       * <code>string filter = 4;</code>
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The filter.
        */
       public java.lang.String getFilter() {
@@ -1732,7 +1732,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * Example of a filter: `name=my-schedule`.
        * </pre>
        *
-       * <code>string filter = 4;</code>
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
@@ -1758,7 +1758,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * Example of a filter: `name=my-schedule`.
        * </pre>
        *
-       * <code>string filter = 4;</code>
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The filter to set.
        * @return This builder for chaining.
        */
@@ -1782,7 +1782,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * Example of a filter: `name=my-schedule`.
        * </pre>
        *
-       * <code>string filter = 4;</code>
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFilter() {
@@ -1801,7 +1801,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * Example of a filter: `name=my-schedule`.
        * </pre>
        *
-       * <code>string filter = 4;</code>
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The bytes for filter to set.
        * @return This builder for chaining.
        */
@@ -1826,7 +1826,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * Default value: `id asc`.
        * </pre>
        *
-       * <code>string order_by = 5;</code>
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The orderBy.
        */
       public java.lang.String getOrderBy() {
@@ -1849,7 +1849,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * Default value: `id asc`.
        * </pre>
        *
-       * <code>string order_by = 5;</code>
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The bytes for orderBy.
        */
       public com.google.protobuf.ByteString
@@ -1873,7 +1873,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * Default value: `id asc`.
        * </pre>
        *
-       * <code>string order_by = 5;</code>
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The orderBy to set.
        * @return This builder for chaining.
        */
@@ -1895,7 +1895,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * Default value: `id asc`.
        * </pre>
        *
-       * <code>string order_by = 5;</code>
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
       public Builder clearOrderBy() {
@@ -1912,7 +1912,7 @@ public final class SnapshotScheduleServiceOuterClass {
        * Default value: `id asc`.
        * </pre>
        *
-       * <code>string order_by = 5;</code>
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The bytes for orderBy to set.
        * @return This builder for chaining.
        */
@@ -21543,134 +21543,136 @@ public final class SnapshotScheduleServiceOuterClass {
       "sk.proto\032&yandex/cloud/compute/v1/snapsh" +
       "ot.proto\032/yandex/cloud/compute/v1/snapsh" +
       "ot_schedule.proto\032&yandex/cloud/operatio" +
-      "n/operation.proto\":\n\032GetSnapshotSchedule" +
-      "Request\022\034\n\024snapshot_schedule_id\030\001 \001(\t\"z\n" +
-      "\034ListSnapshotSchedulesRequest\022\021\n\tfolder_" +
-      "id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_toke" +
-      "n\030\003 \001(\t\022\016\n\006filter\030\004 \001(\t\022\020\n\010order_by\030\005 \001(" +
-      "\t\"\177\n\035ListSnapshotSchedulesResponse\022E\n\022sn" +
-      "apshot_schedules\030\001 \003(\0132).yandex.cloud.co" +
-      "mpute.v1.SnapshotSchedule\022\027\n\017next_page_t" +
-      "oken\030\002 \001(\t\"\317\003\n\035CreateSnapshotScheduleReq" +
-      "uest\022\021\n\tfolder_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n" +
-      "\013description\030\003 \001(\t\022R\n\006labels\030\004 \003(\0132B.yan" +
-      "dex.cloud.compute.v1.CreateSnapshotSched" +
-      "uleRequest.LabelsEntry\022@\n\017schedule_polic" +
-      "y\030\005 \001(\0132\'.yandex.cloud.compute.v1.Schedu" +
-      "lePolicy\0225\n\020retention_period\030\006 \001(\0132\031.goo" +
-      "gle.protobuf.DurationH\000\022\030\n\016snapshot_coun" +
-      "t\030\007 \001(\003H\000\022<\n\rsnapshot_spec\030\010 \001(\0132%.yande" +
-      "x.cloud.compute.v1.SnapshotSpec\022\020\n\010disk_" +
-      "ids\030\t \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001B\022\n\020retention_policy\">\n\036" +
-      "CreateSnapshotScheduleMetadata\022\034\n\024snapsh" +
-      "ot_schedule_id\030\001 \001(\t\"\371\003\n\035UpdateSnapshotS" +
-      "cheduleRequest\022\034\n\024snapshot_schedule_id\030\001" +
-      " \001(\t\022/\n\013update_mask\030\002 \001(\0132\032.google.proto" +
-      "buf.FieldMask\022\014\n\004name\030\003 \001(\t\022\023\n\013descripti" +
-      "on\030\004 \001(\t\022R\n\006labels\030\005 \003(\0132B.yandex.cloud." +
-      "compute.v1.UpdateSnapshotScheduleRequest" +
-      ".LabelsEntry\022@\n\017schedule_policy\030\006 \001(\0132\'." +
-      "yandex.cloud.compute.v1.SchedulePolicy\0225" +
-      "\n\020retention_period\030\007 \001(\0132\031.google.protob" +
-      "uf.DurationH\000\022\030\n\016snapshot_count\030\010 \001(\003H\000\022" +
-      "<\n\rsnapshot_spec\030\t \001(\0132%.yandex.cloud.co" +
-      "mpute.v1.SnapshotSpec\032-\n\013LabelsEntry\022\013\n\003" +
+      "n/operation.proto\032\035yandex/cloud/validati" +
+      "on.proto\":\n\032GetSnapshotScheduleRequest\022\034" +
+      "\n\024snapshot_schedule_id\030\001 \001(\t\"\266\001\n\034ListSna" +
+      "pshotSchedulesRequest\022\037\n\tfolder_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<" +
+      "=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006" +
+      "filter\030\004 \001(\tB\n\212\3101\006<=1000\022\033\n\010order_by\030\005 \001" +
+      "(\tB\t\212\3101\005<=100\"\177\n\035ListSnapshotSchedulesRe" +
+      "sponse\022E\n\022snapshot_schedules\030\001 \003(\0132).yan" +
+      "dex.cloud.compute.v1.SnapshotSchedule\022\027\n" +
+      "\017next_page_token\030\002 \001(\t\"\317\003\n\035CreateSnapsho" +
+      "tScheduleRequest\022\021\n\tfolder_id\030\001 \001(\t\022\014\n\004n" +
+      "ame\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022R\n\006labels" +
+      "\030\004 \003(\0132B.yandex.cloud.compute.v1.CreateS" +
+      "napshotScheduleRequest.LabelsEntry\022@\n\017sc" +
+      "hedule_policy\030\005 \001(\0132\'.yandex.cloud.compu" +
+      "te.v1.SchedulePolicy\0225\n\020retention_period" +
+      "\030\006 \001(\0132\031.google.protobuf.DurationH\000\022\030\n\016s" +
+      "napshot_count\030\007 \001(\003H\000\022<\n\rsnapshot_spec\030\010" +
+      " \001(\0132%.yandex.cloud.compute.v1.SnapshotS" +
+      "pec\022\020\n\010disk_ids\030\t \003(\t\032-\n\013LabelsEntry\022\013\n\003" +
       "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\022\n\020retentio" +
-      "n_policy\">\n\036UpdateSnapshotScheduleMetada" +
-      "ta\022\034\n\024snapshot_schedule_id\030\001 \001(\t\"=\n\035Dele" +
-      "teSnapshotScheduleRequest\022\034\n\024snapshot_sc" +
-      "hedule_id\030\001 \001(\t\">\n\036DeleteSnapshotSchedul" +
-      "eMetadata\022\034\n\024snapshot_schedule_id\030\001 \001(\t\"" +
-      ">\n\036DisableSnapshotScheduleRequest\022\034\n\024sna" +
-      "pshot_schedule_id\030\001 \001(\t\"?\n\037DisableSnapsh" +
-      "otScheduleMetadata\022\034\n\024snapshot_schedule_" +
-      "id\030\001 \001(\t\"=\n\035EnableSnapshotScheduleReques" +
-      "t\022\034\n\024snapshot_schedule_id\030\001 \001(\t\">\n\036Enabl" +
-      "eSnapshotScheduleMetadata\022\034\n\024snapshot_sc" +
-      "hedule_id\030\001 \001(\t\"l\n%ListSnapshotScheduleO" +
-      "perationsRequest\022\034\n\024snapshot_schedule_id" +
-      "\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_token\030" +
-      "\003 \001(\t\"x\n&ListSnapshotScheduleOperationsR" +
-      "esponse\0225\n\noperations\030\001 \003(\0132!.yandex.clo" +
-      "ud.operation.Operation\022\027\n\017next_page_toke" +
-      "n\030\002 \001(\t\"k\n$ListSnapshotScheduleSnapshots" +
-      "Request\022\034\n\024snapshot_schedule_id\030\001 \001(\t\022\021\n" +
-      "\tpage_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"v\n%" +
-      "ListSnapshotScheduleSnapshotsResponse\0224\n" +
-      "\tsnapshots\030\001 \003(\0132!.yandex.cloud.compute." +
-      "v1.Snapshot\022\027\n\017next_page_token\030\002 \001(\t\"g\n " +
-      "ListSnapshotScheduleDisksRequest\022\034\n\024snap" +
-      "shot_schedule_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(" +
-      "\003\022\022\n\npage_token\030\003 \001(\t\"j\n!ListSnapshotSch" +
-      "eduleDisksResponse\022,\n\005disks\030\001 \003(\0132\035.yand" +
-      "ex.cloud.compute.v1.Disk\022\027\n\017next_page_to" +
-      "ken\030\002 \001(\t\"_\n\"UpdateSnapshotScheduleDisks" +
-      "Request\022\034\n\024snapshot_schedule_id\030\001 \001(\t\022\016\n" +
-      "\006remove\030\002 \003(\t\022\013\n\003add\030\003 \003(\t\"C\n#UpdateSnap" +
-      "shotScheduleDisksMetadata\022\034\n\024snapshot_sc" +
-      "hedule_id\030\001 \001(\t2\244\022\n\027SnapshotScheduleServ" +
-      "ice\022\243\001\n\003Get\0223.yandex.cloud.compute.v1.Ge" +
-      "tSnapshotScheduleRequest\032).yandex.cloud." +
-      "compute.v1.SnapshotSchedule\"<\202\323\344\223\0026\0224/co" +
-      "mpute/v1/snapshotSchedules/{snapshot_sch" +
-      "edule_id}\022\234\001\n\004List\0225.yandex.cloud.comput" +
-      "e.v1.ListSnapshotSchedulesRequest\0326.yand" +
-      "ex.cloud.compute.v1.ListSnapshotSchedule" +
-      "sResponse\"%\202\323\344\223\002\037\022\035/compute/v1/snapshotS" +
-      "chedules\022\303\001\n\006Create\0226.yandex.cloud.compu" +
-      "te.v1.CreateSnapshotScheduleRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"^\202\323\344\223\002\"\"\035" +
-      "/compute/v1/snapshotSchedules:\001*\262\322*2\n\036Cr" +
-      "eateSnapshotScheduleMetadata\022\020SnapshotSc" +
-      "hedule\022\332\001\n\006Update\0226.yandex.cloud.compute" +
-      ".v1.UpdateSnapshotScheduleRequest\032!.yand" +
-      "ex.cloud.operation.Operation\"u\202\323\344\223\002924/c" +
-      "ompute/v1/snapshotSchedules/{snapshot_sc" +
-      "hedule_id}:\001*\262\322*2\n\036UpdateSnapshotSchedul" +
-      "eMetadata\022\020SnapshotSchedule\022\334\001\n\006Delete\0226" +
-      ".yandex.cloud.compute.v1.DeleteSnapshotS" +
-      "cheduleRequest\032!.yandex.cloud.operation." +
-      "Operation\"w\202\323\344\223\0026*4/compute/v1/snapshotS" +
-      "chedules/{snapshot_schedule_id}\262\322*7\n\036Del" +
-      "eteSnapshotScheduleMetadata\022\025google.prot" +
-      "obuf.Empty\022\366\001\n\013UpdateDisks\022;.yandex.clou" +
-      "d.compute.v1.UpdateSnapshotScheduleDisks" +
+      "n_policy\">\n\036CreateSnapshotScheduleMetada" +
+      "ta\022\034\n\024snapshot_schedule_id\030\001 \001(\t\"\371\003\n\035Upd" +
+      "ateSnapshotScheduleRequest\022\034\n\024snapshot_s" +
+      "chedule_id\030\001 \001(\t\022/\n\013update_mask\030\002 \001(\0132\032." +
+      "google.protobuf.FieldMask\022\014\n\004name\030\003 \001(\t\022" +
+      "\023\n\013description\030\004 \001(\t\022R\n\006labels\030\005 \003(\0132B.y" +
+      "andex.cloud.compute.v1.UpdateSnapshotSch" +
+      "eduleRequest.LabelsEntry\022@\n\017schedule_pol" +
+      "icy\030\006 \001(\0132\'.yandex.cloud.compute.v1.Sche" +
+      "dulePolicy\0225\n\020retention_period\030\007 \001(\0132\031.g" +
+      "oogle.protobuf.DurationH\000\022\030\n\016snapshot_co" +
+      "unt\030\010 \001(\003H\000\022<\n\rsnapshot_spec\030\t \001(\0132%.yan" +
+      "dex.cloud.compute.v1.SnapshotSpec\032-\n\013Lab" +
+      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "B\022\n\020retention_policy\">\n\036UpdateSnapshotSc" +
+      "heduleMetadata\022\034\n\024snapshot_schedule_id\030\001" +
+      " \001(\t\"=\n\035DeleteSnapshotScheduleRequest\022\034\n" +
+      "\024snapshot_schedule_id\030\001 \001(\t\">\n\036DeleteSna" +
+      "pshotScheduleMetadata\022\034\n\024snapshot_schedu" +
+      "le_id\030\001 \001(\t\">\n\036DisableSnapshotScheduleRe" +
+      "quest\022\034\n\024snapshot_schedule_id\030\001 \001(\t\"?\n\037D" +
+      "isableSnapshotScheduleMetadata\022\034\n\024snapsh" +
+      "ot_schedule_id\030\001 \001(\t\"=\n\035EnableSnapshotSc" +
+      "heduleRequest\022\034\n\024snapshot_schedule_id\030\001 " +
+      "\001(\t\">\n\036EnableSnapshotScheduleMetadata\022\034\n" +
+      "\024snapshot_schedule_id\030\001 \001(\t\"l\n%ListSnaps" +
+      "hotScheduleOperationsRequest\022\034\n\024snapshot" +
+      "_schedule_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n" +
+      "\npage_token\030\003 \001(\t\"x\n&ListSnapshotSchedul" +
+      "eOperationsResponse\0225\n\noperations\030\001 \003(\0132" +
+      "!.yandex.cloud.operation.Operation\022\027\n\017ne" +
+      "xt_page_token\030\002 \001(\t\"k\n$ListSnapshotSched" +
+      "uleSnapshotsRequest\022\034\n\024snapshot_schedule" +
+      "_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_tok" +
+      "en\030\003 \001(\t\"v\n%ListSnapshotScheduleSnapshot" +
+      "sResponse\0224\n\tsnapshots\030\001 \003(\0132!.yandex.cl" +
+      "oud.compute.v1.Snapshot\022\027\n\017next_page_tok" +
+      "en\030\002 \001(\t\"g\n ListSnapshotScheduleDisksReq" +
+      "uest\022\034\n\024snapshot_schedule_id\030\001 \001(\t\022\021\n\tpa" +
+      "ge_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"j\n!Lis" +
+      "tSnapshotScheduleDisksResponse\022,\n\005disks\030" +
+      "\001 \003(\0132\035.yandex.cloud.compute.v1.Disk\022\027\n\017" +
+      "next_page_token\030\002 \001(\t\"_\n\"UpdateSnapshotS" +
+      "cheduleDisksRequest\022\034\n\024snapshot_schedule" +
+      "_id\030\001 \001(\t\022\016\n\006remove\030\002 \003(\t\022\013\n\003add\030\003 \003(\t\"C" +
+      "\n#UpdateSnapshotScheduleDisksMetadata\022\034\n" +
+      "\024snapshot_schedule_id\030\001 \001(\t2\244\022\n\027Snapshot" +
+      "ScheduleService\022\243\001\n\003Get\0223.yandex.cloud.c" +
+      "ompute.v1.GetSnapshotScheduleRequest\032).y" +
+      "andex.cloud.compute.v1.SnapshotSchedule\"" +
+      "<\202\323\344\223\0026\0224/compute/v1/snapshotSchedules/{" +
+      "snapshot_schedule_id}\022\234\001\n\004List\0225.yandex." +
+      "cloud.compute.v1.ListSnapshotSchedulesRe" +
+      "quest\0326.yandex.cloud.compute.v1.ListSnap" +
+      "shotSchedulesResponse\"%\202\323\344\223\002\037\022\035/compute/" +
+      "v1/snapshotSchedules\022\303\001\n\006Create\0226.yandex" +
+      ".cloud.compute.v1.CreateSnapshotSchedule" +
       "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"\206\001\202\323\344\223\002E2@/compute/v1/snapshotSchedul" +
-      "es/{snapshot_schedule_id}:updateDisks:\001*" +
-      "\262\322*7\n#UpdateSnapshotScheduleDisksMetadat" +
-      "a\022\020SnapshotSchedule\022\345\001\n\007Disable\0227.yandex" +
-      ".cloud.compute.v1.DisableSnapshotSchedul" +
-      "eRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"~\202\323\344\223\002A\"</compute/v1/snapshotSchedul" +
-      "es/{snapshot_schedule_id}:disable:\001*\262\322*3" +
-      "\n\037DisableSnapshotScheduleMetadata\022\020Snaps" +
-      "hotSchedule\022\341\001\n\006Enable\0226.yandex.cloud.co" +
-      "mpute.v1.EnableSnapshotScheduleRequest\032!" +
-      ".yandex.cloud.operation.Operation\"|\202\323\344\223\002" +
-      "@\";/compute/v1/snapshotSchedules/{snapsh" +
-      "ot_schedule_id}:enable:\001*\262\322*2\n\036EnableSna" +
+      "on\"^\202\323\344\223\002\"\"\035/compute/v1/snapshotSchedule" +
+      "s:\001*\262\322*2\n\036CreateSnapshotScheduleMetadata" +
+      "\022\020SnapshotSchedule\022\332\001\n\006Update\0226.yandex.c" +
+      "loud.compute.v1.UpdateSnapshotScheduleRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"u\202\323\344\223\002924/compute/v1/snapshotSchedules/" +
+      "{snapshot_schedule_id}:\001*\262\322*2\n\036UpdateSna" +
       "pshotScheduleMetadata\022\020SnapshotSchedule\022" +
-      "\332\001\n\016ListOperations\022>.yandex.cloud.comput" +
-      "e.v1.ListSnapshotScheduleOperationsReque" +
-      "st\032?.yandex.cloud.compute.v1.ListSnapsho" +
-      "tScheduleOperationsResponse\"G\202\323\344\223\002A\022?/co" +
-      "mpute/v1/snapshotSchedules/{snapshot_sch" +
-      "edule_id}/operations\022\326\001\n\rListSnapshots\022=" +
-      ".yandex.cloud.compute.v1.ListSnapshotSch" +
-      "eduleSnapshotsRequest\032>.yandex.cloud.com" +
-      "pute.v1.ListSnapshotScheduleSnapshotsRes" +
-      "ponse\"F\202\323\344\223\002@\022>/compute/v1/snapshotSched" +
-      "ules/{snapshot_schedule_id}/snapshots\022\306\001" +
-      "\n\tListDisks\0229.yandex.cloud.compute.v1.Li" +
-      "stSnapshotScheduleDisksRequest\032:.yandex." +
-      "cloud.compute.v1.ListSnapshotScheduleDis" +
-      "ksResponse\"B\202\323\344\223\002<\022:/compute/v1/snapshot" +
-      "Schedules/{snapshot_schedule_id}/disksBb" +
-      "\n\033yandex.cloud.api.compute.v1ZCgithub.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "compute/v1;computeb\006proto3"
+      "\334\001\n\006Delete\0226.yandex.cloud.compute.v1.Del" +
+      "eteSnapshotScheduleRequest\032!.yandex.clou" +
+      "d.operation.Operation\"w\202\323\344\223\0026*4/compute/" +
+      "v1/snapshotSchedules/{snapshot_schedule_" +
+      "id}\262\322*7\n\036DeleteSnapshotScheduleMetadata\022" +
+      "\025google.protobuf.Empty\022\366\001\n\013UpdateDisks\022;" +
+      ".yandex.cloud.compute.v1.UpdateSnapshotS" +
+      "cheduleDisksRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"\206\001\202\323\344\223\002E2@/compute/v1/sna" +
+      "pshotSchedules/{snapshot_schedule_id}:up" +
+      "dateDisks:\001*\262\322*7\n#UpdateSnapshotSchedule" +
+      "DisksMetadata\022\020SnapshotSchedule\022\345\001\n\007Disa" +
+      "ble\0227.yandex.cloud.compute.v1.DisableSna" +
+      "pshotScheduleRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"~\202\323\344\223\002A\"</compute/v1/sna" +
+      "pshotSchedules/{snapshot_schedule_id}:di" +
+      "sable:\001*\262\322*3\n\037DisableSnapshotScheduleMet" +
+      "adata\022\020SnapshotSchedule\022\341\001\n\006Enable\0226.yan" +
+      "dex.cloud.compute.v1.EnableSnapshotSched" +
+      "uleRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"|\202\323\344\223\002@\";/compute/v1/snapshotSched" +
+      "ules/{snapshot_schedule_id}:enable:\001*\262\322*" +
+      "2\n\036EnableSnapshotScheduleMetadata\022\020Snaps" +
+      "hotSchedule\022\332\001\n\016ListOperations\022>.yandex." +
+      "cloud.compute.v1.ListSnapshotScheduleOpe" +
+      "rationsRequest\032?.yandex.cloud.compute.v1" +
+      ".ListSnapshotScheduleOperationsResponse\"" +
+      "G\202\323\344\223\002A\022?/compute/v1/snapshotSchedules/{" +
+      "snapshot_schedule_id}/operations\022\326\001\n\rLis" +
+      "tSnapshots\022=.yandex.cloud.compute.v1.Lis" +
+      "tSnapshotScheduleSnapshotsRequest\032>.yand" +
+      "ex.cloud.compute.v1.ListSnapshotSchedule" +
+      "SnapshotsResponse\"F\202\323\344\223\002@\022>/compute/v1/s" +
+      "napshotSchedules/{snapshot_schedule_id}/" +
+      "snapshots\022\306\001\n\tListDisks\0229.yandex.cloud.c" +
+      "ompute.v1.ListSnapshotScheduleDisksReque" +
+      "st\032:.yandex.cloud.compute.v1.ListSnapsho" +
+      "tScheduleDisksResponse\"B\202\323\344\223\002<\022:/compute" +
+      "/v1/snapshotSchedules/{snapshot_schedule" +
+      "_id}/disksBb\n\033yandex.cloud.api.compute.v" +
+      "1ZCgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/compute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21683,6 +21685,7 @@ public final class SnapshotScheduleServiceOuterClass {
           yandex.cloud.api.compute.v1.SnapshotOuterClass.getDescriptor(),
           yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_compute_v1_GetSnapshotScheduleRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -21826,6 +21829,9 @@ public final class SnapshotScheduleServiceOuterClass {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
+    registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
@@ -21836,6 +21842,7 @@ public final class SnapshotScheduleServiceOuterClass {
     yandex.cloud.api.compute.v1.SnapshotOuterClass.getDescriptor();
     yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -637,7 +637,7 @@ public final class GpuClusterServiceOuterClass {
      * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
-     * <code>string folder_id = 1;</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
@@ -647,7 +647,7 @@ public final class GpuClusterServiceOuterClass {
      * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
-     * <code>string folder_id = 1;</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
@@ -660,7 +660,7 @@ public final class GpuClusterServiceOuterClass {
      * that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
-     * <code>int64 page_size = 2;</code>
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     long getPageSize();
@@ -671,7 +671,7 @@ public final class GpuClusterServiceOuterClass {
      * [ListGpuClustersResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3;</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -681,7 +681,7 @@ public final class GpuClusterServiceOuterClass {
      * [ListGpuClustersResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3;</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
@@ -697,7 +697,7 @@ public final class GpuClusterServiceOuterClass {
      * Example of a filter: `name=my-schedule`.
      * </pre>
      *
-     * <code>string filter = 4;</code>
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The filter.
      */
     java.lang.String getFilter();
@@ -711,7 +711,7 @@ public final class GpuClusterServiceOuterClass {
      * Example of a filter: `name=my-schedule`.
      * </pre>
      *
-     * <code>string filter = 4;</code>
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
@@ -725,7 +725,7 @@ public final class GpuClusterServiceOuterClass {
      * Default value: `id asc`.
      * </pre>
      *
-     * <code>string order_by = 5;</code>
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The orderBy.
      */
     java.lang.String getOrderBy();
@@ -737,7 +737,7 @@ public final class GpuClusterServiceOuterClass {
      * Default value: `id asc`.
      * </pre>
      *
-     * <code>string order_by = 5;</code>
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for orderBy.
      */
     com.google.protobuf.ByteString
@@ -861,7 +861,7 @@ public final class GpuClusterServiceOuterClass {
      * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
-     * <code>string folder_id = 1;</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     @java.lang.Override
@@ -883,7 +883,7 @@ public final class GpuClusterServiceOuterClass {
      * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
-     * <code>string folder_id = 1;</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
     @java.lang.Override
@@ -910,7 +910,7 @@ public final class GpuClusterServiceOuterClass {
      * that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
-     * <code>int64 page_size = 2;</code>
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     @java.lang.Override
@@ -926,7 +926,7 @@ public final class GpuClusterServiceOuterClass {
      * [ListGpuClustersResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3;</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -948,7 +948,7 @@ public final class GpuClusterServiceOuterClass {
      * [ListGpuClustersResponse.next_page_token] returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3;</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -978,7 +978,7 @@ public final class GpuClusterServiceOuterClass {
      * Example of a filter: `name=my-schedule`.
      * </pre>
      *
-     * <code>string filter = 4;</code>
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The filter.
      */
     @java.lang.Override
@@ -1004,7 +1004,7 @@ public final class GpuClusterServiceOuterClass {
      * Example of a filter: `name=my-schedule`.
      * </pre>
      *
-     * <code>string filter = 4;</code>
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for filter.
      */
     @java.lang.Override
@@ -1032,7 +1032,7 @@ public final class GpuClusterServiceOuterClass {
      * Default value: `id asc`.
      * </pre>
      *
-     * <code>string order_by = 5;</code>
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The orderBy.
      */
     @java.lang.Override
@@ -1056,7 +1056,7 @@ public final class GpuClusterServiceOuterClass {
      * Default value: `id asc`.
      * </pre>
      *
-     * <code>string order_by = 5;</code>
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for orderBy.
      */
     @java.lang.Override
@@ -1452,7 +1452,7 @@ public final class GpuClusterServiceOuterClass {
        * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1;</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The folderId.
        */
       public java.lang.String getFolderId() {
@@ -1473,7 +1473,7 @@ public final class GpuClusterServiceOuterClass {
        * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1;</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
@@ -1495,7 +1495,7 @@ public final class GpuClusterServiceOuterClass {
        * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1;</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
        */
@@ -1515,7 +1515,7 @@ public final class GpuClusterServiceOuterClass {
        * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1;</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFolderId() {
@@ -1530,7 +1530,7 @@ public final class GpuClusterServiceOuterClass {
        * To get the folder ID, make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1;</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
        */
@@ -1554,7 +1554,7 @@ public final class GpuClusterServiceOuterClass {
        * that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
-       * <code>int64 page_size = 2;</code>
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return The pageSize.
        */
       @java.lang.Override
@@ -1568,7 +1568,7 @@ public final class GpuClusterServiceOuterClass {
        * that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
-       * <code>int64 page_size = 2;</code>
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
        */
@@ -1585,7 +1585,7 @@ public final class GpuClusterServiceOuterClass {
        * that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
-       * <code>int64 page_size = 2;</code>
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageSize() {
@@ -1602,7 +1602,7 @@ public final class GpuClusterServiceOuterClass {
        * [ListGpuClustersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3;</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -1623,7 +1623,7 @@ public final class GpuClusterServiceOuterClass {
        * [ListGpuClustersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3;</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -1645,7 +1645,7 @@ public final class GpuClusterServiceOuterClass {
        * [ListGpuClustersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3;</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -1665,7 +1665,7 @@ public final class GpuClusterServiceOuterClass {
        * [ListGpuClustersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3;</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -1680,7 +1680,7 @@ public final class GpuClusterServiceOuterClass {
        * [ListGpuClustersResponse.next_page_token] returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3;</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -1707,7 +1707,7 @@ public final class GpuClusterServiceOuterClass {
        * Example of a filter: `name=my-schedule`.
        * </pre>
        *
-       * <code>string filter = 4;</code>
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The filter.
        */
       public java.lang.String getFilter() {
@@ -1732,7 +1732,7 @@ public final class GpuClusterServiceOuterClass {
        * Example of a filter: `name=my-schedule`.
        * </pre>
        *
-       * <code>string filter = 4;</code>
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
@@ -1758,7 +1758,7 @@ public final class GpuClusterServiceOuterClass {
        * Example of a filter: `name=my-schedule`.
        * </pre>
        *
-       * <code>string filter = 4;</code>
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The filter to set.
        * @return This builder for chaining.
        */
@@ -1782,7 +1782,7 @@ public final class GpuClusterServiceOuterClass {
        * Example of a filter: `name=my-schedule`.
        * </pre>
        *
-       * <code>string filter = 4;</code>
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFilter() {
@@ -1801,7 +1801,7 @@ public final class GpuClusterServiceOuterClass {
        * Example of a filter: `name=my-schedule`.
        * </pre>
        *
-       * <code>string filter = 4;</code>
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The bytes for filter to set.
        * @return This builder for chaining.
        */
@@ -1826,7 +1826,7 @@ public final class GpuClusterServiceOuterClass {
        * Default value: `id asc`.
        * </pre>
        *
-       * <code>string order_by = 5;</code>
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The orderBy.
        */
       public java.lang.String getOrderBy() {
@@ -1849,7 +1849,7 @@ public final class GpuClusterServiceOuterClass {
        * Default value: `id asc`.
        * </pre>
        *
-       * <code>string order_by = 5;</code>
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The bytes for orderBy.
        */
       public com.google.protobuf.ByteString
@@ -1873,7 +1873,7 @@ public final class GpuClusterServiceOuterClass {
        * Default value: `id asc`.
        * </pre>
        *
-       * <code>string order_by = 5;</code>
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The orderBy to set.
        * @return This builder for chaining.
        */
@@ -1895,7 +1895,7 @@ public final class GpuClusterServiceOuterClass {
        * Default value: `id asc`.
        * </pre>
        *
-       * <code>string order_by = 5;</code>
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
       public Builder clearOrderBy() {
@@ -1912,7 +1912,7 @@ public final class GpuClusterServiceOuterClass {
        * Default value: `id asc`.
        * </pre>
        *
-       * <code>string order_by = 5;</code>
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The bytes for orderBy to set.
        * @return This builder for chaining.
        */
@@ -13316,78 +13316,80 @@ public final class GpuClusterServiceOuterClass {
       "peration.proto\032&yandex/cloud/compute/v1/" +
       "instance.proto\032)yandex/cloud/compute/v1/" +
       "gpu_cluster.proto\032&yandex/cloud/operatio" +
-      "n/operation.proto\".\n\024GetGpuClusterReques" +
-      "t\022\026\n\016gpu_cluster_id\030\001 \001(\t\"t\n\026ListGpuClus" +
-      "tersRequest\022\021\n\tfolder_id\030\001 \001(\t\022\021\n\tpage_s" +
-      "ize\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\022\016\n\006filter\030" +
-      "\004 \001(\t\022\020\n\010order_by\030\005 \001(\t\"m\n\027ListGpuCluste" +
-      "rsResponse\0229\n\014gpu_clusters\030\001 \003(\0132#.yande" +
-      "x.cloud.compute.v1.GpuCluster\022\027\n\017next_pa" +
-      "ge_token\030\002 \001(\t\"\246\002\n\027CreateGpuClusterReque" +
-      "st\022\021\n\tfolder_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n\013d" +
-      "escription\030\003 \001(\t\022L\n\006labels\030\004 \003(\0132<.yande" +
-      "x.cloud.compute.v1.CreateGpuClusterReque" +
-      "st.LabelsEntry\022\017\n\007zone_id\030\005 \001(\t\022G\n\021inter" +
-      "connect_type\030\006 \001(\0162,.yandex.cloud.comput" +
-      "e.v1.GpuInterconnectType\032-\n\013LabelsEntry\022" +
-      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"2\n\030Creat" +
-      "eGpuClusterMetadata\022\026\n\016gpu_cluster_id\030\001 " +
-      "\001(\t\"\202\002\n\027UpdateGpuClusterRequest\022\026\n\016gpu_c" +
-      "luster_id\030\001 \001(\t\022/\n\013update_mask\030\002 \001(\0132\032.g" +
-      "oogle.protobuf.FieldMask\022\014\n\004name\030\003 \001(\t\022\023" +
-      "\n\013description\030\004 \001(\t\022L\n\006labels\030\005 \003(\0132<.ya" +
-      "ndex.cloud.compute.v1.UpdateGpuClusterRe" +
-      "quest.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"2\n\030UpdateGpuClu" +
-      "sterMetadata\022\026\n\016gpu_cluster_id\030\001 \001(\t\"1\n\027" +
-      "DeleteGpuClusterRequest\022\026\n\016gpu_cluster_i" +
-      "d\030\001 \001(\t\"2\n\030DeleteGpuClusterMetadata\022\026\n\016g" +
-      "pu_cluster_id\030\001 \001(\t\"`\n\037ListGpuClusterOpe" +
-      "rationsRequest\022\026\n\016gpu_cluster_id\030\001 \001(\t\022\021" +
-      "\n\tpage_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"r\n" +
-      " ListGpuClusterOperationsResponse\0225\n\nope" +
-      "rations\030\001 \003(\0132!.yandex.cloud.operation.O" +
-      "peration\022\027\n\017next_page_token\030\002 \001(\t\"o\n\036Lis" +
-      "tGpuClusterInstancesRequest\022\026\n\016gpu_clust" +
-      "er_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_t" +
-      "oken\030\003 \001(\t\022\016\n\006filter\030\004 \001(\t\"p\n\037ListGpuClu" +
-      "sterInstancesResponse\0224\n\tinstances\030\001 \003(\013" +
-      "2!.yandex.cloud.compute.v1.Instance\022\027\n\017n" +
-      "ext_page_token\030\002 \001(\t2\350\t\n\021GpuClusterServi" +
-      "ce\022\213\001\n\003Get\022-.yandex.cloud.compute.v1.Get" +
-      "GpuClusterRequest\032#.yandex.cloud.compute" +
-      ".v1.GpuCluster\"0\202\323\344\223\002*\022(/compute/v1/gpuC" +
-      "lusters/{gpu_cluster_id}\022\212\001\n\004List\022/.yand" +
-      "ex.cloud.compute.v1.ListGpuClustersReque" +
-      "st\0320.yandex.cloud.compute.v1.ListGpuClus" +
-      "tersResponse\"\037\202\323\344\223\002\031\022\027/compute/v1/gpuClu" +
-      "sters\022\253\001\n\006Create\0220.yandex.cloud.compute." +
-      "v1.CreateGpuClusterRequest\032!.yandex.clou" +
-      "d.operation.Operation\"L\202\323\344\223\002\034\"\027/compute/" +
-      "v1/gpuClusters:\001*\262\322*&\n\030CreateGpuClusterM" +
-      "etadata\022\nGpuCluster\022\274\001\n\006Update\0220.yandex." +
-      "cloud.compute.v1.UpdateGpuClusterRequest" +
-      "\032!.yandex.cloud.operation.Operation\"]\202\323\344" +
-      "\223\002-2(/compute/v1/gpuClusters/{gpu_cluste" +
-      "r_id}:\001*\262\322*&\n\030UpdateGpuClusterMetadata\022\n" +
-      "GpuCluster\022\304\001\n\006Delete\0220.yandex.cloud.com" +
-      "pute.v1.DeleteGpuClusterRequest\032!.yandex" +
-      ".cloud.operation.Operation\"e\202\323\344\223\002**(/com" +
-      "pute/v1/gpuClusters/{gpu_cluster_id}\262\322*1" +
-      "\n\030DeleteGpuClusterMetadata\022\025google.proto" +
-      "buf.Empty\022\302\001\n\016ListOperations\0228.yandex.cl" +
-      "oud.compute.v1.ListGpuClusterOperationsR" +
-      "equest\0329.yandex.cloud.compute.v1.ListGpu" +
-      "ClusterOperationsResponse\";\202\323\344\223\0025\0223/comp" +
-      "ute/v1/gpuClusters/{gpu_cluster_id}/oper" +
-      "ations\022\276\001\n\rListInstances\0227.yandex.cloud." +
-      "compute.v1.ListGpuClusterInstancesReques" +
-      "t\0328.yandex.cloud.compute.v1.ListGpuClust" +
-      "erInstancesResponse\":\202\323\344\223\0024\0222/compute/v1" +
-      "/gpuClusters/{gpu_cluster_id}/instancesB" +
-      "b\n\033yandex.cloud.api.compute.v1ZCgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/compute/v1;computeb\006proto3"
+      "n/operation.proto\032\035yandex/cloud/validati" +
+      "on.proto\".\n\024GetGpuClusterRequest\022\026\n\016gpu_" +
+      "cluster_id\030\001 \001(\t\"\260\001\n\026ListGpuClustersRequ" +
+      "est\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\t" +
+      "page_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_toke" +
+      "n\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006" +
+      "<=1000\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=100\"m\n\027L" +
+      "istGpuClustersResponse\0229\n\014gpu_clusters\030\001" +
+      " \003(\0132#.yandex.cloud.compute.v1.GpuCluste" +
+      "r\022\027\n\017next_page_token\030\002 \001(\t\"\246\002\n\027CreateGpu" +
+      "ClusterRequest\022\021\n\tfolder_id\030\001 \001(\t\022\014\n\004nam" +
+      "e\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022L\n\006labels\030\004" +
+      " \003(\0132<.yandex.cloud.compute.v1.CreateGpu" +
+      "ClusterRequest.LabelsEntry\022\017\n\007zone_id\030\005 " +
+      "\001(\t\022G\n\021interconnect_type\030\006 \001(\0162,.yandex." +
+      "cloud.compute.v1.GpuInterconnectType\032-\n\013" +
+      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
+      "\0028\001\"2\n\030CreateGpuClusterMetadata\022\026\n\016gpu_c" +
+      "luster_id\030\001 \001(\t\"\202\002\n\027UpdateGpuClusterRequ" +
+      "est\022\026\n\016gpu_cluster_id\030\001 \001(\t\022/\n\013update_ma" +
+      "sk\030\002 \001(\0132\032.google.protobuf.FieldMask\022\014\n\004" +
+      "name\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022L\n\006label" +
+      "s\030\005 \003(\0132<.yandex.cloud.compute.v1.Update" +
+      "GpuClusterRequest.LabelsEntry\032-\n\013LabelsE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"2\n\030" +
+      "UpdateGpuClusterMetadata\022\026\n\016gpu_cluster_" +
+      "id\030\001 \001(\t\"1\n\027DeleteGpuClusterRequest\022\026\n\016g" +
+      "pu_cluster_id\030\001 \001(\t\"2\n\030DeleteGpuClusterM" +
+      "etadata\022\026\n\016gpu_cluster_id\030\001 \001(\t\"`\n\037ListG" +
+      "puClusterOperationsRequest\022\026\n\016gpu_cluste" +
+      "r_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_to" +
+      "ken\030\003 \001(\t\"r\n ListGpuClusterOperationsRes" +
+      "ponse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud" +
+      ".operation.Operation\022\027\n\017next_page_token\030" +
+      "\002 \001(\t\"o\n\036ListGpuClusterInstancesRequest\022" +
+      "\026\n\016gpu_cluster_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001" +
+      "(\003\022\022\n\npage_token\030\003 \001(\t\022\016\n\006filter\030\004 \001(\t\"p" +
+      "\n\037ListGpuClusterInstancesResponse\0224\n\tins" +
+      "tances\030\001 \003(\0132!.yandex.cloud.compute.v1.I" +
+      "nstance\022\027\n\017next_page_token\030\002 \001(\t2\350\t\n\021Gpu" +
+      "ClusterService\022\213\001\n\003Get\022-.yandex.cloud.co" +
+      "mpute.v1.GetGpuClusterRequest\032#.yandex.c" +
+      "loud.compute.v1.GpuCluster\"0\202\323\344\223\002*\022(/com" +
+      "pute/v1/gpuClusters/{gpu_cluster_id}\022\212\001\n" +
+      "\004List\022/.yandex.cloud.compute.v1.ListGpuC" +
+      "lustersRequest\0320.yandex.cloud.compute.v1" +
+      ".ListGpuClustersResponse\"\037\202\323\344\223\002\031\022\027/compu" +
+      "te/v1/gpuClusters\022\253\001\n\006Create\0220.yandex.cl" +
+      "oud.compute.v1.CreateGpuClusterRequest\032!" +
+      ".yandex.cloud.operation.Operation\"L\202\323\344\223\002" +
+      "\034\"\027/compute/v1/gpuClusters:\001*\262\322*&\n\030Creat" +
+      "eGpuClusterMetadata\022\nGpuCluster\022\274\001\n\006Upda" +
+      "te\0220.yandex.cloud.compute.v1.UpdateGpuCl" +
+      "usterRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"]\202\323\344\223\002-2(/compute/v1/gpuClusters" +
+      "/{gpu_cluster_id}:\001*\262\322*&\n\030UpdateGpuClust" +
+      "erMetadata\022\nGpuCluster\022\304\001\n\006Delete\0220.yand" +
+      "ex.cloud.compute.v1.DeleteGpuClusterRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"e" +
+      "\202\323\344\223\002**(/compute/v1/gpuClusters/{gpu_clu" +
+      "ster_id}\262\322*1\n\030DeleteGpuClusterMetadata\022\025" +
+      "google.protobuf.Empty\022\302\001\n\016ListOperations" +
+      "\0228.yandex.cloud.compute.v1.ListGpuCluste" +
+      "rOperationsRequest\0329.yandex.cloud.comput" +
+      "e.v1.ListGpuClusterOperationsResponse\";\202" +
+      "\323\344\223\0025\0223/compute/v1/gpuClusters/{gpu_clus" +
+      "ter_id}/operations\022\276\001\n\rListInstances\0227.y" +
+      "andex.cloud.compute.v1.ListGpuClusterIns" +
+      "tancesRequest\0328.yandex.cloud.compute.v1." +
+      "ListGpuClusterInstancesResponse\":\202\323\344\223\0024\022" +
+      "2/compute/v1/gpuClusters/{gpu_cluster_id" +
+      "}/instancesBb\n\033yandex.cloud.api.compute." +
+      "v1ZCgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/compute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13398,6 +13400,7 @@ public final class GpuClusterServiceOuterClass {
           yandex.cloud.api.compute.v1.InstanceOuterClass.getDescriptor(),
           yandex.cloud.api.compute.v1.GpuClusterOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_compute_v1_GetGpuClusterRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -13493,6 +13496,9 @@ public final class GpuClusterServiceOuterClass {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
+    registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
@@ -13501,6 +13507,7 @@ public final class GpuClusterServiceOuterClass {
     yandex.cloud.api.compute.v1.InstanceOuterClass.getDescriptor();
     yandex.cloud.api.compute.v1.GpuClusterOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

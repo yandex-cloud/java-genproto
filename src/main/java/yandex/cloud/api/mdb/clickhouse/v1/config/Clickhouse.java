@@ -1134,6 +1134,21 @@ public final class Clickhouse {
     com.google.protobuf.Int64ValueOrBuilder getBackgroundBufferFlushSchedulePoolSizeOrBuilder();
 
     /**
+     * <code>.google.protobuf.Int64Value background_message_broker_schedule_pool_size = 46 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the backgroundMessageBrokerSchedulePoolSize field is set.
+     */
+    boolean hasBackgroundMessageBrokerSchedulePoolSize();
+    /**
+     * <code>.google.protobuf.Int64Value background_message_broker_schedule_pool_size = 46 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The backgroundMessageBrokerSchedulePoolSize.
+     */
+    com.google.protobuf.Int64Value getBackgroundMessageBrokerSchedulePoolSize();
+    /**
+     * <code>.google.protobuf.Int64Value background_message_broker_schedule_pool_size = 46 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getBackgroundMessageBrokerSchedulePoolSizeOrBuilder();
+
+    /**
      * <pre>
      * The default database.
      * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
@@ -1809,6 +1824,19 @@ public final class Clickhouse {
 
               break;
             }
+            case 370: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (backgroundMessageBrokerSchedulePoolSize_ != null) {
+                subBuilder = backgroundMessageBrokerSchedulePoolSize_.toBuilder();
+              }
+              backgroundMessageBrokerSchedulePoolSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(backgroundMessageBrokerSchedulePoolSize_);
+                backgroundMessageBrokerSchedulePoolSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2345,6 +2373,96 @@ public final class Clickhouse {
        * <code>.google.protobuf.BoolValue allow_remote_fs_zero_copy_replication = 14;</code>
        */
       com.google.protobuf.BoolValueOrBuilder getAllowRemoteFsZeroCopyReplicationOrBuilder();
+
+      /**
+       * <code>.google.protobuf.Int64Value merge_with_ttl_timeout = 15;</code>
+       * @return Whether the mergeWithTtlTimeout field is set.
+       */
+      boolean hasMergeWithTtlTimeout();
+      /**
+       * <code>.google.protobuf.Int64Value merge_with_ttl_timeout = 15;</code>
+       * @return The mergeWithTtlTimeout.
+       */
+      com.google.protobuf.Int64Value getMergeWithTtlTimeout();
+      /**
+       * <code>.google.protobuf.Int64Value merge_with_ttl_timeout = 15;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getMergeWithTtlTimeoutOrBuilder();
+
+      /**
+       * <code>.google.protobuf.Int64Value merge_with_recompression_ttl_timeout = 16;</code>
+       * @return Whether the mergeWithRecompressionTtlTimeout field is set.
+       */
+      boolean hasMergeWithRecompressionTtlTimeout();
+      /**
+       * <code>.google.protobuf.Int64Value merge_with_recompression_ttl_timeout = 16;</code>
+       * @return The mergeWithRecompressionTtlTimeout.
+       */
+      com.google.protobuf.Int64Value getMergeWithRecompressionTtlTimeout();
+      /**
+       * <code>.google.protobuf.Int64Value merge_with_recompression_ttl_timeout = 16;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getMergeWithRecompressionTtlTimeoutOrBuilder();
+
+      /**
+       * <code>.google.protobuf.Int64Value max_parts_in_total = 17;</code>
+       * @return Whether the maxPartsInTotal field is set.
+       */
+      boolean hasMaxPartsInTotal();
+      /**
+       * <code>.google.protobuf.Int64Value max_parts_in_total = 17;</code>
+       * @return The maxPartsInTotal.
+       */
+      com.google.protobuf.Int64Value getMaxPartsInTotal();
+      /**
+       * <code>.google.protobuf.Int64Value max_parts_in_total = 17;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getMaxPartsInTotalOrBuilder();
+
+      /**
+       * <code>.google.protobuf.Int64Value max_number_of_merges_with_ttl_in_pool = 18;</code>
+       * @return Whether the maxNumberOfMergesWithTtlInPool field is set.
+       */
+      boolean hasMaxNumberOfMergesWithTtlInPool();
+      /**
+       * <code>.google.protobuf.Int64Value max_number_of_merges_with_ttl_in_pool = 18;</code>
+       * @return The maxNumberOfMergesWithTtlInPool.
+       */
+      com.google.protobuf.Int64Value getMaxNumberOfMergesWithTtlInPool();
+      /**
+       * <code>.google.protobuf.Int64Value max_number_of_merges_with_ttl_in_pool = 18;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getMaxNumberOfMergesWithTtlInPoolOrBuilder();
+
+      /**
+       * <code>.google.protobuf.Int64Value cleanup_delay_period = 19;</code>
+       * @return Whether the cleanupDelayPeriod field is set.
+       */
+      boolean hasCleanupDelayPeriod();
+      /**
+       * <code>.google.protobuf.Int64Value cleanup_delay_period = 19;</code>
+       * @return The cleanupDelayPeriod.
+       */
+      com.google.protobuf.Int64Value getCleanupDelayPeriod();
+      /**
+       * <code>.google.protobuf.Int64Value cleanup_delay_period = 19;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getCleanupDelayPeriodOrBuilder();
+
+      /**
+       * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_execute_mutation = 20;</code>
+       * @return Whether the numberOfFreeEntriesInPoolToExecuteMutation field is set.
+       */
+      boolean hasNumberOfFreeEntriesInPoolToExecuteMutation();
+      /**
+       * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_execute_mutation = 20;</code>
+       * @return The numberOfFreeEntriesInPoolToExecuteMutation.
+       */
+      com.google.protobuf.Int64Value getNumberOfFreeEntriesInPoolToExecuteMutation();
+      /**
+       * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_execute_mutation = 20;</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getNumberOfFreeEntriesInPoolToExecuteMutationOrBuilder();
     }
     /**
      * <pre>
@@ -2573,6 +2691,84 @@ public final class Clickhouse {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(allowRemoteFsZeroCopyReplication_);
                   allowRemoteFsZeroCopyReplication_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 122: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (mergeWithTtlTimeout_ != null) {
+                  subBuilder = mergeWithTtlTimeout_.toBuilder();
+                }
+                mergeWithTtlTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(mergeWithTtlTimeout_);
+                  mergeWithTtlTimeout_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 130: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (mergeWithRecompressionTtlTimeout_ != null) {
+                  subBuilder = mergeWithRecompressionTtlTimeout_.toBuilder();
+                }
+                mergeWithRecompressionTtlTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(mergeWithRecompressionTtlTimeout_);
+                  mergeWithRecompressionTtlTimeout_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 138: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (maxPartsInTotal_ != null) {
+                  subBuilder = maxPartsInTotal_.toBuilder();
+                }
+                maxPartsInTotal_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(maxPartsInTotal_);
+                  maxPartsInTotal_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 146: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (maxNumberOfMergesWithTtlInPool_ != null) {
+                  subBuilder = maxNumberOfMergesWithTtlInPool_.toBuilder();
+                }
+                maxNumberOfMergesWithTtlInPool_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(maxNumberOfMergesWithTtlInPool_);
+                  maxNumberOfMergesWithTtlInPool_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 154: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (cleanupDelayPeriod_ != null) {
+                  subBuilder = cleanupDelayPeriod_.toBuilder();
+                }
+                cleanupDelayPeriod_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(cleanupDelayPeriod_);
+                  cleanupDelayPeriod_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 162: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (numberOfFreeEntriesInPoolToExecuteMutation_ != null) {
+                  subBuilder = numberOfFreeEntriesInPoolToExecuteMutation_.toBuilder();
+                }
+                numberOfFreeEntriesInPoolToExecuteMutation_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(numberOfFreeEntriesInPoolToExecuteMutation_);
+                  numberOfFreeEntriesInPoolToExecuteMutation_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -3108,6 +3304,162 @@ public final class Clickhouse {
         return getAllowRemoteFsZeroCopyReplication();
       }
 
+      public static final int MERGE_WITH_TTL_TIMEOUT_FIELD_NUMBER = 15;
+      private com.google.protobuf.Int64Value mergeWithTtlTimeout_;
+      /**
+       * <code>.google.protobuf.Int64Value merge_with_ttl_timeout = 15;</code>
+       * @return Whether the mergeWithTtlTimeout field is set.
+       */
+      @java.lang.Override
+      public boolean hasMergeWithTtlTimeout() {
+        return mergeWithTtlTimeout_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value merge_with_ttl_timeout = 15;</code>
+       * @return The mergeWithTtlTimeout.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getMergeWithTtlTimeout() {
+        return mergeWithTtlTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mergeWithTtlTimeout_;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value merge_with_ttl_timeout = 15;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getMergeWithTtlTimeoutOrBuilder() {
+        return getMergeWithTtlTimeout();
+      }
+
+      public static final int MERGE_WITH_RECOMPRESSION_TTL_TIMEOUT_FIELD_NUMBER = 16;
+      private com.google.protobuf.Int64Value mergeWithRecompressionTtlTimeout_;
+      /**
+       * <code>.google.protobuf.Int64Value merge_with_recompression_ttl_timeout = 16;</code>
+       * @return Whether the mergeWithRecompressionTtlTimeout field is set.
+       */
+      @java.lang.Override
+      public boolean hasMergeWithRecompressionTtlTimeout() {
+        return mergeWithRecompressionTtlTimeout_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value merge_with_recompression_ttl_timeout = 16;</code>
+       * @return The mergeWithRecompressionTtlTimeout.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getMergeWithRecompressionTtlTimeout() {
+        return mergeWithRecompressionTtlTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mergeWithRecompressionTtlTimeout_;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value merge_with_recompression_ttl_timeout = 16;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getMergeWithRecompressionTtlTimeoutOrBuilder() {
+        return getMergeWithRecompressionTtlTimeout();
+      }
+
+      public static final int MAX_PARTS_IN_TOTAL_FIELD_NUMBER = 17;
+      private com.google.protobuf.Int64Value maxPartsInTotal_;
+      /**
+       * <code>.google.protobuf.Int64Value max_parts_in_total = 17;</code>
+       * @return Whether the maxPartsInTotal field is set.
+       */
+      @java.lang.Override
+      public boolean hasMaxPartsInTotal() {
+        return maxPartsInTotal_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value max_parts_in_total = 17;</code>
+       * @return The maxPartsInTotal.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getMaxPartsInTotal() {
+        return maxPartsInTotal_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxPartsInTotal_;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value max_parts_in_total = 17;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getMaxPartsInTotalOrBuilder() {
+        return getMaxPartsInTotal();
+      }
+
+      public static final int MAX_NUMBER_OF_MERGES_WITH_TTL_IN_POOL_FIELD_NUMBER = 18;
+      private com.google.protobuf.Int64Value maxNumberOfMergesWithTtlInPool_;
+      /**
+       * <code>.google.protobuf.Int64Value max_number_of_merges_with_ttl_in_pool = 18;</code>
+       * @return Whether the maxNumberOfMergesWithTtlInPool field is set.
+       */
+      @java.lang.Override
+      public boolean hasMaxNumberOfMergesWithTtlInPool() {
+        return maxNumberOfMergesWithTtlInPool_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value max_number_of_merges_with_ttl_in_pool = 18;</code>
+       * @return The maxNumberOfMergesWithTtlInPool.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getMaxNumberOfMergesWithTtlInPool() {
+        return maxNumberOfMergesWithTtlInPool_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxNumberOfMergesWithTtlInPool_;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value max_number_of_merges_with_ttl_in_pool = 18;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getMaxNumberOfMergesWithTtlInPoolOrBuilder() {
+        return getMaxNumberOfMergesWithTtlInPool();
+      }
+
+      public static final int CLEANUP_DELAY_PERIOD_FIELD_NUMBER = 19;
+      private com.google.protobuf.Int64Value cleanupDelayPeriod_;
+      /**
+       * <code>.google.protobuf.Int64Value cleanup_delay_period = 19;</code>
+       * @return Whether the cleanupDelayPeriod field is set.
+       */
+      @java.lang.Override
+      public boolean hasCleanupDelayPeriod() {
+        return cleanupDelayPeriod_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value cleanup_delay_period = 19;</code>
+       * @return The cleanupDelayPeriod.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getCleanupDelayPeriod() {
+        return cleanupDelayPeriod_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cleanupDelayPeriod_;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value cleanup_delay_period = 19;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getCleanupDelayPeriodOrBuilder() {
+        return getCleanupDelayPeriod();
+      }
+
+      public static final int NUMBER_OF_FREE_ENTRIES_IN_POOL_TO_EXECUTE_MUTATION_FIELD_NUMBER = 20;
+      private com.google.protobuf.Int64Value numberOfFreeEntriesInPoolToExecuteMutation_;
+      /**
+       * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_execute_mutation = 20;</code>
+       * @return Whether the numberOfFreeEntriesInPoolToExecuteMutation field is set.
+       */
+      @java.lang.Override
+      public boolean hasNumberOfFreeEntriesInPoolToExecuteMutation() {
+        return numberOfFreeEntriesInPoolToExecuteMutation_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_execute_mutation = 20;</code>
+       * @return The numberOfFreeEntriesInPoolToExecuteMutation.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getNumberOfFreeEntriesInPoolToExecuteMutation() {
+        return numberOfFreeEntriesInPoolToExecuteMutation_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : numberOfFreeEntriesInPoolToExecuteMutation_;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_execute_mutation = 20;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getNumberOfFreeEntriesInPoolToExecuteMutationOrBuilder() {
+        return getNumberOfFreeEntriesInPoolToExecuteMutation();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -3163,6 +3515,24 @@ public final class Clickhouse {
         }
         if (allowRemoteFsZeroCopyReplication_ != null) {
           output.writeMessage(14, getAllowRemoteFsZeroCopyReplication());
+        }
+        if (mergeWithTtlTimeout_ != null) {
+          output.writeMessage(15, getMergeWithTtlTimeout());
+        }
+        if (mergeWithRecompressionTtlTimeout_ != null) {
+          output.writeMessage(16, getMergeWithRecompressionTtlTimeout());
+        }
+        if (maxPartsInTotal_ != null) {
+          output.writeMessage(17, getMaxPartsInTotal());
+        }
+        if (maxNumberOfMergesWithTtlInPool_ != null) {
+          output.writeMessage(18, getMaxNumberOfMergesWithTtlInPool());
+        }
+        if (cleanupDelayPeriod_ != null) {
+          output.writeMessage(19, getCleanupDelayPeriod());
+        }
+        if (numberOfFreeEntriesInPoolToExecuteMutation_ != null) {
+          output.writeMessage(20, getNumberOfFreeEntriesInPoolToExecuteMutation());
         }
         unknownFields.writeTo(output);
       }
@@ -3228,6 +3598,30 @@ public final class Clickhouse {
         if (allowRemoteFsZeroCopyReplication_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(14, getAllowRemoteFsZeroCopyReplication());
+        }
+        if (mergeWithTtlTimeout_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(15, getMergeWithTtlTimeout());
+        }
+        if (mergeWithRecompressionTtlTimeout_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(16, getMergeWithRecompressionTtlTimeout());
+        }
+        if (maxPartsInTotal_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(17, getMaxPartsInTotal());
+        }
+        if (maxNumberOfMergesWithTtlInPool_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(18, getMaxNumberOfMergesWithTtlInPool());
+        }
+        if (cleanupDelayPeriod_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(19, getCleanupDelayPeriod());
+        }
+        if (numberOfFreeEntriesInPoolToExecuteMutation_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(20, getNumberOfFreeEntriesInPoolToExecuteMutation());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -3314,6 +3708,36 @@ public final class Clickhouse {
           if (!getAllowRemoteFsZeroCopyReplication()
               .equals(other.getAllowRemoteFsZeroCopyReplication())) return false;
         }
+        if (hasMergeWithTtlTimeout() != other.hasMergeWithTtlTimeout()) return false;
+        if (hasMergeWithTtlTimeout()) {
+          if (!getMergeWithTtlTimeout()
+              .equals(other.getMergeWithTtlTimeout())) return false;
+        }
+        if (hasMergeWithRecompressionTtlTimeout() != other.hasMergeWithRecompressionTtlTimeout()) return false;
+        if (hasMergeWithRecompressionTtlTimeout()) {
+          if (!getMergeWithRecompressionTtlTimeout()
+              .equals(other.getMergeWithRecompressionTtlTimeout())) return false;
+        }
+        if (hasMaxPartsInTotal() != other.hasMaxPartsInTotal()) return false;
+        if (hasMaxPartsInTotal()) {
+          if (!getMaxPartsInTotal()
+              .equals(other.getMaxPartsInTotal())) return false;
+        }
+        if (hasMaxNumberOfMergesWithTtlInPool() != other.hasMaxNumberOfMergesWithTtlInPool()) return false;
+        if (hasMaxNumberOfMergesWithTtlInPool()) {
+          if (!getMaxNumberOfMergesWithTtlInPool()
+              .equals(other.getMaxNumberOfMergesWithTtlInPool())) return false;
+        }
+        if (hasCleanupDelayPeriod() != other.hasCleanupDelayPeriod()) return false;
+        if (hasCleanupDelayPeriod()) {
+          if (!getCleanupDelayPeriod()
+              .equals(other.getCleanupDelayPeriod())) return false;
+        }
+        if (hasNumberOfFreeEntriesInPoolToExecuteMutation() != other.hasNumberOfFreeEntriesInPoolToExecuteMutation()) return false;
+        if (hasNumberOfFreeEntriesInPoolToExecuteMutation()) {
+          if (!getNumberOfFreeEntriesInPoolToExecuteMutation()
+              .equals(other.getNumberOfFreeEntriesInPoolToExecuteMutation())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -3380,6 +3804,30 @@ public final class Clickhouse {
         if (hasAllowRemoteFsZeroCopyReplication()) {
           hash = (37 * hash) + ALLOW_REMOTE_FS_ZERO_COPY_REPLICATION_FIELD_NUMBER;
           hash = (53 * hash) + getAllowRemoteFsZeroCopyReplication().hashCode();
+        }
+        if (hasMergeWithTtlTimeout()) {
+          hash = (37 * hash) + MERGE_WITH_TTL_TIMEOUT_FIELD_NUMBER;
+          hash = (53 * hash) + getMergeWithTtlTimeout().hashCode();
+        }
+        if (hasMergeWithRecompressionTtlTimeout()) {
+          hash = (37 * hash) + MERGE_WITH_RECOMPRESSION_TTL_TIMEOUT_FIELD_NUMBER;
+          hash = (53 * hash) + getMergeWithRecompressionTtlTimeout().hashCode();
+        }
+        if (hasMaxPartsInTotal()) {
+          hash = (37 * hash) + MAX_PARTS_IN_TOTAL_FIELD_NUMBER;
+          hash = (53 * hash) + getMaxPartsInTotal().hashCode();
+        }
+        if (hasMaxNumberOfMergesWithTtlInPool()) {
+          hash = (37 * hash) + MAX_NUMBER_OF_MERGES_WITH_TTL_IN_POOL_FIELD_NUMBER;
+          hash = (53 * hash) + getMaxNumberOfMergesWithTtlInPool().hashCode();
+        }
+        if (hasCleanupDelayPeriod()) {
+          hash = (37 * hash) + CLEANUP_DELAY_PERIOD_FIELD_NUMBER;
+          hash = (53 * hash) + getCleanupDelayPeriod().hashCode();
+        }
+        if (hasNumberOfFreeEntriesInPoolToExecuteMutation()) {
+          hash = (37 * hash) + NUMBER_OF_FREE_ENTRIES_IN_POOL_TO_EXECUTE_MUTATION_FIELD_NUMBER;
+          hash = (53 * hash) + getNumberOfFreeEntriesInPoolToExecuteMutation().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -3602,6 +4050,42 @@ public final class Clickhouse {
             allowRemoteFsZeroCopyReplication_ = null;
             allowRemoteFsZeroCopyReplicationBuilder_ = null;
           }
+          if (mergeWithTtlTimeoutBuilder_ == null) {
+            mergeWithTtlTimeout_ = null;
+          } else {
+            mergeWithTtlTimeout_ = null;
+            mergeWithTtlTimeoutBuilder_ = null;
+          }
+          if (mergeWithRecompressionTtlTimeoutBuilder_ == null) {
+            mergeWithRecompressionTtlTimeout_ = null;
+          } else {
+            mergeWithRecompressionTtlTimeout_ = null;
+            mergeWithRecompressionTtlTimeoutBuilder_ = null;
+          }
+          if (maxPartsInTotalBuilder_ == null) {
+            maxPartsInTotal_ = null;
+          } else {
+            maxPartsInTotal_ = null;
+            maxPartsInTotalBuilder_ = null;
+          }
+          if (maxNumberOfMergesWithTtlInPoolBuilder_ == null) {
+            maxNumberOfMergesWithTtlInPool_ = null;
+          } else {
+            maxNumberOfMergesWithTtlInPool_ = null;
+            maxNumberOfMergesWithTtlInPoolBuilder_ = null;
+          }
+          if (cleanupDelayPeriodBuilder_ == null) {
+            cleanupDelayPeriod_ = null;
+          } else {
+            cleanupDelayPeriod_ = null;
+            cleanupDelayPeriodBuilder_ = null;
+          }
+          if (numberOfFreeEntriesInPoolToExecuteMutationBuilder_ == null) {
+            numberOfFreeEntriesInPoolToExecuteMutation_ = null;
+          } else {
+            numberOfFreeEntriesInPoolToExecuteMutation_ = null;
+            numberOfFreeEntriesInPoolToExecuteMutationBuilder_ = null;
+          }
           return this;
         }
 
@@ -3698,6 +4182,36 @@ public final class Clickhouse {
           } else {
             result.allowRemoteFsZeroCopyReplication_ = allowRemoteFsZeroCopyReplicationBuilder_.build();
           }
+          if (mergeWithTtlTimeoutBuilder_ == null) {
+            result.mergeWithTtlTimeout_ = mergeWithTtlTimeout_;
+          } else {
+            result.mergeWithTtlTimeout_ = mergeWithTtlTimeoutBuilder_.build();
+          }
+          if (mergeWithRecompressionTtlTimeoutBuilder_ == null) {
+            result.mergeWithRecompressionTtlTimeout_ = mergeWithRecompressionTtlTimeout_;
+          } else {
+            result.mergeWithRecompressionTtlTimeout_ = mergeWithRecompressionTtlTimeoutBuilder_.build();
+          }
+          if (maxPartsInTotalBuilder_ == null) {
+            result.maxPartsInTotal_ = maxPartsInTotal_;
+          } else {
+            result.maxPartsInTotal_ = maxPartsInTotalBuilder_.build();
+          }
+          if (maxNumberOfMergesWithTtlInPoolBuilder_ == null) {
+            result.maxNumberOfMergesWithTtlInPool_ = maxNumberOfMergesWithTtlInPool_;
+          } else {
+            result.maxNumberOfMergesWithTtlInPool_ = maxNumberOfMergesWithTtlInPoolBuilder_.build();
+          }
+          if (cleanupDelayPeriodBuilder_ == null) {
+            result.cleanupDelayPeriod_ = cleanupDelayPeriod_;
+          } else {
+            result.cleanupDelayPeriod_ = cleanupDelayPeriodBuilder_.build();
+          }
+          if (numberOfFreeEntriesInPoolToExecuteMutationBuilder_ == null) {
+            result.numberOfFreeEntriesInPoolToExecuteMutation_ = numberOfFreeEntriesInPoolToExecuteMutation_;
+          } else {
+            result.numberOfFreeEntriesInPoolToExecuteMutation_ = numberOfFreeEntriesInPoolToExecuteMutationBuilder_.build();
+          }
           onBuilt();
           return result;
         }
@@ -3787,6 +4301,24 @@ public final class Clickhouse {
           }
           if (other.hasAllowRemoteFsZeroCopyReplication()) {
             mergeAllowRemoteFsZeroCopyReplication(other.getAllowRemoteFsZeroCopyReplication());
+          }
+          if (other.hasMergeWithTtlTimeout()) {
+            mergeMergeWithTtlTimeout(other.getMergeWithTtlTimeout());
+          }
+          if (other.hasMergeWithRecompressionTtlTimeout()) {
+            mergeMergeWithRecompressionTtlTimeout(other.getMergeWithRecompressionTtlTimeout());
+          }
+          if (other.hasMaxPartsInTotal()) {
+            mergeMaxPartsInTotal(other.getMaxPartsInTotal());
+          }
+          if (other.hasMaxNumberOfMergesWithTtlInPool()) {
+            mergeMaxNumberOfMergesWithTtlInPool(other.getMaxNumberOfMergesWithTtlInPool());
+          }
+          if (other.hasCleanupDelayPeriod()) {
+            mergeCleanupDelayPeriod(other.getCleanupDelayPeriod());
+          }
+          if (other.hasNumberOfFreeEntriesInPoolToExecuteMutation()) {
+            mergeNumberOfFreeEntriesInPoolToExecuteMutation(other.getNumberOfFreeEntriesInPoolToExecuteMutation());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -5886,6 +6418,720 @@ public final class Clickhouse {
             allowRemoteFsZeroCopyReplication_ = null;
           }
           return allowRemoteFsZeroCopyReplicationBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value mergeWithTtlTimeout_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> mergeWithTtlTimeoutBuilder_;
+        /**
+         * <code>.google.protobuf.Int64Value merge_with_ttl_timeout = 15;</code>
+         * @return Whether the mergeWithTtlTimeout field is set.
+         */
+        public boolean hasMergeWithTtlTimeout() {
+          return mergeWithTtlTimeoutBuilder_ != null || mergeWithTtlTimeout_ != null;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value merge_with_ttl_timeout = 15;</code>
+         * @return The mergeWithTtlTimeout.
+         */
+        public com.google.protobuf.Int64Value getMergeWithTtlTimeout() {
+          if (mergeWithTtlTimeoutBuilder_ == null) {
+            return mergeWithTtlTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mergeWithTtlTimeout_;
+          } else {
+            return mergeWithTtlTimeoutBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.google.protobuf.Int64Value merge_with_ttl_timeout = 15;</code>
+         */
+        public Builder setMergeWithTtlTimeout(com.google.protobuf.Int64Value value) {
+          if (mergeWithTtlTimeoutBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            mergeWithTtlTimeout_ = value;
+            onChanged();
+          } else {
+            mergeWithTtlTimeoutBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value merge_with_ttl_timeout = 15;</code>
+         */
+        public Builder setMergeWithTtlTimeout(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (mergeWithTtlTimeoutBuilder_ == null) {
+            mergeWithTtlTimeout_ = builderForValue.build();
+            onChanged();
+          } else {
+            mergeWithTtlTimeoutBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value merge_with_ttl_timeout = 15;</code>
+         */
+        public Builder mergeMergeWithTtlTimeout(com.google.protobuf.Int64Value value) {
+          if (mergeWithTtlTimeoutBuilder_ == null) {
+            if (mergeWithTtlTimeout_ != null) {
+              mergeWithTtlTimeout_ =
+                com.google.protobuf.Int64Value.newBuilder(mergeWithTtlTimeout_).mergeFrom(value).buildPartial();
+            } else {
+              mergeWithTtlTimeout_ = value;
+            }
+            onChanged();
+          } else {
+            mergeWithTtlTimeoutBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value merge_with_ttl_timeout = 15;</code>
+         */
+        public Builder clearMergeWithTtlTimeout() {
+          if (mergeWithTtlTimeoutBuilder_ == null) {
+            mergeWithTtlTimeout_ = null;
+            onChanged();
+          } else {
+            mergeWithTtlTimeout_ = null;
+            mergeWithTtlTimeoutBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value merge_with_ttl_timeout = 15;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getMergeWithTtlTimeoutBuilder() {
+          
+          onChanged();
+          return getMergeWithTtlTimeoutFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.google.protobuf.Int64Value merge_with_ttl_timeout = 15;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getMergeWithTtlTimeoutOrBuilder() {
+          if (mergeWithTtlTimeoutBuilder_ != null) {
+            return mergeWithTtlTimeoutBuilder_.getMessageOrBuilder();
+          } else {
+            return mergeWithTtlTimeout_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : mergeWithTtlTimeout_;
+          }
+        }
+        /**
+         * <code>.google.protobuf.Int64Value merge_with_ttl_timeout = 15;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getMergeWithTtlTimeoutFieldBuilder() {
+          if (mergeWithTtlTimeoutBuilder_ == null) {
+            mergeWithTtlTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getMergeWithTtlTimeout(),
+                    getParentForChildren(),
+                    isClean());
+            mergeWithTtlTimeout_ = null;
+          }
+          return mergeWithTtlTimeoutBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value mergeWithRecompressionTtlTimeout_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> mergeWithRecompressionTtlTimeoutBuilder_;
+        /**
+         * <code>.google.protobuf.Int64Value merge_with_recompression_ttl_timeout = 16;</code>
+         * @return Whether the mergeWithRecompressionTtlTimeout field is set.
+         */
+        public boolean hasMergeWithRecompressionTtlTimeout() {
+          return mergeWithRecompressionTtlTimeoutBuilder_ != null || mergeWithRecompressionTtlTimeout_ != null;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value merge_with_recompression_ttl_timeout = 16;</code>
+         * @return The mergeWithRecompressionTtlTimeout.
+         */
+        public com.google.protobuf.Int64Value getMergeWithRecompressionTtlTimeout() {
+          if (mergeWithRecompressionTtlTimeoutBuilder_ == null) {
+            return mergeWithRecompressionTtlTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mergeWithRecompressionTtlTimeout_;
+          } else {
+            return mergeWithRecompressionTtlTimeoutBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.google.protobuf.Int64Value merge_with_recompression_ttl_timeout = 16;</code>
+         */
+        public Builder setMergeWithRecompressionTtlTimeout(com.google.protobuf.Int64Value value) {
+          if (mergeWithRecompressionTtlTimeoutBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            mergeWithRecompressionTtlTimeout_ = value;
+            onChanged();
+          } else {
+            mergeWithRecompressionTtlTimeoutBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value merge_with_recompression_ttl_timeout = 16;</code>
+         */
+        public Builder setMergeWithRecompressionTtlTimeout(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (mergeWithRecompressionTtlTimeoutBuilder_ == null) {
+            mergeWithRecompressionTtlTimeout_ = builderForValue.build();
+            onChanged();
+          } else {
+            mergeWithRecompressionTtlTimeoutBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value merge_with_recompression_ttl_timeout = 16;</code>
+         */
+        public Builder mergeMergeWithRecompressionTtlTimeout(com.google.protobuf.Int64Value value) {
+          if (mergeWithRecompressionTtlTimeoutBuilder_ == null) {
+            if (mergeWithRecompressionTtlTimeout_ != null) {
+              mergeWithRecompressionTtlTimeout_ =
+                com.google.protobuf.Int64Value.newBuilder(mergeWithRecompressionTtlTimeout_).mergeFrom(value).buildPartial();
+            } else {
+              mergeWithRecompressionTtlTimeout_ = value;
+            }
+            onChanged();
+          } else {
+            mergeWithRecompressionTtlTimeoutBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value merge_with_recompression_ttl_timeout = 16;</code>
+         */
+        public Builder clearMergeWithRecompressionTtlTimeout() {
+          if (mergeWithRecompressionTtlTimeoutBuilder_ == null) {
+            mergeWithRecompressionTtlTimeout_ = null;
+            onChanged();
+          } else {
+            mergeWithRecompressionTtlTimeout_ = null;
+            mergeWithRecompressionTtlTimeoutBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value merge_with_recompression_ttl_timeout = 16;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getMergeWithRecompressionTtlTimeoutBuilder() {
+          
+          onChanged();
+          return getMergeWithRecompressionTtlTimeoutFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.google.protobuf.Int64Value merge_with_recompression_ttl_timeout = 16;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getMergeWithRecompressionTtlTimeoutOrBuilder() {
+          if (mergeWithRecompressionTtlTimeoutBuilder_ != null) {
+            return mergeWithRecompressionTtlTimeoutBuilder_.getMessageOrBuilder();
+          } else {
+            return mergeWithRecompressionTtlTimeout_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : mergeWithRecompressionTtlTimeout_;
+          }
+        }
+        /**
+         * <code>.google.protobuf.Int64Value merge_with_recompression_ttl_timeout = 16;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getMergeWithRecompressionTtlTimeoutFieldBuilder() {
+          if (mergeWithRecompressionTtlTimeoutBuilder_ == null) {
+            mergeWithRecompressionTtlTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getMergeWithRecompressionTtlTimeout(),
+                    getParentForChildren(),
+                    isClean());
+            mergeWithRecompressionTtlTimeout_ = null;
+          }
+          return mergeWithRecompressionTtlTimeoutBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value maxPartsInTotal_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxPartsInTotalBuilder_;
+        /**
+         * <code>.google.protobuf.Int64Value max_parts_in_total = 17;</code>
+         * @return Whether the maxPartsInTotal field is set.
+         */
+        public boolean hasMaxPartsInTotal() {
+          return maxPartsInTotalBuilder_ != null || maxPartsInTotal_ != null;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_parts_in_total = 17;</code>
+         * @return The maxPartsInTotal.
+         */
+        public com.google.protobuf.Int64Value getMaxPartsInTotal() {
+          if (maxPartsInTotalBuilder_ == null) {
+            return maxPartsInTotal_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxPartsInTotal_;
+          } else {
+            return maxPartsInTotalBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_parts_in_total = 17;</code>
+         */
+        public Builder setMaxPartsInTotal(com.google.protobuf.Int64Value value) {
+          if (maxPartsInTotalBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            maxPartsInTotal_ = value;
+            onChanged();
+          } else {
+            maxPartsInTotalBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_parts_in_total = 17;</code>
+         */
+        public Builder setMaxPartsInTotal(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (maxPartsInTotalBuilder_ == null) {
+            maxPartsInTotal_ = builderForValue.build();
+            onChanged();
+          } else {
+            maxPartsInTotalBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_parts_in_total = 17;</code>
+         */
+        public Builder mergeMaxPartsInTotal(com.google.protobuf.Int64Value value) {
+          if (maxPartsInTotalBuilder_ == null) {
+            if (maxPartsInTotal_ != null) {
+              maxPartsInTotal_ =
+                com.google.protobuf.Int64Value.newBuilder(maxPartsInTotal_).mergeFrom(value).buildPartial();
+            } else {
+              maxPartsInTotal_ = value;
+            }
+            onChanged();
+          } else {
+            maxPartsInTotalBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_parts_in_total = 17;</code>
+         */
+        public Builder clearMaxPartsInTotal() {
+          if (maxPartsInTotalBuilder_ == null) {
+            maxPartsInTotal_ = null;
+            onChanged();
+          } else {
+            maxPartsInTotal_ = null;
+            maxPartsInTotalBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_parts_in_total = 17;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getMaxPartsInTotalBuilder() {
+          
+          onChanged();
+          return getMaxPartsInTotalFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_parts_in_total = 17;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getMaxPartsInTotalOrBuilder() {
+          if (maxPartsInTotalBuilder_ != null) {
+            return maxPartsInTotalBuilder_.getMessageOrBuilder();
+          } else {
+            return maxPartsInTotal_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : maxPartsInTotal_;
+          }
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_parts_in_total = 17;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getMaxPartsInTotalFieldBuilder() {
+          if (maxPartsInTotalBuilder_ == null) {
+            maxPartsInTotalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getMaxPartsInTotal(),
+                    getParentForChildren(),
+                    isClean());
+            maxPartsInTotal_ = null;
+          }
+          return maxPartsInTotalBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value maxNumberOfMergesWithTtlInPool_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxNumberOfMergesWithTtlInPoolBuilder_;
+        /**
+         * <code>.google.protobuf.Int64Value max_number_of_merges_with_ttl_in_pool = 18;</code>
+         * @return Whether the maxNumberOfMergesWithTtlInPool field is set.
+         */
+        public boolean hasMaxNumberOfMergesWithTtlInPool() {
+          return maxNumberOfMergesWithTtlInPoolBuilder_ != null || maxNumberOfMergesWithTtlInPool_ != null;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_number_of_merges_with_ttl_in_pool = 18;</code>
+         * @return The maxNumberOfMergesWithTtlInPool.
+         */
+        public com.google.protobuf.Int64Value getMaxNumberOfMergesWithTtlInPool() {
+          if (maxNumberOfMergesWithTtlInPoolBuilder_ == null) {
+            return maxNumberOfMergesWithTtlInPool_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxNumberOfMergesWithTtlInPool_;
+          } else {
+            return maxNumberOfMergesWithTtlInPoolBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_number_of_merges_with_ttl_in_pool = 18;</code>
+         */
+        public Builder setMaxNumberOfMergesWithTtlInPool(com.google.protobuf.Int64Value value) {
+          if (maxNumberOfMergesWithTtlInPoolBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            maxNumberOfMergesWithTtlInPool_ = value;
+            onChanged();
+          } else {
+            maxNumberOfMergesWithTtlInPoolBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_number_of_merges_with_ttl_in_pool = 18;</code>
+         */
+        public Builder setMaxNumberOfMergesWithTtlInPool(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (maxNumberOfMergesWithTtlInPoolBuilder_ == null) {
+            maxNumberOfMergesWithTtlInPool_ = builderForValue.build();
+            onChanged();
+          } else {
+            maxNumberOfMergesWithTtlInPoolBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_number_of_merges_with_ttl_in_pool = 18;</code>
+         */
+        public Builder mergeMaxNumberOfMergesWithTtlInPool(com.google.protobuf.Int64Value value) {
+          if (maxNumberOfMergesWithTtlInPoolBuilder_ == null) {
+            if (maxNumberOfMergesWithTtlInPool_ != null) {
+              maxNumberOfMergesWithTtlInPool_ =
+                com.google.protobuf.Int64Value.newBuilder(maxNumberOfMergesWithTtlInPool_).mergeFrom(value).buildPartial();
+            } else {
+              maxNumberOfMergesWithTtlInPool_ = value;
+            }
+            onChanged();
+          } else {
+            maxNumberOfMergesWithTtlInPoolBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_number_of_merges_with_ttl_in_pool = 18;</code>
+         */
+        public Builder clearMaxNumberOfMergesWithTtlInPool() {
+          if (maxNumberOfMergesWithTtlInPoolBuilder_ == null) {
+            maxNumberOfMergesWithTtlInPool_ = null;
+            onChanged();
+          } else {
+            maxNumberOfMergesWithTtlInPool_ = null;
+            maxNumberOfMergesWithTtlInPoolBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_number_of_merges_with_ttl_in_pool = 18;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getMaxNumberOfMergesWithTtlInPoolBuilder() {
+          
+          onChanged();
+          return getMaxNumberOfMergesWithTtlInPoolFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_number_of_merges_with_ttl_in_pool = 18;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getMaxNumberOfMergesWithTtlInPoolOrBuilder() {
+          if (maxNumberOfMergesWithTtlInPoolBuilder_ != null) {
+            return maxNumberOfMergesWithTtlInPoolBuilder_.getMessageOrBuilder();
+          } else {
+            return maxNumberOfMergesWithTtlInPool_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : maxNumberOfMergesWithTtlInPool_;
+          }
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_number_of_merges_with_ttl_in_pool = 18;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getMaxNumberOfMergesWithTtlInPoolFieldBuilder() {
+          if (maxNumberOfMergesWithTtlInPoolBuilder_ == null) {
+            maxNumberOfMergesWithTtlInPoolBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getMaxNumberOfMergesWithTtlInPool(),
+                    getParentForChildren(),
+                    isClean());
+            maxNumberOfMergesWithTtlInPool_ = null;
+          }
+          return maxNumberOfMergesWithTtlInPoolBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value cleanupDelayPeriod_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> cleanupDelayPeriodBuilder_;
+        /**
+         * <code>.google.protobuf.Int64Value cleanup_delay_period = 19;</code>
+         * @return Whether the cleanupDelayPeriod field is set.
+         */
+        public boolean hasCleanupDelayPeriod() {
+          return cleanupDelayPeriodBuilder_ != null || cleanupDelayPeriod_ != null;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value cleanup_delay_period = 19;</code>
+         * @return The cleanupDelayPeriod.
+         */
+        public com.google.protobuf.Int64Value getCleanupDelayPeriod() {
+          if (cleanupDelayPeriodBuilder_ == null) {
+            return cleanupDelayPeriod_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : cleanupDelayPeriod_;
+          } else {
+            return cleanupDelayPeriodBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.google.protobuf.Int64Value cleanup_delay_period = 19;</code>
+         */
+        public Builder setCleanupDelayPeriod(com.google.protobuf.Int64Value value) {
+          if (cleanupDelayPeriodBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            cleanupDelayPeriod_ = value;
+            onChanged();
+          } else {
+            cleanupDelayPeriodBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value cleanup_delay_period = 19;</code>
+         */
+        public Builder setCleanupDelayPeriod(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (cleanupDelayPeriodBuilder_ == null) {
+            cleanupDelayPeriod_ = builderForValue.build();
+            onChanged();
+          } else {
+            cleanupDelayPeriodBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value cleanup_delay_period = 19;</code>
+         */
+        public Builder mergeCleanupDelayPeriod(com.google.protobuf.Int64Value value) {
+          if (cleanupDelayPeriodBuilder_ == null) {
+            if (cleanupDelayPeriod_ != null) {
+              cleanupDelayPeriod_ =
+                com.google.protobuf.Int64Value.newBuilder(cleanupDelayPeriod_).mergeFrom(value).buildPartial();
+            } else {
+              cleanupDelayPeriod_ = value;
+            }
+            onChanged();
+          } else {
+            cleanupDelayPeriodBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value cleanup_delay_period = 19;</code>
+         */
+        public Builder clearCleanupDelayPeriod() {
+          if (cleanupDelayPeriodBuilder_ == null) {
+            cleanupDelayPeriod_ = null;
+            onChanged();
+          } else {
+            cleanupDelayPeriod_ = null;
+            cleanupDelayPeriodBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value cleanup_delay_period = 19;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getCleanupDelayPeriodBuilder() {
+          
+          onChanged();
+          return getCleanupDelayPeriodFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.google.protobuf.Int64Value cleanup_delay_period = 19;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getCleanupDelayPeriodOrBuilder() {
+          if (cleanupDelayPeriodBuilder_ != null) {
+            return cleanupDelayPeriodBuilder_.getMessageOrBuilder();
+          } else {
+            return cleanupDelayPeriod_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : cleanupDelayPeriod_;
+          }
+        }
+        /**
+         * <code>.google.protobuf.Int64Value cleanup_delay_period = 19;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getCleanupDelayPeriodFieldBuilder() {
+          if (cleanupDelayPeriodBuilder_ == null) {
+            cleanupDelayPeriodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getCleanupDelayPeriod(),
+                    getParentForChildren(),
+                    isClean());
+            cleanupDelayPeriod_ = null;
+          }
+          return cleanupDelayPeriodBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value numberOfFreeEntriesInPoolToExecuteMutation_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> numberOfFreeEntriesInPoolToExecuteMutationBuilder_;
+        /**
+         * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_execute_mutation = 20;</code>
+         * @return Whether the numberOfFreeEntriesInPoolToExecuteMutation field is set.
+         */
+        public boolean hasNumberOfFreeEntriesInPoolToExecuteMutation() {
+          return numberOfFreeEntriesInPoolToExecuteMutationBuilder_ != null || numberOfFreeEntriesInPoolToExecuteMutation_ != null;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_execute_mutation = 20;</code>
+         * @return The numberOfFreeEntriesInPoolToExecuteMutation.
+         */
+        public com.google.protobuf.Int64Value getNumberOfFreeEntriesInPoolToExecuteMutation() {
+          if (numberOfFreeEntriesInPoolToExecuteMutationBuilder_ == null) {
+            return numberOfFreeEntriesInPoolToExecuteMutation_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : numberOfFreeEntriesInPoolToExecuteMutation_;
+          } else {
+            return numberOfFreeEntriesInPoolToExecuteMutationBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_execute_mutation = 20;</code>
+         */
+        public Builder setNumberOfFreeEntriesInPoolToExecuteMutation(com.google.protobuf.Int64Value value) {
+          if (numberOfFreeEntriesInPoolToExecuteMutationBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            numberOfFreeEntriesInPoolToExecuteMutation_ = value;
+            onChanged();
+          } else {
+            numberOfFreeEntriesInPoolToExecuteMutationBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_execute_mutation = 20;</code>
+         */
+        public Builder setNumberOfFreeEntriesInPoolToExecuteMutation(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (numberOfFreeEntriesInPoolToExecuteMutationBuilder_ == null) {
+            numberOfFreeEntriesInPoolToExecuteMutation_ = builderForValue.build();
+            onChanged();
+          } else {
+            numberOfFreeEntriesInPoolToExecuteMutationBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_execute_mutation = 20;</code>
+         */
+        public Builder mergeNumberOfFreeEntriesInPoolToExecuteMutation(com.google.protobuf.Int64Value value) {
+          if (numberOfFreeEntriesInPoolToExecuteMutationBuilder_ == null) {
+            if (numberOfFreeEntriesInPoolToExecuteMutation_ != null) {
+              numberOfFreeEntriesInPoolToExecuteMutation_ =
+                com.google.protobuf.Int64Value.newBuilder(numberOfFreeEntriesInPoolToExecuteMutation_).mergeFrom(value).buildPartial();
+            } else {
+              numberOfFreeEntriesInPoolToExecuteMutation_ = value;
+            }
+            onChanged();
+          } else {
+            numberOfFreeEntriesInPoolToExecuteMutationBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_execute_mutation = 20;</code>
+         */
+        public Builder clearNumberOfFreeEntriesInPoolToExecuteMutation() {
+          if (numberOfFreeEntriesInPoolToExecuteMutationBuilder_ == null) {
+            numberOfFreeEntriesInPoolToExecuteMutation_ = null;
+            onChanged();
+          } else {
+            numberOfFreeEntriesInPoolToExecuteMutation_ = null;
+            numberOfFreeEntriesInPoolToExecuteMutationBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_execute_mutation = 20;</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getNumberOfFreeEntriesInPoolToExecuteMutationBuilder() {
+          
+          onChanged();
+          return getNumberOfFreeEntriesInPoolToExecuteMutationFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_execute_mutation = 20;</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getNumberOfFreeEntriesInPoolToExecuteMutationOrBuilder() {
+          if (numberOfFreeEntriesInPoolToExecuteMutationBuilder_ != null) {
+            return numberOfFreeEntriesInPoolToExecuteMutationBuilder_.getMessageOrBuilder();
+          } else {
+            return numberOfFreeEntriesInPoolToExecuteMutation_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : numberOfFreeEntriesInPoolToExecuteMutation_;
+          }
+        }
+        /**
+         * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_execute_mutation = 20;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getNumberOfFreeEntriesInPoolToExecuteMutationFieldBuilder() {
+          if (numberOfFreeEntriesInPoolToExecuteMutationBuilder_ == null) {
+            numberOfFreeEntriesInPoolToExecuteMutationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getNumberOfFreeEntriesInPoolToExecuteMutation(),
+                    getParentForChildren(),
+                    isClean());
+            numberOfFreeEntriesInPoolToExecuteMutation_ = null;
+          }
+          return numberOfFreeEntriesInPoolToExecuteMutationBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -28915,7 +30161,7 @@ public final class Clickhouse {
            * Minimum age of the data in seconds.
            * </pre>
            *
-           * <code>int64 age = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
+           * <code>int64 age = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
            * @return The age.
            */
           long getAge();
@@ -29024,7 +30270,7 @@ public final class Clickhouse {
            * Minimum age of the data in seconds.
            * </pre>
            *
-           * <code>int64 age = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
+           * <code>int64 age = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
            * @return The age.
            */
           @java.lang.Override
@@ -29374,7 +30620,7 @@ public final class Clickhouse {
              * Minimum age of the data in seconds.
              * </pre>
              *
-             * <code>int64 age = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
+             * <code>int64 age = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
              * @return The age.
              */
             @java.lang.Override
@@ -29386,7 +30632,7 @@ public final class Clickhouse {
              * Minimum age of the data in seconds.
              * </pre>
              *
-             * <code>int64 age = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
+             * <code>int64 age = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
              * @param value The age to set.
              * @return This builder for chaining.
              */
@@ -29401,7 +30647,7 @@ public final class Clickhouse {
              * Minimum age of the data in seconds.
              * </pre>
              *
-             * <code>int64 age = 1 [(.yandex.cloud.value) = "&gt;0"];</code>
+             * <code>int64 age = 1 [(.yandex.cloud.value) = "&gt;=0"];</code>
              * @return This builder for chaining.
              */
             public Builder clearAge() {
@@ -33140,6 +34386,32 @@ public final class Clickhouse {
       return getBackgroundBufferFlushSchedulePoolSize();
     }
 
+    public static final int BACKGROUND_MESSAGE_BROKER_SCHEDULE_POOL_SIZE_FIELD_NUMBER = 46;
+    private com.google.protobuf.Int64Value backgroundMessageBrokerSchedulePoolSize_;
+    /**
+     * <code>.google.protobuf.Int64Value background_message_broker_schedule_pool_size = 46 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the backgroundMessageBrokerSchedulePoolSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasBackgroundMessageBrokerSchedulePoolSize() {
+      return backgroundMessageBrokerSchedulePoolSize_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value background_message_broker_schedule_pool_size = 46 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The backgroundMessageBrokerSchedulePoolSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getBackgroundMessageBrokerSchedulePoolSize() {
+      return backgroundMessageBrokerSchedulePoolSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backgroundMessageBrokerSchedulePoolSize_;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value background_message_broker_schedule_pool_size = 46 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getBackgroundMessageBrokerSchedulePoolSizeOrBuilder() {
+      return getBackgroundMessageBrokerSchedulePoolSize();
+    }
+
     public static final int DEFAULT_DATABASE_FIELD_NUMBER = 43;
     private com.google.protobuf.StringValue defaultDatabase_;
     /**
@@ -33397,6 +34669,9 @@ public final class Clickhouse {
       if (totalMemoryTrackerSampleProbability_ != null) {
         output.writeMessage(45, getTotalMemoryTrackerSampleProbability());
       }
+      if (backgroundMessageBrokerSchedulePoolSize_ != null) {
+        output.writeMessage(46, getBackgroundMessageBrokerSchedulePoolSize());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -33583,6 +34858,10 @@ public final class Clickhouse {
       if (totalMemoryTrackerSampleProbability_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(45, getTotalMemoryTrackerSampleProbability());
+      }
+      if (backgroundMessageBrokerSchedulePoolSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(46, getBackgroundMessageBrokerSchedulePoolSize());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -33783,6 +35062,11 @@ public final class Clickhouse {
         if (!getBackgroundBufferFlushSchedulePoolSize()
             .equals(other.getBackgroundBufferFlushSchedulePoolSize())) return false;
       }
+      if (hasBackgroundMessageBrokerSchedulePoolSize() != other.hasBackgroundMessageBrokerSchedulePoolSize()) return false;
+      if (hasBackgroundMessageBrokerSchedulePoolSize()) {
+        if (!getBackgroundMessageBrokerSchedulePoolSize()
+            .equals(other.getBackgroundMessageBrokerSchedulePoolSize())) return false;
+      }
       if (hasDefaultDatabase() != other.hasDefaultDatabase()) return false;
       if (hasDefaultDatabase()) {
         if (!getDefaultDatabase()
@@ -33968,6 +35252,10 @@ public final class Clickhouse {
       if (hasBackgroundBufferFlushSchedulePoolSize()) {
         hash = (37 * hash) + BACKGROUND_BUFFER_FLUSH_SCHEDULE_POOL_SIZE_FIELD_NUMBER;
         hash = (53 * hash) + getBackgroundBufferFlushSchedulePoolSize().hashCode();
+      }
+      if (hasBackgroundMessageBrokerSchedulePoolSize()) {
+        hash = (37 * hash) + BACKGROUND_MESSAGE_BROKER_SCHEDULE_POOL_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getBackgroundMessageBrokerSchedulePoolSize().hashCode();
       }
       if (hasDefaultDatabase()) {
         hash = (37 * hash) + DEFAULT_DATABASE_FIELD_NUMBER;
@@ -34360,6 +35648,12 @@ public final class Clickhouse {
           backgroundBufferFlushSchedulePoolSize_ = null;
           backgroundBufferFlushSchedulePoolSizeBuilder_ = null;
         }
+        if (backgroundMessageBrokerSchedulePoolSizeBuilder_ == null) {
+          backgroundMessageBrokerSchedulePoolSize_ = null;
+        } else {
+          backgroundMessageBrokerSchedulePoolSize_ = null;
+          backgroundMessageBrokerSchedulePoolSizeBuilder_ = null;
+        }
         if (defaultDatabaseBuilder_ == null) {
           defaultDatabase_ = null;
         } else {
@@ -34614,6 +35908,11 @@ public final class Clickhouse {
           result.backgroundBufferFlushSchedulePoolSize_ = backgroundBufferFlushSchedulePoolSize_;
         } else {
           result.backgroundBufferFlushSchedulePoolSize_ = backgroundBufferFlushSchedulePoolSizeBuilder_.build();
+        }
+        if (backgroundMessageBrokerSchedulePoolSizeBuilder_ == null) {
+          result.backgroundMessageBrokerSchedulePoolSize_ = backgroundMessageBrokerSchedulePoolSize_;
+        } else {
+          result.backgroundMessageBrokerSchedulePoolSize_ = backgroundMessageBrokerSchedulePoolSizeBuilder_.build();
         }
         if (defaultDatabaseBuilder_ == null) {
           result.defaultDatabase_ = defaultDatabase_;
@@ -34897,6 +36196,9 @@ public final class Clickhouse {
         }
         if (other.hasBackgroundBufferFlushSchedulePoolSize()) {
           mergeBackgroundBufferFlushSchedulePoolSize(other.getBackgroundBufferFlushSchedulePoolSize());
+        }
+        if (other.hasBackgroundMessageBrokerSchedulePoolSize()) {
+          mergeBackgroundMessageBrokerSchedulePoolSize(other.getBackgroundMessageBrokerSchedulePoolSize());
         }
         if (other.hasDefaultDatabase()) {
           mergeDefaultDatabase(other.getDefaultDatabase());
@@ -41617,6 +42919,125 @@ public final class Clickhouse {
         return backgroundBufferFlushSchedulePoolSizeBuilder_;
       }
 
+      private com.google.protobuf.Int64Value backgroundMessageBrokerSchedulePoolSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backgroundMessageBrokerSchedulePoolSizeBuilder_;
+      /**
+       * <code>.google.protobuf.Int64Value background_message_broker_schedule_pool_size = 46 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the backgroundMessageBrokerSchedulePoolSize field is set.
+       */
+      public boolean hasBackgroundMessageBrokerSchedulePoolSize() {
+        return backgroundMessageBrokerSchedulePoolSizeBuilder_ != null || backgroundMessageBrokerSchedulePoolSize_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_message_broker_schedule_pool_size = 46 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The backgroundMessageBrokerSchedulePoolSize.
+       */
+      public com.google.protobuf.Int64Value getBackgroundMessageBrokerSchedulePoolSize() {
+        if (backgroundMessageBrokerSchedulePoolSizeBuilder_ == null) {
+          return backgroundMessageBrokerSchedulePoolSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backgroundMessageBrokerSchedulePoolSize_;
+        } else {
+          return backgroundMessageBrokerSchedulePoolSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_message_broker_schedule_pool_size = 46 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder setBackgroundMessageBrokerSchedulePoolSize(com.google.protobuf.Int64Value value) {
+        if (backgroundMessageBrokerSchedulePoolSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          backgroundMessageBrokerSchedulePoolSize_ = value;
+          onChanged();
+        } else {
+          backgroundMessageBrokerSchedulePoolSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_message_broker_schedule_pool_size = 46 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder setBackgroundMessageBrokerSchedulePoolSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (backgroundMessageBrokerSchedulePoolSizeBuilder_ == null) {
+          backgroundMessageBrokerSchedulePoolSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          backgroundMessageBrokerSchedulePoolSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_message_broker_schedule_pool_size = 46 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder mergeBackgroundMessageBrokerSchedulePoolSize(com.google.protobuf.Int64Value value) {
+        if (backgroundMessageBrokerSchedulePoolSizeBuilder_ == null) {
+          if (backgroundMessageBrokerSchedulePoolSize_ != null) {
+            backgroundMessageBrokerSchedulePoolSize_ =
+              com.google.protobuf.Int64Value.newBuilder(backgroundMessageBrokerSchedulePoolSize_).mergeFrom(value).buildPartial();
+          } else {
+            backgroundMessageBrokerSchedulePoolSize_ = value;
+          }
+          onChanged();
+        } else {
+          backgroundMessageBrokerSchedulePoolSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_message_broker_schedule_pool_size = 46 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder clearBackgroundMessageBrokerSchedulePoolSize() {
+        if (backgroundMessageBrokerSchedulePoolSizeBuilder_ == null) {
+          backgroundMessageBrokerSchedulePoolSize_ = null;
+          onChanged();
+        } else {
+          backgroundMessageBrokerSchedulePoolSize_ = null;
+          backgroundMessageBrokerSchedulePoolSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_message_broker_schedule_pool_size = 46 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getBackgroundMessageBrokerSchedulePoolSizeBuilder() {
+        
+        onChanged();
+        return getBackgroundMessageBrokerSchedulePoolSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_message_broker_schedule_pool_size = 46 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getBackgroundMessageBrokerSchedulePoolSizeOrBuilder() {
+        if (backgroundMessageBrokerSchedulePoolSizeBuilder_ != null) {
+          return backgroundMessageBrokerSchedulePoolSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return backgroundMessageBrokerSchedulePoolSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : backgroundMessageBrokerSchedulePoolSize_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value background_message_broker_schedule_pool_size = 46 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getBackgroundMessageBrokerSchedulePoolSizeFieldBuilder() {
+        if (backgroundMessageBrokerSchedulePoolSizeBuilder_ == null) {
+          backgroundMessageBrokerSchedulePoolSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getBackgroundMessageBrokerSchedulePoolSize(),
+                  getParentForChildren(),
+                  isClean());
+          backgroundMessageBrokerSchedulePoolSize_ = null;
+        }
+        return backgroundMessageBrokerSchedulePoolSizeBuilder_;
+      }
+
       private com.google.protobuf.StringValue defaultDatabase_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> defaultDatabaseBuilder_;
@@ -43465,8 +44886,8 @@ public final class Clickhouse {
       "\n6yandex/cloud/mdb/clickhouse/v1/config/" +
       "clickhouse.proto\022%yandex.cloud.mdb.click" +
       "house.v1.config\032\036google/protobuf/wrapper" +
-      "s.proto\032\035yandex/cloud/validation.proto\"\212" +
-      "F\n\020ClickhouseConfig\022S\n\tlog_level\030\001 \001(\0162@" +
+      "s.proto\032\035yandex/cloud/validation.proto\"\207" +
+      "J\n\020ClickhouseConfig\022S\n\tlog_level\030\001 \001(\0162@" +
       ".yandex.cloud.mdb.clickhouse.v1.config.C" +
       "lickhouseConfig.LogLevel\022U\n\nmerge_tree\030\002" +
       " \001(\0132A.yandex.cloud.mdb.clickhouse.v1.co" +
@@ -43538,169 +44959,182 @@ public final class Clickhouse {
       "hedule_pool_size\030( \001(\0132\033.google.protobuf" +
       ".Int64ValueB\006\372\3071\002>0\022W\n*background_buffer" +
       "_flush_schedule_pool_size\030) \001(\0132\033.google" +
-      ".protobuf.Int64ValueB\006\372\3071\002>0\0226\n\020default_" +
-      "database\030+ \001(\0132\034.google.protobuf.StringV" +
-      "alue\022?\n\032total_memory_profiler_step\030, \001(\013" +
-      "2\033.google.protobuf.Int64Value\022M\n\'total_m" +
-      "emory_tracker_sample_probability\030- \001(\0132\034" +
-      ".google.protobuf.DoubleValue\032\341\007\n\tMergeTr" +
-      "ee\022D\n\037replicated_deduplication_window\030\001 " +
-      "\001(\0132\033.google.protobuf.Int64Value\022L\n\'repl" +
-      "icated_deduplication_window_seconds\030\002 \001(" +
-      "\0132\033.google.protobuf.Int64Value\022:\n\025parts_" +
-      "to_delay_insert\030\003 \001(\0132\033.google.protobuf." +
-      "Int64Value\022:\n\025parts_to_throw_insert\030\004 \001(" +
+      ".protobuf.Int64ValueB\006\372\3071\002>0\022Y\n,backgrou" +
+      "nd_message_broker_schedule_pool_size\030. \001" +
+      "(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>0\022" +
+      "6\n\020default_database\030+ \001(\0132\034.google.proto" +
+      "buf.StringValue\022?\n\032total_memory_profiler" +
+      "_step\030, \001(\0132\033.google.protobuf.Int64Value" +
+      "\022M\n\'total_memory_tracker_sample_probabil" +
+      "ity\030- \001(\0132\034.google.protobuf.DoubleValue\032" +
+      "\202\013\n\tMergeTree\022D\n\037replicated_deduplicatio" +
+      "n_window\030\001 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022L\n\'replicated_deduplication_window_s" +
+      "econds\030\002 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\022:\n\025parts_to_delay_insert\030\003 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\022:\n\025parts_to_throw_" +
+      "insert\030\004 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\022C\n\036inactive_parts_to_delay_insert\030\t \001(" +
       "\0132\033.google.protobuf.Int64Value\022C\n\036inacti" +
-      "ve_parts_to_delay_insert\030\t \001(\0132\033.google." +
-      "protobuf.Int64Value\022C\n\036inactive_parts_to" +
-      "_throw_insert\030\n \001(\0132\033.google.protobuf.In" +
-      "t64Value\022C\n\036max_replicated_merges_in_que" +
-      "ue\030\005 \001(\0132\033.google.protobuf.Int64Value\022^\n" +
-      "9number_of_free_entries_in_pool_to_lower" +
-      "_max_size_of_merge\030\006 \001(\0132\033.google.protob" +
-      "uf.Int64Value\022L\n\'max_bytes_to_merge_at_m" +
-      "in_space_in_pool\030\007 \001(\0132\033.google.protobuf" +
-      ".Int64Value\022L\n\'max_bytes_to_merge_at_max" +
-      "_space_in_pool\030\010 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022<\n\027min_bytes_for_wide_part\030\013 \001" +
-      "(\0132\033.google.protobuf.Int64Value\022;\n\026min_r" +
-      "ows_for_wide_part\030\014 \001(\0132\033.google.protobu" +
-      "f.Int64Value\0227\n\023ttl_only_drop_parts\030\r \001(" +
-      "\0132\032.google.protobuf.BoolValue\022I\n%allow_r" +
-      "emote_fs_zero_copy_replication\030\016 \001(\0132\032.g" +
-      "oogle.protobuf.BoolValue\032\352\004\n\005Kafka\022i\n\021se" +
-      "curity_protocol\030\001 \001(\0162N.yandex.cloud.mdb" +
-      ".clickhouse.v1.config.ClickhouseConfig.K" +
-      "afka.SecurityProtocol\022c\n\016sasl_mechanism\030" +
-      "\002 \001(\0162K.yandex.cloud.mdb.clickhouse.v1.c" +
-      "onfig.ClickhouseConfig.Kafka.SaslMechani" +
-      "sm\022\025\n\rsasl_username\030\003 \001(\t\022\025\n\rsasl_passwo" +
-      "rd\030\004 \001(\t\"\267\001\n\020SecurityProtocol\022!\n\035SECURIT" +
-      "Y_PROTOCOL_UNSPECIFIED\020\000\022\037\n\033SECURITY_PRO" +
-      "TOCOL_PLAINTEXT\020\001\022\031\n\025SECURITY_PROTOCOL_S" +
-      "SL\020\002\022$\n SECURITY_PROTOCOL_SASL_PLAINTEXT" +
-      "\020\003\022\036\n\032SECURITY_PROTOCOL_SASL_SSL\020\004\"\250\001\n\rS" +
-      "aslMechanism\022\036\n\032SASL_MECHANISM_UNSPECIFI" +
-      "ED\020\000\022\031\n\025SASL_MECHANISM_GSSAPI\020\001\022\030\n\024SASL_" +
-      "MECHANISM_PLAIN\020\002\022 \n\034SASL_MECHANISM_SCRA" +
-      "M_SHA_256\020\003\022 \n\034SASL_MECHANISM_SCRAM_SHA_" +
-      "512\020\004\032w\n\nKafkaTopic\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022" +
-      "U\n\010settings\030\002 \001(\0132=.yandex.cloud.mdb.cli" +
-      "ckhouse.v1.config.ClickhouseConfig.Kafka" +
-      "B\004\350\3071\001\032=\n\010Rabbitmq\022\020\n\010username\030\001 \001(\t\022\020\n\010" +
-      "password\030\002 \001(\t\022\r\n\005vhost\030\003 \001(\t\032\333\001\n\013Compre" +
-      "ssion\022Z\n\006method\030\001 \001(\0162J.yandex.cloud.mdb" +
-      ".clickhouse.v1.config.ClickhouseConfig.C" +
-      "ompression.Method\022\036\n\rmin_part_size\030\002 \001(\003" +
-      "B\007\372\3071\003>=1\022\033\n\023min_part_size_ratio\030\003 \001(\001\"3" +
-      "\n\006Method\022\026\n\022METHOD_UNSPECIFIED\020\000\022\007\n\003LZ4\020" +
-      "\001\022\010\n\004ZSTD\020\002\032\240\032\n\022ExternalDictionary\022\022\n\004na" +
-      "me\030\001 \001(\tB\004\350\3071\001\022m\n\tstructure\030\002 \001(\0132T.yand" +
+      "ve_parts_to_throw_insert\030\n \001(\0132\033.google." +
+      "protobuf.Int64Value\022C\n\036max_replicated_me" +
+      "rges_in_queue\030\005 \001(\0132\033.google.protobuf.In" +
+      "t64Value\022^\n9number_of_free_entries_in_po" +
+      "ol_to_lower_max_size_of_merge\030\006 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\022L\n\'max_bytes_to" +
+      "_merge_at_min_space_in_pool\030\007 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\022L\n\'max_bytes_to_m" +
+      "erge_at_max_space_in_pool\030\010 \001(\0132\033.google" +
+      ".protobuf.Int64Value\022<\n\027min_bytes_for_wi" +
+      "de_part\030\013 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022;\n\026min_rows_for_wide_part\030\014 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\0227\n\023ttl_only_drop" +
+      "_parts\030\r \001(\0132\032.google.protobuf.BoolValue" +
+      "\022I\n%allow_remote_fs_zero_copy_replicatio" +
+      "n\030\016 \001(\0132\032.google.protobuf.BoolValue\022;\n\026m" +
+      "erge_with_ttl_timeout\030\017 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022I\n$merge_with_recompres" +
+      "sion_ttl_timeout\030\020 \001(\0132\033.google.protobuf" +
+      ".Int64Value\0227\n\022max_parts_in_total\030\021 \001(\0132" +
+      "\033.google.protobuf.Int64Value\022J\n%max_numb" +
+      "er_of_merges_with_ttl_in_pool\030\022 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\0229\n\024cleanup_dela" +
+      "y_period\030\023 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022W\n2number_of_free_entries_in_pool_to" +
+      "_execute_mutation\030\024 \001(\0132\033.google.protobu" +
+      "f.Int64Value\032\352\004\n\005Kafka\022i\n\021security_proto" +
+      "col\030\001 \001(\0162N.yandex.cloud.mdb.clickhouse." +
+      "v1.config.ClickhouseConfig.Kafka.Securit" +
+      "yProtocol\022c\n\016sasl_mechanism\030\002 \001(\0162K.yand" +
       "ex.cloud.mdb.clickhouse.v1.config.Clickh" +
-      "ouseConfig.ExternalDictionary.StructureB" +
-      "\004\350\3071\001\022g\n\006layout\030\003 \001(\0132Q.yandex.cloud.mdb" +
+      "ouseConfig.Kafka.SaslMechanism\022\025\n\rsasl_u" +
+      "sername\030\003 \001(\t\022\025\n\rsasl_password\030\004 \001(\t\"\267\001\n" +
+      "\020SecurityProtocol\022!\n\035SECURITY_PROTOCOL_U" +
+      "NSPECIFIED\020\000\022\037\n\033SECURITY_PROTOCOL_PLAINT" +
+      "EXT\020\001\022\031\n\025SECURITY_PROTOCOL_SSL\020\002\022$\n SECU" +
+      "RITY_PROTOCOL_SASL_PLAINTEXT\020\003\022\036\n\032SECURI" +
+      "TY_PROTOCOL_SASL_SSL\020\004\"\250\001\n\rSaslMechanism" +
+      "\022\036\n\032SASL_MECHANISM_UNSPECIFIED\020\000\022\031\n\025SASL" +
+      "_MECHANISM_GSSAPI\020\001\022\030\n\024SASL_MECHANISM_PL" +
+      "AIN\020\002\022 \n\034SASL_MECHANISM_SCRAM_SHA_256\020\003\022" +
+      " \n\034SASL_MECHANISM_SCRAM_SHA_512\020\004\032w\n\nKaf" +
+      "kaTopic\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022U\n\010settings\030" +
+      "\002 \001(\0132=.yandex.cloud.mdb.clickhouse.v1.c" +
+      "onfig.ClickhouseConfig.KafkaB\004\350\3071\001\032=\n\010Ra" +
+      "bbitmq\022\020\n\010username\030\001 \001(\t\022\020\n\010password\030\002 \001" +
+      "(\t\022\r\n\005vhost\030\003 \001(\t\032\333\001\n\013Compression\022Z\n\006met" +
+      "hod\030\001 \001(\0162J.yandex.cloud.mdb.clickhouse." +
+      "v1.config.ClickhouseConfig.Compression.M" +
+      "ethod\022\036\n\rmin_part_size\030\002 \001(\003B\007\372\3071\003>=1\022\033\n" +
+      "\023min_part_size_ratio\030\003 \001(\001\"3\n\006Method\022\026\n\022" +
+      "METHOD_UNSPECIFIED\020\000\022\007\n\003LZ4\020\001\022\010\n\004ZSTD\020\002\032" +
+      "\240\032\n\022ExternalDictionary\022\022\n\004name\030\001 \001(\tB\004\350\307" +
+      "1\001\022m\n\tstructure\030\002 \001(\0132T.yandex.cloud.mdb" +
       ".clickhouse.v1.config.ClickhouseConfig.E" +
-      "xternalDictionary.LayoutB\004\350\3071\001\022\030\n\016fixed_" +
-      "lifetime\030\004 \001(\003H\000\022j\n\016lifetime_range\030\005 \001(\013" +
-      "2P.yandex.cloud.mdb.clickhouse.v1.config" +
-      ".ClickhouseConfig.ExternalDictionary.Ran" +
-      "geH\000\022l\n\013http_source\030\006 \001(\0132U.yandex.cloud" +
-      ".mdb.clickhouse.v1.config.ClickhouseConf" +
-      "ig.ExternalDictionary.HttpSourceH\001\022n\n\014my" +
-      "sql_source\030\007 \001(\0132V.yandex.cloud.mdb.clic" +
-      "khouse.v1.config.ClickhouseConfig.Extern" +
-      "alDictionary.MysqlSourceH\001\022x\n\021clickhouse" +
-      "_source\030\010 \001(\0132[.yandex.cloud.mdb.clickho" +
+      "xternalDictionary.StructureB\004\350\3071\001\022g\n\006lay" +
+      "out\030\003 \001(\0132Q.yandex.cloud.mdb.clickhouse." +
+      "v1.config.ClickhouseConfig.ExternalDicti" +
+      "onary.LayoutB\004\350\3071\001\022\030\n\016fixed_lifetime\030\004 \001" +
+      "(\003H\000\022j\n\016lifetime_range\030\005 \001(\0132P.yandex.cl" +
+      "oud.mdb.clickhouse.v1.config.ClickhouseC" +
+      "onfig.ExternalDictionary.RangeH\000\022l\n\013http" +
+      "_source\030\006 \001(\0132U.yandex.cloud.mdb.clickho" +
       "use.v1.config.ClickhouseConfig.ExternalD" +
-      "ictionary.ClickhouseSourceH\001\022r\n\016mongodb_" +
-      "source\030\t \001(\0132X.yandex.cloud.mdb.clickhou" +
-      "se.v1.config.ClickhouseConfig.ExternalDi" +
-      "ctionary.MongodbSourceH\001\022x\n\021postgresql_s" +
-      "ource\030\n \001(\0132[.yandex.cloud.mdb.clickhous" +
-      "e.v1.config.ClickhouseConfig.ExternalDic" +
-      "tionary.PostgresqlSourceH\001\0325\n\nHttpSource" +
-      "\022\021\n\003url\030\001 \001(\tB\004\350\3071\001\022\024\n\006format\030\002 \001(\tB\004\350\3071" +
-      "\001\032\223\003\n\013MysqlSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005t" +
-      "able\030\002 \001(\tB\004\350\3071\001\022\031\n\004port\030\003 \001(\003B\013\372\3071\0070-65" +
-      "535\022\014\n\004user\030\004 \001(\t\022\020\n\010password\030\005 \001(\t\022x\n\010r" +
-      "eplicas\030\006 \003(\0132^.yandex.cloud.mdb.clickho" +
-      "use.v1.config.ClickhouseConfig.ExternalD" +
-      "ictionary.MysqlSource.ReplicaB\006\202\3101\002>0\022\r\n" +
-      "\005where\030\007 \001(\t\022\030\n\020invalidate_query\030\010 \001(\t\032\177" +
-      "\n\007Replica\022\033\n\004host\030\001 \001(\tB\r\350\3071\001\212\3101\005<=253\022\034" +
-      "\n\010priority\030\002 \001(\003B\n\350\3071\001\372\3071\002>0\022\031\n\004port\030\003 \001" +
-      "(\003B\013\372\3071\0070-65535\022\014\n\004user\030\004 \001(\t\022\020\n\010passwor" +
-      "d\030\005 \001(\t\032\246\001\n\020ClickhouseSource\022\020\n\002db\030\001 \001(\t" +
-      "B\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\033\n\004host\030\003 \001(" +
-      "\tB\r\350\3071\001\212\3101\005<=253\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65" +
-      "535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(" +
-      "\t\022\r\n\005where\030\007 \001(\t\032\231\001\n\rMongodbSource\022\020\n\002db" +
-      "\030\001 \001(\tB\004\350\3071\001\022\030\n\ncollection\030\002 \001(\tB\004\350\3071\001\022\033" +
-      "\n\004host\030\003 \001(\tB\r\350\3071\001\212\3101\005<=253\022\031\n\004port\030\004 \001(" +
-      "\003B\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010pa" +
-      "ssword\030\006 \001(\t\032\213\003\n\020PostgresqlSource\022\020\n\002db\030" +
-      "\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\025\n\005host" +
-      "s\030\003 \003(\tB\006\202\3101\002>0\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-655" +
-      "35\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t" +
-      "\022\030\n\020invalidate_query\030\007 \001(\t\022u\n\010ssl_mode\030\010" +
-      " \001(\0162c.yandex.cloud.mdb.clickhouse.v1.co" +
+      "ictionary.HttpSourceH\001\022n\n\014mysql_source\030\007" +
+      " \001(\0132V.yandex.cloud.mdb.clickhouse.v1.co" +
       "nfig.ClickhouseConfig.ExternalDictionary" +
-      ".PostgresqlSource.SslMode\"g\n\007SslMode\022\030\n\024" +
-      "SSL_MODE_UNSPECIFIED\020\000\022\013\n\007DISABLE\020\001\022\t\n\005A" +
-      "LLOW\020\002\022\n\n\006PREFER\020\003\022\r\n\tVERIFY_CA\020\004\022\017\n\013VER" +
-      "IFY_FULL\020\005\032\336\006\n\tStructure\022c\n\002id\030\001 \001(\0132W.y" +
-      "andex.cloud.mdb.clickhouse.v1.config.Cli" +
-      "ckhouseConfig.ExternalDictionary.Structu" +
-      "re.Id\022e\n\003key\030\003 \001(\0132X.yandex.cloud.mdb.cl" +
-      "ickhouse.v1.config.ClickhouseConfig.Exte" +
-      "rnalDictionary.Structure.Key\022q\n\trange_mi" +
-      "n\030\004 \001(\0132^.yandex.cloud.mdb.clickhouse.v1" +
-      ".config.ClickhouseConfig.ExternalDiction" +
-      "ary.Structure.Attribute\022q\n\trange_max\030\005 \001" +
-      "(\0132^.yandex.cloud.mdb.clickhouse.v1.conf" +
-      "ig.ClickhouseConfig.ExternalDictionary.S" +
-      "tructure.Attribute\022z\n\nattributes\030\002 \003(\0132^" +
-      ".yandex.cloud.mdb.clickhouse.v1.config.C" +
-      "lickhouseConfig.ExternalDictionary.Struc" +
-      "ture.AttributeB\006\202\3101\002>0\032\204\001\n\tAttribute\022\022\n\004" +
-      "name\030\001 \001(\tB\004\350\3071\001\022\022\n\004type\030\002 \001(\tB\004\350\3071\001\022\022\n\n" +
-      "null_value\030\003 \001(\t\022\022\n\nexpression\030\004 \001(\t\022\024\n\014" +
-      "hierarchical\030\005 \001(\010\022\021\n\tinjective\030\006 \001(\010\032\030\n" +
-      "\002Id\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\032\201\001\n\003Key\022z\n\nattri" +
-      "butes\030\001 \003(\0132^.yandex.cloud.mdb.clickhous" +
-      "e.v1.config.ClickhouseConfig.ExternalDic" +
-      "tionary.Structure.AttributeB\006\202\3101\002>0\032\213\002\n\006" +
-      "Layout\022j\n\004type\030\001 \001(\0162V.yandex.cloud.mdb." +
-      "clickhouse.v1.config.ClickhouseConfig.Ex" +
-      "ternalDictionary.Layout.TypeB\004\350\3071\001\022\025\n\rsi" +
-      "ze_in_cells\030\002 \001(\003\"~\n\004Type\022\024\n\020TYPE_UNSPEC" +
-      "IFIED\020\000\022\010\n\004FLAT\020\001\022\n\n\006HASHED\020\002\022\026\n\022COMPLEX" +
-      "_KEY_HASHED\020\003\022\020\n\014RANGE_HASHED\020\004\022\t\n\005CACHE" +
-      "\020\005\022\025\n\021COMPLEX_KEY_CACHE\020\006\032!\n\005Range\022\013\n\003mi" +
-      "n\030\001 \001(\003\022\013\n\003max\030\002 \001(\003B\020\n\010lifetime\022\004\300\3011\001B\016" +
-      "\n\006source\022\004\300\3011\001\032\364\002\n\016GraphiteRollup\022\022\n\004nam" +
-      "e\030\001 \001(\tB\004\350\3071\001\022h\n\010patterns\030\002 \003(\0132N.yandex" +
-      ".cloud.mdb.clickhouse.v1.config.Clickhou" +
-      "seConfig.GraphiteRollup.PatternB\006\202\3101\002>0\032" +
-      "\343\001\n\007Pattern\022\016\n\006regexp\030\001 \001(\t\022\026\n\010function\030" +
-      "\002 \001(\tB\004\350\3071\001\022s\n\tretention\030\003 \003(\0132X.yandex." +
+      ".MysqlSourceH\001\022x\n\021clickhouse_source\030\010 \001(" +
+      "\0132[.yandex.cloud.mdb.clickhouse.v1.confi" +
+      "g.ClickhouseConfig.ExternalDictionary.Cl" +
+      "ickhouseSourceH\001\022r\n\016mongodb_source\030\t \001(\013" +
+      "2X.yandex.cloud.mdb.clickhouse.v1.config" +
+      ".ClickhouseConfig.ExternalDictionary.Mon" +
+      "godbSourceH\001\022x\n\021postgresql_source\030\n \001(\0132" +
+      "[.yandex.cloud.mdb.clickhouse.v1.config." +
+      "ClickhouseConfig.ExternalDictionary.Post" +
+      "gresqlSourceH\001\0325\n\nHttpSource\022\021\n\003url\030\001 \001(" +
+      "\tB\004\350\3071\001\022\024\n\006format\030\002 \001(\tB\004\350\3071\001\032\223\003\n\013MysqlS" +
+      "ource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004" +
+      "\350\3071\001\022\031\n\004port\030\003 \001(\003B\013\372\3071\0070-65535\022\014\n\004user\030" +
+      "\004 \001(\t\022\020\n\010password\030\005 \001(\t\022x\n\010replicas\030\006 \003(" +
+      "\0132^.yandex.cloud.mdb.clickhouse.v1.confi" +
+      "g.ClickhouseConfig.ExternalDictionary.My" +
+      "sqlSource.ReplicaB\006\202\3101\002>0\022\r\n\005where\030\007 \001(\t" +
+      "\022\030\n\020invalidate_query\030\010 \001(\t\032\177\n\007Replica\022\033\n" +
+      "\004host\030\001 \001(\tB\r\350\3071\001\212\3101\005<=253\022\034\n\010priority\030\002" +
+      " \001(\003B\n\350\3071\001\372\3071\002>0\022\031\n\004port\030\003 \001(\003B\013\372\3071\0070-65" +
+      "535\022\014\n\004user\030\004 \001(\t\022\020\n\010password\030\005 \001(\t\032\246\001\n\020" +
+      "ClickhouseSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005ta" +
+      "ble\030\002 \001(\tB\004\350\3071\001\022\033\n\004host\030\003 \001(\tB\r\350\3071\001\212\3101\005<" +
+      "=253\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022\022\n\004user\030" +
+      "\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t\022\r\n\005where\030\007" +
+      " \001(\t\032\231\001\n\rMongodbSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001" +
+      "\022\030\n\ncollection\030\002 \001(\tB\004\350\3071\001\022\033\n\004host\030\003 \001(\t" +
+      "B\r\350\3071\001\212\3101\005<=253\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-655" +
+      "35\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t" +
+      "\032\213\003\n\020PostgresqlSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022" +
+      "\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\025\n\005hosts\030\003 \003(\tB\006\202\3101" +
+      "\002>0\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022\022\n\004user\030\005" +
+      " \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t\022\030\n\020invalida" +
+      "te_query\030\007 \001(\t\022u\n\010ssl_mode\030\010 \001(\0162c.yande" +
+      "x.cloud.mdb.clickhouse.v1.config.Clickho" +
+      "useConfig.ExternalDictionary.PostgresqlS" +
+      "ource.SslMode\"g\n\007SslMode\022\030\n\024SSL_MODE_UNS" +
+      "PECIFIED\020\000\022\013\n\007DISABLE\020\001\022\t\n\005ALLOW\020\002\022\n\n\006PR" +
+      "EFER\020\003\022\r\n\tVERIFY_CA\020\004\022\017\n\013VERIFY_FULL\020\005\032\336" +
+      "\006\n\tStructure\022c\n\002id\030\001 \001(\0132W.yandex.cloud." +
+      "mdb.clickhouse.v1.config.ClickhouseConfi" +
+      "g.ExternalDictionary.Structure.Id\022e\n\003key" +
+      "\030\003 \001(\0132X.yandex.cloud.mdb.clickhouse.v1." +
+      "config.ClickhouseConfig.ExternalDictiona" +
+      "ry.Structure.Key\022q\n\trange_min\030\004 \001(\0132^.ya" +
+      "ndex.cloud.mdb.clickhouse.v1.config.Clic" +
+      "khouseConfig.ExternalDictionary.Structur" +
+      "e.Attribute\022q\n\trange_max\030\005 \001(\0132^.yandex." +
       "cloud.mdb.clickhouse.v1.config.Clickhous" +
-      "eConfig.GraphiteRollup.Pattern.Retention" +
-      "B\006\202\3101\002>0\032;\n\tRetention\022\023\n\003age\030\001 \001(\003B\006\372\3071\002" +
-      ">0\022\031\n\tprecision\030\002 \001(\003B\006\372\3071\002>0\"d\n\010LogLeve" +
-      "l\022\031\n\025LOG_LEVEL_UNSPECIFIED\020\000\022\t\n\005TRACE\020\001\022" +
-      "\t\n\005DEBUG\020\002\022\017\n\013INFORMATION\020\003\022\013\n\007WARNING\020\004" +
-      "\022\t\n\005ERROR\020\005\"\215\002\n\023ClickhouseConfigSet\022W\n\020e" +
-      "ffective_config\030\001 \001(\01327.yandex.cloud.mdb" +
-      ".clickhouse.v1.config.ClickhouseConfigB\004" +
-      "\350\3071\001\022L\n\013user_config\030\002 \001(\01327.yandex.cloud" +
-      ".mdb.clickhouse.v1.config.ClickhouseConf" +
-      "ig\022O\n\016default_config\030\003 \001(\01327.yandex.clou" +
+      "eConfig.ExternalDictionary.Structure.Att" +
+      "ribute\022z\n\nattributes\030\002 \003(\0132^.yandex.clou" +
       "d.mdb.clickhouse.v1.config.ClickhouseCon" +
-      "figB\201\001\n)yandex.cloud.api.mdb.clickhouse." +
-      "v1.configZTgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/mdb/clickhouse/v1/co" +
-      "nfig;clickhouseb\006proto3"
+      "fig.ExternalDictionary.Structure.Attribu" +
+      "teB\006\202\3101\002>0\032\204\001\n\tAttribute\022\022\n\004name\030\001 \001(\tB\004" +
+      "\350\3071\001\022\022\n\004type\030\002 \001(\tB\004\350\3071\001\022\022\n\nnull_value\030\003" +
+      " \001(\t\022\022\n\nexpression\030\004 \001(\t\022\024\n\014hierarchical" +
+      "\030\005 \001(\010\022\021\n\tinjective\030\006 \001(\010\032\030\n\002Id\022\022\n\004name\030" +
+      "\001 \001(\tB\004\350\3071\001\032\201\001\n\003Key\022z\n\nattributes\030\001 \003(\0132" +
+      "^.yandex.cloud.mdb.clickhouse.v1.config." +
+      "ClickhouseConfig.ExternalDictionary.Stru" +
+      "cture.AttributeB\006\202\3101\002>0\032\213\002\n\006Layout\022j\n\004ty" +
+      "pe\030\001 \001(\0162V.yandex.cloud.mdb.clickhouse.v" +
+      "1.config.ClickhouseConfig.ExternalDictio" +
+      "nary.Layout.TypeB\004\350\3071\001\022\025\n\rsize_in_cells\030" +
+      "\002 \001(\003\"~\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\010\n\004F" +
+      "LAT\020\001\022\n\n\006HASHED\020\002\022\026\n\022COMPLEX_KEY_HASHED\020" +
+      "\003\022\020\n\014RANGE_HASHED\020\004\022\t\n\005CACHE\020\005\022\025\n\021COMPLE" +
+      "X_KEY_CACHE\020\006\032!\n\005Range\022\013\n\003min\030\001 \001(\003\022\013\n\003m" +
+      "ax\030\002 \001(\003B\020\n\010lifetime\022\004\300\3011\001B\016\n\006source\022\004\300\301" +
+      "1\001\032\365\002\n\016GraphiteRollup\022\022\n\004name\030\001 \001(\tB\004\350\3071" +
+      "\001\022h\n\010patterns\030\002 \003(\0132N.yandex.cloud.mdb.c" +
+      "lickhouse.v1.config.ClickhouseConfig.Gra" +
+      "phiteRollup.PatternB\006\202\3101\002>0\032\344\001\n\007Pattern\022" +
+      "\016\n\006regexp\030\001 \001(\t\022\026\n\010function\030\002 \001(\tB\004\350\3071\001\022" +
+      "s\n\tretention\030\003 \003(\0132X.yandex.cloud.mdb.cl" +
+      "ickhouse.v1.config.ClickhouseConfig.Grap" +
+      "hiteRollup.Pattern.RetentionB\006\202\3101\002>0\032<\n\t" +
+      "Retention\022\024\n\003age\030\001 \001(\003B\007\372\3071\003>=0\022\031\n\tpreci" +
+      "sion\030\002 \001(\003B\006\372\3071\002>0\"d\n\010LogLevel\022\031\n\025LOG_LE" +
+      "VEL_UNSPECIFIED\020\000\022\t\n\005TRACE\020\001\022\t\n\005DEBUG\020\002\022" +
+      "\017\n\013INFORMATION\020\003\022\013\n\007WARNING\020\004\022\t\n\005ERROR\020\005" +
+      "\"\215\002\n\023ClickhouseConfigSet\022W\n\020effective_co" +
+      "nfig\030\001 \001(\01327.yandex.cloud.mdb.clickhouse" +
+      ".v1.config.ClickhouseConfigB\004\350\3071\001\022L\n\013use" +
+      "r_config\030\002 \001(\01327.yandex.cloud.mdb.clickh" +
+      "ouse.v1.config.ClickhouseConfig\022O\n\016defau" +
+      "lt_config\030\003 \001(\01327.yandex.cloud.mdb.click" +
+      "house.v1.config.ClickhouseConfigB\201\001\n)yan" +
+      "dex.cloud.api.mdb.clickhouse.v1.configZT" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/mdb/clickhouse/v1/config;clickh" +
+      "ouseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -43713,13 +45147,13 @@ public final class Clickhouse {
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor,
-        new java.lang.String[] { "LogLevel", "MergeTree", "Compression", "Dictionaries", "GraphiteRollup", "Kafka", "KafkaTopics", "Rabbitmq", "MaxConnections", "MaxConcurrentQueries", "KeepAliveTimeout", "UncompressedCacheSize", "MarkCacheSize", "MaxTableSizeToDrop", "MaxPartitionSizeToDrop", "BuiltinDictionariesReloadInterval", "Timezone", "GeobaseUri", "QueryLogRetentionSize", "QueryLogRetentionTime", "QueryThreadLogEnabled", "QueryThreadLogRetentionSize", "QueryThreadLogRetentionTime", "PartLogRetentionSize", "PartLogRetentionTime", "MetricLogEnabled", "MetricLogRetentionSize", "MetricLogRetentionTime", "TraceLogEnabled", "TraceLogRetentionSize", "TraceLogRetentionTime", "TextLogEnabled", "TextLogRetentionSize", "TextLogRetentionTime", "TextLogLevel", "OpentelemetrySpanLogEnabled", "BackgroundPoolSize", "BackgroundSchedulePoolSize", "BackgroundFetchesPoolSize", "BackgroundMovePoolSize", "BackgroundDistributedSchedulePoolSize", "BackgroundBufferFlushSchedulePoolSize", "DefaultDatabase", "TotalMemoryProfilerStep", "TotalMemoryTrackerSampleProbability", });
+        new java.lang.String[] { "LogLevel", "MergeTree", "Compression", "Dictionaries", "GraphiteRollup", "Kafka", "KafkaTopics", "Rabbitmq", "MaxConnections", "MaxConcurrentQueries", "KeepAliveTimeout", "UncompressedCacheSize", "MarkCacheSize", "MaxTableSizeToDrop", "MaxPartitionSizeToDrop", "BuiltinDictionariesReloadInterval", "Timezone", "GeobaseUri", "QueryLogRetentionSize", "QueryLogRetentionTime", "QueryThreadLogEnabled", "QueryThreadLogRetentionSize", "QueryThreadLogRetentionTime", "PartLogRetentionSize", "PartLogRetentionTime", "MetricLogEnabled", "MetricLogRetentionSize", "MetricLogRetentionTime", "TraceLogEnabled", "TraceLogRetentionSize", "TraceLogRetentionTime", "TextLogEnabled", "TextLogRetentionSize", "TextLogRetentionTime", "TextLogLevel", "OpentelemetrySpanLogEnabled", "BackgroundPoolSize", "BackgroundSchedulePoolSize", "BackgroundFetchesPoolSize", "BackgroundMovePoolSize", "BackgroundDistributedSchedulePoolSize", "BackgroundBufferFlushSchedulePoolSize", "BackgroundMessageBrokerSchedulePoolSize", "DefaultDatabase", "TotalMemoryProfilerStep", "TotalMemoryTrackerSampleProbability", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_descriptor,
-        new java.lang.String[] { "ReplicatedDeduplicationWindow", "ReplicatedDeduplicationWindowSeconds", "PartsToDelayInsert", "PartsToThrowInsert", "InactivePartsToDelayInsert", "InactivePartsToThrowInsert", "MaxReplicatedMergesInQueue", "NumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge", "MaxBytesToMergeAtMinSpaceInPool", "MaxBytesToMergeAtMaxSpaceInPool", "MinBytesForWidePart", "MinRowsForWidePart", "TtlOnlyDropParts", "AllowRemoteFsZeroCopyReplication", });
+        new java.lang.String[] { "ReplicatedDeduplicationWindow", "ReplicatedDeduplicationWindowSeconds", "PartsToDelayInsert", "PartsToThrowInsert", "InactivePartsToDelayInsert", "InactivePartsToThrowInsert", "MaxReplicatedMergesInQueue", "NumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge", "MaxBytesToMergeAtMinSpaceInPool", "MaxBytesToMergeAtMaxSpaceInPool", "MinBytesForWidePart", "MinRowsForWidePart", "TtlOnlyDropParts", "AllowRemoteFsZeroCopyReplication", "MergeWithTtlTimeout", "MergeWithRecompressionTtlTimeout", "MaxPartsInTotal", "MaxNumberOfMergesWithTtlInPool", "CleanupDelayPeriod", "NumberOfFreeEntriesInPoolToExecuteMutation", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Kafka_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Kafka_fieldAccessorTable = new

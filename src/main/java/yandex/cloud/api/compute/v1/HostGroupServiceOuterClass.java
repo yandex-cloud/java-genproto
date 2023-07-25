@@ -693,7 +693,12 @@ public final class HostGroupServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters resources listed in the response.
-     * Currently you can use filtering only on the [HostGroup.name] field.
+     * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+     * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+     * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+     * 3. `&lt;value&gt;` represents a value.
+     * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -703,7 +708,12 @@ public final class HostGroupServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters resources listed in the response.
-     * Currently you can use filtering only on the [HostGroup.name] field.
+     * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+     * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+     * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+     * 3. `&lt;value&gt;` represents a value.
+     * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -711,6 +721,30 @@ public final class HostGroupServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getFilterBytes();
+
+    /**
+     * <pre>
+     * By which column the listing should be ordered and in which direction,
+     * format is "createdAt desc". "id asc" if omitted.
+     * The default sorting order is ascending
+     * </pre>
+     *
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The orderBy.
+     */
+    java.lang.String getOrderBy();
+    /**
+     * <pre>
+     * By which column the listing should be ordered and in which direction,
+     * format is "createdAt desc". "id asc" if omitted.
+     * The default sorting order is ascending
+     * </pre>
+     *
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for orderBy.
+     */
+    com.google.protobuf.ByteString
+        getOrderByBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListHostGroupsRequest}
@@ -728,6 +762,7 @@ public final class HostGroupServiceOuterClass {
       folderId_ = "";
       pageToken_ = "";
       filter_ = "";
+      orderBy_ = "";
     }
 
     @java.lang.Override
@@ -781,6 +816,12 @@ public final class HostGroupServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               filter_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              orderBy_ = s;
               break;
             }
             default: {
@@ -936,7 +977,12 @@ public final class HostGroupServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters resources listed in the response.
-     * Currently you can use filtering only on the [HostGroup.name] field.
+     * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+     * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+     * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+     * 3. `&lt;value&gt;` represents a value.
+     * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -958,7 +1004,12 @@ public final class HostGroupServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters resources listed in the response.
-     * Currently you can use filtering only on the [HostGroup.name] field.
+     * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+     * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+     * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+     * 3. `&lt;value&gt;` represents a value.
+     * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -973,6 +1024,56 @@ public final class HostGroupServiceOuterClass {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORDER_BY_FIELD_NUMBER = 5;
+    private volatile java.lang.Object orderBy_;
+    /**
+     * <pre>
+     * By which column the listing should be ordered and in which direction,
+     * format is "createdAt desc". "id asc" if omitted.
+     * The default sorting order is ascending
+     * </pre>
+     *
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The orderBy.
+     */
+    @java.lang.Override
+    public java.lang.String getOrderBy() {
+      java.lang.Object ref = orderBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orderBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * By which column the listing should be ordered and in which direction,
+     * format is "createdAt desc". "id asc" if omitted.
+     * The default sorting order is ascending
+     * </pre>
+     *
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for orderBy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrderByBytes() {
+      java.lang.Object ref = orderBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orderBy_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1005,6 +1106,9 @@ public final class HostGroupServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, orderBy_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1026,6 +1130,9 @@ public final class HostGroupServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, orderBy_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1050,6 +1157,8 @@ public final class HostGroupServiceOuterClass {
           .equals(other.getPageToken())) return false;
       if (!getFilter()
           .equals(other.getFilter())) return false;
+      if (!getOrderBy()
+          .equals(other.getOrderBy())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1070,6 +1179,8 @@ public final class HostGroupServiceOuterClass {
       hash = (53 * hash) + getPageToken().hashCode();
       hash = (37 * hash) + FILTER_FIELD_NUMBER;
       hash = (53 * hash) + getFilter().hashCode();
+      hash = (37 * hash) + ORDER_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getOrderBy().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1211,6 +1322,8 @@ public final class HostGroupServiceOuterClass {
 
         filter_ = "";
 
+        orderBy_ = "";
+
         return this;
       }
 
@@ -1241,6 +1354,7 @@ public final class HostGroupServiceOuterClass {
         result.pageSize_ = pageSize_;
         result.pageToken_ = pageToken_;
         result.filter_ = filter_;
+        result.orderBy_ = orderBy_;
         onBuilt();
         return result;
       }
@@ -1302,6 +1416,10 @@ public final class HostGroupServiceOuterClass {
         }
         if (!other.getFilter().isEmpty()) {
           filter_ = other.filter_;
+          onChanged();
+        }
+        if (!other.getOrderBy().isEmpty()) {
+          orderBy_ = other.orderBy_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1596,7 +1714,12 @@ public final class HostGroupServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [HostGroup.name] field.
+       * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1617,7 +1740,12 @@ public final class HostGroupServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [HostGroup.name] field.
+       * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1639,7 +1767,12 @@ public final class HostGroupServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [HostGroup.name] field.
+       * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1659,7 +1792,12 @@ public final class HostGroupServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [HostGroup.name] field.
+       * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1674,7 +1812,12 @@ public final class HostGroupServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [HostGroup.name] field.
+       * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1689,6 +1832,112 @@ public final class HostGroupServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         filter_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object orderBy_ = "";
+      /**
+       * <pre>
+       * By which column the listing should be ordered and in which direction,
+       * format is "createdAt desc". "id asc" if omitted.
+       * The default sorting order is ascending
+       * </pre>
+       *
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The orderBy.
+       */
+      public java.lang.String getOrderBy() {
+        java.lang.Object ref = orderBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          orderBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * By which column the listing should be ordered and in which direction,
+       * format is "createdAt desc". "id asc" if omitted.
+       * The default sorting order is ascending
+       * </pre>
+       *
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for orderBy.
+       */
+      public com.google.protobuf.ByteString
+          getOrderByBytes() {
+        java.lang.Object ref = orderBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          orderBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * By which column the listing should be ordered and in which direction,
+       * format is "createdAt desc". "id asc" if omitted.
+       * The default sorting order is ascending
+       * </pre>
+       *
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The orderBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderBy(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        orderBy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * By which column the listing should be ordered and in which direction,
+       * format is "createdAt desc". "id asc" if omitted.
+       * The default sorting order is ascending
+       * </pre>
+       *
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrderBy() {
+        
+        orderBy_ = getDefaultInstance().getOrderBy();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * By which column the listing should be ordered and in which direction,
+       * format is "createdAt desc". "id asc" if omitted.
+       * The default sorting order is ascending
+       * </pre>
+       *
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for orderBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        orderBy_ = value;
         onChanged();
         return this;
       }
@@ -9578,9 +9827,7 @@ public final class HostGroupServiceOuterClass {
 
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
-     * Currently you can use filtering only on the [Host.id] field.
-     * To get the host ID, use [HostGroupService.ListHosts] request.
+     * Filter support is not currently implemented. Any filters are ignored.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -9589,9 +9836,7 @@ public final class HostGroupServiceOuterClass {
     java.lang.String getFilter();
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
-     * Currently you can use filtering only on the [Host.id] field.
-     * To get the host ID, use [HostGroupService.ListHosts] request.
+     * Filter support is not currently implemented. Any filters are ignored.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -9823,9 +10068,7 @@ public final class HostGroupServiceOuterClass {
     private volatile java.lang.Object filter_;
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
-     * Currently you can use filtering only on the [Host.id] field.
-     * To get the host ID, use [HostGroupService.ListHosts] request.
+     * Filter support is not currently implemented. Any filters are ignored.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -9846,9 +10089,7 @@ public final class HostGroupServiceOuterClass {
     }
     /**
      * <pre>
-     * A filter expression that filters resources listed in the response.
-     * Currently you can use filtering only on the [Host.id] field.
-     * To get the host ID, use [HostGroupService.ListHosts] request.
+     * Filter support is not currently implemented. Any filters are ignored.
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10485,9 +10726,7 @@ public final class HostGroupServiceOuterClass {
       private java.lang.Object filter_ = "";
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [Host.id] field.
-       * To get the host ID, use [HostGroupService.ListHosts] request.
+       * Filter support is not currently implemented. Any filters are ignored.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10507,9 +10746,7 @@ public final class HostGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [Host.id] field.
-       * To get the host ID, use [HostGroupService.ListHosts] request.
+       * Filter support is not currently implemented. Any filters are ignored.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10530,9 +10767,7 @@ public final class HostGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [Host.id] field.
-       * To get the host ID, use [HostGroupService.ListHosts] request.
+       * Filter support is not currently implemented. Any filters are ignored.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10551,9 +10786,7 @@ public final class HostGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [Host.id] field.
-       * To get the host ID, use [HostGroupService.ListHosts] request.
+       * Filter support is not currently implemented. Any filters are ignored.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -10567,9 +10800,7 @@ public final class HostGroupServiceOuterClass {
       }
       /**
        * <pre>
-       * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [Host.id] field.
-       * To get the host ID, use [HostGroupService.ListHosts] request.
+       * Filter support is not currently implemented. Any filters are ignored.
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -15965,102 +16196,103 @@ public final class HostGroupServiceOuterClass {
       "ost_group.proto\032&yandex/cloud/operation/" +
       "operation.proto\032\035yandex/cloud/validation" +
       ".proto\":\n\023GetHostGroupRequest\022#\n\rhost_gr" +
-      "oup_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\222\001\n\025ListHostG" +
+      "oup_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\257\001\n\025ListHostG" +
       "roupsRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
       "\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\n" +
       "page_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 " +
-      "\001(\tB\n\212\3101\006<=1000\"j\n\026ListHostGroupsRespons" +
-      "e\0227\n\013host_groups\030\001 \003(\0132\".yandex.cloud.co" +
-      "mpute.v1.HostGroup\022\027\n\017next_page_token\030\002 " +
-      "\001(\t\"\225\004\n\026CreateHostGroupRequest\022\037\n\tfolder" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362" +
-      "\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013d" +
-      "escription\030\003 \001(\tB\t\212\3101\005<=256\022\224\001\n\006labels\030\004" +
-      " \003(\0132;.yandex.cloud.compute.v1.CreateHos" +
-      "tGroupRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<" +
-      "=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a" +
-      "-z][-_./\\@0-9a-z]*\022\035\n\007zone_id\030\005 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\022\035\n\007type_id\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022F\n\022maintenance_policy\030\007 \001(\0162*.yandex.cl" +
-      "oud.compute.v1.MaintenancePolicy\022:\n\014scal" +
-      "e_policy\030\010 \001(\0132$.yandex.cloud.compute.v1" +
-      ".ScalePolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001\"0\n\027CreateHostGroupMe" +
-      "tadata\022\025\n\rhost_group_id\030\001 \001(\t\"\214\004\n\026Update" +
-      "HostGroupRequest\022#\n\rhost_group_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.goo" +
-      "gle.protobuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\307" +
-      "1 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013de" +
-      "scription\030\004 \001(\tB\t\212\3101\005<=256\022\224\001\n\006labels\030\005 " +
-      "\003(\0132;.yandex.cloud.compute.v1.UpdateHost" +
-      "GroupRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=" +
-      "63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-" +
-      "z][-_./\\@0-9a-z]*\022F\n\022maintenance_policy\030" +
-      "\006 \001(\0162*.yandex.cloud.compute.v1.Maintena" +
-      "ncePolicy\022:\n\014scale_policy\030\007 \001(\0132$.yandex" +
-      ".cloud.compute.v1.ScalePolicy\032-\n\013LabelsE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"0\n\027" +
-      "UpdateHostGroupMetadata\022\025\n\rhost_group_id" +
-      "\030\001 \001(\t\"=\n\026DeleteHostGroupRequest\022#\n\rhost" +
-      "_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"0\n\027DeleteH" +
-      "ostGroupMetadata\022\025\n\rhost_group_id\030\001 \001(\t\"" +
-      "\236\001\n\035ListHostGroupInstancesRequest\022#\n\rhos" +
-      "t_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_s" +
-      "ize\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(" +
-      "\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000" +
-      "\"o\n\036ListHostGroupInstancesResponse\0224\n\tin" +
-      "stances\030\001 \003(\0132!.yandex.cloud.compute.v1." +
-      "Instance\022\027\n\017next_page_token\030\002 \001(\t\"~\n\031Lis" +
-      "tHostGroupHostsRequest\022#\n\rhost_group_id\030" +
+      "\001(\tB\n\212\3101\006<=1000\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<" +
+      "=100\"j\n\026ListHostGroupsResponse\0227\n\013host_g" +
+      "roups\030\001 \003(\0132\".yandex.cloud.compute.v1.Ho" +
+      "stGroup\022\027\n\017next_page_token\030\002 \001(\t\"\225\004\n\026Cre" +
+      "ateHostGroupRequest\022\037\n\tfolder_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([" +
+      "-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030" +
+      "\003 \001(\tB\t\212\3101\005<=256\022\224\001\n\006labels\030\004 \003(\0132;.yand" +
+      "ex.cloud.compute.v1.CreateHostGroupReque" +
+      "st.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_." +
+      "/\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0" +
+      "-9a-z]*\022\035\n\007zone_id\030\005 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
+      "\n\007type_id\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022F\n\022mainten" +
+      "ance_policy\030\007 \001(\0162*.yandex.cloud.compute" +
+      ".v1.MaintenancePolicy\022:\n\014scale_policy\030\010 " +
+      "\001(\0132$.yandex.cloud.compute.v1.ScalePolic" +
+      "y\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\"0\n\027CreateHostGroupMetadata\022\025\n\rh" +
+      "ost_group_id\030\001 \001(\t\"\214\004\n\026UpdateHostGroupRe" +
+      "quest\022#\n\rhost_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022/\n\013update_mask\030\002 \001(\0132\032.google.protobu" +
+      "f.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-" +
+      "a-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\004" +
+      " \001(\tB\t\212\3101\005<=256\022\224\001\n\006labels\030\005 \003(\0132;.yande" +
+      "x.cloud.compute.v1.UpdateHostGroupReques" +
+      "t.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./" +
+      "\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-" +
+      "9a-z]*\022F\n\022maintenance_policy\030\006 \001(\0162*.yan" +
+      "dex.cloud.compute.v1.MaintenancePolicy\022:" +
+      "\n\014scale_policy\030\007 \001(\0132$.yandex.cloud.comp" +
+      "ute.v1.ScalePolicy\032-\n\013LabelsEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"0\n\027UpdateHostG" +
+      "roupMetadata\022\025\n\rhost_group_id\030\001 \001(\t\"=\n\026D" +
+      "eleteHostGroupRequest\022#\n\rhost_group_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\"0\n\027DeleteHostGroupMet" +
+      "adata\022\025\n\rhost_group_id\030\001 \001(\t\"\236\001\n\035ListHos" +
+      "tGroupInstancesRequest\022#\n\rhost_group_id\030" +
       "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n" +
       "\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=10" +
-      "0\"c\n\032ListHostGroupHostsResponse\022,\n\005hosts" +
-      "\030\001 \003(\0132\035.yandex.cloud.compute.v1.Host\022\027\n" +
-      "\017next_page_token\030\002 \001(\t\"\203\001\n\036ListHostGroup" +
-      "OperationsRequest\022#\n\rhost_group_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<" +
-      "=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"q\n\037" +
-      "ListHostGroupOperationsResponse\0225\n\nopera" +
-      "tions\030\001 \003(\0132!.yandex.cloud.operation.Ope" +
-      "ration\022\027\n\017next_page_token\030\002 \001(\t2\370\n\n\020Host" +
-      "GroupService\022\207\001\n\003Get\022,.yandex.cloud.comp" +
-      "ute.v1.GetHostGroupRequest\032\".yandex.clou" +
-      "d.compute.v1.HostGroup\".\202\323\344\223\002(\022&/compute" +
-      "/v1/hostGroups/{host_group_id}\022\207\001\n\004List\022" +
-      "..yandex.cloud.compute.v1.ListHostGroups" +
-      "Request\032/.yandex.cloud.compute.v1.ListHo" +
-      "stGroupsResponse\"\036\202\323\344\223\002\030\022\026/compute/v1/ho" +
-      "stGroups\022\247\001\n\006Create\022/.yandex.cloud.compu" +
-      "te.v1.CreateHostGroupRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"I\202\323\344\223\002\033\"\026/comput" +
-      "e/v1/hostGroups:\001*\262\322*$\n\027CreateHostGroupM" +
-      "etadata\022\tHostGroup\022\267\001\n\006Update\022/.yandex.c" +
-      "loud.compute.v1.UpdateHostGroupRequest\032!" +
-      ".yandex.cloud.operation.Operation\"Y\202\323\344\223\002" +
-      "+2&/compute/v1/hostGroups/{host_group_id" +
-      "}:\001*\262\322*$\n\027UpdateHostGroupMetadata\022\tHostG" +
-      "roup\022\300\001\n\006Delete\022/.yandex.cloud.compute.v" +
-      "1.DeleteHostGroupRequest\032!.yandex.cloud." +
-      "operation.Operation\"b\202\323\344\223\002(*&/compute/v1" +
-      "/hostGroups/{host_group_id}\262\322*0\n\027DeleteH" +
-      "ostGroupMetadata\022\025google.protobuf.Empty\022" +
-      "\276\001\n\016ListOperations\0227.yandex.cloud.comput" +
-      "e.v1.ListHostGroupOperationsRequest\0328.ya" +
-      "ndex.cloud.compute.v1.ListHostGroupOpera" +
-      "tionsResponse\"9\202\323\344\223\0023\0221/compute/v1/hostG" +
-      "roups/{host_group_id}/operations\022\272\001\n\rLis" +
-      "tInstances\0226.yandex.cloud.compute.v1.Lis" +
-      "tHostGroupInstancesRequest\0327.yandex.clou" +
-      "d.compute.v1.ListHostGroupInstancesRespo" +
-      "nse\"8\202\323\344\223\0022\0220/compute/v1/hostGroups/{hos" +
-      "t_group_id}/instances\022\252\001\n\tListHosts\0222.ya" +
-      "ndex.cloud.compute.v1.ListHostGroupHosts" +
-      "Request\0323.yandex.cloud.compute.v1.ListHo" +
-      "stGroupHostsResponse\"4\202\323\344\223\002.\022,/compute/v" +
-      "1/hostGroups/{host_group_id}/hostsBb\n\033ya" +
-      "ndex.cloud.api.compute.v1ZCgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/comp" +
-      "ute/v1;computeb\006proto3"
+      "0\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"o\n\036ListHos" +
+      "tGroupInstancesResponse\0224\n\tinstances\030\001 \003" +
+      "(\0132!.yandex.cloud.compute.v1.Instance\022\027\n" +
+      "\017next_page_token\030\002 \001(\t\"~\n\031ListHostGroupH" +
+      "ostsRequest\022#\n\rhost_group_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022" +
+      "\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"c\n\032ListHo" +
+      "stGroupHostsResponse\022,\n\005hosts\030\001 \003(\0132\035.ya" +
+      "ndex.cloud.compute.v1.Host\022\027\n\017next_page_" +
+      "token\030\002 \001(\t\"\203\001\n\036ListHostGroupOperationsR" +
+      "equest\022#\n\rhost_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npa" +
+      "ge_token\030\003 \001(\tB\t\212\3101\005<=100\"q\n\037ListHostGro" +
+      "upOperationsResponse\0225\n\noperations\030\001 \003(\013" +
+      "2!.yandex.cloud.operation.Operation\022\027\n\017n" +
+      "ext_page_token\030\002 \001(\t2\370\n\n\020HostGroupServic" +
+      "e\022\207\001\n\003Get\022,.yandex.cloud.compute.v1.GetH" +
+      "ostGroupRequest\032\".yandex.cloud.compute.v" +
+      "1.HostGroup\".\202\323\344\223\002(\022&/compute/v1/hostGro" +
+      "ups/{host_group_id}\022\207\001\n\004List\022..yandex.cl" +
+      "oud.compute.v1.ListHostGroupsRequest\032/.y" +
+      "andex.cloud.compute.v1.ListHostGroupsRes" +
+      "ponse\"\036\202\323\344\223\002\030\022\026/compute/v1/hostGroups\022\247\001" +
+      "\n\006Create\022/.yandex.cloud.compute.v1.Creat" +
+      "eHostGroupRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"I\202\323\344\223\002\033\"\026/compute/v1/hostGr" +
+      "oups:\001*\262\322*$\n\027CreateHostGroupMetadata\022\tHo" +
+      "stGroup\022\267\001\n\006Update\022/.yandex.cloud.comput" +
+      "e.v1.UpdateHostGroupRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"Y\202\323\344\223\002+2&/compute" +
+      "/v1/hostGroups/{host_group_id}:\001*\262\322*$\n\027U" +
+      "pdateHostGroupMetadata\022\tHostGroup\022\300\001\n\006De" +
+      "lete\022/.yandex.cloud.compute.v1.DeleteHos" +
+      "tGroupRequest\032!.yandex.cloud.operation.O" +
+      "peration\"b\202\323\344\223\002(*&/compute/v1/hostGroups" +
+      "/{host_group_id}\262\322*0\n\027DeleteHostGroupMet" +
+      "adata\022\025google.protobuf.Empty\022\276\001\n\016ListOpe" +
+      "rations\0227.yandex.cloud.compute.v1.ListHo" +
+      "stGroupOperationsRequest\0328.yandex.cloud." +
+      "compute.v1.ListHostGroupOperationsRespon" +
+      "se\"9\202\323\344\223\0023\0221/compute/v1/hostGroups/{host" +
+      "_group_id}/operations\022\272\001\n\rListInstances\022" +
+      "6.yandex.cloud.compute.v1.ListHostGroupI" +
+      "nstancesRequest\0327.yandex.cloud.compute.v" +
+      "1.ListHostGroupInstancesResponse\"8\202\323\344\223\0022" +
+      "\0220/compute/v1/hostGroups/{host_group_id}" +
+      "/instances\022\252\001\n\tListHosts\0222.yandex.cloud." +
+      "compute.v1.ListHostGroupHostsRequest\0323.y" +
+      "andex.cloud.compute.v1.ListHostGroupHost" +
+      "sResponse\"4\202\323\344\223\002.\022,/compute/v1/hostGroup" +
+      "s/{host_group_id}/hostsBb\n\033yandex.cloud." +
+      "api.compute.v1ZCgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/compute/v1;comp" +
+      "uteb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -16084,7 +16316,7 @@ public final class HostGroupServiceOuterClass {
     internal_static_yandex_cloud_compute_v1_ListHostGroupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_ListHostGroupsRequest_descriptor,
-        new java.lang.String[] { "FolderId", "PageSize", "PageToken", "Filter", });
+        new java.lang.String[] { "FolderId", "PageSize", "PageToken", "Filter", "OrderBy", });
     internal_static_yandex_cloud_compute_v1_ListHostGroupsResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_compute_v1_ListHostGroupsResponse_fieldAccessorTable = new

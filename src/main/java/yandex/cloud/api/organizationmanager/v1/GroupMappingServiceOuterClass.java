@@ -1229,7 +1229,7 @@ public final class GroupMappingServiceOuterClass {
 
     /**
      * <pre>
-     * A new state of synchronization to update (if mentioned in updated_fields).
+     * Synchronization status.
      * </pre>
      *
      * <code>bool enabled = 3;</code>
@@ -1376,7 +1376,7 @@ public final class GroupMappingServiceOuterClass {
     private boolean enabled_;
     /**
      * <pre>
-     * A new state of synchronization to update (if mentioned in updated_fields).
+     * Synchronization status.
      * </pre>
      *
      * <code>bool enabled = 3;</code>
@@ -1806,7 +1806,7 @@ public final class GroupMappingServiceOuterClass {
       private boolean enabled_ ;
       /**
        * <pre>
-       * A new state of synchronization to update (if mentioned in updated_fields).
+       * Synchronization status.
        * </pre>
        *
        * <code>bool enabled = 3;</code>
@@ -1818,7 +1818,7 @@ public final class GroupMappingServiceOuterClass {
       }
       /**
        * <pre>
-       * A new state of synchronization to update (if mentioned in updated_fields).
+       * Synchronization status.
        * </pre>
        *
        * <code>bool enabled = 3;</code>
@@ -1833,7 +1833,7 @@ public final class GroupMappingServiceOuterClass {
       }
       /**
        * <pre>
-       * A new state of synchronization to update (if mentioned in updated_fields).
+       * Synchronization status.
        * </pre>
        *
        * <code>bool enabled = 3;</code>
@@ -2495,31 +2495,31 @@ public final class GroupMappingServiceOuterClass {
      * A set of fields that should be updated
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask updated_fields = 2 [(.yandex.cloud.required) = true];</code>
-     * @return Whether the updatedFields field is set.
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
-    boolean hasUpdatedFields();
+    boolean hasUpdateMask();
     /**
      * <pre>
      * A set of fields that should be updated
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask updated_fields = 2 [(.yandex.cloud.required) = true];</code>
-     * @return The updatedFields.
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
-    com.google.protobuf.FieldMask getUpdatedFields();
+    com.google.protobuf.FieldMask getUpdateMask();
     /**
      * <pre>
      * A set of fields that should be updated
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask updated_fields = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
-    com.google.protobuf.FieldMaskOrBuilder getUpdatedFieldsOrBuilder();
+    com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
      * <pre>
-     * A new state of synchronization to update (if mentioned in updated_fields).
+     * A new state of synchronization to update (if mentioned in update_mask).
      * </pre>
      *
      * <code>bool enabled = 3;</code>
@@ -2585,13 +2585,13 @@ public final class GroupMappingServiceOuterClass {
             }
             case 18: {
               com.google.protobuf.FieldMask.Builder subBuilder = null;
-              if (updatedFields_ != null) {
-                subBuilder = updatedFields_.toBuilder();
+              if (updateMask_ != null) {
+                subBuilder = updateMask_.toBuilder();
               }
-              updatedFields_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
+              updateMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(updatedFields_);
-                updatedFields_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(updateMask_);
+                updateMask_ = subBuilder.buildPartial();
               }
 
               break;
@@ -2679,49 +2679,49 @@ public final class GroupMappingServiceOuterClass {
       }
     }
 
-    public static final int UPDATED_FIELDS_FIELD_NUMBER = 2;
-    private com.google.protobuf.FieldMask updatedFields_;
+    public static final int UPDATE_MASK_FIELD_NUMBER = 2;
+    private com.google.protobuf.FieldMask updateMask_;
     /**
      * <pre>
      * A set of fields that should be updated
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask updated_fields = 2 [(.yandex.cloud.required) = true];</code>
-     * @return Whether the updatedFields field is set.
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
      */
     @java.lang.Override
-    public boolean hasUpdatedFields() {
-      return updatedFields_ != null;
+    public boolean hasUpdateMask() {
+      return updateMask_ != null;
     }
     /**
      * <pre>
      * A set of fields that should be updated
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask updated_fields = 2 [(.yandex.cloud.required) = true];</code>
-     * @return The updatedFields.
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
      */
     @java.lang.Override
-    public com.google.protobuf.FieldMask getUpdatedFields() {
-      return updatedFields_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updatedFields_;
+    public com.google.protobuf.FieldMask getUpdateMask() {
+      return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
     }
     /**
      * <pre>
      * A set of fields that should be updated
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask updated_fields = 2 [(.yandex.cloud.required) = true];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.FieldMaskOrBuilder getUpdatedFieldsOrBuilder() {
-      return getUpdatedFields();
+    public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+      return getUpdateMask();
     }
 
     public static final int ENABLED_FIELD_NUMBER = 3;
     private boolean enabled_;
     /**
      * <pre>
-     * A new state of synchronization to update (if mentioned in updated_fields).
+     * A new state of synchronization to update (if mentioned in update_mask).
      * </pre>
      *
      * <code>bool enabled = 3;</code>
@@ -2749,8 +2749,8 @@ public final class GroupMappingServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, federationId_);
       }
-      if (updatedFields_ != null) {
-        output.writeMessage(2, getUpdatedFields());
+      if (updateMask_ != null) {
+        output.writeMessage(2, getUpdateMask());
       }
       if (enabled_ != false) {
         output.writeBool(3, enabled_);
@@ -2767,9 +2767,9 @@ public final class GroupMappingServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(federationId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, federationId_);
       }
-      if (updatedFields_ != null) {
+      if (updateMask_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getUpdatedFields());
+          .computeMessageSize(2, getUpdateMask());
       }
       if (enabled_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -2792,10 +2792,10 @@ public final class GroupMappingServiceOuterClass {
 
       if (!getFederationId()
           .equals(other.getFederationId())) return false;
-      if (hasUpdatedFields() != other.hasUpdatedFields()) return false;
-      if (hasUpdatedFields()) {
-        if (!getUpdatedFields()
-            .equals(other.getUpdatedFields())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
+      if (hasUpdateMask()) {
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
       }
       if (getEnabled()
           != other.getEnabled()) return false;
@@ -2812,9 +2812,9 @@ public final class GroupMappingServiceOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + FEDERATION_ID_FIELD_NUMBER;
       hash = (53 * hash) + getFederationId().hashCode();
-      if (hasUpdatedFields()) {
-        hash = (37 * hash) + UPDATED_FIELDS_FIELD_NUMBER;
-        hash = (53 * hash) + getUpdatedFields().hashCode();
+      if (hasUpdateMask()) {
+        hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdateMask().hashCode();
       }
       hash = (37 * hash) + ENABLED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
@@ -2958,11 +2958,11 @@ public final class GroupMappingServiceOuterClass {
         super.clear();
         federationId_ = "";
 
-        if (updatedFieldsBuilder_ == null) {
-          updatedFields_ = null;
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
         } else {
-          updatedFields_ = null;
-          updatedFieldsBuilder_ = null;
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
         }
         enabled_ = false;
 
@@ -2993,10 +2993,10 @@ public final class GroupMappingServiceOuterClass {
       public yandex.cloud.api.organizationmanager.v1.GroupMappingServiceOuterClass.UpdateGroupMappingRequest buildPartial() {
         yandex.cloud.api.organizationmanager.v1.GroupMappingServiceOuterClass.UpdateGroupMappingRequest result = new yandex.cloud.api.organizationmanager.v1.GroupMappingServiceOuterClass.UpdateGroupMappingRequest(this);
         result.federationId_ = federationId_;
-        if (updatedFieldsBuilder_ == null) {
-          result.updatedFields_ = updatedFields_;
+        if (updateMaskBuilder_ == null) {
+          result.updateMask_ = updateMask_;
         } else {
-          result.updatedFields_ = updatedFieldsBuilder_.build();
+          result.updateMask_ = updateMaskBuilder_.build();
         }
         result.enabled_ = enabled_;
         onBuilt();
@@ -3051,8 +3051,8 @@ public final class GroupMappingServiceOuterClass {
           federationId_ = other.federationId_;
           onChanged();
         }
-        if (other.hasUpdatedFields()) {
-          mergeUpdatedFields(other.getUpdatedFields());
+        if (other.hasUpdateMask()) {
+          mergeUpdateMask(other.getUpdateMask());
         }
         if (other.getEnabled() != false) {
           setEnabled(other.getEnabled());
@@ -3182,33 +3182,33 @@ public final class GroupMappingServiceOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FieldMask updatedFields_;
+      private com.google.protobuf.FieldMask updateMask_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updatedFieldsBuilder_;
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
       /**
        * <pre>
        * A set of fields that should be updated
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask updated_fields = 2 [(.yandex.cloud.required) = true];</code>
-       * @return Whether the updatedFields field is set.
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
        */
-      public boolean hasUpdatedFields() {
-        return updatedFieldsBuilder_ != null || updatedFields_ != null;
+      public boolean hasUpdateMask() {
+        return updateMaskBuilder_ != null || updateMask_ != null;
       }
       /**
        * <pre>
        * A set of fields that should be updated
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask updated_fields = 2 [(.yandex.cloud.required) = true];</code>
-       * @return The updatedFields.
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
        */
-      public com.google.protobuf.FieldMask getUpdatedFields() {
-        if (updatedFieldsBuilder_ == null) {
-          return updatedFields_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updatedFields_;
+      public com.google.protobuf.FieldMask getUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
         } else {
-          return updatedFieldsBuilder_.getMessage();
+          return updateMaskBuilder_.getMessage();
         }
       }
       /**
@@ -3216,17 +3216,17 @@ public final class GroupMappingServiceOuterClass {
        * A set of fields that should be updated
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask updated_fields = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
-      public Builder setUpdatedFields(com.google.protobuf.FieldMask value) {
-        if (updatedFieldsBuilder_ == null) {
+      public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          updatedFields_ = value;
+          updateMask_ = value;
           onChanged();
         } else {
-          updatedFieldsBuilder_.setMessage(value);
+          updateMaskBuilder_.setMessage(value);
         }
 
         return this;
@@ -3236,15 +3236,15 @@ public final class GroupMappingServiceOuterClass {
        * A set of fields that should be updated
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask updated_fields = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
-      public Builder setUpdatedFields(
+      public Builder setUpdateMask(
           com.google.protobuf.FieldMask.Builder builderForValue) {
-        if (updatedFieldsBuilder_ == null) {
-          updatedFields_ = builderForValue.build();
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = builderForValue.build();
           onChanged();
         } else {
-          updatedFieldsBuilder_.setMessage(builderForValue.build());
+          updateMaskBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
@@ -3254,19 +3254,19 @@ public final class GroupMappingServiceOuterClass {
        * A set of fields that should be updated
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask updated_fields = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
-      public Builder mergeUpdatedFields(com.google.protobuf.FieldMask value) {
-        if (updatedFieldsBuilder_ == null) {
-          if (updatedFields_ != null) {
-            updatedFields_ =
-              com.google.protobuf.FieldMask.newBuilder(updatedFields_).mergeFrom(value).buildPartial();
+      public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (updateMask_ != null) {
+            updateMask_ =
+              com.google.protobuf.FieldMask.newBuilder(updateMask_).mergeFrom(value).buildPartial();
           } else {
-            updatedFields_ = value;
+            updateMask_ = value;
           }
           onChanged();
         } else {
-          updatedFieldsBuilder_.mergeFrom(value);
+          updateMaskBuilder_.mergeFrom(value);
         }
 
         return this;
@@ -3276,15 +3276,15 @@ public final class GroupMappingServiceOuterClass {
        * A set of fields that should be updated
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask updated_fields = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
-      public Builder clearUpdatedFields() {
-        if (updatedFieldsBuilder_ == null) {
-          updatedFields_ = null;
+      public Builder clearUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
           onChanged();
         } else {
-          updatedFields_ = null;
-          updatedFieldsBuilder_ = null;
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
         }
 
         return this;
@@ -3294,26 +3294,26 @@ public final class GroupMappingServiceOuterClass {
        * A set of fields that should be updated
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask updated_fields = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
-      public com.google.protobuf.FieldMask.Builder getUpdatedFieldsBuilder() {
+      public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
         
         onChanged();
-        return getUpdatedFieldsFieldBuilder().getBuilder();
+        return getUpdateMaskFieldBuilder().getBuilder();
       }
       /**
        * <pre>
        * A set of fields that should be updated
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask updated_fields = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
-      public com.google.protobuf.FieldMaskOrBuilder getUpdatedFieldsOrBuilder() {
-        if (updatedFieldsBuilder_ != null) {
-          return updatedFieldsBuilder_.getMessageOrBuilder();
+      public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+        if (updateMaskBuilder_ != null) {
+          return updateMaskBuilder_.getMessageOrBuilder();
         } else {
-          return updatedFields_ == null ?
-              com.google.protobuf.FieldMask.getDefaultInstance() : updatedFields_;
+          return updateMask_ == null ?
+              com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
         }
       }
       /**
@@ -3321,26 +3321,26 @@ public final class GroupMappingServiceOuterClass {
        * A set of fields that should be updated
        * </pre>
        *
-       * <code>.google.protobuf.FieldMask updated_fields = 2 [(.yandex.cloud.required) = true];</code>
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
-          getUpdatedFieldsFieldBuilder() {
-        if (updatedFieldsBuilder_ == null) {
-          updatedFieldsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getUpdateMaskFieldBuilder() {
+        if (updateMaskBuilder_ == null) {
+          updateMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
-                  getUpdatedFields(),
+                  getUpdateMask(),
                   getParentForChildren(),
                   isClean());
-          updatedFields_ = null;
+          updateMask_ = null;
         }
-        return updatedFieldsBuilder_;
+        return updateMaskBuilder_;
       }
 
       private boolean enabled_ ;
       /**
        * <pre>
-       * A new state of synchronization to update (if mentioned in updated_fields).
+       * A new state of synchronization to update (if mentioned in update_mask).
        * </pre>
        *
        * <code>bool enabled = 3;</code>
@@ -3352,7 +3352,7 @@ public final class GroupMappingServiceOuterClass {
       }
       /**
        * <pre>
-       * A new state of synchronization to update (if mentioned in updated_fields).
+       * A new state of synchronization to update (if mentioned in update_mask).
        * </pre>
        *
        * <code>bool enabled = 3;</code>
@@ -3367,7 +3367,7 @@ public final class GroupMappingServiceOuterClass {
       }
       /**
        * <pre>
-       * A new state of synchronization to update (if mentioned in updated_fields).
+       * A new state of synchronization to update (if mentioned in update_mask).
        * </pre>
        *
        * <code>bool enabled = 3;</code>
@@ -10588,66 +10588,66 @@ public final class GroupMappingServiceOuterClass {
       "anager.v1.GroupMapping\"Q\n\031CreateGroupMap" +
       "pingRequest\022#\n\rfederation_id\030\001 \001(\tB\014\350\3071\001" +
       "\212\3101\004<=50\022\017\n\007enabled\030\003 \001(\010\"3\n\032CreateGroup" +
-      "MappingMetadata\022\025\n\rfederation_id\030\001 \001(\t\"\213" +
+      "MappingMetadata\022\025\n\rfederation_id\030\001 \001(\t\"\202" +
       "\001\n\031UpdateGroupMappingRequest\022#\n\rfederati" +
-      "on_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0228\n\016updated_fie" +
-      "lds\030\002 \001(\0132\032.google.protobuf.FieldMaskB\004\350" +
-      "\3071\001\022\017\n\007enabled\030\003 \001(\010\"3\n\032UpdateGroupMappi" +
-      "ngMetadata\022\025\n\rfederation_id\030\001 \001(\t\"@\n\031Del" +
-      "eteGroupMappingRequest\022#\n\rfederation_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"3\n\032DeleteGroupMappin" +
-      "gMetadata\022\025\n\rfederation_id\030\001 \001(\t\"\260\001\n\036Upd" +
-      "ateGroupMappingItemsRequest\022#\n\rfederatio" +
-      "n_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022i\n\031group_mappin" +
-      "g_item_deltas\030\004 \003(\0132:.yandex.cloud.organ" +
-      "izationmanager.v1.GroupMappingItemDeltaB" +
-      "\n\202\3101\0061-1000\"\346\001\n\025GroupMappingItemDelta\022C\n" +
-      "\004item\030\001 \001(\01325.yandex.cloud.organizationm" +
-      "anager.v1.GroupMappingItem\022Q\n\006action\030\002 \001" +
-      "(\0162A.yandex.cloud.organizationmanager.v1" +
-      ".GroupMappingItemDelta.Action\"5\n\006Action\022" +
-      "\026\n\022ACTION_UNSPECIFIED\020\000\022\007\n\003ADD\020\001\022\n\n\006REMO" +
-      "VE\020\002\"8\n\037UpdateGroupMappingItemsMetadata\022" +
-      "\025\n\rfederation_id\030\001 \001(\t\"\200\001\n\037UpdateGroupMa" +
-      "ppingItemsResponse\022]\n\031group_mapping_item" +
-      "_deltas\030\004 \003(\0132:.yandex.cloud.organizatio" +
-      "nmanager.v1.GroupMappingItemDelta\"\236\001\n\034Li" +
-      "stGroupMappingItemsRequest\022#\n\rfederation" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
-      "(\003B\n\372\3071\0060-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006" +
-      "<=2000\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"\214\001\n\035L" +
-      "istGroupMappingItemsResponse\022R\n\023group_ma" +
-      "pping_items\030\001 \003(\01325.yandex.cloud.organiz" +
-      "ationmanager.v1.GroupMappingItem\022\027\n\017next" +
-      "_page_token\030\002 \001(\t2\320\007\n\023GroupMappingServic" +
-      "e\022\200\001\n\003Get\022;.yandex.cloud.organizationman" +
-      "ager.v1.GetGroupMappingRequest\032<.yandex." +
-      "cloud.organizationmanager.v1.GetGroupMap" +
-      "pingResponse\022\233\001\n\006Create\022>.yandex.cloud.o" +
-      "rganizationmanager.v1.CreateGroupMapping" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\".\262\322**\n\032CreateGroupMappingMetadata\022\014Gr" +
-      "oupMapping\022\233\001\n\006Update\022>.yandex.cloud.org" +
-      "anizationmanager.v1.UpdateGroupMappingRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\".\262\322**\n\032UpdateGroupMappingMetadata\022\014Grou" +
-      "pMapping\022\244\001\n\006Delete\022>.yandex.cloud.organ" +
-      "izationmanager.v1.DeleteGroupMappingRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"7" +
-      "\262\322*3\n\032DeleteGroupMappingMetadata\022\025google" +
-      ".protobuf.Empty\022\222\001\n\tListItems\022A.yandex.c" +
-      "loud.organizationmanager.v1.ListGroupMap" +
-      "pingItemsRequest\032B.yandex.cloud.organiza" +
-      "tionmanager.v1.ListGroupMappingItemsResp" +
-      "onse\022\275\001\n\013UpdateItems\022C.yandex.cloud.orga" +
-      "nizationmanager.v1.UpdateGroupMappingIte" +
-      "msRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"F\262\322*B\n\037UpdateGroupMappingItemsMetad" +
-      "ata\022\037UpdateGroupMappingItemsResponseB\206\001\n" +
-      "\'yandex.cloud.api.organizationmanager.v1" +
-      "Z[github.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/organizationmanager/v1;organi" +
-      "zationmanagerb\006proto3"
+      "on_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask" +
+      "\030\002 \001(\0132\032.google.protobuf.FieldMask\022\017\n\007en" +
+      "abled\030\003 \001(\010\"3\n\032UpdateGroupMappingMetadat" +
+      "a\022\025\n\rfederation_id\030\001 \001(\t\"@\n\031DeleteGroupM" +
+      "appingRequest\022#\n\rfederation_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\"3\n\032DeleteGroupMappingMetadata" +
+      "\022\025\n\rfederation_id\030\001 \001(\t\"\260\001\n\036UpdateGroupM" +
+      "appingItemsRequest\022#\n\rfederation_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022i\n\031group_mapping_item_de" +
+      "ltas\030\004 \003(\0132:.yandex.cloud.organizationma" +
+      "nager.v1.GroupMappingItemDeltaB\n\202\3101\0061-10" +
+      "00\"\346\001\n\025GroupMappingItemDelta\022C\n\004item\030\001 \001" +
+      "(\01325.yandex.cloud.organizationmanager.v1" +
+      ".GroupMappingItem\022Q\n\006action\030\002 \001(\0162A.yand" +
+      "ex.cloud.organizationmanager.v1.GroupMap" +
+      "pingItemDelta.Action\"5\n\006Action\022\026\n\022ACTION" +
+      "_UNSPECIFIED\020\000\022\007\n\003ADD\020\001\022\n\n\006REMOVE\020\002\"8\n\037U" +
+      "pdateGroupMappingItemsMetadata\022\025\n\rfedera" +
+      "tion_id\030\001 \001(\t\"\200\001\n\037UpdateGroupMappingItem" +
+      "sResponse\022]\n\031group_mapping_item_deltas\030\004" +
+      " \003(\0132:.yandex.cloud.organizationmanager." +
+      "v1.GroupMappingItemDelta\"\236\001\n\034ListGroupMa" +
+      "ppingItemsRequest\022#\n\rfederation_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060" +
+      "-1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=2000\022\032\n" +
+      "\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"\214\001\n\035ListGroupM" +
+      "appingItemsResponse\022R\n\023group_mapping_ite" +
+      "ms\030\001 \003(\01325.yandex.cloud.organizationmana" +
+      "ger.v1.GroupMappingItem\022\027\n\017next_page_tok" +
+      "en\030\002 \001(\t2\320\007\n\023GroupMappingService\022\200\001\n\003Get" +
+      "\022;.yandex.cloud.organizationmanager.v1.G" +
+      "etGroupMappingRequest\032<.yandex.cloud.org" +
+      "anizationmanager.v1.GetGroupMappingRespo" +
+      "nse\022\233\001\n\006Create\022>.yandex.cloud.organizati" +
+      "onmanager.v1.CreateGroupMappingRequest\032!" +
+      ".yandex.cloud.operation.Operation\".\262\322**\n" +
+      "\032CreateGroupMappingMetadata\022\014GroupMappin" +
+      "g\022\233\001\n\006Update\022>.yandex.cloud.organization" +
+      "manager.v1.UpdateGroupMappingRequest\032!.y" +
+      "andex.cloud.operation.Operation\".\262\322**\n\032U" +
+      "pdateGroupMappingMetadata\022\014GroupMapping\022" +
+      "\244\001\n\006Delete\022>.yandex.cloud.organizationma" +
+      "nager.v1.DeleteGroupMappingRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"7\262\322*3\n\032Del" +
+      "eteGroupMappingMetadata\022\025google.protobuf" +
+      ".Empty\022\222\001\n\tListItems\022A.yandex.cloud.orga" +
+      "nizationmanager.v1.ListGroupMappingItems" +
+      "Request\032B.yandex.cloud.organizationmanag" +
+      "er.v1.ListGroupMappingItemsResponse\022\275\001\n\013" +
+      "UpdateItems\022C.yandex.cloud.organizationm" +
+      "anager.v1.UpdateGroupMappingItemsRequest" +
+      "\032!.yandex.cloud.operation.Operation\"F\262\322*" +
+      "B\n\037UpdateGroupMappingItemsMetadata\022\037Upda" +
+      "teGroupMappingItemsResponseB\206\001\n\'yandex.c" +
+      "loud.api.organizationmanager.v1Z[github." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/organizationmanager/v1;organizationman" +
+      "agerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10687,7 +10687,7 @@ public final class GroupMappingServiceOuterClass {
     internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupMappingRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupMappingRequest_descriptor,
-        new java.lang.String[] { "FederationId", "UpdatedFields", "Enabled", });
+        new java.lang.String[] { "FederationId", "UpdateMask", "Enabled", });
     internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupMappingMetadata_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_organizationmanager_v1_UpdateGroupMappingMetadata_fieldAccessorTable = new

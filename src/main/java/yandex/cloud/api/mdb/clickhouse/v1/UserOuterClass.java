@@ -8372,6 +8372,145 @@ public final class UserOuterClass {
 
     /**
      * <pre>
+     * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_final_threads = 126 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxFinalThreads field is set.
+     */
+    boolean hasMaxFinalThreads();
+    /**
+     * <pre>
+     * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_final_threads = 126 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxFinalThreads.
+     */
+    com.google.protobuf.Int64Value getMaxFinalThreads();
+    /**
+     * <pre>
+     * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_final_threads = 126 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxFinalThreadsOrBuilder();
+
+    /**
+     * <pre>
+     * Enables or disables order-preserving parallel parsing of data formats. Supported only for [TSV](https://clickhouse.com/docs/en/interfaces/formats#tabseparated), [TKSV](https://clickhouse.com/docs/en/interfaces/formats#tskv), [CSV](https://clickhouse.com/docs/en/interfaces/formats#csv) and [JSONEachRow](https://clickhouse.com/docs/en/interfaces/formats#jsoneachrow) formats.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_parallel_parsing = 127;</code>
+     * @return Whether the inputFormatParallelParsing field is set.
+     */
+    boolean hasInputFormatParallelParsing();
+    /**
+     * <pre>
+     * Enables or disables order-preserving parallel parsing of data formats. Supported only for [TSV](https://clickhouse.com/docs/en/interfaces/formats#tabseparated), [TKSV](https://clickhouse.com/docs/en/interfaces/formats#tskv), [CSV](https://clickhouse.com/docs/en/interfaces/formats#csv) and [JSONEachRow](https://clickhouse.com/docs/en/interfaces/formats#jsoneachrow) formats.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_parallel_parsing = 127;</code>
+     * @return The inputFormatParallelParsing.
+     */
+    com.google.protobuf.BoolValue getInputFormatParallelParsing();
+    /**
+     * <pre>
+     * Enables or disables order-preserving parallel parsing of data formats. Supported only for [TSV](https://clickhouse.com/docs/en/interfaces/formats#tabseparated), [TKSV](https://clickhouse.com/docs/en/interfaces/formats#tskv), [CSV](https://clickhouse.com/docs/en/interfaces/formats#csv) and [JSONEachRow](https://clickhouse.com/docs/en/interfaces/formats#jsoneachrow) formats.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_parallel_parsing = 127;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getInputFormatParallelParsingOrBuilder();
+
+    /**
+     * <pre>
+     * Enables or disables the insertion of JSON data with nested objects.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_import_nested_json = 128;</code>
+     * @return Whether the inputFormatImportNestedJson field is set.
+     */
+    boolean hasInputFormatImportNestedJson();
+    /**
+     * <pre>
+     * Enables or disables the insertion of JSON data with nested objects.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_import_nested_json = 128;</code>
+     * @return The inputFormatImportNestedJson.
+     */
+    com.google.protobuf.BoolValue getInputFormatImportNestedJson();
+    /**
+     * <pre>
+     * Enables or disables the insertion of JSON data with nested objects.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_import_nested_json = 128;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getInputFormatImportNestedJsonOrBuilder();
+
+    /**
+     * <pre>
+     * Method of reading data from local filesystem, one of: read, pread, mmap, io_uring, pread_threadpool. The 'io_uring' method is experimental and does not work for Log, TinyLog, StripeLog, File, Set and Join, and other tables with append-able files in presence of concurrent reads and writes.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.LocalFilesystemReadMethod local_filesystem_read_method = 129;</code>
+     * @return The enum numeric value on the wire for localFilesystemReadMethod.
+     */
+    int getLocalFilesystemReadMethodValue();
+    /**
+     * <pre>
+     * Method of reading data from local filesystem, one of: read, pread, mmap, io_uring, pread_threadpool. The 'io_uring' method is experimental and does not work for Log, TinyLog, StripeLog, File, Set and Join, and other tables with append-able files in presence of concurrent reads and writes.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.LocalFilesystemReadMethod local_filesystem_read_method = 129;</code>
+     * @return The localFilesystemReadMethod.
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LocalFilesystemReadMethod getLocalFilesystemReadMethod();
+
+    /**
+     * <pre>
+     * The maximum size of the buffer to read from the filesystem.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/codebrowser/ClickHouse/src/Core/Settings.h.html#DB::SettingsTraits::Data::max_read_buffer_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_read_buffer_size = 130 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the maxReadBufferSize field is set.
+     */
+    boolean hasMaxReadBufferSize();
+    /**
+     * <pre>
+     * The maximum size of the buffer to read from the filesystem.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/codebrowser/ClickHouse/src/Core/Settings.h.html#DB::SettingsTraits::Data::max_read_buffer_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_read_buffer_size = 130 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The maxReadBufferSize.
+     */
+    com.google.protobuf.Int64Value getMaxReadBufferSize();
+    /**
+     * <pre>
+     * The maximum size of the buffer to read from the filesystem.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/codebrowser/ClickHouse/src/Core/Settings.h.html#DB::SettingsTraits::Data::max_read_buffer_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_read_buffer_size = 130 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxReadBufferSizeOrBuilder();
+
+    /**
+     * <pre>
      * The setting is deprecated and has no effect.
      * </pre>
      *
@@ -8463,6 +8602,7 @@ public final class UserOuterClass {
       quotaMode_ = 0;
       formatRegexp_ = "";
       formatRegexpEscapingRule_ = 0;
+      localFilesystemReadMethod_ = 0;
     }
 
     @java.lang.Override
@@ -9993,6 +10133,64 @@ public final class UserOuterClass {
 
               break;
             }
+            case 1010: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxFinalThreads_ != null) {
+                subBuilder = maxFinalThreads_.toBuilder();
+              }
+              maxFinalThreads_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxFinalThreads_);
+                maxFinalThreads_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1018: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (inputFormatParallelParsing_ != null) {
+                subBuilder = inputFormatParallelParsing_.toBuilder();
+              }
+              inputFormatParallelParsing_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(inputFormatParallelParsing_);
+                inputFormatParallelParsing_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1026: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (inputFormatImportNestedJson_ != null) {
+                subBuilder = inputFormatImportNestedJson_.toBuilder();
+              }
+              inputFormatImportNestedJson_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(inputFormatImportNestedJson_);
+                inputFormatImportNestedJson_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1032: {
+              int rawValue = input.readEnum();
+
+              localFilesystemReadMethod_ = rawValue;
+              break;
+            }
+            case 1042: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxReadBufferSize_ != null) {
+                subBuilder = maxReadBufferSize_.toBuilder();
+              }
+              maxReadBufferSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxReadBufferSize_);
+                maxReadBufferSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -11273,6 +11471,141 @@ public final class UserOuterClass {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.UserSettings.DateTimeOutputFormat)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.clickhouse.v1.UserSettings.LocalFilesystemReadMethod}
+     */
+    public enum LocalFilesystemReadMethod
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>LOCAL_FILESYSTEM_READ_METHOD_UNSPECIFIED = 0;</code>
+       */
+      LOCAL_FILESYSTEM_READ_METHOD_UNSPECIFIED(0),
+      /**
+       * <code>LOCAL_FILESYSTEM_READ_METHOD_READ = 1;</code>
+       */
+      LOCAL_FILESYSTEM_READ_METHOD_READ(1),
+      /**
+       * <code>LOCAL_FILESYSTEM_READ_METHOD_PREAD_THREADPOOL = 2;</code>
+       */
+      LOCAL_FILESYSTEM_READ_METHOD_PREAD_THREADPOOL(2),
+      /**
+       * <code>LOCAL_FILESYSTEM_READ_METHOD_PREAD = 3;</code>
+       */
+      LOCAL_FILESYSTEM_READ_METHOD_PREAD(3),
+      /**
+       * <code>LOCAL_FILESYSTEM_READ_METHOD_NMAP = 4;</code>
+       */
+      LOCAL_FILESYSTEM_READ_METHOD_NMAP(4),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>LOCAL_FILESYSTEM_READ_METHOD_UNSPECIFIED = 0;</code>
+       */
+      public static final int LOCAL_FILESYSTEM_READ_METHOD_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>LOCAL_FILESYSTEM_READ_METHOD_READ = 1;</code>
+       */
+      public static final int LOCAL_FILESYSTEM_READ_METHOD_READ_VALUE = 1;
+      /**
+       * <code>LOCAL_FILESYSTEM_READ_METHOD_PREAD_THREADPOOL = 2;</code>
+       */
+      public static final int LOCAL_FILESYSTEM_READ_METHOD_PREAD_THREADPOOL_VALUE = 2;
+      /**
+       * <code>LOCAL_FILESYSTEM_READ_METHOD_PREAD = 3;</code>
+       */
+      public static final int LOCAL_FILESYSTEM_READ_METHOD_PREAD_VALUE = 3;
+      /**
+       * <code>LOCAL_FILESYSTEM_READ_METHOD_NMAP = 4;</code>
+       */
+      public static final int LOCAL_FILESYSTEM_READ_METHOD_NMAP_VALUE = 4;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static LocalFilesystemReadMethod valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static LocalFilesystemReadMethod forNumber(int value) {
+        switch (value) {
+          case 0: return LOCAL_FILESYSTEM_READ_METHOD_UNSPECIFIED;
+          case 1: return LOCAL_FILESYSTEM_READ_METHOD_READ;
+          case 2: return LOCAL_FILESYSTEM_READ_METHOD_PREAD_THREADPOOL;
+          case 3: return LOCAL_FILESYSTEM_READ_METHOD_PREAD;
+          case 4: return LOCAL_FILESYSTEM_READ_METHOD_NMAP;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<LocalFilesystemReadMethod>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          LocalFilesystemReadMethod> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<LocalFilesystemReadMethod>() {
+              public LocalFilesystemReadMethod findValueByNumber(int number) {
+                return LocalFilesystemReadMethod.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.getDescriptor().getEnumTypes().get(9);
+      }
+
+      private static final LocalFilesystemReadMethod[] VALUES = values();
+
+      public static LocalFilesystemReadMethod valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private LocalFilesystemReadMethod(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.UserSettings.LocalFilesystemReadMethod)
     }
 
     public static final int READONLY_FIELD_NUMBER = 1;
@@ -16404,6 +16737,197 @@ public final class UserOuterClass {
       return getMemoryProfilerSampleProbability();
     }
 
+    public static final int MAX_FINAL_THREADS_FIELD_NUMBER = 126;
+    private com.google.protobuf.Int64Value maxFinalThreads_;
+    /**
+     * <pre>
+     * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_final_threads = 126 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxFinalThreads field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxFinalThreads() {
+      return maxFinalThreads_ != null;
+    }
+    /**
+     * <pre>
+     * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_final_threads = 126 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxFinalThreads.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxFinalThreads() {
+      return maxFinalThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxFinalThreads_;
+    }
+    /**
+     * <pre>
+     * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_final_threads = 126 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxFinalThreadsOrBuilder() {
+      return getMaxFinalThreads();
+    }
+
+    public static final int INPUT_FORMAT_PARALLEL_PARSING_FIELD_NUMBER = 127;
+    private com.google.protobuf.BoolValue inputFormatParallelParsing_;
+    /**
+     * <pre>
+     * Enables or disables order-preserving parallel parsing of data formats. Supported only for [TSV](https://clickhouse.com/docs/en/interfaces/formats#tabseparated), [TKSV](https://clickhouse.com/docs/en/interfaces/formats#tskv), [CSV](https://clickhouse.com/docs/en/interfaces/formats#csv) and [JSONEachRow](https://clickhouse.com/docs/en/interfaces/formats#jsoneachrow) formats.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_parallel_parsing = 127;</code>
+     * @return Whether the inputFormatParallelParsing field is set.
+     */
+    @java.lang.Override
+    public boolean hasInputFormatParallelParsing() {
+      return inputFormatParallelParsing_ != null;
+    }
+    /**
+     * <pre>
+     * Enables or disables order-preserving parallel parsing of data formats. Supported only for [TSV](https://clickhouse.com/docs/en/interfaces/formats#tabseparated), [TKSV](https://clickhouse.com/docs/en/interfaces/formats#tskv), [CSV](https://clickhouse.com/docs/en/interfaces/formats#csv) and [JSONEachRow](https://clickhouse.com/docs/en/interfaces/formats#jsoneachrow) formats.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_parallel_parsing = 127;</code>
+     * @return The inputFormatParallelParsing.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getInputFormatParallelParsing() {
+      return inputFormatParallelParsing_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : inputFormatParallelParsing_;
+    }
+    /**
+     * <pre>
+     * Enables or disables order-preserving parallel parsing of data formats. Supported only for [TSV](https://clickhouse.com/docs/en/interfaces/formats#tabseparated), [TKSV](https://clickhouse.com/docs/en/interfaces/formats#tskv), [CSV](https://clickhouse.com/docs/en/interfaces/formats#csv) and [JSONEachRow](https://clickhouse.com/docs/en/interfaces/formats#jsoneachrow) formats.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_parallel_parsing = 127;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getInputFormatParallelParsingOrBuilder() {
+      return getInputFormatParallelParsing();
+    }
+
+    public static final int INPUT_FORMAT_IMPORT_NESTED_JSON_FIELD_NUMBER = 128;
+    private com.google.protobuf.BoolValue inputFormatImportNestedJson_;
+    /**
+     * <pre>
+     * Enables or disables the insertion of JSON data with nested objects.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_import_nested_json = 128;</code>
+     * @return Whether the inputFormatImportNestedJson field is set.
+     */
+    @java.lang.Override
+    public boolean hasInputFormatImportNestedJson() {
+      return inputFormatImportNestedJson_ != null;
+    }
+    /**
+     * <pre>
+     * Enables or disables the insertion of JSON data with nested objects.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_import_nested_json = 128;</code>
+     * @return The inputFormatImportNestedJson.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getInputFormatImportNestedJson() {
+      return inputFormatImportNestedJson_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : inputFormatImportNestedJson_;
+    }
+    /**
+     * <pre>
+     * Enables or disables the insertion of JSON data with nested objects.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue input_format_import_nested_json = 128;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getInputFormatImportNestedJsonOrBuilder() {
+      return getInputFormatImportNestedJson();
+    }
+
+    public static final int LOCAL_FILESYSTEM_READ_METHOD_FIELD_NUMBER = 129;
+    private int localFilesystemReadMethod_;
+    /**
+     * <pre>
+     * Method of reading data from local filesystem, one of: read, pread, mmap, io_uring, pread_threadpool. The 'io_uring' method is experimental and does not work for Log, TinyLog, StripeLog, File, Set and Join, and other tables with append-able files in presence of concurrent reads and writes.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.LocalFilesystemReadMethod local_filesystem_read_method = 129;</code>
+     * @return The enum numeric value on the wire for localFilesystemReadMethod.
+     */
+    @java.lang.Override public int getLocalFilesystemReadMethodValue() {
+      return localFilesystemReadMethod_;
+    }
+    /**
+     * <pre>
+     * Method of reading data from local filesystem, one of: read, pread, mmap, io_uring, pread_threadpool. The 'io_uring' method is experimental and does not work for Log, TinyLog, StripeLog, File, Set and Join, and other tables with append-able files in presence of concurrent reads and writes.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.LocalFilesystemReadMethod local_filesystem_read_method = 129;</code>
+     * @return The localFilesystemReadMethod.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LocalFilesystemReadMethod getLocalFilesystemReadMethod() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LocalFilesystemReadMethod result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LocalFilesystemReadMethod.valueOf(localFilesystemReadMethod_);
+      return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LocalFilesystemReadMethod.UNRECOGNIZED : result;
+    }
+
+    public static final int MAX_READ_BUFFER_SIZE_FIELD_NUMBER = 130;
+    private com.google.protobuf.Int64Value maxReadBufferSize_;
+    /**
+     * <pre>
+     * The maximum size of the buffer to read from the filesystem.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/codebrowser/ClickHouse/src/Core/Settings.h.html#DB::SettingsTraits::Data::max_read_buffer_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_read_buffer_size = 130 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the maxReadBufferSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxReadBufferSize() {
+      return maxReadBufferSize_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum size of the buffer to read from the filesystem.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/codebrowser/ClickHouse/src/Core/Settings.h.html#DB::SettingsTraits::Data::max_read_buffer_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_read_buffer_size = 130 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The maxReadBufferSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxReadBufferSize() {
+      return maxReadBufferSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxReadBufferSize_;
+    }
+    /**
+     * <pre>
+     * The maximum size of the buffer to read from the filesystem.
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/codebrowser/ClickHouse/src/Core/Settings.h.html#DB::SettingsTraits::Data::max_read_buffer_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_read_buffer_size = 130 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxReadBufferSizeOrBuilder() {
+      return getMaxReadBufferSize();
+    }
+
     public static final int COMPILE_FIELD_NUMBER = 44;
     private com.google.protobuf.BoolValue compile_;
     /**
@@ -16871,6 +17395,21 @@ public final class UserOuterClass {
       }
       if (memoryProfilerSampleProbability_ != null) {
         output.writeMessage(125, getMemoryProfilerSampleProbability());
+      }
+      if (maxFinalThreads_ != null) {
+        output.writeMessage(126, getMaxFinalThreads());
+      }
+      if (inputFormatParallelParsing_ != null) {
+        output.writeMessage(127, getInputFormatParallelParsing());
+      }
+      if (inputFormatImportNestedJson_ != null) {
+        output.writeMessage(128, getInputFormatImportNestedJson());
+      }
+      if (localFilesystemReadMethod_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LocalFilesystemReadMethod.LOCAL_FILESYSTEM_READ_METHOD_UNSPECIFIED.getNumber()) {
+        output.writeEnum(129, localFilesystemReadMethod_);
+      }
+      if (maxReadBufferSize_ != null) {
+        output.writeMessage(130, getMaxReadBufferSize());
       }
       unknownFields.writeTo(output);
     }
@@ -17379,6 +17918,26 @@ public final class UserOuterClass {
       if (memoryProfilerSampleProbability_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(125, getMemoryProfilerSampleProbability());
+      }
+      if (maxFinalThreads_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(126, getMaxFinalThreads());
+      }
+      if (inputFormatParallelParsing_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(127, getInputFormatParallelParsing());
+      }
+      if (inputFormatImportNestedJson_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(128, getInputFormatImportNestedJson());
+      }
+      if (localFilesystemReadMethod_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LocalFilesystemReadMethod.LOCAL_FILESYSTEM_READ_METHOD_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(129, localFilesystemReadMethod_);
+      }
+      if (maxReadBufferSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(130, getMaxReadBufferSize());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -17933,6 +18492,27 @@ public final class UserOuterClass {
         if (!getMemoryProfilerSampleProbability()
             .equals(other.getMemoryProfilerSampleProbability())) return false;
       }
+      if (hasMaxFinalThreads() != other.hasMaxFinalThreads()) return false;
+      if (hasMaxFinalThreads()) {
+        if (!getMaxFinalThreads()
+            .equals(other.getMaxFinalThreads())) return false;
+      }
+      if (hasInputFormatParallelParsing() != other.hasInputFormatParallelParsing()) return false;
+      if (hasInputFormatParallelParsing()) {
+        if (!getInputFormatParallelParsing()
+            .equals(other.getInputFormatParallelParsing())) return false;
+      }
+      if (hasInputFormatImportNestedJson() != other.hasInputFormatImportNestedJson()) return false;
+      if (hasInputFormatImportNestedJson()) {
+        if (!getInputFormatImportNestedJson()
+            .equals(other.getInputFormatImportNestedJson())) return false;
+      }
+      if (localFilesystemReadMethod_ != other.localFilesystemReadMethod_) return false;
+      if (hasMaxReadBufferSize() != other.hasMaxReadBufferSize()) return false;
+      if (hasMaxReadBufferSize()) {
+        if (!getMaxReadBufferSize()
+            .equals(other.getMaxReadBufferSize())) return false;
+      }
       if (hasCompile() != other.hasCompile()) return false;
       if (hasCompile()) {
         if (!getCompile()
@@ -18405,6 +18985,24 @@ public final class UserOuterClass {
       if (hasMemoryProfilerSampleProbability()) {
         hash = (37 * hash) + MEMORY_PROFILER_SAMPLE_PROBABILITY_FIELD_NUMBER;
         hash = (53 * hash) + getMemoryProfilerSampleProbability().hashCode();
+      }
+      if (hasMaxFinalThreads()) {
+        hash = (37 * hash) + MAX_FINAL_THREADS_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxFinalThreads().hashCode();
+      }
+      if (hasInputFormatParallelParsing()) {
+        hash = (37 * hash) + INPUT_FORMAT_PARALLEL_PARSING_FIELD_NUMBER;
+        hash = (53 * hash) + getInputFormatParallelParsing().hashCode();
+      }
+      if (hasInputFormatImportNestedJson()) {
+        hash = (37 * hash) + INPUT_FORMAT_IMPORT_NESTED_JSON_FIELD_NUMBER;
+        hash = (53 * hash) + getInputFormatImportNestedJson().hashCode();
+      }
+      hash = (37 * hash) + LOCAL_FILESYSTEM_READ_METHOD_FIELD_NUMBER;
+      hash = (53 * hash) + localFilesystemReadMethod_;
+      if (hasMaxReadBufferSize()) {
+        hash = (37 * hash) + MAX_READ_BUFFER_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxReadBufferSize().hashCode();
       }
       if (hasCompile()) {
         hash = (37 * hash) + COMPILE_FIELD_NUMBER;
@@ -19210,6 +19808,32 @@ public final class UserOuterClass {
           memoryProfilerSampleProbability_ = null;
           memoryProfilerSampleProbabilityBuilder_ = null;
         }
+        if (maxFinalThreadsBuilder_ == null) {
+          maxFinalThreads_ = null;
+        } else {
+          maxFinalThreads_ = null;
+          maxFinalThreadsBuilder_ = null;
+        }
+        if (inputFormatParallelParsingBuilder_ == null) {
+          inputFormatParallelParsing_ = null;
+        } else {
+          inputFormatParallelParsing_ = null;
+          inputFormatParallelParsingBuilder_ = null;
+        }
+        if (inputFormatImportNestedJsonBuilder_ == null) {
+          inputFormatImportNestedJson_ = null;
+        } else {
+          inputFormatImportNestedJson_ = null;
+          inputFormatImportNestedJsonBuilder_ = null;
+        }
+        localFilesystemReadMethod_ = 0;
+
+        if (maxReadBufferSizeBuilder_ == null) {
+          maxReadBufferSize_ = null;
+        } else {
+          maxReadBufferSize_ = null;
+          maxReadBufferSizeBuilder_ = null;
+        }
         if (compileBuilder_ == null) {
           compile_ = null;
         } else {
@@ -19790,6 +20414,27 @@ public final class UserOuterClass {
         } else {
           result.memoryProfilerSampleProbability_ = memoryProfilerSampleProbabilityBuilder_.build();
         }
+        if (maxFinalThreadsBuilder_ == null) {
+          result.maxFinalThreads_ = maxFinalThreads_;
+        } else {
+          result.maxFinalThreads_ = maxFinalThreadsBuilder_.build();
+        }
+        if (inputFormatParallelParsingBuilder_ == null) {
+          result.inputFormatParallelParsing_ = inputFormatParallelParsing_;
+        } else {
+          result.inputFormatParallelParsing_ = inputFormatParallelParsingBuilder_.build();
+        }
+        if (inputFormatImportNestedJsonBuilder_ == null) {
+          result.inputFormatImportNestedJson_ = inputFormatImportNestedJson_;
+        } else {
+          result.inputFormatImportNestedJson_ = inputFormatImportNestedJsonBuilder_.build();
+        }
+        result.localFilesystemReadMethod_ = localFilesystemReadMethod_;
+        if (maxReadBufferSizeBuilder_ == null) {
+          result.maxReadBufferSize_ = maxReadBufferSize_;
+        } else {
+          result.maxReadBufferSize_ = maxReadBufferSizeBuilder_.build();
+        }
         if (compileBuilder_ == null) {
           result.compile_ = compile_;
         } else {
@@ -20218,6 +20863,21 @@ public final class UserOuterClass {
         }
         if (other.hasMemoryProfilerSampleProbability()) {
           mergeMemoryProfilerSampleProbability(other.getMemoryProfilerSampleProbability());
+        }
+        if (other.hasMaxFinalThreads()) {
+          mergeMaxFinalThreads(other.getMaxFinalThreads());
+        }
+        if (other.hasInputFormatParallelParsing()) {
+          mergeInputFormatParallelParsing(other.getInputFormatParallelParsing());
+        }
+        if (other.hasInputFormatImportNestedJson()) {
+          mergeInputFormatImportNestedJson(other.getInputFormatImportNestedJson());
+        }
+        if (other.localFilesystemReadMethod_ != 0) {
+          setLocalFilesystemReadMethodValue(other.getLocalFilesystemReadMethodValue());
+        }
+        if (other.hasMaxReadBufferSize()) {
+          mergeMaxReadBufferSize(other.getMaxReadBufferSize());
         }
         if (other.hasCompile()) {
           mergeCompile(other.getCompile());
@@ -39695,6 +40355,736 @@ public final class UserOuterClass {
         return memoryProfilerSampleProbabilityBuilder_;
       }
 
+      private com.google.protobuf.Int64Value maxFinalThreads_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxFinalThreadsBuilder_;
+      /**
+       * <pre>
+       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_final_threads = 126 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxFinalThreads field is set.
+       */
+      public boolean hasMaxFinalThreads() {
+        return maxFinalThreadsBuilder_ != null || maxFinalThreads_ != null;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_final_threads = 126 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxFinalThreads.
+       */
+      public com.google.protobuf.Int64Value getMaxFinalThreads() {
+        if (maxFinalThreadsBuilder_ == null) {
+          return maxFinalThreads_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxFinalThreads_;
+        } else {
+          return maxFinalThreadsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_final_threads = 126 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxFinalThreads(com.google.protobuf.Int64Value value) {
+        if (maxFinalThreadsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxFinalThreads_ = value;
+          onChanged();
+        } else {
+          maxFinalThreadsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_final_threads = 126 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxFinalThreads(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxFinalThreadsBuilder_ == null) {
+          maxFinalThreads_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxFinalThreadsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_final_threads = 126 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeMaxFinalThreads(com.google.protobuf.Int64Value value) {
+        if (maxFinalThreadsBuilder_ == null) {
+          if (maxFinalThreads_ != null) {
+            maxFinalThreads_ =
+              com.google.protobuf.Int64Value.newBuilder(maxFinalThreads_).mergeFrom(value).buildPartial();
+          } else {
+            maxFinalThreads_ = value;
+          }
+          onChanged();
+        } else {
+          maxFinalThreadsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_final_threads = 126 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearMaxFinalThreads() {
+        if (maxFinalThreadsBuilder_ == null) {
+          maxFinalThreads_ = null;
+          onChanged();
+        } else {
+          maxFinalThreads_ = null;
+          maxFinalThreadsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_final_threads = 126 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxFinalThreadsBuilder() {
+        
+        onChanged();
+        return getMaxFinalThreadsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_final_threads = 126 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxFinalThreadsOrBuilder() {
+        if (maxFinalThreadsBuilder_ != null) {
+          return maxFinalThreadsBuilder_.getMessageOrBuilder();
+        } else {
+          return maxFinalThreads_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxFinalThreads_;
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of parallel threads for the SELECT query data read phase with the FINAL modifier. 
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max-final-threads).
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_final_threads = 126 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxFinalThreadsFieldBuilder() {
+        if (maxFinalThreadsBuilder_ == null) {
+          maxFinalThreadsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxFinalThreads(),
+                  getParentForChildren(),
+                  isClean());
+          maxFinalThreads_ = null;
+        }
+        return maxFinalThreadsBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue inputFormatParallelParsing_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> inputFormatParallelParsingBuilder_;
+      /**
+       * <pre>
+       * Enables or disables order-preserving parallel parsing of data formats. Supported only for [TSV](https://clickhouse.com/docs/en/interfaces/formats#tabseparated), [TKSV](https://clickhouse.com/docs/en/interfaces/formats#tskv), [CSV](https://clickhouse.com/docs/en/interfaces/formats#csv) and [JSONEachRow](https://clickhouse.com/docs/en/interfaces/formats#jsoneachrow) formats.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_parallel_parsing = 127;</code>
+       * @return Whether the inputFormatParallelParsing field is set.
+       */
+      public boolean hasInputFormatParallelParsing() {
+        return inputFormatParallelParsingBuilder_ != null || inputFormatParallelParsing_ != null;
+      }
+      /**
+       * <pre>
+       * Enables or disables order-preserving parallel parsing of data formats. Supported only for [TSV](https://clickhouse.com/docs/en/interfaces/formats#tabseparated), [TKSV](https://clickhouse.com/docs/en/interfaces/formats#tskv), [CSV](https://clickhouse.com/docs/en/interfaces/formats#csv) and [JSONEachRow](https://clickhouse.com/docs/en/interfaces/formats#jsoneachrow) formats.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_parallel_parsing = 127;</code>
+       * @return The inputFormatParallelParsing.
+       */
+      public com.google.protobuf.BoolValue getInputFormatParallelParsing() {
+        if (inputFormatParallelParsingBuilder_ == null) {
+          return inputFormatParallelParsing_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : inputFormatParallelParsing_;
+        } else {
+          return inputFormatParallelParsingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enables or disables order-preserving parallel parsing of data formats. Supported only for [TSV](https://clickhouse.com/docs/en/interfaces/formats#tabseparated), [TKSV](https://clickhouse.com/docs/en/interfaces/formats#tskv), [CSV](https://clickhouse.com/docs/en/interfaces/formats#csv) and [JSONEachRow](https://clickhouse.com/docs/en/interfaces/formats#jsoneachrow) formats.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_parallel_parsing = 127;</code>
+       */
+      public Builder setInputFormatParallelParsing(com.google.protobuf.BoolValue value) {
+        if (inputFormatParallelParsingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          inputFormatParallelParsing_ = value;
+          onChanged();
+        } else {
+          inputFormatParallelParsingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables order-preserving parallel parsing of data formats. Supported only for [TSV](https://clickhouse.com/docs/en/interfaces/formats#tabseparated), [TKSV](https://clickhouse.com/docs/en/interfaces/formats#tskv), [CSV](https://clickhouse.com/docs/en/interfaces/formats#csv) and [JSONEachRow](https://clickhouse.com/docs/en/interfaces/formats#jsoneachrow) formats.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_parallel_parsing = 127;</code>
+       */
+      public Builder setInputFormatParallelParsing(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (inputFormatParallelParsingBuilder_ == null) {
+          inputFormatParallelParsing_ = builderForValue.build();
+          onChanged();
+        } else {
+          inputFormatParallelParsingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables order-preserving parallel parsing of data formats. Supported only for [TSV](https://clickhouse.com/docs/en/interfaces/formats#tabseparated), [TKSV](https://clickhouse.com/docs/en/interfaces/formats#tskv), [CSV](https://clickhouse.com/docs/en/interfaces/formats#csv) and [JSONEachRow](https://clickhouse.com/docs/en/interfaces/formats#jsoneachrow) formats.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_parallel_parsing = 127;</code>
+       */
+      public Builder mergeInputFormatParallelParsing(com.google.protobuf.BoolValue value) {
+        if (inputFormatParallelParsingBuilder_ == null) {
+          if (inputFormatParallelParsing_ != null) {
+            inputFormatParallelParsing_ =
+              com.google.protobuf.BoolValue.newBuilder(inputFormatParallelParsing_).mergeFrom(value).buildPartial();
+          } else {
+            inputFormatParallelParsing_ = value;
+          }
+          onChanged();
+        } else {
+          inputFormatParallelParsingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables order-preserving parallel parsing of data formats. Supported only for [TSV](https://clickhouse.com/docs/en/interfaces/formats#tabseparated), [TKSV](https://clickhouse.com/docs/en/interfaces/formats#tskv), [CSV](https://clickhouse.com/docs/en/interfaces/formats#csv) and [JSONEachRow](https://clickhouse.com/docs/en/interfaces/formats#jsoneachrow) formats.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_parallel_parsing = 127;</code>
+       */
+      public Builder clearInputFormatParallelParsing() {
+        if (inputFormatParallelParsingBuilder_ == null) {
+          inputFormatParallelParsing_ = null;
+          onChanged();
+        } else {
+          inputFormatParallelParsing_ = null;
+          inputFormatParallelParsingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables order-preserving parallel parsing of data formats. Supported only for [TSV](https://clickhouse.com/docs/en/interfaces/formats#tabseparated), [TKSV](https://clickhouse.com/docs/en/interfaces/formats#tskv), [CSV](https://clickhouse.com/docs/en/interfaces/formats#csv) and [JSONEachRow](https://clickhouse.com/docs/en/interfaces/formats#jsoneachrow) formats.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_parallel_parsing = 127;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getInputFormatParallelParsingBuilder() {
+        
+        onChanged();
+        return getInputFormatParallelParsingFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enables or disables order-preserving parallel parsing of data formats. Supported only for [TSV](https://clickhouse.com/docs/en/interfaces/formats#tabseparated), [TKSV](https://clickhouse.com/docs/en/interfaces/formats#tskv), [CSV](https://clickhouse.com/docs/en/interfaces/formats#csv) and [JSONEachRow](https://clickhouse.com/docs/en/interfaces/formats#jsoneachrow) formats.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_parallel_parsing = 127;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getInputFormatParallelParsingOrBuilder() {
+        if (inputFormatParallelParsingBuilder_ != null) {
+          return inputFormatParallelParsingBuilder_.getMessageOrBuilder();
+        } else {
+          return inputFormatParallelParsing_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : inputFormatParallelParsing_;
+        }
+      }
+      /**
+       * <pre>
+       * Enables or disables order-preserving parallel parsing of data formats. Supported only for [TSV](https://clickhouse.com/docs/en/interfaces/formats#tabseparated), [TKSV](https://clickhouse.com/docs/en/interfaces/formats#tskv), [CSV](https://clickhouse.com/docs/en/interfaces/formats#csv) and [JSONEachRow](https://clickhouse.com/docs/en/interfaces/formats#jsoneachrow) formats.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_parallel_parsing = 127;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getInputFormatParallelParsingFieldBuilder() {
+        if (inputFormatParallelParsingBuilder_ == null) {
+          inputFormatParallelParsingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getInputFormatParallelParsing(),
+                  getParentForChildren(),
+                  isClean());
+          inputFormatParallelParsing_ = null;
+        }
+        return inputFormatParallelParsingBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue inputFormatImportNestedJson_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> inputFormatImportNestedJsonBuilder_;
+      /**
+       * <pre>
+       * Enables or disables the insertion of JSON data with nested objects.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_import_nested_json = 128;</code>
+       * @return Whether the inputFormatImportNestedJson field is set.
+       */
+      public boolean hasInputFormatImportNestedJson() {
+        return inputFormatImportNestedJsonBuilder_ != null || inputFormatImportNestedJson_ != null;
+      }
+      /**
+       * <pre>
+       * Enables or disables the insertion of JSON data with nested objects.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_import_nested_json = 128;</code>
+       * @return The inputFormatImportNestedJson.
+       */
+      public com.google.protobuf.BoolValue getInputFormatImportNestedJson() {
+        if (inputFormatImportNestedJsonBuilder_ == null) {
+          return inputFormatImportNestedJson_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : inputFormatImportNestedJson_;
+        } else {
+          return inputFormatImportNestedJsonBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enables or disables the insertion of JSON data with nested objects.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_import_nested_json = 128;</code>
+       */
+      public Builder setInputFormatImportNestedJson(com.google.protobuf.BoolValue value) {
+        if (inputFormatImportNestedJsonBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          inputFormatImportNestedJson_ = value;
+          onChanged();
+        } else {
+          inputFormatImportNestedJsonBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables the insertion of JSON data with nested objects.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_import_nested_json = 128;</code>
+       */
+      public Builder setInputFormatImportNestedJson(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (inputFormatImportNestedJsonBuilder_ == null) {
+          inputFormatImportNestedJson_ = builderForValue.build();
+          onChanged();
+        } else {
+          inputFormatImportNestedJsonBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables the insertion of JSON data with nested objects.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_import_nested_json = 128;</code>
+       */
+      public Builder mergeInputFormatImportNestedJson(com.google.protobuf.BoolValue value) {
+        if (inputFormatImportNestedJsonBuilder_ == null) {
+          if (inputFormatImportNestedJson_ != null) {
+            inputFormatImportNestedJson_ =
+              com.google.protobuf.BoolValue.newBuilder(inputFormatImportNestedJson_).mergeFrom(value).buildPartial();
+          } else {
+            inputFormatImportNestedJson_ = value;
+          }
+          onChanged();
+        } else {
+          inputFormatImportNestedJsonBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables the insertion of JSON data with nested objects.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_import_nested_json = 128;</code>
+       */
+      public Builder clearInputFormatImportNestedJson() {
+        if (inputFormatImportNestedJsonBuilder_ == null) {
+          inputFormatImportNestedJson_ = null;
+          onChanged();
+        } else {
+          inputFormatImportNestedJson_ = null;
+          inputFormatImportNestedJsonBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables the insertion of JSON data with nested objects.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_import_nested_json = 128;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getInputFormatImportNestedJsonBuilder() {
+        
+        onChanged();
+        return getInputFormatImportNestedJsonFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enables or disables the insertion of JSON data with nested objects.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_import_nested_json = 128;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getInputFormatImportNestedJsonOrBuilder() {
+        if (inputFormatImportNestedJsonBuilder_ != null) {
+          return inputFormatImportNestedJsonBuilder_.getMessageOrBuilder();
+        } else {
+          return inputFormatImportNestedJson_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : inputFormatImportNestedJson_;
+        }
+      }
+      /**
+       * <pre>
+       * Enables or disables the insertion of JSON data with nested objects.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#input-format-parallel-parsing)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue input_format_import_nested_json = 128;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getInputFormatImportNestedJsonFieldBuilder() {
+        if (inputFormatImportNestedJsonBuilder_ == null) {
+          inputFormatImportNestedJsonBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getInputFormatImportNestedJson(),
+                  getParentForChildren(),
+                  isClean());
+          inputFormatImportNestedJson_ = null;
+        }
+        return inputFormatImportNestedJsonBuilder_;
+      }
+
+      private int localFilesystemReadMethod_ = 0;
+      /**
+       * <pre>
+       * Method of reading data from local filesystem, one of: read, pread, mmap, io_uring, pread_threadpool. The 'io_uring' method is experimental and does not work for Log, TinyLog, StripeLog, File, Set and Join, and other tables with append-able files in presence of concurrent reads and writes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.LocalFilesystemReadMethod local_filesystem_read_method = 129;</code>
+       * @return The enum numeric value on the wire for localFilesystemReadMethod.
+       */
+      @java.lang.Override public int getLocalFilesystemReadMethodValue() {
+        return localFilesystemReadMethod_;
+      }
+      /**
+       * <pre>
+       * Method of reading data from local filesystem, one of: read, pread, mmap, io_uring, pread_threadpool. The 'io_uring' method is experimental and does not work for Log, TinyLog, StripeLog, File, Set and Join, and other tables with append-able files in presence of concurrent reads and writes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.LocalFilesystemReadMethod local_filesystem_read_method = 129;</code>
+       * @param value The enum numeric value on the wire for localFilesystemReadMethod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalFilesystemReadMethodValue(int value) {
+        
+        localFilesystemReadMethod_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Method of reading data from local filesystem, one of: read, pread, mmap, io_uring, pread_threadpool. The 'io_uring' method is experimental and does not work for Log, TinyLog, StripeLog, File, Set and Join, and other tables with append-able files in presence of concurrent reads and writes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.LocalFilesystemReadMethod local_filesystem_read_method = 129;</code>
+       * @return The localFilesystemReadMethod.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LocalFilesystemReadMethod getLocalFilesystemReadMethod() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LocalFilesystemReadMethod result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LocalFilesystemReadMethod.valueOf(localFilesystemReadMethod_);
+        return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LocalFilesystemReadMethod.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Method of reading data from local filesystem, one of: read, pread, mmap, io_uring, pread_threadpool. The 'io_uring' method is experimental and does not work for Log, TinyLog, StripeLog, File, Set and Join, and other tables with append-able files in presence of concurrent reads and writes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.LocalFilesystemReadMethod local_filesystem_read_method = 129;</code>
+       * @param value The localFilesystemReadMethod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLocalFilesystemReadMethod(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.LocalFilesystemReadMethod value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        localFilesystemReadMethod_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Method of reading data from local filesystem, one of: read, pread, mmap, io_uring, pread_threadpool. The 'io_uring' method is experimental and does not work for Log, TinyLog, StripeLog, File, Set and Join, and other tables with append-able files in presence of concurrent reads and writes.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.LocalFilesystemReadMethod local_filesystem_read_method = 129;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLocalFilesystemReadMethod() {
+        
+        localFilesystemReadMethod_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value maxReadBufferSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxReadBufferSizeBuilder_;
+      /**
+       * <pre>
+       * The maximum size of the buffer to read from the filesystem.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/codebrowser/ClickHouse/src/Core/Settings.h.html#DB::SettingsTraits::Data::max_read_buffer_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_read_buffer_size = 130 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the maxReadBufferSize field is set.
+       */
+      public boolean hasMaxReadBufferSize() {
+        return maxReadBufferSizeBuilder_ != null || maxReadBufferSize_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum size of the buffer to read from the filesystem.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/codebrowser/ClickHouse/src/Core/Settings.h.html#DB::SettingsTraits::Data::max_read_buffer_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_read_buffer_size = 130 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The maxReadBufferSize.
+       */
+      public com.google.protobuf.Int64Value getMaxReadBufferSize() {
+        if (maxReadBufferSizeBuilder_ == null) {
+          return maxReadBufferSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxReadBufferSize_;
+        } else {
+          return maxReadBufferSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size of the buffer to read from the filesystem.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/codebrowser/ClickHouse/src/Core/Settings.h.html#DB::SettingsTraits::Data::max_read_buffer_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_read_buffer_size = 130 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder setMaxReadBufferSize(com.google.protobuf.Int64Value value) {
+        if (maxReadBufferSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxReadBufferSize_ = value;
+          onChanged();
+        } else {
+          maxReadBufferSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size of the buffer to read from the filesystem.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/codebrowser/ClickHouse/src/Core/Settings.h.html#DB::SettingsTraits::Data::max_read_buffer_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_read_buffer_size = 130 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder setMaxReadBufferSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxReadBufferSizeBuilder_ == null) {
+          maxReadBufferSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxReadBufferSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size of the buffer to read from the filesystem.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/codebrowser/ClickHouse/src/Core/Settings.h.html#DB::SettingsTraits::Data::max_read_buffer_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_read_buffer_size = 130 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder mergeMaxReadBufferSize(com.google.protobuf.Int64Value value) {
+        if (maxReadBufferSizeBuilder_ == null) {
+          if (maxReadBufferSize_ != null) {
+            maxReadBufferSize_ =
+              com.google.protobuf.Int64Value.newBuilder(maxReadBufferSize_).mergeFrom(value).buildPartial();
+          } else {
+            maxReadBufferSize_ = value;
+          }
+          onChanged();
+        } else {
+          maxReadBufferSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size of the buffer to read from the filesystem.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/codebrowser/ClickHouse/src/Core/Settings.h.html#DB::SettingsTraits::Data::max_read_buffer_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_read_buffer_size = 130 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder clearMaxReadBufferSize() {
+        if (maxReadBufferSizeBuilder_ == null) {
+          maxReadBufferSize_ = null;
+          onChanged();
+        } else {
+          maxReadBufferSize_ = null;
+          maxReadBufferSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size of the buffer to read from the filesystem.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/codebrowser/ClickHouse/src/Core/Settings.h.html#DB::SettingsTraits::Data::max_read_buffer_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_read_buffer_size = 130 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxReadBufferSizeBuilder() {
+        
+        onChanged();
+        return getMaxReadBufferSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum size of the buffer to read from the filesystem.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/codebrowser/ClickHouse/src/Core/Settings.h.html#DB::SettingsTraits::Data::max_read_buffer_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_read_buffer_size = 130 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxReadBufferSizeOrBuilder() {
+        if (maxReadBufferSizeBuilder_ != null) {
+          return maxReadBufferSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return maxReadBufferSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxReadBufferSize_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size of the buffer to read from the filesystem.
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/codebrowser/ClickHouse/src/Core/Settings.h.html#DB::SettingsTraits::Data::max_read_buffer_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_read_buffer_size = 130 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxReadBufferSizeFieldBuilder() {
+        if (maxReadBufferSizeBuilder_ == null) {
+          maxReadBufferSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxReadBufferSize(),
+                  getParentForChildren(),
+                  isClean());
+          maxReadBufferSize_ = null;
+        }
+        return maxReadBufferSizeBuilder_;
+      }
+
       private com.google.protobuf.BoolValue compile_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> compileBuilder_;
@@ -42208,7 +43598,7 @@ public final class UserOuterClass {
       "rmission\022>\n\010settings\030\004 \001(\0132,.yandex.clou" +
       "d.mdb.clickhouse.v1.UserSettings\0229\n\006quot" +
       "as\030\005 \003(\0132).yandex.cloud.mdb.clickhouse.v" +
-      "1.UserQuota\"\241R\n\014UserSettings\0226\n\010readonly" +
+      "1.UserQuota\"\223W\n\014UserSettings\0226\n\010readonly" +
       "\030\001 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
       "\0030-2\022-\n\tallow_ddl\030\002 \001(\0132\032.google.protobu" +
       "f.BoolValue\022A\n\035allow_introspection_funct" +
@@ -42422,68 +43812,84 @@ public final class UserOuterClass {
       "otobuf.Int64Value\0229\n\024memory_profiler_ste" +
       "p\030| \001(\0132\033.google.protobuf.Int64Value\022H\n\"" +
       "memory_profiler_sample_probability\030} \001(\013" +
-      "2\034.google.protobuf.DoubleValue\022/\n\007compil" +
-      "e\030, \001(\0132\032.google.protobuf.BoolValueB\002\030\001\022" +
-      "=\n\024min_count_to_compile\030- \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueB\002\030\001\"_\n\014OverflowMode\022\035" +
-      "\n\031OVERFLOW_MODE_UNSPECIFIED\020\000\022\027\n\023OVERFLO" +
-      "W_MODE_THROW\020\001\022\027\n\023OVERFLOW_MODE_BREAK\020\002\"" +
-      "\241\001\n\023GroupByOverflowMode\022&\n\"GROUP_BY_OVER" +
-      "FLOW_MODE_UNSPECIFIED\020\000\022 \n\034GROUP_BY_OVER" +
-      "FLOW_MODE_THROW\020\001\022 \n\034GROUP_BY_OVERFLOW_M" +
-      "ODE_BREAK\020\002\022\036\n\032GROUP_BY_OVERFLOW_MODE_AN" +
-      "Y\020\003\"\322\001\n\026DistributedProductMode\022(\n$DISTRI" +
-      "BUTED_PRODUCT_MODE_UNSPECIFIED\020\000\022!\n\035DIST" +
-      "RIBUTED_PRODUCT_MODE_DENY\020\001\022\"\n\036DISTRIBUT" +
-      "ED_PRODUCT_MODE_LOCAL\020\002\022#\n\037DISTRIBUTED_P" +
-      "RODUCT_MODE_GLOBAL\020\003\022\"\n\036DISTRIBUTED_PROD" +
-      "UCT_MODE_ALLOW\020\004\"q\n\tQuotaMode\022\032\n\026QUOTA_M" +
-      "ODE_UNSPECIFIED\020\000\022\026\n\022QUOTA_MODE_DEFAULT\020" +
-      "\001\022\024\n\020QUOTA_MODE_KEYED\020\002\022\032\n\026QUOTA_MODE_KE" +
-      "YED_BY_IP\020\003\"\266\002\n\033CountDistinctImplementat" +
-      "ion\022-\n)COUNT_DISTINCT_IMPLEMENTATION_UNS" +
-      "PECIFIED\020\000\022&\n\"COUNT_DISTINCT_IMPLEMENTAT" +
-      "ION_UNIQ\020\001\022/\n+COUNT_DISTINCT_IMPLEMENTAT" +
-      "ION_UNIQ_COMBINED\020\002\0222\n.COUNT_DISTINCT_IM" +
-      "PLEMENTATION_UNIQ_COMBINED_64\020\003\022-\n)COUNT" +
-      "_DISTINCT_IMPLEMENTATION_UNIQ_HLL_12\020\004\022," +
-      "\n(COUNT_DISTINCT_IMPLEMENTATION_UNIQ_EXA" +
-      "CT\020\005\"\220\002\n\rJoinAlgorithm\022\036\n\032JOIN_ALGORITHM" +
-      "_UNSPECIFIED\020\000\022\027\n\023JOIN_ALGORITHM_HASH\020\001\022" +
-      " \n\034JOIN_ALGORITHM_PARALLEL_HASH\020\002\022 \n\034JOI" +
-      "N_ALGORITHM_PARTIAL_MERGE\020\003\022\031\n\025JOIN_ALGO" +
-      "RITHM_DIRECT\020\004\022\027\n\023JOIN_ALGORITHM_AUTO\020\005\022" +
-      "%\n!JOIN_ALGORITHM_FULL_SORTING_MERGE\020\006\022\'" +
-      "\n#JOIN_ALGORITHM_PREFER_PARTIAL_MERGE\020\007\"" +
-      "\255\002\n\030FormatRegexpEscapingRule\022+\n\'FORMAT_R" +
-      "EGEXP_ESCAPING_RULE_UNSPECIFIED\020\000\022\'\n#FOR" +
-      "MAT_REGEXP_ESCAPING_RULE_ESCAPED\020\001\022&\n\"FO" +
-      "RMAT_REGEXP_ESCAPING_RULE_QUOTED\020\002\022#\n\037FO" +
-      "RMAT_REGEXP_ESCAPING_RULE_CSV\020\003\022$\n FORMA" +
-      "T_REGEXP_ESCAPING_RULE_JSON\020\004\022#\n\037FORMAT_" +
-      "REGEXP_ESCAPING_RULE_XML\020\005\022#\n\037FORMAT_REG" +
-      "EXP_ESCAPING_RULE_RAW\020\006\"\262\001\n\023DateTimeInpu" +
-      "tFormat\022&\n\"DATE_TIME_INPUT_FORMAT_UNSPEC" +
-      "IFIED\020\000\022&\n\"DATE_TIME_INPUT_FORMAT_BEST_E" +
-      "FFORT\020\001\022 \n\034DATE_TIME_INPUT_FORMAT_BASIC\020" +
-      "\002\022)\n%DATE_TIME_INPUT_FORMAT_BEST_EFFORT_" +
-      "US\020\003\"\260\001\n\024DateTimeOutputFormat\022\'\n#DATE_TI" +
-      "ME_OUTPUT_FORMAT_UNSPECIFIED\020\000\022\"\n\036DATE_T" +
-      "IME_OUTPUT_FORMAT_SIMPLE\020\001\022\037\n\033DATE_TIME_" +
-      "OUTPUT_FORMAT_ISO\020\002\022*\n&DATE_TIME_OUTPUT_" +
-      "FORMAT_UNIX_TIMESTAMP\020\003\"\356\002\n\tUserQuota\022B\n" +
-      "\021interval_duration\030\001 \001(\0132\033.google.protob" +
-      "uf.Int64ValueB\n\372\3071\006>=1000\0225\n\007queries\030\002 \001" +
+      "2\034.google.protobuf.DoubleValue\022?\n\021max_fi" +
+      "nal_threads\030~ \001(\0132\033.google.protobuf.Int6" +
+      "4ValueB\007\372\3071\003>=0\022A\n\035input_format_parallel" +
+      "_parsing\030\177 \001(\0132\032.google.protobuf.BoolVal" +
+      "ue\022D\n\037input_format_import_nested_json\030\200\001" +
+      " \001(\0132\032.google.protobuf.BoolValue\022m\n\034loca" +
+      "l_filesystem_read_method\030\201\001 \001(\0162F.yandex" +
+      ".cloud.mdb.clickhouse.v1.UserSettings.Lo" +
+      "calFilesystemReadMethod\022B\n\024max_read_buff" +
+      "er_size\030\202\001 \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\006\372\3071\002>0\022/\n\007compile\030, \001(\0132\032.google.pr" +
+      "otobuf.BoolValueB\002\030\001\022=\n\024min_count_to_com" +
+      "pile\030- \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\002\030\001\"_\n\014OverflowMode\022\035\n\031OVERFLOW_MODE_UNS" +
+      "PECIFIED\020\000\022\027\n\023OVERFLOW_MODE_THROW\020\001\022\027\n\023O" +
+      "VERFLOW_MODE_BREAK\020\002\"\241\001\n\023GroupByOverflow" +
+      "Mode\022&\n\"GROUP_BY_OVERFLOW_MODE_UNSPECIFI" +
+      "ED\020\000\022 \n\034GROUP_BY_OVERFLOW_MODE_THROW\020\001\022 " +
+      "\n\034GROUP_BY_OVERFLOW_MODE_BREAK\020\002\022\036\n\032GROU" +
+      "P_BY_OVERFLOW_MODE_ANY\020\003\"\322\001\n\026Distributed" +
+      "ProductMode\022(\n$DISTRIBUTED_PRODUCT_MODE_" +
+      "UNSPECIFIED\020\000\022!\n\035DISTRIBUTED_PRODUCT_MOD" +
+      "E_DENY\020\001\022\"\n\036DISTRIBUTED_PRODUCT_MODE_LOC" +
+      "AL\020\002\022#\n\037DISTRIBUTED_PRODUCT_MODE_GLOBAL\020" +
+      "\003\022\"\n\036DISTRIBUTED_PRODUCT_MODE_ALLOW\020\004\"q\n" +
+      "\tQuotaMode\022\032\n\026QUOTA_MODE_UNSPECIFIED\020\000\022\026" +
+      "\n\022QUOTA_MODE_DEFAULT\020\001\022\024\n\020QUOTA_MODE_KEY" +
+      "ED\020\002\022\032\n\026QUOTA_MODE_KEYED_BY_IP\020\003\"\266\002\n\033Cou" +
+      "ntDistinctImplementation\022-\n)COUNT_DISTIN" +
+      "CT_IMPLEMENTATION_UNSPECIFIED\020\000\022&\n\"COUNT" +
+      "_DISTINCT_IMPLEMENTATION_UNIQ\020\001\022/\n+COUNT" +
+      "_DISTINCT_IMPLEMENTATION_UNIQ_COMBINED\020\002" +
+      "\0222\n.COUNT_DISTINCT_IMPLEMENTATION_UNIQ_C" +
+      "OMBINED_64\020\003\022-\n)COUNT_DISTINCT_IMPLEMENT" +
+      "ATION_UNIQ_HLL_12\020\004\022,\n(COUNT_DISTINCT_IM" +
+      "PLEMENTATION_UNIQ_EXACT\020\005\"\220\002\n\rJoinAlgori" +
+      "thm\022\036\n\032JOIN_ALGORITHM_UNSPECIFIED\020\000\022\027\n\023J" +
+      "OIN_ALGORITHM_HASH\020\001\022 \n\034JOIN_ALGORITHM_P" +
+      "ARALLEL_HASH\020\002\022 \n\034JOIN_ALGORITHM_PARTIAL" +
+      "_MERGE\020\003\022\031\n\025JOIN_ALGORITHM_DIRECT\020\004\022\027\n\023J" +
+      "OIN_ALGORITHM_AUTO\020\005\022%\n!JOIN_ALGORITHM_F" +
+      "ULL_SORTING_MERGE\020\006\022\'\n#JOIN_ALGORITHM_PR" +
+      "EFER_PARTIAL_MERGE\020\007\"\255\002\n\030FormatRegexpEsc" +
+      "apingRule\022+\n\'FORMAT_REGEXP_ESCAPING_RULE" +
+      "_UNSPECIFIED\020\000\022\'\n#FORMAT_REGEXP_ESCAPING" +
+      "_RULE_ESCAPED\020\001\022&\n\"FORMAT_REGEXP_ESCAPIN" +
+      "G_RULE_QUOTED\020\002\022#\n\037FORMAT_REGEXP_ESCAPIN" +
+      "G_RULE_CSV\020\003\022$\n FORMAT_REGEXP_ESCAPING_R" +
+      "ULE_JSON\020\004\022#\n\037FORMAT_REGEXP_ESCAPING_RUL" +
+      "E_XML\020\005\022#\n\037FORMAT_REGEXP_ESCAPING_RULE_R" +
+      "AW\020\006\"\262\001\n\023DateTimeInputFormat\022&\n\"DATE_TIM" +
+      "E_INPUT_FORMAT_UNSPECIFIED\020\000\022&\n\"DATE_TIM" +
+      "E_INPUT_FORMAT_BEST_EFFORT\020\001\022 \n\034DATE_TIM" +
+      "E_INPUT_FORMAT_BASIC\020\002\022)\n%DATE_TIME_INPU" +
+      "T_FORMAT_BEST_EFFORT_US\020\003\"\260\001\n\024DateTimeOu" +
+      "tputFormat\022\'\n#DATE_TIME_OUTPUT_FORMAT_UN" +
+      "SPECIFIED\020\000\022\"\n\036DATE_TIME_OUTPUT_FORMAT_S" +
+      "IMPLE\020\001\022\037\n\033DATE_TIME_OUTPUT_FORMAT_ISO\020\002" +
+      "\022*\n&DATE_TIME_OUTPUT_FORMAT_UNIX_TIMESTA" +
+      "MP\020\003\"\362\001\n\031LocalFilesystemReadMethod\022,\n(LO" +
+      "CAL_FILESYSTEM_READ_METHOD_UNSPECIFIED\020\000" +
+      "\022%\n!LOCAL_FILESYSTEM_READ_METHOD_READ\020\001\022" +
+      "1\n-LOCAL_FILESYSTEM_READ_METHOD_PREAD_TH" +
+      "READPOOL\020\002\022&\n\"LOCAL_FILESYSTEM_READ_METH" +
+      "OD_PREAD\020\003\022%\n!LOCAL_FILESYSTEM_READ_METH" +
+      "OD_NMAP\020\004\"\356\002\n\tUserQuota\022B\n\021interval_dura" +
+      "tion\030\001 \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\n\372\3071\006>=1000\0225\n\007queries\030\002 \001(\0132\033.google.pr" +
+      "otobuf.Int64ValueB\007\372\3071\003>=0\0224\n\006errors\030\003 \001" +
       "(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0" +
-      "\0224\n\006errors\030\003 \001(\0132\033.google.protobuf.Int64" +
-      "ValueB\007\372\3071\003>=0\0229\n\013result_rows\030\004 \001(\0132\033.go" +
-      "ogle.protobuf.Int64ValueB\007\372\3071\003>=0\0227\n\trea" +
-      "d_rows\030\005 \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\007\372\3071\003>=0\022<\n\016execution_time\030\006 \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\007\372\3071\003>=0Bs\n\"yand" +
-      "ex.cloud.api.mdb.clickhouse.v1ZMgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/mdb/clickhouse/v1;clickhouseb\006proto3"
+      "\0229\n\013result_rows\030\004 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\007\372\3071\003>=0\0227\n\tread_rows\030\005 \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022<\n\016" +
+      "execution_time\030\006 \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\007\372\3071\003>=0Bs\n\"yandex.cloud.api.m" +
+      "db.clickhouse.v1ZMgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/mdb/clickhous" +
+      "e/v1;clickhouseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -42514,7 +43920,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_descriptor,
-        new java.lang.String[] { "Readonly", "AllowDdl", "AllowIntrospectionFunctions", "ConnectTimeout", "ConnectTimeoutWithFailover", "ReceiveTimeout", "SendTimeout", "TimeoutBeforeCheckingExecutionSpeed", "InsertQuorum", "InsertQuorumTimeout", "InsertQuorumParallel", "InsertNullAsDefault", "SelectSequentialConsistency", "DeduplicateBlocksInDependentMaterializedViews", "ReplicationAlterPartitionsSync", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "SkipUnavailableShards", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "Priority", "MaxThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "MaxPartitionsPerInsertBlock", "MaxConcurrentQueriesForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxRowsInSet", "MaxBytesInSet", "SetOverflowMode", "MaxRowsInJoin", "MaxBytesInJoin", "JoinOverflowMode", "JoinAlgorithm", "AnyJoinDistinctRightTableKeys", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "MinExecutionSpeed", "MinExecutionSpeedBytes", "CountDistinctImplementation", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "InputFormatNullAsDefault", "DateTimeInputFormat", "InputFormatWithNamesUseHeader", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "DateTimeOutputFormat", "LowCardinalityAllowInNativeFormat", "AllowSuspiciousLowCardinalityTypes", "EmptyResultForAggregationByEmptySet", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", "CancelHttpReadonlyQueriesOnClientClose", "MaxHttpGetRedirects", "JoinedSubqueryRequiresAlias", "JoinUseNulls", "TransformNullIn", "QuotaMode", "FlattenNested", "FormatRegexp", "FormatRegexpEscapingRule", "FormatRegexpSkipUnmatched", "AsyncInsert", "AsyncInsertThreads", "WaitForAsyncInsert", "WaitForAsyncInsertTimeout", "AsyncInsertMaxDataSize", "AsyncInsertBusyTimeout", "AsyncInsertStaleTimeout", "MemoryProfilerStep", "MemoryProfilerSampleProbability", "Compile", "MinCountToCompile", });
+        new java.lang.String[] { "Readonly", "AllowDdl", "AllowIntrospectionFunctions", "ConnectTimeout", "ConnectTimeoutWithFailover", "ReceiveTimeout", "SendTimeout", "TimeoutBeforeCheckingExecutionSpeed", "InsertQuorum", "InsertQuorumTimeout", "InsertQuorumParallel", "InsertNullAsDefault", "SelectSequentialConsistency", "DeduplicateBlocksInDependentMaterializedViews", "ReplicationAlterPartitionsSync", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "SkipUnavailableShards", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "Priority", "MaxThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "MaxPartitionsPerInsertBlock", "MaxConcurrentQueriesForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxRowsInSet", "MaxBytesInSet", "SetOverflowMode", "MaxRowsInJoin", "MaxBytesInJoin", "JoinOverflowMode", "JoinAlgorithm", "AnyJoinDistinctRightTableKeys", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "MinExecutionSpeed", "MinExecutionSpeedBytes", "CountDistinctImplementation", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "InputFormatNullAsDefault", "DateTimeInputFormat", "InputFormatWithNamesUseHeader", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "DateTimeOutputFormat", "LowCardinalityAllowInNativeFormat", "AllowSuspiciousLowCardinalityTypes", "EmptyResultForAggregationByEmptySet", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", "CancelHttpReadonlyQueriesOnClientClose", "MaxHttpGetRedirects", "JoinedSubqueryRequiresAlias", "JoinUseNulls", "TransformNullIn", "QuotaMode", "FlattenNested", "FormatRegexp", "FormatRegexpEscapingRule", "FormatRegexpSkipUnmatched", "AsyncInsert", "AsyncInsertThreads", "WaitForAsyncInsert", "WaitForAsyncInsertTimeout", "AsyncInsertMaxDataSize", "AsyncInsertBusyTimeout", "AsyncInsertStaleTimeout", "MemoryProfilerStep", "MemoryProfilerSampleProbability", "MaxFinalThreads", "InputFormatParallelParsing", "InputFormatImportNestedJson", "LocalFilesystemReadMethod", "MaxReadBufferSize", "Compile", "MinCountToCompile", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_fieldAccessorTable = new

@@ -5574,13 +5574,859 @@ public final class Stt {
 
   }
 
+  public interface SpeechAnalysisOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.SpeechAnalysisOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Analyse speech for every speaker
+     * </pre>
+     *
+     * <code>bool enable_speaker_analysis = 1;</code>
+     * @return The enableSpeakerAnalysis.
+     */
+    boolean getEnableSpeakerAnalysis();
+
+    /**
+     * <pre>
+     * Analyse conversation of two speakers
+     * </pre>
+     *
+     * <code>bool enable_conversation_analysis = 2;</code>
+     * @return The enableConversationAnalysis.
+     */
+    boolean getEnableConversationAnalysis();
+
+    /**
+     * <pre>
+     * Quantile levels in range (0, 1) for descriptive statistics
+     * </pre>
+     *
+     * <code>repeated double descriptive_statistics_quantiles = 3;</code>
+     * @return A list containing the descriptiveStatisticsQuantiles.
+     */
+    java.util.List<java.lang.Double> getDescriptiveStatisticsQuantilesList();
+    /**
+     * <pre>
+     * Quantile levels in range (0, 1) for descriptive statistics
+     * </pre>
+     *
+     * <code>repeated double descriptive_statistics_quantiles = 3;</code>
+     * @return The count of descriptiveStatisticsQuantiles.
+     */
+    int getDescriptiveStatisticsQuantilesCount();
+    /**
+     * <pre>
+     * Quantile levels in range (0, 1) for descriptive statistics
+     * </pre>
+     *
+     * <code>repeated double descriptive_statistics_quantiles = 3;</code>
+     * @param index The index of the element to return.
+     * @return The descriptiveStatisticsQuantiles at the given index.
+     */
+    double getDescriptiveStatisticsQuantiles(int index);
+  }
+  /**
+   * Protobuf type {@code speechkit.stt.v3.SpeechAnalysisOptions}
+   */
+  public static final class SpeechAnalysisOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.stt.v3.SpeechAnalysisOptions)
+      SpeechAnalysisOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SpeechAnalysisOptions.newBuilder() to construct.
+    private SpeechAnalysisOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SpeechAnalysisOptions() {
+      descriptiveStatisticsQuantiles_ = emptyDoubleList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SpeechAnalysisOptions();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SpeechAnalysisOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              enableSpeakerAnalysis_ = input.readBool();
+              break;
+            }
+            case 16: {
+
+              enableConversationAnalysis_ = input.readBool();
+              break;
+            }
+            case 25: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                descriptiveStatisticsQuantiles_ = newDoubleList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              descriptiveStatisticsQuantiles_.addDouble(input.readDouble());
+              break;
+            }
+            case 26: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                descriptiveStatisticsQuantiles_ = newDoubleList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                descriptiveStatisticsQuantiles_.addDouble(input.readDouble());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          descriptiveStatisticsQuantiles_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SpeechAnalysisOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SpeechAnalysisOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.class, yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.Builder.class);
+    }
+
+    public static final int ENABLE_SPEAKER_ANALYSIS_FIELD_NUMBER = 1;
+    private boolean enableSpeakerAnalysis_;
+    /**
+     * <pre>
+     * Analyse speech for every speaker
+     * </pre>
+     *
+     * <code>bool enable_speaker_analysis = 1;</code>
+     * @return The enableSpeakerAnalysis.
+     */
+    @java.lang.Override
+    public boolean getEnableSpeakerAnalysis() {
+      return enableSpeakerAnalysis_;
+    }
+
+    public static final int ENABLE_CONVERSATION_ANALYSIS_FIELD_NUMBER = 2;
+    private boolean enableConversationAnalysis_;
+    /**
+     * <pre>
+     * Analyse conversation of two speakers
+     * </pre>
+     *
+     * <code>bool enable_conversation_analysis = 2;</code>
+     * @return The enableConversationAnalysis.
+     */
+    @java.lang.Override
+    public boolean getEnableConversationAnalysis() {
+      return enableConversationAnalysis_;
+    }
+
+    public static final int DESCRIPTIVE_STATISTICS_QUANTILES_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.DoubleList descriptiveStatisticsQuantiles_;
+    /**
+     * <pre>
+     * Quantile levels in range (0, 1) for descriptive statistics
+     * </pre>
+     *
+     * <code>repeated double descriptive_statistics_quantiles = 3;</code>
+     * @return A list containing the descriptiveStatisticsQuantiles.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Double>
+        getDescriptiveStatisticsQuantilesList() {
+      return descriptiveStatisticsQuantiles_;
+    }
+    /**
+     * <pre>
+     * Quantile levels in range (0, 1) for descriptive statistics
+     * </pre>
+     *
+     * <code>repeated double descriptive_statistics_quantiles = 3;</code>
+     * @return The count of descriptiveStatisticsQuantiles.
+     */
+    public int getDescriptiveStatisticsQuantilesCount() {
+      return descriptiveStatisticsQuantiles_.size();
+    }
+    /**
+     * <pre>
+     * Quantile levels in range (0, 1) for descriptive statistics
+     * </pre>
+     *
+     * <code>repeated double descriptive_statistics_quantiles = 3;</code>
+     * @param index The index of the element to return.
+     * @return The descriptiveStatisticsQuantiles at the given index.
+     */
+    public double getDescriptiveStatisticsQuantiles(int index) {
+      return descriptiveStatisticsQuantiles_.getDouble(index);
+    }
+    private int descriptiveStatisticsQuantilesMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (enableSpeakerAnalysis_ != false) {
+        output.writeBool(1, enableSpeakerAnalysis_);
+      }
+      if (enableConversationAnalysis_ != false) {
+        output.writeBool(2, enableConversationAnalysis_);
+      }
+      if (getDescriptiveStatisticsQuantilesList().size() > 0) {
+        output.writeUInt32NoTag(26);
+        output.writeUInt32NoTag(descriptiveStatisticsQuantilesMemoizedSerializedSize);
+      }
+      for (int i = 0; i < descriptiveStatisticsQuantiles_.size(); i++) {
+        output.writeDoubleNoTag(descriptiveStatisticsQuantiles_.getDouble(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enableSpeakerAnalysis_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, enableSpeakerAnalysis_);
+      }
+      if (enableConversationAnalysis_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, enableConversationAnalysis_);
+      }
+      {
+        int dataSize = 0;
+        dataSize = 8 * getDescriptiveStatisticsQuantilesList().size();
+        size += dataSize;
+        if (!getDescriptiveStatisticsQuantilesList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        descriptiveStatisticsQuantilesMemoizedSerializedSize = dataSize;
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions other = (yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions) obj;
+
+      if (getEnableSpeakerAnalysis()
+          != other.getEnableSpeakerAnalysis()) return false;
+      if (getEnableConversationAnalysis()
+          != other.getEnableConversationAnalysis()) return false;
+      if (!getDescriptiveStatisticsQuantilesList()
+          .equals(other.getDescriptiveStatisticsQuantilesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ENABLE_SPEAKER_ANALYSIS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnableSpeakerAnalysis());
+      hash = (37 * hash) + ENABLE_CONVERSATION_ANALYSIS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnableConversationAnalysis());
+      if (getDescriptiveStatisticsQuantilesCount() > 0) {
+        hash = (37 * hash) + DESCRIPTIVE_STATISTICS_QUANTILES_FIELD_NUMBER;
+        hash = (53 * hash) + getDescriptiveStatisticsQuantilesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code speechkit.stt.v3.SpeechAnalysisOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.SpeechAnalysisOptions)
+        yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SpeechAnalysisOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SpeechAnalysisOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.class, yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        enableSpeakerAnalysis_ = false;
+
+        enableConversationAnalysis_ = false;
+
+        descriptiveStatisticsQuantiles_ = emptyDoubleList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SpeechAnalysisOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions build() {
+        yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions buildPartial() {
+        yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions result = new yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions(this);
+        int from_bitField0_ = bitField0_;
+        result.enableSpeakerAnalysis_ = enableSpeakerAnalysis_;
+        result.enableConversationAnalysis_ = enableConversationAnalysis_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          descriptiveStatisticsQuantiles_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.descriptiveStatisticsQuantiles_ = descriptiveStatisticsQuantiles_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions) {
+          return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions other) {
+        if (other == yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.getDefaultInstance()) return this;
+        if (other.getEnableSpeakerAnalysis() != false) {
+          setEnableSpeakerAnalysis(other.getEnableSpeakerAnalysis());
+        }
+        if (other.getEnableConversationAnalysis() != false) {
+          setEnableConversationAnalysis(other.getEnableConversationAnalysis());
+        }
+        if (!other.descriptiveStatisticsQuantiles_.isEmpty()) {
+          if (descriptiveStatisticsQuantiles_.isEmpty()) {
+            descriptiveStatisticsQuantiles_ = other.descriptiveStatisticsQuantiles_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureDescriptiveStatisticsQuantilesIsMutable();
+            descriptiveStatisticsQuantiles_.addAll(other.descriptiveStatisticsQuantiles_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean enableSpeakerAnalysis_ ;
+      /**
+       * <pre>
+       * Analyse speech for every speaker
+       * </pre>
+       *
+       * <code>bool enable_speaker_analysis = 1;</code>
+       * @return The enableSpeakerAnalysis.
+       */
+      @java.lang.Override
+      public boolean getEnableSpeakerAnalysis() {
+        return enableSpeakerAnalysis_;
+      }
+      /**
+       * <pre>
+       * Analyse speech for every speaker
+       * </pre>
+       *
+       * <code>bool enable_speaker_analysis = 1;</code>
+       * @param value The enableSpeakerAnalysis to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnableSpeakerAnalysis(boolean value) {
+        
+        enableSpeakerAnalysis_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Analyse speech for every speaker
+       * </pre>
+       *
+       * <code>bool enable_speaker_analysis = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnableSpeakerAnalysis() {
+        
+        enableSpeakerAnalysis_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean enableConversationAnalysis_ ;
+      /**
+       * <pre>
+       * Analyse conversation of two speakers
+       * </pre>
+       *
+       * <code>bool enable_conversation_analysis = 2;</code>
+       * @return The enableConversationAnalysis.
+       */
+      @java.lang.Override
+      public boolean getEnableConversationAnalysis() {
+        return enableConversationAnalysis_;
+      }
+      /**
+       * <pre>
+       * Analyse conversation of two speakers
+       * </pre>
+       *
+       * <code>bool enable_conversation_analysis = 2;</code>
+       * @param value The enableConversationAnalysis to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEnableConversationAnalysis(boolean value) {
+        
+        enableConversationAnalysis_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Analyse conversation of two speakers
+       * </pre>
+       *
+       * <code>bool enable_conversation_analysis = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEnableConversationAnalysis() {
+        
+        enableConversationAnalysis_ = false;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.DoubleList descriptiveStatisticsQuantiles_ = emptyDoubleList();
+      private void ensureDescriptiveStatisticsQuantilesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          descriptiveStatisticsQuantiles_ = mutableCopy(descriptiveStatisticsQuantiles_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * Quantile levels in range (0, 1) for descriptive statistics
+       * </pre>
+       *
+       * <code>repeated double descriptive_statistics_quantiles = 3;</code>
+       * @return A list containing the descriptiveStatisticsQuantiles.
+       */
+      public java.util.List<java.lang.Double>
+          getDescriptiveStatisticsQuantilesList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(descriptiveStatisticsQuantiles_) : descriptiveStatisticsQuantiles_;
+      }
+      /**
+       * <pre>
+       * Quantile levels in range (0, 1) for descriptive statistics
+       * </pre>
+       *
+       * <code>repeated double descriptive_statistics_quantiles = 3;</code>
+       * @return The count of descriptiveStatisticsQuantiles.
+       */
+      public int getDescriptiveStatisticsQuantilesCount() {
+        return descriptiveStatisticsQuantiles_.size();
+      }
+      /**
+       * <pre>
+       * Quantile levels in range (0, 1) for descriptive statistics
+       * </pre>
+       *
+       * <code>repeated double descriptive_statistics_quantiles = 3;</code>
+       * @param index The index of the element to return.
+       * @return The descriptiveStatisticsQuantiles at the given index.
+       */
+      public double getDescriptiveStatisticsQuantiles(int index) {
+        return descriptiveStatisticsQuantiles_.getDouble(index);
+      }
+      /**
+       * <pre>
+       * Quantile levels in range (0, 1) for descriptive statistics
+       * </pre>
+       *
+       * <code>repeated double descriptive_statistics_quantiles = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The descriptiveStatisticsQuantiles to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptiveStatisticsQuantiles(
+          int index, double value) {
+        ensureDescriptiveStatisticsQuantilesIsMutable();
+        descriptiveStatisticsQuantiles_.setDouble(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Quantile levels in range (0, 1) for descriptive statistics
+       * </pre>
+       *
+       * <code>repeated double descriptive_statistics_quantiles = 3;</code>
+       * @param value The descriptiveStatisticsQuantiles to add.
+       * @return This builder for chaining.
+       */
+      public Builder addDescriptiveStatisticsQuantiles(double value) {
+        ensureDescriptiveStatisticsQuantilesIsMutable();
+        descriptiveStatisticsQuantiles_.addDouble(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Quantile levels in range (0, 1) for descriptive statistics
+       * </pre>
+       *
+       * <code>repeated double descriptive_statistics_quantiles = 3;</code>
+       * @param values The descriptiveStatisticsQuantiles to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllDescriptiveStatisticsQuantiles(
+          java.lang.Iterable<? extends java.lang.Double> values) {
+        ensureDescriptiveStatisticsQuantilesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, descriptiveStatisticsQuantiles_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Quantile levels in range (0, 1) for descriptive statistics
+       * </pre>
+       *
+       * <code>repeated double descriptive_statistics_quantiles = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescriptiveStatisticsQuantiles() {
+        descriptiveStatisticsQuantiles_ = emptyDoubleList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.SpeechAnalysisOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.stt.v3.SpeechAnalysisOptions)
+    private static final yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions();
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SpeechAnalysisOptions>
+        PARSER = new com.google.protobuf.AbstractParser<SpeechAnalysisOptions>() {
+      @java.lang.Override
+      public SpeechAnalysisOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SpeechAnalysisOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SpeechAnalysisOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SpeechAnalysisOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface RawAudioOrBuilder extends
       // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.RawAudio)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     *  Type of audio encoding
+     * Type of audio encoding
      * </pre>
      *
      * <code>.speechkit.stt.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
@@ -5589,7 +6435,7 @@ public final class Stt {
     int getAudioEncodingValue();
     /**
      * <pre>
-     *  Type of audio encoding
+     * Type of audio encoding
      * </pre>
      *
      * <code>.speechkit.stt.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
@@ -5599,7 +6445,7 @@ public final class Stt {
 
     /**
      * <pre>
-     *  PCM sample rate
+     * PCM sample rate
      * </pre>
      *
      * <code>int64 sample_rate_hertz = 2;</code>
@@ -5609,7 +6455,7 @@ public final class Stt {
 
     /**
      * <pre>
-     *  PCM channel count. Currently only single channel audio is supported in real-time recognition.
+     * PCM channel count. Currently only single channel audio is supported in real-time recognition.
      * </pre>
      *
      * <code>int64 audio_channel_count = 3;</code>
@@ -5835,7 +6681,7 @@ public final class Stt {
     private int audioEncoding_;
     /**
      * <pre>
-     *  Type of audio encoding
+     * Type of audio encoding
      * </pre>
      *
      * <code>.speechkit.stt.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
@@ -5846,7 +6692,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Type of audio encoding
+     * Type of audio encoding
      * </pre>
      *
      * <code>.speechkit.stt.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
@@ -5862,7 +6708,7 @@ public final class Stt {
     private long sampleRateHertz_;
     /**
      * <pre>
-     *  PCM sample rate
+     * PCM sample rate
      * </pre>
      *
      * <code>int64 sample_rate_hertz = 2;</code>
@@ -5877,7 +6723,7 @@ public final class Stt {
     private long audioChannelCount_;
     /**
      * <pre>
-     *  PCM channel count. Currently only single channel audio is supported in real-time recognition.
+     * PCM channel count. Currently only single channel audio is supported in real-time recognition.
      * </pre>
      *
      * <code>int64 audio_channel_count = 3;</code>
@@ -6232,7 +7078,7 @@ public final class Stt {
       private int audioEncoding_ = 0;
       /**
        * <pre>
-       *  Type of audio encoding
+       * Type of audio encoding
        * </pre>
        *
        * <code>.speechkit.stt.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
@@ -6243,7 +7089,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Type of audio encoding
+       * Type of audio encoding
        * </pre>
        *
        * <code>.speechkit.stt.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
@@ -6258,7 +7104,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Type of audio encoding
+       * Type of audio encoding
        * </pre>
        *
        * <code>.speechkit.stt.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
@@ -6272,7 +7118,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Type of audio encoding
+       * Type of audio encoding
        * </pre>
        *
        * <code>.speechkit.stt.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
@@ -6290,7 +7136,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Type of audio encoding
+       * Type of audio encoding
        * </pre>
        *
        * <code>.speechkit.stt.v3.RawAudio.AudioEncoding audio_encoding = 1;</code>
@@ -6306,7 +7152,7 @@ public final class Stt {
       private long sampleRateHertz_ ;
       /**
        * <pre>
-       *  PCM sample rate
+       * PCM sample rate
        * </pre>
        *
        * <code>int64 sample_rate_hertz = 2;</code>
@@ -6318,7 +7164,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  PCM sample rate
+       * PCM sample rate
        * </pre>
        *
        * <code>int64 sample_rate_hertz = 2;</code>
@@ -6333,7 +7179,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  PCM sample rate
+       * PCM sample rate
        * </pre>
        *
        * <code>int64 sample_rate_hertz = 2;</code>
@@ -6349,7 +7195,7 @@ public final class Stt {
       private long audioChannelCount_ ;
       /**
        * <pre>
-       *  PCM channel count. Currently only single channel audio is supported in real-time recognition.
+       * PCM channel count. Currently only single channel audio is supported in real-time recognition.
        * </pre>
        *
        * <code>int64 audio_channel_count = 3;</code>
@@ -6361,7 +7207,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  PCM channel count. Currently only single channel audio is supported in real-time recognition.
+       * PCM channel count. Currently only single channel audio is supported in real-time recognition.
        * </pre>
        *
        * <code>int64 audio_channel_count = 3;</code>
@@ -6376,7 +7222,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  PCM channel count. Currently only single channel audio is supported in real-time recognition.
+       * PCM channel count. Currently only single channel audio is supported in real-time recognition.
        * </pre>
        *
        * <code>int64 audio_channel_count = 3;</code>
@@ -6447,7 +7293,7 @@ public final class Stt {
 
     /**
      * <pre>
-     *  Type of audio container.
+     * Type of audio container.
      * </pre>
      *
      * <code>.speechkit.stt.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
@@ -6456,7 +7302,7 @@ public final class Stt {
     int getContainerAudioTypeValue();
     /**
      * <pre>
-     *  Type of audio container.
+     * Type of audio container.
      * </pre>
      *
      * <code>.speechkit.stt.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
@@ -6706,7 +7552,7 @@ public final class Stt {
     private int containerAudioType_;
     /**
      * <pre>
-     *  Type of audio container.
+     * Type of audio container.
      * </pre>
      *
      * <code>.speechkit.stt.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
@@ -6717,7 +7563,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Type of audio container.
+     * Type of audio container.
      * </pre>
      *
      * <code>.speechkit.stt.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
@@ -7037,7 +7883,7 @@ public final class Stt {
       private int containerAudioType_ = 0;
       /**
        * <pre>
-       *  Type of audio container.
+       * Type of audio container.
        * </pre>
        *
        * <code>.speechkit.stt.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
@@ -7048,7 +7894,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Type of audio container.
+       * Type of audio container.
        * </pre>
        *
        * <code>.speechkit.stt.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
@@ -7063,7 +7909,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Type of audio container.
+       * Type of audio container.
        * </pre>
        *
        * <code>.speechkit.stt.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
@@ -7077,7 +7923,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Type of audio container.
+       * Type of audio container.
        * </pre>
        *
        * <code>.speechkit.stt.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
@@ -7095,7 +7941,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Type of audio container.
+       * Type of audio container.
        * </pre>
        *
        * <code>.speechkit.stt.v3.ContainerAudio.ContainerAudioType container_audio_type = 1;</code>
@@ -8240,34 +9086,58 @@ public final class Stt {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Language restriction type
+     * </pre>
+     *
      * <code>.speechkit.stt.v3.LanguageRestrictionOptions.LanguageRestrictionType restriction_type = 1;</code>
      * @return The enum numeric value on the wire for restrictionType.
      */
     int getRestrictionTypeValue();
     /**
+     * <pre>
+     * Language restriction type
+     * </pre>
+     *
      * <code>.speechkit.stt.v3.LanguageRestrictionOptions.LanguageRestrictionType restriction_type = 1;</code>
      * @return The restrictionType.
      */
     yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions.LanguageRestrictionType getRestrictionType();
 
     /**
+     * <pre>
+     * The list of language codes to restrict recognition in the case of an auto model
+     * </pre>
+     *
      * <code>repeated string language_code = 2;</code>
      * @return A list containing the languageCode.
      */
     java.util.List<java.lang.String>
         getLanguageCodeList();
     /**
+     * <pre>
+     * The list of language codes to restrict recognition in the case of an auto model
+     * </pre>
+     *
      * <code>repeated string language_code = 2;</code>
      * @return The count of languageCode.
      */
     int getLanguageCodeCount();
     /**
+     * <pre>
+     * The list of language codes to restrict recognition in the case of an auto model
+     * </pre>
+     *
      * <code>repeated string language_code = 2;</code>
      * @param index The index of the element to return.
      * @return The languageCode at the given index.
      */
     java.lang.String getLanguageCode(int index);
     /**
+     * <pre>
+     * The list of language codes to restrict recognition in the case of an auto model
+     * </pre>
+     *
      * <code>repeated string language_code = 2;</code>
      * @param index The index of the value to return.
      * @return The bytes of the languageCode at the given index.
@@ -8513,6 +9383,10 @@ public final class Stt {
     public static final int RESTRICTION_TYPE_FIELD_NUMBER = 1;
     private int restrictionType_;
     /**
+     * <pre>
+     * Language restriction type
+     * </pre>
+     *
      * <code>.speechkit.stt.v3.LanguageRestrictionOptions.LanguageRestrictionType restriction_type = 1;</code>
      * @return The enum numeric value on the wire for restrictionType.
      */
@@ -8520,6 +9394,10 @@ public final class Stt {
       return restrictionType_;
     }
     /**
+     * <pre>
+     * Language restriction type
+     * </pre>
+     *
      * <code>.speechkit.stt.v3.LanguageRestrictionOptions.LanguageRestrictionType restriction_type = 1;</code>
      * @return The restrictionType.
      */
@@ -8532,6 +9410,10 @@ public final class Stt {
     public static final int LANGUAGE_CODE_FIELD_NUMBER = 2;
     private com.google.protobuf.LazyStringList languageCode_;
     /**
+     * <pre>
+     * The list of language codes to restrict recognition in the case of an auto model
+     * </pre>
+     *
      * <code>repeated string language_code = 2;</code>
      * @return A list containing the languageCode.
      */
@@ -8540,6 +9422,10 @@ public final class Stt {
       return languageCode_;
     }
     /**
+     * <pre>
+     * The list of language codes to restrict recognition in the case of an auto model
+     * </pre>
+     *
      * <code>repeated string language_code = 2;</code>
      * @return The count of languageCode.
      */
@@ -8547,6 +9433,10 @@ public final class Stt {
       return languageCode_.size();
     }
     /**
+     * <pre>
+     * The list of language codes to restrict recognition in the case of an auto model
+     * </pre>
+     *
      * <code>repeated string language_code = 2;</code>
      * @param index The index of the element to return.
      * @return The languageCode at the given index.
@@ -8555,6 +9445,10 @@ public final class Stt {
       return languageCode_.get(index);
     }
     /**
+     * <pre>
+     * The list of language codes to restrict recognition in the case of an auto model
+     * </pre>
+     *
      * <code>repeated string language_code = 2;</code>
      * @param index The index of the value to return.
      * @return The bytes of the languageCode at the given index.
@@ -8907,6 +9801,10 @@ public final class Stt {
 
       private int restrictionType_ = 0;
       /**
+       * <pre>
+       * Language restriction type
+       * </pre>
+       *
        * <code>.speechkit.stt.v3.LanguageRestrictionOptions.LanguageRestrictionType restriction_type = 1;</code>
        * @return The enum numeric value on the wire for restrictionType.
        */
@@ -8914,6 +9812,10 @@ public final class Stt {
         return restrictionType_;
       }
       /**
+       * <pre>
+       * Language restriction type
+       * </pre>
+       *
        * <code>.speechkit.stt.v3.LanguageRestrictionOptions.LanguageRestrictionType restriction_type = 1;</code>
        * @param value The enum numeric value on the wire for restrictionType to set.
        * @return This builder for chaining.
@@ -8925,6 +9827,10 @@ public final class Stt {
         return this;
       }
       /**
+       * <pre>
+       * Language restriction type
+       * </pre>
+       *
        * <code>.speechkit.stt.v3.LanguageRestrictionOptions.LanguageRestrictionType restriction_type = 1;</code>
        * @return The restrictionType.
        */
@@ -8935,6 +9841,10 @@ public final class Stt {
         return result == null ? yandex.cloud.api.ai.stt.v3.Stt.LanguageRestrictionOptions.LanguageRestrictionType.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Language restriction type
+       * </pre>
+       *
        * <code>.speechkit.stt.v3.LanguageRestrictionOptions.LanguageRestrictionType restriction_type = 1;</code>
        * @param value The restrictionType to set.
        * @return This builder for chaining.
@@ -8949,6 +9859,10 @@ public final class Stt {
         return this;
       }
       /**
+       * <pre>
+       * Language restriction type
+       * </pre>
+       *
        * <code>.speechkit.stt.v3.LanguageRestrictionOptions.LanguageRestrictionType restriction_type = 1;</code>
        * @return This builder for chaining.
        */
@@ -8967,6 +9881,10 @@ public final class Stt {
          }
       }
       /**
+       * <pre>
+       * The list of language codes to restrict recognition in the case of an auto model
+       * </pre>
+       *
        * <code>repeated string language_code = 2;</code>
        * @return A list containing the languageCode.
        */
@@ -8975,6 +9893,10 @@ public final class Stt {
         return languageCode_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * The list of language codes to restrict recognition in the case of an auto model
+       * </pre>
+       *
        * <code>repeated string language_code = 2;</code>
        * @return The count of languageCode.
        */
@@ -8982,6 +9904,10 @@ public final class Stt {
         return languageCode_.size();
       }
       /**
+       * <pre>
+       * The list of language codes to restrict recognition in the case of an auto model
+       * </pre>
+       *
        * <code>repeated string language_code = 2;</code>
        * @param index The index of the element to return.
        * @return The languageCode at the given index.
@@ -8990,6 +9916,10 @@ public final class Stt {
         return languageCode_.get(index);
       }
       /**
+       * <pre>
+       * The list of language codes to restrict recognition in the case of an auto model
+       * </pre>
+       *
        * <code>repeated string language_code = 2;</code>
        * @param index The index of the value to return.
        * @return The bytes of the languageCode at the given index.
@@ -8999,6 +9929,10 @@ public final class Stt {
         return languageCode_.getByteString(index);
       }
       /**
+       * <pre>
+       * The list of language codes to restrict recognition in the case of an auto model
+       * </pre>
+       *
        * <code>repeated string language_code = 2;</code>
        * @param index The index to set the value at.
        * @param value The languageCode to set.
@@ -9015,6 +9949,10 @@ public final class Stt {
         return this;
       }
       /**
+       * <pre>
+       * The list of language codes to restrict recognition in the case of an auto model
+       * </pre>
+       *
        * <code>repeated string language_code = 2;</code>
        * @param value The languageCode to add.
        * @return This builder for chaining.
@@ -9030,6 +9968,10 @@ public final class Stt {
         return this;
       }
       /**
+       * <pre>
+       * The list of language codes to restrict recognition in the case of an auto model
+       * </pre>
+       *
        * <code>repeated string language_code = 2;</code>
        * @param values The languageCode to add.
        * @return This builder for chaining.
@@ -9043,6 +9985,10 @@ public final class Stt {
         return this;
       }
       /**
+       * <pre>
+       * The list of language codes to restrict recognition in the case of an auto model
+       * </pre>
+       *
        * <code>repeated string language_code = 2;</code>
        * @return This builder for chaining.
        */
@@ -9053,6 +9999,10 @@ public final class Stt {
         return this;
       }
       /**
+       * <pre>
+       * The list of language codes to restrict recognition in the case of an auto model
+       * </pre>
+       *
        * <code>repeated string language_code = 2;</code>
        * @param value The bytes of the languageCode to add.
        * @return This builder for chaining.
@@ -9127,7 +10077,8 @@ public final class Stt {
 
     /**
      * <pre>
-     *  Reserved for future, do not use.
+     * Sets the recognition model for the cloud version of SpeechKit. Possible values: 'general', 'general:rc', 'general:deprecated'.
+     * The model is ignored for SpeechKit Hybrid.
      * </pre>
      *
      * <code>string model = 1;</code>
@@ -9136,7 +10087,8 @@ public final class Stt {
     java.lang.String getModel();
     /**
      * <pre>
-     *  Reserved for future, do not use.
+     * Sets the recognition model for the cloud version of SpeechKit. Possible values: 'general', 'general:rc', 'general:deprecated'.
+     * The model is ignored for SpeechKit Hybrid.
      * </pre>
      *
      * <code>string model = 1;</code>
@@ -9147,7 +10099,7 @@ public final class Stt {
 
     /**
      * <pre>
-     *  Specified input audio.
+     * Specified input audio.
      * </pre>
      *
      * <code>.speechkit.stt.v3.AudioFormatOptions audio_format = 2;</code>
@@ -9156,7 +10108,7 @@ public final class Stt {
     boolean hasAudioFormat();
     /**
      * <pre>
-     *  Specified input audio.
+     * Specified input audio.
      * </pre>
      *
      * <code>.speechkit.stt.v3.AudioFormatOptions audio_format = 2;</code>
@@ -9165,7 +10117,7 @@ public final class Stt {
     yandex.cloud.api.ai.stt.v3.Stt.AudioFormatOptions getAudioFormat();
     /**
      * <pre>
-     *  Specified input audio.
+     * Specified input audio.
      * </pre>
      *
      * <code>.speechkit.stt.v3.AudioFormatOptions audio_format = 2;</code>
@@ -9174,7 +10126,7 @@ public final class Stt {
 
     /**
      * <pre>
-     *  Text normalization options.
+     * Text normalization options.
      * </pre>
      *
      * <code>.speechkit.stt.v3.TextNormalizationOptions text_normalization = 3;</code>
@@ -9183,7 +10135,7 @@ public final class Stt {
     boolean hasTextNormalization();
     /**
      * <pre>
-     *  Text normalization options.
+     * Text normalization options.
      * </pre>
      *
      * <code>.speechkit.stt.v3.TextNormalizationOptions text_normalization = 3;</code>
@@ -9192,7 +10144,7 @@ public final class Stt {
     yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions getTextNormalization();
     /**
      * <pre>
-     *  Text normalization options.
+     * Text normalization options.
      * </pre>
      *
      * <code>.speechkit.stt.v3.TextNormalizationOptions text_normalization = 3;</code>
@@ -9385,10 +10337,18 @@ public final class Stt {
        */
       AUDIO_PROCESSING_TYPE_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Process audio in mode optimized for real-time recognition, i.e. send partials and final responses as soon as possible
+       * </pre>
+       *
        * <code>REAL_TIME = 1;</code>
        */
       REAL_TIME(1),
       /**
+       * <pre>
+       * Process audio after all data was received
+       * </pre>
+       *
        * <code>FULL_DATA = 2;</code>
        */
       FULL_DATA(2),
@@ -9400,10 +10360,18 @@ public final class Stt {
        */
       public static final int AUDIO_PROCESSING_TYPE_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Process audio in mode optimized for real-time recognition, i.e. send partials and final responses as soon as possible
+       * </pre>
+       *
        * <code>REAL_TIME = 1;</code>
        */
       public static final int REAL_TIME_VALUE = 1;
       /**
+       * <pre>
+       * Process audio after all data was received
+       * </pre>
+       *
        * <code>FULL_DATA = 2;</code>
        */
       public static final int FULL_DATA_VALUE = 2;
@@ -9496,7 +10464,8 @@ public final class Stt {
     private volatile java.lang.Object model_;
     /**
      * <pre>
-     *  Reserved for future, do not use.
+     * Sets the recognition model for the cloud version of SpeechKit. Possible values: 'general', 'general:rc', 'general:deprecated'.
+     * The model is ignored for SpeechKit Hybrid.
      * </pre>
      *
      * <code>string model = 1;</code>
@@ -9517,7 +10486,8 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Reserved for future, do not use.
+     * Sets the recognition model for the cloud version of SpeechKit. Possible values: 'general', 'general:rc', 'general:deprecated'.
+     * The model is ignored for SpeechKit Hybrid.
      * </pre>
      *
      * <code>string model = 1;</code>
@@ -9542,7 +10512,7 @@ public final class Stt {
     private yandex.cloud.api.ai.stt.v3.Stt.AudioFormatOptions audioFormat_;
     /**
      * <pre>
-     *  Specified input audio.
+     * Specified input audio.
      * </pre>
      *
      * <code>.speechkit.stt.v3.AudioFormatOptions audio_format = 2;</code>
@@ -9554,7 +10524,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Specified input audio.
+     * Specified input audio.
      * </pre>
      *
      * <code>.speechkit.stt.v3.AudioFormatOptions audio_format = 2;</code>
@@ -9566,7 +10536,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Specified input audio.
+     * Specified input audio.
      * </pre>
      *
      * <code>.speechkit.stt.v3.AudioFormatOptions audio_format = 2;</code>
@@ -9580,7 +10550,7 @@ public final class Stt {
     private yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions textNormalization_;
     /**
      * <pre>
-     *  Text normalization options.
+     * Text normalization options.
      * </pre>
      *
      * <code>.speechkit.stt.v3.TextNormalizationOptions text_normalization = 3;</code>
@@ -9592,7 +10562,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Text normalization options.
+     * Text normalization options.
      * </pre>
      *
      * <code>.speechkit.stt.v3.TextNormalizationOptions text_normalization = 3;</code>
@@ -9604,7 +10574,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Text normalization options.
+     * Text normalization options.
      * </pre>
      *
      * <code>.speechkit.stt.v3.TextNormalizationOptions text_normalization = 3;</code>
@@ -10090,7 +11060,8 @@ public final class Stt {
       private java.lang.Object model_ = "";
       /**
        * <pre>
-       *  Reserved for future, do not use.
+       * Sets the recognition model for the cloud version of SpeechKit. Possible values: 'general', 'general:rc', 'general:deprecated'.
+       * The model is ignored for SpeechKit Hybrid.
        * </pre>
        *
        * <code>string model = 1;</code>
@@ -10110,7 +11081,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Reserved for future, do not use.
+       * Sets the recognition model for the cloud version of SpeechKit. Possible values: 'general', 'general:rc', 'general:deprecated'.
+       * The model is ignored for SpeechKit Hybrid.
        * </pre>
        *
        * <code>string model = 1;</code>
@@ -10131,7 +11103,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Reserved for future, do not use.
+       * Sets the recognition model for the cloud version of SpeechKit. Possible values: 'general', 'general:rc', 'general:deprecated'.
+       * The model is ignored for SpeechKit Hybrid.
        * </pre>
        *
        * <code>string model = 1;</code>
@@ -10150,7 +11123,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Reserved for future, do not use.
+       * Sets the recognition model for the cloud version of SpeechKit. Possible values: 'general', 'general:rc', 'general:deprecated'.
+       * The model is ignored for SpeechKit Hybrid.
        * </pre>
        *
        * <code>string model = 1;</code>
@@ -10164,7 +11138,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Reserved for future, do not use.
+       * Sets the recognition model for the cloud version of SpeechKit. Possible values: 'general', 'general:rc', 'general:deprecated'.
+       * The model is ignored for SpeechKit Hybrid.
        * </pre>
        *
        * <code>string model = 1;</code>
@@ -10188,7 +11163,7 @@ public final class Stt {
           yandex.cloud.api.ai.stt.v3.Stt.AudioFormatOptions, yandex.cloud.api.ai.stt.v3.Stt.AudioFormatOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.AudioFormatOptionsOrBuilder> audioFormatBuilder_;
       /**
        * <pre>
-       *  Specified input audio.
+       * Specified input audio.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AudioFormatOptions audio_format = 2;</code>
@@ -10199,7 +11174,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Specified input audio.
+       * Specified input audio.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AudioFormatOptions audio_format = 2;</code>
@@ -10214,7 +11189,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Specified input audio.
+       * Specified input audio.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AudioFormatOptions audio_format = 2;</code>
@@ -10234,7 +11209,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Specified input audio.
+       * Specified input audio.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AudioFormatOptions audio_format = 2;</code>
@@ -10252,7 +11227,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Specified input audio.
+       * Specified input audio.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AudioFormatOptions audio_format = 2;</code>
@@ -10274,7 +11249,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Specified input audio.
+       * Specified input audio.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AudioFormatOptions audio_format = 2;</code>
@@ -10292,7 +11267,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Specified input audio.
+       * Specified input audio.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AudioFormatOptions audio_format = 2;</code>
@@ -10304,7 +11279,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Specified input audio.
+       * Specified input audio.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AudioFormatOptions audio_format = 2;</code>
@@ -10319,7 +11294,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Specified input audio.
+       * Specified input audio.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AudioFormatOptions audio_format = 2;</code>
@@ -10343,7 +11318,7 @@ public final class Stt {
           yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions, yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.TextNormalizationOptionsOrBuilder> textNormalizationBuilder_;
       /**
        * <pre>
-       *  Text normalization options.
+       * Text normalization options.
        * </pre>
        *
        * <code>.speechkit.stt.v3.TextNormalizationOptions text_normalization = 3;</code>
@@ -10354,7 +11329,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Text normalization options.
+       * Text normalization options.
        * </pre>
        *
        * <code>.speechkit.stt.v3.TextNormalizationOptions text_normalization = 3;</code>
@@ -10369,7 +11344,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Text normalization options.
+       * Text normalization options.
        * </pre>
        *
        * <code>.speechkit.stt.v3.TextNormalizationOptions text_normalization = 3;</code>
@@ -10389,7 +11364,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Text normalization options.
+       * Text normalization options.
        * </pre>
        *
        * <code>.speechkit.stt.v3.TextNormalizationOptions text_normalization = 3;</code>
@@ -10407,7 +11382,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Text normalization options.
+       * Text normalization options.
        * </pre>
        *
        * <code>.speechkit.stt.v3.TextNormalizationOptions text_normalization = 3;</code>
@@ -10429,7 +11404,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Text normalization options.
+       * Text normalization options.
        * </pre>
        *
        * <code>.speechkit.stt.v3.TextNormalizationOptions text_normalization = 3;</code>
@@ -10447,7 +11422,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Text normalization options.
+       * Text normalization options.
        * </pre>
        *
        * <code>.speechkit.stt.v3.TextNormalizationOptions text_normalization = 3;</code>
@@ -10459,7 +11434,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Text normalization options.
+       * Text normalization options.
        * </pre>
        *
        * <code>.speechkit.stt.v3.TextNormalizationOptions text_normalization = 3;</code>
@@ -10474,7 +11449,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Text normalization options.
+       * Text normalization options.
        * </pre>
        *
        * <code>.speechkit.stt.v3.TextNormalizationOptions text_normalization = 3;</code>
@@ -10780,7 +11755,7 @@ public final class Stt {
 
     /**
      * <pre>
-     *  Configuration for speech recognition model.
+     * Configuration for speech recognition model.
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 1;</code>
@@ -10789,7 +11764,7 @@ public final class Stt {
     boolean hasRecognitionModel();
     /**
      * <pre>
-     *  Configuration for speech recognition model.
+     * Configuration for speech recognition model.
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 1;</code>
@@ -10798,7 +11773,7 @@ public final class Stt {
     yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions getRecognitionModel();
     /**
      * <pre>
-     *  Configuration for speech recognition model.
+     * Configuration for speech recognition model.
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 1;</code>
@@ -10807,7 +11782,7 @@ public final class Stt {
 
     /**
      * <pre>
-     *  Configuration for end of utterance detection model.
+     * Configuration for end of utterance detection model.
      * </pre>
      *
      * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
@@ -10816,7 +11791,7 @@ public final class Stt {
     boolean hasEouClassifier();
     /**
      * <pre>
-     *  Configuration for end of utterance detection model.
+     * Configuration for end of utterance detection model.
      * </pre>
      *
      * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
@@ -10825,7 +11800,7 @@ public final class Stt {
     yandex.cloud.api.ai.stt.v3.Stt.EouClassifierOptions getEouClassifier();
     /**
      * <pre>
-     *  Configuration for end of utterance detection model.
+     * Configuration for end of utterance detection model.
      * </pre>
      *
      * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
@@ -10834,7 +11809,7 @@ public final class Stt {
 
     /**
      * <pre>
-     *  Configuration for classifiers over speech recognition.
+     * Configuration for classifiers over speech recognition.
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
@@ -10843,7 +11818,7 @@ public final class Stt {
     boolean hasRecognitionClassifier();
     /**
      * <pre>
-     *  Configuration for classifiers over speech recognition.
+     * Configuration for classifiers over speech recognition.
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
@@ -10852,12 +11827,39 @@ public final class Stt {
     yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions getRecognitionClassifier();
     /**
      * <pre>
-     *  Configuration for classifiers over speech recognition.
+     * Configuration for classifiers over speech recognition.
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
      */
     yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptionsOrBuilder getRecognitionClassifierOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration for speech analysis over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 4;</code>
+     * @return Whether the speechAnalysis field is set.
+     */
+    boolean hasSpeechAnalysis();
+    /**
+     * <pre>
+     * Configuration for speech analysis over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 4;</code>
+     * @return The speechAnalysis.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions getSpeechAnalysis();
+    /**
+     * <pre>
+     * Configuration for speech analysis over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 4;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptionsOrBuilder getSpeechAnalysisOrBuilder();
   }
   /**
    * Protobuf type {@code speechkit.stt.v3.StreamingOptions}
@@ -10943,6 +11945,19 @@ public final class Stt {
 
               break;
             }
+            case 34: {
+              yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.Builder subBuilder = null;
+              if (speechAnalysis_ != null) {
+                subBuilder = speechAnalysis_.toBuilder();
+              }
+              speechAnalysis_ = input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(speechAnalysis_);
+                speechAnalysis_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -10979,7 +11994,7 @@ public final class Stt {
     private yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions recognitionModel_;
     /**
      * <pre>
-     *  Configuration for speech recognition model.
+     * Configuration for speech recognition model.
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 1;</code>
@@ -10991,7 +12006,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Configuration for speech recognition model.
+     * Configuration for speech recognition model.
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 1;</code>
@@ -11003,7 +12018,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Configuration for speech recognition model.
+     * Configuration for speech recognition model.
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 1;</code>
@@ -11017,7 +12032,7 @@ public final class Stt {
     private yandex.cloud.api.ai.stt.v3.Stt.EouClassifierOptions eouClassifier_;
     /**
      * <pre>
-     *  Configuration for end of utterance detection model.
+     * Configuration for end of utterance detection model.
      * </pre>
      *
      * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
@@ -11029,7 +12044,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Configuration for end of utterance detection model.
+     * Configuration for end of utterance detection model.
      * </pre>
      *
      * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
@@ -11041,7 +12056,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Configuration for end of utterance detection model.
+     * Configuration for end of utterance detection model.
      * </pre>
      *
      * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
@@ -11055,7 +12070,7 @@ public final class Stt {
     private yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions recognitionClassifier_;
     /**
      * <pre>
-     *  Configuration for classifiers over speech recognition.
+     * Configuration for classifiers over speech recognition.
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
@@ -11067,7 +12082,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Configuration for classifiers over speech recognition.
+     * Configuration for classifiers over speech recognition.
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
@@ -11079,7 +12094,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Configuration for classifiers over speech recognition.
+     * Configuration for classifiers over speech recognition.
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
@@ -11087,6 +12102,44 @@ public final class Stt {
     @java.lang.Override
     public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptionsOrBuilder getRecognitionClassifierOrBuilder() {
       return getRecognitionClassifier();
+    }
+
+    public static final int SPEECH_ANALYSIS_FIELD_NUMBER = 4;
+    private yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions speechAnalysis_;
+    /**
+     * <pre>
+     * Configuration for speech analysis over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 4;</code>
+     * @return Whether the speechAnalysis field is set.
+     */
+    @java.lang.Override
+    public boolean hasSpeechAnalysis() {
+      return speechAnalysis_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for speech analysis over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 4;</code>
+     * @return The speechAnalysis.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions getSpeechAnalysis() {
+      return speechAnalysis_ == null ? yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.getDefaultInstance() : speechAnalysis_;
+    }
+    /**
+     * <pre>
+     * Configuration for speech analysis over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptionsOrBuilder getSpeechAnalysisOrBuilder() {
+      return getSpeechAnalysis();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -11112,6 +12165,9 @@ public final class Stt {
       if (recognitionClassifier_ != null) {
         output.writeMessage(3, getRecognitionClassifier());
       }
+      if (speechAnalysis_ != null) {
+        output.writeMessage(4, getSpeechAnalysis());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -11132,6 +12188,10 @@ public final class Stt {
       if (recognitionClassifier_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getRecognitionClassifier());
+      }
+      if (speechAnalysis_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getSpeechAnalysis());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11163,6 +12223,11 @@ public final class Stt {
         if (!getRecognitionClassifier()
             .equals(other.getRecognitionClassifier())) return false;
       }
+      if (hasSpeechAnalysis() != other.hasSpeechAnalysis()) return false;
+      if (hasSpeechAnalysis()) {
+        if (!getSpeechAnalysis()
+            .equals(other.getSpeechAnalysis())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11185,6 +12250,10 @@ public final class Stt {
       if (hasRecognitionClassifier()) {
         hash = (37 * hash) + RECOGNITION_CLASSIFIER_FIELD_NUMBER;
         hash = (53 * hash) + getRecognitionClassifier().hashCode();
+      }
+      if (hasSpeechAnalysis()) {
+        hash = (37 * hash) + SPEECH_ANALYSIS_FIELD_NUMBER;
+        hash = (53 * hash) + getSpeechAnalysis().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -11337,6 +12406,12 @@ public final class Stt {
           recognitionClassifier_ = null;
           recognitionClassifierBuilder_ = null;
         }
+        if (speechAnalysisBuilder_ == null) {
+          speechAnalysis_ = null;
+        } else {
+          speechAnalysis_ = null;
+          speechAnalysisBuilder_ = null;
+        }
         return this;
       }
 
@@ -11377,6 +12452,11 @@ public final class Stt {
           result.recognitionClassifier_ = recognitionClassifier_;
         } else {
           result.recognitionClassifier_ = recognitionClassifierBuilder_.build();
+        }
+        if (speechAnalysisBuilder_ == null) {
+          result.speechAnalysis_ = speechAnalysis_;
+        } else {
+          result.speechAnalysis_ = speechAnalysisBuilder_.build();
         }
         onBuilt();
         return result;
@@ -11435,6 +12515,9 @@ public final class Stt {
         if (other.hasRecognitionClassifier()) {
           mergeRecognitionClassifier(other.getRecognitionClassifier());
         }
+        if (other.hasSpeechAnalysis()) {
+          mergeSpeechAnalysis(other.getSpeechAnalysis());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -11469,7 +12552,7 @@ public final class Stt {
           yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions, yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptionsOrBuilder> recognitionModelBuilder_;
       /**
        * <pre>
-       *  Configuration for speech recognition model.
+       * Configuration for speech recognition model.
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 1;</code>
@@ -11480,7 +12563,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for speech recognition model.
+       * Configuration for speech recognition model.
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 1;</code>
@@ -11495,7 +12578,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for speech recognition model.
+       * Configuration for speech recognition model.
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 1;</code>
@@ -11515,7 +12598,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for speech recognition model.
+       * Configuration for speech recognition model.
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 1;</code>
@@ -11533,7 +12616,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for speech recognition model.
+       * Configuration for speech recognition model.
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 1;</code>
@@ -11555,7 +12638,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for speech recognition model.
+       * Configuration for speech recognition model.
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 1;</code>
@@ -11573,7 +12656,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for speech recognition model.
+       * Configuration for speech recognition model.
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 1;</code>
@@ -11585,7 +12668,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for speech recognition model.
+       * Configuration for speech recognition model.
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 1;</code>
@@ -11600,7 +12683,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for speech recognition model.
+       * Configuration for speech recognition model.
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 1;</code>
@@ -11624,7 +12707,7 @@ public final class Stt {
           yandex.cloud.api.ai.stt.v3.Stt.EouClassifierOptions, yandex.cloud.api.ai.stt.v3.Stt.EouClassifierOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.EouClassifierOptionsOrBuilder> eouClassifierBuilder_;
       /**
        * <pre>
-       *  Configuration for end of utterance detection model.
+       * Configuration for end of utterance detection model.
        * </pre>
        *
        * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
@@ -11635,7 +12718,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for end of utterance detection model.
+       * Configuration for end of utterance detection model.
        * </pre>
        *
        * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
@@ -11650,7 +12733,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for end of utterance detection model.
+       * Configuration for end of utterance detection model.
        * </pre>
        *
        * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
@@ -11670,7 +12753,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for end of utterance detection model.
+       * Configuration for end of utterance detection model.
        * </pre>
        *
        * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
@@ -11688,7 +12771,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for end of utterance detection model.
+       * Configuration for end of utterance detection model.
        * </pre>
        *
        * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
@@ -11710,7 +12793,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for end of utterance detection model.
+       * Configuration for end of utterance detection model.
        * </pre>
        *
        * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
@@ -11728,7 +12811,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for end of utterance detection model.
+       * Configuration for end of utterance detection model.
        * </pre>
        *
        * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
@@ -11740,7 +12823,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for end of utterance detection model.
+       * Configuration for end of utterance detection model.
        * </pre>
        *
        * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
@@ -11755,7 +12838,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for end of utterance detection model.
+       * Configuration for end of utterance detection model.
        * </pre>
        *
        * <code>.speechkit.stt.v3.EouClassifierOptions eou_classifier = 2;</code>
@@ -11779,7 +12862,7 @@ public final class Stt {
           yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptionsOrBuilder> recognitionClassifierBuilder_;
       /**
        * <pre>
-       *  Configuration for classifiers over speech recognition.
+       * Configuration for classifiers over speech recognition.
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
@@ -11790,7 +12873,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for classifiers over speech recognition.
+       * Configuration for classifiers over speech recognition.
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
@@ -11805,7 +12888,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for classifiers over speech recognition.
+       * Configuration for classifiers over speech recognition.
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
@@ -11825,7 +12908,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for classifiers over speech recognition.
+       * Configuration for classifiers over speech recognition.
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
@@ -11843,7 +12926,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for classifiers over speech recognition.
+       * Configuration for classifiers over speech recognition.
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
@@ -11865,7 +12948,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for classifiers over speech recognition.
+       * Configuration for classifiers over speech recognition.
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
@@ -11883,7 +12966,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for classifiers over speech recognition.
+       * Configuration for classifiers over speech recognition.
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
@@ -11895,7 +12978,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for classifiers over speech recognition.
+       * Configuration for classifiers over speech recognition.
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
@@ -11910,7 +12993,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Configuration for classifiers over speech recognition.
+       * Configuration for classifiers over speech recognition.
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 3;</code>
@@ -11927,6 +13010,161 @@ public final class Stt {
           recognitionClassifier_ = null;
         }
         return recognitionClassifierBuilder_;
+      }
+
+      private yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions speechAnalysis_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions, yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptionsOrBuilder> speechAnalysisBuilder_;
+      /**
+       * <pre>
+       * Configuration for speech analysis over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 4;</code>
+       * @return Whether the speechAnalysis field is set.
+       */
+      public boolean hasSpeechAnalysis() {
+        return speechAnalysisBuilder_ != null || speechAnalysis_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for speech analysis over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 4;</code>
+       * @return The speechAnalysis.
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions getSpeechAnalysis() {
+        if (speechAnalysisBuilder_ == null) {
+          return speechAnalysis_ == null ? yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.getDefaultInstance() : speechAnalysis_;
+        } else {
+          return speechAnalysisBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for speech analysis over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 4;</code>
+       */
+      public Builder setSpeechAnalysis(yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions value) {
+        if (speechAnalysisBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          speechAnalysis_ = value;
+          onChanged();
+        } else {
+          speechAnalysisBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for speech analysis over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 4;</code>
+       */
+      public Builder setSpeechAnalysis(
+          yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.Builder builderForValue) {
+        if (speechAnalysisBuilder_ == null) {
+          speechAnalysis_ = builderForValue.build();
+          onChanged();
+        } else {
+          speechAnalysisBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for speech analysis over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 4;</code>
+       */
+      public Builder mergeSpeechAnalysis(yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions value) {
+        if (speechAnalysisBuilder_ == null) {
+          if (speechAnalysis_ != null) {
+            speechAnalysis_ =
+              yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.newBuilder(speechAnalysis_).mergeFrom(value).buildPartial();
+          } else {
+            speechAnalysis_ = value;
+          }
+          onChanged();
+        } else {
+          speechAnalysisBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for speech analysis over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 4;</code>
+       */
+      public Builder clearSpeechAnalysis() {
+        if (speechAnalysisBuilder_ == null) {
+          speechAnalysis_ = null;
+          onChanged();
+        } else {
+          speechAnalysis_ = null;
+          speechAnalysisBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for speech analysis over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 4;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.Builder getSpeechAnalysisBuilder() {
+        
+        onChanged();
+        return getSpeechAnalysisFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for speech analysis over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 4;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptionsOrBuilder getSpeechAnalysisOrBuilder() {
+        if (speechAnalysisBuilder_ != null) {
+          return speechAnalysisBuilder_.getMessageOrBuilder();
+        } else {
+          return speechAnalysis_ == null ?
+              yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.getDefaultInstance() : speechAnalysis_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for speech analysis over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions, yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptionsOrBuilder> 
+          getSpeechAnalysisFieldBuilder() {
+        if (speechAnalysisBuilder_ == null) {
+          speechAnalysisBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions, yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptionsOrBuilder>(
+                  getSpeechAnalysis(),
+                  getParentForChildren(),
+                  isClean());
+          speechAnalysis_ = null;
+        }
+        return speechAnalysisBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -15103,13 +16341,1675 @@ public final class Stt {
 
   }
 
+  public interface RecognizeFileRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.RecognizeFileRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Bytes with data
+     * </pre>
+     *
+     * <code>bytes content = 1;</code>
+     * @return Whether the content field is set.
+     */
+    boolean hasContent();
+    /**
+     * <pre>
+     * Bytes with data
+     * </pre>
+     *
+     * <code>bytes content = 1;</code>
+     * @return The content.
+     */
+    com.google.protobuf.ByteString getContent();
+
+    /**
+     * <pre>
+     * S3 data url
+     * </pre>
+     *
+     * <code>string uri = 2;</code>
+     * @return Whether the uri field is set.
+     */
+    boolean hasUri();
+    /**
+     * <pre>
+     * S3 data url
+     * </pre>
+     *
+     * <code>string uri = 2;</code>
+     * @return The uri.
+     */
+    java.lang.String getUri();
+    /**
+     * <pre>
+     * S3 data url
+     * </pre>
+     *
+     * <code>string uri = 2;</code>
+     * @return The bytes for uri.
+     */
+    com.google.protobuf.ByteString
+        getUriBytes();
+
+    /**
+     * <pre>
+     * Configuration for speech recognition model.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 3;</code>
+     * @return Whether the recognitionModel field is set.
+     */
+    boolean hasRecognitionModel();
+    /**
+     * <pre>
+     * Configuration for speech recognition model.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 3;</code>
+     * @return The recognitionModel.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions getRecognitionModel();
+    /**
+     * <pre>
+     * Configuration for speech recognition model.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 3;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptionsOrBuilder getRecognitionModelOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration for classifiers over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 4;</code>
+     * @return Whether the recognitionClassifier field is set.
+     */
+    boolean hasRecognitionClassifier();
+    /**
+     * <pre>
+     * Configuration for classifiers over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 4;</code>
+     * @return The recognitionClassifier.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions getRecognitionClassifier();
+    /**
+     * <pre>
+     * Configuration for classifiers over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 4;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptionsOrBuilder getRecognitionClassifierOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration for speech analysis over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 5;</code>
+     * @return Whether the speechAnalysis field is set.
+     */
+    boolean hasSpeechAnalysis();
+    /**
+     * <pre>
+     * Configuration for speech analysis over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 5;</code>
+     * @return The speechAnalysis.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions getSpeechAnalysis();
+    /**
+     * <pre>
+     * Configuration for speech analysis over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 5;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptionsOrBuilder getSpeechAnalysisOrBuilder();
+
+    public yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest.AudioSourceCase getAudioSourceCase();
+  }
+  /**
+   * Protobuf type {@code speechkit.stt.v3.RecognizeFileRequest}
+   */
+  public static final class RecognizeFileRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.stt.v3.RecognizeFileRequest)
+      RecognizeFileRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RecognizeFileRequest.newBuilder() to construct.
+    private RecognizeFileRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RecognizeFileRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RecognizeFileRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RecognizeFileRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              audioSource_ = input.readBytes();
+              audioSourceCase_ = 1;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              audioSourceCase_ = 2;
+              audioSource_ = s;
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.Builder subBuilder = null;
+              if (recognitionModel_ != null) {
+                subBuilder = recognitionModel_.toBuilder();
+              }
+              recognitionModel_ = input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(recognitionModel_);
+                recognitionModel_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.Builder subBuilder = null;
+              if (recognitionClassifier_ != null) {
+                subBuilder = recognitionClassifier_.toBuilder();
+              }
+              recognitionClassifier_ = input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(recognitionClassifier_);
+                recognitionClassifier_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.Builder subBuilder = null;
+              if (speechAnalysis_ != null) {
+                subBuilder = speechAnalysis_.toBuilder();
+              }
+              speechAnalysis_ = input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(speechAnalysis_);
+                speechAnalysis_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognizeFileRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognizeFileRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest.class, yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest.Builder.class);
+    }
+
+    private int audioSourceCase_ = 0;
+    private java.lang.Object audioSource_;
+    public enum AudioSourceCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      CONTENT(1),
+      URI(2),
+      AUDIOSOURCE_NOT_SET(0);
+      private final int value;
+      private AudioSourceCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static AudioSourceCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static AudioSourceCase forNumber(int value) {
+        switch (value) {
+          case 1: return CONTENT;
+          case 2: return URI;
+          case 0: return AUDIOSOURCE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public AudioSourceCase
+    getAudioSourceCase() {
+      return AudioSourceCase.forNumber(
+          audioSourceCase_);
+    }
+
+    public static final int CONTENT_FIELD_NUMBER = 1;
+    /**
+     * <pre>
+     * Bytes with data
+     * </pre>
+     *
+     * <code>bytes content = 1;</code>
+     * @return Whether the content field is set.
+     */
+    @java.lang.Override
+    public boolean hasContent() {
+      return audioSourceCase_ == 1;
+    }
+    /**
+     * <pre>
+     * Bytes with data
+     * </pre>
+     *
+     * <code>bytes content = 1;</code>
+     * @return The content.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getContent() {
+      if (audioSourceCase_ == 1) {
+        return (com.google.protobuf.ByteString) audioSource_;
+      }
+      return com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final int URI_FIELD_NUMBER = 2;
+    /**
+     * <pre>
+     * S3 data url
+     * </pre>
+     *
+     * <code>string uri = 2;</code>
+     * @return Whether the uri field is set.
+     */
+    public boolean hasUri() {
+      return audioSourceCase_ == 2;
+    }
+    /**
+     * <pre>
+     * S3 data url
+     * </pre>
+     *
+     * <code>string uri = 2;</code>
+     * @return The uri.
+     */
+    public java.lang.String getUri() {
+      java.lang.Object ref = "";
+      if (audioSourceCase_ == 2) {
+        ref = audioSource_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (audioSourceCase_ == 2) {
+          audioSource_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * S3 data url
+     * </pre>
+     *
+     * <code>string uri = 2;</code>
+     * @return The bytes for uri.
+     */
+    public com.google.protobuf.ByteString
+        getUriBytes() {
+      java.lang.Object ref = "";
+      if (audioSourceCase_ == 2) {
+        ref = audioSource_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (audioSourceCase_ == 2) {
+          audioSource_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECOGNITION_MODEL_FIELD_NUMBER = 3;
+    private yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions recognitionModel_;
+    /**
+     * <pre>
+     * Configuration for speech recognition model.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 3;</code>
+     * @return Whether the recognitionModel field is set.
+     */
+    @java.lang.Override
+    public boolean hasRecognitionModel() {
+      return recognitionModel_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for speech recognition model.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 3;</code>
+     * @return The recognitionModel.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions getRecognitionModel() {
+      return recognitionModel_ == null ? yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.getDefaultInstance() : recognitionModel_;
+    }
+    /**
+     * <pre>
+     * Configuration for speech recognition model.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptionsOrBuilder getRecognitionModelOrBuilder() {
+      return getRecognitionModel();
+    }
+
+    public static final int RECOGNITION_CLASSIFIER_FIELD_NUMBER = 4;
+    private yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions recognitionClassifier_;
+    /**
+     * <pre>
+     * Configuration for classifiers over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 4;</code>
+     * @return Whether the recognitionClassifier field is set.
+     */
+    @java.lang.Override
+    public boolean hasRecognitionClassifier() {
+      return recognitionClassifier_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for classifiers over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 4;</code>
+     * @return The recognitionClassifier.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions getRecognitionClassifier() {
+      return recognitionClassifier_ == null ? yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.getDefaultInstance() : recognitionClassifier_;
+    }
+    /**
+     * <pre>
+     * Configuration for classifiers over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptionsOrBuilder getRecognitionClassifierOrBuilder() {
+      return getRecognitionClassifier();
+    }
+
+    public static final int SPEECH_ANALYSIS_FIELD_NUMBER = 5;
+    private yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions speechAnalysis_;
+    /**
+     * <pre>
+     * Configuration for speech analysis over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 5;</code>
+     * @return Whether the speechAnalysis field is set.
+     */
+    @java.lang.Override
+    public boolean hasSpeechAnalysis() {
+      return speechAnalysis_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for speech analysis over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 5;</code>
+     * @return The speechAnalysis.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions getSpeechAnalysis() {
+      return speechAnalysis_ == null ? yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.getDefaultInstance() : speechAnalysis_;
+    }
+    /**
+     * <pre>
+     * Configuration for speech analysis over speech recognition.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptionsOrBuilder getSpeechAnalysisOrBuilder() {
+      return getSpeechAnalysis();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (audioSourceCase_ == 1) {
+        output.writeBytes(
+            1, (com.google.protobuf.ByteString) audioSource_);
+      }
+      if (audioSourceCase_ == 2) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, audioSource_);
+      }
+      if (recognitionModel_ != null) {
+        output.writeMessage(3, getRecognitionModel());
+      }
+      if (recognitionClassifier_ != null) {
+        output.writeMessage(4, getRecognitionClassifier());
+      }
+      if (speechAnalysis_ != null) {
+        output.writeMessage(5, getSpeechAnalysis());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (audioSourceCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(
+              1, (com.google.protobuf.ByteString) audioSource_);
+      }
+      if (audioSourceCase_ == 2) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, audioSource_);
+      }
+      if (recognitionModel_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRecognitionModel());
+      }
+      if (recognitionClassifier_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getRecognitionClassifier());
+      }
+      if (speechAnalysis_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getSpeechAnalysis());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest other = (yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest) obj;
+
+      if (hasRecognitionModel() != other.hasRecognitionModel()) return false;
+      if (hasRecognitionModel()) {
+        if (!getRecognitionModel()
+            .equals(other.getRecognitionModel())) return false;
+      }
+      if (hasRecognitionClassifier() != other.hasRecognitionClassifier()) return false;
+      if (hasRecognitionClassifier()) {
+        if (!getRecognitionClassifier()
+            .equals(other.getRecognitionClassifier())) return false;
+      }
+      if (hasSpeechAnalysis() != other.hasSpeechAnalysis()) return false;
+      if (hasSpeechAnalysis()) {
+        if (!getSpeechAnalysis()
+            .equals(other.getSpeechAnalysis())) return false;
+      }
+      if (!getAudioSourceCase().equals(other.getAudioSourceCase())) return false;
+      switch (audioSourceCase_) {
+        case 1:
+          if (!getContent()
+              .equals(other.getContent())) return false;
+          break;
+        case 2:
+          if (!getUri()
+              .equals(other.getUri())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasRecognitionModel()) {
+        hash = (37 * hash) + RECOGNITION_MODEL_FIELD_NUMBER;
+        hash = (53 * hash) + getRecognitionModel().hashCode();
+      }
+      if (hasRecognitionClassifier()) {
+        hash = (37 * hash) + RECOGNITION_CLASSIFIER_FIELD_NUMBER;
+        hash = (53 * hash) + getRecognitionClassifier().hashCode();
+      }
+      if (hasSpeechAnalysis()) {
+        hash = (37 * hash) + SPEECH_ANALYSIS_FIELD_NUMBER;
+        hash = (53 * hash) + getSpeechAnalysis().hashCode();
+      }
+      switch (audioSourceCase_) {
+        case 1:
+          hash = (37 * hash) + CONTENT_FIELD_NUMBER;
+          hash = (53 * hash) + getContent().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + URI_FIELD_NUMBER;
+          hash = (53 * hash) + getUri().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code speechkit.stt.v3.RecognizeFileRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.RecognizeFileRequest)
+        yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognizeFileRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognizeFileRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest.class, yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (recognitionModelBuilder_ == null) {
+          recognitionModel_ = null;
+        } else {
+          recognitionModel_ = null;
+          recognitionModelBuilder_ = null;
+        }
+        if (recognitionClassifierBuilder_ == null) {
+          recognitionClassifier_ = null;
+        } else {
+          recognitionClassifier_ = null;
+          recognitionClassifierBuilder_ = null;
+        }
+        if (speechAnalysisBuilder_ == null) {
+          speechAnalysis_ = null;
+        } else {
+          speechAnalysis_ = null;
+          speechAnalysisBuilder_ = null;
+        }
+        audioSourceCase_ = 0;
+        audioSource_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_RecognizeFileRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest build() {
+        yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest buildPartial() {
+        yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest result = new yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest(this);
+        if (audioSourceCase_ == 1) {
+          result.audioSource_ = audioSource_;
+        }
+        if (audioSourceCase_ == 2) {
+          result.audioSource_ = audioSource_;
+        }
+        if (recognitionModelBuilder_ == null) {
+          result.recognitionModel_ = recognitionModel_;
+        } else {
+          result.recognitionModel_ = recognitionModelBuilder_.build();
+        }
+        if (recognitionClassifierBuilder_ == null) {
+          result.recognitionClassifier_ = recognitionClassifier_;
+        } else {
+          result.recognitionClassifier_ = recognitionClassifierBuilder_.build();
+        }
+        if (speechAnalysisBuilder_ == null) {
+          result.speechAnalysis_ = speechAnalysis_;
+        } else {
+          result.speechAnalysis_ = speechAnalysisBuilder_.build();
+        }
+        result.audioSourceCase_ = audioSourceCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest) {
+          return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest other) {
+        if (other == yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest.getDefaultInstance()) return this;
+        if (other.hasRecognitionModel()) {
+          mergeRecognitionModel(other.getRecognitionModel());
+        }
+        if (other.hasRecognitionClassifier()) {
+          mergeRecognitionClassifier(other.getRecognitionClassifier());
+        }
+        if (other.hasSpeechAnalysis()) {
+          mergeSpeechAnalysis(other.getSpeechAnalysis());
+        }
+        switch (other.getAudioSourceCase()) {
+          case CONTENT: {
+            setContent(other.getContent());
+            break;
+          }
+          case URI: {
+            audioSourceCase_ = 2;
+            audioSource_ = other.audioSource_;
+            onChanged();
+            break;
+          }
+          case AUDIOSOURCE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int audioSourceCase_ = 0;
+      private java.lang.Object audioSource_;
+      public AudioSourceCase
+          getAudioSourceCase() {
+        return AudioSourceCase.forNumber(
+            audioSourceCase_);
+      }
+
+      public Builder clearAudioSource() {
+        audioSourceCase_ = 0;
+        audioSource_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      /**
+       * <pre>
+       * Bytes with data
+       * </pre>
+       *
+       * <code>bytes content = 1;</code>
+       * @return Whether the content field is set.
+       */
+      public boolean hasContent() {
+        return audioSourceCase_ == 1;
+      }
+      /**
+       * <pre>
+       * Bytes with data
+       * </pre>
+       *
+       * <code>bytes content = 1;</code>
+       * @return The content.
+       */
+      public com.google.protobuf.ByteString getContent() {
+        if (audioSourceCase_ == 1) {
+          return (com.google.protobuf.ByteString) audioSource_;
+        }
+        return com.google.protobuf.ByteString.EMPTY;
+      }
+      /**
+       * <pre>
+       * Bytes with data
+       * </pre>
+       *
+       * <code>bytes content = 1;</code>
+       * @param value The content to set.
+       * @return This builder for chaining.
+       */
+      public Builder setContent(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  audioSourceCase_ = 1;
+        audioSource_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Bytes with data
+       * </pre>
+       *
+       * <code>bytes content = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearContent() {
+        if (audioSourceCase_ == 1) {
+          audioSourceCase_ = 0;
+          audioSource_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      /**
+       * <pre>
+       * S3 data url
+       * </pre>
+       *
+       * <code>string uri = 2;</code>
+       * @return Whether the uri field is set.
+       */
+      @java.lang.Override
+      public boolean hasUri() {
+        return audioSourceCase_ == 2;
+      }
+      /**
+       * <pre>
+       * S3 data url
+       * </pre>
+       *
+       * <code>string uri = 2;</code>
+       * @return The uri.
+       */
+      @java.lang.Override
+      public java.lang.String getUri() {
+        java.lang.Object ref = "";
+        if (audioSourceCase_ == 2) {
+          ref = audioSource_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (audioSourceCase_ == 2) {
+            audioSource_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * S3 data url
+       * </pre>
+       *
+       * <code>string uri = 2;</code>
+       * @return The bytes for uri.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getUriBytes() {
+        java.lang.Object ref = "";
+        if (audioSourceCase_ == 2) {
+          ref = audioSource_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (audioSourceCase_ == 2) {
+            audioSource_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * S3 data url
+       * </pre>
+       *
+       * <code>string uri = 2;</code>
+       * @param value The uri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUri(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  audioSourceCase_ = 2;
+        audioSource_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * S3 data url
+       * </pre>
+       *
+       * <code>string uri = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUri() {
+        if (audioSourceCase_ == 2) {
+          audioSourceCase_ = 0;
+          audioSource_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * S3 data url
+       * </pre>
+       *
+       * <code>string uri = 2;</code>
+       * @param value The bytes for uri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        audioSourceCase_ = 2;
+        audioSource_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions recognitionModel_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions, yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptionsOrBuilder> recognitionModelBuilder_;
+      /**
+       * <pre>
+       * Configuration for speech recognition model.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 3;</code>
+       * @return Whether the recognitionModel field is set.
+       */
+      public boolean hasRecognitionModel() {
+        return recognitionModelBuilder_ != null || recognitionModel_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for speech recognition model.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 3;</code>
+       * @return The recognitionModel.
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions getRecognitionModel() {
+        if (recognitionModelBuilder_ == null) {
+          return recognitionModel_ == null ? yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.getDefaultInstance() : recognitionModel_;
+        } else {
+          return recognitionModelBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for speech recognition model.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 3;</code>
+       */
+      public Builder setRecognitionModel(yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions value) {
+        if (recognitionModelBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          recognitionModel_ = value;
+          onChanged();
+        } else {
+          recognitionModelBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for speech recognition model.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 3;</code>
+       */
+      public Builder setRecognitionModel(
+          yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.Builder builderForValue) {
+        if (recognitionModelBuilder_ == null) {
+          recognitionModel_ = builderForValue.build();
+          onChanged();
+        } else {
+          recognitionModelBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for speech recognition model.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 3;</code>
+       */
+      public Builder mergeRecognitionModel(yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions value) {
+        if (recognitionModelBuilder_ == null) {
+          if (recognitionModel_ != null) {
+            recognitionModel_ =
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.newBuilder(recognitionModel_).mergeFrom(value).buildPartial();
+          } else {
+            recognitionModel_ = value;
+          }
+          onChanged();
+        } else {
+          recognitionModelBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for speech recognition model.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 3;</code>
+       */
+      public Builder clearRecognitionModel() {
+        if (recognitionModelBuilder_ == null) {
+          recognitionModel_ = null;
+          onChanged();
+        } else {
+          recognitionModel_ = null;
+          recognitionModelBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for speech recognition model.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 3;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.Builder getRecognitionModelBuilder() {
+        
+        onChanged();
+        return getRecognitionModelFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for speech recognition model.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 3;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptionsOrBuilder getRecognitionModelOrBuilder() {
+        if (recognitionModelBuilder_ != null) {
+          return recognitionModelBuilder_.getMessageOrBuilder();
+        } else {
+          return recognitionModel_ == null ?
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.getDefaultInstance() : recognitionModel_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for speech recognition model.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionModelOptions recognition_model = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions, yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptionsOrBuilder> 
+          getRecognitionModelFieldBuilder() {
+        if (recognitionModelBuilder_ == null) {
+          recognitionModelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions, yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionModelOptionsOrBuilder>(
+                  getRecognitionModel(),
+                  getParentForChildren(),
+                  isClean());
+          recognitionModel_ = null;
+        }
+        return recognitionModelBuilder_;
+      }
+
+      private yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions recognitionClassifier_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptionsOrBuilder> recognitionClassifierBuilder_;
+      /**
+       * <pre>
+       * Configuration for classifiers over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 4;</code>
+       * @return Whether the recognitionClassifier field is set.
+       */
+      public boolean hasRecognitionClassifier() {
+        return recognitionClassifierBuilder_ != null || recognitionClassifier_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for classifiers over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 4;</code>
+       * @return The recognitionClassifier.
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions getRecognitionClassifier() {
+        if (recognitionClassifierBuilder_ == null) {
+          return recognitionClassifier_ == null ? yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.getDefaultInstance() : recognitionClassifier_;
+        } else {
+          return recognitionClassifierBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for classifiers over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 4;</code>
+       */
+      public Builder setRecognitionClassifier(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions value) {
+        if (recognitionClassifierBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          recognitionClassifier_ = value;
+          onChanged();
+        } else {
+          recognitionClassifierBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for classifiers over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 4;</code>
+       */
+      public Builder setRecognitionClassifier(
+          yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.Builder builderForValue) {
+        if (recognitionClassifierBuilder_ == null) {
+          recognitionClassifier_ = builderForValue.build();
+          onChanged();
+        } else {
+          recognitionClassifierBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for classifiers over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 4;</code>
+       */
+      public Builder mergeRecognitionClassifier(yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions value) {
+        if (recognitionClassifierBuilder_ == null) {
+          if (recognitionClassifier_ != null) {
+            recognitionClassifier_ =
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.newBuilder(recognitionClassifier_).mergeFrom(value).buildPartial();
+          } else {
+            recognitionClassifier_ = value;
+          }
+          onChanged();
+        } else {
+          recognitionClassifierBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for classifiers over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 4;</code>
+       */
+      public Builder clearRecognitionClassifier() {
+        if (recognitionClassifierBuilder_ == null) {
+          recognitionClassifier_ = null;
+          onChanged();
+        } else {
+          recognitionClassifier_ = null;
+          recognitionClassifierBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for classifiers over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 4;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.Builder getRecognitionClassifierBuilder() {
+        
+        onChanged();
+        return getRecognitionClassifierFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for classifiers over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 4;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptionsOrBuilder getRecognitionClassifierOrBuilder() {
+        if (recognitionClassifierBuilder_ != null) {
+          return recognitionClassifierBuilder_.getMessageOrBuilder();
+        } else {
+          return recognitionClassifier_ == null ?
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.getDefaultInstance() : recognitionClassifier_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for classifiers over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.RecognitionClassifierOptions recognition_classifier = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptionsOrBuilder> 
+          getRecognitionClassifierFieldBuilder() {
+        if (recognitionClassifierBuilder_ == null) {
+          recognitionClassifierBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierOptionsOrBuilder>(
+                  getRecognitionClassifier(),
+                  getParentForChildren(),
+                  isClean());
+          recognitionClassifier_ = null;
+        }
+        return recognitionClassifierBuilder_;
+      }
+
+      private yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions speechAnalysis_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions, yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptionsOrBuilder> speechAnalysisBuilder_;
+      /**
+       * <pre>
+       * Configuration for speech analysis over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 5;</code>
+       * @return Whether the speechAnalysis field is set.
+       */
+      public boolean hasSpeechAnalysis() {
+        return speechAnalysisBuilder_ != null || speechAnalysis_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for speech analysis over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 5;</code>
+       * @return The speechAnalysis.
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions getSpeechAnalysis() {
+        if (speechAnalysisBuilder_ == null) {
+          return speechAnalysis_ == null ? yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.getDefaultInstance() : speechAnalysis_;
+        } else {
+          return speechAnalysisBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for speech analysis over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 5;</code>
+       */
+      public Builder setSpeechAnalysis(yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions value) {
+        if (speechAnalysisBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          speechAnalysis_ = value;
+          onChanged();
+        } else {
+          speechAnalysisBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for speech analysis over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 5;</code>
+       */
+      public Builder setSpeechAnalysis(
+          yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.Builder builderForValue) {
+        if (speechAnalysisBuilder_ == null) {
+          speechAnalysis_ = builderForValue.build();
+          onChanged();
+        } else {
+          speechAnalysisBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for speech analysis over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 5;</code>
+       */
+      public Builder mergeSpeechAnalysis(yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions value) {
+        if (speechAnalysisBuilder_ == null) {
+          if (speechAnalysis_ != null) {
+            speechAnalysis_ =
+              yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.newBuilder(speechAnalysis_).mergeFrom(value).buildPartial();
+          } else {
+            speechAnalysis_ = value;
+          }
+          onChanged();
+        } else {
+          speechAnalysisBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for speech analysis over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 5;</code>
+       */
+      public Builder clearSpeechAnalysis() {
+        if (speechAnalysisBuilder_ == null) {
+          speechAnalysis_ = null;
+          onChanged();
+        } else {
+          speechAnalysis_ = null;
+          speechAnalysisBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for speech analysis over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 5;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.Builder getSpeechAnalysisBuilder() {
+        
+        onChanged();
+        return getSpeechAnalysisFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for speech analysis over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 5;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptionsOrBuilder getSpeechAnalysisOrBuilder() {
+        if (speechAnalysisBuilder_ != null) {
+          return speechAnalysisBuilder_.getMessageOrBuilder();
+        } else {
+          return speechAnalysis_ == null ?
+              yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.getDefaultInstance() : speechAnalysis_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for speech analysis over speech recognition.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions, yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptionsOrBuilder> 
+          getSpeechAnalysisFieldBuilder() {
+        if (speechAnalysisBuilder_ == null) {
+          speechAnalysisBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions, yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptionsOrBuilder>(
+                  getSpeechAnalysis(),
+                  getParentForChildren(),
+                  isClean());
+          speechAnalysis_ = null;
+        }
+        return speechAnalysisBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.RecognizeFileRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.stt.v3.RecognizeFileRequest)
+    private static final yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest();
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RecognizeFileRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RecognizeFileRequest>() {
+      @java.lang.Override
+      public RecognizeFileRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RecognizeFileRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RecognizeFileRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RecognizeFileRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.RecognizeFileRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface WordOrBuilder extends
       // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.Word)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     *  Word text.
+     * Word text.
      * </pre>
      *
      * <code>string text = 1;</code>
@@ -15118,7 +18018,7 @@ public final class Stt {
     java.lang.String getText();
     /**
      * <pre>
-     *  Word text.
+     * Word text.
      * </pre>
      *
      * <code>string text = 1;</code>
@@ -15129,7 +18029,7 @@ public final class Stt {
 
     /**
      * <pre>
-     *  Estimation of word start time in ms.
+     * Estimation of word start time in ms.
      * </pre>
      *
      * <code>int64 start_time_ms = 2;</code>
@@ -15139,7 +18039,7 @@ public final class Stt {
 
     /**
      * <pre>
-     *  Estimation of word end time in ms.
+     * Estimation of word end time in ms.
      * </pre>
      *
      * <code>int64 end_time_ms = 3;</code>
@@ -15249,7 +18149,7 @@ public final class Stt {
     private volatile java.lang.Object text_;
     /**
      * <pre>
-     *  Word text.
+     * Word text.
      * </pre>
      *
      * <code>string text = 1;</code>
@@ -15270,7 +18170,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Word text.
+     * Word text.
      * </pre>
      *
      * <code>string text = 1;</code>
@@ -15295,7 +18195,7 @@ public final class Stt {
     private long startTimeMs_;
     /**
      * <pre>
-     *  Estimation of word start time in ms.
+     * Estimation of word start time in ms.
      * </pre>
      *
      * <code>int64 start_time_ms = 2;</code>
@@ -15310,7 +18210,7 @@ public final class Stt {
     private long endTimeMs_;
     /**
      * <pre>
-     *  Estimation of word end time in ms.
+     * Estimation of word end time in ms.
      * </pre>
      *
      * <code>int64 end_time_ms = 3;</code>
@@ -15666,7 +18566,7 @@ public final class Stt {
       private java.lang.Object text_ = "";
       /**
        * <pre>
-       *  Word text.
+       * Word text.
        * </pre>
        *
        * <code>string text = 1;</code>
@@ -15686,7 +18586,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Word text.
+       * Word text.
        * </pre>
        *
        * <code>string text = 1;</code>
@@ -15707,7 +18607,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Word text.
+       * Word text.
        * </pre>
        *
        * <code>string text = 1;</code>
@@ -15726,7 +18626,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Word text.
+       * Word text.
        * </pre>
        *
        * <code>string text = 1;</code>
@@ -15740,7 +18640,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Word text.
+       * Word text.
        * </pre>
        *
        * <code>string text = 1;</code>
@@ -15762,7 +18662,7 @@ public final class Stt {
       private long startTimeMs_ ;
       /**
        * <pre>
-       *  Estimation of word start time in ms.
+       * Estimation of word start time in ms.
        * </pre>
        *
        * <code>int64 start_time_ms = 2;</code>
@@ -15774,7 +18674,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Estimation of word start time in ms.
+       * Estimation of word start time in ms.
        * </pre>
        *
        * <code>int64 start_time_ms = 2;</code>
@@ -15789,7 +18689,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Estimation of word start time in ms.
+       * Estimation of word start time in ms.
        * </pre>
        *
        * <code>int64 start_time_ms = 2;</code>
@@ -15805,7 +18705,7 @@ public final class Stt {
       private long endTimeMs_ ;
       /**
        * <pre>
-       *  Estimation of word end time in ms.
+       * Estimation of word end time in ms.
        * </pre>
        *
        * <code>int64 end_time_ms = 3;</code>
@@ -15817,7 +18717,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Estimation of word end time in ms.
+       * Estimation of word end time in ms.
        * </pre>
        *
        * <code>int64 end_time_ms = 3;</code>
@@ -15832,7 +18732,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Estimation of word end time in ms.
+       * Estimation of word end time in ms.
        * </pre>
        *
        * <code>int64 end_time_ms = 3;</code>
@@ -20073,8 +22973,8 @@ public final class Stt {
 
     /**
      * <pre>
-     *  How much audio was processed. This time includes trimming silences as well. This cursor is moved after server received enough data
-     *  to update recognition results (includes silence as well).
+     * How much audio was processed. This time includes trimming silences as well. This cursor is moved after server received enough data
+     * to update recognition results (includes silence as well).
      * </pre>
      *
      * <code>int64 partial_time_ms = 3;</code>
@@ -20084,8 +22984,8 @@ public final class Stt {
 
     /**
      * <pre>
-     *  Time of last final. This cursor is moved when server decides that recognition from start of audio until final_time_ms will not change anymore
-     *  usually this even is followed by EOU detection (but this could change in future).
+     * Time of last final. This cursor is moved when server decides that recognition from start of audio until final_time_ms will not change anymore
+     * usually this even is followed by EOU detection (but this could change in future).
      * </pre>
      *
      * <code>int64 final_time_ms = 4;</code>
@@ -20095,7 +22995,7 @@ public final class Stt {
 
     /**
      * <pre>
-     *  This is index of last final server send. Incremented after each new final.
+     * This is index of last final server send. Incremented after each new final.
      * </pre>
      *
      * <code>int64 final_index = 5;</code>
@@ -20105,9 +23005,9 @@ public final class Stt {
 
     /**
      * <pre>
-     *  Estimated time of EOU. Cursor is updated after each new EOU is sent.
-     *  For external classifier this equals to received_data_ms at the moment EOU event arrives.
-     *  For internal classifier this is estimation of time. The time is not exact and has the same guarantees as word timings.
+     * Estimated time of EOU. Cursor is updated after each new EOU is sent.
+     * For external classifier this equals to received_data_ms at the moment EOU event arrives.
+     * For internal classifier this is estimation of time. The time is not exact and has the same guarantees as word timings.
      * </pre>
      *
      * <code>int64 eou_time_ms = 6;</code>
@@ -20260,8 +23160,8 @@ public final class Stt {
     private long partialTimeMs_;
     /**
      * <pre>
-     *  How much audio was processed. This time includes trimming silences as well. This cursor is moved after server received enough data
-     *  to update recognition results (includes silence as well).
+     * How much audio was processed. This time includes trimming silences as well. This cursor is moved after server received enough data
+     * to update recognition results (includes silence as well).
      * </pre>
      *
      * <code>int64 partial_time_ms = 3;</code>
@@ -20276,8 +23176,8 @@ public final class Stt {
     private long finalTimeMs_;
     /**
      * <pre>
-     *  Time of last final. This cursor is moved when server decides that recognition from start of audio until final_time_ms will not change anymore
-     *  usually this even is followed by EOU detection (but this could change in future).
+     * Time of last final. This cursor is moved when server decides that recognition from start of audio until final_time_ms will not change anymore
+     * usually this even is followed by EOU detection (but this could change in future).
      * </pre>
      *
      * <code>int64 final_time_ms = 4;</code>
@@ -20292,7 +23192,7 @@ public final class Stt {
     private long finalIndex_;
     /**
      * <pre>
-     *  This is index of last final server send. Incremented after each new final.
+     * This is index of last final server send. Incremented after each new final.
      * </pre>
      *
      * <code>int64 final_index = 5;</code>
@@ -20307,9 +23207,9 @@ public final class Stt {
     private long eouTimeMs_;
     /**
      * <pre>
-     *  Estimated time of EOU. Cursor is updated after each new EOU is sent.
-     *  For external classifier this equals to received_data_ms at the moment EOU event arrives.
-     *  For internal classifier this is estimation of time. The time is not exact and has the same guarantees as word timings.
+     * Estimated time of EOU. Cursor is updated after each new EOU is sent.
+     * For external classifier this equals to received_data_ms at the moment EOU event arrives.
+     * For internal classifier this is estimation of time. The time is not exact and has the same guarantees as word timings.
      * </pre>
      *
      * <code>int64 eou_time_ms = 6;</code>
@@ -20806,8 +23706,8 @@ public final class Stt {
       private long partialTimeMs_ ;
       /**
        * <pre>
-       *  How much audio was processed. This time includes trimming silences as well. This cursor is moved after server received enough data
-       *  to update recognition results (includes silence as well).
+       * How much audio was processed. This time includes trimming silences as well. This cursor is moved after server received enough data
+       * to update recognition results (includes silence as well).
        * </pre>
        *
        * <code>int64 partial_time_ms = 3;</code>
@@ -20819,8 +23719,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  How much audio was processed. This time includes trimming silences as well. This cursor is moved after server received enough data
-       *  to update recognition results (includes silence as well).
+       * How much audio was processed. This time includes trimming silences as well. This cursor is moved after server received enough data
+       * to update recognition results (includes silence as well).
        * </pre>
        *
        * <code>int64 partial_time_ms = 3;</code>
@@ -20835,8 +23735,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  How much audio was processed. This time includes trimming silences as well. This cursor is moved after server received enough data
-       *  to update recognition results (includes silence as well).
+       * How much audio was processed. This time includes trimming silences as well. This cursor is moved after server received enough data
+       * to update recognition results (includes silence as well).
        * </pre>
        *
        * <code>int64 partial_time_ms = 3;</code>
@@ -20852,8 +23752,8 @@ public final class Stt {
       private long finalTimeMs_ ;
       /**
        * <pre>
-       *  Time of last final. This cursor is moved when server decides that recognition from start of audio until final_time_ms will not change anymore
-       *  usually this even is followed by EOU detection (but this could change in future).
+       * Time of last final. This cursor is moved when server decides that recognition from start of audio until final_time_ms will not change anymore
+       * usually this even is followed by EOU detection (but this could change in future).
        * </pre>
        *
        * <code>int64 final_time_ms = 4;</code>
@@ -20865,8 +23765,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Time of last final. This cursor is moved when server decides that recognition from start of audio until final_time_ms will not change anymore
-       *  usually this even is followed by EOU detection (but this could change in future).
+       * Time of last final. This cursor is moved when server decides that recognition from start of audio until final_time_ms will not change anymore
+       * usually this even is followed by EOU detection (but this could change in future).
        * </pre>
        *
        * <code>int64 final_time_ms = 4;</code>
@@ -20881,8 +23781,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Time of last final. This cursor is moved when server decides that recognition from start of audio until final_time_ms will not change anymore
-       *  usually this even is followed by EOU detection (but this could change in future).
+       * Time of last final. This cursor is moved when server decides that recognition from start of audio until final_time_ms will not change anymore
+       * usually this even is followed by EOU detection (but this could change in future).
        * </pre>
        *
        * <code>int64 final_time_ms = 4;</code>
@@ -20898,7 +23798,7 @@ public final class Stt {
       private long finalIndex_ ;
       /**
        * <pre>
-       *  This is index of last final server send. Incremented after each new final.
+       * This is index of last final server send. Incremented after each new final.
        * </pre>
        *
        * <code>int64 final_index = 5;</code>
@@ -20910,7 +23810,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  This is index of last final server send. Incremented after each new final.
+       * This is index of last final server send. Incremented after each new final.
        * </pre>
        *
        * <code>int64 final_index = 5;</code>
@@ -20925,7 +23825,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  This is index of last final server send. Incremented after each new final.
+       * This is index of last final server send. Incremented after each new final.
        * </pre>
        *
        * <code>int64 final_index = 5;</code>
@@ -20941,9 +23841,9 @@ public final class Stt {
       private long eouTimeMs_ ;
       /**
        * <pre>
-       *  Estimated time of EOU. Cursor is updated after each new EOU is sent.
-       *  For external classifier this equals to received_data_ms at the moment EOU event arrives.
-       *  For internal classifier this is estimation of time. The time is not exact and has the same guarantees as word timings.
+       * Estimated time of EOU. Cursor is updated after each new EOU is sent.
+       * For external classifier this equals to received_data_ms at the moment EOU event arrives.
+       * For internal classifier this is estimation of time. The time is not exact and has the same guarantees as word timings.
        * </pre>
        *
        * <code>int64 eou_time_ms = 6;</code>
@@ -20955,9 +23855,9 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Estimated time of EOU. Cursor is updated after each new EOU is sent.
-       *  For external classifier this equals to received_data_ms at the moment EOU event arrives.
-       *  For internal classifier this is estimation of time. The time is not exact and has the same guarantees as word timings.
+       * Estimated time of EOU. Cursor is updated after each new EOU is sent.
+       * For external classifier this equals to received_data_ms at the moment EOU event arrives.
+       * For internal classifier this is estimation of time. The time is not exact and has the same guarantees as word timings.
        * </pre>
        *
        * <code>int64 eou_time_ms = 6;</code>
@@ -20972,9 +23872,9 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Estimated time of EOU. Cursor is updated after each new EOU is sent.
-       *  For external classifier this equals to received_data_ms at the moment EOU event arrives.
-       *  For internal classifier this is estimation of time. The time is not exact and has the same guarantees as word timings.
+       * Estimated time of EOU. Cursor is updated after each new EOU is sent.
+       * For external classifier this equals to received_data_ms at the moment EOU event arrives.
+       * For internal classifier this is estimation of time. The time is not exact and has the same guarantees as word timings.
        * </pre>
        *
        * <code>int64 eou_time_ms = 6;</code>
@@ -27673,6 +30573,8915 @@ public final class Stt {
 
   }
 
+  public interface DescriptiveStatisticsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.DescriptiveStatistics)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Minimum observed value
+     * </pre>
+     *
+     * <code>double min = 1;</code>
+     * @return The min.
+     */
+    double getMin();
+
+    /**
+     * <pre>
+     * Maximum observed value
+     * </pre>
+     *
+     * <code>double max = 2;</code>
+     * @return The max.
+     */
+    double getMax();
+
+    /**
+     * <pre>
+     * Estimated mean of distribution
+     * </pre>
+     *
+     * <code>double mean = 3;</code>
+     * @return The mean.
+     */
+    double getMean();
+
+    /**
+     * <pre>
+     * Estimated standard deviation of distribution
+     * </pre>
+     *
+     * <code>double std = 4;</code>
+     * @return The std.
+     */
+    double getStd();
+
+    /**
+     * <pre>
+     * List of evaluated quantiles
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile> 
+        getQuantilesList();
+    /**
+     * <pre>
+     * List of evaluated quantiles
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile getQuantiles(int index);
+    /**
+     * <pre>
+     * List of evaluated quantiles
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+     */
+    int getQuantilesCount();
+    /**
+     * <pre>
+     * List of evaluated quantiles
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.QuantileOrBuilder> 
+        getQuantilesOrBuilderList();
+    /**
+     * <pre>
+     * List of evaluated quantiles
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.QuantileOrBuilder getQuantilesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code speechkit.stt.v3.DescriptiveStatistics}
+   */
+  public static final class DescriptiveStatistics extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.stt.v3.DescriptiveStatistics)
+      DescriptiveStatisticsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DescriptiveStatistics.newBuilder() to construct.
+    private DescriptiveStatistics(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DescriptiveStatistics() {
+      quantiles_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DescriptiveStatistics();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DescriptiveStatistics(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 9: {
+
+              min_ = input.readDouble();
+              break;
+            }
+            case 17: {
+
+              max_ = input.readDouble();
+              break;
+            }
+            case 25: {
+
+              mean_ = input.readDouble();
+              break;
+            }
+            case 33: {
+
+              std_ = input.readDouble();
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                quantiles_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              quantiles_.add(
+                  input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          quantiles_ = java.util.Collections.unmodifiableList(quantiles_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_DescriptiveStatistics_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_DescriptiveStatistics_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.class, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder.class);
+    }
+
+    public interface QuantileOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.DescriptiveStatistics.Quantile)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Quantile level in range (0, 1)
+       * </pre>
+       *
+       * <code>double level = 1;</code>
+       * @return The level.
+       */
+      double getLevel();
+
+      /**
+       * <pre>
+       * Quantile value
+       * </pre>
+       *
+       * <code>double value = 2;</code>
+       * @return The value.
+       */
+      double getValue();
+    }
+    /**
+     * Protobuf type {@code speechkit.stt.v3.DescriptiveStatistics.Quantile}
+     */
+    public static final class Quantile extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:speechkit.stt.v3.DescriptiveStatistics.Quantile)
+        QuantileOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Quantile.newBuilder() to construct.
+      private Quantile(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Quantile() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Quantile();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Quantile(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 9: {
+
+                level_ = input.readDouble();
+                break;
+              }
+              case 17: {
+
+                value_ = input.readDouble();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_DescriptiveStatistics_Quantile_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_DescriptiveStatistics_Quantile_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile.class, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile.Builder.class);
+      }
+
+      public static final int LEVEL_FIELD_NUMBER = 1;
+      private double level_;
+      /**
+       * <pre>
+       * Quantile level in range (0, 1)
+       * </pre>
+       *
+       * <code>double level = 1;</code>
+       * @return The level.
+       */
+      @java.lang.Override
+      public double getLevel() {
+        return level_;
+      }
+
+      public static final int VALUE_FIELD_NUMBER = 2;
+      private double value_;
+      /**
+       * <pre>
+       * Quantile value
+       * </pre>
+       *
+       * <code>double value = 2;</code>
+       * @return The value.
+       */
+      @java.lang.Override
+      public double getValue() {
+        return value_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (java.lang.Double.doubleToRawLongBits(level_) != 0) {
+          output.writeDouble(1, level_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(value_) != 0) {
+          output.writeDouble(2, value_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (java.lang.Double.doubleToRawLongBits(level_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(1, level_);
+        }
+        if (java.lang.Double.doubleToRawLongBits(value_) != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(2, value_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile other = (yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile) obj;
+
+        if (java.lang.Double.doubleToLongBits(getLevel())
+            != java.lang.Double.doubleToLongBits(
+                other.getLevel())) return false;
+        if (java.lang.Double.doubleToLongBits(getValue())
+            != java.lang.Double.doubleToLongBits(
+                other.getValue())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + LEVEL_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getLevel()));
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getValue()));
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code speechkit.stt.v3.DescriptiveStatistics.Quantile}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.DescriptiveStatistics.Quantile)
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.QuantileOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_DescriptiveStatistics_Quantile_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_DescriptiveStatistics_Quantile_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile.class, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          level_ = 0D;
+
+          value_ = 0D;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_DescriptiveStatistics_Quantile_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile getDefaultInstanceForType() {
+          return yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile build() {
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile buildPartial() {
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile result = new yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile(this);
+          result.level_ = level_;
+          result.value_ = value_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile) {
+            return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile other) {
+          if (other == yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile.getDefaultInstance()) return this;
+          if (other.getLevel() != 0D) {
+            setLevel(other.getLevel());
+          }
+          if (other.getValue() != 0D) {
+            setValue(other.getValue());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private double level_ ;
+        /**
+         * <pre>
+         * Quantile level in range (0, 1)
+         * </pre>
+         *
+         * <code>double level = 1;</code>
+         * @return The level.
+         */
+        @java.lang.Override
+        public double getLevel() {
+          return level_;
+        }
+        /**
+         * <pre>
+         * Quantile level in range (0, 1)
+         * </pre>
+         *
+         * <code>double level = 1;</code>
+         * @param value The level to set.
+         * @return This builder for chaining.
+         */
+        public Builder setLevel(double value) {
+          
+          level_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Quantile level in range (0, 1)
+         * </pre>
+         *
+         * <code>double level = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearLevel() {
+          
+          level_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private double value_ ;
+        /**
+         * <pre>
+         * Quantile value
+         * </pre>
+         *
+         * <code>double value = 2;</code>
+         * @return The value.
+         */
+        @java.lang.Override
+        public double getValue() {
+          return value_;
+        }
+        /**
+         * <pre>
+         * Quantile value
+         * </pre>
+         *
+         * <code>double value = 2;</code>
+         * @param value The value to set.
+         * @return This builder for chaining.
+         */
+        public Builder setValue(double value) {
+          
+          value_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Quantile value
+         * </pre>
+         *
+         * <code>double value = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearValue() {
+          
+          value_ = 0D;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.DescriptiveStatistics.Quantile)
+      }
+
+      // @@protoc_insertion_point(class_scope:speechkit.stt.v3.DescriptiveStatistics.Quantile)
+      private static final yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile();
+      }
+
+      public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Quantile>
+          PARSER = new com.google.protobuf.AbstractParser<Quantile>() {
+        @java.lang.Override
+        public Quantile parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Quantile(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Quantile> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Quantile> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int MIN_FIELD_NUMBER = 1;
+    private double min_;
+    /**
+     * <pre>
+     * Minimum observed value
+     * </pre>
+     *
+     * <code>double min = 1;</code>
+     * @return The min.
+     */
+    @java.lang.Override
+    public double getMin() {
+      return min_;
+    }
+
+    public static final int MAX_FIELD_NUMBER = 2;
+    private double max_;
+    /**
+     * <pre>
+     * Maximum observed value
+     * </pre>
+     *
+     * <code>double max = 2;</code>
+     * @return The max.
+     */
+    @java.lang.Override
+    public double getMax() {
+      return max_;
+    }
+
+    public static final int MEAN_FIELD_NUMBER = 3;
+    private double mean_;
+    /**
+     * <pre>
+     * Estimated mean of distribution
+     * </pre>
+     *
+     * <code>double mean = 3;</code>
+     * @return The mean.
+     */
+    @java.lang.Override
+    public double getMean() {
+      return mean_;
+    }
+
+    public static final int STD_FIELD_NUMBER = 4;
+    private double std_;
+    /**
+     * <pre>
+     * Estimated standard deviation of distribution
+     * </pre>
+     *
+     * <code>double std = 4;</code>
+     * @return The std.
+     */
+    @java.lang.Override
+    public double getStd() {
+      return std_;
+    }
+
+    public static final int QUANTILES_FIELD_NUMBER = 5;
+    private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile> quantiles_;
+    /**
+     * <pre>
+     * List of evaluated quantiles
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile> getQuantilesList() {
+      return quantiles_;
+    }
+    /**
+     * <pre>
+     * List of evaluated quantiles
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.QuantileOrBuilder> 
+        getQuantilesOrBuilderList() {
+      return quantiles_;
+    }
+    /**
+     * <pre>
+     * List of evaluated quantiles
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+     */
+    @java.lang.Override
+    public int getQuantilesCount() {
+      return quantiles_.size();
+    }
+    /**
+     * <pre>
+     * List of evaluated quantiles
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile getQuantiles(int index) {
+      return quantiles_.get(index);
+    }
+    /**
+     * <pre>
+     * List of evaluated quantiles
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.QuantileOrBuilder getQuantilesOrBuilder(
+        int index) {
+      return quantiles_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (java.lang.Double.doubleToRawLongBits(min_) != 0) {
+        output.writeDouble(1, min_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(max_) != 0) {
+        output.writeDouble(2, max_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(mean_) != 0) {
+        output.writeDouble(3, mean_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(std_) != 0) {
+        output.writeDouble(4, std_);
+      }
+      for (int i = 0; i < quantiles_.size(); i++) {
+        output.writeMessage(5, quantiles_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (java.lang.Double.doubleToRawLongBits(min_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(1, min_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(max_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, max_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(mean_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(3, mean_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(std_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(4, std_);
+      }
+      for (int i = 0; i < quantiles_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, quantiles_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics other = (yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics) obj;
+
+      if (java.lang.Double.doubleToLongBits(getMin())
+          != java.lang.Double.doubleToLongBits(
+              other.getMin())) return false;
+      if (java.lang.Double.doubleToLongBits(getMax())
+          != java.lang.Double.doubleToLongBits(
+              other.getMax())) return false;
+      if (java.lang.Double.doubleToLongBits(getMean())
+          != java.lang.Double.doubleToLongBits(
+              other.getMean())) return false;
+      if (java.lang.Double.doubleToLongBits(getStd())
+          != java.lang.Double.doubleToLongBits(
+              other.getStd())) return false;
+      if (!getQuantilesList()
+          .equals(other.getQuantilesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MIN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getMin()));
+      hash = (37 * hash) + MAX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getMax()));
+      hash = (37 * hash) + MEAN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getMean()));
+      hash = (37 * hash) + STD_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getStd()));
+      if (getQuantilesCount() > 0) {
+        hash = (37 * hash) + QUANTILES_FIELD_NUMBER;
+        hash = (53 * hash) + getQuantilesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code speechkit.stt.v3.DescriptiveStatistics}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.DescriptiveStatistics)
+        yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_DescriptiveStatistics_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_DescriptiveStatistics_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.class, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getQuantilesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        min_ = 0D;
+
+        max_ = 0D;
+
+        mean_ = 0D;
+
+        std_ = 0D;
+
+        if (quantilesBuilder_ == null) {
+          quantiles_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          quantilesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_DescriptiveStatistics_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics build() {
+        yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics buildPartial() {
+        yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics result = new yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics(this);
+        int from_bitField0_ = bitField0_;
+        result.min_ = min_;
+        result.max_ = max_;
+        result.mean_ = mean_;
+        result.std_ = std_;
+        if (quantilesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            quantiles_ = java.util.Collections.unmodifiableList(quantiles_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.quantiles_ = quantiles_;
+        } else {
+          result.quantiles_ = quantilesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics) {
+          return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics other) {
+        if (other == yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance()) return this;
+        if (other.getMin() != 0D) {
+          setMin(other.getMin());
+        }
+        if (other.getMax() != 0D) {
+          setMax(other.getMax());
+        }
+        if (other.getMean() != 0D) {
+          setMean(other.getMean());
+        }
+        if (other.getStd() != 0D) {
+          setStd(other.getStd());
+        }
+        if (quantilesBuilder_ == null) {
+          if (!other.quantiles_.isEmpty()) {
+            if (quantiles_.isEmpty()) {
+              quantiles_ = other.quantiles_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureQuantilesIsMutable();
+              quantiles_.addAll(other.quantiles_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.quantiles_.isEmpty()) {
+            if (quantilesBuilder_.isEmpty()) {
+              quantilesBuilder_.dispose();
+              quantilesBuilder_ = null;
+              quantiles_ = other.quantiles_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              quantilesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getQuantilesFieldBuilder() : null;
+            } else {
+              quantilesBuilder_.addAllMessages(other.quantiles_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private double min_ ;
+      /**
+       * <pre>
+       * Minimum observed value
+       * </pre>
+       *
+       * <code>double min = 1;</code>
+       * @return The min.
+       */
+      @java.lang.Override
+      public double getMin() {
+        return min_;
+      }
+      /**
+       * <pre>
+       * Minimum observed value
+       * </pre>
+       *
+       * <code>double min = 1;</code>
+       * @param value The min to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMin(double value) {
+        
+        min_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Minimum observed value
+       * </pre>
+       *
+       * <code>double min = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMin() {
+        
+        min_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private double max_ ;
+      /**
+       * <pre>
+       * Maximum observed value
+       * </pre>
+       *
+       * <code>double max = 2;</code>
+       * @return The max.
+       */
+      @java.lang.Override
+      public double getMax() {
+        return max_;
+      }
+      /**
+       * <pre>
+       * Maximum observed value
+       * </pre>
+       *
+       * <code>double max = 2;</code>
+       * @param value The max to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMax(double value) {
+        
+        max_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum observed value
+       * </pre>
+       *
+       * <code>double max = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMax() {
+        
+        max_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private double mean_ ;
+      /**
+       * <pre>
+       * Estimated mean of distribution
+       * </pre>
+       *
+       * <code>double mean = 3;</code>
+       * @return The mean.
+       */
+      @java.lang.Override
+      public double getMean() {
+        return mean_;
+      }
+      /**
+       * <pre>
+       * Estimated mean of distribution
+       * </pre>
+       *
+       * <code>double mean = 3;</code>
+       * @param value The mean to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMean(double value) {
+        
+        mean_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Estimated mean of distribution
+       * </pre>
+       *
+       * <code>double mean = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMean() {
+        
+        mean_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private double std_ ;
+      /**
+       * <pre>
+       * Estimated standard deviation of distribution
+       * </pre>
+       *
+       * <code>double std = 4;</code>
+       * @return The std.
+       */
+      @java.lang.Override
+      public double getStd() {
+        return std_;
+      }
+      /**
+       * <pre>
+       * Estimated standard deviation of distribution
+       * </pre>
+       *
+       * <code>double std = 4;</code>
+       * @param value The std to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStd(double value) {
+        
+        std_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Estimated standard deviation of distribution
+       * </pre>
+       *
+       * <code>double std = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStd() {
+        
+        std_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile> quantiles_ =
+        java.util.Collections.emptyList();
+      private void ensureQuantilesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          quantiles_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile>(quantiles_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.QuantileOrBuilder> quantilesBuilder_;
+
+      /**
+       * <pre>
+       * List of evaluated quantiles
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile> getQuantilesList() {
+        if (quantilesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(quantiles_);
+        } else {
+          return quantilesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of evaluated quantiles
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+       */
+      public int getQuantilesCount() {
+        if (quantilesBuilder_ == null) {
+          return quantiles_.size();
+        } else {
+          return quantilesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of evaluated quantiles
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile getQuantiles(int index) {
+        if (quantilesBuilder_ == null) {
+          return quantiles_.get(index);
+        } else {
+          return quantilesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of evaluated quantiles
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+       */
+      public Builder setQuantiles(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile value) {
+        if (quantilesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQuantilesIsMutable();
+          quantiles_.set(index, value);
+          onChanged();
+        } else {
+          quantilesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of evaluated quantiles
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+       */
+      public Builder setQuantiles(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile.Builder builderForValue) {
+        if (quantilesBuilder_ == null) {
+          ensureQuantilesIsMutable();
+          quantiles_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          quantilesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of evaluated quantiles
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+       */
+      public Builder addQuantiles(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile value) {
+        if (quantilesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQuantilesIsMutable();
+          quantiles_.add(value);
+          onChanged();
+        } else {
+          quantilesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of evaluated quantiles
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+       */
+      public Builder addQuantiles(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile value) {
+        if (quantilesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureQuantilesIsMutable();
+          quantiles_.add(index, value);
+          onChanged();
+        } else {
+          quantilesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of evaluated quantiles
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+       */
+      public Builder addQuantiles(
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile.Builder builderForValue) {
+        if (quantilesBuilder_ == null) {
+          ensureQuantilesIsMutable();
+          quantiles_.add(builderForValue.build());
+          onChanged();
+        } else {
+          quantilesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of evaluated quantiles
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+       */
+      public Builder addQuantiles(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile.Builder builderForValue) {
+        if (quantilesBuilder_ == null) {
+          ensureQuantilesIsMutable();
+          quantiles_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          quantilesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of evaluated quantiles
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+       */
+      public Builder addAllQuantiles(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile> values) {
+        if (quantilesBuilder_ == null) {
+          ensureQuantilesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, quantiles_);
+          onChanged();
+        } else {
+          quantilesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of evaluated quantiles
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+       */
+      public Builder clearQuantiles() {
+        if (quantilesBuilder_ == null) {
+          quantiles_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          quantilesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of evaluated quantiles
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+       */
+      public Builder removeQuantiles(int index) {
+        if (quantilesBuilder_ == null) {
+          ensureQuantilesIsMutable();
+          quantiles_.remove(index);
+          onChanged();
+        } else {
+          quantilesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of evaluated quantiles
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile.Builder getQuantilesBuilder(
+          int index) {
+        return getQuantilesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of evaluated quantiles
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.QuantileOrBuilder getQuantilesOrBuilder(
+          int index) {
+        if (quantilesBuilder_ == null) {
+          return quantiles_.get(index);  } else {
+          return quantilesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of evaluated quantiles
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.QuantileOrBuilder> 
+           getQuantilesOrBuilderList() {
+        if (quantilesBuilder_ != null) {
+          return quantilesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(quantiles_);
+        }
+      }
+      /**
+       * <pre>
+       * List of evaluated quantiles
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile.Builder addQuantilesBuilder() {
+        return getQuantilesFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of evaluated quantiles
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile.Builder addQuantilesBuilder(
+          int index) {
+        return getQuantilesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of evaluated quantiles
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.DescriptiveStatistics.Quantile quantiles = 5;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile.Builder> 
+           getQuantilesBuilderList() {
+        return getQuantilesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.QuantileOrBuilder> 
+          getQuantilesFieldBuilder() {
+        if (quantilesBuilder_ == null) {
+          quantilesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Quantile.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.QuantileOrBuilder>(
+                  quantiles_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          quantiles_ = null;
+        }
+        return quantilesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.DescriptiveStatistics)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.stt.v3.DescriptiveStatistics)
+    private static final yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics();
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DescriptiveStatistics>
+        PARSER = new com.google.protobuf.AbstractParser<DescriptiveStatistics>() {
+      @java.lang.Override
+      public DescriptiveStatistics parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DescriptiveStatistics(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DescriptiveStatistics> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DescriptiveStatistics> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AudioSegmentBoundariesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.AudioSegmentBoundaries)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Audio segment start time
+     * </pre>
+     *
+     * <code>int64 start_time_ms = 1;</code>
+     * @return The startTimeMs.
+     */
+    long getStartTimeMs();
+
+    /**
+     * <pre>
+     * Audio segment end time
+     * </pre>
+     *
+     * <code>int64 end_time_ms = 2;</code>
+     * @return The endTimeMs.
+     */
+    long getEndTimeMs();
+  }
+  /**
+   * Protobuf type {@code speechkit.stt.v3.AudioSegmentBoundaries}
+   */
+  public static final class AudioSegmentBoundaries extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.stt.v3.AudioSegmentBoundaries)
+      AudioSegmentBoundariesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AudioSegmentBoundaries.newBuilder() to construct.
+    private AudioSegmentBoundaries(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AudioSegmentBoundaries() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AudioSegmentBoundaries();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AudioSegmentBoundaries(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              startTimeMs_ = input.readInt64();
+              break;
+            }
+            case 16: {
+
+              endTimeMs_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_AudioSegmentBoundaries_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_AudioSegmentBoundaries_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.class, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder.class);
+    }
+
+    public static final int START_TIME_MS_FIELD_NUMBER = 1;
+    private long startTimeMs_;
+    /**
+     * <pre>
+     * Audio segment start time
+     * </pre>
+     *
+     * <code>int64 start_time_ms = 1;</code>
+     * @return The startTimeMs.
+     */
+    @java.lang.Override
+    public long getStartTimeMs() {
+      return startTimeMs_;
+    }
+
+    public static final int END_TIME_MS_FIELD_NUMBER = 2;
+    private long endTimeMs_;
+    /**
+     * <pre>
+     * Audio segment end time
+     * </pre>
+     *
+     * <code>int64 end_time_ms = 2;</code>
+     * @return The endTimeMs.
+     */
+    @java.lang.Override
+    public long getEndTimeMs() {
+      return endTimeMs_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (startTimeMs_ != 0L) {
+        output.writeInt64(1, startTimeMs_);
+      }
+      if (endTimeMs_ != 0L) {
+        output.writeInt64(2, endTimeMs_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (startTimeMs_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, startTimeMs_);
+      }
+      if (endTimeMs_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, endTimeMs_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries other = (yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries) obj;
+
+      if (getStartTimeMs()
+          != other.getStartTimeMs()) return false;
+      if (getEndTimeMs()
+          != other.getEndTimeMs()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + START_TIME_MS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStartTimeMs());
+      hash = (37 * hash) + END_TIME_MS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEndTimeMs());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code speechkit.stt.v3.AudioSegmentBoundaries}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.AudioSegmentBoundaries)
+        yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundariesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_AudioSegmentBoundaries_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_AudioSegmentBoundaries_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.class, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        startTimeMs_ = 0L;
+
+        endTimeMs_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_AudioSegmentBoundaries_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries build() {
+        yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries buildPartial() {
+        yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries result = new yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries(this);
+        result.startTimeMs_ = startTimeMs_;
+        result.endTimeMs_ = endTimeMs_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries) {
+          return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries other) {
+        if (other == yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.getDefaultInstance()) return this;
+        if (other.getStartTimeMs() != 0L) {
+          setStartTimeMs(other.getStartTimeMs());
+        }
+        if (other.getEndTimeMs() != 0L) {
+          setEndTimeMs(other.getEndTimeMs());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long startTimeMs_ ;
+      /**
+       * <pre>
+       * Audio segment start time
+       * </pre>
+       *
+       * <code>int64 start_time_ms = 1;</code>
+       * @return The startTimeMs.
+       */
+      @java.lang.Override
+      public long getStartTimeMs() {
+        return startTimeMs_;
+      }
+      /**
+       * <pre>
+       * Audio segment start time
+       * </pre>
+       *
+       * <code>int64 start_time_ms = 1;</code>
+       * @param value The startTimeMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartTimeMs(long value) {
+        
+        startTimeMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Audio segment start time
+       * </pre>
+       *
+       * <code>int64 start_time_ms = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartTimeMs() {
+        
+        startTimeMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long endTimeMs_ ;
+      /**
+       * <pre>
+       * Audio segment end time
+       * </pre>
+       *
+       * <code>int64 end_time_ms = 2;</code>
+       * @return The endTimeMs.
+       */
+      @java.lang.Override
+      public long getEndTimeMs() {
+        return endTimeMs_;
+      }
+      /**
+       * <pre>
+       * Audio segment end time
+       * </pre>
+       *
+       * <code>int64 end_time_ms = 2;</code>
+       * @param value The endTimeMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndTimeMs(long value) {
+        
+        endTimeMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Audio segment end time
+       * </pre>
+       *
+       * <code>int64 end_time_ms = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEndTimeMs() {
+        
+        endTimeMs_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.AudioSegmentBoundaries)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.stt.v3.AudioSegmentBoundaries)
+    private static final yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries();
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AudioSegmentBoundaries>
+        PARSER = new com.google.protobuf.AbstractParser<AudioSegmentBoundaries>() {
+      @java.lang.Override
+      public AudioSegmentBoundaries parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AudioSegmentBoundaries(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AudioSegmentBoundaries> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AudioSegmentBoundaries> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SpeakerAnalysisOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.SpeakerAnalysis)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Speaker tag
+     * </pre>
+     *
+     * <code>string speaker_tag = 1;</code>
+     * @return The speakerTag.
+     */
+    java.lang.String getSpeakerTag();
+    /**
+     * <pre>
+     * Speaker tag
+     * </pre>
+     *
+     * <code>string speaker_tag = 1;</code>
+     * @return The bytes for speakerTag.
+     */
+    com.google.protobuf.ByteString
+        getSpeakerTagBytes();
+
+    /**
+     * <pre>
+     * Response window type
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerAnalysis.WindowType window_type = 2;</code>
+     * @return The enum numeric value on the wire for windowType.
+     */
+    int getWindowTypeValue();
+    /**
+     * <pre>
+     * Response window type
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerAnalysis.WindowType window_type = 2;</code>
+     * @return The windowType.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.WindowType getWindowType();
+
+    /**
+     * <pre>
+     * Audio segment boundaries
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.AudioSegmentBoundaries speech_boundaries = 3;</code>
+     * @return Whether the speechBoundaries field is set.
+     */
+    boolean hasSpeechBoundaries();
+    /**
+     * <pre>
+     * Audio segment boundaries
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.AudioSegmentBoundaries speech_boundaries = 3;</code>
+     * @return The speechBoundaries.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries getSpeechBoundaries();
+    /**
+     * <pre>
+     * Audio segment boundaries
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.AudioSegmentBoundaries speech_boundaries = 3;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundariesOrBuilder getSpeechBoundariesOrBuilder();
+
+    /**
+     * <pre>
+     * Total speech duration
+     * </pre>
+     *
+     * <code>int64 total_speech_ms = 4;</code>
+     * @return The totalSpeechMs.
+     */
+    long getTotalSpeechMs();
+
+    /**
+     * <pre>
+     * Speech ratio within audio segment
+     * </pre>
+     *
+     * <code>double speech_ratio = 5;</code>
+     * @return The speechRatio.
+     */
+    double getSpeechRatio();
+
+    /**
+     * <pre>
+     * Total silence duration
+     * </pre>
+     *
+     * <code>int64 total_silence_ms = 6;</code>
+     * @return The totalSilenceMs.
+     */
+    long getTotalSilenceMs();
+
+    /**
+     * <pre>
+     * Silence ratio within audio segment
+     * </pre>
+     *
+     * <code>double silence_ratio = 7;</code>
+     * @return The silenceRatio.
+     */
+    double getSilenceRatio();
+
+    /**
+     * <pre>
+     * Number of words in recognized speech
+     * </pre>
+     *
+     * <code>int64 words_count = 8;</code>
+     * @return The wordsCount.
+     */
+    long getWordsCount();
+
+    /**
+     * <pre>
+     * Number of letters in recognized speech
+     * </pre>
+     *
+     * <code>int64 letters_count = 9;</code>
+     * @return The lettersCount.
+     */
+    long getLettersCount();
+
+    /**
+     * <pre>
+     * Descriptive statistics for words per second distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_second = 10;</code>
+     * @return Whether the wordsPerSecond field is set.
+     */
+    boolean hasWordsPerSecond();
+    /**
+     * <pre>
+     * Descriptive statistics for words per second distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_second = 10;</code>
+     * @return The wordsPerSecond.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getWordsPerSecond();
+    /**
+     * <pre>
+     * Descriptive statistics for words per second distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_second = 10;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder getWordsPerSecondOrBuilder();
+
+    /**
+     * <pre>
+     * Descriptive statistics for letters per second distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_second = 11;</code>
+     * @return Whether the lettersPerSecond field is set.
+     */
+    boolean hasLettersPerSecond();
+    /**
+     * <pre>
+     * Descriptive statistics for letters per second distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_second = 11;</code>
+     * @return The lettersPerSecond.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getLettersPerSecond();
+    /**
+     * <pre>
+     * Descriptive statistics for letters per second distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_second = 11;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder getLettersPerSecondOrBuilder();
+
+    /**
+     * <pre>
+     * Descriptive statistics for words per utterance distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_utterance = 12;</code>
+     * @return Whether the wordsPerUtterance field is set.
+     */
+    boolean hasWordsPerUtterance();
+    /**
+     * <pre>
+     * Descriptive statistics for words per utterance distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_utterance = 12;</code>
+     * @return The wordsPerUtterance.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getWordsPerUtterance();
+    /**
+     * <pre>
+     * Descriptive statistics for words per utterance distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_utterance = 12;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder getWordsPerUtteranceOrBuilder();
+
+    /**
+     * <pre>
+     * Descriptive statistics for letters per utterance distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_utterance = 13;</code>
+     * @return Whether the lettersPerUtterance field is set.
+     */
+    boolean hasLettersPerUtterance();
+    /**
+     * <pre>
+     * Descriptive statistics for letters per utterance distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_utterance = 13;</code>
+     * @return The lettersPerUtterance.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getLettersPerUtterance();
+    /**
+     * <pre>
+     * Descriptive statistics for letters per utterance distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_utterance = 13;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder getLettersPerUtteranceOrBuilder();
+
+    /**
+     * <pre>
+     * Number of utterances
+     * </pre>
+     *
+     * <code>int64 utterance_count = 14;</code>
+     * @return The utteranceCount.
+     */
+    long getUtteranceCount();
+
+    /**
+     * <pre>
+     * Descriptive statistics for utterance duration distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics utterance_duration_estimation = 15;</code>
+     * @return Whether the utteranceDurationEstimation field is set.
+     */
+    boolean hasUtteranceDurationEstimation();
+    /**
+     * <pre>
+     * Descriptive statistics for utterance duration distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics utterance_duration_estimation = 15;</code>
+     * @return The utteranceDurationEstimation.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getUtteranceDurationEstimation();
+    /**
+     * <pre>
+     * Descriptive statistics for utterance duration distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics utterance_duration_estimation = 15;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder getUtteranceDurationEstimationOrBuilder();
+  }
+  /**
+   * Protobuf type {@code speechkit.stt.v3.SpeakerAnalysis}
+   */
+  public static final class SpeakerAnalysis extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.stt.v3.SpeakerAnalysis)
+      SpeakerAnalysisOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SpeakerAnalysis.newBuilder() to construct.
+    private SpeakerAnalysis(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SpeakerAnalysis() {
+      speakerTag_ = "";
+      windowType_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SpeakerAnalysis();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SpeakerAnalysis(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              speakerTag_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              windowType_ = rawValue;
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder subBuilder = null;
+              if (speechBoundaries_ != null) {
+                subBuilder = speechBoundaries_.toBuilder();
+              }
+              speechBoundaries_ = input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(speechBoundaries_);
+                speechBoundaries_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 32: {
+
+              totalSpeechMs_ = input.readInt64();
+              break;
+            }
+            case 41: {
+
+              speechRatio_ = input.readDouble();
+              break;
+            }
+            case 48: {
+
+              totalSilenceMs_ = input.readInt64();
+              break;
+            }
+            case 57: {
+
+              silenceRatio_ = input.readDouble();
+              break;
+            }
+            case 64: {
+
+              wordsCount_ = input.readInt64();
+              break;
+            }
+            case 72: {
+
+              lettersCount_ = input.readInt64();
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder subBuilder = null;
+              if (wordsPerSecond_ != null) {
+                subBuilder = wordsPerSecond_.toBuilder();
+              }
+              wordsPerSecond_ = input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(wordsPerSecond_);
+                wordsPerSecond_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder subBuilder = null;
+              if (lettersPerSecond_ != null) {
+                subBuilder = lettersPerSecond_.toBuilder();
+              }
+              lettersPerSecond_ = input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lettersPerSecond_);
+                lettersPerSecond_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder subBuilder = null;
+              if (wordsPerUtterance_ != null) {
+                subBuilder = wordsPerUtterance_.toBuilder();
+              }
+              wordsPerUtterance_ = input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(wordsPerUtterance_);
+                wordsPerUtterance_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 106: {
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder subBuilder = null;
+              if (lettersPerUtterance_ != null) {
+                subBuilder = lettersPerUtterance_.toBuilder();
+              }
+              lettersPerUtterance_ = input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(lettersPerUtterance_);
+                lettersPerUtterance_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 112: {
+
+              utteranceCount_ = input.readInt64();
+              break;
+            }
+            case 122: {
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder subBuilder = null;
+              if (utteranceDurationEstimation_ != null) {
+                subBuilder = utteranceDurationEstimation_.toBuilder();
+              }
+              utteranceDurationEstimation_ = input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(utteranceDurationEstimation_);
+                utteranceDurationEstimation_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SpeakerAnalysis_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SpeakerAnalysis_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.class, yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code speechkit.stt.v3.SpeakerAnalysis.WindowType}
+     */
+    public enum WindowType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>WINDOW_TYPE_UNSPECIFIED = 0;</code>
+       */
+      WINDOW_TYPE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Stats for all received audio
+       * </pre>
+       *
+       * <code>TOTAL = 1;</code>
+       */
+      TOTAL(1),
+      /**
+       * <pre>
+       * Stats for last utterance
+       * </pre>
+       *
+       * <code>LAST_UTTERANCE = 2;</code>
+       */
+      LAST_UTTERANCE(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>WINDOW_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int WINDOW_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Stats for all received audio
+       * </pre>
+       *
+       * <code>TOTAL = 1;</code>
+       */
+      public static final int TOTAL_VALUE = 1;
+      /**
+       * <pre>
+       * Stats for last utterance
+       * </pre>
+       *
+       * <code>LAST_UTTERANCE = 2;</code>
+       */
+      public static final int LAST_UTTERANCE_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static WindowType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static WindowType forNumber(int value) {
+        switch (value) {
+          case 0: return WINDOW_TYPE_UNSPECIFIED;
+          case 1: return TOTAL;
+          case 2: return LAST_UTTERANCE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<WindowType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          WindowType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<WindowType>() {
+              public WindowType findValueByNumber(int number) {
+                return WindowType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final WindowType[] VALUES = values();
+
+      public static WindowType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private WindowType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:speechkit.stt.v3.SpeakerAnalysis.WindowType)
+    }
+
+    public static final int SPEAKER_TAG_FIELD_NUMBER = 1;
+    private volatile java.lang.Object speakerTag_;
+    /**
+     * <pre>
+     * Speaker tag
+     * </pre>
+     *
+     * <code>string speaker_tag = 1;</code>
+     * @return The speakerTag.
+     */
+    @java.lang.Override
+    public java.lang.String getSpeakerTag() {
+      java.lang.Object ref = speakerTag_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        speakerTag_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Speaker tag
+     * </pre>
+     *
+     * <code>string speaker_tag = 1;</code>
+     * @return The bytes for speakerTag.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSpeakerTagBytes() {
+      java.lang.Object ref = speakerTag_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        speakerTag_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WINDOW_TYPE_FIELD_NUMBER = 2;
+    private int windowType_;
+    /**
+     * <pre>
+     * Response window type
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerAnalysis.WindowType window_type = 2;</code>
+     * @return The enum numeric value on the wire for windowType.
+     */
+    @java.lang.Override public int getWindowTypeValue() {
+      return windowType_;
+    }
+    /**
+     * <pre>
+     * Response window type
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerAnalysis.WindowType window_type = 2;</code>
+     * @return The windowType.
+     */
+    @java.lang.Override public yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.WindowType getWindowType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.WindowType result = yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.WindowType.valueOf(windowType_);
+      return result == null ? yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.WindowType.UNRECOGNIZED : result;
+    }
+
+    public static final int SPEECH_BOUNDARIES_FIELD_NUMBER = 3;
+    private yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries speechBoundaries_;
+    /**
+     * <pre>
+     * Audio segment boundaries
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.AudioSegmentBoundaries speech_boundaries = 3;</code>
+     * @return Whether the speechBoundaries field is set.
+     */
+    @java.lang.Override
+    public boolean hasSpeechBoundaries() {
+      return speechBoundaries_ != null;
+    }
+    /**
+     * <pre>
+     * Audio segment boundaries
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.AudioSegmentBoundaries speech_boundaries = 3;</code>
+     * @return The speechBoundaries.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries getSpeechBoundaries() {
+      return speechBoundaries_ == null ? yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.getDefaultInstance() : speechBoundaries_;
+    }
+    /**
+     * <pre>
+     * Audio segment boundaries
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.AudioSegmentBoundaries speech_boundaries = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundariesOrBuilder getSpeechBoundariesOrBuilder() {
+      return getSpeechBoundaries();
+    }
+
+    public static final int TOTAL_SPEECH_MS_FIELD_NUMBER = 4;
+    private long totalSpeechMs_;
+    /**
+     * <pre>
+     * Total speech duration
+     * </pre>
+     *
+     * <code>int64 total_speech_ms = 4;</code>
+     * @return The totalSpeechMs.
+     */
+    @java.lang.Override
+    public long getTotalSpeechMs() {
+      return totalSpeechMs_;
+    }
+
+    public static final int SPEECH_RATIO_FIELD_NUMBER = 5;
+    private double speechRatio_;
+    /**
+     * <pre>
+     * Speech ratio within audio segment
+     * </pre>
+     *
+     * <code>double speech_ratio = 5;</code>
+     * @return The speechRatio.
+     */
+    @java.lang.Override
+    public double getSpeechRatio() {
+      return speechRatio_;
+    }
+
+    public static final int TOTAL_SILENCE_MS_FIELD_NUMBER = 6;
+    private long totalSilenceMs_;
+    /**
+     * <pre>
+     * Total silence duration
+     * </pre>
+     *
+     * <code>int64 total_silence_ms = 6;</code>
+     * @return The totalSilenceMs.
+     */
+    @java.lang.Override
+    public long getTotalSilenceMs() {
+      return totalSilenceMs_;
+    }
+
+    public static final int SILENCE_RATIO_FIELD_NUMBER = 7;
+    private double silenceRatio_;
+    /**
+     * <pre>
+     * Silence ratio within audio segment
+     * </pre>
+     *
+     * <code>double silence_ratio = 7;</code>
+     * @return The silenceRatio.
+     */
+    @java.lang.Override
+    public double getSilenceRatio() {
+      return silenceRatio_;
+    }
+
+    public static final int WORDS_COUNT_FIELD_NUMBER = 8;
+    private long wordsCount_;
+    /**
+     * <pre>
+     * Number of words in recognized speech
+     * </pre>
+     *
+     * <code>int64 words_count = 8;</code>
+     * @return The wordsCount.
+     */
+    @java.lang.Override
+    public long getWordsCount() {
+      return wordsCount_;
+    }
+
+    public static final int LETTERS_COUNT_FIELD_NUMBER = 9;
+    private long lettersCount_;
+    /**
+     * <pre>
+     * Number of letters in recognized speech
+     * </pre>
+     *
+     * <code>int64 letters_count = 9;</code>
+     * @return The lettersCount.
+     */
+    @java.lang.Override
+    public long getLettersCount() {
+      return lettersCount_;
+    }
+
+    public static final int WORDS_PER_SECOND_FIELD_NUMBER = 10;
+    private yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics wordsPerSecond_;
+    /**
+     * <pre>
+     * Descriptive statistics for words per second distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_second = 10;</code>
+     * @return Whether the wordsPerSecond field is set.
+     */
+    @java.lang.Override
+    public boolean hasWordsPerSecond() {
+      return wordsPerSecond_ != null;
+    }
+    /**
+     * <pre>
+     * Descriptive statistics for words per second distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_second = 10;</code>
+     * @return The wordsPerSecond.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getWordsPerSecond() {
+      return wordsPerSecond_ == null ? yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance() : wordsPerSecond_;
+    }
+    /**
+     * <pre>
+     * Descriptive statistics for words per second distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_second = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder getWordsPerSecondOrBuilder() {
+      return getWordsPerSecond();
+    }
+
+    public static final int LETTERS_PER_SECOND_FIELD_NUMBER = 11;
+    private yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics lettersPerSecond_;
+    /**
+     * <pre>
+     * Descriptive statistics for letters per second distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_second = 11;</code>
+     * @return Whether the lettersPerSecond field is set.
+     */
+    @java.lang.Override
+    public boolean hasLettersPerSecond() {
+      return lettersPerSecond_ != null;
+    }
+    /**
+     * <pre>
+     * Descriptive statistics for letters per second distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_second = 11;</code>
+     * @return The lettersPerSecond.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getLettersPerSecond() {
+      return lettersPerSecond_ == null ? yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance() : lettersPerSecond_;
+    }
+    /**
+     * <pre>
+     * Descriptive statistics for letters per second distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_second = 11;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder getLettersPerSecondOrBuilder() {
+      return getLettersPerSecond();
+    }
+
+    public static final int WORDS_PER_UTTERANCE_FIELD_NUMBER = 12;
+    private yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics wordsPerUtterance_;
+    /**
+     * <pre>
+     * Descriptive statistics for words per utterance distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_utterance = 12;</code>
+     * @return Whether the wordsPerUtterance field is set.
+     */
+    @java.lang.Override
+    public boolean hasWordsPerUtterance() {
+      return wordsPerUtterance_ != null;
+    }
+    /**
+     * <pre>
+     * Descriptive statistics for words per utterance distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_utterance = 12;</code>
+     * @return The wordsPerUtterance.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getWordsPerUtterance() {
+      return wordsPerUtterance_ == null ? yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance() : wordsPerUtterance_;
+    }
+    /**
+     * <pre>
+     * Descriptive statistics for words per utterance distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_utterance = 12;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder getWordsPerUtteranceOrBuilder() {
+      return getWordsPerUtterance();
+    }
+
+    public static final int LETTERS_PER_UTTERANCE_FIELD_NUMBER = 13;
+    private yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics lettersPerUtterance_;
+    /**
+     * <pre>
+     * Descriptive statistics for letters per utterance distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_utterance = 13;</code>
+     * @return Whether the lettersPerUtterance field is set.
+     */
+    @java.lang.Override
+    public boolean hasLettersPerUtterance() {
+      return lettersPerUtterance_ != null;
+    }
+    /**
+     * <pre>
+     * Descriptive statistics for letters per utterance distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_utterance = 13;</code>
+     * @return The lettersPerUtterance.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getLettersPerUtterance() {
+      return lettersPerUtterance_ == null ? yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance() : lettersPerUtterance_;
+    }
+    /**
+     * <pre>
+     * Descriptive statistics for letters per utterance distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_utterance = 13;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder getLettersPerUtteranceOrBuilder() {
+      return getLettersPerUtterance();
+    }
+
+    public static final int UTTERANCE_COUNT_FIELD_NUMBER = 14;
+    private long utteranceCount_;
+    /**
+     * <pre>
+     * Number of utterances
+     * </pre>
+     *
+     * <code>int64 utterance_count = 14;</code>
+     * @return The utteranceCount.
+     */
+    @java.lang.Override
+    public long getUtteranceCount() {
+      return utteranceCount_;
+    }
+
+    public static final int UTTERANCE_DURATION_ESTIMATION_FIELD_NUMBER = 15;
+    private yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics utteranceDurationEstimation_;
+    /**
+     * <pre>
+     * Descriptive statistics for utterance duration distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics utterance_duration_estimation = 15;</code>
+     * @return Whether the utteranceDurationEstimation field is set.
+     */
+    @java.lang.Override
+    public boolean hasUtteranceDurationEstimation() {
+      return utteranceDurationEstimation_ != null;
+    }
+    /**
+     * <pre>
+     * Descriptive statistics for utterance duration distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics utterance_duration_estimation = 15;</code>
+     * @return The utteranceDurationEstimation.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getUtteranceDurationEstimation() {
+      return utteranceDurationEstimation_ == null ? yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance() : utteranceDurationEstimation_;
+    }
+    /**
+     * <pre>
+     * Descriptive statistics for utterance duration distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics utterance_duration_estimation = 15;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder getUtteranceDurationEstimationOrBuilder() {
+      return getUtteranceDurationEstimation();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(speakerTag_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, speakerTag_);
+      }
+      if (windowType_ != yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.WindowType.WINDOW_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, windowType_);
+      }
+      if (speechBoundaries_ != null) {
+        output.writeMessage(3, getSpeechBoundaries());
+      }
+      if (totalSpeechMs_ != 0L) {
+        output.writeInt64(4, totalSpeechMs_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(speechRatio_) != 0) {
+        output.writeDouble(5, speechRatio_);
+      }
+      if (totalSilenceMs_ != 0L) {
+        output.writeInt64(6, totalSilenceMs_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(silenceRatio_) != 0) {
+        output.writeDouble(7, silenceRatio_);
+      }
+      if (wordsCount_ != 0L) {
+        output.writeInt64(8, wordsCount_);
+      }
+      if (lettersCount_ != 0L) {
+        output.writeInt64(9, lettersCount_);
+      }
+      if (wordsPerSecond_ != null) {
+        output.writeMessage(10, getWordsPerSecond());
+      }
+      if (lettersPerSecond_ != null) {
+        output.writeMessage(11, getLettersPerSecond());
+      }
+      if (wordsPerUtterance_ != null) {
+        output.writeMessage(12, getWordsPerUtterance());
+      }
+      if (lettersPerUtterance_ != null) {
+        output.writeMessage(13, getLettersPerUtterance());
+      }
+      if (utteranceCount_ != 0L) {
+        output.writeInt64(14, utteranceCount_);
+      }
+      if (utteranceDurationEstimation_ != null) {
+        output.writeMessage(15, getUtteranceDurationEstimation());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(speakerTag_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, speakerTag_);
+      }
+      if (windowType_ != yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.WindowType.WINDOW_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, windowType_);
+      }
+      if (speechBoundaries_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getSpeechBoundaries());
+      }
+      if (totalSpeechMs_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, totalSpeechMs_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(speechRatio_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(5, speechRatio_);
+      }
+      if (totalSilenceMs_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(6, totalSilenceMs_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(silenceRatio_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(7, silenceRatio_);
+      }
+      if (wordsCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(8, wordsCount_);
+      }
+      if (lettersCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(9, lettersCount_);
+      }
+      if (wordsPerSecond_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getWordsPerSecond());
+      }
+      if (lettersPerSecond_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getLettersPerSecond());
+      }
+      if (wordsPerUtterance_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getWordsPerUtterance());
+      }
+      if (lettersPerUtterance_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, getLettersPerUtterance());
+      }
+      if (utteranceCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(14, utteranceCount_);
+      }
+      if (utteranceDurationEstimation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getUtteranceDurationEstimation());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis other = (yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis) obj;
+
+      if (!getSpeakerTag()
+          .equals(other.getSpeakerTag())) return false;
+      if (windowType_ != other.windowType_) return false;
+      if (hasSpeechBoundaries() != other.hasSpeechBoundaries()) return false;
+      if (hasSpeechBoundaries()) {
+        if (!getSpeechBoundaries()
+            .equals(other.getSpeechBoundaries())) return false;
+      }
+      if (getTotalSpeechMs()
+          != other.getTotalSpeechMs()) return false;
+      if (java.lang.Double.doubleToLongBits(getSpeechRatio())
+          != java.lang.Double.doubleToLongBits(
+              other.getSpeechRatio())) return false;
+      if (getTotalSilenceMs()
+          != other.getTotalSilenceMs()) return false;
+      if (java.lang.Double.doubleToLongBits(getSilenceRatio())
+          != java.lang.Double.doubleToLongBits(
+              other.getSilenceRatio())) return false;
+      if (getWordsCount()
+          != other.getWordsCount()) return false;
+      if (getLettersCount()
+          != other.getLettersCount()) return false;
+      if (hasWordsPerSecond() != other.hasWordsPerSecond()) return false;
+      if (hasWordsPerSecond()) {
+        if (!getWordsPerSecond()
+            .equals(other.getWordsPerSecond())) return false;
+      }
+      if (hasLettersPerSecond() != other.hasLettersPerSecond()) return false;
+      if (hasLettersPerSecond()) {
+        if (!getLettersPerSecond()
+            .equals(other.getLettersPerSecond())) return false;
+      }
+      if (hasWordsPerUtterance() != other.hasWordsPerUtterance()) return false;
+      if (hasWordsPerUtterance()) {
+        if (!getWordsPerUtterance()
+            .equals(other.getWordsPerUtterance())) return false;
+      }
+      if (hasLettersPerUtterance() != other.hasLettersPerUtterance()) return false;
+      if (hasLettersPerUtterance()) {
+        if (!getLettersPerUtterance()
+            .equals(other.getLettersPerUtterance())) return false;
+      }
+      if (getUtteranceCount()
+          != other.getUtteranceCount()) return false;
+      if (hasUtteranceDurationEstimation() != other.hasUtteranceDurationEstimation()) return false;
+      if (hasUtteranceDurationEstimation()) {
+        if (!getUtteranceDurationEstimation()
+            .equals(other.getUtteranceDurationEstimation())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SPEAKER_TAG_FIELD_NUMBER;
+      hash = (53 * hash) + getSpeakerTag().hashCode();
+      hash = (37 * hash) + WINDOW_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + windowType_;
+      if (hasSpeechBoundaries()) {
+        hash = (37 * hash) + SPEECH_BOUNDARIES_FIELD_NUMBER;
+        hash = (53 * hash) + getSpeechBoundaries().hashCode();
+      }
+      hash = (37 * hash) + TOTAL_SPEECH_MS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalSpeechMs());
+      hash = (37 * hash) + SPEECH_RATIO_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getSpeechRatio()));
+      hash = (37 * hash) + TOTAL_SILENCE_MS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalSilenceMs());
+      hash = (37 * hash) + SILENCE_RATIO_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getSilenceRatio()));
+      hash = (37 * hash) + WORDS_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getWordsCount());
+      hash = (37 * hash) + LETTERS_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLettersCount());
+      if (hasWordsPerSecond()) {
+        hash = (37 * hash) + WORDS_PER_SECOND_FIELD_NUMBER;
+        hash = (53 * hash) + getWordsPerSecond().hashCode();
+      }
+      if (hasLettersPerSecond()) {
+        hash = (37 * hash) + LETTERS_PER_SECOND_FIELD_NUMBER;
+        hash = (53 * hash) + getLettersPerSecond().hashCode();
+      }
+      if (hasWordsPerUtterance()) {
+        hash = (37 * hash) + WORDS_PER_UTTERANCE_FIELD_NUMBER;
+        hash = (53 * hash) + getWordsPerUtterance().hashCode();
+      }
+      if (hasLettersPerUtterance()) {
+        hash = (37 * hash) + LETTERS_PER_UTTERANCE_FIELD_NUMBER;
+        hash = (53 * hash) + getLettersPerUtterance().hashCode();
+      }
+      hash = (37 * hash) + UTTERANCE_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getUtteranceCount());
+      if (hasUtteranceDurationEstimation()) {
+        hash = (37 * hash) + UTTERANCE_DURATION_ESTIMATION_FIELD_NUMBER;
+        hash = (53 * hash) + getUtteranceDurationEstimation().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code speechkit.stt.v3.SpeakerAnalysis}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.SpeakerAnalysis)
+        yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysisOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SpeakerAnalysis_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SpeakerAnalysis_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.class, yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        speakerTag_ = "";
+
+        windowType_ = 0;
+
+        if (speechBoundariesBuilder_ == null) {
+          speechBoundaries_ = null;
+        } else {
+          speechBoundaries_ = null;
+          speechBoundariesBuilder_ = null;
+        }
+        totalSpeechMs_ = 0L;
+
+        speechRatio_ = 0D;
+
+        totalSilenceMs_ = 0L;
+
+        silenceRatio_ = 0D;
+
+        wordsCount_ = 0L;
+
+        lettersCount_ = 0L;
+
+        if (wordsPerSecondBuilder_ == null) {
+          wordsPerSecond_ = null;
+        } else {
+          wordsPerSecond_ = null;
+          wordsPerSecondBuilder_ = null;
+        }
+        if (lettersPerSecondBuilder_ == null) {
+          lettersPerSecond_ = null;
+        } else {
+          lettersPerSecond_ = null;
+          lettersPerSecondBuilder_ = null;
+        }
+        if (wordsPerUtteranceBuilder_ == null) {
+          wordsPerUtterance_ = null;
+        } else {
+          wordsPerUtterance_ = null;
+          wordsPerUtteranceBuilder_ = null;
+        }
+        if (lettersPerUtteranceBuilder_ == null) {
+          lettersPerUtterance_ = null;
+        } else {
+          lettersPerUtterance_ = null;
+          lettersPerUtteranceBuilder_ = null;
+        }
+        utteranceCount_ = 0L;
+
+        if (utteranceDurationEstimationBuilder_ == null) {
+          utteranceDurationEstimation_ = null;
+        } else {
+          utteranceDurationEstimation_ = null;
+          utteranceDurationEstimationBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SpeakerAnalysis_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis build() {
+        yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis buildPartial() {
+        yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis result = new yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis(this);
+        result.speakerTag_ = speakerTag_;
+        result.windowType_ = windowType_;
+        if (speechBoundariesBuilder_ == null) {
+          result.speechBoundaries_ = speechBoundaries_;
+        } else {
+          result.speechBoundaries_ = speechBoundariesBuilder_.build();
+        }
+        result.totalSpeechMs_ = totalSpeechMs_;
+        result.speechRatio_ = speechRatio_;
+        result.totalSilenceMs_ = totalSilenceMs_;
+        result.silenceRatio_ = silenceRatio_;
+        result.wordsCount_ = wordsCount_;
+        result.lettersCount_ = lettersCount_;
+        if (wordsPerSecondBuilder_ == null) {
+          result.wordsPerSecond_ = wordsPerSecond_;
+        } else {
+          result.wordsPerSecond_ = wordsPerSecondBuilder_.build();
+        }
+        if (lettersPerSecondBuilder_ == null) {
+          result.lettersPerSecond_ = lettersPerSecond_;
+        } else {
+          result.lettersPerSecond_ = lettersPerSecondBuilder_.build();
+        }
+        if (wordsPerUtteranceBuilder_ == null) {
+          result.wordsPerUtterance_ = wordsPerUtterance_;
+        } else {
+          result.wordsPerUtterance_ = wordsPerUtteranceBuilder_.build();
+        }
+        if (lettersPerUtteranceBuilder_ == null) {
+          result.lettersPerUtterance_ = lettersPerUtterance_;
+        } else {
+          result.lettersPerUtterance_ = lettersPerUtteranceBuilder_.build();
+        }
+        result.utteranceCount_ = utteranceCount_;
+        if (utteranceDurationEstimationBuilder_ == null) {
+          result.utteranceDurationEstimation_ = utteranceDurationEstimation_;
+        } else {
+          result.utteranceDurationEstimation_ = utteranceDurationEstimationBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis) {
+          return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis other) {
+        if (other == yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.getDefaultInstance()) return this;
+        if (!other.getSpeakerTag().isEmpty()) {
+          speakerTag_ = other.speakerTag_;
+          onChanged();
+        }
+        if (other.windowType_ != 0) {
+          setWindowTypeValue(other.getWindowTypeValue());
+        }
+        if (other.hasSpeechBoundaries()) {
+          mergeSpeechBoundaries(other.getSpeechBoundaries());
+        }
+        if (other.getTotalSpeechMs() != 0L) {
+          setTotalSpeechMs(other.getTotalSpeechMs());
+        }
+        if (other.getSpeechRatio() != 0D) {
+          setSpeechRatio(other.getSpeechRatio());
+        }
+        if (other.getTotalSilenceMs() != 0L) {
+          setTotalSilenceMs(other.getTotalSilenceMs());
+        }
+        if (other.getSilenceRatio() != 0D) {
+          setSilenceRatio(other.getSilenceRatio());
+        }
+        if (other.getWordsCount() != 0L) {
+          setWordsCount(other.getWordsCount());
+        }
+        if (other.getLettersCount() != 0L) {
+          setLettersCount(other.getLettersCount());
+        }
+        if (other.hasWordsPerSecond()) {
+          mergeWordsPerSecond(other.getWordsPerSecond());
+        }
+        if (other.hasLettersPerSecond()) {
+          mergeLettersPerSecond(other.getLettersPerSecond());
+        }
+        if (other.hasWordsPerUtterance()) {
+          mergeWordsPerUtterance(other.getWordsPerUtterance());
+        }
+        if (other.hasLettersPerUtterance()) {
+          mergeLettersPerUtterance(other.getLettersPerUtterance());
+        }
+        if (other.getUtteranceCount() != 0L) {
+          setUtteranceCount(other.getUtteranceCount());
+        }
+        if (other.hasUtteranceDurationEstimation()) {
+          mergeUtteranceDurationEstimation(other.getUtteranceDurationEstimation());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object speakerTag_ = "";
+      /**
+       * <pre>
+       * Speaker tag
+       * </pre>
+       *
+       * <code>string speaker_tag = 1;</code>
+       * @return The speakerTag.
+       */
+      public java.lang.String getSpeakerTag() {
+        java.lang.Object ref = speakerTag_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          speakerTag_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Speaker tag
+       * </pre>
+       *
+       * <code>string speaker_tag = 1;</code>
+       * @return The bytes for speakerTag.
+       */
+      public com.google.protobuf.ByteString
+          getSpeakerTagBytes() {
+        java.lang.Object ref = speakerTag_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          speakerTag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Speaker tag
+       * </pre>
+       *
+       * <code>string speaker_tag = 1;</code>
+       * @param value The speakerTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpeakerTag(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        speakerTag_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Speaker tag
+       * </pre>
+       *
+       * <code>string speaker_tag = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpeakerTag() {
+        
+        speakerTag_ = getDefaultInstance().getSpeakerTag();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Speaker tag
+       * </pre>
+       *
+       * <code>string speaker_tag = 1;</code>
+       * @param value The bytes for speakerTag to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpeakerTagBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        speakerTag_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int windowType_ = 0;
+      /**
+       * <pre>
+       * Response window type
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerAnalysis.WindowType window_type = 2;</code>
+       * @return The enum numeric value on the wire for windowType.
+       */
+      @java.lang.Override public int getWindowTypeValue() {
+        return windowType_;
+      }
+      /**
+       * <pre>
+       * Response window type
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerAnalysis.WindowType window_type = 2;</code>
+       * @param value The enum numeric value on the wire for windowType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWindowTypeValue(int value) {
+        
+        windowType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Response window type
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerAnalysis.WindowType window_type = 2;</code>
+       * @return The windowType.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.WindowType getWindowType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.WindowType result = yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.WindowType.valueOf(windowType_);
+        return result == null ? yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.WindowType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Response window type
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerAnalysis.WindowType window_type = 2;</code>
+       * @param value The windowType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWindowType(yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.WindowType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        windowType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Response window type
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerAnalysis.WindowType window_type = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWindowType() {
+        
+        windowType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries speechBoundaries_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundariesOrBuilder> speechBoundariesBuilder_;
+      /**
+       * <pre>
+       * Audio segment boundaries
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.AudioSegmentBoundaries speech_boundaries = 3;</code>
+       * @return Whether the speechBoundaries field is set.
+       */
+      public boolean hasSpeechBoundaries() {
+        return speechBoundariesBuilder_ != null || speechBoundaries_ != null;
+      }
+      /**
+       * <pre>
+       * Audio segment boundaries
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.AudioSegmentBoundaries speech_boundaries = 3;</code>
+       * @return The speechBoundaries.
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries getSpeechBoundaries() {
+        if (speechBoundariesBuilder_ == null) {
+          return speechBoundaries_ == null ? yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.getDefaultInstance() : speechBoundaries_;
+        } else {
+          return speechBoundariesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Audio segment boundaries
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.AudioSegmentBoundaries speech_boundaries = 3;</code>
+       */
+      public Builder setSpeechBoundaries(yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries value) {
+        if (speechBoundariesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          speechBoundaries_ = value;
+          onChanged();
+        } else {
+          speechBoundariesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Audio segment boundaries
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.AudioSegmentBoundaries speech_boundaries = 3;</code>
+       */
+      public Builder setSpeechBoundaries(
+          yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder builderForValue) {
+        if (speechBoundariesBuilder_ == null) {
+          speechBoundaries_ = builderForValue.build();
+          onChanged();
+        } else {
+          speechBoundariesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Audio segment boundaries
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.AudioSegmentBoundaries speech_boundaries = 3;</code>
+       */
+      public Builder mergeSpeechBoundaries(yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries value) {
+        if (speechBoundariesBuilder_ == null) {
+          if (speechBoundaries_ != null) {
+            speechBoundaries_ =
+              yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.newBuilder(speechBoundaries_).mergeFrom(value).buildPartial();
+          } else {
+            speechBoundaries_ = value;
+          }
+          onChanged();
+        } else {
+          speechBoundariesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Audio segment boundaries
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.AudioSegmentBoundaries speech_boundaries = 3;</code>
+       */
+      public Builder clearSpeechBoundaries() {
+        if (speechBoundariesBuilder_ == null) {
+          speechBoundaries_ = null;
+          onChanged();
+        } else {
+          speechBoundaries_ = null;
+          speechBoundariesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Audio segment boundaries
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.AudioSegmentBoundaries speech_boundaries = 3;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder getSpeechBoundariesBuilder() {
+        
+        onChanged();
+        return getSpeechBoundariesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Audio segment boundaries
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.AudioSegmentBoundaries speech_boundaries = 3;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundariesOrBuilder getSpeechBoundariesOrBuilder() {
+        if (speechBoundariesBuilder_ != null) {
+          return speechBoundariesBuilder_.getMessageOrBuilder();
+        } else {
+          return speechBoundaries_ == null ?
+              yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.getDefaultInstance() : speechBoundaries_;
+        }
+      }
+      /**
+       * <pre>
+       * Audio segment boundaries
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.AudioSegmentBoundaries speech_boundaries = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundariesOrBuilder> 
+          getSpeechBoundariesFieldBuilder() {
+        if (speechBoundariesBuilder_ == null) {
+          speechBoundariesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundariesOrBuilder>(
+                  getSpeechBoundaries(),
+                  getParentForChildren(),
+                  isClean());
+          speechBoundaries_ = null;
+        }
+        return speechBoundariesBuilder_;
+      }
+
+      private long totalSpeechMs_ ;
+      /**
+       * <pre>
+       * Total speech duration
+       * </pre>
+       *
+       * <code>int64 total_speech_ms = 4;</code>
+       * @return The totalSpeechMs.
+       */
+      @java.lang.Override
+      public long getTotalSpeechMs() {
+        return totalSpeechMs_;
+      }
+      /**
+       * <pre>
+       * Total speech duration
+       * </pre>
+       *
+       * <code>int64 total_speech_ms = 4;</code>
+       * @param value The totalSpeechMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalSpeechMs(long value) {
+        
+        totalSpeechMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Total speech duration
+       * </pre>
+       *
+       * <code>int64 total_speech_ms = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalSpeechMs() {
+        
+        totalSpeechMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private double speechRatio_ ;
+      /**
+       * <pre>
+       * Speech ratio within audio segment
+       * </pre>
+       *
+       * <code>double speech_ratio = 5;</code>
+       * @return The speechRatio.
+       */
+      @java.lang.Override
+      public double getSpeechRatio() {
+        return speechRatio_;
+      }
+      /**
+       * <pre>
+       * Speech ratio within audio segment
+       * </pre>
+       *
+       * <code>double speech_ratio = 5;</code>
+       * @param value The speechRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpeechRatio(double value) {
+        
+        speechRatio_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Speech ratio within audio segment
+       * </pre>
+       *
+       * <code>double speech_ratio = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpeechRatio() {
+        
+        speechRatio_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private long totalSilenceMs_ ;
+      /**
+       * <pre>
+       * Total silence duration
+       * </pre>
+       *
+       * <code>int64 total_silence_ms = 6;</code>
+       * @return The totalSilenceMs.
+       */
+      @java.lang.Override
+      public long getTotalSilenceMs() {
+        return totalSilenceMs_;
+      }
+      /**
+       * <pre>
+       * Total silence duration
+       * </pre>
+       *
+       * <code>int64 total_silence_ms = 6;</code>
+       * @param value The totalSilenceMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalSilenceMs(long value) {
+        
+        totalSilenceMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Total silence duration
+       * </pre>
+       *
+       * <code>int64 total_silence_ms = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalSilenceMs() {
+        
+        totalSilenceMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private double silenceRatio_ ;
+      /**
+       * <pre>
+       * Silence ratio within audio segment
+       * </pre>
+       *
+       * <code>double silence_ratio = 7;</code>
+       * @return The silenceRatio.
+       */
+      @java.lang.Override
+      public double getSilenceRatio() {
+        return silenceRatio_;
+      }
+      /**
+       * <pre>
+       * Silence ratio within audio segment
+       * </pre>
+       *
+       * <code>double silence_ratio = 7;</code>
+       * @param value The silenceRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSilenceRatio(double value) {
+        
+        silenceRatio_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Silence ratio within audio segment
+       * </pre>
+       *
+       * <code>double silence_ratio = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSilenceRatio() {
+        
+        silenceRatio_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private long wordsCount_ ;
+      /**
+       * <pre>
+       * Number of words in recognized speech
+       * </pre>
+       *
+       * <code>int64 words_count = 8;</code>
+       * @return The wordsCount.
+       */
+      @java.lang.Override
+      public long getWordsCount() {
+        return wordsCount_;
+      }
+      /**
+       * <pre>
+       * Number of words in recognized speech
+       * </pre>
+       *
+       * <code>int64 words_count = 8;</code>
+       * @param value The wordsCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWordsCount(long value) {
+        
+        wordsCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of words in recognized speech
+       * </pre>
+       *
+       * <code>int64 words_count = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWordsCount() {
+        
+        wordsCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long lettersCount_ ;
+      /**
+       * <pre>
+       * Number of letters in recognized speech
+       * </pre>
+       *
+       * <code>int64 letters_count = 9;</code>
+       * @return The lettersCount.
+       */
+      @java.lang.Override
+      public long getLettersCount() {
+        return lettersCount_;
+      }
+      /**
+       * <pre>
+       * Number of letters in recognized speech
+       * </pre>
+       *
+       * <code>int64 letters_count = 9;</code>
+       * @param value The lettersCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLettersCount(long value) {
+        
+        lettersCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of letters in recognized speech
+       * </pre>
+       *
+       * <code>int64 letters_count = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLettersCount() {
+        
+        lettersCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics wordsPerSecond_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder> wordsPerSecondBuilder_;
+      /**
+       * <pre>
+       * Descriptive statistics for words per second distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_second = 10;</code>
+       * @return Whether the wordsPerSecond field is set.
+       */
+      public boolean hasWordsPerSecond() {
+        return wordsPerSecondBuilder_ != null || wordsPerSecond_ != null;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for words per second distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_second = 10;</code>
+       * @return The wordsPerSecond.
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getWordsPerSecond() {
+        if (wordsPerSecondBuilder_ == null) {
+          return wordsPerSecond_ == null ? yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance() : wordsPerSecond_;
+        } else {
+          return wordsPerSecondBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for words per second distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_second = 10;</code>
+       */
+      public Builder setWordsPerSecond(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics value) {
+        if (wordsPerSecondBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          wordsPerSecond_ = value;
+          onChanged();
+        } else {
+          wordsPerSecondBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for words per second distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_second = 10;</code>
+       */
+      public Builder setWordsPerSecond(
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder builderForValue) {
+        if (wordsPerSecondBuilder_ == null) {
+          wordsPerSecond_ = builderForValue.build();
+          onChanged();
+        } else {
+          wordsPerSecondBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for words per second distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_second = 10;</code>
+       */
+      public Builder mergeWordsPerSecond(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics value) {
+        if (wordsPerSecondBuilder_ == null) {
+          if (wordsPerSecond_ != null) {
+            wordsPerSecond_ =
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.newBuilder(wordsPerSecond_).mergeFrom(value).buildPartial();
+          } else {
+            wordsPerSecond_ = value;
+          }
+          onChanged();
+        } else {
+          wordsPerSecondBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for words per second distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_second = 10;</code>
+       */
+      public Builder clearWordsPerSecond() {
+        if (wordsPerSecondBuilder_ == null) {
+          wordsPerSecond_ = null;
+          onChanged();
+        } else {
+          wordsPerSecond_ = null;
+          wordsPerSecondBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for words per second distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_second = 10;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder getWordsPerSecondBuilder() {
+        
+        onChanged();
+        return getWordsPerSecondFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for words per second distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_second = 10;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder getWordsPerSecondOrBuilder() {
+        if (wordsPerSecondBuilder_ != null) {
+          return wordsPerSecondBuilder_.getMessageOrBuilder();
+        } else {
+          return wordsPerSecond_ == null ?
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance() : wordsPerSecond_;
+        }
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for words per second distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_second = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder> 
+          getWordsPerSecondFieldBuilder() {
+        if (wordsPerSecondBuilder_ == null) {
+          wordsPerSecondBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder>(
+                  getWordsPerSecond(),
+                  getParentForChildren(),
+                  isClean());
+          wordsPerSecond_ = null;
+        }
+        return wordsPerSecondBuilder_;
+      }
+
+      private yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics lettersPerSecond_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder> lettersPerSecondBuilder_;
+      /**
+       * <pre>
+       * Descriptive statistics for letters per second distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_second = 11;</code>
+       * @return Whether the lettersPerSecond field is set.
+       */
+      public boolean hasLettersPerSecond() {
+        return lettersPerSecondBuilder_ != null || lettersPerSecond_ != null;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for letters per second distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_second = 11;</code>
+       * @return The lettersPerSecond.
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getLettersPerSecond() {
+        if (lettersPerSecondBuilder_ == null) {
+          return lettersPerSecond_ == null ? yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance() : lettersPerSecond_;
+        } else {
+          return lettersPerSecondBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for letters per second distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_second = 11;</code>
+       */
+      public Builder setLettersPerSecond(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics value) {
+        if (lettersPerSecondBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lettersPerSecond_ = value;
+          onChanged();
+        } else {
+          lettersPerSecondBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for letters per second distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_second = 11;</code>
+       */
+      public Builder setLettersPerSecond(
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder builderForValue) {
+        if (lettersPerSecondBuilder_ == null) {
+          lettersPerSecond_ = builderForValue.build();
+          onChanged();
+        } else {
+          lettersPerSecondBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for letters per second distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_second = 11;</code>
+       */
+      public Builder mergeLettersPerSecond(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics value) {
+        if (lettersPerSecondBuilder_ == null) {
+          if (lettersPerSecond_ != null) {
+            lettersPerSecond_ =
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.newBuilder(lettersPerSecond_).mergeFrom(value).buildPartial();
+          } else {
+            lettersPerSecond_ = value;
+          }
+          onChanged();
+        } else {
+          lettersPerSecondBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for letters per second distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_second = 11;</code>
+       */
+      public Builder clearLettersPerSecond() {
+        if (lettersPerSecondBuilder_ == null) {
+          lettersPerSecond_ = null;
+          onChanged();
+        } else {
+          lettersPerSecond_ = null;
+          lettersPerSecondBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for letters per second distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_second = 11;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder getLettersPerSecondBuilder() {
+        
+        onChanged();
+        return getLettersPerSecondFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for letters per second distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_second = 11;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder getLettersPerSecondOrBuilder() {
+        if (lettersPerSecondBuilder_ != null) {
+          return lettersPerSecondBuilder_.getMessageOrBuilder();
+        } else {
+          return lettersPerSecond_ == null ?
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance() : lettersPerSecond_;
+        }
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for letters per second distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_second = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder> 
+          getLettersPerSecondFieldBuilder() {
+        if (lettersPerSecondBuilder_ == null) {
+          lettersPerSecondBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder>(
+                  getLettersPerSecond(),
+                  getParentForChildren(),
+                  isClean());
+          lettersPerSecond_ = null;
+        }
+        return lettersPerSecondBuilder_;
+      }
+
+      private yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics wordsPerUtterance_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder> wordsPerUtteranceBuilder_;
+      /**
+       * <pre>
+       * Descriptive statistics for words per utterance distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_utterance = 12;</code>
+       * @return Whether the wordsPerUtterance field is set.
+       */
+      public boolean hasWordsPerUtterance() {
+        return wordsPerUtteranceBuilder_ != null || wordsPerUtterance_ != null;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for words per utterance distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_utterance = 12;</code>
+       * @return The wordsPerUtterance.
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getWordsPerUtterance() {
+        if (wordsPerUtteranceBuilder_ == null) {
+          return wordsPerUtterance_ == null ? yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance() : wordsPerUtterance_;
+        } else {
+          return wordsPerUtteranceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for words per utterance distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_utterance = 12;</code>
+       */
+      public Builder setWordsPerUtterance(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics value) {
+        if (wordsPerUtteranceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          wordsPerUtterance_ = value;
+          onChanged();
+        } else {
+          wordsPerUtteranceBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for words per utterance distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_utterance = 12;</code>
+       */
+      public Builder setWordsPerUtterance(
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder builderForValue) {
+        if (wordsPerUtteranceBuilder_ == null) {
+          wordsPerUtterance_ = builderForValue.build();
+          onChanged();
+        } else {
+          wordsPerUtteranceBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for words per utterance distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_utterance = 12;</code>
+       */
+      public Builder mergeWordsPerUtterance(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics value) {
+        if (wordsPerUtteranceBuilder_ == null) {
+          if (wordsPerUtterance_ != null) {
+            wordsPerUtterance_ =
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.newBuilder(wordsPerUtterance_).mergeFrom(value).buildPartial();
+          } else {
+            wordsPerUtterance_ = value;
+          }
+          onChanged();
+        } else {
+          wordsPerUtteranceBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for words per utterance distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_utterance = 12;</code>
+       */
+      public Builder clearWordsPerUtterance() {
+        if (wordsPerUtteranceBuilder_ == null) {
+          wordsPerUtterance_ = null;
+          onChanged();
+        } else {
+          wordsPerUtterance_ = null;
+          wordsPerUtteranceBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for words per utterance distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_utterance = 12;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder getWordsPerUtteranceBuilder() {
+        
+        onChanged();
+        return getWordsPerUtteranceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for words per utterance distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_utterance = 12;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder getWordsPerUtteranceOrBuilder() {
+        if (wordsPerUtteranceBuilder_ != null) {
+          return wordsPerUtteranceBuilder_.getMessageOrBuilder();
+        } else {
+          return wordsPerUtterance_ == null ?
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance() : wordsPerUtterance_;
+        }
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for words per utterance distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics words_per_utterance = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder> 
+          getWordsPerUtteranceFieldBuilder() {
+        if (wordsPerUtteranceBuilder_ == null) {
+          wordsPerUtteranceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder>(
+                  getWordsPerUtterance(),
+                  getParentForChildren(),
+                  isClean());
+          wordsPerUtterance_ = null;
+        }
+        return wordsPerUtteranceBuilder_;
+      }
+
+      private yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics lettersPerUtterance_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder> lettersPerUtteranceBuilder_;
+      /**
+       * <pre>
+       * Descriptive statistics for letters per utterance distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_utterance = 13;</code>
+       * @return Whether the lettersPerUtterance field is set.
+       */
+      public boolean hasLettersPerUtterance() {
+        return lettersPerUtteranceBuilder_ != null || lettersPerUtterance_ != null;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for letters per utterance distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_utterance = 13;</code>
+       * @return The lettersPerUtterance.
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getLettersPerUtterance() {
+        if (lettersPerUtteranceBuilder_ == null) {
+          return lettersPerUtterance_ == null ? yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance() : lettersPerUtterance_;
+        } else {
+          return lettersPerUtteranceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for letters per utterance distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_utterance = 13;</code>
+       */
+      public Builder setLettersPerUtterance(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics value) {
+        if (lettersPerUtteranceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          lettersPerUtterance_ = value;
+          onChanged();
+        } else {
+          lettersPerUtteranceBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for letters per utterance distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_utterance = 13;</code>
+       */
+      public Builder setLettersPerUtterance(
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder builderForValue) {
+        if (lettersPerUtteranceBuilder_ == null) {
+          lettersPerUtterance_ = builderForValue.build();
+          onChanged();
+        } else {
+          lettersPerUtteranceBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for letters per utterance distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_utterance = 13;</code>
+       */
+      public Builder mergeLettersPerUtterance(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics value) {
+        if (lettersPerUtteranceBuilder_ == null) {
+          if (lettersPerUtterance_ != null) {
+            lettersPerUtterance_ =
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.newBuilder(lettersPerUtterance_).mergeFrom(value).buildPartial();
+          } else {
+            lettersPerUtterance_ = value;
+          }
+          onChanged();
+        } else {
+          lettersPerUtteranceBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for letters per utterance distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_utterance = 13;</code>
+       */
+      public Builder clearLettersPerUtterance() {
+        if (lettersPerUtteranceBuilder_ == null) {
+          lettersPerUtterance_ = null;
+          onChanged();
+        } else {
+          lettersPerUtterance_ = null;
+          lettersPerUtteranceBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for letters per utterance distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_utterance = 13;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder getLettersPerUtteranceBuilder() {
+        
+        onChanged();
+        return getLettersPerUtteranceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for letters per utterance distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_utterance = 13;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder getLettersPerUtteranceOrBuilder() {
+        if (lettersPerUtteranceBuilder_ != null) {
+          return lettersPerUtteranceBuilder_.getMessageOrBuilder();
+        } else {
+          return lettersPerUtterance_ == null ?
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance() : lettersPerUtterance_;
+        }
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for letters per utterance distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics letters_per_utterance = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder> 
+          getLettersPerUtteranceFieldBuilder() {
+        if (lettersPerUtteranceBuilder_ == null) {
+          lettersPerUtteranceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder>(
+                  getLettersPerUtterance(),
+                  getParentForChildren(),
+                  isClean());
+          lettersPerUtterance_ = null;
+        }
+        return lettersPerUtteranceBuilder_;
+      }
+
+      private long utteranceCount_ ;
+      /**
+       * <pre>
+       * Number of utterances
+       * </pre>
+       *
+       * <code>int64 utterance_count = 14;</code>
+       * @return The utteranceCount.
+       */
+      @java.lang.Override
+      public long getUtteranceCount() {
+        return utteranceCount_;
+      }
+      /**
+       * <pre>
+       * Number of utterances
+       * </pre>
+       *
+       * <code>int64 utterance_count = 14;</code>
+       * @param value The utteranceCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUtteranceCount(long value) {
+        
+        utteranceCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of utterances
+       * </pre>
+       *
+       * <code>int64 utterance_count = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUtteranceCount() {
+        
+        utteranceCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics utteranceDurationEstimation_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder> utteranceDurationEstimationBuilder_;
+      /**
+       * <pre>
+       * Descriptive statistics for utterance duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics utterance_duration_estimation = 15;</code>
+       * @return Whether the utteranceDurationEstimation field is set.
+       */
+      public boolean hasUtteranceDurationEstimation() {
+        return utteranceDurationEstimationBuilder_ != null || utteranceDurationEstimation_ != null;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for utterance duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics utterance_duration_estimation = 15;</code>
+       * @return The utteranceDurationEstimation.
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getUtteranceDurationEstimation() {
+        if (utteranceDurationEstimationBuilder_ == null) {
+          return utteranceDurationEstimation_ == null ? yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance() : utteranceDurationEstimation_;
+        } else {
+          return utteranceDurationEstimationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for utterance duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics utterance_duration_estimation = 15;</code>
+       */
+      public Builder setUtteranceDurationEstimation(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics value) {
+        if (utteranceDurationEstimationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          utteranceDurationEstimation_ = value;
+          onChanged();
+        } else {
+          utteranceDurationEstimationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for utterance duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics utterance_duration_estimation = 15;</code>
+       */
+      public Builder setUtteranceDurationEstimation(
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder builderForValue) {
+        if (utteranceDurationEstimationBuilder_ == null) {
+          utteranceDurationEstimation_ = builderForValue.build();
+          onChanged();
+        } else {
+          utteranceDurationEstimationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for utterance duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics utterance_duration_estimation = 15;</code>
+       */
+      public Builder mergeUtteranceDurationEstimation(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics value) {
+        if (utteranceDurationEstimationBuilder_ == null) {
+          if (utteranceDurationEstimation_ != null) {
+            utteranceDurationEstimation_ =
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.newBuilder(utteranceDurationEstimation_).mergeFrom(value).buildPartial();
+          } else {
+            utteranceDurationEstimation_ = value;
+          }
+          onChanged();
+        } else {
+          utteranceDurationEstimationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for utterance duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics utterance_duration_estimation = 15;</code>
+       */
+      public Builder clearUtteranceDurationEstimation() {
+        if (utteranceDurationEstimationBuilder_ == null) {
+          utteranceDurationEstimation_ = null;
+          onChanged();
+        } else {
+          utteranceDurationEstimation_ = null;
+          utteranceDurationEstimationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for utterance duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics utterance_duration_estimation = 15;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder getUtteranceDurationEstimationBuilder() {
+        
+        onChanged();
+        return getUtteranceDurationEstimationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for utterance duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics utterance_duration_estimation = 15;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder getUtteranceDurationEstimationOrBuilder() {
+        if (utteranceDurationEstimationBuilder_ != null) {
+          return utteranceDurationEstimationBuilder_.getMessageOrBuilder();
+        } else {
+          return utteranceDurationEstimation_ == null ?
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance() : utteranceDurationEstimation_;
+        }
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for utterance duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics utterance_duration_estimation = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder> 
+          getUtteranceDurationEstimationFieldBuilder() {
+        if (utteranceDurationEstimationBuilder_ == null) {
+          utteranceDurationEstimationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder>(
+                  getUtteranceDurationEstimation(),
+                  getParentForChildren(),
+                  isClean());
+          utteranceDurationEstimation_ = null;
+        }
+        return utteranceDurationEstimationBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.SpeakerAnalysis)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.stt.v3.SpeakerAnalysis)
+    private static final yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis();
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SpeakerAnalysis>
+        PARSER = new com.google.protobuf.AbstractParser<SpeakerAnalysis>() {
+      @java.lang.Override
+      public SpeakerAnalysis parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SpeakerAnalysis(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SpeakerAnalysis> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SpeakerAnalysis> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ConversationAnalysisOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.ConversationAnalysis)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Audio segment boundaries
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.AudioSegmentBoundaries conversation_boundaries = 1;</code>
+     * @return Whether the conversationBoundaries field is set.
+     */
+    boolean hasConversationBoundaries();
+    /**
+     * <pre>
+     * Audio segment boundaries
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.AudioSegmentBoundaries conversation_boundaries = 1;</code>
+     * @return The conversationBoundaries.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries getConversationBoundaries();
+    /**
+     * <pre>
+     * Audio segment boundaries
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.AudioSegmentBoundaries conversation_boundaries = 1;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundariesOrBuilder getConversationBoundariesOrBuilder();
+
+    /**
+     * <pre>
+     * Total simultaneous silence duration
+     * </pre>
+     *
+     * <code>int64 total_simultaneous_silence_duration_ms = 2;</code>
+     * @return The totalSimultaneousSilenceDurationMs.
+     */
+    long getTotalSimultaneousSilenceDurationMs();
+
+    /**
+     * <pre>
+     * Simultaneous silence ratio within audio segment
+     * </pre>
+     *
+     * <code>double total_simultaneous_silence_ratio = 3;</code>
+     * @return The totalSimultaneousSilenceRatio.
+     */
+    double getTotalSimultaneousSilenceRatio();
+
+    /**
+     * <pre>
+     * Descriptive statistics for simultaneous silence duration distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_silence_duration_estimation = 4;</code>
+     * @return Whether the simultaneousSilenceDurationEstimation field is set.
+     */
+    boolean hasSimultaneousSilenceDurationEstimation();
+    /**
+     * <pre>
+     * Descriptive statistics for simultaneous silence duration distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_silence_duration_estimation = 4;</code>
+     * @return The simultaneousSilenceDurationEstimation.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getSimultaneousSilenceDurationEstimation();
+    /**
+     * <pre>
+     * Descriptive statistics for simultaneous silence duration distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_silence_duration_estimation = 4;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder getSimultaneousSilenceDurationEstimationOrBuilder();
+
+    /**
+     * <pre>
+     * Total simultaneous speech duration
+     * </pre>
+     *
+     * <code>int64 total_simultaneous_speech_duration_ms = 5;</code>
+     * @return The totalSimultaneousSpeechDurationMs.
+     */
+    long getTotalSimultaneousSpeechDurationMs();
+
+    /**
+     * <pre>
+     * Simultaneous speech ratio within audio segment
+     * </pre>
+     *
+     * <code>double total_simultaneous_speech_ratio = 6;</code>
+     * @return The totalSimultaneousSpeechRatio.
+     */
+    double getTotalSimultaneousSpeechRatio();
+
+    /**
+     * <pre>
+     * Descriptive statistics for simultaneous speech duration distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_speech_duration_estimation = 7;</code>
+     * @return Whether the simultaneousSpeechDurationEstimation field is set.
+     */
+    boolean hasSimultaneousSpeechDurationEstimation();
+    /**
+     * <pre>
+     * Descriptive statistics for simultaneous speech duration distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_speech_duration_estimation = 7;</code>
+     * @return The simultaneousSpeechDurationEstimation.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getSimultaneousSpeechDurationEstimation();
+    /**
+     * <pre>
+     * Descriptive statistics for simultaneous speech duration distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_speech_duration_estimation = 7;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder getSimultaneousSpeechDurationEstimationOrBuilder();
+
+    /**
+     * <pre>
+     * Interrupts description for every speaker
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation> 
+        getSpeakerInterruptsList();
+    /**
+     * <pre>
+     * Interrupts description for every speaker
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation getSpeakerInterrupts(int index);
+    /**
+     * <pre>
+     * Interrupts description for every speaker
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+     */
+    int getSpeakerInterruptsCount();
+    /**
+     * <pre>
+     * Interrupts description for every speaker
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluationOrBuilder> 
+        getSpeakerInterruptsOrBuilderList();
+    /**
+     * <pre>
+     * Interrupts description for every speaker
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluationOrBuilder getSpeakerInterruptsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code speechkit.stt.v3.ConversationAnalysis}
+   */
+  public static final class ConversationAnalysis extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.stt.v3.ConversationAnalysis)
+      ConversationAnalysisOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ConversationAnalysis.newBuilder() to construct.
+    private ConversationAnalysis(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ConversationAnalysis() {
+      speakerInterrupts_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConversationAnalysis();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ConversationAnalysis(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder subBuilder = null;
+              if (conversationBoundaries_ != null) {
+                subBuilder = conversationBoundaries_.toBuilder();
+              }
+              conversationBoundaries_ = input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(conversationBoundaries_);
+                conversationBoundaries_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 16: {
+
+              totalSimultaneousSilenceDurationMs_ = input.readInt64();
+              break;
+            }
+            case 25: {
+
+              totalSimultaneousSilenceRatio_ = input.readDouble();
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder subBuilder = null;
+              if (simultaneousSilenceDurationEstimation_ != null) {
+                subBuilder = simultaneousSilenceDurationEstimation_.toBuilder();
+              }
+              simultaneousSilenceDurationEstimation_ = input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(simultaneousSilenceDurationEstimation_);
+                simultaneousSilenceDurationEstimation_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 40: {
+
+              totalSimultaneousSpeechDurationMs_ = input.readInt64();
+              break;
+            }
+            case 49: {
+
+              totalSimultaneousSpeechRatio_ = input.readDouble();
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder subBuilder = null;
+              if (simultaneousSpeechDurationEstimation_ != null) {
+                subBuilder = simultaneousSpeechDurationEstimation_.toBuilder();
+              }
+              simultaneousSpeechDurationEstimation_ = input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(simultaneousSpeechDurationEstimation_);
+                simultaneousSpeechDurationEstimation_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                speakerInterrupts_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              speakerInterrupts_.add(
+                  input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          speakerInterrupts_ = java.util.Collections.unmodifiableList(speakerInterrupts_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_ConversationAnalysis_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_ConversationAnalysis_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.class, yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.Builder.class);
+    }
+
+    public interface InterruptsEvaluationOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Speaker tag
+       * </pre>
+       *
+       * <code>string speaker_tag = 1;</code>
+       * @return The speakerTag.
+       */
+      java.lang.String getSpeakerTag();
+      /**
+       * <pre>
+       * Speaker tag
+       * </pre>
+       *
+       * <code>string speaker_tag = 1;</code>
+       * @return The bytes for speakerTag.
+       */
+      com.google.protobuf.ByteString
+          getSpeakerTagBytes();
+
+      /**
+       * <pre>
+       * Number of interrupts made by the speaker
+       * </pre>
+       *
+       * <code>int64 interrupts_count = 2;</code>
+       * @return The interruptsCount.
+       */
+      long getInterruptsCount2();
+
+      /**
+       * <pre>
+       * Total duration of all interrupts
+       * </pre>
+       *
+       * <code>int64 interrupts_duration_ms = 3;</code>
+       * @return The interruptsDurationMs.
+       */
+      long getInterruptsDurationMs();
+
+      /**
+       * <pre>
+       * Boundaries for every interrupt
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+       */
+      java.util.List<yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries> 
+          getInterrupts4List();
+      /**
+       * <pre>
+       * Boundaries for every interrupt
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+       */
+      yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries getInterrupts4(int index);
+      /**
+       * <pre>
+       * Boundaries for every interrupt
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+       */
+      int getInterrupts4Count();
+      /**
+       * <pre>
+       * Boundaries for every interrupt
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+       */
+      java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundariesOrBuilder> 
+          getInterrupts4OrBuilderList();
+      /**
+       * <pre>
+       * Boundaries for every interrupt
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+       */
+      yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundariesOrBuilder getInterrupts4OrBuilder(
+          int index);
+    }
+    /**
+     * Protobuf type {@code speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation}
+     */
+    public static final class InterruptsEvaluation extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation)
+        InterruptsEvaluationOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use InterruptsEvaluation.newBuilder() to construct.
+      private InterruptsEvaluation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private InterruptsEvaluation() {
+        speakerTag_ = "";
+        interrupts4_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new InterruptsEvaluation();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private InterruptsEvaluation(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                speakerTag_ = s;
+                break;
+              }
+              case 16: {
+
+                interruptsCount2_ = input.readInt64();
+                break;
+              }
+              case 24: {
+
+                interruptsDurationMs_ = input.readInt64();
+                break;
+              }
+              case 34: {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  interrupts4_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                interrupts4_.add(
+                    input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.parser(), extensionRegistry));
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            interrupts4_ = java.util.Collections.unmodifiableList(interrupts4_);
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_ConversationAnalysis_InterruptsEvaluation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_ConversationAnalysis_InterruptsEvaluation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation.class, yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation.Builder.class);
+      }
+
+      public static final int SPEAKER_TAG_FIELD_NUMBER = 1;
+      private volatile java.lang.Object speakerTag_;
+      /**
+       * <pre>
+       * Speaker tag
+       * </pre>
+       *
+       * <code>string speaker_tag = 1;</code>
+       * @return The speakerTag.
+       */
+      @java.lang.Override
+      public java.lang.String getSpeakerTag() {
+        java.lang.Object ref = speakerTag_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          speakerTag_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Speaker tag
+       * </pre>
+       *
+       * <code>string speaker_tag = 1;</code>
+       * @return The bytes for speakerTag.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getSpeakerTagBytes() {
+        java.lang.Object ref = speakerTag_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          speakerTag_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int INTERRUPTS_COUNT_FIELD_NUMBER = 2;
+      private long interruptsCount2_;
+      // An alternative name is used for field "interrupts_count" because:
+      //     both repeated field "interrupts" and singular field "interrupts_count" generate the method "getInterruptsCount()"
+      /**
+       * <pre>
+       * Number of interrupts made by the speaker
+       * </pre>
+       *
+       * <code>int64 interrupts_count = 2;</code>
+       * @return The interruptsCount.
+       */
+      @java.lang.Override
+      public long getInterruptsCount2() {
+        return interruptsCount2_;
+      }
+
+      public static final int INTERRUPTS_DURATION_MS_FIELD_NUMBER = 3;
+      private long interruptsDurationMs_;
+      /**
+       * <pre>
+       * Total duration of all interrupts
+       * </pre>
+       *
+       * <code>int64 interrupts_duration_ms = 3;</code>
+       * @return The interruptsDurationMs.
+       */
+      @java.lang.Override
+      public long getInterruptsDurationMs() {
+        return interruptsDurationMs_;
+      }
+
+      public static final int INTERRUPTS_FIELD_NUMBER = 4;
+      private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries> interrupts4_;
+      // An alternative name is used for field "interrupts" because:
+      //     both repeated field "interrupts" and singular field "interrupts_count" generate the method "getInterruptsCount()"
+      /**
+       * <pre>
+       * Boundaries for every interrupt
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+       */
+      @java.lang.Override
+      public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries> getInterrupts4List() {
+        return interrupts4_;
+      }
+      /**
+       * <pre>
+       * Boundaries for every interrupt
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+       */
+      @java.lang.Override
+      public java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundariesOrBuilder> 
+          getInterrupts4OrBuilderList() {
+        return interrupts4_;
+      }
+      /**
+       * <pre>
+       * Boundaries for every interrupt
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+       */
+      @java.lang.Override
+      public int getInterrupts4Count() {
+        return interrupts4_.size();
+      }
+      /**
+       * <pre>
+       * Boundaries for every interrupt
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries getInterrupts4(int index) {
+        return interrupts4_.get(index);
+      }
+      /**
+       * <pre>
+       * Boundaries for every interrupt
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundariesOrBuilder getInterrupts4OrBuilder(
+          int index) {
+        return interrupts4_.get(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(speakerTag_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, speakerTag_);
+        }
+        if (interruptsCount2_ != 0L) {
+          output.writeInt64(2, interruptsCount2_);
+        }
+        if (interruptsDurationMs_ != 0L) {
+          output.writeInt64(3, interruptsDurationMs_);
+        }
+        for (int i = 0; i < interrupts4_.size(); i++) {
+          output.writeMessage(4, interrupts4_.get(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(speakerTag_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, speakerTag_);
+        }
+        if (interruptsCount2_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(2, interruptsCount2_);
+        }
+        if (interruptsDurationMs_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(3, interruptsDurationMs_);
+        }
+        for (int i = 0; i < interrupts4_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, interrupts4_.get(i));
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation other = (yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation) obj;
+
+        if (!getSpeakerTag()
+            .equals(other.getSpeakerTag())) return false;
+        if (getInterruptsCount2()
+            != other.getInterruptsCount2()) return false;
+        if (getInterruptsDurationMs()
+            != other.getInterruptsDurationMs()) return false;
+        if (!getInterrupts4List()
+            .equals(other.getInterrupts4List())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + SPEAKER_TAG_FIELD_NUMBER;
+        hash = (53 * hash) + getSpeakerTag().hashCode();
+        hash = (37 * hash) + INTERRUPTS_COUNT_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getInterruptsCount2());
+        hash = (37 * hash) + INTERRUPTS_DURATION_MS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getInterruptsDurationMs());
+        if (getInterrupts4Count() > 0) {
+          hash = (37 * hash) + INTERRUPTS_FIELD_NUMBER;
+          hash = (53 * hash) + getInterrupts4List().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation)
+          yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluationOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_ConversationAnalysis_InterruptsEvaluation_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_ConversationAnalysis_InterruptsEvaluation_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation.class, yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getInterrupts4FieldBuilder();
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          speakerTag_ = "";
+
+          interruptsCount2_ = 0L;
+
+          interruptsDurationMs_ = 0L;
+
+          if (interrupts4Builder_ == null) {
+            interrupts4_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            interrupts4Builder_.clear();
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_ConversationAnalysis_InterruptsEvaluation_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation getDefaultInstanceForType() {
+          return yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation build() {
+          yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation buildPartial() {
+          yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation result = new yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation(this);
+          int from_bitField0_ = bitField0_;
+          result.speakerTag_ = speakerTag_;
+          result.interruptsCount2_ = interruptsCount2_;
+          result.interruptsDurationMs_ = interruptsDurationMs_;
+          if (interrupts4Builder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0)) {
+              interrupts4_ = java.util.Collections.unmodifiableList(interrupts4_);
+              bitField0_ = (bitField0_ & ~0x00000001);
+            }
+            result.interrupts4_ = interrupts4_;
+          } else {
+            result.interrupts4_ = interrupts4Builder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation) {
+            return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation other) {
+          if (other == yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation.getDefaultInstance()) return this;
+          if (!other.getSpeakerTag().isEmpty()) {
+            speakerTag_ = other.speakerTag_;
+            onChanged();
+          }
+          if (other.getInterruptsCount2() != 0L) {
+            setInterruptsCount2(other.getInterruptsCount2());
+          }
+          if (other.getInterruptsDurationMs() != 0L) {
+            setInterruptsDurationMs(other.getInterruptsDurationMs());
+          }
+          if (interrupts4Builder_ == null) {
+            if (!other.interrupts4_.isEmpty()) {
+              if (interrupts4_.isEmpty()) {
+                interrupts4_ = other.interrupts4_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+              } else {
+                ensureInterrupts4IsMutable();
+                interrupts4_.addAll(other.interrupts4_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.interrupts4_.isEmpty()) {
+              if (interrupts4Builder_.isEmpty()) {
+                interrupts4Builder_.dispose();
+                interrupts4Builder_ = null;
+                interrupts4_ = other.interrupts4_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                interrupts4Builder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getInterrupts4FieldBuilder() : null;
+              } else {
+                interrupts4Builder_.addAllMessages(other.interrupts4_);
+              }
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object speakerTag_ = "";
+        /**
+         * <pre>
+         * Speaker tag
+         * </pre>
+         *
+         * <code>string speaker_tag = 1;</code>
+         * @return The speakerTag.
+         */
+        public java.lang.String getSpeakerTag() {
+          java.lang.Object ref = speakerTag_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            speakerTag_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Speaker tag
+         * </pre>
+         *
+         * <code>string speaker_tag = 1;</code>
+         * @return The bytes for speakerTag.
+         */
+        public com.google.protobuf.ByteString
+            getSpeakerTagBytes() {
+          java.lang.Object ref = speakerTag_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            speakerTag_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Speaker tag
+         * </pre>
+         *
+         * <code>string speaker_tag = 1;</code>
+         * @param value The speakerTag to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSpeakerTag(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          speakerTag_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Speaker tag
+         * </pre>
+         *
+         * <code>string speaker_tag = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearSpeakerTag() {
+          
+          speakerTag_ = getDefaultInstance().getSpeakerTag();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Speaker tag
+         * </pre>
+         *
+         * <code>string speaker_tag = 1;</code>
+         * @param value The bytes for speakerTag to set.
+         * @return This builder for chaining.
+         */
+        public Builder setSpeakerTagBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          speakerTag_ = value;
+          onChanged();
+          return this;
+        }
+
+        private long interruptsCount2_ ;
+        /**
+         * <pre>
+         * Number of interrupts made by the speaker
+         * </pre>
+         *
+         * <code>int64 interrupts_count = 2;</code>
+         * @return The interruptsCount.
+         */
+        @java.lang.Override
+        public long getInterruptsCount2() {
+          return interruptsCount2_;
+        }
+        /**
+         * <pre>
+         * Number of interrupts made by the speaker
+         * </pre>
+         *
+         * <code>int64 interrupts_count = 2;</code>
+         * @param value The interruptsCount to set.
+         * @return This builder for chaining.
+         */
+        public Builder setInterruptsCount2(long value) {
+          
+          interruptsCount2_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Number of interrupts made by the speaker
+         * </pre>
+         *
+         * <code>int64 interrupts_count = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearInterruptsCount2() {
+          
+          interruptsCount2_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private long interruptsDurationMs_ ;
+        /**
+         * <pre>
+         * Total duration of all interrupts
+         * </pre>
+         *
+         * <code>int64 interrupts_duration_ms = 3;</code>
+         * @return The interruptsDurationMs.
+         */
+        @java.lang.Override
+        public long getInterruptsDurationMs() {
+          return interruptsDurationMs_;
+        }
+        /**
+         * <pre>
+         * Total duration of all interrupts
+         * </pre>
+         *
+         * <code>int64 interrupts_duration_ms = 3;</code>
+         * @param value The interruptsDurationMs to set.
+         * @return This builder for chaining.
+         */
+        public Builder setInterruptsDurationMs(long value) {
+          
+          interruptsDurationMs_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Total duration of all interrupts
+         * </pre>
+         *
+         * <code>int64 interrupts_duration_ms = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearInterruptsDurationMs() {
+          
+          interruptsDurationMs_ = 0L;
+          onChanged();
+          return this;
+        }
+
+        private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries> interrupts4_ =
+          java.util.Collections.emptyList();
+        private void ensureInterrupts4IsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            interrupts4_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries>(interrupts4_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundariesOrBuilder> interrupts4Builder_;
+
+        /**
+         * <pre>
+         * Boundaries for every interrupt
+         * </pre>
+         *
+         * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+         */
+        public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries> getInterrupts4List() {
+          if (interrupts4Builder_ == null) {
+            return java.util.Collections.unmodifiableList(interrupts4_);
+          } else {
+            return interrupts4Builder_.getMessageList();
+          }
+        }
+        /**
+         * <pre>
+         * Boundaries for every interrupt
+         * </pre>
+         *
+         * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+         */
+        public int getInterrupts4Count() {
+          if (interrupts4Builder_ == null) {
+            return interrupts4_.size();
+          } else {
+            return interrupts4Builder_.getCount();
+          }
+        }
+        /**
+         * <pre>
+         * Boundaries for every interrupt
+         * </pre>
+         *
+         * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+         */
+        public yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries getInterrupts4(int index) {
+          if (interrupts4Builder_ == null) {
+            return interrupts4_.get(index);
+          } else {
+            return interrupts4Builder_.getMessage(index);
+          }
+        }
+        /**
+         * <pre>
+         * Boundaries for every interrupt
+         * </pre>
+         *
+         * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+         */
+        public Builder setInterrupts4(
+            int index, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries value) {
+          if (interrupts4Builder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureInterrupts4IsMutable();
+            interrupts4_.set(index, value);
+            onChanged();
+          } else {
+            interrupts4Builder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Boundaries for every interrupt
+         * </pre>
+         *
+         * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+         */
+        public Builder setInterrupts4(
+            int index, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder builderForValue) {
+          if (interrupts4Builder_ == null) {
+            ensureInterrupts4IsMutable();
+            interrupts4_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            interrupts4Builder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Boundaries for every interrupt
+         * </pre>
+         *
+         * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+         */
+        public Builder addInterrupts4(yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries value) {
+          if (interrupts4Builder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureInterrupts4IsMutable();
+            interrupts4_.add(value);
+            onChanged();
+          } else {
+            interrupts4Builder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Boundaries for every interrupt
+         * </pre>
+         *
+         * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+         */
+        public Builder addInterrupts4(
+            int index, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries value) {
+          if (interrupts4Builder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureInterrupts4IsMutable();
+            interrupts4_.add(index, value);
+            onChanged();
+          } else {
+            interrupts4Builder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Boundaries for every interrupt
+         * </pre>
+         *
+         * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+         */
+        public Builder addInterrupts4(
+            yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder builderForValue) {
+          if (interrupts4Builder_ == null) {
+            ensureInterrupts4IsMutable();
+            interrupts4_.add(builderForValue.build());
+            onChanged();
+          } else {
+            interrupts4Builder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Boundaries for every interrupt
+         * </pre>
+         *
+         * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+         */
+        public Builder addInterrupts4(
+            int index, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder builderForValue) {
+          if (interrupts4Builder_ == null) {
+            ensureInterrupts4IsMutable();
+            interrupts4_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            interrupts4Builder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Boundaries for every interrupt
+         * </pre>
+         *
+         * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+         */
+        public Builder addAllInterrupts4(
+            java.lang.Iterable<? extends yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries> values) {
+          if (interrupts4Builder_ == null) {
+            ensureInterrupts4IsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, interrupts4_);
+            onChanged();
+          } else {
+            interrupts4Builder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Boundaries for every interrupt
+         * </pre>
+         *
+         * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+         */
+        public Builder clearInterrupts4() {
+          if (interrupts4Builder_ == null) {
+            interrupts4_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+            onChanged();
+          } else {
+            interrupts4Builder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Boundaries for every interrupt
+         * </pre>
+         *
+         * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+         */
+        public Builder removeInterrupts4(int index) {
+          if (interrupts4Builder_ == null) {
+            ensureInterrupts4IsMutable();
+            interrupts4_.remove(index);
+            onChanged();
+          } else {
+            interrupts4Builder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <pre>
+         * Boundaries for every interrupt
+         * </pre>
+         *
+         * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+         */
+        public yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder getInterrupts4Builder(
+            int index) {
+          return getInterrupts4FieldBuilder().getBuilder(index);
+        }
+        /**
+         * <pre>
+         * Boundaries for every interrupt
+         * </pre>
+         *
+         * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+         */
+        public yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundariesOrBuilder getInterrupts4OrBuilder(
+            int index) {
+          if (interrupts4Builder_ == null) {
+            return interrupts4_.get(index);  } else {
+            return interrupts4Builder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <pre>
+         * Boundaries for every interrupt
+         * </pre>
+         *
+         * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+         */
+        public java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundariesOrBuilder> 
+             getInterrupts4OrBuilderList() {
+          if (interrupts4Builder_ != null) {
+            return interrupts4Builder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(interrupts4_);
+          }
+        }
+        /**
+         * <pre>
+         * Boundaries for every interrupt
+         * </pre>
+         *
+         * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+         */
+        public yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder addInterrupts4Builder() {
+          return getInterrupts4FieldBuilder().addBuilder(
+              yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.getDefaultInstance());
+        }
+        /**
+         * <pre>
+         * Boundaries for every interrupt
+         * </pre>
+         *
+         * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+         */
+        public yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder addInterrupts4Builder(
+            int index) {
+          return getInterrupts4FieldBuilder().addBuilder(
+              index, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.getDefaultInstance());
+        }
+        /**
+         * <pre>
+         * Boundaries for every interrupt
+         * </pre>
+         *
+         * <code>repeated .speechkit.stt.v3.AudioSegmentBoundaries interrupts = 4;</code>
+         */
+        public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder> 
+             getInterrupts4BuilderList() {
+          return getInterrupts4FieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundariesOrBuilder> 
+            getInterrupts4FieldBuilder() {
+          if (interrupts4Builder_ == null) {
+            interrupts4Builder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundariesOrBuilder>(
+                    interrupts4_,
+                    ((bitField0_ & 0x00000001) != 0),
+                    getParentForChildren(),
+                    isClean());
+            interrupts4_ = null;
+          }
+          return interrupts4Builder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation)
+      }
+
+      // @@protoc_insertion_point(class_scope:speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation)
+      private static final yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation();
+      }
+
+      public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<InterruptsEvaluation>
+          PARSER = new com.google.protobuf.AbstractParser<InterruptsEvaluation>() {
+        @java.lang.Override
+        public InterruptsEvaluation parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new InterruptsEvaluation(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<InterruptsEvaluation> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<InterruptsEvaluation> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int CONVERSATION_BOUNDARIES_FIELD_NUMBER = 1;
+    private yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries conversationBoundaries_;
+    /**
+     * <pre>
+     * Audio segment boundaries
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.AudioSegmentBoundaries conversation_boundaries = 1;</code>
+     * @return Whether the conversationBoundaries field is set.
+     */
+    @java.lang.Override
+    public boolean hasConversationBoundaries() {
+      return conversationBoundaries_ != null;
+    }
+    /**
+     * <pre>
+     * Audio segment boundaries
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.AudioSegmentBoundaries conversation_boundaries = 1;</code>
+     * @return The conversationBoundaries.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries getConversationBoundaries() {
+      return conversationBoundaries_ == null ? yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.getDefaultInstance() : conversationBoundaries_;
+    }
+    /**
+     * <pre>
+     * Audio segment boundaries
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.AudioSegmentBoundaries conversation_boundaries = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundariesOrBuilder getConversationBoundariesOrBuilder() {
+      return getConversationBoundaries();
+    }
+
+    public static final int TOTAL_SIMULTANEOUS_SILENCE_DURATION_MS_FIELD_NUMBER = 2;
+    private long totalSimultaneousSilenceDurationMs_;
+    /**
+     * <pre>
+     * Total simultaneous silence duration
+     * </pre>
+     *
+     * <code>int64 total_simultaneous_silence_duration_ms = 2;</code>
+     * @return The totalSimultaneousSilenceDurationMs.
+     */
+    @java.lang.Override
+    public long getTotalSimultaneousSilenceDurationMs() {
+      return totalSimultaneousSilenceDurationMs_;
+    }
+
+    public static final int TOTAL_SIMULTANEOUS_SILENCE_RATIO_FIELD_NUMBER = 3;
+    private double totalSimultaneousSilenceRatio_;
+    /**
+     * <pre>
+     * Simultaneous silence ratio within audio segment
+     * </pre>
+     *
+     * <code>double total_simultaneous_silence_ratio = 3;</code>
+     * @return The totalSimultaneousSilenceRatio.
+     */
+    @java.lang.Override
+    public double getTotalSimultaneousSilenceRatio() {
+      return totalSimultaneousSilenceRatio_;
+    }
+
+    public static final int SIMULTANEOUS_SILENCE_DURATION_ESTIMATION_FIELD_NUMBER = 4;
+    private yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics simultaneousSilenceDurationEstimation_;
+    /**
+     * <pre>
+     * Descriptive statistics for simultaneous silence duration distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_silence_duration_estimation = 4;</code>
+     * @return Whether the simultaneousSilenceDurationEstimation field is set.
+     */
+    @java.lang.Override
+    public boolean hasSimultaneousSilenceDurationEstimation() {
+      return simultaneousSilenceDurationEstimation_ != null;
+    }
+    /**
+     * <pre>
+     * Descriptive statistics for simultaneous silence duration distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_silence_duration_estimation = 4;</code>
+     * @return The simultaneousSilenceDurationEstimation.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getSimultaneousSilenceDurationEstimation() {
+      return simultaneousSilenceDurationEstimation_ == null ? yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance() : simultaneousSilenceDurationEstimation_;
+    }
+    /**
+     * <pre>
+     * Descriptive statistics for simultaneous silence duration distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_silence_duration_estimation = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder getSimultaneousSilenceDurationEstimationOrBuilder() {
+      return getSimultaneousSilenceDurationEstimation();
+    }
+
+    public static final int TOTAL_SIMULTANEOUS_SPEECH_DURATION_MS_FIELD_NUMBER = 5;
+    private long totalSimultaneousSpeechDurationMs_;
+    /**
+     * <pre>
+     * Total simultaneous speech duration
+     * </pre>
+     *
+     * <code>int64 total_simultaneous_speech_duration_ms = 5;</code>
+     * @return The totalSimultaneousSpeechDurationMs.
+     */
+    @java.lang.Override
+    public long getTotalSimultaneousSpeechDurationMs() {
+      return totalSimultaneousSpeechDurationMs_;
+    }
+
+    public static final int TOTAL_SIMULTANEOUS_SPEECH_RATIO_FIELD_NUMBER = 6;
+    private double totalSimultaneousSpeechRatio_;
+    /**
+     * <pre>
+     * Simultaneous speech ratio within audio segment
+     * </pre>
+     *
+     * <code>double total_simultaneous_speech_ratio = 6;</code>
+     * @return The totalSimultaneousSpeechRatio.
+     */
+    @java.lang.Override
+    public double getTotalSimultaneousSpeechRatio() {
+      return totalSimultaneousSpeechRatio_;
+    }
+
+    public static final int SIMULTANEOUS_SPEECH_DURATION_ESTIMATION_FIELD_NUMBER = 7;
+    private yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics simultaneousSpeechDurationEstimation_;
+    /**
+     * <pre>
+     * Descriptive statistics for simultaneous speech duration distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_speech_duration_estimation = 7;</code>
+     * @return Whether the simultaneousSpeechDurationEstimation field is set.
+     */
+    @java.lang.Override
+    public boolean hasSimultaneousSpeechDurationEstimation() {
+      return simultaneousSpeechDurationEstimation_ != null;
+    }
+    /**
+     * <pre>
+     * Descriptive statistics for simultaneous speech duration distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_speech_duration_estimation = 7;</code>
+     * @return The simultaneousSpeechDurationEstimation.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getSimultaneousSpeechDurationEstimation() {
+      return simultaneousSpeechDurationEstimation_ == null ? yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance() : simultaneousSpeechDurationEstimation_;
+    }
+    /**
+     * <pre>
+     * Descriptive statistics for simultaneous speech duration distribution
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_speech_duration_estimation = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder getSimultaneousSpeechDurationEstimationOrBuilder() {
+      return getSimultaneousSpeechDurationEstimation();
+    }
+
+    public static final int SPEAKER_INTERRUPTS_FIELD_NUMBER = 8;
+    private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation> speakerInterrupts_;
+    /**
+     * <pre>
+     * Interrupts description for every speaker
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation> getSpeakerInterruptsList() {
+      return speakerInterrupts_;
+    }
+    /**
+     * <pre>
+     * Interrupts description for every speaker
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluationOrBuilder> 
+        getSpeakerInterruptsOrBuilderList() {
+      return speakerInterrupts_;
+    }
+    /**
+     * <pre>
+     * Interrupts description for every speaker
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+     */
+    @java.lang.Override
+    public int getSpeakerInterruptsCount() {
+      return speakerInterrupts_.size();
+    }
+    /**
+     * <pre>
+     * Interrupts description for every speaker
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation getSpeakerInterrupts(int index) {
+      return speakerInterrupts_.get(index);
+    }
+    /**
+     * <pre>
+     * Interrupts description for every speaker
+     * </pre>
+     *
+     * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluationOrBuilder getSpeakerInterruptsOrBuilder(
+        int index) {
+      return speakerInterrupts_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (conversationBoundaries_ != null) {
+        output.writeMessage(1, getConversationBoundaries());
+      }
+      if (totalSimultaneousSilenceDurationMs_ != 0L) {
+        output.writeInt64(2, totalSimultaneousSilenceDurationMs_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(totalSimultaneousSilenceRatio_) != 0) {
+        output.writeDouble(3, totalSimultaneousSilenceRatio_);
+      }
+      if (simultaneousSilenceDurationEstimation_ != null) {
+        output.writeMessage(4, getSimultaneousSilenceDurationEstimation());
+      }
+      if (totalSimultaneousSpeechDurationMs_ != 0L) {
+        output.writeInt64(5, totalSimultaneousSpeechDurationMs_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(totalSimultaneousSpeechRatio_) != 0) {
+        output.writeDouble(6, totalSimultaneousSpeechRatio_);
+      }
+      if (simultaneousSpeechDurationEstimation_ != null) {
+        output.writeMessage(7, getSimultaneousSpeechDurationEstimation());
+      }
+      for (int i = 0; i < speakerInterrupts_.size(); i++) {
+        output.writeMessage(8, speakerInterrupts_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (conversationBoundaries_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getConversationBoundaries());
+      }
+      if (totalSimultaneousSilenceDurationMs_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, totalSimultaneousSilenceDurationMs_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(totalSimultaneousSilenceRatio_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(3, totalSimultaneousSilenceRatio_);
+      }
+      if (simultaneousSilenceDurationEstimation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getSimultaneousSilenceDurationEstimation());
+      }
+      if (totalSimultaneousSpeechDurationMs_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, totalSimultaneousSpeechDurationMs_);
+      }
+      if (java.lang.Double.doubleToRawLongBits(totalSimultaneousSpeechRatio_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(6, totalSimultaneousSpeechRatio_);
+      }
+      if (simultaneousSpeechDurationEstimation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getSimultaneousSpeechDurationEstimation());
+      }
+      for (int i = 0; i < speakerInterrupts_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, speakerInterrupts_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis other = (yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis) obj;
+
+      if (hasConversationBoundaries() != other.hasConversationBoundaries()) return false;
+      if (hasConversationBoundaries()) {
+        if (!getConversationBoundaries()
+            .equals(other.getConversationBoundaries())) return false;
+      }
+      if (getTotalSimultaneousSilenceDurationMs()
+          != other.getTotalSimultaneousSilenceDurationMs()) return false;
+      if (java.lang.Double.doubleToLongBits(getTotalSimultaneousSilenceRatio())
+          != java.lang.Double.doubleToLongBits(
+              other.getTotalSimultaneousSilenceRatio())) return false;
+      if (hasSimultaneousSilenceDurationEstimation() != other.hasSimultaneousSilenceDurationEstimation()) return false;
+      if (hasSimultaneousSilenceDurationEstimation()) {
+        if (!getSimultaneousSilenceDurationEstimation()
+            .equals(other.getSimultaneousSilenceDurationEstimation())) return false;
+      }
+      if (getTotalSimultaneousSpeechDurationMs()
+          != other.getTotalSimultaneousSpeechDurationMs()) return false;
+      if (java.lang.Double.doubleToLongBits(getTotalSimultaneousSpeechRatio())
+          != java.lang.Double.doubleToLongBits(
+              other.getTotalSimultaneousSpeechRatio())) return false;
+      if (hasSimultaneousSpeechDurationEstimation() != other.hasSimultaneousSpeechDurationEstimation()) return false;
+      if (hasSimultaneousSpeechDurationEstimation()) {
+        if (!getSimultaneousSpeechDurationEstimation()
+            .equals(other.getSimultaneousSpeechDurationEstimation())) return false;
+      }
+      if (!getSpeakerInterruptsList()
+          .equals(other.getSpeakerInterruptsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasConversationBoundaries()) {
+        hash = (37 * hash) + CONVERSATION_BOUNDARIES_FIELD_NUMBER;
+        hash = (53 * hash) + getConversationBoundaries().hashCode();
+      }
+      hash = (37 * hash) + TOTAL_SIMULTANEOUS_SILENCE_DURATION_MS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalSimultaneousSilenceDurationMs());
+      hash = (37 * hash) + TOTAL_SIMULTANEOUS_SILENCE_RATIO_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getTotalSimultaneousSilenceRatio()));
+      if (hasSimultaneousSilenceDurationEstimation()) {
+        hash = (37 * hash) + SIMULTANEOUS_SILENCE_DURATION_ESTIMATION_FIELD_NUMBER;
+        hash = (53 * hash) + getSimultaneousSilenceDurationEstimation().hashCode();
+      }
+      hash = (37 * hash) + TOTAL_SIMULTANEOUS_SPEECH_DURATION_MS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTotalSimultaneousSpeechDurationMs());
+      hash = (37 * hash) + TOTAL_SIMULTANEOUS_SPEECH_RATIO_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getTotalSimultaneousSpeechRatio()));
+      if (hasSimultaneousSpeechDurationEstimation()) {
+        hash = (37 * hash) + SIMULTANEOUS_SPEECH_DURATION_ESTIMATION_FIELD_NUMBER;
+        hash = (53 * hash) + getSimultaneousSpeechDurationEstimation().hashCode();
+      }
+      if (getSpeakerInterruptsCount() > 0) {
+        hash = (37 * hash) + SPEAKER_INTERRUPTS_FIELD_NUMBER;
+        hash = (53 * hash) + getSpeakerInterruptsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code speechkit.stt.v3.ConversationAnalysis}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.ConversationAnalysis)
+        yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysisOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_ConversationAnalysis_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_ConversationAnalysis_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.class, yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSpeakerInterruptsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (conversationBoundariesBuilder_ == null) {
+          conversationBoundaries_ = null;
+        } else {
+          conversationBoundaries_ = null;
+          conversationBoundariesBuilder_ = null;
+        }
+        totalSimultaneousSilenceDurationMs_ = 0L;
+
+        totalSimultaneousSilenceRatio_ = 0D;
+
+        if (simultaneousSilenceDurationEstimationBuilder_ == null) {
+          simultaneousSilenceDurationEstimation_ = null;
+        } else {
+          simultaneousSilenceDurationEstimation_ = null;
+          simultaneousSilenceDurationEstimationBuilder_ = null;
+        }
+        totalSimultaneousSpeechDurationMs_ = 0L;
+
+        totalSimultaneousSpeechRatio_ = 0D;
+
+        if (simultaneousSpeechDurationEstimationBuilder_ == null) {
+          simultaneousSpeechDurationEstimation_ = null;
+        } else {
+          simultaneousSpeechDurationEstimation_ = null;
+          simultaneousSpeechDurationEstimationBuilder_ = null;
+        }
+        if (speakerInterruptsBuilder_ == null) {
+          speakerInterrupts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          speakerInterruptsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_ConversationAnalysis_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis build() {
+        yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis buildPartial() {
+        yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis result = new yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis(this);
+        int from_bitField0_ = bitField0_;
+        if (conversationBoundariesBuilder_ == null) {
+          result.conversationBoundaries_ = conversationBoundaries_;
+        } else {
+          result.conversationBoundaries_ = conversationBoundariesBuilder_.build();
+        }
+        result.totalSimultaneousSilenceDurationMs_ = totalSimultaneousSilenceDurationMs_;
+        result.totalSimultaneousSilenceRatio_ = totalSimultaneousSilenceRatio_;
+        if (simultaneousSilenceDurationEstimationBuilder_ == null) {
+          result.simultaneousSilenceDurationEstimation_ = simultaneousSilenceDurationEstimation_;
+        } else {
+          result.simultaneousSilenceDurationEstimation_ = simultaneousSilenceDurationEstimationBuilder_.build();
+        }
+        result.totalSimultaneousSpeechDurationMs_ = totalSimultaneousSpeechDurationMs_;
+        result.totalSimultaneousSpeechRatio_ = totalSimultaneousSpeechRatio_;
+        if (simultaneousSpeechDurationEstimationBuilder_ == null) {
+          result.simultaneousSpeechDurationEstimation_ = simultaneousSpeechDurationEstimation_;
+        } else {
+          result.simultaneousSpeechDurationEstimation_ = simultaneousSpeechDurationEstimationBuilder_.build();
+        }
+        if (speakerInterruptsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            speakerInterrupts_ = java.util.Collections.unmodifiableList(speakerInterrupts_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.speakerInterrupts_ = speakerInterrupts_;
+        } else {
+          result.speakerInterrupts_ = speakerInterruptsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis) {
+          return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis other) {
+        if (other == yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.getDefaultInstance()) return this;
+        if (other.hasConversationBoundaries()) {
+          mergeConversationBoundaries(other.getConversationBoundaries());
+        }
+        if (other.getTotalSimultaneousSilenceDurationMs() != 0L) {
+          setTotalSimultaneousSilenceDurationMs(other.getTotalSimultaneousSilenceDurationMs());
+        }
+        if (other.getTotalSimultaneousSilenceRatio() != 0D) {
+          setTotalSimultaneousSilenceRatio(other.getTotalSimultaneousSilenceRatio());
+        }
+        if (other.hasSimultaneousSilenceDurationEstimation()) {
+          mergeSimultaneousSilenceDurationEstimation(other.getSimultaneousSilenceDurationEstimation());
+        }
+        if (other.getTotalSimultaneousSpeechDurationMs() != 0L) {
+          setTotalSimultaneousSpeechDurationMs(other.getTotalSimultaneousSpeechDurationMs());
+        }
+        if (other.getTotalSimultaneousSpeechRatio() != 0D) {
+          setTotalSimultaneousSpeechRatio(other.getTotalSimultaneousSpeechRatio());
+        }
+        if (other.hasSimultaneousSpeechDurationEstimation()) {
+          mergeSimultaneousSpeechDurationEstimation(other.getSimultaneousSpeechDurationEstimation());
+        }
+        if (speakerInterruptsBuilder_ == null) {
+          if (!other.speakerInterrupts_.isEmpty()) {
+            if (speakerInterrupts_.isEmpty()) {
+              speakerInterrupts_ = other.speakerInterrupts_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureSpeakerInterruptsIsMutable();
+              speakerInterrupts_.addAll(other.speakerInterrupts_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.speakerInterrupts_.isEmpty()) {
+            if (speakerInterruptsBuilder_.isEmpty()) {
+              speakerInterruptsBuilder_.dispose();
+              speakerInterruptsBuilder_ = null;
+              speakerInterrupts_ = other.speakerInterrupts_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              speakerInterruptsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSpeakerInterruptsFieldBuilder() : null;
+            } else {
+              speakerInterruptsBuilder_.addAllMessages(other.speakerInterrupts_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries conversationBoundaries_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundariesOrBuilder> conversationBoundariesBuilder_;
+      /**
+       * <pre>
+       * Audio segment boundaries
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.AudioSegmentBoundaries conversation_boundaries = 1;</code>
+       * @return Whether the conversationBoundaries field is set.
+       */
+      public boolean hasConversationBoundaries() {
+        return conversationBoundariesBuilder_ != null || conversationBoundaries_ != null;
+      }
+      /**
+       * <pre>
+       * Audio segment boundaries
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.AudioSegmentBoundaries conversation_boundaries = 1;</code>
+       * @return The conversationBoundaries.
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries getConversationBoundaries() {
+        if (conversationBoundariesBuilder_ == null) {
+          return conversationBoundaries_ == null ? yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.getDefaultInstance() : conversationBoundaries_;
+        } else {
+          return conversationBoundariesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Audio segment boundaries
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.AudioSegmentBoundaries conversation_boundaries = 1;</code>
+       */
+      public Builder setConversationBoundaries(yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries value) {
+        if (conversationBoundariesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          conversationBoundaries_ = value;
+          onChanged();
+        } else {
+          conversationBoundariesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Audio segment boundaries
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.AudioSegmentBoundaries conversation_boundaries = 1;</code>
+       */
+      public Builder setConversationBoundaries(
+          yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder builderForValue) {
+        if (conversationBoundariesBuilder_ == null) {
+          conversationBoundaries_ = builderForValue.build();
+          onChanged();
+        } else {
+          conversationBoundariesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Audio segment boundaries
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.AudioSegmentBoundaries conversation_boundaries = 1;</code>
+       */
+      public Builder mergeConversationBoundaries(yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries value) {
+        if (conversationBoundariesBuilder_ == null) {
+          if (conversationBoundaries_ != null) {
+            conversationBoundaries_ =
+              yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.newBuilder(conversationBoundaries_).mergeFrom(value).buildPartial();
+          } else {
+            conversationBoundaries_ = value;
+          }
+          onChanged();
+        } else {
+          conversationBoundariesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Audio segment boundaries
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.AudioSegmentBoundaries conversation_boundaries = 1;</code>
+       */
+      public Builder clearConversationBoundaries() {
+        if (conversationBoundariesBuilder_ == null) {
+          conversationBoundaries_ = null;
+          onChanged();
+        } else {
+          conversationBoundaries_ = null;
+          conversationBoundariesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Audio segment boundaries
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.AudioSegmentBoundaries conversation_boundaries = 1;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder getConversationBoundariesBuilder() {
+        
+        onChanged();
+        return getConversationBoundariesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Audio segment boundaries
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.AudioSegmentBoundaries conversation_boundaries = 1;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundariesOrBuilder getConversationBoundariesOrBuilder() {
+        if (conversationBoundariesBuilder_ != null) {
+          return conversationBoundariesBuilder_.getMessageOrBuilder();
+        } else {
+          return conversationBoundaries_ == null ?
+              yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.getDefaultInstance() : conversationBoundaries_;
+        }
+      }
+      /**
+       * <pre>
+       * Audio segment boundaries
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.AudioSegmentBoundaries conversation_boundaries = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundariesOrBuilder> 
+          getConversationBoundariesFieldBuilder() {
+        if (conversationBoundariesBuilder_ == null) {
+          conversationBoundariesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundaries.Builder, yandex.cloud.api.ai.stt.v3.Stt.AudioSegmentBoundariesOrBuilder>(
+                  getConversationBoundaries(),
+                  getParentForChildren(),
+                  isClean());
+          conversationBoundaries_ = null;
+        }
+        return conversationBoundariesBuilder_;
+      }
+
+      private long totalSimultaneousSilenceDurationMs_ ;
+      /**
+       * <pre>
+       * Total simultaneous silence duration
+       * </pre>
+       *
+       * <code>int64 total_simultaneous_silence_duration_ms = 2;</code>
+       * @return The totalSimultaneousSilenceDurationMs.
+       */
+      @java.lang.Override
+      public long getTotalSimultaneousSilenceDurationMs() {
+        return totalSimultaneousSilenceDurationMs_;
+      }
+      /**
+       * <pre>
+       * Total simultaneous silence duration
+       * </pre>
+       *
+       * <code>int64 total_simultaneous_silence_duration_ms = 2;</code>
+       * @param value The totalSimultaneousSilenceDurationMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalSimultaneousSilenceDurationMs(long value) {
+        
+        totalSimultaneousSilenceDurationMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Total simultaneous silence duration
+       * </pre>
+       *
+       * <code>int64 total_simultaneous_silence_duration_ms = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalSimultaneousSilenceDurationMs() {
+        
+        totalSimultaneousSilenceDurationMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private double totalSimultaneousSilenceRatio_ ;
+      /**
+       * <pre>
+       * Simultaneous silence ratio within audio segment
+       * </pre>
+       *
+       * <code>double total_simultaneous_silence_ratio = 3;</code>
+       * @return The totalSimultaneousSilenceRatio.
+       */
+      @java.lang.Override
+      public double getTotalSimultaneousSilenceRatio() {
+        return totalSimultaneousSilenceRatio_;
+      }
+      /**
+       * <pre>
+       * Simultaneous silence ratio within audio segment
+       * </pre>
+       *
+       * <code>double total_simultaneous_silence_ratio = 3;</code>
+       * @param value The totalSimultaneousSilenceRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalSimultaneousSilenceRatio(double value) {
+        
+        totalSimultaneousSilenceRatio_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Simultaneous silence ratio within audio segment
+       * </pre>
+       *
+       * <code>double total_simultaneous_silence_ratio = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalSimultaneousSilenceRatio() {
+        
+        totalSimultaneousSilenceRatio_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics simultaneousSilenceDurationEstimation_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder> simultaneousSilenceDurationEstimationBuilder_;
+      /**
+       * <pre>
+       * Descriptive statistics for simultaneous silence duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_silence_duration_estimation = 4;</code>
+       * @return Whether the simultaneousSilenceDurationEstimation field is set.
+       */
+      public boolean hasSimultaneousSilenceDurationEstimation() {
+        return simultaneousSilenceDurationEstimationBuilder_ != null || simultaneousSilenceDurationEstimation_ != null;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for simultaneous silence duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_silence_duration_estimation = 4;</code>
+       * @return The simultaneousSilenceDurationEstimation.
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getSimultaneousSilenceDurationEstimation() {
+        if (simultaneousSilenceDurationEstimationBuilder_ == null) {
+          return simultaneousSilenceDurationEstimation_ == null ? yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance() : simultaneousSilenceDurationEstimation_;
+        } else {
+          return simultaneousSilenceDurationEstimationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for simultaneous silence duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_silence_duration_estimation = 4;</code>
+       */
+      public Builder setSimultaneousSilenceDurationEstimation(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics value) {
+        if (simultaneousSilenceDurationEstimationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          simultaneousSilenceDurationEstimation_ = value;
+          onChanged();
+        } else {
+          simultaneousSilenceDurationEstimationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for simultaneous silence duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_silence_duration_estimation = 4;</code>
+       */
+      public Builder setSimultaneousSilenceDurationEstimation(
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder builderForValue) {
+        if (simultaneousSilenceDurationEstimationBuilder_ == null) {
+          simultaneousSilenceDurationEstimation_ = builderForValue.build();
+          onChanged();
+        } else {
+          simultaneousSilenceDurationEstimationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for simultaneous silence duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_silence_duration_estimation = 4;</code>
+       */
+      public Builder mergeSimultaneousSilenceDurationEstimation(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics value) {
+        if (simultaneousSilenceDurationEstimationBuilder_ == null) {
+          if (simultaneousSilenceDurationEstimation_ != null) {
+            simultaneousSilenceDurationEstimation_ =
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.newBuilder(simultaneousSilenceDurationEstimation_).mergeFrom(value).buildPartial();
+          } else {
+            simultaneousSilenceDurationEstimation_ = value;
+          }
+          onChanged();
+        } else {
+          simultaneousSilenceDurationEstimationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for simultaneous silence duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_silence_duration_estimation = 4;</code>
+       */
+      public Builder clearSimultaneousSilenceDurationEstimation() {
+        if (simultaneousSilenceDurationEstimationBuilder_ == null) {
+          simultaneousSilenceDurationEstimation_ = null;
+          onChanged();
+        } else {
+          simultaneousSilenceDurationEstimation_ = null;
+          simultaneousSilenceDurationEstimationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for simultaneous silence duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_silence_duration_estimation = 4;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder getSimultaneousSilenceDurationEstimationBuilder() {
+        
+        onChanged();
+        return getSimultaneousSilenceDurationEstimationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for simultaneous silence duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_silence_duration_estimation = 4;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder getSimultaneousSilenceDurationEstimationOrBuilder() {
+        if (simultaneousSilenceDurationEstimationBuilder_ != null) {
+          return simultaneousSilenceDurationEstimationBuilder_.getMessageOrBuilder();
+        } else {
+          return simultaneousSilenceDurationEstimation_ == null ?
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance() : simultaneousSilenceDurationEstimation_;
+        }
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for simultaneous silence duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_silence_duration_estimation = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder> 
+          getSimultaneousSilenceDurationEstimationFieldBuilder() {
+        if (simultaneousSilenceDurationEstimationBuilder_ == null) {
+          simultaneousSilenceDurationEstimationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder>(
+                  getSimultaneousSilenceDurationEstimation(),
+                  getParentForChildren(),
+                  isClean());
+          simultaneousSilenceDurationEstimation_ = null;
+        }
+        return simultaneousSilenceDurationEstimationBuilder_;
+      }
+
+      private long totalSimultaneousSpeechDurationMs_ ;
+      /**
+       * <pre>
+       * Total simultaneous speech duration
+       * </pre>
+       *
+       * <code>int64 total_simultaneous_speech_duration_ms = 5;</code>
+       * @return The totalSimultaneousSpeechDurationMs.
+       */
+      @java.lang.Override
+      public long getTotalSimultaneousSpeechDurationMs() {
+        return totalSimultaneousSpeechDurationMs_;
+      }
+      /**
+       * <pre>
+       * Total simultaneous speech duration
+       * </pre>
+       *
+       * <code>int64 total_simultaneous_speech_duration_ms = 5;</code>
+       * @param value The totalSimultaneousSpeechDurationMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalSimultaneousSpeechDurationMs(long value) {
+        
+        totalSimultaneousSpeechDurationMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Total simultaneous speech duration
+       * </pre>
+       *
+       * <code>int64 total_simultaneous_speech_duration_ms = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalSimultaneousSpeechDurationMs() {
+        
+        totalSimultaneousSpeechDurationMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private double totalSimultaneousSpeechRatio_ ;
+      /**
+       * <pre>
+       * Simultaneous speech ratio within audio segment
+       * </pre>
+       *
+       * <code>double total_simultaneous_speech_ratio = 6;</code>
+       * @return The totalSimultaneousSpeechRatio.
+       */
+      @java.lang.Override
+      public double getTotalSimultaneousSpeechRatio() {
+        return totalSimultaneousSpeechRatio_;
+      }
+      /**
+       * <pre>
+       * Simultaneous speech ratio within audio segment
+       * </pre>
+       *
+       * <code>double total_simultaneous_speech_ratio = 6;</code>
+       * @param value The totalSimultaneousSpeechRatio to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTotalSimultaneousSpeechRatio(double value) {
+        
+        totalSimultaneousSpeechRatio_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Simultaneous speech ratio within audio segment
+       * </pre>
+       *
+       * <code>double total_simultaneous_speech_ratio = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTotalSimultaneousSpeechRatio() {
+        
+        totalSimultaneousSpeechRatio_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics simultaneousSpeechDurationEstimation_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder> simultaneousSpeechDurationEstimationBuilder_;
+      /**
+       * <pre>
+       * Descriptive statistics for simultaneous speech duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_speech_duration_estimation = 7;</code>
+       * @return Whether the simultaneousSpeechDurationEstimation field is set.
+       */
+      public boolean hasSimultaneousSpeechDurationEstimation() {
+        return simultaneousSpeechDurationEstimationBuilder_ != null || simultaneousSpeechDurationEstimation_ != null;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for simultaneous speech duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_speech_duration_estimation = 7;</code>
+       * @return The simultaneousSpeechDurationEstimation.
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics getSimultaneousSpeechDurationEstimation() {
+        if (simultaneousSpeechDurationEstimationBuilder_ == null) {
+          return simultaneousSpeechDurationEstimation_ == null ? yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance() : simultaneousSpeechDurationEstimation_;
+        } else {
+          return simultaneousSpeechDurationEstimationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for simultaneous speech duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_speech_duration_estimation = 7;</code>
+       */
+      public Builder setSimultaneousSpeechDurationEstimation(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics value) {
+        if (simultaneousSpeechDurationEstimationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          simultaneousSpeechDurationEstimation_ = value;
+          onChanged();
+        } else {
+          simultaneousSpeechDurationEstimationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for simultaneous speech duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_speech_duration_estimation = 7;</code>
+       */
+      public Builder setSimultaneousSpeechDurationEstimation(
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder builderForValue) {
+        if (simultaneousSpeechDurationEstimationBuilder_ == null) {
+          simultaneousSpeechDurationEstimation_ = builderForValue.build();
+          onChanged();
+        } else {
+          simultaneousSpeechDurationEstimationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for simultaneous speech duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_speech_duration_estimation = 7;</code>
+       */
+      public Builder mergeSimultaneousSpeechDurationEstimation(yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics value) {
+        if (simultaneousSpeechDurationEstimationBuilder_ == null) {
+          if (simultaneousSpeechDurationEstimation_ != null) {
+            simultaneousSpeechDurationEstimation_ =
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.newBuilder(simultaneousSpeechDurationEstimation_).mergeFrom(value).buildPartial();
+          } else {
+            simultaneousSpeechDurationEstimation_ = value;
+          }
+          onChanged();
+        } else {
+          simultaneousSpeechDurationEstimationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for simultaneous speech duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_speech_duration_estimation = 7;</code>
+       */
+      public Builder clearSimultaneousSpeechDurationEstimation() {
+        if (simultaneousSpeechDurationEstimationBuilder_ == null) {
+          simultaneousSpeechDurationEstimation_ = null;
+          onChanged();
+        } else {
+          simultaneousSpeechDurationEstimation_ = null;
+          simultaneousSpeechDurationEstimationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for simultaneous speech duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_speech_duration_estimation = 7;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder getSimultaneousSpeechDurationEstimationBuilder() {
+        
+        onChanged();
+        return getSimultaneousSpeechDurationEstimationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for simultaneous speech duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_speech_duration_estimation = 7;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder getSimultaneousSpeechDurationEstimationOrBuilder() {
+        if (simultaneousSpeechDurationEstimationBuilder_ != null) {
+          return simultaneousSpeechDurationEstimationBuilder_.getMessageOrBuilder();
+        } else {
+          return simultaneousSpeechDurationEstimation_ == null ?
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.getDefaultInstance() : simultaneousSpeechDurationEstimation_;
+        }
+      }
+      /**
+       * <pre>
+       * Descriptive statistics for simultaneous speech duration distribution
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.DescriptiveStatistics simultaneous_speech_duration_estimation = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder> 
+          getSimultaneousSpeechDurationEstimationFieldBuilder() {
+        if (simultaneousSpeechDurationEstimationBuilder_ == null) {
+          simultaneousSpeechDurationEstimationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatistics.Builder, yandex.cloud.api.ai.stt.v3.Stt.DescriptiveStatisticsOrBuilder>(
+                  getSimultaneousSpeechDurationEstimation(),
+                  getParentForChildren(),
+                  isClean());
+          simultaneousSpeechDurationEstimation_ = null;
+        }
+        return simultaneousSpeechDurationEstimationBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation> speakerInterrupts_ =
+        java.util.Collections.emptyList();
+      private void ensureSpeakerInterruptsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          speakerInterrupts_ = new java.util.ArrayList<yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation>(speakerInterrupts_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation, yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation.Builder, yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluationOrBuilder> speakerInterruptsBuilder_;
+
+      /**
+       * <pre>
+       * Interrupts description for every speaker
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation> getSpeakerInterruptsList() {
+        if (speakerInterruptsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(speakerInterrupts_);
+        } else {
+          return speakerInterruptsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Interrupts description for every speaker
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+       */
+      public int getSpeakerInterruptsCount() {
+        if (speakerInterruptsBuilder_ == null) {
+          return speakerInterrupts_.size();
+        } else {
+          return speakerInterruptsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Interrupts description for every speaker
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation getSpeakerInterrupts(int index) {
+        if (speakerInterruptsBuilder_ == null) {
+          return speakerInterrupts_.get(index);
+        } else {
+          return speakerInterruptsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Interrupts description for every speaker
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+       */
+      public Builder setSpeakerInterrupts(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation value) {
+        if (speakerInterruptsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSpeakerInterruptsIsMutable();
+          speakerInterrupts_.set(index, value);
+          onChanged();
+        } else {
+          speakerInterruptsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Interrupts description for every speaker
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+       */
+      public Builder setSpeakerInterrupts(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation.Builder builderForValue) {
+        if (speakerInterruptsBuilder_ == null) {
+          ensureSpeakerInterruptsIsMutable();
+          speakerInterrupts_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          speakerInterruptsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Interrupts description for every speaker
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+       */
+      public Builder addSpeakerInterrupts(yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation value) {
+        if (speakerInterruptsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSpeakerInterruptsIsMutable();
+          speakerInterrupts_.add(value);
+          onChanged();
+        } else {
+          speakerInterruptsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Interrupts description for every speaker
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+       */
+      public Builder addSpeakerInterrupts(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation value) {
+        if (speakerInterruptsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSpeakerInterruptsIsMutable();
+          speakerInterrupts_.add(index, value);
+          onChanged();
+        } else {
+          speakerInterruptsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Interrupts description for every speaker
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+       */
+      public Builder addSpeakerInterrupts(
+          yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation.Builder builderForValue) {
+        if (speakerInterruptsBuilder_ == null) {
+          ensureSpeakerInterruptsIsMutable();
+          speakerInterrupts_.add(builderForValue.build());
+          onChanged();
+        } else {
+          speakerInterruptsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Interrupts description for every speaker
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+       */
+      public Builder addSpeakerInterrupts(
+          int index, yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation.Builder builderForValue) {
+        if (speakerInterruptsBuilder_ == null) {
+          ensureSpeakerInterruptsIsMutable();
+          speakerInterrupts_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          speakerInterruptsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Interrupts description for every speaker
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+       */
+      public Builder addAllSpeakerInterrupts(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation> values) {
+        if (speakerInterruptsBuilder_ == null) {
+          ensureSpeakerInterruptsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, speakerInterrupts_);
+          onChanged();
+        } else {
+          speakerInterruptsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Interrupts description for every speaker
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+       */
+      public Builder clearSpeakerInterrupts() {
+        if (speakerInterruptsBuilder_ == null) {
+          speakerInterrupts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          speakerInterruptsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Interrupts description for every speaker
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+       */
+      public Builder removeSpeakerInterrupts(int index) {
+        if (speakerInterruptsBuilder_ == null) {
+          ensureSpeakerInterruptsIsMutable();
+          speakerInterrupts_.remove(index);
+          onChanged();
+        } else {
+          speakerInterruptsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Interrupts description for every speaker
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation.Builder getSpeakerInterruptsBuilder(
+          int index) {
+        return getSpeakerInterruptsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Interrupts description for every speaker
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluationOrBuilder getSpeakerInterruptsOrBuilder(
+          int index) {
+        if (speakerInterruptsBuilder_ == null) {
+          return speakerInterrupts_.get(index);  } else {
+          return speakerInterruptsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Interrupts description for every speaker
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluationOrBuilder> 
+           getSpeakerInterruptsOrBuilderList() {
+        if (speakerInterruptsBuilder_ != null) {
+          return speakerInterruptsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(speakerInterrupts_);
+        }
+      }
+      /**
+       * <pre>
+       * Interrupts description for every speaker
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation.Builder addSpeakerInterruptsBuilder() {
+        return getSpeakerInterruptsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Interrupts description for every speaker
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation.Builder addSpeakerInterruptsBuilder(
+          int index) {
+        return getSpeakerInterruptsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Interrupts description for every speaker
+       * </pre>
+       *
+       * <code>repeated .speechkit.stt.v3.ConversationAnalysis.InterruptsEvaluation speaker_interrupts = 8;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation.Builder> 
+           getSpeakerInterruptsBuilderList() {
+        return getSpeakerInterruptsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation, yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation.Builder, yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluationOrBuilder> 
+          getSpeakerInterruptsFieldBuilder() {
+        if (speakerInterruptsBuilder_ == null) {
+          speakerInterruptsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation, yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluation.Builder, yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.InterruptsEvaluationOrBuilder>(
+                  speakerInterrupts_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          speakerInterrupts_ = null;
+        }
+        return speakerInterruptsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.ConversationAnalysis)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.stt.v3.ConversationAnalysis)
+    private static final yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis();
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ConversationAnalysis>
+        PARSER = new com.google.protobuf.AbstractParser<ConversationAnalysis>() {
+      @java.lang.Override
+      public ConversationAnalysis parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ConversationAnalysis(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ConversationAnalysis> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ConversationAnalysis> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface StreamingResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.StreamingResponse)
       com.google.protobuf.MessageOrBuilder {
@@ -27744,7 +39553,7 @@ public final class Stt {
     /**
      * <pre>
      * Partial results, server will send them regularly after enough audio data was received from user. This are current text estimation
-     *  from final_time_ms to partial_time_ms. Could change after new data will arrive.
+     * from final_time_ms to partial_time_ms. Could change after new data will arrive.
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
@@ -27754,7 +39563,7 @@ public final class Stt {
     /**
      * <pre>
      * Partial results, server will send them regularly after enough audio data was received from user. This are current text estimation
-     *  from final_time_ms to partial_time_ms. Could change after new data will arrive.
+     * from final_time_ms to partial_time_ms. Could change after new data will arrive.
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
@@ -27764,7 +39573,7 @@ public final class Stt {
     /**
      * <pre>
      * Partial results, server will send them regularly after enough audio data was received from user. This are current text estimation
-     *  from final_time_ms to partial_time_ms. Could change after new data will arrive.
+     * from final_time_ms to partial_time_ms. Could change after new data will arrive.
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
@@ -27773,7 +39582,7 @@ public final class Stt {
 
     /**
      * <pre>
-     *  Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
+     * Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
@@ -27782,7 +39591,7 @@ public final class Stt {
     boolean hasFinal();
     /**
      * <pre>
-     *  Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
+     * Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
@@ -27791,7 +39600,7 @@ public final class Stt {
     yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate getFinal();
     /**
      * <pre>
-     *  Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
+     * Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
@@ -27800,8 +39609,8 @@ public final class Stt {
 
     /**
      * <pre>
-     *  After EOU classifier, send the message with final, send the EouUpdate with time of EOU
-     *  before eou_update we send final with the same time. there could be several finals before eou update.
+     * After EOU classifier, send the message with final, send the EouUpdate with time of EOU
+     * before eou_update we send final with the same time. there could be several finals before eou update.
      * </pre>
      *
      * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
@@ -27810,8 +39619,8 @@ public final class Stt {
     boolean hasEouUpdate();
     /**
      * <pre>
-     *  After EOU classifier, send the message with final, send the EouUpdate with time of EOU
-     *  before eou_update we send final with the same time. there could be several finals before eou update.
+     * After EOU classifier, send the message with final, send the EouUpdate with time of EOU
+     * before eou_update we send final with the same time. there could be several finals before eou update.
      * </pre>
      *
      * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
@@ -27820,8 +39629,8 @@ public final class Stt {
     yandex.cloud.api.ai.stt.v3.Stt.EouUpdate getEouUpdate();
     /**
      * <pre>
-     *  After EOU classifier, send the message with final, send the EouUpdate with time of EOU
-     *  before eou_update we send final with the same time. there could be several finals before eou update.
+     * After EOU classifier, send the message with final, send the EouUpdate with time of EOU
+     * before eou_update we send final with the same time. there could be several finals before eou update.
      * </pre>
      *
      * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
@@ -27830,8 +39639,8 @@ public final class Stt {
 
     /**
      * <pre>
-     *    For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
-     *    Final normalization will introduce additional latency.
+     * For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
+     * Final normalization will introduce additional latency.
      * </pre>
      *
      * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
@@ -27840,8 +39649,8 @@ public final class Stt {
     boolean hasFinalRefinement();
     /**
      * <pre>
-     *    For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
-     *    Final normalization will introduce additional latency.
+     * For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
+     * Final normalization will introduce additional latency.
      * </pre>
      *
      * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
@@ -27850,8 +39659,8 @@ public final class Stt {
     yandex.cloud.api.ai.stt.v3.Stt.FinalRefinement getFinalRefinement();
     /**
      * <pre>
-     *    For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
-     *    Final normalization will introduce additional latency.
+     * For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
+     * Final normalization will introduce additional latency.
      * </pre>
      *
      * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
@@ -27860,7 +39669,7 @@ public final class Stt {
 
     /**
      * <pre>
-     *    Status messages, send by server with fixed interval (keep-alive).
+     * Status messages, send by server with fixed interval (keep-alive).
      * </pre>
      *
      * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
@@ -27869,7 +39678,7 @@ public final class Stt {
     boolean hasStatusCode();
     /**
      * <pre>
-     *    Status messages, send by server with fixed interval (keep-alive).
+     * Status messages, send by server with fixed interval (keep-alive).
      * </pre>
      *
      * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
@@ -27878,7 +39687,7 @@ public final class Stt {
     yandex.cloud.api.ai.stt.v3.Stt.StatusCode getStatusCode();
     /**
      * <pre>
-     *    Status messages, send by server with fixed interval (keep-alive).
+     * Status messages, send by server with fixed interval (keep-alive).
      * </pre>
      *
      * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
@@ -27887,7 +39696,7 @@ public final class Stt {
 
     /**
      * <pre>
-     *  Result of the triggered classifier
+     * Result of the triggered classifier
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
@@ -27896,7 +39705,7 @@ public final class Stt {
     boolean hasClassifierUpdate();
     /**
      * <pre>
-     *  Result of the triggered classifier
+     * Result of the triggered classifier
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
@@ -27905,12 +39714,66 @@ public final class Stt {
     yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate getClassifierUpdate();
     /**
      * <pre>
-     *  Result of the triggered classifier
+     * Result of the triggered classifier
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
      */
     yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdateOrBuilder getClassifierUpdateOrBuilder();
+
+    /**
+     * <pre>
+     * Speech statistics for every speaker
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerAnalysis speaker_analysis = 11;</code>
+     * @return Whether the speakerAnalysis field is set.
+     */
+    boolean hasSpeakerAnalysis();
+    /**
+     * <pre>
+     * Speech statistics for every speaker
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerAnalysis speaker_analysis = 11;</code>
+     * @return The speakerAnalysis.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis getSpeakerAnalysis();
+    /**
+     * <pre>
+     * Speech statistics for every speaker
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerAnalysis speaker_analysis = 11;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysisOrBuilder getSpeakerAnalysisOrBuilder();
+
+    /**
+     * <pre>
+     * Conversation statistics
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.ConversationAnalysis conversation_analysis = 12;</code>
+     * @return Whether the conversationAnalysis field is set.
+     */
+    boolean hasConversationAnalysis();
+    /**
+     * <pre>
+     * Conversation statistics
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.ConversationAnalysis conversation_analysis = 12;</code>
+     * @return The conversationAnalysis.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis getConversationAnalysis();
+    /**
+     * <pre>
+     * Conversation statistics
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.ConversationAnalysis conversation_analysis = 12;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysisOrBuilder getConversationAnalysisOrBuilder();
 
     /**
      * <pre>
@@ -28108,6 +39971,34 @@ public final class Stt {
               eventCase_ = 10;
               break;
             }
+            case 90: {
+              yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.Builder subBuilder = null;
+              if (eventCase_ == 11) {
+                subBuilder = ((yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis) event_).toBuilder();
+              }
+              event_ =
+                  input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis) event_);
+                event_ = subBuilder.buildPartial();
+              }
+              eventCase_ = 11;
+              break;
+            }
+            case 98: {
+              yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.Builder subBuilder = null;
+              if (eventCase_ == 12) {
+                subBuilder = ((yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis) event_).toBuilder();
+              }
+              event_ =
+                  input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis) event_);
+                event_ = subBuilder.buildPartial();
+              }
+              eventCase_ = 12;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -28151,6 +40042,8 @@ public final class Stt {
       FINAL_REFINEMENT(7),
       STATUS_CODE(8),
       CLASSIFIER_UPDATE(10),
+      SPEAKER_ANALYSIS(11),
+      CONVERSATION_ANALYSIS(12),
       EVENT_NOT_SET(0);
       private final int value;
       private EventCase(int value) {
@@ -28174,6 +40067,8 @@ public final class Stt {
           case 7: return FINAL_REFINEMENT;
           case 8: return STATUS_CODE;
           case 10: return CLASSIFIER_UPDATE;
+          case 11: return SPEAKER_ANALYSIS;
+          case 12: return CONVERSATION_ANALYSIS;
           case 0: return EVENT_NOT_SET;
           default: return null;
         }
@@ -28284,7 +40179,7 @@ public final class Stt {
     /**
      * <pre>
      * Partial results, server will send them regularly after enough audio data was received from user. This are current text estimation
-     *  from final_time_ms to partial_time_ms. Could change after new data will arrive.
+     * from final_time_ms to partial_time_ms. Could change after new data will arrive.
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
@@ -28297,7 +40192,7 @@ public final class Stt {
     /**
      * <pre>
      * Partial results, server will send them regularly after enough audio data was received from user. This are current text estimation
-     *  from final_time_ms to partial_time_ms. Could change after new data will arrive.
+     * from final_time_ms to partial_time_ms. Could change after new data will arrive.
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
@@ -28313,7 +40208,7 @@ public final class Stt {
     /**
      * <pre>
      * Partial results, server will send them regularly after enough audio data was received from user. This are current text estimation
-     *  from final_time_ms to partial_time_ms. Could change after new data will arrive.
+     * from final_time_ms to partial_time_ms. Could change after new data will arrive.
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
@@ -28329,7 +40224,7 @@ public final class Stt {
     public static final int FINAL_FIELD_NUMBER = 5;
     /**
      * <pre>
-     *  Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
+     * Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
@@ -28341,7 +40236,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
+     * Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
@@ -28356,7 +40251,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
+     * Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
      * </pre>
      *
      * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
@@ -28372,8 +40267,8 @@ public final class Stt {
     public static final int EOU_UPDATE_FIELD_NUMBER = 6;
     /**
      * <pre>
-     *  After EOU classifier, send the message with final, send the EouUpdate with time of EOU
-     *  before eou_update we send final with the same time. there could be several finals before eou update.
+     * After EOU classifier, send the message with final, send the EouUpdate with time of EOU
+     * before eou_update we send final with the same time. there could be several finals before eou update.
      * </pre>
      *
      * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
@@ -28385,8 +40280,8 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  After EOU classifier, send the message with final, send the EouUpdate with time of EOU
-     *  before eou_update we send final with the same time. there could be several finals before eou update.
+     * After EOU classifier, send the message with final, send the EouUpdate with time of EOU
+     * before eou_update we send final with the same time. there could be several finals before eou update.
      * </pre>
      *
      * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
@@ -28401,8 +40296,8 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  After EOU classifier, send the message with final, send the EouUpdate with time of EOU
-     *  before eou_update we send final with the same time. there could be several finals before eou update.
+     * After EOU classifier, send the message with final, send the EouUpdate with time of EOU
+     * before eou_update we send final with the same time. there could be several finals before eou update.
      * </pre>
      *
      * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
@@ -28418,8 +40313,8 @@ public final class Stt {
     public static final int FINAL_REFINEMENT_FIELD_NUMBER = 7;
     /**
      * <pre>
-     *    For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
-     *    Final normalization will introduce additional latency.
+     * For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
+     * Final normalization will introduce additional latency.
      * </pre>
      *
      * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
@@ -28431,8 +40326,8 @@ public final class Stt {
     }
     /**
      * <pre>
-     *    For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
-     *    Final normalization will introduce additional latency.
+     * For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
+     * Final normalization will introduce additional latency.
      * </pre>
      *
      * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
@@ -28447,8 +40342,8 @@ public final class Stt {
     }
     /**
      * <pre>
-     *    For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
-     *    Final normalization will introduce additional latency.
+     * For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
+     * Final normalization will introduce additional latency.
      * </pre>
      *
      * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
@@ -28464,7 +40359,7 @@ public final class Stt {
     public static final int STATUS_CODE_FIELD_NUMBER = 8;
     /**
      * <pre>
-     *    Status messages, send by server with fixed interval (keep-alive).
+     * Status messages, send by server with fixed interval (keep-alive).
      * </pre>
      *
      * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
@@ -28476,7 +40371,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *    Status messages, send by server with fixed interval (keep-alive).
+     * Status messages, send by server with fixed interval (keep-alive).
      * </pre>
      *
      * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
@@ -28491,7 +40386,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *    Status messages, send by server with fixed interval (keep-alive).
+     * Status messages, send by server with fixed interval (keep-alive).
      * </pre>
      *
      * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
@@ -28507,7 +40402,7 @@ public final class Stt {
     public static final int CLASSIFIER_UPDATE_FIELD_NUMBER = 10;
     /**
      * <pre>
-     *  Result of the triggered classifier
+     * Result of the triggered classifier
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
@@ -28519,7 +40414,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Result of the triggered classifier
+     * Result of the triggered classifier
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
@@ -28534,7 +40429,7 @@ public final class Stt {
     }
     /**
      * <pre>
-     *  Result of the triggered classifier
+     * Result of the triggered classifier
      * </pre>
      *
      * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
@@ -28545,6 +40440,92 @@ public final class Stt {
          return (yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate) event_;
       }
       return yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.getDefaultInstance();
+    }
+
+    public static final int SPEAKER_ANALYSIS_FIELD_NUMBER = 11;
+    /**
+     * <pre>
+     * Speech statistics for every speaker
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerAnalysis speaker_analysis = 11;</code>
+     * @return Whether the speakerAnalysis field is set.
+     */
+    @java.lang.Override
+    public boolean hasSpeakerAnalysis() {
+      return eventCase_ == 11;
+    }
+    /**
+     * <pre>
+     * Speech statistics for every speaker
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerAnalysis speaker_analysis = 11;</code>
+     * @return The speakerAnalysis.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis getSpeakerAnalysis() {
+      if (eventCase_ == 11) {
+         return (yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis) event_;
+      }
+      return yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Speech statistics for every speaker
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerAnalysis speaker_analysis = 11;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysisOrBuilder getSpeakerAnalysisOrBuilder() {
+      if (eventCase_ == 11) {
+         return (yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis) event_;
+      }
+      return yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.getDefaultInstance();
+    }
+
+    public static final int CONVERSATION_ANALYSIS_FIELD_NUMBER = 12;
+    /**
+     * <pre>
+     * Conversation statistics
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.ConversationAnalysis conversation_analysis = 12;</code>
+     * @return Whether the conversationAnalysis field is set.
+     */
+    @java.lang.Override
+    public boolean hasConversationAnalysis() {
+      return eventCase_ == 12;
+    }
+    /**
+     * <pre>
+     * Conversation statistics
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.ConversationAnalysis conversation_analysis = 12;</code>
+     * @return The conversationAnalysis.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis getConversationAnalysis() {
+      if (eventCase_ == 12) {
+         return (yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis) event_;
+      }
+      return yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Conversation statistics
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.ConversationAnalysis conversation_analysis = 12;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysisOrBuilder getConversationAnalysisOrBuilder() {
+      if (eventCase_ == 12) {
+         return (yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis) event_;
+      }
+      return yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.getDefaultInstance();
     }
 
     public static final int CHANNEL_TAG_FIELD_NUMBER = 9;
@@ -28637,6 +40618,12 @@ public final class Stt {
       if (eventCase_ == 10) {
         output.writeMessage(10, (yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate) event_);
       }
+      if (eventCase_ == 11) {
+        output.writeMessage(11, (yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis) event_);
+      }
+      if (eventCase_ == 12) {
+        output.writeMessage(12, (yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis) event_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -28684,6 +40671,14 @@ public final class Stt {
       if (eventCase_ == 10) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, (yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate) event_);
+      }
+      if (eventCase_ == 11) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, (yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis) event_);
+      }
+      if (eventCase_ == 12) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, (yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis) event_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -28740,6 +40735,14 @@ public final class Stt {
           if (!getClassifierUpdate()
               .equals(other.getClassifierUpdate())) return false;
           break;
+        case 11:
+          if (!getSpeakerAnalysis()
+              .equals(other.getSpeakerAnalysis())) return false;
+          break;
+        case 12:
+          if (!getConversationAnalysis()
+              .equals(other.getConversationAnalysis())) return false;
+          break;
         case 0:
         default:
       }
@@ -28791,6 +40794,14 @@ public final class Stt {
         case 10:
           hash = (37 * hash) + CLASSIFIER_UPDATE_FIELD_NUMBER;
           hash = (53 * hash) + getClassifierUpdate().hashCode();
+          break;
+        case 11:
+          hash = (37 * hash) + SPEAKER_ANALYSIS_FIELD_NUMBER;
+          hash = (53 * hash) + getSpeakerAnalysis().hashCode();
+          break;
+        case 12:
+          hash = (37 * hash) + CONVERSATION_ANALYSIS_FIELD_NUMBER;
+          hash = (53 * hash) + getConversationAnalysis().hashCode();
           break;
         case 0:
         default:
@@ -29032,6 +41043,20 @@ public final class Stt {
             result.event_ = classifierUpdateBuilder_.build();
           }
         }
+        if (eventCase_ == 11) {
+          if (speakerAnalysisBuilder_ == null) {
+            result.event_ = event_;
+          } else {
+            result.event_ = speakerAnalysisBuilder_.build();
+          }
+        }
+        if (eventCase_ == 12) {
+          if (conversationAnalysisBuilder_ == null) {
+            result.event_ = event_;
+          } else {
+            result.event_ = conversationAnalysisBuilder_.build();
+          }
+        }
         result.channelTag_ = channelTag_;
         result.eventCase_ = eventCase_;
         onBuilt();
@@ -29118,6 +41143,14 @@ public final class Stt {
           }
           case CLASSIFIER_UPDATE: {
             mergeClassifierUpdate(other.getClassifierUpdate());
+            break;
+          }
+          case SPEAKER_ANALYSIS: {
+            mergeSpeakerAnalysis(other.getSpeakerAnalysis());
+            break;
+          }
+          case CONVERSATION_ANALYSIS: {
+            mergeConversationAnalysis(other.getConversationAnalysis());
             break;
           }
           case EVENT_NOT_SET: {
@@ -29526,7 +41559,7 @@ public final class Stt {
       /**
        * <pre>
        * Partial results, server will send them regularly after enough audio data was received from user. This are current text estimation
-       *  from final_time_ms to partial_time_ms. Could change after new data will arrive.
+       * from final_time_ms to partial_time_ms. Could change after new data will arrive.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
@@ -29539,7 +41572,7 @@ public final class Stt {
       /**
        * <pre>
        * Partial results, server will send them regularly after enough audio data was received from user. This are current text estimation
-       *  from final_time_ms to partial_time_ms. Could change after new data will arrive.
+       * from final_time_ms to partial_time_ms. Could change after new data will arrive.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
@@ -29562,7 +41595,7 @@ public final class Stt {
       /**
        * <pre>
        * Partial results, server will send them regularly after enough audio data was received from user. This are current text estimation
-       *  from final_time_ms to partial_time_ms. Could change after new data will arrive.
+       * from final_time_ms to partial_time_ms. Could change after new data will arrive.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
@@ -29583,7 +41616,7 @@ public final class Stt {
       /**
        * <pre>
        * Partial results, server will send them regularly after enough audio data was received from user. This are current text estimation
-       *  from final_time_ms to partial_time_ms. Could change after new data will arrive.
+       * from final_time_ms to partial_time_ms. Could change after new data will arrive.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
@@ -29602,7 +41635,7 @@ public final class Stt {
       /**
        * <pre>
        * Partial results, server will send them regularly after enough audio data was received from user. This are current text estimation
-       *  from final_time_ms to partial_time_ms. Could change after new data will arrive.
+       * from final_time_ms to partial_time_ms. Could change after new data will arrive.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
@@ -29629,7 +41662,7 @@ public final class Stt {
       /**
        * <pre>
        * Partial results, server will send them regularly after enough audio data was received from user. This are current text estimation
-       *  from final_time_ms to partial_time_ms. Could change after new data will arrive.
+       * from final_time_ms to partial_time_ms. Could change after new data will arrive.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
@@ -29653,7 +41686,7 @@ public final class Stt {
       /**
        * <pre>
        * Partial results, server will send them regularly after enough audio data was received from user. This are current text estimation
-       *  from final_time_ms to partial_time_ms. Could change after new data will arrive.
+       * from final_time_ms to partial_time_ms. Could change after new data will arrive.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
@@ -29664,7 +41697,7 @@ public final class Stt {
       /**
        * <pre>
        * Partial results, server will send them regularly after enough audio data was received from user. This are current text estimation
-       *  from final_time_ms to partial_time_ms. Could change after new data will arrive.
+       * from final_time_ms to partial_time_ms. Could change after new data will arrive.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
@@ -29683,7 +41716,7 @@ public final class Stt {
       /**
        * <pre>
        * Partial results, server will send them regularly after enough audio data was received from user. This are current text estimation
-       *  from final_time_ms to partial_time_ms. Could change after new data will arrive.
+       * from final_time_ms to partial_time_ms. Could change after new data will arrive.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate partial = 4;</code>
@@ -29711,7 +41744,7 @@ public final class Stt {
           yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate, yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdate.Builder, yandex.cloud.api.ai.stt.v3.Stt.AlternativeUpdateOrBuilder> finalBuilder_;
       /**
        * <pre>
-       *  Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
+       * Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
@@ -29723,7 +41756,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
+       * Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
@@ -29745,7 +41778,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
+       * Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
@@ -29765,7 +41798,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
+       * Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
@@ -29783,7 +41816,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
+       * Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
@@ -29809,7 +41842,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
+       * Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
@@ -29832,7 +41865,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
+       * Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
@@ -29842,7 +41875,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
+       * Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
@@ -29860,7 +41893,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
+       * Final results, the recognition is now fixed until final_time_ms. For now, final is sent only if the EOU event was triggered. This could be change in future releases.
        * </pre>
        *
        * <code>.speechkit.stt.v3.AlternativeUpdate final = 5;</code>
@@ -29888,8 +41921,8 @@ public final class Stt {
           yandex.cloud.api.ai.stt.v3.Stt.EouUpdate, yandex.cloud.api.ai.stt.v3.Stt.EouUpdate.Builder, yandex.cloud.api.ai.stt.v3.Stt.EouUpdateOrBuilder> eouUpdateBuilder_;
       /**
        * <pre>
-       *  After EOU classifier, send the message with final, send the EouUpdate with time of EOU
-       *  before eou_update we send final with the same time. there could be several finals before eou update.
+       * After EOU classifier, send the message with final, send the EouUpdate with time of EOU
+       * before eou_update we send final with the same time. there could be several finals before eou update.
        * </pre>
        *
        * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
@@ -29901,8 +41934,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  After EOU classifier, send the message with final, send the EouUpdate with time of EOU
-       *  before eou_update we send final with the same time. there could be several finals before eou update.
+       * After EOU classifier, send the message with final, send the EouUpdate with time of EOU
+       * before eou_update we send final with the same time. there could be several finals before eou update.
        * </pre>
        *
        * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
@@ -29924,8 +41957,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  After EOU classifier, send the message with final, send the EouUpdate with time of EOU
-       *  before eou_update we send final with the same time. there could be several finals before eou update.
+       * After EOU classifier, send the message with final, send the EouUpdate with time of EOU
+       * before eou_update we send final with the same time. there could be several finals before eou update.
        * </pre>
        *
        * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
@@ -29945,8 +41978,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  After EOU classifier, send the message with final, send the EouUpdate with time of EOU
-       *  before eou_update we send final with the same time. there could be several finals before eou update.
+       * After EOU classifier, send the message with final, send the EouUpdate with time of EOU
+       * before eou_update we send final with the same time. there could be several finals before eou update.
        * </pre>
        *
        * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
@@ -29964,8 +41997,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  After EOU classifier, send the message with final, send the EouUpdate with time of EOU
-       *  before eou_update we send final with the same time. there could be several finals before eou update.
+       * After EOU classifier, send the message with final, send the EouUpdate with time of EOU
+       * before eou_update we send final with the same time. there could be several finals before eou update.
        * </pre>
        *
        * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
@@ -29991,8 +42024,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  After EOU classifier, send the message with final, send the EouUpdate with time of EOU
-       *  before eou_update we send final with the same time. there could be several finals before eou update.
+       * After EOU classifier, send the message with final, send the EouUpdate with time of EOU
+       * before eou_update we send final with the same time. there could be several finals before eou update.
        * </pre>
        *
        * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
@@ -30015,8 +42048,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  After EOU classifier, send the message with final, send the EouUpdate with time of EOU
-       *  before eou_update we send final with the same time. there could be several finals before eou update.
+       * After EOU classifier, send the message with final, send the EouUpdate with time of EOU
+       * before eou_update we send final with the same time. there could be several finals before eou update.
        * </pre>
        *
        * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
@@ -30026,8 +42059,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  After EOU classifier, send the message with final, send the EouUpdate with time of EOU
-       *  before eou_update we send final with the same time. there could be several finals before eou update.
+       * After EOU classifier, send the message with final, send the EouUpdate with time of EOU
+       * before eou_update we send final with the same time. there could be several finals before eou update.
        * </pre>
        *
        * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
@@ -30045,8 +42078,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  After EOU classifier, send the message with final, send the EouUpdate with time of EOU
-       *  before eou_update we send final with the same time. there could be several finals before eou update.
+       * After EOU classifier, send the message with final, send the EouUpdate with time of EOU
+       * before eou_update we send final with the same time. there could be several finals before eou update.
        * </pre>
        *
        * <code>.speechkit.stt.v3.EouUpdate eou_update = 6;</code>
@@ -30074,8 +42107,8 @@ public final class Stt {
           yandex.cloud.api.ai.stt.v3.Stt.FinalRefinement, yandex.cloud.api.ai.stt.v3.Stt.FinalRefinement.Builder, yandex.cloud.api.ai.stt.v3.Stt.FinalRefinementOrBuilder> finalRefinementBuilder_;
       /**
        * <pre>
-       *    For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
-       *    Final normalization will introduce additional latency.
+       * For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
+       * Final normalization will introduce additional latency.
        * </pre>
        *
        * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
@@ -30087,8 +42120,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *    For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
-       *    Final normalization will introduce additional latency.
+       * For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
+       * Final normalization will introduce additional latency.
        * </pre>
        *
        * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
@@ -30110,8 +42143,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *    For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
-       *    Final normalization will introduce additional latency.
+       * For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
+       * Final normalization will introduce additional latency.
        * </pre>
        *
        * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
@@ -30131,8 +42164,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *    For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
-       *    Final normalization will introduce additional latency.
+       * For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
+       * Final normalization will introduce additional latency.
        * </pre>
        *
        * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
@@ -30150,8 +42183,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *    For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
-       *    Final normalization will introduce additional latency.
+       * For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
+       * Final normalization will introduce additional latency.
        * </pre>
        *
        * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
@@ -30177,8 +42210,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *    For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
-       *    Final normalization will introduce additional latency.
+       * For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
+       * Final normalization will introduce additional latency.
        * </pre>
        *
        * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
@@ -30201,8 +42234,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *    For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
-       *    Final normalization will introduce additional latency.
+       * For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
+       * Final normalization will introduce additional latency.
        * </pre>
        *
        * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
@@ -30212,8 +42245,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *    For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
-       *    Final normalization will introduce additional latency.
+       * For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
+       * Final normalization will introduce additional latency.
        * </pre>
        *
        * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
@@ -30231,8 +42264,8 @@ public final class Stt {
       }
       /**
        * <pre>
-       *    For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
-       *    Final normalization will introduce additional latency.
+       * For each final, if normalization is enabled, sent the normalized text (or some other advanced post-processing).
+       * Final normalization will introduce additional latency.
        * </pre>
        *
        * <code>.speechkit.stt.v3.FinalRefinement final_refinement = 7;</code>
@@ -30260,7 +42293,7 @@ public final class Stt {
           yandex.cloud.api.ai.stt.v3.Stt.StatusCode, yandex.cloud.api.ai.stt.v3.Stt.StatusCode.Builder, yandex.cloud.api.ai.stt.v3.Stt.StatusCodeOrBuilder> statusCodeBuilder_;
       /**
        * <pre>
-       *    Status messages, send by server with fixed interval (keep-alive).
+       * Status messages, send by server with fixed interval (keep-alive).
        * </pre>
        *
        * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
@@ -30272,7 +42305,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *    Status messages, send by server with fixed interval (keep-alive).
+       * Status messages, send by server with fixed interval (keep-alive).
        * </pre>
        *
        * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
@@ -30294,7 +42327,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *    Status messages, send by server with fixed interval (keep-alive).
+       * Status messages, send by server with fixed interval (keep-alive).
        * </pre>
        *
        * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
@@ -30314,7 +42347,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *    Status messages, send by server with fixed interval (keep-alive).
+       * Status messages, send by server with fixed interval (keep-alive).
        * </pre>
        *
        * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
@@ -30332,7 +42365,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *    Status messages, send by server with fixed interval (keep-alive).
+       * Status messages, send by server with fixed interval (keep-alive).
        * </pre>
        *
        * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
@@ -30358,7 +42391,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *    Status messages, send by server with fixed interval (keep-alive).
+       * Status messages, send by server with fixed interval (keep-alive).
        * </pre>
        *
        * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
@@ -30381,7 +42414,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *    Status messages, send by server with fixed interval (keep-alive).
+       * Status messages, send by server with fixed interval (keep-alive).
        * </pre>
        *
        * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
@@ -30391,7 +42424,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *    Status messages, send by server with fixed interval (keep-alive).
+       * Status messages, send by server with fixed interval (keep-alive).
        * </pre>
        *
        * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
@@ -30409,7 +42442,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *    Status messages, send by server with fixed interval (keep-alive).
+       * Status messages, send by server with fixed interval (keep-alive).
        * </pre>
        *
        * <code>.speechkit.stt.v3.StatusCode status_code = 8;</code>
@@ -30437,7 +42470,7 @@ public final class Stt {
           yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdate.Builder, yandex.cloud.api.ai.stt.v3.Stt.RecognitionClassifierUpdateOrBuilder> classifierUpdateBuilder_;
       /**
        * <pre>
-       *  Result of the triggered classifier
+       * Result of the triggered classifier
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
@@ -30449,7 +42482,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Result of the triggered classifier
+       * Result of the triggered classifier
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
@@ -30471,7 +42504,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Result of the triggered classifier
+       * Result of the triggered classifier
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
@@ -30491,7 +42524,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Result of the triggered classifier
+       * Result of the triggered classifier
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
@@ -30509,7 +42542,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Result of the triggered classifier
+       * Result of the triggered classifier
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
@@ -30535,7 +42568,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Result of the triggered classifier
+       * Result of the triggered classifier
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
@@ -30558,7 +42591,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Result of the triggered classifier
+       * Result of the triggered classifier
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
@@ -30568,7 +42601,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Result of the triggered classifier
+       * Result of the triggered classifier
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
@@ -30586,7 +42619,7 @@ public final class Stt {
       }
       /**
        * <pre>
-       *  Result of the triggered classifier
+       * Result of the triggered classifier
        * </pre>
        *
        * <code>.speechkit.stt.v3.RecognitionClassifierUpdate classifier_update = 10;</code>
@@ -30608,6 +42641,360 @@ public final class Stt {
         eventCase_ = 10;
         onChanged();;
         return classifierUpdateBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis, yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.Builder, yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysisOrBuilder> speakerAnalysisBuilder_;
+      /**
+       * <pre>
+       * Speech statistics for every speaker
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerAnalysis speaker_analysis = 11;</code>
+       * @return Whether the speakerAnalysis field is set.
+       */
+      @java.lang.Override
+      public boolean hasSpeakerAnalysis() {
+        return eventCase_ == 11;
+      }
+      /**
+       * <pre>
+       * Speech statistics for every speaker
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerAnalysis speaker_analysis = 11;</code>
+       * @return The speakerAnalysis.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis getSpeakerAnalysis() {
+        if (speakerAnalysisBuilder_ == null) {
+          if (eventCase_ == 11) {
+            return (yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis) event_;
+          }
+          return yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.getDefaultInstance();
+        } else {
+          if (eventCase_ == 11) {
+            return speakerAnalysisBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Speech statistics for every speaker
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerAnalysis speaker_analysis = 11;</code>
+       */
+      public Builder setSpeakerAnalysis(yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis value) {
+        if (speakerAnalysisBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          event_ = value;
+          onChanged();
+        } else {
+          speakerAnalysisBuilder_.setMessage(value);
+        }
+        eventCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Speech statistics for every speaker
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerAnalysis speaker_analysis = 11;</code>
+       */
+      public Builder setSpeakerAnalysis(
+          yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.Builder builderForValue) {
+        if (speakerAnalysisBuilder_ == null) {
+          event_ = builderForValue.build();
+          onChanged();
+        } else {
+          speakerAnalysisBuilder_.setMessage(builderForValue.build());
+        }
+        eventCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Speech statistics for every speaker
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerAnalysis speaker_analysis = 11;</code>
+       */
+      public Builder mergeSpeakerAnalysis(yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis value) {
+        if (speakerAnalysisBuilder_ == null) {
+          if (eventCase_ == 11 &&
+              event_ != yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.getDefaultInstance()) {
+            event_ = yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.newBuilder((yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis) event_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            event_ = value;
+          }
+          onChanged();
+        } else {
+          if (eventCase_ == 11) {
+            speakerAnalysisBuilder_.mergeFrom(value);
+          }
+          speakerAnalysisBuilder_.setMessage(value);
+        }
+        eventCase_ = 11;
+        return this;
+      }
+      /**
+       * <pre>
+       * Speech statistics for every speaker
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerAnalysis speaker_analysis = 11;</code>
+       */
+      public Builder clearSpeakerAnalysis() {
+        if (speakerAnalysisBuilder_ == null) {
+          if (eventCase_ == 11) {
+            eventCase_ = 0;
+            event_ = null;
+            onChanged();
+          }
+        } else {
+          if (eventCase_ == 11) {
+            eventCase_ = 0;
+            event_ = null;
+          }
+          speakerAnalysisBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Speech statistics for every speaker
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerAnalysis speaker_analysis = 11;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.Builder getSpeakerAnalysisBuilder() {
+        return getSpeakerAnalysisFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Speech statistics for every speaker
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerAnalysis speaker_analysis = 11;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysisOrBuilder getSpeakerAnalysisOrBuilder() {
+        if ((eventCase_ == 11) && (speakerAnalysisBuilder_ != null)) {
+          return speakerAnalysisBuilder_.getMessageOrBuilder();
+        } else {
+          if (eventCase_ == 11) {
+            return (yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis) event_;
+          }
+          return yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Speech statistics for every speaker
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerAnalysis speaker_analysis = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis, yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.Builder, yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysisOrBuilder> 
+          getSpeakerAnalysisFieldBuilder() {
+        if (speakerAnalysisBuilder_ == null) {
+          if (!(eventCase_ == 11)) {
+            event_ = yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.getDefaultInstance();
+          }
+          speakerAnalysisBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis, yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis.Builder, yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysisOrBuilder>(
+                  (yandex.cloud.api.ai.stt.v3.Stt.SpeakerAnalysis) event_,
+                  getParentForChildren(),
+                  isClean());
+          event_ = null;
+        }
+        eventCase_ = 11;
+        onChanged();;
+        return speakerAnalysisBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis, yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.Builder, yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysisOrBuilder> conversationAnalysisBuilder_;
+      /**
+       * <pre>
+       * Conversation statistics
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.ConversationAnalysis conversation_analysis = 12;</code>
+       * @return Whether the conversationAnalysis field is set.
+       */
+      @java.lang.Override
+      public boolean hasConversationAnalysis() {
+        return eventCase_ == 12;
+      }
+      /**
+       * <pre>
+       * Conversation statistics
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.ConversationAnalysis conversation_analysis = 12;</code>
+       * @return The conversationAnalysis.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis getConversationAnalysis() {
+        if (conversationAnalysisBuilder_ == null) {
+          if (eventCase_ == 12) {
+            return (yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis) event_;
+          }
+          return yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.getDefaultInstance();
+        } else {
+          if (eventCase_ == 12) {
+            return conversationAnalysisBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Conversation statistics
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.ConversationAnalysis conversation_analysis = 12;</code>
+       */
+      public Builder setConversationAnalysis(yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis value) {
+        if (conversationAnalysisBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          event_ = value;
+          onChanged();
+        } else {
+          conversationAnalysisBuilder_.setMessage(value);
+        }
+        eventCase_ = 12;
+        return this;
+      }
+      /**
+       * <pre>
+       * Conversation statistics
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.ConversationAnalysis conversation_analysis = 12;</code>
+       */
+      public Builder setConversationAnalysis(
+          yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.Builder builderForValue) {
+        if (conversationAnalysisBuilder_ == null) {
+          event_ = builderForValue.build();
+          onChanged();
+        } else {
+          conversationAnalysisBuilder_.setMessage(builderForValue.build());
+        }
+        eventCase_ = 12;
+        return this;
+      }
+      /**
+       * <pre>
+       * Conversation statistics
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.ConversationAnalysis conversation_analysis = 12;</code>
+       */
+      public Builder mergeConversationAnalysis(yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis value) {
+        if (conversationAnalysisBuilder_ == null) {
+          if (eventCase_ == 12 &&
+              event_ != yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.getDefaultInstance()) {
+            event_ = yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.newBuilder((yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis) event_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            event_ = value;
+          }
+          onChanged();
+        } else {
+          if (eventCase_ == 12) {
+            conversationAnalysisBuilder_.mergeFrom(value);
+          }
+          conversationAnalysisBuilder_.setMessage(value);
+        }
+        eventCase_ = 12;
+        return this;
+      }
+      /**
+       * <pre>
+       * Conversation statistics
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.ConversationAnalysis conversation_analysis = 12;</code>
+       */
+      public Builder clearConversationAnalysis() {
+        if (conversationAnalysisBuilder_ == null) {
+          if (eventCase_ == 12) {
+            eventCase_ = 0;
+            event_ = null;
+            onChanged();
+          }
+        } else {
+          if (eventCase_ == 12) {
+            eventCase_ = 0;
+            event_ = null;
+          }
+          conversationAnalysisBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Conversation statistics
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.ConversationAnalysis conversation_analysis = 12;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.Builder getConversationAnalysisBuilder() {
+        return getConversationAnalysisFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Conversation statistics
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.ConversationAnalysis conversation_analysis = 12;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysisOrBuilder getConversationAnalysisOrBuilder() {
+        if ((eventCase_ == 12) && (conversationAnalysisBuilder_ != null)) {
+          return conversationAnalysisBuilder_.getMessageOrBuilder();
+        } else {
+          if (eventCase_ == 12) {
+            return (yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis) event_;
+          }
+          return yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Conversation statistics
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.ConversationAnalysis conversation_analysis = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis, yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.Builder, yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysisOrBuilder> 
+          getConversationAnalysisFieldBuilder() {
+        if (conversationAnalysisBuilder_ == null) {
+          if (!(eventCase_ == 12)) {
+            event_ = yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.getDefaultInstance();
+          }
+          conversationAnalysisBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis, yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis.Builder, yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysisOrBuilder>(
+                  (yandex.cloud.api.ai.stt.v3.Stt.ConversationAnalysis) event_,
+                  getParentForChildren(),
+                  isClean());
+          event_ = null;
+        }
+        eventCase_ = 12;
+        onChanged();;
+        return conversationAnalysisBuilder_;
       }
 
       private java.lang.Object channelTag_ = "";
@@ -30789,6 +43176,11 @@ public final class Stt {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_speechkit_stt_v3_RecognitionClassifierOptions_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_SpeechAnalysisOptions_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_SpeechAnalysisOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_speechkit_stt_v3_RawAudio_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -30838,6 +43230,11 @@ public final class Stt {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_speechkit_stt_v3_StreamingRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_RecognizeFileRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_RecognizeFileRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_speechkit_stt_v3_Word_descriptor;
   private static final 
@@ -30904,6 +43301,36 @@ public final class Stt {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_speechkit_stt_v3_RecognitionClassifierUpdate_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_DescriptiveStatistics_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_DescriptiveStatistics_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_DescriptiveStatistics_Quantile_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_DescriptiveStatistics_Quantile_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_AudioSegmentBoundaries_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_AudioSegmentBoundaries_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_SpeakerAnalysis_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_SpeakerAnalysis_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_ConversationAnalysis_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_ConversationAnalysis_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_ConversationAnalysis_InterruptsEvaluation_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_ConversationAnalysis_InterruptsEvaluation_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_speechkit_stt_v3_StreamingResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -30948,106 +43375,165 @@ public final class Stt {
       "_UTTERANCE\020\001\022\014\n\010ON_FINAL\020\002\"\\\n\034Recognitio" +
       "nClassifierOptions\022<\n\013classifiers\030\001 \003(\0132" +
       "\'.speechkit.stt.v3.RecognitionClassifier" +
-      "\"\307\001\n\010RawAudio\022@\n\016audio_encoding\030\001 \001(\0162(." +
-      "speechkit.stt.v3.RawAudio.AudioEncoding\022" +
-      "\031\n\021sample_rate_hertz\030\002 \001(\003\022\033\n\023audio_chan" +
-      "nel_count\030\003 \001(\003\"A\n\rAudioEncoding\022\036\n\032AUDI" +
-      "O_ENCODING_UNSPECIFIED\020\000\022\020\n\014LINEAR16_PCM" +
-      "\020\001\"\277\001\n\016ContainerAudio\022Q\n\024container_audio" +
-      "_type\030\001 \001(\01623.speechkit.stt.v3.Container" +
-      "Audio.ContainerAudioType\"Z\n\022ContainerAud" +
-      "ioType\022$\n CONTAINER_AUDIO_TYPE_UNSPECIFI" +
-      "ED\020\000\022\007\n\003WAV\020\001\022\014\n\010OGG_OPUS\020\002\022\007\n\003MP3\020\003\"\221\001\n" +
-      "\022AudioFormatOptions\022/\n\traw_audio\030\001 \001(\0132\032" +
-      ".speechkit.stt.v3.RawAudioH\000\022;\n\017containe" +
-      "r_audio\030\002 \001(\0132 .speechkit.stt.v3.Contain" +
-      "erAudioH\000B\r\n\013AudioFormat\"\367\001\n\032LanguageRes" +
-      "trictionOptions\022^\n\020restriction_type\030\001 \001(" +
-      "\0162D.speechkit.stt.v3.LanguageRestriction" +
-      "Options.LanguageRestrictionType\022\025\n\rlangu" +
-      "age_code\030\002 \003(\t\"b\n\027LanguageRestrictionTyp" +
-      "e\022)\n%LANGUAGE_RESTRICTION_TYPE_UNSPECIFI" +
-      "ED\020\000\022\r\n\tWHITELIST\020\001\022\r\n\tBLACKLIST\020\002\"\262\003\n\027R" +
-      "ecognitionModelOptions\022\r\n\005model\030\001 \001(\t\022:\n" +
-      "\014audio_format\030\002 \001(\0132$.speechkit.stt.v3.A" +
-      "udioFormatOptions\022F\n\022text_normalization\030" +
-      "\003 \001(\0132*.speechkit.stt.v3.TextNormalizati" +
-      "onOptions\022J\n\024language_restriction\030\004 \001(\0132" +
-      ",.speechkit.stt.v3.LanguageRestrictionOp" +
-      "tions\022\\\n\025audio_processing_type\030\005 \001(\0162=.s" +
-      "peechkit.stt.v3.RecognitionModelOptions." +
-      "AudioProcessingType\"Z\n\023AudioProcessingTy" +
-      "pe\022%\n!AUDIO_PROCESSING_TYPE_UNSPECIFIED\020" +
-      "\000\022\r\n\tREAL_TIME\020\001\022\r\n\tFULL_DATA\020\002\"\350\001\n\020Stre" +
-      "amingOptions\022D\n\021recognition_model\030\001 \001(\0132" +
-      ").speechkit.stt.v3.RecognitionModelOptio" +
-      "ns\022>\n\016eou_classifier\030\002 \001(\0132&.speechkit.s" +
-      "tt.v3.EouClassifierOptions\022N\n\026recognitio" +
-      "n_classifier\030\003 \001(\0132..speechkit.stt.v3.Re" +
-      "cognitionClassifierOptions\"\032\n\nAudioChunk" +
-      "\022\014\n\004data\030\001 \001(\014\"#\n\014SilenceChunk\022\023\n\013durati" +
-      "on_ms\030\001 \001(\003\"\005\n\003Eou\"\350\001\n\020StreamingRequest\022" +
-      "=\n\017session_options\030\001 \001(\0132\".speechkit.stt" +
-      ".v3.StreamingOptionsH\000\022-\n\005chunk\030\002 \001(\0132\034." +
-      "speechkit.stt.v3.AudioChunkH\000\0227\n\rsilence" +
-      "_chunk\030\003 \001(\0132\036.speechkit.stt.v3.SilenceC" +
-      "hunkH\000\022$\n\003eou\030\004 \001(\0132\025.speechkit.stt.v3.E" +
-      "ouH\000B\007\n\005Event\"@\n\004Word\022\014\n\004text\030\001 \001(\t\022\025\n\rs" +
-      "tart_time_ms\030\002 \001(\003\022\023\n\013end_time_ms\030\003 \001(\003\"" +
-      "@\n\022LanguageEstimation\022\025\n\rlanguage_code\030\001" +
-      " \001(\t\022\023\n\013probability\030\002 \001(\001\"\273\001\n\013Alternativ" +
-      "e\022%\n\005words\030\001 \003(\0132\026.speechkit.stt.v3.Word" +
-      "\022\014\n\004text\030\002 \001(\t\022\025\n\rstart_time_ms\030\003 \001(\003\022\023\n" +
-      "\013end_time_ms\030\004 \001(\003\022\022\n\nconfidence\030\005 \001(\001\0227" +
-      "\n\tlanguages\030\006 \003(\0132$.speechkit.stt.v3.Lan" +
-      "guageEstimation\"\034\n\tEouUpdate\022\017\n\007time_ms\030" +
-      "\002 \001(\003\"a\n\021AlternativeUpdate\0223\n\014alternativ" +
-      "es\030\001 \003(\0132\035.speechkit.stt.v3.Alternative\022" +
-      "\027\n\013channel_tag\030\002 \001(\tB\002\030\001\"\231\001\n\014AudioCursor" +
-      "s\022\030\n\020received_data_ms\030\001 \001(\003\022\025\n\rreset_tim" +
-      "e_ms\030\002 \001(\003\022\027\n\017partial_time_ms\030\003 \001(\003\022\025\n\rf" +
-      "inal_time_ms\030\004 \001(\003\022\023\n\013final_index\030\005 \001(\003\022" +
-      "\023\n\013eou_time_ms\030\006 \001(\003\"n\n\017FinalRefinement\022" +
-      "\023\n\013final_index\030\001 \001(\003\022>\n\017normalized_text\030" +
-      "\002 \001(\0132#.speechkit.stt.v3.AlternativeUpda" +
-      "teH\000B\006\n\004Type\"L\n\nStatusCode\022-\n\tcode_type\030" +
-      "\001 \001(\0162\032.speechkit.stt.v3.CodeType\022\017\n\007mes" +
-      "sage\030\002 \001(\t\"4\n\013SessionUuid\022\014\n\004uuid\030\001 \001(\t\022" +
-      "\027\n\017user_request_id\030\002 \001(\t\"K\n\017PhraseHighli" +
-      "ght\022\014\n\004text\030\001 \001(\t\022\025\n\rstart_time_ms\030\002 \001(\003" +
-      "\022\023\n\013end_time_ms\030\003 \001(\003\"?\n\032RecognitionClas" +
-      "sifierLabel\022\r\n\005label\030\001 \001(\t\022\022\n\nconfidence" +
-      "\030\002 \001(\001\"\246\001\n\033RecognitionClassifierResult\022\022" +
-      "\n\nclassifier\030\001 \001(\t\0225\n\nhighlights\030\002 \003(\0132!" +
-      ".speechkit.stt.v3.PhraseHighlight\022<\n\006lab" +
-      "els\030\003 \003(\0132,.speechkit.stt.v3.Recognition" +
-      "ClassifierLabel\"\261\002\n\033RecognitionClassifie" +
-      "rUpdate\022M\n\013window_type\030\001 \001(\01628.speechkit" +
-      ".stt.v3.RecognitionClassifierUpdate.Wind" +
-      "owType\022\025\n\rstart_time_ms\030\002 \001(\003\022\023\n\013end_tim" +
-      "e_ms\030\003 \001(\003\022H\n\021classifier_result\030\004 \001(\0132-." +
-      "speechkit.stt.v3.RecognitionClassifierRe" +
-      "sult\"M\n\nWindowType\022\033\n\027WINDOW_TYPE_UNSPEC" +
-      "IFIED\020\000\022\022\n\016LAST_UTTERANCE\020\001\022\016\n\nLAST_FINA" +
-      "L\020\002\"\235\004\n\021StreamingResponse\0223\n\014session_uui" +
-      "d\030\001 \001(\0132\035.speechkit.stt.v3.SessionUuid\0225" +
-      "\n\raudio_cursors\030\002 \001(\0132\036.speechkit.stt.v3" +
-      ".AudioCursors\022\035\n\025response_wall_time_ms\030\003" +
-      " \001(\003\0226\n\007partial\030\004 \001(\0132#.speechkit.stt.v3" +
-      ".AlternativeUpdateH\000\0224\n\005final\030\005 \001(\0132#.sp" +
-      "eechkit.stt.v3.AlternativeUpdateH\000\0221\n\neo" +
-      "u_update\030\006 \001(\0132\033.speechkit.stt.v3.EouUpd" +
-      "ateH\000\022=\n\020final_refinement\030\007 \001(\0132!.speech" +
-      "kit.stt.v3.FinalRefinementH\000\0223\n\013status_c" +
-      "ode\030\010 \001(\0132\034.speechkit.stt.v3.StatusCodeH" +
-      "\000\022J\n\021classifier_update\030\n \001(\0132-.speechkit" +
-      ".stt.v3.RecognitionClassifierUpdateH\000\022\023\n" +
-      "\013channel_tag\030\t \001(\tB\007\n\005Event*K\n\010CodeType\022" +
-      "\031\n\025CODE_TYPE_UNSPECIFIED\020\000\022\013\n\007WORKING\020\001\022" +
-      "\013\n\007WARNING\020\002\022\n\n\006CLOSED\020\003B\\\n\032yandex.cloud" +
-      ".api.ai.stt.v3Z>github.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/ai/stt/v3;sttb\006" +
-      "proto3"
+      "\"\210\001\n\025SpeechAnalysisOptions\022\037\n\027enable_spe" +
+      "aker_analysis\030\001 \001(\010\022$\n\034enable_conversati" +
+      "on_analysis\030\002 \001(\010\022(\n descriptive_statist" +
+      "ics_quantiles\030\003 \003(\001\"\307\001\n\010RawAudio\022@\n\016audi" +
+      "o_encoding\030\001 \001(\0162(.speechkit.stt.v3.RawA" +
+      "udio.AudioEncoding\022\031\n\021sample_rate_hertz\030" +
+      "\002 \001(\003\022\033\n\023audio_channel_count\030\003 \001(\003\"A\n\rAu" +
+      "dioEncoding\022\036\n\032AUDIO_ENCODING_UNSPECIFIE" +
+      "D\020\000\022\020\n\014LINEAR16_PCM\020\001\"\277\001\n\016ContainerAudio" +
+      "\022Q\n\024container_audio_type\030\001 \001(\01623.speechk" +
+      "it.stt.v3.ContainerAudio.ContainerAudioT" +
+      "ype\"Z\n\022ContainerAudioType\022$\n CONTAINER_A" +
+      "UDIO_TYPE_UNSPECIFIED\020\000\022\007\n\003WAV\020\001\022\014\n\010OGG_" +
+      "OPUS\020\002\022\007\n\003MP3\020\003\"\221\001\n\022AudioFormatOptions\022/" +
+      "\n\traw_audio\030\001 \001(\0132\032.speechkit.stt.v3.Raw" +
+      "AudioH\000\022;\n\017container_audio\030\002 \001(\0132 .speec" +
+      "hkit.stt.v3.ContainerAudioH\000B\r\n\013AudioFor" +
+      "mat\"\367\001\n\032LanguageRestrictionOptions\022^\n\020re" +
+      "striction_type\030\001 \001(\0162D.speechkit.stt.v3." +
+      "LanguageRestrictionOptions.LanguageRestr" +
+      "ictionType\022\025\n\rlanguage_code\030\002 \003(\t\"b\n\027Lan" +
+      "guageRestrictionType\022)\n%LANGUAGE_RESTRIC" +
+      "TION_TYPE_UNSPECIFIED\020\000\022\r\n\tWHITELIST\020\001\022\r" +
+      "\n\tBLACKLIST\020\002\"\262\003\n\027RecognitionModelOption" +
+      "s\022\r\n\005model\030\001 \001(\t\022:\n\014audio_format\030\002 \001(\0132$" +
+      ".speechkit.stt.v3.AudioFormatOptions\022F\n\022" +
+      "text_normalization\030\003 \001(\0132*.speechkit.stt" +
+      ".v3.TextNormalizationOptions\022J\n\024language" +
+      "_restriction\030\004 \001(\0132,.speechkit.stt.v3.La" +
+      "nguageRestrictionOptions\022\\\n\025audio_proces" +
+      "sing_type\030\005 \001(\0162=.speechkit.stt.v3.Recog" +
+      "nitionModelOptions.AudioProcessingType\"Z" +
+      "\n\023AudioProcessingType\022%\n!AUDIO_PROCESSIN" +
+      "G_TYPE_UNSPECIFIED\020\000\022\r\n\tREAL_TIME\020\001\022\r\n\tF" +
+      "ULL_DATA\020\002\"\252\002\n\020StreamingOptions\022D\n\021recog" +
+      "nition_model\030\001 \001(\0132).speechkit.stt.v3.Re" +
+      "cognitionModelOptions\022>\n\016eou_classifier\030" +
+      "\002 \001(\0132&.speechkit.stt.v3.EouClassifierOp" +
+      "tions\022N\n\026recognition_classifier\030\003 \001(\0132.." +
+      "speechkit.stt.v3.RecognitionClassifierOp" +
+      "tions\022@\n\017speech_analysis\030\004 \001(\0132\'.speechk" +
+      "it.stt.v3.SpeechAnalysisOptions\"\032\n\nAudio" +
+      "Chunk\022\014\n\004data\030\001 \001(\014\"#\n\014SilenceChunk\022\023\n\013d" +
+      "uration_ms\030\001 \001(\003\"\005\n\003Eou\"\350\001\n\020StreamingReq" +
+      "uest\022=\n\017session_options\030\001 \001(\0132\".speechki" +
+      "t.stt.v3.StreamingOptionsH\000\022-\n\005chunk\030\002 \001" +
+      "(\0132\034.speechkit.stt.v3.AudioChunkH\000\0227\n\rsi" +
+      "lence_chunk\030\003 \001(\0132\036.speechkit.stt.v3.Sil" +
+      "enceChunkH\000\022$\n\003eou\030\004 \001(\0132\025.speechkit.stt" +
+      ".v3.EouH\000B\007\n\005Event\"\237\002\n\024RecognizeFileRequ" +
+      "est\022\021\n\007content\030\001 \001(\014H\000\022\r\n\003uri\030\002 \001(\tH\000\022D\n" +
+      "\021recognition_model\030\003 \001(\0132).speechkit.stt" +
+      ".v3.RecognitionModelOptions\022N\n\026recogniti" +
+      "on_classifier\030\004 \001(\0132..speechkit.stt.v3.R" +
+      "ecognitionClassifierOptions\022@\n\017speech_an" +
+      "alysis\030\005 \001(\0132\'.speechkit.stt.v3.SpeechAn" +
+      "alysisOptionsB\r\n\013AudioSource\"@\n\004Word\022\014\n\004" +
+      "text\030\001 \001(\t\022\025\n\rstart_time_ms\030\002 \001(\003\022\023\n\013end" +
+      "_time_ms\030\003 \001(\003\"@\n\022LanguageEstimation\022\025\n\r" +
+      "language_code\030\001 \001(\t\022\023\n\013probability\030\002 \001(\001" +
+      "\"\273\001\n\013Alternative\022%\n\005words\030\001 \003(\0132\026.speech" +
+      "kit.stt.v3.Word\022\014\n\004text\030\002 \001(\t\022\025\n\rstart_t" +
+      "ime_ms\030\003 \001(\003\022\023\n\013end_time_ms\030\004 \001(\003\022\022\n\ncon" +
+      "fidence\030\005 \001(\001\0227\n\tlanguages\030\006 \003(\0132$.speec" +
+      "hkit.stt.v3.LanguageEstimation\"\034\n\tEouUpd" +
+      "ate\022\017\n\007time_ms\030\002 \001(\003\"a\n\021AlternativeUpdat" +
+      "e\0223\n\014alternatives\030\001 \003(\0132\035.speechkit.stt." +
+      "v3.Alternative\022\027\n\013channel_tag\030\002 \001(\tB\002\030\001\"" +
+      "\231\001\n\014AudioCursors\022\030\n\020received_data_ms\030\001 \001" +
+      "(\003\022\025\n\rreset_time_ms\030\002 \001(\003\022\027\n\017partial_tim" +
+      "e_ms\030\003 \001(\003\022\025\n\rfinal_time_ms\030\004 \001(\003\022\023\n\013fin" +
+      "al_index\030\005 \001(\003\022\023\n\013eou_time_ms\030\006 \001(\003\"n\n\017F" +
+      "inalRefinement\022\023\n\013final_index\030\001 \001(\003\022>\n\017n" +
+      "ormalized_text\030\002 \001(\0132#.speechkit.stt.v3." +
+      "AlternativeUpdateH\000B\006\n\004Type\"L\n\nStatusCod" +
+      "e\022-\n\tcode_type\030\001 \001(\0162\032.speechkit.stt.v3." +
+      "CodeType\022\017\n\007message\030\002 \001(\t\"4\n\013SessionUuid" +
+      "\022\014\n\004uuid\030\001 \001(\t\022\027\n\017user_request_id\030\002 \001(\t\"" +
+      "K\n\017PhraseHighlight\022\014\n\004text\030\001 \001(\t\022\025\n\rstar" +
+      "t_time_ms\030\002 \001(\003\022\023\n\013end_time_ms\030\003 \001(\003\"?\n\032" +
+      "RecognitionClassifierLabel\022\r\n\005label\030\001 \001(" +
+      "\t\022\022\n\nconfidence\030\002 \001(\001\"\246\001\n\033RecognitionCla" +
+      "ssifierResult\022\022\n\nclassifier\030\001 \001(\t\0225\n\nhig" +
+      "hlights\030\002 \003(\0132!.speechkit.stt.v3.PhraseH" +
+      "ighlight\022<\n\006labels\030\003 \003(\0132,.speechkit.stt" +
+      ".v3.RecognitionClassifierLabel\"\261\002\n\033Recog" +
+      "nitionClassifierUpdate\022M\n\013window_type\030\001 " +
+      "\001(\01628.speechkit.stt.v3.RecognitionClassi" +
+      "fierUpdate.WindowType\022\025\n\rstart_time_ms\030\002" +
+      " \001(\003\022\023\n\013end_time_ms\030\003 \001(\003\022H\n\021classifier_" +
+      "result\030\004 \001(\0132-.speechkit.stt.v3.Recognit" +
+      "ionClassifierResult\"M\n\nWindowType\022\033\n\027WIN" +
+      "DOW_TYPE_UNSPECIFIED\020\000\022\022\n\016LAST_UTTERANCE" +
+      "\020\001\022\016\n\nLAST_FINAL\020\002\"\273\001\n\025DescriptiveStatis" +
+      "tics\022\013\n\003min\030\001 \001(\001\022\013\n\003max\030\002 \001(\001\022\014\n\004mean\030\003" +
+      " \001(\001\022\013\n\003std\030\004 \001(\001\022C\n\tquantiles\030\005 \003(\01320.s" +
+      "peechkit.stt.v3.DescriptiveStatistics.Qu" +
+      "antile\032(\n\010Quantile\022\r\n\005level\030\001 \001(\001\022\r\n\005val" +
+      "ue\030\002 \001(\001\"D\n\026AudioSegmentBoundaries\022\025\n\rst" +
+      "art_time_ms\030\001 \001(\003\022\023\n\013end_time_ms\030\002 \001(\003\"\203" +
+      "\006\n\017SpeakerAnalysis\022\023\n\013speaker_tag\030\001 \001(\t\022" +
+      "A\n\013window_type\030\002 \001(\0162,.speechkit.stt.v3." +
+      "SpeakerAnalysis.WindowType\022C\n\021speech_bou" +
+      "ndaries\030\003 \001(\0132(.speechkit.stt.v3.AudioSe" +
+      "gmentBoundaries\022\027\n\017total_speech_ms\030\004 \001(\003" +
+      "\022\024\n\014speech_ratio\030\005 \001(\001\022\030\n\020total_silence_" +
+      "ms\030\006 \001(\003\022\025\n\rsilence_ratio\030\007 \001(\001\022\023\n\013words" +
+      "_count\030\010 \001(\003\022\025\n\rletters_count\030\t \001(\003\022A\n\020w" +
+      "ords_per_second\030\n \001(\0132\'.speechkit.stt.v3" +
+      ".DescriptiveStatistics\022C\n\022letters_per_se" +
+      "cond\030\013 \001(\0132\'.speechkit.stt.v3.Descriptiv" +
+      "eStatistics\022D\n\023words_per_utterance\030\014 \001(\013" +
+      "2\'.speechkit.stt.v3.DescriptiveStatistic" +
+      "s\022F\n\025letters_per_utterance\030\r \001(\0132\'.speec" +
+      "hkit.stt.v3.DescriptiveStatistics\022\027\n\017utt" +
+      "erance_count\030\016 \001(\003\022N\n\035utterance_duration" +
+      "_estimation\030\017 \001(\0132\'.speechkit.stt.v3.Des" +
+      "criptiveStatistics\"H\n\nWindowType\022\033\n\027WIND" +
+      "OW_TYPE_UNSPECIFIED\020\000\022\t\n\005TOTAL\020\001\022\022\n\016LAST" +
+      "_UTTERANCE\020\002\"\307\005\n\024ConversationAnalysis\022I\n" +
+      "\027conversation_boundaries\030\001 \001(\0132(.speechk" +
+      "it.stt.v3.AudioSegmentBoundaries\022.\n&tota" +
+      "l_simultaneous_silence_duration_ms\030\002 \001(\003" +
+      "\022(\n total_simultaneous_silence_ratio\030\003 \001" +
+      "(\001\022Y\n(simultaneous_silence_duration_esti" +
+      "mation\030\004 \001(\0132\'.speechkit.stt.v3.Descript" +
+      "iveStatistics\022-\n%total_simultaneous_spee" +
+      "ch_duration_ms\030\005 \001(\003\022\'\n\037total_simultaneo" +
+      "us_speech_ratio\030\006 \001(\001\022X\n\'simultaneous_sp" +
+      "eech_duration_estimation\030\007 \001(\0132\'.speechk" +
+      "it.stt.v3.DescriptiveStatistics\022W\n\022speak" +
+      "er_interrupts\030\010 \003(\0132;.speechkit.stt.v3.C" +
+      "onversationAnalysis.InterruptsEvaluation" +
+      "\032\243\001\n\024InterruptsEvaluation\022\023\n\013speaker_tag" +
+      "\030\001 \001(\t\022\030\n\020interrupts_count\030\002 \001(\003\022\036\n\026inte" +
+      "rrupts_duration_ms\030\003 \001(\003\022<\n\ninterrupts\030\004" +
+      " \003(\0132(.speechkit.stt.v3.AudioSegmentBoun" +
+      "daries\"\245\005\n\021StreamingResponse\0223\n\014session_" +
+      "uuid\030\001 \001(\0132\035.speechkit.stt.v3.SessionUui" +
+      "d\0225\n\raudio_cursors\030\002 \001(\0132\036.speechkit.stt" +
+      ".v3.AudioCursors\022\035\n\025response_wall_time_m" +
+      "s\030\003 \001(\003\0226\n\007partial\030\004 \001(\0132#.speechkit.stt" +
+      ".v3.AlternativeUpdateH\000\0224\n\005final\030\005 \001(\0132#" +
+      ".speechkit.stt.v3.AlternativeUpdateH\000\0221\n" +
+      "\neou_update\030\006 \001(\0132\033.speechkit.stt.v3.Eou" +
+      "UpdateH\000\022=\n\020final_refinement\030\007 \001(\0132!.spe" +
+      "echkit.stt.v3.FinalRefinementH\000\0223\n\013statu" +
+      "s_code\030\010 \001(\0132\034.speechkit.stt.v3.StatusCo" +
+      "deH\000\022J\n\021classifier_update\030\n \001(\0132-.speech" +
+      "kit.stt.v3.RecognitionClassifierUpdateH\000" +
+      "\022=\n\020speaker_analysis\030\013 \001(\0132!.speechkit.s" +
+      "tt.v3.SpeakerAnalysisH\000\022G\n\025conversation_" +
+      "analysis\030\014 \001(\0132&.speechkit.stt.v3.Conver" +
+      "sationAnalysisH\000\022\023\n\013channel_tag\030\t \001(\tB\007\n" +
+      "\005Event*K\n\010CodeType\022\031\n\025CODE_TYPE_UNSPECIF" +
+      "IED\020\000\022\013\n\007WORKING\020\001\022\013\n\007WARNING\020\002\022\n\n\006CLOSE" +
+      "D\020\003B\\\n\032yandex.cloud.api.ai.stt.v3Z>githu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/ai/stt/v3;sttb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -31089,150 +43575,198 @@ public final class Stt {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_RecognitionClassifierOptions_descriptor,
         new java.lang.String[] { "Classifiers", });
-    internal_static_speechkit_stt_v3_RawAudio_descriptor =
+    internal_static_speechkit_stt_v3_SpeechAnalysisOptions_descriptor =
       getDescriptor().getMessageTypes().get(6);
+    internal_static_speechkit_stt_v3_SpeechAnalysisOptions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_SpeechAnalysisOptions_descriptor,
+        new java.lang.String[] { "EnableSpeakerAnalysis", "EnableConversationAnalysis", "DescriptiveStatisticsQuantiles", });
+    internal_static_speechkit_stt_v3_RawAudio_descriptor =
+      getDescriptor().getMessageTypes().get(7);
     internal_static_speechkit_stt_v3_RawAudio_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_RawAudio_descriptor,
         new java.lang.String[] { "AudioEncoding", "SampleRateHertz", "AudioChannelCount", });
     internal_static_speechkit_stt_v3_ContainerAudio_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_speechkit_stt_v3_ContainerAudio_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_ContainerAudio_descriptor,
         new java.lang.String[] { "ContainerAudioType", });
     internal_static_speechkit_stt_v3_AudioFormatOptions_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_speechkit_stt_v3_AudioFormatOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_AudioFormatOptions_descriptor,
         new java.lang.String[] { "RawAudio", "ContainerAudio", "AudioFormat", });
     internal_static_speechkit_stt_v3_LanguageRestrictionOptions_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_speechkit_stt_v3_LanguageRestrictionOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_LanguageRestrictionOptions_descriptor,
         new java.lang.String[] { "RestrictionType", "LanguageCode", });
     internal_static_speechkit_stt_v3_RecognitionModelOptions_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_speechkit_stt_v3_RecognitionModelOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_RecognitionModelOptions_descriptor,
         new java.lang.String[] { "Model", "AudioFormat", "TextNormalization", "LanguageRestriction", "AudioProcessingType", });
     internal_static_speechkit_stt_v3_StreamingOptions_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_speechkit_stt_v3_StreamingOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_StreamingOptions_descriptor,
-        new java.lang.String[] { "RecognitionModel", "EouClassifier", "RecognitionClassifier", });
+        new java.lang.String[] { "RecognitionModel", "EouClassifier", "RecognitionClassifier", "SpeechAnalysis", });
     internal_static_speechkit_stt_v3_AudioChunk_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_speechkit_stt_v3_AudioChunk_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_AudioChunk_descriptor,
         new java.lang.String[] { "Data", });
     internal_static_speechkit_stt_v3_SilenceChunk_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_speechkit_stt_v3_SilenceChunk_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_SilenceChunk_descriptor,
         new java.lang.String[] { "DurationMs", });
     internal_static_speechkit_stt_v3_Eou_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_speechkit_stt_v3_Eou_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_Eou_descriptor,
         new java.lang.String[] { });
     internal_static_speechkit_stt_v3_StreamingRequest_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_speechkit_stt_v3_StreamingRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_StreamingRequest_descriptor,
         new java.lang.String[] { "SessionOptions", "Chunk", "SilenceChunk", "Eou", "Event", });
+    internal_static_speechkit_stt_v3_RecognizeFileRequest_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_speechkit_stt_v3_RecognizeFileRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_RecognizeFileRequest_descriptor,
+        new java.lang.String[] { "Content", "Uri", "RecognitionModel", "RecognitionClassifier", "SpeechAnalysis", "AudioSource", });
     internal_static_speechkit_stt_v3_Word_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_speechkit_stt_v3_Word_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_Word_descriptor,
         new java.lang.String[] { "Text", "StartTimeMs", "EndTimeMs", });
     internal_static_speechkit_stt_v3_LanguageEstimation_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_speechkit_stt_v3_LanguageEstimation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_LanguageEstimation_descriptor,
         new java.lang.String[] { "LanguageCode", "Probability", });
     internal_static_speechkit_stt_v3_Alternative_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_speechkit_stt_v3_Alternative_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_Alternative_descriptor,
         new java.lang.String[] { "Words", "Text", "StartTimeMs", "EndTimeMs", "Confidence", "Languages", });
     internal_static_speechkit_stt_v3_EouUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_speechkit_stt_v3_EouUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_EouUpdate_descriptor,
         new java.lang.String[] { "TimeMs", });
     internal_static_speechkit_stt_v3_AlternativeUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_speechkit_stt_v3_AlternativeUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_AlternativeUpdate_descriptor,
         new java.lang.String[] { "Alternatives", "ChannelTag", });
     internal_static_speechkit_stt_v3_AudioCursors_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_speechkit_stt_v3_AudioCursors_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_AudioCursors_descriptor,
         new java.lang.String[] { "ReceivedDataMs", "ResetTimeMs", "PartialTimeMs", "FinalTimeMs", "FinalIndex", "EouTimeMs", });
     internal_static_speechkit_stt_v3_FinalRefinement_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_speechkit_stt_v3_FinalRefinement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_FinalRefinement_descriptor,
         new java.lang.String[] { "FinalIndex", "NormalizedText", "Type", });
     internal_static_speechkit_stt_v3_StatusCode_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_speechkit_stt_v3_StatusCode_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_StatusCode_descriptor,
         new java.lang.String[] { "CodeType", "Message", });
     internal_static_speechkit_stt_v3_SessionUuid_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_speechkit_stt_v3_SessionUuid_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_SessionUuid_descriptor,
         new java.lang.String[] { "Uuid", "UserRequestId", });
     internal_static_speechkit_stt_v3_PhraseHighlight_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_speechkit_stt_v3_PhraseHighlight_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_PhraseHighlight_descriptor,
         new java.lang.String[] { "Text", "StartTimeMs", "EndTimeMs", });
     internal_static_speechkit_stt_v3_RecognitionClassifierLabel_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_speechkit_stt_v3_RecognitionClassifierLabel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_RecognitionClassifierLabel_descriptor,
         new java.lang.String[] { "Label", "Confidence", });
     internal_static_speechkit_stt_v3_RecognitionClassifierResult_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_speechkit_stt_v3_RecognitionClassifierResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_RecognitionClassifierResult_descriptor,
         new java.lang.String[] { "Classifier", "Highlights", "Labels", });
     internal_static_speechkit_stt_v3_RecognitionClassifierUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_speechkit_stt_v3_RecognitionClassifierUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_RecognitionClassifierUpdate_descriptor,
         new java.lang.String[] { "WindowType", "StartTimeMs", "EndTimeMs", "ClassifierResult", });
+    internal_static_speechkit_stt_v3_DescriptiveStatistics_descriptor =
+      getDescriptor().getMessageTypes().get(31);
+    internal_static_speechkit_stt_v3_DescriptiveStatistics_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_DescriptiveStatistics_descriptor,
+        new java.lang.String[] { "Min", "Max", "Mean", "Std", "Quantiles", });
+    internal_static_speechkit_stt_v3_DescriptiveStatistics_Quantile_descriptor =
+      internal_static_speechkit_stt_v3_DescriptiveStatistics_descriptor.getNestedTypes().get(0);
+    internal_static_speechkit_stt_v3_DescriptiveStatistics_Quantile_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_DescriptiveStatistics_Quantile_descriptor,
+        new java.lang.String[] { "Level", "Value", });
+    internal_static_speechkit_stt_v3_AudioSegmentBoundaries_descriptor =
+      getDescriptor().getMessageTypes().get(32);
+    internal_static_speechkit_stt_v3_AudioSegmentBoundaries_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_AudioSegmentBoundaries_descriptor,
+        new java.lang.String[] { "StartTimeMs", "EndTimeMs", });
+    internal_static_speechkit_stt_v3_SpeakerAnalysis_descriptor =
+      getDescriptor().getMessageTypes().get(33);
+    internal_static_speechkit_stt_v3_SpeakerAnalysis_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_SpeakerAnalysis_descriptor,
+        new java.lang.String[] { "SpeakerTag", "WindowType", "SpeechBoundaries", "TotalSpeechMs", "SpeechRatio", "TotalSilenceMs", "SilenceRatio", "WordsCount", "LettersCount", "WordsPerSecond", "LettersPerSecond", "WordsPerUtterance", "LettersPerUtterance", "UtteranceCount", "UtteranceDurationEstimation", });
+    internal_static_speechkit_stt_v3_ConversationAnalysis_descriptor =
+      getDescriptor().getMessageTypes().get(34);
+    internal_static_speechkit_stt_v3_ConversationAnalysis_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_ConversationAnalysis_descriptor,
+        new java.lang.String[] { "ConversationBoundaries", "TotalSimultaneousSilenceDurationMs", "TotalSimultaneousSilenceRatio", "SimultaneousSilenceDurationEstimation", "TotalSimultaneousSpeechDurationMs", "TotalSimultaneousSpeechRatio", "SimultaneousSpeechDurationEstimation", "SpeakerInterrupts", });
+    internal_static_speechkit_stt_v3_ConversationAnalysis_InterruptsEvaluation_descriptor =
+      internal_static_speechkit_stt_v3_ConversationAnalysis_descriptor.getNestedTypes().get(0);
+    internal_static_speechkit_stt_v3_ConversationAnalysis_InterruptsEvaluation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_ConversationAnalysis_InterruptsEvaluation_descriptor,
+        new java.lang.String[] { "SpeakerTag", "InterruptsCount2", "InterruptsDurationMs", "Interrupts4", });
     internal_static_speechkit_stt_v3_StreamingResponse_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_speechkit_stt_v3_StreamingResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_StreamingResponse_descriptor,
-        new java.lang.String[] { "SessionUuid", "AudioCursors", "ResponseWallTimeMs", "Partial", "Final", "EouUpdate", "FinalRefinement", "StatusCode", "ClassifierUpdate", "ChannelTag", "Event", });
+        new java.lang.String[] { "SessionUuid", "AudioCursors", "ResponseWallTimeMs", "Partial", "Final", "EouUpdate", "FinalRefinement", "StatusCode", "ClassifierUpdate", "SpeakerAnalysis", "ConversationAnalysis", "ChannelTag", "Event", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

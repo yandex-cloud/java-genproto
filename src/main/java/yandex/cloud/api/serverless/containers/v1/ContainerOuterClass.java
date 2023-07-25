@@ -15692,26 +15692,6 @@ public final class ContainerOuterClass {
 
     /**
      * <pre>
-     * Mount point directory name (not path) for mounting.
-     * </pre>
-     *
-     * <code>string mount_point_name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z]*", (.yandex.cloud.length) = "1-100"];</code>
-     * @return The mountPointName.
-     */
-    java.lang.String getMountPointName();
-    /**
-     * <pre>
-     * Mount point directory name (not path) for mounting.
-     * </pre>
-     *
-     * <code>string mount_point_name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z]*", (.yandex.cloud.length) = "1-100"];</code>
-     * @return The bytes for mountPointName.
-     */
-    com.google.protobuf.ByteString
-        getMountPointNameBytes();
-
-    /**
-     * <pre>
      * Is mount read only.
      * </pre>
      *
@@ -15719,6 +15699,26 @@ public final class ContainerOuterClass {
      * @return The readOnly.
      */
     boolean getReadOnly();
+
+    /**
+     * <pre>
+     * Mount point path inside the container for mounting.
+     * </pre>
+     *
+     * <code>string mount_point_path = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z/]*", (.yandex.cloud.length) = "1-300"];</code>
+     * @return The mountPointPath.
+     */
+    java.lang.String getMountPointPath();
+    /**
+     * <pre>
+     * Mount point path inside the container for mounting.
+     * </pre>
+     *
+     * <code>string mount_point_path = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z/]*", (.yandex.cloud.length) = "1-300"];</code>
+     * @return The bytes for mountPointPath.
+     */
+    com.google.protobuf.ByteString
+        getMountPointPathBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.containers.v1.StorageMount}
@@ -15735,7 +15735,7 @@ public final class ContainerOuterClass {
     private StorageMount() {
       bucketId_ = "";
       prefix_ = "";
-      mountPointName_ = "";
+      mountPointPath_ = "";
     }
 
     @java.lang.Override
@@ -15780,15 +15780,15 @@ public final class ContainerOuterClass {
               prefix_ = s;
               break;
             }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              mountPointName_ = s;
-              break;
-            }
             case 32: {
 
               readOnly_ = input.readBool();
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              mountPointPath_ = s;
               break;
             }
             default: {
@@ -15915,52 +15915,6 @@ public final class ContainerOuterClass {
       }
     }
 
-    public static final int MOUNT_POINT_NAME_FIELD_NUMBER = 3;
-    private volatile java.lang.Object mountPointName_;
-    /**
-     * <pre>
-     * Mount point directory name (not path) for mounting.
-     * </pre>
-     *
-     * <code>string mount_point_name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z]*", (.yandex.cloud.length) = "1-100"];</code>
-     * @return The mountPointName.
-     */
-    @java.lang.Override
-    public java.lang.String getMountPointName() {
-      java.lang.Object ref = mountPointName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        mountPointName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Mount point directory name (not path) for mounting.
-     * </pre>
-     *
-     * <code>string mount_point_name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z]*", (.yandex.cloud.length) = "1-100"];</code>
-     * @return The bytes for mountPointName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getMountPointNameBytes() {
-      java.lang.Object ref = mountPointName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        mountPointName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int READ_ONLY_FIELD_NUMBER = 4;
     private boolean readOnly_;
     /**
@@ -15974,6 +15928,52 @@ public final class ContainerOuterClass {
     @java.lang.Override
     public boolean getReadOnly() {
       return readOnly_;
+    }
+
+    public static final int MOUNT_POINT_PATH_FIELD_NUMBER = 5;
+    private volatile java.lang.Object mountPointPath_;
+    /**
+     * <pre>
+     * Mount point path inside the container for mounting.
+     * </pre>
+     *
+     * <code>string mount_point_path = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z/]*", (.yandex.cloud.length) = "1-300"];</code>
+     * @return The mountPointPath.
+     */
+    @java.lang.Override
+    public java.lang.String getMountPointPath() {
+      java.lang.Object ref = mountPointPath_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        mountPointPath_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Mount point path inside the container for mounting.
+     * </pre>
+     *
+     * <code>string mount_point_path = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z/]*", (.yandex.cloud.length) = "1-300"];</code>
+     * @return The bytes for mountPointPath.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMountPointPathBytes() {
+      java.lang.Object ref = mountPointPath_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        mountPointPath_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -15996,11 +15996,11 @@ public final class ContainerOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, prefix_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mountPointName_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, mountPointName_);
-      }
       if (readOnly_ != false) {
         output.writeBool(4, readOnly_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mountPointPath_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, mountPointPath_);
       }
       unknownFields.writeTo(output);
     }
@@ -16017,12 +16017,12 @@ public final class ContainerOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, prefix_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mountPointName_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, mountPointName_);
-      }
       if (readOnly_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, readOnly_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mountPointPath_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, mountPointPath_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -16043,10 +16043,10 @@ public final class ContainerOuterClass {
           .equals(other.getBucketId())) return false;
       if (!getPrefix()
           .equals(other.getPrefix())) return false;
-      if (!getMountPointName()
-          .equals(other.getMountPointName())) return false;
       if (getReadOnly()
           != other.getReadOnly()) return false;
+      if (!getMountPointPath()
+          .equals(other.getMountPointPath())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -16062,11 +16062,11 @@ public final class ContainerOuterClass {
       hash = (53 * hash) + getBucketId().hashCode();
       hash = (37 * hash) + PREFIX_FIELD_NUMBER;
       hash = (53 * hash) + getPrefix().hashCode();
-      hash = (37 * hash) + MOUNT_POINT_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getMountPointName().hashCode();
       hash = (37 * hash) + READ_ONLY_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getReadOnly());
+      hash = (37 * hash) + MOUNT_POINT_PATH_FIELD_NUMBER;
+      hash = (53 * hash) + getMountPointPath().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -16204,9 +16204,9 @@ public final class ContainerOuterClass {
 
         prefix_ = "";
 
-        mountPointName_ = "";
-
         readOnly_ = false;
+
+        mountPointPath_ = "";
 
         return this;
       }
@@ -16236,8 +16236,8 @@ public final class ContainerOuterClass {
         yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.StorageMount result = new yandex.cloud.api.serverless.containers.v1.ContainerOuterClass.StorageMount(this);
         result.bucketId_ = bucketId_;
         result.prefix_ = prefix_;
-        result.mountPointName_ = mountPointName_;
         result.readOnly_ = readOnly_;
+        result.mountPointPath_ = mountPointPath_;
         onBuilt();
         return result;
       }
@@ -16294,12 +16294,12 @@ public final class ContainerOuterClass {
           prefix_ = other.prefix_;
           onChanged();
         }
-        if (!other.getMountPointName().isEmpty()) {
-          mountPointName_ = other.mountPointName_;
-          onChanged();
-        }
         if (other.getReadOnly() != false) {
           setReadOnly(other.getReadOnly());
+        }
+        if (!other.getMountPointPath().isEmpty()) {
+          mountPointPath_ = other.mountPointPath_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -16522,102 +16522,6 @@ public final class ContainerOuterClass {
         return this;
       }
 
-      private java.lang.Object mountPointName_ = "";
-      /**
-       * <pre>
-       * Mount point directory name (not path) for mounting.
-       * </pre>
-       *
-       * <code>string mount_point_name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z]*", (.yandex.cloud.length) = "1-100"];</code>
-       * @return The mountPointName.
-       */
-      public java.lang.String getMountPointName() {
-        java.lang.Object ref = mountPointName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          mountPointName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Mount point directory name (not path) for mounting.
-       * </pre>
-       *
-       * <code>string mount_point_name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z]*", (.yandex.cloud.length) = "1-100"];</code>
-       * @return The bytes for mountPointName.
-       */
-      public com.google.protobuf.ByteString
-          getMountPointNameBytes() {
-        java.lang.Object ref = mountPointName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          mountPointName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Mount point directory name (not path) for mounting.
-       * </pre>
-       *
-       * <code>string mount_point_name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z]*", (.yandex.cloud.length) = "1-100"];</code>
-       * @param value The mountPointName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMountPointName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        mountPointName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Mount point directory name (not path) for mounting.
-       * </pre>
-       *
-       * <code>string mount_point_name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z]*", (.yandex.cloud.length) = "1-100"];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMountPointName() {
-        
-        mountPointName_ = getDefaultInstance().getMountPointName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Mount point directory name (not path) for mounting.
-       * </pre>
-       *
-       * <code>string mount_point_name = 3 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z]*", (.yandex.cloud.length) = "1-100"];</code>
-       * @param value The bytes for mountPointName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMountPointNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        mountPointName_ = value;
-        onChanged();
-        return this;
-      }
-
       private boolean readOnly_ ;
       /**
        * <pre>
@@ -16657,6 +16561,102 @@ public final class ContainerOuterClass {
       public Builder clearReadOnly() {
         
         readOnly_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object mountPointPath_ = "";
+      /**
+       * <pre>
+       * Mount point path inside the container for mounting.
+       * </pre>
+       *
+       * <code>string mount_point_path = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z/]*", (.yandex.cloud.length) = "1-300"];</code>
+       * @return The mountPointPath.
+       */
+      public java.lang.String getMountPointPath() {
+        java.lang.Object ref = mountPointPath_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          mountPointPath_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Mount point path inside the container for mounting.
+       * </pre>
+       *
+       * <code>string mount_point_path = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z/]*", (.yandex.cloud.length) = "1-300"];</code>
+       * @return The bytes for mountPointPath.
+       */
+      public com.google.protobuf.ByteString
+          getMountPointPathBytes() {
+        java.lang.Object ref = mountPointPath_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          mountPointPath_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Mount point path inside the container for mounting.
+       * </pre>
+       *
+       * <code>string mount_point_path = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z/]*", (.yandex.cloud.length) = "1-300"];</code>
+       * @param value The mountPointPath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMountPointPath(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        mountPointPath_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Mount point path inside the container for mounting.
+       * </pre>
+       *
+       * <code>string mount_point_path = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z/]*", (.yandex.cloud.length) = "1-300"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMountPointPath() {
+        
+        mountPointPath_ = getDefaultInstance().getMountPointPath();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Mount point path inside the container for mounting.
+       * </pre>
+       *
+       * <code>string mount_point_path = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[-_0-9a-zA-Z/]*", (.yandex.cloud.length) = "1-300"];</code>
+       * @param value The bytes for mountPointPath to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMountPointPathBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        mountPointPath_ = value;
         onChanged();
         return this;
       }
@@ -16858,14 +16858,14 @@ public final class ContainerOuterClass {
       "ex.cloud.logging.v1.LogLevel.LevelB\r\n\013de" +
       "stination\"J\n\rScalingPolicy\022\034\n\024zone_insta" +
       "nces_limit\030\001 \001(\003\022\033\n\023zone_requests_limit\030" +
-      "\002 \001(\003\"\237\001\n\014StorageMount\0221\n\tbucket_id\030\001 \001(" +
+      "\002 \001(\003\"\246\001\n\014StorageMount\0221\n\tbucket_id\030\001 \001(" +
       "\tB\036\350\3071\001\212\3101\0043-63\362\3071\016[-.0-9a-zA-Z]*\022\016\n\006pre" +
-      "fix\030\002 \001(\t\0229\n\020mount_point_name\030\003 \001(\tB\037\350\3071" +
-      "\001\212\3101\0051-100\362\3071\016[-_0-9a-zA-Z]*\022\021\n\tread_onl" +
-      "y\030\004 \001(\010B\201\001\n)yandex.cloud.api.serverless." +
-      "containers.v1ZTgithub.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/serverless/conta" +
-      "iners/v1;containersb\006proto3"
+      "fix\030\002 \001(\t\022\021\n\tread_only\030\004 \001(\010\022:\n\020mount_po" +
+      "int_path\030\005 \001(\tB \350\3071\001\212\3101\0051-300\362\3071\017[-_0-9a" +
+      "-zA-Z/]*J\004\010\003\020\004B\201\001\n)yandex.cloud.api.serv" +
+      "erless.containers.v1ZTgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/serverles" +
+      "s/containers/v1;containersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -16958,7 +16958,7 @@ public final class ContainerOuterClass {
     internal_static_yandex_cloud_serverless_containers_v1_StorageMount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_containers_v1_StorageMount_descriptor,
-        new java.lang.String[] { "BucketId", "Prefix", "MountPointName", "ReadOnly", });
+        new java.lang.String[] { "BucketId", "Prefix", "ReadOnly", "MountPointPath", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);

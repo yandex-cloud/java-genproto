@@ -693,7 +693,12 @@ public final class DiskPlacementGroupServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters resources listed in the response.
-     * Currently you can use filtering only on the [DiskPlacementGroup.name] field.
+     * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+     * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+     * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+     * 3. `&lt;value&gt;` represents a value.
+     * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -703,7 +708,12 @@ public final class DiskPlacementGroupServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters resources listed in the response.
-     * Currently you can use filtering only on the [DiskPlacementGroup.name] field.
+     * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+     * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+     * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+     * 3. `&lt;value&gt;` represents a value.
+     * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -711,6 +721,30 @@ public final class DiskPlacementGroupServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getFilterBytes();
+
+    /**
+     * <pre>
+     * By which column the listing should be ordered and in which direction,
+     * format is "createdAt desc". "id asc" if omitted.
+     * The default sorting order is ascending
+     * </pre>
+     *
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The orderBy.
+     */
+    java.lang.String getOrderBy();
+    /**
+     * <pre>
+     * By which column the listing should be ordered and in which direction,
+     * format is "createdAt desc". "id asc" if omitted.
+     * The default sorting order is ascending
+     * </pre>
+     *
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for orderBy.
+     */
+    com.google.protobuf.ByteString
+        getOrderByBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListDiskPlacementGroupsRequest}
@@ -728,6 +762,7 @@ public final class DiskPlacementGroupServiceOuterClass {
       folderId_ = "";
       pageToken_ = "";
       filter_ = "";
+      orderBy_ = "";
     }
 
     @java.lang.Override
@@ -781,6 +816,12 @@ public final class DiskPlacementGroupServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               filter_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              orderBy_ = s;
               break;
             }
             default: {
@@ -936,7 +977,12 @@ public final class DiskPlacementGroupServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters resources listed in the response.
-     * Currently you can use filtering only on the [DiskPlacementGroup.name] field.
+     * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+     * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+     * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+     * 3. `&lt;value&gt;` represents a value.
+     * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -958,7 +1004,12 @@ public final class DiskPlacementGroupServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters resources listed in the response.
-     * Currently you can use filtering only on the [DiskPlacementGroup.name] field.
+     * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+     * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+     * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+     * 3. `&lt;value&gt;` represents a value.
+     * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
      * </pre>
      *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -973,6 +1024,56 @@ public final class DiskPlacementGroupServiceOuterClass {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORDER_BY_FIELD_NUMBER = 5;
+    private volatile java.lang.Object orderBy_;
+    /**
+     * <pre>
+     * By which column the listing should be ordered and in which direction,
+     * format is "createdAt desc". "id asc" if omitted.
+     * The default sorting order is ascending
+     * </pre>
+     *
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The orderBy.
+     */
+    @java.lang.Override
+    public java.lang.String getOrderBy() {
+      java.lang.Object ref = orderBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orderBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * By which column the listing should be ordered and in which direction,
+     * format is "createdAt desc". "id asc" if omitted.
+     * The default sorting order is ascending
+     * </pre>
+     *
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for orderBy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrderByBytes() {
+      java.lang.Object ref = orderBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orderBy_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1005,6 +1106,9 @@ public final class DiskPlacementGroupServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, orderBy_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1026,6 +1130,9 @@ public final class DiskPlacementGroupServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, orderBy_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1050,6 +1157,8 @@ public final class DiskPlacementGroupServiceOuterClass {
           .equals(other.getPageToken())) return false;
       if (!getFilter()
           .equals(other.getFilter())) return false;
+      if (!getOrderBy()
+          .equals(other.getOrderBy())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1070,6 +1179,8 @@ public final class DiskPlacementGroupServiceOuterClass {
       hash = (53 * hash) + getPageToken().hashCode();
       hash = (37 * hash) + FILTER_FIELD_NUMBER;
       hash = (53 * hash) + getFilter().hashCode();
+      hash = (37 * hash) + ORDER_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getOrderBy().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1211,6 +1322,8 @@ public final class DiskPlacementGroupServiceOuterClass {
 
         filter_ = "";
 
+        orderBy_ = "";
+
         return this;
       }
 
@@ -1241,6 +1354,7 @@ public final class DiskPlacementGroupServiceOuterClass {
         result.pageSize_ = pageSize_;
         result.pageToken_ = pageToken_;
         result.filter_ = filter_;
+        result.orderBy_ = orderBy_;
         onBuilt();
         return result;
       }
@@ -1302,6 +1416,10 @@ public final class DiskPlacementGroupServiceOuterClass {
         }
         if (!other.getFilter().isEmpty()) {
           filter_ = other.filter_;
+          onChanged();
+        }
+        if (!other.getOrderBy().isEmpty()) {
+          orderBy_ = other.orderBy_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1596,7 +1714,12 @@ public final class DiskPlacementGroupServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [DiskPlacementGroup.name] field.
+       * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1617,7 +1740,12 @@ public final class DiskPlacementGroupServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [DiskPlacementGroup.name] field.
+       * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1639,7 +1767,12 @@ public final class DiskPlacementGroupServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [DiskPlacementGroup.name] field.
+       * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1659,7 +1792,12 @@ public final class DiskPlacementGroupServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [DiskPlacementGroup.name] field.
+       * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1674,7 +1812,12 @@ public final class DiskPlacementGroupServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [DiskPlacementGroup.name] field.
+       * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
        * </pre>
        *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
@@ -1689,6 +1832,112 @@ public final class DiskPlacementGroupServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         filter_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object orderBy_ = "";
+      /**
+       * <pre>
+       * By which column the listing should be ordered and in which direction,
+       * format is "createdAt desc". "id asc" if omitted.
+       * The default sorting order is ascending
+       * </pre>
+       *
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The orderBy.
+       */
+      public java.lang.String getOrderBy() {
+        java.lang.Object ref = orderBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          orderBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * By which column the listing should be ordered and in which direction,
+       * format is "createdAt desc". "id asc" if omitted.
+       * The default sorting order is ascending
+       * </pre>
+       *
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for orderBy.
+       */
+      public com.google.protobuf.ByteString
+          getOrderByBytes() {
+        java.lang.Object ref = orderBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          orderBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * By which column the listing should be ordered and in which direction,
+       * format is "createdAt desc". "id asc" if omitted.
+       * The default sorting order is ascending
+       * </pre>
+       *
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The orderBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderBy(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        orderBy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * By which column the listing should be ordered and in which direction,
+       * format is "createdAt desc". "id asc" if omitted.
+       * The default sorting order is ascending
+       * </pre>
+       *
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrderBy() {
+        
+        orderBy_ = getDefaultInstance().getOrderBy();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * By which column the listing should be ordered and in which direction,
+       * format is "createdAt desc". "id asc" if omitted.
+       * The default sorting order is ascending
+       * </pre>
+       *
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for orderBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        orderBy_ = value;
         onChanged();
         return this;
       }
@@ -13353,100 +13602,101 @@ public final class DiskPlacementGroupServiceOuterClass {
       "cloud/operation/operation.proto\032\035yandex/" +
       "cloud/validation.proto\"M\n\034GetDiskPlaceme" +
       "ntGroupRequest\022-\n\027disk_placement_group_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\233\001\n\036ListDiskPlacem" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\270\001\n\036ListDiskPlacem" +
       "entGroupsRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071" +
       "\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000" +
       "\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filte" +
-      "r\030\004 \001(\tB\n\212\3101\006<=1000\"\206\001\n\037ListDiskPlacemen" +
-      "tGroupsResponse\022J\n\025disk_placement_groups" +
-      "\030\001 \003(\0132+.yandex.cloud.compute.v1.DiskPla" +
-      "cementGroup\022\027\n\017next_page_token\030\002 \001(\t\"\334\004\n" +
-      "\037CreateDiskPlacementGroupRequest\022\037\n\tfold" +
-      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB" +
-      "$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n" +
-      "\013description\030\003 \001(\tB\t\212\3101\005<=256\022\235\001\n\006labels" +
-      "\030\004 \003(\0132D.yandex.cloud.compute.v1.CreateD" +
-      "iskPlacementGroupRequest.LabelsEntryBG\202\310" +
-      "1\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041" +
-      "-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\035\n\007zone_id" +
-      "\030\005 \001(\tB\014\350\3071\001\212\3101\004<=50\022Y\n\031spread_placement" +
-      "_strategy\030\006 \001(\01324.yandex.cloud.compute.v" +
-      "1.DiskSpreadPlacementStrategyH\000\022_\n\034parti" +
-      "tion_placement_strategy\030\007 \001(\01327.yandex.c" +
-      "loud.compute.v1.DiskPartitionPlacementSt" +
-      "rategyH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001B\032\n\022placement_strategy\022\004\300" +
-      "\3011\001\"C\n CreateDiskPlacementGroupMetadata\022" +
-      "\037\n\027disk_placement_group_id\030\001 \001(\t\"\244\003\n\037Upd" +
-      "ateDiskPlacementGroupRequest\022-\n\027disk_pla" +
-      "cement_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013u" +
-      "pdate_mask\030\002 \001(\0132\032.google.protobuf.Field" +
-      "Mask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]" +
-      "{0,61}[a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212" +
-      "\3101\005<=256\022\235\001\n\006labels\030\005 \003(\0132D.yandex.cloud" +
-      ".compute.v1.UpdateDiskPlacementGroupRequ" +
-      "est.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_" +
-      "./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@" +
-      "0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\"C\n UpdateDiskPlacementGr" +
-      "oupMetadata\022\037\n\027disk_placement_group_id\030\001" +
-      " \001(\t\"P\n\037DeleteDiskPlacementGroupRequest\022" +
-      "-\n\027disk_placement_group_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\"C\n DeleteDiskPlacementGroupMetada" +
-      "ta\022\037\n\027disk_placement_group_id\030\001 \001(\t\"\221\001\n\"" +
-      "ListDiskPlacementGroupDisksRequest\022-\n\027di" +
-      "sk_placement_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage" +
-      "_token\030\003 \001(\tB\t\212\3101\005<=100\"l\n#ListDiskPlace" +
-      "mentGroupDisksResponse\022,\n\005disks\030\001 \003(\0132\035." +
-      "yandex.cloud.compute.v1.Disk\022\027\n\017next_pag" +
-      "e_token\030\002 \001(\t\"\226\001\n\'ListDiskPlacementGroup" +
-      "OperationsRequest\022-\n\027disk_placement_grou" +
-      "p_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 " +
-      "\001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
-      "\005<=100\"z\n(ListDiskPlacementGroupOperatio" +
-      "nsResponse\0225\n\noperations\030\001 \003(\0132!.yandex." +
-      "cloud.operation.Operation\022\027\n\017next_page_t" +
-      "oken\030\002 \001(\t2\305\013\n\031DiskPlacementGroupService" +
-      "\022\254\001\n\003Get\0225.yandex.cloud.compute.v1.GetDi" +
-      "skPlacementGroupRequest\032+.yandex.cloud.c" +
-      "ompute.v1.DiskPlacementGroup\"A\202\323\344\223\002;\0229/c" +
-      "ompute/v1/diskPlacementGroups/{disk_plac" +
-      "ement_group_id}\022\242\001\n\004List\0227.yandex.cloud." +
-      "compute.v1.ListDiskPlacementGroupsReques" +
-      "t\0328.yandex.cloud.compute.v1.ListDiskPlac" +
-      "ementGroupsResponse\"\'\202\323\344\223\002!\022\037/compute/v1" +
-      "/diskPlacementGroups\022\313\001\n\006Create\0228.yandex" +
-      ".cloud.compute.v1.CreateDiskPlacementGro" +
-      "upRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"d\202\323\344\223\002$\"\037/compute/v1/diskPlacementG" +
-      "roups:\001*\262\322*6\n CreateDiskPlacementGroupMe" +
-      "tadata\022\022DiskPlacementGroup\022\345\001\n\006Update\0228." +
-      "yandex.cloud.compute.v1.UpdateDiskPlacem" +
-      "entGroupRequest\032!.yandex.cloud.operation" +
-      ".Operation\"~\202\323\344\223\002>29/compute/v1/diskPlac" +
-      "ementGroups/{disk_placement_group_id}:\001*" +
-      "\262\322*6\n UpdateDiskPlacementGroupMetadata\022\022" +
-      "DiskPlacementGroup\022\345\001\n\006Delete\0228.yandex.c" +
-      "loud.compute.v1.DeleteDiskPlacementGroup" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"~\202\323\344\223\002;*9/compute/v1/diskPlacementGro" +
-      "ups/{disk_placement_group_id}\262\322*9\n Delet" +
-      "eDiskPlacementGroupMetadata\022\025google.prot" +
-      "obuf.Empty\022\317\001\n\tListDisks\022;.yandex.cloud." +
-      "compute.v1.ListDiskPlacementGroupDisksRe" +
-      "quest\032<.yandex.cloud.compute.v1.ListDisk" +
-      "PlacementGroupDisksResponse\"G\202\323\344\223\002A\022?/co" +
-      "mpute/v1/diskPlacementGroups/{disk_place" +
-      "ment_group_id}/disks\022\343\001\n\016ListOperations\022" +
-      "@.yandex.cloud.compute.v1.ListDiskPlacem" +
-      "entGroupOperationsRequest\032A.yandex.cloud" +
-      ".compute.v1.ListDiskPlacementGroupOperat" +
-      "ionsResponse\"L\202\323\344\223\002F\022D/compute/v1/diskPl" +
-      "acementGroups/{disk_placement_group_id}/" +
-      "operationsBb\n\033yandex.cloud.api.compute.v" +
-      "1ZCgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/compute/v1;computeb\006proto3"
+      "r\030\004 \001(\tB\n\212\3101\006<=1000\022\033\n\010order_by\030\005 \001(\tB\t\212" +
+      "\3101\005<=100\"\206\001\n\037ListDiskPlacementGroupsResp" +
+      "onse\022J\n\025disk_placement_groups\030\001 \003(\0132+.ya" +
+      "ndex.cloud.compute.v1.DiskPlacementGroup" +
+      "\022\027\n\017next_page_token\030\002 \001(\t\"\334\004\n\037CreateDisk" +
+      "PlacementGroupRequest\022\037\n\tfolder_id\030\001 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]" +
+      "([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descriptio" +
+      "n\030\003 \001(\tB\t\212\3101\005<=256\022\235\001\n\006labels\030\004 \003(\0132D.ya" +
+      "ndex.cloud.compute.v1.CreateDiskPlacemen" +
+      "tGroupRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<" +
+      "=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a" +
+      "-z][-_./\\@0-9a-z]*\022\035\n\007zone_id\030\005 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\022Y\n\031spread_placement_strategy\030\006" +
+      " \001(\01324.yandex.cloud.compute.v1.DiskSprea" +
+      "dPlacementStrategyH\000\022_\n\034partition_placem" +
+      "ent_strategy\030\007 \001(\01327.yandex.cloud.comput" +
+      "e.v1.DiskPartitionPlacementStrategyH\000\032-\n" +
+      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001B\032\n\022placement_strategy\022\004\300\3011\001\"C\n Crea" +
+      "teDiskPlacementGroupMetadata\022\037\n\027disk_pla" +
+      "cement_group_id\030\001 \001(\t\"\244\003\n\037UpdateDiskPlac" +
+      "ementGroupRequest\022-\n\027disk_placement_grou" +
+      "p_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030" +
+      "\002 \001(\0132\032.google.protobuf.FieldMask\0222\n\004nam" +
+      "e\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0" +
+      "-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\235\001" +
+      "\n\006labels\030\005 \003(\0132D.yandex.cloud.compute.v1" +
+      ".UpdateDiskPlacementGroupRequest.LabelsE" +
+      "ntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]" +
+      "*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\032-\n" +
+      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001\"C\n UpdateDiskPlacementGroupMetadata" +
+      "\022\037\n\027disk_placement_group_id\030\001 \001(\t\"P\n\037Del" +
+      "eteDiskPlacementGroupRequest\022-\n\027disk_pla" +
+      "cement_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"C\n D" +
+      "eleteDiskPlacementGroupMetadata\022\037\n\027disk_" +
+      "placement_group_id\030\001 \001(\t\"\221\001\n\"ListDiskPla" +
+      "cementGroupDisksRequest\022-\n\027disk_placemen" +
+      "t_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_s" +
+      "ize\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(" +
+      "\tB\t\212\3101\005<=100\"l\n#ListDiskPlacementGroupDi" +
+      "sksResponse\022,\n\005disks\030\001 \003(\0132\035.yandex.clou" +
+      "d.compute.v1.Disk\022\027\n\017next_page_token\030\002 \001" +
+      "(\t\"\226\001\n\'ListDiskPlacementGroupOperationsR" +
+      "equest\022-\n\027disk_placement_group_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=" +
+      "1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"z\n(L" +
+      "istDiskPlacementGroupOperationsResponse\022" +
+      "5\n\noperations\030\001 \003(\0132!.yandex.cloud.opera" +
+      "tion.Operation\022\027\n\017next_page_token\030\002 \001(\t2" +
+      "\305\013\n\031DiskPlacementGroupService\022\254\001\n\003Get\0225." +
+      "yandex.cloud.compute.v1.GetDiskPlacement" +
+      "GroupRequest\032+.yandex.cloud.compute.v1.D" +
+      "iskPlacementGroup\"A\202\323\344\223\002;\0229/compute/v1/d" +
+      "iskPlacementGroups/{disk_placement_group" +
+      "_id}\022\242\001\n\004List\0227.yandex.cloud.compute.v1." +
+      "ListDiskPlacementGroupsRequest\0328.yandex." +
+      "cloud.compute.v1.ListDiskPlacementGroups" +
+      "Response\"\'\202\323\344\223\002!\022\037/compute/v1/diskPlacem" +
+      "entGroups\022\313\001\n\006Create\0228.yandex.cloud.comp" +
+      "ute.v1.CreateDiskPlacementGroupRequest\032!" +
+      ".yandex.cloud.operation.Operation\"d\202\323\344\223\002" +
+      "$\"\037/compute/v1/diskPlacementGroups:\001*\262\322*" +
+      "6\n CreateDiskPlacementGroupMetadata\022\022Dis" +
+      "kPlacementGroup\022\345\001\n\006Update\0228.yandex.clou" +
+      "d.compute.v1.UpdateDiskPlacementGroupReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "~\202\323\344\223\002>29/compute/v1/diskPlacementGroups" +
+      "/{disk_placement_group_id}:\001*\262\322*6\n Updat" +
+      "eDiskPlacementGroupMetadata\022\022DiskPlaceme" +
+      "ntGroup\022\345\001\n\006Delete\0228.yandex.cloud.comput" +
+      "e.v1.DeleteDiskPlacementGroupRequest\032!.y" +
+      "andex.cloud.operation.Operation\"~\202\323\344\223\002;*" +
+      "9/compute/v1/diskPlacementGroups/{disk_p" +
+      "lacement_group_id}\262\322*9\n DeleteDiskPlacem" +
+      "entGroupMetadata\022\025google.protobuf.Empty\022" +
+      "\317\001\n\tListDisks\022;.yandex.cloud.compute.v1." +
+      "ListDiskPlacementGroupDisksRequest\032<.yan" +
+      "dex.cloud.compute.v1.ListDiskPlacementGr" +
+      "oupDisksResponse\"G\202\323\344\223\002A\022?/compute/v1/di" +
+      "skPlacementGroups/{disk_placement_group_" +
+      "id}/disks\022\343\001\n\016ListOperations\022@.yandex.cl" +
+      "oud.compute.v1.ListDiskPlacementGroupOpe" +
+      "rationsRequest\032A.yandex.cloud.compute.v1" +
+      ".ListDiskPlacementGroupOperationsRespons" +
+      "e\"L\202\323\344\223\002F\022D/compute/v1/diskPlacementGrou" +
+      "ps/{disk_placement_group_id}/operationsB" +
+      "b\n\033yandex.cloud.api.compute.v1ZCgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/compute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13470,7 +13720,7 @@ public final class DiskPlacementGroupServiceOuterClass {
     internal_static_yandex_cloud_compute_v1_ListDiskPlacementGroupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_ListDiskPlacementGroupsRequest_descriptor,
-        new java.lang.String[] { "FolderId", "PageSize", "PageToken", "Filter", });
+        new java.lang.String[] { "FolderId", "PageSize", "PageToken", "Filter", "OrderBy", });
     internal_static_yandex_cloud_compute_v1_ListDiskPlacementGroupsResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_compute_v1_ListDiskPlacementGroupsResponse_fieldAccessorTable = new

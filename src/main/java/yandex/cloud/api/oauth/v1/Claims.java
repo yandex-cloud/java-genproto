@@ -14,6 +14,141 @@ public final class Claims {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code yandex.cloud.oauth.SubjectType}
+   */
+  public enum SubjectType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>SUBJECT_TYPE_UNSPECIFIED = 0;</code>
+     */
+    SUBJECT_TYPE_UNSPECIFIED(0),
+    /**
+     * <code>USER_ACCOUNT = 1;</code>
+     */
+    USER_ACCOUNT(1),
+    /**
+     * <code>SERVICE_ACCOUNT = 2;</code>
+     */
+    SERVICE_ACCOUNT(2),
+    /**
+     * <code>GROUP = 3;</code>
+     */
+    GROUP(3),
+    /**
+     * <code>INVITEE = 4;</code>
+     */
+    INVITEE(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>SUBJECT_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int SUBJECT_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>USER_ACCOUNT = 1;</code>
+     */
+    public static final int USER_ACCOUNT_VALUE = 1;
+    /**
+     * <code>SERVICE_ACCOUNT = 2;</code>
+     */
+    public static final int SERVICE_ACCOUNT_VALUE = 2;
+    /**
+     * <code>GROUP = 3;</code>
+     */
+    public static final int GROUP_VALUE = 3;
+    /**
+     * <code>INVITEE = 4;</code>
+     */
+    public static final int INVITEE_VALUE = 4;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static SubjectType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static SubjectType forNumber(int value) {
+      switch (value) {
+        case 0: return SUBJECT_TYPE_UNSPECIFIED;
+        case 1: return USER_ACCOUNT;
+        case 2: return SERVICE_ACCOUNT;
+        case 3: return GROUP;
+        case 4: return INVITEE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<SubjectType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        SubjectType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<SubjectType>() {
+            public SubjectType findValueByNumber(int number) {
+              return SubjectType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.oauth.v1.Claims.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final SubjectType[] VALUES = values();
+
+    public static SubjectType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private SubjectType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.oauth.SubjectType)
+  }
+
   public interface SubjectClaimsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.oauth.SubjectClaims)
       com.google.protobuf.MessageOrBuilder {
@@ -230,6 +365,25 @@ public final class Claims {
 
     /**
      * <pre>
+     * Subject type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.oauth.SubjectType sub_type = 99;</code>
+     * @return The enum numeric value on the wire for subType.
+     */
+    int getSubTypeValue();
+    /**
+     * <pre>
+     * Subject type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.oauth.SubjectType sub_type = 99;</code>
+     * @return The subType.
+     */
+    yandex.cloud.api.oauth.v1.Claims.SubjectType getSubType();
+
+    /**
+     * <pre>
      * User federation, non-empty only for federated users.
      * </pre>
      *
@@ -282,6 +436,7 @@ public final class Claims {
       zoneinfo_ = "";
       locale_ = "";
       phoneNumber_ = "";
+      subType_ = 0;
     }
 
     @java.lang.Override
@@ -372,6 +527,12 @@ public final class Claims {
               java.lang.String s = input.readStringRequireUtf8();
 
               phoneNumber_ = s;
+              break;
+            }
+            case 792: {
+              int rawValue = input.readEnum();
+
+              subType_ = rawValue;
               break;
             }
             case 802: {
@@ -889,6 +1050,33 @@ public final class Claims {
       }
     }
 
+    public static final int SUB_TYPE_FIELD_NUMBER = 99;
+    private int subType_;
+    /**
+     * <pre>
+     * Subject type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.oauth.SubjectType sub_type = 99;</code>
+     * @return The enum numeric value on the wire for subType.
+     */
+    @java.lang.Override public int getSubTypeValue() {
+      return subType_;
+    }
+    /**
+     * <pre>
+     * Subject type.
+     * </pre>
+     *
+     * <code>.yandex.cloud.oauth.SubjectType sub_type = 99;</code>
+     * @return The subType.
+     */
+    @java.lang.Override public yandex.cloud.api.oauth.v1.Claims.SubjectType getSubType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.oauth.v1.Claims.SubjectType result = yandex.cloud.api.oauth.v1.Claims.SubjectType.valueOf(subType_);
+      return result == null ? yandex.cloud.api.oauth.v1.Claims.SubjectType.UNRECOGNIZED : result;
+    }
+
     public static final int FEDERATION_FIELD_NUMBER = 100;
     private yandex.cloud.api.oauth.v1.Claims.Federation federation_;
     /**
@@ -971,6 +1159,9 @@ public final class Claims {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 17, phoneNumber_);
       }
+      if (subType_ != yandex.cloud.api.oauth.v1.Claims.SubjectType.SUBJECT_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(99, subType_);
+      }
       if (federation_ != null) {
         output.writeMessage(100, getFederation());
       }
@@ -1013,6 +1204,10 @@ public final class Claims {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, phoneNumber_);
       }
+      if (subType_ != yandex.cloud.api.oauth.v1.Claims.SubjectType.SUBJECT_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(99, subType_);
+      }
       if (federation_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(100, getFederation());
@@ -1052,6 +1247,7 @@ public final class Claims {
           .equals(other.getLocale())) return false;
       if (!getPhoneNumber()
           .equals(other.getPhoneNumber())) return false;
+      if (subType_ != other.subType_) return false;
       if (hasFederation() != other.hasFederation()) return false;
       if (hasFederation()) {
         if (!getFederation()
@@ -1088,6 +1284,8 @@ public final class Claims {
       hash = (53 * hash) + getLocale().hashCode();
       hash = (37 * hash) + PHONE_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getPhoneNumber().hashCode();
+      hash = (37 * hash) + SUB_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + subType_;
       if (hasFederation()) {
         hash = (37 * hash) + FEDERATION_FIELD_NUMBER;
         hash = (53 * hash) + getFederation().hashCode();
@@ -1249,6 +1447,8 @@ public final class Claims {
 
         phoneNumber_ = "";
 
+        subType_ = 0;
+
         if (federationBuilder_ == null) {
           federation_ = null;
         } else {
@@ -1291,6 +1491,7 @@ public final class Claims {
         result.zoneinfo_ = zoneinfo_;
         result.locale_ = locale_;
         result.phoneNumber_ = phoneNumber_;
+        result.subType_ = subType_;
         if (federationBuilder_ == null) {
           result.federation_ = federation_;
         } else {
@@ -1383,6 +1584,9 @@ public final class Claims {
         if (!other.getPhoneNumber().isEmpty()) {
           phoneNumber_ = other.phoneNumber_;
           onChanged();
+        }
+        if (other.subType_ != 0) {
+          setSubTypeValue(other.getSubTypeValue());
         }
         if (other.hasFederation()) {
           mergeFederation(other.getFederation());
@@ -2397,6 +2601,80 @@ public final class Claims {
   checkByteStringIsUtf8(value);
         
         phoneNumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int subType_ = 0;
+      /**
+       * <pre>
+       * Subject type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.oauth.SubjectType sub_type = 99;</code>
+       * @return The enum numeric value on the wire for subType.
+       */
+      @java.lang.Override public int getSubTypeValue() {
+        return subType_;
+      }
+      /**
+       * <pre>
+       * Subject type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.oauth.SubjectType sub_type = 99;</code>
+       * @param value The enum numeric value on the wire for subType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubTypeValue(int value) {
+        
+        subType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Subject type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.oauth.SubjectType sub_type = 99;</code>
+       * @return The subType.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.oauth.v1.Claims.SubjectType getSubType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.oauth.v1.Claims.SubjectType result = yandex.cloud.api.oauth.v1.Claims.SubjectType.valueOf(subType_);
+        return result == null ? yandex.cloud.api.oauth.v1.Claims.SubjectType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Subject type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.oauth.SubjectType sub_type = 99;</code>
+       * @param value The subType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubType(yandex.cloud.api.oauth.v1.Claims.SubjectType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        subType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Subject type.
+       * </pre>
+       *
+       * <code>.yandex.cloud.oauth.SubjectType sub_type = 99;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubType() {
+        
+        subType_ = 0;
         onChanged();
         return this;
       }
@@ -3427,17 +3705,21 @@ public final class Claims {
     java.lang.String[] descriptorData = {
       "\n\037yandex/cloud/oauth/claims.proto\022\022yande" +
       "x.cloud.oauth\032\035yandex/cloud/validation.p" +
-      "roto\"\211\002\n\rSubjectClaims\022\031\n\003sub\030\001 \001(\tB\014\350\3071" +
+      "roto\"\274\002\n\rSubjectClaims\022\031\n\003sub\030\001 \001(\tB\014\350\3071" +
       "\001\212\3101\004<=50\022\014\n\004name\030\002 \001(\t\022\022\n\ngiven_name\030\003 " +
       "\001(\t\022\023\n\013family_name\030\004 \001(\t\022\032\n\022preferred_us" +
       "ername\030\007 \001(\t\022\017\n\007picture\030\t \001(\t\022\r\n\005email\030\013" +
       " \001(\t\022\020\n\010zoneinfo\030\017 \001(\t\022\016\n\006locale\030\020 \001(\t\022\024" +
-      "\n\014phone_number\030\021 \001(\t\0222\n\nfederation\030d \001(\013" +
-      "2\036.yandex.cloud.oauth.Federation\"4\n\nFede" +
-      "ration\022\030\n\002id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004name" +
-      "\030\003 \001(\tBY\n\031yandex.cloud.api.oauth.v1Z<git" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/oauth;oauthb\006proto3"
+      "\n\014phone_number\030\021 \001(\t\0221\n\010sub_type\030c \001(\0162\037" +
+      ".yandex.cloud.oauth.SubjectType\0222\n\nfeder" +
+      "ation\030d \001(\0132\036.yandex.cloud.oauth.Federat" +
+      "ion\"4\n\nFederation\022\030\n\002id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022\014\n\004name\030\003 \001(\t*j\n\013SubjectType\022\034\n\030SUBJ" +
+      "ECT_TYPE_UNSPECIFIED\020\000\022\020\n\014USER_ACCOUNT\020\001" +
+      "\022\023\n\017SERVICE_ACCOUNT\020\002\022\t\n\005GROUP\020\003\022\013\n\007INVI" +
+      "TEE\020\004BY\n\031yandex.cloud.api.oauth.v1Z<gith" +
+      "ub.com/yandex-cloud/go-genproto/yandex/c" +
+      "loud/oauth;oauthb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3449,7 +3731,7 @@ public final class Claims {
     internal_static_yandex_cloud_oauth_SubjectClaims_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_oauth_SubjectClaims_descriptor,
-        new java.lang.String[] { "Sub", "Name", "GivenName", "FamilyName", "PreferredUsername", "Picture", "Email", "Zoneinfo", "Locale", "PhoneNumber", "Federation", });
+        new java.lang.String[] { "Sub", "Name", "GivenName", "FamilyName", "PreferredUsername", "Picture", "Email", "Zoneinfo", "Locale", "PhoneNumber", "SubType", "Federation", });
     internal_static_yandex_cloud_oauth_Federation_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_oauth_Federation_fieldAccessorTable = new

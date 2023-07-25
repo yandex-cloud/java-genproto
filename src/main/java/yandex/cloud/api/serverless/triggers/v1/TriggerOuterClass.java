@@ -8006,6 +8006,33 @@ public final class TriggerOuterClass {
 
       /**
        * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4;</code>
+       * @return Whether the batchSettings field is set.
+       */
+      boolean hasBatchSettings();
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4;</code>
+       * @return The batchSettings.
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings getBatchSettings();
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4;</code>
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder getBatchSettingsOrBuilder();
+
+      /**
+       * <pre>
        * Instructions for invoking a function with retries as needed.
        * </pre>
        *
@@ -8128,6 +8155,19 @@ public final class TriggerOuterClass {
                 java.lang.String s = input.readStringRequireUtf8();
 
                 mqttTopic_ = s;
+                break;
+              }
+              case 34: {
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder subBuilder = null;
+                if (batchSettings_ != null) {
+                  subBuilder = batchSettings_.toBuilder();
+                }
+                batchSettings_ = input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(batchSettings_);
+                  batchSettings_ = subBuilder.buildPartial();
+                }
+
                 break;
               }
               case 810: {
@@ -8369,6 +8409,44 @@ public final class TriggerOuterClass {
         }
       }
 
+      public static final int BATCH_SETTINGS_FIELD_NUMBER = 4;
+      private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings batchSettings_;
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4;</code>
+       * @return Whether the batchSettings field is set.
+       */
+      @java.lang.Override
+      public boolean hasBatchSettings() {
+        return batchSettings_ != null;
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4;</code>
+       * @return The batchSettings.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings getBatchSettings() {
+        return batchSettings_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.getDefaultInstance() : batchSettings_;
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder getBatchSettingsOrBuilder() {
+        return getBatchSettings();
+      }
+
       public static final int INVOKE_FUNCTION_FIELD_NUMBER = 101;
       /**
        * <pre>
@@ -8478,6 +8556,9 @@ public final class TriggerOuterClass {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mqttTopic_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 3, mqttTopic_);
         }
+        if (batchSettings_ != null) {
+          output.writeMessage(4, getBatchSettings());
+        }
         if (actionCase_ == 101) {
           output.writeMessage(101, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_);
         }
@@ -8501,6 +8582,10 @@ public final class TriggerOuterClass {
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mqttTopic_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, mqttTopic_);
+        }
+        if (batchSettings_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, getBatchSettings());
         }
         if (actionCase_ == 101) {
           size += com.google.protobuf.CodedOutputStream
@@ -8531,6 +8616,11 @@ public final class TriggerOuterClass {
             .equals(other.getDeviceId())) return false;
         if (!getMqttTopic()
             .equals(other.getMqttTopic())) return false;
+        if (hasBatchSettings() != other.hasBatchSettings()) return false;
+        if (hasBatchSettings()) {
+          if (!getBatchSettings()
+              .equals(other.getBatchSettings())) return false;
+        }
         if (!getActionCase().equals(other.getActionCase())) return false;
         switch (actionCase_) {
           case 101:
@@ -8561,6 +8651,10 @@ public final class TriggerOuterClass {
         hash = (53 * hash) + getDeviceId().hashCode();
         hash = (37 * hash) + MQTT_TOPIC_FIELD_NUMBER;
         hash = (53 * hash) + getMqttTopic().hashCode();
+        if (hasBatchSettings()) {
+          hash = (37 * hash) + BATCH_SETTINGS_FIELD_NUMBER;
+          hash = (53 * hash) + getBatchSettings().hashCode();
+        }
         switch (actionCase_) {
           case 101:
             hash = (37 * hash) + INVOKE_FUNCTION_FIELD_NUMBER;
@@ -8716,6 +8810,12 @@ public final class TriggerOuterClass {
 
           mqttTopic_ = "";
 
+          if (batchSettingsBuilder_ == null) {
+            batchSettings_ = null;
+          } else {
+            batchSettings_ = null;
+            batchSettingsBuilder_ = null;
+          }
           actionCase_ = 0;
           action_ = null;
           return this;
@@ -8747,6 +8847,11 @@ public final class TriggerOuterClass {
           result.registryId_ = registryId_;
           result.deviceId_ = deviceId_;
           result.mqttTopic_ = mqttTopic_;
+          if (batchSettingsBuilder_ == null) {
+            result.batchSettings_ = batchSettings_;
+          } else {
+            result.batchSettings_ = batchSettingsBuilder_.build();
+          }
           if (actionCase_ == 101) {
             if (invokeFunctionBuilder_ == null) {
               result.action_ = action_;
@@ -8821,6 +8926,9 @@ public final class TriggerOuterClass {
           if (!other.getMqttTopic().isEmpty()) {
             mqttTopic_ = other.mqttTopic_;
             onChanged();
+          }
+          if (other.hasBatchSettings()) {
+            mergeBatchSettings(other.getBatchSettings());
           }
           switch (other.getActionCase()) {
             case INVOKE_FUNCTION: {
@@ -9165,6 +9273,161 @@ public final class TriggerOuterClass {
           mqttTopic_ = value;
           onChanged();
           return this;
+        }
+
+        private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings batchSettings_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder> batchSettingsBuilder_;
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4;</code>
+         * @return Whether the batchSettings field is set.
+         */
+        public boolean hasBatchSettings() {
+          return batchSettingsBuilder_ != null || batchSettings_ != null;
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4;</code>
+         * @return The batchSettings.
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings getBatchSettings() {
+          if (batchSettingsBuilder_ == null) {
+            return batchSettings_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.getDefaultInstance() : batchSettings_;
+          } else {
+            return batchSettingsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4;</code>
+         */
+        public Builder setBatchSettings(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings value) {
+          if (batchSettingsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            batchSettings_ = value;
+            onChanged();
+          } else {
+            batchSettingsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4;</code>
+         */
+        public Builder setBatchSettings(
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder builderForValue) {
+          if (batchSettingsBuilder_ == null) {
+            batchSettings_ = builderForValue.build();
+            onChanged();
+          } else {
+            batchSettingsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4;</code>
+         */
+        public Builder mergeBatchSettings(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings value) {
+          if (batchSettingsBuilder_ == null) {
+            if (batchSettings_ != null) {
+              batchSettings_ =
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.newBuilder(batchSettings_).mergeFrom(value).buildPartial();
+            } else {
+              batchSettings_ = value;
+            }
+            onChanged();
+          } else {
+            batchSettingsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4;</code>
+         */
+        public Builder clearBatchSettings() {
+          if (batchSettingsBuilder_ == null) {
+            batchSettings_ = null;
+            onChanged();
+          } else {
+            batchSettings_ = null;
+            batchSettingsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder getBatchSettingsBuilder() {
+          
+          onChanged();
+          return getBatchSettingsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder getBatchSettingsOrBuilder() {
+          if (batchSettingsBuilder_ != null) {
+            return batchSettingsBuilder_.getMessageOrBuilder();
+          } else {
+            return batchSettings_ == null ?
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.getDefaultInstance() : batchSettings_;
+          }
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 4;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder> 
+            getBatchSettingsFieldBuilder() {
+          if (batchSettingsBuilder_ == null) {
+            batchSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder>(
+                    getBatchSettings(),
+                    getParentForChildren(),
+                    isClean());
+            batchSettings_ = null;
+          }
+          return batchSettingsBuilder_;
         }
 
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -9619,6 +9882,33 @@ public final class TriggerOuterClass {
 
       /**
        * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+       * @return Whether the batchSettings field is set.
+       */
+      boolean hasBatchSettings();
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+       * @return The batchSettings.
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings getBatchSettings();
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder getBatchSettingsOrBuilder();
+
+      /**
+       * <pre>
        * Instructions for invoking a function with retries as needed.
        * </pre>
        *
@@ -9734,6 +10024,19 @@ public final class TriggerOuterClass {
                 java.lang.String s = input.readStringRequireUtf8();
 
                 mqttTopic_ = s;
+                break;
+              }
+              case 26: {
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder subBuilder = null;
+                if (batchSettings_ != null) {
+                  subBuilder = batchSettings_.toBuilder();
+                }
+                batchSettings_ = input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(batchSettings_);
+                  batchSettings_ = subBuilder.buildPartial();
+                }
+
                 break;
               }
               case 810: {
@@ -9929,6 +10232,44 @@ public final class TriggerOuterClass {
         }
       }
 
+      public static final int BATCH_SETTINGS_FIELD_NUMBER = 3;
+      private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings batchSettings_;
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+       * @return Whether the batchSettings field is set.
+       */
+      @java.lang.Override
+      public boolean hasBatchSettings() {
+        return batchSettings_ != null;
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+       * @return The batchSettings.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings getBatchSettings() {
+        return batchSettings_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.getDefaultInstance() : batchSettings_;
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder getBatchSettingsOrBuilder() {
+        return getBatchSettings();
+      }
+
       public static final int INVOKE_FUNCTION_FIELD_NUMBER = 101;
       /**
        * <pre>
@@ -10035,6 +10376,9 @@ public final class TriggerOuterClass {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mqttTopic_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, mqttTopic_);
         }
+        if (batchSettings_ != null) {
+          output.writeMessage(3, getBatchSettings());
+        }
         if (actionCase_ == 101) {
           output.writeMessage(101, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_);
         }
@@ -10055,6 +10399,10 @@ public final class TriggerOuterClass {
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(mqttTopic_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, mqttTopic_);
+        }
+        if (batchSettings_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getBatchSettings());
         }
         if (actionCase_ == 101) {
           size += com.google.protobuf.CodedOutputStream
@@ -10083,6 +10431,11 @@ public final class TriggerOuterClass {
             .equals(other.getBrokerId())) return false;
         if (!getMqttTopic()
             .equals(other.getMqttTopic())) return false;
+        if (hasBatchSettings() != other.hasBatchSettings()) return false;
+        if (hasBatchSettings()) {
+          if (!getBatchSettings()
+              .equals(other.getBatchSettings())) return false;
+        }
         if (!getActionCase().equals(other.getActionCase())) return false;
         switch (actionCase_) {
           case 101:
@@ -10111,6 +10464,10 @@ public final class TriggerOuterClass {
         hash = (53 * hash) + getBrokerId().hashCode();
         hash = (37 * hash) + MQTT_TOPIC_FIELD_NUMBER;
         hash = (53 * hash) + getMqttTopic().hashCode();
+        if (hasBatchSettings()) {
+          hash = (37 * hash) + BATCH_SETTINGS_FIELD_NUMBER;
+          hash = (53 * hash) + getBatchSettings().hashCode();
+        }
         switch (actionCase_) {
           case 101:
             hash = (37 * hash) + INVOKE_FUNCTION_FIELD_NUMBER;
@@ -10264,6 +10621,12 @@ public final class TriggerOuterClass {
 
           mqttTopic_ = "";
 
+          if (batchSettingsBuilder_ == null) {
+            batchSettings_ = null;
+          } else {
+            batchSettings_ = null;
+            batchSettingsBuilder_ = null;
+          }
           actionCase_ = 0;
           action_ = null;
           return this;
@@ -10294,6 +10657,11 @@ public final class TriggerOuterClass {
           yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTBrokerMessage result = new yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.IoTBrokerMessage(this);
           result.brokerId_ = brokerId_;
           result.mqttTopic_ = mqttTopic_;
+          if (batchSettingsBuilder_ == null) {
+            result.batchSettings_ = batchSettings_;
+          } else {
+            result.batchSettings_ = batchSettingsBuilder_.build();
+          }
           if (actionCase_ == 101) {
             if (invokeFunctionBuilder_ == null) {
               result.action_ = action_;
@@ -10364,6 +10732,9 @@ public final class TriggerOuterClass {
           if (!other.getMqttTopic().isEmpty()) {
             mqttTopic_ = other.mqttTopic_;
             onChanged();
+          }
+          if (other.hasBatchSettings()) {
+            mergeBatchSettings(other.getBatchSettings());
           }
           switch (other.getActionCase()) {
             case INVOKE_FUNCTION: {
@@ -10612,6 +10983,161 @@ public final class TriggerOuterClass {
           mqttTopic_ = value;
           onChanged();
           return this;
+        }
+
+        private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings batchSettings_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder> batchSettingsBuilder_;
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+         * @return Whether the batchSettings field is set.
+         */
+        public boolean hasBatchSettings() {
+          return batchSettingsBuilder_ != null || batchSettings_ != null;
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+         * @return The batchSettings.
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings getBatchSettings() {
+          if (batchSettingsBuilder_ == null) {
+            return batchSettings_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.getDefaultInstance() : batchSettings_;
+          } else {
+            return batchSettingsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+         */
+        public Builder setBatchSettings(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings value) {
+          if (batchSettingsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            batchSettings_ = value;
+            onChanged();
+          } else {
+            batchSettingsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+         */
+        public Builder setBatchSettings(
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder builderForValue) {
+          if (batchSettingsBuilder_ == null) {
+            batchSettings_ = builderForValue.build();
+            onChanged();
+          } else {
+            batchSettingsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+         */
+        public Builder mergeBatchSettings(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings value) {
+          if (batchSettingsBuilder_ == null) {
+            if (batchSettings_ != null) {
+              batchSettings_ =
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.newBuilder(batchSettings_).mergeFrom(value).buildPartial();
+            } else {
+              batchSettings_ = value;
+            }
+            onChanged();
+          } else {
+            batchSettingsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+         */
+        public Builder clearBatchSettings() {
+          if (batchSettingsBuilder_ == null) {
+            batchSettings_ = null;
+            onChanged();
+          } else {
+            batchSettings_ = null;
+            batchSettingsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder getBatchSettingsBuilder() {
+          
+          onChanged();
+          return getBatchSettingsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder getBatchSettingsOrBuilder() {
+          if (batchSettingsBuilder_ != null) {
+            return batchSettingsBuilder_.getMessageOrBuilder();
+          } else {
+            return batchSettings_ == null ?
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.getDefaultInstance() : batchSettings_;
+          }
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder> 
+            getBatchSettingsFieldBuilder() {
+          if (batchSettingsBuilder_ == null) {
+            batchSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder>(
+                    getBatchSettings(),
+                    getParentForChildren(),
+                    isClean());
+            batchSettings_ = null;
+          }
+          return batchSettingsBuilder_;
         }
 
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -11135,6 +11661,33 @@ public final class TriggerOuterClass {
 
       /**
        * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 8;</code>
+       * @return Whether the batchSettings field is set.
+       */
+      boolean hasBatchSettings();
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 8;</code>
+       * @return The batchSettings.
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings getBatchSettings();
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 8;</code>
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder getBatchSettingsOrBuilder();
+
+      /**
+       * <pre>
        * Instructions for invoking a function with retries as needed.
        * </pre>
        *
@@ -11278,6 +11831,19 @@ public final class TriggerOuterClass {
                 java.lang.String s = input.readStringRequireUtf8();
 
                 suffix_ = s;
+                break;
+              }
+              case 66: {
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder subBuilder = null;
+                if (batchSettings_ != null) {
+                  subBuilder = batchSettings_.toBuilder();
+                }
+                batchSettings_ = input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(batchSettings_);
+                  batchSettings_ = subBuilder.buildPartial();
+                }
+
                 break;
               }
               case 810: {
@@ -11600,6 +12166,44 @@ public final class TriggerOuterClass {
         }
       }
 
+      public static final int BATCH_SETTINGS_FIELD_NUMBER = 8;
+      private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings batchSettings_;
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 8;</code>
+       * @return Whether the batchSettings field is set.
+       */
+      @java.lang.Override
+      public boolean hasBatchSettings() {
+        return batchSettings_ != null;
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 8;</code>
+       * @return The batchSettings.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings getBatchSettings() {
+        return batchSettings_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.getDefaultInstance() : batchSettings_;
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 8;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder getBatchSettingsOrBuilder() {
+        return getBatchSettings();
+      }
+
       public static final int INVOKE_FUNCTION_FIELD_NUMBER = 101;
       /**
        * <pre>
@@ -11717,6 +12321,9 @@ public final class TriggerOuterClass {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(suffix_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 7, suffix_);
         }
+        if (batchSettings_ != null) {
+          output.writeMessage(8, getBatchSettings());
+        }
         if (actionCase_ == 101) {
           output.writeMessage(101, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_);
         }
@@ -11753,6 +12360,10 @@ public final class TriggerOuterClass {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(suffix_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, suffix_);
         }
+        if (batchSettings_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(8, getBatchSettings());
+        }
         if (actionCase_ == 101) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(101, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_);
@@ -11783,6 +12394,11 @@ public final class TriggerOuterClass {
             .equals(other.getPrefix())) return false;
         if (!getSuffix()
             .equals(other.getSuffix())) return false;
+        if (hasBatchSettings() != other.hasBatchSettings()) return false;
+        if (hasBatchSettings()) {
+          if (!getBatchSettings()
+              .equals(other.getBatchSettings())) return false;
+        }
         if (!getActionCase().equals(other.getActionCase())) return false;
         switch (actionCase_) {
           case 101:
@@ -11817,6 +12433,10 @@ public final class TriggerOuterClass {
         hash = (53 * hash) + getPrefix().hashCode();
         hash = (37 * hash) + SUFFIX_FIELD_NUMBER;
         hash = (53 * hash) + getSuffix().hashCode();
+        if (hasBatchSettings()) {
+          hash = (37 * hash) + BATCH_SETTINGS_FIELD_NUMBER;
+          hash = (53 * hash) + getBatchSettings().hashCode();
+        }
         switch (actionCase_) {
           case 101:
             hash = (37 * hash) + INVOKE_FUNCTION_FIELD_NUMBER;
@@ -11970,6 +12590,12 @@ public final class TriggerOuterClass {
 
           suffix_ = "";
 
+          if (batchSettingsBuilder_ == null) {
+            batchSettings_ = null;
+          } else {
+            batchSettings_ = null;
+            batchSettingsBuilder_ = null;
+          }
           actionCase_ = 0;
           action_ = null;
           return this;
@@ -12007,6 +12633,11 @@ public final class TriggerOuterClass {
           result.bucketId_ = bucketId_;
           result.prefix_ = prefix_;
           result.suffix_ = suffix_;
+          if (batchSettingsBuilder_ == null) {
+            result.batchSettings_ = batchSettings_;
+          } else {
+            result.batchSettings_ = batchSettingsBuilder_.build();
+          }
           if (actionCase_ == 101) {
             if (invokeFunctionBuilder_ == null) {
               result.action_ = action_;
@@ -12091,6 +12722,9 @@ public final class TriggerOuterClass {
           if (!other.getSuffix().isEmpty()) {
             suffix_ = other.suffix_;
             onChanged();
+          }
+          if (other.hasBatchSettings()) {
+            mergeBatchSettings(other.getBatchSettings());
           }
           switch (other.getActionCase()) {
             case INVOKE_FUNCTION: {
@@ -12626,6 +13260,161 @@ public final class TriggerOuterClass {
           return this;
         }
 
+        private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings batchSettings_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder> batchSettingsBuilder_;
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 8;</code>
+         * @return Whether the batchSettings field is set.
+         */
+        public boolean hasBatchSettings() {
+          return batchSettingsBuilder_ != null || batchSettings_ != null;
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 8;</code>
+         * @return The batchSettings.
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings getBatchSettings() {
+          if (batchSettingsBuilder_ == null) {
+            return batchSettings_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.getDefaultInstance() : batchSettings_;
+          } else {
+            return batchSettingsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 8;</code>
+         */
+        public Builder setBatchSettings(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings value) {
+          if (batchSettingsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            batchSettings_ = value;
+            onChanged();
+          } else {
+            batchSettingsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 8;</code>
+         */
+        public Builder setBatchSettings(
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder builderForValue) {
+          if (batchSettingsBuilder_ == null) {
+            batchSettings_ = builderForValue.build();
+            onChanged();
+          } else {
+            batchSettingsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 8;</code>
+         */
+        public Builder mergeBatchSettings(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings value) {
+          if (batchSettingsBuilder_ == null) {
+            if (batchSettings_ != null) {
+              batchSettings_ =
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.newBuilder(batchSettings_).mergeFrom(value).buildPartial();
+            } else {
+              batchSettings_ = value;
+            }
+            onChanged();
+          } else {
+            batchSettingsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 8;</code>
+         */
+        public Builder clearBatchSettings() {
+          if (batchSettingsBuilder_ == null) {
+            batchSettings_ = null;
+            onChanged();
+          } else {
+            batchSettings_ = null;
+            batchSettingsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 8;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder getBatchSettingsBuilder() {
+          
+          onChanged();
+          return getBatchSettingsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 8;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder getBatchSettingsOrBuilder() {
+          if (batchSettingsBuilder_ != null) {
+            return batchSettingsBuilder_.getMessageOrBuilder();
+          } else {
+            return batchSettings_ == null ?
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.getDefaultInstance() : batchSettings_;
+          }
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 8;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder> 
+            getBatchSettingsFieldBuilder() {
+          if (batchSettingsBuilder_ == null) {
+            batchSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder>(
+                    getBatchSettings(),
+                    getParentForChildren(),
+                    isClean());
+            batchSettings_ = null;
+          }
+          return batchSettingsBuilder_;
+        }
+
         private com.google.protobuf.SingleFieldBuilderV3<
             yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetryOrBuilder> invokeFunctionBuilder_;
         /**
@@ -13147,6 +13936,33 @@ public final class TriggerOuterClass {
 
       /**
        * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 7;</code>
+       * @return Whether the batchSettings field is set.
+       */
+      boolean hasBatchSettings();
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 7;</code>
+       * @return The batchSettings.
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings getBatchSettings();
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 7;</code>
+       */
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder getBatchSettingsOrBuilder();
+
+      /**
+       * <pre>
        * Instructions for invoking a function with retries as needed.
        * </pre>
        *
@@ -13290,6 +14106,19 @@ public final class TriggerOuterClass {
                 java.lang.String s = input.readStringRequireUtf8();
 
                 tag_ = s;
+                break;
+              }
+              case 58: {
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder subBuilder = null;
+                if (batchSettings_ != null) {
+                  subBuilder = batchSettings_.toBuilder();
+                }
+                batchSettings_ = input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(batchSettings_);
+                  batchSettings_ = subBuilder.buildPartial();
+                }
+
                 break;
               }
               case 810: {
@@ -13612,6 +14441,44 @@ public final class TriggerOuterClass {
         }
       }
 
+      public static final int BATCH_SETTINGS_FIELD_NUMBER = 7;
+      private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings batchSettings_;
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 7;</code>
+       * @return Whether the batchSettings field is set.
+       */
+      @java.lang.Override
+      public boolean hasBatchSettings() {
+        return batchSettings_ != null;
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 7;</code>
+       * @return The batchSettings.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings getBatchSettings() {
+        return batchSettings_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.getDefaultInstance() : batchSettings_;
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 7;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder getBatchSettingsOrBuilder() {
+        return getBatchSettings();
+      }
+
       public static final int INVOKE_FUNCTION_FIELD_NUMBER = 101;
       /**
        * <pre>
@@ -13729,6 +14596,9 @@ public final class TriggerOuterClass {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 6, tag_);
         }
+        if (batchSettings_ != null) {
+          output.writeMessage(7, getBatchSettings());
+        }
         if (actionCase_ == 101) {
           output.writeMessage(101, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_);
         }
@@ -13765,6 +14635,10 @@ public final class TriggerOuterClass {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tag_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, tag_);
         }
+        if (batchSettings_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(7, getBatchSettings());
+        }
         if (actionCase_ == 101) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(101, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_);
@@ -13795,6 +14669,11 @@ public final class TriggerOuterClass {
             .equals(other.getImageName())) return false;
         if (!getTag()
             .equals(other.getTag())) return false;
+        if (hasBatchSettings() != other.hasBatchSettings()) return false;
+        if (hasBatchSettings()) {
+          if (!getBatchSettings()
+              .equals(other.getBatchSettings())) return false;
+        }
         if (!getActionCase().equals(other.getActionCase())) return false;
         switch (actionCase_) {
           case 101:
@@ -13829,6 +14708,10 @@ public final class TriggerOuterClass {
         hash = (53 * hash) + getImageName().hashCode();
         hash = (37 * hash) + TAG_FIELD_NUMBER;
         hash = (53 * hash) + getTag().hashCode();
+        if (hasBatchSettings()) {
+          hash = (37 * hash) + BATCH_SETTINGS_FIELD_NUMBER;
+          hash = (53 * hash) + getBatchSettings().hashCode();
+        }
         switch (actionCase_) {
           case 101:
             hash = (37 * hash) + INVOKE_FUNCTION_FIELD_NUMBER;
@@ -13982,6 +14865,12 @@ public final class TriggerOuterClass {
 
           tag_ = "";
 
+          if (batchSettingsBuilder_ == null) {
+            batchSettings_ = null;
+          } else {
+            batchSettings_ = null;
+            batchSettingsBuilder_ = null;
+          }
           actionCase_ = 0;
           action_ = null;
           return this;
@@ -14019,6 +14908,11 @@ public final class TriggerOuterClass {
           result.registryId_ = registryId_;
           result.imageName_ = imageName_;
           result.tag_ = tag_;
+          if (batchSettingsBuilder_ == null) {
+            result.batchSettings_ = batchSettings_;
+          } else {
+            result.batchSettings_ = batchSettingsBuilder_.build();
+          }
           if (actionCase_ == 101) {
             if (invokeFunctionBuilder_ == null) {
               result.action_ = action_;
@@ -14103,6 +14997,9 @@ public final class TriggerOuterClass {
           if (!other.getTag().isEmpty()) {
             tag_ = other.tag_;
             onChanged();
+          }
+          if (other.hasBatchSettings()) {
+            mergeBatchSettings(other.getBatchSettings());
           }
           switch (other.getActionCase()) {
             case INVOKE_FUNCTION: {
@@ -14636,6 +15533,161 @@ public final class TriggerOuterClass {
           tag_ = value;
           onChanged();
           return this;
+        }
+
+        private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings batchSettings_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder> batchSettingsBuilder_;
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 7;</code>
+         * @return Whether the batchSettings field is set.
+         */
+        public boolean hasBatchSettings() {
+          return batchSettingsBuilder_ != null || batchSettings_ != null;
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 7;</code>
+         * @return The batchSettings.
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings getBatchSettings() {
+          if (batchSettingsBuilder_ == null) {
+            return batchSettings_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.getDefaultInstance() : batchSettings_;
+          } else {
+            return batchSettingsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 7;</code>
+         */
+        public Builder setBatchSettings(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings value) {
+          if (batchSettingsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            batchSettings_ = value;
+            onChanged();
+          } else {
+            batchSettingsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 7;</code>
+         */
+        public Builder setBatchSettings(
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder builderForValue) {
+          if (batchSettingsBuilder_ == null) {
+            batchSettings_ = builderForValue.build();
+            onChanged();
+          } else {
+            batchSettingsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 7;</code>
+         */
+        public Builder mergeBatchSettings(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings value) {
+          if (batchSettingsBuilder_ == null) {
+            if (batchSettings_ != null) {
+              batchSettings_ =
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.newBuilder(batchSettings_).mergeFrom(value).buildPartial();
+            } else {
+              batchSettings_ = value;
+            }
+            onChanged();
+          } else {
+            batchSettingsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 7;</code>
+         */
+        public Builder clearBatchSettings() {
+          if (batchSettingsBuilder_ == null) {
+            batchSettings_ = null;
+            onChanged();
+          } else {
+            batchSettings_ = null;
+            batchSettingsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 7;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder getBatchSettingsBuilder() {
+          
+          onChanged();
+          return getBatchSettingsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 7;</code>
+         */
+        public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder getBatchSettingsOrBuilder() {
+          if (batchSettingsBuilder_ != null) {
+            return batchSettingsBuilder_.getMessageOrBuilder();
+          } else {
+            return batchSettings_ == null ?
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.getDefaultInstance() : batchSettings_;
+          }
+        }
+        /**
+         * <pre>
+         * Batch settings for processing events.
+         * </pre>
+         *
+         * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 7;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder> 
+            getBatchSettingsFieldBuilder() {
+          if (batchSettingsBuilder_ == null) {
+            batchSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder>(
+                    getBatchSettings(),
+                    getParentForChildren(),
+                    isClean());
+            batchSettings_ = null;
+          }
+          return batchSettingsBuilder_;
         }
 
         private com.google.protobuf.SingleFieldBuilderV3<
@@ -33937,6 +34989,33 @@ public final class TriggerOuterClass {
         getEmailBytes();
 
     /**
+     * <pre>
+     * Batch settings for processing events.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+     * @return Whether the batchSettings field is set.
+     */
+    boolean hasBatchSettings();
+    /**
+     * <pre>
+     * Batch settings for processing events.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+     * @return The batchSettings.
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings getBatchSettings();
+    /**
+     * <pre>
+     * Batch settings for processing events.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder getBatchSettingsOrBuilder();
+
+    /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
      * @return Whether the invokeFunction field is set.
      */
@@ -34018,6 +35097,19 @@ public final class TriggerOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               email_ = s;
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder subBuilder = null;
+              if (batchSettings_ != null) {
+                subBuilder = batchSettings_.toBuilder();
+              }
+              batchSettings_ = input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(batchSettings_);
+                batchSettings_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             case 810: {
@@ -34169,6 +35261,44 @@ public final class TriggerOuterClass {
       }
     }
 
+    public static final int BATCH_SETTINGS_FIELD_NUMBER = 3;
+    private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings batchSettings_;
+    /**
+     * <pre>
+     * Batch settings for processing events.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+     * @return Whether the batchSettings field is set.
+     */
+    @java.lang.Override
+    public boolean hasBatchSettings() {
+      return batchSettings_ != null;
+    }
+    /**
+     * <pre>
+     * Batch settings for processing events.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+     * @return The batchSettings.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings getBatchSettings() {
+      return batchSettings_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.getDefaultInstance() : batchSettings_;
+    }
+    /**
+     * <pre>
+     * Batch settings for processing events.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder getBatchSettingsOrBuilder() {
+      return getBatchSettings();
+    }
+
     public static final int INVOKE_FUNCTION_FIELD_NUMBER = 101;
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
@@ -34248,6 +35378,9 @@ public final class TriggerOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, email_);
       }
+      if (batchSettings_ != null) {
+        output.writeMessage(3, getBatchSettings());
+      }
       if (actionCase_ == 101) {
         output.writeMessage(101, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_);
       }
@@ -34265,6 +35398,10 @@ public final class TriggerOuterClass {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(email_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, email_);
+      }
+      if (batchSettings_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getBatchSettings());
       }
       if (actionCase_ == 101) {
         size += com.google.protobuf.CodedOutputStream
@@ -34291,6 +35428,11 @@ public final class TriggerOuterClass {
 
       if (!getEmail()
           .equals(other.getEmail())) return false;
+      if (hasBatchSettings() != other.hasBatchSettings()) return false;
+      if (hasBatchSettings()) {
+        if (!getBatchSettings()
+            .equals(other.getBatchSettings())) return false;
+      }
       if (!getActionCase().equals(other.getActionCase())) return false;
       switch (actionCase_) {
         case 101:
@@ -34317,6 +35459,10 @@ public final class TriggerOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + EMAIL_FIELD_NUMBER;
       hash = (53 * hash) + getEmail().hashCode();
+      if (hasBatchSettings()) {
+        hash = (37 * hash) + BATCH_SETTINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getBatchSettings().hashCode();
+      }
       switch (actionCase_) {
         case 101:
           hash = (37 * hash) + INVOKE_FUNCTION_FIELD_NUMBER;
@@ -34464,6 +35610,12 @@ public final class TriggerOuterClass {
         super.clear();
         email_ = "";
 
+        if (batchSettingsBuilder_ == null) {
+          batchSettings_ = null;
+        } else {
+          batchSettings_ = null;
+          batchSettingsBuilder_ = null;
+        }
         actionCase_ = 0;
         action_ = null;
         return this;
@@ -34493,6 +35645,11 @@ public final class TriggerOuterClass {
       public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Mail buildPartial() {
         yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Mail result = new yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Mail(this);
         result.email_ = email_;
+        if (batchSettingsBuilder_ == null) {
+          result.batchSettings_ = batchSettings_;
+        } else {
+          result.batchSettings_ = batchSettingsBuilder_.build();
+        }
         if (actionCase_ == 101) {
           if (invokeFunctionBuilder_ == null) {
             result.action_ = action_;
@@ -34559,6 +35716,9 @@ public final class TriggerOuterClass {
         if (!other.getEmail().isEmpty()) {
           email_ = other.email_;
           onChanged();
+        }
+        if (other.hasBatchSettings()) {
+          mergeBatchSettings(other.getBatchSettings());
         }
         switch (other.getActionCase()) {
           case INVOKE_FUNCTION: {
@@ -34716,6 +35876,161 @@ public final class TriggerOuterClass {
         email_ = value;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings batchSettings_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder> batchSettingsBuilder_;
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+       * @return Whether the batchSettings field is set.
+       */
+      public boolean hasBatchSettings() {
+        return batchSettingsBuilder_ != null || batchSettings_ != null;
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+       * @return The batchSettings.
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings getBatchSettings() {
+        if (batchSettingsBuilder_ == null) {
+          return batchSettings_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.getDefaultInstance() : batchSettings_;
+        } else {
+          return batchSettingsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+       */
+      public Builder setBatchSettings(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings value) {
+        if (batchSettingsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          batchSettings_ = value;
+          onChanged();
+        } else {
+          batchSettingsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+       */
+      public Builder setBatchSettings(
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder builderForValue) {
+        if (batchSettingsBuilder_ == null) {
+          batchSettings_ = builderForValue.build();
+          onChanged();
+        } else {
+          batchSettingsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+       */
+      public Builder mergeBatchSettings(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings value) {
+        if (batchSettingsBuilder_ == null) {
+          if (batchSettings_ != null) {
+            batchSettings_ =
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.newBuilder(batchSettings_).mergeFrom(value).buildPartial();
+          } else {
+            batchSettings_ = value;
+          }
+          onChanged();
+        } else {
+          batchSettingsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+       */
+      public Builder clearBatchSettings() {
+        if (batchSettingsBuilder_ == null) {
+          batchSettings_ = null;
+          onChanged();
+        } else {
+          batchSettings_ = null;
+          batchSettingsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder getBatchSettingsBuilder() {
+        
+        onChanged();
+        return getBatchSettingsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder getBatchSettingsOrBuilder() {
+        if (batchSettingsBuilder_ != null) {
+          return batchSettingsBuilder_.getMessageOrBuilder();
+        } else {
+          return batchSettings_ == null ?
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.getDefaultInstance() : batchSettings_;
+        }
+      }
+      /**
+       * <pre>
+       * Batch settings for processing events.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder> 
+          getBatchSettingsFieldBuilder() {
+        if (batchSettingsBuilder_ == null) {
+          batchSettingsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder>(
+                  getBatchSettings(),
+                  getParentForChildren(),
+                  isClean());
+          batchSettings_ = null;
+        }
+        return batchSettingsBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -35186,7 +36501,7 @@ public final class TriggerOuterClass {
       "ggers.v1\032\036google/protobuf/duration.proto" +
       "\032\037google/protobuf/timestamp.proto\032\'yande" +
       "x/cloud/logging/v1/log_entry.proto\032\035yand" +
-      "ex/cloud/validation.proto\"\343%\n\007Trigger\022\n\n" +
+      "ex/cloud/validation.proto\"\223(\n\007Trigger\022\n\n" +
       "\002id\030\001 \001(\t\022\037\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=" +
       "50\022.\n\ncreated_at\030\003 \001(\0132\032.google.protobuf" +
       ".Timestamp\022\026\n\004name\030\004 \001(\tB\010\212\3101\0043-63\022\036\n\013de" +
@@ -35239,140 +36554,149 @@ public final class TriggerOuterClass {
       "triggers.v1.InvokeFunctionOnceH\000\022T\n\020invo" +
       "ke_container\030f \001(\01328.yandex.cloud.server" +
       "less.triggers.v1.InvokeContainerOnceH\000B\016" +
-      "\n\006action\022\004\300\3011\001\032\222\002\n\nIoTMessage\022\031\n\013registr" +
+      "\n\006action\022\004\300\3011\001\032\336\002\n\nIoTMessage\022\031\n\013registr" +
       "y_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tdevice_id\030\002 \001(\t\022\022\n\nm" +
-      "qtt_topic\030\003 \001(\t\022W\n\017invoke_function\030e \001(\013" +
-      "2<.yandex.cloud.serverless.triggers.v1.I" +
-      "nvokeFunctionWithRetryH\000\022Y\n\020invoke_conta" +
-      "iner\030f \001(\0132=.yandex.cloud.serverless.tri" +
-      "ggers.v1.InvokeContainerWithRetryH\000B\016\n\006a" +
-      "ction\022\004\300\3011\001\032\203\002\n\020IoTBrokerMessage\022\027\n\tbrok" +
-      "er_id\030\001 \001(\tB\004\350\3071\001\022\022\n\nmqtt_topic\030\002 \001(\t\022W\n" +
-      "\017invoke_function\030e \001(\0132<.yandex.cloud.se" +
-      "rverless.triggers.v1.InvokeFunctionWithR" +
-      "etryH\000\022Y\n\020invoke_container\030f \001(\0132=.yande" +
-      "x.cloud.serverless.triggers.v1.InvokeCon" +
-      "tainerWithRetryH\000B\016\n\006action\022\004\300\3011\001\032\347\002\n\rOb" +
-      "jectStorage\022_\n\nevent_type\030\003 \003(\0162C.yandex" +
-      ".cloud.serverless.triggers.v1.Trigger.Ob" +
-      "jectStorageEventTypeB\006\202\3101\002>0\022\021\n\tbucket_i" +
-      "d\030\004 \001(\t\022\016\n\006prefix\030\006 \001(\t\022\016\n\006suffix\030\007 \001(\t\022" +
+      "qtt_topic\030\003 \001(\t\022J\n\016batch_settings\030\004 \001(\0132" +
+      "2.yandex.cloud.serverless.triggers.v1.Ba" +
+      "tchSettings\022W\n\017invoke_function\030e \001(\0132<.y" +
+      "andex.cloud.serverless.triggers.v1.Invok" +
+      "eFunctionWithRetryH\000\022Y\n\020invoke_container" +
+      "\030f \001(\0132=.yandex.cloud.serverless.trigger" +
+      "s.v1.InvokeContainerWithRetryH\000B\016\n\006actio" +
+      "n\022\004\300\3011\001\032\317\002\n\020IoTBrokerMessage\022\027\n\tbroker_i" +
+      "d\030\001 \001(\tB\004\350\3071\001\022\022\n\nmqtt_topic\030\002 \001(\t\022J\n\016bat" +
+      "ch_settings\030\003 \001(\01322.yandex.cloud.serverl" +
+      "ess.triggers.v1.BatchSettings\022W\n\017invoke_" +
+      "function\030e \001(\0132<.yandex.cloud.serverless" +
+      ".triggers.v1.InvokeFunctionWithRetryH\000\022Y" +
+      "\n\020invoke_container\030f \001(\0132=.yandex.cloud." +
+      "serverless.triggers.v1.InvokeContainerWi" +
+      "thRetryH\000B\016\n\006action\022\004\300\3011\001\032\263\003\n\rObjectStor" +
+      "age\022_\n\nevent_type\030\003 \003(\0162C.yandex.cloud.s" +
+      "erverless.triggers.v1.Trigger.ObjectStor" +
+      "ageEventTypeB\006\202\3101\002>0\022\021\n\tbucket_id\030\004 \001(\t\022" +
+      "\016\n\006prefix\030\006 \001(\t\022\016\n\006suffix\030\007 \001(\t\022J\n\016batch" +
+      "_settings\030\010 \001(\01322.yandex.cloud.serverles" +
+      "s.triggers.v1.BatchSettings\022W\n\017invoke_fu" +
+      "nction\030e \001(\0132<.yandex.cloud.serverless.t" +
+      "riggers.v1.InvokeFunctionWithRetryH\000\022Y\n\020" +
+      "invoke_container\030f \001(\0132=.yandex.cloud.se" +
+      "rverless.triggers.v1.InvokeContainerWith" +
+      "RetryH\000B\016\n\006action\022\004\300\3011\001\032\276\003\n\021ContainerReg" +
+      "istry\022c\n\nevent_type\030\003 \003(\0162G.yandex.cloud" +
+      ".serverless.triggers.v1.Trigger.Containe" +
+      "rRegistryEventTypeB\006\202\3101\002>0\022\023\n\013registry_i" +
+      "d\030\004 \001(\t\022\022\n\nimage_name\030\005 \001(\t\022\013\n\003tag\030\006 \001(\t" +
+      "\022J\n\016batch_settings\030\007 \001(\01322.yandex.cloud." +
+      "serverless.triggers.v1.BatchSettings\022W\n\017" +
+      "invoke_function\030e \001(\0132<.yandex.cloud.ser" +
+      "verless.triggers.v1.InvokeFunctionWithRe" +
+      "tryH\000\022Y\n\020invoke_container\030f \001(\0132=.yandex" +
+      ".cloud.serverless.triggers.v1.InvokeCont" +
+      "ainerWithRetryH\000B\016\n\006action\022\004\300\3011\001\032\300\002\n\tClo" +
+      "udLogs\022\024\n\014log_group_id\030\001 \003(\t\022Y\n\016batch_se" +
+      "ttings\030\002 \001(\0132;.yandex.cloud.serverless.t" +
+      "riggers.v1.CloudLogsBatchSettingsB\004\350\3071\001\022" +
       "W\n\017invoke_function\030e \001(\0132<.yandex.cloud." +
       "serverless.triggers.v1.InvokeFunctionWit" +
       "hRetryH\000\022Y\n\020invoke_container\030f \001(\0132=.yan" +
       "dex.cloud.serverless.triggers.v1.InvokeC" +
-      "ontainerWithRetryH\000B\016\n\006action\022\004\300\3011\001\032\362\002\n\021" +
-      "ContainerRegistry\022c\n\nevent_type\030\003 \003(\0162G." +
-      "yandex.cloud.serverless.triggers.v1.Trig" +
-      "ger.ContainerRegistryEventTypeB\006\202\3101\002>0\022\023" +
-      "\n\013registry_id\030\004 \001(\t\022\022\n\nimage_name\030\005 \001(\t\022" +
-      "\013\n\003tag\030\006 \001(\t\022W\n\017invoke_function\030e \001(\0132<." +
-      "yandex.cloud.serverless.triggers.v1.Invo" +
-      "keFunctionWithRetryH\000\022Y\n\020invoke_containe" +
-      "r\030f \001(\0132=.yandex.cloud.serverless.trigge" +
-      "rs.v1.InvokeContainerWithRetryH\000B\016\n\006acti" +
-      "on\022\004\300\3011\001\032\300\002\n\tCloudLogs\022\024\n\014log_group_id\030\001" +
-      " \003(\t\022Y\n\016batch_settings\030\002 \001(\0132;.yandex.cl" +
-      "oud.serverless.triggers.v1.CloudLogsBatc" +
-      "hSettingsB\004\350\3071\001\022W\n\017invoke_function\030e \001(\013" +
-      "2<.yandex.cloud.serverless.triggers.v1.I" +
-      "nvokeFunctionWithRetryH\000\022Y\n\020invoke_conta" +
-      "iner\030f \001(\0132=.yandex.cloud.serverless.tri" +
-      "ggers.v1.InvokeContainerWithRetryH\000B\016\n\006a" +
-      "ction\022\004\300\3011\001\032\314\004\n\007Logging\022\036\n\014log_group_id\030" +
-      "\001 \001(\tB\010\212\3101\004<=50\022@\n\rresource_type\030\003 \003(\tB)" +
-      "\362\3071\034[a-zA-Z][-a-zA-Z0-9_.]{1,62}\202\3101\005<=10" +
-      "0\022>\n\013resource_id\030\004 \003(\tB)\362\3071\034[a-zA-Z][-a-" +
-      "zA-Z0-9_.]{1,62}\202\3101\005<=100\022?\n\013stream_name" +
-      "\030\007 \003(\tB*\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9" +
-      "]\202\3101\005<=100\022A\n\006levels\030\005 \003(\0162\'.yandex.clou" +
-      "d.logging.v1.LogLevel.LevelB\010\202\3101\004<=10\022W\n" +
-      "\016batch_settings\030\006 \001(\01329.yandex.cloud.ser" +
-      "verless.triggers.v1.LoggingBatchSettings" +
-      "B\004\350\3071\001\022W\n\017invoke_function\030e \001(\0132<.yandex" +
+      "ontainerWithRetryH\000B\016\n\006action\022\004\300\3011\001\032\314\004\n\007" +
+      "Logging\022\036\n\014log_group_id\030\001 \001(\tB\010\212\3101\004<=50\022" +
+      "@\n\rresource_type\030\003 \003(\tB)\362\3071\034[a-zA-Z][-a-" +
+      "zA-Z0-9_.]{1,62}\202\3101\005<=100\022>\n\013resource_id" +
+      "\030\004 \003(\tB)\362\3071\034[a-zA-Z][-a-zA-Z0-9_.]{1,62}" +
+      "\202\3101\005<=100\022?\n\013stream_name\030\007 \003(\tB*\362\3071\035|[a-" +
+      "z][-a-z0-9]{1,61}[a-z0-9]\202\3101\005<=100\022A\n\006le" +
+      "vels\030\005 \003(\0162\'.yandex.cloud.logging.v1.Log" +
+      "Level.LevelB\010\202\3101\004<=10\022W\n\016batch_settings\030" +
+      "\006 \001(\01329.yandex.cloud.serverless.triggers" +
+      ".v1.LoggingBatchSettingsB\004\350\3071\001\022W\n\017invoke" +
+      "_function\030e \001(\0132<.yandex.cloud.serverles" +
+      "s.triggers.v1.InvokeFunctionWithRetryH\000\022" +
+      "Y\n\020invoke_container\030g \001(\0132=.yandex.cloud" +
+      ".serverless.triggers.v1.InvokeContainerW" +
+      "ithRetryH\000B\016\n\006action\022\004\300\3011\001\"\312\001\n\026ObjectSto" +
+      "rageEventType\022)\n%OBJECT_STORAGE_EVENT_TY" +
+      "PE_UNSPECIFIED\020\000\022+\n\'OBJECT_STORAGE_EVENT" +
+      "_TYPE_CREATE_OBJECT\020\001\022+\n\'OBJECT_STORAGE_" +
+      "EVENT_TYPE_UPDATE_OBJECT\020\002\022+\n\'OBJECT_STO" +
+      "RAGE_EVENT_TYPE_DELETE_OBJECT\020\003\"\223\002\n\032Cont" +
+      "ainerRegistryEventType\022-\n)CONTAINER_REGI" +
+      "STRY_EVENT_TYPE_UNSPECIFIED\020\000\022.\n*CONTAIN" +
+      "ER_REGISTRY_EVENT_TYPE_CREATE_IMAGE\020\001\022.\n" +
+      "*CONTAINER_REGISTRY_EVENT_TYPE_DELETE_IM" +
+      "AGE\020\002\0222\n.CONTAINER_REGISTRY_EVENT_TYPE_C" +
+      "REATE_IMAGE_TAG\020\003\0222\n.CONTAINER_REGISTRY_" +
+      "EVENT_TYPE_DELETE_IMAGE_TAG\020\004\"8\n\006Status\022" +
+      "\026\n\022STATUS_UNSPECIFIED\020\000\022\n\n\006ACTIVE\020\001\022\n\n\006P" +
+      "AUSED\020\002\"i\n\022InvokeFunctionOnce\022!\n\013functio" +
+      "n_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014function_tag" +
+      "\030\002 \001(\t\022\032\n\022service_account_id\030\003 \001(\t\"\213\002\n\027I" +
+      "nvokeFunctionWithRetry\022!\n\013function_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014function_tag\030\002 \001(\t\022" +
+      "\032\n\022service_account_id\030\003 \001(\t\022J\n\016retry_set" +
+      "tings\030\004 \001(\01322.yandex.cloud.serverless.tr" +
+      "iggers.v1.RetrySettings\022O\n\021dead_letter_q" +
+      "ueue\030\005 \001(\01324.yandex.cloud.serverless.tri" +
+      "ggers.v1.PutQueueMessage\"c\n\023InvokeContai" +
+      "nerOnce\022\"\n\014container_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022\014\n\004path\030\003 \001(\t\022\032\n\022service_account_id\030" +
+      "\004 \001(\t\"\205\002\n\030InvokeContainerWithRetry\022\"\n\014co" +
+      "ntainer_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004path\030\003" +
+      " \001(\t\022\032\n\022service_account_id\030\004 \001(\t\022J\n\016retr" +
+      "y_settings\030\005 \001(\01322.yandex.cloud.serverle" +
+      "ss.triggers.v1.RetrySettings\022O\n\021dead_let" +
+      "ter_queue\030\006 \001(\01324.yandex.cloud.serverles" +
+      "s.triggers.v1.PutQueueMessage\"M\n\017PutQueu" +
+      "eMessage\022\020\n\010queue_id\030\013 \001(\t\022(\n\022service_ac" +
+      "count_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"X\n\rBatchSet" +
+      "tings\022\026\n\004size\030\001 \001(\003B\010\372\3071\0040-10\022/\n\006cutoff\030" +
+      "\002 \001(\0132\031.google.protobuf.DurationB\004\350\3071\001\"g" +
+      "\n\026CloudLogsBatchSettings\022\027\n\004size\030\001 \001(\003B\t" +
+      "\372\3071\0050-100\0224\n\006cutoff\030\002 \001(\0132\031.google.proto" +
+      "buf.DurationB\t\372\3071\0051s-1m\"e\n\024LoggingBatchS" +
+      "ettings\022\027\n\004size\030\001 \001(\003B\t\372\3071\0051-100\0224\n\006cuto" +
+      "ff\030\002 \001(\0132\031.google.protobuf.DurationB\t\372\3071" +
+      "\0051s-1m\"m\n\rRetrySettings\022\037\n\016retry_attempt" +
+      "s\030\001 \001(\003B\007\372\3071\0031-5\022;\n\010interval\030\002 \001(\0132\031.goo" +
+      "gle.protobuf.DurationB\016\372\3071\00610s-1m\350\3071\001\"\232\002" +
+      "\n\rBillingBudget\022(\n\022billing_account_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\tbudget_id\030\002 \001(\tB\010\212\310" +
+      "1\004<=50\022W\n\017invoke_function\030e \001(\0132<.yandex" +
       ".cloud.serverless.triggers.v1.InvokeFunc" +
       "tionWithRetryH\000\022Y\n\020invoke_container\030g \001(" +
       "\0132=.yandex.cloud.serverless.triggers.v1." +
       "InvokeContainerWithRetryH\000B\016\n\006action\022\004\300\301" +
-      "1\001\"\312\001\n\026ObjectStorageEventType\022)\n%OBJECT_" +
-      "STORAGE_EVENT_TYPE_UNSPECIFIED\020\000\022+\n\'OBJE" +
-      "CT_STORAGE_EVENT_TYPE_CREATE_OBJECT\020\001\022+\n" +
-      "\'OBJECT_STORAGE_EVENT_TYPE_UPDATE_OBJECT" +
-      "\020\002\022+\n\'OBJECT_STORAGE_EVENT_TYPE_DELETE_O" +
-      "BJECT\020\003\"\223\002\n\032ContainerRegistryEventType\022-" +
-      "\n)CONTAINER_REGISTRY_EVENT_TYPE_UNSPECIF" +
-      "IED\020\000\022.\n*CONTAINER_REGISTRY_EVENT_TYPE_C" +
-      "REATE_IMAGE\020\001\022.\n*CONTAINER_REGISTRY_EVEN" +
-      "T_TYPE_DELETE_IMAGE\020\002\0222\n.CONTAINER_REGIS" +
-      "TRY_EVENT_TYPE_CREATE_IMAGE_TAG\020\003\0222\n.CON" +
-      "TAINER_REGISTRY_EVENT_TYPE_DELETE_IMAGE_" +
-      "TAG\020\004\"8\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022" +
-      "\n\n\006ACTIVE\020\001\022\n\n\006PAUSED\020\002\"i\n\022InvokeFunctio" +
-      "nOnce\022!\n\013function_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022\024\n\014function_tag\030\002 \001(\t\022\032\n\022service_accoun" +
-      "t_id\030\003 \001(\t\"\213\002\n\027InvokeFunctionWithRetry\022!" +
-      "\n\013function_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\024\n\014fun" +
-      "ction_tag\030\002 \001(\t\022\032\n\022service_account_id\030\003 " +
-      "\001(\t\022J\n\016retry_settings\030\004 \001(\01322.yandex.clo" +
-      "ud.serverless.triggers.v1.RetrySettings\022" +
-      "O\n\021dead_letter_queue\030\005 \001(\01324.yandex.clou" +
-      "d.serverless.triggers.v1.PutQueueMessage" +
-      "\"c\n\023InvokeContainerOnce\022\"\n\014container_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\014\n\004path\030\003 \001(\t\022\032\n\022ser" +
-      "vice_account_id\030\004 \001(\t\"\205\002\n\030InvokeContaine" +
-      "rWithRetry\022\"\n\014container_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022\014\n\004path\030\003 \001(\t\022\032\n\022service_account_" +
-      "id\030\004 \001(\t\022J\n\016retry_settings\030\005 \001(\01322.yande" +
-      "x.cloud.serverless.triggers.v1.RetrySett" +
-      "ings\022O\n\021dead_letter_queue\030\006 \001(\01324.yandex" +
-      ".cloud.serverless.triggers.v1.PutQueueMe" +
-      "ssage\"M\n\017PutQueueMessage\022\020\n\010queue_id\030\013 \001" +
-      "(\t\022(\n\022service_account_id\030\002 \001(\tB\014\350\3071\001\212\3101\004" +
-      "<=50\"X\n\rBatchSettings\022\026\n\004size\030\001 \001(\003B\010\372\3071" +
-      "\0040-10\022/\n\006cutoff\030\002 \001(\0132\031.google.protobuf." +
-      "DurationB\004\350\3071\001\"g\n\026CloudLogsBatchSettings" +
-      "\022\027\n\004size\030\001 \001(\003B\t\372\3071\0050-100\0224\n\006cutoff\030\002 \001(" +
-      "\0132\031.google.protobuf.DurationB\t\372\3071\0051s-1m\"" +
-      "e\n\024LoggingBatchSettings\022\027\n\004size\030\001 \001(\003B\t\372" +
-      "\3071\0051-100\0224\n\006cutoff\030\002 \001(\0132\031.google.protob" +
-      "uf.DurationB\t\372\3071\0051s-1m\"m\n\rRetrySettings\022" +
-      "\037\n\016retry_attempts\030\001 \001(\003B\007\372\3071\0031-5\022;\n\010inte" +
-      "rval\030\002 \001(\0132\031.google.protobuf.DurationB\016\372" +
-      "\3071\00610s-1m\350\3071\001\"\232\002\n\rBillingBudget\022(\n\022billi" +
-      "ng_account_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\tbud" +
-      "get_id\030\002 \001(\tB\010\212\3101\004<=50\022W\n\017invoke_functio" +
-      "n\030e \001(\0132<.yandex.cloud.serverless.trigge" +
-      "rs.v1.InvokeFunctionWithRetryH\000\022Y\n\020invok" +
-      "e_container\030g \001(\0132=.yandex.cloud.serverl" +
-      "ess.triggers.v1.InvokeContainerWithRetry" +
-      "H\000B\016\n\006action\022\004\300\3011\001\"j\n\027DataStreamBatchSet" +
-      "tings\022\031\n\004size\030\001 \001(\003B\013\372\3071\0071-65536\0224\n\006cuto" +
-      "ff\030\002 \001(\0132\031.google.protobuf.DurationB\t\372\3071" +
-      "\0051s-1m\"\366\002\n\nDataStream\022\020\n\010endpoint\030\001 \001(\t\022" +
-      "\020\n\010database\030\002 \001(\t\022\016\n\006stream\030\003 \001(\t\022\032\n\022ser" +
-      "vice_account_id\030\004 \001(\t\022T\n\016batch_settings\030" +
-      "\005 \001(\0132<.yandex.cloud.serverless.triggers" +
-      ".v1.DataStreamBatchSettings\022W\n\017invoke_fu" +
-      "nction\030\r \001(\0132<.yandex.cloud.serverless.t" +
+      "1\001\"j\n\027DataStreamBatchSettings\022\031\n\004size\030\001 " +
+      "\001(\003B\013\372\3071\0071-65536\0224\n\006cutoff\030\002 \001(\0132\031.googl" +
+      "e.protobuf.DurationB\t\372\3071\0051s-1m\"\366\002\n\nDataS" +
+      "tream\022\020\n\010endpoint\030\001 \001(\t\022\020\n\010database\030\002 \001(" +
+      "\t\022\016\n\006stream\030\003 \001(\t\022\032\n\022service_account_id\030" +
+      "\004 \001(\t\022T\n\016batch_settings\030\005 \001(\0132<.yandex.c" +
+      "loud.serverless.triggers.v1.DataStreamBa" +
+      "tchSettings\022W\n\017invoke_function\030\r \001(\0132<.y" +
+      "andex.cloud.serverless.triggers.v1.Invok" +
+      "eFunctionWithRetryH\000\022Y\n\020invoke_container" +
+      "\030\017 \001(\0132=.yandex.cloud.serverless.trigger" +
+      "s.v1.InvokeContainerWithRetryH\000B\016\n\006actio" +
+      "n\022\004\300\3011\001\"\245\002\n\004Mail\022\r\n\005email\030\002 \001(\t\022J\n\016batch" +
+      "_settings\030\003 \001(\01322.yandex.cloud.serverles" +
+      "s.triggers.v1.BatchSettings\022W\n\017invoke_fu" +
+      "nction\030e \001(\0132<.yandex.cloud.serverless.t" +
       "riggers.v1.InvokeFunctionWithRetryH\000\022Y\n\020" +
-      "invoke_container\030\017 \001(\0132=.yandex.cloud.se" +
+      "invoke_container\030g \001(\0132=.yandex.cloud.se" +
       "rverless.triggers.v1.InvokeContainerWith" +
-      "RetryH\000B\016\n\006action\022\004\300\3011\001\"\331\001\n\004Mail\022\r\n\005emai" +
-      "l\030\002 \001(\t\022W\n\017invoke_function\030e \001(\0132<.yande" +
-      "x.cloud.serverless.triggers.v1.InvokeFun" +
-      "ctionWithRetryH\000\022Y\n\020invoke_container\030g \001" +
-      "(\0132=.yandex.cloud.serverless.triggers.v1" +
-      ".InvokeContainerWithRetryH\000B\016\n\006action\022\004\300" +
-      "\3011\001*\342\001\n\013TriggerType\022\034\n\030TRIGGER_TYPE_UNSP" +
-      "ECIFIED\020\000\022\t\n\005TIMER\020\002\022\021\n\rMESSAGE_QUEUE\020\003\022" +
-      "\017\n\013IOT_MESSAGE\020\004\022\026\n\022IOT_BROKER_MESSAGE\020\014" +
-      "\022\022\n\016OBJECT_STORAGE\020\005\022\026\n\022CONTAINER_REGIST" +
-      "RY\020\006\022\016\n\nCLOUD_LOGS\020\007\022\013\n\007LOGGING\020\010\022\022\n\016BIL" +
-      "LING_BUDGET\020\t\022\007\n\003YDS\020\n\022\010\n\004MAIL\020\013B{\n\'yand" +
-      "ex.cloud.api.serverless.triggers.v1ZPgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/serverless/triggers/v1;triggersb\006p" +
-      "roto3"
+      "RetryH\000B\016\n\006action\022\004\300\3011\001*\342\001\n\013TriggerType\022" +
+      "\034\n\030TRIGGER_TYPE_UNSPECIFIED\020\000\022\t\n\005TIMER\020\002" +
+      "\022\021\n\rMESSAGE_QUEUE\020\003\022\017\n\013IOT_MESSAGE\020\004\022\026\n\022" +
+      "IOT_BROKER_MESSAGE\020\014\022\022\n\016OBJECT_STORAGE\020\005" +
+      "\022\026\n\022CONTAINER_REGISTRY\020\006\022\016\n\nCLOUD_LOGS\020\007" +
+      "\022\013\n\007LOGGING\020\010\022\022\n\016BILLING_BUDGET\020\t\022\007\n\003YDS" +
+      "\020\n\022\010\n\004MAIL\020\013B{\n\'yandex.cloud.api.serverl" +
+      "ess.triggers.v1ZPgithub.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/serverless/tri" +
+      "ggers/v1;triggersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -35417,25 +36741,25 @@ public final class TriggerOuterClass {
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_IoTMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Trigger_IoTMessage_descriptor,
-        new java.lang.String[] { "RegistryId", "DeviceId", "MqttTopic", "InvokeFunction", "InvokeContainer", "Action", });
+        new java.lang.String[] { "RegistryId", "DeviceId", "MqttTopic", "BatchSettings", "InvokeFunction", "InvokeContainer", "Action", });
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_IoTBrokerMessage_descriptor =
       internal_static_yandex_cloud_serverless_triggers_v1_Trigger_descriptor.getNestedTypes().get(5);
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_IoTBrokerMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Trigger_IoTBrokerMessage_descriptor,
-        new java.lang.String[] { "BrokerId", "MqttTopic", "InvokeFunction", "InvokeContainer", "Action", });
+        new java.lang.String[] { "BrokerId", "MqttTopic", "BatchSettings", "InvokeFunction", "InvokeContainer", "Action", });
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_ObjectStorage_descriptor =
       internal_static_yandex_cloud_serverless_triggers_v1_Trigger_descriptor.getNestedTypes().get(6);
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_ObjectStorage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Trigger_ObjectStorage_descriptor,
-        new java.lang.String[] { "EventType", "BucketId", "Prefix", "Suffix", "InvokeFunction", "InvokeContainer", "Action", });
+        new java.lang.String[] { "EventType", "BucketId", "Prefix", "Suffix", "BatchSettings", "InvokeFunction", "InvokeContainer", "Action", });
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_ContainerRegistry_descriptor =
       internal_static_yandex_cloud_serverless_triggers_v1_Trigger_descriptor.getNestedTypes().get(7);
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_ContainerRegistry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Trigger_ContainerRegistry_descriptor,
-        new java.lang.String[] { "EventType", "RegistryId", "ImageName", "Tag", "InvokeFunction", "InvokeContainer", "Action", });
+        new java.lang.String[] { "EventType", "RegistryId", "ImageName", "Tag", "BatchSettings", "InvokeFunction", "InvokeContainer", "Action", });
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_CloudLogs_descriptor =
       internal_static_yandex_cloud_serverless_triggers_v1_Trigger_descriptor.getNestedTypes().get(8);
     internal_static_yandex_cloud_serverless_triggers_v1_Trigger_CloudLogs_fieldAccessorTable = new
@@ -35525,7 +36849,7 @@ public final class TriggerOuterClass {
     internal_static_yandex_cloud_serverless_triggers_v1_Mail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Mail_descriptor,
-        new java.lang.String[] { "Email", "InvokeFunction", "InvokeContainer", "Action", });
+        new java.lang.String[] { "Email", "BatchSettings", "InvokeFunction", "InvokeContainer", "Action", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);

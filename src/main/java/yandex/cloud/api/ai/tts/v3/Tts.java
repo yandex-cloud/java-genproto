@@ -8874,6 +8874,25 @@ public final class Tts {
     com.google.protobuf.ByteString
         getRoleBytes();
 
+    /**
+     * <pre>
+     * Hint to increase (or decrease) speaker's pitch, measured in Hz. Valid values are in range [-1000;1000], default value is 0.
+     * </pre>
+     *
+     * <code>double pitch_shift = 6;</code>
+     * @return Whether the pitchShift field is set.
+     */
+    boolean hasPitchShift();
+    /**
+     * <pre>
+     * Hint to increase (or decrease) speaker's pitch, measured in Hz. Valid values are in range [-1000;1000], default value is 0.
+     * </pre>
+     *
+     * <code>double pitch_shift = 6;</code>
+     * @return The pitchShift.
+     */
+    double getPitchShift();
+
     public yandex.cloud.api.ai.tts.v3.Tts.Hints.HintCase getHintCase();
   }
   /**
@@ -8957,6 +8976,11 @@ public final class Tts {
               hint_ = s;
               break;
             }
+            case 49: {
+              hint_ = input.readDouble();
+              hintCase_ = 6;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -8999,6 +9023,7 @@ public final class Tts {
       SPEED(3),
       VOLUME(4),
       ROLE(5),
+      PITCH_SHIFT(6),
       HINT_NOT_SET(0);
       private final int value;
       private HintCase(int value) {
@@ -9021,6 +9046,7 @@ public final class Tts {
           case 3: return SPEED;
           case 4: return VOLUME;
           case 5: return ROLE;
+          case 6: return PITCH_SHIFT;
           case 0: return HINT_NOT_SET;
           default: return null;
         }
@@ -9269,6 +9295,35 @@ public final class Tts {
       }
     }
 
+    public static final int PITCH_SHIFT_FIELD_NUMBER = 6;
+    /**
+     * <pre>
+     * Hint to increase (or decrease) speaker's pitch, measured in Hz. Valid values are in range [-1000;1000], default value is 0.
+     * </pre>
+     *
+     * <code>double pitch_shift = 6;</code>
+     * @return Whether the pitchShift field is set.
+     */
+    @java.lang.Override
+    public boolean hasPitchShift() {
+      return hintCase_ == 6;
+    }
+    /**
+     * <pre>
+     * Hint to increase (or decrease) speaker's pitch, measured in Hz. Valid values are in range [-1000;1000], default value is 0.
+     * </pre>
+     *
+     * <code>double pitch_shift = 6;</code>
+     * @return The pitchShift.
+     */
+    @java.lang.Override
+    public double getPitchShift() {
+      if (hintCase_ == 6) {
+        return (java.lang.Double) hint_;
+      }
+      return 0D;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9300,6 +9355,10 @@ public final class Tts {
       if (hintCase_ == 5) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, hint_);
       }
+      if (hintCase_ == 6) {
+        output.writeDouble(
+            6, (double)((java.lang.Double) hint_));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -9328,6 +9387,11 @@ public final class Tts {
       }
       if (hintCase_ == 5) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, hint_);
+      }
+      if (hintCase_ == 6) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(
+              6, (double)((java.lang.Double) hint_));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9368,6 +9432,11 @@ public final class Tts {
           if (!getRole()
               .equals(other.getRole())) return false;
           break;
+        case 6:
+          if (java.lang.Double.doubleToLongBits(getPitchShift())
+              != java.lang.Double.doubleToLongBits(
+                  other.getPitchShift())) return false;
+          break;
         case 0:
         default:
       }
@@ -9404,6 +9473,11 @@ public final class Tts {
         case 5:
           hash = (37 * hash) + ROLE_FIELD_NUMBER;
           hash = (53 * hash) + getRole().hashCode();
+          break;
+        case 6:
+          hash = (37 * hash) + PITCH_SHIFT_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              java.lang.Double.doubleToLongBits(getPitchShift()));
           break;
         case 0:
         default:
@@ -9588,6 +9662,9 @@ public final class Tts {
         if (hintCase_ == 5) {
           result.hint_ = hint_;
         }
+        if (hintCase_ == 6) {
+          result.hint_ = hint_;
+        }
         result.hintCase_ = hintCase_;
         onBuilt();
         return result;
@@ -9660,6 +9737,10 @@ public final class Tts {
             hintCase_ = 5;
             hint_ = other.hint_;
             onChanged();
+            break;
+          }
+          case PITCH_SHIFT: {
+            setPitchShift(other.getPitchShift());
             break;
           }
           case HINT_NOT_SET: {
@@ -10248,6 +10329,63 @@ public final class Tts {
         hintCase_ = 5;
         hint_ = value;
         onChanged();
+        return this;
+      }
+
+      /**
+       * <pre>
+       * Hint to increase (or decrease) speaker's pitch, measured in Hz. Valid values are in range [-1000;1000], default value is 0.
+       * </pre>
+       *
+       * <code>double pitch_shift = 6;</code>
+       * @return Whether the pitchShift field is set.
+       */
+      public boolean hasPitchShift() {
+        return hintCase_ == 6;
+      }
+      /**
+       * <pre>
+       * Hint to increase (or decrease) speaker's pitch, measured in Hz. Valid values are in range [-1000;1000], default value is 0.
+       * </pre>
+       *
+       * <code>double pitch_shift = 6;</code>
+       * @return The pitchShift.
+       */
+      public double getPitchShift() {
+        if (hintCase_ == 6) {
+          return (java.lang.Double) hint_;
+        }
+        return 0D;
+      }
+      /**
+       * <pre>
+       * Hint to increase (or decrease) speaker's pitch, measured in Hz. Valid values are in range [-1000;1000], default value is 0.
+       * </pre>
+       *
+       * <code>double pitch_shift = 6;</code>
+       * @param value The pitchShift to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPitchShift(double value) {
+        hintCase_ = 6;
+        hint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Hint to increase (or decrease) speaker's pitch, measured in Hz. Valid values are in range [-1000;1000], default value is 0.
+       * </pre>
+       *
+       * <code>double pitch_shift = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPitchShift() {
+        if (hintCase_ == 6) {
+          hintCase_ = 0;
+          hint_ = null;
+          onChanged();
+        }
         return this;
       }
       @java.lang.Override
@@ -12746,24 +12884,25 @@ public final class Tts {
       "riable\"\032\n\nAudioChunk\022\014\n\004data\030\001 \001(\014\"X\n\014Te" +
       "xtTemplate\022\025\n\rtext_template\030\001 \001(\t\0221\n\tvar" +
       "iables\030\002 \003(\0132\036.speechkit.tts.v3.TextVari" +
-      "able\"\216\001\n\005Hints\022\017\n\005voice\030\001 \001(\tH\000\0229\n\016audio" +
+      "able\"\245\001\n\005Hints\022\017\n\005voice\030\001 \001(\tH\000\0229\n\016audio" +
       "_template\030\002 \001(\0132\037.speechkit.tts.v3.Audio" +
       "TemplateH\000\022\017\n\005speed\030\003 \001(\001H\000\022\020\n\006volume\030\004 " +
-      "\001(\001H\000\022\016\n\004role\030\005 \001(\tH\000B\006\n\004Hint\"\314\003\n\031Uttera" +
-      "nceSynthesisRequest\022\r\n\005model\030\001 \001(\t\022\016\n\004te" +
-      "xt\030\002 \001(\tH\000\0227\n\rtext_template\030\003 \001(\0132\036.spee" +
-      "chkit.tts.v3.TextTemplateH\000\022&\n\005hints\030\004 \003" +
-      "(\0132\027.speechkit.tts.v3.Hints\022?\n\021output_au" +
-      "dio_spec\030\005 \001(\0132$.speechkit.tts.v3.AudioF" +
-      "ormatOptions\022j\n\033loudness_normalization_t" +
-      "ype\030\006 \001(\0162E.speechkit.tts.v3.UtteranceSy" +
-      "nthesisRequest.LoudnessNormalizationType" +
-      "\022\023\n\013unsafe_mode\030\007 \001(\010\"`\n\031LoudnessNormali" +
-      "zationType\022+\n\'LOUDNESS_NORMALIZATION_TYP" +
-      "E_UNSPECIFIED\020\000\022\014\n\010MAX_PEAK\020\001\022\010\n\004LUFS\020\002B" +
-      "\013\n\tUtteranceB\\\n\032yandex.cloud.api.ai.tts." +
-      "v3Z>github.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/ai/tts/v3;ttsb\006proto3"
+      "\001(\001H\000\022\016\n\004role\030\005 \001(\tH\000\022\025\n\013pitch_shift\030\006 \001" +
+      "(\001H\000B\006\n\004Hint\"\314\003\n\031UtteranceSynthesisReque" +
+      "st\022\r\n\005model\030\001 \001(\t\022\016\n\004text\030\002 \001(\tH\000\0227\n\rtex" +
+      "t_template\030\003 \001(\0132\036.speechkit.tts.v3.Text" +
+      "TemplateH\000\022&\n\005hints\030\004 \003(\0132\027.speechkit.tt" +
+      "s.v3.Hints\022?\n\021output_audio_spec\030\005 \001(\0132$." +
+      "speechkit.tts.v3.AudioFormatOptions\022j\n\033l" +
+      "oudness_normalization_type\030\006 \001(\0162E.speec" +
+      "hkit.tts.v3.UtteranceSynthesisRequest.Lo" +
+      "udnessNormalizationType\022\023\n\013unsafe_mode\030\007" +
+      " \001(\010\"`\n\031LoudnessNormalizationType\022+\n\'LOU" +
+      "DNESS_NORMALIZATION_TYPE_UNSPECIFIED\020\000\022\014" +
+      "\n\010MAX_PEAK\020\001\022\010\n\004LUFS\020\002B\013\n\tUtteranceB\\\n\032y" +
+      "andex.cloud.api.ai.tts.v3Z>github.com/ya" +
+      "ndex-cloud/go-genproto/yandex/cloud/ai/t" +
+      "ts/v3;ttsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12834,7 +12973,7 @@ public final class Tts {
     internal_static_speechkit_tts_v3_Hints_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_tts_v3_Hints_descriptor,
-        new java.lang.String[] { "Voice", "AudioTemplate", "Speed", "Volume", "Role", "Hint", });
+        new java.lang.String[] { "Voice", "AudioTemplate", "Speed", "Volume", "Role", "PitchShift", "Hint", });
     internal_static_speechkit_tts_v3_UtteranceSynthesisRequest_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_speechkit_tts_v3_UtteranceSynthesisRequest_fieldAccessorTable = new

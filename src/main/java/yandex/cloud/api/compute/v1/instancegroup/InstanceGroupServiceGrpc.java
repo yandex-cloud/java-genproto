@@ -235,6 +235,68 @@ public final class InstanceGroupServiceGrpc {
     return getStopMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRestartRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRollingRestartMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RollingRestart",
+      requestType = yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRestartRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRestartRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRollingRestartMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRestartRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getRollingRestartMethod;
+    if ((getRollingRestartMethod = InstanceGroupServiceGrpc.getRollingRestartMethod) == null) {
+      synchronized (InstanceGroupServiceGrpc.class) {
+        if ((getRollingRestartMethod = InstanceGroupServiceGrpc.getRollingRestartMethod) == null) {
+          InstanceGroupServiceGrpc.getRollingRestartMethod = getRollingRestartMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRestartRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RollingRestart"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRestartRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new InstanceGroupServiceMethodDescriptorSupplier("RollingRestart"))
+              .build();
+        }
+      }
+    }
+    return getRollingRestartMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRecreateRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRollingRecreateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RollingRecreate",
+      requestType = yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRecreateRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRecreateRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRollingRecreateMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRecreateRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getRollingRecreateMethod;
+    if ((getRollingRecreateMethod = InstanceGroupServiceGrpc.getRollingRecreateMethod) == null) {
+      synchronized (InstanceGroupServiceGrpc.class) {
+        if ((getRollingRecreateMethod = InstanceGroupServiceGrpc.getRollingRecreateMethod) == null) {
+          InstanceGroupServiceGrpc.getRollingRecreateMethod = getRollingRecreateMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRecreateRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RollingRecreate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRecreateRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new InstanceGroupServiceMethodDescriptorSupplier("RollingRecreate"))
+              .build();
+        }
+      }
+    }
+    return getRollingRecreateMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.StartInstanceGroupRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getStartMethod;
 
@@ -735,6 +797,28 @@ public final class InstanceGroupServiceGrpc {
 
     /**
      * <pre>
+     * Performs rolling restart of specified instances for the specified instance group.
+     * Rolling restart does restart of instances respecting all group policies.
+     * </pre>
+     */
+    public void rollingRestart(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRestartRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRollingRestartMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Performs rolling recreate of specified instances for the specified instance group.
+     * Rolling recreate does recreate of instance VMs respecting all group policies.
+     * </pre>
+     */
+    public void rollingRecreate(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRecreateRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRollingRecreateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Starts the specified instance group.
      * </pre>
      */
@@ -906,6 +990,20 @@ public final class InstanceGroupServiceGrpc {
                 yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.StopInstanceGroupRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_STOP)))
+          .addMethod(
+            getRollingRestartMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRestartRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_ROLLING_RESTART)))
+          .addMethod(
+            getRollingRecreateMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRecreateRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_ROLLING_RECREATE)))
           .addMethod(
             getStartMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1091,6 +1189,30 @@ public final class InstanceGroupServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getStopMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Performs rolling restart of specified instances for the specified instance group.
+     * Rolling restart does restart of instances respecting all group policies.
+     * </pre>
+     */
+    public void rollingRestart(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRestartRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRollingRestartMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Performs rolling recreate of specified instances for the specified instance group.
+     * Rolling recreate does recreate of instance VMs respecting all group policies.
+     * </pre>
+     */
+    public void rollingRecreate(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRecreateRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRollingRecreateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1322,6 +1444,28 @@ public final class InstanceGroupServiceGrpc {
 
     /**
      * <pre>
+     * Performs rolling restart of specified instances for the specified instance group.
+     * Rolling restart does restart of instances respecting all group policies.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation rollingRestart(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRestartRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRollingRestartMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Performs rolling recreate of specified instances for the specified instance group.
+     * Rolling recreate does recreate of instance VMs respecting all group policies.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation rollingRecreate(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRecreateRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRollingRecreateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Starts the specified instance group.
      * </pre>
      */
@@ -1544,6 +1688,30 @@ public final class InstanceGroupServiceGrpc {
 
     /**
      * <pre>
+     * Performs rolling restart of specified instances for the specified instance group.
+     * Rolling restart does restart of instances respecting all group policies.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> rollingRestart(
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRestartRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRollingRestartMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Performs rolling recreate of specified instances for the specified instance group.
+     * Rolling recreate does recreate of instance VMs respecting all group policies.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> rollingRecreate(
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRecreateRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRollingRecreateMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Starts the specified instance group.
      * </pre>
      */
@@ -1684,18 +1852,20 @@ public final class InstanceGroupServiceGrpc {
   private static final int METHODID_UPDATE = 4;
   private static final int METHODID_UPDATE_FROM_YAML = 5;
   private static final int METHODID_STOP = 6;
-  private static final int METHODID_START = 7;
-  private static final int METHODID_DELETE = 8;
-  private static final int METHODID_LIST_INSTANCES = 9;
-  private static final int METHODID_DELETE_INSTANCES = 10;
-  private static final int METHODID_STOP_INSTANCES = 11;
-  private static final int METHODID_LIST_OPERATIONS = 12;
-  private static final int METHODID_LIST_LOG_RECORDS = 13;
-  private static final int METHODID_LIST_ACCESS_BINDINGS = 14;
-  private static final int METHODID_SET_ACCESS_BINDINGS = 15;
-  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 16;
-  private static final int METHODID_RESUME_PROCESSES = 17;
-  private static final int METHODID_PAUSE_PROCESSES = 18;
+  private static final int METHODID_ROLLING_RESTART = 7;
+  private static final int METHODID_ROLLING_RECREATE = 8;
+  private static final int METHODID_START = 9;
+  private static final int METHODID_DELETE = 10;
+  private static final int METHODID_LIST_INSTANCES = 11;
+  private static final int METHODID_DELETE_INSTANCES = 12;
+  private static final int METHODID_STOP_INSTANCES = 13;
+  private static final int METHODID_LIST_OPERATIONS = 14;
+  private static final int METHODID_LIST_LOG_RECORDS = 15;
+  private static final int METHODID_LIST_ACCESS_BINDINGS = 16;
+  private static final int METHODID_SET_ACCESS_BINDINGS = 17;
+  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 18;
+  private static final int METHODID_RESUME_PROCESSES = 19;
+  private static final int METHODID_PAUSE_PROCESSES = 20;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1740,6 +1910,14 @@ public final class InstanceGroupServiceGrpc {
           break;
         case METHODID_STOP:
           serviceImpl.stop((yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.StopInstanceGroupRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_ROLLING_RESTART:
+          serviceImpl.rollingRestart((yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRestartRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_ROLLING_RECREATE:
+          serviceImpl.rollingRecreate((yandex.cloud.api.compute.v1.instancegroup.InstanceGroupServiceOuterClass.RollingRecreateRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_START:
@@ -1858,6 +2036,8 @@ public final class InstanceGroupServiceGrpc {
               .addMethod(getUpdateMethod())
               .addMethod(getUpdateFromYamlMethod())
               .addMethod(getStopMethod())
+              .addMethod(getRollingRestartMethod())
+              .addMethod(getRollingRecreateMethod())
               .addMethod(getStartMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getListInstancesMethod())

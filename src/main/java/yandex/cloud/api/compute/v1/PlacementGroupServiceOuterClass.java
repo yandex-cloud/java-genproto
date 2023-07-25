@@ -637,7 +637,7 @@ public final class PlacementGroupServiceOuterClass {
      * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
-     * <code>string folder_id = 1;</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
@@ -647,7 +647,7 @@ public final class PlacementGroupServiceOuterClass {
      * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
-     * <code>string folder_id = 1;</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
     com.google.protobuf.ByteString
@@ -661,7 +661,7 @@ public final class PlacementGroupServiceOuterClass {
      * that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
-     * <code>int64 page_size = 2;</code>
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     long getPageSize();
@@ -673,7 +673,7 @@ public final class PlacementGroupServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3;</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
@@ -684,7 +684,7 @@ public final class PlacementGroupServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3;</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
     com.google.protobuf.ByteString
@@ -693,24 +693,58 @@ public final class PlacementGroupServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters resources listed in the response.
-     * Currently you can use filtering only on the [PlacementGroup.name] field.
+     * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+     * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+     * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+     * 3. `&lt;value&gt;` represents a value.
+     * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
      * </pre>
      *
-     * <code>string filter = 4;</code>
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The filter.
      */
     java.lang.String getFilter();
     /**
      * <pre>
      * A filter expression that filters resources listed in the response.
-     * Currently you can use filtering only on the [PlacementGroup.name] field.
+     * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+     * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+     * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+     * 3. `&lt;value&gt;` represents a value.
+     * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
      * </pre>
      *
-     * <code>string filter = 4;</code>
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for filter.
      */
     com.google.protobuf.ByteString
         getFilterBytes();
+
+    /**
+     * <pre>
+     * By which column the listing should be ordered and in which direction,
+     * format is "createdAt desc". "id asc" if omitted.
+     * The default sorting order is ascending
+     * </pre>
+     *
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The orderBy.
+     */
+    java.lang.String getOrderBy();
+    /**
+     * <pre>
+     * By which column the listing should be ordered and in which direction,
+     * format is "createdAt desc". "id asc" if omitted.
+     * The default sorting order is ascending
+     * </pre>
+     *
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for orderBy.
+     */
+    com.google.protobuf.ByteString
+        getOrderByBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.ListPlacementGroupsRequest}
@@ -728,6 +762,7 @@ public final class PlacementGroupServiceOuterClass {
       folderId_ = "";
       pageToken_ = "";
       filter_ = "";
+      orderBy_ = "";
     }
 
     @java.lang.Override
@@ -783,6 +818,12 @@ public final class PlacementGroupServiceOuterClass {
               filter_ = s;
               break;
             }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              orderBy_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -823,7 +864,7 @@ public final class PlacementGroupServiceOuterClass {
      * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
-     * <code>string folder_id = 1;</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     @java.lang.Override
@@ -845,7 +886,7 @@ public final class PlacementGroupServiceOuterClass {
      * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
      * </pre>
      *
-     * <code>string folder_id = 1;</code>
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
     @java.lang.Override
@@ -873,7 +914,7 @@ public final class PlacementGroupServiceOuterClass {
      * that can be used to get the next page of results in subsequent list requests.
      * </pre>
      *
-     * <code>int64 page_size = 2;</code>
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     @java.lang.Override
@@ -890,7 +931,7 @@ public final class PlacementGroupServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3;</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
     @java.lang.Override
@@ -913,7 +954,7 @@ public final class PlacementGroupServiceOuterClass {
      * returned by a previous list request.
      * </pre>
      *
-     * <code>string page_token = 3;</code>
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
     @java.lang.Override
@@ -936,10 +977,15 @@ public final class PlacementGroupServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters resources listed in the response.
-     * Currently you can use filtering only on the [PlacementGroup.name] field.
+     * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+     * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+     * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+     * 3. `&lt;value&gt;` represents a value.
+     * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
      * </pre>
      *
-     * <code>string filter = 4;</code>
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The filter.
      */
     @java.lang.Override
@@ -958,10 +1004,15 @@ public final class PlacementGroupServiceOuterClass {
     /**
      * <pre>
      * A filter expression that filters resources listed in the response.
-     * Currently you can use filtering only on the [PlacementGroup.name] field.
+     * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+     * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+     * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+     * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+     * 3. `&lt;value&gt;` represents a value.
+     * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
      * </pre>
      *
-     * <code>string filter = 4;</code>
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for filter.
      */
     @java.lang.Override
@@ -973,6 +1024,56 @@ public final class PlacementGroupServiceOuterClass {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORDER_BY_FIELD_NUMBER = 5;
+    private volatile java.lang.Object orderBy_;
+    /**
+     * <pre>
+     * By which column the listing should be ordered and in which direction,
+     * format is "createdAt desc". "id asc" if omitted.
+     * The default sorting order is ascending
+     * </pre>
+     *
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The orderBy.
+     */
+    @java.lang.Override
+    public java.lang.String getOrderBy() {
+      java.lang.Object ref = orderBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orderBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * By which column the listing should be ordered and in which direction,
+     * format is "createdAt desc". "id asc" if omitted.
+     * The default sorting order is ascending
+     * </pre>
+     *
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for orderBy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrderByBytes() {
+      java.lang.Object ref = orderBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orderBy_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1005,6 +1106,9 @@ public final class PlacementGroupServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, orderBy_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1026,6 +1130,9 @@ public final class PlacementGroupServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, orderBy_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1050,6 +1157,8 @@ public final class PlacementGroupServiceOuterClass {
           .equals(other.getPageToken())) return false;
       if (!getFilter()
           .equals(other.getFilter())) return false;
+      if (!getOrderBy()
+          .equals(other.getOrderBy())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1070,6 +1179,8 @@ public final class PlacementGroupServiceOuterClass {
       hash = (53 * hash) + getPageToken().hashCode();
       hash = (37 * hash) + FILTER_FIELD_NUMBER;
       hash = (53 * hash) + getFilter().hashCode();
+      hash = (37 * hash) + ORDER_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getOrderBy().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1211,6 +1322,8 @@ public final class PlacementGroupServiceOuterClass {
 
         filter_ = "";
 
+        orderBy_ = "";
+
         return this;
       }
 
@@ -1241,6 +1354,7 @@ public final class PlacementGroupServiceOuterClass {
         result.pageSize_ = pageSize_;
         result.pageToken_ = pageToken_;
         result.filter_ = filter_;
+        result.orderBy_ = orderBy_;
         onBuilt();
         return result;
       }
@@ -1304,6 +1418,10 @@ public final class PlacementGroupServiceOuterClass {
           filter_ = other.filter_;
           onChanged();
         }
+        if (!other.getOrderBy().isEmpty()) {
+          orderBy_ = other.orderBy_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -1340,7 +1458,7 @@ public final class PlacementGroupServiceOuterClass {
        * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1;</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The folderId.
        */
       public java.lang.String getFolderId() {
@@ -1361,7 +1479,7 @@ public final class PlacementGroupServiceOuterClass {
        * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1;</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for folderId.
        */
       public com.google.protobuf.ByteString
@@ -1383,7 +1501,7 @@ public final class PlacementGroupServiceOuterClass {
        * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1;</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
        */
@@ -1403,7 +1521,7 @@ public final class PlacementGroupServiceOuterClass {
        * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1;</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFolderId() {
@@ -1418,7 +1536,7 @@ public final class PlacementGroupServiceOuterClass {
        * To get the folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
        * </pre>
        *
-       * <code>string folder_id = 1;</code>
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
        */
@@ -1443,7 +1561,7 @@ public final class PlacementGroupServiceOuterClass {
        * that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
-       * <code>int64 page_size = 2;</code>
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return The pageSize.
        */
       @java.lang.Override
@@ -1458,7 +1576,7 @@ public final class PlacementGroupServiceOuterClass {
        * that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
-       * <code>int64 page_size = 2;</code>
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
        */
@@ -1476,7 +1594,7 @@ public final class PlacementGroupServiceOuterClass {
        * that can be used to get the next page of results in subsequent list requests.
        * </pre>
        *
-       * <code>int64 page_size = 2;</code>
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageSize() {
@@ -1494,7 +1612,7 @@ public final class PlacementGroupServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3;</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The pageToken.
        */
       public java.lang.String getPageToken() {
@@ -1516,7 +1634,7 @@ public final class PlacementGroupServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3;</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The bytes for pageToken.
        */
       public com.google.protobuf.ByteString
@@ -1539,7 +1657,7 @@ public final class PlacementGroupServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3;</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
        */
@@ -1560,7 +1678,7 @@ public final class PlacementGroupServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3;</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
       public Builder clearPageToken() {
@@ -1576,7 +1694,7 @@ public final class PlacementGroupServiceOuterClass {
        * returned by a previous list request.
        * </pre>
        *
-       * <code>string page_token = 3;</code>
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
        */
@@ -1596,10 +1714,15 @@ public final class PlacementGroupServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [PlacementGroup.name] field.
+       * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
        * </pre>
        *
-       * <code>string filter = 4;</code>
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The filter.
        */
       public java.lang.String getFilter() {
@@ -1617,10 +1740,15 @@ public final class PlacementGroupServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [PlacementGroup.name] field.
+       * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
        * </pre>
        *
-       * <code>string filter = 4;</code>
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The bytes for filter.
        */
       public com.google.protobuf.ByteString
@@ -1639,10 +1767,15 @@ public final class PlacementGroupServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [PlacementGroup.name] field.
+       * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
        * </pre>
        *
-       * <code>string filter = 4;</code>
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The filter to set.
        * @return This builder for chaining.
        */
@@ -1659,10 +1792,15 @@ public final class PlacementGroupServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [PlacementGroup.name] field.
+       * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
        * </pre>
        *
-       * <code>string filter = 4;</code>
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
       public Builder clearFilter() {
@@ -1674,10 +1812,15 @@ public final class PlacementGroupServiceOuterClass {
       /**
        * <pre>
        * A filter expression that filters resources listed in the response.
-       * Currently you can use filtering only on the [PlacementGroup.name] field.
+       * The expression consists of one or more conditions united by `AND` operator: `&lt;condition1&gt; [AND &lt;condition2&gt; [&lt;...&gt; AND &lt;conditionN&gt;]]`.
+       * Each condition has the form `&lt;field&gt; &lt;operator&gt; &lt;value&gt;`, where:
+       * 1. `&lt;field&gt;` is the field name. Currently you can use filtering only on the limited number of fields.
+       * 2. `&lt;operator&gt;` is a logical operator, one of `=`, `!=`, `IN`, `NOT IN`.
+       * 3. `&lt;value&gt;` represents a value.
+       * String values should be written in double (`"`) or single (`'`) quotes. C-style escape sequences are supported (`&#92;"` turns to `"`, `&#92;'` to `'`, `&#92;&#92;` to backslash).
        * </pre>
        *
-       * <code>string filter = 4;</code>
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The bytes for filter to set.
        * @return This builder for chaining.
        */
@@ -1689,6 +1832,112 @@ public final class PlacementGroupServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         filter_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object orderBy_ = "";
+      /**
+       * <pre>
+       * By which column the listing should be ordered and in which direction,
+       * format is "createdAt desc". "id asc" if omitted.
+       * The default sorting order is ascending
+       * </pre>
+       *
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The orderBy.
+       */
+      public java.lang.String getOrderBy() {
+        java.lang.Object ref = orderBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          orderBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * By which column the listing should be ordered and in which direction,
+       * format is "createdAt desc". "id asc" if omitted.
+       * The default sorting order is ascending
+       * </pre>
+       *
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for orderBy.
+       */
+      public com.google.protobuf.ByteString
+          getOrderByBytes() {
+        java.lang.Object ref = orderBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          orderBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * By which column the listing should be ordered and in which direction,
+       * format is "createdAt desc". "id asc" if omitted.
+       * The default sorting order is ascending
+       * </pre>
+       *
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The orderBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderBy(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        orderBy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * By which column the listing should be ordered and in which direction,
+       * format is "createdAt desc". "id asc" if omitted.
+       * The default sorting order is ascending
+       * </pre>
+       *
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrderBy() {
+        
+        orderBy_ = getDefaultInstance().getOrderBy();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * By which column the listing should be ordered and in which direction,
+       * format is "createdAt desc". "id asc" if omitted.
+       * The default sorting order is ascending
+       * </pre>
+       *
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for orderBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        orderBy_ = value;
         onChanged();
         return this;
       }
@@ -13079,85 +13328,87 @@ public final class PlacementGroupServiceOuterClass {
       "/v1/placement_group.proto\032&yandex/cloud/" +
       "operation/operation.proto\032\035yandex/cloud/" +
       "validation.proto\"6\n\030GetPlacementGroupReq" +
-      "uest\022\032\n\022placement_group_id\030\001 \001(\t\"f\n\032List" +
-      "PlacementGroupsRequest\022\021\n\tfolder_id\030\001 \001(" +
-      "\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t" +
-      "\022\016\n\006filter\030\004 \001(\t\"y\n\033ListPlacementGroupsR" +
-      "esponse\022A\n\020placement_groups\030\001 \003(\0132\'.yand" +
-      "ex.cloud.compute.v1.PlacementGroup\022\027\n\017ne" +
-      "xt_page_token\030\002 \001(\t\"\244\003\n\033CreatePlacementG" +
-      "roupRequest\022\021\n\tfolder_id\030\001 \001(\t\022\014\n\004name\030\002" +
-      " \001(\t\022\023\n\013description\030\003 \001(\t\022P\n\006labels\030\004 \003(" +
-      "\0132@.yandex.cloud.compute.v1.CreatePlacem" +
-      "entGroupRequest.LabelsEntry\022U\n\031spread_pl" +
-      "acement_strategy\030\005 \001(\01320.yandex.cloud.co" +
-      "mpute.v1.SpreadPlacementStrategyH\000\022[\n\034pa" +
-      "rtition_placement_strategy\030\006 \001(\01323.yande" +
-      "x.cloud.compute.v1.PartitionPlacementStr" +
-      "ategyH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001B\032\n\022placement_strategy\022\004\300\301" +
-      "1\001\":\n\034CreatePlacementGroupMetadata\022\032\n\022pl" +
-      "acement_group_id\030\001 \001(\t\"\216\002\n\033UpdatePlaceme" +
-      "ntGroupRequest\022\032\n\022placement_group_id\030\001 \001" +
-      "(\t\022/\n\013update_mask\030\002 \001(\0132\032.google.protobu" +
-      "f.FieldMask\022\014\n\004name\030\003 \001(\t\022\023\n\013description" +
-      "\030\004 \001(\t\022P\n\006labels\030\005 \003(\0132@.yandex.cloud.co" +
-      "mpute.v1.UpdatePlacementGroupRequest.Lab" +
-      "elsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
-      "value\030\002 \001(\t:\0028\001\":\n\034UpdatePlacementGroupM" +
-      "etadata\022\032\n\022placement_group_id\030\001 \001(\t\"9\n\033D" +
-      "eletePlacementGroupRequest\022\032\n\022placement_" +
-      "group_id\030\001 \001(\t\":\n\034DeletePlacementGroupMe" +
-      "tadata\022\032\n\022placement_group_id\030\001 \001(\t\"g\n\"Li" +
-      "stPlacementGroupInstancesRequest\022\032\n\022plac" +
-      "ement_group_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022" +
-      "\022\n\npage_token\030\003 \001(\t\"t\n#ListPlacementGrou" +
-      "pInstancesResponse\0224\n\tinstances\030\001 \003(\0132!." +
-      "yandex.cloud.compute.v1.Instance\022\027\n\017next" +
-      "_page_token\030\002 \001(\t\"h\n#ListPlacementGroupO" +
-      "perationsRequest\022\032\n\022placement_group_id\030\001" +
-      " \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_token\030\003 " +
-      "\001(\t\"v\n$ListPlacementGroupOperationsRespo" +
-      "nse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.o" +
-      "peration.Operation\022\027\n\017next_page_token\030\002 " +
-      "\001(\t2\334\n\n\025PlacementGroupService\022\233\001\n\003Get\0221." +
-      "yandex.cloud.compute.v1.GetPlacementGrou" +
-      "pRequest\032\'.yandex.cloud.compute.v1.Place" +
-      "mentGroup\"8\202\323\344\223\0022\0220/compute/v1/placement" +
-      "Groups/{placement_group_id}\022\226\001\n\004List\0223.y" +
-      "andex.cloud.compute.v1.ListPlacementGrou" +
-      "psRequest\0324.yandex.cloud.compute.v1.List" +
-      "PlacementGroupsResponse\"#\202\323\344\223\002\035\022\033/comput" +
-      "e/v1/placementGroups\022\273\001\n\006Create\0224.yandex" +
-      ".cloud.compute.v1.CreatePlacementGroupRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"X\202\323\344\223\002 \"\033/compute/v1/placementGroups:\001*" +
-      "\262\322*.\n\034CreatePlacementGroupMetadata\022\016Plac" +
-      "ementGroup\022\320\001\n\006Update\0224.yandex.cloud.com" +
-      "pute.v1.UpdatePlacementGroupRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"m\202\323\344\223\002520" +
-      "/compute/v1/placementGroups/{placement_g" +
-      "roup_id}:\001*\262\322*.\n\034UpdatePlacementGroupMet" +
-      "adata\022\016PlacementGroup\022\324\001\n\006Delete\0224.yande" +
-      "x.cloud.compute.v1.DeletePlacementGroupR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"q\202\323\344\223\0022*0/compute/v1/placementGroups/{" +
-      "placement_group_id}\262\322*5\n\034DeletePlacement" +
-      "GroupMetadata\022\025google.protobuf.Empty\022\316\001\n" +
-      "\rListInstances\022;.yandex.cloud.compute.v1" +
-      ".ListPlacementGroupInstancesRequest\032<.ya" +
+      "uest\022\032\n\022placement_group_id\030\001 \001(\t\"\264\001\n\032Lis" +
+      "tPlacementGroupsRequest\022\037\n\tfolder_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
+      "\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032" +
+      "\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\022\033\n\010order_by\030\005" +
+      " \001(\tB\t\212\3101\005<=100\"y\n\033ListPlacementGroupsRe" +
+      "sponse\022A\n\020placement_groups\030\001 \003(\0132\'.yande" +
+      "x.cloud.compute.v1.PlacementGroup\022\027\n\017nex" +
+      "t_page_token\030\002 \001(\t\"\244\003\n\033CreatePlacementGr" +
+      "oupRequest\022\021\n\tfolder_id\030\001 \001(\t\022\014\n\004name\030\002 " +
+      "\001(\t\022\023\n\013description\030\003 \001(\t\022P\n\006labels\030\004 \003(\013" +
+      "2@.yandex.cloud.compute.v1.CreatePlaceme" +
+      "ntGroupRequest.LabelsEntry\022U\n\031spread_pla" +
+      "cement_strategy\030\005 \001(\01320.yandex.cloud.com" +
+      "pute.v1.SpreadPlacementStrategyH\000\022[\n\034par" +
+      "tition_placement_strategy\030\006 \001(\01323.yandex" +
+      ".cloud.compute.v1.PartitionPlacementStra" +
+      "tegyH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "lue\030\002 \001(\t:\0028\001B\032\n\022placement_strategy\022\004\300\3011" +
+      "\001\":\n\034CreatePlacementGroupMetadata\022\032\n\022pla" +
+      "cement_group_id\030\001 \001(\t\"\216\002\n\033UpdatePlacemen" +
+      "tGroupRequest\022\032\n\022placement_group_id\030\001 \001(" +
+      "\t\022/\n\013update_mask\030\002 \001(\0132\032.google.protobuf" +
+      ".FieldMask\022\014\n\004name\030\003 \001(\t\022\023\n\013description\030" +
+      "\004 \001(\t\022P\n\006labels\030\005 \003(\0132@.yandex.cloud.com" +
+      "pute.v1.UpdatePlacementGroupRequest.Labe" +
+      "lsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\":\n\034UpdatePlacementGroupMe" +
+      "tadata\022\032\n\022placement_group_id\030\001 \001(\t\"9\n\033De" +
+      "letePlacementGroupRequest\022\032\n\022placement_g" +
+      "roup_id\030\001 \001(\t\":\n\034DeletePlacementGroupMet" +
+      "adata\022\032\n\022placement_group_id\030\001 \001(\t\"g\n\"Lis" +
+      "tPlacementGroupInstancesRequest\022\032\n\022place" +
+      "ment_group_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022" +
+      "\n\npage_token\030\003 \001(\t\"t\n#ListPlacementGroup" +
+      "InstancesResponse\0224\n\tinstances\030\001 \003(\0132!.y" +
+      "andex.cloud.compute.v1.Instance\022\027\n\017next_" +
+      "page_token\030\002 \001(\t\"h\n#ListPlacementGroupOp" +
+      "erationsRequest\022\032\n\022placement_group_id\030\001 " +
+      "\001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001" +
+      "(\t\"v\n$ListPlacementGroupOperationsRespon" +
+      "se\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.op" +
+      "eration.Operation\022\027\n\017next_page_token\030\002 \001" +
+      "(\t2\334\n\n\025PlacementGroupService\022\233\001\n\003Get\0221.y" +
+      "andex.cloud.compute.v1.GetPlacementGroup" +
+      "Request\032\'.yandex.cloud.compute.v1.Placem" +
+      "entGroup\"8\202\323\344\223\0022\0220/compute/v1/placementG" +
+      "roups/{placement_group_id}\022\226\001\n\004List\0223.ya" +
       "ndex.cloud.compute.v1.ListPlacementGroup" +
-      "InstancesResponse\"B\202\323\344\223\002<\022:/compute/v1/p" +
-      "lacementGroups/{placement_group_id}/inst" +
-      "ances\022\322\001\n\016ListOperations\022<.yandex.cloud." +
-      "compute.v1.ListPlacementGroupOperationsR" +
-      "equest\032=.yandex.cloud.compute.v1.ListPla" +
-      "cementGroupOperationsResponse\"C\202\323\344\223\002=\022;/" +
+      "sRequest\0324.yandex.cloud.compute.v1.ListP" +
+      "lacementGroupsResponse\"#\202\323\344\223\002\035\022\033/compute" +
+      "/v1/placementGroups\022\273\001\n\006Create\0224.yandex." +
+      "cloud.compute.v1.CreatePlacementGroupReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "X\202\323\344\223\002 \"\033/compute/v1/placementGroups:\001*\262" +
+      "\322*.\n\034CreatePlacementGroupMetadata\022\016Place" +
+      "mentGroup\022\320\001\n\006Update\0224.yandex.cloud.comp" +
+      "ute.v1.UpdatePlacementGroupRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"m\202\323\344\223\002520/" +
       "compute/v1/placementGroups/{placement_gr" +
-      "oup_id}/operationsBb\n\033yandex.cloud.api.c" +
-      "ompute.v1ZCgithub.com/yandex-cloud/go-ge" +
-      "nproto/yandex/cloud/compute/v1;computeb\006" +
-      "proto3"
+      "oup_id}:\001*\262\322*.\n\034UpdatePlacementGroupMeta" +
+      "data\022\016PlacementGroup\022\324\001\n\006Delete\0224.yandex" +
+      ".cloud.compute.v1.DeletePlacementGroupRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"q\202\323\344\223\0022*0/compute/v1/placementGroups/{p" +
+      "lacement_group_id}\262\322*5\n\034DeletePlacementG" +
+      "roupMetadata\022\025google.protobuf.Empty\022\316\001\n\r" +
+      "ListInstances\022;.yandex.cloud.compute.v1." +
+      "ListPlacementGroupInstancesRequest\032<.yan" +
+      "dex.cloud.compute.v1.ListPlacementGroupI" +
+      "nstancesResponse\"B\202\323\344\223\002<\022:/compute/v1/pl" +
+      "acementGroups/{placement_group_id}/insta" +
+      "nces\022\322\001\n\016ListOperations\022<.yandex.cloud.c" +
+      "ompute.v1.ListPlacementGroupOperationsRe" +
+      "quest\032=.yandex.cloud.compute.v1.ListPlac" +
+      "ementGroupOperationsResponse\"C\202\323\344\223\002=\022;/c" +
+      "ompute/v1/placementGroups/{placement_gro" +
+      "up_id}/operationsBb\n\033yandex.cloud.api.co" +
+      "mpute.v1ZCgithub.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/compute/v1;computeb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13181,7 +13432,7 @@ public final class PlacementGroupServiceOuterClass {
     internal_static_yandex_cloud_compute_v1_ListPlacementGroupsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_ListPlacementGroupsRequest_descriptor,
-        new java.lang.String[] { "FolderId", "PageSize", "PageToken", "Filter", });
+        new java.lang.String[] { "FolderId", "PageSize", "PageToken", "Filter", "OrderBy", });
     internal_static_yandex_cloud_compute_v1_ListPlacementGroupsResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_compute_v1_ListPlacementGroupsResponse_fieldAccessorTable = new
@@ -13265,6 +13516,9 @@ public final class PlacementGroupServiceOuterClass {
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.exactlyOne);
+    registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
