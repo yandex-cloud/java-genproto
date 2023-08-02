@@ -627,6 +627,18 @@ public final class InstanceServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getFilterBytes();
+
+    /**
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The orderBy.
+     */
+    java.lang.String getOrderBy();
+    /**
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for orderBy.
+     */
+    com.google.protobuf.ByteString
+        getOrderByBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.marketplace.licensemanager.v1.ListInstancesRequest}
@@ -644,6 +656,7 @@ public final class InstanceServiceOuterClass {
       folderId_ = "";
       pageToken_ = "";
       filter_ = "";
+      orderBy_ = "";
     }
 
     @java.lang.Override
@@ -697,6 +710,12 @@ public final class InstanceServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               filter_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              orderBy_ = s;
               break;
             }
             default: {
@@ -856,6 +875,44 @@ public final class InstanceServiceOuterClass {
       }
     }
 
+    public static final int ORDER_BY_FIELD_NUMBER = 5;
+    private volatile java.lang.Object orderBy_;
+    /**
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The orderBy.
+     */
+    @java.lang.Override
+    public java.lang.String getOrderBy() {
+      java.lang.Object ref = orderBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orderBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for orderBy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrderByBytes() {
+      java.lang.Object ref = orderBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orderBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -882,6 +939,9 @@ public final class InstanceServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, orderBy_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -903,6 +963,9 @@ public final class InstanceServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, orderBy_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -927,6 +990,8 @@ public final class InstanceServiceOuterClass {
           .equals(other.getPageToken())) return false;
       if (!getFilter()
           .equals(other.getFilter())) return false;
+      if (!getOrderBy()
+          .equals(other.getOrderBy())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -947,6 +1012,8 @@ public final class InstanceServiceOuterClass {
       hash = (53 * hash) + getPageToken().hashCode();
       hash = (37 * hash) + FILTER_FIELD_NUMBER;
       hash = (53 * hash) + getFilter().hashCode();
+      hash = (37 * hash) + ORDER_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getOrderBy().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1088,6 +1155,8 @@ public final class InstanceServiceOuterClass {
 
         filter_ = "";
 
+        orderBy_ = "";
+
         return this;
       }
 
@@ -1118,6 +1187,7 @@ public final class InstanceServiceOuterClass {
         result.pageSize_ = pageSize_;
         result.pageToken_ = pageToken_;
         result.filter_ = filter_;
+        result.orderBy_ = orderBy_;
         onBuilt();
         return result;
       }
@@ -1179,6 +1249,10 @@ public final class InstanceServiceOuterClass {
         }
         if (!other.getFilter().isEmpty()) {
           filter_ = other.filter_;
+          onChanged();
+        }
+        if (!other.getOrderBy().isEmpty()) {
+          orderBy_ = other.orderBy_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1465,6 +1539,82 @@ public final class InstanceServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         filter_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object orderBy_ = "";
+      /**
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The orderBy.
+       */
+      public java.lang.String getOrderBy() {
+        java.lang.Object ref = orderBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          orderBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for orderBy.
+       */
+      public com.google.protobuf.ByteString
+          getOrderByBytes() {
+        java.lang.Object ref = orderBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          orderBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The orderBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderBy(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        orderBy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrderBy() {
+        
+        orderBy_ = getDefaultInstance().getOrderBy();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for orderBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        orderBy_ = value;
         onChanged();
         return this;
       }
@@ -2495,27 +2645,28 @@ public final class InstanceServiceOuterClass {
       "etplace/licensemanager/v1/instance.proto" +
       "\032\035yandex/cloud/validation.proto\"/\n\022GetIn" +
       "stanceRequest\022\031\n\013instance_id\030\001 \001(\tB\004\350\3071\001" +
-      "\"\211\001\n\024ListInstancesRequest\022\027\n\tfolder_id\030\001" +
+      "\"\246\001\n\024ListInstancesRequest\022\027\n\tfolder_id\030\001" +
       " \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-100" +
       "0\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filt" +
-      "er\030\004 \001(\tB\n\212\3101\006<=1000\"y\n\025ListInstancesRes" +
-      "ponse\022G\n\tinstances\030\001 \003(\01324.yandex.cloud." +
-      "marketplace.licensemanager.v1.Instance\022\027" +
-      "\n\017next_page_token\030\002 \001(\t2\221\003\n\017InstanceServ" +
-      "ice\022\274\001\n\003Get\022>.yandex.cloud.marketplace.l" +
-      "icensemanager.v1.GetInstanceRequest\0324.ya" +
-      "ndex.cloud.marketplace.licensemanager.v1" +
-      ".Instance\"?\202\323\344\223\0029\0227/marketplace/license-" +
-      "manager/v1/instances/{instance_id}\022\276\001\n\004L" +
-      "ist\022@.yandex.cloud.marketplace.licensema" +
-      "nager.v1.ListInstancesRequest\032A.yandex.c" +
-      "loud.marketplace.licensemanager.v1.ListI" +
-      "nstancesResponse\"1\202\323\344\223\002+\022)/marketplace/l" +
-      "icense-manager/v1/instancesB\217\001\n.yandex.c" +
-      "loud.api.marketplace.licensemanager.v1Z]" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/marketplace/licensemanager/v1;l" +
-      "icensemanagerb\006proto3"
+      "er\030\004 \001(\tB\n\212\3101\006<=1000\022\033\n\010order_by\030\005 \001(\tB\t" +
+      "\212\3101\005<=100\"y\n\025ListInstancesResponse\022G\n\tin" +
+      "stances\030\001 \003(\01324.yandex.cloud.marketplace" +
+      ".licensemanager.v1.Instance\022\027\n\017next_page" +
+      "_token\030\002 \001(\t2\221\003\n\017InstanceService\022\274\001\n\003Get" +
+      "\022>.yandex.cloud.marketplace.licensemanag" +
+      "er.v1.GetInstanceRequest\0324.yandex.cloud." +
+      "marketplace.licensemanager.v1.Instance\"?" +
+      "\202\323\344\223\0029\0227/marketplace/license-manager/v1/" +
+      "instances/{instance_id}\022\276\001\n\004List\022@.yande" +
+      "x.cloud.marketplace.licensemanager.v1.Li" +
+      "stInstancesRequest\032A.yandex.cloud.market" +
+      "place.licensemanager.v1.ListInstancesRes" +
+      "ponse\"1\202\323\344\223\002+\022)/marketplace/license-mana" +
+      "ger/v1/instancesB\217\001\n.yandex.cloud.api.ma" +
+      "rketplace.licensemanager.v1Z]github.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/ma" +
+      "rketplace/licensemanager/v1;licensemanag" +
+      "erb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2535,7 +2686,7 @@ public final class InstanceServiceOuterClass {
     internal_static_yandex_cloud_marketplace_licensemanager_v1_ListInstancesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_marketplace_licensemanager_v1_ListInstancesRequest_descriptor,
-        new java.lang.String[] { "FolderId", "PageSize", "PageToken", "Filter", });
+        new java.lang.String[] { "FolderId", "PageSize", "PageToken", "Filter", "OrderBy", });
     internal_static_yandex_cloud_marketplace_licensemanager_v1_ListInstancesResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_marketplace_licensemanager_v1_ListInstancesResponse_fieldAccessorTable = new
