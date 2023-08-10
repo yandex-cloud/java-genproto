@@ -7961,7 +7961,7 @@ public final class FunctionOuterClass {
 
     /**
      * <pre>
-     * Amount of memory available to the version, specified in bytes.
+     * Amount of memory available to the version, specified in bytes, multiple of 128MB.
      * </pre>
      *
      * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
@@ -8059,7 +8059,7 @@ public final class FunctionOuterClass {
     private long memory_;
     /**
      * <pre>
-     * Amount of memory available to the version, specified in bytes.
+     * Amount of memory available to the version, specified in bytes, multiple of 128MB.
      * </pre>
      *
      * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
@@ -8380,7 +8380,7 @@ public final class FunctionOuterClass {
       private long memory_ ;
       /**
        * <pre>
-       * Amount of memory available to the version, specified in bytes.
+       * Amount of memory available to the version, specified in bytes, multiple of 128MB.
        * </pre>
        *
        * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
@@ -8392,7 +8392,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Amount of memory available to the version, specified in bytes.
+       * Amount of memory available to the version, specified in bytes, multiple of 128MB.
        * </pre>
        *
        * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
@@ -8407,7 +8407,7 @@ public final class FunctionOuterClass {
       }
       /**
        * <pre>
-       * Amount of memory available to the version, specified in bytes.
+       * Amount of memory available to the version, specified in bytes, multiple of 128MB.
        * </pre>
        *
        * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>

@@ -10390,7 +10390,7 @@ public final class ContainerOuterClass {
 
     /**
      * <pre>
-     * Amount of memory available to the revision, specified in bytes.
+     * Amount of memory available to the revision, specified in bytes, multiple of 128MB.
      * </pre>
      *
      * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
@@ -10403,14 +10403,15 @@ public final class ContainerOuterClass {
      * Number of cores available to the revision.
      * </pre>
      *
-     * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-1"];</code>
+     * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-2"];</code>
      * @return The cores.
      */
     long getCores();
 
     /**
      * <pre>
-     * Specifies baseline performance for a core in percent.
+     * Specifies baseline performance for a core in percent, multiple of 5%.
+     * Should be 100% for cores &gt; 1.
      * </pre>
      *
      * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0-100"];</code>
@@ -10518,7 +10519,7 @@ public final class ContainerOuterClass {
     private long memory_;
     /**
      * <pre>
-     * Amount of memory available to the revision, specified in bytes.
+     * Amount of memory available to the revision, specified in bytes, multiple of 128MB.
      * </pre>
      *
      * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
@@ -10536,7 +10537,7 @@ public final class ContainerOuterClass {
      * Number of cores available to the revision.
      * </pre>
      *
-     * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-1"];</code>
+     * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-2"];</code>
      * @return The cores.
      */
     @java.lang.Override
@@ -10548,7 +10549,8 @@ public final class ContainerOuterClass {
     private long coreFraction_;
     /**
      * <pre>
-     * Specifies baseline performance for a core in percent.
+     * Specifies baseline performance for a core in percent, multiple of 5%.
+     * Should be 100% for cores &gt; 1.
      * </pre>
      *
      * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0-100"];</code>
@@ -10905,7 +10907,7 @@ public final class ContainerOuterClass {
       private long memory_ ;
       /**
        * <pre>
-       * Amount of memory available to the revision, specified in bytes.
+       * Amount of memory available to the revision, specified in bytes, multiple of 128MB.
        * </pre>
        *
        * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
@@ -10917,7 +10919,7 @@ public final class ContainerOuterClass {
       }
       /**
        * <pre>
-       * Amount of memory available to the revision, specified in bytes.
+       * Amount of memory available to the revision, specified in bytes, multiple of 128MB.
        * </pre>
        *
        * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
@@ -10932,7 +10934,7 @@ public final class ContainerOuterClass {
       }
       /**
        * <pre>
-       * Amount of memory available to the revision, specified in bytes.
+       * Amount of memory available to the revision, specified in bytes, multiple of 128MB.
        * </pre>
        *
        * <code>int64 memory = 1 [(.yandex.cloud.value) = "134217728-4294967296"];</code>
@@ -10951,7 +10953,7 @@ public final class ContainerOuterClass {
        * Number of cores available to the revision.
        * </pre>
        *
-       * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-1"];</code>
+       * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-2"];</code>
        * @return The cores.
        */
       @java.lang.Override
@@ -10963,7 +10965,7 @@ public final class ContainerOuterClass {
        * Number of cores available to the revision.
        * </pre>
        *
-       * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-1"];</code>
+       * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-2"];</code>
        * @param value The cores to set.
        * @return This builder for chaining.
        */
@@ -10978,7 +10980,7 @@ public final class ContainerOuterClass {
        * Number of cores available to the revision.
        * </pre>
        *
-       * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-1"];</code>
+       * <code>int64 cores = 2 [(.yandex.cloud.value) = "0-2"];</code>
        * @return This builder for chaining.
        */
       public Builder clearCores() {
@@ -10991,7 +10993,8 @@ public final class ContainerOuterClass {
       private long coreFraction_ ;
       /**
        * <pre>
-       * Specifies baseline performance for a core in percent.
+       * Specifies baseline performance for a core in percent, multiple of 5%.
+       * Should be 100% for cores &gt; 1.
        * </pre>
        *
        * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0-100"];</code>
@@ -11003,7 +11006,8 @@ public final class ContainerOuterClass {
       }
       /**
        * <pre>
-       * Specifies baseline performance for a core in percent.
+       * Specifies baseline performance for a core in percent, multiple of 5%.
+       * Should be 100% for cores &gt; 1.
        * </pre>
        *
        * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0-100"];</code>
@@ -11018,7 +11022,8 @@ public final class ContainerOuterClass {
       }
       /**
        * <pre>
-       * Specifies baseline performance for a core in percent.
+       * Specifies baseline performance for a core in percent, multiple of 5%.
+       * Should be 100% for cores &gt; 1.
        * </pre>
        *
        * <code>int64 core_fraction = 3 [(.yandex.cloud.value) = "0-100"];</code>
@@ -16844,7 +16849,7 @@ public final class ContainerOuterClass {
       "\002 \001(\t:\0028\001\"\032\n\007Command\022\017\n\007command\030\001 \003(\t\"\024\n" +
       "\004Args\022\014\n\004args\030\001 \003(\t\"o\n\tResources\022(\n\006memo" +
       "ry\030\001 \001(\003B\030\372\3071\024134217728-4294967296\022\026\n\005co" +
-      "res\030\002 \001(\003B\007\372\3071\0030-1\022 \n\rcore_fraction\030\003 \001(" +
+      "res\030\002 \001(\003B\007\372\3071\0030-2\022 \n\rcore_fraction\030\003 \001(" +
       "\003B\t\372\3071\0050-100\"(\n\017ProvisionPolicy\022\025\n\rmin_i" +
       "nstances\030\001 \001(\003\"b\n\006Secret\022\n\n\002id\030\001 \001(\t\022\022\n\n" +
       "version_id\030\002 \001(\t\022\013\n\003key\030\003 \001(\t\022\036\n\024environ" +

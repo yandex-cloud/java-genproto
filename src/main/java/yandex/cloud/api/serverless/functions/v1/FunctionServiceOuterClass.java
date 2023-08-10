@@ -9793,6 +9793,1310 @@ public final class FunctionServiceOuterClass {
 
   }
 
+  public interface DeleteFunctionVersionRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.functions.v1.DeleteFunctionVersionRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the function's version to delete.
+     * </pre>
+     *
+     * <code>string function_version_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The functionVersionId.
+     */
+    java.lang.String getFunctionVersionId();
+    /**
+     * <pre>
+     * ID of the function's version to delete.
+     * </pre>
+     *
+     * <code>string function_version_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionVersionId.
+     */
+    com.google.protobuf.ByteString
+        getFunctionVersionIdBytes();
+
+    /**
+     * <pre>
+     * Forces deletion of the version tags.
+     * If the value equals false and the function has tags with the selected version then request returns an error.
+     * </pre>
+     *
+     * <code>bool force = 3;</code>
+     * @return The force.
+     */
+    boolean getForce();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.functions.v1.DeleteFunctionVersionRequest}
+   */
+  public static final class DeleteFunctionVersionRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.DeleteFunctionVersionRequest)
+      DeleteFunctionVersionRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteFunctionVersionRequest.newBuilder() to construct.
+    private DeleteFunctionVersionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteFunctionVersionRequest() {
+      functionVersionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteFunctionVersionRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteFunctionVersionRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              functionVersionId_ = s;
+              break;
+            }
+            case 24: {
+
+              force_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.internal_static_yandex_cloud_serverless_functions_v1_DeleteFunctionVersionRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.internal_static_yandex_cloud_serverless_functions_v1_DeleteFunctionVersionRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest.class, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest.Builder.class);
+    }
+
+    public static final int FUNCTION_VERSION_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object functionVersionId_;
+    /**
+     * <pre>
+     * ID of the function's version to delete.
+     * </pre>
+     *
+     * <code>string function_version_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The functionVersionId.
+     */
+    @java.lang.Override
+    public java.lang.String getFunctionVersionId() {
+      java.lang.Object ref = functionVersionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        functionVersionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the function's version to delete.
+     * </pre>
+     *
+     * <code>string function_version_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for functionVersionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFunctionVersionIdBytes() {
+      java.lang.Object ref = functionVersionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        functionVersionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FORCE_FIELD_NUMBER = 3;
+    private boolean force_;
+    /**
+     * <pre>
+     * Forces deletion of the version tags.
+     * If the value equals false and the function has tags with the selected version then request returns an error.
+     * </pre>
+     *
+     * <code>bool force = 3;</code>
+     * @return The force.
+     */
+    @java.lang.Override
+    public boolean getForce() {
+      return force_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionVersionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, functionVersionId_);
+      }
+      if (force_ != false) {
+        output.writeBool(3, force_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionVersionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, functionVersionId_);
+      }
+      if (force_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, force_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest) obj;
+
+      if (!getFunctionVersionId()
+          .equals(other.getFunctionVersionId())) return false;
+      if (getForce()
+          != other.getForce()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FUNCTION_VERSION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFunctionVersionId().hashCode();
+      hash = (37 * hash) + FORCE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getForce());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.functions.v1.DeleteFunctionVersionRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.functions.v1.DeleteFunctionVersionRequest)
+        yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.internal_static_yandex_cloud_serverless_functions_v1_DeleteFunctionVersionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.internal_static_yandex_cloud_serverless_functions_v1_DeleteFunctionVersionRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest.class, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        functionVersionId_ = "";
+
+        force_ = false;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.internal_static_yandex_cloud_serverless_functions_v1_DeleteFunctionVersionRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest build() {
+        yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest buildPartial() {
+        yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest result = new yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest(this);
+        result.functionVersionId_ = functionVersionId_;
+        result.force_ = force_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest) {
+          return mergeFrom((yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest other) {
+        if (other == yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest.getDefaultInstance()) return this;
+        if (!other.getFunctionVersionId().isEmpty()) {
+          functionVersionId_ = other.functionVersionId_;
+          onChanged();
+        }
+        if (other.getForce() != false) {
+          setForce(other.getForce());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object functionVersionId_ = "";
+      /**
+       * <pre>
+       * ID of the function's version to delete.
+       * </pre>
+       *
+       * <code>string function_version_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The functionVersionId.
+       */
+      public java.lang.String getFunctionVersionId() {
+        java.lang.Object ref = functionVersionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          functionVersionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the function's version to delete.
+       * </pre>
+       *
+       * <code>string function_version_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for functionVersionId.
+       */
+      public com.google.protobuf.ByteString
+          getFunctionVersionIdBytes() {
+        java.lang.Object ref = functionVersionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          functionVersionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the function's version to delete.
+       * </pre>
+       *
+       * <code>string function_version_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The functionVersionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFunctionVersionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        functionVersionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the function's version to delete.
+       * </pre>
+       *
+       * <code>string function_version_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFunctionVersionId() {
+        
+        functionVersionId_ = getDefaultInstance().getFunctionVersionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the function's version to delete.
+       * </pre>
+       *
+       * <code>string function_version_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for functionVersionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFunctionVersionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        functionVersionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean force_ ;
+      /**
+       * <pre>
+       * Forces deletion of the version tags.
+       * If the value equals false and the function has tags with the selected version then request returns an error.
+       * </pre>
+       *
+       * <code>bool force = 3;</code>
+       * @return The force.
+       */
+      @java.lang.Override
+      public boolean getForce() {
+        return force_;
+      }
+      /**
+       * <pre>
+       * Forces deletion of the version tags.
+       * If the value equals false and the function has tags with the selected version then request returns an error.
+       * </pre>
+       *
+       * <code>bool force = 3;</code>
+       * @param value The force to set.
+       * @return This builder for chaining.
+       */
+      public Builder setForce(boolean value) {
+        
+        force_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Forces deletion of the version tags.
+       * If the value equals false and the function has tags with the selected version then request returns an error.
+       * </pre>
+       *
+       * <code>bool force = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearForce() {
+        
+        force_ = false;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.functions.v1.DeleteFunctionVersionRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.functions.v1.DeleteFunctionVersionRequest)
+    private static final yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest();
+    }
+
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteFunctionVersionRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteFunctionVersionRequest>() {
+      @java.lang.Override
+      public DeleteFunctionVersionRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteFunctionVersionRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteFunctionVersionRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteFunctionVersionRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteFunctionVersionMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.functions.v1.DeleteFunctionVersionMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the function's version is being deleted.
+     * </pre>
+     *
+     * <code>string function_version_id = 2;</code>
+     * @return The functionVersionId.
+     */
+    java.lang.String getFunctionVersionId();
+    /**
+     * <pre>
+     * ID of the function's version is being deleted.
+     * </pre>
+     *
+     * <code>string function_version_id = 2;</code>
+     * @return The bytes for functionVersionId.
+     */
+    com.google.protobuf.ByteString
+        getFunctionVersionIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.functions.v1.DeleteFunctionVersionMetadata}
+   */
+  public static final class DeleteFunctionVersionMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.functions.v1.DeleteFunctionVersionMetadata)
+      DeleteFunctionVersionMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteFunctionVersionMetadata.newBuilder() to construct.
+    private DeleteFunctionVersionMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteFunctionVersionMetadata() {
+      functionVersionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteFunctionVersionMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteFunctionVersionMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              functionVersionId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.internal_static_yandex_cloud_serverless_functions_v1_DeleteFunctionVersionMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.internal_static_yandex_cloud_serverless_functions_v1_DeleteFunctionVersionMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata.class, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata.Builder.class);
+    }
+
+    public static final int FUNCTION_VERSION_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object functionVersionId_;
+    /**
+     * <pre>
+     * ID of the function's version is being deleted.
+     * </pre>
+     *
+     * <code>string function_version_id = 2;</code>
+     * @return The functionVersionId.
+     */
+    @java.lang.Override
+    public java.lang.String getFunctionVersionId() {
+      java.lang.Object ref = functionVersionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        functionVersionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the function's version is being deleted.
+     * </pre>
+     *
+     * <code>string function_version_id = 2;</code>
+     * @return The bytes for functionVersionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFunctionVersionIdBytes() {
+      java.lang.Object ref = functionVersionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        functionVersionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionVersionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, functionVersionId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(functionVersionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, functionVersionId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata other = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata) obj;
+
+      if (!getFunctionVersionId()
+          .equals(other.getFunctionVersionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FUNCTION_VERSION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFunctionVersionId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.functions.v1.DeleteFunctionVersionMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.functions.v1.DeleteFunctionVersionMetadata)
+        yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.internal_static_yandex_cloud_serverless_functions_v1_DeleteFunctionVersionMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.internal_static_yandex_cloud_serverless_functions_v1_DeleteFunctionVersionMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata.class, yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        functionVersionId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.internal_static_yandex_cloud_serverless_functions_v1_DeleteFunctionVersionMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata build() {
+        yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata buildPartial() {
+        yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata result = new yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata(this);
+        result.functionVersionId_ = functionVersionId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata) {
+          return mergeFrom((yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata other) {
+        if (other == yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata.getDefaultInstance()) return this;
+        if (!other.getFunctionVersionId().isEmpty()) {
+          functionVersionId_ = other.functionVersionId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object functionVersionId_ = "";
+      /**
+       * <pre>
+       * ID of the function's version is being deleted.
+       * </pre>
+       *
+       * <code>string function_version_id = 2;</code>
+       * @return The functionVersionId.
+       */
+      public java.lang.String getFunctionVersionId() {
+        java.lang.Object ref = functionVersionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          functionVersionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the function's version is being deleted.
+       * </pre>
+       *
+       * <code>string function_version_id = 2;</code>
+       * @return The bytes for functionVersionId.
+       */
+      public com.google.protobuf.ByteString
+          getFunctionVersionIdBytes() {
+        java.lang.Object ref = functionVersionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          functionVersionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the function's version is being deleted.
+       * </pre>
+       *
+       * <code>string function_version_id = 2;</code>
+       * @param value The functionVersionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFunctionVersionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        functionVersionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the function's version is being deleted.
+       * </pre>
+       *
+       * <code>string function_version_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFunctionVersionId() {
+        
+        functionVersionId_ = getDefaultInstance().getFunctionVersionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the function's version is being deleted.
+       * </pre>
+       *
+       * <code>string function_version_id = 2;</code>
+       * @param value The bytes for functionVersionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFunctionVersionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        functionVersionId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.functions.v1.DeleteFunctionVersionMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.functions.v1.DeleteFunctionVersionMetadata)
+    private static final yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata();
+    }
+
+    public static yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteFunctionVersionMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteFunctionVersionMetadata>() {
+      @java.lang.Override
+      public DeleteFunctionVersionMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteFunctionVersionMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteFunctionVersionMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteFunctionVersionMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ListRuntimesRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.functions.v1.ListRuntimesRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -33579,6 +34883,16 @@ public final class FunctionServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_functions_v1_DeleteFunctionMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_functions_v1_DeleteFunctionVersionRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_functions_v1_DeleteFunctionVersionRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_functions_v1_DeleteFunctionVersionMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_functions_v1_DeleteFunctionVersionMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_functions_v1_ListRuntimesRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -33746,198 +35060,207 @@ public final class FunctionServiceOuterClass {
       "tionMetadata\022\023\n\013function_id\030\001 \001(\t\"2\n\025Del" +
       "eteFunctionRequest\022\031\n\013function_id\030\001 \001(\tB" +
       "\004\350\3071\001\"-\n\026DeleteFunctionMetadata\022\023\n\013funct" +
-      "ion_id\030\001 \001(\t\"\025\n\023ListRuntimesRequest\"(\n\024L" +
-      "istRuntimesResponse\022\020\n\010runtimes\030\001 \003(\t\"\260\001" +
-      "\n\034ListFunctionsVersionsRequest\022\023\n\tfolder" +
-      "_id\030\001 \001(\tH\000\022\025\n\013function_id\030\002 \001(\tH\000\022\035\n\tpa" +
-      "ge_size\030\003 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030" +
-      "\004 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\005 \001(\tB\n\212\3101\006<=" +
-      "1000B\n\n\002id\022\004\300\3011\001\"y\n\035ListFunctionsVersion" +
-      "sResponse\022?\n\010versions\030\001 \003(\0132-.yandex.clo" +
-      "ud.serverless.functions.v1.Version\022\027\n\017ne" +
-      "xt_page_token\030\002 \001(\t\"\224\001\n\035ListFunctionOper" +
-      "ationsRequest\022\031\n\013function_id\030\001 \001(\tB\004\350\3071\001" +
-      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_" +
-      "token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n" +
-      "\212\3101\006<=1000\"p\n\036ListFunctionOperationsResp" +
-      "onse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud." +
-      "operation.Operation\022\027\n\017next_page_token\030\002" +
-      " \001(\t\"\377\010\n\034CreateFunctionVersionRequest\022\031\n" +
-      "\013function_id\030\001 \001(\tB\004\350\3071\001\022\025\n\007runtime\030\002 \001(" +
-      "\tB\004\350\3071\001\022\036\n\013description\030\003 \001(\tB\t\212\3101\0050-256\022" +
-      "\030\n\nentrypoint\030\004 \001(\tB\004\350\3071\001\022H\n\tresources\030\005" +
-      " \001(\0132/.yandex.cloud.serverless.functions" +
-      ".v1.ResourcesB\004\350\3071\001\022:\n\021execution_timeout" +
-      "\030\006 \001(\0132\031.google.protobuf.DurationB\004\350\3071\001\022" +
-      "\032\n\022service_account_id\030\007 \001(\t\022@\n\007package\030\t" +
-      " \001(\0132-.yandex.cloud.serverless.functions" +
-      ".v1.PackageH\000\022!\n\007content\030\n \001(\014B\016\212\3101\n<=52" +
-      "428800H\000\022\024\n\nversion_id\030\013 \001(\tH\000\022\217\001\n\013envir" +
-      "onment\030\014 \003(\0132S.yandex.cloud.serverless.f" +
-      "unctions.v1.CreateFunctionVersionRequest" +
-      ".EnvironmentEntryB%\212\3101\006<=4096\262\3101\027\022\025[a-zA" +
-      "-Z][a-zA-Z0-9_]*\022!\n\003tag\030\r \003(\tB\024\362\3071\020[a-z]" +
-      "[-_0-9a-z]*\022H\n\014connectivity\030\021 \001(\01322.yand" +
-      "ex.cloud.serverless.functions.v1.Connect" +
-      "ivity\022|\n\026named_service_accounts\030\017 \003(\0132\\." +
-      "yandex.cloud.serverless.functions.v1.Cre" +
-      "ateFunctionVersionRequest.NamedServiceAc" +
-      "countsEntry\022=\n\007secrets\030\022 \003(\0132,.yandex.cl" +
-      "oud.serverless.functions.v1.Secret\022E\n\013lo" +
-      "g_options\030\023 \001(\01320.yandex.cloud.serverles" +
-      "s.functions.v1.LogOptions\022J\n\016storage_mou" +
-      "nts\030\024 \003(\01322.yandex.cloud.serverless.func" +
-      "tions.v1.StorageMount\0322\n\020EnvironmentEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032;\n\031Nam" +
-      "edServiceAccountsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001B\026\n\016package_source\022\004\300\3011\001\"<" +
-      "\n\035CreateFunctionVersionMetadata\022\033\n\023funct" +
-      "ion_version_id\030\001 \001(\t\"]\n\025SetFunctionTagRe" +
-      "quest\022!\n\023function_version_id\030\001 \001(\tB\004\350\3071\001" +
-      "\022!\n\003tag\030\002 \001(\tB\024\362\3071\020[a-z][-_0-9a-z]*\"`\n\030R" +
-      "emoveFunctionTagRequest\022!\n\023function_vers" +
-      "ion_id\030\001 \001(\tB\004\350\3071\001\022!\n\003tag\030\002 \001(\tB\024\362\3071\020[a-" +
-      "z][-_0-9a-z]*\"5\n\026SetFunctionTagMetadata\022" +
-      "\033\n\023function_version_id\030\001 \001(\t\"8\n\031RemoveFu" +
-      "nctionTagMetadata\022\033\n\023function_version_id" +
-      "\030\001 \001(\t\"\301\001\n\035ListFunctionTagHistoryRequest" +
-      "\022\031\n\013function_id\030\001 \001(\tB\004\350\3071\001\022+\n\003tag\030\002 \001(\t" +
-      "B\036\362\3071\032[a-z][-_0-9a-z]*|[$]latest\022\035\n\tpage" +
-      "_size\030\003 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\004 " +
-      "\001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\005 \001(\tB\n\212\3101\006<=10" +
-      "00\"\200\003\n\036ListFunctionTagHistoryResponse\022\202\001" +
-      "\n\033function_tag_history_record\030\001 \003(\0132].ya" +
-      "ndex.cloud.serverless.functions.v1.ListF" +
-      "unctionTagHistoryResponse.FunctionTagHis" +
-      "toryRecord\022\027\n\017next_page_token\030\002 \001(\t\032\277\001\n\030" +
-      "FunctionTagHistoryRecord\022\023\n\013function_id\030" +
-      "\001 \001(\t\022\033\n\023function_version_id\030\003 \001(\t\022\013\n\003ta" +
-      "g\030\002 \001(\t\0222\n\016effective_from\030\004 \001(\0132\032.google" +
-      ".protobuf.Timestamp\0220\n\014effective_to\030\005 \001(" +
-      "\0132\032.google.protobuf.Timestamp\"u\n\032ListSca" +
-      "lingPoliciesRequest\022\031\n\013function_id\030\001 \001(\t" +
-      "B\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n" +
-      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"\205\001\n\033ListSca" +
-      "lingPoliciesResponse\022M\n\020scaling_policies" +
-      "\030\001 \003(\01323.yandex.cloud.serverless.functio" +
-      "ns.v1.ScalingPolicy\022\027\n\017next_page_token\030\002" +
-      " \001(\t\"\351\001\n\027SetScalingPolicyRequest\022\031\n\013func" +
-      "tion_id\030\001 \001(\tB\004\350\3071\001\022/\n\003tag\030\002 \001(\tB\"\350\3071\001\362\307" +
-      "1\032[a-z][-_0-9a-z]*|[$]latest\022/\n\033provisio" +
-      "ned_instances_count\030\004 \001(\003B\n\372\3071\0060-1000\022(\n" +
-      "\024zone_instances_limit\030\005 \001(\003B\n\372\3071\0060-1000\022" +
-      "\'\n\023zone_requests_limit\030\006 \001(\003B\n\372\3071\0060-1000" +
-      "\"/\n\030SetScalingPolicyMetadata\022\023\n\013function" +
-      "_id\030\001 \001(\t\"h\n\032RemoveScalingPolicyRequest\022" +
-      "\031\n\013function_id\030\001 \001(\tB\004\350\3071\001\022/\n\003tag\030\002 \001(\tB" +
-      "\"\350\3071\001\362\3071\032[a-z][-_0-9a-z]*|[$]latest\"2\n\033R" +
-      "emoveScalingPolicyMetadata\022\023\n\013function_i" +
-      "d\030\001 \001(\t2\333\037\n\017FunctionService\022\236\001\n\003Get\0228.ya" +
-      "ndex.cloud.serverless.functions.v1.GetFu" +
-      "nctionRequest\032..yandex.cloud.serverless." +
-      "functions.v1.Function\"-\202\323\344\223\002\'\022%/function" +
-      "s/v1/functions/{function_id}\022\240\001\n\004List\022:." +
-      "yandex.cloud.serverless.functions.v1.Lis" +
-      "tFunctionsRequest\032;.yandex.cloud.serverl" +
-      "ess.functions.v1.ListFunctionsResponse\"\037" +
-      "\202\323\344\223\002\031\022\027/functions/v1/functions\022\262\001\n\006Crea" +
-      "te\022;.yandex.cloud.serverless.functions.v" +
-      "1.CreateFunctionRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"H\202\323\344\223\002\034\"\027/functions/v" +
-      "1/functions:\001*\262\322*\"\n\026CreateFunctionMetada" +
-      "ta\022\010Function\022\300\001\n\006Update\022;.yandex.cloud.s" +
-      "erverless.functions.v1.UpdateFunctionReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "V\202\323\344\223\002*2%/functions/v1/functions/{functi" +
-      "on_id}:\001*\262\322*\"\n\026UpdateFunctionMetadata\022\010F" +
-      "unction\022\312\001\n\006Delete\022;.yandex.cloud.server" +
-      "less.functions.v1.DeleteFunctionRequest\032" +
-      "!.yandex.cloud.operation.Operation\"`\202\323\344\223" +
-      "\002\'*%/functions/v1/functions/{function_id" +
-      "}\262\322*/\n\026DeleteFunctionMetadata\022\025google.pr" +
-      "otobuf.Empty\022\262\001\n\nGetVersion\022?.yandex.clo" +
-      "ud.serverless.functions.v1.GetFunctionVe" +
-      "rsionRequest\032-.yandex.cloud.serverless.f" +
-      "unctions.v1.Version\"4\202\323\344\223\002.\022,/functions/" +
-      "v1/versions/{function_version_id}\022\254\001\n\017Ge" +
-      "tVersionByTag\022D.yandex.cloud.serverless." +
-      "functions.v1.GetFunctionVersionByTagRequ" +
-      "est\032-.yandex.cloud.serverless.functions." +
-      "v1.Version\"$\202\323\344\223\002\036\022\034/functions/v1/versio" +
-      "ns:byTag\022\267\001\n\014ListVersions\022B.yandex.cloud" +
-      ".serverless.functions.v1.ListFunctionsVe" +
-      "rsionsRequest\032C.yandex.cloud.serverless." +
-      "functions.v1.ListFunctionsVersionsRespon" +
-      "se\"\036\202\323\344\223\002\030\022\026/functions/v1/versions\022\315\001\n\006S" +
-      "etTag\022;.yandex.cloud.serverless.function" +
-      "s.v1.SetFunctionTagRequest\032!.yandex.clou" +
-      "d.operation.Operation\"c\202\323\344\223\0028\"3/function" +
-      "s/v1/versions/{function_version_id}:setT" +
-      "ag:\001*\262\322*!\n\026SetFunctionTagMetadata\022\007Versi" +
-      "on\022\331\001\n\tRemoveTag\022>.yandex.cloud.serverle" +
-      "ss.functions.v1.RemoveFunctionTagRequest" +
-      "\032!.yandex.cloud.operation.Operation\"i\202\323\344" +
-      "\223\002;\"6/functions/v1/versions/{function_ve" +
-      "rsion_id}:removeTag:\001*\262\322*$\n\031RemoveFuncti" +
-      "onTagMetadata\022\007Version\022\325\001\n\016ListTagHistor" +
-      "y\022C.yandex.cloud.serverless.functions.v1" +
-      ".ListFunctionTagHistoryRequest\032D.yandex." +
+      "ion_id\030\001 \001(\t\"V\n\034DeleteFunctionVersionReq" +
+      "uest\022!\n\023function_version_id\030\002 \001(\tB\004\350\3071\001\022" +
+      "\r\n\005force\030\003 \001(\010J\004\010\001\020\002\"B\n\035DeleteFunctionVe" +
+      "rsionMetadata\022\033\n\023function_version_id\030\002 \001" +
+      "(\tJ\004\010\001\020\002\"\025\n\023ListRuntimesRequest\"(\n\024ListR" +
+      "untimesResponse\022\020\n\010runtimes\030\001 \003(\t\"\260\001\n\034Li" +
+      "stFunctionsVersionsRequest\022\023\n\tfolder_id\030" +
+      "\001 \001(\tH\000\022\025\n\013function_id\030\002 \001(\tH\000\022\035\n\tpage_s" +
+      "ize\030\003 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\004 \001(" +
+      "\tB\t\212\3101\005<=100\022\032\n\006filter\030\005 \001(\tB\n\212\3101\006<=1000" +
+      "B\n\n\002id\022\004\300\3011\001\"y\n\035ListFunctionsVersionsRes" +
+      "ponse\022?\n\010versions\030\001 \003(\0132-.yandex.cloud.s" +
+      "erverless.functions.v1.Version\022\027\n\017next_p" +
+      "age_token\030\002 \001(\t\"\224\001\n\035ListFunctionOperatio" +
+      "nsRequest\022\031\n\013function_id\030\001 \001(\tB\004\350\3071\001\022\035\n\t" +
+      "page_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_toke" +
+      "n\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006" +
+      "<=1000\"p\n\036ListFunctionOperationsResponse" +
+      "\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.oper" +
+      "ation.Operation\022\027\n\017next_page_token\030\002 \001(\t" +
+      "\"\377\010\n\034CreateFunctionVersionRequest\022\031\n\013fun" +
+      "ction_id\030\001 \001(\tB\004\350\3071\001\022\025\n\007runtime\030\002 \001(\tB\004\350" +
+      "\3071\001\022\036\n\013description\030\003 \001(\tB\t\212\3101\0050-256\022\030\n\ne" +
+      "ntrypoint\030\004 \001(\tB\004\350\3071\001\022H\n\tresources\030\005 \001(\013" +
+      "2/.yandex.cloud.serverless.functions.v1." +
+      "ResourcesB\004\350\3071\001\022:\n\021execution_timeout\030\006 \001" +
+      "(\0132\031.google.protobuf.DurationB\004\350\3071\001\022\032\n\022s" +
+      "ervice_account_id\030\007 \001(\t\022@\n\007package\030\t \001(\013" +
+      "2-.yandex.cloud.serverless.functions.v1." +
+      "PackageH\000\022!\n\007content\030\n \001(\014B\016\212\3101\n<=524288" +
+      "00H\000\022\024\n\nversion_id\030\013 \001(\tH\000\022\217\001\n\013environme" +
+      "nt\030\014 \003(\0132S.yandex.cloud.serverless.funct" +
+      "ions.v1.CreateFunctionVersionRequest.Env" +
+      "ironmentEntryB%\212\3101\006<=4096\262\3101\027\022\025[a-zA-Z][" +
+      "a-zA-Z0-9_]*\022!\n\003tag\030\r \003(\tB\024\362\3071\020[a-z][-_0" +
+      "-9a-z]*\022H\n\014connectivity\030\021 \001(\01322.yandex.c" +
+      "loud.serverless.functions.v1.Connectivit" +
+      "y\022|\n\026named_service_accounts\030\017 \003(\0132\\.yand" +
+      "ex.cloud.serverless.functions.v1.CreateF" +
+      "unctionVersionRequest.NamedServiceAccoun" +
+      "tsEntry\022=\n\007secrets\030\022 \003(\0132,.yandex.cloud." +
+      "serverless.functions.v1.Secret\022E\n\013log_op" +
+      "tions\030\023 \001(\01320.yandex.cloud.serverless.fu" +
+      "nctions.v1.LogOptions\022J\n\016storage_mounts\030" +
+      "\024 \003(\01322.yandex.cloud.serverless.function" +
+      "s.v1.StorageMount\0322\n\020EnvironmentEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032;\n\031NamedSe" +
+      "rviceAccountsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001B\026\n\016package_source\022\004\300\3011\001\"<\n\035Cr" +
+      "eateFunctionVersionMetadata\022\033\n\023function_" +
+      "version_id\030\001 \001(\t\"]\n\025SetFunctionTagReques" +
+      "t\022!\n\023function_version_id\030\001 \001(\tB\004\350\3071\001\022!\n\003" +
+      "tag\030\002 \001(\tB\024\362\3071\020[a-z][-_0-9a-z]*\"`\n\030Remov" +
+      "eFunctionTagRequest\022!\n\023function_version_" +
+      "id\030\001 \001(\tB\004\350\3071\001\022!\n\003tag\030\002 \001(\tB\024\362\3071\020[a-z][-" +
+      "_0-9a-z]*\"5\n\026SetFunctionTagMetadata\022\033\n\023f" +
+      "unction_version_id\030\001 \001(\t\"8\n\031RemoveFuncti" +
+      "onTagMetadata\022\033\n\023function_version_id\030\001 \001" +
+      "(\t\"\301\001\n\035ListFunctionTagHistoryRequest\022\031\n\013" +
+      "function_id\030\001 \001(\tB\004\350\3071\001\022+\n\003tag\030\002 \001(\tB\036\362\307" +
+      "1\032[a-z][-_0-9a-z]*|[$]latest\022\035\n\tpage_siz" +
+      "e\030\003 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\004 \001(\tB" +
+      "\t\212\3101\005<=100\022\032\n\006filter\030\005 \001(\tB\n\212\3101\006<=1000\"\200" +
+      "\003\n\036ListFunctionTagHistoryResponse\022\202\001\n\033fu" +
+      "nction_tag_history_record\030\001 \003(\0132].yandex" +
+      ".cloud.serverless.functions.v1.ListFunct" +
+      "ionTagHistoryResponse.FunctionTagHistory" +
+      "Record\022\027\n\017next_page_token\030\002 \001(\t\032\277\001\n\030Func" +
+      "tionTagHistoryRecord\022\023\n\013function_id\030\001 \001(" +
+      "\t\022\033\n\023function_version_id\030\003 \001(\t\022\013\n\003tag\030\002 " +
+      "\001(\t\0222\n\016effective_from\030\004 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\0220\n\014effective_to\030\005 \001(\0132\032." +
+      "google.protobuf.Timestamp\"u\n\032ListScaling" +
+      "PoliciesRequest\022\031\n\013function_id\030\001 \001(\tB\004\350\307" +
+      "1\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npag" +
+      "e_token\030\003 \001(\tB\t\212\3101\005<=100\"\205\001\n\033ListScaling" +
+      "PoliciesResponse\022M\n\020scaling_policies\030\001 \003" +
+      "(\01323.yandex.cloud.serverless.functions.v" +
+      "1.ScalingPolicy\022\027\n\017next_page_token\030\002 \001(\t" +
+      "\"\351\001\n\027SetScalingPolicyRequest\022\031\n\013function" +
+      "_id\030\001 \001(\tB\004\350\3071\001\022/\n\003tag\030\002 \001(\tB\"\350\3071\001\362\3071\032[a" +
+      "-z][-_0-9a-z]*|[$]latest\022/\n\033provisioned_" +
+      "instances_count\030\004 \001(\003B\n\372\3071\0060-1000\022(\n\024zon" +
+      "e_instances_limit\030\005 \001(\003B\n\372\3071\0060-1000\022\'\n\023z" +
+      "one_requests_limit\030\006 \001(\003B\n\372\3071\0060-1000\"/\n\030" +
+      "SetScalingPolicyMetadata\022\023\n\013function_id\030" +
+      "\001 \001(\t\"h\n\032RemoveScalingPolicyRequest\022\031\n\013f" +
+      "unction_id\030\001 \001(\tB\004\350\3071\001\022/\n\003tag\030\002 \001(\tB\"\350\3071" +
+      "\001\362\3071\032[a-z][-_0-9a-z]*|[$]latest\"2\n\033Remov" +
+      "eScalingPolicyMetadata\022\023\n\013function_id\030\001 " +
+      "\001(\t2\304!\n\017FunctionService\022\236\001\n\003Get\0228.yandex" +
+      ".cloud.serverless.functions.v1.GetFuncti" +
+      "onRequest\032..yandex.cloud.serverless.func" +
+      "tions.v1.Function\"-\202\323\344\223\002\'\022%/functions/v1" +
+      "/functions/{function_id}\022\240\001\n\004List\022:.yand" +
+      "ex.cloud.serverless.functions.v1.ListFun" +
+      "ctionsRequest\032;.yandex.cloud.serverless." +
+      "functions.v1.ListFunctionsResponse\"\037\202\323\344\223" +
+      "\002\031\022\027/functions/v1/functions\022\262\001\n\006Create\022;" +
+      ".yandex.cloud.serverless.functions.v1.Cr" +
+      "eateFunctionRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"H\202\323\344\223\002\034\"\027/functions/v1/fu" +
+      "nctions:\001*\262\322*\"\n\026CreateFunctionMetadata\022\010" +
+      "Function\022\300\001\n\006Update\022;.yandex.cloud.serve" +
+      "rless.functions.v1.UpdateFunctionRequest" +
+      "\032!.yandex.cloud.operation.Operation\"V\202\323\344" +
+      "\223\002*2%/functions/v1/functions/{function_i" +
+      "d}:\001*\262\322*\"\n\026UpdateFunctionMetadata\022\010Funct" +
+      "ion\022\312\001\n\006Delete\022;.yandex.cloud.serverless" +
+      ".functions.v1.DeleteFunctionRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"`\202\323\344\223\002\'*%" +
+      "/functions/v1/functions/{function_id}\262\322*" +
+      "/\n\026DeleteFunctionMetadata\022\025google.protob" +
+      "uf.Empty\022\262\001\n\nGetVersion\022?.yandex.cloud.s" +
+      "erverless.functions.v1.GetFunctionVersio" +
+      "nRequest\032-.yandex.cloud.serverless.funct" +
+      "ions.v1.Version\"4\202\323\344\223\002.\022,/functions/v1/v" +
+      "ersions/{function_version_id}\022\254\001\n\017GetVer" +
+      "sionByTag\022D.yandex.cloud.serverless.func" +
+      "tions.v1.GetFunctionVersionByTagRequest\032" +
+      "-.yandex.cloud.serverless.functions.v1.V" +
+      "ersion\"$\202\323\344\223\002\036\022\034/functions/v1/versions:b" +
+      "yTag\022\267\001\n\014ListVersions\022B.yandex.cloud.ser" +
+      "verless.functions.v1.ListFunctionsVersio" +
+      "nsRequest\032C.yandex.cloud.serverless.func" +
+      "tions.v1.ListFunctionsVersionsResponse\"\036" +
+      "\202\323\344\223\002\030\022\026/functions/v1/versions\022\346\001\n\rDelet" +
+      "eVersion\022B.yandex.cloud.serverless.funct" +
+      "ions.v1.DeleteFunctionVersionRequest\032!.y" +
+      "andex.cloud.operation.Operation\"n\202\323\344\223\002.*" +
+      ",/functions/v1/versions/{function_versio" +
+      "n_id}\262\322*6\n\035DeleteFunctionVersionMetadata" +
+      "\022\025google.protobuf.Empty\022\315\001\n\006SetTag\022;.yan" +
+      "dex.cloud.serverless.functions.v1.SetFun" +
+      "ctionTagRequest\032!.yandex.cloud.operation" +
+      ".Operation\"c\202\323\344\223\0028\"3/functions/v1/versio" +
+      "ns/{function_version_id}:setTag:\001*\262\322*!\n\026" +
+      "SetFunctionTagMetadata\022\007Version\022\331\001\n\tRemo" +
+      "veTag\022>.yandex.cloud.serverless.function" +
+      "s.v1.RemoveFunctionTagRequest\032!.yandex.c" +
+      "loud.operation.Operation\"i\202\323\344\223\002;\"6/funct" +
+      "ions/v1/versions/{function_version_id}:r" +
+      "emoveTag:\001*\262\322*$\n\031RemoveFunctionTagMetada" +
+      "ta\022\007Version\022\325\001\n\016ListTagHistory\022C.yandex." +
       "cloud.serverless.functions.v1.ListFuncti" +
-      "onTagHistoryResponse\"8\202\323\344\223\0022\0220/functions" +
-      "/v1/functions/{function_id}:tagHistory\022\305" +
-      "\001\n\rCreateVersion\022B.yandex.cloud.serverle" +
-      "ss.functions.v1.CreateFunctionVersionReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "M\202\323\344\223\002\033\"\026/functions/v1/versions:\001*\262\322*(\n\035" +
-      "CreateFunctionVersionMetadata\022\007Version\022\245" +
-      "\001\n\014ListRuntimes\0229.yandex.cloud.serverles" +
-      "s.functions.v1.ListRuntimesRequest\032:.yan" +
-      "dex.cloud.serverless.functions.v1.ListRu" +
-      "ntimesResponse\"\036\202\323\344\223\002\030\022\026/functions/v1/ru" +
-      "ntimes\022\325\001\n\016ListOperations\022C.yandex.cloud" +
-      ".serverless.functions.v1.ListFunctionOpe" +
-      "rationsRequest\032D.yandex.cloud.serverless" +
-      ".functions.v1.ListFunctionOperationsResp" +
-      "onse\"8\202\323\344\223\0022\0220/functions/v1/functions/{f" +
-      "unction_id}/operations\022\267\001\n\022ListAccessBin" +
-      "dings\022..yandex.cloud.access.ListAccessBi" +
-      "ndingsRequest\032/.yandex.cloud.access.List" +
-      "AccessBindingsResponse\"@\202\323\344\223\002:\0228/functio" +
-      "ns/v1/functions/{resource_id}:listAccess" +
-      "Bindings\022\346\001\n\021SetAccessBindings\022-.yandex." +
-      "cloud.access.SetAccessBindingsRequest\032!." +
-      "yandex.cloud.operation.Operation\"\177\202\323\344\223\002<" +
-      "\"7/functions/v1/functions/{resource_id}:" +
-      "setAccessBindings:\001*\262\322*9\n access.SetAcce" +
-      "ssBindingsMetadata\022\025google.protobuf.Empt" +
-      "y\022\363\001\n\024UpdateAccessBindings\0220.yandex.clou" +
-      "d.access.UpdateAccessBindingsRequest\032!.y" +
-      "andex.cloud.operation.Operation\"\205\001\202\323\344\223\002?" +
-      "\":/functions/v1/functions/{resource_id}:" +
-      "updateAccessBindings:\001*\262\322*<\n#access.Upda" +
-      "teAccessBindingsMetadata\022\025google.protobu" +
-      "f.Empty\022\331\001\n\023ListScalingPolicies\022@.yandex" +
-      ".cloud.serverless.functions.v1.ListScali" +
-      "ngPoliciesRequest\032A.yandex.cloud.serverl" +
-      "ess.functions.v1.ListScalingPoliciesResp" +
-      "onse\"=\202\323\344\223\0027\0225/functions/v1/functions/{f" +
-      "unction_id}/scalingPolicies\022\344\001\n\020SetScali" +
-      "ngPolicy\022=.yandex.cloud.serverless.funct" +
-      "ions.v1.SetScalingPolicyRequest\032!.yandex" +
-      ".cloud.operation.Operation\"n\202\323\344\223\002;\"6/fun" +
-      "ctions/v1/functions/{function_id}:setSca" +
-      "lingPolicy:\001*\262\322*)\n\030SetScalingPolicyMetad" +
-      "ata\022\rScalingPolicy\022\370\001\n\023RemoveScalingPoli" +
-      "cy\022@.yandex.cloud.serverless.functions.v" +
-      "1.RemoveScalingPolicyRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"|\202\323\344\223\002>\"9/functi" +
-      "ons/v1/functions/{function_id}:removeSca" +
-      "lingPolicy:\001*\262\322*4\n\033RemoveScalingPolicyMe" +
-      "tadata\022\025google.protobuf.EmptyB~\n(yandex." +
-      "cloud.api.serverless.functions.v1ZRgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/serverless/functions/v1;functionsb\006p" +
-      "roto3"
+      "onTagHistoryRequest\032D.yandex.cloud.serve" +
+      "rless.functions.v1.ListFunctionTagHistor" +
+      "yResponse\"8\202\323\344\223\0022\0220/functions/v1/functio" +
+      "ns/{function_id}:tagHistory\022\305\001\n\rCreateVe" +
+      "rsion\022B.yandex.cloud.serverless.function" +
+      "s.v1.CreateFunctionVersionRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"M\202\323\344\223\002\033\"\026/f" +
+      "unctions/v1/versions:\001*\262\322*(\n\035CreateFunct" +
+      "ionVersionMetadata\022\007Version\022\245\001\n\014ListRunt" +
+      "imes\0229.yandex.cloud.serverless.functions" +
+      ".v1.ListRuntimesRequest\032:.yandex.cloud.s" +
+      "erverless.functions.v1.ListRuntimesRespo" +
+      "nse\"\036\202\323\344\223\002\030\022\026/functions/v1/runtimes\022\325\001\n\016" +
+      "ListOperations\022C.yandex.cloud.serverless" +
+      ".functions.v1.ListFunctionOperationsRequ" +
+      "est\032D.yandex.cloud.serverless.functions." +
+      "v1.ListFunctionOperationsResponse\"8\202\323\344\223\002" +
+      "2\0220/functions/v1/functions/{function_id}" +
+      "/operations\022\267\001\n\022ListAccessBindings\022..yan" +
+      "dex.cloud.access.ListAccessBindingsReque" +
+      "st\032/.yandex.cloud.access.ListAccessBindi" +
+      "ngsResponse\"@\202\323\344\223\002:\0228/functions/v1/funct" +
+      "ions/{resource_id}:listAccessBindings\022\346\001" +
+      "\n\021SetAccessBindings\022-.yandex.cloud.acces" +
+      "s.SetAccessBindingsRequest\032!.yandex.clou" +
+      "d.operation.Operation\"\177\202\323\344\223\002<\"7/function" +
+      "s/v1/functions/{resource_id}:setAccessBi" +
+      "ndings:\001*\262\322*9\n access.SetAccessBindingsM" +
+      "etadata\022\025google.protobuf.Empty\022\363\001\n\024Updat" +
+      "eAccessBindings\0220.yandex.cloud.access.Up" +
+      "dateAccessBindingsRequest\032!.yandex.cloud" +
+      ".operation.Operation\"\205\001\202\323\344\223\002?\":/function" +
+      "s/v1/functions/{resource_id}:updateAcces" +
+      "sBindings:\001*\262\322*<\n#access.UpdateAccessBin" +
+      "dingsMetadata\022\025google.protobuf.Empty\022\331\001\n" +
+      "\023ListScalingPolicies\022@.yandex.cloud.serv" +
+      "erless.functions.v1.ListScalingPoliciesR" +
+      "equest\032A.yandex.cloud.serverless.functio" +
+      "ns.v1.ListScalingPoliciesResponse\"=\202\323\344\223\002" +
+      "7\0225/functions/v1/functions/{function_id}" +
+      "/scalingPolicies\022\344\001\n\020SetScalingPolicy\022=." +
+      "yandex.cloud.serverless.functions.v1.Set" +
+      "ScalingPolicyRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"n\202\323\344\223\002;\"6/functions/v1/f" +
+      "unctions/{function_id}:setScalingPolicy:" +
+      "\001*\262\322*)\n\030SetScalingPolicyMetadata\022\rScalin" +
+      "gPolicy\022\370\001\n\023RemoveScalingPolicy\022@.yandex" +
+      ".cloud.serverless.functions.v1.RemoveSca" +
+      "lingPolicyRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"|\202\323\344\223\002>\"9/functions/v1/func" +
+      "tions/{function_id}:removeScalingPolicy:" +
+      "\001*\262\322*4\n\033RemoveScalingPolicyMetadata\022\025goo" +
+      "gle.protobuf.EmptyB~\n(yandex.cloud.api.s" +
+      "erverless.functions.v1ZRgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/serverl" +
+      "ess/functions/v1;functionsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -34030,44 +35353,56 @@ public final class FunctionServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_DeleteFunctionMetadata_descriptor,
         new java.lang.String[] { "FunctionId", });
-    internal_static_yandex_cloud_serverless_functions_v1_ListRuntimesRequest_descriptor =
+    internal_static_yandex_cloud_serverless_functions_v1_DeleteFunctionVersionRequest_descriptor =
       getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_serverless_functions_v1_DeleteFunctionVersionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_functions_v1_DeleteFunctionVersionRequest_descriptor,
+        new java.lang.String[] { "FunctionVersionId", "Force", });
+    internal_static_yandex_cloud_serverless_functions_v1_DeleteFunctionVersionMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_serverless_functions_v1_DeleteFunctionVersionMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_functions_v1_DeleteFunctionVersionMetadata_descriptor,
+        new java.lang.String[] { "FunctionVersionId", });
+    internal_static_yandex_cloud_serverless_functions_v1_ListRuntimesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_serverless_functions_v1_ListRuntimesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_ListRuntimesRequest_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_serverless_functions_v1_ListRuntimesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_serverless_functions_v1_ListRuntimesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_ListRuntimesResponse_descriptor,
         new java.lang.String[] { "Runtimes", });
     internal_static_yandex_cloud_serverless_functions_v1_ListFunctionsVersionsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_serverless_functions_v1_ListFunctionsVersionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_ListFunctionsVersionsRequest_descriptor,
         new java.lang.String[] { "FolderId", "FunctionId", "PageSize", "PageToken", "Filter", "Id", });
     internal_static_yandex_cloud_serverless_functions_v1_ListFunctionsVersionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_serverless_functions_v1_ListFunctionsVersionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_ListFunctionsVersionsResponse_descriptor,
         new java.lang.String[] { "Versions", "NextPageToken", });
     internal_static_yandex_cloud_serverless_functions_v1_ListFunctionOperationsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_serverless_functions_v1_ListFunctionOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_ListFunctionOperationsRequest_descriptor,
         new java.lang.String[] { "FunctionId", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_serverless_functions_v1_ListFunctionOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_serverless_functions_v1_ListFunctionOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_ListFunctionOperationsResponse_descriptor,
         new java.lang.String[] { "Operations", "NextPageToken", });
     internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_descriptor,
@@ -34085,43 +35420,43 @@ public final class FunctionServiceOuterClass {
         internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionRequest_NamedServiceAccountsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_CreateFunctionVersionMetadata_descriptor,
         new java.lang.String[] { "FunctionVersionId", });
     internal_static_yandex_cloud_serverless_functions_v1_SetFunctionTagRequest_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_yandex_cloud_serverless_functions_v1_SetFunctionTagRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_SetFunctionTagRequest_descriptor,
         new java.lang.String[] { "FunctionVersionId", "Tag", });
     internal_static_yandex_cloud_serverless_functions_v1_RemoveFunctionTagRequest_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_yandex_cloud_serverless_functions_v1_RemoveFunctionTagRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_RemoveFunctionTagRequest_descriptor,
         new java.lang.String[] { "FunctionVersionId", "Tag", });
     internal_static_yandex_cloud_serverless_functions_v1_SetFunctionTagMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_yandex_cloud_serverless_functions_v1_SetFunctionTagMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_SetFunctionTagMetadata_descriptor,
         new java.lang.String[] { "FunctionVersionId", });
     internal_static_yandex_cloud_serverless_functions_v1_RemoveFunctionTagMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_yandex_cloud_serverless_functions_v1_RemoveFunctionTagMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_RemoveFunctionTagMetadata_descriptor,
         new java.lang.String[] { "FunctionVersionId", });
     internal_static_yandex_cloud_serverless_functions_v1_ListFunctionTagHistoryRequest_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_yandex_cloud_serverless_functions_v1_ListFunctionTagHistoryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_ListFunctionTagHistoryRequest_descriptor,
         new java.lang.String[] { "FunctionId", "Tag", "PageSize", "PageToken", "Filter", });
     internal_static_yandex_cloud_serverless_functions_v1_ListFunctionTagHistoryResponse_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_yandex_cloud_serverless_functions_v1_ListFunctionTagHistoryResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_ListFunctionTagHistoryResponse_descriptor,
@@ -34133,37 +35468,37 @@ public final class FunctionServiceOuterClass {
         internal_static_yandex_cloud_serverless_functions_v1_ListFunctionTagHistoryResponse_FunctionTagHistoryRecord_descriptor,
         new java.lang.String[] { "FunctionId", "FunctionVersionId", "Tag", "EffectiveFrom", "EffectiveTo", });
     internal_static_yandex_cloud_serverless_functions_v1_ListScalingPoliciesRequest_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_yandex_cloud_serverless_functions_v1_ListScalingPoliciesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_ListScalingPoliciesRequest_descriptor,
         new java.lang.String[] { "FunctionId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_serverless_functions_v1_ListScalingPoliciesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_yandex_cloud_serverless_functions_v1_ListScalingPoliciesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_ListScalingPoliciesResponse_descriptor,
         new java.lang.String[] { "ScalingPolicies", "NextPageToken", });
     internal_static_yandex_cloud_serverless_functions_v1_SetScalingPolicyRequest_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_yandex_cloud_serverless_functions_v1_SetScalingPolicyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_SetScalingPolicyRequest_descriptor,
         new java.lang.String[] { "FunctionId", "Tag", "ProvisionedInstancesCount", "ZoneInstancesLimit", "ZoneRequestsLimit", });
     internal_static_yandex_cloud_serverless_functions_v1_SetScalingPolicyMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_yandex_cloud_serverless_functions_v1_SetScalingPolicyMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_SetScalingPolicyMetadata_descriptor,
         new java.lang.String[] { "FunctionId", });
     internal_static_yandex_cloud_serverless_functions_v1_RemoveScalingPolicyRequest_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_yandex_cloud_serverless_functions_v1_RemoveScalingPolicyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_RemoveScalingPolicyRequest_descriptor,
         new java.lang.String[] { "FunctionId", "Tag", });
     internal_static_yandex_cloud_serverless_functions_v1_RemoveScalingPolicyMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_yandex_cloud_serverless_functions_v1_RemoveScalingPolicyMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_functions_v1_RemoveScalingPolicyMetadata_descriptor,

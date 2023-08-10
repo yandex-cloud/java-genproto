@@ -15315,6 +15315,25 @@ public final class NodeOuterClass {
      */
     com.google.protobuf.ByteString
         getGpuClusterIdBytes();
+
+    /**
+     * <pre>
+     * GPU environment configured on node.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.GpuSettings.GpuEnvironment gpu_environment = 2;</code>
+     * @return The enum numeric value on the wire for gpuEnvironment.
+     */
+    int getGpuEnvironmentValue();
+    /**
+     * <pre>
+     * GPU environment configured on node.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.GpuSettings.GpuEnvironment gpu_environment = 2;</code>
+     * @return The gpuEnvironment.
+     */
+    yandex.cloud.api.k8s.v1.NodeOuterClass.GpuSettings.GpuEnvironment getGpuEnvironment();
   }
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.GpuSettings}
@@ -15330,6 +15349,7 @@ public final class NodeOuterClass {
     }
     private GpuSettings() {
       gpuClusterId_ = "";
+      gpuEnvironment_ = 0;
     }
 
     @java.lang.Override
@@ -15368,6 +15388,12 @@ public final class NodeOuterClass {
               gpuClusterId_ = s;
               break;
             }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              gpuEnvironment_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -15398,6 +15424,151 @@ public final class NodeOuterClass {
       return yandex.cloud.api.k8s.v1.NodeOuterClass.internal_static_yandex_cloud_k8s_v1_GpuSettings_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.k8s.v1.NodeOuterClass.GpuSettings.class, yandex.cloud.api.k8s.v1.NodeOuterClass.GpuSettings.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.k8s.v1.GpuSettings.GpuEnvironment}
+     */
+    public enum GpuEnvironment
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <pre>
+       * Use one of the values below, depending on the default for the specific Cloud installation.
+       * </pre>
+       *
+       * <code>GPU_ENVIRONMENT_UNSPECIFIED = 0;</code>
+       */
+      GPU_ENVIRONMENT_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Use a node image with the pre-installed GPU toolkit, drivers and CUDA.
+       * </pre>
+       *
+       * <code>RUNC_DRIVERS_CUDA = 1;</code>
+       */
+      RUNC_DRIVERS_CUDA(1),
+      /**
+       * <pre>
+       * Use a node image with the pre-installed GPU toolkit but without drivers.
+       * You should install drivers on a node yourself in that case.
+       * There are tools to help you to do that, for example gpu-operator.
+       * </pre>
+       *
+       * <code>RUNC = 2;</code>
+       */
+      RUNC(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <pre>
+       * Use one of the values below, depending on the default for the specific Cloud installation.
+       * </pre>
+       *
+       * <code>GPU_ENVIRONMENT_UNSPECIFIED = 0;</code>
+       */
+      public static final int GPU_ENVIRONMENT_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Use a node image with the pre-installed GPU toolkit, drivers and CUDA.
+       * </pre>
+       *
+       * <code>RUNC_DRIVERS_CUDA = 1;</code>
+       */
+      public static final int RUNC_DRIVERS_CUDA_VALUE = 1;
+      /**
+       * <pre>
+       * Use a node image with the pre-installed GPU toolkit but without drivers.
+       * You should install drivers on a node yourself in that case.
+       * There are tools to help you to do that, for example gpu-operator.
+       * </pre>
+       *
+       * <code>RUNC = 2;</code>
+       */
+      public static final int RUNC_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static GpuEnvironment valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static GpuEnvironment forNumber(int value) {
+        switch (value) {
+          case 0: return GPU_ENVIRONMENT_UNSPECIFIED;
+          case 1: return RUNC_DRIVERS_CUDA;
+          case 2: return RUNC;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<GpuEnvironment>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          GpuEnvironment> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<GpuEnvironment>() {
+              public GpuEnvironment findValueByNumber(int number) {
+                return GpuEnvironment.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.k8s.v1.NodeOuterClass.GpuSettings.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final GpuEnvironment[] VALUES = values();
+
+      public static GpuEnvironment valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private GpuEnvironment(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.k8s.v1.GpuSettings.GpuEnvironment)
     }
 
     public static final int GPU_CLUSTER_ID_FIELD_NUMBER = 1;
@@ -15446,6 +15617,33 @@ public final class NodeOuterClass {
       }
     }
 
+    public static final int GPU_ENVIRONMENT_FIELD_NUMBER = 2;
+    private int gpuEnvironment_;
+    /**
+     * <pre>
+     * GPU environment configured on node.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.GpuSettings.GpuEnvironment gpu_environment = 2;</code>
+     * @return The enum numeric value on the wire for gpuEnvironment.
+     */
+    @java.lang.Override public int getGpuEnvironmentValue() {
+      return gpuEnvironment_;
+    }
+    /**
+     * <pre>
+     * GPU environment configured on node.
+     * </pre>
+     *
+     * <code>.yandex.cloud.k8s.v1.GpuSettings.GpuEnvironment gpu_environment = 2;</code>
+     * @return The gpuEnvironment.
+     */
+    @java.lang.Override public yandex.cloud.api.k8s.v1.NodeOuterClass.GpuSettings.GpuEnvironment getGpuEnvironment() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.k8s.v1.NodeOuterClass.GpuSettings.GpuEnvironment result = yandex.cloud.api.k8s.v1.NodeOuterClass.GpuSettings.GpuEnvironment.valueOf(gpuEnvironment_);
+      return result == null ? yandex.cloud.api.k8s.v1.NodeOuterClass.GpuSettings.GpuEnvironment.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -15463,6 +15661,9 @@ public final class NodeOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gpuClusterId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, gpuClusterId_);
       }
+      if (gpuEnvironment_ != yandex.cloud.api.k8s.v1.NodeOuterClass.GpuSettings.GpuEnvironment.GPU_ENVIRONMENT_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, gpuEnvironment_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -15474,6 +15675,10 @@ public final class NodeOuterClass {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(gpuClusterId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, gpuClusterId_);
+      }
+      if (gpuEnvironment_ != yandex.cloud.api.k8s.v1.NodeOuterClass.GpuSettings.GpuEnvironment.GPU_ENVIRONMENT_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, gpuEnvironment_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -15492,6 +15697,7 @@ public final class NodeOuterClass {
 
       if (!getGpuClusterId()
           .equals(other.getGpuClusterId())) return false;
+      if (gpuEnvironment_ != other.gpuEnvironment_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -15505,6 +15711,8 @@ public final class NodeOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + GPU_CLUSTER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getGpuClusterId().hashCode();
+      hash = (37 * hash) + GPU_ENVIRONMENT_FIELD_NUMBER;
+      hash = (53 * hash) + gpuEnvironment_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -15640,6 +15848,8 @@ public final class NodeOuterClass {
         super.clear();
         gpuClusterId_ = "";
 
+        gpuEnvironment_ = 0;
+
         return this;
       }
 
@@ -15667,6 +15877,7 @@ public final class NodeOuterClass {
       public yandex.cloud.api.k8s.v1.NodeOuterClass.GpuSettings buildPartial() {
         yandex.cloud.api.k8s.v1.NodeOuterClass.GpuSettings result = new yandex.cloud.api.k8s.v1.NodeOuterClass.GpuSettings(this);
         result.gpuClusterId_ = gpuClusterId_;
+        result.gpuEnvironment_ = gpuEnvironment_;
         onBuilt();
         return result;
       }
@@ -15718,6 +15929,9 @@ public final class NodeOuterClass {
         if (!other.getGpuClusterId().isEmpty()) {
           gpuClusterId_ = other.gpuClusterId_;
           onChanged();
+        }
+        if (other.gpuEnvironment_ != 0) {
+          setGpuEnvironmentValue(other.getGpuEnvironmentValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -15840,6 +16054,80 @@ public final class NodeOuterClass {
   checkByteStringIsUtf8(value);
         
         gpuClusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int gpuEnvironment_ = 0;
+      /**
+       * <pre>
+       * GPU environment configured on node.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.GpuSettings.GpuEnvironment gpu_environment = 2;</code>
+       * @return The enum numeric value on the wire for gpuEnvironment.
+       */
+      @java.lang.Override public int getGpuEnvironmentValue() {
+        return gpuEnvironment_;
+      }
+      /**
+       * <pre>
+       * GPU environment configured on node.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.GpuSettings.GpuEnvironment gpu_environment = 2;</code>
+       * @param value The enum numeric value on the wire for gpuEnvironment to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGpuEnvironmentValue(int value) {
+        
+        gpuEnvironment_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * GPU environment configured on node.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.GpuSettings.GpuEnvironment gpu_environment = 2;</code>
+       * @return The gpuEnvironment.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.NodeOuterClass.GpuSettings.GpuEnvironment getGpuEnvironment() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.k8s.v1.NodeOuterClass.GpuSettings.GpuEnvironment result = yandex.cloud.api.k8s.v1.NodeOuterClass.GpuSettings.GpuEnvironment.valueOf(gpuEnvironment_);
+        return result == null ? yandex.cloud.api.k8s.v1.NodeOuterClass.GpuSettings.GpuEnvironment.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * GPU environment configured on node.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.GpuSettings.GpuEnvironment gpu_environment = 2;</code>
+       * @param value The gpuEnvironment to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGpuEnvironment(yandex.cloud.api.k8s.v1.NodeOuterClass.GpuSettings.GpuEnvironment value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        gpuEnvironment_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * GPU environment configured on node.
+       * </pre>
+       *
+       * <code>.yandex.cloud.k8s.v1.GpuSettings.GpuEnvironment gpu_environment = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGpuEnvironment() {
+        
+        gpuEnvironment_ = 0;
         onChanged();
         return this;
       }
@@ -22907,33 +23195,37 @@ public final class NodeOuterClass {
       "rRuntimeSettings.TypeB\004\350\3071\001\"8\n\004Type\022\024\n\020T" +
       "YPE_UNSPECIFIED\020\000\022\n\n\006DOCKER\020\001\022\016\n\nCONTAIN" +
       "ERD\020\002\032+\n\030ContainerNetworkSettings\022\017\n\007pod" +
-      "_mtu\030\001 \001(\003\"%\n\013GpuSettings\022\026\n\016gpu_cluster" +
-      "_id\030\001 \001(\t\"\324\001\n\024NetworkInterfaceSpec\022\022\n\nsu" +
-      "bnet_ids\030\002 \003(\t\022E\n\027primary_v4_address_spe" +
-      "c\030\003 \001(\0132$.yandex.cloud.k8s.v1.NodeAddres" +
-      "sSpec\022E\n\027primary_v6_address_spec\030\004 \001(\0132$" +
-      ".yandex.cloud.k8s.v1.NodeAddressSpec\022\032\n\022" +
-      "security_group_ids\030\005 \003(\t\"\222\001\n\017NodeAddress" +
-      "Spec\022A\n\023one_to_one_nat_spec\030\001 \001(\0132$.yand" +
-      "ex.cloud.k8s.v1.OneToOneNatSpec\022<\n\020dns_r" +
-      "ecord_specs\030\002 \003(\0132\".yandex.cloud.k8s.v1." +
-      "DnsRecordSpec\"_\n\rDnsRecordSpec\022\022\n\004fqdn\030\001" +
-      " \001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001(\t\022\030\n\003ttl\030\003" +
-      " \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"E\n\017OneToO" +
-      "neNatSpec\0222\n\nip_version\030\001 \001(\0162\036.yandex.c" +
-      "loud.k8s.v1.IpVersion\"y\n\rResourcesSpec\022\027" +
-      "\n\006memory\030\001 \001(\003B\007\372\3071\003>=0\022\026\n\005cores\030\002 \001(\003B\007" +
-      "\372\3071\003>=0\022 \n\rcore_fraction\030\003 \001(\003B\t\372\3071\0050-10" +
-      "0\022\025\n\004gpus\030\004 \001(\003B\007\372\3071\003>=0\"\200\001\n\010DiskSpec\022L\n" +
-      "\014disk_type_id\030\001 \001(\tB6\362\30712|network-ssd|ne" +
-      "twork-hdd|network-ssd-nonreplicated\022&\n\td" +
-      "isk_size\030\002 \001(\003B\023\372\3071\0170-4398046511104\"\'\n\020S" +
-      "chedulingPolicy\022\023\n\013preemptible\030\001 \001(\010\"-\n\017" +
-      "PlacementPolicy\022\032\n\022placement_group_id\030\001 " +
-      "\001(\t*;\n\tIpVersion\022\032\n\026IP_VERSION_UNSPECIFI" +
-      "ED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002BV\n\027yandex.cloud" +
-      ".api.k8s.v1Z;github.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/k8s/v1;k8sb\006proto3"
+      "_mtu\030\001 \001(\003\"\303\001\n\013GpuSettings\022\026\n\016gpu_cluste" +
+      "r_id\030\001 \001(\t\022H\n\017gpu_environment\030\002 \001(\0162/.ya" +
+      "ndex.cloud.k8s.v1.GpuSettings.GpuEnviron" +
+      "ment\"R\n\016GpuEnvironment\022\037\n\033GPU_ENVIRONMEN" +
+      "T_UNSPECIFIED\020\000\022\025\n\021RUNC_DRIVERS_CUDA\020\001\022\010" +
+      "\n\004RUNC\020\002\"\324\001\n\024NetworkInterfaceSpec\022\022\n\nsub" +
+      "net_ids\030\002 \003(\t\022E\n\027primary_v4_address_spec" +
+      "\030\003 \001(\0132$.yandex.cloud.k8s.v1.NodeAddress" +
+      "Spec\022E\n\027primary_v6_address_spec\030\004 \001(\0132$." +
+      "yandex.cloud.k8s.v1.NodeAddressSpec\022\032\n\022s" +
+      "ecurity_group_ids\030\005 \003(\t\"\222\001\n\017NodeAddressS" +
+      "pec\022A\n\023one_to_one_nat_spec\030\001 \001(\0132$.yande" +
+      "x.cloud.k8s.v1.OneToOneNatSpec\022<\n\020dns_re" +
+      "cord_specs\030\002 \003(\0132\".yandex.cloud.k8s.v1.D" +
+      "nsRecordSpec\"_\n\rDnsRecordSpec\022\022\n\004fqdn\030\001 " +
+      "\001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001(\t\022\030\n\003ttl\030\003 " +
+      "\001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"E\n\017OneToOn" +
+      "eNatSpec\0222\n\nip_version\030\001 \001(\0162\036.yandex.cl" +
+      "oud.k8s.v1.IpVersion\"y\n\rResourcesSpec\022\027\n" +
+      "\006memory\030\001 \001(\003B\007\372\3071\003>=0\022\026\n\005cores\030\002 \001(\003B\007\372" +
+      "\3071\003>=0\022 \n\rcore_fraction\030\003 \001(\003B\t\372\3071\0050-100" +
+      "\022\025\n\004gpus\030\004 \001(\003B\007\372\3071\003>=0\"\200\001\n\010DiskSpec\022L\n\014" +
+      "disk_type_id\030\001 \001(\tB6\362\30712|network-ssd|net" +
+      "work-hdd|network-ssd-nonreplicated\022&\n\tdi" +
+      "sk_size\030\002 \001(\003B\023\372\3071\0170-4398046511104\"\'\n\020Sc" +
+      "hedulingPolicy\022\023\n\013preemptible\030\001 \001(\010\"-\n\017P" +
+      "lacementPolicy\022\032\n\022placement_group_id\030\001 \001" +
+      "(\t*;\n\tIpVersion\022\032\n\026IP_VERSION_UNSPECIFIE" +
+      "D\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002BV\n\027yandex.cloud." +
+      "api.k8s.v1Z;github.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/k8s/v1;k8sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -23024,7 +23316,7 @@ public final class NodeOuterClass {
     internal_static_yandex_cloud_k8s_v1_GpuSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_GpuSettings_descriptor,
-        new java.lang.String[] { "GpuClusterId", });
+        new java.lang.String[] { "GpuClusterId", "GpuEnvironment", });
     internal_static_yandex_cloud_k8s_v1_NetworkInterfaceSpec_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_k8s_v1_NetworkInterfaceSpec_fieldAccessorTable = new

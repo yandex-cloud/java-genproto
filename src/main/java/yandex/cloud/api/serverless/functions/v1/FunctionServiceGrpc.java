@@ -266,6 +266,37 @@ public final class FunctionServiceGrpc {
     return getListVersionsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteVersionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteVersion",
+      requestType = yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteVersionMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteVersionMethod;
+    if ((getDeleteVersionMethod = FunctionServiceGrpc.getDeleteVersionMethod) == null) {
+      synchronized (FunctionServiceGrpc.class) {
+        if ((getDeleteVersionMethod = FunctionServiceGrpc.getDeleteVersionMethod) == null) {
+          FunctionServiceGrpc.getDeleteVersionMethod = getDeleteVersionMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteVersion"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new FunctionServiceMethodDescriptorSupplier("DeleteVersion"))
+              .build();
+        }
+      }
+    }
+    return getDeleteVersionMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetFunctionTagRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getSetTagMethod;
 
@@ -775,6 +806,17 @@ public final class FunctionServiceGrpc {
 
     /**
      * <pre>
+     * Deletes the specified version of a function.
+     * NOTE: old untagged function versions are deleted automatically.
+     * </pre>
+     */
+    public void deleteVersion(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteVersionMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Set a tag for the specified version of a function.
      * </pre>
      */
@@ -951,6 +993,13 @@ public final class FunctionServiceGrpc {
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsRequest,
                 yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsResponse>(
                   this, METHODID_LIST_VERSIONS)))
+          .addMethod(
+            getDeleteVersionMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_DELETE_VERSION)))
           .addMethod(
             getSetTagMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1146,6 +1195,18 @@ public final class FunctionServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListVersionsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes the specified version of a function.
+     * NOTE: old untagged function versions are deleted automatically.
+     * </pre>
+     */
+    public void deleteVersion(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteVersionMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -1384,6 +1445,17 @@ public final class FunctionServiceGrpc {
 
     /**
      * <pre>
+     * Deletes the specified version of a function.
+     * NOTE: old untagged function versions are deleted automatically.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation deleteVersion(yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteVersionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Set a tag for the specified version of a function.
      * </pre>
      */
@@ -1614,6 +1686,18 @@ public final class FunctionServiceGrpc {
 
     /**
      * <pre>
+     * Deletes the specified version of a function.
+     * NOTE: old untagged function versions are deleted automatically.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> deleteVersion(
+        yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteVersionMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Set a tag for the specified version of a function.
      * </pre>
      */
@@ -1753,18 +1837,19 @@ public final class FunctionServiceGrpc {
   private static final int METHODID_GET_VERSION = 5;
   private static final int METHODID_GET_VERSION_BY_TAG = 6;
   private static final int METHODID_LIST_VERSIONS = 7;
-  private static final int METHODID_SET_TAG = 8;
-  private static final int METHODID_REMOVE_TAG = 9;
-  private static final int METHODID_LIST_TAG_HISTORY = 10;
-  private static final int METHODID_CREATE_VERSION = 11;
-  private static final int METHODID_LIST_RUNTIMES = 12;
-  private static final int METHODID_LIST_OPERATIONS = 13;
-  private static final int METHODID_LIST_ACCESS_BINDINGS = 14;
-  private static final int METHODID_SET_ACCESS_BINDINGS = 15;
-  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 16;
-  private static final int METHODID_LIST_SCALING_POLICIES = 17;
-  private static final int METHODID_SET_SCALING_POLICY = 18;
-  private static final int METHODID_REMOVE_SCALING_POLICY = 19;
+  private static final int METHODID_DELETE_VERSION = 8;
+  private static final int METHODID_SET_TAG = 9;
+  private static final int METHODID_REMOVE_TAG = 10;
+  private static final int METHODID_LIST_TAG_HISTORY = 11;
+  private static final int METHODID_CREATE_VERSION = 12;
+  private static final int METHODID_LIST_RUNTIMES = 13;
+  private static final int METHODID_LIST_OPERATIONS = 14;
+  private static final int METHODID_LIST_ACCESS_BINDINGS = 15;
+  private static final int METHODID_SET_ACCESS_BINDINGS = 16;
+  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 17;
+  private static final int METHODID_LIST_SCALING_POLICIES = 18;
+  private static final int METHODID_SET_SCALING_POLICY = 19;
+  private static final int METHODID_REMOVE_SCALING_POLICY = 20;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1814,6 +1899,10 @@ public final class FunctionServiceGrpc {
         case METHODID_LIST_VERSIONS:
           serviceImpl.listVersions((yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.ListFunctionsVersionsResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_VERSION:
+          serviceImpl.deleteVersion((yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.DeleteFunctionVersionRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_SET_TAG:
           serviceImpl.setTag((yandex.cloud.api.serverless.functions.v1.FunctionServiceOuterClass.SetFunctionTagRequest) request,
@@ -1932,6 +2021,7 @@ public final class FunctionServiceGrpc {
               .addMethod(getGetVersionMethod())
               .addMethod(getGetVersionByTagMethod())
               .addMethod(getListVersionsMethod())
+              .addMethod(getDeleteVersionMethod())
               .addMethod(getSetTagMethod())
               .addMethod(getRemoveTagMethod())
               .addMethod(getListTagHistoryMethod())

@@ -966,6 +966,46 @@ public final class InstanceOuterClass {
      * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 20;</code>
      */
     yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicyOrBuilder getPlacementPolicyOrBuilder();
+
+    /**
+     * <pre>
+     * ID of the dedicated host group that the instance belongs to.
+     * </pre>
+     *
+     * <code>string host_group_id = 27;</code>
+     * @return The hostGroupId.
+     */
+    java.lang.String getHostGroupId();
+    /**
+     * <pre>
+     * ID of the dedicated host group that the instance belongs to.
+     * </pre>
+     *
+     * <code>string host_group_id = 27;</code>
+     * @return The bytes for hostGroupId.
+     */
+    com.google.protobuf.ByteString
+        getHostGroupIdBytes();
+
+    /**
+     * <pre>
+     * ID of the dedicated host that the instance belongs to.
+     * </pre>
+     *
+     * <code>string host_id = 28;</code>
+     * @return The hostId.
+     */
+    java.lang.String getHostId();
+    /**
+     * <pre>
+     * ID of the dedicated host that the instance belongs to.
+     * </pre>
+     *
+     * <code>string host_id = 28;</code>
+     * @return The bytes for hostId.
+     */
+    com.google.protobuf.ByteString
+        getHostIdBytes();
   }
   /**
    * <pre>
@@ -997,6 +1037,8 @@ public final class InstanceOuterClass {
       networkInterfaces_ = java.util.Collections.emptyList();
       fqdn_ = "";
       serviceAccountId_ = "";
+      hostGroupId_ = "";
+      hostId_ = "";
     }
 
     @java.lang.Override
@@ -1248,6 +1290,18 @@ public final class InstanceOuterClass {
                 gpuSettings_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 218: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              hostGroupId_ = s;
+              break;
+            }
+            case 226: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              hostId_ = s;
               break;
             }
             default: {
@@ -2712,6 +2766,98 @@ public final class InstanceOuterClass {
       return getPlacementPolicy();
     }
 
+    public static final int HOST_GROUP_ID_FIELD_NUMBER = 27;
+    private volatile java.lang.Object hostGroupId_;
+    /**
+     * <pre>
+     * ID of the dedicated host group that the instance belongs to.
+     * </pre>
+     *
+     * <code>string host_group_id = 27;</code>
+     * @return The hostGroupId.
+     */
+    @java.lang.Override
+    public java.lang.String getHostGroupId() {
+      java.lang.Object ref = hostGroupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hostGroupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the dedicated host group that the instance belongs to.
+     * </pre>
+     *
+     * <code>string host_group_id = 27;</code>
+     * @return The bytes for hostGroupId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHostGroupIdBytes() {
+      java.lang.Object ref = hostGroupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hostGroupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HOST_ID_FIELD_NUMBER = 28;
+    private volatile java.lang.Object hostId_;
+    /**
+     * <pre>
+     * ID of the dedicated host that the instance belongs to.
+     * </pre>
+     *
+     * <code>string host_id = 28;</code>
+     * @return The hostId.
+     */
+    @java.lang.Override
+    public java.lang.String getHostId() {
+      java.lang.Object ref = hostId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hostId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the dedicated host that the instance belongs to.
+     * </pre>
+     *
+     * <code>string host_id = 28;</code>
+     * @return The bytes for hostId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHostIdBytes() {
+      java.lang.Object ref = hostId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hostId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2800,6 +2946,12 @@ public final class InstanceOuterClass {
       }
       if (gpuSettings_ != null) {
         output.writeMessage(26, getGpuSettings());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostGroupId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 27, hostGroupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 28, hostId_);
       }
       unknownFields.writeTo(output);
     }
@@ -2906,6 +3058,12 @@ public final class InstanceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(26, getGpuSettings());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostGroupId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, hostGroupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(28, hostId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2990,6 +3148,10 @@ public final class InstanceOuterClass {
         if (!getPlacementPolicy()
             .equals(other.getPlacementPolicy())) return false;
       }
+      if (!getHostGroupId()
+          .equals(other.getHostGroupId())) return false;
+      if (!getHostId()
+          .equals(other.getHostId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3075,6 +3237,10 @@ public final class InstanceOuterClass {
         hash = (37 * hash) + PLACEMENT_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getPlacementPolicy().hashCode();
       }
+      hash = (37 * hash) + HOST_GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getHostGroupId().hashCode();
+      hash = (37 * hash) + HOST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getHostId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3334,6 +3500,10 @@ public final class InstanceOuterClass {
           placementPolicy_ = null;
           placementPolicyBuilder_ = null;
         }
+        hostGroupId_ = "";
+
+        hostId_ = "";
+
         return this;
       }
 
@@ -3450,6 +3620,8 @@ public final class InstanceOuterClass {
         } else {
           result.placementPolicy_ = placementPolicyBuilder_.build();
         }
+        result.hostGroupId_ = hostGroupId_;
+        result.hostId_ = hostId_;
         onBuilt();
         return result;
       }
@@ -3664,6 +3836,14 @@ public final class InstanceOuterClass {
         }
         if (other.hasPlacementPolicy()) {
           mergePlacementPolicy(other.getPlacementPolicy());
+        }
+        if (!other.getHostGroupId().isEmpty()) {
+          hostGroupId_ = other.hostGroupId_;
+          onChanged();
+        }
+        if (!other.getHostId().isEmpty()) {
+          hostId_ = other.hostId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7334,6 +7514,198 @@ public final class InstanceOuterClass {
           placementPolicy_ = null;
         }
         return placementPolicyBuilder_;
+      }
+
+      private java.lang.Object hostGroupId_ = "";
+      /**
+       * <pre>
+       * ID of the dedicated host group that the instance belongs to.
+       * </pre>
+       *
+       * <code>string host_group_id = 27;</code>
+       * @return The hostGroupId.
+       */
+      public java.lang.String getHostGroupId() {
+        java.lang.Object ref = hostGroupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hostGroupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the dedicated host group that the instance belongs to.
+       * </pre>
+       *
+       * <code>string host_group_id = 27;</code>
+       * @return The bytes for hostGroupId.
+       */
+      public com.google.protobuf.ByteString
+          getHostGroupIdBytes() {
+        java.lang.Object ref = hostGroupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hostGroupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the dedicated host group that the instance belongs to.
+       * </pre>
+       *
+       * <code>string host_group_id = 27;</code>
+       * @param value The hostGroupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        hostGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the dedicated host group that the instance belongs to.
+       * </pre>
+       *
+       * <code>string host_group_id = 27;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHostGroupId() {
+        
+        hostGroupId_ = getDefaultInstance().getHostGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the dedicated host group that the instance belongs to.
+       * </pre>
+       *
+       * <code>string host_group_id = 27;</code>
+       * @param value The bytes for hostGroupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        hostGroupId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object hostId_ = "";
+      /**
+       * <pre>
+       * ID of the dedicated host that the instance belongs to.
+       * </pre>
+       *
+       * <code>string host_id = 28;</code>
+       * @return The hostId.
+       */
+      public java.lang.String getHostId() {
+        java.lang.Object ref = hostId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hostId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the dedicated host that the instance belongs to.
+       * </pre>
+       *
+       * <code>string host_id = 28;</code>
+       * @return The bytes for hostId.
+       */
+      public com.google.protobuf.ByteString
+          getHostIdBytes() {
+        java.lang.Object ref = hostId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hostId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the dedicated host that the instance belongs to.
+       * </pre>
+       *
+       * <code>string host_id = 28;</code>
+       * @param value The hostId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        hostId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the dedicated host that the instance belongs to.
+       * </pre>
+       *
+       * <code>string host_id = 28;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHostId() {
+        
+        hostId_ = getDefaultInstance().getHostId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the dedicated host that the instance belongs to.
+       * </pre>
+       *
+       * <code>string host_id = 28;</code>
+       * @param value The bytes for hostId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        hostId_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -18406,6 +18778,16 @@ public final class InstanceOuterClass {
      */
     yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRuleOrBuilder getHostAffinityRulesOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Placement group partition
+     * </pre>
+     *
+     * <code>int64 placement_group_partition = 3;</code>
+     * @return The placementGroupPartition.
+     */
+    long getPlacementGroupPartition();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.PlacementPolicy}
@@ -18468,6 +18850,11 @@ public final class InstanceOuterClass {
               }
               hostAffinityRules_.add(
                   input.readMessage(yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.HostAffinityRule.parser(), extensionRegistry));
+              break;
+            }
+            case 24: {
+
+              placementGroupPartition_ = input.readInt64();
               break;
             }
             default: {
@@ -19771,6 +20158,21 @@ public final class InstanceOuterClass {
       return hostAffinityRules_.get(index);
     }
 
+    public static final int PLACEMENT_GROUP_PARTITION_FIELD_NUMBER = 3;
+    private long placementGroupPartition_;
+    /**
+     * <pre>
+     * Placement group partition
+     * </pre>
+     *
+     * <code>int64 placement_group_partition = 3;</code>
+     * @return The placementGroupPartition.
+     */
+    @java.lang.Override
+    public long getPlacementGroupPartition() {
+      return placementGroupPartition_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -19791,6 +20193,9 @@ public final class InstanceOuterClass {
       for (int i = 0; i < hostAffinityRules_.size(); i++) {
         output.writeMessage(2, hostAffinityRules_.get(i));
       }
+      if (placementGroupPartition_ != 0L) {
+        output.writeInt64(3, placementGroupPartition_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -19806,6 +20211,10 @@ public final class InstanceOuterClass {
       for (int i = 0; i < hostAffinityRules_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, hostAffinityRules_.get(i));
+      }
+      if (placementGroupPartition_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, placementGroupPartition_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -19826,6 +20235,8 @@ public final class InstanceOuterClass {
           .equals(other.getPlacementGroupId())) return false;
       if (!getHostAffinityRulesList()
           .equals(other.getHostAffinityRulesList())) return false;
+      if (getPlacementGroupPartition()
+          != other.getPlacementGroupPartition()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -19843,6 +20254,9 @@ public final class InstanceOuterClass {
         hash = (37 * hash) + HOST_AFFINITY_RULES_FIELD_NUMBER;
         hash = (53 * hash) + getHostAffinityRulesList().hashCode();
       }
+      hash = (37 * hash) + PLACEMENT_GROUP_PARTITION_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPlacementGroupPartition());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -19985,6 +20399,8 @@ public final class InstanceOuterClass {
         } else {
           hostAffinityRulesBuilder_.clear();
         }
+        placementGroupPartition_ = 0L;
+
         return this;
       }
 
@@ -20022,6 +20438,7 @@ public final class InstanceOuterClass {
         } else {
           result.hostAffinityRules_ = hostAffinityRulesBuilder_.build();
         }
+        result.placementGroupPartition_ = placementGroupPartition_;
         onBuilt();
         return result;
       }
@@ -20099,6 +20516,9 @@ public final class InstanceOuterClass {
               hostAffinityRulesBuilder_.addAllMessages(other.hostAffinityRules_);
             }
           }
+        }
+        if (other.getPlacementGroupPartition() != 0L) {
+          setPlacementGroupPartition(other.getPlacementGroupPartition());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -20536,6 +20956,49 @@ public final class InstanceOuterClass {
           hostAffinityRules_ = null;
         }
         return hostAffinityRulesBuilder_;
+      }
+
+      private long placementGroupPartition_ ;
+      /**
+       * <pre>
+       * Placement group partition
+       * </pre>
+       *
+       * <code>int64 placement_group_partition = 3;</code>
+       * @return The placementGroupPartition.
+       */
+      @java.lang.Override
+      public long getPlacementGroupPartition() {
+        return placementGroupPartition_;
+      }
+      /**
+       * <pre>
+       * Placement group partition
+       * </pre>
+       *
+       * <code>int64 placement_group_partition = 3;</code>
+       * @param value The placementGroupPartition to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlacementGroupPartition(long value) {
+        
+        placementGroupPartition_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Placement group partition
+       * </pre>
+       *
+       * <code>int64 placement_group_partition = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlacementGroupPartition() {
+        
+        placementGroupPartition_ = 0L;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -21676,7 +22139,7 @@ public final class InstanceOuterClass {
     java.lang.String[] descriptorData = {
       "\n&yandex/cloud/compute/v1/instance.proto" +
       "\022\027yandex.cloud.compute.v1\032\037google/protob" +
-      "uf/timestamp.proto\"\340\n\n\010Instance\022\n\n\002id\030\001 " +
+      "uf/timestamp.proto\"\210\013\n\010Instance\022\n\n\002id\030\001 " +
       "\001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001" +
       "(\0132\032.google.protobuf.Timestamp\022\014\n\004name\030\004" +
       " \001(\t\022\023\n\013description\030\005 \001(\t\022=\n\006labels\030\006 \003(" +
@@ -21704,7 +22167,8 @@ public final class InstanceOuterClass {
       "k_settings\030\023 \001(\0132(.yandex.cloud.compute." +
       "v1.NetworkSettings\022B\n\020placement_policy\030\024" +
       " \001(\0132(.yandex.cloud.compute.v1.Placement" +
-      "Policy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
+      "Policy\022\025\n\rhost_group_id\030\033 \001(\t\022\017\n\007host_id" +
+      "\030\034 \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
       "lue\030\002 \001(\t:\0028\001\032/\n\rMetadataEntry\022\013\n\003key\030\001 " +
       "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\254\001\n\006Status\022\026\n\022STA" +
       "TUS_UNSPECIFIED\020\000\022\020\n\014PROVISIONING\020\001\022\013\n\007R" +
@@ -21745,29 +22209,30 @@ public final class InstanceOuterClass {
       "NetworkSettings.Type\"^\n\004Type\022\024\n\020TYPE_UNS" +
       "PECIFIED\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWARE_ACC" +
       "ELERATED\020\002\022\030\n\024HARDWARE_ACCELERATED\020\003\"%\n\013" +
-      "GpuSettings\022\026\n\016gpu_cluster_id\030\001 \001(\t\"\301\002\n\017" +
+      "GpuSettings\022\026\n\016gpu_cluster_id\030\001 \001(\t\"\344\002\n\017" +
       "PlacementPolicy\022\032\n\022placement_group_id\030\001 " +
       "\001(\t\022V\n\023host_affinity_rules\030\002 \003(\01329.yande" +
       "x.cloud.compute.v1.PlacementPolicy.HostA" +
-      "ffinityRule\032\271\001\n\020HostAffinityRule\022\013\n\003key\030" +
-      "\001 \001(\t\022N\n\002op\030\002 \001(\0162B.yandex.cloud.compute" +
-      ".v1.PlacementPolicy.HostAffinityRule.Ope" +
-      "rator\022\016\n\006values\030\003 \003(\t\"8\n\010Operator\022\030\n\024OPE" +
-      "RATOR_UNSPECIFIED\020\000\022\006\n\002IN\020\001\022\n\n\006NOT_IN\020\002\"" +
-      "\241\002\n\017MetadataOptions\022B\n\021gce_http_endpoint" +
-      "\030\001 \001(\0162\'.yandex.cloud.compute.v1.Metadat" +
-      "aOption\022E\n\024aws_v1_http_endpoint\030\002 \001(\0162\'." +
-      "yandex.cloud.compute.v1.MetadataOption\022?" +
-      "\n\016gce_http_token\030\003 \001(\0162\'.yandex.cloud.co" +
-      "mpute.v1.MetadataOption\022B\n\021aws_v1_http_t" +
-      "oken\030\004 \001(\0162\'.yandex.cloud.compute.v1.Met" +
-      "adataOption*;\n\tIpVersion\022\032\n\026IP_VERSION_U" +
-      "NSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002*L\n\016Meta" +
-      "dataOption\022\037\n\033METADATA_OPTION_UNSPECIFIE" +
-      "D\020\000\022\013\n\007ENABLED\020\001\022\014\n\010DISABLED\020\002Bb\n\033yandex" +
-      ".cloud.api.compute.v1ZCgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/compute/" +
-      "v1;computeb\006proto3"
+      "ffinityRule\022!\n\031placement_group_partition" +
+      "\030\003 \001(\003\032\271\001\n\020HostAffinityRule\022\013\n\003key\030\001 \001(\t" +
+      "\022N\n\002op\030\002 \001(\0162B.yandex.cloud.compute.v1.P" +
+      "lacementPolicy.HostAffinityRule.Operator" +
+      "\022\016\n\006values\030\003 \003(\t\"8\n\010Operator\022\030\n\024OPERATOR" +
+      "_UNSPECIFIED\020\000\022\006\n\002IN\020\001\022\n\n\006NOT_IN\020\002\"\241\002\n\017M" +
+      "etadataOptions\022B\n\021gce_http_endpoint\030\001 \001(" +
+      "\0162\'.yandex.cloud.compute.v1.MetadataOpti" +
+      "on\022E\n\024aws_v1_http_endpoint\030\002 \001(\0162\'.yande" +
+      "x.cloud.compute.v1.MetadataOption\022?\n\016gce" +
+      "_http_token\030\003 \001(\0162\'.yandex.cloud.compute" +
+      ".v1.MetadataOption\022B\n\021aws_v1_http_token\030" +
+      "\004 \001(\0162\'.yandex.cloud.compute.v1.Metadata" +
+      "Option*;\n\tIpVersion\022\032\n\026IP_VERSION_UNSPEC" +
+      "IFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002*L\n\016MetadataO" +
+      "ption\022\037\n\033METADATA_OPTION_UNSPECIFIED\020\000\022\013" +
+      "\n\007ENABLED\020\001\022\014\n\010DISABLED\020\002Bb\n\033yandex.clou" +
+      "d.api.compute.v1ZCgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/compute/v1;co" +
+      "mputeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21779,7 +22244,7 @@ public final class InstanceOuterClass {
     internal_static_yandex_cloud_compute_v1_Instance_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_Instance_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "ZoneId", "PlatformId", "Resources", "Status", "Metadata", "MetadataOptions", "BootDisk", "SecondaryDisks", "LocalDisks", "Filesystems", "NetworkInterfaces", "GpuSettings", "Fqdn", "SchedulingPolicy", "ServiceAccountId", "NetworkSettings", "PlacementPolicy", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "ZoneId", "PlatformId", "Resources", "Status", "Metadata", "MetadataOptions", "BootDisk", "SecondaryDisks", "LocalDisks", "Filesystems", "NetworkInterfaces", "GpuSettings", "Fqdn", "SchedulingPolicy", "ServiceAccountId", "NetworkSettings", "PlacementPolicy", "HostGroupId", "HostId", });
     internal_static_yandex_cloud_compute_v1_Instance_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_Instance_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_Instance_LabelsEntry_fieldAccessorTable = new
@@ -21863,7 +22328,7 @@ public final class InstanceOuterClass {
     internal_static_yandex_cloud_compute_v1_PlacementPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_PlacementPolicy_descriptor,
-        new java.lang.String[] { "PlacementGroupId", "HostAffinityRules", });
+        new java.lang.String[] { "PlacementGroupId", "HostAffinityRules", "PlacementGroupPartition", });
     internal_static_yandex_cloud_compute_v1_PlacementPolicy_HostAffinityRule_descriptor =
       internal_static_yandex_cloud_compute_v1_PlacementPolicy_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_PlacementPolicy_HostAffinityRule_fieldAccessorTable = new

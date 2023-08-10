@@ -503,6 +503,18 @@ public final class DatabaseOuterClass {
         getKinesisApiEndpointBytes();
 
     /**
+     * <code>string kafka_api_endpoint = 26;</code>
+     * @return The kafkaApiEndpoint.
+     */
+    java.lang.String getKafkaApiEndpoint();
+    /**
+     * <code>string kafka_api_endpoint = 26;</code>
+     * @return The bytes for kafkaApiEndpoint.
+     */
+    com.google.protobuf.ByteString
+        getKafkaApiEndpointBytes();
+
+    /**
      * <code>.yandex.cloud.ydb.v1.MonitoringConfig monitoring_config = 24;</code>
      * @return Whether the monitoringConfig field is set.
      */
@@ -554,6 +566,7 @@ public final class DatabaseOuterClass {
       locationId_ = "";
       documentApiEndpoint_ = "";
       kinesisApiEndpoint_ = "";
+      kafkaApiEndpoint_ = "";
     }
 
     @java.lang.Override
@@ -804,6 +817,12 @@ public final class DatabaseOuterClass {
             case 200: {
 
               deletionProtection_ = input.readBool();
+              break;
+            }
+            case 210: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              kafkaApiEndpoint_ = s;
               break;
             }
             default: {
@@ -1838,6 +1857,44 @@ public final class DatabaseOuterClass {
       }
     }
 
+    public static final int KAFKA_API_ENDPOINT_FIELD_NUMBER = 26;
+    private volatile java.lang.Object kafkaApiEndpoint_;
+    /**
+     * <code>string kafka_api_endpoint = 26;</code>
+     * @return The kafkaApiEndpoint.
+     */
+    @java.lang.Override
+    public java.lang.String getKafkaApiEndpoint() {
+      java.lang.Object ref = kafkaApiEndpoint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        kafkaApiEndpoint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string kafka_api_endpoint = 26;</code>
+     * @return The bytes for kafkaApiEndpoint.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKafkaApiEndpointBytes() {
+      java.lang.Object ref = kafkaApiEndpoint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        kafkaApiEndpoint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int MONITORING_CONFIG_FIELD_NUMBER = 24;
     private yandex.cloud.api.ydb.v1.DatabaseOuterClass.MonitoringConfig monitoringConfig_;
     /**
@@ -1964,6 +2021,9 @@ public final class DatabaseOuterClass {
       if (deletionProtection_ != false) {
         output.writeBool(25, deletionProtection_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(kafkaApiEndpoint_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 26, kafkaApiEndpoint_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2069,6 +2129,9 @@ public final class DatabaseOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(25, deletionProtection_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(kafkaApiEndpoint_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(26, kafkaApiEndpoint_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2131,6 +2194,8 @@ public final class DatabaseOuterClass {
           .equals(other.getDocumentApiEndpoint())) return false;
       if (!getKinesisApiEndpoint()
           .equals(other.getKinesisApiEndpoint())) return false;
+      if (!getKafkaApiEndpoint()
+          .equals(other.getKafkaApiEndpoint())) return false;
       if (hasMonitoringConfig() != other.hasMonitoringConfig()) return false;
       if (hasMonitoringConfig()) {
         if (!getMonitoringConfig()
@@ -2219,6 +2284,8 @@ public final class DatabaseOuterClass {
       hash = (53 * hash) + getDocumentApiEndpoint().hashCode();
       hash = (37 * hash) + KINESIS_API_ENDPOINT_FIELD_NUMBER;
       hash = (53 * hash) + getKinesisApiEndpoint().hashCode();
+      hash = (37 * hash) + KAFKA_API_ENDPOINT_FIELD_NUMBER;
+      hash = (53 * hash) + getKafkaApiEndpoint().hashCode();
       if (hasMonitoringConfig()) {
         hash = (37 * hash) + MONITORING_CONFIG_FIELD_NUMBER;
         hash = (53 * hash) + getMonitoringConfig().hashCode();
@@ -2456,6 +2523,8 @@ public final class DatabaseOuterClass {
 
         kinesisApiEndpoint_ = "";
 
+        kafkaApiEndpoint_ = "";
+
         if (monitoringConfigBuilder_ == null) {
           monitoringConfig_ = null;
         } else {
@@ -2560,6 +2629,7 @@ public final class DatabaseOuterClass {
         }
         result.documentApiEndpoint_ = documentApiEndpoint_;
         result.kinesisApiEndpoint_ = kinesisApiEndpoint_;
+        result.kafkaApiEndpoint_ = kafkaApiEndpoint_;
         if (monitoringConfigBuilder_ == null) {
           result.monitoringConfig_ = monitoringConfig_;
         } else {
@@ -2683,6 +2753,10 @@ public final class DatabaseOuterClass {
         }
         if (!other.getKinesisApiEndpoint().isEmpty()) {
           kinesisApiEndpoint_ = other.kinesisApiEndpoint_;
+          onChanged();
+        }
+        if (!other.getKafkaApiEndpoint().isEmpty()) {
+          kafkaApiEndpoint_ = other.kafkaApiEndpoint_;
           onChanged();
         }
         if (other.hasMonitoringConfig()) {
@@ -4951,6 +5025,82 @@ public final class DatabaseOuterClass {
   checkByteStringIsUtf8(value);
         
         kinesisApiEndpoint_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object kafkaApiEndpoint_ = "";
+      /**
+       * <code>string kafka_api_endpoint = 26;</code>
+       * @return The kafkaApiEndpoint.
+       */
+      public java.lang.String getKafkaApiEndpoint() {
+        java.lang.Object ref = kafkaApiEndpoint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          kafkaApiEndpoint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string kafka_api_endpoint = 26;</code>
+       * @return The bytes for kafkaApiEndpoint.
+       */
+      public com.google.protobuf.ByteString
+          getKafkaApiEndpointBytes() {
+        java.lang.Object ref = kafkaApiEndpoint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          kafkaApiEndpoint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string kafka_api_endpoint = 26;</code>
+       * @param value The kafkaApiEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKafkaApiEndpoint(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        kafkaApiEndpoint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string kafka_api_endpoint = 26;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKafkaApiEndpoint() {
+        
+        kafkaApiEndpoint_ = getDefaultInstance().getKafkaApiEndpoint();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string kafka_api_endpoint = 26;</code>
+       * @param value The bytes for kafkaApiEndpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKafkaApiEndpointBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        kafkaApiEndpoint_ = value;
         onChanged();
         return this;
       }
@@ -21395,7 +21545,7 @@ public final class DatabaseOuterClass {
       "\n\"yandex/cloud/ydb/v1/database.proto\022\023ya" +
       "ndex.cloud.ydb.v1\032\037google/protobuf/times" +
       "tamp.proto\032\035yandex/cloud/validation.prot" +
-      "o\032 yandex/cloud/ydb/v1/backup.proto\"\221\t\n\010" +
+      "o\032 yandex/cloud/ydb/v1/backup.proto\"\255\t\n\010" +
       "Database\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022" +
       ".\n\ncreated_at\030\003 \001(\0132\032.google.protobuf.Ti" +
       "mestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013description\030\005 \001" +
@@ -21417,76 +21567,76 @@ public final class DatabaseOuterClass {
       "dex.cloud.ydb.v1.Database.LabelsEntry\0228\n" +
       "\rbackup_config\030\025 \001(\0132!.yandex.cloud.ydb." +
       "v1.BackupConfig\022\035\n\025document_api_endpoint" +
-      "\030\026 \001(\t\022\034\n\024kinesis_api_endpoint\030\027 \001(\t\022@\n\021" +
-      "monitoring_config\030\030 \001(\0132%.yandex.cloud.y" +
-      "db.v1.MonitoringConfig\022\033\n\023deletion_prote" +
-      "ction\030\031 \001(\010\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\"\201\001\n\006Status\022\026\n\022STATUS_" +
-      "UNSPECIFIED\020\000\022\020\n\014PROVISIONING\020\001\022\013\n\007RUNNI" +
-      "NG\020\002\022\014\n\010UPDATING\020\004\022\t\n\005ERROR\020\005\022\014\n\010DELETIN" +
-      "G\020\006\022\014\n\010STARTING\020\007\022\013\n\007STOPPED\020\010B\017\n\rdataba" +
-      "se_type\"\202\006\n\016AlertParameter\022Z\n\026double_par" +
-      "ameter_value\030\001 \001(\01328.yandex.cloud.ydb.v1" +
-      ".AlertParameter.DoubleParameterValueH\000\022\\" +
-      "\n\027integer_parameter_value\030\002 \001(\01329.yandex" +
-      ".cloud.ydb.v1.AlertParameter.IntegerPara" +
-      "meterValueH\000\022V\n\024text_parameter_value\030\003 \001" +
-      "(\01326.yandex.cloud.ydb.v1.AlertParameter." +
-      "TextParameterValueH\000\022_\n\031text_list_parame" +
-      "ter_value\030\004 \001(\0132:.yandex.cloud.ydb.v1.Al" +
-      "ertParameter.TextListParameterValueH\000\022a\n" +
-      "\032label_list_parameter_value\030\005 \001(\0132;.yand" +
-      "ex.cloud.ydb.v1.AlertParameter.LabelList" +
-      "ParameterValueH\000\0323\n\024DoubleParameterValue" +
-      "\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\001\0324\n\025Integer" +
-      "ParameterValue\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\003\0321\n\022TextParameterValue\022\014\n\004name\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t\0326\n\026TextListParameterValue" +
-      "\022\014\n\004name\030\001 \001(\t\022\016\n\006values\030\002 \003(\t\0327\n\027LabelL" +
-      "istParameterValue\022\014\n\004name\030\001 \001(\t\022\016\n\006value" +
-      "s\030\002 \003(\tB\013\n\tparameter\"\242\001\n\023NotificationCha" +
-      "nnel\022\037\n\027notification_channel_id\030\001 \001(\t\022I\n" +
-      "\025notify_about_statuses\030\002 \003(\0162*.yandex.cl" +
-      "oud.ydb.v1.AlertEvaluationStatus\022\037\n\027repe" +
-      "ate_notify_delay_ms\030\003 \001(\003\"\236\002\n\005Alert\022\020\n\010a" +
-      "lert_id\030\001 \001(\t\022\031\n\021alert_template_id\030\002 \001(\t" +
-      "\022\014\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022G\n\025n" +
-      "otification_channels\030\005 \003(\0132(.yandex.clou" +
-      "d.ydb.v1.NotificationChannel\022=\n\020alert_pa" +
-      "rameters\030\006 \003(\0132#.yandex.cloud.ydb.v1.Ale" +
-      "rtParameter\022=\n\020alert_thresholds\030\007 \003(\0132#." +
-      "yandex.cloud.ydb.v1.AlertParameter\">\n\020Mo" +
-      "nitoringConfig\022*\n\006alerts\030\001 \003(\0132\032.yandex." +
-      "cloud.ydb.v1.Alert\"\346\001\n\021DedicatedDatabase" +
-      "\022\032\n\022resource_preset_id\030\001 \001(\t\022:\n\016storage_" +
-      "config\030\002 \001(\0132\".yandex.cloud.ydb.v1.Stora" +
-      "geConfig\0226\n\014scale_policy\030\003 \001(\0132 .yandex." +
-      "cloud.ydb.v1.ScalePolicy\022\022\n\nnetwork_id\030\004" +
-      " \001(\t\022\022\n\nsubnet_ids\030\005 \003(\t\022\031\n\021assign_publi" +
-      "c_ips\030\006 \001(\010\"\255\001\n\022ServerlessDatabase\022\034\n\024th" +
-      "rottling_rcu_limit\030\001 \001(\003\022\032\n\022storage_size" +
-      "_limit\030\002 \001(\003\022#\n\033enable_throttling_rcu_li" +
-      "mit\030\003 \001(\010\022\035\n\025provisioned_rcu_limit\030\004 \001(\003" +
-      "\022\031\n\021topic_write_quota\030\005 \001(\003\"&\n\rZonalData" +
-      "base\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\"+\n\020RegionalD" +
-      "atabase\022\027\n\tregion_id\030\001 \001(\tB\004\350\3071\001\"\212\001\n\013Sca" +
-      "lePolicy\022B\n\013fixed_scale\030\001 \001(\0132+.yandex.c" +
-      "loud.ydb.v1.ScalePolicy.FixedScaleH\000\032#\n\n" +
-      "FixedScale\022\025\n\004size\030\001 \001(\003B\007\372\3071\003>=1B\022\n\nsca" +
-      "le_type\022\004\300\3011\001\"q\n\rStorageConfig\022D\n\017storag" +
-      "e_options\030\001 \003(\0132\".yandex.cloud.ydb.v1.St" +
-      "orageOptionB\007\202\3101\003>=1\022\032\n\022storage_size_lim" +
-      "it\030\002 \001(\003\"=\n\rStorageOption\022\027\n\017storage_typ" +
-      "e_id\030\001 \001(\t\022\023\n\013group_count\030\002 \001(\003*\355\001\n\025Aler" +
-      "tEvaluationStatus\022\'\n#ALERT_EVALUATION_ST" +
-      "ATUS_UNSPECIFIED\020\000\022\036\n\032ALERT_EVALUATION_S" +
-      "TATUS_OK\020\001\022#\n\037ALERT_EVALUATION_STATUS_NO" +
-      "_DATA\020\002\022!\n\035ALERT_EVALUATION_STATUS_ERROR" +
-      "\020\003\022!\n\035ALERT_EVALUATION_STATUS_ALARM\020\004\022 \n" +
-      "\034ALERT_EVALUATION_STATUS_WARN\020\005BV\n\027yande" +
-      "x.cloud.api.ydb.v1Z;github.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/ydb/v1;ydbb" +
-      "\006proto3"
+      "\030\026 \001(\t\022\034\n\024kinesis_api_endpoint\030\027 \001(\t\022\032\n\022" +
+      "kafka_api_endpoint\030\032 \001(\t\022@\n\021monitoring_c" +
+      "onfig\030\030 \001(\0132%.yandex.cloud.ydb.v1.Monito" +
+      "ringConfig\022\033\n\023deletion_protection\030\031 \001(\010\032" +
+      "-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001\"\201\001\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020" +
+      "\000\022\020\n\014PROVISIONING\020\001\022\013\n\007RUNNING\020\002\022\014\n\010UPDA" +
+      "TING\020\004\022\t\n\005ERROR\020\005\022\014\n\010DELETING\020\006\022\014\n\010START" +
+      "ING\020\007\022\013\n\007STOPPED\020\010B\017\n\rdatabase_type\"\202\006\n\016" +
+      "AlertParameter\022Z\n\026double_parameter_value" +
+      "\030\001 \001(\01328.yandex.cloud.ydb.v1.AlertParame" +
+      "ter.DoubleParameterValueH\000\022\\\n\027integer_pa" +
+      "rameter_value\030\002 \001(\01329.yandex.cloud.ydb.v" +
+      "1.AlertParameter.IntegerParameterValueH\000" +
+      "\022V\n\024text_parameter_value\030\003 \001(\01326.yandex." +
+      "cloud.ydb.v1.AlertParameter.TextParamete" +
+      "rValueH\000\022_\n\031text_list_parameter_value\030\004 " +
+      "\001(\0132:.yandex.cloud.ydb.v1.AlertParameter" +
+      ".TextListParameterValueH\000\022a\n\032label_list_" +
+      "parameter_value\030\005 \001(\0132;.yandex.cloud.ydb" +
+      ".v1.AlertParameter.LabelListParameterVal" +
+      "ueH\000\0323\n\024DoubleParameterValue\022\014\n\004name\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\001\0324\n\025IntegerParameterVal" +
+      "ue\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\003\0321\n\022TextP" +
+      "arameterValue\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t\0326\n\026TextListParameterValue\022\014\n\004name\030\001 \001" +
+      "(\t\022\016\n\006values\030\002 \003(\t\0327\n\027LabelListParameter" +
+      "Value\022\014\n\004name\030\001 \001(\t\022\016\n\006values\030\002 \003(\tB\013\n\tp" +
+      "arameter\"\242\001\n\023NotificationChannel\022\037\n\027noti" +
+      "fication_channel_id\030\001 \001(\t\022I\n\025notify_abou" +
+      "t_statuses\030\002 \003(\0162*.yandex.cloud.ydb.v1.A" +
+      "lertEvaluationStatus\022\037\n\027repeate_notify_d" +
+      "elay_ms\030\003 \001(\003\"\236\002\n\005Alert\022\020\n\010alert_id\030\001 \001(" +
+      "\t\022\031\n\021alert_template_id\030\002 \001(\t\022\014\n\004name\030\003 \001" +
+      "(\t\022\023\n\013description\030\004 \001(\t\022G\n\025notification_" +
+      "channels\030\005 \003(\0132(.yandex.cloud.ydb.v1.Not" +
+      "ificationChannel\022=\n\020alert_parameters\030\006 \003" +
+      "(\0132#.yandex.cloud.ydb.v1.AlertParameter\022" +
+      "=\n\020alert_thresholds\030\007 \003(\0132#.yandex.cloud" +
+      ".ydb.v1.AlertParameter\">\n\020MonitoringConf" +
+      "ig\022*\n\006alerts\030\001 \003(\0132\032.yandex.cloud.ydb.v1" +
+      ".Alert\"\346\001\n\021DedicatedDatabase\022\032\n\022resource" +
+      "_preset_id\030\001 \001(\t\022:\n\016storage_config\030\002 \001(\013" +
+      "2\".yandex.cloud.ydb.v1.StorageConfig\0226\n\014" +
+      "scale_policy\030\003 \001(\0132 .yandex.cloud.ydb.v1" +
+      ".ScalePolicy\022\022\n\nnetwork_id\030\004 \001(\t\022\022\n\nsubn" +
+      "et_ids\030\005 \003(\t\022\031\n\021assign_public_ips\030\006 \001(\010\"" +
+      "\255\001\n\022ServerlessDatabase\022\034\n\024throttling_rcu" +
+      "_limit\030\001 \001(\003\022\032\n\022storage_size_limit\030\002 \001(\003" +
+      "\022#\n\033enable_throttling_rcu_limit\030\003 \001(\010\022\035\n" +
+      "\025provisioned_rcu_limit\030\004 \001(\003\022\031\n\021topic_wr" +
+      "ite_quota\030\005 \001(\003\"&\n\rZonalDatabase\022\025\n\007zone" +
+      "_id\030\001 \001(\tB\004\350\3071\001\"+\n\020RegionalDatabase\022\027\n\tr" +
+      "egion_id\030\001 \001(\tB\004\350\3071\001\"\212\001\n\013ScalePolicy\022B\n\013" +
+      "fixed_scale\030\001 \001(\0132+.yandex.cloud.ydb.v1." +
+      "ScalePolicy.FixedScaleH\000\032#\n\nFixedScale\022\025" +
+      "\n\004size\030\001 \001(\003B\007\372\3071\003>=1B\022\n\nscale_type\022\004\300\3011" +
+      "\001\"q\n\rStorageConfig\022D\n\017storage_options\030\001 " +
+      "\003(\0132\".yandex.cloud.ydb.v1.StorageOptionB" +
+      "\007\202\3101\003>=1\022\032\n\022storage_size_limit\030\002 \001(\003\"=\n\r" +
+      "StorageOption\022\027\n\017storage_type_id\030\001 \001(\t\022\023" +
+      "\n\013group_count\030\002 \001(\003*\355\001\n\025AlertEvaluationS" +
+      "tatus\022\'\n#ALERT_EVALUATION_STATUS_UNSPECI" +
+      "FIED\020\000\022\036\n\032ALERT_EVALUATION_STATUS_OK\020\001\022#" +
+      "\n\037ALERT_EVALUATION_STATUS_NO_DATA\020\002\022!\n\035A" +
+      "LERT_EVALUATION_STATUS_ERROR\020\003\022!\n\035ALERT_" +
+      "EVALUATION_STATUS_ALARM\020\004\022 \n\034ALERT_EVALU" +
+      "ATION_STATUS_WARN\020\005BV\n\027yandex.cloud.api." +
+      "ydb.v1Z;github.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/ydb/v1;ydbb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21500,7 +21650,7 @@ public final class DatabaseOuterClass {
     internal_static_yandex_cloud_ydb_v1_Database_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ydb_v1_Database_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Status", "Endpoint", "ResourcePresetId", "StorageConfig", "ScalePolicy", "NetworkId", "SubnetIds", "ZonalDatabase", "RegionalDatabase", "DedicatedDatabase", "ServerlessDatabase", "AssignPublicIps", "LocationId", "Labels", "BackupConfig", "DocumentApiEndpoint", "KinesisApiEndpoint", "MonitoringConfig", "DeletionProtection", "DatabaseType", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Status", "Endpoint", "ResourcePresetId", "StorageConfig", "ScalePolicy", "NetworkId", "SubnetIds", "ZonalDatabase", "RegionalDatabase", "DedicatedDatabase", "ServerlessDatabase", "AssignPublicIps", "LocationId", "Labels", "BackupConfig", "DocumentApiEndpoint", "KinesisApiEndpoint", "KafkaApiEndpoint", "MonitoringConfig", "DeletionProtection", "DatabaseType", });
     internal_static_yandex_cloud_ydb_v1_Database_LabelsEntry_descriptor =
       internal_static_yandex_cloud_ydb_v1_Database_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ydb_v1_Database_LabelsEntry_fieldAccessorTable = new
