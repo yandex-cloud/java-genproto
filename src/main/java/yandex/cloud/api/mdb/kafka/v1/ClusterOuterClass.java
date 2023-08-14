@@ -6123,6 +6123,33 @@ public final class ClusterOuterClass {
      * <code>.yandex.cloud.mdb.kafka.v1.Access access = 9;</code>
      */
     yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.AccessOrBuilder getAccessOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration of REST API.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig rest_api_config = 10;</code>
+     * @return Whether the restApiConfig field is set.
+     */
+    boolean hasRestApiConfig();
+    /**
+     * <pre>
+     * Configuration of REST API.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig rest_api_config = 10;</code>
+     * @return The restApiConfig.
+     */
+    yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig getRestApiConfig();
+    /**
+     * <pre>
+     * Configuration of REST API.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig rest_api_config = 10;</code>
+     */
+    yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfigOrBuilder getRestApiConfigOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConfigSpec}
@@ -6250,6 +6277,19 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(access_);
                 access_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig.Builder subBuilder = null;
+              if (restApiConfig_ != null) {
+                subBuilder = restApiConfig_.toBuilder();
+              }
+              restApiConfig_ = input.readMessage(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(restApiConfig_);
+                restApiConfig_ = subBuilder.buildPartial();
               }
 
               break;
@@ -8650,6 +8690,515 @@ public final class ClusterOuterClass {
 
     }
 
+    public interface RestAPIConfigOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * Is REST API enabled for this cluster.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      boolean getEnabled();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig}
+     */
+    public static final class RestAPIConfig extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig)
+        RestAPIConfigOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use RestAPIConfig.newBuilder() to construct.
+      private RestAPIConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private RestAPIConfig() {
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new RestAPIConfig();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private RestAPIConfig(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                enabled_ = input.readBool();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_RestAPIConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_RestAPIConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig.class, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig.Builder.class);
+      }
+
+      public static final int ENABLED_FIELD_NUMBER = 1;
+      private boolean enabled_;
+      /**
+       * <pre>
+       * Is REST API enabled for this cluster.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (enabled_ != false) {
+          output.writeBool(1, enabled_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (enabled_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, enabled_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig other = (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig) obj;
+
+        if (getEnabled()
+            != other.getEnabled()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnabled());
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig)
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfigOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_RestAPIConfig_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_RestAPIConfig_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig.class, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          enabled_ = false;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_RestAPIConfig_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig getDefaultInstanceForType() {
+          return yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig build() {
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig buildPartial() {
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig result = new yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig(this);
+          result.enabled_ = enabled_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig) {
+            return mergeFrom((yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig other) {
+          if (other == yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig.getDefaultInstance()) return this;
+          if (other.getEnabled() != false) {
+            setEnabled(other.getEnabled());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private boolean enabled_ ;
+        /**
+         * <pre>
+         * Is REST API enabled for this cluster.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @return The enabled.
+         */
+        @java.lang.Override
+        public boolean getEnabled() {
+          return enabled_;
+        }
+        /**
+         * <pre>
+         * Is REST API enabled for this cluster.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @param value The enabled to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEnabled(boolean value) {
+          
+          enabled_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Is REST API enabled for this cluster.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearEnabled() {
+          
+          enabled_ = false;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig)
+      private static final yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig();
+      }
+
+      public static yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<RestAPIConfig>
+          PARSER = new com.google.protobuf.AbstractParser<RestAPIConfig>() {
+        @java.lang.Override
+        public RestAPIConfig parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new RestAPIConfig(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<RestAPIConfig> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<RestAPIConfig> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int VERSION_FIELD_NUMBER = 1;
     private volatile java.lang.Object version_;
     /**
@@ -8945,6 +9494,44 @@ public final class ClusterOuterClass {
       return getAccess();
     }
 
+    public static final int REST_API_CONFIG_FIELD_NUMBER = 10;
+    private yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig restApiConfig_;
+    /**
+     * <pre>
+     * Configuration of REST API.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig rest_api_config = 10;</code>
+     * @return Whether the restApiConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasRestApiConfig() {
+      return restApiConfig_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration of REST API.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig rest_api_config = 10;</code>
+     * @return The restApiConfig.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig getRestApiConfig() {
+      return restApiConfig_ == null ? yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig.getDefaultInstance() : restApiConfig_;
+    }
+    /**
+     * <pre>
+     * Configuration of REST API.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig rest_api_config = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfigOrBuilder getRestApiConfigOrBuilder() {
+      return getRestApiConfig();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8985,6 +9572,9 @@ public final class ClusterOuterClass {
       }
       if (access_ != null) {
         output.writeMessage(9, getAccess());
+      }
+      if (restApiConfig_ != null) {
+        output.writeMessage(10, getRestApiConfig());
       }
       unknownFields.writeTo(output);
     }
@@ -9034,6 +9624,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getAccess());
       }
+      if (restApiConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getRestApiConfig());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -9079,6 +9673,11 @@ public final class ClusterOuterClass {
         if (!getAccess()
             .equals(other.getAccess())) return false;
       }
+      if (hasRestApiConfig() != other.hasRestApiConfig()) return false;
+      if (hasRestApiConfig()) {
+        if (!getRestApiConfig()
+            .equals(other.getRestApiConfig())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9120,6 +9719,10 @@ public final class ClusterOuterClass {
       if (hasAccess()) {
         hash = (37 * hash) + ACCESS_FIELD_NUMBER;
         hash = (53 * hash) + getAccess().hashCode();
+      }
+      if (hasRestApiConfig()) {
+        hash = (37 * hash) + REST_API_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getRestApiConfig().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -9288,6 +9891,12 @@ public final class ClusterOuterClass {
           access_ = null;
           accessBuilder_ = null;
         }
+        if (restApiConfigBuilder_ == null) {
+          restApiConfig_ = null;
+        } else {
+          restApiConfig_ = null;
+          restApiConfigBuilder_ = null;
+        }
         return this;
       }
 
@@ -9343,6 +9952,11 @@ public final class ClusterOuterClass {
           result.access_ = access_;
         } else {
           result.access_ = accessBuilder_.build();
+        }
+        if (restApiConfigBuilder_ == null) {
+          result.restApiConfig_ = restApiConfig_;
+        } else {
+          result.restApiConfig_ = restApiConfigBuilder_.build();
         }
         onBuilt();
         return result;
@@ -9426,6 +10040,9 @@ public final class ClusterOuterClass {
         }
         if (other.hasAccess()) {
           mergeAccess(other.getAccess());
+        }
+        if (other.hasRestApiConfig()) {
+          mergeRestApiConfig(other.getRestApiConfig());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10449,6 +11066,161 @@ public final class ClusterOuterClass {
           access_ = null;
         }
         return accessBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig restApiConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfigOrBuilder> restApiConfigBuilder_;
+      /**
+       * <pre>
+       * Configuration of REST API.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig rest_api_config = 10;</code>
+       * @return Whether the restApiConfig field is set.
+       */
+      public boolean hasRestApiConfig() {
+        return restApiConfigBuilder_ != null || restApiConfig_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration of REST API.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig rest_api_config = 10;</code>
+       * @return The restApiConfig.
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig getRestApiConfig() {
+        if (restApiConfigBuilder_ == null) {
+          return restApiConfig_ == null ? yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig.getDefaultInstance() : restApiConfig_;
+        } else {
+          return restApiConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of REST API.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig rest_api_config = 10;</code>
+       */
+      public Builder setRestApiConfig(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig value) {
+        if (restApiConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          restApiConfig_ = value;
+          onChanged();
+        } else {
+          restApiConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of REST API.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig rest_api_config = 10;</code>
+       */
+      public Builder setRestApiConfig(
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig.Builder builderForValue) {
+        if (restApiConfigBuilder_ == null) {
+          restApiConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          restApiConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of REST API.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig rest_api_config = 10;</code>
+       */
+      public Builder mergeRestApiConfig(yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig value) {
+        if (restApiConfigBuilder_ == null) {
+          if (restApiConfig_ != null) {
+            restApiConfig_ =
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig.newBuilder(restApiConfig_).mergeFrom(value).buildPartial();
+          } else {
+            restApiConfig_ = value;
+          }
+          onChanged();
+        } else {
+          restApiConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of REST API.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig rest_api_config = 10;</code>
+       */
+      public Builder clearRestApiConfig() {
+        if (restApiConfigBuilder_ == null) {
+          restApiConfig_ = null;
+          onChanged();
+        } else {
+          restApiConfig_ = null;
+          restApiConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration of REST API.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig rest_api_config = 10;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig.Builder getRestApiConfigBuilder() {
+        
+        onChanged();
+        return getRestApiConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration of REST API.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig rest_api_config = 10;</code>
+       */
+      public yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfigOrBuilder getRestApiConfigOrBuilder() {
+        if (restApiConfigBuilder_ != null) {
+          return restApiConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return restApiConfig_ == null ?
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig.getDefaultInstance() : restApiConfig_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration of REST API.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.kafka.v1.ConfigSpec.RestAPIConfig rest_api_config = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfigOrBuilder> 
+          getRestApiConfigFieldBuilder() {
+        if (restApiConfigBuilder_ == null) {
+          restApiConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfig.Builder, yandex.cloud.api.mdb.kafka.v1.ClusterOuterClass.ConfigSpec.RestAPIConfigOrBuilder>(
+                  getRestApiConfig(),
+                  getParentForChildren(),
+                  isClean());
+          restApiConfig_ = null;
+        }
+        return restApiConfigBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -36779,6 +37551,11 @@ public final class ClusterOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_Zookeeper_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_RestAPIConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_RestAPIConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_kafka_v1_Resources_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -36856,7 +37633,7 @@ public final class ClusterOuterClass {
       "\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n" +
       "\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014" +
       "\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004lin" +
-      "k\030\003 \001(\t\"\335\006\n\nConfigSpec\022\017\n\007version\030\001 \001(\t\022" +
+      "k\030\003 \001(\t\"\315\007\n\nConfigSpec\022\017\n\007version\030\001 \001(\t\022" +
       ":\n\005kafka\030\002 \001(\0132+.yandex.cloud.mdb.kafka." +
       "v1.ConfigSpec.Kafka\022B\n\tzookeeper\030\003 \001(\0132/" +
       ".yandex.cloud.mdb.kafka.v1.ConfigSpec.Zo" +
@@ -36865,153 +37642,156 @@ public final class ClusterOuterClass {
       "assign_public_ip\030\006 \001(\010\022\030\n\020unmanaged_topi" +
       "cs\030\007 \001(\010\022\027\n\017schema_registry\030\010 \001(\010\0221\n\006acc" +
       "ess\030\t \001(\0132!.yandex.cloud.mdb.kafka.v1.Ac" +
-      "cess\032\262\003\n\005Kafka\0227\n\tresources\030\001 \001(\0132$.yand" +
-      "ex.cloud.mdb.kafka.v1.Resources\022Z\n\020kafka" +
-      "_config_2_1\030\002 \001(\0132).yandex.cloud.mdb.kaf" +
-      "ka.v1.KafkaConfig2_1B\002\030\001H\000R\017kafkaConfig_" +
-      "2_1\022Z\n\020kafka_config_2_6\030\003 \001(\0132).yandex.c" +
-      "loud.mdb.kafka.v1.KafkaConfig2_6B\002\030\001H\000R\017" +
-      "kafkaConfig_2_6\022V\n\020kafka_config_2_8\030\004 \001(" +
-      "\0132).yandex.cloud.mdb.kafka.v1.KafkaConfi" +
-      "g2_8H\000R\017kafkaConfig_2_8\022P\n\016kafka_config_" +
-      "3\030\005 \001(\0132\'.yandex.cloud.mdb.kafka.v1.Kafk" +
-      "aConfig3H\000R\rkafkaConfig_3B\016\n\014kafka_confi" +
-      "g\032D\n\tZookeeper\0227\n\tresources\030\001 \001(\0132$.yand" +
-      "ex.cloud.mdb.kafka.v1.Resources\"P\n\tResou" +
-      "rces\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\tdisk" +
-      "_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\371\010\n\016Ka" +
-      "fkaConfig2_1\022D\n\020compression_type\030\001 \001(\0162*" +
-      ".yandex.cloud.mdb.kafka.v1.CompressionTy" +
-      "pe\022@\n\033log_flush_interval_messages\030\002 \001(\0132" +
-      "\033.google.protobuf.Int64Value\022:\n\025log_flus" +
-      "h_interval_ms\030\003 \001(\0132\033.google.protobuf.In" +
-      "t64Value\022D\n\037log_flush_scheduler_interval" +
-      "_ms\030\004 \001(\0132\033.google.protobuf.Int64Value\0228" +
-      "\n\023log_retention_bytes\030\005 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\0228\n\023log_retention_hours\030" +
-      "\006 \001(\0132\033.google.protobuf.Int64Value\022:\n\025lo" +
-      "g_retention_minutes\030\007 \001(\0132\033.google.proto" +
-      "buf.Int64Value\0225\n\020log_retention_ms\030\010 \001(\013" +
-      "2\033.google.protobuf.Int64Value\0226\n\021log_seg" +
-      "ment_bytes\030\t \001(\0132\033.google.protobuf.Int64" +
-      "Value\0223\n\017log_preallocate\030\n \001(\0132\032.google." +
-      "protobuf.BoolValue\022=\n\030socket_send_buffer" +
-      "_bytes\030\013 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022@\n\033socket_receive_buffer_bytes\030\014 \001(\0132\033" +
-      ".google.protobuf.Int64Value\022=\n\031auto_crea" +
-      "te_topics_enable\030\r \001(\0132\032.google.protobuf" +
-      ".BoolValue\0223\n\016num_partitions\030\016 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022?\n\032default_repli" +
-      "cation_factor\030\017 \001(\0132\033.google.protobuf.In" +
-      "t64Value\0226\n\021message_max_bytes\030\020 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\022<\n\027replica_fetc" +
-      "h_max_bytes\030\021 \001(\0132\033.google.protobuf.Int6" +
-      "4Value\022\031\n\021ssl_cipher_suites\030\022 \003(\t\022>\n\031off" +
-      "sets_retention_minutes\030\023 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value:\002\030\001\"\371\010\n\016KafkaConfig2_6" +
-      "\022D\n\020compression_type\030\001 \001(\0162*.yandex.clou" +
-      "d.mdb.kafka.v1.CompressionType\022@\n\033log_fl" +
-      "ush_interval_messages\030\002 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\022:\n\025log_flush_interval_m" +
-      "s\030\003 \001(\0132\033.google.protobuf.Int64Value\022D\n\037" +
-      "log_flush_scheduler_interval_ms\030\004 \001(\0132\033." +
-      "google.protobuf.Int64Value\0228\n\023log_retent" +
-      "ion_bytes\030\005 \001(\0132\033.google.protobuf.Int64V" +
-      "alue\0228\n\023log_retention_hours\030\006 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022:\n\025log_retention_" +
-      "minutes\030\007 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\0225\n\020log_retention_ms\030\010 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\0226\n\021log_segment_bytes\030\t" +
-      " \001(\0132\033.google.protobuf.Int64Value\0223\n\017log" +
-      "_preallocate\030\n \001(\0132\032.google.protobuf.Boo" +
-      "lValue\022=\n\030socket_send_buffer_bytes\030\013 \001(\013" +
-      "2\033.google.protobuf.Int64Value\022@\n\033socket_" +
-      "receive_buffer_bytes\030\014 \001(\0132\033.google.prot" +
-      "obuf.Int64Value\022=\n\031auto_create_topics_en" +
-      "able\030\r \001(\0132\032.google.protobuf.BoolValue\0223" +
-      "\n\016num_partitions\030\016 \001(\0132\033.google.protobuf" +
-      ".Int64Value\022?\n\032default_replication_facto" +
-      "r\030\017 \001(\0132\033.google.protobuf.Int64Value\0226\n\021" +
-      "message_max_bytes\030\020 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022<\n\027replica_fetch_max_bytes\030" +
-      "\021 \001(\0132\033.google.protobuf.Int64Value\022\031\n\021ss" +
-      "l_cipher_suites\030\022 \003(\t\022>\n\031offsets_retenti" +
-      "on_minutes\030\023 \001(\0132\033.google.protobuf.Int64" +
-      "Value:\002\030\001\"\300\t\n\016KafkaConfig2_8\022D\n\020compress" +
-      "ion_type\030\001 \001(\0162*.yandex.cloud.mdb.kafka." +
-      "v1.CompressionType\022@\n\033log_flush_interval" +
-      "_messages\030\002 \001(\0132\033.google.protobuf.Int64V" +
-      "alue\022:\n\025log_flush_interval_ms\030\003 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\022D\n\037log_flush_sc" +
-      "heduler_interval_ms\030\004 \001(\0132\033.google.proto" +
-      "buf.Int64Value\0228\n\023log_retention_bytes\030\005 " +
-      "\001(\0132\033.google.protobuf.Int64Value\0228\n\023log_" +
-      "retention_hours\030\006 \001(\0132\033.google.protobuf." +
-      "Int64Value\022:\n\025log_retention_minutes\030\007 \001(" +
-      "\0132\033.google.protobuf.Int64Value\0225\n\020log_re" +
-      "tention_ms\030\010 \001(\0132\033.google.protobuf.Int64" +
-      "Value\0226\n\021log_segment_bytes\030\t \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\0223\n\017log_preallocate" +
-      "\030\n \001(\0132\032.google.protobuf.BoolValue\022=\n\030so" +
-      "cket_send_buffer_bytes\030\013 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\022@\n\033socket_receive_buff" +
-      "er_bytes\030\014 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\022=\n\031auto_create_topics_enable\030\r \001(\0132\032" +
-      ".google.protobuf.BoolValue\0223\n\016num_partit" +
-      "ions\030\016 \001(\0132\033.google.protobuf.Int64Value\022" +
-      "?\n\032default_replication_factor\030\017 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\0226\n\021message_max_" +
-      "bytes\030\020 \001(\0132\033.google.protobuf.Int64Value" +
-      "\022<\n\027replica_fetch_max_bytes\030\021 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022\031\n\021ssl_cipher_sui" +
-      "tes\030\022 \003(\t\022>\n\031offsets_retention_minutes\030\023" +
-      " \001(\0132\033.google.protobuf.Int64Value\022I\n\027sas" +
-      "l_enabled_mechanisms\030\024 \003(\0162(.yandex.clou" +
-      "d.mdb.kafka.v1.SaslMechanism\"\276\t\n\014KafkaCo" +
-      "nfig3\022D\n\020compression_type\030\001 \001(\0162*.yandex" +
-      ".cloud.mdb.kafka.v1.CompressionType\022@\n\033l" +
-      "og_flush_interval_messages\030\002 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\022:\n\025log_flush_inter" +
-      "val_ms\030\003 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022D\n\037log_flush_scheduler_interval_ms\030\004 \001" +
-      "(\0132\033.google.protobuf.Int64Value\0228\n\023log_r" +
-      "etention_bytes\030\005 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\0228\n\023log_retention_hours\030\006 \001(\0132\033" +
-      ".google.protobuf.Int64Value\022:\n\025log_reten" +
-      "tion_minutes\030\007 \001(\0132\033.google.protobuf.Int" +
-      "64Value\0225\n\020log_retention_ms\030\010 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\0226\n\021log_segment_by" +
-      "tes\030\t \001(\0132\033.google.protobuf.Int64Value\0223" +
-      "\n\017log_preallocate\030\n \001(\0132\032.google.protobu" +
-      "f.BoolValue\022=\n\030socket_send_buffer_bytes\030" +
-      "\013 \001(\0132\033.google.protobuf.Int64Value\022@\n\033so" +
-      "cket_receive_buffer_bytes\030\014 \001(\0132\033.google" +
-      ".protobuf.Int64Value\022=\n\031auto_create_topi" +
-      "cs_enable\030\r \001(\0132\032.google.protobuf.BoolVa" +
-      "lue\0223\n\016num_partitions\030\016 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\022?\n\032default_replication_" +
-      "factor\030\017 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\0226\n\021message_max_bytes\030\020 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\022<\n\027replica_fetch_max_b" +
-      "ytes\030\021 \001(\0132\033.google.protobuf.Int64Value\022" +
-      "\031\n\021ssl_cipher_suites\030\022 \003(\t\022>\n\031offsets_re" +
-      "tention_minutes\030\023 \001(\0132\033.google.protobuf." +
-      "Int64Value\022I\n\027sasl_enabled_mechanisms\030\024 " +
-      "\003(\0162(.yandex.cloud.mdb.kafka.v1.SaslMech" +
-      "anism\"\375\002\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_" +
-      "id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\0222\n\004role\030\004 \001(\0162" +
-      "$.yandex.cloud.mdb.kafka.v1.Host.Role\0227\n" +
-      "\tresources\030\005 \001(\0132$.yandex.cloud.mdb.kafk" +
-      "a.v1.Resources\0226\n\006health\030\006 \001(\0162&.yandex." +
-      "cloud.mdb.kafka.v1.Host.Health\022\021\n\tsubnet" +
-      "_id\030\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\"6\n\004R" +
-      "ole\022\024\n\020ROLE_UNSPECIFIED\020\000\022\t\n\005KAFKA\020\001\022\r\n\t" +
-      "ZOOKEEPER\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005AL" +
-      "IVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\037\n\006Access\022" +
-      "\025\n\rdata_transfer\030\001 \001(\010Bd\n\035yandex.cloud.a" +
-      "pi.mdb.kafka.v1ZCgithub.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/mdb/kafka/v1;k" +
-      "afkab\006proto3"
+      "cess\022L\n\017rest_api_config\030\n \001(\01323.yandex.c" +
+      "loud.mdb.kafka.v1.ConfigSpec.RestAPIConf" +
+      "ig\032\262\003\n\005Kafka\0227\n\tresources\030\001 \001(\0132$.yandex" +
+      ".cloud.mdb.kafka.v1.Resources\022Z\n\020kafka_c" +
+      "onfig_2_1\030\002 \001(\0132).yandex.cloud.mdb.kafka" +
+      ".v1.KafkaConfig2_1B\002\030\001H\000R\017kafkaConfig_2_" +
+      "1\022Z\n\020kafka_config_2_6\030\003 \001(\0132).yandex.clo" +
+      "ud.mdb.kafka.v1.KafkaConfig2_6B\002\030\001H\000R\017ka" +
+      "fkaConfig_2_6\022V\n\020kafka_config_2_8\030\004 \001(\0132" +
+      ").yandex.cloud.mdb.kafka.v1.KafkaConfig2" +
+      "_8H\000R\017kafkaConfig_2_8\022P\n\016kafka_config_3\030" +
+      "\005 \001(\0132\'.yandex.cloud.mdb.kafka.v1.KafkaC" +
+      "onfig3H\000R\rkafkaConfig_3B\016\n\014kafka_config\032" +
+      "D\n\tZookeeper\0227\n\tresources\030\001 \001(\0132$.yandex" +
+      ".cloud.mdb.kafka.v1.Resources\032 \n\rRestAPI" +
+      "Config\022\017\n\007enabled\030\001 \001(\010\"P\n\tResources\022\032\n\022" +
+      "resource_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 " +
+      "\001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"\371\010\n\016KafkaConfi" +
+      "g2_1\022D\n\020compression_type\030\001 \001(\0162*.yandex." +
+      "cloud.mdb.kafka.v1.CompressionType\022@\n\033lo" +
+      "g_flush_interval_messages\030\002 \001(\0132\033.google" +
+      ".protobuf.Int64Value\022:\n\025log_flush_interv" +
+      "al_ms\030\003 \001(\0132\033.google.protobuf.Int64Value" +
+      "\022D\n\037log_flush_scheduler_interval_ms\030\004 \001(" +
+      "\0132\033.google.protobuf.Int64Value\0228\n\023log_re" +
+      "tention_bytes\030\005 \001(\0132\033.google.protobuf.In" +
+      "t64Value\0228\n\023log_retention_hours\030\006 \001(\0132\033." +
+      "google.protobuf.Int64Value\022:\n\025log_retent" +
+      "ion_minutes\030\007 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\0225\n\020log_retention_ms\030\010 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\0226\n\021log_segment_byt" +
+      "es\030\t \001(\0132\033.google.protobuf.Int64Value\0223\n" +
+      "\017log_preallocate\030\n \001(\0132\032.google.protobuf" +
+      ".BoolValue\022=\n\030socket_send_buffer_bytes\030\013" +
+      " \001(\0132\033.google.protobuf.Int64Value\022@\n\033soc" +
+      "ket_receive_buffer_bytes\030\014 \001(\0132\033.google." +
+      "protobuf.Int64Value\022=\n\031auto_create_topic" +
+      "s_enable\030\r \001(\0132\032.google.protobuf.BoolVal" +
+      "ue\0223\n\016num_partitions\030\016 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022?\n\032default_replication_f" +
+      "actor\030\017 \001(\0132\033.google.protobuf.Int64Value" +
+      "\0226\n\021message_max_bytes\030\020 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022<\n\027replica_fetch_max_by" +
+      "tes\030\021 \001(\0132\033.google.protobuf.Int64Value\022\031" +
+      "\n\021ssl_cipher_suites\030\022 \003(\t\022>\n\031offsets_ret" +
+      "ention_minutes\030\023 \001(\0132\033.google.protobuf.I" +
+      "nt64Value:\002\030\001\"\371\010\n\016KafkaConfig2_6\022D\n\020comp" +
+      "ression_type\030\001 \001(\0162*.yandex.cloud.mdb.ka" +
+      "fka.v1.CompressionType\022@\n\033log_flush_inte" +
+      "rval_messages\030\002 \001(\0132\033.google.protobuf.In" +
+      "t64Value\022:\n\025log_flush_interval_ms\030\003 \001(\0132" +
+      "\033.google.protobuf.Int64Value\022D\n\037log_flus" +
+      "h_scheduler_interval_ms\030\004 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\0228\n\023log_retention_byte" +
+      "s\030\005 \001(\0132\033.google.protobuf.Int64Value\0228\n\023" +
+      "log_retention_hours\030\006 \001(\0132\033.google.proto" +
+      "buf.Int64Value\022:\n\025log_retention_minutes\030" +
+      "\007 \001(\0132\033.google.protobuf.Int64Value\0225\n\020lo" +
+      "g_retention_ms\030\010 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\0226\n\021log_segment_bytes\030\t \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\0223\n\017log_preallo" +
+      "cate\030\n \001(\0132\032.google.protobuf.BoolValue\022=" +
+      "\n\030socket_send_buffer_bytes\030\013 \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\022@\n\033socket_receive_" +
+      "buffer_bytes\030\014 \001(\0132\033.google.protobuf.Int" +
+      "64Value\022=\n\031auto_create_topics_enable\030\r \001" +
+      "(\0132\032.google.protobuf.BoolValue\0223\n\016num_pa" +
+      "rtitions\030\016 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022?\n\032default_replication_factor\030\017 \001(\0132" +
+      "\033.google.protobuf.Int64Value\0226\n\021message_" +
+      "max_bytes\030\020 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\022<\n\027replica_fetch_max_bytes\030\021 \001(\0132\033." +
+      "google.protobuf.Int64Value\022\031\n\021ssl_cipher" +
+      "_suites\030\022 \003(\t\022>\n\031offsets_retention_minut" +
+      "es\030\023 \001(\0132\033.google.protobuf.Int64Value:\002\030" +
+      "\001\"\300\t\n\016KafkaConfig2_8\022D\n\020compression_type" +
+      "\030\001 \001(\0162*.yandex.cloud.mdb.kafka.v1.Compr" +
+      "essionType\022@\n\033log_flush_interval_message" +
+      "s\030\002 \001(\0132\033.google.protobuf.Int64Value\022:\n\025" +
+      "log_flush_interval_ms\030\003 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022D\n\037log_flush_scheduler_" +
+      "interval_ms\030\004 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\0228\n\023log_retention_bytes\030\005 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\0228\n\023log_retentio" +
+      "n_hours\030\006 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022:\n\025log_retention_minutes\030\007 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\0225\n\020log_retention_" +
+      "ms\030\010 \001(\0132\033.google.protobuf.Int64Value\0226\n" +
+      "\021log_segment_bytes\030\t \001(\0132\033.google.protob" +
+      "uf.Int64Value\0223\n\017log_preallocate\030\n \001(\0132\032" +
+      ".google.protobuf.BoolValue\022=\n\030socket_sen" +
+      "d_buffer_bytes\030\013 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\022@\n\033socket_receive_buffer_bytes" +
+      "\030\014 \001(\0132\033.google.protobuf.Int64Value\022=\n\031a" +
+      "uto_create_topics_enable\030\r \001(\0132\032.google." +
+      "protobuf.BoolValue\0223\n\016num_partitions\030\016 \001" +
+      "(\0132\033.google.protobuf.Int64Value\022?\n\032defau" +
+      "lt_replication_factor\030\017 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\0226\n\021message_max_bytes\030\020 " +
+      "\001(\0132\033.google.protobuf.Int64Value\022<\n\027repl" +
+      "ica_fetch_max_bytes\030\021 \001(\0132\033.google.proto" +
+      "buf.Int64Value\022\031\n\021ssl_cipher_suites\030\022 \003(" +
+      "\t\022>\n\031offsets_retention_minutes\030\023 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\022I\n\027sasl_enable" +
+      "d_mechanisms\030\024 \003(\0162(.yandex.cloud.mdb.ka" +
+      "fka.v1.SaslMechanism\"\276\t\n\014KafkaConfig3\022D\n" +
+      "\020compression_type\030\001 \001(\0162*.yandex.cloud.m" +
+      "db.kafka.v1.CompressionType\022@\n\033log_flush" +
+      "_interval_messages\030\002 \001(\0132\033.google.protob" +
+      "uf.Int64Value\022:\n\025log_flush_interval_ms\030\003" +
+      " \001(\0132\033.google.protobuf.Int64Value\022D\n\037log" +
+      "_flush_scheduler_interval_ms\030\004 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\0228\n\023log_retention" +
+      "_bytes\030\005 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\0228\n\023log_retention_hours\030\006 \001(\0132\033.google." +
+      "protobuf.Int64Value\022:\n\025log_retention_min" +
+      "utes\030\007 \001(\0132\033.google.protobuf.Int64Value\022" +
+      "5\n\020log_retention_ms\030\010 \001(\0132\033.google.proto" +
+      "buf.Int64Value\0226\n\021log_segment_bytes\030\t \001(" +
+      "\0132\033.google.protobuf.Int64Value\0223\n\017log_pr" +
+      "eallocate\030\n \001(\0132\032.google.protobuf.BoolVa" +
+      "lue\022=\n\030socket_send_buffer_bytes\030\013 \001(\0132\033." +
+      "google.protobuf.Int64Value\022@\n\033socket_rec" +
+      "eive_buffer_bytes\030\014 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022=\n\031auto_create_topics_enabl" +
+      "e\030\r \001(\0132\032.google.protobuf.BoolValue\0223\n\016n" +
+      "um_partitions\030\016 \001(\0132\033.google.protobuf.In" +
+      "t64Value\022?\n\032default_replication_factor\030\017" +
+      " \001(\0132\033.google.protobuf.Int64Value\0226\n\021mes" +
+      "sage_max_bytes\030\020 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\022<\n\027replica_fetch_max_bytes\030\021 \001" +
+      "(\0132\033.google.protobuf.Int64Value\022\031\n\021ssl_c" +
+      "ipher_suites\030\022 \003(\t\022>\n\031offsets_retention_" +
+      "minutes\030\023 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022I\n\027sasl_enabled_mechanisms\030\024 \003(\0162(.ya" +
+      "ndex.cloud.mdb.kafka.v1.SaslMechanism\"\375\002" +
+      "\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t" +
+      "\022\017\n\007zone_id\030\003 \001(\t\0222\n\004role\030\004 \001(\0162$.yandex" +
+      ".cloud.mdb.kafka.v1.Host.Role\0227\n\tresourc" +
+      "es\030\005 \001(\0132$.yandex.cloud.mdb.kafka.v1.Res" +
+      "ources\0226\n\006health\030\006 \001(\0162&.yandex.cloud.md" +
+      "b.kafka.v1.Host.Health\022\021\n\tsubnet_id\030\010 \001(" +
+      "\t\022\030\n\020assign_public_ip\030\t \001(\010\"6\n\004Role\022\024\n\020R" +
+      "OLE_UNSPECIFIED\020\000\022\t\n\005KAFKA\020\001\022\r\n\tZOOKEEPE" +
+      "R\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n" +
+      "\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\037\n\006Access\022\025\n\rdata_" +
+      "transfer\030\001 \001(\010Bd\n\035yandex.cloud.api.mdb.k" +
+      "afka.v1ZCgithub.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/mdb/kafka/v1;kafkab\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -37045,7 +37825,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_descriptor,
-        new java.lang.String[] { "Version", "Kafka", "Zookeeper", "ZoneId", "BrokersCount", "AssignPublicIp", "UnmanagedTopics", "SchemaRegistry", "Access", });
+        new java.lang.String[] { "Version", "Kafka", "Zookeeper", "ZoneId", "BrokersCount", "AssignPublicIp", "UnmanagedTopics", "SchemaRegistry", "Access", "RestApiConfig", });
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_Kafka_descriptor =
       internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_Kafka_fieldAccessorTable = new
@@ -37058,6 +37838,12 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_Zookeeper_descriptor,
         new java.lang.String[] { "Resources", });
+    internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_RestAPIConfig_descriptor =
+      internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_descriptor.getNestedTypes().get(2);
+    internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_RestAPIConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_kafka_v1_ConfigSpec_RestAPIConfig_descriptor,
+        new java.lang.String[] { "Enabled", });
     internal_static_yandex_cloud_mdb_kafka_v1_Resources_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_kafka_v1_Resources_fieldAccessorTable = new

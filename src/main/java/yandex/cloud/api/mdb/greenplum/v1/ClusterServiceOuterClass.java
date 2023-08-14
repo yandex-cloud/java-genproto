@@ -7323,6 +7323,36 @@ public final class ClusterServiceOuterClass {
      */
     yandex.cloud.api.mdb.greenplum.v1.Config.ConnectionPoolerConfigOrBuilder getPoolOrBuilder();
 
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
+     * @return Whether the backgroundActivities field is set.
+     */
+    boolean hasBackgroundActivities();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
+     * @return The backgroundActivities.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig getBackgroundActivities();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfigOrBuilder getBackgroundActivitiesOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig pxf_config = 8;</code>
+     * @return Whether the pxfConfig field is set.
+     */
+    boolean hasPxfConfig();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig pxf_config = 8;</code>
+     * @return The pxfConfig.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig getPxfConfig();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig pxf_config = 8;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfigOrBuilder getPxfConfigOrBuilder();
+
     public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ConfigSpec.GreenplumConfigCase getGreenplumConfigCase();
   }
   /**
@@ -7437,6 +7467,32 @@ public final class ClusterServiceOuterClass {
                 greenplumConfig_ = subBuilder.buildPartial();
               }
               greenplumConfigCase_ = 5;
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig.Builder subBuilder = null;
+              if (backgroundActivities_ != null) {
+                subBuilder = backgroundActivities_.toBuilder();
+              }
+              backgroundActivities_ = input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(backgroundActivities_);
+                backgroundActivities_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig.Builder subBuilder = null;
+              if (pxfConfig_ != null) {
+                subBuilder = pxfConfig_.toBuilder();
+              }
+              pxfConfig_ = input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pxfConfig_);
+                pxfConfig_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -7678,6 +7734,58 @@ public final class ClusterServiceOuterClass {
       return getPool();
     }
 
+    public static final int BACKGROUND_ACTIVITIES_FIELD_NUMBER = 6;
+    private yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig backgroundActivities_;
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
+     * @return Whether the backgroundActivities field is set.
+     */
+    @java.lang.Override
+    public boolean hasBackgroundActivities() {
+      return backgroundActivities_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
+     * @return The backgroundActivities.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig getBackgroundActivities() {
+      return backgroundActivities_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig.getDefaultInstance() : backgroundActivities_;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfigOrBuilder getBackgroundActivitiesOrBuilder() {
+      return getBackgroundActivities();
+    }
+
+    public static final int PXF_CONFIG_FIELD_NUMBER = 8;
+    private yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig pxfConfig_;
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig pxf_config = 8;</code>
+     * @return Whether the pxfConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasPxfConfig() {
+      return pxfConfig_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig pxf_config = 8;</code>
+     * @return The pxfConfig.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig getPxfConfig() {
+      return pxfConfig_ == null ? yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig.getDefaultInstance() : pxfConfig_;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig pxf_config = 8;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfigOrBuilder getPxfConfigOrBuilder() {
+      return getPxfConfig();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7706,6 +7814,12 @@ public final class ClusterServiceOuterClass {
       }
       if (greenplumConfigCase_ == 5) {
         output.writeMessage(5, (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_22) greenplumConfig_);
+      }
+      if (backgroundActivities_ != null) {
+        output.writeMessage(6, getBackgroundActivities());
+      }
+      if (pxfConfig_ != null) {
+        output.writeMessage(8, getPxfConfig());
       }
       unknownFields.writeTo(output);
     }
@@ -7736,6 +7850,14 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6_22) greenplumConfig_);
       }
+      if (backgroundActivities_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getBackgroundActivities());
+      }
+      if (pxfConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getPxfConfig());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7755,6 +7877,16 @@ public final class ClusterServiceOuterClass {
       if (hasPool()) {
         if (!getPool()
             .equals(other.getPool())) return false;
+      }
+      if (hasBackgroundActivities() != other.hasBackgroundActivities()) return false;
+      if (hasBackgroundActivities()) {
+        if (!getBackgroundActivities()
+            .equals(other.getBackgroundActivities())) return false;
+      }
+      if (hasPxfConfig() != other.hasPxfConfig()) return false;
+      if (hasPxfConfig()) {
+        if (!getPxfConfig()
+            .equals(other.getPxfConfig())) return false;
       }
       if (!getGreenplumConfigCase().equals(other.getGreenplumConfigCase())) return false;
       switch (greenplumConfigCase_) {
@@ -7791,6 +7923,14 @@ public final class ClusterServiceOuterClass {
       if (hasPool()) {
         hash = (37 * hash) + POOL_FIELD_NUMBER;
         hash = (53 * hash) + getPool().hashCode();
+      }
+      if (hasBackgroundActivities()) {
+        hash = (37 * hash) + BACKGROUND_ACTIVITIES_FIELD_NUMBER;
+        hash = (53 * hash) + getBackgroundActivities().hashCode();
+      }
+      if (hasPxfConfig()) {
+        hash = (37 * hash) + PXF_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getPxfConfig().hashCode();
       }
       switch (greenplumConfigCase_) {
         case 1:
@@ -7951,6 +8091,18 @@ public final class ClusterServiceOuterClass {
           pool_ = null;
           poolBuilder_ = null;
         }
+        if (backgroundActivitiesBuilder_ == null) {
+          backgroundActivities_ = null;
+        } else {
+          backgroundActivities_ = null;
+          backgroundActivitiesBuilder_ = null;
+        }
+        if (pxfConfigBuilder_ == null) {
+          pxfConfig_ = null;
+        } else {
+          pxfConfig_ = null;
+          pxfConfigBuilder_ = null;
+        }
         greenplumConfigCase_ = 0;
         greenplumConfig_ = null;
         return this;
@@ -8012,6 +8164,16 @@ public final class ClusterServiceOuterClass {
         } else {
           result.pool_ = poolBuilder_.build();
         }
+        if (backgroundActivitiesBuilder_ == null) {
+          result.backgroundActivities_ = backgroundActivities_;
+        } else {
+          result.backgroundActivities_ = backgroundActivitiesBuilder_.build();
+        }
+        if (pxfConfigBuilder_ == null) {
+          result.pxfConfig_ = pxfConfig_;
+        } else {
+          result.pxfConfig_ = pxfConfigBuilder_.build();
+        }
         result.greenplumConfigCase_ = greenplumConfigCase_;
         onBuilt();
         return result;
@@ -8063,6 +8225,12 @@ public final class ClusterServiceOuterClass {
         if (other == yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ConfigSpec.getDefaultInstance()) return this;
         if (other.hasPool()) {
           mergePool(other.getPool());
+        }
+        if (other.hasBackgroundActivities()) {
+          mergeBackgroundActivities(other.getBackgroundActivities());
+        }
+        if (other.hasPxfConfig()) {
+          mergePxfConfig(other.getPxfConfig());
         }
         switch (other.getGreenplumConfigCase()) {
           case GREENPLUM_CONFIG_6_17: {
@@ -8846,6 +9014,244 @@ public final class ClusterServiceOuterClass {
           pool_ = null;
         }
         return poolBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig backgroundActivities_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfigOrBuilder> backgroundActivitiesBuilder_;
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
+       * @return Whether the backgroundActivities field is set.
+       */
+      public boolean hasBackgroundActivities() {
+        return backgroundActivitiesBuilder_ != null || backgroundActivities_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
+       * @return The backgroundActivities.
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig getBackgroundActivities() {
+        if (backgroundActivitiesBuilder_ == null) {
+          return backgroundActivities_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig.getDefaultInstance() : backgroundActivities_;
+        } else {
+          return backgroundActivitiesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
+       */
+      public Builder setBackgroundActivities(yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig value) {
+        if (backgroundActivitiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          backgroundActivities_ = value;
+          onChanged();
+        } else {
+          backgroundActivitiesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
+       */
+      public Builder setBackgroundActivities(
+          yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig.Builder builderForValue) {
+        if (backgroundActivitiesBuilder_ == null) {
+          backgroundActivities_ = builderForValue.build();
+          onChanged();
+        } else {
+          backgroundActivitiesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
+       */
+      public Builder mergeBackgroundActivities(yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig value) {
+        if (backgroundActivitiesBuilder_ == null) {
+          if (backgroundActivities_ != null) {
+            backgroundActivities_ =
+              yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig.newBuilder(backgroundActivities_).mergeFrom(value).buildPartial();
+          } else {
+            backgroundActivities_ = value;
+          }
+          onChanged();
+        } else {
+          backgroundActivitiesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
+       */
+      public Builder clearBackgroundActivities() {
+        if (backgroundActivitiesBuilder_ == null) {
+          backgroundActivities_ = null;
+          onChanged();
+        } else {
+          backgroundActivities_ = null;
+          backgroundActivitiesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig.Builder getBackgroundActivitiesBuilder() {
+        
+        onChanged();
+        return getBackgroundActivitiesFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfigOrBuilder getBackgroundActivitiesOrBuilder() {
+        if (backgroundActivitiesBuilder_ != null) {
+          return backgroundActivitiesBuilder_.getMessageOrBuilder();
+        } else {
+          return backgroundActivities_ == null ?
+              yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig.getDefaultInstance() : backgroundActivities_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig background_activities = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfigOrBuilder> 
+          getBackgroundActivitiesFieldBuilder() {
+        if (backgroundActivitiesBuilder_ == null) {
+          backgroundActivitiesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfigOrBuilder>(
+                  getBackgroundActivities(),
+                  getParentForChildren(),
+                  isClean());
+          backgroundActivities_ = null;
+        }
+        return backgroundActivitiesBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig pxfConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfigOrBuilder> pxfConfigBuilder_;
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig pxf_config = 8;</code>
+       * @return Whether the pxfConfig field is set.
+       */
+      public boolean hasPxfConfig() {
+        return pxfConfigBuilder_ != null || pxfConfig_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig pxf_config = 8;</code>
+       * @return The pxfConfig.
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig getPxfConfig() {
+        if (pxfConfigBuilder_ == null) {
+          return pxfConfig_ == null ? yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig.getDefaultInstance() : pxfConfig_;
+        } else {
+          return pxfConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig pxf_config = 8;</code>
+       */
+      public Builder setPxfConfig(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig value) {
+        if (pxfConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pxfConfig_ = value;
+          onChanged();
+        } else {
+          pxfConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig pxf_config = 8;</code>
+       */
+      public Builder setPxfConfig(
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig.Builder builderForValue) {
+        if (pxfConfigBuilder_ == null) {
+          pxfConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          pxfConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig pxf_config = 8;</code>
+       */
+      public Builder mergePxfConfig(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig value) {
+        if (pxfConfigBuilder_ == null) {
+          if (pxfConfig_ != null) {
+            pxfConfig_ =
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig.newBuilder(pxfConfig_).mergeFrom(value).buildPartial();
+          } else {
+            pxfConfig_ = value;
+          }
+          onChanged();
+        } else {
+          pxfConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig pxf_config = 8;</code>
+       */
+      public Builder clearPxfConfig() {
+        if (pxfConfigBuilder_ == null) {
+          pxfConfig_ = null;
+          onChanged();
+        } else {
+          pxfConfig_ = null;
+          pxfConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig pxf_config = 8;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig.Builder getPxfConfigBuilder() {
+        
+        onChanged();
+        return getPxfConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig pxf_config = 8;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfigOrBuilder getPxfConfigOrBuilder() {
+        if (pxfConfigBuilder_ != null) {
+          return pxfConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return pxfConfig_ == null ?
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig.getDefaultInstance() : pxfConfig_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFConfig pxf_config = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfigOrBuilder> 
+          getPxfConfigFieldBuilder() {
+        if (pxfConfigBuilder_ == null) {
+          pxfConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfig.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFConfigOrBuilder>(
+                  getPxfConfig(),
+                  getParentForChildren(),
+                  isClean());
+          pxfConfig_ = null;
+        }
+        return pxfConfigBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -39046,244 +39452,249 @@ public final class ClusterServiceOuterClass {
       "v1/maintenance.proto\032*yandex/cloud/mdb/g" +
       "reenplum/v1/config.proto\032(yandex/cloud/m" +
       "db/greenplum/v1/host.proto\032*yandex/cloud" +
-      "/mdb/greenplum/v1/backup.proto\"5\n\021GetClu" +
-      "sterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\"\220\001\n\023ListClustersRequest\022\037\n\tfolder_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(" +
-      "\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<" +
-      "=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"i\n\024List" +
-      "ClustersResponse\0228\n\010clusters\030\001 \003(\0132&.yan" +
-      "dex.cloud.mdb.greenplum.v1.Cluster\022\027\n\017ne" +
-      "xt_page_token\030\002 \001(\t\"\214\010\n\024CreateClusterReq" +
-      "uest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n" +
-      "\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_" +
-      "-]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\220\001\n\006" +
-      "labels\030\004 \003(\0132?.yandex.cloud.mdb.greenplu" +
-      "m.v1.CreateClusterRequest.LabelsEntryB?\202" +
-      "\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=63" +
-      "\262\3101\022\022\020[a-z][-_0-9a-z]*\022M\n\013environment\030\005 " +
-      "\001(\01622.yandex.cloud.mdb.greenplum.v1.Clus" +
-      "ter.EnvironmentB\004\350\3071\001\022>\n\006config\030\006 \001(\0132.." +
-      "yandex.cloud.mdb.greenplum.v1.GreenplumC" +
-      "onfig\022P\n\rmaster_config\030\007 \001(\01329.yandex.cl" +
-      "oud.mdb.greenplum.v1.MasterSubclusterCon" +
-      "figSpec\022R\n\016segment_config\030\010 \001(\0132:.yandex" +
-      ".cloud.mdb.greenplum.v1.SegmentSubcluste" +
-      "rConfigSpec\022\031\n\021master_host_count\030\t \001(\003\022\027" +
-      "\n\017segment_in_host\030\n \001(\003\022\032\n\022segment_host_" +
-      "count\030\013 \001(\003\022\027\n\tuser_name\030\014 \001(\tB\004\350\3071\001\022$\n\r" +
-      "user_password\030\r \001(\tB\r\350\3071\001\212\3101\0058-128\022 \n\nne" +
-      "twork_id\030\016 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022security" +
-      "_group_ids\030\017 \003(\t\022\033\n\023deletion_protection\030" +
-      "\020 \001(\010\022\026\n\016host_group_ids\030\021 \003(\t\022L\n\022mainten" +
-      "ance_window\030\023 \001(\01320.yandex.cloud.mdb.gre" +
-      "enplum.v1.MaintenanceWindow\022>\n\013config_sp" +
-      "ec\030\024 \001(\0132).yandex.cloud.mdb.greenplum.v1" +
-      ".ConfigSpec\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
-      "\r\n\005value\030\002 \001(\t:\0028\001\"\221\004\n\nConfigSpec\022i\n\025gre" +
-      "enplum_config_6_17\030\001 \001(\01322.yandex.cloud." +
-      "mdb.greenplum.v1.GreenplumConfig6_17H\000R\024" +
-      "greenplumConfig_6_17\022i\n\025greenplum_config" +
-      "_6_19\030\002 \001(\01322.yandex.cloud.mdb.greenplum" +
-      ".v1.GreenplumConfig6_19H\000R\024greenplumConf" +
-      "ig_6_19\022i\n\025greenplum_config_6_21\030\004 \001(\01322" +
+      "/mdb/greenplum/v1/backup.proto\032\'yandex/c" +
+      "loud/mdb/greenplum/v1/pxf.proto\"5\n\021GetCl" +
+      "usterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\"\220\001\n\023ListClustersRequest\022\037\n\tfolder" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
+      "(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
+      "<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"i\n\024Lis" +
+      "tClustersResponse\0228\n\010clusters\030\001 \003(\0132&.ya" +
+      "ndex.cloud.mdb.greenplum.v1.Cluster\022\027\n\017n" +
+      "ext_page_token\030\002 \001(\t\"\214\010\n\024CreateClusterRe" +
+      "quest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022," +
+      "\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9" +
+      "_-]*\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\220\001\n" +
+      "\006labels\030\004 \003(\0132?.yandex.cloud.mdb.greenpl" +
+      "um.v1.CreateClusterRequest.LabelsEntryB?" +
+      "\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004<=6" +
+      "3\262\3101\022\022\020[a-z][-_0-9a-z]*\022M\n\013environment\030\005" +
+      " \001(\01622.yandex.cloud.mdb.greenplum.v1.Clu" +
+      "ster.EnvironmentB\004\350\3071\001\022>\n\006config\030\006 \001(\0132." +
       ".yandex.cloud.mdb.greenplum.v1.Greenplum" +
-      "Config6_21H\000R\024greenplumConfig_6_21\022i\n\025gr" +
-      "eenplum_config_6_22\030\005 \001(\01322.yandex.cloud" +
-      ".mdb.greenplum.v1.GreenplumConfig6_22H\000R" +
-      "\024greenplumConfig_6_22\022C\n\004pool\030\003 \001(\01325.ya" +
-      "ndex.cloud.mdb.greenplum.v1.ConnectionPo" +
-      "olerConfigB\022\n\020greenplum_config\"+\n\025Create" +
-      "ClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\310\006\n\024" +
-      "UpdateClusterRequest\022 \n\ncluster_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.go" +
-      "ogle.protobuf.FieldMask\022\036\n\013description\030\003" +
-      " \001(\tB\t\212\3101\005<=256\022\220\001\n\006labels\030\004 \003(\0132?.yande" +
-      "x.cloud.mdb.greenplum.v1.UpdateClusterRe" +
-      "quest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[" +
-      "-_0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z" +
-      "]*\022(\n\004name\030\005 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9" +
-      "_-]*\022>\n\006config\030\006 \001(\0132..yandex.cloud.mdb." +
-      "greenplum.v1.GreenplumConfig\022P\n\rmaster_c" +
-      "onfig\030\007 \001(\01329.yandex.cloud.mdb.greenplum" +
-      ".v1.MasterSubclusterConfigSpec\022R\n\016segmen" +
-      "t_config\030\010 \001(\0132:.yandex.cloud.mdb.greenp" +
-      "lum.v1.SegmentSubclusterConfigSpec\022$\n\rus" +
-      "er_password\030\r \001(\tB\r\350\3071\001\212\3101\0058-128\022L\n\022main" +
-      "tenance_window\030\017 \001(\01320.yandex.cloud.mdb." +
-      "greenplum.v1.MaintenanceWindow\022\032\n\022securi" +
-      "ty_group_ids\030\021 \003(\t\022\033\n\023deletion_protectio" +
-      "n\030\022 \001(\010\022>\n\013config_spec\030\023 \001(\0132).yandex.cl" +
-      "oud.mdb.greenplum.v1.ConfigSpec\032-\n\013Label" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+" +
-      "\n\025UpdateClusterMetadata\022\022\n\ncluster_id\030\001 " +
-      "\001(\t\"-\n\027AddClusterHostsMetadata\022\022\n\ncluste" +
-      "r_id\030\001 \001(\t\"\204\001\n\rExpandRequest\022 \n\ncluster_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022segment_host_c" +
-      "ount\030\002 \001(\003\022#\n\033add_segments_per_host_coun" +
-      "t\030\003 \001(\003\022\020\n\010duration\030\004 \001(\003\"8\n\024DeleteClust" +
-      "erRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\"+\n\025DeleteClusterMetadata\022\022\n\ncluster_" +
-      "id\030\001 \001(\t\"7\n\023StartClusterRequest\022 \n\nclust" +
-      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartCluste" +
-      "rMetadata\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopClu" +
-      "sterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\")\n\023StopClusterMetadata\022\022\n\ncluster_" +
-      "id\030\001 \001(\t\"~\n\034ListClusterOperationsRequest" +
-      "\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpa" +
-      "ge_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030" +
-      "\003 \001(\tB\t\212\3101\005<=100\"o\n\035ListClusterOperation" +
-      "sResponse\0225\n\noperations\030\001 \003(\0132!.yandex.c" +
-      "loud.operation.Operation\022\027\n\017next_page_to" +
-      "ken\030\002 \001(\t\"y\n\027ListClusterHostsRequest\022 \n\n" +
-      "cluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_s" +
-      "ize\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(" +
-      "\tB\t\212\3101\005<=100\"g\n\030ListClusterHostsResponse" +
-      "\0222\n\005hosts\030\001 \003(\0132#.yandex.cloud.mdb.green" +
-      "plum.v1.Host\022\027\n\017next_page_token\030\002 \001(\t\"Y\n" +
-      "\032MasterSubclusterConfigSpec\022;\n\tresources" +
-      "\030\001 \001(\0132(.yandex.cloud.mdb.greenplum.v1.R" +
-      "esources\"Z\n\033SegmentSubclusterConfigSpec\022" +
-      ";\n\tresources\030\001 \001(\0132(.yandex.cloud.mdb.gr" +
-      "eenplum.v1.Resources\"j\n\027ListClusterLogsR" +
-      "esponse\0226\n\004logs\030\001 \003(\0132(.yandex.cloud.mdb" +
-      ".greenplum.v1.LogRecord\022\027\n\017next_page_tok" +
-      "en\030\002 \001(\t\"\262\001\n\tLogRecord\022-\n\ttimestamp\030\001 \001(" +
-      "\0132\032.google.protobuf.Timestamp\022F\n\007message" +
-      "\030\002 \003(\01325.yandex.cloud.mdb.greenplum.v1.L" +
-      "ogRecord.MessageEntry\032.\n\014MessageEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\345\003\n\026ListCl" +
-      "usterLogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022W\n\014ser" +
-      "vice_type\030\003 \001(\0162A.yandex.cloud.mdb.green" +
-      "plum.v1.ListClusterLogsRequest.ServiceTy" +
-      "pe\022-\n\tfrom_time\030\004 \001(\0132\032.google.protobuf." +
-      "Timestamp\022+\n\007to_time\030\005 \001(\0132\032.google.prot" +
-      "obuf.Timestamp\022\035\n\tpage_size\030\006 \001(\003B\n\372\3071\006<" +
-      "=1000\022\035\n\npage_token\030\007 \001(\tB\t\212\3101\005<=100\022\036\n\026" +
-      "always_next_page_token\030\010 \001(\010\022\032\n\006filter\030\t" +
-      " \001(\tB\n\212\3101\006<=1000\"c\n\013ServiceType\022\034\n\030SERVI" +
-      "CE_TYPE_UNSPECIFIED\020\000\022\r\n\tGREENPLUM\020\001\022\024\n\020" +
-      "GREENPLUM_POOLER\020\002\022\021\n\rGREENPLUM_PXF\020\003\"{\n" +
-      "\031ListClusterBackupsRequest\022 \n\ncluster_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B" +
-      "\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=1" +
-      "00\"f\n\017StreamLogRecord\0228\n\006record\030\001 \001(\0132(." +
-      "yandex.cloud.mdb.greenplum.v1.LogRecord\022" +
-      "\031\n\021next_record_token\030\002 \001(\t\"\254\003\n\030StreamClu" +
-      "sterLogsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\022\025\n\rcolumn_filter\030\002 \003(\t\022Y\n\014serv" +
-      "ice_type\030\003 \001(\0162C.yandex.cloud.mdb.greenp" +
-      "lum.v1.StreamClusterLogsRequest.ServiceT" +
-      "ype\022-\n\tfrom_time\030\004 \001(\0132\032.google.protobuf" +
-      ".Timestamp\022+\n\007to_time\030\005 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\022\037\n\014record_token\030\006 \001(\tB\t\212" +
-      "\3101\005<=100\022\032\n\006filter\030\007 \001(\tB\n\212\3101\006<=1000\"c\n\013" +
-      "ServiceType\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020" +
-      "\000\022\r\n\tGREENPLUM\020\001\022\024\n\020GREENPLUM_POOLER\020\002\022\021" +
-      "\n\rGREENPLUM_PXF\020\003\"m\n\032ListClusterBackupsR" +
-      "esponse\0226\n\007backups\030\001 \003(\0132%.yandex.cloud." +
-      "mdb.greenplum.v1.Backup\022\027\n\017next_page_tok" +
-      "en\030\002 \001(\t\"\275\007\n\025RestoreClusterRequest\022\027\n\tba" +
-      "ckup_id\030\001 \001(\tB\004\350\3071\001\022(\n\004time\030\020 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\022\037\n\tfolder_id\030\002 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\003 \001(\tB\036\350\3071\001\212\3101\004<=" +
-      "63\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013description\030\004 \001(" +
-      "\tB\t\212\3101\005<=256\022\221\001\n\006labels\030\005 \003(\0132@.yandex.c" +
-      "loud.mdb.greenplum.v1.RestoreClusterRequ" +
-      "est.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_" +
-      "0-9a-z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*" +
-      "\022M\n\013environment\030\006 \001(\01622.yandex.cloud.mdb" +
-      ".greenplum.v1.Cluster.EnvironmentB\004\350\3071\001\022" +
-      "E\n\006config\030\007 \001(\01325.yandex.cloud.mdb.green" +
-      "plum.v1.GreenplumRestoreConfig\022B\n\020master" +
-      "_resources\030\010 \001(\0132(.yandex.cloud.mdb.gree" +
-      "nplum.v1.Resources\022C\n\021segment_resources\030" +
-      "\t \001(\0132(.yandex.cloud.mdb.greenplum.v1.Re" +
-      "sources\022 \n\nnetwork_id\030\n \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022\032\n\022security_group_ids\030\013 \003(\t\022\033\n\023deletio" +
-      "n_protection\030\014 \001(\010\022\026\n\016host_group_ids\030\r \003" +
-      "(\t\022\032\n\022placement_group_id\030\016 \001(\t\022L\n\022mainte" +
-      "nance_window\030\017 \001(\01320.yandex.cloud.mdb.gr" +
-      "eenplum.v1.MaintenanceWindow\022\032\n\022segment_" +
-      "host_count\030\021 \001(\003\022\027\n\017segment_in_host\030\022 \001(" +
-      "\003\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\"?\n\026RestoreClusterMetadata\022\022\n\ncl" +
-      "uster_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t2\205\026\n\016Cl" +
-      "usterService\022\224\001\n\003Get\0220.yandex.cloud.mdb." +
-      "greenplum.v1.GetClusterRequest\032&.yandex." +
-      "cloud.mdb.greenplum.v1.Cluster\"3\202\323\344\223\002-\022+" +
-      "/managed-greenplum/v1/clusters/{cluster_" +
-      "id}\022\227\001\n\004List\0222.yandex.cloud.mdb.greenplu" +
-      "m.v1.ListClustersRequest\0323.yandex.cloud." +
-      "mdb.greenplum.v1.ListClustersResponse\"&\202" +
-      "\323\344\223\002 \022\036/managed-greenplum/v1/clusters\022\257\001" +
-      "\n\006Create\0223.yandex.cloud.mdb.greenplum.v1" +
-      ".CreateClusterRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"M\202\323\344\223\002#\"\036/managed-green" +
-      "plum/v1/clusters:\001*\262\322* \n\025CreateClusterMe" +
-      "tadata\022\007Cluster\022\274\001\n\006Update\0223.yandex.clou" +
-      "d.mdb.greenplum.v1.UpdateClusterRequest\032" +
-      "!.yandex.cloud.operation.Operation\"Z\202\323\344\223" +
-      "\00202+/managed-greenplum/v1/clusters/{clus" +
-      "ter_id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007C" +
-      "luster\022\276\001\n\006Expand\022,.yandex.cloud.mdb.gre" +
-      "enplum.v1.ExpandRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"c\202\323\344\223\0027\"2/managed-gre" +
-      "enplum/v1/clusters/{cluster_id}/expand:\001" +
-      "*\262\322*\"\n\027AddClusterHostsMetadata\022\007Cluster\022" +
-      "\307\001\n\006Delete\0223.yandex.cloud.mdb.greenplum." +
-      "v1.DeleteClusterRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"e\202\323\344\223\002-*+/managed-gre" +
-      "enplum/v1/clusters/{cluster_id}\262\322*.\n\025Del" +
-      "eteClusterMetadata\022\025google.protobuf.Empt" +
-      "y\022\274\001\n\005Start\0222.yandex.cloud.mdb.greenplum" +
-      ".v1.StartClusterRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"\\\202\323\344\223\0023\"1/managed-gre" +
-      "enplum/v1/clusters/{cluster_id}:start\262\322*" +
-      "\037\n\024StartClusterMetadata\022\007Cluster\022\270\001\n\004Sto" +
-      "p\0221.yandex.cloud.mdb.greenplum.v1.StopCl" +
-      "usterRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"Z\202\323\344\223\0022\"0/managed-greenplum/v1/c" +
-      "lusters/{cluster_id}:stop\262\322*\036\n\023StopClust" +
-      "erMetadata\022\007Cluster\022\313\001\n\016ListOperations\022;" +
-      ".yandex.cloud.mdb.greenplum.v1.ListClust" +
-      "erOperationsRequest\032<.yandex.cloud.mdb.g" +
-      "reenplum.v1.ListClusterOperationsRespons" +
-      "e\">\202\323\344\223\0028\0226/managed-greenplum/v1/cluster" +
-      "s/{cluster_id}/operations\022\304\001\n\017ListMaster" +
-      "Hosts\0226.yandex.cloud.mdb.greenplum.v1.Li" +
-      "stClusterHostsRequest\0327.yandex.cloud.mdb" +
-      ".greenplum.v1.ListClusterHostsResponse\"@" +
-      "\202\323\344\223\002:\0228/managed-greenplum/v1/clusters/{" +
-      "cluster_id}/master-hosts\022\306\001\n\020ListSegment" +
-      "Hosts\0226.yandex.cloud.mdb.greenplum.v1.Li" +
-      "stClusterHostsRequest\0327.yandex.cloud.mdb" +
-      ".greenplum.v1.ListClusterHostsResponse\"A" +
-      "\202\323\344\223\002;\0229/managed-greenplum/v1/clusters/{" +
-      "cluster_id}/segment-hosts\022\263\001\n\010ListLogs\0225" +
-      ".yandex.cloud.mdb.greenplum.v1.ListClust" +
-      "erLogsRequest\0326.yandex.cloud.mdb.greenpl" +
-      "um.v1.ListClusterLogsResponse\"8\202\323\344\223\0022\0220/" +
-      "managed-greenplum/v1/clusters/{cluster_i" +
-      "d}:logs\022\270\001\n\nStreamLogs\0227.yandex.cloud.md" +
-      "b.greenplum.v1.StreamClusterLogsRequest\032" +
-      "..yandex.cloud.mdb.greenplum.v1.StreamLo" +
-      "gRecord\"?\202\323\344\223\0029\0227/managed-greenplum/v1/c" +
-      "lusters/{cluster_id}:stream_logs0\001\022\277\001\n\013L" +
-      "istBackups\0228.yandex.cloud.mdb.greenplum." +
-      "v1.ListClusterBackupsRequest\0329.yandex.cl" +
-      "oud.mdb.greenplum.v1.ListClusterBackupsR" +
-      "esponse\";\202\323\344\223\0025\0223/managed-greenplum/v1/c" +
-      "lusters/{cluster_id}/backups\022\272\001\n\007Restore" +
-      "\0224.yandex.cloud.mdb.greenplum.v1.Restore" +
+      "Config\022P\n\rmaster_config\030\007 \001(\01329.yandex.c" +
+      "loud.mdb.greenplum.v1.MasterSubclusterCo" +
+      "nfigSpec\022R\n\016segment_config\030\010 \001(\0132:.yande" +
+      "x.cloud.mdb.greenplum.v1.SegmentSubclust" +
+      "erConfigSpec\022\031\n\021master_host_count\030\t \001(\003\022" +
+      "\027\n\017segment_in_host\030\n \001(\003\022\032\n\022segment_host" +
+      "_count\030\013 \001(\003\022\027\n\tuser_name\030\014 \001(\tB\004\350\3071\001\022$\n" +
+      "\ruser_password\030\r \001(\tB\r\350\3071\001\212\3101\0058-128\022 \n\nn" +
+      "etwork_id\030\016 \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022securit" +
+      "y_group_ids\030\017 \003(\t\022\033\n\023deletion_protection" +
+      "\030\020 \001(\010\022\026\n\016host_group_ids\030\021 \003(\t\022L\n\022mainte" +
+      "nance_window\030\023 \001(\01320.yandex.cloud.mdb.gr" +
+      "eenplum.v1.MaintenanceWindow\022>\n\013config_s" +
+      "pec\030\024 \001(\0132).yandex.cloud.mdb.greenplum.v" +
+      "1.ConfigSpec\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001\"\251\005\n\nConfigSpec\022i\n\025gr" +
+      "eenplum_config_6_17\030\001 \001(\01322.yandex.cloud" +
+      ".mdb.greenplum.v1.GreenplumConfig6_17H\000R" +
+      "\024greenplumConfig_6_17\022i\n\025greenplum_confi" +
+      "g_6_19\030\002 \001(\01322.yandex.cloud.mdb.greenplu" +
+      "m.v1.GreenplumConfig6_19H\000R\024greenplumCon" +
+      "fig_6_19\022i\n\025greenplum_config_6_21\030\004 \001(\0132" +
+      "2.yandex.cloud.mdb.greenplum.v1.Greenplu" +
+      "mConfig6_21H\000R\024greenplumConfig_6_21\022i\n\025g" +
+      "reenplum_config_6_22\030\005 \001(\01322.yandex.clou" +
+      "d.mdb.greenplum.v1.GreenplumConfig6_22H\000" +
+      "R\024greenplumConfig_6_22\022C\n\004pool\030\003 \001(\01325.y" +
+      "andex.cloud.mdb.greenplum.v1.ConnectionP" +
+      "oolerConfig\022X\n\025background_activities\030\006 \001" +
+      "(\01329.yandex.cloud.mdb.greenplum.v1.Backg" +
+      "roundActivitiesConfig\022<\n\npxf_config\030\010 \001(" +
+      "\0132(.yandex.cloud.mdb.greenplum.v1.PXFCon" +
+      "figB\022\n\020greenplum_config\"+\n\025CreateCluster" +
+      "Metadata\022\022\n\ncluster_id\030\001 \001(\t\"\310\006\n\024UpdateC" +
+      "lusterRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.pr" +
+      "otobuf.FieldMask\022\036\n\013description\030\003 \001(\tB\t\212" +
+      "\3101\005<=256\022\220\001\n\006labels\030\004 \003(\0132?.yandex.cloud" +
+      ".mdb.greenplum.v1.UpdateClusterRequest.L" +
+      "abelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-" +
+      "z]*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022(\n\004n" +
+      "ame\030\005 \001(\tB\032\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022>\n" +
+      "\006config\030\006 \001(\0132..yandex.cloud.mdb.greenpl" +
+      "um.v1.GreenplumConfig\022P\n\rmaster_config\030\007" +
+      " \001(\01329.yandex.cloud.mdb.greenplum.v1.Mas" +
+      "terSubclusterConfigSpec\022R\n\016segment_confi" +
+      "g\030\010 \001(\0132:.yandex.cloud.mdb.greenplum.v1." +
+      "SegmentSubclusterConfigSpec\022$\n\ruser_pass" +
+      "word\030\r \001(\tB\r\350\3071\001\212\3101\0058-128\022L\n\022maintenance" +
+      "_window\030\017 \001(\01320.yandex.cloud.mdb.greenpl" +
+      "um.v1.MaintenanceWindow\022\032\n\022security_grou" +
+      "p_ids\030\021 \003(\t\022\033\n\023deletion_protection\030\022 \001(\010" +
+      "\022>\n\013config_spec\030\023 \001(\0132).yandex.cloud.mdb" +
+      ".greenplum.v1.ConfigSpec\032-\n\013LabelsEntry\022" +
+      "\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025Updat" +
+      "eClusterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"-\n\027" +
+      "AddClusterHostsMetadata\022\022\n\ncluster_id\030\001 " +
+      "\001(\t\"\204\001\n\rExpandRequest\022 \n\ncluster_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022segment_host_count\030\002 " +
+      "\001(\003\022#\n\033add_segments_per_host_count\030\003 \001(\003" +
+      "\022\020\n\010duration\030\004 \001(\003\"8\n\024DeleteClusterReque" +
+      "st\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025" +
+      "DeleteClusterMetadata\022\022\n\ncluster_id\030\001 \001(" +
+      "\t\"7\n\023StartClusterRequest\022 \n\ncluster_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\"*\n\024StartClusterMetada" +
+      "ta\022\022\n\ncluster_id\030\001 \001(\t\"6\n\022StopClusterReq" +
+      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")" +
+      "\n\023StopClusterMetadata\022\022\n\ncluster_id\030\001 \001(" +
+      "\t\"~\n\034ListClusterOperationsRequest\022 \n\nclu" +
+      "ster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size" +
+      "\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t" +
+      "\212\3101\005<=100\"o\n\035ListClusterOperationsRespon" +
+      "se\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.op" +
+      "eration.Operation\022\027\n\017next_page_token\030\002 \001" +
+      "(\t\"y\n\027ListClusterHostsRequest\022 \n\ncluster" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001" +
+      "(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005" +
+      "<=100\"g\n\030ListClusterHostsResponse\0222\n\005hos" +
+      "ts\030\001 \003(\0132#.yandex.cloud.mdb.greenplum.v1" +
+      ".Host\022\027\n\017next_page_token\030\002 \001(\t\"Y\n\032Master" +
+      "SubclusterConfigSpec\022;\n\tresources\030\001 \001(\0132" +
+      "(.yandex.cloud.mdb.greenplum.v1.Resource" +
+      "s\"Z\n\033SegmentSubclusterConfigSpec\022;\n\treso" +
+      "urces\030\001 \001(\0132(.yandex.cloud.mdb.greenplum" +
+      ".v1.Resources\"j\n\027ListClusterLogsResponse" +
+      "\0226\n\004logs\030\001 \003(\0132(.yandex.cloud.mdb.greenp" +
+      "lum.v1.LogRecord\022\027\n\017next_page_token\030\002 \001(" +
+      "\t\"\262\001\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\022F\n\007message\030\002 \003(\0132" +
+      "5.yandex.cloud.mdb.greenplum.v1.LogRecor" +
+      "d.MessageEntry\032.\n\014MessageEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\345\003\n\026ListClusterLo" +
+      "gsRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022\025\n\rcolumn_filter\030\002 \003(\t\022W\n\014service_ty" +
+      "pe\030\003 \001(\0162A.yandex.cloud.mdb.greenplum.v1" +
+      ".ListClusterLogsRequest.ServiceType\022-\n\tf" +
+      "rom_time\030\004 \001(\0132\032.google.protobuf.Timesta" +
+      "mp\022+\n\007to_time\030\005 \001(\0132\032.google.protobuf.Ti" +
+      "mestamp\022\035\n\tpage_size\030\006 \001(\003B\n\372\3071\006<=1000\022\035" +
+      "\n\npage_token\030\007 \001(\tB\t\212\3101\005<=100\022\036\n\026always_" +
+      "next_page_token\030\010 \001(\010\022\032\n\006filter\030\t \001(\tB\n\212" +
+      "\3101\006<=1000\"c\n\013ServiceType\022\034\n\030SERVICE_TYPE" +
+      "_UNSPECIFIED\020\000\022\r\n\tGREENPLUM\020\001\022\024\n\020GREENPL" +
+      "UM_POOLER\020\002\022\021\n\rGREENPLUM_PXF\020\003\"{\n\031ListCl" +
+      "usterBackupsRequest\022 \n\ncluster_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=" +
+      "1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"f\n\017S" +
+      "treamLogRecord\0228\n\006record\030\001 \001(\0132(.yandex." +
+      "cloud.mdb.greenplum.v1.LogRecord\022\031\n\021next" +
+      "_record_token\030\002 \001(\t\"\254\003\n\030StreamClusterLog" +
+      "sRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022\025\n\rcolumn_filter\030\002 \003(\t\022Y\n\014service_typ" +
+      "e\030\003 \001(\0162C.yandex.cloud.mdb.greenplum.v1." +
+      "StreamClusterLogsRequest.ServiceType\022-\n\t" +
+      "from_time\030\004 \001(\0132\032.google.protobuf.Timest" +
+      "amp\022+\n\007to_time\030\005 \001(\0132\032.google.protobuf.T" +
+      "imestamp\022\037\n\014record_token\030\006 \001(\tB\t\212\3101\005<=10" +
+      "0\022\032\n\006filter\030\007 \001(\tB\n\212\3101\006<=1000\"c\n\013Service" +
+      "Type\022\034\n\030SERVICE_TYPE_UNSPECIFIED\020\000\022\r\n\tGR" +
+      "EENPLUM\020\001\022\024\n\020GREENPLUM_POOLER\020\002\022\021\n\rGREEN" +
+      "PLUM_PXF\020\003\"m\n\032ListClusterBackupsResponse" +
+      "\0226\n\007backups\030\001 \003(\0132%.yandex.cloud.mdb.gre" +
+      "enplum.v1.Backup\022\027\n\017next_page_token\030\002 \001(" +
+      "\t\"\275\007\n\025RestoreClusterRequest\022\027\n\tbackup_id" +
+      "\030\001 \001(\tB\004\350\3071\001\022(\n\004time\030\020 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022\037\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022,\n\004name\030\003 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[" +
+      "a-zA-Z0-9_-]*\022\036\n\013description\030\004 \001(\tB\t\212\3101\005" +
+      "<=256\022\221\001\n\006labels\030\005 \003(\0132@.yandex.cloud.md" +
+      "b.greenplum.v1.RestoreClusterRequest.Lab" +
+      "elsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]" +
+      "*\262\3101\006\032\004<=63\262\3101\022\022\020[a-z][-_0-9a-z]*\022M\n\013env" +
+      "ironment\030\006 \001(\01622.yandex.cloud.mdb.greenp" +
+      "lum.v1.Cluster.EnvironmentB\004\350\3071\001\022E\n\006conf" +
+      "ig\030\007 \001(\01325.yandex.cloud.mdb.greenplum.v1" +
+      ".GreenplumRestoreConfig\022B\n\020master_resour" +
+      "ces\030\010 \001(\0132(.yandex.cloud.mdb.greenplum.v" +
+      "1.Resources\022C\n\021segment_resources\030\t \001(\0132(" +
+      ".yandex.cloud.mdb.greenplum.v1.Resources" +
+      "\022 \n\nnetwork_id\030\n \001(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\022se" +
+      "curity_group_ids\030\013 \003(\t\022\033\n\023deletion_prote" +
+      "ction\030\014 \001(\010\022\026\n\016host_group_ids\030\r \003(\t\022\032\n\022p" +
+      "lacement_group_id\030\016 \001(\t\022L\n\022maintenance_w" +
+      "indow\030\017 \001(\01320.yandex.cloud.mdb.greenplum" +
+      ".v1.MaintenanceWindow\022\032\n\022segment_host_co" +
+      "unt\030\021 \001(\003\022\027\n\017segment_in_host\030\022 \001(\003\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\"?\n\026RestoreClusterMetadata\022\022\n\ncluster_i" +
+      "d\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t2\205\026\n\016ClusterSe" +
+      "rvice\022\224\001\n\003Get\0220.yandex.cloud.mdb.greenpl" +
+      "um.v1.GetClusterRequest\032&.yandex.cloud.m" +
+      "db.greenplum.v1.Cluster\"3\202\323\344\223\002-\022+/manage" +
+      "d-greenplum/v1/clusters/{cluster_id}\022\227\001\n" +
+      "\004List\0222.yandex.cloud.mdb.greenplum.v1.Li" +
+      "stClustersRequest\0323.yandex.cloud.mdb.gre" +
+      "enplum.v1.ListClustersResponse\"&\202\323\344\223\002 \022\036" +
+      "/managed-greenplum/v1/clusters\022\257\001\n\006Creat" +
+      "e\0223.yandex.cloud.mdb.greenplum.v1.Create" +
       "ClusterRequest\032!.yandex.cloud.operation." +
-      "Operation\"V\202\323\344\223\002+\"&/managed-greenplum/v1" +
-      "/clusters:restore:\001*\262\322*!\n\026RestoreCluster" +
-      "Metadata\022\007ClusterBp\n!yandex.cloud.api.md" +
-      "b.greenplum.v1ZKgithub.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/mdb/greenplum/v" +
-      "1;greenplumb\006proto3"
+      "Operation\"M\202\323\344\223\002#\"\036/managed-greenplum/v1" +
+      "/clusters:\001*\262\322* \n\025CreateClusterMetadata\022" +
+      "\007Cluster\022\274\001\n\006Update\0223.yandex.cloud.mdb.g" +
+      "reenplum.v1.UpdateClusterRequest\032!.yande" +
+      "x.cloud.operation.Operation\"Z\202\323\344\223\00202+/ma" +
+      "naged-greenplum/v1/clusters/{cluster_id}" +
+      ":\001*\262\322* \n\025UpdateClusterMetadata\022\007Cluster\022" +
+      "\276\001\n\006Expand\022,.yandex.cloud.mdb.greenplum." +
+      "v1.ExpandRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"c\202\323\344\223\0027\"2/managed-greenplum/" +
+      "v1/clusters/{cluster_id}/expand:\001*\262\322*\"\n\027" +
+      "AddClusterHostsMetadata\022\007Cluster\022\307\001\n\006Del" +
+      "ete\0223.yandex.cloud.mdb.greenplum.v1.Dele" +
+      "teClusterRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"e\202\323\344\223\002-*+/managed-greenplum/" +
+      "v1/clusters/{cluster_id}\262\322*.\n\025DeleteClus" +
+      "terMetadata\022\025google.protobuf.Empty\022\274\001\n\005S" +
+      "tart\0222.yandex.cloud.mdb.greenplum.v1.Sta" +
+      "rtClusterRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"\\\202\323\344\223\0023\"1/managed-greenplum/" +
+      "v1/clusters/{cluster_id}:start\262\322*\037\n\024Star" +
+      "tClusterMetadata\022\007Cluster\022\270\001\n\004Stop\0221.yan" +
+      "dex.cloud.mdb.greenplum.v1.StopClusterRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"Z\202\323\344\223\0022\"0/managed-greenplum/v1/clusters" +
+      "/{cluster_id}:stop\262\322*\036\n\023StopClusterMetad" +
+      "ata\022\007Cluster\022\313\001\n\016ListOperations\022;.yandex" +
+      ".cloud.mdb.greenplum.v1.ListClusterOpera" +
+      "tionsRequest\032<.yandex.cloud.mdb.greenplu" +
+      "m.v1.ListClusterOperationsResponse\">\202\323\344\223" +
+      "\0028\0226/managed-greenplum/v1/clusters/{clus" +
+      "ter_id}/operations\022\304\001\n\017ListMasterHosts\0226" +
+      ".yandex.cloud.mdb.greenplum.v1.ListClust" +
+      "erHostsRequest\0327.yandex.cloud.mdb.greenp" +
+      "lum.v1.ListClusterHostsResponse\"@\202\323\344\223\002:\022" +
+      "8/managed-greenplum/v1/clusters/{cluster" +
+      "_id}/master-hosts\022\306\001\n\020ListSegmentHosts\0226" +
+      ".yandex.cloud.mdb.greenplum.v1.ListClust" +
+      "erHostsRequest\0327.yandex.cloud.mdb.greenp" +
+      "lum.v1.ListClusterHostsResponse\"A\202\323\344\223\002;\022" +
+      "9/managed-greenplum/v1/clusters/{cluster" +
+      "_id}/segment-hosts\022\263\001\n\010ListLogs\0225.yandex" +
+      ".cloud.mdb.greenplum.v1.ListClusterLogsR" +
+      "equest\0326.yandex.cloud.mdb.greenplum.v1.L" +
+      "istClusterLogsResponse\"8\202\323\344\223\0022\0220/managed" +
+      "-greenplum/v1/clusters/{cluster_id}:logs" +
+      "\022\270\001\n\nStreamLogs\0227.yandex.cloud.mdb.green" +
+      "plum.v1.StreamClusterLogsRequest\032..yande" +
+      "x.cloud.mdb.greenplum.v1.StreamLogRecord" +
+      "\"?\202\323\344\223\0029\0227/managed-greenplum/v1/clusters" +
+      "/{cluster_id}:stream_logs0\001\022\277\001\n\013ListBack" +
+      "ups\0228.yandex.cloud.mdb.greenplum.v1.List" +
+      "ClusterBackupsRequest\0329.yandex.cloud.mdb" +
+      ".greenplum.v1.ListClusterBackupsResponse" +
+      "\";\202\323\344\223\0025\0223/managed-greenplum/v1/clusters" +
+      "/{cluster_id}/backups\022\272\001\n\007Restore\0224.yand" +
+      "ex.cloud.mdb.greenplum.v1.RestoreCluster" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"V\202\323\344\223\002+\"&/managed-greenplum/v1/cluste" +
+      "rs:restore:\001*\262\322*!\n\026RestoreClusterMetadat" +
+      "a\022\007ClusterBp\n!yandex.cloud.api.mdb.green" +
+      "plum.v1ZKgithub.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/mdb/greenplum/v1;green" +
+      "plumb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -39299,6 +39710,7 @@ public final class ClusterServiceOuterClass {
           yandex.cloud.api.mdb.greenplum.v1.Config.getDescriptor(),
           yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.getDescriptor(),
           yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.getDescriptor(),
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.getDescriptor(),
         });
     internal_static_yandex_cloud_mdb_greenplum_v1_GetClusterRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -39335,7 +39747,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_greenplum_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_ConfigSpec_descriptor,
-        new java.lang.String[] { "GreenplumConfig617", "GreenplumConfig619", "GreenplumConfig621", "GreenplumConfig622", "Pool", "GreenplumConfig", });
+        new java.lang.String[] { "GreenplumConfig617", "GreenplumConfig619", "GreenplumConfig621", "GreenplumConfig622", "Pool", "BackgroundActivities", "PxfConfig", "GreenplumConfig", });
     internal_static_yandex_cloud_mdb_greenplum_v1_CreateClusterMetadata_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_mdb_greenplum_v1_CreateClusterMetadata_fieldAccessorTable = new
@@ -39533,6 +39945,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.greenplum.v1.Config.getDescriptor();
     yandex.cloud.api.mdb.greenplum.v1.HostOuterClass.getDescriptor();
     yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.getDescriptor();
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

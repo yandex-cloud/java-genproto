@@ -34962,6 +34962,796 @@ public final class TriggerOuterClass {
 
   }
 
+  public interface ObjectStorageBucketSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.triggers.v1.ObjectStorageBucketSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Bucket for saving.
+     * </pre>
+     *
+     * <code>string bucket_id = 1 [(.yandex.cloud.pattern) = "[-.0-9a-zA-Z]*", (.yandex.cloud.length) = "3-63"];</code>
+     * @return The bucketId.
+     */
+    java.lang.String getBucketId();
+    /**
+     * <pre>
+     * Bucket for saving.
+     * </pre>
+     *
+     * <code>string bucket_id = 1 [(.yandex.cloud.pattern) = "[-.0-9a-zA-Z]*", (.yandex.cloud.length) = "3-63"];</code>
+     * @return The bytes for bucketId.
+     */
+    com.google.protobuf.ByteString
+        getBucketIdBytes();
+
+    /**
+     * <pre>
+     * SA which has write permission on storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The serviceAccountId.
+     */
+    java.lang.String getServiceAccountId();
+    /**
+     * <pre>
+     * SA which has write permission on storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for serviceAccountId.
+     */
+    com.google.protobuf.ByteString
+        getServiceAccountIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.triggers.v1.ObjectStorageBucketSettings}
+   */
+  public static final class ObjectStorageBucketSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.triggers.v1.ObjectStorageBucketSettings)
+      ObjectStorageBucketSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ObjectStorageBucketSettings.newBuilder() to construct.
+    private ObjectStorageBucketSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ObjectStorageBucketSettings() {
+      bucketId_ = "";
+      serviceAccountId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ObjectStorageBucketSettings();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ObjectStorageBucketSettings(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              bucketId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceAccountId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_ObjectStorageBucketSettings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_ObjectStorageBucketSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings.class, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings.Builder.class);
+    }
+
+    public static final int BUCKET_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object bucketId_;
+    /**
+     * <pre>
+     * Bucket for saving.
+     * </pre>
+     *
+     * <code>string bucket_id = 1 [(.yandex.cloud.pattern) = "[-.0-9a-zA-Z]*", (.yandex.cloud.length) = "3-63"];</code>
+     * @return The bucketId.
+     */
+    @java.lang.Override
+    public java.lang.String getBucketId() {
+      java.lang.Object ref = bucketId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        bucketId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Bucket for saving.
+     * </pre>
+     *
+     * <code>string bucket_id = 1 [(.yandex.cloud.pattern) = "[-.0-9a-zA-Z]*", (.yandex.cloud.length) = "3-63"];</code>
+     * @return The bytes for bucketId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getBucketIdBytes() {
+      java.lang.Object ref = bucketId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        bucketId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object serviceAccountId_;
+    /**
+     * <pre>
+     * SA which has write permission on storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The serviceAccountId.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceAccountId() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccountId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * SA which has write permission on storage.
+     * </pre>
+     *
+     * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for serviceAccountId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceAccountIdBytes() {
+      java.lang.Object ref = serviceAccountId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccountId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucketId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, bucketId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, serviceAccountId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(bucketId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, bucketId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceAccountId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, serviceAccountId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings other = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings) obj;
+
+      if (!getBucketId()
+          .equals(other.getBucketId())) return false;
+      if (!getServiceAccountId()
+          .equals(other.getServiceAccountId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + BUCKET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getBucketId().hashCode();
+      hash = (37 * hash) + SERVICE_ACCOUNT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceAccountId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.triggers.v1.ObjectStorageBucketSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.triggers.v1.ObjectStorageBucketSettings)
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_ObjectStorageBucketSettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_ObjectStorageBucketSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings.class, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bucketId_ = "";
+
+        serviceAccountId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.internal_static_yandex_cloud_serverless_triggers_v1_ObjectStorageBucketSettings_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings build() {
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings buildPartial() {
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings result = new yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings(this);
+        result.bucketId_ = bucketId_;
+        result.serviceAccountId_ = serviceAccountId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings) {
+          return mergeFrom((yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings other) {
+        if (other == yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings.getDefaultInstance()) return this;
+        if (!other.getBucketId().isEmpty()) {
+          bucketId_ = other.bucketId_;
+          onChanged();
+        }
+        if (!other.getServiceAccountId().isEmpty()) {
+          serviceAccountId_ = other.serviceAccountId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object bucketId_ = "";
+      /**
+       * <pre>
+       * Bucket for saving.
+       * </pre>
+       *
+       * <code>string bucket_id = 1 [(.yandex.cloud.pattern) = "[-.0-9a-zA-Z]*", (.yandex.cloud.length) = "3-63"];</code>
+       * @return The bucketId.
+       */
+      public java.lang.String getBucketId() {
+        java.lang.Object ref = bucketId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          bucketId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Bucket for saving.
+       * </pre>
+       *
+       * <code>string bucket_id = 1 [(.yandex.cloud.pattern) = "[-.0-9a-zA-Z]*", (.yandex.cloud.length) = "3-63"];</code>
+       * @return The bytes for bucketId.
+       */
+      public com.google.protobuf.ByteString
+          getBucketIdBytes() {
+        java.lang.Object ref = bucketId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          bucketId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Bucket for saving.
+       * </pre>
+       *
+       * <code>string bucket_id = 1 [(.yandex.cloud.pattern) = "[-.0-9a-zA-Z]*", (.yandex.cloud.length) = "3-63"];</code>
+       * @param value The bucketId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBucketId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        bucketId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Bucket for saving.
+       * </pre>
+       *
+       * <code>string bucket_id = 1 [(.yandex.cloud.pattern) = "[-.0-9a-zA-Z]*", (.yandex.cloud.length) = "3-63"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBucketId() {
+        
+        bucketId_ = getDefaultInstance().getBucketId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Bucket for saving.
+       * </pre>
+       *
+       * <code>string bucket_id = 1 [(.yandex.cloud.pattern) = "[-.0-9a-zA-Z]*", (.yandex.cloud.length) = "3-63"];</code>
+       * @param value The bytes for bucketId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBucketIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        bucketId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceAccountId_ = "";
+      /**
+       * <pre>
+       * SA which has write permission on storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The serviceAccountId.
+       */
+      public java.lang.String getServiceAccountId() {
+        java.lang.Object ref = serviceAccountId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceAccountId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * SA which has write permission on storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for serviceAccountId.
+       */
+      public com.google.protobuf.ByteString
+          getServiceAccountIdBytes() {
+        java.lang.Object ref = serviceAccountId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceAccountId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * SA which has write permission on storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SA which has write permission on storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceAccountId() {
+        
+        serviceAccountId_ = getDefaultInstance().getServiceAccountId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * SA which has write permission on storage.
+       * </pre>
+       *
+       * <code>string service_account_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for serviceAccountId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceAccountIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceAccountId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.triggers.v1.ObjectStorageBucketSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.triggers.v1.ObjectStorageBucketSettings)
+    private static final yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings();
+    }
+
+    public static yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ObjectStorageBucketSettings>
+        PARSER = new com.google.protobuf.AbstractParser<ObjectStorageBucketSettings>() {
+      @java.lang.Override
+      public ObjectStorageBucketSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ObjectStorageBucketSettings(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ObjectStorageBucketSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ObjectStorageBucketSettings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface MailOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.triggers.v1.Mail)
       com.google.protobuf.MessageOrBuilder {
@@ -35014,6 +35804,33 @@ public final class TriggerOuterClass {
      * <code>.yandex.cloud.serverless.triggers.v1.BatchSettings batch_settings = 3;</code>
      */
     yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.BatchSettingsOrBuilder getBatchSettingsOrBuilder();
+
+    /**
+     * <pre>
+     * Bucket settings for saving attachments.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.ObjectStorageBucketSettings attachments_bucket = 4;</code>
+     * @return Whether the attachmentsBucket field is set.
+     */
+    boolean hasAttachmentsBucket();
+    /**
+     * <pre>
+     * Bucket settings for saving attachments.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.ObjectStorageBucketSettings attachments_bucket = 4;</code>
+     * @return The attachmentsBucket.
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings getAttachmentsBucket();
+    /**
+     * <pre>
+     * Bucket settings for saving attachments.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.ObjectStorageBucketSettings attachments_bucket = 4;</code>
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettingsOrBuilder getAttachmentsBucketOrBuilder();
 
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
@@ -35108,6 +35925,19 @@ public final class TriggerOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(batchSettings_);
                 batchSettings_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings.Builder subBuilder = null;
+              if (attachmentsBucket_ != null) {
+                subBuilder = attachmentsBucket_.toBuilder();
+              }
+              attachmentsBucket_ = input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(attachmentsBucket_);
+                attachmentsBucket_ = subBuilder.buildPartial();
               }
 
               break;
@@ -35299,6 +36129,44 @@ public final class TriggerOuterClass {
       return getBatchSettings();
     }
 
+    public static final int ATTACHMENTS_BUCKET_FIELD_NUMBER = 4;
+    private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings attachmentsBucket_;
+    /**
+     * <pre>
+     * Bucket settings for saving attachments.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.ObjectStorageBucketSettings attachments_bucket = 4;</code>
+     * @return Whether the attachmentsBucket field is set.
+     */
+    @java.lang.Override
+    public boolean hasAttachmentsBucket() {
+      return attachmentsBucket_ != null;
+    }
+    /**
+     * <pre>
+     * Bucket settings for saving attachments.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.ObjectStorageBucketSettings attachments_bucket = 4;</code>
+     * @return The attachmentsBucket.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings getAttachmentsBucket() {
+      return attachmentsBucket_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings.getDefaultInstance() : attachmentsBucket_;
+    }
+    /**
+     * <pre>
+     * Bucket settings for saving attachments.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.ObjectStorageBucketSettings attachments_bucket = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettingsOrBuilder getAttachmentsBucketOrBuilder() {
+      return getAttachmentsBucket();
+    }
+
     public static final int INVOKE_FUNCTION_FIELD_NUMBER = 101;
     /**
      * <code>.yandex.cloud.serverless.triggers.v1.InvokeFunctionWithRetry invoke_function = 101;</code>
@@ -35381,6 +36249,9 @@ public final class TriggerOuterClass {
       if (batchSettings_ != null) {
         output.writeMessage(3, getBatchSettings());
       }
+      if (attachmentsBucket_ != null) {
+        output.writeMessage(4, getAttachmentsBucket());
+      }
       if (actionCase_ == 101) {
         output.writeMessage(101, (yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.InvokeFunctionWithRetry) action_);
       }
@@ -35402,6 +36273,10 @@ public final class TriggerOuterClass {
       if (batchSettings_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getBatchSettings());
+      }
+      if (attachmentsBucket_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getAttachmentsBucket());
       }
       if (actionCase_ == 101) {
         size += com.google.protobuf.CodedOutputStream
@@ -35433,6 +36308,11 @@ public final class TriggerOuterClass {
         if (!getBatchSettings()
             .equals(other.getBatchSettings())) return false;
       }
+      if (hasAttachmentsBucket() != other.hasAttachmentsBucket()) return false;
+      if (hasAttachmentsBucket()) {
+        if (!getAttachmentsBucket()
+            .equals(other.getAttachmentsBucket())) return false;
+      }
       if (!getActionCase().equals(other.getActionCase())) return false;
       switch (actionCase_) {
         case 101:
@@ -35462,6 +36342,10 @@ public final class TriggerOuterClass {
       if (hasBatchSettings()) {
         hash = (37 * hash) + BATCH_SETTINGS_FIELD_NUMBER;
         hash = (53 * hash) + getBatchSettings().hashCode();
+      }
+      if (hasAttachmentsBucket()) {
+        hash = (37 * hash) + ATTACHMENTS_BUCKET_FIELD_NUMBER;
+        hash = (53 * hash) + getAttachmentsBucket().hashCode();
       }
       switch (actionCase_) {
         case 101:
@@ -35616,6 +36500,12 @@ public final class TriggerOuterClass {
           batchSettings_ = null;
           batchSettingsBuilder_ = null;
         }
+        if (attachmentsBucketBuilder_ == null) {
+          attachmentsBucket_ = null;
+        } else {
+          attachmentsBucket_ = null;
+          attachmentsBucketBuilder_ = null;
+        }
         actionCase_ = 0;
         action_ = null;
         return this;
@@ -35649,6 +36539,11 @@ public final class TriggerOuterClass {
           result.batchSettings_ = batchSettings_;
         } else {
           result.batchSettings_ = batchSettingsBuilder_.build();
+        }
+        if (attachmentsBucketBuilder_ == null) {
+          result.attachmentsBucket_ = attachmentsBucket_;
+        } else {
+          result.attachmentsBucket_ = attachmentsBucketBuilder_.build();
         }
         if (actionCase_ == 101) {
           if (invokeFunctionBuilder_ == null) {
@@ -35719,6 +36614,9 @@ public final class TriggerOuterClass {
         }
         if (other.hasBatchSettings()) {
           mergeBatchSettings(other.getBatchSettings());
+        }
+        if (other.hasAttachmentsBucket()) {
+          mergeAttachmentsBucket(other.getAttachmentsBucket());
         }
         switch (other.getActionCase()) {
           case INVOKE_FUNCTION: {
@@ -36031,6 +36929,161 @@ public final class TriggerOuterClass {
           batchSettings_ = null;
         }
         return batchSettingsBuilder_;
+      }
+
+      private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings attachmentsBucket_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettingsOrBuilder> attachmentsBucketBuilder_;
+      /**
+       * <pre>
+       * Bucket settings for saving attachments.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.ObjectStorageBucketSettings attachments_bucket = 4;</code>
+       * @return Whether the attachmentsBucket field is set.
+       */
+      public boolean hasAttachmentsBucket() {
+        return attachmentsBucketBuilder_ != null || attachmentsBucket_ != null;
+      }
+      /**
+       * <pre>
+       * Bucket settings for saving attachments.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.ObjectStorageBucketSettings attachments_bucket = 4;</code>
+       * @return The attachmentsBucket.
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings getAttachmentsBucket() {
+        if (attachmentsBucketBuilder_ == null) {
+          return attachmentsBucket_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings.getDefaultInstance() : attachmentsBucket_;
+        } else {
+          return attachmentsBucketBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Bucket settings for saving attachments.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.ObjectStorageBucketSettings attachments_bucket = 4;</code>
+       */
+      public Builder setAttachmentsBucket(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings value) {
+        if (attachmentsBucketBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          attachmentsBucket_ = value;
+          onChanged();
+        } else {
+          attachmentsBucketBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Bucket settings for saving attachments.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.ObjectStorageBucketSettings attachments_bucket = 4;</code>
+       */
+      public Builder setAttachmentsBucket(
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings.Builder builderForValue) {
+        if (attachmentsBucketBuilder_ == null) {
+          attachmentsBucket_ = builderForValue.build();
+          onChanged();
+        } else {
+          attachmentsBucketBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Bucket settings for saving attachments.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.ObjectStorageBucketSettings attachments_bucket = 4;</code>
+       */
+      public Builder mergeAttachmentsBucket(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings value) {
+        if (attachmentsBucketBuilder_ == null) {
+          if (attachmentsBucket_ != null) {
+            attachmentsBucket_ =
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings.newBuilder(attachmentsBucket_).mergeFrom(value).buildPartial();
+          } else {
+            attachmentsBucket_ = value;
+          }
+          onChanged();
+        } else {
+          attachmentsBucketBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Bucket settings for saving attachments.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.ObjectStorageBucketSettings attachments_bucket = 4;</code>
+       */
+      public Builder clearAttachmentsBucket() {
+        if (attachmentsBucketBuilder_ == null) {
+          attachmentsBucket_ = null;
+          onChanged();
+        } else {
+          attachmentsBucket_ = null;
+          attachmentsBucketBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Bucket settings for saving attachments.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.ObjectStorageBucketSettings attachments_bucket = 4;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings.Builder getAttachmentsBucketBuilder() {
+        
+        onChanged();
+        return getAttachmentsBucketFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Bucket settings for saving attachments.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.ObjectStorageBucketSettings attachments_bucket = 4;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettingsOrBuilder getAttachmentsBucketOrBuilder() {
+        if (attachmentsBucketBuilder_ != null) {
+          return attachmentsBucketBuilder_.getMessageOrBuilder();
+        } else {
+          return attachmentsBucket_ == null ?
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings.getDefaultInstance() : attachmentsBucket_;
+        }
+      }
+      /**
+       * <pre>
+       * Bucket settings for saving attachments.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.ObjectStorageBucketSettings attachments_bucket = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettingsOrBuilder> 
+          getAttachmentsBucketFieldBuilder() {
+        if (attachmentsBucketBuilder_ == null) {
+          attachmentsBucketBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettings.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.ObjectStorageBucketSettingsOrBuilder>(
+                  getAttachmentsBucket(),
+                  getParentForChildren(),
+                  isClean());
+          attachmentsBucket_ = null;
+        }
+        return attachmentsBucketBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -36483,6 +37536,11 @@ public final class TriggerOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_triggers_v1_DataStream_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_triggers_v1_ObjectStorageBucketSettings_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_triggers_v1_ObjectStorageBucketSettings_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_triggers_v1_Mail_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -36680,23 +37738,28 @@ public final class TriggerOuterClass {
       "eFunctionWithRetryH\000\022Y\n\020invoke_container" +
       "\030\017 \001(\0132=.yandex.cloud.serverless.trigger" +
       "s.v1.InvokeContainerWithRetryH\000B\016\n\006actio" +
-      "n\022\004\300\3011\001\"\245\002\n\004Mail\022\r\n\005email\030\002 \001(\t\022J\n\016batch" +
+      "n\022\004\300\3011\001\"v\n\033ObjectStorageBucketSettings\022-" +
+      "\n\tbucket_id\030\001 \001(\tB\032\212\3101\0043-63\362\3071\016[-.0-9a-z" +
+      "A-Z]*\022(\n\022service_account_id\030\002 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\"\203\003\n\004Mail\022\r\n\005email\030\002 \001(\t\022J\n\016batch" +
       "_settings\030\003 \001(\01322.yandex.cloud.serverles" +
-      "s.triggers.v1.BatchSettings\022W\n\017invoke_fu" +
-      "nction\030e \001(\0132<.yandex.cloud.serverless.t" +
-      "riggers.v1.InvokeFunctionWithRetryH\000\022Y\n\020" +
-      "invoke_container\030g \001(\0132=.yandex.cloud.se" +
-      "rverless.triggers.v1.InvokeContainerWith" +
-      "RetryH\000B\016\n\006action\022\004\300\3011\001*\342\001\n\013TriggerType\022" +
-      "\034\n\030TRIGGER_TYPE_UNSPECIFIED\020\000\022\t\n\005TIMER\020\002" +
-      "\022\021\n\rMESSAGE_QUEUE\020\003\022\017\n\013IOT_MESSAGE\020\004\022\026\n\022" +
-      "IOT_BROKER_MESSAGE\020\014\022\022\n\016OBJECT_STORAGE\020\005" +
-      "\022\026\n\022CONTAINER_REGISTRY\020\006\022\016\n\nCLOUD_LOGS\020\007" +
-      "\022\013\n\007LOGGING\020\010\022\022\n\016BILLING_BUDGET\020\t\022\007\n\003YDS" +
-      "\020\n\022\010\n\004MAIL\020\013B{\n\'yandex.cloud.api.serverl" +
-      "ess.triggers.v1ZPgithub.com/yandex-cloud" +
-      "/go-genproto/yandex/cloud/serverless/tri" +
-      "ggers/v1;triggersb\006proto3"
+      "s.triggers.v1.BatchSettings\022\\\n\022attachmen" +
+      "ts_bucket\030\004 \001(\0132@.yandex.cloud.serverles" +
+      "s.triggers.v1.ObjectStorageBucketSetting" +
+      "s\022W\n\017invoke_function\030e \001(\0132<.yandex.clou" +
+      "d.serverless.triggers.v1.InvokeFunctionW" +
+      "ithRetryH\000\022Y\n\020invoke_container\030g \001(\0132=.y" +
+      "andex.cloud.serverless.triggers.v1.Invok" +
+      "eContainerWithRetryH\000B\016\n\006action\022\004\300\3011\001*\342\001" +
+      "\n\013TriggerType\022\034\n\030TRIGGER_TYPE_UNSPECIFIE" +
+      "D\020\000\022\t\n\005TIMER\020\002\022\021\n\rMESSAGE_QUEUE\020\003\022\017\n\013IOT" +
+      "_MESSAGE\020\004\022\026\n\022IOT_BROKER_MESSAGE\020\014\022\022\n\016OB" +
+      "JECT_STORAGE\020\005\022\026\n\022CONTAINER_REGISTRY\020\006\022\016" +
+      "\n\nCLOUD_LOGS\020\007\022\013\n\007LOGGING\020\010\022\022\n\016BILLING_B" +
+      "UDGET\020\t\022\007\n\003YDS\020\n\022\010\n\004MAIL\020\013B{\n\'yandex.clo" +
+      "ud.api.serverless.triggers.v1ZPgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "serverless/triggers/v1;triggersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -36844,12 +37907,18 @@ public final class TriggerOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_DataStream_descriptor,
         new java.lang.String[] { "Endpoint", "Database", "Stream", "ServiceAccountId", "BatchSettings", "InvokeFunction", "InvokeContainer", "Action", });
-    internal_static_yandex_cloud_serverless_triggers_v1_Mail_descriptor =
+    internal_static_yandex_cloud_serverless_triggers_v1_ObjectStorageBucketSettings_descriptor =
       getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_serverless_triggers_v1_ObjectStorageBucketSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_triggers_v1_ObjectStorageBucketSettings_descriptor,
+        new java.lang.String[] { "BucketId", "ServiceAccountId", });
+    internal_static_yandex_cloud_serverless_triggers_v1_Mail_descriptor =
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_serverless_triggers_v1_Mail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_Mail_descriptor,
-        new java.lang.String[] { "Email", "BatchSettings", "InvokeFunction", "InvokeContainer", "Action", });
+        new java.lang.String[] { "Email", "BatchSettings", "AttachmentsBucket", "InvokeFunction", "InvokeContainer", "Action", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);

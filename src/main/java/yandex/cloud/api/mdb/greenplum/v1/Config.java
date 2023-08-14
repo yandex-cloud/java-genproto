@@ -2336,6 +2336,3330 @@ public final class Config {
 
   }
 
+  public interface BackgroundActivityStartAtOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 hours = 1 [(.yandex.cloud.value) = "0-23"];</code>
+     * @return The hours.
+     */
+    long getHours();
+
+    /**
+     * <code>int64 minutes = 2 [(.yandex.cloud.value) = "0-59"];</code>
+     * @return The minutes.
+     */
+    long getMinutes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt}
+   */
+  public static final class BackgroundActivityStartAt extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt)
+      BackgroundActivityStartAtOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BackgroundActivityStartAt.newBuilder() to construct.
+    private BackgroundActivityStartAt(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BackgroundActivityStartAt() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BackgroundActivityStartAt();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BackgroundActivityStartAt(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              hours_ = input.readInt64();
+              break;
+            }
+            case 16: {
+
+              minutes_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_BackgroundActivityStartAt_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_BackgroundActivityStartAt_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.class, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.Builder.class);
+    }
+
+    public static final int HOURS_FIELD_NUMBER = 1;
+    private long hours_;
+    /**
+     * <code>int64 hours = 1 [(.yandex.cloud.value) = "0-23"];</code>
+     * @return The hours.
+     */
+    @java.lang.Override
+    public long getHours() {
+      return hours_;
+    }
+
+    public static final int MINUTES_FIELD_NUMBER = 2;
+    private long minutes_;
+    /**
+     * <code>int64 minutes = 2 [(.yandex.cloud.value) = "0-59"];</code>
+     * @return The minutes.
+     */
+    @java.lang.Override
+    public long getMinutes() {
+      return minutes_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (hours_ != 0L) {
+        output.writeInt64(1, hours_);
+      }
+      if (minutes_ != 0L) {
+        output.writeInt64(2, minutes_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (hours_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, hours_);
+      }
+      if (minutes_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, minutes_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt other = (yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt) obj;
+
+      if (getHours()
+          != other.getHours()) return false;
+      if (getMinutes()
+          != other.getMinutes()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HOURS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getHours());
+      hash = (37 * hash) + MINUTES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMinutes());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt)
+        yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAtOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_BackgroundActivityStartAt_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_BackgroundActivityStartAt_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.class, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        hours_ = 0L;
+
+        minutes_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_BackgroundActivityStartAt_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt build() {
+        yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt result = new yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt(this);
+        result.hours_ = hours_;
+        result.minutes_ = minutes_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.getDefaultInstance()) return this;
+        if (other.getHours() != 0L) {
+          setHours(other.getHours());
+        }
+        if (other.getMinutes() != 0L) {
+          setMinutes(other.getMinutes());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long hours_ ;
+      /**
+       * <code>int64 hours = 1 [(.yandex.cloud.value) = "0-23"];</code>
+       * @return The hours.
+       */
+      @java.lang.Override
+      public long getHours() {
+        return hours_;
+      }
+      /**
+       * <code>int64 hours = 1 [(.yandex.cloud.value) = "0-23"];</code>
+       * @param value The hours to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHours(long value) {
+        
+        hours_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 hours = 1 [(.yandex.cloud.value) = "0-23"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHours() {
+        
+        hours_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long minutes_ ;
+      /**
+       * <code>int64 minutes = 2 [(.yandex.cloud.value) = "0-59"];</code>
+       * @return The minutes.
+       */
+      @java.lang.Override
+      public long getMinutes() {
+        return minutes_;
+      }
+      /**
+       * <code>int64 minutes = 2 [(.yandex.cloud.value) = "0-59"];</code>
+       * @param value The minutes to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinutes(long value) {
+        
+        minutes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 minutes = 2 [(.yandex.cloud.value) = "0-59"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinutes() {
+        
+        minutes_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt)
+    private static final yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BackgroundActivityStartAt>
+        PARSER = new com.google.protobuf.AbstractParser<BackgroundActivityStartAt>() {
+      @java.lang.Override
+      public BackgroundActivityStartAt parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BackgroundActivityStartAt(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BackgroundActivityStartAt> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BackgroundActivityStartAt> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TableSizesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.TableSizes)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+     */
+    java.util.List<yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt> 
+        getStartsList();
+    /**
+     * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt getStarts(int index);
+    /**
+     * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+     */
+    int getStartsCount();
+    /**
+     * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+     */
+    java.util.List<? extends yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAtOrBuilder> 
+        getStartsOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAtOrBuilder getStartsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.TableSizes}
+   */
+  public static final class TableSizes extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.TableSizes)
+      TableSizesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TableSizes.newBuilder() to construct.
+    private TableSizes(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TableSizes() {
+      starts_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TableSizes();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TableSizes(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                starts_ = new java.util.ArrayList<yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              starts_.add(
+                  input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          starts_ = java.util.Collections.unmodifiableList(starts_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_TableSizes_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_TableSizes_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes.class, yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes.Builder.class);
+    }
+
+    public static final int STARTS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt> starts_;
+    /**
+     * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt> getStartsList() {
+      return starts_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAtOrBuilder> 
+        getStartsOrBuilderList() {
+      return starts_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+     */
+    @java.lang.Override
+    public int getStartsCount() {
+      return starts_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt getStarts(int index) {
+      return starts_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAtOrBuilder getStartsOrBuilder(
+        int index) {
+      return starts_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < starts_.size(); i++) {
+        output.writeMessage(1, starts_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < starts_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, starts_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes other = (yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes) obj;
+
+      if (!getStartsList()
+          .equals(other.getStartsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getStartsCount() > 0) {
+        hash = (37 * hash) + STARTS_FIELD_NUMBER;
+        hash = (53 * hash) + getStartsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.TableSizes}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.TableSizes)
+        yandex.cloud.api.mdb.greenplum.v1.Config.TableSizesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_TableSizes_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_TableSizes_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes.class, yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getStartsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (startsBuilder_ == null) {
+          starts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          startsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_TableSizes_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes build() {
+        yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes result = new yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes(this);
+        int from_bitField0_ = bitField0_;
+        if (startsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            starts_ = java.util.Collections.unmodifiableList(starts_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.starts_ = starts_;
+        } else {
+          result.starts_ = startsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes.getDefaultInstance()) return this;
+        if (startsBuilder_ == null) {
+          if (!other.starts_.isEmpty()) {
+            if (starts_.isEmpty()) {
+              starts_ = other.starts_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureStartsIsMutable();
+              starts_.addAll(other.starts_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.starts_.isEmpty()) {
+            if (startsBuilder_.isEmpty()) {
+              startsBuilder_.dispose();
+              startsBuilder_ = null;
+              starts_ = other.starts_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              startsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getStartsFieldBuilder() : null;
+            } else {
+              startsBuilder_.addAllMessages(other.starts_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt> starts_ =
+        java.util.Collections.emptyList();
+      private void ensureStartsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          starts_ = new java.util.ArrayList<yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt>(starts_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAtOrBuilder> startsBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt> getStartsList() {
+        if (startsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(starts_);
+        } else {
+          return startsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+       */
+      public int getStartsCount() {
+        if (startsBuilder_ == null) {
+          return starts_.size();
+        } else {
+          return startsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt getStarts(int index) {
+        if (startsBuilder_ == null) {
+          return starts_.get(index);
+        } else {
+          return startsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+       */
+      public Builder setStarts(
+          int index, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt value) {
+        if (startsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStartsIsMutable();
+          starts_.set(index, value);
+          onChanged();
+        } else {
+          startsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+       */
+      public Builder setStarts(
+          int index, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.Builder builderForValue) {
+        if (startsBuilder_ == null) {
+          ensureStartsIsMutable();
+          starts_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          startsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+       */
+      public Builder addStarts(yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt value) {
+        if (startsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStartsIsMutable();
+          starts_.add(value);
+          onChanged();
+        } else {
+          startsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+       */
+      public Builder addStarts(
+          int index, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt value) {
+        if (startsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureStartsIsMutable();
+          starts_.add(index, value);
+          onChanged();
+        } else {
+          startsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+       */
+      public Builder addStarts(
+          yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.Builder builderForValue) {
+        if (startsBuilder_ == null) {
+          ensureStartsIsMutable();
+          starts_.add(builderForValue.build());
+          onChanged();
+        } else {
+          startsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+       */
+      public Builder addStarts(
+          int index, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.Builder builderForValue) {
+        if (startsBuilder_ == null) {
+          ensureStartsIsMutable();
+          starts_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          startsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+       */
+      public Builder addAllStarts(
+          java.lang.Iterable<? extends yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt> values) {
+        if (startsBuilder_ == null) {
+          ensureStartsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, starts_);
+          onChanged();
+        } else {
+          startsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+       */
+      public Builder clearStarts() {
+        if (startsBuilder_ == null) {
+          starts_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          startsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+       */
+      public Builder removeStarts(int index) {
+        if (startsBuilder_ == null) {
+          ensureStartsIsMutable();
+          starts_.remove(index);
+          onChanged();
+        } else {
+          startsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.Builder getStartsBuilder(
+          int index) {
+        return getStartsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAtOrBuilder getStartsOrBuilder(
+          int index) {
+        if (startsBuilder_ == null) {
+          return starts_.get(index);  } else {
+          return startsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAtOrBuilder> 
+           getStartsOrBuilderList() {
+        if (startsBuilder_ != null) {
+          return startsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(starts_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.Builder addStartsBuilder() {
+        return getStartsFieldBuilder().addBuilder(
+            yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.Builder addStartsBuilder(
+          int index) {
+        return getStartsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt starts = 1 [(.yandex.cloud.size) = "&lt;=4"];</code>
+       */
+      public java.util.List<yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.Builder> 
+           getStartsBuilderList() {
+        return getStartsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAtOrBuilder> 
+          getStartsFieldBuilder() {
+        if (startsBuilder_ == null) {
+          startsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAtOrBuilder>(
+                  starts_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          starts_ = null;
+        }
+        return startsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.TableSizes)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.TableSizes)
+    private static final yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TableSizes>
+        PARSER = new com.google.protobuf.AbstractParser<TableSizes>() {
+      @java.lang.Override
+      public TableSizes parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TableSizes(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TableSizes> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TableSizes> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AnalyzeAndVacuumOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.AnalyzeAndVacuum)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt start = 1;</code>
+     * @return Whether the start field is set.
+     */
+    boolean hasStart();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt start = 1;</code>
+     * @return The start.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt getStart();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt start = 1;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAtOrBuilder getStartOrBuilder();
+
+    /**
+     * <pre>
+     * in seconds 24*60*60-1 = 86399
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+     * @return Whether the analyzeTimeout field is set.
+     */
+    boolean hasAnalyzeTimeout();
+    /**
+     * <pre>
+     * in seconds 24*60*60-1 = 86399
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+     * @return The analyzeTimeout.
+     */
+    com.google.protobuf.Int64Value getAnalyzeTimeout();
+    /**
+     * <pre>
+     * in seconds 24*60*60-1 = 86399
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getAnalyzeTimeoutOrBuilder();
+
+    /**
+     * <pre>
+     * in seconds 24*60*60-1 = 86399
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+     * @return Whether the vacuumTimeout field is set.
+     */
+    boolean hasVacuumTimeout();
+    /**
+     * <pre>
+     * in seconds 24*60*60-1 = 86399
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+     * @return The vacuumTimeout.
+     */
+    com.google.protobuf.Int64Value getVacuumTimeout();
+    /**
+     * <pre>
+     * in seconds 24*60*60-1 = 86399
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getVacuumTimeoutOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.AnalyzeAndVacuum}
+   */
+  public static final class AnalyzeAndVacuum extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.AnalyzeAndVacuum)
+      AnalyzeAndVacuumOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AnalyzeAndVacuum.newBuilder() to construct.
+    private AnalyzeAndVacuum(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AnalyzeAndVacuum() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AnalyzeAndVacuum();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AnalyzeAndVacuum(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.Builder subBuilder = null;
+              if (start_ != null) {
+                subBuilder = start_.toBuilder();
+              }
+              start_ = input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(start_);
+                start_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (analyzeTimeout_ != null) {
+                subBuilder = analyzeTimeout_.toBuilder();
+              }
+              analyzeTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(analyzeTimeout_);
+                analyzeTimeout_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (vacuumTimeout_ != null) {
+                subBuilder = vacuumTimeout_.toBuilder();
+              }
+              vacuumTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(vacuumTimeout_);
+                vacuumTimeout_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_AnalyzeAndVacuum_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_AnalyzeAndVacuum_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum.class, yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum.Builder.class);
+    }
+
+    public static final int START_FIELD_NUMBER = 1;
+    private yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt start_;
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt start = 1;</code>
+     * @return Whether the start field is set.
+     */
+    @java.lang.Override
+    public boolean hasStart() {
+      return start_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt start = 1;</code>
+     * @return The start.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt getStart() {
+      return start_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.getDefaultInstance() : start_;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt start = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAtOrBuilder getStartOrBuilder() {
+      return getStart();
+    }
+
+    public static final int ANALYZE_TIMEOUT_FIELD_NUMBER = 2;
+    private com.google.protobuf.Int64Value analyzeTimeout_;
+    /**
+     * <pre>
+     * in seconds 24*60*60-1 = 86399
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+     * @return Whether the analyzeTimeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasAnalyzeTimeout() {
+      return analyzeTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * in seconds 24*60*60-1 = 86399
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+     * @return The analyzeTimeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getAnalyzeTimeout() {
+      return analyzeTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : analyzeTimeout_;
+    }
+    /**
+     * <pre>
+     * in seconds 24*60*60-1 = 86399
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getAnalyzeTimeoutOrBuilder() {
+      return getAnalyzeTimeout();
+    }
+
+    public static final int VACUUM_TIMEOUT_FIELD_NUMBER = 3;
+    private com.google.protobuf.Int64Value vacuumTimeout_;
+    /**
+     * <pre>
+     * in seconds 24*60*60-1 = 86399
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+     * @return Whether the vacuumTimeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasVacuumTimeout() {
+      return vacuumTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * in seconds 24*60*60-1 = 86399
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+     * @return The vacuumTimeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getVacuumTimeout() {
+      return vacuumTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : vacuumTimeout_;
+    }
+    /**
+     * <pre>
+     * in seconds 24*60*60-1 = 86399
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getVacuumTimeoutOrBuilder() {
+      return getVacuumTimeout();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (start_ != null) {
+        output.writeMessage(1, getStart());
+      }
+      if (analyzeTimeout_ != null) {
+        output.writeMessage(2, getAnalyzeTimeout());
+      }
+      if (vacuumTimeout_ != null) {
+        output.writeMessage(3, getVacuumTimeout());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (start_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getStart());
+      }
+      if (analyzeTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAnalyzeTimeout());
+      }
+      if (vacuumTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getVacuumTimeout());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum other = (yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum) obj;
+
+      if (hasStart() != other.hasStart()) return false;
+      if (hasStart()) {
+        if (!getStart()
+            .equals(other.getStart())) return false;
+      }
+      if (hasAnalyzeTimeout() != other.hasAnalyzeTimeout()) return false;
+      if (hasAnalyzeTimeout()) {
+        if (!getAnalyzeTimeout()
+            .equals(other.getAnalyzeTimeout())) return false;
+      }
+      if (hasVacuumTimeout() != other.hasVacuumTimeout()) return false;
+      if (hasVacuumTimeout()) {
+        if (!getVacuumTimeout()
+            .equals(other.getVacuumTimeout())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasStart()) {
+        hash = (37 * hash) + START_FIELD_NUMBER;
+        hash = (53 * hash) + getStart().hashCode();
+      }
+      if (hasAnalyzeTimeout()) {
+        hash = (37 * hash) + ANALYZE_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getAnalyzeTimeout().hashCode();
+      }
+      if (hasVacuumTimeout()) {
+        hash = (37 * hash) + VACUUM_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getVacuumTimeout().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.AnalyzeAndVacuum}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.AnalyzeAndVacuum)
+        yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuumOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_AnalyzeAndVacuum_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_AnalyzeAndVacuum_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum.class, yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (startBuilder_ == null) {
+          start_ = null;
+        } else {
+          start_ = null;
+          startBuilder_ = null;
+        }
+        if (analyzeTimeoutBuilder_ == null) {
+          analyzeTimeout_ = null;
+        } else {
+          analyzeTimeout_ = null;
+          analyzeTimeoutBuilder_ = null;
+        }
+        if (vacuumTimeoutBuilder_ == null) {
+          vacuumTimeout_ = null;
+        } else {
+          vacuumTimeout_ = null;
+          vacuumTimeoutBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_AnalyzeAndVacuum_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum build() {
+        yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum result = new yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum(this);
+        if (startBuilder_ == null) {
+          result.start_ = start_;
+        } else {
+          result.start_ = startBuilder_.build();
+        }
+        if (analyzeTimeoutBuilder_ == null) {
+          result.analyzeTimeout_ = analyzeTimeout_;
+        } else {
+          result.analyzeTimeout_ = analyzeTimeoutBuilder_.build();
+        }
+        if (vacuumTimeoutBuilder_ == null) {
+          result.vacuumTimeout_ = vacuumTimeout_;
+        } else {
+          result.vacuumTimeout_ = vacuumTimeoutBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum.getDefaultInstance()) return this;
+        if (other.hasStart()) {
+          mergeStart(other.getStart());
+        }
+        if (other.hasAnalyzeTimeout()) {
+          mergeAnalyzeTimeout(other.getAnalyzeTimeout());
+        }
+        if (other.hasVacuumTimeout()) {
+          mergeVacuumTimeout(other.getVacuumTimeout());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt start_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAtOrBuilder> startBuilder_;
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt start = 1;</code>
+       * @return Whether the start field is set.
+       */
+      public boolean hasStart() {
+        return startBuilder_ != null || start_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt start = 1;</code>
+       * @return The start.
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt getStart() {
+        if (startBuilder_ == null) {
+          return start_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.getDefaultInstance() : start_;
+        } else {
+          return startBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt start = 1;</code>
+       */
+      public Builder setStart(yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt value) {
+        if (startBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          start_ = value;
+          onChanged();
+        } else {
+          startBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt start = 1;</code>
+       */
+      public Builder setStart(
+          yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.Builder builderForValue) {
+        if (startBuilder_ == null) {
+          start_ = builderForValue.build();
+          onChanged();
+        } else {
+          startBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt start = 1;</code>
+       */
+      public Builder mergeStart(yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt value) {
+        if (startBuilder_ == null) {
+          if (start_ != null) {
+            start_ =
+              yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.newBuilder(start_).mergeFrom(value).buildPartial();
+          } else {
+            start_ = value;
+          }
+          onChanged();
+        } else {
+          startBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt start = 1;</code>
+       */
+      public Builder clearStart() {
+        if (startBuilder_ == null) {
+          start_ = null;
+          onChanged();
+        } else {
+          start_ = null;
+          startBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt start = 1;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.Builder getStartBuilder() {
+        
+        onChanged();
+        return getStartFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt start = 1;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAtOrBuilder getStartOrBuilder() {
+        if (startBuilder_ != null) {
+          return startBuilder_.getMessageOrBuilder();
+        } else {
+          return start_ == null ?
+              yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.getDefaultInstance() : start_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.BackgroundActivityStartAt start = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAtOrBuilder> 
+          getStartFieldBuilder() {
+        if (startBuilder_ == null) {
+          startBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAt.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivityStartAtOrBuilder>(
+                  getStart(),
+                  getParentForChildren(),
+                  isClean());
+          start_ = null;
+        }
+        return startBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value analyzeTimeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> analyzeTimeoutBuilder_;
+      /**
+       * <pre>
+       * in seconds 24*60*60-1 = 86399
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+       * @return Whether the analyzeTimeout field is set.
+       */
+      public boolean hasAnalyzeTimeout() {
+        return analyzeTimeoutBuilder_ != null || analyzeTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * in seconds 24*60*60-1 = 86399
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+       * @return The analyzeTimeout.
+       */
+      public com.google.protobuf.Int64Value getAnalyzeTimeout() {
+        if (analyzeTimeoutBuilder_ == null) {
+          return analyzeTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : analyzeTimeout_;
+        } else {
+          return analyzeTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * in seconds 24*60*60-1 = 86399
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+       */
+      public Builder setAnalyzeTimeout(com.google.protobuf.Int64Value value) {
+        if (analyzeTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          analyzeTimeout_ = value;
+          onChanged();
+        } else {
+          analyzeTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in seconds 24*60*60-1 = 86399
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+       */
+      public Builder setAnalyzeTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (analyzeTimeoutBuilder_ == null) {
+          analyzeTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          analyzeTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in seconds 24*60*60-1 = 86399
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+       */
+      public Builder mergeAnalyzeTimeout(com.google.protobuf.Int64Value value) {
+        if (analyzeTimeoutBuilder_ == null) {
+          if (analyzeTimeout_ != null) {
+            analyzeTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(analyzeTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            analyzeTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          analyzeTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in seconds 24*60*60-1 = 86399
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+       */
+      public Builder clearAnalyzeTimeout() {
+        if (analyzeTimeoutBuilder_ == null) {
+          analyzeTimeout_ = null;
+          onChanged();
+        } else {
+          analyzeTimeout_ = null;
+          analyzeTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in seconds 24*60*60-1 = 86399
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getAnalyzeTimeoutBuilder() {
+        
+        onChanged();
+        return getAnalyzeTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * in seconds 24*60*60-1 = 86399
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getAnalyzeTimeoutOrBuilder() {
+        if (analyzeTimeoutBuilder_ != null) {
+          return analyzeTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return analyzeTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : analyzeTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * in seconds 24*60*60-1 = 86399
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value analyze_timeout = 2 [(.yandex.cloud.value) = "0-86399"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getAnalyzeTimeoutFieldBuilder() {
+        if (analyzeTimeoutBuilder_ == null) {
+          analyzeTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getAnalyzeTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          analyzeTimeout_ = null;
+        }
+        return analyzeTimeoutBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value vacuumTimeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> vacuumTimeoutBuilder_;
+      /**
+       * <pre>
+       * in seconds 24*60*60-1 = 86399
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+       * @return Whether the vacuumTimeout field is set.
+       */
+      public boolean hasVacuumTimeout() {
+        return vacuumTimeoutBuilder_ != null || vacuumTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * in seconds 24*60*60-1 = 86399
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+       * @return The vacuumTimeout.
+       */
+      public com.google.protobuf.Int64Value getVacuumTimeout() {
+        if (vacuumTimeoutBuilder_ == null) {
+          return vacuumTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : vacuumTimeout_;
+        } else {
+          return vacuumTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * in seconds 24*60*60-1 = 86399
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+       */
+      public Builder setVacuumTimeout(com.google.protobuf.Int64Value value) {
+        if (vacuumTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          vacuumTimeout_ = value;
+          onChanged();
+        } else {
+          vacuumTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in seconds 24*60*60-1 = 86399
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+       */
+      public Builder setVacuumTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (vacuumTimeoutBuilder_ == null) {
+          vacuumTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          vacuumTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in seconds 24*60*60-1 = 86399
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+       */
+      public Builder mergeVacuumTimeout(com.google.protobuf.Int64Value value) {
+        if (vacuumTimeoutBuilder_ == null) {
+          if (vacuumTimeout_ != null) {
+            vacuumTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(vacuumTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            vacuumTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          vacuumTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in seconds 24*60*60-1 = 86399
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+       */
+      public Builder clearVacuumTimeout() {
+        if (vacuumTimeoutBuilder_ == null) {
+          vacuumTimeout_ = null;
+          onChanged();
+        } else {
+          vacuumTimeout_ = null;
+          vacuumTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * in seconds 24*60*60-1 = 86399
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getVacuumTimeoutBuilder() {
+        
+        onChanged();
+        return getVacuumTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * in seconds 24*60*60-1 = 86399
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getVacuumTimeoutOrBuilder() {
+        if (vacuumTimeoutBuilder_ != null) {
+          return vacuumTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return vacuumTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : vacuumTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * in seconds 24*60*60-1 = 86399
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value vacuum_timeout = 3 [(.yandex.cloud.value) = "0-86399"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getVacuumTimeoutFieldBuilder() {
+        if (vacuumTimeoutBuilder_ == null) {
+          vacuumTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getVacuumTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          vacuumTimeout_ = null;
+        }
+        return vacuumTimeoutBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.AnalyzeAndVacuum)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.AnalyzeAndVacuum)
+    private static final yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AnalyzeAndVacuum>
+        PARSER = new com.google.protobuf.AbstractParser<AnalyzeAndVacuum>() {
+      @java.lang.Override
+      public AnalyzeAndVacuum parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AnalyzeAndVacuum(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AnalyzeAndVacuum> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AnalyzeAndVacuum> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BackgroundActivitiesConfigOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.TableSizes table_sizes = 1;</code>
+     * @return Whether the tableSizes field is set.
+     */
+    boolean hasTableSizes();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.TableSizes table_sizes = 1;</code>
+     * @return The tableSizes.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes getTableSizes();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.TableSizes table_sizes = 1;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Config.TableSizesOrBuilder getTableSizesOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.AnalyzeAndVacuum analyze_and_vacuum = 2;</code>
+     * @return Whether the analyzeAndVacuum field is set.
+     */
+    boolean hasAnalyzeAndVacuum();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.AnalyzeAndVacuum analyze_and_vacuum = 2;</code>
+     * @return The analyzeAndVacuum.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum getAnalyzeAndVacuum();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.AnalyzeAndVacuum analyze_and_vacuum = 2;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuumOrBuilder getAnalyzeAndVacuumOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig}
+   */
+  public static final class BackgroundActivitiesConfig extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig)
+      BackgroundActivitiesConfigOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BackgroundActivitiesConfig.newBuilder() to construct.
+    private BackgroundActivitiesConfig(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BackgroundActivitiesConfig() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BackgroundActivitiesConfig();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BackgroundActivitiesConfig(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes.Builder subBuilder = null;
+              if (tableSizes_ != null) {
+                subBuilder = tableSizes_.toBuilder();
+              }
+              tableSizes_ = input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(tableSizes_);
+                tableSizes_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum.Builder subBuilder = null;
+              if (analyzeAndVacuum_ != null) {
+                subBuilder = analyzeAndVacuum_.toBuilder();
+              }
+              analyzeAndVacuum_ = input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(analyzeAndVacuum_);
+                analyzeAndVacuum_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_BackgroundActivitiesConfig_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_BackgroundActivitiesConfig_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig.class, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig.Builder.class);
+    }
+
+    public static final int TABLE_SIZES_FIELD_NUMBER = 1;
+    private yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes tableSizes_;
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.TableSizes table_sizes = 1;</code>
+     * @return Whether the tableSizes field is set.
+     */
+    @java.lang.Override
+    public boolean hasTableSizes() {
+      return tableSizes_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.TableSizes table_sizes = 1;</code>
+     * @return The tableSizes.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes getTableSizes() {
+      return tableSizes_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes.getDefaultInstance() : tableSizes_;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.TableSizes table_sizes = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.TableSizesOrBuilder getTableSizesOrBuilder() {
+      return getTableSizes();
+    }
+
+    public static final int ANALYZE_AND_VACUUM_FIELD_NUMBER = 2;
+    private yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum analyzeAndVacuum_;
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.AnalyzeAndVacuum analyze_and_vacuum = 2;</code>
+     * @return Whether the analyzeAndVacuum field is set.
+     */
+    @java.lang.Override
+    public boolean hasAnalyzeAndVacuum() {
+      return analyzeAndVacuum_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.AnalyzeAndVacuum analyze_and_vacuum = 2;</code>
+     * @return The analyzeAndVacuum.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum getAnalyzeAndVacuum() {
+      return analyzeAndVacuum_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum.getDefaultInstance() : analyzeAndVacuum_;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.AnalyzeAndVacuum analyze_and_vacuum = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuumOrBuilder getAnalyzeAndVacuumOrBuilder() {
+      return getAnalyzeAndVacuum();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (tableSizes_ != null) {
+        output.writeMessage(1, getTableSizes());
+      }
+      if (analyzeAndVacuum_ != null) {
+        output.writeMessage(2, getAnalyzeAndVacuum());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (tableSizes_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTableSizes());
+      }
+      if (analyzeAndVacuum_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getAnalyzeAndVacuum());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig other = (yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig) obj;
+
+      if (hasTableSizes() != other.hasTableSizes()) return false;
+      if (hasTableSizes()) {
+        if (!getTableSizes()
+            .equals(other.getTableSizes())) return false;
+      }
+      if (hasAnalyzeAndVacuum() != other.hasAnalyzeAndVacuum()) return false;
+      if (hasAnalyzeAndVacuum()) {
+        if (!getAnalyzeAndVacuum()
+            .equals(other.getAnalyzeAndVacuum())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTableSizes()) {
+        hash = (37 * hash) + TABLE_SIZES_FIELD_NUMBER;
+        hash = (53 * hash) + getTableSizes().hashCode();
+      }
+      if (hasAnalyzeAndVacuum()) {
+        hash = (37 * hash) + ANALYZE_AND_VACUUM_FIELD_NUMBER;
+        hash = (53 * hash) + getAnalyzeAndVacuum().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig)
+        yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfigOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_BackgroundActivitiesConfig_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_BackgroundActivitiesConfig_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig.class, yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (tableSizesBuilder_ == null) {
+          tableSizes_ = null;
+        } else {
+          tableSizes_ = null;
+          tableSizesBuilder_ = null;
+        }
+        if (analyzeAndVacuumBuilder_ == null) {
+          analyzeAndVacuum_ = null;
+        } else {
+          analyzeAndVacuum_ = null;
+          analyzeAndVacuumBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_BackgroundActivitiesConfig_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig build() {
+        yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig result = new yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig(this);
+        if (tableSizesBuilder_ == null) {
+          result.tableSizes_ = tableSizes_;
+        } else {
+          result.tableSizes_ = tableSizesBuilder_.build();
+        }
+        if (analyzeAndVacuumBuilder_ == null) {
+          result.analyzeAndVacuum_ = analyzeAndVacuum_;
+        } else {
+          result.analyzeAndVacuum_ = analyzeAndVacuumBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig.getDefaultInstance()) return this;
+        if (other.hasTableSizes()) {
+          mergeTableSizes(other.getTableSizes());
+        }
+        if (other.hasAnalyzeAndVacuum()) {
+          mergeAnalyzeAndVacuum(other.getAnalyzeAndVacuum());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes tableSizes_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes, yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.TableSizesOrBuilder> tableSizesBuilder_;
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.TableSizes table_sizes = 1;</code>
+       * @return Whether the tableSizes field is set.
+       */
+      public boolean hasTableSizes() {
+        return tableSizesBuilder_ != null || tableSizes_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.TableSizes table_sizes = 1;</code>
+       * @return The tableSizes.
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes getTableSizes() {
+        if (tableSizesBuilder_ == null) {
+          return tableSizes_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes.getDefaultInstance() : tableSizes_;
+        } else {
+          return tableSizesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.TableSizes table_sizes = 1;</code>
+       */
+      public Builder setTableSizes(yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes value) {
+        if (tableSizesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          tableSizes_ = value;
+          onChanged();
+        } else {
+          tableSizesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.TableSizes table_sizes = 1;</code>
+       */
+      public Builder setTableSizes(
+          yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes.Builder builderForValue) {
+        if (tableSizesBuilder_ == null) {
+          tableSizes_ = builderForValue.build();
+          onChanged();
+        } else {
+          tableSizesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.TableSizes table_sizes = 1;</code>
+       */
+      public Builder mergeTableSizes(yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes value) {
+        if (tableSizesBuilder_ == null) {
+          if (tableSizes_ != null) {
+            tableSizes_ =
+              yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes.newBuilder(tableSizes_).mergeFrom(value).buildPartial();
+          } else {
+            tableSizes_ = value;
+          }
+          onChanged();
+        } else {
+          tableSizesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.TableSizes table_sizes = 1;</code>
+       */
+      public Builder clearTableSizes() {
+        if (tableSizesBuilder_ == null) {
+          tableSizes_ = null;
+          onChanged();
+        } else {
+          tableSizes_ = null;
+          tableSizesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.TableSizes table_sizes = 1;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes.Builder getTableSizesBuilder() {
+        
+        onChanged();
+        return getTableSizesFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.TableSizes table_sizes = 1;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.TableSizesOrBuilder getTableSizesOrBuilder() {
+        if (tableSizesBuilder_ != null) {
+          return tableSizesBuilder_.getMessageOrBuilder();
+        } else {
+          return tableSizes_ == null ?
+              yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes.getDefaultInstance() : tableSizes_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.TableSizes table_sizes = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes, yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.TableSizesOrBuilder> 
+          getTableSizesFieldBuilder() {
+        if (tableSizesBuilder_ == null) {
+          tableSizesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes, yandex.cloud.api.mdb.greenplum.v1.Config.TableSizes.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.TableSizesOrBuilder>(
+                  getTableSizes(),
+                  getParentForChildren(),
+                  isClean());
+          tableSizes_ = null;
+        }
+        return tableSizesBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum analyzeAndVacuum_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum, yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuumOrBuilder> analyzeAndVacuumBuilder_;
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.AnalyzeAndVacuum analyze_and_vacuum = 2;</code>
+       * @return Whether the analyzeAndVacuum field is set.
+       */
+      public boolean hasAnalyzeAndVacuum() {
+        return analyzeAndVacuumBuilder_ != null || analyzeAndVacuum_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.AnalyzeAndVacuum analyze_and_vacuum = 2;</code>
+       * @return The analyzeAndVacuum.
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum getAnalyzeAndVacuum() {
+        if (analyzeAndVacuumBuilder_ == null) {
+          return analyzeAndVacuum_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum.getDefaultInstance() : analyzeAndVacuum_;
+        } else {
+          return analyzeAndVacuumBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.AnalyzeAndVacuum analyze_and_vacuum = 2;</code>
+       */
+      public Builder setAnalyzeAndVacuum(yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum value) {
+        if (analyzeAndVacuumBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          analyzeAndVacuum_ = value;
+          onChanged();
+        } else {
+          analyzeAndVacuumBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.AnalyzeAndVacuum analyze_and_vacuum = 2;</code>
+       */
+      public Builder setAnalyzeAndVacuum(
+          yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum.Builder builderForValue) {
+        if (analyzeAndVacuumBuilder_ == null) {
+          analyzeAndVacuum_ = builderForValue.build();
+          onChanged();
+        } else {
+          analyzeAndVacuumBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.AnalyzeAndVacuum analyze_and_vacuum = 2;</code>
+       */
+      public Builder mergeAnalyzeAndVacuum(yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum value) {
+        if (analyzeAndVacuumBuilder_ == null) {
+          if (analyzeAndVacuum_ != null) {
+            analyzeAndVacuum_ =
+              yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum.newBuilder(analyzeAndVacuum_).mergeFrom(value).buildPartial();
+          } else {
+            analyzeAndVacuum_ = value;
+          }
+          onChanged();
+        } else {
+          analyzeAndVacuumBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.AnalyzeAndVacuum analyze_and_vacuum = 2;</code>
+       */
+      public Builder clearAnalyzeAndVacuum() {
+        if (analyzeAndVacuumBuilder_ == null) {
+          analyzeAndVacuum_ = null;
+          onChanged();
+        } else {
+          analyzeAndVacuum_ = null;
+          analyzeAndVacuumBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.AnalyzeAndVacuum analyze_and_vacuum = 2;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum.Builder getAnalyzeAndVacuumBuilder() {
+        
+        onChanged();
+        return getAnalyzeAndVacuumFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.AnalyzeAndVacuum analyze_and_vacuum = 2;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuumOrBuilder getAnalyzeAndVacuumOrBuilder() {
+        if (analyzeAndVacuumBuilder_ != null) {
+          return analyzeAndVacuumBuilder_.getMessageOrBuilder();
+        } else {
+          return analyzeAndVacuum_ == null ?
+              yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum.getDefaultInstance() : analyzeAndVacuum_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.AnalyzeAndVacuum analyze_and_vacuum = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum, yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuumOrBuilder> 
+          getAnalyzeAndVacuumFieldBuilder() {
+        if (analyzeAndVacuumBuilder_ == null) {
+          analyzeAndVacuumBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum, yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuum.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.AnalyzeAndVacuumOrBuilder>(
+                  getAnalyzeAndVacuum(),
+                  getParentForChildren(),
+                  isClean());
+          analyzeAndVacuum_ = null;
+        }
+        return analyzeAndVacuumBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.BackgroundActivitiesConfig)
+    private static final yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BackgroundActivitiesConfig>
+        PARSER = new com.google.protobuf.AbstractParser<BackgroundActivitiesConfig>() {
+      @java.lang.Override
+      public BackgroundActivitiesConfig parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BackgroundActivitiesConfig(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BackgroundActivitiesConfig> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BackgroundActivitiesConfig> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.BackgroundActivitiesConfig getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface MasterSubclusterConfigOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.MasterSubclusterConfig)
       com.google.protobuf.MessageOrBuilder {
@@ -21605,6 +24929,26 @@ public final class Config {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_greenplum_v1_ConnectionPoolerConfig_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_BackgroundActivityStartAt_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_BackgroundActivityStartAt_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_TableSizes_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_TableSizes_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_AnalyzeAndVacuum_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_AnalyzeAndVacuum_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_BackgroundActivitiesConfig_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_BackgroundActivitiesConfig_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_greenplum_v1_MasterSubclusterConfig_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -21680,109 +25024,124 @@ public final class Config {
       "t64Value\0228\n\023client_idle_timeout\030\003 \001(\0132\033." +
       "google.protobuf.Int64Value\"C\n\010PoolMode\022\031" +
       "\n\025POOL_MODE_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\017" +
-      "\n\013TRANSACTION\020\002\"U\n\026MasterSubclusterConfi" +
-      "g\022;\n\tresources\030\001 \001(\0132(.yandex.cloud.mdb." +
-      "greenplum.v1.Resources\"V\n\027SegmentSubclus" +
-      "terConfig\022;\n\tresources\030\001 \001(\0132(.yandex.cl" +
-      "oud.mdb.greenplum.v1.Resources\"\323\003\n\023Green" +
-      "plumConfig6_17\0224\n\017max_connections\030\001 \001(\0132" +
-      "\033.google.protobuf.Int64Value\022;\n\026max_slot" +
-      "_wal_keep_size\030\002 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022B\n\035gp_workfile_limit_per_segme" +
-      "nt\030\003 \001(\0132\033.google.protobuf.Int64Value\022@\n" +
-      "\033gp_workfile_limit_per_query\030\004 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022F\n!gp_workfile_l" +
-      "imit_files_per_query\030\005 \001(\0132\033.google.prot" +
-      "obuf.Int64Value\022>\n\031max_prepared_transact" +
-      "ions\030\006 \001(\0132\033.google.protobuf.Int64Value\022" +
-      ";\n\027gp_workfile_compression\030\007 \001(\0132\032.googl" +
-      "e.protobuf.BoolValue\"\317\004\n\023GreenplumConfig" +
-      "6_19\0224\n\017max_connections\030\001 \001(\0132\033.google.p" +
-      "rotobuf.Int64Value\022;\n\026max_slot_wal_keep_" +
-      "size\030\002 \001(\0132\033.google.protobuf.Int64Value\022" +
-      "B\n\035gp_workfile_limit_per_segment\030\003 \001(\0132\033" +
-      ".google.protobuf.Int64Value\022@\n\033gp_workfi" +
-      "le_limit_per_query\030\004 \001(\0132\033.google.protob" +
-      "uf.Int64Value\022F\n!gp_workfile_limit_files" +
-      "_per_query\030\005 \001(\0132\033.google.protobuf.Int64" +
-      "Value\022>\n\031max_prepared_transactions\030\006 \001(\013" +
-      "2\033.google.protobuf.Int64Value\022;\n\027gp_work" +
-      "file_compression\030\007 \001(\0132\032.google.protobuf" +
-      ".BoolValue\0226\n\021max_statement_mem\030\010 \001(\0132\033." +
-      "google.protobuf.Int64Value\022B\n\rlog_statem" +
-      "ent\030\t \001(\0162+.yandex.cloud.mdb.greenplum.v" +
-      "1.LogStatement\"\231\005\n\023GreenplumConfig6_21\0224" +
-      "\n\017max_connections\030\001 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022;\n\026max_slot_wal_keep_size\030\002" +
-      " \001(\0132\033.google.protobuf.Int64Value\022B\n\035gp_" +
-      "workfile_limit_per_segment\030\003 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\022@\n\033gp_workfile_lim" +
-      "it_per_query\030\004 \001(\0132\033.google.protobuf.Int" +
-      "64Value\022F\n!gp_workfile_limit_files_per_q" +
-      "uery\030\005 \001(\0132\033.google.protobuf.Int64Value\022" +
-      ">\n\031max_prepared_transactions\030\006 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022;\n\027gp_workfile_c" +
-      "ompression\030\007 \001(\0132\032.google.protobuf.BoolV" +
-      "alue\0226\n\021max_statement_mem\030\010 \001(\0132\033.google" +
-      ".protobuf.Int64Value\022B\n\rlog_statement\030\t " +
-      "\001(\0162+.yandex.cloud.mdb.greenplum.v1.LogS" +
-      "tatement\022H\n$gp_add_column_inherits_table" +
-      "_setting\030\n \001(\0132\032.google.protobuf.BoolVal" +
-      "ue\"\231\005\n\023GreenplumConfig6_22\0224\n\017max_connec" +
-      "tions\030\001 \001(\0132\033.google.protobuf.Int64Value" +
-      "\022;\n\026max_slot_wal_keep_size\030\002 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\022B\n\035gp_workfile_lim" +
-      "it_per_segment\030\003 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022@\n\033gp_workfile_limit_per_query" +
-      "\030\004 \001(\0132\033.google.protobuf.Int64Value\022F\n!g" +
-      "p_workfile_limit_files_per_query\030\005 \001(\0132\033" +
-      ".google.protobuf.Int64Value\022>\n\031max_prepa" +
-      "red_transactions\030\006 \001(\0132\033.google.protobuf" +
-      ".Int64Value\022;\n\027gp_workfile_compression\030\007" +
-      " \001(\0132\032.google.protobuf.BoolValue\0226\n\021max_" +
-      "statement_mem\030\010 \001(\0132\033.google.protobuf.In" +
-      "t64Value\022B\n\rlog_statement\030\t \001(\0162+.yandex" +
-      ".cloud.mdb.greenplum.v1.LogStatement\022H\n$" +
-      "gp_add_column_inherits_table_setting\030\n \001" +
-      "(\0132\032.google.protobuf.BoolValue\"\201\002\n\026Green" +
-      "plumConfigSet6_17\022R\n\020effective_config\030\001 " +
-      "\001(\01322.yandex.cloud.mdb.greenplum.v1.Gree" +
-      "nplumConfig6_17B\004\350\3071\001\022G\n\013user_config\030\002 \001" +
-      "(\01322.yandex.cloud.mdb.greenplum.v1.Green" +
-      "plumConfig6_17\022J\n\016default_config\030\003 \001(\01322" +
-      ".yandex.cloud.mdb.greenplum.v1.Greenplum" +
-      "Config6_17\"\201\002\n\026GreenplumConfigSet6_19\022R\n" +
-      "\020effective_config\030\001 \001(\01322.yandex.cloud.m" +
-      "db.greenplum.v1.GreenplumConfig6_19B\004\350\3071" +
-      "\001\022G\n\013user_config\030\002 \001(\01322.yandex.cloud.md" +
-      "b.greenplum.v1.GreenplumConfig6_19\022J\n\016de" +
-      "fault_config\030\003 \001(\01322.yandex.cloud.mdb.gr" +
-      "eenplum.v1.GreenplumConfig6_19\"\201\002\n\026Green" +
-      "plumConfigSet6_21\022R\n\020effective_config\030\001 " +
-      "\001(\01322.yandex.cloud.mdb.greenplum.v1.Gree" +
-      "nplumConfig6_21B\004\350\3071\001\022G\n\013user_config\030\002 \001" +
-      "(\01322.yandex.cloud.mdb.greenplum.v1.Green" +
-      "plumConfig6_21\022J\n\016default_config\030\003 \001(\01322" +
-      ".yandex.cloud.mdb.greenplum.v1.Greenplum" +
-      "Config6_21\"\201\002\n\026GreenplumConfigSet6_22\022R\n" +
-      "\020effective_config\030\001 \001(\01322.yandex.cloud.m" +
-      "db.greenplum.v1.GreenplumConfig6_22B\004\350\3071" +
-      "\001\022G\n\013user_config\030\002 \001(\01322.yandex.cloud.md" +
-      "b.greenplum.v1.GreenplumConfig6_22\022J\n\016de" +
-      "fault_config\030\003 \001(\01322.yandex.cloud.mdb.gr" +
-      "eenplum.v1.GreenplumConfig6_22\"\215\002\n\031Conne" +
-      "ctionPoolerConfigSet\022U\n\020effective_config" +
-      "\030\001 \001(\01325.yandex.cloud.mdb.greenplum.v1.C" +
-      "onnectionPoolerConfigB\004\350\3071\001\022J\n\013user_conf" +
-      "ig\030\002 \001(\01325.yandex.cloud.mdb.greenplum.v1" +
-      ".ConnectionPoolerConfig\022M\n\016default_confi" +
-      "g\030\003 \001(\01325.yandex.cloud.mdb.greenplum.v1." +
-      "ConnectionPoolerConfig*R\n\014LogStatement\022\035" +
-      "\n\031LOG_STATEMENT_UNSPECIFIED\020\000\022\010\n\004NONE\020\001\022" +
-      "\007\n\003DDL\020\002\022\007\n\003MOD\020\003\022\007\n\003ALL\020\004Bp\n!yandex.clo" +
-      "ud.api.mdb.greenplum.v1ZKgithub.com/yand" +
-      "ex-cloud/go-genproto/yandex/cloud/mdb/gr" +
-      "eenplum/v1;greenplumb\006proto3"
+      "\n\013TRANSACTION\020\002\"O\n\031BackgroundActivitySta" +
+      "rtAt\022\027\n\005hours\030\001 \001(\003B\010\372\3071\0040-23\022\031\n\007minutes" +
+      "\030\002 \001(\003B\010\372\3071\0040-59\"_\n\nTableSizes\022Q\n\006starts" +
+      "\030\001 \003(\01328.yandex.cloud.mdb.greenplum.v1.B" +
+      "ackgroundActivityStartAtB\007\202\3101\003<=4\"\340\001\n\020An" +
+      "alyzeAndVacuum\022G\n\005start\030\001 \001(\01328.yandex.c" +
+      "loud.mdb.greenplum.v1.BackgroundActivity" +
+      "StartAt\022A\n\017analyze_timeout\030\002 \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\013\372\3071\0070-86399\022@\n\016va" +
+      "cuum_timeout\030\003 \001(\0132\033.google.protobuf.Int" +
+      "64ValueB\013\372\3071\0070-86399\"\251\001\n\032BackgroundActiv" +
+      "itiesConfig\022>\n\013table_sizes\030\001 \001(\0132).yande" +
+      "x.cloud.mdb.greenplum.v1.TableSizes\022K\n\022a" +
+      "nalyze_and_vacuum\030\002 \001(\0132/.yandex.cloud.m" +
+      "db.greenplum.v1.AnalyzeAndVacuum\"U\n\026Mast" +
+      "erSubclusterConfig\022;\n\tresources\030\001 \001(\0132(." +
+      "yandex.cloud.mdb.greenplum.v1.Resources\"" +
+      "V\n\027SegmentSubclusterConfig\022;\n\tresources\030" +
+      "\001 \001(\0132(.yandex.cloud.mdb.greenplum.v1.Re" +
+      "sources\"\323\003\n\023GreenplumConfig6_17\0224\n\017max_c" +
+      "onnections\030\001 \001(\0132\033.google.protobuf.Int64" +
+      "Value\022;\n\026max_slot_wal_keep_size\030\002 \001(\0132\033." +
+      "google.protobuf.Int64Value\022B\n\035gp_workfil" +
+      "e_limit_per_segment\030\003 \001(\0132\033.google.proto" +
+      "buf.Int64Value\022@\n\033gp_workfile_limit_per_" +
+      "query\030\004 \001(\0132\033.google.protobuf.Int64Value" +
+      "\022F\n!gp_workfile_limit_files_per_query\030\005 " +
+      "\001(\0132\033.google.protobuf.Int64Value\022>\n\031max_" +
+      "prepared_transactions\030\006 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022;\n\027gp_workfile_compress" +
+      "ion\030\007 \001(\0132\032.google.protobuf.BoolValue\"\317\004" +
+      "\n\023GreenplumConfig6_19\0224\n\017max_connections" +
+      "\030\001 \001(\0132\033.google.protobuf.Int64Value\022;\n\026m" +
+      "ax_slot_wal_keep_size\030\002 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022B\n\035gp_workfile_limit_pe" +
+      "r_segment\030\003 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\022@\n\033gp_workfile_limit_per_query\030\004 \001(" +
+      "\0132\033.google.protobuf.Int64Value\022F\n!gp_wor" +
+      "kfile_limit_files_per_query\030\005 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\022>\n\031max_prepared_t" +
+      "ransactions\030\006 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\022;\n\027gp_workfile_compression\030\007 \001(\0132" +
+      "\032.google.protobuf.BoolValue\0226\n\021max_state" +
+      "ment_mem\030\010 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022B\n\rlog_statement\030\t \001(\0162+.yandex.clou" +
+      "d.mdb.greenplum.v1.LogStatement\"\231\005\n\023Gree" +
+      "nplumConfig6_21\0224\n\017max_connections\030\001 \001(\013" +
+      "2\033.google.protobuf.Int64Value\022;\n\026max_slo" +
+      "t_wal_keep_size\030\002 \001(\0132\033.google.protobuf." +
+      "Int64Value\022B\n\035gp_workfile_limit_per_segm" +
+      "ent\030\003 \001(\0132\033.google.protobuf.Int64Value\022@" +
+      "\n\033gp_workfile_limit_per_query\030\004 \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\022F\n!gp_workfile_" +
+      "limit_files_per_query\030\005 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022>\n\031max_prepared_transac" +
+      "tions\030\006 \001(\0132\033.google.protobuf.Int64Value" +
+      "\022;\n\027gp_workfile_compression\030\007 \001(\0132\032.goog" +
+      "le.protobuf.BoolValue\0226\n\021max_statement_m" +
+      "em\030\010 \001(\0132\033.google.protobuf.Int64Value\022B\n" +
+      "\rlog_statement\030\t \001(\0162+.yandex.cloud.mdb." +
+      "greenplum.v1.LogStatement\022H\n$gp_add_colu" +
+      "mn_inherits_table_setting\030\n \001(\0132\032.google" +
+      ".protobuf.BoolValue\"\231\005\n\023GreenplumConfig6" +
+      "_22\0224\n\017max_connections\030\001 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022;\n\026max_slot_wal_keep_s" +
+      "ize\030\002 \001(\0132\033.google.protobuf.Int64Value\022B" +
+      "\n\035gp_workfile_limit_per_segment\030\003 \001(\0132\033." +
+      "google.protobuf.Int64Value\022@\n\033gp_workfil" +
+      "e_limit_per_query\030\004 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022F\n!gp_workfile_limit_files_" +
+      "per_query\030\005 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\022>\n\031max_prepared_transactions\030\006 \001(\0132" +
+      "\033.google.protobuf.Int64Value\022;\n\027gp_workf" +
+      "ile_compression\030\007 \001(\0132\032.google.protobuf." +
+      "BoolValue\0226\n\021max_statement_mem\030\010 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\022B\n\rlog_stateme" +
+      "nt\030\t \001(\0162+.yandex.cloud.mdb.greenplum.v1" +
+      ".LogStatement\022H\n$gp_add_column_inherits_" +
+      "table_setting\030\n \001(\0132\032.google.protobuf.Bo" +
+      "olValue\"\201\002\n\026GreenplumConfigSet6_17\022R\n\020ef" +
+      "fective_config\030\001 \001(\01322.yandex.cloud.mdb." +
+      "greenplum.v1.GreenplumConfig6_17B\004\350\3071\001\022G" +
+      "\n\013user_config\030\002 \001(\01322.yandex.cloud.mdb.g" +
+      "reenplum.v1.GreenplumConfig6_17\022J\n\016defau" +
+      "lt_config\030\003 \001(\01322.yandex.cloud.mdb.green" +
+      "plum.v1.GreenplumConfig6_17\"\201\002\n\026Greenplu" +
+      "mConfigSet6_19\022R\n\020effective_config\030\001 \001(\013" +
+      "22.yandex.cloud.mdb.greenplum.v1.Greenpl" +
+      "umConfig6_19B\004\350\3071\001\022G\n\013user_config\030\002 \001(\0132" +
+      "2.yandex.cloud.mdb.greenplum.v1.Greenplu" +
+      "mConfig6_19\022J\n\016default_config\030\003 \001(\01322.ya" +
+      "ndex.cloud.mdb.greenplum.v1.GreenplumCon" +
+      "fig6_19\"\201\002\n\026GreenplumConfigSet6_21\022R\n\020ef" +
+      "fective_config\030\001 \001(\01322.yandex.cloud.mdb." +
+      "greenplum.v1.GreenplumConfig6_21B\004\350\3071\001\022G" +
+      "\n\013user_config\030\002 \001(\01322.yandex.cloud.mdb.g" +
+      "reenplum.v1.GreenplumConfig6_21\022J\n\016defau" +
+      "lt_config\030\003 \001(\01322.yandex.cloud.mdb.green" +
+      "plum.v1.GreenplumConfig6_21\"\201\002\n\026Greenplu" +
+      "mConfigSet6_22\022R\n\020effective_config\030\001 \001(\013" +
+      "22.yandex.cloud.mdb.greenplum.v1.Greenpl" +
+      "umConfig6_22B\004\350\3071\001\022G\n\013user_config\030\002 \001(\0132" +
+      "2.yandex.cloud.mdb.greenplum.v1.Greenplu" +
+      "mConfig6_22\022J\n\016default_config\030\003 \001(\01322.ya" +
+      "ndex.cloud.mdb.greenplum.v1.GreenplumCon" +
+      "fig6_22\"\215\002\n\031ConnectionPoolerConfigSet\022U\n" +
+      "\020effective_config\030\001 \001(\01325.yandex.cloud.m" +
+      "db.greenplum.v1.ConnectionPoolerConfigB\004" +
+      "\350\3071\001\022J\n\013user_config\030\002 \001(\01325.yandex.cloud" +
+      ".mdb.greenplum.v1.ConnectionPoolerConfig" +
+      "\022M\n\016default_config\030\003 \001(\01325.yandex.cloud." +
+      "mdb.greenplum.v1.ConnectionPoolerConfig*" +
+      "R\n\014LogStatement\022\035\n\031LOG_STATEMENT_UNSPECI" +
+      "FIED\020\000\022\010\n\004NONE\020\001\022\007\n\003DDL\020\002\022\007\n\003MOD\020\003\022\007\n\003AL" +
+      "L\020\004Bp\n!yandex.cloud.api.mdb.greenplum.v1" +
+      "ZKgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/mdb/greenplum/v1;greenplumb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21802,68 +25161,92 @@ public final class Config {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_ConnectionPoolerConfig_descriptor,
         new java.lang.String[] { "Mode", "Size", "ClientIdleTimeout", });
-    internal_static_yandex_cloud_mdb_greenplum_v1_MasterSubclusterConfig_descriptor =
+    internal_static_yandex_cloud_mdb_greenplum_v1_BackgroundActivityStartAt_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_mdb_greenplum_v1_BackgroundActivityStartAt_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_BackgroundActivityStartAt_descriptor,
+        new java.lang.String[] { "Hours", "Minutes", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_TableSizes_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_mdb_greenplum_v1_TableSizes_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_TableSizes_descriptor,
+        new java.lang.String[] { "Starts", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_AnalyzeAndVacuum_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_mdb_greenplum_v1_AnalyzeAndVacuum_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_AnalyzeAndVacuum_descriptor,
+        new java.lang.String[] { "Start", "AnalyzeTimeout", "VacuumTimeout", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_BackgroundActivitiesConfig_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_mdb_greenplum_v1_BackgroundActivitiesConfig_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_BackgroundActivitiesConfig_descriptor,
+        new java.lang.String[] { "TableSizes", "AnalyzeAndVacuum", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_MasterSubclusterConfig_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_mdb_greenplum_v1_MasterSubclusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_MasterSubclusterConfig_descriptor,
         new java.lang.String[] { "Resources", });
     internal_static_yandex_cloud_mdb_greenplum_v1_SegmentSubclusterConfig_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_mdb_greenplum_v1_SegmentSubclusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_SegmentSubclusterConfig_descriptor,
         new java.lang.String[] { "Resources", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_17_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_17_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_17_descriptor,
         new java.lang.String[] { "MaxConnections", "MaxSlotWalKeepSize", "GpWorkfileLimitPerSegment", "GpWorkfileLimitPerQuery", "GpWorkfileLimitFilesPerQuery", "MaxPreparedTransactions", "GpWorkfileCompression", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_19_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_19_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_19_descriptor,
         new java.lang.String[] { "MaxConnections", "MaxSlotWalKeepSize", "GpWorkfileLimitPerSegment", "GpWorkfileLimitPerQuery", "GpWorkfileLimitFilesPerQuery", "MaxPreparedTransactions", "GpWorkfileCompression", "MaxStatementMem", "LogStatement", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_21_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_21_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_21_descriptor,
         new java.lang.String[] { "MaxConnections", "MaxSlotWalKeepSize", "GpWorkfileLimitPerSegment", "GpWorkfileLimitPerQuery", "GpWorkfileLimitFilesPerQuery", "MaxPreparedTransactions", "GpWorkfileCompression", "MaxStatementMem", "LogStatement", "GpAddColumnInheritsTableSetting", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_22_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_22_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_22_descriptor,
         new java.lang.String[] { "MaxConnections", "MaxSlotWalKeepSize", "GpWorkfileLimitPerSegment", "GpWorkfileLimitPerQuery", "GpWorkfileLimitFilesPerQuery", "MaxPreparedTransactions", "GpWorkfileCompression", "MaxStatementMem", "LogStatement", "GpAddColumnInheritsTableSetting", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_17_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_17_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_17_descriptor,
         new java.lang.String[] { "EffectiveConfig", "UserConfig", "DefaultConfig", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_19_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_19_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_19_descriptor,
         new java.lang.String[] { "EffectiveConfig", "UserConfig", "DefaultConfig", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_21_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_21_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_21_descriptor,
         new java.lang.String[] { "EffectiveConfig", "UserConfig", "DefaultConfig", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_22_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_22_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_22_descriptor,
         new java.lang.String[] { "EffectiveConfig", "UserConfig", "DefaultConfig", });
     internal_static_yandex_cloud_mdb_greenplum_v1_ConnectionPoolerConfigSet_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_mdb_greenplum_v1_ConnectionPoolerConfigSet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_ConnectionPoolerConfigSet_descriptor,
@@ -21871,6 +25254,8 @@ public final class Config {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
+    registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.WrappersProto.getDescriptor();

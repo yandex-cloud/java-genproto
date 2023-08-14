@@ -91,6 +91,18 @@ public final class InstanceOuterClass {
         getNameBytes();
 
     /**
+     * <code>string description = 14;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 14;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
      * <code>.google.protobuf.Timestamp start_time = 7;</code>
      * @return Whether the startTime field is set.
      */
@@ -219,6 +231,7 @@ public final class InstanceOuterClass {
       templateId_ = "";
       templateVersionId_ = "";
       name_ = "";
+      description_ = "";
       state_ = 0;
       locks_ = java.util.Collections.emptyList();
     }
@@ -368,6 +381,12 @@ public final class InstanceOuterClass {
                 licenseTemplate_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 114: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
               break;
             }
             default: {
@@ -786,6 +805,44 @@ public final class InstanceOuterClass {
       }
     }
 
+    public static final int DESCRIPTION_FIELD_NUMBER = 14;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>string description = 14;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 14;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int START_TIME_FIELD_NUMBER = 7;
     private com.google.protobuf.Timestamp startTime_;
     /**
@@ -1028,6 +1085,9 @@ public final class InstanceOuterClass {
       if (licenseTemplate_ != null) {
         output.writeMessage(13, getLicenseTemplate());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 14, description_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1083,6 +1143,9 @@ public final class InstanceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getLicenseTemplate());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, description_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1110,6 +1173,8 @@ public final class InstanceOuterClass {
           .equals(other.getTemplateVersionId())) return false;
       if (!getName()
           .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
       if (hasStartTime() != other.hasStartTime()) return false;
       if (hasStartTime()) {
         if (!getStartTime()
@@ -1161,6 +1226,8 @@ public final class InstanceOuterClass {
       hash = (53 * hash) + getTemplateVersionId().hashCode();
       hash = (37 * hash) + NAME_FIELD_NUMBER;
       hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
       if (hasStartTime()) {
         hash = (37 * hash) + START_TIME_FIELD_NUMBER;
         hash = (53 * hash) + getStartTime().hashCode();
@@ -1333,6 +1400,8 @@ public final class InstanceOuterClass {
 
         name_ = "";
 
+        description_ = "";
+
         if (startTimeBuilder_ == null) {
           startTime_ = null;
         } else {
@@ -1404,6 +1473,7 @@ public final class InstanceOuterClass {
         result.templateId_ = templateId_;
         result.templateVersionId_ = templateVersionId_;
         result.name_ = name_;
+        result.description_ = description_;
         if (startTimeBuilder_ == null) {
           result.startTime_ = startTime_;
         } else {
@@ -1509,6 +1579,10 @@ public final class InstanceOuterClass {
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
           onChanged();
         }
         if (other.hasStartTime()) {
@@ -2037,6 +2111,82 @@ public final class InstanceOuterClass {
   checkByteStringIsUtf8(value);
         
         name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 14;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 14;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 14;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 14;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
         onChanged();
         return this;
       }
@@ -3002,27 +3152,27 @@ public final class InstanceOuterClass {
       "/timestamp.proto\0325yandex/cloud/marketpla" +
       "ce/licensemanager/v1/lock.proto\0329yandex/" +
       "cloud/marketplace/licensemanager/v1/temp" +
-      "late.proto\"\207\005\n\010Instance\022\n\n\002id\030\001 \001(\t\022\020\n\010c" +
+      "late.proto\"\234\005\n\010Instance\022\n\n\002id\030\001 \001(\t\022\020\n\010c" +
       "loud_id\030\002 \001(\t\022\021\n\tfolder_id\030\003 \001(\t\022\023\n\013temp" +
       "late_id\030\004 \001(\t\022\033\n\023template_version_id\030\005 \001" +
-      "(\t\022\014\n\004name\030\006 \001(\t\022.\n\nstart_time\030\007 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp\022,\n\010end_time\030\010 \001" +
-      "(\0132\032.google.protobuf.Timestamp\022.\n\ncreate" +
-      "d_at\030\t \001(\0132\032.google.protobuf.Timestamp\022." +
-      "\n\nupdated_at\030\n \001(\0132\032.google.protobuf.Tim" +
-      "estamp\022I\n\005state\030\013 \001(\0162:.yandex.cloud.mar" +
-      "ketplace.licensemanager.v1.Instance.Stat" +
-      "e\022?\n\005locks\030\014 \003(\01320.yandex.cloud.marketpl" +
-      "ace.licensemanager.v1.Lock\022N\n\020license_te" +
-      "mplate\030\r \001(\01324.yandex.cloud.marketplace." +
-      "licensemanager.v1.Template\"p\n\005State\022\025\n\021S" +
-      "TATE_UNSPECIFIED\020\000\022\013\n\007PENDING\020\001\022\n\n\006ACTIV" +
-      "E\020\002\022\r\n\tCANCELLED\020\003\022\013\n\007EXPIRED\020\004\022\016\n\nDEPRE" +
-      "CATED\020\005\022\013\n\007DELETED\020\006B\217\001\n.yandex.cloud.ap" +
-      "i.marketplace.licensemanager.v1Z]github." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/marketplace/licensemanager/v1;licensem" +
-      "anagerb\006proto3"
+      "(\t\022\014\n\004name\030\006 \001(\t\022\023\n\013description\030\016 \001(\t\022.\n" +
+      "\nstart_time\030\007 \001(\0132\032.google.protobuf.Time" +
+      "stamp\022,\n\010end_time\030\010 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022.\n\ncreated_at\030\t \001(\0132\032.google" +
+      ".protobuf.Timestamp\022.\n\nupdated_at\030\n \001(\0132" +
+      "\032.google.protobuf.Timestamp\022I\n\005state\030\013 \001" +
+      "(\0162:.yandex.cloud.marketplace.licenseman" +
+      "ager.v1.Instance.State\022?\n\005locks\030\014 \003(\01320." +
+      "yandex.cloud.marketplace.licensemanager." +
+      "v1.Lock\022N\n\020license_template\030\r \001(\01324.yand" +
+      "ex.cloud.marketplace.licensemanager.v1.T" +
+      "emplate\"p\n\005State\022\025\n\021STATE_UNSPECIFIED\020\000\022" +
+      "\013\n\007PENDING\020\001\022\n\n\006ACTIVE\020\002\022\r\n\tCANCELLED\020\003\022" +
+      "\013\n\007EXPIRED\020\004\022\016\n\nDEPRECATED\020\005\022\013\n\007DELETED\020" +
+      "\006B\217\001\n.yandex.cloud.api.marketplace.licen" +
+      "semanager.v1Z]github.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/marketplace/licen" +
+      "semanager/v1;licensemanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3036,7 +3186,7 @@ public final class InstanceOuterClass {
     internal_static_yandex_cloud_marketplace_licensemanager_v1_Instance_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_marketplace_licensemanager_v1_Instance_descriptor,
-        new java.lang.String[] { "Id", "CloudId", "FolderId", "TemplateId", "TemplateVersionId", "Name", "StartTime", "EndTime", "CreatedAt", "UpdatedAt", "State", "Locks", "LicenseTemplate", });
+        new java.lang.String[] { "Id", "CloudId", "FolderId", "TemplateId", "TemplateVersionId", "Name", "Description", "StartTime", "EndTime", "CreatedAt", "UpdatedAt", "State", "Locks", "LicenseTemplate", });
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.getDescriptor();
     yandex.cloud.api.marketplace.licensemanager.v1.TemplateOuterClass.getDescriptor();

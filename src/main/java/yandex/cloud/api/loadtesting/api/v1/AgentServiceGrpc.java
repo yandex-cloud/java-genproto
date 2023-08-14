@@ -77,6 +77,37 @@ public final class AgentServiceGrpc {
     return getGetMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsRequest,
+      yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsResponse> getListMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "List",
+      requestType = yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsRequest.class,
+      responseType = yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsRequest,
+      yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsResponse> getListMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsRequest, yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsResponse> getListMethod;
+    if ((getListMethod = AgentServiceGrpc.getListMethod) == null) {
+      synchronized (AgentServiceGrpc.class) {
+        if ((getListMethod = AgentServiceGrpc.getListMethod) == null) {
+          AgentServiceGrpc.getListMethod = getListMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsRequest, yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AgentServiceMethodDescriptorSupplier("List"))
+              .build();
+        }
+      }
+    }
+    return getListMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.DeleteAgentRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
 
@@ -172,6 +203,13 @@ public final class AgentServiceGrpc {
 
     /**
      */
+    public void list(yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+    }
+
+    /**
+     */
     public void delete(yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.DeleteAgentRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
@@ -193,6 +231,13 @@ public final class AgentServiceGrpc {
                 yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.GetAgentRequest,
                 yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.Agent>(
                   this, METHODID_GET)))
+          .addMethod(
+            getListMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsRequest,
+                yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsResponse>(
+                  this, METHODID_LIST)))
           .addMethod(
             getDeleteMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -236,6 +281,14 @@ public final class AgentServiceGrpc {
 
     /**
      */
+    public void list(yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
     public void delete(yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.DeleteAgentRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
@@ -269,6 +322,13 @@ public final class AgentServiceGrpc {
     public yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.Agent get(yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.GetAgentRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsResponse list(yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListMethod(), getCallOptions(), request);
     }
 
     /**
@@ -311,6 +371,14 @@ public final class AgentServiceGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsResponse> list(
+        yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.DeleteAgentRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
@@ -320,7 +388,8 @@ public final class AgentServiceGrpc {
 
   private static final int METHODID_CREATE = 0;
   private static final int METHODID_GET = 1;
-  private static final int METHODID_DELETE = 2;
+  private static final int METHODID_LIST = 2;
+  private static final int METHODID_DELETE = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -346,6 +415,10 @@ public final class AgentServiceGrpc {
         case METHODID_GET:
           serviceImpl.get((yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.GetAgentRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.Agent>) responseObserver);
+          break;
+        case METHODID_LIST:
+          serviceImpl.list((yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsResponse>) responseObserver);
           break;
         case METHODID_DELETE:
           serviceImpl.delete((yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.DeleteAgentRequest) request,
@@ -414,6 +487,7 @@ public final class AgentServiceGrpc {
               .setSchemaDescriptor(new AgentServiceFileDescriptorSupplier())
               .addMethod(getCreateMethod())
               .addMethod(getGetMethod())
+              .addMethod(getListMethod())
               .addMethod(getDeleteMethod())
               .build();
         }
