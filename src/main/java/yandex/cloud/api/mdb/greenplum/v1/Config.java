@@ -7022,6 +7022,3225 @@ public final class Config {
 
   }
 
+  public interface GreenplumConfig6OrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.GreenplumConfig6)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Maximum number of inbound connections on master segment
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+     * @return Whether the maxConnections field is set.
+     */
+    boolean hasMaxConnections();
+    /**
+     * <pre>
+     * Maximum number of inbound connections on master segment
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+     * @return The maxConnections.
+     */
+    com.google.protobuf.Int64Value getMaxConnections();
+    /**
+     * <pre>
+     * Maximum number of inbound connections on master segment
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder();
+
+    /**
+     * <pre>
+     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+     * @return Whether the maxSlotWalKeepSize field is set.
+     */
+    boolean hasMaxSlotWalKeepSize();
+    /**
+     * <pre>
+     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+     * @return The maxSlotWalKeepSize.
+     */
+    com.google.protobuf.Int64Value getMaxSlotWalKeepSize();
+    /**
+     * <pre>
+     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxSlotWalKeepSizeOrBuilder();
+
+    /**
+     * <pre>
+     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+     * @return Whether the gpWorkfileLimitPerSegment field is set.
+     */
+    boolean hasGpWorkfileLimitPerSegment();
+    /**
+     * <pre>
+     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+     * @return The gpWorkfileLimitPerSegment.
+     */
+    com.google.protobuf.Int64Value getGpWorkfileLimitPerSegment();
+    /**
+     * <pre>
+     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitPerSegmentOrBuilder();
+
+    /**
+     * <pre>
+     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+     * @return Whether the gpWorkfileLimitPerQuery field is set.
+     */
+    boolean hasGpWorkfileLimitPerQuery();
+    /**
+     * <pre>
+     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+     * @return The gpWorkfileLimitPerQuery.
+     */
+    com.google.protobuf.Int64Value getGpWorkfileLimitPerQuery();
+    /**
+     * <pre>
+     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitPerQueryOrBuilder();
+
+    /**
+     * <pre>
+     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+     * Spill files are created when executing a query that requires more memory than it is allocated.
+     * The current query is terminated when the limit is exceeded.
+     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * Default value is 10000
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+     * @return Whether the gpWorkfileLimitFilesPerQuery field is set.
+     */
+    boolean hasGpWorkfileLimitFilesPerQuery();
+    /**
+     * <pre>
+     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+     * Spill files are created when executing a query that requires more memory than it is allocated.
+     * The current query is terminated when the limit is exceeded.
+     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * Default value is 10000
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+     * @return The gpWorkfileLimitFilesPerQuery.
+     */
+    com.google.protobuf.Int64Value getGpWorkfileLimitFilesPerQuery();
+    /**
+     * <pre>
+     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+     * Spill files are created when executing a query that requires more memory than it is allocated.
+     * The current query is terminated when the limit is exceeded.
+     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * Default value is 10000
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitFilesPerQueryOrBuilder();
+
+    /**
+     * <pre>
+     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+     * @return Whether the maxPreparedTransactions field is set.
+     */
+    boolean hasMaxPreparedTransactions();
+    /**
+     * <pre>
+     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+     * @return The maxPreparedTransactions.
+     */
+    com.google.protobuf.Int64Value getMaxPreparedTransactions();
+    /**
+     * <pre>
+     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxPreparedTransactionsOrBuilder();
+
+    /**
+     * <pre>
+     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+     * @return Whether the gpWorkfileCompression field is set.
+     */
+    boolean hasGpWorkfileCompression();
+    /**
+     * <pre>
+     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+     * @return The gpWorkfileCompression.
+     */
+    com.google.protobuf.BoolValue getGpWorkfileCompression();
+    /**
+     * <pre>
+     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getGpWorkfileCompressionOrBuilder();
+
+    /**
+     * <pre>
+     * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+     * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+     * (seghost_physical_memory) / (average_number_concurrent_queries)
+     * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+     * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+     * Default value is 2097152000 (2000MB)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+     * @return Whether the maxStatementMem field is set.
+     */
+    boolean hasMaxStatementMem();
+    /**
+     * <pre>
+     * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+     * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+     * (seghost_physical_memory) / (average_number_concurrent_queries)
+     * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+     * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+     * Default value is 2097152000 (2000MB)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+     * @return The maxStatementMem.
+     */
+    com.google.protobuf.Int64Value getMaxStatementMem();
+    /**
+     * <pre>
+     * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+     * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+     * (seghost_physical_memory) / (average_number_concurrent_queries)
+     * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+     * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+     * Default value is 2097152000 (2000MB)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxStatementMemOrBuilder();
+
+    /**
+     * <pre>
+     * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+     * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+     * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+     * Default value is ddl
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+     * @return The enum numeric value on the wire for logStatement.
+     */
+    int getLogStatementValue();
+    /**
+     * <pre>
+     * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+     * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+     * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+     * Default value is ddl
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+     * @return The logStatement.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement getLogStatement();
+
+    /**
+     * <pre>
+     * https://docs.vmware.com/en/VMware-Tanzu-Greenplum/6/greenplum-database/GUID-ref_guide-config_params-guc-list.html#gp_add_column_inherits_table_setting
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_add_column_inherits_table_setting = 10;</code>
+     * @return Whether the gpAddColumnInheritsTableSetting field is set.
+     */
+    boolean hasGpAddColumnInheritsTableSetting();
+    /**
+     * <pre>
+     * https://docs.vmware.com/en/VMware-Tanzu-Greenplum/6/greenplum-database/GUID-ref_guide-config_params-guc-list.html#gp_add_column_inherits_table_setting
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_add_column_inherits_table_setting = 10;</code>
+     * @return The gpAddColumnInheritsTableSetting.
+     */
+    com.google.protobuf.BoolValue getGpAddColumnInheritsTableSetting();
+    /**
+     * <pre>
+     * https://docs.vmware.com/en/VMware-Tanzu-Greenplum/6/greenplum-database/GUID-ref_guide-config_params-guc-list.html#gp_add_column_inherits_table_setting
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_add_column_inherits_table_setting = 10;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getGpAddColumnInheritsTableSettingOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.GreenplumConfig6}
+   */
+  public static final class GreenplumConfig6 extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.GreenplumConfig6)
+      GreenplumConfig6OrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GreenplumConfig6.newBuilder() to construct.
+    private GreenplumConfig6(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GreenplumConfig6() {
+      logStatement_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GreenplumConfig6();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GreenplumConfig6(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxConnections_ != null) {
+                subBuilder = maxConnections_.toBuilder();
+              }
+              maxConnections_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxConnections_);
+                maxConnections_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxSlotWalKeepSize_ != null) {
+                subBuilder = maxSlotWalKeepSize_.toBuilder();
+              }
+              maxSlotWalKeepSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxSlotWalKeepSize_);
+                maxSlotWalKeepSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (gpWorkfileLimitPerSegment_ != null) {
+                subBuilder = gpWorkfileLimitPerSegment_.toBuilder();
+              }
+              gpWorkfileLimitPerSegment_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gpWorkfileLimitPerSegment_);
+                gpWorkfileLimitPerSegment_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (gpWorkfileLimitPerQuery_ != null) {
+                subBuilder = gpWorkfileLimitPerQuery_.toBuilder();
+              }
+              gpWorkfileLimitPerQuery_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gpWorkfileLimitPerQuery_);
+                gpWorkfileLimitPerQuery_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (gpWorkfileLimitFilesPerQuery_ != null) {
+                subBuilder = gpWorkfileLimitFilesPerQuery_.toBuilder();
+              }
+              gpWorkfileLimitFilesPerQuery_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gpWorkfileLimitFilesPerQuery_);
+                gpWorkfileLimitFilesPerQuery_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxPreparedTransactions_ != null) {
+                subBuilder = maxPreparedTransactions_.toBuilder();
+              }
+              maxPreparedTransactions_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxPreparedTransactions_);
+                maxPreparedTransactions_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (gpWorkfileCompression_ != null) {
+                subBuilder = gpWorkfileCompression_.toBuilder();
+              }
+              gpWorkfileCompression_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gpWorkfileCompression_);
+                gpWorkfileCompression_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxStatementMem_ != null) {
+                subBuilder = maxStatementMem_.toBuilder();
+              }
+              maxStatementMem_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxStatementMem_);
+                maxStatementMem_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 72: {
+              int rawValue = input.readEnum();
+
+              logStatement_ = rawValue;
+              break;
+            }
+            case 82: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (gpAddColumnInheritsTableSetting_ != null) {
+                subBuilder = gpAddColumnInheritsTableSetting_.toBuilder();
+              }
+              gpAddColumnInheritsTableSetting_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(gpAddColumnInheritsTableSetting_);
+                gpAddColumnInheritsTableSetting_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.class, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.Builder.class);
+    }
+
+    public static final int MAX_CONNECTIONS_FIELD_NUMBER = 1;
+    private com.google.protobuf.Int64Value maxConnections_;
+    /**
+     * <pre>
+     * Maximum number of inbound connections on master segment
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+     * @return Whether the maxConnections field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxConnections() {
+      return maxConnections_ != null;
+    }
+    /**
+     * <pre>
+     * Maximum number of inbound connections on master segment
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+     * @return The maxConnections.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxConnections() {
+      return maxConnections_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxConnections_;
+    }
+    /**
+     * <pre>
+     * Maximum number of inbound connections on master segment
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder() {
+      return getMaxConnections();
+    }
+
+    public static final int MAX_SLOT_WAL_KEEP_SIZE_FIELD_NUMBER = 2;
+    private com.google.protobuf.Int64Value maxSlotWalKeepSize_;
+    /**
+     * <pre>
+     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+     * @return Whether the maxSlotWalKeepSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxSlotWalKeepSize() {
+      return maxSlotWalKeepSize_ != null;
+    }
+    /**
+     * <pre>
+     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+     * @return The maxSlotWalKeepSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxSlotWalKeepSize() {
+      return maxSlotWalKeepSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxSlotWalKeepSize_;
+    }
+    /**
+     * <pre>
+     * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+     * https://www.postgresql.org/docs/current/runtime-config-replication.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxSlotWalKeepSizeOrBuilder() {
+      return getMaxSlotWalKeepSize();
+    }
+
+    public static final int GP_WORKFILE_LIMIT_PER_SEGMENT_FIELD_NUMBER = 3;
+    private com.google.protobuf.Int64Value gpWorkfileLimitPerSegment_;
+    /**
+     * <pre>
+     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+     * @return Whether the gpWorkfileLimitPerSegment field is set.
+     */
+    @java.lang.Override
+    public boolean hasGpWorkfileLimitPerSegment() {
+      return gpWorkfileLimitPerSegment_ != null;
+    }
+    /**
+     * <pre>
+     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+     * @return The gpWorkfileLimitPerSegment.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getGpWorkfileLimitPerSegment() {
+      return gpWorkfileLimitPerSegment_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitPerSegment_;
+    }
+    /**
+     * <pre>
+     * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitPerSegmentOrBuilder() {
+      return getGpWorkfileLimitPerSegment();
+    }
+
+    public static final int GP_WORKFILE_LIMIT_PER_QUERY_FIELD_NUMBER = 4;
+    private com.google.protobuf.Int64Value gpWorkfileLimitPerQuery_;
+    /**
+     * <pre>
+     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+     * @return Whether the gpWorkfileLimitPerQuery field is set.
+     */
+    @java.lang.Override
+    public boolean hasGpWorkfileLimitPerQuery() {
+      return gpWorkfileLimitPerQuery_ != null;
+    }
+    /**
+     * <pre>
+     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+     * @return The gpWorkfileLimitPerQuery.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getGpWorkfileLimitPerQuery() {
+      return gpWorkfileLimitPerQuery_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitPerQuery_;
+    }
+    /**
+     * <pre>
+     * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+     * The default value is 0, which means a limit is not enforced.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitPerQueryOrBuilder() {
+      return getGpWorkfileLimitPerQuery();
+    }
+
+    public static final int GP_WORKFILE_LIMIT_FILES_PER_QUERY_FIELD_NUMBER = 5;
+    private com.google.protobuf.Int64Value gpWorkfileLimitFilesPerQuery_;
+    /**
+     * <pre>
+     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+     * Spill files are created when executing a query that requires more memory than it is allocated.
+     * The current query is terminated when the limit is exceeded.
+     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * Default value is 10000
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+     * @return Whether the gpWorkfileLimitFilesPerQuery field is set.
+     */
+    @java.lang.Override
+    public boolean hasGpWorkfileLimitFilesPerQuery() {
+      return gpWorkfileLimitFilesPerQuery_ != null;
+    }
+    /**
+     * <pre>
+     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+     * Spill files are created when executing a query that requires more memory than it is allocated.
+     * The current query is terminated when the limit is exceeded.
+     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * Default value is 10000
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+     * @return The gpWorkfileLimitFilesPerQuery.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getGpWorkfileLimitFilesPerQuery() {
+      return gpWorkfileLimitFilesPerQuery_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitFilesPerQuery_;
+    }
+    /**
+     * <pre>
+     * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+     * Spill files are created when executing a query that requires more memory than it is allocated.
+     * The current query is terminated when the limit is exceeded.
+     * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+     * Default value is 10000
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitFilesPerQueryOrBuilder() {
+      return getGpWorkfileLimitFilesPerQuery();
+    }
+
+    public static final int MAX_PREPARED_TRANSACTIONS_FIELD_NUMBER = 6;
+    private com.google.protobuf.Int64Value maxPreparedTransactions_;
+    /**
+     * <pre>
+     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+     * @return Whether the maxPreparedTransactions field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxPreparedTransactions() {
+      return maxPreparedTransactions_ != null;
+    }
+    /**
+     * <pre>
+     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+     * @return The maxPreparedTransactions.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxPreparedTransactions() {
+      return maxPreparedTransactions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxPreparedTransactions_;
+    }
+    /**
+     * <pre>
+     * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+     * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxPreparedTransactionsOrBuilder() {
+      return getMaxPreparedTransactions();
+    }
+
+    public static final int GP_WORKFILE_COMPRESSION_FIELD_NUMBER = 7;
+    private com.google.protobuf.BoolValue gpWorkfileCompression_;
+    /**
+     * <pre>
+     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+     * @return Whether the gpWorkfileCompression field is set.
+     */
+    @java.lang.Override
+    public boolean hasGpWorkfileCompression() {
+      return gpWorkfileCompression_ != null;
+    }
+    /**
+     * <pre>
+     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+     * @return The gpWorkfileCompression.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getGpWorkfileCompression() {
+      return gpWorkfileCompression_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : gpWorkfileCompression_;
+    }
+    /**
+     * <pre>
+     * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getGpWorkfileCompressionOrBuilder() {
+      return getGpWorkfileCompression();
+    }
+
+    public static final int MAX_STATEMENT_MEM_FIELD_NUMBER = 8;
+    private com.google.protobuf.Int64Value maxStatementMem_;
+    /**
+     * <pre>
+     * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+     * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+     * (seghost_physical_memory) / (average_number_concurrent_queries)
+     * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+     * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+     * Default value is 2097152000 (2000MB)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+     * @return Whether the maxStatementMem field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxStatementMem() {
+      return maxStatementMem_ != null;
+    }
+    /**
+     * <pre>
+     * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+     * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+     * (seghost_physical_memory) / (average_number_concurrent_queries)
+     * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+     * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+     * Default value is 2097152000 (2000MB)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+     * @return The maxStatementMem.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxStatementMem() {
+      return maxStatementMem_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxStatementMem_;
+    }
+    /**
+     * <pre>
+     * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+     * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+     * (seghost_physical_memory) / (average_number_concurrent_queries)
+     * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+     * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+     * Default value is 2097152000 (2000MB)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxStatementMemOrBuilder() {
+      return getMaxStatementMem();
+    }
+
+    public static final int LOG_STATEMENT_FIELD_NUMBER = 9;
+    private int logStatement_;
+    /**
+     * <pre>
+     * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+     * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+     * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+     * Default value is ddl
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+     * @return The enum numeric value on the wire for logStatement.
+     */
+    @java.lang.Override public int getLogStatementValue() {
+      return logStatement_;
+    }
+    /**
+     * <pre>
+     * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+     * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+     * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+     * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+     * Default value is ddl
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+     * @return The logStatement.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement getLogStatement() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement result = yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement.valueOf(logStatement_);
+      return result == null ? yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement.UNRECOGNIZED : result;
+    }
+
+    public static final int GP_ADD_COLUMN_INHERITS_TABLE_SETTING_FIELD_NUMBER = 10;
+    private com.google.protobuf.BoolValue gpAddColumnInheritsTableSetting_;
+    /**
+     * <pre>
+     * https://docs.vmware.com/en/VMware-Tanzu-Greenplum/6/greenplum-database/GUID-ref_guide-config_params-guc-list.html#gp_add_column_inherits_table_setting
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_add_column_inherits_table_setting = 10;</code>
+     * @return Whether the gpAddColumnInheritsTableSetting field is set.
+     */
+    @java.lang.Override
+    public boolean hasGpAddColumnInheritsTableSetting() {
+      return gpAddColumnInheritsTableSetting_ != null;
+    }
+    /**
+     * <pre>
+     * https://docs.vmware.com/en/VMware-Tanzu-Greenplum/6/greenplum-database/GUID-ref_guide-config_params-guc-list.html#gp_add_column_inherits_table_setting
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_add_column_inherits_table_setting = 10;</code>
+     * @return The gpAddColumnInheritsTableSetting.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getGpAddColumnInheritsTableSetting() {
+      return gpAddColumnInheritsTableSetting_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : gpAddColumnInheritsTableSetting_;
+    }
+    /**
+     * <pre>
+     * https://docs.vmware.com/en/VMware-Tanzu-Greenplum/6/greenplum-database/GUID-ref_guide-config_params-guc-list.html#gp_add_column_inherits_table_setting
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue gp_add_column_inherits_table_setting = 10;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getGpAddColumnInheritsTableSettingOrBuilder() {
+      return getGpAddColumnInheritsTableSetting();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (maxConnections_ != null) {
+        output.writeMessage(1, getMaxConnections());
+      }
+      if (maxSlotWalKeepSize_ != null) {
+        output.writeMessage(2, getMaxSlotWalKeepSize());
+      }
+      if (gpWorkfileLimitPerSegment_ != null) {
+        output.writeMessage(3, getGpWorkfileLimitPerSegment());
+      }
+      if (gpWorkfileLimitPerQuery_ != null) {
+        output.writeMessage(4, getGpWorkfileLimitPerQuery());
+      }
+      if (gpWorkfileLimitFilesPerQuery_ != null) {
+        output.writeMessage(5, getGpWorkfileLimitFilesPerQuery());
+      }
+      if (maxPreparedTransactions_ != null) {
+        output.writeMessage(6, getMaxPreparedTransactions());
+      }
+      if (gpWorkfileCompression_ != null) {
+        output.writeMessage(7, getGpWorkfileCompression());
+      }
+      if (maxStatementMem_ != null) {
+        output.writeMessage(8, getMaxStatementMem());
+      }
+      if (logStatement_ != yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement.LOG_STATEMENT_UNSPECIFIED.getNumber()) {
+        output.writeEnum(9, logStatement_);
+      }
+      if (gpAddColumnInheritsTableSetting_ != null) {
+        output.writeMessage(10, getGpAddColumnInheritsTableSetting());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (maxConnections_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getMaxConnections());
+      }
+      if (maxSlotWalKeepSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getMaxSlotWalKeepSize());
+      }
+      if (gpWorkfileLimitPerSegment_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getGpWorkfileLimitPerSegment());
+      }
+      if (gpWorkfileLimitPerQuery_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getGpWorkfileLimitPerQuery());
+      }
+      if (gpWorkfileLimitFilesPerQuery_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getGpWorkfileLimitFilesPerQuery());
+      }
+      if (maxPreparedTransactions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getMaxPreparedTransactions());
+      }
+      if (gpWorkfileCompression_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getGpWorkfileCompression());
+      }
+      if (maxStatementMem_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getMaxStatementMem());
+      }
+      if (logStatement_ != yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement.LOG_STATEMENT_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(9, logStatement_);
+      }
+      if (gpAddColumnInheritsTableSetting_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getGpAddColumnInheritsTableSetting());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 other = (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6) obj;
+
+      if (hasMaxConnections() != other.hasMaxConnections()) return false;
+      if (hasMaxConnections()) {
+        if (!getMaxConnections()
+            .equals(other.getMaxConnections())) return false;
+      }
+      if (hasMaxSlotWalKeepSize() != other.hasMaxSlotWalKeepSize()) return false;
+      if (hasMaxSlotWalKeepSize()) {
+        if (!getMaxSlotWalKeepSize()
+            .equals(other.getMaxSlotWalKeepSize())) return false;
+      }
+      if (hasGpWorkfileLimitPerSegment() != other.hasGpWorkfileLimitPerSegment()) return false;
+      if (hasGpWorkfileLimitPerSegment()) {
+        if (!getGpWorkfileLimitPerSegment()
+            .equals(other.getGpWorkfileLimitPerSegment())) return false;
+      }
+      if (hasGpWorkfileLimitPerQuery() != other.hasGpWorkfileLimitPerQuery()) return false;
+      if (hasGpWorkfileLimitPerQuery()) {
+        if (!getGpWorkfileLimitPerQuery()
+            .equals(other.getGpWorkfileLimitPerQuery())) return false;
+      }
+      if (hasGpWorkfileLimitFilesPerQuery() != other.hasGpWorkfileLimitFilesPerQuery()) return false;
+      if (hasGpWorkfileLimitFilesPerQuery()) {
+        if (!getGpWorkfileLimitFilesPerQuery()
+            .equals(other.getGpWorkfileLimitFilesPerQuery())) return false;
+      }
+      if (hasMaxPreparedTransactions() != other.hasMaxPreparedTransactions()) return false;
+      if (hasMaxPreparedTransactions()) {
+        if (!getMaxPreparedTransactions()
+            .equals(other.getMaxPreparedTransactions())) return false;
+      }
+      if (hasGpWorkfileCompression() != other.hasGpWorkfileCompression()) return false;
+      if (hasGpWorkfileCompression()) {
+        if (!getGpWorkfileCompression()
+            .equals(other.getGpWorkfileCompression())) return false;
+      }
+      if (hasMaxStatementMem() != other.hasMaxStatementMem()) return false;
+      if (hasMaxStatementMem()) {
+        if (!getMaxStatementMem()
+            .equals(other.getMaxStatementMem())) return false;
+      }
+      if (logStatement_ != other.logStatement_) return false;
+      if (hasGpAddColumnInheritsTableSetting() != other.hasGpAddColumnInheritsTableSetting()) return false;
+      if (hasGpAddColumnInheritsTableSetting()) {
+        if (!getGpAddColumnInheritsTableSetting()
+            .equals(other.getGpAddColumnInheritsTableSetting())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasMaxConnections()) {
+        hash = (37 * hash) + MAX_CONNECTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxConnections().hashCode();
+      }
+      if (hasMaxSlotWalKeepSize()) {
+        hash = (37 * hash) + MAX_SLOT_WAL_KEEP_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxSlotWalKeepSize().hashCode();
+      }
+      if (hasGpWorkfileLimitPerSegment()) {
+        hash = (37 * hash) + GP_WORKFILE_LIMIT_PER_SEGMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getGpWorkfileLimitPerSegment().hashCode();
+      }
+      if (hasGpWorkfileLimitPerQuery()) {
+        hash = (37 * hash) + GP_WORKFILE_LIMIT_PER_QUERY_FIELD_NUMBER;
+        hash = (53 * hash) + getGpWorkfileLimitPerQuery().hashCode();
+      }
+      if (hasGpWorkfileLimitFilesPerQuery()) {
+        hash = (37 * hash) + GP_WORKFILE_LIMIT_FILES_PER_QUERY_FIELD_NUMBER;
+        hash = (53 * hash) + getGpWorkfileLimitFilesPerQuery().hashCode();
+      }
+      if (hasMaxPreparedTransactions()) {
+        hash = (37 * hash) + MAX_PREPARED_TRANSACTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxPreparedTransactions().hashCode();
+      }
+      if (hasGpWorkfileCompression()) {
+        hash = (37 * hash) + GP_WORKFILE_COMPRESSION_FIELD_NUMBER;
+        hash = (53 * hash) + getGpWorkfileCompression().hashCode();
+      }
+      if (hasMaxStatementMem()) {
+        hash = (37 * hash) + MAX_STATEMENT_MEM_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxStatementMem().hashCode();
+      }
+      hash = (37 * hash) + LOG_STATEMENT_FIELD_NUMBER;
+      hash = (53 * hash) + logStatement_;
+      if (hasGpAddColumnInheritsTableSetting()) {
+        hash = (37 * hash) + GP_ADD_COLUMN_INHERITS_TABLE_SETTING_FIELD_NUMBER;
+        hash = (53 * hash) + getGpAddColumnInheritsTableSetting().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.GreenplumConfig6}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.GreenplumConfig6)
+        yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.class, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (maxConnectionsBuilder_ == null) {
+          maxConnections_ = null;
+        } else {
+          maxConnections_ = null;
+          maxConnectionsBuilder_ = null;
+        }
+        if (maxSlotWalKeepSizeBuilder_ == null) {
+          maxSlotWalKeepSize_ = null;
+        } else {
+          maxSlotWalKeepSize_ = null;
+          maxSlotWalKeepSizeBuilder_ = null;
+        }
+        if (gpWorkfileLimitPerSegmentBuilder_ == null) {
+          gpWorkfileLimitPerSegment_ = null;
+        } else {
+          gpWorkfileLimitPerSegment_ = null;
+          gpWorkfileLimitPerSegmentBuilder_ = null;
+        }
+        if (gpWorkfileLimitPerQueryBuilder_ == null) {
+          gpWorkfileLimitPerQuery_ = null;
+        } else {
+          gpWorkfileLimitPerQuery_ = null;
+          gpWorkfileLimitPerQueryBuilder_ = null;
+        }
+        if (gpWorkfileLimitFilesPerQueryBuilder_ == null) {
+          gpWorkfileLimitFilesPerQuery_ = null;
+        } else {
+          gpWorkfileLimitFilesPerQuery_ = null;
+          gpWorkfileLimitFilesPerQueryBuilder_ = null;
+        }
+        if (maxPreparedTransactionsBuilder_ == null) {
+          maxPreparedTransactions_ = null;
+        } else {
+          maxPreparedTransactions_ = null;
+          maxPreparedTransactionsBuilder_ = null;
+        }
+        if (gpWorkfileCompressionBuilder_ == null) {
+          gpWorkfileCompression_ = null;
+        } else {
+          gpWorkfileCompression_ = null;
+          gpWorkfileCompressionBuilder_ = null;
+        }
+        if (maxStatementMemBuilder_ == null) {
+          maxStatementMem_ = null;
+        } else {
+          maxStatementMem_ = null;
+          maxStatementMemBuilder_ = null;
+        }
+        logStatement_ = 0;
+
+        if (gpAddColumnInheritsTableSettingBuilder_ == null) {
+          gpAddColumnInheritsTableSetting_ = null;
+        } else {
+          gpAddColumnInheritsTableSetting_ = null;
+          gpAddColumnInheritsTableSettingBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 build() {
+        yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 result = new yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6(this);
+        if (maxConnectionsBuilder_ == null) {
+          result.maxConnections_ = maxConnections_;
+        } else {
+          result.maxConnections_ = maxConnectionsBuilder_.build();
+        }
+        if (maxSlotWalKeepSizeBuilder_ == null) {
+          result.maxSlotWalKeepSize_ = maxSlotWalKeepSize_;
+        } else {
+          result.maxSlotWalKeepSize_ = maxSlotWalKeepSizeBuilder_.build();
+        }
+        if (gpWorkfileLimitPerSegmentBuilder_ == null) {
+          result.gpWorkfileLimitPerSegment_ = gpWorkfileLimitPerSegment_;
+        } else {
+          result.gpWorkfileLimitPerSegment_ = gpWorkfileLimitPerSegmentBuilder_.build();
+        }
+        if (gpWorkfileLimitPerQueryBuilder_ == null) {
+          result.gpWorkfileLimitPerQuery_ = gpWorkfileLimitPerQuery_;
+        } else {
+          result.gpWorkfileLimitPerQuery_ = gpWorkfileLimitPerQueryBuilder_.build();
+        }
+        if (gpWorkfileLimitFilesPerQueryBuilder_ == null) {
+          result.gpWorkfileLimitFilesPerQuery_ = gpWorkfileLimitFilesPerQuery_;
+        } else {
+          result.gpWorkfileLimitFilesPerQuery_ = gpWorkfileLimitFilesPerQueryBuilder_.build();
+        }
+        if (maxPreparedTransactionsBuilder_ == null) {
+          result.maxPreparedTransactions_ = maxPreparedTransactions_;
+        } else {
+          result.maxPreparedTransactions_ = maxPreparedTransactionsBuilder_.build();
+        }
+        if (gpWorkfileCompressionBuilder_ == null) {
+          result.gpWorkfileCompression_ = gpWorkfileCompression_;
+        } else {
+          result.gpWorkfileCompression_ = gpWorkfileCompressionBuilder_.build();
+        }
+        if (maxStatementMemBuilder_ == null) {
+          result.maxStatementMem_ = maxStatementMem_;
+        } else {
+          result.maxStatementMem_ = maxStatementMemBuilder_.build();
+        }
+        result.logStatement_ = logStatement_;
+        if (gpAddColumnInheritsTableSettingBuilder_ == null) {
+          result.gpAddColumnInheritsTableSetting_ = gpAddColumnInheritsTableSetting_;
+        } else {
+          result.gpAddColumnInheritsTableSetting_ = gpAddColumnInheritsTableSettingBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.getDefaultInstance()) return this;
+        if (other.hasMaxConnections()) {
+          mergeMaxConnections(other.getMaxConnections());
+        }
+        if (other.hasMaxSlotWalKeepSize()) {
+          mergeMaxSlotWalKeepSize(other.getMaxSlotWalKeepSize());
+        }
+        if (other.hasGpWorkfileLimitPerSegment()) {
+          mergeGpWorkfileLimitPerSegment(other.getGpWorkfileLimitPerSegment());
+        }
+        if (other.hasGpWorkfileLimitPerQuery()) {
+          mergeGpWorkfileLimitPerQuery(other.getGpWorkfileLimitPerQuery());
+        }
+        if (other.hasGpWorkfileLimitFilesPerQuery()) {
+          mergeGpWorkfileLimitFilesPerQuery(other.getGpWorkfileLimitFilesPerQuery());
+        }
+        if (other.hasMaxPreparedTransactions()) {
+          mergeMaxPreparedTransactions(other.getMaxPreparedTransactions());
+        }
+        if (other.hasGpWorkfileCompression()) {
+          mergeGpWorkfileCompression(other.getGpWorkfileCompression());
+        }
+        if (other.hasMaxStatementMem()) {
+          mergeMaxStatementMem(other.getMaxStatementMem());
+        }
+        if (other.logStatement_ != 0) {
+          setLogStatementValue(other.getLogStatementValue());
+        }
+        if (other.hasGpAddColumnInheritsTableSetting()) {
+          mergeGpAddColumnInheritsTableSetting(other.getGpAddColumnInheritsTableSetting());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value maxConnections_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxConnectionsBuilder_;
+      /**
+       * <pre>
+       * Maximum number of inbound connections on master segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+       * @return Whether the maxConnections field is set.
+       */
+      public boolean hasMaxConnections() {
+        return maxConnectionsBuilder_ != null || maxConnections_ != null;
+      }
+      /**
+       * <pre>
+       * Maximum number of inbound connections on master segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+       * @return The maxConnections.
+       */
+      public com.google.protobuf.Int64Value getMaxConnections() {
+        if (maxConnectionsBuilder_ == null) {
+          return maxConnections_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxConnections_;
+        } else {
+          return maxConnectionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Maximum number of inbound connections on master segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+       */
+      public Builder setMaxConnections(com.google.protobuf.Int64Value value) {
+        if (maxConnectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxConnections_ = value;
+          onChanged();
+        } else {
+          maxConnectionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum number of inbound connections on master segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+       */
+      public Builder setMaxConnections(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxConnectionsBuilder_ == null) {
+          maxConnections_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxConnectionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum number of inbound connections on master segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+       */
+      public Builder mergeMaxConnections(com.google.protobuf.Int64Value value) {
+        if (maxConnectionsBuilder_ == null) {
+          if (maxConnections_ != null) {
+            maxConnections_ =
+              com.google.protobuf.Int64Value.newBuilder(maxConnections_).mergeFrom(value).buildPartial();
+          } else {
+            maxConnections_ = value;
+          }
+          onChanged();
+        } else {
+          maxConnectionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum number of inbound connections on master segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+       */
+      public Builder clearMaxConnections() {
+        if (maxConnectionsBuilder_ == null) {
+          maxConnections_ = null;
+          onChanged();
+        } else {
+          maxConnections_ = null;
+          maxConnectionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum number of inbound connections on master segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxConnectionsBuilder() {
+        
+        onChanged();
+        return getMaxConnectionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Maximum number of inbound connections on master segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxConnectionsOrBuilder() {
+        if (maxConnectionsBuilder_ != null) {
+          return maxConnectionsBuilder_.getMessageOrBuilder();
+        } else {
+          return maxConnections_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxConnections_;
+        }
+      }
+      /**
+       * <pre>
+       * Maximum number of inbound connections on master segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_connections = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxConnectionsFieldBuilder() {
+        if (maxConnectionsBuilder_ == null) {
+          maxConnectionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxConnections(),
+                  getParentForChildren(),
+                  isClean());
+          maxConnections_ = null;
+        }
+        return maxConnectionsBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxSlotWalKeepSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxSlotWalKeepSizeBuilder_;
+      /**
+       * <pre>
+       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+       * @return Whether the maxSlotWalKeepSize field is set.
+       */
+      public boolean hasMaxSlotWalKeepSize() {
+        return maxSlotWalKeepSizeBuilder_ != null || maxSlotWalKeepSize_ != null;
+      }
+      /**
+       * <pre>
+       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+       * @return The maxSlotWalKeepSize.
+       */
+      public com.google.protobuf.Int64Value getMaxSlotWalKeepSize() {
+        if (maxSlotWalKeepSizeBuilder_ == null) {
+          return maxSlotWalKeepSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxSlotWalKeepSize_;
+        } else {
+          return maxSlotWalKeepSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+       */
+      public Builder setMaxSlotWalKeepSize(com.google.protobuf.Int64Value value) {
+        if (maxSlotWalKeepSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxSlotWalKeepSize_ = value;
+          onChanged();
+        } else {
+          maxSlotWalKeepSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+       */
+      public Builder setMaxSlotWalKeepSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxSlotWalKeepSizeBuilder_ == null) {
+          maxSlotWalKeepSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxSlotWalKeepSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+       */
+      public Builder mergeMaxSlotWalKeepSize(com.google.protobuf.Int64Value value) {
+        if (maxSlotWalKeepSizeBuilder_ == null) {
+          if (maxSlotWalKeepSize_ != null) {
+            maxSlotWalKeepSize_ =
+              com.google.protobuf.Int64Value.newBuilder(maxSlotWalKeepSize_).mergeFrom(value).buildPartial();
+          } else {
+            maxSlotWalKeepSize_ = value;
+          }
+          onChanged();
+        } else {
+          maxSlotWalKeepSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+       */
+      public Builder clearMaxSlotWalKeepSize() {
+        if (maxSlotWalKeepSizeBuilder_ == null) {
+          maxSlotWalKeepSize_ = null;
+          onChanged();
+        } else {
+          maxSlotWalKeepSize_ = null;
+          maxSlotWalKeepSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxSlotWalKeepSizeBuilder() {
+        
+        onChanged();
+        return getMaxSlotWalKeepSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxSlotWalKeepSizeOrBuilder() {
+        if (maxSlotWalKeepSizeBuilder_ != null) {
+          return maxSlotWalKeepSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return maxSlotWalKeepSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxSlotWalKeepSize_;
+        }
+      }
+      /**
+       * <pre>
+       * Specify the maximum size of WAL files that replication slots are allowed to retain in the pg_wal directory at checkpoint time.
+       * https://www.postgresql.org/docs/current/runtime-config-replication.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_slot_wal_keep_size = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxSlotWalKeepSizeFieldBuilder() {
+        if (maxSlotWalKeepSizeBuilder_ == null) {
+          maxSlotWalKeepSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxSlotWalKeepSize(),
+                  getParentForChildren(),
+                  isClean());
+          maxSlotWalKeepSize_ = null;
+        }
+        return maxSlotWalKeepSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value gpWorkfileLimitPerSegment_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpWorkfileLimitPerSegmentBuilder_;
+      /**
+       * <pre>
+       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+       * @return Whether the gpWorkfileLimitPerSegment field is set.
+       */
+      public boolean hasGpWorkfileLimitPerSegment() {
+        return gpWorkfileLimitPerSegmentBuilder_ != null || gpWorkfileLimitPerSegment_ != null;
+      }
+      /**
+       * <pre>
+       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+       * @return The gpWorkfileLimitPerSegment.
+       */
+      public com.google.protobuf.Int64Value getGpWorkfileLimitPerSegment() {
+        if (gpWorkfileLimitPerSegmentBuilder_ == null) {
+          return gpWorkfileLimitPerSegment_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitPerSegment_;
+        } else {
+          return gpWorkfileLimitPerSegmentBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+       */
+      public Builder setGpWorkfileLimitPerSegment(com.google.protobuf.Int64Value value) {
+        if (gpWorkfileLimitPerSegmentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gpWorkfileLimitPerSegment_ = value;
+          onChanged();
+        } else {
+          gpWorkfileLimitPerSegmentBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+       */
+      public Builder setGpWorkfileLimitPerSegment(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (gpWorkfileLimitPerSegmentBuilder_ == null) {
+          gpWorkfileLimitPerSegment_ = builderForValue.build();
+          onChanged();
+        } else {
+          gpWorkfileLimitPerSegmentBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+       */
+      public Builder mergeGpWorkfileLimitPerSegment(com.google.protobuf.Int64Value value) {
+        if (gpWorkfileLimitPerSegmentBuilder_ == null) {
+          if (gpWorkfileLimitPerSegment_ != null) {
+            gpWorkfileLimitPerSegment_ =
+              com.google.protobuf.Int64Value.newBuilder(gpWorkfileLimitPerSegment_).mergeFrom(value).buildPartial();
+          } else {
+            gpWorkfileLimitPerSegment_ = value;
+          }
+          onChanged();
+        } else {
+          gpWorkfileLimitPerSegmentBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+       */
+      public Builder clearGpWorkfileLimitPerSegment() {
+        if (gpWorkfileLimitPerSegmentBuilder_ == null) {
+          gpWorkfileLimitPerSegment_ = null;
+          onChanged();
+        } else {
+          gpWorkfileLimitPerSegment_ = null;
+          gpWorkfileLimitPerSegmentBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getGpWorkfileLimitPerSegmentBuilder() {
+        
+        onChanged();
+        return getGpWorkfileLimitPerSegmentFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitPerSegmentOrBuilder() {
+        if (gpWorkfileLimitPerSegmentBuilder_ != null) {
+          return gpWorkfileLimitPerSegmentBuilder_.getMessageOrBuilder();
+        } else {
+          return gpWorkfileLimitPerSegment_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitPerSegment_;
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum total disk size that all running queries are allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_segment
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_segment = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getGpWorkfileLimitPerSegmentFieldBuilder() {
+        if (gpWorkfileLimitPerSegmentBuilder_ == null) {
+          gpWorkfileLimitPerSegmentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getGpWorkfileLimitPerSegment(),
+                  getParentForChildren(),
+                  isClean());
+          gpWorkfileLimitPerSegment_ = null;
+        }
+        return gpWorkfileLimitPerSegmentBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value gpWorkfileLimitPerQuery_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpWorkfileLimitPerQueryBuilder_;
+      /**
+       * <pre>
+       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+       * @return Whether the gpWorkfileLimitPerQuery field is set.
+       */
+      public boolean hasGpWorkfileLimitPerQuery() {
+        return gpWorkfileLimitPerQueryBuilder_ != null || gpWorkfileLimitPerQuery_ != null;
+      }
+      /**
+       * <pre>
+       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+       * @return The gpWorkfileLimitPerQuery.
+       */
+      public com.google.protobuf.Int64Value getGpWorkfileLimitPerQuery() {
+        if (gpWorkfileLimitPerQueryBuilder_ == null) {
+          return gpWorkfileLimitPerQuery_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitPerQuery_;
+        } else {
+          return gpWorkfileLimitPerQueryBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+       */
+      public Builder setGpWorkfileLimitPerQuery(com.google.protobuf.Int64Value value) {
+        if (gpWorkfileLimitPerQueryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gpWorkfileLimitPerQuery_ = value;
+          onChanged();
+        } else {
+          gpWorkfileLimitPerQueryBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+       */
+      public Builder setGpWorkfileLimitPerQuery(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (gpWorkfileLimitPerQueryBuilder_ == null) {
+          gpWorkfileLimitPerQuery_ = builderForValue.build();
+          onChanged();
+        } else {
+          gpWorkfileLimitPerQueryBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+       */
+      public Builder mergeGpWorkfileLimitPerQuery(com.google.protobuf.Int64Value value) {
+        if (gpWorkfileLimitPerQueryBuilder_ == null) {
+          if (gpWorkfileLimitPerQuery_ != null) {
+            gpWorkfileLimitPerQuery_ =
+              com.google.protobuf.Int64Value.newBuilder(gpWorkfileLimitPerQuery_).mergeFrom(value).buildPartial();
+          } else {
+            gpWorkfileLimitPerQuery_ = value;
+          }
+          onChanged();
+        } else {
+          gpWorkfileLimitPerQueryBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+       */
+      public Builder clearGpWorkfileLimitPerQuery() {
+        if (gpWorkfileLimitPerQueryBuilder_ == null) {
+          gpWorkfileLimitPerQuery_ = null;
+          onChanged();
+        } else {
+          gpWorkfileLimitPerQuery_ = null;
+          gpWorkfileLimitPerQueryBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getGpWorkfileLimitPerQueryBuilder() {
+        
+        onChanged();
+        return getGpWorkfileLimitPerQueryFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitPerQueryOrBuilder() {
+        if (gpWorkfileLimitPerQueryBuilder_ != null) {
+          return gpWorkfileLimitPerQueryBuilder_.getMessageOrBuilder();
+        } else {
+          return gpWorkfileLimitPerQuery_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitPerQuery_;
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum disk size an individual query is allowed to use for creating temporary spill files at each segment.
+       * The default value is 0, which means a limit is not enforced.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_per_query
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_per_query = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getGpWorkfileLimitPerQueryFieldBuilder() {
+        if (gpWorkfileLimitPerQueryBuilder_ == null) {
+          gpWorkfileLimitPerQueryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getGpWorkfileLimitPerQuery(),
+                  getParentForChildren(),
+                  isClean());
+          gpWorkfileLimitPerQuery_ = null;
+        }
+        return gpWorkfileLimitPerQueryBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value gpWorkfileLimitFilesPerQuery_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> gpWorkfileLimitFilesPerQueryBuilder_;
+      /**
+       * <pre>
+       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+       * Spill files are created when executing a query that requires more memory than it is allocated.
+       * The current query is terminated when the limit is exceeded.
+       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * Default value is 10000
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+       * @return Whether the gpWorkfileLimitFilesPerQuery field is set.
+       */
+      public boolean hasGpWorkfileLimitFilesPerQuery() {
+        return gpWorkfileLimitFilesPerQueryBuilder_ != null || gpWorkfileLimitFilesPerQuery_ != null;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+       * Spill files are created when executing a query that requires more memory than it is allocated.
+       * The current query is terminated when the limit is exceeded.
+       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * Default value is 10000
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+       * @return The gpWorkfileLimitFilesPerQuery.
+       */
+      public com.google.protobuf.Int64Value getGpWorkfileLimitFilesPerQuery() {
+        if (gpWorkfileLimitFilesPerQueryBuilder_ == null) {
+          return gpWorkfileLimitFilesPerQuery_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitFilesPerQuery_;
+        } else {
+          return gpWorkfileLimitFilesPerQueryBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+       * Spill files are created when executing a query that requires more memory than it is allocated.
+       * The current query is terminated when the limit is exceeded.
+       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * Default value is 10000
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+       */
+      public Builder setGpWorkfileLimitFilesPerQuery(com.google.protobuf.Int64Value value) {
+        if (gpWorkfileLimitFilesPerQueryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gpWorkfileLimitFilesPerQuery_ = value;
+          onChanged();
+        } else {
+          gpWorkfileLimitFilesPerQueryBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+       * Spill files are created when executing a query that requires more memory than it is allocated.
+       * The current query is terminated when the limit is exceeded.
+       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * Default value is 10000
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+       */
+      public Builder setGpWorkfileLimitFilesPerQuery(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (gpWorkfileLimitFilesPerQueryBuilder_ == null) {
+          gpWorkfileLimitFilesPerQuery_ = builderForValue.build();
+          onChanged();
+        } else {
+          gpWorkfileLimitFilesPerQueryBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+       * Spill files are created when executing a query that requires more memory than it is allocated.
+       * The current query is terminated when the limit is exceeded.
+       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * Default value is 10000
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+       */
+      public Builder mergeGpWorkfileLimitFilesPerQuery(com.google.protobuf.Int64Value value) {
+        if (gpWorkfileLimitFilesPerQueryBuilder_ == null) {
+          if (gpWorkfileLimitFilesPerQuery_ != null) {
+            gpWorkfileLimitFilesPerQuery_ =
+              com.google.protobuf.Int64Value.newBuilder(gpWorkfileLimitFilesPerQuery_).mergeFrom(value).buildPartial();
+          } else {
+            gpWorkfileLimitFilesPerQuery_ = value;
+          }
+          onChanged();
+        } else {
+          gpWorkfileLimitFilesPerQueryBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+       * Spill files are created when executing a query that requires more memory than it is allocated.
+       * The current query is terminated when the limit is exceeded.
+       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * Default value is 10000
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+       */
+      public Builder clearGpWorkfileLimitFilesPerQuery() {
+        if (gpWorkfileLimitFilesPerQueryBuilder_ == null) {
+          gpWorkfileLimitFilesPerQuery_ = null;
+          onChanged();
+        } else {
+          gpWorkfileLimitFilesPerQuery_ = null;
+          gpWorkfileLimitFilesPerQueryBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+       * Spill files are created when executing a query that requires more memory than it is allocated.
+       * The current query is terminated when the limit is exceeded.
+       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * Default value is 10000
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getGpWorkfileLimitFilesPerQueryBuilder() {
+        
+        onChanged();
+        return getGpWorkfileLimitFilesPerQueryFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+       * Spill files are created when executing a query that requires more memory than it is allocated.
+       * The current query is terminated when the limit is exceeded.
+       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * Default value is 10000
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getGpWorkfileLimitFilesPerQueryOrBuilder() {
+        if (gpWorkfileLimitFilesPerQueryBuilder_ != null) {
+          return gpWorkfileLimitFilesPerQueryBuilder_.getMessageOrBuilder();
+        } else {
+          return gpWorkfileLimitFilesPerQuery_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : gpWorkfileLimitFilesPerQuery_;
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of temporary spill files (also known as workfiles) allowed per query per segment.
+       * Spill files are created when executing a query that requires more memory than it is allocated.
+       * The current query is terminated when the limit is exceeded.
+       * Set the value to 0 (zero) to allow an unlimited number of spill files. master session reload
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_limit_files_per_query
+       * Default value is 10000
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value gp_workfile_limit_files_per_query = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getGpWorkfileLimitFilesPerQueryFieldBuilder() {
+        if (gpWorkfileLimitFilesPerQueryBuilder_ == null) {
+          gpWorkfileLimitFilesPerQueryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getGpWorkfileLimitFilesPerQuery(),
+                  getParentForChildren(),
+                  isClean());
+          gpWorkfileLimitFilesPerQuery_ = null;
+        }
+        return gpWorkfileLimitFilesPerQueryBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxPreparedTransactions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxPreparedTransactionsBuilder_;
+      /**
+       * <pre>
+       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+       * @return Whether the maxPreparedTransactions field is set.
+       */
+      public boolean hasMaxPreparedTransactions() {
+        return maxPreparedTransactionsBuilder_ != null || maxPreparedTransactions_ != null;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+       * @return The maxPreparedTransactions.
+       */
+      public com.google.protobuf.Int64Value getMaxPreparedTransactions() {
+        if (maxPreparedTransactionsBuilder_ == null) {
+          return maxPreparedTransactions_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxPreparedTransactions_;
+        } else {
+          return maxPreparedTransactionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+       */
+      public Builder setMaxPreparedTransactions(com.google.protobuf.Int64Value value) {
+        if (maxPreparedTransactionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxPreparedTransactions_ = value;
+          onChanged();
+        } else {
+          maxPreparedTransactionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+       */
+      public Builder setMaxPreparedTransactions(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxPreparedTransactionsBuilder_ == null) {
+          maxPreparedTransactions_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxPreparedTransactionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+       */
+      public Builder mergeMaxPreparedTransactions(com.google.protobuf.Int64Value value) {
+        if (maxPreparedTransactionsBuilder_ == null) {
+          if (maxPreparedTransactions_ != null) {
+            maxPreparedTransactions_ =
+              com.google.protobuf.Int64Value.newBuilder(maxPreparedTransactions_).mergeFrom(value).buildPartial();
+          } else {
+            maxPreparedTransactions_ = value;
+          }
+          onChanged();
+        } else {
+          maxPreparedTransactionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+       */
+      public Builder clearMaxPreparedTransactions() {
+        if (maxPreparedTransactionsBuilder_ == null) {
+          maxPreparedTransactions_ = null;
+          onChanged();
+        } else {
+          maxPreparedTransactions_ = null;
+          maxPreparedTransactionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxPreparedTransactionsBuilder() {
+        
+        onChanged();
+        return getMaxPreparedTransactionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxPreparedTransactionsOrBuilder() {
+        if (maxPreparedTransactionsBuilder_ != null) {
+          return maxPreparedTransactionsBuilder_.getMessageOrBuilder();
+        } else {
+          return maxPreparedTransactions_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxPreparedTransactions_;
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum number of transactions that can be in the "prepared" state simultaneously
+       * https://www.postgresql.org/docs/9.6/runtime-config-resource.html
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_prepared_transactions = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxPreparedTransactionsFieldBuilder() {
+        if (maxPreparedTransactionsBuilder_ == null) {
+          maxPreparedTransactionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxPreparedTransactions(),
+                  getParentForChildren(),
+                  isClean());
+          maxPreparedTransactions_ = null;
+        }
+        return maxPreparedTransactionsBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue gpWorkfileCompression_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> gpWorkfileCompressionBuilder_;
+      /**
+       * <pre>
+       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+       * @return Whether the gpWorkfileCompression field is set.
+       */
+      public boolean hasGpWorkfileCompression() {
+        return gpWorkfileCompressionBuilder_ != null || gpWorkfileCompression_ != null;
+      }
+      /**
+       * <pre>
+       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+       * @return The gpWorkfileCompression.
+       */
+      public com.google.protobuf.BoolValue getGpWorkfileCompression() {
+        if (gpWorkfileCompressionBuilder_ == null) {
+          return gpWorkfileCompression_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : gpWorkfileCompression_;
+        } else {
+          return gpWorkfileCompressionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+       */
+      public Builder setGpWorkfileCompression(com.google.protobuf.BoolValue value) {
+        if (gpWorkfileCompressionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gpWorkfileCompression_ = value;
+          onChanged();
+        } else {
+          gpWorkfileCompressionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+       */
+      public Builder setGpWorkfileCompression(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (gpWorkfileCompressionBuilder_ == null) {
+          gpWorkfileCompression_ = builderForValue.build();
+          onChanged();
+        } else {
+          gpWorkfileCompressionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+       */
+      public Builder mergeGpWorkfileCompression(com.google.protobuf.BoolValue value) {
+        if (gpWorkfileCompressionBuilder_ == null) {
+          if (gpWorkfileCompression_ != null) {
+            gpWorkfileCompression_ =
+              com.google.protobuf.BoolValue.newBuilder(gpWorkfileCompression_).mergeFrom(value).buildPartial();
+          } else {
+            gpWorkfileCompression_ = value;
+          }
+          onChanged();
+        } else {
+          gpWorkfileCompressionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+       */
+      public Builder clearGpWorkfileCompression() {
+        if (gpWorkfileCompressionBuilder_ == null) {
+          gpWorkfileCompression_ = null;
+          onChanged();
+        } else {
+          gpWorkfileCompression_ = null;
+          gpWorkfileCompressionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getGpWorkfileCompressionBuilder() {
+        
+        onChanged();
+        return getGpWorkfileCompressionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getGpWorkfileCompressionOrBuilder() {
+        if (gpWorkfileCompressionBuilder_ != null) {
+          return gpWorkfileCompressionBuilder_.getMessageOrBuilder();
+        } else {
+          return gpWorkfileCompression_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : gpWorkfileCompression_;
+        }
+      }
+      /**
+       * <pre>
+       * Specifies whether the temporary files created, when a hash aggregation or hash join operation spills to disk, are compressed.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#gp_workfile_compression
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_workfile_compression = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getGpWorkfileCompressionFieldBuilder() {
+        if (gpWorkfileCompressionBuilder_ == null) {
+          gpWorkfileCompressionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getGpWorkfileCompression(),
+                  getParentForChildren(),
+                  isClean());
+          gpWorkfileCompression_ = null;
+        }
+        return gpWorkfileCompressionBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxStatementMem_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxStatementMemBuilder_;
+      /**
+       * <pre>
+       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+       * (seghost_physical_memory) / (average_number_concurrent_queries)
+       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+       * Default value is 2097152000 (2000MB)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+       * @return Whether the maxStatementMem field is set.
+       */
+      public boolean hasMaxStatementMem() {
+        return maxStatementMemBuilder_ != null || maxStatementMem_ != null;
+      }
+      /**
+       * <pre>
+       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+       * (seghost_physical_memory) / (average_number_concurrent_queries)
+       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+       * Default value is 2097152000 (2000MB)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+       * @return The maxStatementMem.
+       */
+      public com.google.protobuf.Int64Value getMaxStatementMem() {
+        if (maxStatementMemBuilder_ == null) {
+          return maxStatementMem_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxStatementMem_;
+        } else {
+          return maxStatementMemBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+       * (seghost_physical_memory) / (average_number_concurrent_queries)
+       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+       * Default value is 2097152000 (2000MB)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+       */
+      public Builder setMaxStatementMem(com.google.protobuf.Int64Value value) {
+        if (maxStatementMemBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxStatementMem_ = value;
+          onChanged();
+        } else {
+          maxStatementMemBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+       * (seghost_physical_memory) / (average_number_concurrent_queries)
+       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+       * Default value is 2097152000 (2000MB)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+       */
+      public Builder setMaxStatementMem(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxStatementMemBuilder_ == null) {
+          maxStatementMem_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxStatementMemBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+       * (seghost_physical_memory) / (average_number_concurrent_queries)
+       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+       * Default value is 2097152000 (2000MB)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+       */
+      public Builder mergeMaxStatementMem(com.google.protobuf.Int64Value value) {
+        if (maxStatementMemBuilder_ == null) {
+          if (maxStatementMem_ != null) {
+            maxStatementMem_ =
+              com.google.protobuf.Int64Value.newBuilder(maxStatementMem_).mergeFrom(value).buildPartial();
+          } else {
+            maxStatementMem_ = value;
+          }
+          onChanged();
+        } else {
+          maxStatementMemBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+       * (seghost_physical_memory) / (average_number_concurrent_queries)
+       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+       * Default value is 2097152000 (2000MB)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+       */
+      public Builder clearMaxStatementMem() {
+        if (maxStatementMemBuilder_ == null) {
+          maxStatementMem_ = null;
+          onChanged();
+        } else {
+          maxStatementMem_ = null;
+          maxStatementMemBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+       * (seghost_physical_memory) / (average_number_concurrent_queries)
+       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+       * Default value is 2097152000 (2000MB)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxStatementMemBuilder() {
+        
+        onChanged();
+        return getMaxStatementMemFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+       * (seghost_physical_memory) / (average_number_concurrent_queries)
+       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+       * Default value is 2097152000 (2000MB)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxStatementMemOrBuilder() {
+        if (maxStatementMemBuilder_ != null) {
+          return maxStatementMemBuilder_.getMessageOrBuilder();
+        } else {
+          return maxStatementMem_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxStatementMem_;
+        }
+      }
+      /**
+       * <pre>
+       * Sets the maximum memory limit for a query. Helps avoid out-of-memory errors on a segment host during query processing as a result of setting statement_mem too high.
+       * Taking into account the configuration of a single segment host, calculate max_statement_mem as follows:
+       * (seghost_physical_memory) / (average_number_concurrent_queries)
+       * When changing both max_statement_mem and statement_mem, max_statement_mem must be changed first, or listed first in the postgresql.conf file.
+       * https://greenplum.docs.pivotal.io/6-19/ref_guide/config_params/guc-list.html#max_statement_mem
+       * Default value is 2097152000 (2000MB)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_statement_mem = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxStatementMemFieldBuilder() {
+        if (maxStatementMemBuilder_ == null) {
+          maxStatementMemBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxStatementMem(),
+                  getParentForChildren(),
+                  isClean());
+          maxStatementMem_ = null;
+        }
+        return maxStatementMemBuilder_;
+      }
+
+      private int logStatement_ = 0;
+      /**
+       * <pre>
+       * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+       * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+       * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * Default value is ddl
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+       * @return The enum numeric value on the wire for logStatement.
+       */
+      @java.lang.Override public int getLogStatementValue() {
+        return logStatement_;
+      }
+      /**
+       * <pre>
+       * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+       * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+       * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * Default value is ddl
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+       * @param value The enum numeric value on the wire for logStatement to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLogStatementValue(int value) {
+        
+        logStatement_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+       * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+       * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * Default value is ddl
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+       * @return The logStatement.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement getLogStatement() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement result = yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement.valueOf(logStatement_);
+        return result == null ? yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+       * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+       * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * Default value is ddl
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+       * @param value The logStatement to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLogStatement(yandex.cloud.api.mdb.greenplum.v1.Config.LogStatement value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        logStatement_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Controls which SQL statements are logged. DDL logs all data definition commands like CREATE, ALTER, and DROP commands.
+       * MOD logs all DDL statements, plus INSERT, UPDATE, DELETE, TRUNCATE, and COPY FROM.
+       * PREPARE and EXPLAIN ANALYZE statements are also logged if their contained command is of an appropriate type.
+       * https://docs.greenplum.org/6-5/ref_guide/config_params/guc-list.html#log_statement
+       * Default value is ddl
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.LogStatement log_statement = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLogStatement() {
+        
+        logStatement_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.BoolValue gpAddColumnInheritsTableSetting_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> gpAddColumnInheritsTableSettingBuilder_;
+      /**
+       * <pre>
+       * https://docs.vmware.com/en/VMware-Tanzu-Greenplum/6/greenplum-database/GUID-ref_guide-config_params-guc-list.html#gp_add_column_inherits_table_setting
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_add_column_inherits_table_setting = 10;</code>
+       * @return Whether the gpAddColumnInheritsTableSetting field is set.
+       */
+      public boolean hasGpAddColumnInheritsTableSetting() {
+        return gpAddColumnInheritsTableSettingBuilder_ != null || gpAddColumnInheritsTableSetting_ != null;
+      }
+      /**
+       * <pre>
+       * https://docs.vmware.com/en/VMware-Tanzu-Greenplum/6/greenplum-database/GUID-ref_guide-config_params-guc-list.html#gp_add_column_inherits_table_setting
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_add_column_inherits_table_setting = 10;</code>
+       * @return The gpAddColumnInheritsTableSetting.
+       */
+      public com.google.protobuf.BoolValue getGpAddColumnInheritsTableSetting() {
+        if (gpAddColumnInheritsTableSettingBuilder_ == null) {
+          return gpAddColumnInheritsTableSetting_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : gpAddColumnInheritsTableSetting_;
+        } else {
+          return gpAddColumnInheritsTableSettingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * https://docs.vmware.com/en/VMware-Tanzu-Greenplum/6/greenplum-database/GUID-ref_guide-config_params-guc-list.html#gp_add_column_inherits_table_setting
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_add_column_inherits_table_setting = 10;</code>
+       */
+      public Builder setGpAddColumnInheritsTableSetting(com.google.protobuf.BoolValue value) {
+        if (gpAddColumnInheritsTableSettingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          gpAddColumnInheritsTableSetting_ = value;
+          onChanged();
+        } else {
+          gpAddColumnInheritsTableSettingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * https://docs.vmware.com/en/VMware-Tanzu-Greenplum/6/greenplum-database/GUID-ref_guide-config_params-guc-list.html#gp_add_column_inherits_table_setting
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_add_column_inherits_table_setting = 10;</code>
+       */
+      public Builder setGpAddColumnInheritsTableSetting(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (gpAddColumnInheritsTableSettingBuilder_ == null) {
+          gpAddColumnInheritsTableSetting_ = builderForValue.build();
+          onChanged();
+        } else {
+          gpAddColumnInheritsTableSettingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * https://docs.vmware.com/en/VMware-Tanzu-Greenplum/6/greenplum-database/GUID-ref_guide-config_params-guc-list.html#gp_add_column_inherits_table_setting
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_add_column_inherits_table_setting = 10;</code>
+       */
+      public Builder mergeGpAddColumnInheritsTableSetting(com.google.protobuf.BoolValue value) {
+        if (gpAddColumnInheritsTableSettingBuilder_ == null) {
+          if (gpAddColumnInheritsTableSetting_ != null) {
+            gpAddColumnInheritsTableSetting_ =
+              com.google.protobuf.BoolValue.newBuilder(gpAddColumnInheritsTableSetting_).mergeFrom(value).buildPartial();
+          } else {
+            gpAddColumnInheritsTableSetting_ = value;
+          }
+          onChanged();
+        } else {
+          gpAddColumnInheritsTableSettingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * https://docs.vmware.com/en/VMware-Tanzu-Greenplum/6/greenplum-database/GUID-ref_guide-config_params-guc-list.html#gp_add_column_inherits_table_setting
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_add_column_inherits_table_setting = 10;</code>
+       */
+      public Builder clearGpAddColumnInheritsTableSetting() {
+        if (gpAddColumnInheritsTableSettingBuilder_ == null) {
+          gpAddColumnInheritsTableSetting_ = null;
+          onChanged();
+        } else {
+          gpAddColumnInheritsTableSetting_ = null;
+          gpAddColumnInheritsTableSettingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * https://docs.vmware.com/en/VMware-Tanzu-Greenplum/6/greenplum-database/GUID-ref_guide-config_params-guc-list.html#gp_add_column_inherits_table_setting
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_add_column_inherits_table_setting = 10;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getGpAddColumnInheritsTableSettingBuilder() {
+        
+        onChanged();
+        return getGpAddColumnInheritsTableSettingFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * https://docs.vmware.com/en/VMware-Tanzu-Greenplum/6/greenplum-database/GUID-ref_guide-config_params-guc-list.html#gp_add_column_inherits_table_setting
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_add_column_inherits_table_setting = 10;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getGpAddColumnInheritsTableSettingOrBuilder() {
+        if (gpAddColumnInheritsTableSettingBuilder_ != null) {
+          return gpAddColumnInheritsTableSettingBuilder_.getMessageOrBuilder();
+        } else {
+          return gpAddColumnInheritsTableSetting_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : gpAddColumnInheritsTableSetting_;
+        }
+      }
+      /**
+       * <pre>
+       * https://docs.vmware.com/en/VMware-Tanzu-Greenplum/6/greenplum-database/GUID-ref_guide-config_params-guc-list.html#gp_add_column_inherits_table_setting
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue gp_add_column_inherits_table_setting = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getGpAddColumnInheritsTableSettingFieldBuilder() {
+        if (gpAddColumnInheritsTableSettingBuilder_ == null) {
+          gpAddColumnInheritsTableSettingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getGpAddColumnInheritsTableSetting(),
+                  getParentForChildren(),
+                  isClean());
+          gpAddColumnInheritsTableSetting_ = null;
+        }
+        return gpAddColumnInheritsTableSettingBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.GreenplumConfig6)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.GreenplumConfig6)
+    private static final yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GreenplumConfig6>
+        PARSER = new com.google.protobuf.AbstractParser<GreenplumConfig6>() {
+      @java.lang.Override
+      public GreenplumConfig6 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GreenplumConfig6(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GreenplumConfig6> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GreenplumConfig6> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface GreenplumConfig6_17OrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.GreenplumConfig6_17)
       com.google.protobuf.MessageOrBuilder {
@@ -23711,6 +26930,1228 @@ public final class Config {
 
   }
 
+  public interface GreenplumConfigSet6OrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Effective settings for a Greenplum (a combination of settings defined
+     * in [user_config] and [default_config]).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the effectiveConfig field is set.
+     */
+    boolean hasEffectiveConfig();
+    /**
+     * <pre>
+     * Effective settings for a Greenplum (a combination of settings defined
+     * in [user_config] and [default_config]).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The effectiveConfig.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 getEffectiveConfig();
+    /**
+     * <pre>
+     * Effective settings for a Greenplum (a combination of settings defined
+     * in [user_config] and [default_config]).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6OrBuilder getEffectiveConfigOrBuilder();
+
+    /**
+     * <pre>
+     * User-defined settings for a Greenplum.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 user_config = 2;</code>
+     * @return Whether the userConfig field is set.
+     */
+    boolean hasUserConfig();
+    /**
+     * <pre>
+     * User-defined settings for a Greenplum.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 user_config = 2;</code>
+     * @return The userConfig.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 getUserConfig();
+    /**
+     * <pre>
+     * User-defined settings for a Greenplum.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 user_config = 2;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6OrBuilder getUserConfigOrBuilder();
+
+    /**
+     * <pre>
+     * Default configuration for a Greenplum.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
+     */
+    boolean hasDefaultConfig();
+    /**
+     * <pre>
+     * Default configuration for a Greenplum.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 default_config = 3;</code>
+     * @return The defaultConfig.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 getDefaultConfig();
+    /**
+     * <pre>
+     * Default configuration for a Greenplum.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 default_config = 3;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6OrBuilder getDefaultConfigOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6}
+   */
+  public static final class GreenplumConfigSet6 extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6)
+      GreenplumConfigSet6OrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GreenplumConfigSet6.newBuilder() to construct.
+    private GreenplumConfigSet6(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GreenplumConfigSet6() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GreenplumConfigSet6();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GreenplumConfigSet6(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.Builder subBuilder = null;
+              if (effectiveConfig_ != null) {
+                subBuilder = effectiveConfig_.toBuilder();
+              }
+              effectiveConfig_ = input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(effectiveConfig_);
+                effectiveConfig_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.Builder subBuilder = null;
+              if (userConfig_ != null) {
+                subBuilder = userConfig_.toBuilder();
+              }
+              userConfig_ = input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(userConfig_);
+                userConfig_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.Builder subBuilder = null;
+              if (defaultConfig_ != null) {
+                subBuilder = defaultConfig_.toBuilder();
+              }
+              defaultConfig_ = input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(defaultConfig_);
+                defaultConfig_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6.class, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6.Builder.class);
+    }
+
+    public static final int EFFECTIVE_CONFIG_FIELD_NUMBER = 1;
+    private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 effectiveConfig_;
+    /**
+     * <pre>
+     * Effective settings for a Greenplum (a combination of settings defined
+     * in [user_config] and [default_config]).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the effectiveConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasEffectiveConfig() {
+      return effectiveConfig_ != null;
+    }
+    /**
+     * <pre>
+     * Effective settings for a Greenplum (a combination of settings defined
+     * in [user_config] and [default_config]).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The effectiveConfig.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 getEffectiveConfig() {
+      return effectiveConfig_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.getDefaultInstance() : effectiveConfig_;
+    }
+    /**
+     * <pre>
+     * Effective settings for a Greenplum (a combination of settings defined
+     * in [user_config] and [default_config]).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6OrBuilder getEffectiveConfigOrBuilder() {
+      return getEffectiveConfig();
+    }
+
+    public static final int USER_CONFIG_FIELD_NUMBER = 2;
+    private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 userConfig_;
+    /**
+     * <pre>
+     * User-defined settings for a Greenplum.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 user_config = 2;</code>
+     * @return Whether the userConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasUserConfig() {
+      return userConfig_ != null;
+    }
+    /**
+     * <pre>
+     * User-defined settings for a Greenplum.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 user_config = 2;</code>
+     * @return The userConfig.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 getUserConfig() {
+      return userConfig_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.getDefaultInstance() : userConfig_;
+    }
+    /**
+     * <pre>
+     * User-defined settings for a Greenplum.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 user_config = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6OrBuilder getUserConfigOrBuilder() {
+      return getUserConfig();
+    }
+
+    public static final int DEFAULT_CONFIG_FIELD_NUMBER = 3;
+    private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 defaultConfig_;
+    /**
+     * <pre>
+     * Default configuration for a Greenplum.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 default_config = 3;</code>
+     * @return Whether the defaultConfig field is set.
+     */
+    @java.lang.Override
+    public boolean hasDefaultConfig() {
+      return defaultConfig_ != null;
+    }
+    /**
+     * <pre>
+     * Default configuration for a Greenplum.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 default_config = 3;</code>
+     * @return The defaultConfig.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 getDefaultConfig() {
+      return defaultConfig_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.getDefaultInstance() : defaultConfig_;
+    }
+    /**
+     * <pre>
+     * Default configuration for a Greenplum.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 default_config = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6OrBuilder getDefaultConfigOrBuilder() {
+      return getDefaultConfig();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (effectiveConfig_ != null) {
+        output.writeMessage(1, getEffectiveConfig());
+      }
+      if (userConfig_ != null) {
+        output.writeMessage(2, getUserConfig());
+      }
+      if (defaultConfig_ != null) {
+        output.writeMessage(3, getDefaultConfig());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (effectiveConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getEffectiveConfig());
+      }
+      if (userConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getUserConfig());
+      }
+      if (defaultConfig_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDefaultConfig());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 other = (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6) obj;
+
+      if (hasEffectiveConfig() != other.hasEffectiveConfig()) return false;
+      if (hasEffectiveConfig()) {
+        if (!getEffectiveConfig()
+            .equals(other.getEffectiveConfig())) return false;
+      }
+      if (hasUserConfig() != other.hasUserConfig()) return false;
+      if (hasUserConfig()) {
+        if (!getUserConfig()
+            .equals(other.getUserConfig())) return false;
+      }
+      if (hasDefaultConfig() != other.hasDefaultConfig()) return false;
+      if (hasDefaultConfig()) {
+        if (!getDefaultConfig()
+            .equals(other.getDefaultConfig())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasEffectiveConfig()) {
+        hash = (37 * hash) + EFFECTIVE_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getEffectiveConfig().hashCode();
+      }
+      if (hasUserConfig()) {
+        hash = (37 * hash) + USER_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getUserConfig().hashCode();
+      }
+      if (hasDefaultConfig()) {
+        hash = (37 * hash) + DEFAULT_CONFIG_FIELD_NUMBER;
+        hash = (53 * hash) + getDefaultConfig().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6)
+        yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6.class, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (effectiveConfigBuilder_ == null) {
+          effectiveConfig_ = null;
+        } else {
+          effectiveConfig_ = null;
+          effectiveConfigBuilder_ = null;
+        }
+        if (userConfigBuilder_ == null) {
+          userConfig_ = null;
+        } else {
+          userConfig_ = null;
+          userConfigBuilder_ = null;
+        }
+        if (defaultConfigBuilder_ == null) {
+          defaultConfig_ = null;
+        } else {
+          defaultConfig_ = null;
+          defaultConfigBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 build() {
+        yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 result = new yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6(this);
+        if (effectiveConfigBuilder_ == null) {
+          result.effectiveConfig_ = effectiveConfig_;
+        } else {
+          result.effectiveConfig_ = effectiveConfigBuilder_.build();
+        }
+        if (userConfigBuilder_ == null) {
+          result.userConfig_ = userConfig_;
+        } else {
+          result.userConfig_ = userConfigBuilder_.build();
+        }
+        if (defaultConfigBuilder_ == null) {
+          result.defaultConfig_ = defaultConfig_;
+        } else {
+          result.defaultConfig_ = defaultConfigBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6.getDefaultInstance()) return this;
+        if (other.hasEffectiveConfig()) {
+          mergeEffectiveConfig(other.getEffectiveConfig());
+        }
+        if (other.hasUserConfig()) {
+          mergeUserConfig(other.getUserConfig());
+        }
+        if (other.hasDefaultConfig()) {
+          mergeDefaultConfig(other.getDefaultConfig());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 effectiveConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6OrBuilder> effectiveConfigBuilder_;
+      /**
+       * <pre>
+       * Effective settings for a Greenplum (a combination of settings defined
+       * in [user_config] and [default_config]).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the effectiveConfig field is set.
+       */
+      public boolean hasEffectiveConfig() {
+        return effectiveConfigBuilder_ != null || effectiveConfig_ != null;
+      }
+      /**
+       * <pre>
+       * Effective settings for a Greenplum (a combination of settings defined
+       * in [user_config] and [default_config]).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The effectiveConfig.
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 getEffectiveConfig() {
+        if (effectiveConfigBuilder_ == null) {
+          return effectiveConfig_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.getDefaultInstance() : effectiveConfig_;
+        } else {
+          return effectiveConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Effective settings for a Greenplum (a combination of settings defined
+       * in [user_config] and [default_config]).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setEffectiveConfig(yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 value) {
+        if (effectiveConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          effectiveConfig_ = value;
+          onChanged();
+        } else {
+          effectiveConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Effective settings for a Greenplum (a combination of settings defined
+       * in [user_config] and [default_config]).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setEffectiveConfig(
+          yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.Builder builderForValue) {
+        if (effectiveConfigBuilder_ == null) {
+          effectiveConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          effectiveConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Effective settings for a Greenplum (a combination of settings defined
+       * in [user_config] and [default_config]).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder mergeEffectiveConfig(yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 value) {
+        if (effectiveConfigBuilder_ == null) {
+          if (effectiveConfig_ != null) {
+            effectiveConfig_ =
+              yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.newBuilder(effectiveConfig_).mergeFrom(value).buildPartial();
+          } else {
+            effectiveConfig_ = value;
+          }
+          onChanged();
+        } else {
+          effectiveConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Effective settings for a Greenplum (a combination of settings defined
+       * in [user_config] and [default_config]).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearEffectiveConfig() {
+        if (effectiveConfigBuilder_ == null) {
+          effectiveConfig_ = null;
+          onChanged();
+        } else {
+          effectiveConfig_ = null;
+          effectiveConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Effective settings for a Greenplum (a combination of settings defined
+       * in [user_config] and [default_config]).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.Builder getEffectiveConfigBuilder() {
+        
+        onChanged();
+        return getEffectiveConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Effective settings for a Greenplum (a combination of settings defined
+       * in [user_config] and [default_config]).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6OrBuilder getEffectiveConfigOrBuilder() {
+        if (effectiveConfigBuilder_ != null) {
+          return effectiveConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return effectiveConfig_ == null ?
+              yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.getDefaultInstance() : effectiveConfig_;
+        }
+      }
+      /**
+       * <pre>
+       * Effective settings for a Greenplum (a combination of settings defined
+       * in [user_config] and [default_config]).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 effective_config = 1 [(.yandex.cloud.required) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6OrBuilder> 
+          getEffectiveConfigFieldBuilder() {
+        if (effectiveConfigBuilder_ == null) {
+          effectiveConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6OrBuilder>(
+                  getEffectiveConfig(),
+                  getParentForChildren(),
+                  isClean());
+          effectiveConfig_ = null;
+        }
+        return effectiveConfigBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 userConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6OrBuilder> userConfigBuilder_;
+      /**
+       * <pre>
+       * User-defined settings for a Greenplum.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 user_config = 2;</code>
+       * @return Whether the userConfig field is set.
+       */
+      public boolean hasUserConfig() {
+        return userConfigBuilder_ != null || userConfig_ != null;
+      }
+      /**
+       * <pre>
+       * User-defined settings for a Greenplum.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 user_config = 2;</code>
+       * @return The userConfig.
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 getUserConfig() {
+        if (userConfigBuilder_ == null) {
+          return userConfig_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.getDefaultInstance() : userConfig_;
+        } else {
+          return userConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * User-defined settings for a Greenplum.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 user_config = 2;</code>
+       */
+      public Builder setUserConfig(yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 value) {
+        if (userConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          userConfig_ = value;
+          onChanged();
+        } else {
+          userConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * User-defined settings for a Greenplum.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 user_config = 2;</code>
+       */
+      public Builder setUserConfig(
+          yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.Builder builderForValue) {
+        if (userConfigBuilder_ == null) {
+          userConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          userConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * User-defined settings for a Greenplum.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 user_config = 2;</code>
+       */
+      public Builder mergeUserConfig(yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 value) {
+        if (userConfigBuilder_ == null) {
+          if (userConfig_ != null) {
+            userConfig_ =
+              yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.newBuilder(userConfig_).mergeFrom(value).buildPartial();
+          } else {
+            userConfig_ = value;
+          }
+          onChanged();
+        } else {
+          userConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * User-defined settings for a Greenplum.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 user_config = 2;</code>
+       */
+      public Builder clearUserConfig() {
+        if (userConfigBuilder_ == null) {
+          userConfig_ = null;
+          onChanged();
+        } else {
+          userConfig_ = null;
+          userConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * User-defined settings for a Greenplum.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 user_config = 2;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.Builder getUserConfigBuilder() {
+        
+        onChanged();
+        return getUserConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * User-defined settings for a Greenplum.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 user_config = 2;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6OrBuilder getUserConfigOrBuilder() {
+        if (userConfigBuilder_ != null) {
+          return userConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return userConfig_ == null ?
+              yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.getDefaultInstance() : userConfig_;
+        }
+      }
+      /**
+       * <pre>
+       * User-defined settings for a Greenplum.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 user_config = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6OrBuilder> 
+          getUserConfigFieldBuilder() {
+        if (userConfigBuilder_ == null) {
+          userConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6OrBuilder>(
+                  getUserConfig(),
+                  getParentForChildren(),
+                  isClean());
+          userConfig_ = null;
+        }
+        return userConfigBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 defaultConfig_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6OrBuilder> defaultConfigBuilder_;
+      /**
+       * <pre>
+       * Default configuration for a Greenplum.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 default_config = 3;</code>
+       * @return Whether the defaultConfig field is set.
+       */
+      public boolean hasDefaultConfig() {
+        return defaultConfigBuilder_ != null || defaultConfig_ != null;
+      }
+      /**
+       * <pre>
+       * Default configuration for a Greenplum.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 default_config = 3;</code>
+       * @return The defaultConfig.
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 getDefaultConfig() {
+        if (defaultConfigBuilder_ == null) {
+          return defaultConfig_ == null ? yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.getDefaultInstance() : defaultConfig_;
+        } else {
+          return defaultConfigBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Default configuration for a Greenplum.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 default_config = 3;</code>
+       */
+      public Builder setDefaultConfig(yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 value) {
+        if (defaultConfigBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          defaultConfig_ = value;
+          onChanged();
+        } else {
+          defaultConfigBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default configuration for a Greenplum.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 default_config = 3;</code>
+       */
+      public Builder setDefaultConfig(
+          yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.Builder builderForValue) {
+        if (defaultConfigBuilder_ == null) {
+          defaultConfig_ = builderForValue.build();
+          onChanged();
+        } else {
+          defaultConfigBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default configuration for a Greenplum.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 default_config = 3;</code>
+       */
+      public Builder mergeDefaultConfig(yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6 value) {
+        if (defaultConfigBuilder_ == null) {
+          if (defaultConfig_ != null) {
+            defaultConfig_ =
+              yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.newBuilder(defaultConfig_).mergeFrom(value).buildPartial();
+          } else {
+            defaultConfig_ = value;
+          }
+          onChanged();
+        } else {
+          defaultConfigBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default configuration for a Greenplum.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 default_config = 3;</code>
+       */
+      public Builder clearDefaultConfig() {
+        if (defaultConfigBuilder_ == null) {
+          defaultConfig_ = null;
+          onChanged();
+        } else {
+          defaultConfig_ = null;
+          defaultConfigBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default configuration for a Greenplum.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 default_config = 3;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.Builder getDefaultConfigBuilder() {
+        
+        onChanged();
+        return getDefaultConfigFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Default configuration for a Greenplum.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 default_config = 3;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6OrBuilder getDefaultConfigOrBuilder() {
+        if (defaultConfigBuilder_ != null) {
+          return defaultConfigBuilder_.getMessageOrBuilder();
+        } else {
+          return defaultConfig_ == null ?
+              yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.getDefaultInstance() : defaultConfig_;
+        }
+      }
+      /**
+       * <pre>
+       * Default configuration for a Greenplum.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.GreenplumConfig6 default_config = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6OrBuilder> 
+          getDefaultConfigFieldBuilder() {
+        if (defaultConfigBuilder_ == null) {
+          defaultConfigBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6.Builder, yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfig6OrBuilder>(
+                  getDefaultConfig(),
+                  getParentForChildren(),
+                  isClean());
+          defaultConfig_ = null;
+        }
+        return defaultConfigBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.GreenplumConfigSet6)
+    private static final yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GreenplumConfigSet6>
+        PARSER = new com.google.protobuf.AbstractParser<GreenplumConfigSet6>() {
+      @java.lang.Override
+      public GreenplumConfigSet6 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GreenplumConfigSet6(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GreenplumConfigSet6> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GreenplumConfigSet6> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Config.GreenplumConfigSet6 getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ConnectionPoolerConfigSetOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.ConnectionPoolerConfigSet)
       com.google.protobuf.MessageOrBuilder {
@@ -24959,6 +29400,11 @@ public final class Config {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_greenplum_v1_SegmentSubclusterConfig_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_17_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -24998,6 +29444,11 @@ public final class Config {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_22_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_greenplum_v1_ConnectionPoolerConfigSet_descriptor;
   private static final 
@@ -25043,105 +29494,127 @@ public final class Config {
       "yandex.cloud.mdb.greenplum.v1.Resources\"" +
       "V\n\027SegmentSubclusterConfig\022;\n\tresources\030" +
       "\001 \001(\0132(.yandex.cloud.mdb.greenplum.v1.Re" +
-      "sources\"\323\003\n\023GreenplumConfig6_17\0224\n\017max_c" +
-      "onnections\030\001 \001(\0132\033.google.protobuf.Int64" +
-      "Value\022;\n\026max_slot_wal_keep_size\030\002 \001(\0132\033." +
-      "google.protobuf.Int64Value\022B\n\035gp_workfil" +
-      "e_limit_per_segment\030\003 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022@\n\033gp_workfile_limit_per_" +
-      "query\030\004 \001(\0132\033.google.protobuf.Int64Value" +
-      "\022F\n!gp_workfile_limit_files_per_query\030\005 " +
-      "\001(\0132\033.google.protobuf.Int64Value\022>\n\031max_" +
-      "prepared_transactions\030\006 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\022;\n\027gp_workfile_compress" +
-      "ion\030\007 \001(\0132\032.google.protobuf.BoolValue\"\317\004" +
-      "\n\023GreenplumConfig6_19\0224\n\017max_connections" +
-      "\030\001 \001(\0132\033.google.protobuf.Int64Value\022;\n\026m" +
-      "ax_slot_wal_keep_size\030\002 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\022B\n\035gp_workfile_limit_pe" +
-      "r_segment\030\003 \001(\0132\033.google.protobuf.Int64V" +
-      "alue\022@\n\033gp_workfile_limit_per_query\030\004 \001(" +
-      "\0132\033.google.protobuf.Int64Value\022F\n!gp_wor" +
-      "kfile_limit_files_per_query\030\005 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022>\n\031max_prepared_t" +
-      "ransactions\030\006 \001(\0132\033.google.protobuf.Int6" +
-      "4Value\022;\n\027gp_workfile_compression\030\007 \001(\0132" +
-      "\032.google.protobuf.BoolValue\0226\n\021max_state" +
-      "ment_mem\030\010 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\022B\n\rlog_statement\030\t \001(\0162+.yandex.clou" +
-      "d.mdb.greenplum.v1.LogStatement\"\231\005\n\023Gree" +
-      "nplumConfig6_21\0224\n\017max_connections\030\001 \001(\013" +
-      "2\033.google.protobuf.Int64Value\022;\n\026max_slo" +
-      "t_wal_keep_size\030\002 \001(\0132\033.google.protobuf." +
-      "Int64Value\022B\n\035gp_workfile_limit_per_segm" +
-      "ent\030\003 \001(\0132\033.google.protobuf.Int64Value\022@" +
-      "\n\033gp_workfile_limit_per_query\030\004 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\022F\n!gp_workfile_" +
-      "limit_files_per_query\030\005 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\022>\n\031max_prepared_transac" +
-      "tions\030\006 \001(\0132\033.google.protobuf.Int64Value" +
-      "\022;\n\027gp_workfile_compression\030\007 \001(\0132\032.goog" +
-      "le.protobuf.BoolValue\0226\n\021max_statement_m" +
-      "em\030\010 \001(\0132\033.google.protobuf.Int64Value\022B\n" +
-      "\rlog_statement\030\t \001(\0162+.yandex.cloud.mdb." +
-      "greenplum.v1.LogStatement\022H\n$gp_add_colu" +
-      "mn_inherits_table_setting\030\n \001(\0132\032.google" +
-      ".protobuf.BoolValue\"\231\005\n\023GreenplumConfig6" +
-      "_22\0224\n\017max_connections\030\001 \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\022;\n\026max_slot_wal_keep_s" +
-      "ize\030\002 \001(\0132\033.google.protobuf.Int64Value\022B" +
-      "\n\035gp_workfile_limit_per_segment\030\003 \001(\0132\033." +
-      "google.protobuf.Int64Value\022@\n\033gp_workfil" +
-      "e_limit_per_query\030\004 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022F\n!gp_workfile_limit_files_" +
-      "per_query\030\005 \001(\0132\033.google.protobuf.Int64V" +
-      "alue\022>\n\031max_prepared_transactions\030\006 \001(\0132" +
-      "\033.google.protobuf.Int64Value\022;\n\027gp_workf" +
-      "ile_compression\030\007 \001(\0132\032.google.protobuf." +
-      "BoolValue\0226\n\021max_statement_mem\030\010 \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\022B\n\rlog_stateme" +
-      "nt\030\t \001(\0162+.yandex.cloud.mdb.greenplum.v1" +
-      ".LogStatement\022H\n$gp_add_column_inherits_" +
-      "table_setting\030\n \001(\0132\032.google.protobuf.Bo" +
-      "olValue\"\201\002\n\026GreenplumConfigSet6_17\022R\n\020ef" +
-      "fective_config\030\001 \001(\01322.yandex.cloud.mdb." +
-      "greenplum.v1.GreenplumConfig6_17B\004\350\3071\001\022G" +
-      "\n\013user_config\030\002 \001(\01322.yandex.cloud.mdb.g" +
-      "reenplum.v1.GreenplumConfig6_17\022J\n\016defau" +
-      "lt_config\030\003 \001(\01322.yandex.cloud.mdb.green" +
-      "plum.v1.GreenplumConfig6_17\"\201\002\n\026Greenplu" +
-      "mConfigSet6_19\022R\n\020effective_config\030\001 \001(\013" +
+      "sources\"\226\005\n\020GreenplumConfig6\0224\n\017max_conn" +
+      "ections\030\001 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022;\n\026max_slot_wal_keep_size\030\002 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\022B\n\035gp_workfile_l" +
+      "imit_per_segment\030\003 \001(\0132\033.google.protobuf" +
+      ".Int64Value\022@\n\033gp_workfile_limit_per_que" +
+      "ry\030\004 \001(\0132\033.google.protobuf.Int64Value\022F\n" +
+      "!gp_workfile_limit_files_per_query\030\005 \001(\013" +
+      "2\033.google.protobuf.Int64Value\022>\n\031max_pre" +
+      "pared_transactions\030\006 \001(\0132\033.google.protob" +
+      "uf.Int64Value\022;\n\027gp_workfile_compression" +
+      "\030\007 \001(\0132\032.google.protobuf.BoolValue\0226\n\021ma" +
+      "x_statement_mem\030\010 \001(\0132\033.google.protobuf." +
+      "Int64Value\022B\n\rlog_statement\030\t \001(\0162+.yand" +
+      "ex.cloud.mdb.greenplum.v1.LogStatement\022H" +
+      "\n$gp_add_column_inherits_table_setting\030\n" +
+      " \001(\0132\032.google.protobuf.BoolValue\"\323\003\n\023Gre" +
+      "enplumConfig6_17\0224\n\017max_connections\030\001 \001(" +
+      "\0132\033.google.protobuf.Int64Value\022;\n\026max_sl" +
+      "ot_wal_keep_size\030\002 \001(\0132\033.google.protobuf" +
+      ".Int64Value\022B\n\035gp_workfile_limit_per_seg" +
+      "ment\030\003 \001(\0132\033.google.protobuf.Int64Value\022" +
+      "@\n\033gp_workfile_limit_per_query\030\004 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\022F\n!gp_workfile" +
+      "_limit_files_per_query\030\005 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022>\n\031max_prepared_transa" +
+      "ctions\030\006 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\022;\n\027gp_workfile_compression\030\007 \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\"\317\004\n\023GreenplumConf" +
+      "ig6_19\0224\n\017max_connections\030\001 \001(\0132\033.google" +
+      ".protobuf.Int64Value\022;\n\026max_slot_wal_kee" +
+      "p_size\030\002 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\022B\n\035gp_workfile_limit_per_segment\030\003 \001(\013" +
+      "2\033.google.protobuf.Int64Value\022@\n\033gp_work" +
+      "file_limit_per_query\030\004 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022F\n!gp_workfile_limit_fil" +
+      "es_per_query\030\005 \001(\0132\033.google.protobuf.Int" +
+      "64Value\022>\n\031max_prepared_transactions\030\006 \001" +
+      "(\0132\033.google.protobuf.Int64Value\022;\n\027gp_wo" +
+      "rkfile_compression\030\007 \001(\0132\032.google.protob" +
+      "uf.BoolValue\0226\n\021max_statement_mem\030\010 \001(\0132" +
+      "\033.google.protobuf.Int64Value\022B\n\rlog_stat" +
+      "ement\030\t \001(\0162+.yandex.cloud.mdb.greenplum" +
+      ".v1.LogStatement\"\231\005\n\023GreenplumConfig6_21" +
+      "\0224\n\017max_connections\030\001 \001(\0132\033.google.proto" +
+      "buf.Int64Value\022;\n\026max_slot_wal_keep_size" +
+      "\030\002 \001(\0132\033.google.protobuf.Int64Value\022B\n\035g" +
+      "p_workfile_limit_per_segment\030\003 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\022@\n\033gp_workfile_l" +
+      "imit_per_query\030\004 \001(\0132\033.google.protobuf.I" +
+      "nt64Value\022F\n!gp_workfile_limit_files_per" +
+      "_query\030\005 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\022>\n\031max_prepared_transactions\030\006 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\022;\n\027gp_workfile" +
+      "_compression\030\007 \001(\0132\032.google.protobuf.Boo" +
+      "lValue\0226\n\021max_statement_mem\030\010 \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\022B\n\rlog_statement\030" +
+      "\t \001(\0162+.yandex.cloud.mdb.greenplum.v1.Lo" +
+      "gStatement\022H\n$gp_add_column_inherits_tab" +
+      "le_setting\030\n \001(\0132\032.google.protobuf.BoolV" +
+      "alue\"\231\005\n\023GreenplumConfig6_22\0224\n\017max_conn" +
+      "ections\030\001 \001(\0132\033.google.protobuf.Int64Val" +
+      "ue\022;\n\026max_slot_wal_keep_size\030\002 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\022B\n\035gp_workfile_l" +
+      "imit_per_segment\030\003 \001(\0132\033.google.protobuf" +
+      ".Int64Value\022@\n\033gp_workfile_limit_per_que" +
+      "ry\030\004 \001(\0132\033.google.protobuf.Int64Value\022F\n" +
+      "!gp_workfile_limit_files_per_query\030\005 \001(\013" +
+      "2\033.google.protobuf.Int64Value\022>\n\031max_pre" +
+      "pared_transactions\030\006 \001(\0132\033.google.protob" +
+      "uf.Int64Value\022;\n\027gp_workfile_compression" +
+      "\030\007 \001(\0132\032.google.protobuf.BoolValue\0226\n\021ma" +
+      "x_statement_mem\030\010 \001(\0132\033.google.protobuf." +
+      "Int64Value\022B\n\rlog_statement\030\t \001(\0162+.yand" +
+      "ex.cloud.mdb.greenplum.v1.LogStatement\022H" +
+      "\n$gp_add_column_inherits_table_setting\030\n" +
+      " \001(\0132\032.google.protobuf.BoolValue\"\201\002\n\026Gre" +
+      "enplumConfigSet6_17\022R\n\020effective_config\030" +
+      "\001 \001(\01322.yandex.cloud.mdb.greenplum.v1.Gr" +
+      "eenplumConfig6_17B\004\350\3071\001\022G\n\013user_config\030\002" +
+      " \001(\01322.yandex.cloud.mdb.greenplum.v1.Gre" +
+      "enplumConfig6_17\022J\n\016default_config\030\003 \001(\013" +
       "22.yandex.cloud.mdb.greenplum.v1.Greenpl" +
-      "umConfig6_19B\004\350\3071\001\022G\n\013user_config\030\002 \001(\0132" +
-      "2.yandex.cloud.mdb.greenplum.v1.Greenplu" +
-      "mConfig6_19\022J\n\016default_config\030\003 \001(\01322.ya" +
-      "ndex.cloud.mdb.greenplum.v1.GreenplumCon" +
-      "fig6_19\"\201\002\n\026GreenplumConfigSet6_21\022R\n\020ef" +
-      "fective_config\030\001 \001(\01322.yandex.cloud.mdb." +
-      "greenplum.v1.GreenplumConfig6_21B\004\350\3071\001\022G" +
-      "\n\013user_config\030\002 \001(\01322.yandex.cloud.mdb.g" +
-      "reenplum.v1.GreenplumConfig6_21\022J\n\016defau" +
-      "lt_config\030\003 \001(\01322.yandex.cloud.mdb.green" +
-      "plum.v1.GreenplumConfig6_21\"\201\002\n\026Greenplu" +
-      "mConfigSet6_22\022R\n\020effective_config\030\001 \001(\013" +
+      "umConfig6_17\"\201\002\n\026GreenplumConfigSet6_19\022" +
+      "R\n\020effective_config\030\001 \001(\01322.yandex.cloud" +
+      ".mdb.greenplum.v1.GreenplumConfig6_19B\004\350" +
+      "\3071\001\022G\n\013user_config\030\002 \001(\01322.yandex.cloud." +
+      "mdb.greenplum.v1.GreenplumConfig6_19\022J\n\016" +
+      "default_config\030\003 \001(\01322.yandex.cloud.mdb." +
+      "greenplum.v1.GreenplumConfig6_19\"\201\002\n\026Gre" +
+      "enplumConfigSet6_21\022R\n\020effective_config\030" +
+      "\001 \001(\01322.yandex.cloud.mdb.greenplum.v1.Gr" +
+      "eenplumConfig6_21B\004\350\3071\001\022G\n\013user_config\030\002" +
+      " \001(\01322.yandex.cloud.mdb.greenplum.v1.Gre" +
+      "enplumConfig6_21\022J\n\016default_config\030\003 \001(\013" +
       "22.yandex.cloud.mdb.greenplum.v1.Greenpl" +
-      "umConfig6_22B\004\350\3071\001\022G\n\013user_config\030\002 \001(\0132" +
-      "2.yandex.cloud.mdb.greenplum.v1.Greenplu" +
-      "mConfig6_22\022J\n\016default_config\030\003 \001(\01322.ya" +
-      "ndex.cloud.mdb.greenplum.v1.GreenplumCon" +
-      "fig6_22\"\215\002\n\031ConnectionPoolerConfigSet\022U\n" +
-      "\020effective_config\030\001 \001(\01325.yandex.cloud.m" +
-      "db.greenplum.v1.ConnectionPoolerConfigB\004" +
-      "\350\3071\001\022J\n\013user_config\030\002 \001(\01325.yandex.cloud" +
-      ".mdb.greenplum.v1.ConnectionPoolerConfig" +
-      "\022M\n\016default_config\030\003 \001(\01325.yandex.cloud." +
-      "mdb.greenplum.v1.ConnectionPoolerConfig*" +
-      "R\n\014LogStatement\022\035\n\031LOG_STATEMENT_UNSPECI" +
-      "FIED\020\000\022\010\n\004NONE\020\001\022\007\n\003DDL\020\002\022\007\n\003MOD\020\003\022\007\n\003AL" +
-      "L\020\004Bp\n!yandex.cloud.api.mdb.greenplum.v1" +
-      "ZKgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/mdb/greenplum/v1;greenplumb\006p" +
-      "roto3"
+      "umConfig6_21\"\201\002\n\026GreenplumConfigSet6_22\022" +
+      "R\n\020effective_config\030\001 \001(\01322.yandex.cloud" +
+      ".mdb.greenplum.v1.GreenplumConfig6_22B\004\350" +
+      "\3071\001\022G\n\013user_config\030\002 \001(\01322.yandex.cloud." +
+      "mdb.greenplum.v1.GreenplumConfig6_22\022J\n\016" +
+      "default_config\030\003 \001(\01322.yandex.cloud.mdb." +
+      "greenplum.v1.GreenplumConfig6_22\"\365\001\n\023Gre" +
+      "enplumConfigSet6\022O\n\020effective_config\030\001 \001" +
+      "(\0132/.yandex.cloud.mdb.greenplum.v1.Green" +
+      "plumConfig6B\004\350\3071\001\022D\n\013user_config\030\002 \001(\0132/" +
+      ".yandex.cloud.mdb.greenplum.v1.Greenplum" +
+      "Config6\022G\n\016default_config\030\003 \001(\0132/.yandex" +
+      ".cloud.mdb.greenplum.v1.GreenplumConfig6" +
+      "\"\215\002\n\031ConnectionPoolerConfigSet\022U\n\020effect" +
+      "ive_config\030\001 \001(\01325.yandex.cloud.mdb.gree" +
+      "nplum.v1.ConnectionPoolerConfigB\004\350\3071\001\022J\n" +
+      "\013user_config\030\002 \001(\01325.yandex.cloud.mdb.gr" +
+      "eenplum.v1.ConnectionPoolerConfig\022M\n\016def" +
+      "ault_config\030\003 \001(\01325.yandex.cloud.mdb.gre" +
+      "enplum.v1.ConnectionPoolerConfig*R\n\014LogS" +
+      "tatement\022\035\n\031LOG_STATEMENT_UNSPECIFIED\020\000\022" +
+      "\010\n\004NONE\020\001\022\007\n\003DDL\020\002\022\007\n\003MOD\020\003\022\007\n\003ALL\020\004Bp\n!" +
+      "yandex.cloud.api.mdb.greenplum.v1ZKgithu" +
+      "b.com/yandex-cloud/go-genproto/yandex/cl" +
+      "oud/mdb/greenplum/v1;greenplumb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -25197,56 +29670,68 @@ public final class Config {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_SegmentSubclusterConfig_descriptor,
         new java.lang.String[] { "Resources", });
-    internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_17_descriptor =
+    internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_descriptor =
       getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_descriptor,
+        new java.lang.String[] { "MaxConnections", "MaxSlotWalKeepSize", "GpWorkfileLimitPerSegment", "GpWorkfileLimitPerQuery", "GpWorkfileLimitFilesPerQuery", "MaxPreparedTransactions", "GpWorkfileCompression", "MaxStatementMem", "LogStatement", "GpAddColumnInheritsTableSetting", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_17_descriptor =
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_17_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_17_descriptor,
         new java.lang.String[] { "MaxConnections", "MaxSlotWalKeepSize", "GpWorkfileLimitPerSegment", "GpWorkfileLimitPerQuery", "GpWorkfileLimitFilesPerQuery", "MaxPreparedTransactions", "GpWorkfileCompression", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_19_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_19_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_19_descriptor,
         new java.lang.String[] { "MaxConnections", "MaxSlotWalKeepSize", "GpWorkfileLimitPerSegment", "GpWorkfileLimitPerQuery", "GpWorkfileLimitFilesPerQuery", "MaxPreparedTransactions", "GpWorkfileCompression", "MaxStatementMem", "LogStatement", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_21_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_21_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_21_descriptor,
         new java.lang.String[] { "MaxConnections", "MaxSlotWalKeepSize", "GpWorkfileLimitPerSegment", "GpWorkfileLimitPerQuery", "GpWorkfileLimitFilesPerQuery", "MaxPreparedTransactions", "GpWorkfileCompression", "MaxStatementMem", "LogStatement", "GpAddColumnInheritsTableSetting", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_22_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_22_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig6_22_descriptor,
         new java.lang.String[] { "MaxConnections", "MaxSlotWalKeepSize", "GpWorkfileLimitPerSegment", "GpWorkfileLimitPerQuery", "GpWorkfileLimitFilesPerQuery", "MaxPreparedTransactions", "GpWorkfileCompression", "MaxStatementMem", "LogStatement", "GpAddColumnInheritsTableSetting", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_17_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_17_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_17_descriptor,
         new java.lang.String[] { "EffectiveConfig", "UserConfig", "DefaultConfig", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_19_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_19_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_19_descriptor,
         new java.lang.String[] { "EffectiveConfig", "UserConfig", "DefaultConfig", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_21_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_21_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_21_descriptor,
         new java.lang.String[] { "EffectiveConfig", "UserConfig", "DefaultConfig", });
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_22_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_22_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_22_descriptor,
         new java.lang.String[] { "EffectiveConfig", "UserConfig", "DefaultConfig", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfigSet6_descriptor,
+        new java.lang.String[] { "EffectiveConfig", "UserConfig", "DefaultConfig", });
     internal_static_yandex_cloud_mdb_greenplum_v1_ConnectionPoolerConfigSet_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_yandex_cloud_mdb_greenplum_v1_ConnectionPoolerConfigSet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_ConnectionPoolerConfigSet_descriptor,

@@ -5296,6 +5296,33 @@ public final class TriggerServiceOuterClass {
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * New parameters for trigger.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 6;</code>
+     * @return Whether the rule field is set.
+     */
+    boolean hasRule();
+    /**
+     * <pre>
+     * New parameters for trigger.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 6;</code>
+     * @return The rule.
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule getRule();
+    /**
+     * <pre>
+     * New parameters for trigger.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 6;</code>
+     */
+    yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.RuleOrBuilder getRuleOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.triggers.v1.UpdateTriggerRequest}
@@ -5388,6 +5415,19 @@ public final class TriggerServiceOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule.Builder subBuilder = null;
+              if (rule_ != null) {
+                subBuilder = rule_.toBuilder();
+              }
+              rule_ = input.readMessage(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(rule_);
+                rule_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -5719,6 +5759,44 @@ public final class TriggerServiceOuterClass {
       return map.get(key);
     }
 
+    public static final int RULE_FIELD_NUMBER = 6;
+    private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule rule_;
+    /**
+     * <pre>
+     * New parameters for trigger.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 6;</code>
+     * @return Whether the rule field is set.
+     */
+    @java.lang.Override
+    public boolean hasRule() {
+      return rule_ != null;
+    }
+    /**
+     * <pre>
+     * New parameters for trigger.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 6;</code>
+     * @return The rule.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule getRule() {
+      return rule_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule.getDefaultInstance() : rule_;
+    }
+    /**
+     * <pre>
+     * New parameters for trigger.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.RuleOrBuilder getRuleOrBuilder() {
+      return getRule();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5751,6 +5829,9 @@ public final class TriggerServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           5);
+      if (rule_ != null) {
+        output.writeMessage(6, getRule());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5783,6 +5864,10 @@ public final class TriggerServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(5, labels__);
       }
+      if (rule_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getRule());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5811,6 +5896,11 @@ public final class TriggerServiceOuterClass {
           .equals(other.getDescription())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (hasRule() != other.hasRule()) return false;
+      if (hasRule()) {
+        if (!getRule()
+            .equals(other.getRule())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5835,6 +5925,10 @@ public final class TriggerServiceOuterClass {
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      if (hasRule()) {
+        hash = (37 * hash) + RULE_FIELD_NUMBER;
+        hash = (53 * hash) + getRule().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -6004,6 +6098,12 @@ public final class TriggerServiceOuterClass {
         description_ = "";
 
         internalGetMutableLabels().clear();
+        if (ruleBuilder_ == null) {
+          rule_ = null;
+        } else {
+          rule_ = null;
+          ruleBuilder_ = null;
+        }
         return this;
       }
 
@@ -6041,6 +6141,11 @@ public final class TriggerServiceOuterClass {
         result.description_ = description_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        if (ruleBuilder_ == null) {
+          result.rule_ = rule_;
+        } else {
+          result.rule_ = ruleBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -6106,6 +6211,9 @@ public final class TriggerServiceOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (other.hasRule()) {
+          mergeRule(other.getRule());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -6760,6 +6868,161 @@ public final class TriggerServiceOuterClass {
         internalGetMutableLabels().getMutableMap()
             .putAll(values);
         return this;
+      }
+
+      private yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule rule_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.RuleOrBuilder> ruleBuilder_;
+      /**
+       * <pre>
+       * New parameters for trigger.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 6;</code>
+       * @return Whether the rule field is set.
+       */
+      public boolean hasRule() {
+        return ruleBuilder_ != null || rule_ != null;
+      }
+      /**
+       * <pre>
+       * New parameters for trigger.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 6;</code>
+       * @return The rule.
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule getRule() {
+        if (ruleBuilder_ == null) {
+          return rule_ == null ? yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule.getDefaultInstance() : rule_;
+        } else {
+          return ruleBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * New parameters for trigger.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 6;</code>
+       */
+      public Builder setRule(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule value) {
+        if (ruleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          rule_ = value;
+          onChanged();
+        } else {
+          ruleBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New parameters for trigger.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 6;</code>
+       */
+      public Builder setRule(
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule.Builder builderForValue) {
+        if (ruleBuilder_ == null) {
+          rule_ = builderForValue.build();
+          onChanged();
+        } else {
+          ruleBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New parameters for trigger.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 6;</code>
+       */
+      public Builder mergeRule(yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule value) {
+        if (ruleBuilder_ == null) {
+          if (rule_ != null) {
+            rule_ =
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule.newBuilder(rule_).mergeFrom(value).buildPartial();
+          } else {
+            rule_ = value;
+          }
+          onChanged();
+        } else {
+          ruleBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New parameters for trigger.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 6;</code>
+       */
+      public Builder clearRule() {
+        if (ruleBuilder_ == null) {
+          rule_ = null;
+          onChanged();
+        } else {
+          rule_ = null;
+          ruleBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New parameters for trigger.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 6;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule.Builder getRuleBuilder() {
+        
+        onChanged();
+        return getRuleFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * New parameters for trigger.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 6;</code>
+       */
+      public yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.RuleOrBuilder getRuleOrBuilder() {
+        if (ruleBuilder_ != null) {
+          return ruleBuilder_.getMessageOrBuilder();
+        } else {
+          return rule_ == null ?
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule.getDefaultInstance() : rule_;
+        }
+      }
+      /**
+       * <pre>
+       * New parameters for trigger.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.triggers.v1.Trigger.Rule rule = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.RuleOrBuilder> 
+          getRuleFieldBuilder() {
+        if (ruleBuilder_ == null) {
+          ruleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.Rule.Builder, yandex.cloud.api.serverless.triggers.v1.TriggerOuterClass.Trigger.RuleOrBuilder>(
+                  getRule(),
+                  getParentForChildren(),
+                  isClean());
+          rule_ = null;
+        }
+        return ruleBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13442,7 +13705,7 @@ public final class TriggerServiceOuterClass {
       "yandex.cloud.serverless.triggers.v1.Trig" +
       "ger.RuleB\004\350\3071\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001" +
       "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025CreateTriggerMe" +
-      "tadata\022\022\n\ntrigger_id\030\001 \001(\t\"\372\002\n\024UpdateTri" +
+      "tadata\022\022\n\ntrigger_id\030\001 \001(\t\"\273\003\n\024UpdateTri" +
       "ggerRequest\022\030\n\ntrigger_id\030\001 \001(\tB\004\350\3071\001\022/\n" +
       "\013update_mask\030\002 \001(\0132\032.google.protobuf.Fie" +
       "ldMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9" +
@@ -13451,64 +13714,65 @@ public final class TriggerServiceOuterClass {
       "serverless.triggers.v1.UpdateTriggerRequ" +
       "est.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_" +
       "0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*" +
-      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
-      "\001(\t:\0028\001\"1\n\025UpdateTriggerMetadata\022\030\n\ntrig" +
-      "ger_id\030\001 \001(\tB\004\350\3071\001\"0\n\024DeleteTriggerReque" +
-      "st\022\030\n\ntrigger_id\030\001 \001(\tB\004\350\3071\001\"1\n\025DeleteTr" +
-      "iggerMetadata\022\030\n\ntrigger_id\030\001 \001(\tB\004\350\3071\001\"" +
-      "/\n\023PauseTriggerRequest\022\030\n\ntrigger_id\030\001 \001" +
-      "(\tB\004\350\3071\001\"0\n\024PauseTriggerMetadata\022\030\n\ntrig" +
-      "ger_id\030\001 \001(\tB\004\350\3071\001\"0\n\024ResumeTriggerReque" +
-      "st\022\030\n\ntrigger_id\030\001 \001(\tB\004\350\3071\001\"1\n\025ResumeTr" +
-      "iggerMetadata\022\030\n\ntrigger_id\030\001 \001(\tB\004\350\3071\001\"" +
-      "\222\001\n\034ListTriggerOperationsRequest\022\030\n\ntrig" +
-      "ger_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
-      "\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
-      "\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"o\n\035ListTrig" +
-      "gerOperationsResponse\0225\n\noperations\030\001 \003(" +
-      "\0132!.yandex.cloud.operation.Operation\022\027\n\017" +
-      "next_page_token\030\002 \001(\t2\314\013\n\016TriggerService" +
-      "\022\227\001\n\003Get\0226.yandex.cloud.serverless.trigg" +
-      "ers.v1.GetTriggerRequest\032,.yandex.cloud." +
-      "serverless.triggers.v1.Trigger\"*\202\323\344\223\002$\022\"" +
-      "/triggers/v1/triggers/{trigger_id}\022\232\001\n\004L" +
-      "ist\0228.yandex.cloud.serverless.triggers.v" +
-      "1.ListTriggersRequest\0329.yandex.cloud.ser" +
-      "verless.triggers.v1.ListTriggersResponse" +
-      "\"\035\202\323\344\223\002\027\022\025/triggers/v1/triggers\022\254\001\n\006Crea" +
+      "\022?\n\004rule\030\006 \001(\01321.yandex.cloud.serverless" +
+      ".triggers.v1.Trigger.Rule\032-\n\013LabelsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"1\n\025Upda" +
+      "teTriggerMetadata\022\030\n\ntrigger_id\030\001 \001(\tB\004\350" +
+      "\3071\001\"0\n\024DeleteTriggerRequest\022\030\n\ntrigger_i" +
+      "d\030\001 \001(\tB\004\350\3071\001\"1\n\025DeleteTriggerMetadata\022\030" +
+      "\n\ntrigger_id\030\001 \001(\tB\004\350\3071\001\"/\n\023PauseTrigger" +
+      "Request\022\030\n\ntrigger_id\030\001 \001(\tB\004\350\3071\001\"0\n\024Pau" +
+      "seTriggerMetadata\022\030\n\ntrigger_id\030\001 \001(\tB\004\350" +
+      "\3071\001\"0\n\024ResumeTriggerRequest\022\030\n\ntrigger_i" +
+      "d\030\001 \001(\tB\004\350\3071\001\"1\n\025ResumeTriggerMetadata\022\030" +
+      "\n\ntrigger_id\030\001 \001(\tB\004\350\3071\001\"\222\001\n\034ListTrigger" +
+      "OperationsRequest\022\030\n\ntrigger_id\030\001 \001(\tB\004\350" +
+      "\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npa" +
+      "ge_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(" +
+      "\tB\n\212\3101\006<=1000\"o\n\035ListTriggerOperationsRe" +
+      "sponse\0225\n\noperations\030\001 \003(\0132!.yandex.clou" +
+      "d.operation.Operation\022\027\n\017next_page_token" +
+      "\030\002 \001(\t2\314\013\n\016TriggerService\022\227\001\n\003Get\0226.yand" +
+      "ex.cloud.serverless.triggers.v1.GetTrigg" +
+      "erRequest\032,.yandex.cloud.serverless.trig" +
+      "gers.v1.Trigger\"*\202\323\344\223\002$\022\"/triggers/v1/tr" +
+      "iggers/{trigger_id}\022\232\001\n\004List\0228.yandex.cl" +
+      "oud.serverless.triggers.v1.ListTriggersR" +
+      "equest\0329.yandex.cloud.serverless.trigger" +
+      "s.v1.ListTriggersResponse\"\035\202\323\344\223\002\027\022\025/trig" +
+      "gers/v1/triggers\022\254\001\n\006Create\0229.yandex.clo" +
+      "ud.serverless.triggers.v1.CreateTriggerR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"D\202\323\344\223\002\032\"\025/triggers/v1/triggers:\001*\262\322* \n" +
+      "\025CreateTriggerMetadata\022\007Trigger\022\271\001\n\006Upda" +
       "te\0229.yandex.cloud.serverless.triggers.v1" +
-      ".CreateTriggerRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"D\202\323\344\223\002\032\"\025/triggers/v1/t" +
-      "riggers:\001*\262\322* \n\025CreateTriggerMetadata\022\007T" +
-      "rigger\022\271\001\n\006Update\0229.yandex.cloud.serverl" +
-      "ess.triggers.v1.UpdateTriggerRequest\032!.y" +
-      "andex.cloud.operation.Operation\"Q\202\323\344\223\002\'2" +
-      "\"/triggers/v1/triggers/{trigger_id}:\001*\262\322" +
-      "* \n\025UpdateTriggerMetadata\022\007Trigger\022\304\001\n\006D" +
-      "elete\0229.yandex.cloud.serverless.triggers" +
-      ".v1.DeleteTriggerRequest\032!.yandex.cloud." +
-      "operation.Operation\"\\\202\323\344\223\002$*\"/triggers/v" +
-      "1/triggers/{trigger_id}\262\322*.\n\025DeleteTrigg" +
-      "erMetadata\022\025google.protobuf.Empty\022\274\001\n\005Pa" +
-      "use\0228.yandex.cloud.serverless.triggers.v" +
-      "1.PauseTriggerRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"V\202\323\344\223\002-\"(/triggers/v1/t" +
-      "riggers/{trigger_id}:pause:\001*\262\322*\037\n\024Pause" +
-      "TriggerMetadata\022\007Trigger\022\300\001\n\006Resume\0229.ya" +
-      "ndex.cloud.serverless.triggers.v1.Resume" +
-      "TriggerRequest\032!.yandex.cloud.operation." +
-      "Operation\"X\202\323\344\223\002.\")/triggers/v1/triggers" +
-      "/{trigger_id}:resume:\001*\262\322* \n\025ResumeTrigg" +
-      "erMetadata\022\007Trigger\022\316\001\n\016ListOperations\022A" +
-      ".yandex.cloud.serverless.triggers.v1.Lis" +
-      "tTriggerOperationsRequest\032B.yandex.cloud" +
-      ".serverless.triggers.v1.ListTriggerOpera" +
-      "tionsResponse\"5\202\323\344\223\002/\022-/triggers/v1/trig" +
-      "gers/{trigger_id}/operationsB{\n\'yandex.c" +
-      "loud.api.serverless.triggers.v1ZPgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/serverless/triggers/v1;triggersb\006proto" +
-      "3"
+      ".UpdateTriggerRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"Q\202\323\344\223\002\'2\"/triggers/v1/t" +
+      "riggers/{trigger_id}:\001*\262\322* \n\025UpdateTrigg" +
+      "erMetadata\022\007Trigger\022\304\001\n\006Delete\0229.yandex." +
+      "cloud.serverless.triggers.v1.DeleteTrigg" +
+      "erRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"\\\202\323\344\223\002$*\"/triggers/v1/triggers/{tri" +
+      "gger_id}\262\322*.\n\025DeleteTriggerMetadata\022\025goo" +
+      "gle.protobuf.Empty\022\274\001\n\005Pause\0228.yandex.cl" +
+      "oud.serverless.triggers.v1.PauseTriggerR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"V\202\323\344\223\002-\"(/triggers/v1/triggers/{trigge" +
+      "r_id}:pause:\001*\262\322*\037\n\024PauseTriggerMetadata" +
+      "\022\007Trigger\022\300\001\n\006Resume\0229.yandex.cloud.serv" +
+      "erless.triggers.v1.ResumeTriggerRequest\032" +
+      "!.yandex.cloud.operation.Operation\"X\202\323\344\223" +
+      "\002.\")/triggers/v1/triggers/{trigger_id}:r" +
+      "esume:\001*\262\322* \n\025ResumeTriggerMetadata\022\007Tri" +
+      "gger\022\316\001\n\016ListOperations\022A.yandex.cloud.s" +
+      "erverless.triggers.v1.ListTriggerOperati" +
+      "onsRequest\032B.yandex.cloud.serverless.tri" +
+      "ggers.v1.ListTriggerOperationsResponse\"5" +
+      "\202\323\344\223\002/\022-/triggers/v1/triggers/{trigger_i" +
+      "d}/operationsB{\n\'yandex.cloud.api.server" +
+      "less.triggers.v1ZPgithub.com/yandex-clou" +
+      "d/go-genproto/yandex/cloud/serverless/tr" +
+      "iggers/v1;triggersb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13561,7 +13825,7 @@ public final class TriggerServiceOuterClass {
     internal_static_yandex_cloud_serverless_triggers_v1_UpdateTriggerRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_triggers_v1_UpdateTriggerRequest_descriptor,
-        new java.lang.String[] { "TriggerId", "UpdateMask", "Name", "Description", "Labels", });
+        new java.lang.String[] { "TriggerId", "UpdateMask", "Name", "Description", "Labels", "Rule", });
     internal_static_yandex_cloud_serverless_triggers_v1_UpdateTriggerRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_serverless_triggers_v1_UpdateTriggerRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_triggers_v1_UpdateTriggerRequest_LabelsEntry_fieldAccessorTable = new

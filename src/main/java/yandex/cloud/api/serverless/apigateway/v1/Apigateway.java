@@ -335,6 +335,87 @@ public final class Apigateway {
      * <code>.yandex.cloud.serverless.apigateway.v1.LogOptions log_options = 13;</code>
      */
     yandex.cloud.api.serverless.apigateway.v1.Apigateway.LogOptionsOrBuilder getLogOptionsOrBuilder();
+
+    /**
+     * <pre>
+     * Values of variables defined in the specification.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 14;</code>
+     */
+    int getVariablesCount();
+    /**
+     * <pre>
+     * Values of variables defined in the specification.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 14;</code>
+     */
+    boolean containsVariables(
+        java.lang.String key);
+    /**
+     * Use {@link #getVariablesMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput>
+    getVariables();
+    /**
+     * <pre>
+     * Values of variables defined in the specification.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 14;</code>
+     */
+    java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput>
+    getVariablesMap();
+    /**
+     * <pre>
+     * Values of variables defined in the specification.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 14;</code>
+     */
+
+    yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput getVariablesOrDefault(
+        java.lang.String key,
+        yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput defaultValue);
+    /**
+     * <pre>
+     * Values of variables defined in the specification.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 14;</code>
+     */
+
+    yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput getVariablesOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * Canary release of the gateway.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.Canary canary = 15;</code>
+     * @return Whether the canary field is set.
+     */
+    boolean hasCanary();
+    /**
+     * <pre>
+     * Canary release of the gateway.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.Canary canary = 15;</code>
+     * @return The canary.
+     */
+    yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary getCanary();
+    /**
+     * <pre>
+     * Canary release of the gateway.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.Canary canary = 15;</code>
+     */
+    yandex.cloud.api.serverless.apigateway.v1.Apigateway.CanaryOrBuilder getCanaryOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.ApiGateway}
@@ -493,6 +574,32 @@ public final class Apigateway {
 
               break;
             }
+            case 114: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                variables_ = com.google.protobuf.MapField.newMapField(
+                    VariablesDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000004;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput>
+              variables__ = input.readMessage(
+                  VariablesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              variables_.getMutableMap().put(
+                  variables__.getKey(), variables__.getValue());
+              break;
+            }
+            case 122: {
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary.Builder subBuilder = null;
+              if (canary_ != null) {
+                subBuilder = canary_.toBuilder();
+              }
+              canary_ = input.readMessage(yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(canary_);
+                canary_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -527,6 +634,8 @@ public final class Apigateway {
       switch (number) {
         case 7:
           return internalGetLabels();
+        case 14:
+          return internalGetVariables();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -1298,6 +1407,141 @@ public final class Apigateway {
       return getLogOptions();
     }
 
+    public static final int VARIABLES_FIELD_NUMBER = 14;
+    private static final class VariablesDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput>newDefaultInstance(
+                  yandex.cloud.api.serverless.apigateway.v1.Apigateway.internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_VariablesEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> variables_;
+    private com.google.protobuf.MapField<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput>
+    internalGetVariables() {
+      if (variables_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            VariablesDefaultEntryHolder.defaultEntry);
+      }
+      return variables_;
+    }
+
+    public int getVariablesCount() {
+      return internalGetVariables().getMap().size();
+    }
+    /**
+     * <pre>
+     * Values of variables defined in the specification.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 14;</code>
+     */
+
+    @java.lang.Override
+    public boolean containsVariables(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetVariables().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getVariablesMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> getVariables() {
+      return getVariablesMap();
+    }
+    /**
+     * <pre>
+     * Values of variables defined in the specification.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 14;</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> getVariablesMap() {
+      return internalGetVariables().getMap();
+    }
+    /**
+     * <pre>
+     * Values of variables defined in the specification.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 14;</code>
+     */
+    @java.lang.Override
+
+    public yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput getVariablesOrDefault(
+        java.lang.String key,
+        yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> map =
+          internalGetVariables().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Values of variables defined in the specification.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 14;</code>
+     */
+    @java.lang.Override
+
+    public yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput getVariablesOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> map =
+          internalGetVariables().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int CANARY_FIELD_NUMBER = 15;
+    private yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary canary_;
+    /**
+     * <pre>
+     * Canary release of the gateway.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.Canary canary = 15;</code>
+     * @return Whether the canary field is set.
+     */
+    @java.lang.Override
+    public boolean hasCanary() {
+      return canary_ != null;
+    }
+    /**
+     * <pre>
+     * Canary release of the gateway.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.Canary canary = 15;</code>
+     * @return The canary.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary getCanary() {
+      return canary_ == null ? yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary.getDefaultInstance() : canary_;
+    }
+    /**
+     * <pre>
+     * Canary release of the gateway.
+     * </pre>
+     *
+     * <code>.yandex.cloud.serverless.apigateway.v1.Canary canary = 15;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.serverless.apigateway.v1.Apigateway.CanaryOrBuilder getCanaryOrBuilder() {
+      return getCanary();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1350,6 +1594,15 @@ public final class Apigateway {
       }
       if (logOptions_ != null) {
         output.writeMessage(13, getLogOptions());
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetVariables(),
+          VariablesDefaultEntryHolder.defaultEntry,
+          14);
+      if (canary_ != null) {
+        output.writeMessage(15, getCanary());
       }
       unknownFields.writeTo(output);
     }
@@ -1408,6 +1661,20 @@ public final class Apigateway {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getLogOptions());
       }
+      for (java.util.Map.Entry<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> entry
+           : internalGetVariables().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput>
+        variables__ = VariablesDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(14, variables__);
+      }
+      if (canary_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getCanary());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1455,6 +1722,13 @@ public final class Apigateway {
         if (!getLogOptions()
             .equals(other.getLogOptions())) return false;
       }
+      if (!internalGetVariables().equals(
+          other.internalGetVariables())) return false;
+      if (hasCanary() != other.hasCanary()) return false;
+      if (hasCanary()) {
+        if (!getCanary()
+            .equals(other.getCanary())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1499,6 +1773,14 @@ public final class Apigateway {
       if (hasLogOptions()) {
         hash = (37 * hash) + LOG_OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getLogOptions().hashCode();
+      }
+      if (!internalGetVariables().getMap().isEmpty()) {
+        hash = (37 * hash) + VARIABLES_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetVariables().hashCode();
+      }
+      if (hasCanary()) {
+        hash = (37 * hash) + CANARY_FIELD_NUMBER;
+        hash = (53 * hash) + getCanary().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1613,6 +1895,8 @@ public final class Apigateway {
         switch (number) {
           case 7:
             return internalGetLabels();
+          case 14:
+            return internalGetVariables();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -1624,6 +1908,8 @@ public final class Apigateway {
         switch (number) {
           case 7:
             return internalGetMutableLabels();
+          case 14:
+            return internalGetMutableVariables();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -1695,6 +1981,13 @@ public final class Apigateway {
           logOptions_ = null;
           logOptionsBuilder_ = null;
         }
+        internalGetMutableVariables().clear();
+        if (canaryBuilder_ == null) {
+          canary_ = null;
+        } else {
+          canary_ = null;
+          canaryBuilder_ = null;
+        }
         return this;
       }
 
@@ -1754,6 +2047,13 @@ public final class Apigateway {
           result.logOptions_ = logOptions_;
         } else {
           result.logOptions_ = logOptionsBuilder_.build();
+        }
+        result.variables_ = internalGetVariables();
+        result.variables_.makeImmutable();
+        if (canaryBuilder_ == null) {
+          result.canary_ = canary_;
+        } else {
+          result.canary_ = canaryBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1866,6 +2166,11 @@ public final class Apigateway {
         }
         if (other.hasLogOptions()) {
           mergeLogOptions(other.getLogOptions());
+        }
+        internalGetMutableVariables().mergeFrom(
+            other.internalGetVariables());
+        if (other.hasCanary()) {
+          mergeCanary(other.getCanary());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3481,6 +3786,320 @@ public final class Apigateway {
           logOptions_ = null;
         }
         return logOptionsBuilder_;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> variables_;
+      private com.google.protobuf.MapField<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput>
+      internalGetVariables() {
+        if (variables_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              VariablesDefaultEntryHolder.defaultEntry);
+        }
+        return variables_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput>
+      internalGetMutableVariables() {
+        onChanged();;
+        if (variables_ == null) {
+          variables_ = com.google.protobuf.MapField.newMapField(
+              VariablesDefaultEntryHolder.defaultEntry);
+        }
+        if (!variables_.isMutable()) {
+          variables_ = variables_.copy();
+        }
+        return variables_;
+      }
+
+      public int getVariablesCount() {
+        return internalGetVariables().getMap().size();
+      }
+      /**
+       * <pre>
+       * Values of variables defined in the specification.
+       * </pre>
+       *
+       * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 14;</code>
+       */
+
+      @java.lang.Override
+      public boolean containsVariables(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetVariables().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getVariablesMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> getVariables() {
+        return getVariablesMap();
+      }
+      /**
+       * <pre>
+       * Values of variables defined in the specification.
+       * </pre>
+       *
+       * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 14;</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> getVariablesMap() {
+        return internalGetVariables().getMap();
+      }
+      /**
+       * <pre>
+       * Values of variables defined in the specification.
+       * </pre>
+       *
+       * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 14;</code>
+       */
+      @java.lang.Override
+
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput getVariablesOrDefault(
+          java.lang.String key,
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> map =
+            internalGetVariables().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Values of variables defined in the specification.
+       * </pre>
+       *
+       * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 14;</code>
+       */
+      @java.lang.Override
+
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput getVariablesOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> map =
+            internalGetVariables().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearVariables() {
+        internalGetMutableVariables().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Values of variables defined in the specification.
+       * </pre>
+       *
+       * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 14;</code>
+       */
+
+      public Builder removeVariables(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableVariables().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput>
+      getMutableVariables() {
+        return internalGetMutableVariables().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Values of variables defined in the specification.
+       * </pre>
+       *
+       * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 14;</code>
+       */
+      public Builder putVariables(
+          java.lang.String key,
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableVariables().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Values of variables defined in the specification.
+       * </pre>
+       *
+       * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 14;</code>
+       */
+
+      public Builder putAllVariables(
+          java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> values) {
+        internalGetMutableVariables().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary canary_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary, yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.CanaryOrBuilder> canaryBuilder_;
+      /**
+       * <pre>
+       * Canary release of the gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Canary canary = 15;</code>
+       * @return Whether the canary field is set.
+       */
+      public boolean hasCanary() {
+        return canaryBuilder_ != null || canary_ != null;
+      }
+      /**
+       * <pre>
+       * Canary release of the gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Canary canary = 15;</code>
+       * @return The canary.
+       */
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary getCanary() {
+        if (canaryBuilder_ == null) {
+          return canary_ == null ? yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary.getDefaultInstance() : canary_;
+        } else {
+          return canaryBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Canary release of the gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Canary canary = 15;</code>
+       */
+      public Builder setCanary(yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary value) {
+        if (canaryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          canary_ = value;
+          onChanged();
+        } else {
+          canaryBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Canary release of the gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Canary canary = 15;</code>
+       */
+      public Builder setCanary(
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary.Builder builderForValue) {
+        if (canaryBuilder_ == null) {
+          canary_ = builderForValue.build();
+          onChanged();
+        } else {
+          canaryBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Canary release of the gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Canary canary = 15;</code>
+       */
+      public Builder mergeCanary(yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary value) {
+        if (canaryBuilder_ == null) {
+          if (canary_ != null) {
+            canary_ =
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary.newBuilder(canary_).mergeFrom(value).buildPartial();
+          } else {
+            canary_ = value;
+          }
+          onChanged();
+        } else {
+          canaryBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Canary release of the gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Canary canary = 15;</code>
+       */
+      public Builder clearCanary() {
+        if (canaryBuilder_ == null) {
+          canary_ = null;
+          onChanged();
+        } else {
+          canary_ = null;
+          canaryBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Canary release of the gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Canary canary = 15;</code>
+       */
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary.Builder getCanaryBuilder() {
+        
+        onChanged();
+        return getCanaryFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Canary release of the gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Canary canary = 15;</code>
+       */
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.CanaryOrBuilder getCanaryOrBuilder() {
+        if (canaryBuilder_ != null) {
+          return canaryBuilder_.getMessageOrBuilder();
+        } else {
+          return canary_ == null ?
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary.getDefaultInstance() : canary_;
+        }
+      }
+      /**
+       * <pre>
+       * Canary release of the gateway.
+       * </pre>
+       *
+       * <code>.yandex.cloud.serverless.apigateway.v1.Canary canary = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary, yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.CanaryOrBuilder> 
+          getCanaryFieldBuilder() {
+        if (canaryBuilder_ == null) {
+          canaryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary, yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary.Builder, yandex.cloud.api.serverless.apigateway.v1.Apigateway.CanaryOrBuilder>(
+                  getCanary(),
+                  getParentForChildren(),
+                  isClean());
+          canary_ = null;
+        }
+        return canaryBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6750,6 +7369,1904 @@ public final class Apigateway {
 
   }
 
+  public interface CanaryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.apigateway.v1.Canary)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * It describes percentage of requests, which will be processed by canary.
+     * </pre>
+     *
+     * <code>int64 weight = 1 [(.yandex.cloud.value) = "1-99"];</code>
+     * @return The weight.
+     */
+    long getWeight();
+
+    /**
+     * <pre>
+     * Values specification variables, associated with canary.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    int getVariablesCount();
+    /**
+     * <pre>
+     * Values specification variables, associated with canary.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    boolean containsVariables(
+        java.lang.String key);
+    /**
+     * Use {@link #getVariablesMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput>
+    getVariables();
+    /**
+     * <pre>
+     * Values specification variables, associated with canary.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput>
+    getVariablesMap();
+    /**
+     * <pre>
+     * Values specification variables, associated with canary.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+
+    yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput getVariablesOrDefault(
+        java.lang.String key,
+        yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput defaultValue);
+    /**
+     * <pre>
+     * Values specification variables, associated with canary.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+
+    yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput getVariablesOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.Canary}
+   */
+  public static final class Canary extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.Canary)
+      CanaryOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Canary.newBuilder() to construct.
+    private Canary(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Canary() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Canary();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Canary(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              weight_ = input.readInt64();
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                variables_ = com.google.protobuf.MapField.newMapField(
+                    VariablesDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput>
+              variables__ = input.readMessage(
+                  VariablesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              variables_.getMutableMap().put(
+                  variables__.getKey(), variables__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.apigateway.v1.Apigateway.internal_static_yandex_cloud_serverless_apigateway_v1_Canary_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetVariables();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.apigateway.v1.Apigateway.internal_static_yandex_cloud_serverless_apigateway_v1_Canary_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary.class, yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary.Builder.class);
+    }
+
+    public static final int WEIGHT_FIELD_NUMBER = 1;
+    private long weight_;
+    /**
+     * <pre>
+     * It describes percentage of requests, which will be processed by canary.
+     * </pre>
+     *
+     * <code>int64 weight = 1 [(.yandex.cloud.value) = "1-99"];</code>
+     * @return The weight.
+     */
+    @java.lang.Override
+    public long getWeight() {
+      return weight_;
+    }
+
+    public static final int VARIABLES_FIELD_NUMBER = 2;
+    private static final class VariablesDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput>newDefaultInstance(
+                  yandex.cloud.api.serverless.apigateway.v1.Apigateway.internal_static_yandex_cloud_serverless_apigateway_v1_Canary_VariablesEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> variables_;
+    private com.google.protobuf.MapField<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput>
+    internalGetVariables() {
+      if (variables_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            VariablesDefaultEntryHolder.defaultEntry);
+      }
+      return variables_;
+    }
+
+    public int getVariablesCount() {
+      return internalGetVariables().getMap().size();
+    }
+    /**
+     * <pre>
+     * Values specification variables, associated with canary.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+
+    @java.lang.Override
+    public boolean containsVariables(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetVariables().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getVariablesMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> getVariables() {
+      return getVariablesMap();
+    }
+    /**
+     * <pre>
+     * Values specification variables, associated with canary.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> getVariablesMap() {
+      return internalGetVariables().getMap();
+    }
+    /**
+     * <pre>
+     * Values specification variables, associated with canary.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    @java.lang.Override
+
+    public yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput getVariablesOrDefault(
+        java.lang.String key,
+        yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> map =
+          internalGetVariables().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Values specification variables, associated with canary.
+     * </pre>
+     *
+     * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+     */
+    @java.lang.Override
+
+    public yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput getVariablesOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> map =
+          internalGetVariables().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (weight_ != 0L) {
+        output.writeInt64(1, weight_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetVariables(),
+          VariablesDefaultEntryHolder.defaultEntry,
+          2);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (weight_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, weight_);
+      }
+      for (java.util.Map.Entry<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> entry
+           : internalGetVariables().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput>
+        variables__ = VariablesDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, variables__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary other = (yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary) obj;
+
+      if (getWeight()
+          != other.getWeight()) return false;
+      if (!internalGetVariables().equals(
+          other.internalGetVariables())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + WEIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getWeight());
+      if (!internalGetVariables().getMap().isEmpty()) {
+        hash = (37 * hash) + VARIABLES_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetVariables().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.Canary}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.apigateway.v1.Canary)
+        yandex.cloud.api.serverless.apigateway.v1.Apigateway.CanaryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.apigateway.v1.Apigateway.internal_static_yandex_cloud_serverless_apigateway_v1_Canary_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetVariables();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetMutableVariables();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.apigateway.v1.Apigateway.internal_static_yandex_cloud_serverless_apigateway_v1_Canary_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary.class, yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        weight_ = 0L;
+
+        internalGetMutableVariables().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.apigateway.v1.Apigateway.internal_static_yandex_cloud_serverless_apigateway_v1_Canary_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary build() {
+        yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary buildPartial() {
+        yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary result = new yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary(this);
+        int from_bitField0_ = bitField0_;
+        result.weight_ = weight_;
+        result.variables_ = internalGetVariables();
+        result.variables_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary) {
+          return mergeFrom((yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary other) {
+        if (other == yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary.getDefaultInstance()) return this;
+        if (other.getWeight() != 0L) {
+          setWeight(other.getWeight());
+        }
+        internalGetMutableVariables().mergeFrom(
+            other.internalGetVariables());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long weight_ ;
+      /**
+       * <pre>
+       * It describes percentage of requests, which will be processed by canary.
+       * </pre>
+       *
+       * <code>int64 weight = 1 [(.yandex.cloud.value) = "1-99"];</code>
+       * @return The weight.
+       */
+      @java.lang.Override
+      public long getWeight() {
+        return weight_;
+      }
+      /**
+       * <pre>
+       * It describes percentage of requests, which will be processed by canary.
+       * </pre>
+       *
+       * <code>int64 weight = 1 [(.yandex.cloud.value) = "1-99"];</code>
+       * @param value The weight to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWeight(long value) {
+        
+        weight_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * It describes percentage of requests, which will be processed by canary.
+       * </pre>
+       *
+       * <code>int64 weight = 1 [(.yandex.cloud.value) = "1-99"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWeight() {
+        
+        weight_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> variables_;
+      private com.google.protobuf.MapField<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput>
+      internalGetVariables() {
+        if (variables_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              VariablesDefaultEntryHolder.defaultEntry);
+        }
+        return variables_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput>
+      internalGetMutableVariables() {
+        onChanged();;
+        if (variables_ == null) {
+          variables_ = com.google.protobuf.MapField.newMapField(
+              VariablesDefaultEntryHolder.defaultEntry);
+        }
+        if (!variables_.isMutable()) {
+          variables_ = variables_.copy();
+        }
+        return variables_;
+      }
+
+      public int getVariablesCount() {
+        return internalGetVariables().getMap().size();
+      }
+      /**
+       * <pre>
+       * Values specification variables, associated with canary.
+       * </pre>
+       *
+       * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+
+      @java.lang.Override
+      public boolean containsVariables(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetVariables().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getVariablesMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> getVariables() {
+        return getVariablesMap();
+      }
+      /**
+       * <pre>
+       * Values specification variables, associated with canary.
+       * </pre>
+       *
+       * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> getVariablesMap() {
+        return internalGetVariables().getMap();
+      }
+      /**
+       * <pre>
+       * Values specification variables, associated with canary.
+       * </pre>
+       *
+       * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      @java.lang.Override
+
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput getVariablesOrDefault(
+          java.lang.String key,
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> map =
+            internalGetVariables().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Values specification variables, associated with canary.
+       * </pre>
+       *
+       * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      @java.lang.Override
+
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput getVariablesOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> map =
+            internalGetVariables().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearVariables() {
+        internalGetMutableVariables().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Values specification variables, associated with canary.
+       * </pre>
+       *
+       * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+
+      public Builder removeVariables(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableVariables().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput>
+      getMutableVariables() {
+        return internalGetMutableVariables().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Values specification variables, associated with canary.
+       * </pre>
+       *
+       * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+      public Builder putVariables(
+          java.lang.String key,
+          yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableVariables().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Values specification variables, associated with canary.
+       * </pre>
+       *
+       * <code>map&lt;string, .yandex.cloud.serverless.apigateway.v1.VariableInput&gt; variables = 2 [(.yandex.cloud.size) = "&gt;0"];</code>
+       */
+
+      public Builder putAllVariables(
+          java.util.Map<java.lang.String, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput> values) {
+        internalGetMutableVariables().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.apigateway.v1.Canary)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.apigateway.v1.Canary)
+    private static final yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary();
+    }
+
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Canary>
+        PARSER = new com.google.protobuf.AbstractParser<Canary>() {
+      @java.lang.Override
+      public Canary parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Canary(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Canary> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Canary> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.apigateway.v1.Apigateway.Canary getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface VariableInputOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.serverless.apigateway.v1.VariableInput)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string string_value = 1;</code>
+     * @return Whether the stringValue field is set.
+     */
+    boolean hasStringValue();
+    /**
+     * <code>string string_value = 1;</code>
+     * @return The stringValue.
+     */
+    java.lang.String getStringValue();
+    /**
+     * <code>string string_value = 1;</code>
+     * @return The bytes for stringValue.
+     */
+    com.google.protobuf.ByteString
+        getStringValueBytes();
+
+    /**
+     * <code>int64 int_value = 2;</code>
+     * @return Whether the intValue field is set.
+     */
+    boolean hasIntValue();
+    /**
+     * <code>int64 int_value = 2;</code>
+     * @return The intValue.
+     */
+    long getIntValue();
+
+    /**
+     * <code>double double_value = 3;</code>
+     * @return Whether the doubleValue field is set.
+     */
+    boolean hasDoubleValue();
+    /**
+     * <code>double double_value = 3;</code>
+     * @return The doubleValue.
+     */
+    double getDoubleValue();
+
+    /**
+     * <code>bool bool_value = 4;</code>
+     * @return Whether the boolValue field is set.
+     */
+    boolean hasBoolValue();
+    /**
+     * <code>bool bool_value = 4;</code>
+     * @return The boolValue.
+     */
+    boolean getBoolValue();
+
+    public yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput.VariableValueCase getVariableValueCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.VariableInput}
+   */
+  public static final class VariableInput extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.serverless.apigateway.v1.VariableInput)
+      VariableInputOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VariableInput.newBuilder() to construct.
+    private VariableInput(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VariableInput() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VariableInput();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private VariableInput(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              variableValueCase_ = 1;
+              variableValue_ = s;
+              break;
+            }
+            case 16: {
+              variableValue_ = input.readInt64();
+              variableValueCase_ = 2;
+              break;
+            }
+            case 25: {
+              variableValue_ = input.readDouble();
+              variableValueCase_ = 3;
+              break;
+            }
+            case 32: {
+              variableValue_ = input.readBool();
+              variableValueCase_ = 4;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.serverless.apigateway.v1.Apigateway.internal_static_yandex_cloud_serverless_apigateway_v1_VariableInput_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.serverless.apigateway.v1.Apigateway.internal_static_yandex_cloud_serverless_apigateway_v1_VariableInput_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput.class, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput.Builder.class);
+    }
+
+    private int variableValueCase_ = 0;
+    private java.lang.Object variableValue_;
+    public enum VariableValueCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      STRING_VALUE(1),
+      INT_VALUE(2),
+      DOUBLE_VALUE(3),
+      BOOL_VALUE(4),
+      VARIABLEVALUE_NOT_SET(0);
+      private final int value;
+      private VariableValueCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static VariableValueCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static VariableValueCase forNumber(int value) {
+        switch (value) {
+          case 1: return STRING_VALUE;
+          case 2: return INT_VALUE;
+          case 3: return DOUBLE_VALUE;
+          case 4: return BOOL_VALUE;
+          case 0: return VARIABLEVALUE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public VariableValueCase
+    getVariableValueCase() {
+      return VariableValueCase.forNumber(
+          variableValueCase_);
+    }
+
+    public static final int STRING_VALUE_FIELD_NUMBER = 1;
+    /**
+     * <code>string string_value = 1;</code>
+     * @return Whether the stringValue field is set.
+     */
+    public boolean hasStringValue() {
+      return variableValueCase_ == 1;
+    }
+    /**
+     * <code>string string_value = 1;</code>
+     * @return The stringValue.
+     */
+    public java.lang.String getStringValue() {
+      java.lang.Object ref = "";
+      if (variableValueCase_ == 1) {
+        ref = variableValue_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (variableValueCase_ == 1) {
+          variableValue_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>string string_value = 1;</code>
+     * @return The bytes for stringValue.
+     */
+    public com.google.protobuf.ByteString
+        getStringValueBytes() {
+      java.lang.Object ref = "";
+      if (variableValueCase_ == 1) {
+        ref = variableValue_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (variableValueCase_ == 1) {
+          variableValue_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int INT_VALUE_FIELD_NUMBER = 2;
+    /**
+     * <code>int64 int_value = 2;</code>
+     * @return Whether the intValue field is set.
+     */
+    @java.lang.Override
+    public boolean hasIntValue() {
+      return variableValueCase_ == 2;
+    }
+    /**
+     * <code>int64 int_value = 2;</code>
+     * @return The intValue.
+     */
+    @java.lang.Override
+    public long getIntValue() {
+      if (variableValueCase_ == 2) {
+        return (java.lang.Long) variableValue_;
+      }
+      return 0L;
+    }
+
+    public static final int DOUBLE_VALUE_FIELD_NUMBER = 3;
+    /**
+     * <code>double double_value = 3;</code>
+     * @return Whether the doubleValue field is set.
+     */
+    @java.lang.Override
+    public boolean hasDoubleValue() {
+      return variableValueCase_ == 3;
+    }
+    /**
+     * <code>double double_value = 3;</code>
+     * @return The doubleValue.
+     */
+    @java.lang.Override
+    public double getDoubleValue() {
+      if (variableValueCase_ == 3) {
+        return (java.lang.Double) variableValue_;
+      }
+      return 0D;
+    }
+
+    public static final int BOOL_VALUE_FIELD_NUMBER = 4;
+    /**
+     * <code>bool bool_value = 4;</code>
+     * @return Whether the boolValue field is set.
+     */
+    @java.lang.Override
+    public boolean hasBoolValue() {
+      return variableValueCase_ == 4;
+    }
+    /**
+     * <code>bool bool_value = 4;</code>
+     * @return The boolValue.
+     */
+    @java.lang.Override
+    public boolean getBoolValue() {
+      if (variableValueCase_ == 4) {
+        return (java.lang.Boolean) variableValue_;
+      }
+      return false;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (variableValueCase_ == 1) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, variableValue_);
+      }
+      if (variableValueCase_ == 2) {
+        output.writeInt64(
+            2, (long)((java.lang.Long) variableValue_));
+      }
+      if (variableValueCase_ == 3) {
+        output.writeDouble(
+            3, (double)((java.lang.Double) variableValue_));
+      }
+      if (variableValueCase_ == 4) {
+        output.writeBool(
+            4, (boolean)((java.lang.Boolean) variableValue_));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (variableValueCase_ == 1) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, variableValue_);
+      }
+      if (variableValueCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(
+              2, (long)((java.lang.Long) variableValue_));
+      }
+      if (variableValueCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(
+              3, (double)((java.lang.Double) variableValue_));
+      }
+      if (variableValueCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(
+              4, (boolean)((java.lang.Boolean) variableValue_));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput other = (yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput) obj;
+
+      if (!getVariableValueCase().equals(other.getVariableValueCase())) return false;
+      switch (variableValueCase_) {
+        case 1:
+          if (!getStringValue()
+              .equals(other.getStringValue())) return false;
+          break;
+        case 2:
+          if (getIntValue()
+              != other.getIntValue()) return false;
+          break;
+        case 3:
+          if (java.lang.Double.doubleToLongBits(getDoubleValue())
+              != java.lang.Double.doubleToLongBits(
+                  other.getDoubleValue())) return false;
+          break;
+        case 4:
+          if (getBoolValue()
+              != other.getBoolValue()) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (variableValueCase_) {
+        case 1:
+          hash = (37 * hash) + STRING_VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + getStringValue().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + INT_VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getIntValue());
+          break;
+        case 3:
+          hash = (37 * hash) + DOUBLE_VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              java.lang.Double.doubleToLongBits(getDoubleValue()));
+          break;
+        case 4:
+          hash = (37 * hash) + BOOL_VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+              getBoolValue());
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.serverless.apigateway.v1.VariableInput}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.serverless.apigateway.v1.VariableInput)
+        yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInputOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.serverless.apigateway.v1.Apigateway.internal_static_yandex_cloud_serverless_apigateway_v1_VariableInput_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.serverless.apigateway.v1.Apigateway.internal_static_yandex_cloud_serverless_apigateway_v1_VariableInput_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput.class, yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        variableValueCase_ = 0;
+        variableValue_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.serverless.apigateway.v1.Apigateway.internal_static_yandex_cloud_serverless_apigateway_v1_VariableInput_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput getDefaultInstanceForType() {
+        return yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput build() {
+        yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput buildPartial() {
+        yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput result = new yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput(this);
+        if (variableValueCase_ == 1) {
+          result.variableValue_ = variableValue_;
+        }
+        if (variableValueCase_ == 2) {
+          result.variableValue_ = variableValue_;
+        }
+        if (variableValueCase_ == 3) {
+          result.variableValue_ = variableValue_;
+        }
+        if (variableValueCase_ == 4) {
+          result.variableValue_ = variableValue_;
+        }
+        result.variableValueCase_ = variableValueCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput) {
+          return mergeFrom((yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput other) {
+        if (other == yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput.getDefaultInstance()) return this;
+        switch (other.getVariableValueCase()) {
+          case STRING_VALUE: {
+            variableValueCase_ = 1;
+            variableValue_ = other.variableValue_;
+            onChanged();
+            break;
+          }
+          case INT_VALUE: {
+            setIntValue(other.getIntValue());
+            break;
+          }
+          case DOUBLE_VALUE: {
+            setDoubleValue(other.getDoubleValue());
+            break;
+          }
+          case BOOL_VALUE: {
+            setBoolValue(other.getBoolValue());
+            break;
+          }
+          case VARIABLEVALUE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int variableValueCase_ = 0;
+      private java.lang.Object variableValue_;
+      public VariableValueCase
+          getVariableValueCase() {
+        return VariableValueCase.forNumber(
+            variableValueCase_);
+      }
+
+      public Builder clearVariableValue() {
+        variableValueCase_ = 0;
+        variableValue_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      /**
+       * <code>string string_value = 1;</code>
+       * @return Whether the stringValue field is set.
+       */
+      @java.lang.Override
+      public boolean hasStringValue() {
+        return variableValueCase_ == 1;
+      }
+      /**
+       * <code>string string_value = 1;</code>
+       * @return The stringValue.
+       */
+      @java.lang.Override
+      public java.lang.String getStringValue() {
+        java.lang.Object ref = "";
+        if (variableValueCase_ == 1) {
+          ref = variableValue_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (variableValueCase_ == 1) {
+            variableValue_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string string_value = 1;</code>
+       * @return The bytes for stringValue.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getStringValueBytes() {
+        java.lang.Object ref = "";
+        if (variableValueCase_ == 1) {
+          ref = variableValue_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (variableValueCase_ == 1) {
+            variableValue_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string string_value = 1;</code>
+       * @param value The stringValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStringValue(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  variableValueCase_ = 1;
+        variableValue_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string string_value = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStringValue() {
+        if (variableValueCase_ == 1) {
+          variableValueCase_ = 0;
+          variableValue_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string string_value = 1;</code>
+       * @param value The bytes for stringValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStringValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        variableValueCase_ = 1;
+        variableValue_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>int64 int_value = 2;</code>
+       * @return Whether the intValue field is set.
+       */
+      public boolean hasIntValue() {
+        return variableValueCase_ == 2;
+      }
+      /**
+       * <code>int64 int_value = 2;</code>
+       * @return The intValue.
+       */
+      public long getIntValue() {
+        if (variableValueCase_ == 2) {
+          return (java.lang.Long) variableValue_;
+        }
+        return 0L;
+      }
+      /**
+       * <code>int64 int_value = 2;</code>
+       * @param value The intValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIntValue(long value) {
+        variableValueCase_ = 2;
+        variableValue_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 int_value = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIntValue() {
+        if (variableValueCase_ == 2) {
+          variableValueCase_ = 0;
+          variableValue_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      /**
+       * <code>double double_value = 3;</code>
+       * @return Whether the doubleValue field is set.
+       */
+      public boolean hasDoubleValue() {
+        return variableValueCase_ == 3;
+      }
+      /**
+       * <code>double double_value = 3;</code>
+       * @return The doubleValue.
+       */
+      public double getDoubleValue() {
+        if (variableValueCase_ == 3) {
+          return (java.lang.Double) variableValue_;
+        }
+        return 0D;
+      }
+      /**
+       * <code>double double_value = 3;</code>
+       * @param value The doubleValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDoubleValue(double value) {
+        variableValueCase_ = 3;
+        variableValue_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double double_value = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDoubleValue() {
+        if (variableValueCase_ == 3) {
+          variableValueCase_ = 0;
+          variableValue_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      /**
+       * <code>bool bool_value = 4;</code>
+       * @return Whether the boolValue field is set.
+       */
+      public boolean hasBoolValue() {
+        return variableValueCase_ == 4;
+      }
+      /**
+       * <code>bool bool_value = 4;</code>
+       * @return The boolValue.
+       */
+      public boolean getBoolValue() {
+        if (variableValueCase_ == 4) {
+          return (java.lang.Boolean) variableValue_;
+        }
+        return false;
+      }
+      /**
+       * <code>bool bool_value = 4;</code>
+       * @param value The boolValue to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBoolValue(boolean value) {
+        variableValueCase_ = 4;
+        variableValue_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool bool_value = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBoolValue() {
+        if (variableValueCase_ == 4) {
+          variableValueCase_ = 0;
+          variableValue_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.serverless.apigateway.v1.VariableInput)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.serverless.apigateway.v1.VariableInput)
+    private static final yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput();
+    }
+
+    public static yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VariableInput>
+        PARSER = new com.google.protobuf.AbstractParser<VariableInput>() {
+      @java.lang.Override
+      public VariableInput parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new VariableInput(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<VariableInput> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VariableInput> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.serverless.apigateway.v1.Apigateway.VariableInput getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_descriptor;
   private static final 
@@ -6760,6 +9277,11 @@ public final class Apigateway {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_VariablesEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_VariablesEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_serverless_apigateway_v1_AttachedDomain_descriptor;
   private static final 
@@ -6775,6 +9297,21 @@ public final class Apigateway {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_serverless_apigateway_v1_LogOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_apigateway_v1_Canary_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_apigateway_v1_Canary_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_apigateway_v1_Canary_VariablesEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_apigateway_v1_Canary_VariablesEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_serverless_apigateway_v1_VariableInput_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_serverless_apigateway_v1_VariableInput_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -6788,53 +9325,76 @@ public final class Apigateway {
       "apigateway.proto\022%yandex.cloud.serverles" +
       "s.apigateway.v1\032\037google/protobuf/timesta" +
       "mp.proto\032\'yandex/cloud/logging/v1/log_en" +
-      "try.proto\"\263\005\n\nApiGateway\022\n\n\002id\030\001 \001(\t\022\021\n\t" +
-      "folder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n" +
-      "\013description\030\005 \001(\t\022M\n\006labels\030\007 \003(\0132=.yan" +
-      "dex.cloud.serverless.apigateway.v1.ApiGa" +
-      "teway.LabelsEntry\022H\n\006status\030\010 \001(\01628.yand" +
-      "ex.cloud.serverless.apigateway.v1.ApiGat" +
-      "eway.Status\022\016\n\006domain\030\t \001(\t\022\024\n\014log_group" +
-      "_id\030\n \001(\t\022O\n\020attached_domains\030\013 \003(\01325.ya" +
-      "ndex.cloud.serverless.apigateway.v1.Atta" +
-      "chedDomain\022I\n\014connectivity\030\014 \001(\01323.yande" +
-      "x.cloud.serverless.apigateway.v1.Connect" +
-      "ivity\022F\n\013log_options\030\r \001(\01321.yandex.clou" +
-      "d.serverless.apigateway.v1.LogOptions\032-\n" +
-      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\"a\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014" +
-      "\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020\003\022\t" +
-      "\n\005ERROR\020\004\022\014\n\010UPDATING\020\005\"\\\n\016AttachedDomai" +
-      "n\022\021\n\tdomain_id\030\001 \001(\t\022\026\n\016certificate_id\030\002" +
-      " \001(\t\022\017\n\007enabled\030\003 \001(\010\022\016\n\006domain\030\005 \001(\t\"5\n" +
-      "\014Connectivity\022\022\n\nnetwork_id\030\001 \001(\t\022\021\n\tsub" +
-      "net_id\030\002 \003(\t\"\226\001\n\nLogOptions\022\020\n\010disabled\030" +
-      "\001 \001(\010\022\026\n\014log_group_id\030\002 \001(\tH\000\022\023\n\tfolder_" +
-      "id\030\003 \001(\tH\000\022:\n\tmin_level\030\004 \001(\0162\'.yandex.c" +
-      "loud.logging.v1.LogLevel.LevelB\r\n\013destin" +
-      "ationB\201\001\n)yandex.cloud.api.serverless.ap" +
-      "igateway.v1ZTgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/serverless/apigate" +
-      "way/v1;apigatewayb\006proto3"
+      "try.proto\032\035yandex/cloud/validation.proto" +
+      "\"\257\007\n\nApiGateway\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id" +
+      "\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descript" +
+      "ion\030\005 \001(\t\022M\n\006labels\030\007 \003(\0132=.yandex.cloud" +
+      ".serverless.apigateway.v1.ApiGateway.Lab" +
+      "elsEntry\022H\n\006status\030\010 \001(\01628.yandex.cloud." +
+      "serverless.apigateway.v1.ApiGateway.Stat" +
+      "us\022\016\n\006domain\030\t \001(\t\022\024\n\014log_group_id\030\n \001(\t" +
+      "\022O\n\020attached_domains\030\013 \003(\01325.yandex.clou" +
+      "d.serverless.apigateway.v1.AttachedDomai" +
+      "n\022I\n\014connectivity\030\014 \001(\01323.yandex.cloud.s" +
+      "erverless.apigateway.v1.Connectivity\022F\n\013" +
+      "log_options\030\r \001(\01321.yandex.cloud.serverl" +
+      "ess.apigateway.v1.LogOptions\022S\n\tvariable" +
+      "s\030\016 \003(\0132@.yandex.cloud.serverless.apigat" +
+      "eway.v1.ApiGateway.VariablesEntry\022=\n\006can" +
+      "ary\030\017 \001(\0132-.yandex.cloud.serverless.apig" +
+      "ateway.v1.Canary\032-\n\013LabelsEntry\022\013\n\003key\030\001" +
+      " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032f\n\016VariablesEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022C\n\005value\030\002 \001(\01324.yandex.c" +
+      "loud.serverless.apigateway.v1.VariableIn" +
+      "put:\0028\001\"a\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020" +
+      "\000\022\014\n\010CREATING\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010DELETING\020" +
+      "\003\022\t\n\005ERROR\020\004\022\014\n\010UPDATING\020\005\"\\\n\016AttachedDo" +
+      "main\022\021\n\tdomain_id\030\001 \001(\t\022\026\n\016certificate_i" +
+      "d\030\002 \001(\t\022\017\n\007enabled\030\003 \001(\010\022\016\n\006domain\030\005 \001(\t" +
+      "\"5\n\014Connectivity\022\022\n\nnetwork_id\030\001 \001(\t\022\021\n\t" +
+      "subnet_id\030\002 \003(\t\"\226\001\n\nLogOptions\022\020\n\010disabl" +
+      "ed\030\001 \001(\010\022\026\n\014log_group_id\030\002 \001(\tH\000\022\023\n\tfold" +
+      "er_id\030\003 \001(\tH\000\022:\n\tmin_level\030\004 \001(\0162\'.yande" +
+      "x.cloud.logging.v1.LogLevel.LevelB\r\n\013des" +
+      "tination\"\343\001\n\006Canary\022\030\n\006weight\030\001 \001(\003B\010\372\3071" +
+      "\0041-99\022W\n\tvariables\030\002 \003(\0132<.yandex.cloud." +
+      "serverless.apigateway.v1.Canary.Variable" +
+      "sEntryB\006\202\3101\002>0\032f\n\016VariablesEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022C\n\005value\030\002 \001(\01324.yandex.cloud.serv" +
+      "erless.apigateway.v1.VariableInput:\0028\001\"|" +
+      "\n\rVariableInput\022\026\n\014string_value\030\001 \001(\tH\000\022" +
+      "\023\n\tint_value\030\002 \001(\003H\000\022\026\n\014double_value\030\003 \001" +
+      "(\001H\000\022\024\n\nbool_value\030\004 \001(\010H\000B\020\n\016variable_v" +
+      "alueB\201\001\n)yandex.cloud.api.serverless.api" +
+      "gateway.v1ZTgithub.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/serverless/apigatew" +
+      "ay/v1;apigatewayb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.logging.v1.LogEntryOuterClass.getDescriptor(),
+          yandex.cloud.api.Validation.getDescriptor(),
         });
     internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Status", "Domain", "LogGroupId", "AttachedDomains", "Connectivity", "LogOptions", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "Status", "Domain", "LogGroupId", "AttachedDomains", "Connectivity", "LogOptions", "Variables", "Canary", });
     internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_LabelsEntry_descriptor =
       internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_LabelsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_VariablesEntry_descriptor =
+      internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_descriptor.getNestedTypes().get(1);
+    internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_VariablesEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_apigateway_v1_ApiGateway_VariablesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_yandex_cloud_serverless_apigateway_v1_AttachedDomain_descriptor =
       getDescriptor().getMessageTypes().get(1);
@@ -6854,8 +9414,33 @@ public final class Apigateway {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_serverless_apigateway_v1_LogOptions_descriptor,
         new java.lang.String[] { "Disabled", "LogGroupId", "FolderId", "MinLevel", "Destination", });
+    internal_static_yandex_cloud_serverless_apigateway_v1_Canary_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_serverless_apigateway_v1_Canary_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_apigateway_v1_Canary_descriptor,
+        new java.lang.String[] { "Weight", "Variables", });
+    internal_static_yandex_cloud_serverless_apigateway_v1_Canary_VariablesEntry_descriptor =
+      internal_static_yandex_cloud_serverless_apigateway_v1_Canary_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_serverless_apigateway_v1_Canary_VariablesEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_apigateway_v1_Canary_VariablesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_serverless_apigateway_v1_VariableInput_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_serverless_apigateway_v1_VariableInput_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_serverless_apigateway_v1_VariableInput_descriptor,
+        new java.lang.String[] { "StringValue", "IntValue", "DoubleValue", "BoolValue", "VariableValue", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.size);
+    registry.add(yandex.cloud.api.Validation.value);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.logging.v1.LogEntryOuterClass.getDescriptor();
+    yandex.cloud.api.Validation.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

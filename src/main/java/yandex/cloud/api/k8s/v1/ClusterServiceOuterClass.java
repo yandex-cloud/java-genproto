@@ -9655,6 +9655,50 @@ public final class ClusterServiceOuterClass {
      * <code>.yandex.cloud.k8s.v1.MasterLogging master_logging = 4;</code>
      */
     yandex.cloud.api.k8s.v1.ClusterOuterClass.MasterLoggingOrBuilder getMasterLoggingOrBuilder();
+
+    /**
+     * <pre>
+     * Update master instance locations.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+     */
+    java.util.List<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec> 
+        getLocationsList();
+    /**
+     * <pre>
+     * Update master instance locations.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec getLocations(int index);
+    /**
+     * <pre>
+     * Update master instance locations.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+     */
+    int getLocationsCount();
+    /**
+     * <pre>
+     * Update master instance locations.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpecOrBuilder> 
+        getLocationsOrBuilderList();
+    /**
+     * <pre>
+     * Update master instance locations.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpecOrBuilder getLocationsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.k8s.v1.MasterUpdateSpec}
@@ -9670,6 +9714,7 @@ public final class ClusterServiceOuterClass {
     }
     private MasterUpdateSpec() {
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      locations_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -9751,6 +9796,15 @@ public final class ClusterServiceOuterClass {
 
               break;
             }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                locations_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              locations_.add(
+                  input.readMessage(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -9768,6 +9822,9 @@ public final class ClusterServiceOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          locations_ = java.util.Collections.unmodifiableList(locations_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -9951,6 +10008,66 @@ public final class ClusterServiceOuterClass {
       return getMasterLogging();
     }
 
+    public static final int LOCATIONS_FIELD_NUMBER = 5;
+    private java.util.List<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec> locations_;
+    /**
+     * <pre>
+     * Update master instance locations.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec> getLocationsList() {
+      return locations_;
+    }
+    /**
+     * <pre>
+     * Update master instance locations.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpecOrBuilder> 
+        getLocationsOrBuilderList() {
+      return locations_;
+    }
+    /**
+     * <pre>
+     * Update master instance locations.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+     */
+    @java.lang.Override
+    public int getLocationsCount() {
+      return locations_.size();
+    }
+    /**
+     * <pre>
+     * Update master instance locations.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec getLocations(int index) {
+      return locations_.get(index);
+    }
+    /**
+     * <pre>
+     * Update master instance locations.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpecOrBuilder getLocationsOrBuilder(
+        int index) {
+      return locations_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9976,6 +10093,9 @@ public final class ClusterServiceOuterClass {
       }
       if (masterLogging_ != null) {
         output.writeMessage(4, getMasterLogging());
+      }
+      for (int i = 0; i < locations_.size(); i++) {
+        output.writeMessage(5, locations_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -10005,6 +10125,10 @@ public final class ClusterServiceOuterClass {
       if (masterLogging_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getMasterLogging());
+      }
+      for (int i = 0; i < locations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, locations_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10038,6 +10162,8 @@ public final class ClusterServiceOuterClass {
         if (!getMasterLogging()
             .equals(other.getMasterLogging())) return false;
       }
+      if (!getLocationsList()
+          .equals(other.getLocationsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10064,6 +10190,10 @@ public final class ClusterServiceOuterClass {
       if (hasMasterLogging()) {
         hash = (37 * hash) + MASTER_LOGGING_FIELD_NUMBER;
         hash = (53 * hash) + getMasterLogging().hashCode();
+      }
+      if (getLocationsCount() > 0) {
+        hash = (37 * hash) + LOCATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getLocationsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -10193,6 +10323,7 @@ public final class ClusterServiceOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getLocationsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -10217,6 +10348,12 @@ public final class ClusterServiceOuterClass {
         } else {
           masterLogging_ = null;
           masterLoggingBuilder_ = null;
+        }
+        if (locationsBuilder_ == null) {
+          locations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          locationsBuilder_.clear();
         }
         return this;
       }
@@ -10264,6 +10401,15 @@ public final class ClusterServiceOuterClass {
           result.masterLogging_ = masterLogging_;
         } else {
           result.masterLogging_ = masterLoggingBuilder_.build();
+        }
+        if (locationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            locations_ = java.util.Collections.unmodifiableList(locations_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.locations_ = locations_;
+        } else {
+          result.locations_ = locationsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -10331,6 +10477,32 @@ public final class ClusterServiceOuterClass {
         }
         if (other.hasMasterLogging()) {
           mergeMasterLogging(other.getMasterLogging());
+        }
+        if (locationsBuilder_ == null) {
+          if (!other.locations_.isEmpty()) {
+            if (locations_.isEmpty()) {
+              locations_ = other.locations_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureLocationsIsMutable();
+              locations_.addAll(other.locations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.locations_.isEmpty()) {
+            if (locationsBuilder_.isEmpty()) {
+              locationsBuilder_.dispose();
+              locationsBuilder_ = null;
+              locations_ = other.locations_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              locationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLocationsFieldBuilder() : null;
+            } else {
+              locationsBuilder_.addAllMessages(other.locations_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10971,6 +11143,318 @@ public final class ClusterServiceOuterClass {
           masterLogging_ = null;
         }
         return masterLoggingBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec> locations_ =
+        java.util.Collections.emptyList();
+      private void ensureLocationsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          locations_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec>(locations_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpecOrBuilder> locationsBuilder_;
+
+      /**
+       * <pre>
+       * Update master instance locations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+       */
+      public java.util.List<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec> getLocationsList() {
+        if (locationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(locations_);
+        } else {
+          return locationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Update master instance locations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+       */
+      public int getLocationsCount() {
+        if (locationsBuilder_ == null) {
+          return locations_.size();
+        } else {
+          return locationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Update master instance locations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec getLocations(int index) {
+        if (locationsBuilder_ == null) {
+          return locations_.get(index);
+        } else {
+          return locationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Update master instance locations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+       */
+      public Builder setLocations(
+          int index, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec value) {
+        if (locationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocationsIsMutable();
+          locations_.set(index, value);
+          onChanged();
+        } else {
+          locationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Update master instance locations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+       */
+      public Builder setLocations(
+          int index, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.Builder builderForValue) {
+        if (locationsBuilder_ == null) {
+          ensureLocationsIsMutable();
+          locations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          locationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Update master instance locations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+       */
+      public Builder addLocations(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec value) {
+        if (locationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocationsIsMutable();
+          locations_.add(value);
+          onChanged();
+        } else {
+          locationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Update master instance locations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+       */
+      public Builder addLocations(
+          int index, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec value) {
+        if (locationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocationsIsMutable();
+          locations_.add(index, value);
+          onChanged();
+        } else {
+          locationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Update master instance locations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+       */
+      public Builder addLocations(
+          yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.Builder builderForValue) {
+        if (locationsBuilder_ == null) {
+          ensureLocationsIsMutable();
+          locations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          locationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Update master instance locations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+       */
+      public Builder addLocations(
+          int index, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.Builder builderForValue) {
+        if (locationsBuilder_ == null) {
+          ensureLocationsIsMutable();
+          locations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          locationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Update master instance locations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+       */
+      public Builder addAllLocations(
+          java.lang.Iterable<? extends yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec> values) {
+        if (locationsBuilder_ == null) {
+          ensureLocationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, locations_);
+          onChanged();
+        } else {
+          locationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Update master instance locations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+       */
+      public Builder clearLocations() {
+        if (locationsBuilder_ == null) {
+          locations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          locationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Update master instance locations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+       */
+      public Builder removeLocations(int index) {
+        if (locationsBuilder_ == null) {
+          ensureLocationsIsMutable();
+          locations_.remove(index);
+          onChanged();
+        } else {
+          locationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Update master instance locations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.Builder getLocationsBuilder(
+          int index) {
+        return getLocationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Update master instance locations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpecOrBuilder getLocationsOrBuilder(
+          int index) {
+        if (locationsBuilder_ == null) {
+          return locations_.get(index);  } else {
+          return locationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Update master instance locations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpecOrBuilder> 
+           getLocationsOrBuilderList() {
+        if (locationsBuilder_ != null) {
+          return locationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(locations_);
+        }
+      }
+      /**
+       * <pre>
+       * Update master instance locations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.Builder addLocationsBuilder() {
+        return getLocationsFieldBuilder().addBuilder(
+            yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Update master instance locations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.Builder addLocationsBuilder(
+          int index) {
+        return getLocationsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Update master instance locations.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 5;</code>
+       */
+      public java.util.List<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.Builder> 
+           getLocationsBuilderList() {
+        return getLocationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpecOrBuilder> 
+          getLocationsFieldBuilder() {
+        if (locationsBuilder_ == null) {
+          locationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpecOrBuilder>(
+                  locations_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          locations_ = null;
+        }
+        return locationsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -23128,6 +23612,87 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
+     * Locations specification for Kubernetes control-plane (master) instances.
+     * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+     * Possible combinations:
+     * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+     * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+     * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+     */
+    java.util.List<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec> 
+        getLocationsList();
+    /**
+     * <pre>
+     * Locations specification for Kubernetes control-plane (master) instances.
+     * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+     * Possible combinations:
+     * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+     * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+     * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec getLocations(int index);
+    /**
+     * <pre>
+     * Locations specification for Kubernetes control-plane (master) instances.
+     * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+     * Possible combinations:
+     * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+     * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+     * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+     */
+    int getLocationsCount();
+    /**
+     * <pre>
+     * Locations specification for Kubernetes control-plane (master) instances.
+     * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+     * Possible combinations:
+     * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+     * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+     * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpecOrBuilder> 
+        getLocationsOrBuilderList();
+    /**
+     * <pre>
+     * Locations specification for Kubernetes control-plane (master) instances.
+     * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+     * Possible combinations:
+     * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+     * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+     * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpecOrBuilder getLocationsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Number of etcd nodes in cluster.
+     * Works in conjunction with [locations]. See it's documentation for details.
+     * Optional. If not set, will be assumed equal to the number of locations.
+     * </pre>
+     *
+     * <code>int64 etcd_cluster_size = 9 [(.yandex.cloud.value) = "0,1,3"];</code>
+     * @return The etcdClusterSize.
+     */
+    long getEtcdClusterSize();
+
+    /**
+     * <pre>
      * Version of Kubernetes components that runs on the master.
      * </pre>
      *
@@ -23256,6 +23821,7 @@ public final class ClusterServiceOuterClass {
       super(builder);
     }
     private MasterSpec() {
+      locations_ = java.util.Collections.emptyList();
       version_ = "";
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
@@ -23340,9 +23906,9 @@ public final class ClusterServiceOuterClass {
             }
             case 50: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000002;
               }
               securityGroupIds_.add(s);
               break;
@@ -23360,6 +23926,20 @@ public final class ClusterServiceOuterClass {
 
               break;
             }
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                locations_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              locations_.add(
+                  input.readMessage(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.parser(), extensionRegistry));
+              break;
+            }
+            case 72: {
+
+              etcdClusterSize_ = input.readInt64();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -23375,8 +23955,11 @@ public final class ClusterServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          locations_ = java.util.Collections.unmodifiableList(locations_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -23520,6 +24103,108 @@ public final class ClusterServiceOuterClass {
          return (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec) masterType_;
       }
       return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.RegionalMasterSpec.getDefaultInstance();
+    }
+
+    public static final int LOCATIONS_FIELD_NUMBER = 8;
+    private java.util.List<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec> locations_;
+    /**
+     * <pre>
+     * Locations specification for Kubernetes control-plane (master) instances.
+     * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+     * Possible combinations:
+     * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+     * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+     * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec> getLocationsList() {
+      return locations_;
+    }
+    /**
+     * <pre>
+     * Locations specification for Kubernetes control-plane (master) instances.
+     * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+     * Possible combinations:
+     * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+     * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+     * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpecOrBuilder> 
+        getLocationsOrBuilderList() {
+      return locations_;
+    }
+    /**
+     * <pre>
+     * Locations specification for Kubernetes control-plane (master) instances.
+     * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+     * Possible combinations:
+     * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+     * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+     * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+     */
+    @java.lang.Override
+    public int getLocationsCount() {
+      return locations_.size();
+    }
+    /**
+     * <pre>
+     * Locations specification for Kubernetes control-plane (master) instances.
+     * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+     * Possible combinations:
+     * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+     * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+     * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec getLocations(int index) {
+      return locations_.get(index);
+    }
+    /**
+     * <pre>
+     * Locations specification for Kubernetes control-plane (master) instances.
+     * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+     * Possible combinations:
+     * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+     * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+     * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpecOrBuilder getLocationsOrBuilder(
+        int index) {
+      return locations_.get(index);
+    }
+
+    public static final int ETCD_CLUSTER_SIZE_FIELD_NUMBER = 9;
+    private long etcdClusterSize_;
+    /**
+     * <pre>
+     * Number of etcd nodes in cluster.
+     * Works in conjunction with [locations]. See it's documentation for details.
+     * Optional. If not set, will be assumed equal to the number of locations.
+     * </pre>
+     *
+     * <code>int64 etcd_cluster_size = 9 [(.yandex.cloud.value) = "0,1,3"];</code>
+     * @return The etcdClusterSize.
+     */
+    @java.lang.Override
+    public long getEtcdClusterSize() {
+      return etcdClusterSize_;
     }
 
     public static final int VERSION_FIELD_NUMBER = 3;
@@ -23727,6 +24412,12 @@ public final class ClusterServiceOuterClass {
       if (masterLogging_ != null) {
         output.writeMessage(7, getMasterLogging());
       }
+      for (int i = 0; i < locations_.size(); i++) {
+        output.writeMessage(8, locations_.get(i));
+      }
+      if (etcdClusterSize_ != 0L) {
+        output.writeInt64(9, etcdClusterSize_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -23763,6 +24454,14 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getMasterLogging());
       }
+      for (int i = 0; i < locations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, locations_.get(i));
+      }
+      if (etcdClusterSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(9, etcdClusterSize_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -23778,6 +24477,10 @@ public final class ClusterServiceOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec) obj;
 
+      if (!getLocationsList()
+          .equals(other.getLocationsList())) return false;
+      if (getEtcdClusterSize()
+          != other.getEtcdClusterSize()) return false;
       if (!getVersion()
           .equals(other.getVersion())) return false;
       if (hasMaintenancePolicy() != other.hasMaintenancePolicy()) return false;
@@ -23816,6 +24519,13 @@ public final class ClusterServiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (getLocationsCount() > 0) {
+        hash = (37 * hash) + LOCATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getLocationsList().hashCode();
+      }
+      hash = (37 * hash) + ETCD_CLUSTER_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEtcdClusterSize());
       hash = (37 * hash) + VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getVersion().hashCode();
       if (hasMaintenancePolicy()) {
@@ -23970,11 +24680,20 @@ public final class ClusterServiceOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getLocationsFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (locationsBuilder_ == null) {
+          locations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          locationsBuilder_.clear();
+        }
+        etcdClusterSize_ = 0L;
+
         version_ = "";
 
         if (maintenancePolicyBuilder_ == null) {
@@ -23984,7 +24703,7 @@ public final class ClusterServiceOuterClass {
           maintenancePolicyBuilder_ = null;
         }
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (masterLoggingBuilder_ == null) {
           masterLogging_ = null;
         } else {
@@ -24034,15 +24753,25 @@ public final class ClusterServiceOuterClass {
             result.masterType_ = regionalMasterSpecBuilder_.build();
           }
         }
+        if (locationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            locations_ = java.util.Collections.unmodifiableList(locations_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.locations_ = locations_;
+        } else {
+          result.locations_ = locationsBuilder_.build();
+        }
+        result.etcdClusterSize_ = etcdClusterSize_;
         result.version_ = version_;
         if (maintenancePolicyBuilder_ == null) {
           result.maintenancePolicy_ = maintenancePolicy_;
         } else {
           result.maintenancePolicy_ = maintenancePolicyBuilder_.build();
         }
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.securityGroupIds_ = securityGroupIds_;
         if (masterLoggingBuilder_ == null) {
@@ -24099,6 +24828,35 @@ public final class ClusterServiceOuterClass {
 
       public Builder mergeFrom(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec other) {
         if (other == yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.MasterSpec.getDefaultInstance()) return this;
+        if (locationsBuilder_ == null) {
+          if (!other.locations_.isEmpty()) {
+            if (locations_.isEmpty()) {
+              locations_ = other.locations_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureLocationsIsMutable();
+              locations_.addAll(other.locations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.locations_.isEmpty()) {
+            if (locationsBuilder_.isEmpty()) {
+              locationsBuilder_.dispose();
+              locationsBuilder_ = null;
+              locations_ = other.locations_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              locationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLocationsFieldBuilder() : null;
+            } else {
+              locationsBuilder_.addAllMessages(other.locations_);
+            }
+          }
+        }
+        if (other.getEtcdClusterSize() != 0L) {
+          setEtcdClusterSize(other.getEtcdClusterSize());
+        }
         if (!other.getVersion().isEmpty()) {
           version_ = other.version_;
           onChanged();
@@ -24109,7 +24867,7 @@ public final class ClusterServiceOuterClass {
         if (!other.securityGroupIds_.isEmpty()) {
           if (securityGroupIds_.isEmpty()) {
             securityGroupIds_ = other.securityGroupIds_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureSecurityGroupIdsIsMutable();
             securityGroupIds_.addAll(other.securityGroupIds_);
@@ -24531,6 +25289,457 @@ public final class ClusterServiceOuterClass {
         return regionalMasterSpecBuilder_;
       }
 
+      private java.util.List<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec> locations_ =
+        java.util.Collections.emptyList();
+      private void ensureLocationsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          locations_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec>(locations_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpecOrBuilder> locationsBuilder_;
+
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+       * Possible combinations:
+       * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+       * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+       * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+       */
+      public java.util.List<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec> getLocationsList() {
+        if (locationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(locations_);
+        } else {
+          return locationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+       * Possible combinations:
+       * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+       * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+       * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+       */
+      public int getLocationsCount() {
+        if (locationsBuilder_ == null) {
+          return locations_.size();
+        } else {
+          return locationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+       * Possible combinations:
+       * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+       * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+       * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec getLocations(int index) {
+        if (locationsBuilder_ == null) {
+          return locations_.get(index);
+        } else {
+          return locationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+       * Possible combinations:
+       * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+       * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+       * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+       */
+      public Builder setLocations(
+          int index, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec value) {
+        if (locationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocationsIsMutable();
+          locations_.set(index, value);
+          onChanged();
+        } else {
+          locationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+       * Possible combinations:
+       * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+       * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+       * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+       */
+      public Builder setLocations(
+          int index, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.Builder builderForValue) {
+        if (locationsBuilder_ == null) {
+          ensureLocationsIsMutable();
+          locations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          locationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+       * Possible combinations:
+       * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+       * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+       * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+       */
+      public Builder addLocations(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec value) {
+        if (locationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocationsIsMutable();
+          locations_.add(value);
+          onChanged();
+        } else {
+          locationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+       * Possible combinations:
+       * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+       * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+       * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+       */
+      public Builder addLocations(
+          int index, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec value) {
+        if (locationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocationsIsMutable();
+          locations_.add(index, value);
+          onChanged();
+        } else {
+          locationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+       * Possible combinations:
+       * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+       * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+       * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+       */
+      public Builder addLocations(
+          yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.Builder builderForValue) {
+        if (locationsBuilder_ == null) {
+          ensureLocationsIsMutable();
+          locations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          locationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+       * Possible combinations:
+       * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+       * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+       * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+       */
+      public Builder addLocations(
+          int index, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.Builder builderForValue) {
+        if (locationsBuilder_ == null) {
+          ensureLocationsIsMutable();
+          locations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          locationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+       * Possible combinations:
+       * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+       * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+       * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+       */
+      public Builder addAllLocations(
+          java.lang.Iterable<? extends yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec> values) {
+        if (locationsBuilder_ == null) {
+          ensureLocationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, locations_);
+          onChanged();
+        } else {
+          locationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+       * Possible combinations:
+       * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+       * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+       * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+       */
+      public Builder clearLocations() {
+        if (locationsBuilder_ == null) {
+          locations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          locationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+       * Possible combinations:
+       * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+       * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+       * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+       */
+      public Builder removeLocations(int index) {
+        if (locationsBuilder_ == null) {
+          ensureLocationsIsMutable();
+          locations_.remove(index);
+          onChanged();
+        } else {
+          locationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+       * Possible combinations:
+       * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+       * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+       * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.Builder getLocationsBuilder(
+          int index) {
+        return getLocationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+       * Possible combinations:
+       * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+       * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+       * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpecOrBuilder getLocationsOrBuilder(
+          int index) {
+        if (locationsBuilder_ == null) {
+          return locations_.get(index);  } else {
+          return locationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+       * Possible combinations:
+       * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+       * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+       * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpecOrBuilder> 
+           getLocationsOrBuilderList() {
+        if (locationsBuilder_ != null) {
+          return locationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(locations_);
+        }
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+       * Possible combinations:
+       * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+       * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+       * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.Builder addLocationsBuilder() {
+        return getLocationsFieldBuilder().addBuilder(
+            yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+       * Possible combinations:
+       * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+       * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+       * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.Builder addLocationsBuilder(
+          int index) {
+        return getLocationsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * Works in conjunction with [etcd_cluster_size]. See it's documentation for details.
+       * Possible combinations:
+       * - 1 location and etcd_cluster_size = 1 - a single node cluster whose availability is limited by the availability of a single Compute Instance; downtime is expected during cluster updates.
+       * - 1 location and etcd_cluster_size = 3 - a highly available cluster within a single availability zone; can survive the failure of a Compute Instance, a server, or an individual server rack.
+       * - 3 location and etcd_cluster_size = 3 - a highly available cluster with each etcd instance located within separate availability zone; can survive the failure of a single availability zone.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.LocationSpec locations = 8;</code>
+       */
+      public java.util.List<yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.Builder> 
+           getLocationsBuilderList() {
+        return getLocationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpecOrBuilder> 
+          getLocationsFieldBuilder() {
+        if (locationsBuilder_ == null) {
+          locationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.Builder, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpecOrBuilder>(
+                  locations_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          locations_ = null;
+        }
+        return locationsBuilder_;
+      }
+
+      private long etcdClusterSize_ ;
+      /**
+       * <pre>
+       * Number of etcd nodes in cluster.
+       * Works in conjunction with [locations]. See it's documentation for details.
+       * Optional. If not set, will be assumed equal to the number of locations.
+       * </pre>
+       *
+       * <code>int64 etcd_cluster_size = 9 [(.yandex.cloud.value) = "0,1,3"];</code>
+       * @return The etcdClusterSize.
+       */
+      @java.lang.Override
+      public long getEtcdClusterSize() {
+        return etcdClusterSize_;
+      }
+      /**
+       * <pre>
+       * Number of etcd nodes in cluster.
+       * Works in conjunction with [locations]. See it's documentation for details.
+       * Optional. If not set, will be assumed equal to the number of locations.
+       * </pre>
+       *
+       * <code>int64 etcd_cluster_size = 9 [(.yandex.cloud.value) = "0,1,3"];</code>
+       * @param value The etcdClusterSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEtcdClusterSize(long value) {
+        
+        etcdClusterSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of etcd nodes in cluster.
+       * Works in conjunction with [locations]. See it's documentation for details.
+       * Optional. If not set, will be assumed equal to the number of locations.
+       * </pre>
+       *
+       * <code>int64 etcd_cluster_size = 9 [(.yandex.cloud.value) = "0,1,3"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEtcdClusterSize() {
+        
+        etcdClusterSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
       private java.lang.Object version_ = "";
       /**
        * <pre>
@@ -24784,9 +25993,9 @@ public final class ClusterServiceOuterClass {
 
       private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSecurityGroupIdsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -24903,7 +26112,7 @@ public final class ClusterServiceOuterClass {
        */
       public Builder clearSecurityGroupIds() {
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -29972,6 +31181,805 @@ public final class ClusterServiceOuterClass {
 
   }
 
+  public interface LocationSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.k8s.v1.LocationSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the availability zone where the master resides.
+     * </pre>
+     *
+     * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The zoneId.
+     */
+    java.lang.String getZoneId();
+    /**
+     * <pre>
+     * ID of the availability zone where the master resides.
+     * </pre>
+     *
+     * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for zoneId.
+     */
+    com.google.protobuf.ByteString
+        getZoneIdBytes();
+
+    /**
+     * <pre>
+     * ID of the VPC network's subnet where the master resides.
+     * If not specified and there is a single subnet in specified zone, address in this subnet will be allocated.
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     * @return The subnetId.
+     */
+    java.lang.String getSubnetId();
+    /**
+     * <pre>
+     * ID of the VPC network's subnet where the master resides.
+     * If not specified and there is a single subnet in specified zone, address in this subnet will be allocated.
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     * @return The bytes for subnetId.
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.k8s.v1.LocationSpec}
+   */
+  public static final class LocationSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.LocationSpec)
+      LocationSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LocationSpec.newBuilder() to construct.
+    private LocationSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LocationSpec() {
+      zoneId_ = "";
+      subnetId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new LocationSpec();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LocationSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              zoneId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subnetId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_LocationSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_LocationSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.Builder.class);
+    }
+
+    public static final int ZONE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object zoneId_;
+    /**
+     * <pre>
+     * ID of the availability zone where the master resides.
+     * </pre>
+     *
+     * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The zoneId.
+     */
+    @java.lang.Override
+    public java.lang.String getZoneId() {
+      java.lang.Object ref = zoneId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        zoneId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the availability zone where the master resides.
+     * </pre>
+     *
+     * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for zoneId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getZoneIdBytes() {
+      java.lang.Object ref = zoneId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        zoneId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBNET_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object subnetId_;
+    /**
+     * <pre>
+     * ID of the VPC network's subnet where the master resides.
+     * If not specified and there is a single subnet in specified zone, address in this subnet will be allocated.
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     * @return The subnetId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubnetId() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subnetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the VPC network's subnet where the master resides.
+     * If not specified and there is a single subnet in specified zone, address in this subnet will be allocated.
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     * @return The bytes for subnetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubnetIdBytes() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subnetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, zoneId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subnetId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, zoneId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subnetId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec other = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec) obj;
+
+      if (!getZoneId()
+          .equals(other.getZoneId())) return false;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ZONE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getZoneId().hashCode();
+      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubnetId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.k8s.v1.LocationSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.k8s.v1.LocationSpec)
+        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_LocationSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_LocationSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.class, yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        zoneId_ = "";
+
+        subnetId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.internal_static_yandex_cloud_k8s_v1_LocationSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec getDefaultInstanceForType() {
+        return yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec build() {
+        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec buildPartial() {
+        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec result = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec(this);
+        result.zoneId_ = zoneId_;
+        result.subnetId_ = subnetId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec) {
+          return mergeFrom((yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec other) {
+        if (other == yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec.getDefaultInstance()) return this;
+        if (!other.getZoneId().isEmpty()) {
+          zoneId_ = other.zoneId_;
+          onChanged();
+        }
+        if (!other.getSubnetId().isEmpty()) {
+          subnetId_ = other.subnetId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object zoneId_ = "";
+      /**
+       * <pre>
+       * ID of the availability zone where the master resides.
+       * </pre>
+       *
+       * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The zoneId.
+       */
+      public java.lang.String getZoneId() {
+        java.lang.Object ref = zoneId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          zoneId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the availability zone where the master resides.
+       * </pre>
+       *
+       * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for zoneId.
+       */
+      public com.google.protobuf.ByteString
+          getZoneIdBytes() {
+        java.lang.Object ref = zoneId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          zoneId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the availability zone where the master resides.
+       * </pre>
+       *
+       * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The zoneId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        zoneId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the availability zone where the master resides.
+       * </pre>
+       *
+       * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZoneId() {
+        
+        zoneId_ = getDefaultInstance().getZoneId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the availability zone where the master resides.
+       * </pre>
+       *
+       * <code>string zone_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for zoneId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        zoneId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subnetId_ = "";
+      /**
+       * <pre>
+       * ID of the VPC network's subnet where the master resides.
+       * If not specified and there is a single subnet in specified zone, address in this subnet will be allocated.
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @return The subnetId.
+       */
+      public java.lang.String getSubnetId() {
+        java.lang.Object ref = subnetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subnetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the VPC network's subnet where the master resides.
+       * If not specified and there is a single subnet in specified zone, address in this subnet will be allocated.
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @return The bytes for subnetId.
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdBytes() {
+        java.lang.Object ref = subnetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the VPC network's subnet where the master resides.
+       * If not specified and there is a single subnet in specified zone, address in this subnet will be allocated.
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the VPC network's subnet where the master resides.
+       * If not specified and there is a single subnet in specified zone, address in this subnet will be allocated.
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubnetId() {
+        
+        subnetId_ = getDefaultInstance().getSubnetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the VPC network's subnet where the master resides.
+       * If not specified and there is a single subnet in specified zone, address in this subnet will be allocated.
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.k8s.v1.LocationSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.k8s.v1.LocationSpec)
+    private static final yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec();
+    }
+
+    public static yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LocationSpec>
+        PARSER = new com.google.protobuf.AbstractParser<LocationSpec>() {
+      @java.lang.Override
+      public LocationSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LocationSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LocationSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LocationSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterServiceOuterClass.LocationSpec getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_k8s_v1_GetClusterRequest_descriptor;
   private static final 
@@ -30117,6 +32125,11 @@ public final class ClusterServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_k8s_v1_MasterLocation_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_k8s_v1_LocationSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_k8s_v1_LocationSpec_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -30166,127 +32179,132 @@ public final class ClusterServiceOuterClass {
       "kPolicy\022E\n\024ip_allocation_policy\030\013 \001(\0132\'." +
       "yandex.cloud.k8s.v1.IPAllocationPolicy\032-" +
       "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001B\022\n\020internet_gateway\"\355\001\n\020MasterUpda" +
+      "\t:\0028\001B\022\n\020internet_gateway\"\243\002\n\020MasterUpda" +
       "teSpec\0227\n\007version\030\001 \001(\0132&.yandex.cloud.k" +
       "8s.v1.UpdateVersionSpec\022H\n\022maintenance_p" +
       "olicy\030\002 \001(\0132,.yandex.cloud.k8s.v1.Master" +
       "MaintenancePolicy\022\032\n\022security_group_ids\030" +
       "\003 \003(\t\022:\n\016master_logging\030\004 \001(\0132\".yandex.c" +
-      "loud.k8s.v1.MasterLogging\"+\n\025UpdateClust" +
-      "erMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\330\006\n\024Creat" +
-      "eClusterRequest\022\027\n\tfolder_id\030\001 \001(\tB\004\350\3071\001" +
-      "\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,6" +
-      "1}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<" +
-      "=256\022\216\001\n\006labels\030\004 \003(\01325.yandex.cloud.k8s" +
-      ".v1.CreateClusterRequest.LabelsEntryBG\202\310" +
-      "1\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041" +
-      "-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\030\n\nnetwork" +
-      "_id\030\005 \001(\tB\004\350\3071\001\022:\n\013master_spec\030\006 \001(\0132\037.y" +
-      "andex.cloud.k8s.v1.MasterSpecB\004\350\3071\001\022E\n\024i" +
-      "p_allocation_policy\030\007 \001(\0132\'.yandex.cloud" +
-      ".k8s.v1.IPAllocationPolicy\022\036\n\024gateway_ip" +
-      "v4_address\030\010 \001(\tH\000\022 \n\022service_account_id" +
-      "\030\t \001(\tB\004\350\3071\001\022%\n\027node_service_account_id\030" +
-      "\n \001(\tB\004\350\3071\001\022<\n\017release_channel\030\013 \001(\0162#.y" +
-      "andex.cloud.k8s.v1.ReleaseChannel\022:\n\016net" +
-      "work_policy\030\014 \001(\0132\".yandex.cloud.k8s.v1." +
-      "NetworkPolicy\0226\n\014kms_provider\030\r \001(\0132 .ya" +
-      "ndex.cloud.k8s.v1.KMSProvider\022-\n\006cilium\030" +
-      "\016 \001(\0132\033.yandex.cloud.k8s.v1.CiliumH\001\032-\n\013" +
-      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001B\022\n\020internet_gatewayB\030\n\026network_imple" +
-      "mentation\"+\n\025CreateClusterMetadata\022\022\n\ncl" +
-      "uster_id\030\001 \001(\t\"/\n\031AutoUpgradeMasterMetad" +
-      "ata\022\022\n\ncluster_id\030\001 \001(\t\"\222\001\n\034ListClusterO" +
-      "perationsRequest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\307" +
-      "1\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npag" +
-      "e_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\t" +
-      "B\n\212\3101\006<=1000\"o\n\035ListClusterOperationsRes" +
-      "ponse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud" +
-      ".operation.Operation\022\027\n\017next_page_token\030" +
-      "\002 \001(\t\"\222\001\n\034ListClusterNodeGroupsRequest\022\030" +
-      "\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 " +
-      "\001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
-      "\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"m\n\035Li" +
-      "stClusterNodeGroupsResponse\0223\n\013node_grou" +
-      "ps\030\001 \003(\0132\036.yandex.cloud.k8s.v1.NodeGroup" +
-      "\022\027\n\017next_page_token\030\002 \001(\t\"q\n\027ListCluster" +
-      "NodesRequest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035" +
+      "loud.k8s.v1.MasterLogging\0224\n\tlocations\030\005" +
+      " \003(\0132!.yandex.cloud.k8s.v1.LocationSpec\"" +
+      "+\n\025UpdateClusterMetadata\022\022\n\ncluster_id\030\001" +
+      " \001(\t\"\330\006\n\024CreateClusterRequest\022\027\n\tfolder_" +
+      "id\030\001 \001(\tB\004\350\3071\001\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]" +
+      "([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descriptio" +
+      "n\030\003 \001(\tB\t\212\3101\005<=256\022\216\001\n\006labels\030\004 \003(\01325.ya" +
+      "ndex.cloud.k8s.v1.CreateClusterRequest.L" +
+      "abelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0" +
+      "-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-" +
+      "z]*\022\030\n\nnetwork_id\030\005 \001(\tB\004\350\3071\001\022:\n\013master_" +
+      "spec\030\006 \001(\0132\037.yandex.cloud.k8s.v1.MasterS" +
+      "pecB\004\350\3071\001\022E\n\024ip_allocation_policy\030\007 \001(\0132" +
+      "\'.yandex.cloud.k8s.v1.IPAllocationPolicy" +
+      "\022\036\n\024gateway_ipv4_address\030\010 \001(\tH\000\022 \n\022serv" +
+      "ice_account_id\030\t \001(\tB\004\350\3071\001\022%\n\027node_servi" +
+      "ce_account_id\030\n \001(\tB\004\350\3071\001\022<\n\017release_cha" +
+      "nnel\030\013 \001(\0162#.yandex.cloud.k8s.v1.Release" +
+      "Channel\022:\n\016network_policy\030\014 \001(\0132\".yandex" +
+      ".cloud.k8s.v1.NetworkPolicy\0226\n\014kms_provi" +
+      "der\030\r \001(\0132 .yandex.cloud.k8s.v1.KMSProvi" +
+      "der\022-\n\006cilium\030\016 \001(\0132\033.yandex.cloud.k8s.v" +
+      "1.CiliumH\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r" +
+      "\n\005value\030\002 \001(\t:\0028\001B\022\n\020internet_gatewayB\030\n" +
+      "\026network_implementation\"+\n\025CreateCluster" +
+      "Metadata\022\022\n\ncluster_id\030\001 \001(\t\"/\n\031AutoUpgr" +
+      "adeMasterMetadata\022\022\n\ncluster_id\030\001 \001(\t\"\222\001" +
+      "\n\034ListClusterOperationsRequest\022\030\n\ncluste" +
+      "r_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
+      "\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032" +
+      "\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\"o\n\035ListCluste" +
+      "rOperationsResponse\0225\n\noperations\030\001 \003(\0132" +
+      "!.yandex.cloud.operation.Operation\022\027\n\017ne" +
+      "xt_page_token\030\002 \001(\t\"\222\001\n\034ListClusterNodeG" +
+      "roupsRequest\022\030\n\ncluster_id\030\001 \001(\tB\004\350\3071\001\022\035" +
       "\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_to" +
-      "ken\030\003 \001(\tB\t\212\3101\005<=100\"]\n\030ListClusterNodes" +
-      "Response\022(\n\005nodes\030\001 \003(\0132\031.yandex.cloud.k" +
-      "8s.v1.Node\022\027\n\017next_page_token\030\002 \001(\t\"\340\002\n\n" +
-      "MasterSpec\022A\n\021zonal_master_spec\030\001 \001(\0132$." +
-      "yandex.cloud.k8s.v1.ZonalMasterSpecH\000\022G\n" +
-      "\024regional_master_spec\030\002 \001(\0132\'.yandex.clo" +
-      "ud.k8s.v1.RegionalMasterSpecH\000\022\017\n\007versio" +
-      "n\030\003 \001(\t\022H\n\022maintenance_policy\030\004 \001(\0132,.ya" +
-      "ndex.cloud.k8s.v1.MasterMaintenancePolic" +
-      "y\022\032\n\022security_group_ids\030\006 \003(\t\022:\n\016master_" +
-      "logging\030\007 \001(\0132\".yandex.cloud.k8s.v1.Mast" +
-      "erLoggingB\023\n\013master_type\022\004\300\3011\001\"\300\001\n\017Zonal" +
-      "MasterSpec\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022J\n\030int" +
-      "ernal_v4_address_spec\030\002 \001(\0132(.yandex.clo" +
-      "ud.k8s.v1.InternalAddressSpec\022J\n\030externa" +
-      "l_v4_address_spec\030\003 \001(\0132(.yandex.cloud.k" +
-      "8s.v1.ExternalAddressSpec\"\375\001\n\022RegionalMa" +
-      "sterSpec\022\027\n\tregion_id\030\001 \001(\tB\004\350\3071\001\0226\n\tloc" +
-      "ations\030\002 \003(\0132#.yandex.cloud.k8s.v1.Maste" +
-      "rLocation\022J\n\030external_v4_address_spec\030\003 " +
-      "\001(\0132(.yandex.cloud.k8s.v1.ExternalAddres" +
-      "sSpec\022J\n\030external_v6_address_spec\030\004 \001(\0132" +
-      "(.yandex.cloud.k8s.v1.ExternalAddressSpe" +
-      "c\"(\n\023InternalAddressSpec\022\021\n\tsubnet_id\030\002 " +
-      "\001(\t\"&\n\023ExternalAddressSpec\022\017\n\007address\030\001 " +
-      "\001(\t\"s\n\016MasterLocation\022\025\n\007zone_id\030\001 \001(\tB\004" +
-      "\350\3071\001\022J\n\030internal_v4_address_spec\030\002 \001(\0132(" +
-      ".yandex.cloud.k8s.v1.InternalAddressSpec" +
-      "2\306\r\n\016ClusterService\022\201\001\n\003Get\022&.yandex.clo" +
-      "ud.k8s.v1.GetClusterRequest\032\034.yandex.clo" +
-      "ud.k8s.v1.Cluster\"4\202\323\344\223\002.\022,/managed-kube" +
-      "rnetes/v1/clusters/{cluster_id}\022\204\001\n\004List" +
-      "\022(.yandex.cloud.k8s.v1.ListClustersReque" +
-      "st\032).yandex.cloud.k8s.v1.ListClustersRes" +
-      "ponse\"\'\202\323\344\223\002!\022\037/managed-kubernetes/v1/cl" +
-      "usters\022\246\001\n\006Create\022).yandex.cloud.k8s.v1." +
-      "CreateClusterRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"N\202\323\344\223\002$\"\037/managed-kubern" +
-      "etes/v1/clusters:\001*\262\322* \n\025CreateClusterMe" +
-      "tadata\022\007Cluster\022\263\001\n\006Update\022).yandex.clou" +
-      "d.k8s.v1.UpdateClusterRequest\032!.yandex.c" +
-      "loud.operation.Operation\"[\202\323\344\223\00212,/manag" +
-      "ed-kubernetes/v1/clusters/{cluster_id}:\001" +
-      "*\262\322* \n\025UpdateClusterMetadata\022\007Cluster\022\276\001" +
-      "\n\006Delete\022).yandex.cloud.k8s.v1.DeleteClu" +
-      "sterRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"f\202\323\344\223\002.*,/managed-kubernetes/v1/c" +
-      "lusters/{cluster_id}\262\322*.\n\025DeleteClusterM" +
-      "etadata\022\025google.protobuf.Empty\022\262\001\n\004Stop\022" +
-      "\'.yandex.cloud.k8s.v1.StopClusterRequest" +
-      "\032!.yandex.cloud.operation.Operation\"^\202\323\344" +
-      "\223\0026\"1/managed-kubernetes/v1/clusters/{cl" +
-      "uster_id}:stop:\001*\262\322*\036\n\023StopClusterMetada" +
-      "ta\022\007Cluster\022\266\001\n\005Start\022(.yandex.cloud.k8s" +
-      ".v1.StartClusterRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"`\202\323\344\223\0027\"2/managed-kub" +
-      "ernetes/v1/clusters/{cluster_id}:start:\001" +
-      "*\262\322*\037\n\024StartClusterMetadata\022\007Cluster\022\270\001\n" +
-      "\016ListNodeGroups\0221.yandex.cloud.k8s.v1.Li" +
-      "stClusterNodeGroupsRequest\0322.yandex.clou" +
-      "d.k8s.v1.ListClusterNodeGroupsResponse\"?" +
-      "\202\323\344\223\0029\0227/managed-kubernetes/v1/clusters/" +
-      "{cluster_id}/nodeGroups\022\270\001\n\016ListOperatio" +
-      "ns\0221.yandex.cloud.k8s.v1.ListClusterOper" +
-      "ationsRequest\0322.yandex.cloud.k8s.v1.List" +
-      "ClusterOperationsResponse\"?\202\323\344\223\0029\0227/mana" +
-      "ged-kubernetes/v1/clusters/{cluster_id}/" +
-      "operations\022\244\001\n\tListNodes\022,.yandex.cloud." +
-      "k8s.v1.ListClusterNodesRequest\032-.yandex." +
-      "cloud.k8s.v1.ListClusterNodesResponse\":\202" +
-      "\323\344\223\0024\0222/managed-kubernetes/v1/clusters/{" +
-      "cluster_id}/nodesBV\n\027yandex.cloud.api.k8" +
-      "s.v1Z;github.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/k8s/v1;k8sb\006proto3"
+      "ken\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\310" +
+      "1\006<=1000\"m\n\035ListClusterNodeGroupsRespons" +
+      "e\0223\n\013node_groups\030\001 \003(\0132\036.yandex.cloud.k8" +
+      "s.v1.NodeGroup\022\027\n\017next_page_token\030\002 \001(\t\"" +
+      "q\n\027ListClusterNodesRequest\022\030\n\ncluster_id" +
+      "\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1" +
+      "000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"]\n\030Li" +
+      "stClusterNodesResponse\022(\n\005nodes\030\001 \003(\0132\031." +
+      "yandex.cloud.k8s.v1.Node\022\027\n\017next_page_to" +
+      "ken\030\002 \001(\t\"\274\003\n\nMasterSpec\022A\n\021zonal_master" +
+      "_spec\030\001 \001(\0132$.yandex.cloud.k8s.v1.ZonalM" +
+      "asterSpecH\000\022G\n\024regional_master_spec\030\002 \001(" +
+      "\0132\'.yandex.cloud.k8s.v1.RegionalMasterSp" +
+      "ecH\000\0224\n\tlocations\030\010 \003(\0132!.yandex.cloud.k" +
+      "8s.v1.LocationSpec\022$\n\021etcd_cluster_size\030" +
+      "\t \001(\003B\t\372\3071\0050,1,3\022\017\n\007version\030\003 \001(\t\022H\n\022mai" +
+      "ntenance_policy\030\004 \001(\0132,.yandex.cloud.k8s" +
+      ".v1.MasterMaintenancePolicy\022\032\n\022security_" +
+      "group_ids\030\006 \003(\t\022:\n\016master_logging\030\007 \001(\0132" +
+      "\".yandex.cloud.k8s.v1.MasterLoggingB\023\n\013m" +
+      "aster_type\022\004\300\3011\001\"\300\001\n\017ZonalMasterSpec\022\025\n\007" +
+      "zone_id\030\001 \001(\tB\004\350\3071\001\022J\n\030internal_v4_addre" +
+      "ss_spec\030\002 \001(\0132(.yandex.cloud.k8s.v1.Inte" +
+      "rnalAddressSpec\022J\n\030external_v4_address_s" +
+      "pec\030\003 \001(\0132(.yandex.cloud.k8s.v1.External" +
+      "AddressSpec\"\375\001\n\022RegionalMasterSpec\022\027\n\tre" +
+      "gion_id\030\001 \001(\tB\004\350\3071\001\0226\n\tlocations\030\002 \003(\0132#" +
+      ".yandex.cloud.k8s.v1.MasterLocation\022J\n\030e" +
+      "xternal_v4_address_spec\030\003 \001(\0132(.yandex.c" +
+      "loud.k8s.v1.ExternalAddressSpec\022J\n\030exter" +
+      "nal_v6_address_spec\030\004 \001(\0132(.yandex.cloud" +
+      ".k8s.v1.ExternalAddressSpec\"(\n\023InternalA" +
+      "ddressSpec\022\021\n\tsubnet_id\030\002 \001(\t\"&\n\023Externa" +
+      "lAddressSpec\022\017\n\007address\030\001 \001(\t\"s\n\016MasterL" +
+      "ocation\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022J\n\030intern" +
+      "al_v4_address_spec\030\002 \001(\0132(.yandex.cloud." +
+      "k8s.v1.InternalAddressSpec\"8\n\014LocationSp" +
+      "ec\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071\001\022\021\n\tsubnet_id\030\002" +
+      " \001(\t2\306\r\n\016ClusterService\022\201\001\n\003Get\022&.yandex" +
+      ".cloud.k8s.v1.GetClusterRequest\032\034.yandex" +
+      ".cloud.k8s.v1.Cluster\"4\202\323\344\223\002.\022,/managed-" +
+      "kubernetes/v1/clusters/{cluster_id}\022\204\001\n\004" +
+      "List\022(.yandex.cloud.k8s.v1.ListClustersR" +
+      "equest\032).yandex.cloud.k8s.v1.ListCluster" +
+      "sResponse\"\'\202\323\344\223\002!\022\037/managed-kubernetes/v" +
+      "1/clusters\022\246\001\n\006Create\022).yandex.cloud.k8s" +
+      ".v1.CreateClusterRequest\032!.yandex.cloud." +
+      "operation.Operation\"N\202\323\344\223\002$\"\037/managed-ku" +
+      "bernetes/v1/clusters:\001*\262\322* \n\025CreateClust" +
+      "erMetadata\022\007Cluster\022\263\001\n\006Update\022).yandex." +
+      "cloud.k8s.v1.UpdateClusterRequest\032!.yand" +
+      "ex.cloud.operation.Operation\"[\202\323\344\223\00212,/m" +
+      "anaged-kubernetes/v1/clusters/{cluster_i" +
+      "d}:\001*\262\322* \n\025UpdateClusterMetadata\022\007Cluste" +
+      "r\022\276\001\n\006Delete\022).yandex.cloud.k8s.v1.Delet" +
+      "eClusterRequest\032!.yandex.cloud.operation" +
+      ".Operation\"f\202\323\344\223\002.*,/managed-kubernetes/" +
+      "v1/clusters/{cluster_id}\262\322*.\n\025DeleteClus" +
+      "terMetadata\022\025google.protobuf.Empty\022\262\001\n\004S" +
+      "top\022\'.yandex.cloud.k8s.v1.StopClusterReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "^\202\323\344\223\0026\"1/managed-kubernetes/v1/clusters" +
+      "/{cluster_id}:stop:\001*\262\322*\036\n\023StopClusterMe" +
+      "tadata\022\007Cluster\022\266\001\n\005Start\022(.yandex.cloud" +
+      ".k8s.v1.StartClusterRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"`\202\323\344\223\0027\"2/managed" +
+      "-kubernetes/v1/clusters/{cluster_id}:sta" +
+      "rt:\001*\262\322*\037\n\024StartClusterMetadata\022\007Cluster" +
+      "\022\270\001\n\016ListNodeGroups\0221.yandex.cloud.k8s.v" +
+      "1.ListClusterNodeGroupsRequest\0322.yandex." +
+      "cloud.k8s.v1.ListClusterNodeGroupsRespon" +
+      "se\"?\202\323\344\223\0029\0227/managed-kubernetes/v1/clust" +
+      "ers/{cluster_id}/nodeGroups\022\270\001\n\016ListOper" +
+      "ations\0221.yandex.cloud.k8s.v1.ListCluster" +
+      "OperationsRequest\0322.yandex.cloud.k8s.v1." +
+      "ListClusterOperationsResponse\"?\202\323\344\223\0029\0227/" +
+      "managed-kubernetes/v1/clusters/{cluster_" +
+      "id}/operations\022\244\001\n\tListNodes\022,.yandex.cl" +
+      "oud.k8s.v1.ListClusterNodesRequest\032-.yan" +
+      "dex.cloud.k8s.v1.ListClusterNodesRespons" +
+      "e\":\202\323\344\223\0024\0222/managed-kubernetes/v1/cluste" +
+      "rs/{cluster_id}/nodesBV\n\027yandex.cloud.ap" +
+      "i.k8s.v1Z;github.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/k8s/v1;k8sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -30372,7 +32390,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_k8s_v1_MasterUpdateSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_MasterUpdateSpec_descriptor,
-        new java.lang.String[] { "Version", "MaintenancePolicy", "SecurityGroupIds", "MasterLogging", });
+        new java.lang.String[] { "Version", "MaintenancePolicy", "SecurityGroupIds", "MasterLogging", "Locations", });
     internal_static_yandex_cloud_k8s_v1_UpdateClusterMetadata_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_k8s_v1_UpdateClusterMetadata_fieldAccessorTable = new
@@ -30444,7 +32462,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_k8s_v1_MasterSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_MasterSpec_descriptor,
-        new java.lang.String[] { "ZonalMasterSpec", "RegionalMasterSpec", "Version", "MaintenancePolicy", "SecurityGroupIds", "MasterLogging", "MasterType", });
+        new java.lang.String[] { "ZonalMasterSpec", "RegionalMasterSpec", "Locations", "EtcdClusterSize", "Version", "MaintenancePolicy", "SecurityGroupIds", "MasterLogging", "MasterType", });
     internal_static_yandex_cloud_k8s_v1_ZonalMasterSpec_descriptor =
       getDescriptor().getMessageTypes().get(22);
     internal_static_yandex_cloud_k8s_v1_ZonalMasterSpec_fieldAccessorTable = new
@@ -30475,6 +32493,12 @@ public final class ClusterServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_MasterLocation_descriptor,
         new java.lang.String[] { "ZoneId", "InternalV4AddressSpec", });
+    internal_static_yandex_cloud_k8s_v1_LocationSpec_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_yandex_cloud_k8s_v1_LocationSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_k8s_v1_LocationSpec_descriptor,
+        new java.lang.String[] { "ZoneId", "SubnetId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

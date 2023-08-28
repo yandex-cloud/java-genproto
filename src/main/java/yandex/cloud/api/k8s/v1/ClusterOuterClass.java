@@ -5205,6 +5205,60 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
+     * Locations specification for Kubernetes control-plane (master) instances.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+     */
+    java.util.List<yandex.cloud.api.k8s.v1.ClusterOuterClass.Location> 
+        getLocationsList();
+    /**
+     * <pre>
+     * Locations specification for Kubernetes control-plane (master) instances.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterOuterClass.Location getLocations(int index);
+    /**
+     * <pre>
+     * Locations specification for Kubernetes control-plane (master) instances.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+     */
+    int getLocationsCount();
+    /**
+     * <pre>
+     * Locations specification for Kubernetes control-plane (master) instances.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.k8s.v1.ClusterOuterClass.LocationOrBuilder> 
+        getLocationsOrBuilderList();
+    /**
+     * <pre>
+     * Locations specification for Kubernetes control-plane (master) instances.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+     */
+    yandex.cloud.api.k8s.v1.ClusterOuterClass.LocationOrBuilder getLocationsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Number of etcd nodes in cluster.
+     * </pre>
+     *
+     * <code>int64 etcd_cluster_size = 11;</code>
+     * @return The etcdClusterSize.
+     */
+    long getEtcdClusterSize();
+
+    /**
+     * <pre>
      * Version of Kubernetes components that runs on the master.
      * </pre>
      *
@@ -5417,6 +5471,7 @@ public final class ClusterOuterClass {
       super(builder);
     }
     private Master() {
+      locations_ = java.util.Collections.emptyList();
       version_ = "";
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
@@ -5540,9 +5595,9 @@ public final class ClusterOuterClass {
             }
             case 66: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 securityGroupIds_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
+                mutable_bitField0_ |= 0x00000002;
               }
               securityGroupIds_.add(s);
               break;
@@ -5560,6 +5615,20 @@ public final class ClusterOuterClass {
 
               break;
             }
+            case 82: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                locations_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.ClusterOuterClass.Location>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              locations_.add(
+                  input.readMessage(yandex.cloud.api.k8s.v1.ClusterOuterClass.Location.parser(), extensionRegistry));
+              break;
+            }
+            case 88: {
+
+              etcdClusterSize_ = input.readInt64();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -5575,8 +5644,11 @@ public final class ClusterOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          locations_ = java.util.Collections.unmodifiableList(locations_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -5720,6 +5792,81 @@ public final class ClusterOuterClass {
          return (yandex.cloud.api.k8s.v1.ClusterOuterClass.RegionalMaster) masterType_;
       }
       return yandex.cloud.api.k8s.v1.ClusterOuterClass.RegionalMaster.getDefaultInstance();
+    }
+
+    public static final int LOCATIONS_FIELD_NUMBER = 10;
+    private java.util.List<yandex.cloud.api.k8s.v1.ClusterOuterClass.Location> locations_;
+    /**
+     * <pre>
+     * Locations specification for Kubernetes control-plane (master) instances.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.k8s.v1.ClusterOuterClass.Location> getLocationsList() {
+      return locations_;
+    }
+    /**
+     * <pre>
+     * Locations specification for Kubernetes control-plane (master) instances.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.k8s.v1.ClusterOuterClass.LocationOrBuilder> 
+        getLocationsOrBuilderList() {
+      return locations_;
+    }
+    /**
+     * <pre>
+     * Locations specification for Kubernetes control-plane (master) instances.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+     */
+    @java.lang.Override
+    public int getLocationsCount() {
+      return locations_.size();
+    }
+    /**
+     * <pre>
+     * Locations specification for Kubernetes control-plane (master) instances.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.Location getLocations(int index) {
+      return locations_.get(index);
+    }
+    /**
+     * <pre>
+     * Locations specification for Kubernetes control-plane (master) instances.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.LocationOrBuilder getLocationsOrBuilder(
+        int index) {
+      return locations_.get(index);
+    }
+
+    public static final int ETCD_CLUSTER_SIZE_FIELD_NUMBER = 11;
+    private long etcdClusterSize_;
+    /**
+     * <pre>
+     * Number of etcd nodes in cluster.
+     * </pre>
+     *
+     * <code>int64 etcd_cluster_size = 11;</code>
+     * @return The etcdClusterSize.
+     */
+    @java.lang.Override
+    public long getEtcdClusterSize() {
+      return etcdClusterSize_;
     }
 
     public static final int VERSION_FIELD_NUMBER = 2;
@@ -6053,6 +6200,12 @@ public final class ClusterOuterClass {
       if (masterLogging_ != null) {
         output.writeMessage(9, getMasterLogging());
       }
+      for (int i = 0; i < locations_.size(); i++) {
+        output.writeMessage(10, locations_.get(i));
+      }
+      if (etcdClusterSize_ != 0L) {
+        output.writeInt64(11, etcdClusterSize_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6101,6 +6254,14 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getMasterLogging());
       }
+      for (int i = 0; i < locations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, locations_.get(i));
+      }
+      if (etcdClusterSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(11, etcdClusterSize_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6116,6 +6277,10 @@ public final class ClusterOuterClass {
       }
       yandex.cloud.api.k8s.v1.ClusterOuterClass.Master other = (yandex.cloud.api.k8s.v1.ClusterOuterClass.Master) obj;
 
+      if (!getLocationsList()
+          .equals(other.getLocationsList())) return false;
+      if (getEtcdClusterSize()
+          != other.getEtcdClusterSize()) return false;
       if (!getVersion()
           .equals(other.getVersion())) return false;
       if (hasEndpoints() != other.hasEndpoints()) return false;
@@ -6169,6 +6334,13 @@ public final class ClusterOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (getLocationsCount() > 0) {
+        hash = (37 * hash) + LOCATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getLocationsList().hashCode();
+      }
+      hash = (37 * hash) + ETCD_CLUSTER_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEtcdClusterSize());
       hash = (37 * hash) + VERSION_FIELD_NUMBER;
       hash = (53 * hash) + getVersion().hashCode();
       if (hasEndpoints()) {
@@ -6335,11 +6507,20 @@ public final class ClusterOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getLocationsFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        if (locationsBuilder_ == null) {
+          locations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          locationsBuilder_.clear();
+        }
+        etcdClusterSize_ = 0L;
+
         version_ = "";
 
         if (endpointsBuilder_ == null) {
@@ -6367,7 +6548,7 @@ public final class ClusterOuterClass {
           maintenancePolicyBuilder_ = null;
         }
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (masterLoggingBuilder_ == null) {
           masterLogging_ = null;
         } else {
@@ -6417,6 +6598,16 @@ public final class ClusterOuterClass {
             result.masterType_ = regionalMasterBuilder_.build();
           }
         }
+        if (locationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            locations_ = java.util.Collections.unmodifiableList(locations_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.locations_ = locations_;
+        } else {
+          result.locations_ = locationsBuilder_.build();
+        }
+        result.etcdClusterSize_ = etcdClusterSize_;
         result.version_ = version_;
         if (endpointsBuilder_ == null) {
           result.endpoints_ = endpoints_;
@@ -6438,9 +6629,9 @@ public final class ClusterOuterClass {
         } else {
           result.maintenancePolicy_ = maintenancePolicyBuilder_.build();
         }
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           securityGroupIds_ = securityGroupIds_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.securityGroupIds_ = securityGroupIds_;
         if (masterLoggingBuilder_ == null) {
@@ -6497,6 +6688,35 @@ public final class ClusterOuterClass {
 
       public Builder mergeFrom(yandex.cloud.api.k8s.v1.ClusterOuterClass.Master other) {
         if (other == yandex.cloud.api.k8s.v1.ClusterOuterClass.Master.getDefaultInstance()) return this;
+        if (locationsBuilder_ == null) {
+          if (!other.locations_.isEmpty()) {
+            if (locations_.isEmpty()) {
+              locations_ = other.locations_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureLocationsIsMutable();
+              locations_.addAll(other.locations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.locations_.isEmpty()) {
+            if (locationsBuilder_.isEmpty()) {
+              locationsBuilder_.dispose();
+              locationsBuilder_ = null;
+              locations_ = other.locations_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              locationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLocationsFieldBuilder() : null;
+            } else {
+              locationsBuilder_.addAllMessages(other.locations_);
+            }
+          }
+        }
+        if (other.getEtcdClusterSize() != 0L) {
+          setEtcdClusterSize(other.getEtcdClusterSize());
+        }
         if (!other.getVersion().isEmpty()) {
           version_ = other.version_;
           onChanged();
@@ -6516,7 +6736,7 @@ public final class ClusterOuterClass {
         if (!other.securityGroupIds_.isEmpty()) {
           if (securityGroupIds_.isEmpty()) {
             securityGroupIds_ = other.securityGroupIds_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureSecurityGroupIdsIsMutable();
             securityGroupIds_.addAll(other.securityGroupIds_);
@@ -6936,6 +7156,361 @@ public final class ClusterOuterClass {
         masterTypeCase_ = 7;
         onChanged();;
         return regionalMasterBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.k8s.v1.ClusterOuterClass.Location> locations_ =
+        java.util.Collections.emptyList();
+      private void ensureLocationsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          locations_ = new java.util.ArrayList<yandex.cloud.api.k8s.v1.ClusterOuterClass.Location>(locations_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.Location, yandex.cloud.api.k8s.v1.ClusterOuterClass.Location.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.LocationOrBuilder> locationsBuilder_;
+
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+       */
+      public java.util.List<yandex.cloud.api.k8s.v1.ClusterOuterClass.Location> getLocationsList() {
+        if (locationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(locations_);
+        } else {
+          return locationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+       */
+      public int getLocationsCount() {
+        if (locationsBuilder_ == null) {
+          return locations_.size();
+        } else {
+          return locationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.Location getLocations(int index) {
+        if (locationsBuilder_ == null) {
+          return locations_.get(index);
+        } else {
+          return locationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+       */
+      public Builder setLocations(
+          int index, yandex.cloud.api.k8s.v1.ClusterOuterClass.Location value) {
+        if (locationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocationsIsMutable();
+          locations_.set(index, value);
+          onChanged();
+        } else {
+          locationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+       */
+      public Builder setLocations(
+          int index, yandex.cloud.api.k8s.v1.ClusterOuterClass.Location.Builder builderForValue) {
+        if (locationsBuilder_ == null) {
+          ensureLocationsIsMutable();
+          locations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          locationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+       */
+      public Builder addLocations(yandex.cloud.api.k8s.v1.ClusterOuterClass.Location value) {
+        if (locationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocationsIsMutable();
+          locations_.add(value);
+          onChanged();
+        } else {
+          locationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+       */
+      public Builder addLocations(
+          int index, yandex.cloud.api.k8s.v1.ClusterOuterClass.Location value) {
+        if (locationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocationsIsMutable();
+          locations_.add(index, value);
+          onChanged();
+        } else {
+          locationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+       */
+      public Builder addLocations(
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.Location.Builder builderForValue) {
+        if (locationsBuilder_ == null) {
+          ensureLocationsIsMutable();
+          locations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          locationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+       */
+      public Builder addLocations(
+          int index, yandex.cloud.api.k8s.v1.ClusterOuterClass.Location.Builder builderForValue) {
+        if (locationsBuilder_ == null) {
+          ensureLocationsIsMutable();
+          locations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          locationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+       */
+      public Builder addAllLocations(
+          java.lang.Iterable<? extends yandex.cloud.api.k8s.v1.ClusterOuterClass.Location> values) {
+        if (locationsBuilder_ == null) {
+          ensureLocationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, locations_);
+          onChanged();
+        } else {
+          locationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+       */
+      public Builder clearLocations() {
+        if (locationsBuilder_ == null) {
+          locations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          locationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+       */
+      public Builder removeLocations(int index) {
+        if (locationsBuilder_ == null) {
+          ensureLocationsIsMutable();
+          locations_.remove(index);
+          onChanged();
+        } else {
+          locationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.Location.Builder getLocationsBuilder(
+          int index) {
+        return getLocationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.LocationOrBuilder getLocationsOrBuilder(
+          int index) {
+        if (locationsBuilder_ == null) {
+          return locations_.get(index);  } else {
+          return locationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.k8s.v1.ClusterOuterClass.LocationOrBuilder> 
+           getLocationsOrBuilderList() {
+        if (locationsBuilder_ != null) {
+          return locationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(locations_);
+        }
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.Location.Builder addLocationsBuilder() {
+        return getLocationsFieldBuilder().addBuilder(
+            yandex.cloud.api.k8s.v1.ClusterOuterClass.Location.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+       */
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.Location.Builder addLocationsBuilder(
+          int index) {
+        return getLocationsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.k8s.v1.ClusterOuterClass.Location.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Locations specification for Kubernetes control-plane (master) instances.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.k8s.v1.Location locations = 10;</code>
+       */
+      public java.util.List<yandex.cloud.api.k8s.v1.ClusterOuterClass.Location.Builder> 
+           getLocationsBuilderList() {
+        return getLocationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.k8s.v1.ClusterOuterClass.Location, yandex.cloud.api.k8s.v1.ClusterOuterClass.Location.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.LocationOrBuilder> 
+          getLocationsFieldBuilder() {
+        if (locationsBuilder_ == null) {
+          locationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.Location, yandex.cloud.api.k8s.v1.ClusterOuterClass.Location.Builder, yandex.cloud.api.k8s.v1.ClusterOuterClass.LocationOrBuilder>(
+                  locations_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          locations_ = null;
+        }
+        return locationsBuilder_;
+      }
+
+      private long etcdClusterSize_ ;
+      /**
+       * <pre>
+       * Number of etcd nodes in cluster.
+       * </pre>
+       *
+       * <code>int64 etcd_cluster_size = 11;</code>
+       * @return The etcdClusterSize.
+       */
+      @java.lang.Override
+      public long getEtcdClusterSize() {
+        return etcdClusterSize_;
+      }
+      /**
+       * <pre>
+       * Number of etcd nodes in cluster.
+       * </pre>
+       *
+       * <code>int64 etcd_cluster_size = 11;</code>
+       * @param value The etcdClusterSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEtcdClusterSize(long value) {
+        
+        etcdClusterSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of etcd nodes in cluster.
+       * </pre>
+       *
+       * <code>int64 etcd_cluster_size = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEtcdClusterSize() {
+        
+        etcdClusterSize_ = 0L;
+        onChanged();
+        return this;
       }
 
       private java.lang.Object version_ = "";
@@ -7665,9 +8240,9 @@ public final class ClusterOuterClass {
 
       private com.google.protobuf.LazyStringList securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSecurityGroupIdsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           securityGroupIds_ = new com.google.protobuf.LazyStringArrayList(securityGroupIds_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -7784,7 +8359,7 @@ public final class ClusterOuterClass {
        */
       public Builder clearSecurityGroupIds() {
         securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -10753,6 +11328,796 @@ public final class ClusterOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.k8s.v1.ClusterOuterClass.RegionalMaster getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LocationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.k8s.v1.Location)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the availability zone where the master resides.
+     * </pre>
+     *
+     * <code>string zone_id = 1;</code>
+     * @return The zoneId.
+     */
+    java.lang.String getZoneId();
+    /**
+     * <pre>
+     * ID of the availability zone where the master resides.
+     * </pre>
+     *
+     * <code>string zone_id = 1;</code>
+     * @return The bytes for zoneId.
+     */
+    com.google.protobuf.ByteString
+        getZoneIdBytes();
+
+    /**
+     * <pre>
+     * ID of the VPC network's subnet where the master resides.
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     * @return The subnetId.
+     */
+    java.lang.String getSubnetId();
+    /**
+     * <pre>
+     * ID of the VPC network's subnet where the master resides.
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     * @return The bytes for subnetId.
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.k8s.v1.Location}
+   */
+  public static final class Location extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.k8s.v1.Location)
+      LocationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Location.newBuilder() to construct.
+    private Location(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Location() {
+      zoneId_ = "";
+      subnetId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Location();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Location(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              zoneId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subnetId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_Location_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_Location_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.k8s.v1.ClusterOuterClass.Location.class, yandex.cloud.api.k8s.v1.ClusterOuterClass.Location.Builder.class);
+    }
+
+    public static final int ZONE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object zoneId_;
+    /**
+     * <pre>
+     * ID of the availability zone where the master resides.
+     * </pre>
+     *
+     * <code>string zone_id = 1;</code>
+     * @return The zoneId.
+     */
+    @java.lang.Override
+    public java.lang.String getZoneId() {
+      java.lang.Object ref = zoneId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        zoneId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the availability zone where the master resides.
+     * </pre>
+     *
+     * <code>string zone_id = 1;</code>
+     * @return The bytes for zoneId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getZoneIdBytes() {
+      java.lang.Object ref = zoneId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        zoneId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SUBNET_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object subnetId_;
+    /**
+     * <pre>
+     * ID of the VPC network's subnet where the master resides.
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     * @return The subnetId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubnetId() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subnetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the VPC network's subnet where the master resides.
+     * </pre>
+     *
+     * <code>string subnet_id = 2;</code>
+     * @return The bytes for subnetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubnetIdBytes() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subnetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, zoneId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subnetId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(zoneId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, zoneId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subnetId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.k8s.v1.ClusterOuterClass.Location)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.k8s.v1.ClusterOuterClass.Location other = (yandex.cloud.api.k8s.v1.ClusterOuterClass.Location) obj;
+
+      if (!getZoneId()
+          .equals(other.getZoneId())) return false;
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ZONE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getZoneId().hashCode();
+      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubnetId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Location parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Location parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Location parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Location parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Location parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Location parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Location parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Location parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Location parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Location parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Location parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Location parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.k8s.v1.ClusterOuterClass.Location prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.k8s.v1.Location}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.k8s.v1.Location)
+        yandex.cloud.api.k8s.v1.ClusterOuterClass.LocationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_Location_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_Location_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.k8s.v1.ClusterOuterClass.Location.class, yandex.cloud.api.k8s.v1.ClusterOuterClass.Location.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.k8s.v1.ClusterOuterClass.Location.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        zoneId_ = "";
+
+        subnetId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.k8s.v1.ClusterOuterClass.internal_static_yandex_cloud_k8s_v1_Location_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.Location getDefaultInstanceForType() {
+        return yandex.cloud.api.k8s.v1.ClusterOuterClass.Location.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.Location build() {
+        yandex.cloud.api.k8s.v1.ClusterOuterClass.Location result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.k8s.v1.ClusterOuterClass.Location buildPartial() {
+        yandex.cloud.api.k8s.v1.ClusterOuterClass.Location result = new yandex.cloud.api.k8s.v1.ClusterOuterClass.Location(this);
+        result.zoneId_ = zoneId_;
+        result.subnetId_ = subnetId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.k8s.v1.ClusterOuterClass.Location) {
+          return mergeFrom((yandex.cloud.api.k8s.v1.ClusterOuterClass.Location)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.k8s.v1.ClusterOuterClass.Location other) {
+        if (other == yandex.cloud.api.k8s.v1.ClusterOuterClass.Location.getDefaultInstance()) return this;
+        if (!other.getZoneId().isEmpty()) {
+          zoneId_ = other.zoneId_;
+          onChanged();
+        }
+        if (!other.getSubnetId().isEmpty()) {
+          subnetId_ = other.subnetId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.k8s.v1.ClusterOuterClass.Location parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.k8s.v1.ClusterOuterClass.Location) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object zoneId_ = "";
+      /**
+       * <pre>
+       * ID of the availability zone where the master resides.
+       * </pre>
+       *
+       * <code>string zone_id = 1;</code>
+       * @return The zoneId.
+       */
+      public java.lang.String getZoneId() {
+        java.lang.Object ref = zoneId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          zoneId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the availability zone where the master resides.
+       * </pre>
+       *
+       * <code>string zone_id = 1;</code>
+       * @return The bytes for zoneId.
+       */
+      public com.google.protobuf.ByteString
+          getZoneIdBytes() {
+        java.lang.Object ref = zoneId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          zoneId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the availability zone where the master resides.
+       * </pre>
+       *
+       * <code>string zone_id = 1;</code>
+       * @param value The zoneId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        zoneId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the availability zone where the master resides.
+       * </pre>
+       *
+       * <code>string zone_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZoneId() {
+        
+        zoneId_ = getDefaultInstance().getZoneId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the availability zone where the master resides.
+       * </pre>
+       *
+       * <code>string zone_id = 1;</code>
+       * @param value The bytes for zoneId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        zoneId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object subnetId_ = "";
+      /**
+       * <pre>
+       * ID of the VPC network's subnet where the master resides.
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @return The subnetId.
+       */
+      public java.lang.String getSubnetId() {
+        java.lang.Object ref = subnetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subnetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the VPC network's subnet where the master resides.
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @return The bytes for subnetId.
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdBytes() {
+        java.lang.Object ref = subnetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the VPC network's subnet where the master resides.
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the VPC network's subnet where the master resides.
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubnetId() {
+        
+        subnetId_ = getDefaultInstance().getSubnetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the VPC network's subnet where the master resides.
+       * </pre>
+       *
+       * <code>string subnet_id = 2;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.k8s.v1.Location)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.k8s.v1.Location)
+    private static final yandex.cloud.api.k8s.v1.ClusterOuterClass.Location DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.k8s.v1.ClusterOuterClass.Location();
+    }
+
+    public static yandex.cloud.api.k8s.v1.ClusterOuterClass.Location getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Location>
+        PARSER = new com.google.protobuf.AbstractParser<Location>() {
+      @java.lang.Override
+      public Location parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Location(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Location> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Location> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.k8s.v1.ClusterOuterClass.Location getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -17155,6 +18520,11 @@ public final class ClusterOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_k8s_v1_RegionalMaster_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_k8s_v1_Location_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_k8s_v1_Location_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_k8s_v1_MasterEndpoints_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -17229,56 +18599,59 @@ public final class ClusterOuterClass {
       "OPPED\020\005\022\014\n\010DELETING\020\006\022\014\n\010STARTING\020\007\"<\n\006H" +
       "ealth\022\026\n\022HEALTH_UNSPECIFIED\020\000\022\013\n\007HEALTHY" +
       "\020\001\022\r\n\tUNHEALTHY\020\002B\022\n\020internet_gatewayB\030\n" +
-      "\026network_implementation\"\353\003\n\006Master\0228\n\014zo" +
+      "\026network_implementation\"\270\004\n\006Master\0228\n\014zo" +
       "nal_master\030\001 \001(\0132 .yandex.cloud.k8s.v1.Z" +
       "onalMasterH\000\022>\n\017regional_master\030\007 \001(\0132#." +
-      "yandex.cloud.k8s.v1.RegionalMasterH\000\022\017\n\007" +
-      "version\030\002 \001(\t\0227\n\tendpoints\030\003 \001(\0132$.yande" +
-      "x.cloud.k8s.v1.MasterEndpoints\0224\n\013master" +
-      "_auth\030\004 \001(\0132\037.yandex.cloud.k8s.v1.Master" +
-      "Auth\0226\n\014version_info\030\005 \001(\0132 .yandex.clou" +
-      "d.k8s.v1.VersionInfo\022H\n\022maintenance_poli" +
-      "cy\030\006 \001(\0132,.yandex.cloud.k8s.v1.MasterMai" +
-      "ntenancePolicy\022\032\n\022security_group_ids\030\010 \003" +
-      "(\t\022:\n\016master_logging\030\t \001(\0132\".yandex.clou" +
-      "d.k8s.v1.MasterLoggingB\r\n\013master_type\",\n" +
-      "\nMasterAuth\022\036\n\026cluster_ca_certificate\030\001 " +
-      "\001(\t\"X\n\013ZonalMaster\022\017\n\007zone_id\030\001 \001(\t\022\033\n\023i" +
-      "nternal_v4_address\030\002 \001(\t\022\033\n\023external_v4_" +
-      "address\030\003 \001(\t\"z\n\016RegionalMaster\022\021\n\tregio" +
-      "n_id\030\001 \001(\t\022\033\n\023internal_v4_address\030\002 \001(\t\022" +
-      "\033\n\023external_v4_address\030\003 \001(\t\022\033\n\023external" +
-      "_v6_address\030\004 \001(\t\"k\n\017MasterEndpoints\022\034\n\024" +
-      "internal_v4_endpoint\030\001 \001(\t\022\034\n\024external_v" +
-      "4_endpoint\030\002 \001(\t\022\034\n\024external_v6_endpoint" +
-      "\030\003 \001(\t\"\320\001\n\022IPAllocationPolicy\022\037\n\027cluster" +
-      "_ipv4_cidr_block\030\001 \001(\t\0226\n\030node_ipv4_cidr" +
-      "_mask_size\030\005 \001(\003B\024\372\3071\0200,24,25,26,27,28\022\037" +
-      "\n\027service_ipv4_cidr_block\030\002 \001(\t\022\037\n\027clust" +
-      "er_ipv6_cidr_block\030\006 \001(\t\022\037\n\027service_ipv6" +
-      "_cidr_block\030\007 \001(\t\"s\n\027MasterMaintenancePo" +
-      "licy\022\024\n\014auto_upgrade\030\001 \001(\010\022B\n\022maintenanc" +
-      "e_window\030\002 \001(\0132&.yandex.cloud.k8s.v1.Mai" +
-      "ntenanceWindow\"\231\002\n\rMasterLogging\022\017\n\007enab" +
-      "led\030\001 \001(\010\022;\n\014log_group_id\030\002 \001(\tB#\362\3071\037([a" +
-      "-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\0228\n\tfolder" +
-      "_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0" +
-      ",63})?H\000\022\025\n\raudit_enabled\030\004 \001(\010\022\"\n\032clust" +
-      "er_autoscaler_enabled\030\005 \001(\010\022\036\n\026kube_apis" +
-      "erver_enabled\030\006 \001(\010\022\026\n\016events_enabled\030\007 " +
-      "\001(\010B\r\n\013destination\"\200\001\n\rNetworkPolicy\022=\n\010" +
-      "provider\030\001 \001(\0162+.yandex.cloud.k8s.v1.Net" +
-      "workPolicy.Provider\"0\n\010Provider\022\030\n\024PROVI" +
-      "DER_UNSPECIFIED\020\000\022\n\n\006CALICO\020\001\"\035\n\013KMSProv" +
-      "ider\022\016\n\006key_id\030\001 \001(\t\"\200\001\n\006Cilium\022=\n\014routi" +
-      "ng_mode\030\001 \001(\0162\'.yandex.cloud.k8s.v1.Cili" +
-      "um.RoutingMode\"7\n\013RoutingMode\022\034\n\030ROUTING" +
-      "_MODE_UNSPECIFIED\020\000\022\n\n\006TUNNEL\020\001*U\n\016Relea" +
-      "seChannel\022\037\n\033RELEASE_CHANNEL_UNSPECIFIED" +
-      "\020\000\022\t\n\005RAPID\020\001\022\013\n\007REGULAR\020\002\022\n\n\006STABLE\020\003BV" +
-      "\n\027yandex.cloud.api.k8s.v1Z;github.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/k8s/" +
-      "v1;k8sb\006proto3"
+      "yandex.cloud.k8s.v1.RegionalMasterH\000\0220\n\t" +
+      "locations\030\n \003(\0132\035.yandex.cloud.k8s.v1.Lo" +
+      "cation\022\031\n\021etcd_cluster_size\030\013 \001(\003\022\017\n\007ver" +
+      "sion\030\002 \001(\t\0227\n\tendpoints\030\003 \001(\0132$.yandex.c" +
+      "loud.k8s.v1.MasterEndpoints\0224\n\013master_au" +
+      "th\030\004 \001(\0132\037.yandex.cloud.k8s.v1.MasterAut" +
+      "h\0226\n\014version_info\030\005 \001(\0132 .yandex.cloud.k" +
+      "8s.v1.VersionInfo\022H\n\022maintenance_policy\030" +
+      "\006 \001(\0132,.yandex.cloud.k8s.v1.MasterMainte" +
+      "nancePolicy\022\032\n\022security_group_ids\030\010 \003(\t\022" +
+      ":\n\016master_logging\030\t \001(\0132\".yandex.cloud.k" +
+      "8s.v1.MasterLoggingB\r\n\013master_type\",\n\nMa" +
+      "sterAuth\022\036\n\026cluster_ca_certificate\030\001 \001(\t" +
+      "\"X\n\013ZonalMaster\022\017\n\007zone_id\030\001 \001(\t\022\033\n\023inte" +
+      "rnal_v4_address\030\002 \001(\t\022\033\n\023external_v4_add" +
+      "ress\030\003 \001(\t\"z\n\016RegionalMaster\022\021\n\tregion_i" +
+      "d\030\001 \001(\t\022\033\n\023internal_v4_address\030\002 \001(\t\022\033\n\023" +
+      "external_v4_address\030\003 \001(\t\022\033\n\023external_v6" +
+      "_address\030\004 \001(\t\".\n\010Location\022\017\n\007zone_id\030\001 " +
+      "\001(\t\022\021\n\tsubnet_id\030\002 \001(\t\"k\n\017MasterEndpoint" +
+      "s\022\034\n\024internal_v4_endpoint\030\001 \001(\t\022\034\n\024exter" +
+      "nal_v4_endpoint\030\002 \001(\t\022\034\n\024external_v6_end" +
+      "point\030\003 \001(\t\"\320\001\n\022IPAllocationPolicy\022\037\n\027cl" +
+      "uster_ipv4_cidr_block\030\001 \001(\t\0226\n\030node_ipv4" +
+      "_cidr_mask_size\030\005 \001(\003B\024\372\3071\0200,24,25,26,27" +
+      ",28\022\037\n\027service_ipv4_cidr_block\030\002 \001(\t\022\037\n\027" +
+      "cluster_ipv6_cidr_block\030\006 \001(\t\022\037\n\027service" +
+      "_ipv6_cidr_block\030\007 \001(\t\"s\n\027MasterMaintena" +
+      "ncePolicy\022\024\n\014auto_upgrade\030\001 \001(\010\022B\n\022maint" +
+      "enance_window\030\002 \001(\0132&.yandex.cloud.k8s.v" +
+      "1.MaintenanceWindow\"\231\002\n\rMasterLogging\022\017\n" +
+      "\007enabled\030\001 \001(\010\022;\n\014log_group_id\030\002 \001(\tB#\362\307" +
+      "1\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\0228\n\tf" +
+      "older_id\030\003 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9" +
+      "_.]{0,63})?H\000\022\025\n\raudit_enabled\030\004 \001(\010\022\"\n\032" +
+      "cluster_autoscaler_enabled\030\005 \001(\010\022\036\n\026kube" +
+      "_apiserver_enabled\030\006 \001(\010\022\026\n\016events_enabl" +
+      "ed\030\007 \001(\010B\r\n\013destination\"\200\001\n\rNetworkPolic" +
+      "y\022=\n\010provider\030\001 \001(\0162+.yandex.cloud.k8s.v" +
+      "1.NetworkPolicy.Provider\"0\n\010Provider\022\030\n\024" +
+      "PROVIDER_UNSPECIFIED\020\000\022\n\n\006CALICO\020\001\"\035\n\013KM" +
+      "SProvider\022\016\n\006key_id\030\001 \001(\t\"\200\001\n\006Cilium\022=\n\014" +
+      "routing_mode\030\001 \001(\0162\'.yandex.cloud.k8s.v1" +
+      ".Cilium.RoutingMode\"7\n\013RoutingMode\022\034\n\030RO" +
+      "UTING_MODE_UNSPECIFIED\020\000\022\n\n\006TUNNEL\020\001*U\n\016" +
+      "ReleaseChannel\022\037\n\033RELEASE_CHANNEL_UNSPEC" +
+      "IFIED\020\000\022\t\n\005RAPID\020\001\022\013\n\007REGULAR\020\002\022\n\n\006STABL" +
+      "E\020\003BV\n\027yandex.cloud.api.k8s.v1Z;github.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/k8s/v1;k8sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17305,7 +18678,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_k8s_v1_Master_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_Master_descriptor,
-        new java.lang.String[] { "ZonalMaster", "RegionalMaster", "Version", "Endpoints", "MasterAuth", "VersionInfo", "MaintenancePolicy", "SecurityGroupIds", "MasterLogging", "MasterType", });
+        new java.lang.String[] { "ZonalMaster", "RegionalMaster", "Locations", "EtcdClusterSize", "Version", "Endpoints", "MasterAuth", "VersionInfo", "MaintenancePolicy", "SecurityGroupIds", "MasterLogging", "MasterType", });
     internal_static_yandex_cloud_k8s_v1_MasterAuth_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_k8s_v1_MasterAuth_fieldAccessorTable = new
@@ -17324,44 +18697,50 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_RegionalMaster_descriptor,
         new java.lang.String[] { "RegionId", "InternalV4Address", "ExternalV4Address", "ExternalV6Address", });
-    internal_static_yandex_cloud_k8s_v1_MasterEndpoints_descriptor =
+    internal_static_yandex_cloud_k8s_v1_Location_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_k8s_v1_Location_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_k8s_v1_Location_descriptor,
+        new java.lang.String[] { "ZoneId", "SubnetId", });
+    internal_static_yandex_cloud_k8s_v1_MasterEndpoints_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_k8s_v1_MasterEndpoints_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_MasterEndpoints_descriptor,
         new java.lang.String[] { "InternalV4Endpoint", "ExternalV4Endpoint", "ExternalV6Endpoint", });
     internal_static_yandex_cloud_k8s_v1_IPAllocationPolicy_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_k8s_v1_IPAllocationPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_IPAllocationPolicy_descriptor,
         new java.lang.String[] { "ClusterIpv4CidrBlock", "NodeIpv4CidrMaskSize", "ServiceIpv4CidrBlock", "ClusterIpv6CidrBlock", "ServiceIpv6CidrBlock", });
     internal_static_yandex_cloud_k8s_v1_MasterMaintenancePolicy_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_k8s_v1_MasterMaintenancePolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_MasterMaintenancePolicy_descriptor,
         new java.lang.String[] { "AutoUpgrade", "MaintenanceWindow", });
     internal_static_yandex_cloud_k8s_v1_MasterLogging_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_k8s_v1_MasterLogging_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_MasterLogging_descriptor,
         new java.lang.String[] { "Enabled", "LogGroupId", "FolderId", "AuditEnabled", "ClusterAutoscalerEnabled", "KubeApiserverEnabled", "EventsEnabled", "Destination", });
     internal_static_yandex_cloud_k8s_v1_NetworkPolicy_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_k8s_v1_NetworkPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_NetworkPolicy_descriptor,
         new java.lang.String[] { "Provider", });
     internal_static_yandex_cloud_k8s_v1_KMSProvider_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_k8s_v1_KMSProvider_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_KMSProvider_descriptor,
         new java.lang.String[] { "KeyId", });
     internal_static_yandex_cloud_k8s_v1_Cilium_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_k8s_v1_Cilium_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_k8s_v1_Cilium_descriptor,
