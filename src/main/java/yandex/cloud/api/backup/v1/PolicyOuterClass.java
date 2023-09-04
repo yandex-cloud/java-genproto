@@ -179,11 +179,19 @@ public final class PolicyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for id.
      */
@@ -191,11 +199,19 @@ public final class PolicyOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * Policy name.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Policy name.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for name.
      */
@@ -233,32 +249,56 @@ public final class PolicyOuterClass {
     com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
 
     /**
+     * <pre>
+     * If this field is true, it means that the policy is enabled.
+     * </pre>
+     *
      * <code>bool enabled = 5;</code>
      * @return The enabled.
      */
     boolean getEnabled();
 
     /**
+     * <pre>
+     * Set of policy settings
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.PolicySettings settings = 6;</code>
      * @return Whether the settings field is set.
      */
     boolean hasSettings();
     /**
+     * <pre>
+     * Set of policy settings
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.PolicySettings settings = 6;</code>
      * @return The settings.
      */
     yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings getSettings();
     /**
+     * <pre>
+     * Set of policy settings
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.PolicySettings settings = 6;</code>
      */
     yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettingsOrBuilder getSettingsOrBuilder();
 
     /**
+     * <pre>
+     * ID of the folder that the policy belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 7;</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder that the policy belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 7;</code>
      * @return The bytes for folderId.
      */
@@ -410,6 +450,10 @@ public final class PolicyOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The id.
      */
@@ -427,6 +471,10 @@ public final class PolicyOuterClass {
       }
     }
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for id.
      */
@@ -448,6 +496,10 @@ public final class PolicyOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Policy name.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The name.
      */
@@ -465,6 +517,10 @@ public final class PolicyOuterClass {
       }
     }
     /**
+     * <pre>
+     * Policy name.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for name.
      */
@@ -538,6 +594,10 @@ public final class PolicyOuterClass {
     public static final int ENABLED_FIELD_NUMBER = 5;
     private boolean enabled_;
     /**
+     * <pre>
+     * If this field is true, it means that the policy is enabled.
+     * </pre>
+     *
      * <code>bool enabled = 5;</code>
      * @return The enabled.
      */
@@ -549,6 +609,10 @@ public final class PolicyOuterClass {
     public static final int SETTINGS_FIELD_NUMBER = 6;
     private yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings settings_;
     /**
+     * <pre>
+     * Set of policy settings
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.PolicySettings settings = 6;</code>
      * @return Whether the settings field is set.
      */
@@ -557,6 +621,10 @@ public final class PolicyOuterClass {
       return settings_ != null;
     }
     /**
+     * <pre>
+     * Set of policy settings
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.PolicySettings settings = 6;</code>
      * @return The settings.
      */
@@ -565,6 +633,10 @@ public final class PolicyOuterClass {
       return settings_ == null ? yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.getDefaultInstance() : settings_;
     }
     /**
+     * <pre>
+     * Set of policy settings
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.PolicySettings settings = 6;</code>
      */
     @java.lang.Override
@@ -575,6 +647,10 @@ public final class PolicyOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 7;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder that the policy belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 7;</code>
      * @return The folderId.
      */
@@ -592,6 +668,10 @@ public final class PolicyOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder that the policy belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 7;</code>
      * @return The bytes for folderId.
      */
@@ -1056,6 +1136,10 @@ public final class PolicyOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The id.
        */
@@ -1072,6 +1156,10 @@ public final class PolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for id.
        */
@@ -1089,6 +1177,10 @@ public final class PolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -1104,6 +1196,10 @@ public final class PolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -1114,6 +1210,10 @@ public final class PolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -1132,6 +1232,10 @@ public final class PolicyOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Policy name.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The name.
        */
@@ -1148,6 +1252,10 @@ public final class PolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy name.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for name.
        */
@@ -1165,6 +1273,10 @@ public final class PolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy name.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -1180,6 +1292,10 @@ public final class PolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy name.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -1190,6 +1306,10 @@ public final class PolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy name.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -1446,6 +1566,10 @@ public final class PolicyOuterClass {
 
       private boolean enabled_ ;
       /**
+       * <pre>
+       * If this field is true, it means that the policy is enabled.
+       * </pre>
+       *
        * <code>bool enabled = 5;</code>
        * @return The enabled.
        */
@@ -1454,6 +1578,10 @@ public final class PolicyOuterClass {
         return enabled_;
       }
       /**
+       * <pre>
+       * If this field is true, it means that the policy is enabled.
+       * </pre>
+       *
        * <code>bool enabled = 5;</code>
        * @param value The enabled to set.
        * @return This builder for chaining.
@@ -1465,6 +1593,10 @@ public final class PolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * If this field is true, it means that the policy is enabled.
+       * </pre>
+       *
        * <code>bool enabled = 5;</code>
        * @return This builder for chaining.
        */
@@ -1479,6 +1611,10 @@ public final class PolicyOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Builder, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettingsOrBuilder> settingsBuilder_;
       /**
+       * <pre>
+       * Set of policy settings
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.PolicySettings settings = 6;</code>
        * @return Whether the settings field is set.
        */
@@ -1486,6 +1622,10 @@ public final class PolicyOuterClass {
         return settingsBuilder_ != null || settings_ != null;
       }
       /**
+       * <pre>
+       * Set of policy settings
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.PolicySettings settings = 6;</code>
        * @return The settings.
        */
@@ -1497,6 +1637,10 @@ public final class PolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set of policy settings
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.PolicySettings settings = 6;</code>
        */
       public Builder setSettings(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings value) {
@@ -1513,6 +1657,10 @@ public final class PolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of policy settings
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.PolicySettings settings = 6;</code>
        */
       public Builder setSettings(
@@ -1527,6 +1675,10 @@ public final class PolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of policy settings
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.PolicySettings settings = 6;</code>
        */
       public Builder mergeSettings(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings value) {
@@ -1545,6 +1697,10 @@ public final class PolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of policy settings
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.PolicySettings settings = 6;</code>
        */
       public Builder clearSettings() {
@@ -1559,6 +1715,10 @@ public final class PolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of policy settings
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.PolicySettings settings = 6;</code>
        */
       public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Builder getSettingsBuilder() {
@@ -1567,6 +1727,10 @@ public final class PolicyOuterClass {
         return getSettingsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Set of policy settings
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.PolicySettings settings = 6;</code>
        */
       public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettingsOrBuilder getSettingsOrBuilder() {
@@ -1578,6 +1742,10 @@ public final class PolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set of policy settings
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.PolicySettings settings = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1596,6 +1764,10 @@ public final class PolicyOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder that the policy belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 7;</code>
        * @return The folderId.
        */
@@ -1612,6 +1784,10 @@ public final class PolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the policy belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 7;</code>
        * @return The bytes for folderId.
        */
@@ -1629,6 +1805,10 @@ public final class PolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the policy belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 7;</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -1644,6 +1824,10 @@ public final class PolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the policy belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 7;</code>
        * @return This builder for chaining.
        */
@@ -1654,6 +1838,10 @@ public final class PolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the policy belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 7;</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -2050,6 +2238,10 @@ public final class PolicyOuterClass {
     boolean getQuiesceSnapshottingEnabled();
   }
   /**
+   * <pre>
+   * Set of policy settings
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.backup.v1.PolicySettings}
    */
   public static final class PolicySettings extends
@@ -5808,7 +6000,7 @@ public final class PolicyOuterClass {
       /**
        * <pre>
        * The name of the generated archive. The name may use the following variables: `[Machine Name]`, `[Plan ID]`, `[Plan Name]`, `[Unique ID]`, `[Virtualization Server Type]`.
-       * Default value: `[Machine Name]-[Plan ID]-[Unique ID]`.
+       * Default value: `[Machine Name]-[Plan ID]-[Unique ID]A`.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -5818,7 +6010,7 @@ public final class PolicyOuterClass {
       /**
        * <pre>
        * The name of the generated archive. The name may use the following variables: `[Machine Name]`, `[Plan ID]`, `[Plan Name]`, `[Unique ID]`, `[Virtualization Server Type]`.
-       * Default value: `[Machine Name]-[Plan ID]-[Unique ID]`.
+       * Default value: `[Machine Name]-[Plan ID]-[Unique ID]A`.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -5916,7 +6108,7 @@ public final class PolicyOuterClass {
       /**
        * <pre>
        * The name of the generated archive. The name may use the following variables: `[Machine Name]`, `[Plan ID]`, `[Plan Name]`, `[Unique ID]`, `[Virtualization Server Type]`.
-       * Default value: `[Machine Name]-[Plan ID]-[Unique ID]`.
+       * Default value: `[Machine Name]-[Plan ID]-[Unique ID]A`.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -5938,7 +6130,7 @@ public final class PolicyOuterClass {
       /**
        * <pre>
        * The name of the generated archive. The name may use the following variables: `[Machine Name]`, `[Plan ID]`, `[Plan Name]`, `[Unique ID]`, `[Virtualization Server Type]`.
-       * Default value: `[Machine Name]-[Plan ID]-[Unique ID]`.
+       * Default value: `[Machine Name]-[Plan ID]-[Unique ID]A`.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -6265,7 +6457,7 @@ public final class PolicyOuterClass {
         /**
          * <pre>
          * The name of the generated archive. The name may use the following variables: `[Machine Name]`, `[Plan ID]`, `[Plan Name]`, `[Unique ID]`, `[Virtualization Server Type]`.
-         * Default value: `[Machine Name]-[Plan ID]-[Unique ID]`.
+         * Default value: `[Machine Name]-[Plan ID]-[Unique ID]A`.
          * </pre>
          *
          * <code>string name = 1;</code>
@@ -6286,7 +6478,7 @@ public final class PolicyOuterClass {
         /**
          * <pre>
          * The name of the generated archive. The name may use the following variables: `[Machine Name]`, `[Plan ID]`, `[Plan Name]`, `[Unique ID]`, `[Virtualization Server Type]`.
-         * Default value: `[Machine Name]-[Plan ID]-[Unique ID]`.
+         * Default value: `[Machine Name]-[Plan ID]-[Unique ID]A`.
          * </pre>
          *
          * <code>string name = 1;</code>
@@ -6308,7 +6500,7 @@ public final class PolicyOuterClass {
         /**
          * <pre>
          * The name of the generated archive. The name may use the following variables: `[Machine Name]`, `[Plan ID]`, `[Plan Name]`, `[Unique ID]`, `[Virtualization Server Type]`.
-         * Default value: `[Machine Name]-[Plan ID]-[Unique ID]`.
+         * Default value: `[Machine Name]-[Plan ID]-[Unique ID]A`.
          * </pre>
          *
          * <code>string name = 1;</code>
@@ -6328,7 +6520,7 @@ public final class PolicyOuterClass {
         /**
          * <pre>
          * The name of the generated archive. The name may use the following variables: `[Machine Name]`, `[Plan ID]`, `[Plan Name]`, `[Unique ID]`, `[Virtualization Server Type]`.
-         * Default value: `[Machine Name]-[Plan ID]-[Unique ID]`.
+         * Default value: `[Machine Name]-[Plan ID]-[Unique ID]A`.
          * </pre>
          *
          * <code>string name = 1;</code>
@@ -6343,7 +6535,7 @@ public final class PolicyOuterClass {
         /**
          * <pre>
          * The name of the generated archive. The name may use the following variables: `[Machine Name]`, `[Plan ID]`, `[Plan Name]`, `[Unique ID]`, `[Virtualization Server Type]`.
-         * Default value: `[Machine Name]-[Plan ID]-[Unique ID]`.
+         * Default value: `[Machine Name]-[Plan ID]-[Unique ID]A`.
          * </pre>
          *
          * <code>string name = 1;</code>
@@ -6928,12 +7120,20 @@ public final class PolicyOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Hours.
+       * </pre>
+       *
        * <code>int64 hour = 1;</code>
        * @return The hour.
        */
       long getHour();
 
       /**
+       * <pre>
+       * Minutes.
+       * </pre>
+       *
        * <code>int64 minute = 2;</code>
        * @return The minute.
        */
@@ -7029,6 +7229,10 @@ public final class PolicyOuterClass {
       public static final int HOUR_FIELD_NUMBER = 1;
       private long hour_;
       /**
+       * <pre>
+       * Hours.
+       * </pre>
+       *
        * <code>int64 hour = 1;</code>
        * @return The hour.
        */
@@ -7040,6 +7244,10 @@ public final class PolicyOuterClass {
       public static final int MINUTE_FIELD_NUMBER = 2;
       private long minute_;
       /**
+       * <pre>
+       * Minutes.
+       * </pre>
+       *
        * <code>int64 minute = 2;</code>
        * @return The minute.
        */
@@ -7371,6 +7579,10 @@ public final class PolicyOuterClass {
 
         private long hour_ ;
         /**
+         * <pre>
+         * Hours.
+         * </pre>
+         *
          * <code>int64 hour = 1;</code>
          * @return The hour.
          */
@@ -7379,6 +7591,10 @@ public final class PolicyOuterClass {
           return hour_;
         }
         /**
+         * <pre>
+         * Hours.
+         * </pre>
+         *
          * <code>int64 hour = 1;</code>
          * @param value The hour to set.
          * @return This builder for chaining.
@@ -7390,6 +7606,10 @@ public final class PolicyOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Hours.
+         * </pre>
+         *
          * <code>int64 hour = 1;</code>
          * @return This builder for chaining.
          */
@@ -7402,6 +7622,10 @@ public final class PolicyOuterClass {
 
         private long minute_ ;
         /**
+         * <pre>
+         * Minutes.
+         * </pre>
+         *
          * <code>int64 minute = 2;</code>
          * @return The minute.
          */
@@ -7410,6 +7634,10 @@ public final class PolicyOuterClass {
           return minute_;
         }
         /**
+         * <pre>
+         * Minutes.
+         * </pre>
+         *
          * <code>int64 minute = 2;</code>
          * @param value The minute to set.
          * @return This builder for chaining.
@@ -7421,6 +7649,10 @@ public final class PolicyOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Minutes.
+         * </pre>
+         *
          * <code>int64 minute = 2;</code>
          * @return This builder for chaining.
          */
@@ -10272,28 +10504,48 @@ public final class PolicyOuterClass {
             com.google.protobuf.MessageOrBuilder {
 
           /**
+           * <pre>
+           * Days in a week to perform a backup.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.backup.v1.PolicySettings.Day weekdays = 1 [(.yandex.cloud.unique) = true];</code>
            * @return A list containing the weekdays.
            */
           java.util.List<yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Day> getWeekdaysList();
           /**
+           * <pre>
+           * Days in a week to perform a backup.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.backup.v1.PolicySettings.Day weekdays = 1 [(.yandex.cloud.unique) = true];</code>
            * @return The count of weekdays.
            */
           int getWeekdaysCount();
           /**
+           * <pre>
+           * Days in a week to perform a backup.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.backup.v1.PolicySettings.Day weekdays = 1 [(.yandex.cloud.unique) = true];</code>
            * @param index The index of the element to return.
            * @return The weekdays at the given index.
            */
           yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Day getWeekdays(int index);
           /**
+           * <pre>
+           * Days in a week to perform a backup.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.backup.v1.PolicySettings.Day weekdays = 1 [(.yandex.cloud.unique) = true];</code>
            * @return A list containing the enum numeric values on the wire for weekdays.
            */
           java.util.List<java.lang.Integer>
           getWeekdaysValueList();
           /**
+           * <pre>
+           * Days in a week to perform a backup.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.backup.v1.PolicySettings.Day weekdays = 1 [(.yandex.cloud.unique) = true];</code>
            * @param index The index of the value to return.
            * @return The enum numeric value on the wire of weekdays at the given index.
@@ -10301,77 +10553,133 @@ public final class PolicyOuterClass {
           int getWeekdaysValue(int index);
 
           /**
+           * <pre>
+           * Time to repeat the backup.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
            */
           java.util.List<yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay> 
               getRepeatAtList();
           /**
+           * <pre>
+           * Time to repeat the backup.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
            */
           yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay getRepeatAt(int index);
           /**
+           * <pre>
+           * Time to repeat the backup.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
            */
           int getRepeatAtCount();
           /**
+           * <pre>
+           * Time to repeat the backup.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
            */
           java.util.List<? extends yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDayOrBuilder> 
               getRepeatAtOrBuilderList();
           /**
+           * <pre>
+           * Time to repeat the backup.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
            */
           yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDayOrBuilder getRepeatAtOrBuilder(
               int index);
 
           /**
+           * <pre>
+           * Frequency of backup repetition.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.Interval repeat_every = 3;</code>
            * @return Whether the repeatEvery field is set.
            */
           boolean hasRepeatEvery();
           /**
+           * <pre>
+           * Frequency of backup repetition.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.Interval repeat_every = 3;</code>
            * @return The repeatEvery.
            */
           yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval getRepeatEvery();
           /**
+           * <pre>
+           * Frequency of backup repetition.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.Interval repeat_every = 3;</code>
            */
           yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.IntervalOrBuilder getRepeatEveryOrBuilder();
 
           /**
+           * <pre>
+           * The start time of the backup time interval.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_from = 4;</code>
            * @return Whether the timeFrom field is set.
            */
           boolean hasTimeFrom();
           /**
+           * <pre>
+           * The start time of the backup time interval.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_from = 4;</code>
            * @return The timeFrom.
            */
           yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay getTimeFrom();
           /**
+           * <pre>
+           * The start time of the backup time interval.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_from = 4;</code>
            */
           yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDayOrBuilder getTimeFromOrBuilder();
 
           /**
+           * <pre>
+           * The end time of the backup time interval.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_to = 5;</code>
            * @return Whether the timeTo field is set.
            */
           boolean hasTimeTo();
           /**
+           * <pre>
+           * The end time of the backup time interval.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_to = 5;</code>
            * @return The timeTo.
            */
           yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay getTimeTo();
           /**
+           * <pre>
+           * The end time of the backup time interval.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_to = 5;</code>
            */
           yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDayOrBuilder getTimeToOrBuilder();
 
           /**
            * <pre>
-           * Monthdays are days in month.
+           * Days in a month to perform a backup.
            * Allowed values are from 1 to 31.
            * </pre>
            *
@@ -10381,7 +10689,7 @@ public final class PolicyOuterClass {
           java.util.List<java.lang.Long> getMonthdaysList();
           /**
            * <pre>
-           * Monthdays are days in month.
+           * Days in a month to perform a backup.
            * Allowed values are from 1 to 31.
            * </pre>
            *
@@ -10391,7 +10699,7 @@ public final class PolicyOuterClass {
           int getMonthdaysCount();
           /**
            * <pre>
-           * Monthdays are days in month.
+           * Days in a month to perform a backup.
            * Allowed values are from 1 to 31.
            * </pre>
            *
@@ -10442,11 +10750,19 @@ public final class PolicyOuterClass {
           long getMonths(int index);
 
           /**
+           * <pre>
+           * Possible types: `REPEATE_PERIOD_UNSPECIFIED`, `HOURLY`, `DAILY`, `WEEKLY`, `MONTHLY`.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.RepeatePeriod type = 9 [(.yandex.cloud.required) = true];</code>
            * @return The enum numeric value on the wire for type.
            */
           int getTypeValue();
           /**
+           * <pre>
+           * Possible types: `REPEATE_PERIOD_UNSPECIFIED`, `HOURLY`, `DAILY`, `WEEKLY`, `MONTHLY`.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.RepeatePeriod type = 9 [(.yandex.cloud.required) = true];</code>
            * @return The type.
            */
@@ -10684,6 +11000,10 @@ public final class PolicyOuterClass {
                     }
                   };
           /**
+           * <pre>
+           * Days in a week to perform a backup.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.backup.v1.PolicySettings.Day weekdays = 1 [(.yandex.cloud.unique) = true];</code>
            * @return A list containing the weekdays.
            */
@@ -10693,6 +11013,10 @@ public final class PolicyOuterClass {
                 java.lang.Integer, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Day>(weekdays_, weekdays_converter_);
           }
           /**
+           * <pre>
+           * Days in a week to perform a backup.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.backup.v1.PolicySettings.Day weekdays = 1 [(.yandex.cloud.unique) = true];</code>
            * @return The count of weekdays.
            */
@@ -10701,6 +11025,10 @@ public final class PolicyOuterClass {
             return weekdays_.size();
           }
           /**
+           * <pre>
+           * Days in a week to perform a backup.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.backup.v1.PolicySettings.Day weekdays = 1 [(.yandex.cloud.unique) = true];</code>
            * @param index The index of the element to return.
            * @return The weekdays at the given index.
@@ -10710,6 +11038,10 @@ public final class PolicyOuterClass {
             return weekdays_converter_.convert(weekdays_.get(index));
           }
           /**
+           * <pre>
+           * Days in a week to perform a backup.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.backup.v1.PolicySettings.Day weekdays = 1 [(.yandex.cloud.unique) = true];</code>
            * @return A list containing the enum numeric values on the wire for weekdays.
            */
@@ -10719,6 +11051,10 @@ public final class PolicyOuterClass {
             return weekdays_;
           }
           /**
+           * <pre>
+           * Days in a week to perform a backup.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.backup.v1.PolicySettings.Day weekdays = 1 [(.yandex.cloud.unique) = true];</code>
            * @param index The index of the value to return.
            * @return The enum numeric value on the wire of weekdays at the given index.
@@ -10732,6 +11068,10 @@ public final class PolicyOuterClass {
           public static final int REPEAT_AT_FIELD_NUMBER = 2;
           private java.util.List<yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay> repeatAt_;
           /**
+           * <pre>
+           * Time to repeat the backup.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
            */
           @java.lang.Override
@@ -10739,6 +11079,10 @@ public final class PolicyOuterClass {
             return repeatAt_;
           }
           /**
+           * <pre>
+           * Time to repeat the backup.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
            */
           @java.lang.Override
@@ -10747,6 +11091,10 @@ public final class PolicyOuterClass {
             return repeatAt_;
           }
           /**
+           * <pre>
+           * Time to repeat the backup.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
            */
           @java.lang.Override
@@ -10754,6 +11102,10 @@ public final class PolicyOuterClass {
             return repeatAt_.size();
           }
           /**
+           * <pre>
+           * Time to repeat the backup.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
            */
           @java.lang.Override
@@ -10761,6 +11113,10 @@ public final class PolicyOuterClass {
             return repeatAt_.get(index);
           }
           /**
+           * <pre>
+           * Time to repeat the backup.
+           * </pre>
+           *
            * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
            */
           @java.lang.Override
@@ -10772,6 +11128,10 @@ public final class PolicyOuterClass {
           public static final int REPEAT_EVERY_FIELD_NUMBER = 3;
           private yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval repeatEvery_;
           /**
+           * <pre>
+           * Frequency of backup repetition.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.Interval repeat_every = 3;</code>
            * @return Whether the repeatEvery field is set.
            */
@@ -10780,6 +11140,10 @@ public final class PolicyOuterClass {
             return repeatEvery_ != null;
           }
           /**
+           * <pre>
+           * Frequency of backup repetition.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.Interval repeat_every = 3;</code>
            * @return The repeatEvery.
            */
@@ -10788,6 +11152,10 @@ public final class PolicyOuterClass {
             return repeatEvery_ == null ? yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.getDefaultInstance() : repeatEvery_;
           }
           /**
+           * <pre>
+           * Frequency of backup repetition.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.Interval repeat_every = 3;</code>
            */
           @java.lang.Override
@@ -10798,6 +11166,10 @@ public final class PolicyOuterClass {
           public static final int TIME_FROM_FIELD_NUMBER = 4;
           private yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay timeFrom_;
           /**
+           * <pre>
+           * The start time of the backup time interval.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_from = 4;</code>
            * @return Whether the timeFrom field is set.
            */
@@ -10806,6 +11178,10 @@ public final class PolicyOuterClass {
             return timeFrom_ != null;
           }
           /**
+           * <pre>
+           * The start time of the backup time interval.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_from = 4;</code>
            * @return The timeFrom.
            */
@@ -10814,6 +11190,10 @@ public final class PolicyOuterClass {
             return timeFrom_ == null ? yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay.getDefaultInstance() : timeFrom_;
           }
           /**
+           * <pre>
+           * The start time of the backup time interval.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_from = 4;</code>
            */
           @java.lang.Override
@@ -10824,6 +11204,10 @@ public final class PolicyOuterClass {
           public static final int TIME_TO_FIELD_NUMBER = 5;
           private yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay timeTo_;
           /**
+           * <pre>
+           * The end time of the backup time interval.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_to = 5;</code>
            * @return Whether the timeTo field is set.
            */
@@ -10832,6 +11216,10 @@ public final class PolicyOuterClass {
             return timeTo_ != null;
           }
           /**
+           * <pre>
+           * The end time of the backup time interval.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_to = 5;</code>
            * @return The timeTo.
            */
@@ -10840,6 +11228,10 @@ public final class PolicyOuterClass {
             return timeTo_ == null ? yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay.getDefaultInstance() : timeTo_;
           }
           /**
+           * <pre>
+           * The end time of the backup time interval.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_to = 5;</code>
            */
           @java.lang.Override
@@ -10851,7 +11243,7 @@ public final class PolicyOuterClass {
           private com.google.protobuf.Internal.LongList monthdays_;
           /**
            * <pre>
-           * Monthdays are days in month.
+           * Days in a month to perform a backup.
            * Allowed values are from 1 to 31.
            * </pre>
            *
@@ -10865,7 +11257,7 @@ public final class PolicyOuterClass {
           }
           /**
            * <pre>
-           * Monthdays are days in month.
+           * Days in a month to perform a backup.
            * Allowed values are from 1 to 31.
            * </pre>
            *
@@ -10877,7 +11269,7 @@ public final class PolicyOuterClass {
           }
           /**
            * <pre>
-           * Monthdays are days in month.
+           * Days in a month to perform a backup.
            * Allowed values are from 1 to 31.
            * </pre>
            *
@@ -10949,6 +11341,10 @@ public final class PolicyOuterClass {
           public static final int TYPE_FIELD_NUMBER = 9;
           private int type_;
           /**
+           * <pre>
+           * Possible types: `REPEATE_PERIOD_UNSPECIFIED`, `HOURLY`, `DAILY`, `WEEKLY`, `MONTHLY`.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.RepeatePeriod type = 9 [(.yandex.cloud.required) = true];</code>
            * @return The enum numeric value on the wire for type.
            */
@@ -10956,6 +11352,10 @@ public final class PolicyOuterClass {
             return type_;
           }
           /**
+           * <pre>
+           * Possible types: `REPEATE_PERIOD_UNSPECIFIED`, `HOURLY`, `DAILY`, `WEEKLY`, `MONTHLY`.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.RepeatePeriod type = 9 [(.yandex.cloud.required) = true];</code>
            * @return The type.
            */
@@ -11570,6 +11970,10 @@ public final class PolicyOuterClass {
               }
             }
             /**
+             * <pre>
+             * Days in a week to perform a backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.Day weekdays = 1 [(.yandex.cloud.unique) = true];</code>
              * @return A list containing the weekdays.
              */
@@ -11578,6 +11982,10 @@ public final class PolicyOuterClass {
                   java.lang.Integer, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Day>(weekdays_, weekdays_converter_);
             }
             /**
+             * <pre>
+             * Days in a week to perform a backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.Day weekdays = 1 [(.yandex.cloud.unique) = true];</code>
              * @return The count of weekdays.
              */
@@ -11585,6 +11993,10 @@ public final class PolicyOuterClass {
               return weekdays_.size();
             }
             /**
+             * <pre>
+             * Days in a week to perform a backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.Day weekdays = 1 [(.yandex.cloud.unique) = true];</code>
              * @param index The index of the element to return.
              * @return The weekdays at the given index.
@@ -11593,6 +12005,10 @@ public final class PolicyOuterClass {
               return weekdays_converter_.convert(weekdays_.get(index));
             }
             /**
+             * <pre>
+             * Days in a week to perform a backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.Day weekdays = 1 [(.yandex.cloud.unique) = true];</code>
              * @param index The index to set the value at.
              * @param value The weekdays to set.
@@ -11609,6 +12025,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Days in a week to perform a backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.Day weekdays = 1 [(.yandex.cloud.unique) = true];</code>
              * @param value The weekdays to add.
              * @return This builder for chaining.
@@ -11623,6 +12043,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Days in a week to perform a backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.Day weekdays = 1 [(.yandex.cloud.unique) = true];</code>
              * @param values The weekdays to add.
              * @return This builder for chaining.
@@ -11637,6 +12061,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Days in a week to perform a backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.Day weekdays = 1 [(.yandex.cloud.unique) = true];</code>
              * @return This builder for chaining.
              */
@@ -11647,6 +12075,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Days in a week to perform a backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.Day weekdays = 1 [(.yandex.cloud.unique) = true];</code>
              * @return A list containing the enum numeric values on the wire for weekdays.
              */
@@ -11655,6 +12087,10 @@ public final class PolicyOuterClass {
               return java.util.Collections.unmodifiableList(weekdays_);
             }
             /**
+             * <pre>
+             * Days in a week to perform a backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.Day weekdays = 1 [(.yandex.cloud.unique) = true];</code>
              * @param index The index of the value to return.
              * @return The enum numeric value on the wire of weekdays at the given index.
@@ -11663,6 +12099,10 @@ public final class PolicyOuterClass {
               return weekdays_.get(index);
             }
             /**
+             * <pre>
+             * Days in a week to perform a backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.Day weekdays = 1 [(.yandex.cloud.unique) = true];</code>
              * @param index The index of the value to return.
              * @return The enum numeric value on the wire of weekdays at the given index.
@@ -11676,6 +12116,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Days in a week to perform a backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.Day weekdays = 1 [(.yandex.cloud.unique) = true];</code>
              * @param value The enum numeric value on the wire for weekdays to add.
              * @return This builder for chaining.
@@ -11687,6 +12131,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Days in a week to perform a backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.Day weekdays = 1 [(.yandex.cloud.unique) = true];</code>
              * @param values The enum numeric values on the wire for weekdays to add.
              * @return This builder for chaining.
@@ -11714,6 +12162,10 @@ public final class PolicyOuterClass {
                 yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay.Builder, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDayOrBuilder> repeatAtBuilder_;
 
             /**
+             * <pre>
+             * Time to repeat the backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
              */
             public java.util.List<yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay> getRepeatAtList() {
@@ -11724,6 +12176,10 @@ public final class PolicyOuterClass {
               }
             }
             /**
+             * <pre>
+             * Time to repeat the backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
              */
             public int getRepeatAtCount() {
@@ -11734,6 +12190,10 @@ public final class PolicyOuterClass {
               }
             }
             /**
+             * <pre>
+             * Time to repeat the backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
              */
             public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay getRepeatAt(int index) {
@@ -11744,6 +12204,10 @@ public final class PolicyOuterClass {
               }
             }
             /**
+             * <pre>
+             * Time to repeat the backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
              */
             public Builder setRepeatAt(
@@ -11761,6 +12225,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Time to repeat the backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
              */
             public Builder setRepeatAt(
@@ -11775,6 +12243,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Time to repeat the backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
              */
             public Builder addRepeatAt(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay value) {
@@ -11791,6 +12263,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Time to repeat the backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
              */
             public Builder addRepeatAt(
@@ -11808,6 +12284,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Time to repeat the backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
              */
             public Builder addRepeatAt(
@@ -11822,6 +12302,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Time to repeat the backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
              */
             public Builder addRepeatAt(
@@ -11836,6 +12320,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Time to repeat the backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
              */
             public Builder addAllRepeatAt(
@@ -11851,6 +12339,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Time to repeat the backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
              */
             public Builder clearRepeatAt() {
@@ -11864,6 +12356,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Time to repeat the backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
              */
             public Builder removeRepeatAt(int index) {
@@ -11877,6 +12373,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Time to repeat the backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
              */
             public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay.Builder getRepeatAtBuilder(
@@ -11884,6 +12384,10 @@ public final class PolicyOuterClass {
               return getRepeatAtFieldBuilder().getBuilder(index);
             }
             /**
+             * <pre>
+             * Time to repeat the backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
              */
             public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDayOrBuilder getRepeatAtOrBuilder(
@@ -11894,6 +12398,10 @@ public final class PolicyOuterClass {
               }
             }
             /**
+             * <pre>
+             * Time to repeat the backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
              */
             public java.util.List<? extends yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDayOrBuilder> 
@@ -11905,6 +12413,10 @@ public final class PolicyOuterClass {
               }
             }
             /**
+             * <pre>
+             * Time to repeat the backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
              */
             public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay.Builder addRepeatAtBuilder() {
@@ -11912,6 +12424,10 @@ public final class PolicyOuterClass {
                   yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay.getDefaultInstance());
             }
             /**
+             * <pre>
+             * Time to repeat the backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
              */
             public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay.Builder addRepeatAtBuilder(
@@ -11920,6 +12436,10 @@ public final class PolicyOuterClass {
                   index, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay.getDefaultInstance());
             }
             /**
+             * <pre>
+             * Time to repeat the backup.
+             * </pre>
+             *
              * <code>repeated .yandex.cloud.backup.v1.PolicySettings.TimeOfDay repeat_at = 2;</code>
              */
             public java.util.List<yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay.Builder> 
@@ -11945,6 +12465,10 @@ public final class PolicyOuterClass {
             private com.google.protobuf.SingleFieldBuilderV3<
                 yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.Builder, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.IntervalOrBuilder> repeatEveryBuilder_;
             /**
+             * <pre>
+             * Frequency of backup repetition.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.Interval repeat_every = 3;</code>
              * @return Whether the repeatEvery field is set.
              */
@@ -11952,6 +12476,10 @@ public final class PolicyOuterClass {
               return repeatEveryBuilder_ != null || repeatEvery_ != null;
             }
             /**
+             * <pre>
+             * Frequency of backup repetition.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.Interval repeat_every = 3;</code>
              * @return The repeatEvery.
              */
@@ -11963,6 +12491,10 @@ public final class PolicyOuterClass {
               }
             }
             /**
+             * <pre>
+             * Frequency of backup repetition.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.Interval repeat_every = 3;</code>
              */
             public Builder setRepeatEvery(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval value) {
@@ -11979,6 +12511,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Frequency of backup repetition.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.Interval repeat_every = 3;</code>
              */
             public Builder setRepeatEvery(
@@ -11993,6 +12529,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Frequency of backup repetition.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.Interval repeat_every = 3;</code>
              */
             public Builder mergeRepeatEvery(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval value) {
@@ -12011,6 +12551,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Frequency of backup repetition.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.Interval repeat_every = 3;</code>
              */
             public Builder clearRepeatEvery() {
@@ -12025,6 +12569,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Frequency of backup repetition.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.Interval repeat_every = 3;</code>
              */
             public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.Builder getRepeatEveryBuilder() {
@@ -12033,6 +12581,10 @@ public final class PolicyOuterClass {
               return getRepeatEveryFieldBuilder().getBuilder();
             }
             /**
+             * <pre>
+             * Frequency of backup repetition.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.Interval repeat_every = 3;</code>
              */
             public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.IntervalOrBuilder getRepeatEveryOrBuilder() {
@@ -12044,6 +12596,10 @@ public final class PolicyOuterClass {
               }
             }
             /**
+             * <pre>
+             * Frequency of backup repetition.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.Interval repeat_every = 3;</code>
              */
             private com.google.protobuf.SingleFieldBuilderV3<
@@ -12064,6 +12620,10 @@ public final class PolicyOuterClass {
             private com.google.protobuf.SingleFieldBuilderV3<
                 yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay.Builder, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDayOrBuilder> timeFromBuilder_;
             /**
+             * <pre>
+             * The start time of the backup time interval.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_from = 4;</code>
              * @return Whether the timeFrom field is set.
              */
@@ -12071,6 +12631,10 @@ public final class PolicyOuterClass {
               return timeFromBuilder_ != null || timeFrom_ != null;
             }
             /**
+             * <pre>
+             * The start time of the backup time interval.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_from = 4;</code>
              * @return The timeFrom.
              */
@@ -12082,6 +12646,10 @@ public final class PolicyOuterClass {
               }
             }
             /**
+             * <pre>
+             * The start time of the backup time interval.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_from = 4;</code>
              */
             public Builder setTimeFrom(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay value) {
@@ -12098,6 +12666,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * The start time of the backup time interval.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_from = 4;</code>
              */
             public Builder setTimeFrom(
@@ -12112,6 +12684,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * The start time of the backup time interval.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_from = 4;</code>
              */
             public Builder mergeTimeFrom(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay value) {
@@ -12130,6 +12706,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * The start time of the backup time interval.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_from = 4;</code>
              */
             public Builder clearTimeFrom() {
@@ -12144,6 +12724,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * The start time of the backup time interval.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_from = 4;</code>
              */
             public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay.Builder getTimeFromBuilder() {
@@ -12152,6 +12736,10 @@ public final class PolicyOuterClass {
               return getTimeFromFieldBuilder().getBuilder();
             }
             /**
+             * <pre>
+             * The start time of the backup time interval.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_from = 4;</code>
              */
             public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDayOrBuilder getTimeFromOrBuilder() {
@@ -12163,6 +12751,10 @@ public final class PolicyOuterClass {
               }
             }
             /**
+             * <pre>
+             * The start time of the backup time interval.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_from = 4;</code>
              */
             private com.google.protobuf.SingleFieldBuilderV3<
@@ -12183,6 +12775,10 @@ public final class PolicyOuterClass {
             private com.google.protobuf.SingleFieldBuilderV3<
                 yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay.Builder, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDayOrBuilder> timeToBuilder_;
             /**
+             * <pre>
+             * The end time of the backup time interval.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_to = 5;</code>
              * @return Whether the timeTo field is set.
              */
@@ -12190,6 +12786,10 @@ public final class PolicyOuterClass {
               return timeToBuilder_ != null || timeTo_ != null;
             }
             /**
+             * <pre>
+             * The end time of the backup time interval.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_to = 5;</code>
              * @return The timeTo.
              */
@@ -12201,6 +12801,10 @@ public final class PolicyOuterClass {
               }
             }
             /**
+             * <pre>
+             * The end time of the backup time interval.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_to = 5;</code>
              */
             public Builder setTimeTo(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay value) {
@@ -12217,6 +12821,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * The end time of the backup time interval.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_to = 5;</code>
              */
             public Builder setTimeTo(
@@ -12231,6 +12839,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * The end time of the backup time interval.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_to = 5;</code>
              */
             public Builder mergeTimeTo(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay value) {
@@ -12249,6 +12861,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * The end time of the backup time interval.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_to = 5;</code>
              */
             public Builder clearTimeTo() {
@@ -12263,6 +12879,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * The end time of the backup time interval.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_to = 5;</code>
              */
             public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDay.Builder getTimeToBuilder() {
@@ -12271,6 +12891,10 @@ public final class PolicyOuterClass {
               return getTimeToFieldBuilder().getBuilder();
             }
             /**
+             * <pre>
+             * The end time of the backup time interval.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_to = 5;</code>
              */
             public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.TimeOfDayOrBuilder getTimeToOrBuilder() {
@@ -12282,6 +12906,10 @@ public final class PolicyOuterClass {
               }
             }
             /**
+             * <pre>
+             * The end time of the backup time interval.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.TimeOfDay time_to = 5;</code>
              */
             private com.google.protobuf.SingleFieldBuilderV3<
@@ -12307,7 +12935,7 @@ public final class PolicyOuterClass {
             }
             /**
              * <pre>
-             * Monthdays are days in month.
+             * Days in a month to perform a backup.
              * Allowed values are from 1 to 31.
              * </pre>
              *
@@ -12321,7 +12949,7 @@ public final class PolicyOuterClass {
             }
             /**
              * <pre>
-             * Monthdays are days in month.
+             * Days in a month to perform a backup.
              * Allowed values are from 1 to 31.
              * </pre>
              *
@@ -12333,7 +12961,7 @@ public final class PolicyOuterClass {
             }
             /**
              * <pre>
-             * Monthdays are days in month.
+             * Days in a month to perform a backup.
              * Allowed values are from 1 to 31.
              * </pre>
              *
@@ -12346,7 +12974,7 @@ public final class PolicyOuterClass {
             }
             /**
              * <pre>
-             * Monthdays are days in month.
+             * Days in a month to perform a backup.
              * Allowed values are from 1 to 31.
              * </pre>
              *
@@ -12364,7 +12992,7 @@ public final class PolicyOuterClass {
             }
             /**
              * <pre>
-             * Monthdays are days in month.
+             * Days in a month to perform a backup.
              * Allowed values are from 1 to 31.
              * </pre>
              *
@@ -12380,7 +13008,7 @@ public final class PolicyOuterClass {
             }
             /**
              * <pre>
-             * Monthdays are days in month.
+             * Days in a month to perform a backup.
              * Allowed values are from 1 to 31.
              * </pre>
              *
@@ -12398,7 +13026,7 @@ public final class PolicyOuterClass {
             }
             /**
              * <pre>
-             * Monthdays are days in month.
+             * Days in a month to perform a backup.
              * Allowed values are from 1 to 31.
              * </pre>
              *
@@ -12567,6 +13195,10 @@ public final class PolicyOuterClass {
 
             private int type_ = 0;
             /**
+             * <pre>
+             * Possible types: `REPEATE_PERIOD_UNSPECIFIED`, `HOURLY`, `DAILY`, `WEEKLY`, `MONTHLY`.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.RepeatePeriod type = 9 [(.yandex.cloud.required) = true];</code>
              * @return The enum numeric value on the wire for type.
              */
@@ -12574,6 +13206,10 @@ public final class PolicyOuterClass {
               return type_;
             }
             /**
+             * <pre>
+             * Possible types: `REPEATE_PERIOD_UNSPECIFIED`, `HOURLY`, `DAILY`, `WEEKLY`, `MONTHLY`.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.RepeatePeriod type = 9 [(.yandex.cloud.required) = true];</code>
              * @param value The enum numeric value on the wire for type to set.
              * @return This builder for chaining.
@@ -12585,6 +13221,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Possible types: `REPEATE_PERIOD_UNSPECIFIED`, `HOURLY`, `DAILY`, `WEEKLY`, `MONTHLY`.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.RepeatePeriod type = 9 [(.yandex.cloud.required) = true];</code>
              * @return The type.
              */
@@ -12595,6 +13235,10 @@ public final class PolicyOuterClass {
               return result == null ? yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.RepeatePeriod.UNRECOGNIZED : result;
             }
             /**
+             * <pre>
+             * Possible types: `REPEATE_PERIOD_UNSPECIFIED`, `HOURLY`, `DAILY`, `WEEKLY`, `MONTHLY`.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.RepeatePeriod type = 9 [(.yandex.cloud.required) = true];</code>
              * @param value The type to set.
              * @return This builder for chaining.
@@ -12609,6 +13253,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * Possible types: `REPEATE_PERIOD_UNSPECIFIED`, `HOURLY`, `DAILY`, `WEEKLY`, `MONTHLY`.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.RepeatePeriod type = 9 [(.yandex.cloud.required) = true];</code>
              * @return This builder for chaining.
              */
@@ -12676,16 +13324,28 @@ public final class PolicyOuterClass {
             com.google.protobuf.MessageOrBuilder {
 
           /**
+           * <pre>
+           * The interval between backups.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.Interval delay = 1 [(.yandex.cloud.required) = true];</code>
            * @return Whether the delay field is set.
            */
           boolean hasDelay();
           /**
+           * <pre>
+           * The interval between backups.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.Interval delay = 1 [(.yandex.cloud.required) = true];</code>
            * @return The delay.
            */
           yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval getDelay();
           /**
+           * <pre>
+           * The interval between backups.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.Interval delay = 1 [(.yandex.cloud.required) = true];</code>
            */
           yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.IntervalOrBuilder getDelayOrBuilder();
@@ -12783,6 +13443,10 @@ public final class PolicyOuterClass {
           public static final int DELAY_FIELD_NUMBER = 1;
           private yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval delay_;
           /**
+           * <pre>
+           * The interval between backups.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.Interval delay = 1 [(.yandex.cloud.required) = true];</code>
            * @return Whether the delay field is set.
            */
@@ -12791,6 +13455,10 @@ public final class PolicyOuterClass {
             return delay_ != null;
           }
           /**
+           * <pre>
+           * The interval between backups.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.Interval delay = 1 [(.yandex.cloud.required) = true];</code>
            * @return The delay.
            */
@@ -12799,6 +13467,10 @@ public final class PolicyOuterClass {
             return delay_ == null ? yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.getDefaultInstance() : delay_;
           }
           /**
+           * <pre>
+           * The interval between backups.
+           * </pre>
+           *
            * <code>.yandex.cloud.backup.v1.PolicySettings.Interval delay = 1 [(.yandex.cloud.required) = true];</code>
            */
           @java.lang.Override
@@ -13125,6 +13797,10 @@ public final class PolicyOuterClass {
             private com.google.protobuf.SingleFieldBuilderV3<
                 yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.Builder, yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.IntervalOrBuilder> delayBuilder_;
             /**
+             * <pre>
+             * The interval between backups.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.Interval delay = 1 [(.yandex.cloud.required) = true];</code>
              * @return Whether the delay field is set.
              */
@@ -13132,6 +13808,10 @@ public final class PolicyOuterClass {
               return delayBuilder_ != null || delay_ != null;
             }
             /**
+             * <pre>
+             * The interval between backups.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.Interval delay = 1 [(.yandex.cloud.required) = true];</code>
              * @return The delay.
              */
@@ -13143,6 +13823,10 @@ public final class PolicyOuterClass {
               }
             }
             /**
+             * <pre>
+             * The interval between backups.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.Interval delay = 1 [(.yandex.cloud.required) = true];</code>
              */
             public Builder setDelay(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval value) {
@@ -13159,6 +13843,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * The interval between backups.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.Interval delay = 1 [(.yandex.cloud.required) = true];</code>
              */
             public Builder setDelay(
@@ -13173,6 +13861,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * The interval between backups.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.Interval delay = 1 [(.yandex.cloud.required) = true];</code>
              */
             public Builder mergeDelay(yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval value) {
@@ -13191,6 +13883,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * The interval between backups.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.Interval delay = 1 [(.yandex.cloud.required) = true];</code>
              */
             public Builder clearDelay() {
@@ -13205,6 +13901,10 @@ public final class PolicyOuterClass {
               return this;
             }
             /**
+             * <pre>
+             * The interval between backups.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.Interval delay = 1 [(.yandex.cloud.required) = true];</code>
              */
             public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.Interval.Builder getDelayBuilder() {
@@ -13213,6 +13913,10 @@ public final class PolicyOuterClass {
               return getDelayFieldBuilder().getBuilder();
             }
             /**
+             * <pre>
+             * The interval between backups.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.Interval delay = 1 [(.yandex.cloud.required) = true];</code>
              */
             public yandex.cloud.api.backup.v1.PolicyOuterClass.PolicySettings.IntervalOrBuilder getDelayOrBuilder() {
@@ -13224,6 +13928,10 @@ public final class PolicyOuterClass {
               }
             }
             /**
+             * <pre>
+             * The interval between backups.
+             * </pre>
+             *
              * <code>.yandex.cloud.backup.v1.PolicySettings.Interval delay = 1 [(.yandex.cloud.required) = true];</code>
              */
             private com.google.protobuf.SingleFieldBuilderV3<
@@ -16296,6 +17004,10 @@ public final class PolicyOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Set of policy settings
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.backup.v1.PolicySettings}
      */
     public static final class Builder extends
@@ -18330,11 +19042,19 @@ public final class PolicyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1;</code>
      * @return The policyId.
      */
     java.lang.String getPolicyId();
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1;</code>
      * @return The bytes for policyId.
      */
@@ -18342,11 +19062,19 @@ public final class PolicyOuterClass {
         getPolicyIdBytes();
 
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2;</code>
      * @return The computeInstanceId.
      */
     java.lang.String getComputeInstanceId();
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -18654,6 +19382,10 @@ public final class PolicyOuterClass {
     public static final int POLICY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object policyId_;
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1;</code>
      * @return The policyId.
      */
@@ -18671,6 +19403,10 @@ public final class PolicyOuterClass {
       }
     }
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1;</code>
      * @return The bytes for policyId.
      */
@@ -18692,6 +19428,10 @@ public final class PolicyOuterClass {
     public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object computeInstanceId_;
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2;</code>
      * @return The computeInstanceId.
      */
@@ -18709,6 +19449,10 @@ public final class PolicyOuterClass {
       }
     }
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -19168,6 +19912,10 @@ public final class PolicyOuterClass {
 
       private java.lang.Object policyId_ = "";
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1;</code>
        * @return The policyId.
        */
@@ -19184,6 +19932,10 @@ public final class PolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1;</code>
        * @return The bytes for policyId.
        */
@@ -19201,6 +19953,10 @@ public final class PolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1;</code>
        * @param value The policyId to set.
        * @return This builder for chaining.
@@ -19216,6 +19972,10 @@ public final class PolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -19226,6 +19986,10 @@ public final class PolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1;</code>
        * @param value The bytes for policyId to set.
        * @return This builder for chaining.
@@ -19244,6 +20008,10 @@ public final class PolicyOuterClass {
 
       private java.lang.Object computeInstanceId_ = "";
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @return The computeInstanceId.
        */
@@ -19260,6 +20028,10 @@ public final class PolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @return The bytes for computeInstanceId.
        */
@@ -19277,6 +20049,10 @@ public final class PolicyOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @param value The computeInstanceId to set.
        * @return This builder for chaining.
@@ -19292,6 +20068,10 @@ public final class PolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -19302,6 +20082,10 @@ public final class PolicyOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @param value The bytes for computeInstanceId to set.
        * @return This builder for chaining.

@@ -19,11 +19,19 @@ public final class ResourceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -31,17 +39,29 @@ public final class ResourceServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Number of results per page.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Token for the results page.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Token for the results page.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
@@ -147,6 +167,10 @@ public final class ResourceServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
@@ -164,6 +188,10 @@ public final class ResourceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -185,6 +213,10 @@ public final class ResourceServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * Number of results per page.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
@@ -196,6 +228,10 @@ public final class ResourceServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Token for the results page.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
@@ -213,6 +249,10 @@ public final class ResourceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for the results page.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
@@ -570,6 +610,10 @@ public final class ResourceServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The folderId.
        */
@@ -586,6 +630,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for folderId.
        */
@@ -603,6 +651,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -618,6 +670,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -628,6 +684,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -646,6 +706,10 @@ public final class ResourceServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * Number of results per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return The pageSize.
        */
@@ -654,6 +718,10 @@ public final class ResourceServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * Number of results per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -665,6 +733,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Number of results per page.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
@@ -677,6 +749,10 @@ public final class ResourceServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Token for the results page.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The pageToken.
        */
@@ -693,6 +769,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for the results page.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The bytes for pageToken.
        */
@@ -710,6 +790,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for the results page.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -725,6 +809,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for the results page.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
@@ -735,6 +823,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for the results page.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -808,35 +900,63 @@ public final class ResourceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Set of resource parameters.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
      */
     java.util.List<yandex.cloud.api.backup.v1.ResourceOuterClass.Resource> 
         getResourcesList();
     /**
+     * <pre>
+     * Set of resource parameters.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
      */
     yandex.cloud.api.backup.v1.ResourceOuterClass.Resource getResources(int index);
     /**
+     * <pre>
+     * Set of resource parameters.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
      */
     int getResourcesCount();
     /**
+     * <pre>
+     * Set of resource parameters.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceOrBuilder> 
         getResourcesOrBuilderList();
     /**
+     * <pre>
+     * Set of resource parameters.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
      */
     yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceOrBuilder getResourcesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for the next results page.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for the next results page.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -944,6 +1064,10 @@ public final class ResourceServiceOuterClass {
     public static final int RESOURCES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.backup.v1.ResourceOuterClass.Resource> resources_;
     /**
+     * <pre>
+     * Set of resource parameters.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
      */
     @java.lang.Override
@@ -951,6 +1075,10 @@ public final class ResourceServiceOuterClass {
       return resources_;
     }
     /**
+     * <pre>
+     * Set of resource parameters.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
      */
     @java.lang.Override
@@ -959,6 +1087,10 @@ public final class ResourceServiceOuterClass {
       return resources_;
     }
     /**
+     * <pre>
+     * Set of resource parameters.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
      */
     @java.lang.Override
@@ -966,6 +1098,10 @@ public final class ResourceServiceOuterClass {
       return resources_.size();
     }
     /**
+     * <pre>
+     * Set of resource parameters.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
      */
     @java.lang.Override
@@ -973,6 +1109,10 @@ public final class ResourceServiceOuterClass {
       return resources_.get(index);
     }
     /**
+     * <pre>
+     * Set of resource parameters.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
      */
     @java.lang.Override
@@ -984,6 +1124,10 @@ public final class ResourceServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for the next results page.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
@@ -1001,6 +1145,10 @@ public final class ResourceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for the next results page.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -1391,6 +1539,10 @@ public final class ResourceServiceOuterClass {
           yandex.cloud.api.backup.v1.ResourceOuterClass.Resource, yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.Builder, yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceOrBuilder> resourcesBuilder_;
 
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
        */
       public java.util.List<yandex.cloud.api.backup.v1.ResourceOuterClass.Resource> getResourcesList() {
@@ -1401,6 +1553,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
        */
       public int getResourcesCount() {
@@ -1411,6 +1567,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
        */
       public yandex.cloud.api.backup.v1.ResourceOuterClass.Resource getResources(int index) {
@@ -1421,6 +1581,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
        */
       public Builder setResources(
@@ -1438,6 +1602,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
        */
       public Builder setResources(
@@ -1452,6 +1620,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
        */
       public Builder addResources(yandex.cloud.api.backup.v1.ResourceOuterClass.Resource value) {
@@ -1468,6 +1640,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
        */
       public Builder addResources(
@@ -1485,6 +1661,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
        */
       public Builder addResources(
@@ -1499,6 +1679,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
        */
       public Builder addResources(
@@ -1513,6 +1697,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
        */
       public Builder addAllResources(
@@ -1528,6 +1716,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
        */
       public Builder clearResources() {
@@ -1541,6 +1733,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
        */
       public Builder removeResources(int index) {
@@ -1554,6 +1750,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
        */
       public yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.Builder getResourcesBuilder(
@@ -1561,6 +1761,10 @@ public final class ResourceServiceOuterClass {
         return getResourcesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
        */
       public yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceOrBuilder getResourcesOrBuilder(
@@ -1571,6 +1775,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceOrBuilder> 
@@ -1582,6 +1790,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
        */
       public yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.Builder addResourcesBuilder() {
@@ -1589,6 +1801,10 @@ public final class ResourceServiceOuterClass {
             yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
        */
       public yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.Builder addResourcesBuilder(
@@ -1597,6 +1813,10 @@ public final class ResourceServiceOuterClass {
             index, yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Resource resources = 1;</code>
        */
       public java.util.List<yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.Builder> 
@@ -1620,6 +1840,10 @@ public final class ResourceServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for the next results page.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The nextPageToken.
        */
@@ -1636,6 +1860,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for the next results page.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The bytes for nextPageToken.
        */
@@ -1653,6 +1881,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for the next results page.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -1668,6 +1900,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for the next results page.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return This builder for chaining.
        */
@@ -1678,6 +1914,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for the next results page.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.
@@ -1751,11 +1991,19 @@ public final class ResourceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The computeInstanceId.
      */
     java.lang.String getComputeInstanceId();
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for computeInstanceId.
      */
@@ -1849,6 +2097,10 @@ public final class ResourceServiceOuterClass {
     public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object computeInstanceId_;
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The computeInstanceId.
      */
@@ -1866,6 +2118,10 @@ public final class ResourceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for computeInstanceId.
      */
@@ -2188,6 +2444,10 @@ public final class ResourceServiceOuterClass {
 
       private java.lang.Object computeInstanceId_ = "";
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The computeInstanceId.
        */
@@ -2204,6 +2464,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for computeInstanceId.
        */
@@ -2221,6 +2485,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The computeInstanceId to set.
        * @return This builder for chaining.
@@ -2236,6 +2504,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -2246,6 +2518,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for computeInstanceId to set.
        * @return This builder for chaining.
@@ -2319,16 +2595,28 @@ public final class ResourceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Set of resource parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Resource resource = 1;</code>
      * @return Whether the resource field is set.
      */
     boolean hasResource();
     /**
+     * <pre>
+     * Set of resource parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Resource resource = 1;</code>
      * @return The resource.
      */
     yandex.cloud.api.backup.v1.ResourceOuterClass.Resource getResource();
     /**
+     * <pre>
+     * Set of resource parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Resource resource = 1;</code>
      */
     yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceOrBuilder getResourceOrBuilder();
@@ -2426,6 +2714,10 @@ public final class ResourceServiceOuterClass {
     public static final int RESOURCE_FIELD_NUMBER = 1;
     private yandex.cloud.api.backup.v1.ResourceOuterClass.Resource resource_;
     /**
+     * <pre>
+     * Set of resource parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Resource resource = 1;</code>
      * @return Whether the resource field is set.
      */
@@ -2434,6 +2726,10 @@ public final class ResourceServiceOuterClass {
       return resource_ != null;
     }
     /**
+     * <pre>
+     * Set of resource parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Resource resource = 1;</code>
      * @return The resource.
      */
@@ -2442,6 +2738,10 @@ public final class ResourceServiceOuterClass {
       return resource_ == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.getDefaultInstance() : resource_;
     }
     /**
+     * <pre>
+     * Set of resource parameters.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Resource resource = 1;</code>
      */
     @java.lang.Override
@@ -2768,6 +3068,10 @@ public final class ResourceServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.backup.v1.ResourceOuterClass.Resource, yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.Builder, yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceOrBuilder> resourceBuilder_;
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Resource resource = 1;</code>
        * @return Whether the resource field is set.
        */
@@ -2775,6 +3079,10 @@ public final class ResourceServiceOuterClass {
         return resourceBuilder_ != null || resource_ != null;
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Resource resource = 1;</code>
        * @return The resource.
        */
@@ -2786,6 +3094,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Resource resource = 1;</code>
        */
       public Builder setResource(yandex.cloud.api.backup.v1.ResourceOuterClass.Resource value) {
@@ -2802,6 +3114,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Resource resource = 1;</code>
        */
       public Builder setResource(
@@ -2816,6 +3132,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Resource resource = 1;</code>
        */
       public Builder mergeResource(yandex.cloud.api.backup.v1.ResourceOuterClass.Resource value) {
@@ -2834,6 +3154,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Resource resource = 1;</code>
        */
       public Builder clearResource() {
@@ -2848,6 +3172,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Resource resource = 1;</code>
        */
       public yandex.cloud.api.backup.v1.ResourceOuterClass.Resource.Builder getResourceBuilder() {
@@ -2856,6 +3184,10 @@ public final class ResourceServiceOuterClass {
         return getResourceFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Resource resource = 1;</code>
        */
       public yandex.cloud.api.backup.v1.ResourceOuterClass.ResourceOrBuilder getResourceOrBuilder() {
@@ -2867,6 +3199,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set of resource parameters.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Resource resource = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2940,11 +3276,19 @@ public final class ResourceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The computeInstanceId.
      */
     java.lang.String getComputeInstanceId();
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for computeInstanceId.
      */
@@ -2952,11 +3296,19 @@ public final class ResourceServiceOuterClass {
         getComputeInstanceIdBytes();
 
     /**
+     * <pre>
+     * Resource ID is used to identify Compute Cloud instance in backup service.
+     * </pre>
+     *
      * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The resourceId.
      */
     java.lang.String getResourceId();
     /**
+     * <pre>
+     * Resource ID is used to identify Compute Cloud instance in backup service.
+     * </pre>
+     *
      * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for resourceId.
      */
@@ -3057,6 +3409,10 @@ public final class ResourceServiceOuterClass {
     public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object computeInstanceId_;
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The computeInstanceId.
      */
@@ -3074,6 +3430,10 @@ public final class ResourceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for computeInstanceId.
      */
@@ -3095,6 +3455,10 @@ public final class ResourceServiceOuterClass {
     public static final int RESOURCE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object resourceId_;
     /**
+     * <pre>
+     * Resource ID is used to identify Compute Cloud instance in backup service.
+     * </pre>
+     *
      * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The resourceId.
      */
@@ -3112,6 +3476,10 @@ public final class ResourceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Resource ID is used to identify Compute Cloud instance in backup service.
+     * </pre>
+     *
      * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for resourceId.
      */
@@ -3451,6 +3819,10 @@ public final class ResourceServiceOuterClass {
 
       private java.lang.Object computeInstanceId_ = "";
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The computeInstanceId.
        */
@@ -3467,6 +3839,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for computeInstanceId.
        */
@@ -3484,6 +3860,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The computeInstanceId to set.
        * @return This builder for chaining.
@@ -3499,6 +3879,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -3509,6 +3893,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for computeInstanceId to set.
        * @return This builder for chaining.
@@ -3527,6 +3915,10 @@ public final class ResourceServiceOuterClass {
 
       private java.lang.Object resourceId_ = "";
       /**
+       * <pre>
+       * Resource ID is used to identify Compute Cloud instance in backup service.
+       * </pre>
+       *
        * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The resourceId.
        */
@@ -3543,6 +3935,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Resource ID is used to identify Compute Cloud instance in backup service.
+       * </pre>
+       *
        * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for resourceId.
        */
@@ -3560,6 +3956,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Resource ID is used to identify Compute Cloud instance in backup service.
+       * </pre>
+       *
        * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The resourceId to set.
        * @return This builder for chaining.
@@ -3575,6 +3975,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resource ID is used to identify Compute Cloud instance in backup service.
+       * </pre>
+       *
        * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -3585,6 +3989,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resource ID is used to identify Compute Cloud instance in backup service.
+       * </pre>
+       *
        * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for resourceId to set.
        * @return This builder for chaining.
@@ -3659,7 +4067,7 @@ public final class ResourceServiceOuterClass {
 
     /**
      * <pre>
-     * Compute Cloud Instance ID of the Backup.
+     * Compute Cloud instance ID.
      * </pre>
      *
      * <code>string compute_instance_id = 1;</code>
@@ -3668,7 +4076,7 @@ public final class ResourceServiceOuterClass {
     java.lang.String getComputeInstanceId();
     /**
      * <pre>
-     * Compute Cloud Instance ID of the Backup.
+     * Compute Cloud instance ID.
      * </pre>
      *
      * <code>string compute_instance_id = 1;</code>
@@ -3765,7 +4173,7 @@ public final class ResourceServiceOuterClass {
     private volatile java.lang.Object computeInstanceId_;
     /**
      * <pre>
-     * Compute Cloud Instance ID of the Backup.
+     * Compute Cloud instance ID.
      * </pre>
      *
      * <code>string compute_instance_id = 1;</code>
@@ -3786,7 +4194,7 @@ public final class ResourceServiceOuterClass {
     }
     /**
      * <pre>
-     * Compute Cloud Instance ID of the Backup.
+     * Compute Cloud instance ID.
      * </pre>
      *
      * <code>string compute_instance_id = 1;</code>
@@ -4112,7 +4520,7 @@ public final class ResourceServiceOuterClass {
       private java.lang.Object computeInstanceId_ = "";
       /**
        * <pre>
-       * Compute Cloud Instance ID of the Backup.
+       * Compute Cloud instance ID.
        * </pre>
        *
        * <code>string compute_instance_id = 1;</code>
@@ -4132,7 +4540,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Compute Cloud Instance ID of the Backup.
+       * Compute Cloud instance ID.
        * </pre>
        *
        * <code>string compute_instance_id = 1;</code>
@@ -4153,7 +4561,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Compute Cloud Instance ID of the Backup.
+       * Compute Cloud instance ID.
        * </pre>
        *
        * <code>string compute_instance_id = 1;</code>
@@ -4172,7 +4580,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Compute Cloud Instance ID of the Backup.
+       * Compute Cloud instance ID.
        * </pre>
        *
        * <code>string compute_instance_id = 1;</code>
@@ -4186,7 +4594,7 @@ public final class ResourceServiceOuterClass {
       }
       /**
        * <pre>
-       * Compute Cloud Instance ID of the Backup.
+       * Compute Cloud instance ID.
        * </pre>
        *
        * <code>string compute_instance_id = 1;</code>
@@ -4262,11 +4670,19 @@ public final class ResourceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The computeInstanceId.
      */
     java.lang.String getComputeInstanceId();
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for computeInstanceId.
      */
@@ -4274,17 +4690,29 @@ public final class ResourceServiceOuterClass {
         getComputeInstanceIdBytes();
 
     /**
+     * <pre>
+     * Number of results per page. 
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Token for the results page.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Token for the results page.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
@@ -4390,6 +4818,10 @@ public final class ResourceServiceOuterClass {
     public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object computeInstanceId_;
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The computeInstanceId.
      */
@@ -4407,6 +4839,10 @@ public final class ResourceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for computeInstanceId.
      */
@@ -4428,6 +4864,10 @@ public final class ResourceServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * Number of results per page. 
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
@@ -4439,6 +4879,10 @@ public final class ResourceServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Token for the results page.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
@@ -4456,6 +4900,10 @@ public final class ResourceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for the results page.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
@@ -4813,6 +5261,10 @@ public final class ResourceServiceOuterClass {
 
       private java.lang.Object computeInstanceId_ = "";
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The computeInstanceId.
        */
@@ -4829,6 +5281,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for computeInstanceId.
        */
@@ -4846,6 +5302,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The computeInstanceId to set.
        * @return This builder for chaining.
@@ -4861,6 +5321,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -4871,6 +5335,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for computeInstanceId to set.
        * @return This builder for chaining.
@@ -4889,6 +5357,10 @@ public final class ResourceServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * Number of results per page. 
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return The pageSize.
        */
@@ -4897,6 +5369,10 @@ public final class ResourceServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * Number of results per page. 
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -4908,6 +5384,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Number of results per page. 
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
@@ -4920,6 +5400,10 @@ public final class ResourceServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Token for the results page.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The pageToken.
        */
@@ -4936,6 +5420,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for the results page.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The bytes for pageToken.
        */
@@ -4953,6 +5441,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for the results page.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -4968,6 +5460,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for the results page.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
@@ -4978,6 +5474,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for the results page.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -5051,35 +5551,63 @@ public final class ResourceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Set of tasks parameters.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
      */
     java.util.List<yandex.cloud.api.backup.v1.ResourceOuterClass.Task> 
         getTasksList();
     /**
+     * <pre>
+     * Set of tasks parameters.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
      */
     yandex.cloud.api.backup.v1.ResourceOuterClass.Task getTasks(int index);
     /**
+     * <pre>
+     * Set of tasks parameters.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
      */
     int getTasksCount();
     /**
+     * <pre>
+     * Set of tasks parameters.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.backup.v1.ResourceOuterClass.TaskOrBuilder> 
         getTasksOrBuilderList();
     /**
+     * <pre>
+     * Set of tasks parameters.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
      */
     yandex.cloud.api.backup.v1.ResourceOuterClass.TaskOrBuilder getTasksOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for the next results page.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for the next results page.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -5187,6 +5715,10 @@ public final class ResourceServiceOuterClass {
     public static final int TASKS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.backup.v1.ResourceOuterClass.Task> tasks_;
     /**
+     * <pre>
+     * Set of tasks parameters.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
      */
     @java.lang.Override
@@ -5194,6 +5726,10 @@ public final class ResourceServiceOuterClass {
       return tasks_;
     }
     /**
+     * <pre>
+     * Set of tasks parameters.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
      */
     @java.lang.Override
@@ -5202,6 +5738,10 @@ public final class ResourceServiceOuterClass {
       return tasks_;
     }
     /**
+     * <pre>
+     * Set of tasks parameters.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
      */
     @java.lang.Override
@@ -5209,6 +5749,10 @@ public final class ResourceServiceOuterClass {
       return tasks_.size();
     }
     /**
+     * <pre>
+     * Set of tasks parameters.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
      */
     @java.lang.Override
@@ -5216,6 +5760,10 @@ public final class ResourceServiceOuterClass {
       return tasks_.get(index);
     }
     /**
+     * <pre>
+     * Set of tasks parameters.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
      */
     @java.lang.Override
@@ -5227,6 +5775,10 @@ public final class ResourceServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for the next results page.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
@@ -5244,6 +5796,10 @@ public final class ResourceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for the next results page.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -5634,6 +6190,10 @@ public final class ResourceServiceOuterClass {
           yandex.cloud.api.backup.v1.ResourceOuterClass.Task, yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Builder, yandex.cloud.api.backup.v1.ResourceOuterClass.TaskOrBuilder> tasksBuilder_;
 
       /**
+       * <pre>
+       * Set of tasks parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
        */
       public java.util.List<yandex.cloud.api.backup.v1.ResourceOuterClass.Task> getTasksList() {
@@ -5644,6 +6204,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set of tasks parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
        */
       public int getTasksCount() {
@@ -5654,6 +6218,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set of tasks parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
        */
       public yandex.cloud.api.backup.v1.ResourceOuterClass.Task getTasks(int index) {
@@ -5664,6 +6232,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set of tasks parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
        */
       public Builder setTasks(
@@ -5681,6 +6253,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of tasks parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
        */
       public Builder setTasks(
@@ -5695,6 +6271,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of tasks parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
        */
       public Builder addTasks(yandex.cloud.api.backup.v1.ResourceOuterClass.Task value) {
@@ -5711,6 +6291,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of tasks parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
        */
       public Builder addTasks(
@@ -5728,6 +6312,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of tasks parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
        */
       public Builder addTasks(
@@ -5742,6 +6330,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of tasks parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
        */
       public Builder addTasks(
@@ -5756,6 +6348,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of tasks parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
        */
       public Builder addAllTasks(
@@ -5771,6 +6367,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of tasks parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
        */
       public Builder clearTasks() {
@@ -5784,6 +6384,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of tasks parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
        */
       public Builder removeTasks(int index) {
@@ -5797,6 +6401,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Set of tasks parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
        */
       public yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Builder getTasksBuilder(
@@ -5804,6 +6412,10 @@ public final class ResourceServiceOuterClass {
         return getTasksFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Set of tasks parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
        */
       public yandex.cloud.api.backup.v1.ResourceOuterClass.TaskOrBuilder getTasksOrBuilder(
@@ -5814,6 +6426,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set of tasks parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.backup.v1.ResourceOuterClass.TaskOrBuilder> 
@@ -5825,6 +6441,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Set of tasks parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
        */
       public yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Builder addTasksBuilder() {
@@ -5832,6 +6452,10 @@ public final class ResourceServiceOuterClass {
             yandex.cloud.api.backup.v1.ResourceOuterClass.Task.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Set of tasks parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
        */
       public yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Builder addTasksBuilder(
@@ -5840,6 +6464,10 @@ public final class ResourceServiceOuterClass {
             index, yandex.cloud.api.backup.v1.ResourceOuterClass.Task.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Set of tasks parameters.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.backup.v1.Task tasks = 1;</code>
        */
       public java.util.List<yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Builder> 
@@ -5863,6 +6491,10 @@ public final class ResourceServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for the next results page.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The nextPageToken.
        */
@@ -5879,6 +6511,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for the next results page.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The bytes for nextPageToken.
        */
@@ -5896,6 +6532,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for the next results page.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -5911,6 +6551,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for the next results page.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return This builder for chaining.
        */
@@ -5921,6 +6565,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for the next results page.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.
@@ -5994,11 +6642,19 @@ public final class ResourceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -6006,11 +6662,19 @@ public final class ResourceServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The computeInstanceId.
      */
     java.lang.String getComputeInstanceId();
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for computeInstanceId.
      */
@@ -6018,11 +6682,19 @@ public final class ResourceServiceOuterClass {
         getComputeInstanceIdBytes();
 
     /**
+     * <pre>
+     * Path to list items in.
+     * </pre>
+     *
      * <code>string path = 3 [(.yandex.cloud.required) = false];</code>
      * @return The path.
      */
     java.lang.String getPath();
     /**
+     * <pre>
+     * Path to list items in.
+     * </pre>
+     *
      * <code>string path = 3 [(.yandex.cloud.required) = false];</code>
      * @return The bytes for path.
      */
@@ -6130,6 +6802,10 @@ public final class ResourceServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
@@ -6147,6 +6823,10 @@ public final class ResourceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -6168,6 +6848,10 @@ public final class ResourceServiceOuterClass {
     public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object computeInstanceId_;
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The computeInstanceId.
      */
@@ -6185,6 +6869,10 @@ public final class ResourceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for computeInstanceId.
      */
@@ -6206,6 +6894,10 @@ public final class ResourceServiceOuterClass {
     public static final int PATH_FIELD_NUMBER = 3;
     private volatile java.lang.Object path_;
     /**
+     * <pre>
+     * Path to list items in.
+     * </pre>
+     *
      * <code>string path = 3 [(.yandex.cloud.required) = false];</code>
      * @return The path.
      */
@@ -6223,6 +6915,10 @@ public final class ResourceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Path to list items in.
+     * </pre>
+     *
      * <code>string path = 3 [(.yandex.cloud.required) = false];</code>
      * @return The bytes for path.
      */
@@ -6579,6 +7275,10 @@ public final class ResourceServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The folderId.
        */
@@ -6595,6 +7295,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for folderId.
        */
@@ -6612,6 +7316,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -6627,6 +7335,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -6637,6 +7349,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -6655,6 +7371,10 @@ public final class ResourceServiceOuterClass {
 
       private java.lang.Object computeInstanceId_ = "";
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The computeInstanceId.
        */
@@ -6671,6 +7391,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for computeInstanceId.
        */
@@ -6688,6 +7412,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The computeInstanceId to set.
        * @return This builder for chaining.
@@ -6703,6 +7431,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -6713,6 +7445,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for computeInstanceId to set.
        * @return This builder for chaining.
@@ -6731,6 +7467,10 @@ public final class ResourceServiceOuterClass {
 
       private java.lang.Object path_ = "";
       /**
+       * <pre>
+       * Path to list items in.
+       * </pre>
+       *
        * <code>string path = 3 [(.yandex.cloud.required) = false];</code>
        * @return The path.
        */
@@ -6747,6 +7487,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Path to list items in.
+       * </pre>
+       *
        * <code>string path = 3 [(.yandex.cloud.required) = false];</code>
        * @return The bytes for path.
        */
@@ -6764,6 +7508,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Path to list items in.
+       * </pre>
+       *
        * <code>string path = 3 [(.yandex.cloud.required) = false];</code>
        * @param value The path to set.
        * @return This builder for chaining.
@@ -6779,6 +7527,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Path to list items in.
+       * </pre>
+       *
        * <code>string path = 3 [(.yandex.cloud.required) = false];</code>
        * @return This builder for chaining.
        */
@@ -6789,6 +7541,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Path to list items in.
+       * </pre>
+       *
        * <code>string path = 3 [(.yandex.cloud.required) = false];</code>
        * @param value The bytes for path to set.
        * @return This builder for chaining.
@@ -6981,11 +7737,19 @@ public final class ResourceServiceOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Item name.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        * @return The name.
        */
       java.lang.String getName();
       /**
+       * <pre>
+       * Item name.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        * @return The bytes for name.
        */
@@ -7268,6 +8032,10 @@ public final class ResourceServiceOuterClass {
       public static final int NAME_FIELD_NUMBER = 1;
       private volatile java.lang.Object name_;
       /**
+       * <pre>
+       * Item name.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        * @return The name.
        */
@@ -7285,6 +8053,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Item name.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        * @return The bytes for name.
        */
@@ -7722,6 +8494,10 @@ public final class ResourceServiceOuterClass {
 
         private java.lang.Object name_ = "";
         /**
+         * <pre>
+         * Item name.
+         * </pre>
+         *
          * <code>string name = 1;</code>
          * @return The name.
          */
@@ -7738,6 +8514,10 @@ public final class ResourceServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * Item name.
+         * </pre>
+         *
          * <code>string name = 1;</code>
          * @return The bytes for name.
          */
@@ -7755,6 +8535,10 @@ public final class ResourceServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * Item name.
+         * </pre>
+         *
          * <code>string name = 1;</code>
          * @param value The name to set.
          * @return This builder for chaining.
@@ -7770,6 +8554,10 @@ public final class ResourceServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Item name.
+         * </pre>
+         *
          * <code>string name = 1;</code>
          * @return This builder for chaining.
          */
@@ -7780,6 +8568,10 @@ public final class ResourceServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Item name.
+         * </pre>
+         *
          * <code>string name = 1;</code>
          * @param value The bytes for name to set.
          * @return This builder for chaining.
@@ -8706,11 +9498,19 @@ public final class ResourceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -8718,11 +9518,19 @@ public final class ResourceServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The computeInstanceId.
      */
     java.lang.String getComputeInstanceId();
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for computeInstanceId.
      */
@@ -8730,11 +9538,19 @@ public final class ResourceServiceOuterClass {
         getComputeInstanceIdBytes();
 
     /**
+     * <pre>
+     * Path to create directory in.
+     * </pre>
+     *
      * <code>string path = 3 [(.yandex.cloud.required) = true];</code>
      * @return The path.
      */
     java.lang.String getPath();
     /**
+     * <pre>
+     * Path to create directory in.
+     * </pre>
+     *
      * <code>string path = 3 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for path.
      */
@@ -8842,6 +9658,10 @@ public final class ResourceServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
@@ -8859,6 +9679,10 @@ public final class ResourceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -8880,6 +9704,10 @@ public final class ResourceServiceOuterClass {
     public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object computeInstanceId_;
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The computeInstanceId.
      */
@@ -8897,6 +9725,10 @@ public final class ResourceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for computeInstanceId.
      */
@@ -8918,6 +9750,10 @@ public final class ResourceServiceOuterClass {
     public static final int PATH_FIELD_NUMBER = 3;
     private volatile java.lang.Object path_;
     /**
+     * <pre>
+     * Path to create directory in.
+     * </pre>
+     *
      * <code>string path = 3 [(.yandex.cloud.required) = true];</code>
      * @return The path.
      */
@@ -8935,6 +9771,10 @@ public final class ResourceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Path to create directory in.
+     * </pre>
+     *
      * <code>string path = 3 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for path.
      */
@@ -9291,6 +10131,10 @@ public final class ResourceServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The folderId.
        */
@@ -9307,6 +10151,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for folderId.
        */
@@ -9324,6 +10172,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -9339,6 +10191,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -9349,6 +10205,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -9367,6 +10227,10 @@ public final class ResourceServiceOuterClass {
 
       private java.lang.Object computeInstanceId_ = "";
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The computeInstanceId.
        */
@@ -9383,6 +10247,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for computeInstanceId.
        */
@@ -9400,6 +10268,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The computeInstanceId to set.
        * @return This builder for chaining.
@@ -9415,6 +10287,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -9425,6 +10301,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for computeInstanceId to set.
        * @return This builder for chaining.
@@ -9443,6 +10323,10 @@ public final class ResourceServiceOuterClass {
 
       private java.lang.Object path_ = "";
       /**
+       * <pre>
+       * Path to create directory in.
+       * </pre>
+       *
        * <code>string path = 3 [(.yandex.cloud.required) = true];</code>
        * @return The path.
        */
@@ -9459,6 +10343,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Path to create directory in.
+       * </pre>
+       *
        * <code>string path = 3 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for path.
        */
@@ -9476,6 +10364,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Path to create directory in.
+       * </pre>
+       *
        * <code>string path = 3 [(.yandex.cloud.required) = true];</code>
        * @param value The path to set.
        * @return This builder for chaining.
@@ -9491,6 +10383,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Path to create directory in.
+       * </pre>
+       *
        * <code>string path = 3 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -9501,6 +10397,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Path to create directory in.
+       * </pre>
+       *
        * <code>string path = 3 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for path to set.
        * @return This builder for chaining.
@@ -9574,11 +10474,19 @@ public final class ResourceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 1;</code>
      * @return The computeInstanceId.
      */
     java.lang.String getComputeInstanceId();
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 1;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -9586,11 +10494,19 @@ public final class ResourceServiceOuterClass {
         getComputeInstanceIdBytes();
 
     /**
+     * <pre>
+     * Path to create directory metadata in.
+     * </pre>
+     *
      * <code>string path = 2;</code>
      * @return The path.
      */
     java.lang.String getPath();
     /**
+     * <pre>
+     * Path to create directory metadata in.
+     * </pre>
+     *
      * <code>string path = 2;</code>
      * @return The bytes for path.
      */
@@ -9691,6 +10607,10 @@ public final class ResourceServiceOuterClass {
     public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object computeInstanceId_;
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 1;</code>
      * @return The computeInstanceId.
      */
@@ -9708,6 +10628,10 @@ public final class ResourceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 1;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -9729,6 +10653,10 @@ public final class ResourceServiceOuterClass {
     public static final int PATH_FIELD_NUMBER = 2;
     private volatile java.lang.Object path_;
     /**
+     * <pre>
+     * Path to create directory metadata in.
+     * </pre>
+     *
      * <code>string path = 2;</code>
      * @return The path.
      */
@@ -9746,6 +10674,10 @@ public final class ResourceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Path to create directory metadata in.
+     * </pre>
+     *
      * <code>string path = 2;</code>
      * @return The bytes for path.
      */
@@ -10085,6 +11017,10 @@ public final class ResourceServiceOuterClass {
 
       private java.lang.Object computeInstanceId_ = "";
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1;</code>
        * @return The computeInstanceId.
        */
@@ -10101,6 +11037,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1;</code>
        * @return The bytes for computeInstanceId.
        */
@@ -10118,6 +11058,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1;</code>
        * @param value The computeInstanceId to set.
        * @return This builder for chaining.
@@ -10133,6 +11077,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -10143,6 +11091,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1;</code>
        * @param value The bytes for computeInstanceId to set.
        * @return This builder for chaining.
@@ -10161,6 +11113,10 @@ public final class ResourceServiceOuterClass {
 
       private java.lang.Object path_ = "";
       /**
+       * <pre>
+       * Path to create directory metadata in.
+       * </pre>
+       *
        * <code>string path = 2;</code>
        * @return The path.
        */
@@ -10177,6 +11133,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Path to create directory metadata in.
+       * </pre>
+       *
        * <code>string path = 2;</code>
        * @return The bytes for path.
        */
@@ -10194,6 +11154,10 @@ public final class ResourceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Path to create directory metadata in.
+       * </pre>
+       *
        * <code>string path = 2;</code>
        * @param value The path to set.
        * @return This builder for chaining.
@@ -10209,6 +11173,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Path to create directory metadata in.
+       * </pre>
+       *
        * <code>string path = 2;</code>
        * @return This builder for chaining.
        */
@@ -10219,6 +11187,10 @@ public final class ResourceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Path to create directory metadata in.
+       * </pre>
+       *
        * <code>string path = 2;</code>
        * @param value The bytes for path to set.
        * @return This builder for chaining.

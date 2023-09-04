@@ -19,11 +19,19 @@ public final class BackupOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the backup.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the backup.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -31,11 +39,19 @@ public final class BackupOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * Name of the backup.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the backup.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -43,11 +59,19 @@ public final class BackupOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * ID of the backup vault.
+     * </pre>
+     *
      * <code>string vault_id = 3;</code>
      * @return The vaultId.
      */
     java.lang.String getVaultId();
     /**
+     * <pre>
+     * ID of the backup vault.
+     * </pre>
+     *
      * <code>string vault_id = 3;</code>
      * @return The bytes for vaultId.
      */
@@ -55,45 +79,77 @@ public final class BackupOuterClass {
         getVaultIdBytes();
 
     /**
+     * <pre>
+     * Archive attributes.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Archive.ArchiveAttributes attributes = 4;</code>
      * @return Whether the attributes field is set.
      */
     boolean hasAttributes();
     /**
+     * <pre>
+     * Archive attributes.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Archive.ArchiveAttributes attributes = 4;</code>
      * @return The attributes.
      */
     yandex.cloud.api.backup.v1.BackupOuterClass.Archive.ArchiveAttributes getAttributes();
     /**
+     * <pre>
+     * Archive attributes.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Archive.ArchiveAttributes attributes = 4;</code>
      */
     yandex.cloud.api.backup.v1.BackupOuterClass.Archive.ArchiveAttributesOrBuilder getAttributesOrBuilder();
 
     /**
+     * <pre>
+     * Archive size.
+     * </pre>
+     *
      * <code>int64 size = 5;</code>
      * @return The size.
      */
     long getSize();
 
     /**
+     * <pre>
+     * Compressed data size.
+     * </pre>
+     *
      * <code>int64 compressed_data_size = 6;</code>
      * @return The compressedDataSize.
      */
     long getCompressedDataSize();
 
     /**
+     * <pre>
+     * Data size.
+     * </pre>
+     *
      * <code>int64 data_size = 7;</code>
      * @return The dataSize.
      */
     long getDataSize();
 
     /**
+     * <pre>
+     * Original data size.
+     * </pre>
+     *
      * <code>int64 original_data_size = 8;</code>
      * @return The originalDataSize.
      */
     long getOriginalDataSize();
 
     /**
+     * <pre>
+     * Logical size.
+     * </pre>
+     *
      * <code>int64 logical_size = 9;</code>
      * @return The logicalSize.
      */
@@ -222,11 +278,19 @@ public final class BackupOuterClass {
     int getActionsValue(int index);
 
     /**
+     * <pre>
+     * Backup plan ID.
+     * </pre>
+     *
      * <code>string backup_plan_id = 22;</code>
      * @return The backupPlanId.
      */
     java.lang.String getBackupPlanId();
     /**
+     * <pre>
+     * Backup plan ID.
+     * </pre>
+     *
      * <code>string backup_plan_id = 22;</code>
      * @return The bytes for backupPlanId.
      */
@@ -234,11 +298,19 @@ public final class BackupOuterClass {
         getBackupPlanIdBytes();
 
     /**
+     * <pre>
+     * Backup plan name.
+     * </pre>
+     *
      * <code>string backup_plan_name = 23;</code>
      * @return The backupPlanName.
      */
     java.lang.String getBackupPlanName();
     /**
+     * <pre>
+     * Backup plan name.
+     * </pre>
+     *
      * <code>string backup_plan_name = 23;</code>
      * @return The bytes for backupPlanName.
      */
@@ -246,11 +318,19 @@ public final class BackupOuterClass {
         getBackupPlanNameBytes();
 
     /**
+     * <pre>
+     * Backup plan description.
+     * </pre>
+     *
      * <code>string description = 24;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Backup plan description.
+     * </pre>
+     *
      * <code>string description = 24;</code>
      * @return The bytes for description.
      */
@@ -258,11 +338,19 @@ public final class BackupOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Display name, e.g. `INSTANCE_NAME - POLICY_NAME`.
+     * </pre>
+     *
      * <code>string display_name = 25;</code>
      * @return The displayName.
      */
     java.lang.String getDisplayName();
     /**
+     * <pre>
+     * Display name, e.g. `INSTANCE_NAME - POLICY_NAME`.
+     * </pre>
+     *
      * <code>string display_name = 25;</code>
      * @return The bytes for displayName.
      */
@@ -270,11 +358,19 @@ public final class BackupOuterClass {
         getDisplayNameBytes();
 
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 26;</code>
      * @return The computeInstanceId.
      */
     java.lang.String getComputeInstanceId();
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 26;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -282,23 +378,39 @@ public final class BackupOuterClass {
         getComputeInstanceIdBytes();
 
     /**
+     * <pre>
+     * If this field is true, it means that the archive is consistent.
+     * </pre>
+     *
      * <code>bool consistent = 27;</code>
      * @return The consistent.
      */
     boolean getConsistent();
 
     /**
+     * <pre>
+     * If this field is true, it means that the archive was deleted.
+     * </pre>
+     *
      * <code>bool deleted = 30;</code>
      * @return The deleted.
      */
     boolean getDeleted();
 
     /**
+     * <pre>
+     * Resource ID.
+     * </pre>
+     *
      * <code>string resource_id = 31;</code>
      * @return The resourceId.
      */
     java.lang.String getResourceId();
     /**
+     * <pre>
+     * Resource ID.
+     * </pre>
+     *
      * <code>string resource_id = 31;</code>
      * @return The bytes for resourceId.
      */
@@ -598,7 +710,9 @@ public final class BackupOuterClass {
 
     /**
      * <pre>
-     * Encryption Algorithm for underlying backups.
+     * Encryption Algorithm for underlying backups: 
+     * `ENCRYPTION_ALGORITHM_UNSPECIFIED`, `NONE`, `AES128`, `AES192`, 
+     * `AES256`.
      * </pre>
      *
      * Protobuf enum {@code yandex.cloud.backup.v1.Archive.EncryptionAlgorithm}
@@ -736,6 +850,11 @@ public final class BackupOuterClass {
     }
 
     /**
+     * <pre>
+     * Action with archive backup: `ACTION_UNSPECIFIED`, `REFRESH`,
+     * `DELETE_BY_AGENT`.
+     * </pre>
+     *
      * Protobuf enum {@code yandex.cloud.backup.v1.Archive.Action}
      */
     public enum Action
@@ -857,11 +976,19 @@ public final class BackupOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Archive attribute. Default value: `0`.
+       * </pre>
+       *
        * <code>string aaib = 1;</code>
        * @return The aaib.
        */
       java.lang.String getAaib();
       /**
+       * <pre>
+       * Archive attribute. Default value: `0`.
+       * </pre>
+       *
        * <code>string aaib = 1;</code>
        * @return The bytes for aaib.
        */
@@ -869,11 +996,19 @@ public final class BackupOuterClass {
           getAaibBytes();
 
       /**
+       * <pre>
+       * URI of the backup archive.
+       * </pre>
+       *
        * <code>string uri = 2;</code>
        * @return The uri.
        */
       java.lang.String getUri();
       /**
+       * <pre>
+       * URI of the backup archive.
+       * </pre>
+       *
        * <code>string uri = 2;</code>
        * @return The bytes for uri.
        */
@@ -881,6 +1016,10 @@ public final class BackupOuterClass {
           getUriBytes();
     }
     /**
+     * <pre>
+     * Archive attributes.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.backup.v1.Archive.ArchiveAttributes}
      */
     public static final class ArchiveAttributes extends
@@ -974,6 +1113,10 @@ public final class BackupOuterClass {
       public static final int AAIB_FIELD_NUMBER = 1;
       private volatile java.lang.Object aaib_;
       /**
+       * <pre>
+       * Archive attribute. Default value: `0`.
+       * </pre>
+       *
        * <code>string aaib = 1;</code>
        * @return The aaib.
        */
@@ -991,6 +1134,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Archive attribute. Default value: `0`.
+       * </pre>
+       *
        * <code>string aaib = 1;</code>
        * @return The bytes for aaib.
        */
@@ -1012,6 +1159,10 @@ public final class BackupOuterClass {
       public static final int URI_FIELD_NUMBER = 2;
       private volatile java.lang.Object uri_;
       /**
+       * <pre>
+       * URI of the backup archive.
+       * </pre>
+       *
        * <code>string uri = 2;</code>
        * @return The uri.
        */
@@ -1029,6 +1180,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * URI of the backup archive.
+       * </pre>
+       *
        * <code>string uri = 2;</code>
        * @return The bytes for uri.
        */
@@ -1212,6 +1367,10 @@ public final class BackupOuterClass {
         return builder;
       }
       /**
+       * <pre>
+       * Archive attributes.
+       * </pre>
+       *
        * Protobuf type {@code yandex.cloud.backup.v1.Archive.ArchiveAttributes}
        */
       public static final class Builder extends
@@ -1368,6 +1527,10 @@ public final class BackupOuterClass {
 
         private java.lang.Object aaib_ = "";
         /**
+         * <pre>
+         * Archive attribute. Default value: `0`.
+         * </pre>
+         *
          * <code>string aaib = 1;</code>
          * @return The aaib.
          */
@@ -1384,6 +1547,10 @@ public final class BackupOuterClass {
           }
         }
         /**
+         * <pre>
+         * Archive attribute. Default value: `0`.
+         * </pre>
+         *
          * <code>string aaib = 1;</code>
          * @return The bytes for aaib.
          */
@@ -1401,6 +1568,10 @@ public final class BackupOuterClass {
           }
         }
         /**
+         * <pre>
+         * Archive attribute. Default value: `0`.
+         * </pre>
+         *
          * <code>string aaib = 1;</code>
          * @param value The aaib to set.
          * @return This builder for chaining.
@@ -1416,6 +1587,10 @@ public final class BackupOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Archive attribute. Default value: `0`.
+         * </pre>
+         *
          * <code>string aaib = 1;</code>
          * @return This builder for chaining.
          */
@@ -1426,6 +1601,10 @@ public final class BackupOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Archive attribute. Default value: `0`.
+         * </pre>
+         *
          * <code>string aaib = 1;</code>
          * @param value The bytes for aaib to set.
          * @return This builder for chaining.
@@ -1444,6 +1623,10 @@ public final class BackupOuterClass {
 
         private java.lang.Object uri_ = "";
         /**
+         * <pre>
+         * URI of the backup archive.
+         * </pre>
+         *
          * <code>string uri = 2;</code>
          * @return The uri.
          */
@@ -1460,6 +1643,10 @@ public final class BackupOuterClass {
           }
         }
         /**
+         * <pre>
+         * URI of the backup archive.
+         * </pre>
+         *
          * <code>string uri = 2;</code>
          * @return The bytes for uri.
          */
@@ -1477,6 +1664,10 @@ public final class BackupOuterClass {
           }
         }
         /**
+         * <pre>
+         * URI of the backup archive.
+         * </pre>
+         *
          * <code>string uri = 2;</code>
          * @param value The uri to set.
          * @return This builder for chaining.
@@ -1492,6 +1683,10 @@ public final class BackupOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * URI of the backup archive.
+         * </pre>
+         *
          * <code>string uri = 2;</code>
          * @return This builder for chaining.
          */
@@ -1502,6 +1697,10 @@ public final class BackupOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * URI of the backup archive.
+         * </pre>
+         *
          * <code>string uri = 2;</code>
          * @param value The bytes for uri to set.
          * @return This builder for chaining.
@@ -1573,6 +1772,10 @@ public final class BackupOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the backup.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -1590,6 +1793,10 @@ public final class BackupOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the backup.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -1611,6 +1818,10 @@ public final class BackupOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the backup.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
@@ -1628,6 +1839,10 @@ public final class BackupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the backup.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -1649,6 +1864,10 @@ public final class BackupOuterClass {
     public static final int VAULT_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object vaultId_;
     /**
+     * <pre>
+     * ID of the backup vault.
+     * </pre>
+     *
      * <code>string vault_id = 3;</code>
      * @return The vaultId.
      */
@@ -1666,6 +1885,10 @@ public final class BackupOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the backup vault.
+     * </pre>
+     *
      * <code>string vault_id = 3;</code>
      * @return The bytes for vaultId.
      */
@@ -1687,6 +1910,10 @@ public final class BackupOuterClass {
     public static final int ATTRIBUTES_FIELD_NUMBER = 4;
     private yandex.cloud.api.backup.v1.BackupOuterClass.Archive.ArchiveAttributes attributes_;
     /**
+     * <pre>
+     * Archive attributes.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Archive.ArchiveAttributes attributes = 4;</code>
      * @return Whether the attributes field is set.
      */
@@ -1695,6 +1922,10 @@ public final class BackupOuterClass {
       return attributes_ != null;
     }
     /**
+     * <pre>
+     * Archive attributes.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Archive.ArchiveAttributes attributes = 4;</code>
      * @return The attributes.
      */
@@ -1703,6 +1934,10 @@ public final class BackupOuterClass {
       return attributes_ == null ? yandex.cloud.api.backup.v1.BackupOuterClass.Archive.ArchiveAttributes.getDefaultInstance() : attributes_;
     }
     /**
+     * <pre>
+     * Archive attributes.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Archive.ArchiveAttributes attributes = 4;</code>
      */
     @java.lang.Override
@@ -1713,6 +1948,10 @@ public final class BackupOuterClass {
     public static final int SIZE_FIELD_NUMBER = 5;
     private long size_;
     /**
+     * <pre>
+     * Archive size.
+     * </pre>
+     *
      * <code>int64 size = 5;</code>
      * @return The size.
      */
@@ -1724,6 +1963,10 @@ public final class BackupOuterClass {
     public static final int COMPRESSED_DATA_SIZE_FIELD_NUMBER = 6;
     private long compressedDataSize_;
     /**
+     * <pre>
+     * Compressed data size.
+     * </pre>
+     *
      * <code>int64 compressed_data_size = 6;</code>
      * @return The compressedDataSize.
      */
@@ -1735,6 +1978,10 @@ public final class BackupOuterClass {
     public static final int DATA_SIZE_FIELD_NUMBER = 7;
     private long dataSize_;
     /**
+     * <pre>
+     * Data size.
+     * </pre>
+     *
      * <code>int64 data_size = 7;</code>
      * @return The dataSize.
      */
@@ -1746,6 +1993,10 @@ public final class BackupOuterClass {
     public static final int ORIGINAL_DATA_SIZE_FIELD_NUMBER = 8;
     private long originalDataSize_;
     /**
+     * <pre>
+     * Original data size.
+     * </pre>
+     *
      * <code>int64 original_data_size = 8;</code>
      * @return The originalDataSize.
      */
@@ -1757,6 +2008,10 @@ public final class BackupOuterClass {
     public static final int LOGICAL_SIZE_FIELD_NUMBER = 9;
     private long logicalSize_;
     /**
+     * <pre>
+     * Logical size.
+     * </pre>
+     *
      * <code>int64 logical_size = 9;</code>
      * @return The logicalSize.
      */
@@ -1984,6 +2239,10 @@ public final class BackupOuterClass {
     public static final int BACKUP_PLAN_ID_FIELD_NUMBER = 22;
     private volatile java.lang.Object backupPlanId_;
     /**
+     * <pre>
+     * Backup plan ID.
+     * </pre>
+     *
      * <code>string backup_plan_id = 22;</code>
      * @return The backupPlanId.
      */
@@ -2001,6 +2260,10 @@ public final class BackupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Backup plan ID.
+     * </pre>
+     *
      * <code>string backup_plan_id = 22;</code>
      * @return The bytes for backupPlanId.
      */
@@ -2022,6 +2285,10 @@ public final class BackupOuterClass {
     public static final int BACKUP_PLAN_NAME_FIELD_NUMBER = 23;
     private volatile java.lang.Object backupPlanName_;
     /**
+     * <pre>
+     * Backup plan name.
+     * </pre>
+     *
      * <code>string backup_plan_name = 23;</code>
      * @return The backupPlanName.
      */
@@ -2039,6 +2306,10 @@ public final class BackupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Backup plan name.
+     * </pre>
+     *
      * <code>string backup_plan_name = 23;</code>
      * @return The bytes for backupPlanName.
      */
@@ -2060,6 +2331,10 @@ public final class BackupOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 24;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Backup plan description.
+     * </pre>
+     *
      * <code>string description = 24;</code>
      * @return The description.
      */
@@ -2077,6 +2352,10 @@ public final class BackupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Backup plan description.
+     * </pre>
+     *
      * <code>string description = 24;</code>
      * @return The bytes for description.
      */
@@ -2098,6 +2377,10 @@ public final class BackupOuterClass {
     public static final int DISPLAY_NAME_FIELD_NUMBER = 25;
     private volatile java.lang.Object displayName_;
     /**
+     * <pre>
+     * Display name, e.g. `INSTANCE_NAME - POLICY_NAME`.
+     * </pre>
+     *
      * <code>string display_name = 25;</code>
      * @return The displayName.
      */
@@ -2115,6 +2398,10 @@ public final class BackupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Display name, e.g. `INSTANCE_NAME - POLICY_NAME`.
+     * </pre>
+     *
      * <code>string display_name = 25;</code>
      * @return The bytes for displayName.
      */
@@ -2136,6 +2423,10 @@ public final class BackupOuterClass {
     public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 26;
     private volatile java.lang.Object computeInstanceId_;
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 26;</code>
      * @return The computeInstanceId.
      */
@@ -2153,6 +2444,10 @@ public final class BackupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 26;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -2174,6 +2469,10 @@ public final class BackupOuterClass {
     public static final int CONSISTENT_FIELD_NUMBER = 27;
     private boolean consistent_;
     /**
+     * <pre>
+     * If this field is true, it means that the archive is consistent.
+     * </pre>
+     *
      * <code>bool consistent = 27;</code>
      * @return The consistent.
      */
@@ -2185,6 +2484,10 @@ public final class BackupOuterClass {
     public static final int DELETED_FIELD_NUMBER = 30;
     private boolean deleted_;
     /**
+     * <pre>
+     * If this field is true, it means that the archive was deleted.
+     * </pre>
+     *
      * <code>bool deleted = 30;</code>
      * @return The deleted.
      */
@@ -2196,6 +2499,10 @@ public final class BackupOuterClass {
     public static final int RESOURCE_ID_FIELD_NUMBER = 31;
     private volatile java.lang.Object resourceId_;
     /**
+     * <pre>
+     * Resource ID.
+     * </pre>
+     *
      * <code>string resource_id = 31;</code>
      * @return The resourceId.
      */
@@ -2213,6 +2520,10 @@ public final class BackupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Resource ID.
+     * </pre>
+     *
      * <code>string resource_id = 31;</code>
      * @return The bytes for resourceId.
      */
@@ -3045,6 +3356,10 @@ public final class BackupOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the backup.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -3061,6 +3376,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backup.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -3078,6 +3397,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backup.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -3093,6 +3416,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backup.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -3103,6 +3430,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backup.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -3121,6 +3452,10 @@ public final class BackupOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the backup.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return The name.
        */
@@ -3137,6 +3472,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the backup.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return The bytes for name.
        */
@@ -3154,6 +3493,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the backup.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -3169,6 +3512,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the backup.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return This builder for chaining.
        */
@@ -3179,6 +3526,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the backup.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -3197,6 +3548,10 @@ public final class BackupOuterClass {
 
       private java.lang.Object vaultId_ = "";
       /**
+       * <pre>
+       * ID of the backup vault.
+       * </pre>
+       *
        * <code>string vault_id = 3;</code>
        * @return The vaultId.
        */
@@ -3213,6 +3568,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backup vault.
+       * </pre>
+       *
        * <code>string vault_id = 3;</code>
        * @return The bytes for vaultId.
        */
@@ -3230,6 +3589,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backup vault.
+       * </pre>
+       *
        * <code>string vault_id = 3;</code>
        * @param value The vaultId to set.
        * @return This builder for chaining.
@@ -3245,6 +3608,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backup vault.
+       * </pre>
+       *
        * <code>string vault_id = 3;</code>
        * @return This builder for chaining.
        */
@@ -3255,6 +3622,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backup vault.
+       * </pre>
+       *
        * <code>string vault_id = 3;</code>
        * @param value The bytes for vaultId to set.
        * @return This builder for chaining.
@@ -3275,6 +3646,10 @@ public final class BackupOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.backup.v1.BackupOuterClass.Archive.ArchiveAttributes, yandex.cloud.api.backup.v1.BackupOuterClass.Archive.ArchiveAttributes.Builder, yandex.cloud.api.backup.v1.BackupOuterClass.Archive.ArchiveAttributesOrBuilder> attributesBuilder_;
       /**
+       * <pre>
+       * Archive attributes.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Archive.ArchiveAttributes attributes = 4;</code>
        * @return Whether the attributes field is set.
        */
@@ -3282,6 +3657,10 @@ public final class BackupOuterClass {
         return attributesBuilder_ != null || attributes_ != null;
       }
       /**
+       * <pre>
+       * Archive attributes.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Archive.ArchiveAttributes attributes = 4;</code>
        * @return The attributes.
        */
@@ -3293,6 +3672,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Archive attributes.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Archive.ArchiveAttributes attributes = 4;</code>
        */
       public Builder setAttributes(yandex.cloud.api.backup.v1.BackupOuterClass.Archive.ArchiveAttributes value) {
@@ -3309,6 +3692,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Archive attributes.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Archive.ArchiveAttributes attributes = 4;</code>
        */
       public Builder setAttributes(
@@ -3323,6 +3710,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Archive attributes.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Archive.ArchiveAttributes attributes = 4;</code>
        */
       public Builder mergeAttributes(yandex.cloud.api.backup.v1.BackupOuterClass.Archive.ArchiveAttributes value) {
@@ -3341,6 +3732,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Archive attributes.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Archive.ArchiveAttributes attributes = 4;</code>
        */
       public Builder clearAttributes() {
@@ -3355,6 +3750,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Archive attributes.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Archive.ArchiveAttributes attributes = 4;</code>
        */
       public yandex.cloud.api.backup.v1.BackupOuterClass.Archive.ArchiveAttributes.Builder getAttributesBuilder() {
@@ -3363,6 +3762,10 @@ public final class BackupOuterClass {
         return getAttributesFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Archive attributes.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Archive.ArchiveAttributes attributes = 4;</code>
        */
       public yandex.cloud.api.backup.v1.BackupOuterClass.Archive.ArchiveAttributesOrBuilder getAttributesOrBuilder() {
@@ -3374,6 +3777,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Archive attributes.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Archive.ArchiveAttributes attributes = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3392,6 +3799,10 @@ public final class BackupOuterClass {
 
       private long size_ ;
       /**
+       * <pre>
+       * Archive size.
+       * </pre>
+       *
        * <code>int64 size = 5;</code>
        * @return The size.
        */
@@ -3400,6 +3811,10 @@ public final class BackupOuterClass {
         return size_;
       }
       /**
+       * <pre>
+       * Archive size.
+       * </pre>
+       *
        * <code>int64 size = 5;</code>
        * @param value The size to set.
        * @return This builder for chaining.
@@ -3411,6 +3826,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Archive size.
+       * </pre>
+       *
        * <code>int64 size = 5;</code>
        * @return This builder for chaining.
        */
@@ -3423,6 +3842,10 @@ public final class BackupOuterClass {
 
       private long compressedDataSize_ ;
       /**
+       * <pre>
+       * Compressed data size.
+       * </pre>
+       *
        * <code>int64 compressed_data_size = 6;</code>
        * @return The compressedDataSize.
        */
@@ -3431,6 +3854,10 @@ public final class BackupOuterClass {
         return compressedDataSize_;
       }
       /**
+       * <pre>
+       * Compressed data size.
+       * </pre>
+       *
        * <code>int64 compressed_data_size = 6;</code>
        * @param value The compressedDataSize to set.
        * @return This builder for chaining.
@@ -3442,6 +3869,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compressed data size.
+       * </pre>
+       *
        * <code>int64 compressed_data_size = 6;</code>
        * @return This builder for chaining.
        */
@@ -3454,6 +3885,10 @@ public final class BackupOuterClass {
 
       private long dataSize_ ;
       /**
+       * <pre>
+       * Data size.
+       * </pre>
+       *
        * <code>int64 data_size = 7;</code>
        * @return The dataSize.
        */
@@ -3462,6 +3897,10 @@ public final class BackupOuterClass {
         return dataSize_;
       }
       /**
+       * <pre>
+       * Data size.
+       * </pre>
+       *
        * <code>int64 data_size = 7;</code>
        * @param value The dataSize to set.
        * @return This builder for chaining.
@@ -3473,6 +3912,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Data size.
+       * </pre>
+       *
        * <code>int64 data_size = 7;</code>
        * @return This builder for chaining.
        */
@@ -3485,6 +3928,10 @@ public final class BackupOuterClass {
 
       private long originalDataSize_ ;
       /**
+       * <pre>
+       * Original data size.
+       * </pre>
+       *
        * <code>int64 original_data_size = 8;</code>
        * @return The originalDataSize.
        */
@@ -3493,6 +3940,10 @@ public final class BackupOuterClass {
         return originalDataSize_;
       }
       /**
+       * <pre>
+       * Original data size.
+       * </pre>
+       *
        * <code>int64 original_data_size = 8;</code>
        * @param value The originalDataSize to set.
        * @return This builder for chaining.
@@ -3504,6 +3955,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Original data size.
+       * </pre>
+       *
        * <code>int64 original_data_size = 8;</code>
        * @return This builder for chaining.
        */
@@ -3516,6 +3971,10 @@ public final class BackupOuterClass {
 
       private long logicalSize_ ;
       /**
+       * <pre>
+       * Logical size.
+       * </pre>
+       *
        * <code>int64 logical_size = 9;</code>
        * @return The logicalSize.
        */
@@ -3524,6 +3983,10 @@ public final class BackupOuterClass {
         return logicalSize_;
       }
       /**
+       * <pre>
+       * Logical size.
+       * </pre>
+       *
        * <code>int64 logical_size = 9;</code>
        * @param value The logicalSize to set.
        * @return This builder for chaining.
@@ -3535,6 +3998,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Logical size.
+       * </pre>
+       *
        * <code>int64 logical_size = 9;</code>
        * @return This builder for chaining.
        */
@@ -4317,6 +4784,10 @@ public final class BackupOuterClass {
 
       private java.lang.Object backupPlanId_ = "";
       /**
+       * <pre>
+       * Backup plan ID.
+       * </pre>
+       *
        * <code>string backup_plan_id = 22;</code>
        * @return The backupPlanId.
        */
@@ -4333,6 +4804,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Backup plan ID.
+       * </pre>
+       *
        * <code>string backup_plan_id = 22;</code>
        * @return The bytes for backupPlanId.
        */
@@ -4350,6 +4825,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Backup plan ID.
+       * </pre>
+       *
        * <code>string backup_plan_id = 22;</code>
        * @param value The backupPlanId to set.
        * @return This builder for chaining.
@@ -4365,6 +4844,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Backup plan ID.
+       * </pre>
+       *
        * <code>string backup_plan_id = 22;</code>
        * @return This builder for chaining.
        */
@@ -4375,6 +4858,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Backup plan ID.
+       * </pre>
+       *
        * <code>string backup_plan_id = 22;</code>
        * @param value The bytes for backupPlanId to set.
        * @return This builder for chaining.
@@ -4393,6 +4880,10 @@ public final class BackupOuterClass {
 
       private java.lang.Object backupPlanName_ = "";
       /**
+       * <pre>
+       * Backup plan name.
+       * </pre>
+       *
        * <code>string backup_plan_name = 23;</code>
        * @return The backupPlanName.
        */
@@ -4409,6 +4900,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Backup plan name.
+       * </pre>
+       *
        * <code>string backup_plan_name = 23;</code>
        * @return The bytes for backupPlanName.
        */
@@ -4426,6 +4921,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Backup plan name.
+       * </pre>
+       *
        * <code>string backup_plan_name = 23;</code>
        * @param value The backupPlanName to set.
        * @return This builder for chaining.
@@ -4441,6 +4940,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Backup plan name.
+       * </pre>
+       *
        * <code>string backup_plan_name = 23;</code>
        * @return This builder for chaining.
        */
@@ -4451,6 +4954,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Backup plan name.
+       * </pre>
+       *
        * <code>string backup_plan_name = 23;</code>
        * @param value The bytes for backupPlanName to set.
        * @return This builder for chaining.
@@ -4469,6 +4976,10 @@ public final class BackupOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Backup plan description.
+       * </pre>
+       *
        * <code>string description = 24;</code>
        * @return The description.
        */
@@ -4485,6 +4996,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Backup plan description.
+       * </pre>
+       *
        * <code>string description = 24;</code>
        * @return The bytes for description.
        */
@@ -4502,6 +5017,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Backup plan description.
+       * </pre>
+       *
        * <code>string description = 24;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -4517,6 +5036,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Backup plan description.
+       * </pre>
+       *
        * <code>string description = 24;</code>
        * @return This builder for chaining.
        */
@@ -4527,6 +5050,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Backup plan description.
+       * </pre>
+       *
        * <code>string description = 24;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -4545,6 +5072,10 @@ public final class BackupOuterClass {
 
       private java.lang.Object displayName_ = "";
       /**
+       * <pre>
+       * Display name, e.g. `INSTANCE_NAME - POLICY_NAME`.
+       * </pre>
+       *
        * <code>string display_name = 25;</code>
        * @return The displayName.
        */
@@ -4561,6 +5092,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Display name, e.g. `INSTANCE_NAME - POLICY_NAME`.
+       * </pre>
+       *
        * <code>string display_name = 25;</code>
        * @return The bytes for displayName.
        */
@@ -4578,6 +5113,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Display name, e.g. `INSTANCE_NAME - POLICY_NAME`.
+       * </pre>
+       *
        * <code>string display_name = 25;</code>
        * @param value The displayName to set.
        * @return This builder for chaining.
@@ -4593,6 +5132,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Display name, e.g. `INSTANCE_NAME - POLICY_NAME`.
+       * </pre>
+       *
        * <code>string display_name = 25;</code>
        * @return This builder for chaining.
        */
@@ -4603,6 +5146,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Display name, e.g. `INSTANCE_NAME - POLICY_NAME`.
+       * </pre>
+       *
        * <code>string display_name = 25;</code>
        * @param value The bytes for displayName to set.
        * @return This builder for chaining.
@@ -4621,6 +5168,10 @@ public final class BackupOuterClass {
 
       private java.lang.Object computeInstanceId_ = "";
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 26;</code>
        * @return The computeInstanceId.
        */
@@ -4637,6 +5188,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 26;</code>
        * @return The bytes for computeInstanceId.
        */
@@ -4654,6 +5209,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 26;</code>
        * @param value The computeInstanceId to set.
        * @return This builder for chaining.
@@ -4669,6 +5228,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 26;</code>
        * @return This builder for chaining.
        */
@@ -4679,6 +5242,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 26;</code>
        * @param value The bytes for computeInstanceId to set.
        * @return This builder for chaining.
@@ -4697,6 +5264,10 @@ public final class BackupOuterClass {
 
       private boolean consistent_ ;
       /**
+       * <pre>
+       * If this field is true, it means that the archive is consistent.
+       * </pre>
+       *
        * <code>bool consistent = 27;</code>
        * @return The consistent.
        */
@@ -4705,6 +5276,10 @@ public final class BackupOuterClass {
         return consistent_;
       }
       /**
+       * <pre>
+       * If this field is true, it means that the archive is consistent.
+       * </pre>
+       *
        * <code>bool consistent = 27;</code>
        * @param value The consistent to set.
        * @return This builder for chaining.
@@ -4716,6 +5291,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * If this field is true, it means that the archive is consistent.
+       * </pre>
+       *
        * <code>bool consistent = 27;</code>
        * @return This builder for chaining.
        */
@@ -4728,6 +5307,10 @@ public final class BackupOuterClass {
 
       private boolean deleted_ ;
       /**
+       * <pre>
+       * If this field is true, it means that the archive was deleted.
+       * </pre>
+       *
        * <code>bool deleted = 30;</code>
        * @return The deleted.
        */
@@ -4736,6 +5319,10 @@ public final class BackupOuterClass {
         return deleted_;
       }
       /**
+       * <pre>
+       * If this field is true, it means that the archive was deleted.
+       * </pre>
+       *
        * <code>bool deleted = 30;</code>
        * @param value The deleted to set.
        * @return This builder for chaining.
@@ -4747,6 +5334,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * If this field is true, it means that the archive was deleted.
+       * </pre>
+       *
        * <code>bool deleted = 30;</code>
        * @return This builder for chaining.
        */
@@ -4759,6 +5350,10 @@ public final class BackupOuterClass {
 
       private java.lang.Object resourceId_ = "";
       /**
+       * <pre>
+       * Resource ID.
+       * </pre>
+       *
        * <code>string resource_id = 31;</code>
        * @return The resourceId.
        */
@@ -4775,6 +5370,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Resource ID.
+       * </pre>
+       *
        * <code>string resource_id = 31;</code>
        * @return The bytes for resourceId.
        */
@@ -4792,6 +5391,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Resource ID.
+       * </pre>
+       *
        * <code>string resource_id = 31;</code>
        * @param value The resourceId to set.
        * @return This builder for chaining.
@@ -4807,6 +5410,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resource ID.
+       * </pre>
+       *
        * <code>string resource_id = 31;</code>
        * @return This builder for chaining.
        */
@@ -4817,6 +5424,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resource ID.
+       * </pre>
+       *
        * <code>string resource_id = 31;</code>
        * @param value The bytes for resourceId to set.
        * @return This builder for chaining.
@@ -4890,29 +5501,49 @@ public final class BackupOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Free space in the volume.
+     * </pre>
+     *
      * <code>int64 free_space = 1;</code>
      * @return The freeSpace.
      */
     long getFreeSpace();
 
     /**
+     * <pre>
+     * If this field is true, it means that the volume is bootable.
+     * </pre>
+     *
      * <code>bool is_bootable = 2;</code>
      * @return The isBootable.
      */
     boolean getIsBootable();
 
     /**
+     * <pre>
+     * If this field is true, it means that the volume is a system volume.
+     * </pre>
+     *
      * <code>bool is_system = 3;</code>
      * @return The isSystem.
      */
     boolean getIsSystem();
 
     /**
+     * <pre>
+     * Volume name.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Volume name.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      * @return The bytes for name.
      */
@@ -4920,17 +5551,29 @@ public final class BackupOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * Volume size.
+     * </pre>
+     *
      * <code>int64 size = 5;</code>
      * @return The size.
      */
     long getSize();
 
     /**
+     * <pre>
+     * Mount string ID.
+     * </pre>
+     *
      * <code>string mount_strid = 6;</code>
      * @return The mountStrid.
      */
     java.lang.String getMountStrid();
     /**
+     * <pre>
+     * Mount string ID.
+     * </pre>
+     *
      * <code>string mount_strid = 6;</code>
      * @return The bytes for mountStrid.
      */
@@ -5051,6 +5694,10 @@ public final class BackupOuterClass {
     public static final int FREE_SPACE_FIELD_NUMBER = 1;
     private long freeSpace_;
     /**
+     * <pre>
+     * Free space in the volume.
+     * </pre>
+     *
      * <code>int64 free_space = 1;</code>
      * @return The freeSpace.
      */
@@ -5062,6 +5709,10 @@ public final class BackupOuterClass {
     public static final int IS_BOOTABLE_FIELD_NUMBER = 2;
     private boolean isBootable_;
     /**
+     * <pre>
+     * If this field is true, it means that the volume is bootable.
+     * </pre>
+     *
      * <code>bool is_bootable = 2;</code>
      * @return The isBootable.
      */
@@ -5073,6 +5724,10 @@ public final class BackupOuterClass {
     public static final int IS_SYSTEM_FIELD_NUMBER = 3;
     private boolean isSystem_;
     /**
+     * <pre>
+     * If this field is true, it means that the volume is a system volume.
+     * </pre>
+     *
      * <code>bool is_system = 3;</code>
      * @return The isSystem.
      */
@@ -5084,6 +5739,10 @@ public final class BackupOuterClass {
     public static final int NAME_FIELD_NUMBER = 4;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Volume name.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      * @return The name.
      */
@@ -5101,6 +5760,10 @@ public final class BackupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Volume name.
+     * </pre>
+     *
      * <code>string name = 4;</code>
      * @return The bytes for name.
      */
@@ -5122,6 +5785,10 @@ public final class BackupOuterClass {
     public static final int SIZE_FIELD_NUMBER = 5;
     private long size_;
     /**
+     * <pre>
+     * Volume size.
+     * </pre>
+     *
      * <code>int64 size = 5;</code>
      * @return The size.
      */
@@ -5133,6 +5800,10 @@ public final class BackupOuterClass {
     public static final int MOUNT_STRID_FIELD_NUMBER = 6;
     private volatile java.lang.Object mountStrid_;
     /**
+     * <pre>
+     * Mount string ID.
+     * </pre>
+     *
      * <code>string mount_strid = 6;</code>
      * @return The mountStrid.
      */
@@ -5150,6 +5821,10 @@ public final class BackupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Mount string ID.
+     * </pre>
+     *
      * <code>string mount_strid = 6;</code>
      * @return The bytes for mountStrid.
      */
@@ -5561,6 +6236,10 @@ public final class BackupOuterClass {
 
       private long freeSpace_ ;
       /**
+       * <pre>
+       * Free space in the volume.
+       * </pre>
+       *
        * <code>int64 free_space = 1;</code>
        * @return The freeSpace.
        */
@@ -5569,6 +6248,10 @@ public final class BackupOuterClass {
         return freeSpace_;
       }
       /**
+       * <pre>
+       * Free space in the volume.
+       * </pre>
+       *
        * <code>int64 free_space = 1;</code>
        * @param value The freeSpace to set.
        * @return This builder for chaining.
@@ -5580,6 +6263,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Free space in the volume.
+       * </pre>
+       *
        * <code>int64 free_space = 1;</code>
        * @return This builder for chaining.
        */
@@ -5592,6 +6279,10 @@ public final class BackupOuterClass {
 
       private boolean isBootable_ ;
       /**
+       * <pre>
+       * If this field is true, it means that the volume is bootable.
+       * </pre>
+       *
        * <code>bool is_bootable = 2;</code>
        * @return The isBootable.
        */
@@ -5600,6 +6291,10 @@ public final class BackupOuterClass {
         return isBootable_;
       }
       /**
+       * <pre>
+       * If this field is true, it means that the volume is bootable.
+       * </pre>
+       *
        * <code>bool is_bootable = 2;</code>
        * @param value The isBootable to set.
        * @return This builder for chaining.
@@ -5611,6 +6306,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * If this field is true, it means that the volume is bootable.
+       * </pre>
+       *
        * <code>bool is_bootable = 2;</code>
        * @return This builder for chaining.
        */
@@ -5623,6 +6322,10 @@ public final class BackupOuterClass {
 
       private boolean isSystem_ ;
       /**
+       * <pre>
+       * If this field is true, it means that the volume is a system volume.
+       * </pre>
+       *
        * <code>bool is_system = 3;</code>
        * @return The isSystem.
        */
@@ -5631,6 +6334,10 @@ public final class BackupOuterClass {
         return isSystem_;
       }
       /**
+       * <pre>
+       * If this field is true, it means that the volume is a system volume.
+       * </pre>
+       *
        * <code>bool is_system = 3;</code>
        * @param value The isSystem to set.
        * @return This builder for chaining.
@@ -5642,6 +6349,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * If this field is true, it means that the volume is a system volume.
+       * </pre>
+       *
        * <code>bool is_system = 3;</code>
        * @return This builder for chaining.
        */
@@ -5654,6 +6365,10 @@ public final class BackupOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Volume name.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        * @return The name.
        */
@@ -5670,6 +6385,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Volume name.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        * @return The bytes for name.
        */
@@ -5687,6 +6406,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Volume name.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -5702,6 +6425,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Volume name.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        * @return This builder for chaining.
        */
@@ -5712,6 +6439,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Volume name.
+       * </pre>
+       *
        * <code>string name = 4;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -5730,6 +6461,10 @@ public final class BackupOuterClass {
 
       private long size_ ;
       /**
+       * <pre>
+       * Volume size.
+       * </pre>
+       *
        * <code>int64 size = 5;</code>
        * @return The size.
        */
@@ -5738,6 +6473,10 @@ public final class BackupOuterClass {
         return size_;
       }
       /**
+       * <pre>
+       * Volume size.
+       * </pre>
+       *
        * <code>int64 size = 5;</code>
        * @param value The size to set.
        * @return This builder for chaining.
@@ -5749,6 +6488,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Volume size.
+       * </pre>
+       *
        * <code>int64 size = 5;</code>
        * @return This builder for chaining.
        */
@@ -5761,6 +6504,10 @@ public final class BackupOuterClass {
 
       private java.lang.Object mountStrid_ = "";
       /**
+       * <pre>
+       * Mount string ID.
+       * </pre>
+       *
        * <code>string mount_strid = 6;</code>
        * @return The mountStrid.
        */
@@ -5777,6 +6524,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Mount string ID.
+       * </pre>
+       *
        * <code>string mount_strid = 6;</code>
        * @return The bytes for mountStrid.
        */
@@ -5794,6 +6545,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Mount string ID.
+       * </pre>
+       *
        * <code>string mount_strid = 6;</code>
        * @param value The mountStrid to set.
        * @return This builder for chaining.
@@ -5809,6 +6564,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Mount string ID.
+       * </pre>
+       *
        * <code>string mount_strid = 6;</code>
        * @return This builder for chaining.
        */
@@ -5819,6 +6578,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Mount string ID.
+       * </pre>
+       *
        * <code>string mount_strid = 6;</code>
        * @param value The bytes for mountStrid to set.
        * @return This builder for chaining.
@@ -5892,11 +6655,19 @@ public final class BackupOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Device model.
+     * </pre>
+     *
      * <code>string device_model = 1;</code>
      * @return The deviceModel.
      */
     java.lang.String getDeviceModel();
     /**
+     * <pre>
+     * Device model.
+     * </pre>
+     *
      * <code>string device_model = 1;</code>
      * @return The bytes for deviceModel.
      */
@@ -5904,11 +6675,19 @@ public final class BackupOuterClass {
         getDeviceModelBytes();
 
     /**
+     * <pre>
+     * Disk name.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Disk name.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -5916,6 +6695,10 @@ public final class BackupOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * Disk size.
+     * </pre>
+     *
      * <code>int64 size = 3;</code>
      * @return The size.
      */
@@ -6058,6 +6841,10 @@ public final class BackupOuterClass {
     public static final int DEVICE_MODEL_FIELD_NUMBER = 1;
     private volatile java.lang.Object deviceModel_;
     /**
+     * <pre>
+     * Device model.
+     * </pre>
+     *
      * <code>string device_model = 1;</code>
      * @return The deviceModel.
      */
@@ -6075,6 +6862,10 @@ public final class BackupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Device model.
+     * </pre>
+     *
      * <code>string device_model = 1;</code>
      * @return The bytes for deviceModel.
      */
@@ -6096,6 +6887,10 @@ public final class BackupOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Disk name.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
@@ -6113,6 +6908,10 @@ public final class BackupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Disk name.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -6134,6 +6933,10 @@ public final class BackupOuterClass {
     public static final int SIZE_FIELD_NUMBER = 3;
     private long size_;
     /**
+     * <pre>
+     * Disk size.
+     * </pre>
+     *
      * <code>int64 size = 3;</code>
      * @return The size.
      */
@@ -6578,6 +7381,10 @@ public final class BackupOuterClass {
 
       private java.lang.Object deviceModel_ = "";
       /**
+       * <pre>
+       * Device model.
+       * </pre>
+       *
        * <code>string device_model = 1;</code>
        * @return The deviceModel.
        */
@@ -6594,6 +7401,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Device model.
+       * </pre>
+       *
        * <code>string device_model = 1;</code>
        * @return The bytes for deviceModel.
        */
@@ -6611,6 +7422,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Device model.
+       * </pre>
+       *
        * <code>string device_model = 1;</code>
        * @param value The deviceModel to set.
        * @return This builder for chaining.
@@ -6626,6 +7441,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Device model.
+       * </pre>
+       *
        * <code>string device_model = 1;</code>
        * @return This builder for chaining.
        */
@@ -6636,6 +7455,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Device model.
+       * </pre>
+       *
        * <code>string device_model = 1;</code>
        * @param value The bytes for deviceModel to set.
        * @return This builder for chaining.
@@ -6654,6 +7477,10 @@ public final class BackupOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Disk name.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return The name.
        */
@@ -6670,6 +7497,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Disk name.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return The bytes for name.
        */
@@ -6687,6 +7518,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Disk name.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -6702,6 +7537,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Disk name.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return This builder for chaining.
        */
@@ -6712,6 +7551,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Disk name.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -6730,6 +7573,10 @@ public final class BackupOuterClass {
 
       private long size_ ;
       /**
+       * <pre>
+       * Disk size.
+       * </pre>
+       *
        * <code>int64 size = 3;</code>
        * @return The size.
        */
@@ -6738,6 +7585,10 @@ public final class BackupOuterClass {
         return size_;
       }
       /**
+       * <pre>
+       * Disk size.
+       * </pre>
+       *
        * <code>int64 size = 3;</code>
        * @param value The size to set.
        * @return This builder for chaining.
@@ -6749,6 +7600,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Disk size.
+       * </pre>
+       *
        * <code>int64 size = 3;</code>
        * @return This builder for chaining.
        */
@@ -7056,11 +7911,19 @@ public final class BackupOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the backup.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the backup.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -7068,11 +7931,19 @@ public final class BackupOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * ID of the backup vault.
+     * </pre>
+     *
      * <code>string vault_id = 2;</code>
      * @return The vaultId.
      */
     java.lang.String getVaultId();
     /**
+     * <pre>
+     * ID of the backup vault.
+     * </pre>
+     *
      * <code>string vault_id = 2;</code>
      * @return The bytes for vaultId.
      */
@@ -7080,11 +7951,19 @@ public final class BackupOuterClass {
         getVaultIdBytes();
 
     /**
+     * <pre>
+     * ID of the backup archive.
+     * </pre>
+     *
      * <code>string archive_id = 3;</code>
      * @return The archiveId.
      */
     java.lang.String getArchiveId();
     /**
+     * <pre>
+     * ID of the backup archive.
+     * </pre>
+     *
      * <code>string archive_id = 3;</code>
      * @return The bytes for archiveId.
      */
@@ -7122,24 +8001,40 @@ public final class BackupOuterClass {
     com.google.protobuf.TimestampOrBuilder getLastSeenAtOrBuilder();
 
     /**
+     * <pre>
+     * Backup size.
+     * </pre>
+     *
      * <code>int64 size = 6;</code>
      * @return The size.
      */
     long getSize();
 
     /**
+     * <pre>
+     * Deduplicated backup size.
+     * </pre>
+     *
      * <code>int64 deduplicated_size = 7;</code>
      * @return The deduplicatedSize.
      */
     long getDeduplicatedSize();
 
     /**
+     * <pre>
+     * Backed up data size.
+     * </pre>
+     *
      * <code>int64 backed_up_data_size = 8;</code>
      * @return The backedUpDataSize.
      */
     long getBackedUpDataSize();
 
     /**
+     * <pre>
+     * Original data size.
+     * </pre>
+     *
      * <code>int64 original_data_size = 9;</code>
      * @return The originalDataSize.
      */
@@ -7161,11 +8056,19 @@ public final class BackupOuterClass {
     yandex.cloud.api.backup.v1.BackupOuterClass.Backup.BackupAttributesOrBuilder getAttributesOrBuilder();
 
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 11;</code>
      * @return The computeInstanceId.
      */
     java.lang.String getComputeInstanceId();
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 11;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -7208,17 +8111,29 @@ public final class BackupOuterClass {
     yandex.cloud.api.backup.v1.BackupOuterClass.Backup.Type getType();
 
     /**
+     * <pre>
+     * If this field is true, it means that the backup was deleted.
+     * </pre>
+     *
      * <code>bool deleted = 21;</code>
      * @return The deleted.
      */
     boolean getDeleted();
 
     /**
+     * <pre>
+     * [Policy](/docs/backup/concepts/policy) ID.
+     * </pre>
+     *
      * <code>string policy_id = 22;</code>
      * @return The policyId.
      */
     java.lang.String getPolicyId();
     /**
+     * <pre>
+     * [Policy](/docs/backup/concepts/policy) ID.
+     * </pre>
+     *
      * <code>string policy_id = 22;</code>
      * @return The bytes for policyId.
      */
@@ -7226,11 +8141,19 @@ public final class BackupOuterClass {
         getPolicyIdBytes();
 
     /**
+     * <pre>
+     * Resource ID. It identifies Compute Cloud instance in backup service.
+     * </pre>
+     *
      * <code>string resource_id = 23;</code>
      * @return The resourceId.
      */
     java.lang.String getResourceId();
     /**
+     * <pre>
+     * Resource ID. It identifies Compute Cloud instance in backup service.
+     * </pre>
+     *
      * <code>string resource_id = 23;</code>
      * @return The bytes for resourceId.
      */
@@ -7568,11 +8491,19 @@ public final class BackupOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Backup stream name.
+       * </pre>
+       *
        * <code>string stream_name = 1;</code>
        * @return The streamName.
        */
       java.lang.String getStreamName();
       /**
+       * <pre>
+       * Backup stream name.
+       * </pre>
+       *
        * <code>string stream_name = 1;</code>
        * @return The bytes for streamName.
        */
@@ -7580,11 +8511,19 @@ public final class BackupOuterClass {
           getStreamNameBytes();
 
       /**
+       * <pre>
+       * URI of the backup archive.
+       * </pre>
+       *
        * <code>string uri = 2;</code>
        * @return The uri.
        */
       java.lang.String getUri();
       /**
+       * <pre>
+       * URI of the backup archive.
+       * </pre>
+       *
        * <code>string uri = 2;</code>
        * @return The bytes for uri.
        */
@@ -7592,6 +8531,10 @@ public final class BackupOuterClass {
           getUriBytes();
     }
     /**
+     * <pre>
+     * Backup attributes.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.backup.v1.Backup.BackupAttributes}
      */
     public static final class BackupAttributes extends
@@ -7685,6 +8628,10 @@ public final class BackupOuterClass {
       public static final int STREAM_NAME_FIELD_NUMBER = 1;
       private volatile java.lang.Object streamName_;
       /**
+       * <pre>
+       * Backup stream name.
+       * </pre>
+       *
        * <code>string stream_name = 1;</code>
        * @return The streamName.
        */
@@ -7702,6 +8649,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Backup stream name.
+       * </pre>
+       *
        * <code>string stream_name = 1;</code>
        * @return The bytes for streamName.
        */
@@ -7723,6 +8674,10 @@ public final class BackupOuterClass {
       public static final int URI_FIELD_NUMBER = 2;
       private volatile java.lang.Object uri_;
       /**
+       * <pre>
+       * URI of the backup archive.
+       * </pre>
+       *
        * <code>string uri = 2;</code>
        * @return The uri.
        */
@@ -7740,6 +8695,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * URI of the backup archive.
+       * </pre>
+       *
        * <code>string uri = 2;</code>
        * @return The bytes for uri.
        */
@@ -7923,6 +8882,10 @@ public final class BackupOuterClass {
         return builder;
       }
       /**
+       * <pre>
+       * Backup attributes.
+       * </pre>
+       *
        * Protobuf type {@code yandex.cloud.backup.v1.Backup.BackupAttributes}
        */
       public static final class Builder extends
@@ -8079,6 +9042,10 @@ public final class BackupOuterClass {
 
         private java.lang.Object streamName_ = "";
         /**
+         * <pre>
+         * Backup stream name.
+         * </pre>
+         *
          * <code>string stream_name = 1;</code>
          * @return The streamName.
          */
@@ -8095,6 +9062,10 @@ public final class BackupOuterClass {
           }
         }
         /**
+         * <pre>
+         * Backup stream name.
+         * </pre>
+         *
          * <code>string stream_name = 1;</code>
          * @return The bytes for streamName.
          */
@@ -8112,6 +9083,10 @@ public final class BackupOuterClass {
           }
         }
         /**
+         * <pre>
+         * Backup stream name.
+         * </pre>
+         *
          * <code>string stream_name = 1;</code>
          * @param value The streamName to set.
          * @return This builder for chaining.
@@ -8127,6 +9102,10 @@ public final class BackupOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Backup stream name.
+         * </pre>
+         *
          * <code>string stream_name = 1;</code>
          * @return This builder for chaining.
          */
@@ -8137,6 +9116,10 @@ public final class BackupOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Backup stream name.
+         * </pre>
+         *
          * <code>string stream_name = 1;</code>
          * @param value The bytes for streamName to set.
          * @return This builder for chaining.
@@ -8155,6 +9138,10 @@ public final class BackupOuterClass {
 
         private java.lang.Object uri_ = "";
         /**
+         * <pre>
+         * URI of the backup archive.
+         * </pre>
+         *
          * <code>string uri = 2;</code>
          * @return The uri.
          */
@@ -8171,6 +9158,10 @@ public final class BackupOuterClass {
           }
         }
         /**
+         * <pre>
+         * URI of the backup archive.
+         * </pre>
+         *
          * <code>string uri = 2;</code>
          * @return The bytes for uri.
          */
@@ -8188,6 +9179,10 @@ public final class BackupOuterClass {
           }
         }
         /**
+         * <pre>
+         * URI of the backup archive.
+         * </pre>
+         *
          * <code>string uri = 2;</code>
          * @param value The uri to set.
          * @return This builder for chaining.
@@ -8203,6 +9198,10 @@ public final class BackupOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * URI of the backup archive.
+         * </pre>
+         *
          * <code>string uri = 2;</code>
          * @return This builder for chaining.
          */
@@ -8213,6 +9212,10 @@ public final class BackupOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * URI of the backup archive.
+         * </pre>
+         *
          * <code>string uri = 2;</code>
          * @param value The bytes for uri to set.
          * @return This builder for chaining.
@@ -8284,6 +9287,10 @@ public final class BackupOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the backup.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -8301,6 +9308,10 @@ public final class BackupOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the backup.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -8322,6 +9333,10 @@ public final class BackupOuterClass {
     public static final int VAULT_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object vaultId_;
     /**
+     * <pre>
+     * ID of the backup vault.
+     * </pre>
+     *
      * <code>string vault_id = 2;</code>
      * @return The vaultId.
      */
@@ -8339,6 +9354,10 @@ public final class BackupOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the backup vault.
+     * </pre>
+     *
      * <code>string vault_id = 2;</code>
      * @return The bytes for vaultId.
      */
@@ -8360,6 +9379,10 @@ public final class BackupOuterClass {
     public static final int ARCHIVE_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object archiveId_;
     /**
+     * <pre>
+     * ID of the backup archive.
+     * </pre>
+     *
      * <code>string archive_id = 3;</code>
      * @return The archiveId.
      */
@@ -8377,6 +9400,10 @@ public final class BackupOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the backup archive.
+     * </pre>
+     *
      * <code>string archive_id = 3;</code>
      * @return The bytes for archiveId.
      */
@@ -8450,6 +9477,10 @@ public final class BackupOuterClass {
     public static final int SIZE_FIELD_NUMBER = 6;
     private long size_;
     /**
+     * <pre>
+     * Backup size.
+     * </pre>
+     *
      * <code>int64 size = 6;</code>
      * @return The size.
      */
@@ -8461,6 +9492,10 @@ public final class BackupOuterClass {
     public static final int DEDUPLICATED_SIZE_FIELD_NUMBER = 7;
     private long deduplicatedSize_;
     /**
+     * <pre>
+     * Deduplicated backup size.
+     * </pre>
+     *
      * <code>int64 deduplicated_size = 7;</code>
      * @return The deduplicatedSize.
      */
@@ -8472,6 +9507,10 @@ public final class BackupOuterClass {
     public static final int BACKED_UP_DATA_SIZE_FIELD_NUMBER = 8;
     private long backedUpDataSize_;
     /**
+     * <pre>
+     * Backed up data size.
+     * </pre>
+     *
      * <code>int64 backed_up_data_size = 8;</code>
      * @return The backedUpDataSize.
      */
@@ -8483,6 +9522,10 @@ public final class BackupOuterClass {
     public static final int ORIGINAL_DATA_SIZE_FIELD_NUMBER = 9;
     private long originalDataSize_;
     /**
+     * <pre>
+     * Original data size.
+     * </pre>
+     *
      * <code>int64 original_data_size = 9;</code>
      * @return The originalDataSize.
      */
@@ -8520,6 +9563,10 @@ public final class BackupOuterClass {
     public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 11;
     private volatile java.lang.Object computeInstanceId_;
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 11;</code>
      * @return The computeInstanceId.
      */
@@ -8537,6 +9584,10 @@ public final class BackupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 11;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -8617,6 +9668,10 @@ public final class BackupOuterClass {
     public static final int DELETED_FIELD_NUMBER = 21;
     private boolean deleted_;
     /**
+     * <pre>
+     * If this field is true, it means that the backup was deleted.
+     * </pre>
+     *
      * <code>bool deleted = 21;</code>
      * @return The deleted.
      */
@@ -8628,6 +9683,10 @@ public final class BackupOuterClass {
     public static final int POLICY_ID_FIELD_NUMBER = 22;
     private volatile java.lang.Object policyId_;
     /**
+     * <pre>
+     * [Policy](/docs/backup/concepts/policy) ID.
+     * </pre>
+     *
      * <code>string policy_id = 22;</code>
      * @return The policyId.
      */
@@ -8645,6 +9704,10 @@ public final class BackupOuterClass {
       }
     }
     /**
+     * <pre>
+     * [Policy](/docs/backup/concepts/policy) ID.
+     * </pre>
+     *
      * <code>string policy_id = 22;</code>
      * @return The bytes for policyId.
      */
@@ -8666,6 +9729,10 @@ public final class BackupOuterClass {
     public static final int RESOURCE_ID_FIELD_NUMBER = 23;
     private volatile java.lang.Object resourceId_;
     /**
+     * <pre>
+     * Resource ID. It identifies Compute Cloud instance in backup service.
+     * </pre>
+     *
      * <code>string resource_id = 23;</code>
      * @return The resourceId.
      */
@@ -8683,6 +9750,10 @@ public final class BackupOuterClass {
       }
     }
     /**
+     * <pre>
+     * Resource ID. It identifies Compute Cloud instance in backup service.
+     * </pre>
+     *
      * <code>string resource_id = 23;</code>
      * @return The bytes for resourceId.
      */
@@ -9343,6 +10414,10 @@ public final class BackupOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the backup.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -9359,6 +10434,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backup.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -9376,6 +10455,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backup.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -9391,6 +10474,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backup.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -9401,6 +10488,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backup.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -9419,6 +10510,10 @@ public final class BackupOuterClass {
 
       private java.lang.Object vaultId_ = "";
       /**
+       * <pre>
+       * ID of the backup vault.
+       * </pre>
+       *
        * <code>string vault_id = 2;</code>
        * @return The vaultId.
        */
@@ -9435,6 +10530,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backup vault.
+       * </pre>
+       *
        * <code>string vault_id = 2;</code>
        * @return The bytes for vaultId.
        */
@@ -9452,6 +10551,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backup vault.
+       * </pre>
+       *
        * <code>string vault_id = 2;</code>
        * @param value The vaultId to set.
        * @return This builder for chaining.
@@ -9467,6 +10570,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backup vault.
+       * </pre>
+       *
        * <code>string vault_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -9477,6 +10584,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backup vault.
+       * </pre>
+       *
        * <code>string vault_id = 2;</code>
        * @param value The bytes for vaultId to set.
        * @return This builder for chaining.
@@ -9495,6 +10606,10 @@ public final class BackupOuterClass {
 
       private java.lang.Object archiveId_ = "";
       /**
+       * <pre>
+       * ID of the backup archive.
+       * </pre>
+       *
        * <code>string archive_id = 3;</code>
        * @return The archiveId.
        */
@@ -9511,6 +10626,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backup archive.
+       * </pre>
+       *
        * <code>string archive_id = 3;</code>
        * @return The bytes for archiveId.
        */
@@ -9528,6 +10647,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the backup archive.
+       * </pre>
+       *
        * <code>string archive_id = 3;</code>
        * @param value The archiveId to set.
        * @return This builder for chaining.
@@ -9543,6 +10666,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backup archive.
+       * </pre>
+       *
        * <code>string archive_id = 3;</code>
        * @return This builder for chaining.
        */
@@ -9553,6 +10680,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the backup archive.
+       * </pre>
+       *
        * <code>string archive_id = 3;</code>
        * @param value The bytes for archiveId to set.
        * @return This builder for chaining.
@@ -9809,6 +10940,10 @@ public final class BackupOuterClass {
 
       private long size_ ;
       /**
+       * <pre>
+       * Backup size.
+       * </pre>
+       *
        * <code>int64 size = 6;</code>
        * @return The size.
        */
@@ -9817,6 +10952,10 @@ public final class BackupOuterClass {
         return size_;
       }
       /**
+       * <pre>
+       * Backup size.
+       * </pre>
+       *
        * <code>int64 size = 6;</code>
        * @param value The size to set.
        * @return This builder for chaining.
@@ -9828,6 +10967,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Backup size.
+       * </pre>
+       *
        * <code>int64 size = 6;</code>
        * @return This builder for chaining.
        */
@@ -9840,6 +10983,10 @@ public final class BackupOuterClass {
 
       private long deduplicatedSize_ ;
       /**
+       * <pre>
+       * Deduplicated backup size.
+       * </pre>
+       *
        * <code>int64 deduplicated_size = 7;</code>
        * @return The deduplicatedSize.
        */
@@ -9848,6 +10995,10 @@ public final class BackupOuterClass {
         return deduplicatedSize_;
       }
       /**
+       * <pre>
+       * Deduplicated backup size.
+       * </pre>
+       *
        * <code>int64 deduplicated_size = 7;</code>
        * @param value The deduplicatedSize to set.
        * @return This builder for chaining.
@@ -9859,6 +11010,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Deduplicated backup size.
+       * </pre>
+       *
        * <code>int64 deduplicated_size = 7;</code>
        * @return This builder for chaining.
        */
@@ -9871,6 +11026,10 @@ public final class BackupOuterClass {
 
       private long backedUpDataSize_ ;
       /**
+       * <pre>
+       * Backed up data size.
+       * </pre>
+       *
        * <code>int64 backed_up_data_size = 8;</code>
        * @return The backedUpDataSize.
        */
@@ -9879,6 +11038,10 @@ public final class BackupOuterClass {
         return backedUpDataSize_;
       }
       /**
+       * <pre>
+       * Backed up data size.
+       * </pre>
+       *
        * <code>int64 backed_up_data_size = 8;</code>
        * @param value The backedUpDataSize to set.
        * @return This builder for chaining.
@@ -9890,6 +11053,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Backed up data size.
+       * </pre>
+       *
        * <code>int64 backed_up_data_size = 8;</code>
        * @return This builder for chaining.
        */
@@ -9902,6 +11069,10 @@ public final class BackupOuterClass {
 
       private long originalDataSize_ ;
       /**
+       * <pre>
+       * Original data size.
+       * </pre>
+       *
        * <code>int64 original_data_size = 9;</code>
        * @return The originalDataSize.
        */
@@ -9910,6 +11081,10 @@ public final class BackupOuterClass {
         return originalDataSize_;
       }
       /**
+       * <pre>
+       * Original data size.
+       * </pre>
+       *
        * <code>int64 original_data_size = 9;</code>
        * @param value The originalDataSize to set.
        * @return This builder for chaining.
@@ -9921,6 +11096,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Original data size.
+       * </pre>
+       *
        * <code>int64 original_data_size = 9;</code>
        * @return This builder for chaining.
        */
@@ -10052,6 +11231,10 @@ public final class BackupOuterClass {
 
       private java.lang.Object computeInstanceId_ = "";
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 11;</code>
        * @return The computeInstanceId.
        */
@@ -10068,6 +11251,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 11;</code>
        * @return The bytes for computeInstanceId.
        */
@@ -10085,6 +11272,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 11;</code>
        * @param value The computeInstanceId to set.
        * @return This builder for chaining.
@@ -10100,6 +11291,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 11;</code>
        * @return This builder for chaining.
        */
@@ -10110,6 +11305,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 11;</code>
        * @param value The bytes for computeInstanceId to set.
        * @return This builder for chaining.
@@ -10422,6 +11621,10 @@ public final class BackupOuterClass {
 
       private boolean deleted_ ;
       /**
+       * <pre>
+       * If this field is true, it means that the backup was deleted.
+       * </pre>
+       *
        * <code>bool deleted = 21;</code>
        * @return The deleted.
        */
@@ -10430,6 +11633,10 @@ public final class BackupOuterClass {
         return deleted_;
       }
       /**
+       * <pre>
+       * If this field is true, it means that the backup was deleted.
+       * </pre>
+       *
        * <code>bool deleted = 21;</code>
        * @param value The deleted to set.
        * @return This builder for chaining.
@@ -10441,6 +11648,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * If this field is true, it means that the backup was deleted.
+       * </pre>
+       *
        * <code>bool deleted = 21;</code>
        * @return This builder for chaining.
        */
@@ -10453,6 +11664,10 @@ public final class BackupOuterClass {
 
       private java.lang.Object policyId_ = "";
       /**
+       * <pre>
+       * [Policy](/docs/backup/concepts/policy) ID.
+       * </pre>
+       *
        * <code>string policy_id = 22;</code>
        * @return The policyId.
        */
@@ -10469,6 +11684,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * [Policy](/docs/backup/concepts/policy) ID.
+       * </pre>
+       *
        * <code>string policy_id = 22;</code>
        * @return The bytes for policyId.
        */
@@ -10486,6 +11705,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * [Policy](/docs/backup/concepts/policy) ID.
+       * </pre>
+       *
        * <code>string policy_id = 22;</code>
        * @param value The policyId to set.
        * @return This builder for chaining.
@@ -10501,6 +11724,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * [Policy](/docs/backup/concepts/policy) ID.
+       * </pre>
+       *
        * <code>string policy_id = 22;</code>
        * @return This builder for chaining.
        */
@@ -10511,6 +11738,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * [Policy](/docs/backup/concepts/policy) ID.
+       * </pre>
+       *
        * <code>string policy_id = 22;</code>
        * @param value The bytes for policyId to set.
        * @return This builder for chaining.
@@ -10529,6 +11760,10 @@ public final class BackupOuterClass {
 
       private java.lang.Object resourceId_ = "";
       /**
+       * <pre>
+       * Resource ID. It identifies Compute Cloud instance in backup service.
+       * </pre>
+       *
        * <code>string resource_id = 23;</code>
        * @return The resourceId.
        */
@@ -10545,6 +11780,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Resource ID. It identifies Compute Cloud instance in backup service.
+       * </pre>
+       *
        * <code>string resource_id = 23;</code>
        * @return The bytes for resourceId.
        */
@@ -10562,6 +11801,10 @@ public final class BackupOuterClass {
         }
       }
       /**
+       * <pre>
+       * Resource ID. It identifies Compute Cloud instance in backup service.
+       * </pre>
+       *
        * <code>string resource_id = 23;</code>
        * @param value The resourceId to set.
        * @return This builder for chaining.
@@ -10577,6 +11820,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resource ID. It identifies Compute Cloud instance in backup service.
+       * </pre>
+       *
        * <code>string resource_id = 23;</code>
        * @return This builder for chaining.
        */
@@ -10587,6 +11834,10 @@ public final class BackupOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Resource ID. It identifies Compute Cloud instance in backup service.
+       * </pre>
+       *
        * <code>string resource_id = 23;</code>
        * @param value The bytes for resourceId to set.
        * @return This builder for chaining.
@@ -10661,7 +11912,7 @@ public final class BackupOuterClass {
 
     /**
      * <pre>
-     * id of the item. Should be used as source id in case of listing.
+     * ID of the item. Should be used as source ID in case of listing.
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true];</code>
@@ -10670,7 +11921,7 @@ public final class BackupOuterClass {
     java.lang.String getId();
     /**
      * <pre>
-     * id of the item. Should be used as source id in case of listing.
+     * ID of the item. Should be used as source ID in case of listing.
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true];</code>
@@ -10681,7 +11932,7 @@ public final class BackupOuterClass {
 
     /**
      * <pre>
-     * might be empty if this is root directory.
+     * Might be empty if this is root directory.
      * </pre>
      *
      * <code>.google.protobuf.StringValue parent_id = 2 [(.yandex.cloud.required) = false];</code>
@@ -10690,7 +11941,7 @@ public final class BackupOuterClass {
     boolean hasParentId();
     /**
      * <pre>
-     * might be empty if this is root directory.
+     * Might be empty if this is root directory.
      * </pre>
      *
      * <code>.google.protobuf.StringValue parent_id = 2 [(.yandex.cloud.required) = false];</code>
@@ -10699,7 +11950,7 @@ public final class BackupOuterClass {
     com.google.protobuf.StringValue getParentId();
     /**
      * <pre>
-     * might be empty if this is root directory.
+     * Might be empty if this is root directory.
      * </pre>
      *
      * <code>.google.protobuf.StringValue parent_id = 2 [(.yandex.cloud.required) = false];</code>
@@ -11695,7 +12946,7 @@ public final class BackupOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * id of the item. Should be used as source id in case of listing.
+     * ID of the item. Should be used as source ID in case of listing.
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true];</code>
@@ -11716,7 +12967,7 @@ public final class BackupOuterClass {
     }
     /**
      * <pre>
-     * id of the item. Should be used as source id in case of listing.
+     * ID of the item. Should be used as source ID in case of listing.
      * </pre>
      *
      * <code>string id = 1 [(.yandex.cloud.required) = true];</code>
@@ -11741,7 +12992,7 @@ public final class BackupOuterClass {
     private com.google.protobuf.StringValue parentId_;
     /**
      * <pre>
-     * might be empty if this is root directory.
+     * Might be empty if this is root directory.
      * </pre>
      *
      * <code>.google.protobuf.StringValue parent_id = 2 [(.yandex.cloud.required) = false];</code>
@@ -11753,7 +13004,7 @@ public final class BackupOuterClass {
     }
     /**
      * <pre>
-     * might be empty if this is root directory.
+     * Might be empty if this is root directory.
      * </pre>
      *
      * <code>.google.protobuf.StringValue parent_id = 2 [(.yandex.cloud.required) = false];</code>
@@ -11765,7 +13016,7 @@ public final class BackupOuterClass {
     }
     /**
      * <pre>
-     * might be empty if this is root directory.
+     * Might be empty if this is root directory.
      * </pre>
      *
      * <code>.google.protobuf.StringValue parent_id = 2 [(.yandex.cloud.required) = false];</code>
@@ -12440,7 +13691,7 @@ public final class BackupOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * id of the item. Should be used as source id in case of listing.
+       * ID of the item. Should be used as source ID in case of listing.
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true];</code>
@@ -12460,7 +13711,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * id of the item. Should be used as source id in case of listing.
+       * ID of the item. Should be used as source ID in case of listing.
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true];</code>
@@ -12481,7 +13732,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * id of the item. Should be used as source id in case of listing.
+       * ID of the item. Should be used as source ID in case of listing.
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true];</code>
@@ -12500,7 +13751,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * id of the item. Should be used as source id in case of listing.
+       * ID of the item. Should be used as source ID in case of listing.
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true];</code>
@@ -12514,7 +13765,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * id of the item. Should be used as source id in case of listing.
+       * ID of the item. Should be used as source ID in case of listing.
        * </pre>
        *
        * <code>string id = 1 [(.yandex.cloud.required) = true];</code>
@@ -12538,7 +13789,7 @@ public final class BackupOuterClass {
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> parentIdBuilder_;
       /**
        * <pre>
-       * might be empty if this is root directory.
+       * Might be empty if this is root directory.
        * </pre>
        *
        * <code>.google.protobuf.StringValue parent_id = 2 [(.yandex.cloud.required) = false];</code>
@@ -12549,7 +13800,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * might be empty if this is root directory.
+       * Might be empty if this is root directory.
        * </pre>
        *
        * <code>.google.protobuf.StringValue parent_id = 2 [(.yandex.cloud.required) = false];</code>
@@ -12564,7 +13815,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * might be empty if this is root directory.
+       * Might be empty if this is root directory.
        * </pre>
        *
        * <code>.google.protobuf.StringValue parent_id = 2 [(.yandex.cloud.required) = false];</code>
@@ -12584,7 +13835,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * might be empty if this is root directory.
+       * Might be empty if this is root directory.
        * </pre>
        *
        * <code>.google.protobuf.StringValue parent_id = 2 [(.yandex.cloud.required) = false];</code>
@@ -12602,7 +13853,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * might be empty if this is root directory.
+       * Might be empty if this is root directory.
        * </pre>
        *
        * <code>.google.protobuf.StringValue parent_id = 2 [(.yandex.cloud.required) = false];</code>
@@ -12624,7 +13875,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * might be empty if this is root directory.
+       * Might be empty if this is root directory.
        * </pre>
        *
        * <code>.google.protobuf.StringValue parent_id = 2 [(.yandex.cloud.required) = false];</code>
@@ -12642,7 +13893,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * might be empty if this is root directory.
+       * Might be empty if this is root directory.
        * </pre>
        *
        * <code>.google.protobuf.StringValue parent_id = 2 [(.yandex.cloud.required) = false];</code>
@@ -12654,7 +13905,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * might be empty if this is root directory.
+       * Might be empty if this is root directory.
        * </pre>
        *
        * <code>.google.protobuf.StringValue parent_id = 2 [(.yandex.cloud.required) = false];</code>
@@ -12669,7 +13920,7 @@ public final class BackupOuterClass {
       }
       /**
        * <pre>
-       * might be empty if this is root directory.
+       * Might be empty if this is root directory.
        * </pre>
        *
        * <code>.google.protobuf.StringValue parent_id = 2 [(.yandex.cloud.required) = false];</code>

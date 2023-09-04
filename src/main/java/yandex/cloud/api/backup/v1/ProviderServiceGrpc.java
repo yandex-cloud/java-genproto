@@ -3,6 +3,9 @@ package yandex.cloud.api.backup.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for managing [backup providers](/docs/backup/concepts/#providers).
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -122,6 +125,9 @@ public final class ProviderServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing [backup providers](/docs/backup/concepts/#providers).
+   * </pre>
    */
   public static abstract class ProviderServiceImplBase implements io.grpc.BindableService {
 
@@ -166,6 +172,9 @@ public final class ProviderServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing [backup providers](/docs/backup/concepts/#providers).
+   * </pre>
    */
   public static final class ProviderServiceStub extends io.grpc.stub.AbstractAsyncStub<ProviderServiceStub> {
     private ProviderServiceStub(
@@ -203,6 +212,9 @@ public final class ProviderServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing [backup providers](/docs/backup/concepts/#providers).
+   * </pre>
    */
   public static final class ProviderServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ProviderServiceBlockingStub> {
     private ProviderServiceBlockingStub(
@@ -238,6 +250,9 @@ public final class ProviderServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing [backup providers](/docs/backup/concepts/#providers).
+   * </pre>
    */
   public static final class ProviderServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ProviderServiceFutureStub> {
     private ProviderServiceFutureStub(

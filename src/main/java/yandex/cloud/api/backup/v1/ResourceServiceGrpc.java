@@ -3,6 +3,9 @@ package yandex.cloud.api.backup.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for managing backup resources: [Compute Cloud instances](/docs/backup/concepts/vm-connection#os).
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -246,12 +249,15 @@ public final class ResourceServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing backup resources: [Compute Cloud instances](/docs/backup/concepts/vm-connection#os).
+   * </pre>
    */
   public static abstract class ResourceServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * List resources: [Compute Cloud instances](/docs/backup/concepts/vm-connection#os).
+     * List resources: Compute Cloud instances.
      * </pre>
      */
     public void list(yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourcesRequest request,
@@ -360,6 +366,9 @@ public final class ResourceServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing backup resources: [Compute Cloud instances](/docs/backup/concepts/vm-connection#os).
+   * </pre>
    */
   public static final class ResourceServiceStub extends io.grpc.stub.AbstractAsyncStub<ResourceServiceStub> {
     private ResourceServiceStub(
@@ -375,7 +384,7 @@ public final class ResourceServiceGrpc {
 
     /**
      * <pre>
-     * List resources: [Compute Cloud instances](/docs/backup/concepts/vm-connection#os).
+     * List resources: Compute Cloud instances.
      * </pre>
      */
     public void list(yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourcesRequest request,
@@ -443,6 +452,9 @@ public final class ResourceServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing backup resources: [Compute Cloud instances](/docs/backup/concepts/vm-connection#os).
+   * </pre>
    */
   public static final class ResourceServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ResourceServiceBlockingStub> {
     private ResourceServiceBlockingStub(
@@ -458,7 +470,7 @@ public final class ResourceServiceGrpc {
 
     /**
      * <pre>
-     * List resources: [Compute Cloud instances](/docs/backup/concepts/vm-connection#os).
+     * List resources: Compute Cloud instances.
      * </pre>
      */
     public yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourcesResponse list(yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourcesRequest request) {
@@ -520,6 +532,9 @@ public final class ResourceServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing backup resources: [Compute Cloud instances](/docs/backup/concepts/vm-connection#os).
+   * </pre>
    */
   public static final class ResourceServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ResourceServiceFutureStub> {
     private ResourceServiceFutureStub(
@@ -535,7 +550,7 @@ public final class ResourceServiceGrpc {
 
     /**
      * <pre>
-     * List resources: [Compute Cloud instances](/docs/backup/concepts/vm-connection#os).
+     * List resources: Compute Cloud instances.
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.backup.v1.ResourceServiceOuterClass.ListResourcesResponse> list(

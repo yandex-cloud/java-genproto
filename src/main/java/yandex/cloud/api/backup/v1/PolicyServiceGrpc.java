@@ -3,6 +3,9 @@ package yandex.cloud.api.backup.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for managing [policies](/docs/backup/concepts/policy).
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -339,6 +342,9 @@ public final class PolicyServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing [policies](/docs/backup/concepts/policy).
+   * </pre>
    */
   public static abstract class PolicyServiceImplBase implements io.grpc.BindableService {
 
@@ -506,6 +512,9 @@ public final class PolicyServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing [policies](/docs/backup/concepts/policy).
+   * </pre>
    */
   public static final class PolicyServiceStub extends io.grpc.stub.AbstractAsyncStub<PolicyServiceStub> {
     private PolicyServiceStub(
@@ -624,6 +633,9 @@ public final class PolicyServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing [policies](/docs/backup/concepts/policy).
+   * </pre>
    */
   public static final class PolicyServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<PolicyServiceBlockingStub> {
     private PolicyServiceBlockingStub(
@@ -733,6 +745,9 @@ public final class PolicyServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing [policies](/docs/backup/concepts/policy).
+   * </pre>
    */
   public static final class PolicyServiceFutureStub extends io.grpc.stub.AbstractFutureStub<PolicyServiceFutureStub> {
     private PolicyServiceFutureStub(

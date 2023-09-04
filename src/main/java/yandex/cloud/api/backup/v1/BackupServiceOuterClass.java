@@ -1904,7 +1904,7 @@ public final class BackupServiceOuterClass {
 
     /**
      * <pre>
-     * List backups by specific resource_id (not resource_id).
+     * List backups by specific resource ID.
      * </pre>
      *
      * <code>string resource_id = 6;</code>
@@ -1913,7 +1913,7 @@ public final class BackupServiceOuterClass {
     boolean hasResourceId();
     /**
      * <pre>
-     * List backups by specific resource_id (not resource_id).
+     * List backups by specific resource ID.
      * </pre>
      *
      * <code>string resource_id = 6;</code>
@@ -1922,7 +1922,7 @@ public final class BackupServiceOuterClass {
     java.lang.String getResourceId();
     /**
      * <pre>
-     * List backups by specific resource_id (not resource_id).
+     * List backups by specific resource ID.
      * </pre>
      *
      * <code>string resource_id = 6;</code>
@@ -1933,7 +1933,7 @@ public final class BackupServiceOuterClass {
 
     /**
      * <pre>
-     * List backups by specific policy_id.
+     * List backups by specific policy ID.
      * </pre>
      *
      * <code>string policy_id = 7;</code>
@@ -1942,7 +1942,7 @@ public final class BackupServiceOuterClass {
     boolean hasPolicyId();
     /**
      * <pre>
-     * List backups by specific policy_id.
+     * List backups by specific policy ID.
      * </pre>
      *
      * <code>string policy_id = 7;</code>
@@ -1951,7 +1951,7 @@ public final class BackupServiceOuterClass {
     java.lang.String getPolicyId();
     /**
      * <pre>
-     * List backups by specific policy_id.
+     * List backups by specific policy ID.
      * </pre>
      *
      * <code>string policy_id = 7;</code>
@@ -2160,11 +2160,19 @@ public final class BackupServiceOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Archive ID.
+       * </pre>
+       *
        * <code>string archive_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The archiveId.
        */
       java.lang.String getArchiveId();
       /**
+       * <pre>
+       * Archive ID.
+       * </pre>
+       *
        * <code>string archive_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for archiveId.
        */
@@ -2172,11 +2180,19 @@ public final class BackupServiceOuterClass {
           getArchiveIdBytes();
 
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The folderId.
        */
       java.lang.String getFolderId();
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for folderId.
        */
@@ -2277,6 +2293,10 @@ public final class BackupServiceOuterClass {
       public static final int ARCHIVE_ID_FIELD_NUMBER = 1;
       private volatile java.lang.Object archiveId_;
       /**
+       * <pre>
+       * Archive ID.
+       * </pre>
+       *
        * <code>string archive_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The archiveId.
        */
@@ -2294,6 +2314,10 @@ public final class BackupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Archive ID.
+       * </pre>
+       *
        * <code>string archive_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for archiveId.
        */
@@ -2315,6 +2339,10 @@ public final class BackupServiceOuterClass {
       public static final int FOLDER_ID_FIELD_NUMBER = 2;
       private volatile java.lang.Object folderId_;
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The folderId.
        */
@@ -2332,6 +2360,10 @@ public final class BackupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for folderId.
        */
@@ -2671,6 +2703,10 @@ public final class BackupServiceOuterClass {
 
         private java.lang.Object archiveId_ = "";
         /**
+         * <pre>
+         * Archive ID.
+         * </pre>
+         *
          * <code>string archive_id = 1 [(.yandex.cloud.required) = true];</code>
          * @return The archiveId.
          */
@@ -2687,6 +2723,10 @@ public final class BackupServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * Archive ID.
+         * </pre>
+         *
          * <code>string archive_id = 1 [(.yandex.cloud.required) = true];</code>
          * @return The bytes for archiveId.
          */
@@ -2704,6 +2744,10 @@ public final class BackupServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * Archive ID.
+         * </pre>
+         *
          * <code>string archive_id = 1 [(.yandex.cloud.required) = true];</code>
          * @param value The archiveId to set.
          * @return This builder for chaining.
@@ -2719,6 +2763,10 @@ public final class BackupServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Archive ID.
+         * </pre>
+         *
          * <code>string archive_id = 1 [(.yandex.cloud.required) = true];</code>
          * @return This builder for chaining.
          */
@@ -2729,6 +2777,10 @@ public final class BackupServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Archive ID.
+         * </pre>
+         *
          * <code>string archive_id = 1 [(.yandex.cloud.required) = true];</code>
          * @param value The bytes for archiveId to set.
          * @return This builder for chaining.
@@ -2747,6 +2799,10 @@ public final class BackupServiceOuterClass {
 
         private java.lang.Object folderId_ = "";
         /**
+         * <pre>
+         * Folder ID.
+         * </pre>
+         *
          * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
          * @return The folderId.
          */
@@ -2763,6 +2819,10 @@ public final class BackupServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * Folder ID.
+         * </pre>
+         *
          * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
          * @return The bytes for folderId.
          */
@@ -2780,6 +2840,10 @@ public final class BackupServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * Folder ID.
+         * </pre>
+         *
          * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
          * @param value The folderId to set.
          * @return This builder for chaining.
@@ -2795,6 +2859,10 @@ public final class BackupServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Folder ID.
+         * </pre>
+         *
          * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
          * @return This builder for chaining.
          */
@@ -2805,6 +2873,10 @@ public final class BackupServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Folder ID.
+         * </pre>
+         *
          * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
          * @param value The bytes for folderId to set.
          * @return This builder for chaining.
@@ -2878,11 +2950,19 @@ public final class BackupServiceOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1;</code>
        * @return The computeInstanceId.
        */
       java.lang.String getComputeInstanceId();
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1;</code>
        * @return The bytes for computeInstanceId.
        */
@@ -2890,11 +2970,19 @@ public final class BackupServiceOuterClass {
           getComputeInstanceIdBytes();
 
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 2;</code>
        * @return The policyId.
        */
       java.lang.String getPolicyId();
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 2;</code>
        * @return The bytes for policyId.
        */
@@ -2995,6 +3083,10 @@ public final class BackupServiceOuterClass {
       public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 1;
       private volatile java.lang.Object computeInstanceId_;
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1;</code>
        * @return The computeInstanceId.
        */
@@ -3012,6 +3104,10 @@ public final class BackupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1;</code>
        * @return The bytes for computeInstanceId.
        */
@@ -3033,6 +3129,10 @@ public final class BackupServiceOuterClass {
       public static final int POLICY_ID_FIELD_NUMBER = 2;
       private volatile java.lang.Object policyId_;
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 2;</code>
        * @return The policyId.
        */
@@ -3050,6 +3150,10 @@ public final class BackupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 2;</code>
        * @return The bytes for policyId.
        */
@@ -3389,6 +3493,10 @@ public final class BackupServiceOuterClass {
 
         private java.lang.Object computeInstanceId_ = "";
         /**
+         * <pre>
+         * Compute Cloud instance ID.
+         * </pre>
+         *
          * <code>string compute_instance_id = 1;</code>
          * @return The computeInstanceId.
          */
@@ -3405,6 +3513,10 @@ public final class BackupServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * Compute Cloud instance ID.
+         * </pre>
+         *
          * <code>string compute_instance_id = 1;</code>
          * @return The bytes for computeInstanceId.
          */
@@ -3422,6 +3534,10 @@ public final class BackupServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * Compute Cloud instance ID.
+         * </pre>
+         *
          * <code>string compute_instance_id = 1;</code>
          * @param value The computeInstanceId to set.
          * @return This builder for chaining.
@@ -3437,6 +3553,10 @@ public final class BackupServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Compute Cloud instance ID.
+         * </pre>
+         *
          * <code>string compute_instance_id = 1;</code>
          * @return This builder for chaining.
          */
@@ -3447,6 +3567,10 @@ public final class BackupServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Compute Cloud instance ID.
+         * </pre>
+         *
          * <code>string compute_instance_id = 1;</code>
          * @param value The bytes for computeInstanceId to set.
          * @return This builder for chaining.
@@ -3465,6 +3589,10 @@ public final class BackupServiceOuterClass {
 
         private java.lang.Object policyId_ = "";
         /**
+         * <pre>
+         * Policy ID.
+         * </pre>
+         *
          * <code>string policy_id = 2;</code>
          * @return The policyId.
          */
@@ -3481,6 +3609,10 @@ public final class BackupServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * Policy ID.
+         * </pre>
+         *
          * <code>string policy_id = 2;</code>
          * @return The bytes for policyId.
          */
@@ -3498,6 +3630,10 @@ public final class BackupServiceOuterClass {
           }
         }
         /**
+         * <pre>
+         * Policy ID.
+         * </pre>
+         *
          * <code>string policy_id = 2;</code>
          * @param value The policyId to set.
          * @return This builder for chaining.
@@ -3513,6 +3649,10 @@ public final class BackupServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Policy ID.
+         * </pre>
+         *
          * <code>string policy_id = 2;</code>
          * @return This builder for chaining.
          */
@@ -3523,6 +3663,10 @@ public final class BackupServiceOuterClass {
           return this;
         }
         /**
+         * <pre>
+         * Policy ID.
+         * </pre>
+         *
          * <code>string policy_id = 2;</code>
          * @param value The bytes for policyId to set.
          * @return This builder for chaining.
@@ -3857,7 +4001,7 @@ public final class BackupServiceOuterClass {
     public static final int RESOURCE_ID_FIELD_NUMBER = 6;
     /**
      * <pre>
-     * List backups by specific resource_id (not resource_id).
+     * List backups by specific resource ID.
      * </pre>
      *
      * <code>string resource_id = 6;</code>
@@ -3868,7 +4012,7 @@ public final class BackupServiceOuterClass {
     }
     /**
      * <pre>
-     * List backups by specific resource_id (not resource_id).
+     * List backups by specific resource ID.
      * </pre>
      *
      * <code>string resource_id = 6;</code>
@@ -3893,7 +4037,7 @@ public final class BackupServiceOuterClass {
     }
     /**
      * <pre>
-     * List backups by specific resource_id (not resource_id).
+     * List backups by specific resource ID.
      * </pre>
      *
      * <code>string resource_id = 6;</code>
@@ -3921,7 +4065,7 @@ public final class BackupServiceOuterClass {
     public static final int POLICY_ID_FIELD_NUMBER = 7;
     /**
      * <pre>
-     * List backups by specific policy_id.
+     * List backups by specific policy ID.
      * </pre>
      *
      * <code>string policy_id = 7;</code>
@@ -3932,7 +4076,7 @@ public final class BackupServiceOuterClass {
     }
     /**
      * <pre>
-     * List backups by specific policy_id.
+     * List backups by specific policy ID.
      * </pre>
      *
      * <code>string policy_id = 7;</code>
@@ -3957,7 +4101,7 @@ public final class BackupServiceOuterClass {
     }
     /**
      * <pre>
-     * List backups by specific policy_id.
+     * List backups by specific policy ID.
      * </pre>
      *
      * <code>string policy_id = 7;</code>
@@ -5177,7 +5321,7 @@ public final class BackupServiceOuterClass {
 
       /**
        * <pre>
-       * List backups by specific resource_id (not resource_id).
+       * List backups by specific resource ID.
        * </pre>
        *
        * <code>string resource_id = 6;</code>
@@ -5189,7 +5333,7 @@ public final class BackupServiceOuterClass {
       }
       /**
        * <pre>
-       * List backups by specific resource_id (not resource_id).
+       * List backups by specific resource ID.
        * </pre>
        *
        * <code>string resource_id = 6;</code>
@@ -5215,7 +5359,7 @@ public final class BackupServiceOuterClass {
       }
       /**
        * <pre>
-       * List backups by specific resource_id (not resource_id).
+       * List backups by specific resource ID.
        * </pre>
        *
        * <code>string resource_id = 6;</code>
@@ -5242,7 +5386,7 @@ public final class BackupServiceOuterClass {
       }
       /**
        * <pre>
-       * List backups by specific resource_id (not resource_id).
+       * List backups by specific resource ID.
        * </pre>
        *
        * <code>string resource_id = 6;</code>
@@ -5261,7 +5405,7 @@ public final class BackupServiceOuterClass {
       }
       /**
        * <pre>
-       * List backups by specific resource_id (not resource_id).
+       * List backups by specific resource ID.
        * </pre>
        *
        * <code>string resource_id = 6;</code>
@@ -5277,7 +5421,7 @@ public final class BackupServiceOuterClass {
       }
       /**
        * <pre>
-       * List backups by specific resource_id (not resource_id).
+       * List backups by specific resource ID.
        * </pre>
        *
        * <code>string resource_id = 6;</code>
@@ -5298,7 +5442,7 @@ public final class BackupServiceOuterClass {
 
       /**
        * <pre>
-       * List backups by specific policy_id.
+       * List backups by specific policy ID.
        * </pre>
        *
        * <code>string policy_id = 7;</code>
@@ -5310,7 +5454,7 @@ public final class BackupServiceOuterClass {
       }
       /**
        * <pre>
-       * List backups by specific policy_id.
+       * List backups by specific policy ID.
        * </pre>
        *
        * <code>string policy_id = 7;</code>
@@ -5336,7 +5480,7 @@ public final class BackupServiceOuterClass {
       }
       /**
        * <pre>
-       * List backups by specific policy_id.
+       * List backups by specific policy ID.
        * </pre>
        *
        * <code>string policy_id = 7;</code>
@@ -5363,7 +5507,7 @@ public final class BackupServiceOuterClass {
       }
       /**
        * <pre>
-       * List backups by specific policy_id.
+       * List backups by specific policy ID.
        * </pre>
        *
        * <code>string policy_id = 7;</code>
@@ -5382,7 +5526,7 @@ public final class BackupServiceOuterClass {
       }
       /**
        * <pre>
-       * List backups by specific policy_id.
+       * List backups by specific policy ID.
        * </pre>
        *
        * <code>string policy_id = 7;</code>
@@ -5398,7 +5542,7 @@ public final class BackupServiceOuterClass {
       }
       /**
        * <pre>
-       * List backups by specific policy_id.
+       * List backups by specific policy ID.
        * </pre>
        *
        * <code>string policy_id = 7;</code>
@@ -6484,11 +6628,19 @@ public final class BackupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -6496,11 +6648,19 @@ public final class BackupServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
      * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The backupId.
      */
     java.lang.String getBackupId();
     /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
      * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for backupId.
      */
@@ -6628,6 +6788,10 @@ public final class BackupServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
@@ -6645,6 +6809,10 @@ public final class BackupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -6666,6 +6834,10 @@ public final class BackupServiceOuterClass {
     public static final int BACKUP_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object backupId_;
     /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
      * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The backupId.
      */
@@ -6683,6 +6855,10 @@ public final class BackupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
      * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for backupId.
      */
@@ -7085,6 +7261,10 @@ public final class BackupServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The folderId.
        */
@@ -7101,6 +7281,10 @@ public final class BackupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for folderId.
        */
@@ -7118,6 +7302,10 @@ public final class BackupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -7133,6 +7321,10 @@ public final class BackupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -7143,6 +7335,10 @@ public final class BackupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -7161,6 +7357,10 @@ public final class BackupServiceOuterClass {
 
       private java.lang.Object backupId_ = "";
       /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
        * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The backupId.
        */
@@ -7177,6 +7377,10 @@ public final class BackupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
        * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for backupId.
        */
@@ -7194,6 +7398,10 @@ public final class BackupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
        * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The backupId to set.
        * @return This builder for chaining.
@@ -7209,6 +7417,10 @@ public final class BackupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
        * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -7219,6 +7431,10 @@ public final class BackupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
        * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for backupId to set.
        * @return This builder for chaining.
@@ -8181,11 +8397,19 @@ public final class BackupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
      * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The backupId.
      */
     java.lang.String getBackupId();
     /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
      * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for backupId.
      */
@@ -8193,11 +8417,19 @@ public final class BackupServiceOuterClass {
         getBackupIdBytes();
 
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -8298,6 +8530,10 @@ public final class BackupServiceOuterClass {
     public static final int BACKUP_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object backupId_;
     /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
      * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The backupId.
      */
@@ -8315,6 +8551,10 @@ public final class BackupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
      * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for backupId.
      */
@@ -8336,6 +8576,10 @@ public final class BackupServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
@@ -8353,6 +8597,10 @@ public final class BackupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -8692,6 +8940,10 @@ public final class BackupServiceOuterClass {
 
       private java.lang.Object backupId_ = "";
       /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
        * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The backupId.
        */
@@ -8708,6 +8960,10 @@ public final class BackupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
        * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for backupId.
        */
@@ -8725,6 +8981,10 @@ public final class BackupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
        * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The backupId to set.
        * @return This builder for chaining.
@@ -8740,6 +9000,10 @@ public final class BackupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
        * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -8750,6 +9014,10 @@ public final class BackupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
        * <code>string backup_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for backupId to set.
        * @return This builder for chaining.
@@ -8768,6 +9036,10 @@ public final class BackupServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The folderId.
        */
@@ -8784,6 +9056,10 @@ public final class BackupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for folderId.
        */
@@ -8801,6 +9077,10 @@ public final class BackupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -8816,6 +9096,10 @@ public final class BackupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -8826,6 +9110,10 @@ public final class BackupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -10989,11 +11277,19 @@ public final class BackupServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Custom folder for file recovery.
+     * </pre>
+     *
      * <code>string path = 1;</code>
      * @return The path.
      */
     java.lang.String getPath();
     /**
+     * <pre>
+     * Custom folder for file recovery.
+     * </pre>
+     *
      * <code>string path = 1;</code>
      * @return The bytes for path.
      */
@@ -11087,6 +11383,10 @@ public final class BackupServiceOuterClass {
     public static final int PATH_FIELD_NUMBER = 1;
     private volatile java.lang.Object path_;
     /**
+     * <pre>
+     * Custom folder for file recovery.
+     * </pre>
+     *
      * <code>string path = 1;</code>
      * @return The path.
      */
@@ -11104,6 +11404,10 @@ public final class BackupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Custom folder for file recovery.
+     * </pre>
+     *
      * <code>string path = 1;</code>
      * @return The bytes for path.
      */
@@ -11426,6 +11730,10 @@ public final class BackupServiceOuterClass {
 
       private java.lang.Object path_ = "";
       /**
+       * <pre>
+       * Custom folder for file recovery.
+       * </pre>
+       *
        * <code>string path = 1;</code>
        * @return The path.
        */
@@ -11442,6 +11750,10 @@ public final class BackupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Custom folder for file recovery.
+       * </pre>
+       *
        * <code>string path = 1;</code>
        * @return The bytes for path.
        */
@@ -11459,6 +11771,10 @@ public final class BackupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Custom folder for file recovery.
+       * </pre>
+       *
        * <code>string path = 1;</code>
        * @param value The path to set.
        * @return This builder for chaining.
@@ -11474,6 +11790,10 @@ public final class BackupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Custom folder for file recovery.
+       * </pre>
+       *
        * <code>string path = 1;</code>
        * @return This builder for chaining.
        */
@@ -11484,6 +11804,10 @@ public final class BackupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Custom folder for file recovery.
+       * </pre>
+       *
        * <code>string path = 1;</code>
        * @param value The bytes for path to set.
        * @return This builder for chaining.
@@ -13017,7 +13341,7 @@ public final class BackupServiceOuterClass {
 
     /**
      * <pre>
-     * compute_instance_id is a destination instance id.
+     * Destination instance ID.
      * </pre>
      *
      * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -13026,7 +13350,7 @@ public final class BackupServiceOuterClass {
     java.lang.String getComputeInstanceId();
     /**
      * <pre>
-     * compute_instance_id is a destination instance id.
+     * Destination instance ID.
      * </pre>
      *
      * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -13036,11 +13360,19 @@ public final class BackupServiceOuterClass {
         getComputeInstanceIdBytes();
 
     /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
      * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The backupId.
      */
     java.lang.String getBackupId();
     /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
      * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for backupId.
      */
@@ -13209,7 +13541,7 @@ public final class BackupServiceOuterClass {
     private volatile java.lang.Object computeInstanceId_;
     /**
      * <pre>
-     * compute_instance_id is a destination instance id.
+     * Destination instance ID.
      * </pre>
      *
      * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -13230,7 +13562,7 @@ public final class BackupServiceOuterClass {
     }
     /**
      * <pre>
-     * compute_instance_id is a destination instance id.
+     * Destination instance ID.
      * </pre>
      *
      * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -13254,6 +13586,10 @@ public final class BackupServiceOuterClass {
     public static final int BACKUP_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object backupId_;
     /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
      * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The backupId.
      */
@@ -13271,6 +13607,10 @@ public final class BackupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
      * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for backupId.
      */
@@ -13738,7 +14078,7 @@ public final class BackupServiceOuterClass {
       private java.lang.Object computeInstanceId_ = "";
       /**
        * <pre>
-       * compute_instance_id is a destination instance id.
+       * Destination instance ID.
        * </pre>
        *
        * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -13758,7 +14098,7 @@ public final class BackupServiceOuterClass {
       }
       /**
        * <pre>
-       * compute_instance_id is a destination instance id.
+       * Destination instance ID.
        * </pre>
        *
        * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -13779,7 +14119,7 @@ public final class BackupServiceOuterClass {
       }
       /**
        * <pre>
-       * compute_instance_id is a destination instance id.
+       * Destination instance ID.
        * </pre>
        *
        * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -13798,7 +14138,7 @@ public final class BackupServiceOuterClass {
       }
       /**
        * <pre>
-       * compute_instance_id is a destination instance id.
+       * Destination instance ID.
        * </pre>
        *
        * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -13812,7 +14152,7 @@ public final class BackupServiceOuterClass {
       }
       /**
        * <pre>
-       * compute_instance_id is a destination instance id.
+       * Destination instance ID.
        * </pre>
        *
        * <code>string compute_instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -13833,6 +14173,10 @@ public final class BackupServiceOuterClass {
 
       private java.lang.Object backupId_ = "";
       /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
        * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The backupId.
        */
@@ -13849,6 +14193,10 @@ public final class BackupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
        * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for backupId.
        */
@@ -13866,6 +14214,10 @@ public final class BackupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
        * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The backupId to set.
        * @return This builder for chaining.
@@ -13881,6 +14233,10 @@ public final class BackupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
        * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -13891,6 +14247,10 @@ public final class BackupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
        * <code>string backup_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for backupId to set.
        * @return This builder for chaining.
@@ -14199,11 +14559,19 @@ public final class BackupServiceOuterClass {
     double getProgressPercentage();
 
     /**
+     * <pre>
+     * Destination instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The computeInstanceId.
      */
     java.lang.String getComputeInstanceId();
     /**
+     * <pre>
+     * Destination instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for computeInstanceId.
      */
@@ -14211,11 +14579,19 @@ public final class BackupServiceOuterClass {
         getComputeInstanceIdBytes();
 
     /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
      * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
      * @return The backupId.
      */
     java.lang.String getBackupId();
     /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
      * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for backupId.
      */
@@ -14371,6 +14747,10 @@ public final class BackupServiceOuterClass {
     public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object computeInstanceId_;
     /**
+     * <pre>
+     * Destination instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The computeInstanceId.
      */
@@ -14388,6 +14768,10 @@ public final class BackupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Destination instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for computeInstanceId.
      */
@@ -14409,6 +14793,10 @@ public final class BackupServiceOuterClass {
     public static final int BACKUP_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object backupId_;
     /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
      * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
      * @return The backupId.
      */
@@ -14426,6 +14814,10 @@ public final class BackupServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Backup ID.
+     * </pre>
+     *
      * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for backupId.
      */
@@ -14886,6 +15278,10 @@ public final class BackupServiceOuterClass {
 
       private java.lang.Object computeInstanceId_ = "";
       /**
+       * <pre>
+       * Destination instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The computeInstanceId.
        */
@@ -14902,6 +15298,10 @@ public final class BackupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Destination instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for computeInstanceId.
        */
@@ -14919,6 +15319,10 @@ public final class BackupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Destination instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The computeInstanceId to set.
        * @return This builder for chaining.
@@ -14934,6 +15338,10 @@ public final class BackupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Destination instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -14944,6 +15352,10 @@ public final class BackupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Destination instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for computeInstanceId to set.
        * @return This builder for chaining.
@@ -14962,6 +15374,10 @@ public final class BackupServiceOuterClass {
 
       private java.lang.Object backupId_ = "";
       /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
        * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
        * @return The backupId.
        */
@@ -14978,6 +15394,10 @@ public final class BackupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
        * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for backupId.
        */
@@ -14995,6 +15415,10 @@ public final class BackupServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
        * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
        * @param value The backupId to set.
        * @return This builder for chaining.
@@ -15010,6 +15434,10 @@ public final class BackupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
        * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -15020,6 +15448,10 @@ public final class BackupServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Backup ID.
+       * </pre>
+       *
        * <code>string backup_id = 3 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for backupId to set.
        * @return This builder for chaining.

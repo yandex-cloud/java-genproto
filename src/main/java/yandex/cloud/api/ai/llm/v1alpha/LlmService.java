@@ -67,7 +67,7 @@ public final class LlmService {
 
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
      * </pre>
      *
      * <code>string instruction_text = 3;</code>
@@ -76,7 +76,7 @@ public final class LlmService {
     boolean hasInstructionText();
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
      * </pre>
      *
      * <code>string instruction_text = 3;</code>
@@ -85,7 +85,7 @@ public final class LlmService {
     java.lang.String getInstructionText();
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
      * </pre>
      *
      * <code>string instruction_text = 3;</code>
@@ -95,8 +95,25 @@ public final class LlmService {
         getInstructionTextBytes();
 
     /**
+     * <code>string instruction_uri = 5;</code>
+     * @return Whether the instructionUri field is set.
+     */
+    boolean hasInstructionUri();
+    /**
+     * <code>string instruction_uri = 5;</code>
+     * @return The instructionUri.
+     */
+    java.lang.String getInstructionUri();
+    /**
+     * <code>string instruction_uri = 5;</code>
+     * @return The bytes for instructionUri.
+     */
+    com.google.protobuf.ByteString
+        getInstructionUriBytes();
+
+    /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
      * </pre>
      *
      * <code>string request_text = 4;</code>
@@ -105,7 +122,7 @@ public final class LlmService {
     boolean hasRequestText();
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
      * </pre>
      *
      * <code>string request_text = 4;</code>
@@ -114,7 +131,7 @@ public final class LlmService {
     java.lang.String getRequestText();
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
      * </pre>
      *
      * <code>string request_text = 4;</code>
@@ -208,6 +225,12 @@ public final class LlmService {
               request_ = s;
               break;
             }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              instructionCase_ = 5;
+              instruction_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -246,6 +269,7 @@ public final class LlmService {
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       INSTRUCTION_TEXT(3),
+      INSTRUCTION_URI(5),
       INSTRUCTION_NOT_SET(0);
       private final int value;
       private InstructionCase(int value) {
@@ -264,6 +288,7 @@ public final class LlmService {
       public static InstructionCase forNumber(int value) {
         switch (value) {
           case 3: return INSTRUCTION_TEXT;
+          case 5: return INSTRUCTION_URI;
           case 0: return INSTRUCTION_NOT_SET;
           default: return null;
         }
@@ -405,7 +430,7 @@ public final class LlmService {
     public static final int INSTRUCTION_TEXT_FIELD_NUMBER = 3;
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
      * </pre>
      *
      * <code>string instruction_text = 3;</code>
@@ -416,7 +441,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
      * </pre>
      *
      * <code>string instruction_text = 3;</code>
@@ -441,7 +466,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
      * </pre>
      *
      * <code>string instruction_text = 3;</code>
@@ -466,10 +491,62 @@ public final class LlmService {
       }
     }
 
+    public static final int INSTRUCTION_URI_FIELD_NUMBER = 5;
+    /**
+     * <code>string instruction_uri = 5;</code>
+     * @return Whether the instructionUri field is set.
+     */
+    public boolean hasInstructionUri() {
+      return instructionCase_ == 5;
+    }
+    /**
+     * <code>string instruction_uri = 5;</code>
+     * @return The instructionUri.
+     */
+    public java.lang.String getInstructionUri() {
+      java.lang.Object ref = "";
+      if (instructionCase_ == 5) {
+        ref = instruction_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (instructionCase_ == 5) {
+          instruction_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>string instruction_uri = 5;</code>
+     * @return The bytes for instructionUri.
+     */
+    public com.google.protobuf.ByteString
+        getInstructionUriBytes() {
+      java.lang.Object ref = "";
+      if (instructionCase_ == 5) {
+        ref = instruction_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (instructionCase_ == 5) {
+          instruction_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     public static final int REQUEST_TEXT_FIELD_NUMBER = 4;
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
      * </pre>
      *
      * <code>string request_text = 4;</code>
@@ -480,7 +557,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
      * </pre>
      *
      * <code>string request_text = 4;</code>
@@ -505,7 +582,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
      * </pre>
      *
      * <code>string request_text = 4;</code>
@@ -556,6 +633,9 @@ public final class LlmService {
       if (requestCase_ == 4) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, request_);
       }
+      if (instructionCase_ == 5) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, instruction_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -577,6 +657,9 @@ public final class LlmService {
       }
       if (requestCase_ == 4) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, request_);
+      }
+      if (instructionCase_ == 5) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, instruction_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -605,6 +688,10 @@ public final class LlmService {
         case 3:
           if (!getInstructionText()
               .equals(other.getInstructionText())) return false;
+          break;
+        case 5:
+          if (!getInstructionUri()
+              .equals(other.getInstructionUri())) return false;
           break;
         case 0:
         default:
@@ -639,6 +726,10 @@ public final class LlmService {
         case 3:
           hash = (37 * hash) + INSTRUCTION_TEXT_FIELD_NUMBER;
           hash = (53 * hash) + getInstructionText().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + INSTRUCTION_URI_FIELD_NUMBER;
+          hash = (53 * hash) + getInstructionUri().hashCode();
           break;
         case 0:
         default:
@@ -835,6 +926,9 @@ public final class LlmService {
         if (instructionCase_ == 3) {
           result.instruction_ = instruction_;
         }
+        if (instructionCase_ == 5) {
+          result.instruction_ = instruction_;
+        }
         if (requestCase_ == 4) {
           result.request_ = request_;
         }
@@ -898,6 +992,12 @@ public final class LlmService {
         switch (other.getInstructionCase()) {
           case INSTRUCTION_TEXT: {
             instructionCase_ = 3;
+            instruction_ = other.instruction_;
+            onChanged();
+            break;
+          }
+          case INSTRUCTION_URI: {
+            instructionCase_ = 5;
             instruction_ = other.instruction_;
             onChanged();
             break;
@@ -1229,7 +1329,7 @@ public final class LlmService {
 
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
        * </pre>
        *
        * <code>string instruction_text = 3;</code>
@@ -1241,7 +1341,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
        * </pre>
        *
        * <code>string instruction_text = 3;</code>
@@ -1267,7 +1367,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
        * </pre>
        *
        * <code>string instruction_text = 3;</code>
@@ -1294,7 +1394,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
        * </pre>
        *
        * <code>string instruction_text = 3;</code>
@@ -1313,7 +1413,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
        * </pre>
        *
        * <code>string instruction_text = 3;</code>
@@ -1329,7 +1429,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
        * </pre>
        *
        * <code>string instruction_text = 3;</code>
@@ -1349,8 +1449,105 @@ public final class LlmService {
       }
 
       /**
+       * <code>string instruction_uri = 5;</code>
+       * @return Whether the instructionUri field is set.
+       */
+      @java.lang.Override
+      public boolean hasInstructionUri() {
+        return instructionCase_ == 5;
+      }
+      /**
+       * <code>string instruction_uri = 5;</code>
+       * @return The instructionUri.
+       */
+      @java.lang.Override
+      public java.lang.String getInstructionUri() {
+        java.lang.Object ref = "";
+        if (instructionCase_ == 5) {
+          ref = instruction_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (instructionCase_ == 5) {
+            instruction_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string instruction_uri = 5;</code>
+       * @return The bytes for instructionUri.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getInstructionUriBytes() {
+        java.lang.Object ref = "";
+        if (instructionCase_ == 5) {
+          ref = instruction_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (instructionCase_ == 5) {
+            instruction_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string instruction_uri = 5;</code>
+       * @param value The instructionUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstructionUri(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  instructionCase_ = 5;
+        instruction_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string instruction_uri = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInstructionUri() {
+        if (instructionCase_ == 5) {
+          instructionCase_ = 0;
+          instruction_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string instruction_uri = 5;</code>
+       * @param value The bytes for instructionUri to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInstructionUriBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        instructionCase_ = 5;
+        instruction_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
        * </pre>
        *
        * <code>string request_text = 4;</code>
@@ -1362,7 +1559,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
        * </pre>
        *
        * <code>string request_text = 4;</code>
@@ -1388,7 +1585,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
        * </pre>
        *
        * <code>string request_text = 4;</code>
@@ -1415,7 +1612,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
        * </pre>
        *
        * <code>string request_text = 4;</code>
@@ -1434,7 +1631,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
        * </pre>
        *
        * <code>string request_text = 4;</code>
@@ -1450,7 +1647,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text] and [request_text] should be equal or less to 2500 tokens.
+       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
        * </pre>
        *
        * <code>string request_text = 4;</code>
@@ -4209,7 +4406,7 @@ public final class LlmService {
 
     /**
      * <pre>
-     * Assistant's message
+     * Assistant's message.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4218,7 +4415,7 @@ public final class LlmService {
     boolean hasMessage();
     /**
      * <pre>
-     * Assistant's message
+     * Assistant's message.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4227,7 +4424,7 @@ public final class LlmService {
     yandex.cloud.api.ai.llm.v1alpha.Llm.Message getMessage();
     /**
      * <pre>
-     * Assistant's message
+     * Assistant's message.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4236,7 +4433,7 @@ public final class LlmService {
 
     /**
      * <pre>
-     * Total number of tokens for chat request and chat response
+     * Total number of tokens for chat request and chat response.
      * </pre>
      *
      * <code>int64 num_tokens = 2;</code>
@@ -4246,7 +4443,7 @@ public final class LlmService {
   }
   /**
    * <pre>
-   * Contains a model-generated assistant's response for the chat query
+   * Contains a model-generated assistant's response for the chat query.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.ChatResponse}
@@ -4347,7 +4544,7 @@ public final class LlmService {
     private yandex.cloud.api.ai.llm.v1alpha.Llm.Message message_;
     /**
      * <pre>
-     * Assistant's message
+     * Assistant's message.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4359,7 +4556,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Assistant's message
+     * Assistant's message.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4371,7 +4568,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Assistant's message
+     * Assistant's message.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4385,7 +4582,7 @@ public final class LlmService {
     private long numTokens_;
     /**
      * <pre>
-     * Total number of tokens for chat request and chat response
+     * Total number of tokens for chat request and chat response.
      * </pre>
      *
      * <code>int64 num_tokens = 2;</code>
@@ -4570,7 +4767,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Contains a model-generated assistant's response for the chat query
+     * Contains a model-generated assistant's response for the chat query.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.ChatResponse}
@@ -4738,7 +4935,7 @@ public final class LlmService {
           yandex.cloud.api.ai.llm.v1alpha.Llm.Message, yandex.cloud.api.ai.llm.v1alpha.Llm.Message.Builder, yandex.cloud.api.ai.llm.v1alpha.Llm.MessageOrBuilder> messageBuilder_;
       /**
        * <pre>
-       * Assistant's message
+       * Assistant's message.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4749,7 +4946,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Assistant's message
+       * Assistant's message.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4764,7 +4961,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Assistant's message
+       * Assistant's message.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4784,7 +4981,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Assistant's message
+       * Assistant's message.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4802,7 +4999,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Assistant's message
+       * Assistant's message.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4824,7 +5021,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Assistant's message
+       * Assistant's message.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4842,7 +5039,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Assistant's message
+       * Assistant's message.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4854,7 +5051,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Assistant's message
+       * Assistant's message.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4869,7 +5066,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Assistant's message
+       * Assistant's message.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4891,7 +5088,7 @@ public final class LlmService {
       private long numTokens_ ;
       /**
        * <pre>
-       * Total number of tokens for chat request and chat response
+       * Total number of tokens for chat request and chat response.
        * </pre>
        *
        * <code>int64 num_tokens = 2;</code>
@@ -4903,7 +5100,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Total number of tokens for chat request and chat response
+       * Total number of tokens for chat request and chat response.
        * </pre>
        *
        * <code>int64 num_tokens = 2;</code>
@@ -4918,7 +5115,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Total number of tokens for chat request and chat response
+       * Total number of tokens for chat request and chat response.
        * </pre>
        *
        * <code>int64 num_tokens = 2;</code>
@@ -5009,7 +5206,7 @@ public final class LlmService {
 
     /**
      * <pre>
-     * Text for tokenization request
+     * Text for tokenization request.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -5018,7 +5215,7 @@ public final class LlmService {
     java.lang.String getText();
     /**
      * <pre>
-     * Text for tokenization request
+     * Text for tokenization request.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -5029,7 +5226,7 @@ public final class LlmService {
   }
   /**
    * <pre>
-   * Tokenization request
+   * Tokenization request.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.TokenizeRequest}
@@ -5172,7 +5369,7 @@ public final class LlmService {
     private volatile java.lang.Object text_;
     /**
      * <pre>
-     * Text for tokenization request
+     * Text for tokenization request.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -5193,7 +5390,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Text for tokenization request
+     * Text for tokenization request.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -5380,7 +5577,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Tokenization request
+     * Tokenization request.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.TokenizeRequest}
@@ -5636,7 +5833,7 @@ public final class LlmService {
       private java.lang.Object text_ = "";
       /**
        * <pre>
-       * Text for tokenization request
+       * Text for tokenization request.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -5656,7 +5853,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text for tokenization request
+       * Text for tokenization request.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -5677,7 +5874,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text for tokenization request
+       * Text for tokenization request.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -5696,7 +5893,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text for tokenization request
+       * Text for tokenization request.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -5710,7 +5907,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text for tokenization request
+       * Text for tokenization request.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -5787,7 +5984,7 @@ public final class LlmService {
 
     /**
      * <pre>
-     * Sequence of tokens in tokenized text
+     * Sequence of tokens in tokenized text.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -5796,7 +5993,7 @@ public final class LlmService {
         getTokensList();
     /**
      * <pre>
-     * Sequence of tokens in tokenized text
+     * Sequence of tokens in tokenized text.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -5804,7 +6001,7 @@ public final class LlmService {
     yandex.cloud.api.ai.llm.v1alpha.Llm.Token getTokens(int index);
     /**
      * <pre>
-     * Sequence of tokens in tokenized text
+     * Sequence of tokens in tokenized text.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -5812,7 +6009,7 @@ public final class LlmService {
     int getTokensCount();
     /**
      * <pre>
-     * Sequence of tokens in tokenized text
+     * Sequence of tokens in tokenized text.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -5821,7 +6018,7 @@ public final class LlmService {
         getTokensOrBuilderList();
     /**
      * <pre>
-     * Sequence of tokens in tokenized text
+     * Sequence of tokens in tokenized text.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -5831,7 +6028,7 @@ public final class LlmService {
   }
   /**
    * <pre>
-   * Tokenization response
+   * Tokenization response.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.TokenizeResponse}
@@ -5928,7 +6125,7 @@ public final class LlmService {
     private java.util.List<yandex.cloud.api.ai.llm.v1alpha.Llm.Token> tokens_;
     /**
      * <pre>
-     * Sequence of tokens in tokenized text
+     * Sequence of tokens in tokenized text.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -5939,7 +6136,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Sequence of tokens in tokenized text
+     * Sequence of tokens in tokenized text.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -5951,7 +6148,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Sequence of tokens in tokenized text
+     * Sequence of tokens in tokenized text.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -5962,7 +6159,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Sequence of tokens in tokenized text
+     * Sequence of tokens in tokenized text.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -5973,7 +6170,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Sequence of tokens in tokenized text
+     * Sequence of tokens in tokenized text.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6143,7 +6340,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Tokenization response
+     * Tokenization response.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.TokenizeResponse}
@@ -6344,7 +6541,7 @@ public final class LlmService {
 
       /**
        * <pre>
-       * Sequence of tokens in tokenized text
+       * Sequence of tokens in tokenized text.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6358,7 +6555,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text
+       * Sequence of tokens in tokenized text.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6372,7 +6569,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text
+       * Sequence of tokens in tokenized text.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6386,7 +6583,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text
+       * Sequence of tokens in tokenized text.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6407,7 +6604,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text
+       * Sequence of tokens in tokenized text.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6425,7 +6622,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text
+       * Sequence of tokens in tokenized text.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6445,7 +6642,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text
+       * Sequence of tokens in tokenized text.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6466,7 +6663,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text
+       * Sequence of tokens in tokenized text.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6484,7 +6681,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text
+       * Sequence of tokens in tokenized text.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6502,7 +6699,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text
+       * Sequence of tokens in tokenized text.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6521,7 +6718,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text
+       * Sequence of tokens in tokenized text.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6538,7 +6735,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text
+       * Sequence of tokens in tokenized text.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6555,7 +6752,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text
+       * Sequence of tokens in tokenized text.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6566,7 +6763,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text
+       * Sequence of tokens in tokenized text.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6580,7 +6777,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text
+       * Sequence of tokens in tokenized text.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6595,7 +6792,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text
+       * Sequence of tokens in tokenized text.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6606,7 +6803,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text
+       * Sequence of tokens in tokenized text.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6618,7 +6815,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text
+       * Sequence of tokens in tokenized text.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6694,6 +6891,1631 @@ public final class LlmService {
 
   }
 
+  public interface EmbeddingRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.llm.v1alpha.EmbeddingRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.yandex.cloud.ai.llm.v1alpha.EmbeddingRequest.EmbeddingType embedding_type = 1;</code>
+     * @return The enum numeric value on the wire for embeddingType.
+     */
+    int getEmbeddingTypeValue();
+    /**
+     * <code>.yandex.cloud.ai.llm.v1alpha.EmbeddingRequest.EmbeddingType embedding_type = 1;</code>
+     * @return The embeddingType.
+     */
+    yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest.EmbeddingType getEmbeddingType();
+
+    /**
+     * <code>string model = 2;</code>
+     * @return The model.
+     */
+    java.lang.String getModel();
+    /**
+     * <code>string model = 2;</code>
+     * @return The bytes for model.
+     */
+    com.google.protobuf.ByteString
+        getModelBytes();
+
+    /**
+     * <code>string text = 3;</code>
+     * @return The text.
+     */
+    java.lang.String getText();
+    /**
+     * <code>string text = 3;</code>
+     * @return The bytes for text.
+     */
+    com.google.protobuf.ByteString
+        getTextBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.EmbeddingRequest}
+   */
+  public static final class EmbeddingRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.llm.v1alpha.EmbeddingRequest)
+      EmbeddingRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EmbeddingRequest.newBuilder() to construct.
+    private EmbeddingRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EmbeddingRequest() {
+      embeddingType_ = 0;
+      model_ = "";
+      text_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EmbeddingRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EmbeddingRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              embeddingType_ = rawValue;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              model_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              text_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.llm.v1alpha.LlmService.internal_static_yandex_cloud_ai_llm_v1alpha_EmbeddingRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.llm.v1alpha.LlmService.internal_static_yandex_cloud_ai_llm_v1alpha_EmbeddingRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest.class, yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.ai.llm.v1alpha.EmbeddingRequest.EmbeddingType}
+     */
+    public enum EmbeddingType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>EMBEDDING_TYPE_UNSPECIFIED = 0;</code>
+       */
+      EMBEDDING_TYPE_UNSPECIFIED(0),
+      /**
+       * <code>EMBEDDING_TYPE_QUERY = 1;</code>
+       */
+      EMBEDDING_TYPE_QUERY(1),
+      /**
+       * <code>EMBEDDING_TYPE_DOCUMENT = 2;</code>
+       */
+      EMBEDDING_TYPE_DOCUMENT(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>EMBEDDING_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int EMBEDDING_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>EMBEDDING_TYPE_QUERY = 1;</code>
+       */
+      public static final int EMBEDDING_TYPE_QUERY_VALUE = 1;
+      /**
+       * <code>EMBEDDING_TYPE_DOCUMENT = 2;</code>
+       */
+      public static final int EMBEDDING_TYPE_DOCUMENT_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static EmbeddingType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static EmbeddingType forNumber(int value) {
+        switch (value) {
+          case 0: return EMBEDDING_TYPE_UNSPECIFIED;
+          case 1: return EMBEDDING_TYPE_QUERY;
+          case 2: return EMBEDDING_TYPE_DOCUMENT;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<EmbeddingType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          EmbeddingType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<EmbeddingType>() {
+              public EmbeddingType findValueByNumber(int number) {
+                return EmbeddingType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final EmbeddingType[] VALUES = values();
+
+      public static EmbeddingType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private EmbeddingType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.ai.llm.v1alpha.EmbeddingRequest.EmbeddingType)
+    }
+
+    public static final int EMBEDDING_TYPE_FIELD_NUMBER = 1;
+    private int embeddingType_;
+    /**
+     * <code>.yandex.cloud.ai.llm.v1alpha.EmbeddingRequest.EmbeddingType embedding_type = 1;</code>
+     * @return The enum numeric value on the wire for embeddingType.
+     */
+    @java.lang.Override public int getEmbeddingTypeValue() {
+      return embeddingType_;
+    }
+    /**
+     * <code>.yandex.cloud.ai.llm.v1alpha.EmbeddingRequest.EmbeddingType embedding_type = 1;</code>
+     * @return The embeddingType.
+     */
+    @java.lang.Override public yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest.EmbeddingType getEmbeddingType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest.EmbeddingType result = yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest.EmbeddingType.valueOf(embeddingType_);
+      return result == null ? yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest.EmbeddingType.UNRECOGNIZED : result;
+    }
+
+    public static final int MODEL_FIELD_NUMBER = 2;
+    private volatile java.lang.Object model_;
+    /**
+     * <code>string model = 2;</code>
+     * @return The model.
+     */
+    @java.lang.Override
+    public java.lang.String getModel() {
+      java.lang.Object ref = model_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        model_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string model = 2;</code>
+     * @return The bytes for model.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getModelBytes() {
+      java.lang.Object ref = model_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        model_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TEXT_FIELD_NUMBER = 3;
+    private volatile java.lang.Object text_;
+    /**
+     * <code>string text = 3;</code>
+     * @return The text.
+     */
+    @java.lang.Override
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        text_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string text = 3;</code>
+     * @return The bytes for text.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (embeddingType_ != yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest.EmbeddingType.EMBEDDING_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, embeddingType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(model_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, model_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, text_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (embeddingType_ != yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest.EmbeddingType.EMBEDDING_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, embeddingType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(model_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, model_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, text_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest other = (yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest) obj;
+
+      if (embeddingType_ != other.embeddingType_) return false;
+      if (!getModel()
+          .equals(other.getModel())) return false;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + EMBEDDING_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + embeddingType_;
+      hash = (37 * hash) + MODEL_FIELD_NUMBER;
+      hash = (53 * hash) + getModel().hashCode();
+      hash = (37 * hash) + TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getText().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.EmbeddingRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.llm.v1alpha.EmbeddingRequest)
+        yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.llm.v1alpha.LlmService.internal_static_yandex_cloud_ai_llm_v1alpha_EmbeddingRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.llm.v1alpha.LlmService.internal_static_yandex_cloud_ai_llm_v1alpha_EmbeddingRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest.class, yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        embeddingType_ = 0;
+
+        model_ = "";
+
+        text_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.llm.v1alpha.LlmService.internal_static_yandex_cloud_ai_llm_v1alpha_EmbeddingRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest build() {
+        yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest buildPartial() {
+        yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest result = new yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest(this);
+        result.embeddingType_ = embeddingType_;
+        result.model_ = model_;
+        result.text_ = text_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest) {
+          return mergeFrom((yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest other) {
+        if (other == yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest.getDefaultInstance()) return this;
+        if (other.embeddingType_ != 0) {
+          setEmbeddingTypeValue(other.getEmbeddingTypeValue());
+        }
+        if (!other.getModel().isEmpty()) {
+          model_ = other.model_;
+          onChanged();
+        }
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int embeddingType_ = 0;
+      /**
+       * <code>.yandex.cloud.ai.llm.v1alpha.EmbeddingRequest.EmbeddingType embedding_type = 1;</code>
+       * @return The enum numeric value on the wire for embeddingType.
+       */
+      @java.lang.Override public int getEmbeddingTypeValue() {
+        return embeddingType_;
+      }
+      /**
+       * <code>.yandex.cloud.ai.llm.v1alpha.EmbeddingRequest.EmbeddingType embedding_type = 1;</code>
+       * @param value The enum numeric value on the wire for embeddingType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmbeddingTypeValue(int value) {
+        
+        embeddingType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.llm.v1alpha.EmbeddingRequest.EmbeddingType embedding_type = 1;</code>
+       * @return The embeddingType.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest.EmbeddingType getEmbeddingType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest.EmbeddingType result = yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest.EmbeddingType.valueOf(embeddingType_);
+        return result == null ? yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest.EmbeddingType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.ai.llm.v1alpha.EmbeddingRequest.EmbeddingType embedding_type = 1;</code>
+       * @param value The embeddingType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmbeddingType(yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest.EmbeddingType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        embeddingType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.ai.llm.v1alpha.EmbeddingRequest.EmbeddingType embedding_type = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmbeddingType() {
+        
+        embeddingType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object model_ = "";
+      /**
+       * <code>string model = 2;</code>
+       * @return The model.
+       */
+      public java.lang.String getModel() {
+        java.lang.Object ref = model_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          model_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string model = 2;</code>
+       * @return The bytes for model.
+       */
+      public com.google.protobuf.ByteString
+          getModelBytes() {
+        java.lang.Object ref = model_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          model_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string model = 2;</code>
+       * @param value The model to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModel(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        model_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string model = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearModel() {
+        
+        model_ = getDefaultInstance().getModel();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string model = 2;</code>
+       * @param value The bytes for model to set.
+       * @return This builder for chaining.
+       */
+      public Builder setModelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        model_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object text_ = "";
+      /**
+       * <code>string text = 3;</code>
+       * @return The text.
+       */
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          text_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string text = 3;</code>
+       * @return The bytes for text.
+       */
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string text = 3;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string text = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearText() {
+        
+        text_ = getDefaultInstance().getText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string text = 3;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.llm.v1alpha.EmbeddingRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.llm.v1alpha.EmbeddingRequest)
+    private static final yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest();
+    }
+
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EmbeddingRequest>
+        PARSER = new com.google.protobuf.AbstractParser<EmbeddingRequest>() {
+      @java.lang.Override
+      public EmbeddingRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EmbeddingRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EmbeddingRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EmbeddingRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EmbeddingResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.llm.v1alpha.EmbeddingResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated double embedding = 1;</code>
+     * @return A list containing the embedding.
+     */
+    java.util.List<java.lang.Double> getEmbeddingList();
+    /**
+     * <code>repeated double embedding = 1;</code>
+     * @return The count of embedding.
+     */
+    int getEmbeddingCount();
+    /**
+     * <code>repeated double embedding = 1;</code>
+     * @param index The index of the element to return.
+     * @return The embedding at the given index.
+     */
+    double getEmbedding(int index);
+
+    /**
+     * <code>int64 num_tokens = 2;</code>
+     * @return The numTokens.
+     */
+    long getNumTokens();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.EmbeddingResponse}
+   */
+  public static final class EmbeddingResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.llm.v1alpha.EmbeddingResponse)
+      EmbeddingResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EmbeddingResponse.newBuilder() to construct.
+    private EmbeddingResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EmbeddingResponse() {
+      embedding_ = emptyDoubleList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EmbeddingResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EmbeddingResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 9: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                embedding_ = newDoubleList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              embedding_.addDouble(input.readDouble());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                embedding_ = newDoubleList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                embedding_.addDouble(input.readDouble());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 16: {
+
+              numTokens_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          embedding_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.llm.v1alpha.LlmService.internal_static_yandex_cloud_ai_llm_v1alpha_EmbeddingResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.llm.v1alpha.LlmService.internal_static_yandex_cloud_ai_llm_v1alpha_EmbeddingResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse.class, yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse.Builder.class);
+    }
+
+    public static final int EMBEDDING_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.DoubleList embedding_;
+    /**
+     * <code>repeated double embedding = 1;</code>
+     * @return A list containing the embedding.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Double>
+        getEmbeddingList() {
+      return embedding_;
+    }
+    /**
+     * <code>repeated double embedding = 1;</code>
+     * @return The count of embedding.
+     */
+    public int getEmbeddingCount() {
+      return embedding_.size();
+    }
+    /**
+     * <code>repeated double embedding = 1;</code>
+     * @param index The index of the element to return.
+     * @return The embedding at the given index.
+     */
+    public double getEmbedding(int index) {
+      return embedding_.getDouble(index);
+    }
+    private int embeddingMemoizedSerializedSize = -1;
+
+    public static final int NUM_TOKENS_FIELD_NUMBER = 2;
+    private long numTokens_;
+    /**
+     * <code>int64 num_tokens = 2;</code>
+     * @return The numTokens.
+     */
+    @java.lang.Override
+    public long getNumTokens() {
+      return numTokens_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (getEmbeddingList().size() > 0) {
+        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(embeddingMemoizedSerializedSize);
+      }
+      for (int i = 0; i < embedding_.size(); i++) {
+        output.writeDoubleNoTag(embedding_.getDouble(i));
+      }
+      if (numTokens_ != 0L) {
+        output.writeInt64(2, numTokens_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        dataSize = 8 * getEmbeddingList().size();
+        size += dataSize;
+        if (!getEmbeddingList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        embeddingMemoizedSerializedSize = dataSize;
+      }
+      if (numTokens_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, numTokens_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse other = (yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse) obj;
+
+      if (!getEmbeddingList()
+          .equals(other.getEmbeddingList())) return false;
+      if (getNumTokens()
+          != other.getNumTokens()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getEmbeddingCount() > 0) {
+        hash = (37 * hash) + EMBEDDING_FIELD_NUMBER;
+        hash = (53 * hash) + getEmbeddingList().hashCode();
+      }
+      hash = (37 * hash) + NUM_TOKENS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getNumTokens());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.EmbeddingResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.llm.v1alpha.EmbeddingResponse)
+        yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.llm.v1alpha.LlmService.internal_static_yandex_cloud_ai_llm_v1alpha_EmbeddingResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.llm.v1alpha.LlmService.internal_static_yandex_cloud_ai_llm_v1alpha_EmbeddingResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse.class, yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        embedding_ = emptyDoubleList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        numTokens_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.llm.v1alpha.LlmService.internal_static_yandex_cloud_ai_llm_v1alpha_EmbeddingResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse build() {
+        yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse buildPartial() {
+        yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse result = new yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          embedding_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.embedding_ = embedding_;
+        result.numTokens_ = numTokens_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse) {
+          return mergeFrom((yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse other) {
+        if (other == yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse.getDefaultInstance()) return this;
+        if (!other.embedding_.isEmpty()) {
+          if (embedding_.isEmpty()) {
+            embedding_ = other.embedding_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureEmbeddingIsMutable();
+            embedding_.addAll(other.embedding_);
+          }
+          onChanged();
+        }
+        if (other.getNumTokens() != 0L) {
+          setNumTokens(other.getNumTokens());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Internal.DoubleList embedding_ = emptyDoubleList();
+      private void ensureEmbeddingIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          embedding_ = mutableCopy(embedding_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated double embedding = 1;</code>
+       * @return A list containing the embedding.
+       */
+      public java.util.List<java.lang.Double>
+          getEmbeddingList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(embedding_) : embedding_;
+      }
+      /**
+       * <code>repeated double embedding = 1;</code>
+       * @return The count of embedding.
+       */
+      public int getEmbeddingCount() {
+        return embedding_.size();
+      }
+      /**
+       * <code>repeated double embedding = 1;</code>
+       * @param index The index of the element to return.
+       * @return The embedding at the given index.
+       */
+      public double getEmbedding(int index) {
+        return embedding_.getDouble(index);
+      }
+      /**
+       * <code>repeated double embedding = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The embedding to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmbedding(
+          int index, double value) {
+        ensureEmbeddingIsMutable();
+        embedding_.setDouble(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated double embedding = 1;</code>
+       * @param value The embedding to add.
+       * @return This builder for chaining.
+       */
+      public Builder addEmbedding(double value) {
+        ensureEmbeddingIsMutable();
+        embedding_.addDouble(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated double embedding = 1;</code>
+       * @param values The embedding to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllEmbedding(
+          java.lang.Iterable<? extends java.lang.Double> values) {
+        ensureEmbeddingIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, embedding_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated double embedding = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmbedding() {
+        embedding_ = emptyDoubleList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private long numTokens_ ;
+      /**
+       * <code>int64 num_tokens = 2;</code>
+       * @return The numTokens.
+       */
+      @java.lang.Override
+      public long getNumTokens() {
+        return numTokens_;
+      }
+      /**
+       * <code>int64 num_tokens = 2;</code>
+       * @param value The numTokens to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumTokens(long value) {
+        
+        numTokens_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 num_tokens = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumTokens() {
+        
+        numTokens_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.llm.v1alpha.EmbeddingResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.llm.v1alpha.EmbeddingResponse)
+    private static final yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse();
+    }
+
+    public static yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EmbeddingResponse>
+        PARSER = new com.google.protobuf.AbstractParser<EmbeddingResponse>() {
+      @java.lang.Override
+      public EmbeddingResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EmbeddingResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EmbeddingResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EmbeddingResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_llm_v1alpha_InstructRequest_descriptor;
   private static final 
@@ -6724,6 +8546,16 @@ public final class LlmService {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_llm_v1alpha_TokenizeResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_llm_v1alpha_EmbeddingRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_llm_v1alpha_EmbeddingRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_llm_v1alpha_EmbeddingResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_llm_v1alpha_EmbeddingResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -6737,40 +8569,52 @@ public final class LlmService {
       "e.proto\022\033yandex.cloud.ai.llm.v1alpha\032%ya" +
       "ndex/cloud/ai/llm/v1alpha/llm.proto\032\034goo" +
       "gle/api/annotations.proto\032\035yandex/cloud/" +
-      "validation.proto\"\304\001\n\017InstructRequest\022\027\n\005" +
+      "validation.proto\"\337\001\n\017InstructRequest\022\027\n\005" +
       "model\030\001 \001(\tB\010\212\3101\004<=50\022J\n\022generation_opti" +
       "ons\030\002 \001(\0132..yandex.cloud.ai.llm.v1alpha." +
       "GenerationOptions\022\032\n\020instruction_text\030\003 " +
-      "\001(\tH\000\022\026\n\014request_text\030\004 \001(\tH\001B\r\n\013Instruc" +
-      "tionB\t\n\007Request\"m\n\020InstructResponse\022>\n\014a" +
-      "lternatives\030\001 \003(\0132(.yandex.cloud.ai.llm." +
-      "v1alpha.Alternative\022\031\n\021num_prompt_tokens" +
-      "\030\002 \001(\003\"\325\001\n\013ChatRequest\022\027\n\005model\030\001 \001(\tB\010\212" +
-      "\3101\004<=50\022J\n\022generation_options\030\002 \001(\0132..ya" +
-      "ndex.cloud.ai.llm.v1alpha.GenerationOpti" +
-      "ons\022\032\n\020instruction_text\030\003 \001(\tH\000\0226\n\010messa" +
-      "ges\030\004 \003(\0132$.yandex.cloud.ai.llm.v1alpha." +
-      "MessageB\r\n\013Instruction\"Y\n\014ChatResponse\0225" +
-      "\n\007message\030\001 \001(\0132$.yandex.cloud.ai.llm.v1" +
-      "alpha.Message\022\022\n\nnum_tokens\030\002 \001(\003\"8\n\017Tok" +
-      "enizeRequest\022\027\n\005model\030\001 \001(\tB\010\212\3101\004<=50\022\014\n" +
-      "\004text\030\002 \001(\t\"F\n\020TokenizeResponse\0222\n\006token" +
-      "s\030\001 \003(\0132\".yandex.cloud.ai.llm.v1alpha.To" +
-      "ken2\242\002\n\025TextGenerationService\022\213\001\n\010Instru" +
-      "ct\022,.yandex.cloud.ai.llm.v1alpha.Instruc" +
-      "tRequest\032-.yandex.cloud.ai.llm.v1alpha.I" +
-      "nstructResponse\" \202\323\344\223\002\032\"\025/llm/v1alpha/in" +
-      "struct:\001*0\001\022{\n\004Chat\022(.yandex.cloud.ai.ll" +
-      "m.v1alpha.ChatRequest\032).yandex.cloud.ai." +
-      "llm.v1alpha.ChatResponse\"\034\202\323\344\223\002\026\"\021/llm/v" +
-      "1alpha/chat:\001*0\0012\236\001\n\020TokenizerService\022\211\001" +
-      "\n\010Tokenize\022,.yandex.cloud.ai.llm.v1alpha" +
-      ".TokenizeRequest\032-.yandex.cloud.ai.llm.v" +
-      "1alpha.TokenizeResponse\" \202\323\344\223\002\032\"\025/llm/v1" +
-      "alpha/tokenize:\001*Bf\n\037yandex.cloud.api.ai" +
-      ".llm.v1alphaZCgithub.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/ai/llm/v1alpha;ll" +
-      "mb\006proto3"
+      "\001(\tH\000\022\031\n\017instruction_uri\030\005 \001(\tH\000\022\026\n\014requ" +
+      "est_text\030\004 \001(\tH\001B\r\n\013InstructionB\t\n\007Reque" +
+      "st\"m\n\020InstructResponse\022>\n\014alternatives\030\001" +
+      " \003(\0132(.yandex.cloud.ai.llm.v1alpha.Alter" +
+      "native\022\031\n\021num_prompt_tokens\030\002 \001(\003\"\325\001\n\013Ch" +
+      "atRequest\022\027\n\005model\030\001 \001(\tB\010\212\3101\004<=50\022J\n\022ge" +
+      "neration_options\030\002 \001(\0132..yandex.cloud.ai" +
+      ".llm.v1alpha.GenerationOptions\022\032\n\020instru" +
+      "ction_text\030\003 \001(\tH\000\0226\n\010messages\030\004 \003(\0132$.y" +
+      "andex.cloud.ai.llm.v1alpha.MessageB\r\n\013In" +
+      "struction\"Y\n\014ChatResponse\0225\n\007message\030\001 \001" +
+      "(\0132$.yandex.cloud.ai.llm.v1alpha.Message" +
+      "\022\022\n\nnum_tokens\030\002 \001(\003\"8\n\017TokenizeRequest\022" +
+      "\027\n\005model\030\001 \001(\tB\010\212\3101\004<=50\022\014\n\004text\030\002 \001(\t\"F" +
+      "\n\020TokenizeResponse\0222\n\006tokens\030\001 \003(\0132\".yan" +
+      "dex.cloud.ai.llm.v1alpha.Token\"\354\001\n\020Embed" +
+      "dingRequest\022S\n\016embedding_type\030\001 \001(\0162;.ya" +
+      "ndex.cloud.ai.llm.v1alpha.EmbeddingReque" +
+      "st.EmbeddingType\022\r\n\005model\030\002 \001(\t\022\014\n\004text\030" +
+      "\003 \001(\t\"f\n\rEmbeddingType\022\036\n\032EMBEDDING_TYPE" +
+      "_UNSPECIFIED\020\000\022\030\n\024EMBEDDING_TYPE_QUERY\020\001" +
+      "\022\033\n\027EMBEDDING_TYPE_DOCUMENT\020\002\":\n\021Embeddi" +
+      "ngResponse\022\021\n\tembedding\030\001 \003(\001\022\022\n\nnum_tok" +
+      "ens\030\002 \001(\0032\242\002\n\025TextGenerationService\022\213\001\n\010" +
+      "Instruct\022,.yandex.cloud.ai.llm.v1alpha.I" +
+      "nstructRequest\032-.yandex.cloud.ai.llm.v1a" +
+      "lpha.InstructResponse\" \202\323\344\223\002\032\"\025/llm/v1al" +
+      "pha/instruct:\001*0\001\022{\n\004Chat\022(.yandex.cloud" +
+      ".ai.llm.v1alpha.ChatRequest\032).yandex.clo" +
+      "ud.ai.llm.v1alpha.ChatResponse\"\034\202\323\344\223\002\026\"\021" +
+      "/llm/v1alpha/chat:\001*0\0012\236\001\n\020TokenizerServ" +
+      "ice\022\211\001\n\010Tokenize\022,.yandex.cloud.ai.llm.v" +
+      "1alpha.TokenizeRequest\032-.yandex.cloud.ai" +
+      ".llm.v1alpha.TokenizeResponse\" \202\323\344\223\002\032\"\025/" +
+      "llm/v1alpha/tokenize:\001*2\243\001\n\021EmbeddingsSe" +
+      "rvice\022\215\001\n\tEmbedding\022-.yandex.cloud.ai.ll" +
+      "m.v1alpha.EmbeddingRequest\032..yandex.clou" +
+      "d.ai.llm.v1alpha.EmbeddingResponse\"!\202\323\344\223" +
+      "\002\033\"\026/llm/v1alpha/embedding:\001*Bf\n\037yandex." +
+      "cloud.api.ai.llm.v1alphaZCgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/ai/ll" +
+      "m/v1alpha;llmb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6784,7 +8628,7 @@ public final class LlmService {
     internal_static_yandex_cloud_ai_llm_v1alpha_InstructRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_llm_v1alpha_InstructRequest_descriptor,
-        new java.lang.String[] { "Model", "GenerationOptions", "InstructionText", "RequestText", "Instruction", "Request", });
+        new java.lang.String[] { "Model", "GenerationOptions", "InstructionText", "InstructionUri", "RequestText", "Instruction", "Request", });
     internal_static_yandex_cloud_ai_llm_v1alpha_InstructResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_ai_llm_v1alpha_InstructResponse_fieldAccessorTable = new
@@ -6815,6 +8659,18 @@ public final class LlmService {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_llm_v1alpha_TokenizeResponse_descriptor,
         new java.lang.String[] { "Tokens", });
+    internal_static_yandex_cloud_ai_llm_v1alpha_EmbeddingRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_ai_llm_v1alpha_EmbeddingRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_llm_v1alpha_EmbeddingRequest_descriptor,
+        new java.lang.String[] { "EmbeddingType", "Model", "Text", });
+    internal_static_yandex_cloud_ai_llm_v1alpha_EmbeddingResponse_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_yandex_cloud_ai_llm_v1alpha_EmbeddingResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_llm_v1alpha_EmbeddingResponse_descriptor,
+        new java.lang.String[] { "Embedding", "NumTokens", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

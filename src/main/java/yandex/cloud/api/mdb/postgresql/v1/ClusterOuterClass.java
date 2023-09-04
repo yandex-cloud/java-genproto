@@ -6488,6 +6488,33 @@ public final class ClusterOuterClass {
      */
     yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnosticsOrBuilder getPerformanceDiagnosticsOrBuilder();
 
+    /**
+     * <pre>
+     * Disk size autoscaling
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+     * @return Whether the diskSizeAutoscaling field is set.
+     */
+    boolean hasDiskSizeAutoscaling();
+    /**
+     * <pre>
+     * Disk size autoscaling
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+     * @return The diskSizeAutoscaling.
+     */
+    yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+    /**
+     * <pre>
+     * Disk size autoscaling
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+     */
+    yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
+
     public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.ClusterConfig.PostgresqlConfigCase getPostgresqlConfigCase();
   }
   /**
@@ -6813,6 +6840,19 @@ public final class ClusterOuterClass {
                 postgresqlConfig_ = subBuilder.buildPartial();
               }
               postgresqlConfigCase_ = 22;
+              break;
+            }
+            case 186: {
+              yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+              if (diskSizeAutoscaling_ != null) {
+                subBuilder = diskSizeAutoscaling_.toBuilder();
+              }
+              diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(diskSizeAutoscaling_);
+                diskSizeAutoscaling_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -7781,6 +7821,44 @@ public final class ClusterOuterClass {
       return getPerformanceDiagnostics();
     }
 
+    public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 23;
+    private yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+    /**
+     * <pre>
+     * Disk size autoscaling
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+     * @return Whether the diskSizeAutoscaling field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiskSizeAutoscaling() {
+      return diskSizeAutoscaling_ != null;
+    }
+    /**
+     * <pre>
+     * Disk size autoscaling
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+     * @return The diskSizeAutoscaling.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+      return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+    }
+    /**
+     * <pre>
+     * Disk size autoscaling
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+      return getDiskSizeAutoscaling();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7857,6 +7935,9 @@ public final class ClusterOuterClass {
       }
       if (postgresqlConfigCase_ == 22) {
         output.writeMessage(22, (yandex.cloud.api.mdb.postgresql.v1.config.Postgresql151C.PostgresqlConfigSet15_1C) postgresqlConfig_);
+      }
+      if (diskSizeAutoscaling_ != null) {
+        output.writeMessage(23, getDiskSizeAutoscaling());
       }
       unknownFields.writeTo(output);
     }
@@ -7950,6 +8031,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(22, (yandex.cloud.api.mdb.postgresql.v1.config.Postgresql151C.PostgresqlConfigSet15_1C) postgresqlConfig_);
       }
+      if (diskSizeAutoscaling_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(23, getDiskSizeAutoscaling());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -8001,6 +8086,11 @@ public final class ClusterOuterClass {
       if (hasPerformanceDiagnostics()) {
         if (!getPerformanceDiagnostics()
             .equals(other.getPerformanceDiagnostics())) return false;
+      }
+      if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+      if (hasDiskSizeAutoscaling()) {
+        if (!getDiskSizeAutoscaling()
+            .equals(other.getDiskSizeAutoscaling())) return false;
       }
       if (!getPostgresqlConfigCase().equals(other.getPostgresqlConfigCase())) return false;
       switch (postgresqlConfigCase_) {
@@ -8099,6 +8189,10 @@ public final class ClusterOuterClass {
       if (hasPerformanceDiagnostics()) {
         hash = (37 * hash) + PERFORMANCE_DIAGNOSTICS_FIELD_NUMBER;
         hash = (53 * hash) + getPerformanceDiagnostics().hashCode();
+      }
+      if (hasDiskSizeAutoscaling()) {
+        hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+        hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
       }
       switch (postgresqlConfigCase_) {
         case 2:
@@ -8333,6 +8427,12 @@ public final class ClusterOuterClass {
           performanceDiagnostics_ = null;
           performanceDiagnosticsBuilder_ = null;
         }
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscaling_ = null;
+        } else {
+          diskSizeAutoscaling_ = null;
+          diskSizeAutoscalingBuilder_ = null;
+        }
         postgresqlConfigCase_ = 0;
         postgresqlConfig_ = null;
         return this;
@@ -8488,6 +8588,11 @@ public final class ClusterOuterClass {
         } else {
           result.performanceDiagnostics_ = performanceDiagnosticsBuilder_.build();
         }
+        if (diskSizeAutoscalingBuilder_ == null) {
+          result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+        } else {
+          result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
+        }
         result.postgresqlConfigCase_ = postgresqlConfigCase_;
         onBuilt();
         return result;
@@ -8561,6 +8666,9 @@ public final class ClusterOuterClass {
         }
         if (other.hasPerformanceDiagnostics()) {
           mergePerformanceDiagnostics(other.getPerformanceDiagnostics());
+        }
+        if (other.hasDiskSizeAutoscaling()) {
+          mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
         }
         switch (other.getPostgresqlConfigCase()) {
           case POSTGRESQL_CONFIG_9_6: {
@@ -12143,6 +12251,161 @@ public final class ClusterOuterClass {
           performanceDiagnostics_ = null;
         }
         return performanceDiagnosticsBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+      /**
+       * <pre>
+       * Disk size autoscaling
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+        } else {
+          return diskSizeAutoscalingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+       */
+      public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          diskSizeAutoscaling_ = value;
+          onChanged();
+        } else {
+          diskSizeAutoscalingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+       */
+      public Builder setDiskSizeAutoscaling(
+          yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscaling_ = builderForValue.build();
+          onChanged();
+        } else {
+          diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+       */
+      public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          if (diskSizeAutoscaling_ != null) {
+            diskSizeAutoscaling_ =
+              yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+          } else {
+            diskSizeAutoscaling_ = value;
+          }
+          onChanged();
+        } else {
+          diskSizeAutoscalingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+       */
+      public Builder clearDiskSizeAutoscaling() {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscaling_ = null;
+          onChanged();
+        } else {
+          diskSizeAutoscaling_ = null;
+          diskSizeAutoscalingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+        
+        onChanged();
+        return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        if (diskSizeAutoscalingBuilder_ != null) {
+          return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+        } else {
+          return diskSizeAutoscaling_ == null ?
+              yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+        }
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+          getDiskSizeAutoscalingFieldBuilder() {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                  getDiskSizeAutoscaling(),
+                  getParentForChildren(),
+                  isClean());
+          diskSizeAutoscaling_ = null;
+        }
+        return diskSizeAutoscalingBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -24446,6 +24709,697 @@ public final class ClusterOuterClass {
 
   }
 
+  public interface DiskSizeAutoscalingOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>int64 planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return The plannedUsageThreshold.
+     */
+    long getPlannedUsageThreshold();
+
+    /**
+     * <pre>
+     * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>int64 emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return The emergencyUsageThreshold.
+     */
+    long getEmergencyUsageThreshold();
+
+    /**
+     * <pre>
+     * Limit on how large the storage for database instances can automatically grow, in bytes.
+     * </pre>
+     *
+     * <code>int64 disk_size_limit = 3;</code>
+     * @return The diskSizeLimit.
+     */
+    long getDiskSizeLimit();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling}
+   */
+  public static final class DiskSizeAutoscaling extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling)
+      DiskSizeAutoscalingOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DiskSizeAutoscaling.newBuilder() to construct.
+    private DiskSizeAutoscaling(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DiskSizeAutoscaling() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DiskSizeAutoscaling();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DiskSizeAutoscaling(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              plannedUsageThreshold_ = input.readInt64();
+              break;
+            }
+            case 16: {
+
+              emergencyUsageThreshold_ = input.readInt64();
+              break;
+            }
+            case 24: {
+
+              diskSizeLimit_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_postgresql_v1_DiskSizeAutoscaling_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_postgresql_v1_DiskSizeAutoscaling_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.class, yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder.class);
+    }
+
+    public static final int PLANNED_USAGE_THRESHOLD_FIELD_NUMBER = 1;
+    private long plannedUsageThreshold_;
+    /**
+     * <pre>
+     * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>int64 planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return The plannedUsageThreshold.
+     */
+    @java.lang.Override
+    public long getPlannedUsageThreshold() {
+      return plannedUsageThreshold_;
+    }
+
+    public static final int EMERGENCY_USAGE_THRESHOLD_FIELD_NUMBER = 2;
+    private long emergencyUsageThreshold_;
+    /**
+     * <pre>
+     * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+     * </pre>
+     *
+     * <code>int64 emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+     * @return The emergencyUsageThreshold.
+     */
+    @java.lang.Override
+    public long getEmergencyUsageThreshold() {
+      return emergencyUsageThreshold_;
+    }
+
+    public static final int DISK_SIZE_LIMIT_FIELD_NUMBER = 3;
+    private long diskSizeLimit_;
+    /**
+     * <pre>
+     * Limit on how large the storage for database instances can automatically grow, in bytes.
+     * </pre>
+     *
+     * <code>int64 disk_size_limit = 3;</code>
+     * @return The diskSizeLimit.
+     */
+    @java.lang.Override
+    public long getDiskSizeLimit() {
+      return diskSizeLimit_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (plannedUsageThreshold_ != 0L) {
+        output.writeInt64(1, plannedUsageThreshold_);
+      }
+      if (emergencyUsageThreshold_ != 0L) {
+        output.writeInt64(2, emergencyUsageThreshold_);
+      }
+      if (diskSizeLimit_ != 0L) {
+        output.writeInt64(3, diskSizeLimit_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (plannedUsageThreshold_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, plannedUsageThreshold_);
+      }
+      if (emergencyUsageThreshold_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, emergencyUsageThreshold_);
+      }
+      if (diskSizeLimit_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, diskSizeLimit_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling other = (yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling) obj;
+
+      if (getPlannedUsageThreshold()
+          != other.getPlannedUsageThreshold()) return false;
+      if (getEmergencyUsageThreshold()
+          != other.getEmergencyUsageThreshold()) return false;
+      if (getDiskSizeLimit()
+          != other.getDiskSizeLimit()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PLANNED_USAGE_THRESHOLD_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPlannedUsageThreshold());
+      hash = (37 * hash) + EMERGENCY_USAGE_THRESHOLD_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEmergencyUsageThreshold());
+      hash = (37 * hash) + DISK_SIZE_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDiskSizeLimit());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling)
+        yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_postgresql_v1_DiskSizeAutoscaling_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_postgresql_v1_DiskSizeAutoscaling_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.class, yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        plannedUsageThreshold_ = 0L;
+
+        emergencyUsageThreshold_ = 0L;
+
+        diskSizeLimit_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.internal_static_yandex_cloud_mdb_postgresql_v1_DiskSizeAutoscaling_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling build() {
+        yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling buildPartial() {
+        yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling result = new yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling(this);
+        result.plannedUsageThreshold_ = plannedUsageThreshold_;
+        result.emergencyUsageThreshold_ = emergencyUsageThreshold_;
+        result.diskSizeLimit_ = diskSizeLimit_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling) {
+          return mergeFrom((yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling other) {
+        if (other == yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance()) return this;
+        if (other.getPlannedUsageThreshold() != 0L) {
+          setPlannedUsageThreshold(other.getPlannedUsageThreshold());
+        }
+        if (other.getEmergencyUsageThreshold() != 0L) {
+          setEmergencyUsageThreshold(other.getEmergencyUsageThreshold());
+        }
+        if (other.getDiskSizeLimit() != 0L) {
+          setDiskSizeLimit(other.getDiskSizeLimit());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long plannedUsageThreshold_ ;
+      /**
+       * <pre>
+       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>int64 planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       * @return The plannedUsageThreshold.
+       */
+      @java.lang.Override
+      public long getPlannedUsageThreshold() {
+        return plannedUsageThreshold_;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>int64 planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       * @param value The plannedUsageThreshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPlannedUsageThreshold(long value) {
+        
+        plannedUsageThreshold_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>int64 planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPlannedUsageThreshold() {
+        
+        plannedUsageThreshold_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long emergencyUsageThreshold_ ;
+      /**
+       * <pre>
+       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>int64 emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       * @return The emergencyUsageThreshold.
+       */
+      @java.lang.Override
+      public long getEmergencyUsageThreshold() {
+        return emergencyUsageThreshold_;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>int64 emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       * @param value The emergencyUsageThreshold to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmergencyUsageThreshold(long value) {
+        
+        emergencyUsageThreshold_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * </pre>
+       *
+       * <code>int64 emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmergencyUsageThreshold() {
+        
+        emergencyUsageThreshold_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long diskSizeLimit_ ;
+      /**
+       * <pre>
+       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * </pre>
+       *
+       * <code>int64 disk_size_limit = 3;</code>
+       * @return The diskSizeLimit.
+       */
+      @java.lang.Override
+      public long getDiskSizeLimit() {
+        return diskSizeLimit_;
+      }
+      /**
+       * <pre>
+       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * </pre>
+       *
+       * <code>int64 disk_size_limit = 3;</code>
+       * @param value The diskSizeLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDiskSizeLimit(long value) {
+        
+        diskSizeLimit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * </pre>
+       *
+       * <code>int64 disk_size_limit = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDiskSizeLimit() {
+        
+        diskSizeLimit_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling)
+    private static final yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling();
+    }
+
+    public static yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DiskSizeAutoscaling>
+        PARSER = new com.google.protobuf.AbstractParser<DiskSizeAutoscaling>() {
+      @java.lang.Override
+      public DiskSizeAutoscaling parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DiskSizeAutoscaling(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DiskSizeAutoscaling> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DiskSizeAutoscaling> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_postgresql_v1_Cluster_descriptor;
   private static final 
@@ -24501,6 +25455,11 @@ public final class ClusterOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_postgresql_v1_PerformanceDiagnostics_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_postgresql_v1_DiskSizeAutoscaling_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_postgresql_v1_DiskSizeAutoscaling_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -24582,7 +25541,7 @@ public final class ClusterOuterClass {
       "\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007STOPPED" +
       "\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014\n\004name\030\001" +
       " \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004link\030\003 \001(\t\"" +
-      "\224\020\n\rClusterConfig\022\017\n\007version\030\001 \001(\t\022t\n\025po" +
+      "\350\020\n\rClusterConfig\022\017\n\007version\030\001 \001(\t\022t\n\025po" +
       "stgresql_config_9_6\030\002 \001(\0132=.yandex.cloud" +
       ".mdb.postgresql.v1.config.PostgresqlConf" +
       "igSet9_6H\000R\024postgresqlConfig_9_6\022z\n\027post" +
@@ -24633,91 +25592,97 @@ public final class ClusterOuterClass {
       "2&.yandex.cloud.mdb.postgresql.v1.Access" +
       "\022W\n\027performance_diagnostics\030\014 \001(\01326.yand" +
       "ex.cloud.mdb.postgresql.v1.PerformanceDi" +
-      "agnosticsB\023\n\021postgresql_config\"\376\001\n\026Conne" +
-      "ctionPoolerConfig\022X\n\014pooling_mode\030\001 \001(\0162" +
-      "B.yandex.cloud.mdb.postgresql.v1.Connect" +
-      "ionPoolerConfig.PoolingMode\0220\n\014pool_disc" +
-      "ard\030\002 \001(\0132\032.google.protobuf.BoolValue\"X\n" +
-      "\013PoolingMode\022\034\n\030POOLING_MODE_UNSPECIFIED" +
-      "\020\000\022\013\n\007SESSION\020\001\022\017\n\013TRANSACTION\020\002\022\r\n\tSTAT" +
-      "EMENT\020\003\"\360\005\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluste" +
-      "r_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022<\n\tresources" +
-      "\030\004 \001(\0132).yandex.cloud.mdb.postgresql.v1." +
-      "Resources\0227\n\004role\030\005 \001(\0162).yandex.cloud.m" +
-      "db.postgresql.v1.Host.Role\022;\n\006health\030\006 \001" +
-      "(\0162+.yandex.cloud.mdb.postgresql.v1.Host" +
-      ".Health\0229\n\010services\030\007 \003(\0132\'.yandex.cloud" +
-      ".mdb.postgresql.v1.Service\022\021\n\tsubnet_id\030" +
-      "\010 \001(\t\022\032\n\022replication_source\030\t \001(\t\022-\n\010pri" +
-      "ority\030\n \001(\0132\033.google.protobuf.Int64Value" +
-      "\022:\n\006config\030\013 \001(\0132*.yandex.cloud.mdb.post" +
-      "gresql.v1.HostConfig\022\030\n\020assign_public_ip" +
-      "\030\014 \001(\010\022F\n\014replica_type\030\r \001(\01620.yandex.cl" +
-      "oud.mdb.postgresql.v1.Host.ReplicaType\"1" +
-      "\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001\022\013\n\007" +
-      "REPLICA\020\002\"H\n\013ReplicaType\022\030\n\024REPLICA_TYPE" +
-      "_UNKNOWN\020\000\022\t\n\005ASYNC\020\001\022\010\n\004SYNC\020\002\022\n\n\006QUORU" +
-      "M\020\003\"M\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n\005ALI" +
-      "VE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\022\014\n\010READONLY" +
-      "\020\004\"\362\014\n\nHostConfig\022y\n\025postgresql_config_9" +
-      "_6\030\001 \001(\0132>.yandex.cloud.mdb.postgresql.v" +
-      "1.config.PostgresqlHostConfig9_6H\000R\030post" +
-      "gresqlHostConfig_9_6\022\177\n\027postgresql_confi" +
-      "g_10_1c\030\004 \001(\0132@.yandex.cloud.mdb.postgre" +
-      "sql.v1.config.PostgresqlHostConfig10_1CH" +
-      "\000R\032postgresqlHostConfig_10_1c\022v\n\024postgre" +
-      "sql_config_10\030\002 \001(\0132=.yandex.cloud.mdb.p" +
+      "agnostics\022R\n\025disk_size_autoscaling\030\027 \001(\013" +
+      "23.yandex.cloud.mdb.postgresql.v1.DiskSi" +
+      "zeAutoscalingB\023\n\021postgresql_config\"\376\001\n\026C" +
+      "onnectionPoolerConfig\022X\n\014pooling_mode\030\001 " +
+      "\001(\0162B.yandex.cloud.mdb.postgresql.v1.Con" +
+      "nectionPoolerConfig.PoolingMode\0220\n\014pool_" +
+      "discard\030\002 \001(\0132\032.google.protobuf.BoolValu" +
+      "e\"X\n\013PoolingMode\022\034\n\030POOLING_MODE_UNSPECI" +
+      "FIED\020\000\022\013\n\007SESSION\020\001\022\017\n\013TRANSACTION\020\002\022\r\n\t" +
+      "STATEMENT\020\003\"\360\005\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncl" +
+      "uster_id\030\002 \001(\t\022\017\n\007zone_id\030\003 \001(\t\022<\n\tresou" +
+      "rces\030\004 \001(\0132).yandex.cloud.mdb.postgresql" +
+      ".v1.Resources\0227\n\004role\030\005 \001(\0162).yandex.clo" +
+      "ud.mdb.postgresql.v1.Host.Role\022;\n\006health" +
+      "\030\006 \001(\0162+.yandex.cloud.mdb.postgresql.v1." +
+      "Host.Health\0229\n\010services\030\007 \003(\0132\'.yandex.c" +
+      "loud.mdb.postgresql.v1.Service\022\021\n\tsubnet" +
+      "_id\030\010 \001(\t\022\032\n\022replication_source\030\t \001(\t\022-\n" +
+      "\010priority\030\n \001(\0132\033.google.protobuf.Int64V" +
+      "alue\022:\n\006config\030\013 \001(\0132*.yandex.cloud.mdb." +
+      "postgresql.v1.HostConfig\022\030\n\020assign_publi" +
+      "c_ip\030\014 \001(\010\022F\n\014replica_type\030\r \001(\01620.yande" +
+      "x.cloud.mdb.postgresql.v1.Host.ReplicaTy" +
+      "pe\"1\n\004Role\022\020\n\014ROLE_UNKNOWN\020\000\022\n\n\006MASTER\020\001" +
+      "\022\013\n\007REPLICA\020\002\"H\n\013ReplicaType\022\030\n\024REPLICA_" +
+      "TYPE_UNKNOWN\020\000\022\t\n\005ASYNC\020\001\022\010\n\004SYNC\020\002\022\n\n\006Q" +
+      "UORUM\020\003\"M\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022\t\n" +
+      "\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\022\014\n\010READ" +
+      "ONLY\020\004\"\362\014\n\nHostConfig\022y\n\025postgresql_conf" +
+      "ig_9_6\030\001 \001(\0132>.yandex.cloud.mdb.postgres" +
+      "ql.v1.config.PostgresqlHostConfig9_6H\000R\030" +
+      "postgresqlHostConfig_9_6\022\177\n\027postgresql_c" +
+      "onfig_10_1c\030\004 \001(\0132@.yandex.cloud.mdb.pos" +
+      "tgresql.v1.config.PostgresqlHostConfig10" +
+      "_1CH\000R\032postgresqlHostConfig_10_1c\022v\n\024pos" +
+      "tgresql_config_10\030\002 \001(\0132=.yandex.cloud.m" +
+      "db.postgresql.v1.config.PostgresqlHostCo" +
+      "nfig10H\000R\027postgresqlHostConfig_10\022v\n\024pos" +
+      "tgresql_config_11\030\003 \001(\0132=.yandex.cloud.m" +
+      "db.postgresql.v1.config.PostgresqlHostCo" +
+      "nfig11H\000R\027postgresqlHostConfig_11\022\177\n\027pos" +
+      "tgresql_config_11_1c\030\006 \001(\0132@.yandex.clou" +
+      "d.mdb.postgresql.v1.config.PostgresqlHos" +
+      "tConfig11_1CH\000R\032postgresqlHostConfig_11_" +
+      "1c\022v\n\024postgresql_config_12\030\005 \001(\0132=.yande" +
+      "x.cloud.mdb.postgresql.v1.config.Postgre" +
+      "sqlHostConfig12H\000R\027postgresqlHostConfig_" +
+      "12\022\177\n\027postgresql_config_12_1c\030\007 \001(\0132@.ya" +
+      "ndex.cloud.mdb.postgresql.v1.config.Post" +
+      "gresqlHostConfig12_1CH\000R\032postgresqlHostC" +
+      "onfig_12_1c\022v\n\024postgresql_config_13\030\010 \001(" +
+      "\0132=.yandex.cloud.mdb.postgresql.v1.confi" +
+      "g.PostgresqlHostConfig13H\000R\027postgresqlHo" +
+      "stConfig_13\022\177\n\027postgresql_config_13_1c\030\n" +
+      " \001(\0132@.yandex.cloud.mdb.postgresql.v1.co" +
+      "nfig.PostgresqlHostConfig13_1CH\000R\032postgr" +
+      "esqlHostConfig_13_1c\022v\n\024postgresql_confi" +
+      "g_14\030\t \001(\0132=.yandex.cloud.mdb.postgresql" +
+      ".v1.config.PostgresqlHostConfig14H\000R\027pos" +
+      "tgresqlHostConfig_14\022\177\n\027postgresql_confi" +
+      "g_14_1c\030\013 \001(\0132@.yandex.cloud.mdb.postgre" +
+      "sql.v1.config.PostgresqlHostConfig14_1CH" +
+      "\000R\032postgresqlHostConfig_14_1c\022v\n\024postgre" +
+      "sql_config_15\030\014 \001(\0132=.yandex.cloud.mdb.p" +
       "ostgresql.v1.config.PostgresqlHostConfig" +
-      "10H\000R\027postgresqlHostConfig_10\022v\n\024postgre" +
-      "sql_config_11\030\003 \001(\0132=.yandex.cloud.mdb.p" +
-      "ostgresql.v1.config.PostgresqlHostConfig" +
-      "11H\000R\027postgresqlHostConfig_11\022\177\n\027postgre" +
-      "sql_config_11_1c\030\006 \001(\0132@.yandex.cloud.md" +
+      "15H\000R\027postgresqlHostConfig_15\022\177\n\027postgre" +
+      "sql_config_15_1c\030\r \001(\0132@.yandex.cloud.md" +
       "b.postgresql.v1.config.PostgresqlHostCon" +
-      "fig11_1CH\000R\032postgresqlHostConfig_11_1c\022v" +
-      "\n\024postgresql_config_12\030\005 \001(\0132=.yandex.cl" +
-      "oud.mdb.postgresql.v1.config.PostgresqlH" +
-      "ostConfig12H\000R\027postgresqlHostConfig_12\022\177" +
-      "\n\027postgresql_config_12_1c\030\007 \001(\0132@.yandex" +
-      ".cloud.mdb.postgresql.v1.config.Postgres" +
-      "qlHostConfig12_1CH\000R\032postgresqlHostConfi" +
-      "g_12_1c\022v\n\024postgresql_config_13\030\010 \001(\0132=." +
-      "yandex.cloud.mdb.postgresql.v1.config.Po" +
-      "stgresqlHostConfig13H\000R\027postgresqlHostCo" +
-      "nfig_13\022\177\n\027postgresql_config_13_1c\030\n \001(\013" +
-      "2@.yandex.cloud.mdb.postgresql.v1.config" +
-      ".PostgresqlHostConfig13_1CH\000R\032postgresql" +
-      "HostConfig_13_1c\022v\n\024postgresql_config_14" +
-      "\030\t \001(\0132=.yandex.cloud.mdb.postgresql.v1." +
-      "config.PostgresqlHostConfig14H\000R\027postgre" +
-      "sqlHostConfig_14\022\177\n\027postgresql_config_14" +
-      "_1c\030\013 \001(\0132@.yandex.cloud.mdb.postgresql." +
-      "v1.config.PostgresqlHostConfig14_1CH\000R\032p" +
-      "ostgresqlHostConfig_14_1c\022v\n\024postgresql_" +
-      "config_15\030\014 \001(\0132=.yandex.cloud.mdb.postg" +
-      "resql.v1.config.PostgresqlHostConfig15H\000" +
-      "R\027postgresqlHostConfig_15\022\177\n\027postgresql_" +
-      "config_15_1c\030\r \001(\0132@.yandex.cloud.mdb.po" +
-      "stgresql.v1.config.PostgresqlHostConfig1" +
-      "5_1CH\000R\032postgresqlHostConfig_15_1cB\023\n\021po" +
-      "stgresql_config\"\200\002\n\007Service\022:\n\004type\030\001 \001(" +
-      "\0162,.yandex.cloud.mdb.postgresql.v1.Servi" +
-      "ce.Type\022>\n\006health\030\002 \001(\0162..yandex.cloud.m" +
-      "db.postgresql.v1.Service.Health\"8\n\004Type\022" +
-      "\024\n\020TYPE_UNSPECIFIED\020\000\022\016\n\nPOSTGRESQL\020\001\022\n\n" +
-      "\006POOLER\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOWN\020\000\022" +
-      "\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010READONLY\020\003\"P\n\tRe" +
-      "sources\022\032\n\022resource_preset_id\030\001 \001(\t\022\021\n\td" +
-      "isk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t\"W\n\006" +
-      "Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001" +
-      "(\010\022\022\n\nserverless\030\003 \001(\010\022\025\n\rdata_transfer\030" +
-      "\004 \001(\010\"\215\001\n\026PerformanceDiagnostics\022\017\n\007enab" +
-      "led\030\001 \001(\010\022/\n\032sessions_sampling_interval\030" +
-      "\002 \001(\003B\013\372\3071\0071-86400\0221\n\034statements_samplin" +
-      "g_interval\030\003 \001(\003B\013\372\3071\0071-86400Bs\n\"yandex." +
-      "cloud.api.mdb.postgresql.v1ZMgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/md" +
-      "b/postgresql/v1;postgresqlb\006proto3"
+      "fig15_1CH\000R\032postgresqlHostConfig_15_1cB\023" +
+      "\n\021postgresql_config\"\200\002\n\007Service\022:\n\004type\030" +
+      "\001 \001(\0162,.yandex.cloud.mdb.postgresql.v1.S" +
+      "ervice.Type\022>\n\006health\030\002 \001(\0162..yandex.clo" +
+      "ud.mdb.postgresql.v1.Service.Health\"8\n\004T" +
+      "ype\022\024\n\020TYPE_UNSPECIFIED\020\000\022\016\n\nPOSTGRESQL\020" +
+      "\001\022\n\n\006POOLER\020\002\"?\n\006Health\022\022\n\016HEALTH_UNKNOW" +
+      "N\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010READONLY\020\003\"P" +
+      "\n\tResources\022\032\n\022resource_preset_id\030\001 \001(\t\022" +
+      "\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(\t" +
+      "\"W\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql" +
+      "\030\002 \001(\010\022\022\n\nserverless\030\003 \001(\010\022\025\n\rdata_trans" +
+      "fer\030\004 \001(\010\"\215\001\n\026PerformanceDiagnostics\022\017\n\007" +
+      "enabled\030\001 \001(\010\022/\n\032sessions_sampling_inter" +
+      "val\030\002 \001(\003B\013\372\3071\0071-86400\0221\n\034statements_sam" +
+      "pling_interval\030\003 \001(\003B\013\372\3071\0071-86400\"\220\001\n\023Di" +
+      "skSizeAutoscaling\022.\n\027planned_usage_thres" +
+      "hold\030\001 \001(\003B\r\350\3071\000\372\3071\0050-100\0220\n\031emergency_u" +
+      "sage_threshold\030\002 \001(\003B\r\350\3071\000\372\3071\0050-100\022\027\n\017d" +
+      "isk_size_limit\030\003 \001(\003Bs\n\"yandex.cloud.api" +
+      ".mdb.postgresql.v1ZMgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/mdb/postgre" +
+      "sql/v1;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -24777,7 +25742,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_ClusterConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_ClusterConfig_descriptor,
-        new java.lang.String[] { "Version", "PostgresqlConfig96", "PostgresqlConfig101C", "PostgresqlConfig10", "PostgresqlConfig11", "PostgresqlConfig111C", "PostgresqlConfig12", "PostgresqlConfig121C", "PostgresqlConfig13", "PostgresqlConfig131C", "PostgresqlConfig14", "PostgresqlConfig141C", "PostgresqlConfig15", "PostgresqlConfig151C", "PoolerConfig", "Resources", "Autofailover", "BackupWindowStart", "BackupRetainPeriodDays", "Access", "PerformanceDiagnostics", "PostgresqlConfig", });
+        new java.lang.String[] { "Version", "PostgresqlConfig96", "PostgresqlConfig101C", "PostgresqlConfig10", "PostgresqlConfig11", "PostgresqlConfig111C", "PostgresqlConfig12", "PostgresqlConfig121C", "PostgresqlConfig13", "PostgresqlConfig131C", "PostgresqlConfig14", "PostgresqlConfig141C", "PostgresqlConfig15", "PostgresqlConfig151C", "PoolerConfig", "Resources", "Autofailover", "BackupWindowStart", "BackupRetainPeriodDays", "Access", "PerformanceDiagnostics", "DiskSizeAutoscaling", "PostgresqlConfig", });
     internal_static_yandex_cloud_mdb_postgresql_v1_ConnectionPoolerConfig_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_postgresql_v1_ConnectionPoolerConfig_fieldAccessorTable = new
@@ -24820,8 +25785,15 @@ public final class ClusterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_PerformanceDiagnostics_descriptor,
         new java.lang.String[] { "Enabled", "SessionsSamplingInterval", "StatementsSamplingInterval", });
+    internal_static_yandex_cloud_mdb_postgresql_v1_DiskSizeAutoscaling_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_mdb_postgresql_v1_DiskSizeAutoscaling_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_postgresql_v1_DiskSizeAutoscaling_descriptor,
+        new java.lang.String[] { "PlannedUsageThreshold", "EmergencyUsageThreshold", "DiskSizeLimit", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

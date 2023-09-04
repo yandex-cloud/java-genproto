@@ -48647,6 +48647,33 @@ public final class ClusterServiceOuterClass {
      */
     yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.PerformanceDiagnosticsOrBuilder getPerformanceDiagnosticsOrBuilder();
 
+    /**
+     * <pre>
+     * Disk size autoscaling
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+     * @return Whether the diskSizeAutoscaling field is set.
+     */
+    boolean hasDiskSizeAutoscaling();
+    /**
+     * <pre>
+     * Disk size autoscaling
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+     * @return The diskSizeAutoscaling.
+     */
+    yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling();
+    /**
+     * <pre>
+     * Disk size autoscaling
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+     */
+    yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder();
+
     public yandex.cloud.api.mdb.postgresql.v1.ClusterServiceOuterClass.ConfigSpec.PostgresqlConfigCase getPostgresqlConfigCase();
   }
   /**
@@ -48972,6 +48999,19 @@ public final class ClusterServiceOuterClass {
                 postgresqlConfig_ = subBuilder.buildPartial();
               }
               postgresqlConfigCase_ = 22;
+              break;
+            }
+            case 186: {
+              yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder subBuilder = null;
+              if (diskSizeAutoscaling_ != null) {
+                subBuilder = diskSizeAutoscaling_.toBuilder();
+              }
+              diskSizeAutoscaling_ = input.readMessage(yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(diskSizeAutoscaling_);
+                diskSizeAutoscaling_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -49942,6 +49982,44 @@ public final class ClusterServiceOuterClass {
       return getPerformanceDiagnostics();
     }
 
+    public static final int DISK_SIZE_AUTOSCALING_FIELD_NUMBER = 23;
+    private yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+    /**
+     * <pre>
+     * Disk size autoscaling
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+     * @return Whether the diskSizeAutoscaling field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiskSizeAutoscaling() {
+      return diskSizeAutoscaling_ != null;
+    }
+    /**
+     * <pre>
+     * Disk size autoscaling
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+     * @return The diskSizeAutoscaling.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+      return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+    }
+    /**
+     * <pre>
+     * Disk size autoscaling
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+      return getDiskSizeAutoscaling();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -50018,6 +50096,9 @@ public final class ClusterServiceOuterClass {
       }
       if (postgresqlConfigCase_ == 22) {
         output.writeMessage(22, (yandex.cloud.api.mdb.postgresql.v1.config.Postgresql151C.PostgresqlConfig15_1C) postgresqlConfig_);
+      }
+      if (diskSizeAutoscaling_ != null) {
+        output.writeMessage(23, getDiskSizeAutoscaling());
       }
       unknownFields.writeTo(output);
     }
@@ -50111,6 +50192,10 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(22, (yandex.cloud.api.mdb.postgresql.v1.config.Postgresql151C.PostgresqlConfig15_1C) postgresqlConfig_);
       }
+      if (diskSizeAutoscaling_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(23, getDiskSizeAutoscaling());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -50162,6 +50247,11 @@ public final class ClusterServiceOuterClass {
       if (hasPerformanceDiagnostics()) {
         if (!getPerformanceDiagnostics()
             .equals(other.getPerformanceDiagnostics())) return false;
+      }
+      if (hasDiskSizeAutoscaling() != other.hasDiskSizeAutoscaling()) return false;
+      if (hasDiskSizeAutoscaling()) {
+        if (!getDiskSizeAutoscaling()
+            .equals(other.getDiskSizeAutoscaling())) return false;
       }
       if (!getPostgresqlConfigCase().equals(other.getPostgresqlConfigCase())) return false;
       switch (postgresqlConfigCase_) {
@@ -50260,6 +50350,10 @@ public final class ClusterServiceOuterClass {
       if (hasPerformanceDiagnostics()) {
         hash = (37 * hash) + PERFORMANCE_DIAGNOSTICS_FIELD_NUMBER;
         hash = (53 * hash) + getPerformanceDiagnostics().hashCode();
+      }
+      if (hasDiskSizeAutoscaling()) {
+        hash = (37 * hash) + DISK_SIZE_AUTOSCALING_FIELD_NUMBER;
+        hash = (53 * hash) + getDiskSizeAutoscaling().hashCode();
       }
       switch (postgresqlConfigCase_) {
         case 2:
@@ -50494,6 +50588,12 @@ public final class ClusterServiceOuterClass {
           performanceDiagnostics_ = null;
           performanceDiagnosticsBuilder_ = null;
         }
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscaling_ = null;
+        } else {
+          diskSizeAutoscaling_ = null;
+          diskSizeAutoscalingBuilder_ = null;
+        }
         postgresqlConfigCase_ = 0;
         postgresqlConfig_ = null;
         return this;
@@ -50649,6 +50749,11 @@ public final class ClusterServiceOuterClass {
         } else {
           result.performanceDiagnostics_ = performanceDiagnosticsBuilder_.build();
         }
+        if (diskSizeAutoscalingBuilder_ == null) {
+          result.diskSizeAutoscaling_ = diskSizeAutoscaling_;
+        } else {
+          result.diskSizeAutoscaling_ = diskSizeAutoscalingBuilder_.build();
+        }
         result.postgresqlConfigCase_ = postgresqlConfigCase_;
         onBuilt();
         return result;
@@ -50722,6 +50827,9 @@ public final class ClusterServiceOuterClass {
         }
         if (other.hasPerformanceDiagnostics()) {
           mergePerformanceDiagnostics(other.getPerformanceDiagnostics());
+        }
+        if (other.hasDiskSizeAutoscaling()) {
+          mergeDiskSizeAutoscaling(other.getDiskSizeAutoscaling());
         }
         switch (other.getPostgresqlConfigCase()) {
           case POSTGRESQL_CONFIG_9_6: {
@@ -54309,6 +54417,161 @@ public final class ClusterServiceOuterClass {
           performanceDiagnostics_ = null;
         }
         return performanceDiagnosticsBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling diskSizeAutoscaling_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> diskSizeAutoscalingBuilder_;
+      /**
+       * <pre>
+       * Disk size autoscaling
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+       * @return Whether the diskSizeAutoscaling field is set.
+       */
+      public boolean hasDiskSizeAutoscaling() {
+        return diskSizeAutoscalingBuilder_ != null || diskSizeAutoscaling_ != null;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+       * @return The diskSizeAutoscaling.
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling getDiskSizeAutoscaling() {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          return diskSizeAutoscaling_ == null ? yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+        } else {
+          return diskSizeAutoscalingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+       */
+      public Builder setDiskSizeAutoscaling(yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          diskSizeAutoscaling_ = value;
+          onChanged();
+        } else {
+          diskSizeAutoscalingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+       */
+      public Builder setDiskSizeAutoscaling(
+          yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder builderForValue) {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscaling_ = builderForValue.build();
+          onChanged();
+        } else {
+          diskSizeAutoscalingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+       */
+      public Builder mergeDiskSizeAutoscaling(yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling value) {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          if (diskSizeAutoscaling_ != null) {
+            diskSizeAutoscaling_ =
+              yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.newBuilder(diskSizeAutoscaling_).mergeFrom(value).buildPartial();
+          } else {
+            diskSizeAutoscaling_ = value;
+          }
+          onChanged();
+        } else {
+          diskSizeAutoscalingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+       */
+      public Builder clearDiskSizeAutoscaling() {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscaling_ = null;
+          onChanged();
+        } else {
+          diskSizeAutoscaling_ = null;
+          diskSizeAutoscalingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder getDiskSizeAutoscalingBuilder() {
+        
+        onChanged();
+        return getDiskSizeAutoscalingFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+       */
+      public yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder getDiskSizeAutoscalingOrBuilder() {
+        if (diskSizeAutoscalingBuilder_ != null) {
+          return diskSizeAutoscalingBuilder_.getMessageOrBuilder();
+        } else {
+          return diskSizeAutoscaling_ == null ?
+              yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.getDefaultInstance() : diskSizeAutoscaling_;
+        }
+      }
+      /**
+       * <pre>
+       * Disk size autoscaling
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.DiskSizeAutoscaling disk_size_autoscaling = 23;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder> 
+          getDiskSizeAutoscalingFieldBuilder() {
+        if (diskSizeAutoscalingBuilder_ == null) {
+          diskSizeAutoscalingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling, yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscaling.Builder, yandex.cloud.api.mdb.postgresql.v1.ClusterOuterClass.DiskSizeAutoscalingOrBuilder>(
+                  getDiskSizeAutoscaling(),
+                  getParentForChildren(),
+                  isClean());
+          diskSizeAutoscaling_ = null;
+        }
+        return diskSizeAutoscalingBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -59080,7 +59343,7 @@ public final class ClusterServiceOuterClass {
       "plication_source\030\004 \001(\t\022-\n\010priority\030\005 \001(\013" +
       "2\033.google.protobuf.Int64Value\022C\n\013config_" +
       "spec\030\006 \001(\0132..yandex.cloud.mdb.postgresql" +
-      ".v1.ConfigHostSpec\"\352\017\n\nConfigSpec\022\017\n\007ver" +
+      ".v1.ConfigHostSpec\"\276\020\n\nConfigSpec\022\017\n\007ver" +
       "sion\030\001 \001(\t\022q\n\025postgresql_config_9_6\030\002 \001(" +
       "\0132:.yandex.cloud.mdb.postgresql.v1.confi" +
       "g.PostgresqlConfig9_6H\000R\024postgresqlConfi" +
@@ -59130,153 +59393,155 @@ public final class ClusterServiceOuterClass {
       "0\0226\n\006access\030\t \001(\0132&.yandex.cloud.mdb.pos" +
       "tgresql.v1.Access\022W\n\027performance_diagnos" +
       "tics\030\014 \001(\01326.yandex.cloud.mdb.postgresql" +
-      ".v1.PerformanceDiagnosticsB\023\n\021postgresql" +
-      "_config\"\366\014\n\016ConfigHostSpec\022y\n\025postgresql" +
-      "_config_9_6\030\001 \001(\0132>.yandex.cloud.mdb.pos" +
-      "tgresql.v1.config.PostgresqlHostConfig9_" +
-      "6H\000R\030postgresqlHostConfig_9_6\022\177\n\027postgre" +
-      "sql_config_10_1c\030\004 \001(\0132@.yandex.cloud.md" +
+      ".v1.PerformanceDiagnostics\022R\n\025disk_size_" +
+      "autoscaling\030\027 \001(\01323.yandex.cloud.mdb.pos" +
+      "tgresql.v1.DiskSizeAutoscalingB\023\n\021postgr" +
+      "esql_config\"\366\014\n\016ConfigHostSpec\022y\n\025postgr" +
+      "esql_config_9_6\030\001 \001(\0132>.yandex.cloud.mdb" +
+      ".postgresql.v1.config.PostgresqlHostConf" +
+      "ig9_6H\000R\030postgresqlHostConfig_9_6\022\177\n\027pos" +
+      "tgresql_config_10_1c\030\004 \001(\0132@.yandex.clou" +
+      "d.mdb.postgresql.v1.config.PostgresqlHos" +
+      "tConfig10_1CH\000R\032postgresqlHostConfig_10_" +
+      "1c\022v\n\024postgresql_config_10\030\002 \001(\0132=.yande" +
+      "x.cloud.mdb.postgresql.v1.config.Postgre" +
+      "sqlHostConfig10H\000R\027postgresqlHostConfig_" +
+      "10\022v\n\024postgresql_config_11\030\003 \001(\0132=.yande" +
+      "x.cloud.mdb.postgresql.v1.config.Postgre" +
+      "sqlHostConfig11H\000R\027postgresqlHostConfig_" +
+      "11\022\177\n\027postgresql_config_11_1c\030\006 \001(\0132@.ya" +
+      "ndex.cloud.mdb.postgresql.v1.config.Post" +
+      "gresqlHostConfig11_1CH\000R\032postgresqlHostC" +
+      "onfig_11_1c\022v\n\024postgresql_config_12\030\005 \001(" +
+      "\0132=.yandex.cloud.mdb.postgresql.v1.confi" +
+      "g.PostgresqlHostConfig12H\000R\027postgresqlHo" +
+      "stConfig_12\022\177\n\027postgresql_config_12_1c\030\007" +
+      " \001(\0132@.yandex.cloud.mdb.postgresql.v1.co" +
+      "nfig.PostgresqlHostConfig12_1CH\000R\032postgr" +
+      "esqlHostConfig_12_1c\022v\n\024postgresql_confi" +
+      "g_13\030\010 \001(\0132=.yandex.cloud.mdb.postgresql" +
+      ".v1.config.PostgresqlHostConfig13H\000R\027pos" +
+      "tgresqlHostConfig_13\022\177\n\027postgresql_confi" +
+      "g_13_1c\030\n \001(\0132@.yandex.cloud.mdb.postgre" +
+      "sql.v1.config.PostgresqlHostConfig13_1CH" +
+      "\000R\032postgresqlHostConfig_13_1c\022v\n\024postgre" +
+      "sql_config_14\030\t \001(\0132=.yandex.cloud.mdb.p" +
+      "ostgresql.v1.config.PostgresqlHostConfig" +
+      "14H\000R\027postgresqlHostConfig_14\022\177\n\027postgre" +
+      "sql_config_14_1c\030\013 \001(\0132@.yandex.cloud.md" +
       "b.postgresql.v1.config.PostgresqlHostCon" +
-      "fig10_1CH\000R\032postgresqlHostConfig_10_1c\022v" +
-      "\n\024postgresql_config_10\030\002 \001(\0132=.yandex.cl" +
+      "fig14_1CH\000R\032postgresqlHostConfig_14_1c\022v" +
+      "\n\024postgresql_config_15\030\014 \001(\0132=.yandex.cl" +
       "oud.mdb.postgresql.v1.config.PostgresqlH" +
-      "ostConfig10H\000R\027postgresqlHostConfig_10\022v" +
-      "\n\024postgresql_config_11\030\003 \001(\0132=.yandex.cl" +
-      "oud.mdb.postgresql.v1.config.PostgresqlH" +
-      "ostConfig11H\000R\027postgresqlHostConfig_11\022\177" +
-      "\n\027postgresql_config_11_1c\030\006 \001(\0132@.yandex" +
+      "ostConfig15H\000R\027postgresqlHostConfig_15\022\177" +
+      "\n\027postgresql_config_15_1c\030\r \001(\0132@.yandex" +
       ".cloud.mdb.postgresql.v1.config.Postgres" +
-      "qlHostConfig11_1CH\000R\032postgresqlHostConfi" +
-      "g_11_1c\022v\n\024postgresql_config_12\030\005 \001(\0132=." +
-      "yandex.cloud.mdb.postgresql.v1.config.Po" +
-      "stgresqlHostConfig12H\000R\027postgresqlHostCo" +
-      "nfig_12\022\177\n\027postgresql_config_12_1c\030\007 \001(\013" +
-      "2@.yandex.cloud.mdb.postgresql.v1.config" +
-      ".PostgresqlHostConfig12_1CH\000R\032postgresql" +
-      "HostConfig_12_1c\022v\n\024postgresql_config_13" +
-      "\030\010 \001(\0132=.yandex.cloud.mdb.postgresql.v1." +
-      "config.PostgresqlHostConfig13H\000R\027postgre" +
-      "sqlHostConfig_13\022\177\n\027postgresql_config_13" +
-      "_1c\030\n \001(\0132@.yandex.cloud.mdb.postgresql." +
-      "v1.config.PostgresqlHostConfig13_1CH\000R\032p" +
-      "ostgresqlHostConfig_13_1c\022v\n\024postgresql_" +
-      "config_14\030\t \001(\0132=.yandex.cloud.mdb.postg" +
-      "resql.v1.config.PostgresqlHostConfig14H\000" +
-      "R\027postgresqlHostConfig_14\022\177\n\027postgresql_" +
-      "config_14_1c\030\013 \001(\0132@.yandex.cloud.mdb.po" +
-      "stgresql.v1.config.PostgresqlHostConfig1" +
-      "4_1CH\000R\032postgresqlHostConfig_14_1c\022v\n\024po" +
-      "stgresql_config_15\030\014 \001(\0132=.yandex.cloud." +
-      "mdb.postgresql.v1.config.PostgresqlHostC" +
-      "onfig15H\000R\027postgresqlHostConfig_15\022\177\n\027po" +
-      "stgresql_config_15_1c\030\r \001(\0132@.yandex.clo" +
-      "ud.mdb.postgresql.v1.config.PostgresqlHo" +
-      "stConfig15_1CH\000R\032postgresqlHostConfig_15" +
-      "_1cB\023\n\021postgresql_config2\267\037\n\016ClusterServ" +
-      "ice\022\227\001\n\003Get\0221.yandex.cloud.mdb.postgresq" +
-      "l.v1.GetClusterRequest\032\'.yandex.cloud.md" +
-      "b.postgresql.v1.Cluster\"4\202\323\344\223\002.\022,/manage" +
-      "d-postgresql/v1/clusters/{cluster_id}\022\232\001" +
-      "\n\004List\0223.yandex.cloud.mdb.postgresql.v1." +
-      "ListClustersRequest\0324.yandex.cloud.mdb.p" +
-      "ostgresql.v1.ListClustersResponse\"\'\202\323\344\223\002" +
-      "!\022\037/managed-postgresql/v1/clusters\022\261\001\n\006C" +
-      "reate\0224.yandex.cloud.mdb.postgresql.v1.C" +
-      "reateClusterRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"N\202\323\344\223\002$\"\037/managed-postgre" +
-      "sql/v1/clusters:\001*\262\322* \n\025CreateClusterMet" +
-      "adata\022\007Cluster\022\276\001\n\006Update\0224.yandex.cloud" +
-      ".mdb.postgresql.v1.UpdateClusterRequest\032" +
-      "!.yandex.cloud.operation.Operation\"[\202\323\344\223" +
-      "\00212,/managed-postgresql/v1/clusters/{clu" +
-      "ster_id}:\001*\262\322* \n\025UpdateClusterMetadata\022\007" +
-      "Cluster\022\311\001\n\006Delete\0224.yandex.cloud.mdb.po" +
-      "stgresql.v1.DeleteClusterRequest\032!.yande" +
-      "x.cloud.operation.Operation\"f\202\323\344\223\002.*,/ma" +
+      "qlHostConfig15_1CH\000R\032postgresqlHostConfi" +
+      "g_15_1cB\023\n\021postgresql_config2\267\037\n\016Cluster" +
+      "Service\022\227\001\n\003Get\0221.yandex.cloud.mdb.postg" +
+      "resql.v1.GetClusterRequest\032\'.yandex.clou" +
+      "d.mdb.postgresql.v1.Cluster\"4\202\323\344\223\002.\022,/ma" +
       "naged-postgresql/v1/clusters/{cluster_id" +
-      "}\262\322*.\n\025DeleteClusterMetadata\022\025google.pro" +
-      "tobuf.Empty\022\276\001\n\005Start\0223.yandex.cloud.mdb" +
-      ".postgresql.v1.StartClusterRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"]\202\323\344\223\0024\"2/" +
-      "managed-postgresql/v1/clusters/{cluster_" +
-      "id}:start\262\322*\037\n\024StartClusterMetadata\022\007Clu" +
-      "ster\022\272\001\n\004Stop\0222.yandex.cloud.mdb.postgre" +
-      "sql.v1.StopClusterRequest\032!.yandex.cloud" +
-      ".operation.Operation\"[\202\323\344\223\0023\"1/managed-p" +
-      "ostgresql/v1/clusters/{cluster_id}:stop\262" +
-      "\322*\036\n\023StopClusterMetadata\022\007Cluster\022\275\001\n\004Mo" +
-      "ve\0222.yandex.cloud.mdb.postgresql.v1.Move" +
+      "}\022\232\001\n\004List\0223.yandex.cloud.mdb.postgresql" +
+      ".v1.ListClustersRequest\0324.yandex.cloud.m" +
+      "db.postgresql.v1.ListClustersResponse\"\'\202" +
+      "\323\344\223\002!\022\037/managed-postgresql/v1/clusters\022\261" +
+      "\001\n\006Create\0224.yandex.cloud.mdb.postgresql." +
+      "v1.CreateClusterRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"N\202\323\344\223\002$\"\037/managed-pos" +
+      "tgresql/v1/clusters:\001*\262\322* \n\025CreateCluste" +
+      "rMetadata\022\007Cluster\022\276\001\n\006Update\0224.yandex.c" +
+      "loud.mdb.postgresql.v1.UpdateClusterRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"[" +
+      "\202\323\344\223\00212,/managed-postgresql/v1/clusters/" +
+      "{cluster_id}:\001*\262\322* \n\025UpdateClusterMetada" +
+      "ta\022\007Cluster\022\311\001\n\006Delete\0224.yandex.cloud.md" +
+      "b.postgresql.v1.DeleteClusterRequest\032!.y" +
+      "andex.cloud.operation.Operation\"f\202\323\344\223\002.*" +
+      ",/managed-postgresql/v1/clusters/{cluste" +
+      "r_id}\262\322*.\n\025DeleteClusterMetadata\022\025google" +
+      ".protobuf.Empty\022\276\001\n\005Start\0223.yandex.cloud" +
+      ".mdb.postgresql.v1.StartClusterRequest\032!" +
+      ".yandex.cloud.operation.Operation\"]\202\323\344\223\002" +
+      "4\"2/managed-postgresql/v1/clusters/{clus" +
+      "ter_id}:start\262\322*\037\n\024StartClusterMetadata\022" +
+      "\007Cluster\022\272\001\n\004Stop\0222.yandex.cloud.mdb.pos" +
+      "tgresql.v1.StopClusterRequest\032!.yandex.c" +
+      "loud.operation.Operation\"[\202\323\344\223\0023\"1/manag" +
+      "ed-postgresql/v1/clusters/{cluster_id}:s" +
+      "top\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\275\001" +
+      "\n\004Move\0222.yandex.cloud.mdb.postgresql.v1." +
+      "MoveClusterRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"^\202\323\344\223\0026\"1/managed-postgres" +
+      "ql/v1/clusters/{cluster_id}:move:\001*\262\322*\036\n" +
+      "\023MoveClusterMetadata\022\007Cluster\022\302\001\n\006Backup" +
+      "\0224.yandex.cloud.mdb.postgresql.v1.Backup" +
       "ClusterRequest\032!.yandex.cloud.operation." +
-      "Operation\"^\202\323\344\223\0026\"1/managed-postgresql/v" +
-      "1/clusters/{cluster_id}:move:\001*\262\322*\036\n\023Mov" +
-      "eClusterMetadata\022\007Cluster\022\302\001\n\006Backup\0224.y" +
-      "andex.cloud.mdb.postgresql.v1.BackupClus" +
-      "terRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"_\202\323\344\223\0025\"3/managed-postgresql/v1/cl" +
-      "usters/{cluster_id}:backup\262\322* \n\025BackupCl" +
-      "usterMetadata\022\007Cluster\022\274\001\n\007Restore\0225.yan" +
-      "dex.cloud.mdb.postgresql.v1.RestoreClust" +
-      "erRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"W\202\323\344\223\002,\"\'/managed-postgresql/v1/clu" +
-      "sters:restore:\001*\262\322*!\n\026RestoreClusterMeta" +
-      "data\022\007Cluster\022\363\001\n\025RescheduleMaintenance\022" +
-      "<.yandex.cloud.mdb.postgresql.v1.Resched" +
-      "uleMaintenanceRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"y\202\323\344\223\002G\"B/managed-postg" +
-      "resql/v1/clusters/{cluster_id}:reschedul" +
-      "eMaintenance:\001*\262\322*(\n\035RescheduleMaintenan" +
-      "ceMetadata\022\007Cluster\022\341\001\n\rStartFailover\022;." +
-      "yandex.cloud.mdb.postgresql.v1.StartClus" +
-      "terFailoverRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"p\202\323\344\223\002?\":/managed-postgres" +
-      "ql/v1/clusters/{cluster_id}:startFailove" +
-      "r:\001*\262\322*\'\n\034StartClusterFailoverMetadata\022\007" +
-      "Cluster\022\266\001\n\010ListLogs\0226.yandex.cloud.mdb." +
-      "postgresql.v1.ListClusterLogsRequest\0327.y" +
-      "andex.cloud.mdb.postgresql.v1.ListCluste" +
-      "rLogsResponse\"9\202\323\344\223\0023\0221/managed-postgres" +
-      "ql/v1/clusters/{cluster_id}:logs\022\273\001\n\nStr" +
-      "eamLogs\0228.yandex.cloud.mdb.postgresql.v1" +
-      ".StreamClusterLogsRequest\032/.yandex.cloud" +
-      ".mdb.postgresql.v1.StreamLogRecord\"@\202\323\344\223" +
-      "\002:\0228/managed-postgresql/v1/clusters/{clu" +
-      "ster_id}:stream_logs0\001\022\316\001\n\016ListOperation" +
-      "s\022<.yandex.cloud.mdb.postgresql.v1.ListC" +
-      "lusterOperationsRequest\032=.yandex.cloud.m" +
-      "db.postgresql.v1.ListClusterOperationsRe" +
-      "sponse\"?\202\323\344\223\0029\0227/managed-postgresql/v1/c" +
-      "lusters/{cluster_id}/operations\022\302\001\n\013List" +
-      "Backups\0229.yandex.cloud.mdb.postgresql.v1" +
-      ".ListClusterBackupsRequest\032:.yandex.clou" +
-      "d.mdb.postgresql.v1.ListClusterBackupsRe" +
-      "sponse\"<\202\323\344\223\0026\0224/managed-postgresql/v1/c" +
-      "lusters/{cluster_id}/backups\022\272\001\n\tListHos" +
-      "ts\0227.yandex.cloud.mdb.postgresql.v1.List" +
-      "ClusterHostsRequest\0328.yandex.cloud.mdb.p" +
-      "ostgresql.v1.ListClusterHostsResponse\":\202" +
-      "\323\344\223\0024\0222/managed-postgresql/v1/clusters/{" +
-      "cluster_id}/hosts\022\344\001\n\010AddHosts\0226.yandex." +
-      "cloud.mdb.postgresql.v1.AddClusterHostsR" +
-      "equest\032!.yandex.cloud.operation.Operatio",
-      "n\"}\202\323\344\223\002C\">/managed-postgresql/v1/cluste" +
-      "rs/{cluster_id}/hosts:batchCreate:\001*\262\322*0" +
-      "\n\027AddClusterHostsMetadata\022\025google.protob" +
-      "uf.Empty\022\356\001\n\013DeleteHosts\0229.yandex.cloud." +
-      "mdb.postgresql.v1.DeleteClusterHostsRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"\200" +
-      "\001\202\323\344\223\002C\">/managed-postgresql/v1/clusters" +
-      "/{cluster_id}/hosts:batchDelete:\001*\262\322*3\n\032" +
-      "DeleteClusterHostsMetadata\022\025google.proto" +
-      "buf.Empty\022\356\001\n\013UpdateHosts\0229.yandex.cloud" +
-      ".mdb.postgresql.v1.UpdateClusterHostsReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "\200\001\202\323\344\223\002C\">/managed-postgresql/v1/cluster" +
-      "s/{cluster_id}/hosts:batchUpdate:\001*\262\322*3\n" +
-      "\032UpdateClusterHostsMetadata\022\025google.prot" +
-      "obuf.EmptyBs\n\"yandex.cloud.api.mdb.postg" +
-      "resql.v1ZMgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/mdb/postgresql/v1;pos" +
-      "tgresqlb\006proto3"
+      "Operation\"_\202\323\344\223\0025\"3/managed-postgresql/v" +
+      "1/clusters/{cluster_id}:backup\262\322* \n\025Back" +
+      "upClusterMetadata\022\007Cluster\022\274\001\n\007Restore\0225" +
+      ".yandex.cloud.mdb.postgresql.v1.RestoreC" +
+      "lusterRequest\032!.yandex.cloud.operation.O" +
+      "peration\"W\202\323\344\223\002,\"\'/managed-postgresql/v1" +
+      "/clusters:restore:\001*\262\322*!\n\026RestoreCluster" +
+      "Metadata\022\007Cluster\022\363\001\n\025RescheduleMaintena" +
+      "nce\022<.yandex.cloud.mdb.postgresql.v1.Res" +
+      "cheduleMaintenanceRequest\032!.yandex.cloud" +
+      ".operation.Operation\"y\202\323\344\223\002G\"B/managed-p" +
+      "ostgresql/v1/clusters/{cluster_id}:resch" +
+      "eduleMaintenance:\001*\262\322*(\n\035RescheduleMaint" +
+      "enanceMetadata\022\007Cluster\022\341\001\n\rStartFailove" +
+      "r\022;.yandex.cloud.mdb.postgresql.v1.Start" +
+      "ClusterFailoverRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"p\202\323\344\223\002?\":/managed-post" +
+      "gresql/v1/clusters/{cluster_id}:startFai" +
+      "lover:\001*\262\322*\'\n\034StartClusterFailoverMetada" +
+      "ta\022\007Cluster\022\266\001\n\010ListLogs\0226.yandex.cloud." +
+      "mdb.postgresql.v1.ListClusterLogsRequest" +
+      "\0327.yandex.cloud.mdb.postgresql.v1.ListCl" +
+      "usterLogsResponse\"9\202\323\344\223\0023\0221/managed-post" +
+      "gresql/v1/clusters/{cluster_id}:logs\022\273\001\n" +
+      "\nStreamLogs\0228.yandex.cloud.mdb.postgresq" +
+      "l.v1.StreamClusterLogsRequest\032/.yandex.c" +
+      "loud.mdb.postgresql.v1.StreamLogRecord\"@" +
+      "\202\323\344\223\002:\0228/managed-postgresql/v1/clusters/" +
+      "{cluster_id}:stream_logs0\001\022\316\001\n\016ListOpera" +
+      "tions\022<.yandex.cloud.mdb.postgresql.v1.L" +
+      "istClusterOperationsRequest\032=.yandex.clo" +
+      "ud.mdb.postgresql.v1.ListClusterOperatio" +
+      "nsResponse\"?\202\323\344\223\0029\0227/managed-postgresql/" +
+      "v1/clusters/{cluster_id}/operations\022\302\001\n\013" +
+      "ListBackups\0229.yandex.cloud.mdb.postgresq" +
+      "l.v1.ListClusterBackupsRequest\032:.yandex." +
+      "cloud.mdb.postgresql.v1.ListClusterBacku" +
+      "psResponse\"<\202\323\344\223\0026\0224/managed-postgresql/" +
+      "v1/clusters/{cluster_id}/backups\022\272\001\n\tLis" +
+      "tHosts\0227.yandex.cloud.mdb.postgresql.v1." +
+      "ListClusterHostsRequest\0328.yandex.cloud.m" +
+      "db.postgresql.v1.ListClusterHostsRespons" +
+      "e\":\202\323\344\223\0024\0222/managed-postgresql/v1/cluste" +
+      "rs/{cluster_id}/hosts\022\344\001\n\010AddHosts\0226.yan",
+      "dex.cloud.mdb.postgresql.v1.AddClusterHo" +
+      "stsRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"}\202\323\344\223\002C\">/managed-postgresql/v1/cl" +
+      "usters/{cluster_id}/hosts:batchCreate:\001*" +
+      "\262\322*0\n\027AddClusterHostsMetadata\022\025google.pr" +
+      "otobuf.Empty\022\356\001\n\013DeleteHosts\0229.yandex.cl" +
+      "oud.mdb.postgresql.v1.DeleteClusterHosts" +
+      "Request\032!.yandex.cloud.operation.Operati" +
+      "on\"\200\001\202\323\344\223\002C\">/managed-postgresql/v1/clus" +
+      "ters/{cluster_id}/hosts:batchDelete:\001*\262\322" +
+      "*3\n\032DeleteClusterHostsMetadata\022\025google.p" +
+      "rotobuf.Empty\022\356\001\n\013UpdateHosts\0229.yandex.c" +
+      "loud.mdb.postgresql.v1.UpdateClusterHost" +
+      "sRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"\200\001\202\323\344\223\002C\">/managed-postgresql/v1/clu" +
+      "sters/{cluster_id}/hosts:batchUpdate:\001*\262" +
+      "\322*3\n\032UpdateClusterHostsMetadata\022\025google." +
+      "protobuf.EmptyBs\n\"yandex.cloud.api.mdb.p" +
+      "ostgresql.v1ZMgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/mdb/postgresql/v1" +
+      ";postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -59602,7 +59867,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_ConfigSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_ConfigSpec_descriptor,
-        new java.lang.String[] { "Version", "PostgresqlConfig96", "PostgresqlConfig101C", "PostgresqlConfig10", "PostgresqlConfig11", "PostgresqlConfig111C", "PostgresqlConfig12", "PostgresqlConfig121C", "PostgresqlConfig13", "PostgresqlConfig131C", "PostgresqlConfig14", "PostgresqlConfig141C", "PostgresqlConfig15", "PostgresqlConfig151C", "PoolerConfig", "Resources", "Autofailover", "BackupWindowStart", "BackupRetainPeriodDays", "Access", "PerformanceDiagnostics", "PostgresqlConfig", });
+        new java.lang.String[] { "Version", "PostgresqlConfig96", "PostgresqlConfig101C", "PostgresqlConfig10", "PostgresqlConfig11", "PostgresqlConfig111C", "PostgresqlConfig12", "PostgresqlConfig121C", "PostgresqlConfig13", "PostgresqlConfig131C", "PostgresqlConfig14", "PostgresqlConfig141C", "PostgresqlConfig15", "PostgresqlConfig151C", "PoolerConfig", "Resources", "Autofailover", "BackupWindowStart", "BackupRetainPeriodDays", "Access", "PerformanceDiagnostics", "DiskSizeAutoscaling", "PostgresqlConfig", });
     internal_static_yandex_cloud_mdb_postgresql_v1_ConfigHostSpec_descriptor =
       getDescriptor().getMessageTypes().get(43);
     internal_static_yandex_cloud_mdb_postgresql_v1_ConfigHostSpec_fieldAccessorTable = new

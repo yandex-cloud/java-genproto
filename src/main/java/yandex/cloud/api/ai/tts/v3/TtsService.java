@@ -25,20 +25,28 @@ public final class TtsService {
     java.lang.String[] descriptorData = {
       "\n(yandex/cloud/ai/tts/v3/tts_service.pro" +
       "to\022\020speechkit.tts.v3\032 yandex/cloud/ai/tt" +
-      "s/v3/tts.proto2\202\001\n\013Synthesizer\022s\n\022Uttera" +
-      "nceSynthesis\022+.speechkit.tts.v3.Utteranc" +
-      "eSynthesisRequest\032,.speechkit.tts.v3.Utt" +
-      "eranceSynthesisResponse\"\0000\001B\\\n\032yandex.cl" +
-      "oud.api.ai.tts.v3Z>github.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/ai/tts/v3;tt" +
-      "sb\006proto3"
+      "s/v3/tts.proto\032\034google/api/annotations.p" +
+      "roto2\250\001\n\013Synthesizer\022\230\001\n\022UtteranceSynthe" +
+      "sis\022+.speechkit.tts.v3.UtteranceSynthesi" +
+      "sRequest\032,.speechkit.tts.v3.UtteranceSyn" +
+      "thesisResponse\"%\202\323\344\223\002\037\"\032/tts/v3/utteranc" +
+      "eSynthesis:\001*0\001B\\\n\032yandex.cloud.api.ai.t" +
+      "ts.v3Z>github.com/yandex-cloud/go-genpro" +
+      "to/yandex/cloud/ai/tts/v3;ttsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           yandex.cloud.api.ai.tts.v3.Tts.getDescriptor(),
+          com.google.api.AnnotationsProto.getDescriptor(),
         });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     yandex.cloud.api.ai.tts.v3.Tts.getDescriptor();
+    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -20,7 +20,7 @@ public final class PolicyServiceOuterClass {
 
     /**
      * <pre>
-     * Either Folder ID or Compute Cloud instance ID should be set.
+     * Folder ID. Either Folder ID or Compute Cloud instance ID should be set.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -29,7 +29,7 @@ public final class PolicyServiceOuterClass {
     java.lang.String getFolderId();
     /**
      * <pre>
-     * Either Folder ID or Compute Cloud instance ID should be set.
+     * Folder ID. Either Folder ID or Compute Cloud instance ID should be set.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -39,11 +39,19 @@ public final class PolicyServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Compute Cloud instance ID. Either Folder ID or Compute Cloud instance ID should be set.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2;</code>
      * @return The computeInstanceId.
      */
     java.lang.String getComputeInstanceId();
     /**
+     * <pre>
+     * Compute Cloud instance ID. Either Folder ID or Compute Cloud instance ID should be set.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -145,7 +153,7 @@ public final class PolicyServiceOuterClass {
     private volatile java.lang.Object folderId_;
     /**
      * <pre>
-     * Either Folder ID or Compute Cloud instance ID should be set.
+     * Folder ID. Either Folder ID or Compute Cloud instance ID should be set.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -166,7 +174,7 @@ public final class PolicyServiceOuterClass {
     }
     /**
      * <pre>
-     * Either Folder ID or Compute Cloud instance ID should be set.
+     * Folder ID. Either Folder ID or Compute Cloud instance ID should be set.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -190,6 +198,10 @@ public final class PolicyServiceOuterClass {
     public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object computeInstanceId_;
     /**
+     * <pre>
+     * Compute Cloud instance ID. Either Folder ID or Compute Cloud instance ID should be set.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2;</code>
      * @return The computeInstanceId.
      */
@@ -207,6 +219,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Compute Cloud instance ID. Either Folder ID or Compute Cloud instance ID should be set.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -547,7 +563,7 @@ public final class PolicyServiceOuterClass {
       private java.lang.Object folderId_ = "";
       /**
        * <pre>
-       * Either Folder ID or Compute Cloud instance ID should be set.
+       * Folder ID. Either Folder ID or Compute Cloud instance ID should be set.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -567,7 +583,7 @@ public final class PolicyServiceOuterClass {
       }
       /**
        * <pre>
-       * Either Folder ID or Compute Cloud instance ID should be set.
+       * Folder ID. Either Folder ID or Compute Cloud instance ID should be set.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -588,7 +604,7 @@ public final class PolicyServiceOuterClass {
       }
       /**
        * <pre>
-       * Either Folder ID or Compute Cloud instance ID should be set.
+       * Folder ID. Either Folder ID or Compute Cloud instance ID should be set.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -607,7 +623,7 @@ public final class PolicyServiceOuterClass {
       }
       /**
        * <pre>
-       * Either Folder ID or Compute Cloud instance ID should be set.
+       * Folder ID. Either Folder ID or Compute Cloud instance ID should be set.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -621,7 +637,7 @@ public final class PolicyServiceOuterClass {
       }
       /**
        * <pre>
-       * Either Folder ID or Compute Cloud instance ID should be set.
+       * Folder ID. Either Folder ID or Compute Cloud instance ID should be set.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -642,6 +658,10 @@ public final class PolicyServiceOuterClass {
 
       private java.lang.Object computeInstanceId_ = "";
       /**
+       * <pre>
+       * Compute Cloud instance ID. Either Folder ID or Compute Cloud instance ID should be set.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @return The computeInstanceId.
        */
@@ -658,6 +678,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID. Either Folder ID or Compute Cloud instance ID should be set.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @return The bytes for computeInstanceId.
        */
@@ -675,6 +699,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID. Either Folder ID or Compute Cloud instance ID should be set.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @param value The computeInstanceId to set.
        * @return This builder for chaining.
@@ -690,6 +718,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID. Either Folder ID or Compute Cloud instance ID should be set.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -700,6 +732,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID. Either Folder ID or Compute Cloud instance ID should be set.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @param value The bytes for computeInstanceId to set.
        * @return This builder for chaining.
@@ -1566,11 +1602,19 @@ public final class PolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -1578,11 +1622,19 @@ public final class PolicyServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Policy name.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Policy name.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for name.
      */
@@ -1711,6 +1763,10 @@ public final class PolicyServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
@@ -1728,6 +1784,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -1749,6 +1809,10 @@ public final class PolicyServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Policy name.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The name.
      */
@@ -1766,6 +1830,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Policy name.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for name.
      */
@@ -2161,6 +2229,10 @@ public final class PolicyServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The folderId.
        */
@@ -2177,6 +2249,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for folderId.
        */
@@ -2194,6 +2270,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -2209,6 +2289,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -2219,6 +2303,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -2237,6 +2325,10 @@ public final class PolicyServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Policy name.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The name.
        */
@@ -2253,6 +2345,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy name.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for name.
        */
@@ -2270,6 +2366,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy name.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -2285,6 +2385,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy name.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -2295,6 +2399,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy name.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -2487,11 +2595,19 @@ public final class PolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The policyId.
      */
     java.lang.String getPolicyId();
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for policyId.
      */
@@ -2585,6 +2701,10 @@ public final class PolicyServiceOuterClass {
     public static final int POLICY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object policyId_;
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The policyId.
      */
@@ -2602,6 +2722,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for policyId.
      */
@@ -2924,6 +3048,10 @@ public final class PolicyServiceOuterClass {
 
       private java.lang.Object policyId_ = "";
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The policyId.
        */
@@ -2940,6 +3068,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for policyId.
        */
@@ -2957,6 +3089,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The policyId to set.
        * @return This builder for chaining.
@@ -2972,6 +3108,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -2982,6 +3122,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for policyId to set.
        * @return This builder for chaining.
@@ -3055,11 +3199,19 @@ public final class PolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The policyId.
      */
     java.lang.String getPolicyId();
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for policyId.
      */
@@ -3153,6 +3305,10 @@ public final class PolicyServiceOuterClass {
     public static final int POLICY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object policyId_;
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The policyId.
      */
@@ -3170,6 +3326,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for policyId.
      */
@@ -3492,6 +3652,10 @@ public final class PolicyServiceOuterClass {
 
       private java.lang.Object policyId_ = "";
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The policyId.
        */
@@ -3508,6 +3672,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for policyId.
        */
@@ -3525,6 +3693,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The policyId to set.
        * @return This builder for chaining.
@@ -3540,6 +3712,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -3550,6 +3726,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for policyId to set.
        * @return This builder for chaining.
@@ -3623,11 +3803,19 @@ public final class PolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The policyId.
      */
     java.lang.String getPolicyId();
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for policyId.
      */
@@ -3749,6 +3937,10 @@ public final class PolicyServiceOuterClass {
     public static final int POLICY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object policyId_;
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The policyId.
      */
@@ -3766,6 +3958,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for policyId.
      */
@@ -4144,6 +4340,10 @@ public final class PolicyServiceOuterClass {
 
       private java.lang.Object policyId_ = "";
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The policyId.
        */
@@ -4160,6 +4360,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for policyId.
        */
@@ -4177,6 +4381,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The policyId to set.
        * @return This builder for chaining.
@@ -4192,6 +4400,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -4202,6 +4414,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for policyId to set.
        * @return This builder for chaining.
@@ -4394,11 +4610,19 @@ public final class PolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The policyId.
      */
     java.lang.String getPolicyId();
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for policyId.
      */
@@ -4492,6 +4716,10 @@ public final class PolicyServiceOuterClass {
     public static final int POLICY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object policyId_;
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The policyId.
      */
@@ -4509,6 +4737,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for policyId.
      */
@@ -4831,6 +5063,10 @@ public final class PolicyServiceOuterClass {
 
       private java.lang.Object policyId_ = "";
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The policyId.
        */
@@ -4847,6 +5083,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for policyId.
        */
@@ -4864,6 +5104,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The policyId to set.
        * @return This builder for chaining.
@@ -4879,6 +5123,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -4889,6 +5137,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for policyId to set.
        * @return This builder for chaining.
@@ -4962,11 +5214,19 @@ public final class PolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The policyId.
      */
     java.lang.String getPolicyId();
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for policyId.
      */
@@ -5060,6 +5320,10 @@ public final class PolicyServiceOuterClass {
     public static final int POLICY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object policyId_;
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The policyId.
      */
@@ -5077,6 +5341,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for policyId.
      */
@@ -5399,6 +5667,10 @@ public final class PolicyServiceOuterClass {
 
       private java.lang.Object policyId_ = "";
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The policyId.
        */
@@ -5415,6 +5687,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for policyId.
        */
@@ -5432,6 +5708,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The policyId to set.
        * @return This builder for chaining.
@@ -5447,6 +5727,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -5457,6 +5741,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for policyId to set.
        * @return This builder for chaining.
@@ -5530,11 +5818,19 @@ public final class PolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The policyId.
      */
     java.lang.String getPolicyId();
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for policyId.
      */
@@ -5628,6 +5924,10 @@ public final class PolicyServiceOuterClass {
     public static final int POLICY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object policyId_;
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The policyId.
      */
@@ -5645,6 +5945,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for policyId.
      */
@@ -5967,6 +6271,10 @@ public final class PolicyServiceOuterClass {
 
       private java.lang.Object policyId_ = "";
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The policyId.
        */
@@ -5983,6 +6291,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for policyId.
        */
@@ -6000,6 +6312,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The policyId to set.
        * @return This builder for chaining.
@@ -6015,6 +6331,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -6025,6 +6345,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for policyId to set.
        * @return This builder for chaining.
@@ -6098,11 +6422,19 @@ public final class PolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The policyId.
      */
     java.lang.String getPolicyId();
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for policyId.
      */
@@ -6110,11 +6442,19 @@ public final class PolicyServiceOuterClass {
         getPolicyIdBytes();
 
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The computeInstanceId.
      */
     java.lang.String getComputeInstanceId();
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for computeInstanceId.
      */
@@ -6215,6 +6555,10 @@ public final class PolicyServiceOuterClass {
     public static final int POLICY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object policyId_;
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The policyId.
      */
@@ -6232,6 +6576,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for policyId.
      */
@@ -6253,6 +6601,10 @@ public final class PolicyServiceOuterClass {
     public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object computeInstanceId_;
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The computeInstanceId.
      */
@@ -6270,6 +6622,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for computeInstanceId.
      */
@@ -6609,6 +6965,10 @@ public final class PolicyServiceOuterClass {
 
       private java.lang.Object policyId_ = "";
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The policyId.
        */
@@ -6625,6 +6985,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for policyId.
        */
@@ -6642,6 +7006,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The policyId to set.
        * @return This builder for chaining.
@@ -6657,6 +7025,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -6667,6 +7039,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for policyId to set.
        * @return This builder for chaining.
@@ -6685,6 +7061,10 @@ public final class PolicyServiceOuterClass {
 
       private java.lang.Object computeInstanceId_ = "";
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The computeInstanceId.
        */
@@ -6701,6 +7081,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for computeInstanceId.
        */
@@ -6718,6 +7102,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The computeInstanceId to set.
        * @return This builder for chaining.
@@ -6733,6 +7121,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -6743,6 +7135,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for computeInstanceId to set.
        * @return This builder for chaining.
@@ -6816,11 +7212,19 @@ public final class PolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1;</code>
      * @return The policyId.
      */
     java.lang.String getPolicyId();
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1;</code>
      * @return The bytes for policyId.
      */
@@ -6828,11 +7232,19 @@ public final class PolicyServiceOuterClass {
         getPolicyIdBytes();
 
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2;</code>
      * @return The computeInstanceId.
      */
     java.lang.String getComputeInstanceId();
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -6933,6 +7345,10 @@ public final class PolicyServiceOuterClass {
     public static final int POLICY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object policyId_;
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1;</code>
      * @return The policyId.
      */
@@ -6950,6 +7366,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1;</code>
      * @return The bytes for policyId.
      */
@@ -6971,6 +7391,10 @@ public final class PolicyServiceOuterClass {
     public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object computeInstanceId_;
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2;</code>
      * @return The computeInstanceId.
      */
@@ -6988,6 +7412,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -7327,6 +7755,10 @@ public final class PolicyServiceOuterClass {
 
       private java.lang.Object policyId_ = "";
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1;</code>
        * @return The policyId.
        */
@@ -7343,6 +7775,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1;</code>
        * @return The bytes for policyId.
        */
@@ -7360,6 +7796,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1;</code>
        * @param value The policyId to set.
        * @return This builder for chaining.
@@ -7375,6 +7815,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -7385,6 +7829,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1;</code>
        * @param value The bytes for policyId to set.
        * @return This builder for chaining.
@@ -7403,6 +7851,10 @@ public final class PolicyServiceOuterClass {
 
       private java.lang.Object computeInstanceId_ = "";
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @return The computeInstanceId.
        */
@@ -7419,6 +7871,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @return The bytes for computeInstanceId.
        */
@@ -7436,6 +7892,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @param value The computeInstanceId to set.
        * @return This builder for chaining.
@@ -7451,6 +7911,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -7461,6 +7925,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @param value The bytes for computeInstanceId to set.
        * @return This builder for chaining.
@@ -7534,16 +8002,28 @@ public final class PolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return Whether the folderId field is set.
      */
     boolean hasFolderId();
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The bytes for folderId.
      */
@@ -7551,16 +8031,28 @@ public final class PolicyServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 2;</code>
      * @return Whether the policyId field is set.
      */
     boolean hasPolicyId();
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 2;</code>
      * @return The policyId.
      */
     java.lang.String getPolicyId();
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 2;</code>
      * @return The bytes for policyId.
      */
@@ -7568,16 +8060,28 @@ public final class PolicyServiceOuterClass {
         getPolicyIdBytes();
 
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 3;</code>
      * @return Whether the computeInstanceId field is set.
      */
     boolean hasComputeInstanceId();
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 3;</code>
      * @return The computeInstanceId.
      */
     java.lang.String getComputeInstanceId();
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 3;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -7726,6 +8230,10 @@ public final class PolicyServiceOuterClass {
 
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return Whether the folderId field is set.
      */
@@ -7733,6 +8241,10 @@ public final class PolicyServiceOuterClass {
       return idCase_ == 1;
     }
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The folderId.
      */
@@ -7754,6 +8266,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The bytes for folderId.
      */
@@ -7778,6 +8294,10 @@ public final class PolicyServiceOuterClass {
 
     public static final int POLICY_ID_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 2;</code>
      * @return Whether the policyId field is set.
      */
@@ -7785,6 +8305,10 @@ public final class PolicyServiceOuterClass {
       return idCase_ == 2;
     }
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 2;</code>
      * @return The policyId.
      */
@@ -7806,6 +8330,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 2;</code>
      * @return The bytes for policyId.
      */
@@ -7830,6 +8358,10 @@ public final class PolicyServiceOuterClass {
 
     public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 3;
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 3;</code>
      * @return Whether the computeInstanceId field is set.
      */
@@ -7837,6 +8369,10 @@ public final class PolicyServiceOuterClass {
       return idCase_ == 3;
     }
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 3;</code>
      * @return The computeInstanceId.
      */
@@ -7858,6 +8394,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 3;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -8267,6 +8807,10 @@ public final class PolicyServiceOuterClass {
 
 
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @return Whether the folderId field is set.
        */
@@ -8275,6 +8819,10 @@ public final class PolicyServiceOuterClass {
         return idCase_ == 1;
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @return The folderId.
        */
@@ -8297,6 +8845,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @return The bytes for folderId.
        */
@@ -8320,6 +8872,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -8335,6 +8891,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -8347,6 +8907,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -8364,6 +8928,10 @@ public final class PolicyServiceOuterClass {
       }
 
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 2;</code>
        * @return Whether the policyId field is set.
        */
@@ -8372,6 +8940,10 @@ public final class PolicyServiceOuterClass {
         return idCase_ == 2;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 2;</code>
        * @return The policyId.
        */
@@ -8394,6 +8966,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 2;</code>
        * @return The bytes for policyId.
        */
@@ -8417,6 +8993,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 2;</code>
        * @param value The policyId to set.
        * @return This builder for chaining.
@@ -8432,6 +9012,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -8444,6 +9028,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 2;</code>
        * @param value The bytes for policyId to set.
        * @return This builder for chaining.
@@ -8461,6 +9049,10 @@ public final class PolicyServiceOuterClass {
       }
 
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 3;</code>
        * @return Whether the computeInstanceId field is set.
        */
@@ -8469,6 +9061,10 @@ public final class PolicyServiceOuterClass {
         return idCase_ == 3;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 3;</code>
        * @return The computeInstanceId.
        */
@@ -8491,6 +9087,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 3;</code>
        * @return The bytes for computeInstanceId.
        */
@@ -8514,6 +9114,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 3;</code>
        * @param value The computeInstanceId to set.
        * @return This builder for chaining.
@@ -8529,6 +9133,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 3;</code>
        * @return This builder for chaining.
        */
@@ -8541,6 +9149,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 3;</code>
        * @param value The bytes for computeInstanceId to set.
        * @return This builder for chaining.
@@ -9407,11 +10019,19 @@ public final class PolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The policyId.
      */
     java.lang.String getPolicyId();
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for policyId.
      */
@@ -9419,11 +10039,19 @@ public final class PolicyServiceOuterClass {
         getPolicyIdBytes();
 
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The computeInstanceId.
      */
     java.lang.String getComputeInstanceId();
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for computeInstanceId.
      */
@@ -9524,6 +10152,10 @@ public final class PolicyServiceOuterClass {
     public static final int POLICY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object policyId_;
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The policyId.
      */
@@ -9541,6 +10173,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for policyId.
      */
@@ -9562,6 +10198,10 @@ public final class PolicyServiceOuterClass {
     public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object computeInstanceId_;
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The computeInstanceId.
      */
@@ -9579,6 +10219,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for computeInstanceId.
      */
@@ -9918,6 +10562,10 @@ public final class PolicyServiceOuterClass {
 
       private java.lang.Object policyId_ = "";
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The policyId.
        */
@@ -9934,6 +10582,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for policyId.
        */
@@ -9951,6 +10603,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The policyId to set.
        * @return This builder for chaining.
@@ -9966,6 +10622,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -9976,6 +10636,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for policyId to set.
        * @return This builder for chaining.
@@ -9994,6 +10658,10 @@ public final class PolicyServiceOuterClass {
 
       private java.lang.Object computeInstanceId_ = "";
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The computeInstanceId.
        */
@@ -10010,6 +10678,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for computeInstanceId.
        */
@@ -10027,6 +10699,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The computeInstanceId to set.
        * @return This builder for chaining.
@@ -10042,6 +10718,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -10052,6 +10732,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for computeInstanceId to set.
        * @return This builder for chaining.
@@ -10125,11 +10809,19 @@ public final class PolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1;</code>
      * @return The policyId.
      */
     java.lang.String getPolicyId();
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1;</code>
      * @return The bytes for policyId.
      */
@@ -10137,11 +10829,19 @@ public final class PolicyServiceOuterClass {
         getPolicyIdBytes();
 
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2;</code>
      * @return The computeInstanceId.
      */
     java.lang.String getComputeInstanceId();
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -10242,6 +10942,10 @@ public final class PolicyServiceOuterClass {
     public static final int POLICY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object policyId_;
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1;</code>
      * @return The policyId.
      */
@@ -10259,6 +10963,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1;</code>
      * @return The bytes for policyId.
      */
@@ -10280,6 +10988,10 @@ public final class PolicyServiceOuterClass {
     public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object computeInstanceId_;
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2;</code>
      * @return The computeInstanceId.
      */
@@ -10297,6 +11009,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -10636,6 +11352,10 @@ public final class PolicyServiceOuterClass {
 
       private java.lang.Object policyId_ = "";
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1;</code>
        * @return The policyId.
        */
@@ -10652,6 +11372,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1;</code>
        * @return The bytes for policyId.
        */
@@ -10669,6 +11393,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1;</code>
        * @param value The policyId to set.
        * @return This builder for chaining.
@@ -10684,6 +11412,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -10694,6 +11426,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1;</code>
        * @param value The bytes for policyId to set.
        * @return This builder for chaining.
@@ -10712,6 +11448,10 @@ public final class PolicyServiceOuterClass {
 
       private java.lang.Object computeInstanceId_ = "";
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @return The computeInstanceId.
        */
@@ -10728,6 +11468,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @return The bytes for computeInstanceId.
        */
@@ -10745,6 +11489,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @param value The computeInstanceId to set.
        * @return This builder for chaining.
@@ -10760,6 +11508,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -10770,6 +11522,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @param value The bytes for computeInstanceId to set.
        * @return This builder for chaining.
@@ -10843,11 +11599,19 @@ public final class PolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The policyId.
      */
     java.lang.String getPolicyId();
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for policyId.
      */
@@ -10855,11 +11619,19 @@ public final class PolicyServiceOuterClass {
         getPolicyIdBytes();
 
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The computeInstanceId.
      */
     java.lang.String getComputeInstanceId();
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for computeInstanceId.
      */
@@ -10960,6 +11732,10 @@ public final class PolicyServiceOuterClass {
     public static final int POLICY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object policyId_;
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The policyId.
      */
@@ -10977,6 +11753,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for policyId.
      */
@@ -10998,6 +11778,10 @@ public final class PolicyServiceOuterClass {
     public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object computeInstanceId_;
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The computeInstanceId.
      */
@@ -11015,6 +11799,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for computeInstanceId.
      */
@@ -11354,6 +12142,10 @@ public final class PolicyServiceOuterClass {
 
       private java.lang.Object policyId_ = "";
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The policyId.
        */
@@ -11370,6 +12162,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for policyId.
        */
@@ -11387,6 +12183,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The policyId to set.
        * @return This builder for chaining.
@@ -11402,6 +12202,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -11412,6 +12216,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for policyId to set.
        * @return This builder for chaining.
@@ -11430,6 +12238,10 @@ public final class PolicyServiceOuterClass {
 
       private java.lang.Object computeInstanceId_ = "";
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The computeInstanceId.
        */
@@ -11446,6 +12258,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for computeInstanceId.
        */
@@ -11463,6 +12279,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The computeInstanceId to set.
        * @return This builder for chaining.
@@ -11478,6 +12298,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -11488,6 +12312,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for computeInstanceId to set.
        * @return This builder for chaining.
@@ -11561,11 +12389,19 @@ public final class PolicyServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1;</code>
      * @return The policyId.
      */
     java.lang.String getPolicyId();
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1;</code>
      * @return The bytes for policyId.
      */
@@ -11573,11 +12409,19 @@ public final class PolicyServiceOuterClass {
         getPolicyIdBytes();
 
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2;</code>
      * @return The computeInstanceId.
      */
     java.lang.String getComputeInstanceId();
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -11678,6 +12522,10 @@ public final class PolicyServiceOuterClass {
     public static final int POLICY_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object policyId_;
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1;</code>
      * @return The policyId.
      */
@@ -11695,6 +12543,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 1;</code>
      * @return The bytes for policyId.
      */
@@ -11716,6 +12568,10 @@ public final class PolicyServiceOuterClass {
     public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object computeInstanceId_;
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2;</code>
      * @return The computeInstanceId.
      */
@@ -11733,6 +12589,10 @@ public final class PolicyServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 2;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -12072,6 +12932,10 @@ public final class PolicyServiceOuterClass {
 
       private java.lang.Object policyId_ = "";
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1;</code>
        * @return The policyId.
        */
@@ -12088,6 +12952,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1;</code>
        * @return The bytes for policyId.
        */
@@ -12105,6 +12973,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1;</code>
        * @param value The policyId to set.
        * @return This builder for chaining.
@@ -12120,6 +12992,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -12130,6 +13006,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 1;</code>
        * @param value The bytes for policyId to set.
        * @return This builder for chaining.
@@ -12148,6 +13028,10 @@ public final class PolicyServiceOuterClass {
 
       private java.lang.Object computeInstanceId_ = "";
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @return The computeInstanceId.
        */
@@ -12164,6 +13048,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @return The bytes for computeInstanceId.
        */
@@ -12181,6 +13069,10 @@ public final class PolicyServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @param value The computeInstanceId to set.
        * @return This builder for chaining.
@@ -12196,6 +13088,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -12206,6 +13102,10 @@ public final class PolicyServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 2;</code>
        * @param value The bytes for computeInstanceId to set.
        * @return This builder for chaining.

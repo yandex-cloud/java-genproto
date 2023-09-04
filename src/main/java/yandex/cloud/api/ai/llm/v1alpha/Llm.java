@@ -57,7 +57,7 @@ public final class Llm {
 
     /**
      * <pre>
-     * Sets response limit in tokens. It is a int number between 1 and 2000.
+     * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -66,7 +66,7 @@ public final class Llm {
     boolean hasMaxTokens();
     /**
      * <pre>
-     * Sets response limit in tokens. It is a int number between 1 and 2000.
+     * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -75,7 +75,7 @@ public final class Llm {
     com.google.protobuf.Int64Value getMaxTokens();
     /**
      * <pre>
-     * Sets response limit in tokens. It is a int number between 1 and 2000.
+     * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -251,7 +251,7 @@ public final class Llm {
     private com.google.protobuf.Int64Value maxTokens_;
     /**
      * <pre>
-     * Sets response limit in tokens. It is a int number between 1 and 2000.
+     * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -263,7 +263,7 @@ public final class Llm {
     }
     /**
      * <pre>
-     * Sets response limit in tokens. It is a int number between 1 and 2000.
+     * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -275,7 +275,7 @@ public final class Llm {
     }
     /**
      * <pre>
-     * Sets response limit in tokens. It is a int number between 1 and 2000.
+     * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -855,7 +855,7 @@ public final class Llm {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxTokensBuilder_;
       /**
        * <pre>
-       * Sets response limit in tokens. It is a int number between 1 and 2000.
+       * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -866,7 +866,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Sets response limit in tokens. It is a int number between 1 and 2000.
+       * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -881,7 +881,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Sets response limit in tokens. It is a int number between 1 and 2000.
+       * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -901,7 +901,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Sets response limit in tokens. It is a int number between 1 and 2000.
+       * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -919,7 +919,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Sets response limit in tokens. It is a int number between 1 and 2000.
+       * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -941,7 +941,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Sets response limit in tokens. It is a int number between 1 and 2000.
+       * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -959,7 +959,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Sets response limit in tokens. It is a int number between 1 and 2000.
+       * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -971,7 +971,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Sets response limit in tokens. It is a int number between 1 and 2000.
+       * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -986,7 +986,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Sets response limit in tokens. It is a int number between 1 and 2000.
+       * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -1858,7 +1858,7 @@ public final class Llm {
 
     /**
      * <pre>
-     * Message sender.
+     * Identifies who sent message. For message from the LLM model, the mandatory value is "assistant".
      * </pre>
      *
      * <code>string role = 1;</code>
@@ -1867,7 +1867,7 @@ public final class Llm {
     java.lang.String getRole();
     /**
      * <pre>
-     * Message sender.
+     * Identifies who sent message. For message from the LLM model, the mandatory value is "assistant".
      * </pre>
      *
      * <code>string role = 1;</code>
@@ -1995,7 +1995,7 @@ public final class Llm {
     private volatile java.lang.Object role_;
     /**
      * <pre>
-     * Message sender.
+     * Identifies who sent message. For message from the LLM model, the mandatory value is "assistant".
      * </pre>
      *
      * <code>string role = 1;</code>
@@ -2016,7 +2016,7 @@ public final class Llm {
     }
     /**
      * <pre>
-     * Message sender.
+     * Identifies who sent message. For message from the LLM model, the mandatory value is "assistant".
      * </pre>
      *
      * <code>string role = 1;</code>
@@ -2409,7 +2409,7 @@ public final class Llm {
       private java.lang.Object role_ = "";
       /**
        * <pre>
-       * Message sender.
+       * Identifies who sent message. For message from the LLM model, the mandatory value is "assistant".
        * </pre>
        *
        * <code>string role = 1;</code>
@@ -2429,7 +2429,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Message sender.
+       * Identifies who sent message. For message from the LLM model, the mandatory value is "assistant".
        * </pre>
        *
        * <code>string role = 1;</code>
@@ -2450,7 +2450,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Message sender.
+       * Identifies who sent message. For message from the LLM model, the mandatory value is "assistant".
        * </pre>
        *
        * <code>string role = 1;</code>
@@ -2469,7 +2469,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Message sender.
+       * Identifies who sent message. For message from the LLM model, the mandatory value is "assistant".
        * </pre>
        *
        * <code>string role = 1;</code>
@@ -2483,7 +2483,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Message sender.
+       * Identifies who sent message. For message from the LLM model, the mandatory value is "assistant".
        * </pre>
        *
        * <code>string role = 1;</code>
@@ -2656,7 +2656,7 @@ public final class Llm {
 
     /**
      * <pre>
-     * Internal token id.
+     * Internal token ID.
      * </pre>
      *
      * <code>int64 id = 1;</code>
@@ -2686,7 +2686,7 @@ public final class Llm {
 
     /**
      * <pre>
-     * Defines if token is special or not. Special tokens define the behaviour of the model and are not visible for users.
+     * Type of token (special or not special). Special tokens define the behaviour of the model and are not visible for users.
      * </pre>
      *
      * <code>bool special = 3;</code>
@@ -2796,7 +2796,7 @@ public final class Llm {
     private long id_;
     /**
      * <pre>
-     * Internal token id.
+     * Internal token ID.
      * </pre>
      *
      * <code>int64 id = 1;</code>
@@ -2857,7 +2857,7 @@ public final class Llm {
     private boolean special_;
     /**
      * <pre>
-     * Defines if token is special or not. Special tokens define the behaviour of the model and are not visible for users.
+     * Type of token (special or not special). Special tokens define the behaviour of the model and are not visible for users.
      * </pre>
      *
      * <code>bool special = 3;</code>
@@ -3213,7 +3213,7 @@ public final class Llm {
       private long id_ ;
       /**
        * <pre>
-       * Internal token id.
+       * Internal token ID.
        * </pre>
        *
        * <code>int64 id = 1;</code>
@@ -3225,7 +3225,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Internal token id.
+       * Internal token ID.
        * </pre>
        *
        * <code>int64 id = 1;</code>
@@ -3240,7 +3240,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Internal token id.
+       * Internal token ID.
        * </pre>
        *
        * <code>int64 id = 1;</code>
@@ -3352,7 +3352,7 @@ public final class Llm {
       private boolean special_ ;
       /**
        * <pre>
-       * Defines if token is special or not. Special tokens define the behaviour of the model and are not visible for users.
+       * Type of token (special or not special). Special tokens define the behaviour of the model and are not visible for users.
        * </pre>
        *
        * <code>bool special = 3;</code>
@@ -3364,7 +3364,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Defines if token is special or not. Special tokens define the behaviour of the model and are not visible for users.
+       * Type of token (special or not special). Special tokens define the behaviour of the model and are not visible for users.
        * </pre>
        *
        * <code>bool special = 3;</code>
@@ -3379,7 +3379,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Defines if token is special or not. Special tokens define the behaviour of the model and are not visible for users.
+       * Type of token (special or not special). Special tokens define the behaviour of the model and are not visible for users.
        * </pre>
        *
        * <code>bool special = 3;</code>

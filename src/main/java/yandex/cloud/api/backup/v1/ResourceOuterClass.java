@@ -19,11 +19,19 @@ public final class ResourceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 1;</code>
      * @return The computeInstanceId.
      */
     java.lang.String getComputeInstanceId();
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 1;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -61,12 +69,20 @@ public final class ResourceOuterClass {
     com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
 
     /**
+     * <pre>
+     * If this field is true, it means that instance is online.
+     * </pre>
+     *
      * <code>bool online = 4;</code>
      * @return The online.
      */
     boolean getOnline();
 
     /**
+     * <pre>
+     * If this field is true, it means that backup is enabled to instance.
+     * </pre>
+     *
      * <code>bool enabled = 5;</code>
      * @return The enabled.
      */
@@ -148,7 +164,7 @@ public final class ResourceOuterClass {
 
     /**
      * <pre>
-     * Resource Identifier is used to identify Compute Cloud instance in backup service.
+     * Resource ID is used to identify Compute Cloud instance in backup service.
      * </pre>
      *
      * <code>string resource_id = 11;</code>
@@ -157,7 +173,7 @@ public final class ResourceOuterClass {
     java.lang.String getResourceId();
     /**
      * <pre>
-     * Resource Identifier is used to identify Compute Cloud instance in backup service.
+     * Resource ID is used to identify Compute Cloud instance in backup service.
      * </pre>
      *
      * <code>string resource_id = 11;</code>
@@ -546,6 +562,10 @@ public final class ResourceOuterClass {
     public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object computeInstanceId_;
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 1;</code>
      * @return The computeInstanceId.
      */
@@ -563,6 +583,10 @@ public final class ResourceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 1;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -636,6 +660,10 @@ public final class ResourceOuterClass {
     public static final int ONLINE_FIELD_NUMBER = 4;
     private boolean online_;
     /**
+     * <pre>
+     * If this field is true, it means that instance is online.
+     * </pre>
+     *
      * <code>bool online = 4;</code>
      * @return The online.
      */
@@ -647,6 +675,10 @@ public final class ResourceOuterClass {
     public static final int ENABLED_FIELD_NUMBER = 5;
     private boolean enabled_;
     /**
+     * <pre>
+     * If this field is true, it means that backup is enabled to instance.
+     * </pre>
+     *
      * <code>bool enabled = 5;</code>
      * @return The enabled.
      */
@@ -794,7 +826,7 @@ public final class ResourceOuterClass {
     private volatile java.lang.Object resourceId_;
     /**
      * <pre>
-     * Resource Identifier is used to identify Compute Cloud instance in backup service.
+     * Resource ID is used to identify Compute Cloud instance in backup service.
      * </pre>
      *
      * <code>string resource_id = 11;</code>
@@ -815,7 +847,7 @@ public final class ResourceOuterClass {
     }
     /**
      * <pre>
-     * Resource Identifier is used to identify Compute Cloud instance in backup service.
+     * Resource ID is used to identify Compute Cloud instance in backup service.
      * </pre>
      *
      * <code>string resource_id = 11;</code>
@@ -1399,6 +1431,10 @@ public final class ResourceOuterClass {
 
       private java.lang.Object computeInstanceId_ = "";
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1;</code>
        * @return The computeInstanceId.
        */
@@ -1415,6 +1451,10 @@ public final class ResourceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1;</code>
        * @return The bytes for computeInstanceId.
        */
@@ -1432,6 +1472,10 @@ public final class ResourceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1;</code>
        * @param value The computeInstanceId to set.
        * @return This builder for chaining.
@@ -1447,6 +1491,10 @@ public final class ResourceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1457,6 +1505,10 @@ public final class ResourceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 1;</code>
        * @param value The bytes for computeInstanceId to set.
        * @return This builder for chaining.
@@ -1713,6 +1765,10 @@ public final class ResourceOuterClass {
 
       private boolean online_ ;
       /**
+       * <pre>
+       * If this field is true, it means that instance is online.
+       * </pre>
+       *
        * <code>bool online = 4;</code>
        * @return The online.
        */
@@ -1721,6 +1777,10 @@ public final class ResourceOuterClass {
         return online_;
       }
       /**
+       * <pre>
+       * If this field is true, it means that instance is online.
+       * </pre>
+       *
        * <code>bool online = 4;</code>
        * @param value The online to set.
        * @return This builder for chaining.
@@ -1732,6 +1792,10 @@ public final class ResourceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * If this field is true, it means that instance is online.
+       * </pre>
+       *
        * <code>bool online = 4;</code>
        * @return This builder for chaining.
        */
@@ -1744,6 +1808,10 @@ public final class ResourceOuterClass {
 
       private boolean enabled_ ;
       /**
+       * <pre>
+       * If this field is true, it means that backup is enabled to instance.
+       * </pre>
+       *
        * <code>bool enabled = 5;</code>
        * @return The enabled.
        */
@@ -1752,6 +1820,10 @@ public final class ResourceOuterClass {
         return enabled_;
       }
       /**
+       * <pre>
+       * If this field is true, it means that backup is enabled to instance.
+       * </pre>
+       *
        * <code>bool enabled = 5;</code>
        * @param value The enabled to set.
        * @return This builder for chaining.
@@ -1763,6 +1835,10 @@ public final class ResourceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * If this field is true, it means that backup is enabled to instance.
+       * </pre>
+       *
        * <code>bool enabled = 5;</code>
        * @return This builder for chaining.
        */
@@ -2215,7 +2291,7 @@ public final class ResourceOuterClass {
       private java.lang.Object resourceId_ = "";
       /**
        * <pre>
-       * Resource Identifier is used to identify Compute Cloud instance in backup service.
+       * Resource ID is used to identify Compute Cloud instance in backup service.
        * </pre>
        *
        * <code>string resource_id = 11;</code>
@@ -2235,7 +2311,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Resource Identifier is used to identify Compute Cloud instance in backup service.
+       * Resource ID is used to identify Compute Cloud instance in backup service.
        * </pre>
        *
        * <code>string resource_id = 11;</code>
@@ -2256,7 +2332,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Resource Identifier is used to identify Compute Cloud instance in backup service.
+       * Resource ID is used to identify Compute Cloud instance in backup service.
        * </pre>
        *
        * <code>string resource_id = 11;</code>
@@ -2275,7 +2351,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Resource Identifier is used to identify Compute Cloud instance in backup service.
+       * Resource ID is used to identify Compute Cloud instance in backup service.
        * </pre>
        *
        * <code>string resource_id = 11;</code>
@@ -2289,7 +2365,7 @@ public final class ResourceOuterClass {
       }
       /**
        * <pre>
-       * Resource Identifier is used to identify Compute Cloud instance in backup service.
+       * Resource ID is used to identify Compute Cloud instance in backup service.
        * </pre>
        *
        * <code>string resource_id = 11;</code>
@@ -2974,6 +3050,10 @@ public final class ResourceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Task ID.
+     * </pre>
+     *
      * <code>int64 id = 1;</code>
      * @return The id.
      */
@@ -2991,11 +3071,19 @@ public final class ResourceOuterClass {
     boolean getCancellable();
 
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 3;</code>
      * @return The policyId.
      */
     java.lang.String getPolicyId();
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 3;</code>
      * @return The bytes for policyId.
      */
@@ -3003,37 +3091,65 @@ public final class ResourceOuterClass {
         getPolicyIdBytes();
 
     /**
+     * <pre>
+     * Type of the task.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Task.Type type = 4;</code>
      * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
+     * <pre>
+     * Type of the task.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Task.Type type = 4;</code>
      * @return The type.
      */
     yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Type getType();
 
     /**
+     * <pre>
+     * Task progress.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Progress progress = 5;</code>
      * @return Whether the progress field is set.
      */
     boolean hasProgress();
     /**
+     * <pre>
+     * Task progress.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Progress progress = 5;</code>
      * @return The progress.
      */
     yandex.cloud.api.backup.v1.ResourceOuterClass.Progress getProgress();
     /**
+     * <pre>
+     * Task progress.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Progress progress = 5;</code>
      */
     yandex.cloud.api.backup.v1.ResourceOuterClass.ProgressOrBuilder getProgressOrBuilder();
 
     /**
+     * <pre>
+     * Task status.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Task.Status status = 6;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
+     * <pre>
+     * Task status.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Task.Status status = 6;</code>
      * @return The status.
      */
@@ -3100,11 +3216,19 @@ public final class ResourceOuterClass {
     com.google.protobuf.TimestampOrBuilder getCompletedAtOrBuilder();
 
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 11;</code>
      * @return The computeInstanceId.
      */
     java.lang.String getComputeInstanceId();
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 11;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -3568,6 +3692,10 @@ public final class ResourceOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private long id_;
     /**
+     * <pre>
+     * Task ID.
+     * </pre>
+     *
      * <code>int64 id = 1;</code>
      * @return The id.
      */
@@ -3595,6 +3723,10 @@ public final class ResourceOuterClass {
     public static final int POLICY_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object policyId_;
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 3;</code>
      * @return The policyId.
      */
@@ -3612,6 +3744,10 @@ public final class ResourceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Policy ID.
+     * </pre>
+     *
      * <code>string policy_id = 3;</code>
      * @return The bytes for policyId.
      */
@@ -3633,6 +3769,10 @@ public final class ResourceOuterClass {
     public static final int TYPE_FIELD_NUMBER = 4;
     private int type_;
     /**
+     * <pre>
+     * Type of the task.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Task.Type type = 4;</code>
      * @return The enum numeric value on the wire for type.
      */
@@ -3640,6 +3780,10 @@ public final class ResourceOuterClass {
       return type_;
     }
     /**
+     * <pre>
+     * Type of the task.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Task.Type type = 4;</code>
      * @return The type.
      */
@@ -3652,6 +3796,10 @@ public final class ResourceOuterClass {
     public static final int PROGRESS_FIELD_NUMBER = 5;
     private yandex.cloud.api.backup.v1.ResourceOuterClass.Progress progress_;
     /**
+     * <pre>
+     * Task progress.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Progress progress = 5;</code>
      * @return Whether the progress field is set.
      */
@@ -3660,6 +3808,10 @@ public final class ResourceOuterClass {
       return progress_ != null;
     }
     /**
+     * <pre>
+     * Task progress.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Progress progress = 5;</code>
      * @return The progress.
      */
@@ -3668,6 +3820,10 @@ public final class ResourceOuterClass {
       return progress_ == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.Progress.getDefaultInstance() : progress_;
     }
     /**
+     * <pre>
+     * Task progress.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Progress progress = 5;</code>
      */
     @java.lang.Override
@@ -3678,6 +3834,10 @@ public final class ResourceOuterClass {
     public static final int STATUS_FIELD_NUMBER = 6;
     private int status_;
     /**
+     * <pre>
+     * Task status.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Task.Status status = 6;</code>
      * @return The enum numeric value on the wire for status.
      */
@@ -3685,6 +3845,10 @@ public final class ResourceOuterClass {
       return status_;
     }
     /**
+     * <pre>
+     * Task status.
+     * </pre>
+     *
      * <code>.yandex.cloud.backup.v1.Task.Status status = 6;</code>
      * @return The status.
      */
@@ -3801,6 +3965,10 @@ public final class ResourceOuterClass {
     public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 11;
     private volatile java.lang.Object computeInstanceId_;
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 11;</code>
      * @return The computeInstanceId.
      */
@@ -3818,6 +3986,10 @@ public final class ResourceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Compute Cloud instance ID.
+     * </pre>
+     *
      * <code>string compute_instance_id = 11;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -4375,6 +4547,10 @@ public final class ResourceOuterClass {
 
       private long id_ ;
       /**
+       * <pre>
+       * Task ID.
+       * </pre>
+       *
        * <code>int64 id = 1;</code>
        * @return The id.
        */
@@ -4383,6 +4559,10 @@ public final class ResourceOuterClass {
         return id_;
       }
       /**
+       * <pre>
+       * Task ID.
+       * </pre>
+       *
        * <code>int64 id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -4394,6 +4574,10 @@ public final class ResourceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Task ID.
+       * </pre>
+       *
        * <code>int64 id = 1;</code>
        * @return This builder for chaining.
        */
@@ -4452,6 +4636,10 @@ public final class ResourceOuterClass {
 
       private java.lang.Object policyId_ = "";
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 3;</code>
        * @return The policyId.
        */
@@ -4468,6 +4656,10 @@ public final class ResourceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 3;</code>
        * @return The bytes for policyId.
        */
@@ -4485,6 +4677,10 @@ public final class ResourceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 3;</code>
        * @param value The policyId to set.
        * @return This builder for chaining.
@@ -4500,6 +4696,10 @@ public final class ResourceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 3;</code>
        * @return This builder for chaining.
        */
@@ -4510,6 +4710,10 @@ public final class ResourceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Policy ID.
+       * </pre>
+       *
        * <code>string policy_id = 3;</code>
        * @param value The bytes for policyId to set.
        * @return This builder for chaining.
@@ -4528,6 +4732,10 @@ public final class ResourceOuterClass {
 
       private int type_ = 0;
       /**
+       * <pre>
+       * Type of the task.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Task.Type type = 4;</code>
        * @return The enum numeric value on the wire for type.
        */
@@ -4535,6 +4743,10 @@ public final class ResourceOuterClass {
         return type_;
       }
       /**
+       * <pre>
+       * Type of the task.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Task.Type type = 4;</code>
        * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
@@ -4546,6 +4758,10 @@ public final class ResourceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Type of the task.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Task.Type type = 4;</code>
        * @return The type.
        */
@@ -4556,6 +4772,10 @@ public final class ResourceOuterClass {
         return result == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Type.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Type of the task.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Task.Type type = 4;</code>
        * @param value The type to set.
        * @return This builder for chaining.
@@ -4570,6 +4790,10 @@ public final class ResourceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Type of the task.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Task.Type type = 4;</code>
        * @return This builder for chaining.
        */
@@ -4584,6 +4808,10 @@ public final class ResourceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.backup.v1.ResourceOuterClass.Progress, yandex.cloud.api.backup.v1.ResourceOuterClass.Progress.Builder, yandex.cloud.api.backup.v1.ResourceOuterClass.ProgressOrBuilder> progressBuilder_;
       /**
+       * <pre>
+       * Task progress.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Progress progress = 5;</code>
        * @return Whether the progress field is set.
        */
@@ -4591,6 +4819,10 @@ public final class ResourceOuterClass {
         return progressBuilder_ != null || progress_ != null;
       }
       /**
+       * <pre>
+       * Task progress.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Progress progress = 5;</code>
        * @return The progress.
        */
@@ -4602,6 +4834,10 @@ public final class ResourceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Task progress.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Progress progress = 5;</code>
        */
       public Builder setProgress(yandex.cloud.api.backup.v1.ResourceOuterClass.Progress value) {
@@ -4618,6 +4854,10 @@ public final class ResourceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Task progress.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Progress progress = 5;</code>
        */
       public Builder setProgress(
@@ -4632,6 +4872,10 @@ public final class ResourceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Task progress.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Progress progress = 5;</code>
        */
       public Builder mergeProgress(yandex.cloud.api.backup.v1.ResourceOuterClass.Progress value) {
@@ -4650,6 +4894,10 @@ public final class ResourceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Task progress.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Progress progress = 5;</code>
        */
       public Builder clearProgress() {
@@ -4664,6 +4912,10 @@ public final class ResourceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Task progress.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Progress progress = 5;</code>
        */
       public yandex.cloud.api.backup.v1.ResourceOuterClass.Progress.Builder getProgressBuilder() {
@@ -4672,6 +4924,10 @@ public final class ResourceOuterClass {
         return getProgressFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Task progress.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Progress progress = 5;</code>
        */
       public yandex.cloud.api.backup.v1.ResourceOuterClass.ProgressOrBuilder getProgressOrBuilder() {
@@ -4683,6 +4939,10 @@ public final class ResourceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Task progress.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Progress progress = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4701,6 +4961,10 @@ public final class ResourceOuterClass {
 
       private int status_ = 0;
       /**
+       * <pre>
+       * Task status.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Task.Status status = 6;</code>
        * @return The enum numeric value on the wire for status.
        */
@@ -4708,6 +4972,10 @@ public final class ResourceOuterClass {
         return status_;
       }
       /**
+       * <pre>
+       * Task status.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Task.Status status = 6;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
@@ -4719,6 +4987,10 @@ public final class ResourceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Task status.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Task.Status status = 6;</code>
        * @return The status.
        */
@@ -4729,6 +5001,10 @@ public final class ResourceOuterClass {
         return result == null ? yandex.cloud.api.backup.v1.ResourceOuterClass.Task.Status.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Task status.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Task.Status status = 6;</code>
        * @param value The status to set.
        * @return This builder for chaining.
@@ -4743,6 +5019,10 @@ public final class ResourceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Task status.
+       * </pre>
+       *
        * <code>.yandex.cloud.backup.v1.Task.Status status = 6;</code>
        * @return This builder for chaining.
        */
@@ -5231,6 +5511,10 @@ public final class ResourceOuterClass {
 
       private java.lang.Object computeInstanceId_ = "";
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 11;</code>
        * @return The computeInstanceId.
        */
@@ -5247,6 +5531,10 @@ public final class ResourceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 11;</code>
        * @return The bytes for computeInstanceId.
        */
@@ -5264,6 +5552,10 @@ public final class ResourceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 11;</code>
        * @param value The computeInstanceId to set.
        * @return This builder for chaining.
@@ -5279,6 +5571,10 @@ public final class ResourceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 11;</code>
        * @return This builder for chaining.
        */
@@ -5289,6 +5585,10 @@ public final class ResourceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Compute Cloud instance ID.
+       * </pre>
+       *
        * <code>string compute_instance_id = 11;</code>
        * @param value The bytes for computeInstanceId to set.
        * @return This builder for chaining.

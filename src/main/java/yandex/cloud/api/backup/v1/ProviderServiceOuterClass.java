@@ -819,7 +819,7 @@ public final class ProviderServiceOuterClass {
 
     /**
      * <pre>
-     * Activate provider for Folder iD.
+     * Activate provider for folder specified by ID.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -828,7 +828,7 @@ public final class ProviderServiceOuterClass {
     java.lang.String getFolderId();
     /**
      * <pre>
-     * Activate provider for Folder iD.
+     * Activate provider for folder specified by ID.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -925,7 +925,7 @@ public final class ProviderServiceOuterClass {
     private volatile java.lang.Object folderId_;
     /**
      * <pre>
-     * Activate provider for Folder iD.
+     * Activate provider for folder specified by ID.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -946,7 +946,7 @@ public final class ProviderServiceOuterClass {
     }
     /**
      * <pre>
-     * Activate provider for Folder iD.
+     * Activate provider for folder specified by ID.
      * </pre>
      *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1272,7 +1272,7 @@ public final class ProviderServiceOuterClass {
       private java.lang.Object folderId_ = "";
       /**
        * <pre>
-       * Activate provider for Folder iD.
+       * Activate provider for folder specified by ID.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1292,7 +1292,7 @@ public final class ProviderServiceOuterClass {
       }
       /**
        * <pre>
-       * Activate provider for Folder iD.
+       * Activate provider for folder specified by ID.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1313,7 +1313,7 @@ public final class ProviderServiceOuterClass {
       }
       /**
        * <pre>
-       * Activate provider for Folder iD.
+       * Activate provider for folder specified by ID.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1332,7 +1332,7 @@ public final class ProviderServiceOuterClass {
       }
       /**
        * <pre>
-       * Activate provider for Folder iD.
+       * Activate provider for folder specified by ID.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1346,7 +1346,7 @@ public final class ProviderServiceOuterClass {
       }
       /**
        * <pre>
-       * Activate provider for Folder iD.
+       * Activate provider for folder specified by ID.
        * </pre>
        *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1422,11 +1422,19 @@ public final class ProviderServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to find out the backup provider.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to find out the backup provider.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -1520,6 +1528,10 @@ public final class ProviderServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to find out the backup provider.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
@@ -1537,6 +1549,10 @@ public final class ProviderServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to find out the backup provider.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -1859,6 +1875,10 @@ public final class ProviderServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to find out the backup provider.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The folderId.
        */
@@ -1875,6 +1895,10 @@ public final class ProviderServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to find out the backup provider.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for folderId.
        */
@@ -1892,6 +1916,10 @@ public final class ProviderServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to find out the backup provider.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -1907,6 +1935,10 @@ public final class ProviderServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to find out the backup provider.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -1917,6 +1949,10 @@ public final class ProviderServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to find out the backup provider.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -1990,11 +2026,19 @@ public final class ProviderServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The bytes for folderId.
      */
@@ -2002,23 +2046,39 @@ public final class ProviderServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Name of the backup provider.
+     * </pre>
+     *
      * <code>repeated string names = 3;</code>
      * @return A list containing the names.
      */
     java.util.List<java.lang.String>
         getNamesList();
     /**
+     * <pre>
+     * Name of the backup provider.
+     * </pre>
+     *
      * <code>repeated string names = 3;</code>
      * @return The count of names.
      */
     int getNamesCount();
     /**
+     * <pre>
+     * Name of the backup provider.
+     * </pre>
+     *
      * <code>repeated string names = 3;</code>
      * @param index The index of the element to return.
      * @return The names at the given index.
      */
     java.lang.String getNames(int index);
     /**
+     * <pre>
+     * Name of the backup provider.
+     * </pre>
+     *
      * <code>repeated string names = 3;</code>
      * @param index The index of the value to return.
      * @return The bytes of the names at the given index.
@@ -2127,6 +2187,10 @@ public final class ProviderServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The folderId.
      */
@@ -2144,6 +2208,10 @@ public final class ProviderServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Folder ID.
+     * </pre>
+     *
      * <code>string folder_id = 1;</code>
      * @return The bytes for folderId.
      */
@@ -2165,6 +2233,10 @@ public final class ProviderServiceOuterClass {
     public static final int NAMES_FIELD_NUMBER = 3;
     private com.google.protobuf.LazyStringList names_;
     /**
+     * <pre>
+     * Name of the backup provider.
+     * </pre>
+     *
      * <code>repeated string names = 3;</code>
      * @return A list containing the names.
      */
@@ -2173,6 +2245,10 @@ public final class ProviderServiceOuterClass {
       return names_;
     }
     /**
+     * <pre>
+     * Name of the backup provider.
+     * </pre>
+     *
      * <code>repeated string names = 3;</code>
      * @return The count of names.
      */
@@ -2180,6 +2256,10 @@ public final class ProviderServiceOuterClass {
       return names_.size();
     }
     /**
+     * <pre>
+     * Name of the backup provider.
+     * </pre>
+     *
      * <code>repeated string names = 3;</code>
      * @param index The index of the element to return.
      * @return The names at the given index.
@@ -2188,6 +2268,10 @@ public final class ProviderServiceOuterClass {
       return names_.get(index);
     }
     /**
+     * <pre>
+     * Name of the backup provider.
+     * </pre>
+     *
      * <code>repeated string names = 3;</code>
      * @param index The index of the value to return.
      * @return The bytes of the names at the given index.
@@ -2537,6 +2621,10 @@ public final class ProviderServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @return The folderId.
        */
@@ -2553,6 +2641,10 @@ public final class ProviderServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @return The bytes for folderId.
        */
@@ -2570,6 +2662,10 @@ public final class ProviderServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -2585,6 +2681,10 @@ public final class ProviderServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -2595,6 +2695,10 @@ public final class ProviderServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Folder ID.
+       * </pre>
+       *
        * <code>string folder_id = 1;</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -2619,6 +2723,10 @@ public final class ProviderServiceOuterClass {
          }
       }
       /**
+       * <pre>
+       * Name of the backup provider.
+       * </pre>
+       *
        * <code>repeated string names = 3;</code>
        * @return A list containing the names.
        */
@@ -2627,6 +2735,10 @@ public final class ProviderServiceOuterClass {
         return names_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * Name of the backup provider.
+       * </pre>
+       *
        * <code>repeated string names = 3;</code>
        * @return The count of names.
        */
@@ -2634,6 +2746,10 @@ public final class ProviderServiceOuterClass {
         return names_.size();
       }
       /**
+       * <pre>
+       * Name of the backup provider.
+       * </pre>
+       *
        * <code>repeated string names = 3;</code>
        * @param index The index of the element to return.
        * @return The names at the given index.
@@ -2642,6 +2758,10 @@ public final class ProviderServiceOuterClass {
         return names_.get(index);
       }
       /**
+       * <pre>
+       * Name of the backup provider.
+       * </pre>
+       *
        * <code>repeated string names = 3;</code>
        * @param index The index of the value to return.
        * @return The bytes of the names at the given index.
@@ -2651,6 +2771,10 @@ public final class ProviderServiceOuterClass {
         return names_.getByteString(index);
       }
       /**
+       * <pre>
+       * Name of the backup provider.
+       * </pre>
+       *
        * <code>repeated string names = 3;</code>
        * @param index The index to set the value at.
        * @param value The names to set.
@@ -2667,6 +2791,10 @@ public final class ProviderServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the backup provider.
+       * </pre>
+       *
        * <code>repeated string names = 3;</code>
        * @param value The names to add.
        * @return This builder for chaining.
@@ -2682,6 +2810,10 @@ public final class ProviderServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the backup provider.
+       * </pre>
+       *
        * <code>repeated string names = 3;</code>
        * @param values The names to add.
        * @return This builder for chaining.
@@ -2695,6 +2827,10 @@ public final class ProviderServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the backup provider.
+       * </pre>
+       *
        * <code>repeated string names = 3;</code>
        * @return This builder for chaining.
        */
@@ -2705,6 +2841,10 @@ public final class ProviderServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the backup provider.
+       * </pre>
+       *
        * <code>repeated string names = 3;</code>
        * @param value The bytes of the names to add.
        * @return This builder for chaining.

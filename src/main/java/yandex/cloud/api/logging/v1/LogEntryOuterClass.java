@@ -230,7 +230,7 @@ public final class LogEntryOuterClass {
      * Entry stream name.
      * </pre>
      *
-     * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * <code>string stream_name = 9 [(.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The streamName.
      */
     java.lang.String getStreamName();
@@ -239,7 +239,7 @@ public final class LogEntryOuterClass {
      * Entry stream name.
      * </pre>
      *
-     * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * <code>string stream_name = 9 [(.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for streamName.
      */
     com.google.protobuf.ByteString
@@ -744,7 +744,7 @@ public final class LogEntryOuterClass {
      * Entry stream name.
      * </pre>
      *
-     * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * <code>string stream_name = 9 [(.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The streamName.
      */
     @java.lang.Override
@@ -765,7 +765,7 @@ public final class LogEntryOuterClass {
      * Entry stream name.
      * </pre>
      *
-     * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * <code>string stream_name = 9 [(.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for streamName.
      */
     @java.lang.Override
@@ -2369,7 +2369,7 @@ public final class LogEntryOuterClass {
        * Entry stream name.
        * </pre>
        *
-       * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * <code>string stream_name = 9 [(.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The streamName.
        */
       public java.lang.String getStreamName() {
@@ -2389,7 +2389,7 @@ public final class LogEntryOuterClass {
        * Entry stream name.
        * </pre>
        *
-       * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * <code>string stream_name = 9 [(.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The bytes for streamName.
        */
       public com.google.protobuf.ByteString
@@ -2410,7 +2410,7 @@ public final class LogEntryOuterClass {
        * Entry stream name.
        * </pre>
        *
-       * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * <code>string stream_name = 9 [(.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The streamName to set.
        * @return This builder for chaining.
        */
@@ -2429,7 +2429,7 @@ public final class LogEntryOuterClass {
        * Entry stream name.
        * </pre>
        *
-       * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * <code>string stream_name = 9 [(.yandex.cloud.length) = "&lt;=63"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStreamName() {
@@ -2443,7 +2443,7 @@ public final class LogEntryOuterClass {
        * Entry stream name.
        * </pre>
        *
-       * <code>string stream_name = 9 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * <code>string stream_name = 9 [(.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The bytes for streamName to set.
        * @return This builder for chaining.
        */
@@ -2615,7 +2615,7 @@ public final class LogEntryOuterClass {
      * Entry stream name.
      * </pre>
      *
-     * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * <code>string stream_name = 5 [(.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The streamName.
      */
     java.lang.String getStreamName();
@@ -2624,7 +2624,7 @@ public final class LogEntryOuterClass {
      * Entry stream name.
      * </pre>
      *
-     * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * <code>string stream_name = 5 [(.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for streamName.
      */
     com.google.protobuf.ByteString
@@ -2912,7 +2912,7 @@ public final class LogEntryOuterClass {
      * Entry stream name.
      * </pre>
      *
-     * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * <code>string stream_name = 5 [(.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The streamName.
      */
     @java.lang.Override
@@ -2933,7 +2933,7 @@ public final class LogEntryOuterClass {
      * Entry stream name.
      * </pre>
      *
-     * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * <code>string stream_name = 5 [(.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for streamName.
      */
     @java.lang.Override
@@ -3837,7 +3837,7 @@ public final class LogEntryOuterClass {
        * Entry stream name.
        * </pre>
        *
-       * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * <code>string stream_name = 5 [(.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The streamName.
        */
       public java.lang.String getStreamName() {
@@ -3857,7 +3857,7 @@ public final class LogEntryOuterClass {
        * Entry stream name.
        * </pre>
        *
-       * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * <code>string stream_name = 5 [(.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The bytes for streamName.
        */
       public com.google.protobuf.ByteString
@@ -3878,7 +3878,7 @@ public final class LogEntryOuterClass {
        * Entry stream name.
        * </pre>
        *
-       * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * <code>string stream_name = 5 [(.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The streamName to set.
        * @return This builder for chaining.
        */
@@ -3897,7 +3897,7 @@ public final class LogEntryOuterClass {
        * Entry stream name.
        * </pre>
        *
-       * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * <code>string stream_name = 5 [(.yandex.cloud.length) = "&lt;=63"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStreamName() {
@@ -3911,7 +3911,7 @@ public final class LogEntryOuterClass {
        * Entry stream name.
        * </pre>
        *
-       * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * <code>string stream_name = 5 [(.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The bytes for streamName to set.
        * @return This builder for chaining.
        */
@@ -4044,7 +4044,7 @@ public final class LogEntryOuterClass {
      * Entry stream name.
      * </pre>
      *
-     * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * <code>string stream_name = 5 [(.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The streamName.
      */
     java.lang.String getStreamName();
@@ -4053,7 +4053,7 @@ public final class LogEntryOuterClass {
      * Entry stream name.
      * </pre>
      *
-     * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * <code>string stream_name = 5 [(.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for streamName.
      */
     com.google.protobuf.ByteString
@@ -4245,7 +4245,7 @@ public final class LogEntryOuterClass {
      * Entry stream name.
      * </pre>
      *
-     * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * <code>string stream_name = 5 [(.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The streamName.
      */
     @java.lang.Override
@@ -4266,7 +4266,7 @@ public final class LogEntryOuterClass {
      * Entry stream name.
      * </pre>
      *
-     * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+     * <code>string stream_name = 5 [(.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for streamName.
      */
     @java.lang.Override
@@ -4895,7 +4895,7 @@ public final class LogEntryOuterClass {
        * Entry stream name.
        * </pre>
        *
-       * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * <code>string stream_name = 5 [(.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The streamName.
        */
       public java.lang.String getStreamName() {
@@ -4915,7 +4915,7 @@ public final class LogEntryOuterClass {
        * Entry stream name.
        * </pre>
        *
-       * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * <code>string stream_name = 5 [(.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The bytes for streamName.
        */
       public com.google.protobuf.ByteString
@@ -4936,7 +4936,7 @@ public final class LogEntryOuterClass {
        * Entry stream name.
        * </pre>
        *
-       * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * <code>string stream_name = 5 [(.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The streamName to set.
        * @return This builder for chaining.
        */
@@ -4955,7 +4955,7 @@ public final class LogEntryOuterClass {
        * Entry stream name.
        * </pre>
        *
-       * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * <code>string stream_name = 5 [(.yandex.cloud.length) = "&lt;=63"];</code>
        * @return This builder for chaining.
        */
       public Builder clearStreamName() {
@@ -4969,7 +4969,7 @@ public final class LogEntryOuterClass {
        * Entry stream name.
        * </pre>
        *
-       * <code>string stream_name = 5 [(.yandex.cloud.pattern) = "|[a-zA-Z][-a-zA-Z0-9_.]{0,63}"];</code>
+       * <code>string stream_name = 5 [(.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The bytes for streamName to set.
        * @return This builder for chaining.
        */
@@ -6852,7 +6852,7 @@ public final class LogEntryOuterClass {
       "buf/struct.proto\032\037google/protobuf/timest" +
       "amp.proto\032*yandex/cloud/logging/v1/log_r" +
       "esource.proto\032\035yandex/cloud/validation.p" +
-      "roto\"\222\003\n\010LogEntry\022\013\n\003uid\030\001 \001(\t\022;\n\010resour" +
+      "roto\"\371\002\n\010LogEntry\022\013\n\003uid\030\001 \001(\t\022;\n\010resour" +
       "ce\030\002 \001(\0132).yandex.cloud.logging.v1.LogEn" +
       "tryResource\022-\n\ttimestamp\030\003 \001(\0132\032.google." +
       "protobuf.Timestamp\022/\n\013ingested_at\030\004 \001(\0132" +
@@ -6860,31 +6860,29 @@ public final class LogEntryOuterClass {
       "\005 \001(\0132\032.google.protobuf.Timestamp\0226\n\005lev" +
       "el\030\006 \001(\0162\'.yandex.cloud.logging.v1.LogLe" +
       "vel.Level\022\017\n\007message\030\007 \001(\t\022-\n\014json_paylo" +
-      "ad\030\010 \001(\0132\027.google.protobuf.Struct\0226\n\013str" +
-      "eam_name\030\t \001(\tB!\362\3071\035|[a-zA-Z][-a-zA-Z0-9" +
-      "_.]{0,63}\"\221\002\n\020IncomingLogEntry\0223\n\ttimest" +
-      "amp\030\001 \001(\0132\032.google.protobuf.TimestampB\004\350" +
-      "\3071\001\0226\n\005level\030\002 \001(\0162\'.yandex.cloud.loggin" +
-      "g.v1.LogLevel.Level\022\034\n\007message\030\003 \001(\tB\013\272\310" +
-      "1\007<=65536\022:\n\014json_payload\030\004 \001(\0132\027.google" +
-      ".protobuf.StructB\013\272\3101\007<=65536\0226\n\013stream_" +
-      "name\030\005 \001(\tB!\362\3071\035|[a-zA-Z][-a-zA-Z0-9_.]{" +
-      "0,63}\"\276\001\n\020LogEntryDefaults\0226\n\005level\030\002 \001(" +
-      "\0162\'.yandex.cloud.logging.v1.LogLevel.Lev" +
-      "el\022:\n\014json_payload\030\004 \001(\0132\027.google.protob" +
-      "uf.StructB\013\272\3101\007<=65536\0226\n\013stream_name\030\005 " +
-      "\001(\tB!\362\3071\035|[a-zA-Z][-a-zA-Z0-9_.]{0,63}\"\231" +
-      "\001\n\013Destination\022;\n\014log_group_id\030\001 \001(\tB#\362\307" +
-      "1\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000\0228\n\tf" +
-      "older_id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9" +
-      "_.]{0,63})?H\000B\023\n\013destination\022\004\300\3011\001\"\242\001\n\010L" +
-      "ogLevel\0226\n\005level\030\001 \001(\0162\'.yandex.cloud.lo" +
-      "gging.v1.LogLevel.Level\"^\n\005Level\022\025\n\021LEVE" +
-      "L_UNSPECIFIED\020\000\022\t\n\005TRACE\020\001\022\t\n\005DEBUG\020\002\022\010\n" +
-      "\004INFO\020\003\022\010\n\004WARN\020\004\022\t\n\005ERROR\020\005\022\t\n\005FATAL\020\006B" +
-      "b\n\033yandex.cloud.api.logging.v1ZCgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/logging/v1;loggingb\006proto3"
+      "ad\030\010 \001(\0132\027.google.protobuf.Struct\022\035\n\013str" +
+      "eam_name\030\t \001(\tB\010\212\3101\004<=63\"\370\001\n\020IncomingLog" +
+      "Entry\0223\n\ttimestamp\030\001 \001(\0132\032.google.protob" +
+      "uf.TimestampB\004\350\3071\001\0226\n\005level\030\002 \001(\0162\'.yand" +
+      "ex.cloud.logging.v1.LogLevel.Level\022\034\n\007me" +
+      "ssage\030\003 \001(\tB\013\272\3101\007<=65536\022:\n\014json_payload" +
+      "\030\004 \001(\0132\027.google.protobuf.StructB\013\272\3101\007<=6" +
+      "5536\022\035\n\013stream_name\030\005 \001(\tB\010\212\3101\004<=63\"\245\001\n\020" +
+      "LogEntryDefaults\0226\n\005level\030\002 \001(\0162\'.yandex" +
+      ".cloud.logging.v1.LogLevel.Level\022:\n\014json" +
+      "_payload\030\004 \001(\0132\027.google.protobuf.StructB" +
+      "\013\272\3101\007<=65536\022\035\n\013stream_name\030\005 \001(\tB\010\212\3101\004<" +
+      "=63\"\231\001\n\013Destination\022;\n\014log_group_id\030\001 \001(" +
+      "\tB#\362\3071\037([a-zA-Z][-a-zA-Z0-9_.]{0,63})?H\000" +
+      "\0228\n\tfolder_id\030\002 \001(\tB#\362\3071\037([a-zA-Z][-a-zA" +
+      "-Z0-9_.]{0,63})?H\000B\023\n\013destination\022\004\300\3011\001\"" +
+      "\242\001\n\010LogLevel\0226\n\005level\030\001 \001(\0162\'.yandex.clo" +
+      "ud.logging.v1.LogLevel.Level\"^\n\005Level\022\025\n" +
+      "\021LEVEL_UNSPECIFIED\020\000\022\t\n\005TRACE\020\001\022\t\n\005DEBUG" +
+      "\020\002\022\010\n\004INFO\020\003\022\010\n\004WARN\020\004\022\t\n\005ERROR\020\005\022\t\n\005FAT" +
+      "AL\020\006Bb\n\033yandex.cloud.api.logging.v1ZCgit" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/logging/v1;loggingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6928,6 +6926,7 @@ public final class LogEntryOuterClass {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.bytes);
     registry.add(yandex.cloud.api.Validation.exactlyOne);
+    registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
     com.google.protobuf.Descriptors.FileDescriptor

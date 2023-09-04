@@ -2975,6 +2975,26 @@ public final class VirtualHostOuterClass {
      * <code>.yandex.cloud.apploadbalancer.v1.RBAC rbac = 3;</code>
      */
     yandex.cloud.api.apploadbalancer.v1.VirtualHostOuterClass.RBACOrBuilder getRbacOrBuilder();
+
+    /**
+     * <pre>
+     * Security profile that will take effect to all requests routed via particular virtual host.
+     * </pre>
+     *
+     * <code>string security_profile_id = 4;</code>
+     * @return The securityProfileId.
+     */
+    java.lang.String getSecurityProfileId();
+    /**
+     * <pre>
+     * Security profile that will take effect to all requests routed via particular virtual host.
+     * </pre>
+     *
+     * <code>string security_profile_id = 4;</code>
+     * @return The bytes for securityProfileId.
+     */
+    com.google.protobuf.ByteString
+        getSecurityProfileIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.apploadbalancer.v1.RouteOptions}
@@ -2991,6 +3011,7 @@ public final class VirtualHostOuterClass {
     private RouteOptions() {
       modifyRequestHeaders_ = java.util.Collections.emptyList();
       modifyResponseHeaders_ = java.util.Collections.emptyList();
+      securityProfileId_ = "";
     }
 
     @java.lang.Override
@@ -3053,6 +3074,12 @@ public final class VirtualHostOuterClass {
                 rbac_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              securityProfileId_ = s;
               break;
             }
             default: {
@@ -3239,6 +3266,52 @@ public final class VirtualHostOuterClass {
       return getRbac();
     }
 
+    public static final int SECURITY_PROFILE_ID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object securityProfileId_;
+    /**
+     * <pre>
+     * Security profile that will take effect to all requests routed via particular virtual host.
+     * </pre>
+     *
+     * <code>string security_profile_id = 4;</code>
+     * @return The securityProfileId.
+     */
+    @java.lang.Override
+    public java.lang.String getSecurityProfileId() {
+      java.lang.Object ref = securityProfileId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        securityProfileId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Security profile that will take effect to all requests routed via particular virtual host.
+     * </pre>
+     *
+     * <code>string security_profile_id = 4;</code>
+     * @return The bytes for securityProfileId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecurityProfileIdBytes() {
+      java.lang.Object ref = securityProfileId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        securityProfileId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3262,6 +3335,9 @@ public final class VirtualHostOuterClass {
       if (rbac_ != null) {
         output.writeMessage(3, getRbac());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityProfileId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, securityProfileId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3282,6 +3358,9 @@ public final class VirtualHostOuterClass {
       if (rbac_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getRbac());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityProfileId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, securityProfileId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3307,6 +3386,8 @@ public final class VirtualHostOuterClass {
         if (!getRbac()
             .equals(other.getRbac())) return false;
       }
+      if (!getSecurityProfileId()
+          .equals(other.getSecurityProfileId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3330,6 +3411,8 @@ public final class VirtualHostOuterClass {
         hash = (37 * hash) + RBAC_FIELD_NUMBER;
         hash = (53 * hash) + getRbac().hashCode();
       }
+      hash = (37 * hash) + SECURITY_PROFILE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSecurityProfileId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3483,6 +3566,8 @@ public final class VirtualHostOuterClass {
           rbac_ = null;
           rbacBuilder_ = null;
         }
+        securityProfileId_ = "";
+
         return this;
       }
 
@@ -3533,6 +3618,7 @@ public final class VirtualHostOuterClass {
         } else {
           result.rbac_ = rbacBuilder_.build();
         }
+        result.securityProfileId_ = securityProfileId_;
         onBuilt();
         return result;
       }
@@ -3635,6 +3721,10 @@ public final class VirtualHostOuterClass {
         }
         if (other.hasRbac()) {
           mergeRbac(other.getRbac());
+        }
+        if (!other.getSecurityProfileId().isEmpty()) {
+          securityProfileId_ = other.securityProfileId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4407,6 +4497,102 @@ public final class VirtualHostOuterClass {
           rbac_ = null;
         }
         return rbacBuilder_;
+      }
+
+      private java.lang.Object securityProfileId_ = "";
+      /**
+       * <pre>
+       * Security profile that will take effect to all requests routed via particular virtual host.
+       * </pre>
+       *
+       * <code>string security_profile_id = 4;</code>
+       * @return The securityProfileId.
+       */
+      public java.lang.String getSecurityProfileId() {
+        java.lang.Object ref = securityProfileId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          securityProfileId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Security profile that will take effect to all requests routed via particular virtual host.
+       * </pre>
+       *
+       * <code>string security_profile_id = 4;</code>
+       * @return The bytes for securityProfileId.
+       */
+      public com.google.protobuf.ByteString
+          getSecurityProfileIdBytes() {
+        java.lang.Object ref = securityProfileId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          securityProfileId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Security profile that will take effect to all requests routed via particular virtual host.
+       * </pre>
+       *
+       * <code>string security_profile_id = 4;</code>
+       * @param value The securityProfileId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityProfileId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        securityProfileId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security profile that will take effect to all requests routed via particular virtual host.
+       * </pre>
+       *
+       * <code>string security_profile_id = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecurityProfileId() {
+        
+        securityProfileId_ = getDefaultInstance().getSecurityProfileId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Security profile that will take effect to all requests routed via particular virtual host.
+       * </pre>
+       *
+       * <code>string security_profile_id = 4;</code>
+       * @param value The bytes for securityProfileId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityProfileIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        securityProfileId_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -25225,91 +25411,92 @@ public final class VirtualHostOuterClass {
       "y_response_headers\030\005 \003(\01323.yandex.cloud." +
       "apploadbalancer.v1.HeaderModification\022D\n" +
       "\rroute_options\030\006 \001(\0132-.yandex.cloud.appl" +
-      "oadbalancer.v1.RouteOptions\"\356\001\n\014RouteOpt" +
+      "oadbalancer.v1.RouteOptions\"\213\002\n\014RouteOpt" +
       "ions\022S\n\026modify_request_headers\030\001 \003(\01323.y" +
       "andex.cloud.apploadbalancer.v1.HeaderMod" +
       "ification\022T\n\027modify_response_headers\030\002 \003" +
       "(\01323.yandex.cloud.apploadbalancer.v1.Hea" +
       "derModification\0223\n\004rbac\030\003 \001(\0132%.yandex.c" +
-      "loud.apploadbalancer.v1.RBAC\"\313\001\n\004RBAC\022B\n" +
-      "\006action\030\001 \001(\0162,.yandex.cloud.apploadbala" +
-      "ncer.v1.RBAC.ActionB\004\350\3071\001\022H\n\nprincipals\030" +
-      "\002 \003(\0132+.yandex.cloud.apploadbalancer.v1." +
-      "PrincipalsB\007\202\3101\003>=1\"5\n\006Action\022\026\n\022ACTION_" +
-      "UNSPECIFIED\020\000\022\t\n\005ALLOW\020\001\022\010\n\004DENY\020\002\"Y\n\nPr" +
-      "incipals\022K\n\016and_principals\030\001 \003(\0132*.yande" +
-      "x.cloud.apploadbalancer.v1.PrincipalB\007\202\310" +
-      "1\003>=1\"\361\001\n\tPrincipal\022J\n\006header\030\001 \001(\01328.ya" +
-      "ndex.cloud.apploadbalancer.v1.Principal." +
-      "HeaderMatcherH\000\022\023\n\tremote_ip\030\002 \001(\tH\000\022\r\n\003" +
-      "any\030\003 \001(\010H\000\032`\n\rHeaderMatcher\022\022\n\004name\030\001 \001" +
-      "(\tB\004\350\3071\001\022;\n\005value\030\002 \001(\0132,.yandex.cloud.a" +
-      "pploadbalancer.v1.StringMatchB\022\n\nidentif" +
-      "ier\022\004\300\3011\001\"x\n\022HeaderModification\022\014\n\004name\030" +
-      "\001 \001(\t\022\020\n\006append\030\002 \001(\tH\000\022\021\n\007replace\030\003 \001(\t" +
-      "H\000\022\020\n\006remove\030\004 \001(\010H\000\022\020\n\006rename\030\005 \001(\tH\000B\013" +
-      "\n\toperation\"\350\001\n\005Route\022\022\n\004name\030\001 \001(\tB\004\350\3071" +
-      "\001\022:\n\004http\030\002 \001(\0132*.yandex.cloud.apploadba" +
-      "lancer.v1.HttpRouteH\000\022:\n\004grpc\030\003 \001(\0132*.ya" +
-      "ndex.cloud.apploadbalancer.v1.GrpcRouteH" +
-      "\000\022D\n\rroute_options\030\004 \001(\0132-.yandex.cloud." +
-      "apploadbalancer.v1.RouteOptionsB\r\n\005route" +
-      "\022\004\300\3011\001\"\265\002\n\tHttpRoute\022>\n\005match\030\001 \001(\0132/.ya" +
-      "ndex.cloud.apploadbalancer.v1.HttpRouteM" +
-      "atch\022A\n\005route\030\002 \001(\01320.yandex.cloud.applo" +
-      "adbalancer.v1.HttpRouteActionH\000\022C\n\010redir" +
-      "ect\030\003 \001(\0132/.yandex.cloud.apploadbalancer" +
-      ".v1.RedirectActionH\000\022P\n\017direct_response\030" +
-      "\004 \001(\01325.yandex.cloud.apploadbalancer.v1." +
-      "DirectResponseActionH\000B\016\n\006action\022\004\300\3011\001\"\364" +
-      "\001\n\tGrpcRoute\022>\n\005match\030\001 \001(\0132/.yandex.clo" +
-      "ud.apploadbalancer.v1.GrpcRouteMatch\022A\n\005" +
-      "route\030\002 \001(\01320.yandex.cloud.apploadbalanc" +
-      "er.v1.GrpcRouteActionH\000\022T\n\017status_respon" +
-      "se\030\003 \001(\01329.yandex.cloud.apploadbalancer." +
-      "v1.GrpcStatusResponseActionH\000B\016\n\006action\022" +
-      "\004\300\3011\001\"a\n\016HttpRouteMatch\022\023\n\013http_method\030\001" +
-      " \003(\t\022:\n\004path\030\002 \001(\0132,.yandex.cloud.apploa" +
-      "dbalancer.v1.StringMatch\"L\n\016GrpcRouteMat" +
-      "ch\022:\n\004fqmn\030\001 \001(\0132,.yandex.cloud.apploadb" +
-      "alancer.v1.StringMatch\"b\n\013StringMatch\022\025\n" +
-      "\013exact_match\030\001 \001(\tH\000\022\026\n\014prefix_match\030\002 \001" +
-      "(\tH\000\022\025\n\013regex_match\030\003 \001(\tH\000B\r\n\005match\022\004\300\301" +
-      "1\001\"\372\002\n\016RedirectAction\022\026\n\016replace_scheme\030" +
-      "\001 \001(\t\022\024\n\014replace_host\030\002 \001(\t\022\024\n\014replace_p" +
-      "ort\030\003 \001(\003\022\026\n\014replace_path\030\004 \001(\tH\000\022\030\n\016rep" +
-      "lace_prefix\030\005 \001(\tH\000\022\024\n\014remove_query\030\006 \001(" +
-      "\010\022[\n\rresponse_code\030\007 \001(\0162D.yandex.cloud." +
-      "apploadbalancer.v1.RedirectAction.Redire" +
-      "ctResponseCode\"w\n\024RedirectResponseCode\022\025" +
-      "\n\021MOVED_PERMANENTLY\020\000\022\t\n\005FOUND\020\001\022\r\n\tSEE_" +
-      "OTHER\020\002\022\026\n\022TEMPORARY_REDIRECT\020\003\022\026\n\022PERMA" +
-      "NENT_REDIRECT\020\004B\006\n\004path\"k\n\024DirectRespons" +
-      "eAction\022\033\n\006status\030\001 \001(\003B\013\372\3071\007100-599\0226\n\004" +
-      "body\030\002 \001(\0132(.yandex.cloud.apploadbalance" +
-      "r.v1.Payload\"\202\002\n\030GrpcStatusResponseActio" +
-      "n\022P\n\006status\030\001 \001(\0162@.yandex.cloud.appload" +
-      "balancer.v1.GrpcStatusResponseAction.Sta" +
-      "tus\"\223\001\n\006Status\022\006\n\002OK\020\000\022\024\n\020INVALID_ARGUME" +
-      "NT\020\001\022\r\n\tNOT_FOUND\020\002\022\025\n\021PERMISSION_DENIED" +
-      "\020\003\022\023\n\017UNAUTHENTICATED\020\004\022\021\n\rUNIMPLEMENTED" +
-      "\020\005\022\014\n\010INTERNAL\020\006\022\017\n\013UNAVAILABLE\020\007\"\214\002\n\017Ht" +
-      "tpRouteAction\022\036\n\020backend_group_id\030\001 \001(\tB" +
-      "\004\350\3071\001\022*\n\007timeout\030\002 \001(\0132\031.google.protobuf" +
-      ".Duration\022/\n\014idle_timeout\030\003 \001(\0132\031.google" +
-      ".protobuf.Duration\022\026\n\014host_rewrite\030\004 \001(\t" +
-      "H\000\022\033\n\021auto_host_rewrite\030\005 \001(\010H\000\022\026\n\016prefi" +
-      "x_rewrite\030\006 \001(\t\022\025\n\rupgrade_types\030\007 \003(\tB\030" +
-      "\n\026host_rewrite_specifier\"\341\001\n\017GrpcRouteAc" +
-      "tion\022\036\n\020backend_group_id\030\001 \001(\tB\004\350\3071\001\022.\n\013" +
-      "max_timeout\030\002 \001(\0132\031.google.protobuf.Dura" +
-      "tion\022/\n\014idle_timeout\030\003 \001(\0132\031.google.prot" +
-      "obuf.Duration\022\026\n\014host_rewrite\030\004 \001(\tH\000\022\033\n" +
-      "\021auto_host_rewrite\030\005 \001(\010H\000B\030\n\026host_rewri" +
-      "te_specifierBz\n#yandex.cloud.api.appload" +
-      "balancer.v1ZSgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/apploadbalancer/v1" +
-      ";apploadbalancerb\006proto3"
+      "loud.apploadbalancer.v1.RBAC\022\033\n\023security" +
+      "_profile_id\030\004 \001(\t\"\313\001\n\004RBAC\022B\n\006action\030\001 \001" +
+      "(\0162,.yandex.cloud.apploadbalancer.v1.RBA" +
+      "C.ActionB\004\350\3071\001\022H\n\nprincipals\030\002 \003(\0132+.yan" +
+      "dex.cloud.apploadbalancer.v1.PrincipalsB" +
+      "\007\202\3101\003>=1\"5\n\006Action\022\026\n\022ACTION_UNSPECIFIED" +
+      "\020\000\022\t\n\005ALLOW\020\001\022\010\n\004DENY\020\002\"Y\n\nPrincipals\022K\n" +
+      "\016and_principals\030\001 \003(\0132*.yandex.cloud.app" +
+      "loadbalancer.v1.PrincipalB\007\202\3101\003>=1\"\361\001\n\tP" +
+      "rincipal\022J\n\006header\030\001 \001(\01328.yandex.cloud." +
+      "apploadbalancer.v1.Principal.HeaderMatch" +
+      "erH\000\022\023\n\tremote_ip\030\002 \001(\tH\000\022\r\n\003any\030\003 \001(\010H\000" +
+      "\032`\n\rHeaderMatcher\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022;\n" +
+      "\005value\030\002 \001(\0132,.yandex.cloud.apploadbalan" +
+      "cer.v1.StringMatchB\022\n\nidentifier\022\004\300\3011\001\"x" +
+      "\n\022HeaderModification\022\014\n\004name\030\001 \001(\t\022\020\n\006ap" +
+      "pend\030\002 \001(\tH\000\022\021\n\007replace\030\003 \001(\tH\000\022\020\n\006remov" +
+      "e\030\004 \001(\010H\000\022\020\n\006rename\030\005 \001(\tH\000B\013\n\toperation" +
+      "\"\350\001\n\005Route\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022:\n\004http\030\002" +
+      " \001(\0132*.yandex.cloud.apploadbalancer.v1.H" +
+      "ttpRouteH\000\022:\n\004grpc\030\003 \001(\0132*.yandex.cloud." +
+      "apploadbalancer.v1.GrpcRouteH\000\022D\n\rroute_" +
+      "options\030\004 \001(\0132-.yandex.cloud.apploadbala" +
+      "ncer.v1.RouteOptionsB\r\n\005route\022\004\300\3011\001\"\265\002\n\t" +
+      "HttpRoute\022>\n\005match\030\001 \001(\0132/.yandex.cloud." +
+      "apploadbalancer.v1.HttpRouteMatch\022A\n\005rou" +
+      "te\030\002 \001(\01320.yandex.cloud.apploadbalancer." +
+      "v1.HttpRouteActionH\000\022C\n\010redirect\030\003 \001(\0132/" +
+      ".yandex.cloud.apploadbalancer.v1.Redirec" +
+      "tActionH\000\022P\n\017direct_response\030\004 \001(\01325.yan" +
+      "dex.cloud.apploadbalancer.v1.DirectRespo" +
+      "nseActionH\000B\016\n\006action\022\004\300\3011\001\"\364\001\n\tGrpcRout" +
+      "e\022>\n\005match\030\001 \001(\0132/.yandex.cloud.apploadb" +
+      "alancer.v1.GrpcRouteMatch\022A\n\005route\030\002 \001(\013" +
+      "20.yandex.cloud.apploadbalancer.v1.GrpcR" +
+      "outeActionH\000\022T\n\017status_response\030\003 \001(\01329." +
+      "yandex.cloud.apploadbalancer.v1.GrpcStat" +
+      "usResponseActionH\000B\016\n\006action\022\004\300\3011\001\"a\n\016Ht" +
+      "tpRouteMatch\022\023\n\013http_method\030\001 \003(\t\022:\n\004pat" +
+      "h\030\002 \001(\0132,.yandex.cloud.apploadbalancer.v" +
+      "1.StringMatch\"L\n\016GrpcRouteMatch\022:\n\004fqmn\030" +
+      "\001 \001(\0132,.yandex.cloud.apploadbalancer.v1." +
+      "StringMatch\"b\n\013StringMatch\022\025\n\013exact_matc" +
+      "h\030\001 \001(\tH\000\022\026\n\014prefix_match\030\002 \001(\tH\000\022\025\n\013reg" +
+      "ex_match\030\003 \001(\tH\000B\r\n\005match\022\004\300\3011\001\"\372\002\n\016Redi" +
+      "rectAction\022\026\n\016replace_scheme\030\001 \001(\t\022\024\n\014re" +
+      "place_host\030\002 \001(\t\022\024\n\014replace_port\030\003 \001(\003\022\026" +
+      "\n\014replace_path\030\004 \001(\tH\000\022\030\n\016replace_prefix" +
+      "\030\005 \001(\tH\000\022\024\n\014remove_query\030\006 \001(\010\022[\n\rrespon" +
+      "se_code\030\007 \001(\0162D.yandex.cloud.apploadbala" +
+      "ncer.v1.RedirectAction.RedirectResponseC" +
+      "ode\"w\n\024RedirectResponseCode\022\025\n\021MOVED_PER" +
+      "MANENTLY\020\000\022\t\n\005FOUND\020\001\022\r\n\tSEE_OTHER\020\002\022\026\n\022" +
+      "TEMPORARY_REDIRECT\020\003\022\026\n\022PERMANENT_REDIRE" +
+      "CT\020\004B\006\n\004path\"k\n\024DirectResponseAction\022\033\n\006" +
+      "status\030\001 \001(\003B\013\372\3071\007100-599\0226\n\004body\030\002 \001(\0132" +
+      "(.yandex.cloud.apploadbalancer.v1.Payloa" +
+      "d\"\202\002\n\030GrpcStatusResponseAction\022P\n\006status" +
+      "\030\001 \001(\0162@.yandex.cloud.apploadbalancer.v1" +
+      ".GrpcStatusResponseAction.Status\"\223\001\n\006Sta" +
+      "tus\022\006\n\002OK\020\000\022\024\n\020INVALID_ARGUMENT\020\001\022\r\n\tNOT" +
+      "_FOUND\020\002\022\025\n\021PERMISSION_DENIED\020\003\022\023\n\017UNAUT" +
+      "HENTICATED\020\004\022\021\n\rUNIMPLEMENTED\020\005\022\014\n\010INTER" +
+      "NAL\020\006\022\017\n\013UNAVAILABLE\020\007\"\214\002\n\017HttpRouteActi" +
+      "on\022\036\n\020backend_group_id\030\001 \001(\tB\004\350\3071\001\022*\n\007ti" +
+      "meout\030\002 \001(\0132\031.google.protobuf.Duration\022/" +
+      "\n\014idle_timeout\030\003 \001(\0132\031.google.protobuf.D" +
+      "uration\022\026\n\014host_rewrite\030\004 \001(\tH\000\022\033\n\021auto_" +
+      "host_rewrite\030\005 \001(\010H\000\022\026\n\016prefix_rewrite\030\006" +
+      " \001(\t\022\025\n\rupgrade_types\030\007 \003(\tB\030\n\026host_rewr" +
+      "ite_specifier\"\341\001\n\017GrpcRouteAction\022\036\n\020bac" +
+      "kend_group_id\030\001 \001(\tB\004\350\3071\001\022.\n\013max_timeout" +
+      "\030\002 \001(\0132\031.google.protobuf.Duration\022/\n\014idl" +
+      "e_timeout\030\003 \001(\0132\031.google.protobuf.Durati" +
+      "on\022\026\n\014host_rewrite\030\004 \001(\tH\000\022\033\n\021auto_host_" +
+      "rewrite\030\005 \001(\010H\000B\030\n\026host_rewrite_specifie" +
+      "rBz\n#yandex.cloud.api.apploadbalancer.v1" +
+      "ZSgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/apploadbalancer/v1;apploadbal" +
+      "ancerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -25329,7 +25516,7 @@ public final class VirtualHostOuterClass {
     internal_static_yandex_cloud_apploadbalancer_v1_RouteOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_apploadbalancer_v1_RouteOptions_descriptor,
-        new java.lang.String[] { "ModifyRequestHeaders", "ModifyResponseHeaders", "Rbac", });
+        new java.lang.String[] { "ModifyRequestHeaders", "ModifyResponseHeaders", "Rbac", "SecurityProfileId", });
     internal_static_yandex_cloud_apploadbalancer_v1_RBAC_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_apploadbalancer_v1_RBAC_fieldAccessorTable = new
