@@ -20,7 +20,7 @@ public final class Llm {
 
     /**
      * <pre>
-     * Enables streaming of the partially generated text.
+     * Enables streaming of partially generated text.
      * </pre>
      *
      * <code>bool partial_results = 1;</code>
@@ -30,7 +30,8 @@ public final class Llm {
 
     /**
      * <pre>
-     * Affects creativity and randomness of the responses. It is a double number between 0 and infinity. A low temperature causes the responses to be straightforward, a high temperature causes high-level creativity and randomness.
+     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+     * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -39,7 +40,8 @@ public final class Llm {
     boolean hasTemperature();
     /**
      * <pre>
-     * Affects creativity and randomness of the responses. It is a double number between 0 and infinity. A low temperature causes the responses to be straightforward, a high temperature causes high-level creativity and randomness.
+     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+     * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -48,7 +50,8 @@ public final class Llm {
     com.google.protobuf.DoubleValue getTemperature();
     /**
      * <pre>
-     * Affects creativity and randomness of the responses. It is a double number between 0 and infinity. A low temperature causes the responses to be straightforward, a high temperature causes high-level creativity and randomness.
+     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+     * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -57,7 +60,8 @@ public final class Llm {
 
     /**
      * <pre>
-     * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+     * Sets the maximum limit on the total number of tokens used for both the input prompt and the generated response.
+     * Must be greater than zero and not exceed 7400 tokens.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -66,7 +70,8 @@ public final class Llm {
     boolean hasMaxTokens();
     /**
      * <pre>
-     * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+     * Sets the maximum limit on the total number of tokens used for both the input prompt and the generated response.
+     * Must be greater than zero and not exceed 7400 tokens.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -75,7 +80,8 @@ public final class Llm {
     com.google.protobuf.Int64Value getMaxTokens();
     /**
      * <pre>
-     * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+     * Sets the maximum limit on the total number of tokens used for both the input prompt and the generated response.
+     * Must be greater than zero and not exceed 7400 tokens.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -84,7 +90,7 @@ public final class Llm {
   }
   /**
    * <pre>
-   * Sets the generation options.
+   * Defines the options for text generation.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.GenerationOptions}
@@ -198,7 +204,7 @@ public final class Llm {
     private boolean partialResults_;
     /**
      * <pre>
-     * Enables streaming of the partially generated text.
+     * Enables streaming of partially generated text.
      * </pre>
      *
      * <code>bool partial_results = 1;</code>
@@ -213,7 +219,8 @@ public final class Llm {
     private com.google.protobuf.DoubleValue temperature_;
     /**
      * <pre>
-     * Affects creativity and randomness of the responses. It is a double number between 0 and infinity. A low temperature causes the responses to be straightforward, a high temperature causes high-level creativity and randomness.
+     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+     * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -225,7 +232,8 @@ public final class Llm {
     }
     /**
      * <pre>
-     * Affects creativity and randomness of the responses. It is a double number between 0 and infinity. A low temperature causes the responses to be straightforward, a high temperature causes high-level creativity and randomness.
+     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+     * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -237,7 +245,8 @@ public final class Llm {
     }
     /**
      * <pre>
-     * Affects creativity and randomness of the responses. It is a double number between 0 and infinity. A low temperature causes the responses to be straightforward, a high temperature causes high-level creativity and randomness.
+     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+     * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
      * </pre>
      *
      * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -251,7 +260,8 @@ public final class Llm {
     private com.google.protobuf.Int64Value maxTokens_;
     /**
      * <pre>
-     * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+     * Sets the maximum limit on the total number of tokens used for both the input prompt and the generated response.
+     * Must be greater than zero and not exceed 7400 tokens.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -263,7 +273,8 @@ public final class Llm {
     }
     /**
      * <pre>
-     * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+     * Sets the maximum limit on the total number of tokens used for both the input prompt and the generated response.
+     * Must be greater than zero and not exceed 7400 tokens.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -275,7 +286,8 @@ public final class Llm {
     }
     /**
      * <pre>
-     * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+     * Sets the maximum limit on the total number of tokens used for both the input prompt and the generated response.
+     * Must be greater than zero and not exceed 7400 tokens.
      * </pre>
      *
      * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -475,7 +487,7 @@ public final class Llm {
     }
     /**
      * <pre>
-     * Sets the generation options.
+     * Defines the options for text generation.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.GenerationOptions}
@@ -655,7 +667,7 @@ public final class Llm {
       private boolean partialResults_ ;
       /**
        * <pre>
-       * Enables streaming of the partially generated text.
+       * Enables streaming of partially generated text.
        * </pre>
        *
        * <code>bool partial_results = 1;</code>
@@ -667,7 +679,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Enables streaming of the partially generated text.
+       * Enables streaming of partially generated text.
        * </pre>
        *
        * <code>bool partial_results = 1;</code>
@@ -682,7 +694,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Enables streaming of the partially generated text.
+       * Enables streaming of partially generated text.
        * </pre>
        *
        * <code>bool partial_results = 1;</code>
@@ -700,7 +712,8 @@ public final class Llm {
           com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> temperatureBuilder_;
       /**
        * <pre>
-       * Affects creativity and randomness of the responses. It is a double number between 0 and infinity. A low temperature causes the responses to be straightforward, a high temperature causes high-level creativity and randomness.
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+       * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -711,7 +724,8 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Affects creativity and randomness of the responses. It is a double number between 0 and infinity. A low temperature causes the responses to be straightforward, a high temperature causes high-level creativity and randomness.
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+       * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -726,7 +740,8 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Affects creativity and randomness of the responses. It is a double number between 0 and infinity. A low temperature causes the responses to be straightforward, a high temperature causes high-level creativity and randomness.
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+       * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -746,7 +761,8 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Affects creativity and randomness of the responses. It is a double number between 0 and infinity. A low temperature causes the responses to be straightforward, a high temperature causes high-level creativity and randomness.
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+       * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -764,7 +780,8 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Affects creativity and randomness of the responses. It is a double number between 0 and infinity. A low temperature causes the responses to be straightforward, a high temperature causes high-level creativity and randomness.
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+       * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -786,7 +803,8 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Affects creativity and randomness of the responses. It is a double number between 0 and infinity. A low temperature causes the responses to be straightforward, a high temperature causes high-level creativity and randomness.
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+       * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -804,7 +822,8 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Affects creativity and randomness of the responses. It is a double number between 0 and infinity. A low temperature causes the responses to be straightforward, a high temperature causes high-level creativity and randomness.
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+       * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -816,7 +835,8 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Affects creativity and randomness of the responses. It is a double number between 0 and infinity. A low temperature causes the responses to be straightforward, a high temperature causes high-level creativity and randomness.
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+       * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -831,7 +851,8 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Affects creativity and randomness of the responses. It is a double number between 0 and infinity. A low temperature causes the responses to be straightforward, a high temperature causes high-level creativity and randomness.
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+       * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
        * </pre>
        *
        * <code>.google.protobuf.DoubleValue temperature = 2;</code>
@@ -855,7 +876,8 @@ public final class Llm {
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxTokensBuilder_;
       /**
        * <pre>
-       * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+       * Sets the maximum limit on the total number of tokens used for both the input prompt and the generated response.
+       * Must be greater than zero and not exceed 7400 tokens.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -866,7 +888,8 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+       * Sets the maximum limit on the total number of tokens used for both the input prompt and the generated response.
+       * Must be greater than zero and not exceed 7400 tokens.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -881,7 +904,8 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+       * Sets the maximum limit on the total number of tokens used for both the input prompt and the generated response.
+       * Must be greater than zero and not exceed 7400 tokens.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -901,7 +925,8 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+       * Sets the maximum limit on the total number of tokens used for both the input prompt and the generated response.
+       * Must be greater than zero and not exceed 7400 tokens.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -919,7 +944,8 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+       * Sets the maximum limit on the total number of tokens used for both the input prompt and the generated response.
+       * Must be greater than zero and not exceed 7400 tokens.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -941,7 +967,8 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+       * Sets the maximum limit on the total number of tokens used for both the input prompt and the generated response.
+       * Must be greater than zero and not exceed 7400 tokens.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -959,7 +986,8 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+       * Sets the maximum limit on the total number of tokens used for both the input prompt and the generated response.
+       * Must be greater than zero and not exceed 7400 tokens.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -971,7 +999,8 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+       * Sets the maximum limit on the total number of tokens used for both the input prompt and the generated response.
+       * Must be greater than zero and not exceed 7400 tokens.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -986,7 +1015,8 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Sets response limit in tokens. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+       * Sets the maximum limit on the total number of tokens used for both the input prompt and the generated response.
+       * Must be greater than zero and not exceed 7400 tokens.
        * </pre>
        *
        * <code>.google.protobuf.Int64Value max_tokens = 3;</code>
@@ -1063,7 +1093,7 @@ public final class Llm {
 
     /**
      * <pre>
-     * Text of the response.
+     * The generated text response.
      * </pre>
      *
      * <code>string text = 1;</code>
@@ -1072,7 +1102,7 @@ public final class Llm {
     java.lang.String getText();
     /**
      * <pre>
-     * Text of the response.
+     * The generated text response.
      * </pre>
      *
      * <code>string text = 1;</code>
@@ -1083,7 +1113,7 @@ public final class Llm {
 
     /**
      * <pre>
-     * Text log likelihood.
+     * The score or confidence of the generated text.
      * </pre>
      *
      * <code>double score = 2;</code>
@@ -1093,7 +1123,7 @@ public final class Llm {
 
     /**
      * <pre>
-     * Number of tokens in the response.
+     * The number of tokens in the generated response.
      * </pre>
      *
      * <code>int64 num_tokens = 3;</code>
@@ -1103,7 +1133,7 @@ public final class Llm {
   }
   /**
    * <pre>
-   * Contains the response, its score and length in tokens.
+   * Represents an alternative generated response, including its score and token count.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.Alternative}
@@ -1203,7 +1233,7 @@ public final class Llm {
     private volatile java.lang.Object text_;
     /**
      * <pre>
-     * Text of the response.
+     * The generated text response.
      * </pre>
      *
      * <code>string text = 1;</code>
@@ -1224,7 +1254,7 @@ public final class Llm {
     }
     /**
      * <pre>
-     * Text of the response.
+     * The generated text response.
      * </pre>
      *
      * <code>string text = 1;</code>
@@ -1249,7 +1279,7 @@ public final class Llm {
     private double score_;
     /**
      * <pre>
-     * Text log likelihood.
+     * The score or confidence of the generated text.
      * </pre>
      *
      * <code>double score = 2;</code>
@@ -1264,7 +1294,7 @@ public final class Llm {
     private long numTokens_;
     /**
      * <pre>
-     * Number of tokens in the response.
+     * The number of tokens in the generated response.
      * </pre>
      *
      * <code>int64 num_tokens = 3;</code>
@@ -1456,7 +1486,7 @@ public final class Llm {
     }
     /**
      * <pre>
-     * Contains the response, its score and length in tokens.
+     * Represents an alternative generated response, including its score and token count.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.Alternative}
@@ -1621,7 +1651,7 @@ public final class Llm {
       private java.lang.Object text_ = "";
       /**
        * <pre>
-       * Text of the response.
+       * The generated text response.
        * </pre>
        *
        * <code>string text = 1;</code>
@@ -1641,7 +1671,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Text of the response.
+       * The generated text response.
        * </pre>
        *
        * <code>string text = 1;</code>
@@ -1662,7 +1692,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Text of the response.
+       * The generated text response.
        * </pre>
        *
        * <code>string text = 1;</code>
@@ -1681,7 +1711,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Text of the response.
+       * The generated text response.
        * </pre>
        *
        * <code>string text = 1;</code>
@@ -1695,7 +1725,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Text of the response.
+       * The generated text response.
        * </pre>
        *
        * <code>string text = 1;</code>
@@ -1717,7 +1747,7 @@ public final class Llm {
       private double score_ ;
       /**
        * <pre>
-       * Text log likelihood.
+       * The score or confidence of the generated text.
        * </pre>
        *
        * <code>double score = 2;</code>
@@ -1729,7 +1759,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Text log likelihood.
+       * The score or confidence of the generated text.
        * </pre>
        *
        * <code>double score = 2;</code>
@@ -1744,7 +1774,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Text log likelihood.
+       * The score or confidence of the generated text.
        * </pre>
        *
        * <code>double score = 2;</code>
@@ -1760,7 +1790,7 @@ public final class Llm {
       private long numTokens_ ;
       /**
        * <pre>
-       * Number of tokens in the response.
+       * The number of tokens in the generated response.
        * </pre>
        *
        * <code>int64 num_tokens = 3;</code>
@@ -1772,7 +1802,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Number of tokens in the response.
+       * The number of tokens in the generated response.
        * </pre>
        *
        * <code>int64 num_tokens = 3;</code>
@@ -1787,7 +1817,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Number of tokens in the response.
+       * The number of tokens in the generated response.
        * </pre>
        *
        * <code>int64 num_tokens = 3;</code>
@@ -1858,7 +1888,7 @@ public final class Llm {
 
     /**
      * <pre>
-     * Identifies who sent message. For message from the LLM model, the mandatory value is "assistant".
+     * Identifies the sender of the message.
      * </pre>
      *
      * <code>string role = 1;</code>
@@ -1867,7 +1897,7 @@ public final class Llm {
     java.lang.String getRole();
     /**
      * <pre>
-     * Identifies who sent message. For message from the LLM model, the mandatory value is "assistant".
+     * Identifies the sender of the message.
      * </pre>
      *
      * <code>string role = 1;</code>
@@ -1878,7 +1908,7 @@ public final class Llm {
 
     /**
      * <pre>
-     * Text of the message.
+     * The text content of the message.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -1887,7 +1917,7 @@ public final class Llm {
     java.lang.String getText();
     /**
      * <pre>
-     * Text of the message.
+     * The text content of the message.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -1898,7 +1928,7 @@ public final class Llm {
   }
   /**
    * <pre>
-   * Contains description of the message for Chat.
+   * Represents a message within a chat.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.Message}
@@ -1995,7 +2025,7 @@ public final class Llm {
     private volatile java.lang.Object role_;
     /**
      * <pre>
-     * Identifies who sent message. For message from the LLM model, the mandatory value is "assistant".
+     * Identifies the sender of the message.
      * </pre>
      *
      * <code>string role = 1;</code>
@@ -2016,7 +2046,7 @@ public final class Llm {
     }
     /**
      * <pre>
-     * Identifies who sent message. For message from the LLM model, the mandatory value is "assistant".
+     * Identifies the sender of the message.
      * </pre>
      *
      * <code>string role = 1;</code>
@@ -2041,7 +2071,7 @@ public final class Llm {
     private volatile java.lang.Object text_;
     /**
      * <pre>
-     * Text of the message.
+     * The text content of the message.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -2062,7 +2092,7 @@ public final class Llm {
     }
     /**
      * <pre>
-     * Text of the message.
+     * The text content of the message.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -2249,7 +2279,7 @@ public final class Llm {
     }
     /**
      * <pre>
-     * Contains description of the message for Chat.
+     * Represents a message within a chat.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.Message}
@@ -2409,7 +2439,7 @@ public final class Llm {
       private java.lang.Object role_ = "";
       /**
        * <pre>
-       * Identifies who sent message. For message from the LLM model, the mandatory value is "assistant".
+       * Identifies the sender of the message.
        * </pre>
        *
        * <code>string role = 1;</code>
@@ -2429,7 +2459,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Identifies who sent message. For message from the LLM model, the mandatory value is "assistant".
+       * Identifies the sender of the message.
        * </pre>
        *
        * <code>string role = 1;</code>
@@ -2450,7 +2480,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Identifies who sent message. For message from the LLM model, the mandatory value is "assistant".
+       * Identifies the sender of the message.
        * </pre>
        *
        * <code>string role = 1;</code>
@@ -2469,7 +2499,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Identifies who sent message. For message from the LLM model, the mandatory value is "assistant".
+       * Identifies the sender of the message.
        * </pre>
        *
        * <code>string role = 1;</code>
@@ -2483,7 +2513,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Identifies who sent message. For message from the LLM model, the mandatory value is "assistant".
+       * Identifies the sender of the message.
        * </pre>
        *
        * <code>string role = 1;</code>
@@ -2505,7 +2535,7 @@ public final class Llm {
       private java.lang.Object text_ = "";
       /**
        * <pre>
-       * Text of the message.
+       * The text content of the message.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -2525,7 +2555,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Text of the message.
+       * The text content of the message.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -2546,7 +2576,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Text of the message.
+       * The text content of the message.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -2565,7 +2595,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Text of the message.
+       * The text content of the message.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -2579,7 +2609,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Text of the message.
+       * The text content of the message.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -2656,7 +2686,7 @@ public final class Llm {
 
     /**
      * <pre>
-     * Internal token ID.
+     * An internal token identifier.
      * </pre>
      *
      * <code>int64 id = 1;</code>
@@ -2666,7 +2696,7 @@ public final class Llm {
 
     /**
      * <pre>
-     * Token text representation.
+     * The textual representation of the token.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -2675,7 +2705,7 @@ public final class Llm {
     java.lang.String getText();
     /**
      * <pre>
-     * Token text representation.
+     * The textual representation of the token.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -2686,7 +2716,7 @@ public final class Llm {
 
     /**
      * <pre>
-     * Type of token (special or not special). Special tokens define the behaviour of the model and are not visible for users.
+     * Indicates whether the token is special or not. Special tokens define the model's behavior and are not visible to users.
      * </pre>
      *
      * <code>bool special = 3;</code>
@@ -2696,7 +2726,7 @@ public final class Llm {
   }
   /**
    * <pre>
-   * Contains description of the LLM token (base coding unit).
+   * Represents a token, the basic unit of text, used by the LLM.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.Token}
@@ -2796,7 +2826,7 @@ public final class Llm {
     private long id_;
     /**
      * <pre>
-     * Internal token ID.
+     * An internal token identifier.
      * </pre>
      *
      * <code>int64 id = 1;</code>
@@ -2811,7 +2841,7 @@ public final class Llm {
     private volatile java.lang.Object text_;
     /**
      * <pre>
-     * Token text representation.
+     * The textual representation of the token.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -2832,7 +2862,7 @@ public final class Llm {
     }
     /**
      * <pre>
-     * Token text representation.
+     * The textual representation of the token.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -2857,7 +2887,7 @@ public final class Llm {
     private boolean special_;
     /**
      * <pre>
-     * Type of token (special or not special). Special tokens define the behaviour of the model and are not visible for users.
+     * Indicates whether the token is special or not. Special tokens define the model's behavior and are not visible to users.
      * </pre>
      *
      * <code>bool special = 3;</code>
@@ -3048,7 +3078,7 @@ public final class Llm {
     }
     /**
      * <pre>
-     * Contains description of the LLM token (base coding unit).
+     * Represents a token, the basic unit of text, used by the LLM.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.Token}
@@ -3213,7 +3243,7 @@ public final class Llm {
       private long id_ ;
       /**
        * <pre>
-       * Internal token ID.
+       * An internal token identifier.
        * </pre>
        *
        * <code>int64 id = 1;</code>
@@ -3225,7 +3255,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Internal token ID.
+       * An internal token identifier.
        * </pre>
        *
        * <code>int64 id = 1;</code>
@@ -3240,7 +3270,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Internal token ID.
+       * An internal token identifier.
        * </pre>
        *
        * <code>int64 id = 1;</code>
@@ -3256,7 +3286,7 @@ public final class Llm {
       private java.lang.Object text_ = "";
       /**
        * <pre>
-       * Token text representation.
+       * The textual representation of the token.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -3276,7 +3306,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Token text representation.
+       * The textual representation of the token.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -3297,7 +3327,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Token text representation.
+       * The textual representation of the token.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -3316,7 +3346,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Token text representation.
+       * The textual representation of the token.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -3330,7 +3360,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Token text representation.
+       * The textual representation of the token.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -3352,7 +3382,7 @@ public final class Llm {
       private boolean special_ ;
       /**
        * <pre>
-       * Type of token (special or not special). Special tokens define the behaviour of the model and are not visible for users.
+       * Indicates whether the token is special or not. Special tokens define the model's behavior and are not visible to users.
        * </pre>
        *
        * <code>bool special = 3;</code>
@@ -3364,7 +3394,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Type of token (special or not special). Special tokens define the behaviour of the model and are not visible for users.
+       * Indicates whether the token is special or not. Special tokens define the model's behavior and are not visible to users.
        * </pre>
        *
        * <code>bool special = 3;</code>
@@ -3379,7 +3409,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Type of token (special or not special). Special tokens define the behaviour of the model and are not visible for users.
+       * Indicates whether the token is special or not. Special tokens define the model's behavior and are not visible to users.
        * </pre>
        *
        * <code>bool special = 3;</code>

@@ -3,6 +3,9 @@ package yandex.cloud.api.ai.ocr.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for managing operations for asynchronous API requests.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -122,10 +125,16 @@ public final class TextRecognitionAsyncServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing operations for asynchronous API requests.
+   * </pre>
    */
   public static abstract class TextRecognitionAsyncServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * To send the image for asynchronous text recognition.
+     * </pre>
      */
     public void recognize(yandex.cloud.api.ai.ocr.v1.OcrService.RecognizeTextRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -133,6 +142,9 @@ public final class TextRecognitionAsyncServiceGrpc {
     }
 
     /**
+     * <pre>
+     * To get recognition results.
+     * </pre>
      */
     public void getRecognition(yandex.cloud.api.ai.ocr.v1.OcrService.GetRecognitionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.ocr.v1.OcrService.RecognizeTextResponse> responseObserver) {
@@ -160,6 +172,9 @@ public final class TextRecognitionAsyncServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing operations for asynchronous API requests.
+   * </pre>
    */
   public static final class TextRecognitionAsyncServiceStub extends io.grpc.stub.AbstractAsyncStub<TextRecognitionAsyncServiceStub> {
     private TextRecognitionAsyncServiceStub(
@@ -174,6 +189,9 @@ public final class TextRecognitionAsyncServiceGrpc {
     }
 
     /**
+     * <pre>
+     * To send the image for asynchronous text recognition.
+     * </pre>
      */
     public void recognize(yandex.cloud.api.ai.ocr.v1.OcrService.RecognizeTextRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -182,6 +200,9 @@ public final class TextRecognitionAsyncServiceGrpc {
     }
 
     /**
+     * <pre>
+     * To get recognition results.
+     * </pre>
      */
     public void getRecognition(yandex.cloud.api.ai.ocr.v1.OcrService.GetRecognitionRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.ocr.v1.OcrService.RecognizeTextResponse> responseObserver) {
@@ -191,6 +212,9 @@ public final class TextRecognitionAsyncServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing operations for asynchronous API requests.
+   * </pre>
    */
   public static final class TextRecognitionAsyncServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<TextRecognitionAsyncServiceBlockingStub> {
     private TextRecognitionAsyncServiceBlockingStub(
@@ -205,6 +229,9 @@ public final class TextRecognitionAsyncServiceGrpc {
     }
 
     /**
+     * <pre>
+     * To send the image for asynchronous text recognition.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation recognize(yandex.cloud.api.ai.ocr.v1.OcrService.RecognizeTextRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -212,6 +239,9 @@ public final class TextRecognitionAsyncServiceGrpc {
     }
 
     /**
+     * <pre>
+     * To get recognition results.
+     * </pre>
      */
     public java.util.Iterator<yandex.cloud.api.ai.ocr.v1.OcrService.RecognizeTextResponse> getRecognition(
         yandex.cloud.api.ai.ocr.v1.OcrService.GetRecognitionRequest request) {
@@ -221,6 +251,9 @@ public final class TextRecognitionAsyncServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing operations for asynchronous API requests.
+   * </pre>
    */
   public static final class TextRecognitionAsyncServiceFutureStub extends io.grpc.stub.AbstractFutureStub<TextRecognitionAsyncServiceFutureStub> {
     private TextRecognitionAsyncServiceFutureStub(
@@ -235,6 +268,9 @@ public final class TextRecognitionAsyncServiceGrpc {
     }
 
     /**
+     * <pre>
+     * To send the image for asynchronous text recognition.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> recognize(
         yandex.cloud.api.ai.ocr.v1.OcrService.RecognizeTextRequest request) {

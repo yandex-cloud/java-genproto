@@ -175,6 +175,35 @@ public final class BackupOuterClass {
      * <code>.google.protobuf.Timestamp started_at = 5;</code>
      */
     com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder();
+
+    /**
+     * <pre>
+     * Size of backup in bytes.
+     * </pre>
+     *
+     * <code>int64 size = 7;</code>
+     * @return The size.
+     */
+    long getSize();
+
+    /**
+     * <pre>
+     * How this backup was created (manual/automatic/etc...).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.Backup.BackupType type = 8;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <pre>
+     * How this backup was created (manual/automatic/etc...).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.Backup.BackupType type = 8;</code>
+     * @return The type.
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.BackupOuterClass.Backup.BackupType getType();
   }
   /**
    * <pre>
@@ -198,6 +227,7 @@ public final class BackupOuterClass {
       folderId_ = "";
       sourceClusterId_ = "";
       sourceShardNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      type_ = 0;
     }
 
     @java.lang.Override
@@ -284,6 +314,17 @@ public final class BackupOuterClass {
               sourceShardNames_.add(s);
               break;
             }
+            case 56: {
+
+              size_ = input.readInt64();
+              break;
+            }
+            case 64: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -317,6 +358,139 @@ public final class BackupOuterClass {
       return yandex.cloud.api.mdb.clickhouse.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_clickhouse_v1_Backup_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.mdb.clickhouse.v1.BackupOuterClass.Backup.class, yandex.cloud.api.mdb.clickhouse.v1.BackupOuterClass.Backup.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.clickhouse.v1.Backup.BackupType}
+     */
+    public enum BackupType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>BACKUP_TYPE_UNSPECIFIED = 0;</code>
+       */
+      BACKUP_TYPE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Backup created by automated daily schedule.
+       * </pre>
+       *
+       * <code>AUTOMATED = 1;</code>
+       */
+      AUTOMATED(1),
+      /**
+       * <pre>
+       * Backup created by user request.
+       * </pre>
+       *
+       * <code>MANUAL = 2;</code>
+       */
+      MANUAL(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>BACKUP_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int BACKUP_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Backup created by automated daily schedule.
+       * </pre>
+       *
+       * <code>AUTOMATED = 1;</code>
+       */
+      public static final int AUTOMATED_VALUE = 1;
+      /**
+       * <pre>
+       * Backup created by user request.
+       * </pre>
+       *
+       * <code>MANUAL = 2;</code>
+       */
+      public static final int MANUAL_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static BackupType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static BackupType forNumber(int value) {
+        switch (value) {
+          case 0: return BACKUP_TYPE_UNSPECIFIED;
+          case 1: return AUTOMATED;
+          case 2: return MANUAL;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<BackupType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          BackupType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<BackupType>() {
+              public BackupType findValueByNumber(int number) {
+                return BackupType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.BackupOuterClass.Backup.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final BackupType[] VALUES = values();
+
+      public static BackupType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private BackupType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.Backup.BackupType)
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -587,6 +761,48 @@ public final class BackupOuterClass {
       return getStartedAt();
     }
 
+    public static final int SIZE_FIELD_NUMBER = 7;
+    private long size_;
+    /**
+     * <pre>
+     * Size of backup in bytes.
+     * </pre>
+     *
+     * <code>int64 size = 7;</code>
+     * @return The size.
+     */
+    @java.lang.Override
+    public long getSize() {
+      return size_;
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 8;
+    private int type_;
+    /**
+     * <pre>
+     * How this backup was created (manual/automatic/etc...).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.Backup.BackupType type = 8;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * How this backup was created (manual/automatic/etc...).
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.Backup.BackupType type = 8;</code>
+     * @return The type.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.BackupOuterClass.Backup.BackupType getType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.clickhouse.v1.BackupOuterClass.Backup.BackupType result = yandex.cloud.api.mdb.clickhouse.v1.BackupOuterClass.Backup.BackupType.valueOf(type_);
+      return result == null ? yandex.cloud.api.mdb.clickhouse.v1.BackupOuterClass.Backup.BackupType.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -618,6 +834,12 @@ public final class BackupOuterClass {
       }
       for (int i = 0; i < sourceShardNames_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, sourceShardNames_.getRaw(i));
+      }
+      if (size_ != 0L) {
+        output.writeInt64(7, size_);
+      }
+      if (type_ != yandex.cloud.api.mdb.clickhouse.v1.BackupOuterClass.Backup.BackupType.BACKUP_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(8, type_);
       }
       unknownFields.writeTo(output);
     }
@@ -653,6 +875,14 @@ public final class BackupOuterClass {
         size += dataSize;
         size += 1 * getSourceShardNamesList().size();
       }
+      if (size_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(7, size_);
+      }
+      if (type_ != yandex.cloud.api.mdb.clickhouse.v1.BackupOuterClass.Backup.BackupType.BACKUP_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(8, type_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -686,6 +916,9 @@ public final class BackupOuterClass {
         if (!getStartedAt()
             .equals(other.getStartedAt())) return false;
       }
+      if (getSize()
+          != other.getSize()) return false;
+      if (type_ != other.type_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -715,6 +948,11 @@ public final class BackupOuterClass {
         hash = (37 * hash) + STARTED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getStartedAt().hashCode();
       }
+      hash = (37 * hash) + SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSize());
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -873,6 +1111,10 @@ public final class BackupOuterClass {
           startedAt_ = null;
           startedAtBuilder_ = null;
         }
+        size_ = 0L;
+
+        type_ = 0;
+
         return this;
       }
 
@@ -918,6 +1160,8 @@ public final class BackupOuterClass {
         } else {
           result.startedAt_ = startedAtBuilder_.build();
         }
+        result.size_ = size_;
+        result.type_ = type_;
         onBuilt();
         return result;
       }
@@ -993,6 +1237,12 @@ public final class BackupOuterClass {
         }
         if (other.hasStartedAt()) {
           mergeStartedAt(other.getStartedAt());
+        }
+        if (other.getSize() != 0L) {
+          setSize(other.getSize());
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1776,6 +2026,123 @@ public final class BackupOuterClass {
         }
         return startedAtBuilder_;
       }
+
+      private long size_ ;
+      /**
+       * <pre>
+       * Size of backup in bytes.
+       * </pre>
+       *
+       * <code>int64 size = 7;</code>
+       * @return The size.
+       */
+      @java.lang.Override
+      public long getSize() {
+        return size_;
+      }
+      /**
+       * <pre>
+       * Size of backup in bytes.
+       * </pre>
+       *
+       * <code>int64 size = 7;</code>
+       * @param value The size to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSize(long value) {
+        
+        size_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Size of backup in bytes.
+       * </pre>
+       *
+       * <code>int64 size = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSize() {
+        
+        size_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int type_ = 0;
+      /**
+       * <pre>
+       * How this backup was created (manual/automatic/etc...).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.Backup.BackupType type = 8;</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * How this backup was created (manual/automatic/etc...).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.Backup.BackupType type = 8;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * How this backup was created (manual/automatic/etc...).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.Backup.BackupType type = 8;</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.BackupOuterClass.Backup.BackupType getType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.clickhouse.v1.BackupOuterClass.Backup.BackupType result = yandex.cloud.api.mdb.clickhouse.v1.BackupOuterClass.Backup.BackupType.valueOf(type_);
+        return result == null ? yandex.cloud.api.mdb.clickhouse.v1.BackupOuterClass.Backup.BackupType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * How this backup was created (manual/automatic/etc...).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.Backup.BackupType type = 8;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(yandex.cloud.api.mdb.clickhouse.v1.BackupOuterClass.Backup.BackupType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * How this backup was created (manual/automatic/etc...).
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.Backup.BackupType type = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1845,15 +2212,19 @@ public final class BackupOuterClass {
     java.lang.String[] descriptorData = {
       "\n+yandex/cloud/mdb/clickhouse/v1/backup." +
       "proto\022\036yandex.cloud.mdb.clickhouse.v1\032\037g" +
-      "oogle/protobuf/timestamp.proto\"\276\001\n\006Backu" +
+      "oogle/protobuf/timestamp.proto\"\323\002\n\006Backu" +
       "p\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncrea" +
       "ted_at\030\003 \001(\0132\032.google.protobuf.Timestamp" +
       "\022\031\n\021source_cluster_id\030\004 \001(\t\022\032\n\022source_sh" +
       "ard_names\030\006 \003(\t\022.\n\nstarted_at\030\005 \001(\0132\032.go" +
-      "ogle.protobuf.TimestampBs\n\"yandex.cloud." +
-      "api.mdb.clickhouse.v1ZMgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/mdb/clic" +
-      "khouse/v1;clickhouseb\006proto3"
+      "ogle.protobuf.Timestamp\022\014\n\004size\030\007 \001(\003\022?\n" +
+      "\004type\030\010 \001(\01621.yandex.cloud.mdb.clickhous" +
+      "e.v1.Backup.BackupType\"D\n\nBackupType\022\033\n\027" +
+      "BACKUP_TYPE_UNSPECIFIED\020\000\022\r\n\tAUTOMATED\020\001" +
+      "\022\n\n\006MANUAL\020\002Bs\n\"yandex.cloud.api.mdb.cli" +
+      "ckhouse.v1ZMgithub.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/mdb/clickhouse/v1;c" +
+      "lickhouseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1865,7 +2236,7 @@ public final class BackupOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_Backup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_Backup_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "SourceClusterId", "SourceShardNames", "StartedAt", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "SourceClusterId", "SourceShardNames", "StartedAt", "Size", "Type", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

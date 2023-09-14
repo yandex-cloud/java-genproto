@@ -19986,6 +19986,21 @@ public final class ClusterOuterClass {
      * <code>.google.protobuf.Int64Value data_cache_max_size = 4;</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getDataCacheMaxSizeOrBuilder();
+
+    /**
+     * <code>.google.protobuf.BoolValue prefer_not_to_merge = 5;</code>
+     * @return Whether the preferNotToMerge field is set.
+     */
+    boolean hasPreferNotToMerge();
+    /**
+     * <code>.google.protobuf.BoolValue prefer_not_to_merge = 5;</code>
+     * @return The preferNotToMerge.
+     */
+    com.google.protobuf.BoolValue getPreferNotToMerge();
+    /**
+     * <code>.google.protobuf.BoolValue prefer_not_to_merge = 5;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getPreferNotToMergeOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.CloudStorage}
@@ -20072,6 +20087,19 @@ public final class ClusterOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(dataCacheMaxSize_);
                 dataCacheMaxSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (preferNotToMerge_ != null) {
+                subBuilder = preferNotToMerge_.toBuilder();
+              }
+              preferNotToMerge_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(preferNotToMerge_);
+                preferNotToMerge_ = subBuilder.buildPartial();
               }
 
               break;
@@ -20201,6 +20229,32 @@ public final class ClusterOuterClass {
       return getDataCacheMaxSize();
     }
 
+    public static final int PREFER_NOT_TO_MERGE_FIELD_NUMBER = 5;
+    private com.google.protobuf.BoolValue preferNotToMerge_;
+    /**
+     * <code>.google.protobuf.BoolValue prefer_not_to_merge = 5;</code>
+     * @return Whether the preferNotToMerge field is set.
+     */
+    @java.lang.Override
+    public boolean hasPreferNotToMerge() {
+      return preferNotToMerge_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue prefer_not_to_merge = 5;</code>
+     * @return The preferNotToMerge.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getPreferNotToMerge() {
+      return preferNotToMerge_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preferNotToMerge_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue prefer_not_to_merge = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getPreferNotToMergeOrBuilder() {
+      return getPreferNotToMerge();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -20227,6 +20281,9 @@ public final class ClusterOuterClass {
       if (dataCacheMaxSize_ != null) {
         output.writeMessage(4, getDataCacheMaxSize());
       }
+      if (preferNotToMerge_ != null) {
+        output.writeMessage(5, getPreferNotToMerge());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -20251,6 +20308,10 @@ public final class ClusterOuterClass {
       if (dataCacheMaxSize_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getDataCacheMaxSize());
+      }
+      if (preferNotToMerge_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getPreferNotToMerge());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -20284,6 +20345,11 @@ public final class ClusterOuterClass {
         if (!getDataCacheMaxSize()
             .equals(other.getDataCacheMaxSize())) return false;
       }
+      if (hasPreferNotToMerge() != other.hasPreferNotToMerge()) return false;
+      if (hasPreferNotToMerge()) {
+        if (!getPreferNotToMerge()
+            .equals(other.getPreferNotToMerge())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -20309,6 +20375,10 @@ public final class ClusterOuterClass {
       if (hasDataCacheMaxSize()) {
         hash = (37 * hash) + DATA_CACHE_MAX_SIZE_FIELD_NUMBER;
         hash = (53 * hash) + getDataCacheMaxSize().hashCode();
+      }
+      if (hasPreferNotToMerge()) {
+        hash = (37 * hash) + PREFER_NOT_TO_MERGE_FIELD_NUMBER;
+        hash = (53 * hash) + getPreferNotToMerge().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -20463,6 +20533,12 @@ public final class ClusterOuterClass {
           dataCacheMaxSize_ = null;
           dataCacheMaxSizeBuilder_ = null;
         }
+        if (preferNotToMergeBuilder_ == null) {
+          preferNotToMerge_ = null;
+        } else {
+          preferNotToMerge_ = null;
+          preferNotToMergeBuilder_ = null;
+        }
         return this;
       }
 
@@ -20504,6 +20580,11 @@ public final class ClusterOuterClass {
           result.dataCacheMaxSize_ = dataCacheMaxSize_;
         } else {
           result.dataCacheMaxSize_ = dataCacheMaxSizeBuilder_.build();
+        }
+        if (preferNotToMergeBuilder_ == null) {
+          result.preferNotToMerge_ = preferNotToMerge_;
+        } else {
+          result.preferNotToMerge_ = preferNotToMergeBuilder_.build();
         }
         onBuilt();
         return result;
@@ -20564,6 +20645,9 @@ public final class ClusterOuterClass {
         }
         if (other.hasDataCacheMaxSize()) {
           mergeDataCacheMaxSize(other.getDataCacheMaxSize());
+        }
+        if (other.hasPreferNotToMerge()) {
+          mergePreferNotToMerge(other.getPreferNotToMerge());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -20993,6 +21077,125 @@ public final class ClusterOuterClass {
         }
         return dataCacheMaxSizeBuilder_;
       }
+
+      private com.google.protobuf.BoolValue preferNotToMerge_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> preferNotToMergeBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue prefer_not_to_merge = 5;</code>
+       * @return Whether the preferNotToMerge field is set.
+       */
+      public boolean hasPreferNotToMerge() {
+        return preferNotToMergeBuilder_ != null || preferNotToMerge_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue prefer_not_to_merge = 5;</code>
+       * @return The preferNotToMerge.
+       */
+      public com.google.protobuf.BoolValue getPreferNotToMerge() {
+        if (preferNotToMergeBuilder_ == null) {
+          return preferNotToMerge_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : preferNotToMerge_;
+        } else {
+          return preferNotToMergeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue prefer_not_to_merge = 5;</code>
+       */
+      public Builder setPreferNotToMerge(com.google.protobuf.BoolValue value) {
+        if (preferNotToMergeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          preferNotToMerge_ = value;
+          onChanged();
+        } else {
+          preferNotToMergeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue prefer_not_to_merge = 5;</code>
+       */
+      public Builder setPreferNotToMerge(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (preferNotToMergeBuilder_ == null) {
+          preferNotToMerge_ = builderForValue.build();
+          onChanged();
+        } else {
+          preferNotToMergeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue prefer_not_to_merge = 5;</code>
+       */
+      public Builder mergePreferNotToMerge(com.google.protobuf.BoolValue value) {
+        if (preferNotToMergeBuilder_ == null) {
+          if (preferNotToMerge_ != null) {
+            preferNotToMerge_ =
+              com.google.protobuf.BoolValue.newBuilder(preferNotToMerge_).mergeFrom(value).buildPartial();
+          } else {
+            preferNotToMerge_ = value;
+          }
+          onChanged();
+        } else {
+          preferNotToMergeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue prefer_not_to_merge = 5;</code>
+       */
+      public Builder clearPreferNotToMerge() {
+        if (preferNotToMergeBuilder_ == null) {
+          preferNotToMerge_ = null;
+          onChanged();
+        } else {
+          preferNotToMerge_ = null;
+          preferNotToMergeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue prefer_not_to_merge = 5;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getPreferNotToMergeBuilder() {
+        
+        onChanged();
+        return getPreferNotToMergeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue prefer_not_to_merge = 5;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getPreferNotToMergeOrBuilder() {
+        if (preferNotToMergeBuilder_ != null) {
+          return preferNotToMergeBuilder_.getMessageOrBuilder();
+        } else {
+          return preferNotToMerge_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : preferNotToMerge_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue prefer_not_to_merge = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getPreferNotToMergeFieldBuilder() {
+        if (preferNotToMergeBuilder_ == null) {
+          preferNotToMergeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getPreferNotToMerge(),
+                  getParentForChildren(),
+                  isClean());
+          preferNotToMerge_ = null;
+        }
+        return preferNotToMergeBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -21221,15 +21424,17 @@ public final class ClusterOuterClass {
       "d\030\003 \001(\t\"~\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007" +
       "web_sql\030\002 \001(\010\022\017\n\007metrika\030\003 \001(\010\022\022\n\nserver" +
       "less\030\004 \001(\010\022\025\n\rdata_transfer\030\005 \001(\010\022\024\n\014yan" +
-      "dex_query\030\006 \001(\010\"\315\001\n\014CloudStorage\022\017\n\007enab" +
+      "dex_query\030\006 \001(\010\"\206\002\n\014CloudStorage\022\017\n\007enab" +
       "led\030\001 \001(\010\022:\n\013move_factor\030\002 \001(\0132\034.google." +
       "protobuf.DoubleValueB\007\372\3071\0030-1\0226\n\022data_ca" +
       "che_enabled\030\003 \001(\0132\032.google.protobuf.Bool" +
       "Value\0228\n\023data_cache_max_size\030\004 \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueBs\n\"yandex.cloud." +
-      "api.mdb.clickhouse.v1ZMgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/mdb/clic" +
-      "khouse/v1;clickhouseb\006proto3"
+      "gle.protobuf.Int64Value\0227\n\023prefer_not_to" +
+      "_merge\030\005 \001(\0132\032.google.protobuf.BoolValue" +
+      "Bs\n\"yandex.cloud.api.mdb.clickhouse.v1ZM" +
+      "github.com/yandex-cloud/go-genproto/yand" +
+      "ex/cloud/mdb/clickhouse/v1;clickhouseb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21330,7 +21535,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_CloudStorage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_CloudStorage_descriptor,
-        new java.lang.String[] { "Enabled", "MoveFactor", "DataCacheEnabled", "DataCacheMaxSize", });
+        new java.lang.String[] { "Enabled", "MoveFactor", "DataCacheEnabled", "DataCacheMaxSize", "PreferNotToMerge", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.value);

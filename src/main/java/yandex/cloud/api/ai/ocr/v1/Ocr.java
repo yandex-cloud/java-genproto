@@ -1589,7 +1589,7 @@ public final class Ocr {
 
     /**
      * <pre>
-     * Recognized entities
+     * Recognized entities.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -1598,7 +1598,7 @@ public final class Ocr {
         getEntitiesList();
     /**
      * <pre>
-     * Recognized entities
+     * Recognized entities.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -1606,7 +1606,7 @@ public final class Ocr {
     yandex.cloud.api.ai.ocr.v1.Ocr.Entity getEntities(int index);
     /**
      * <pre>
-     * Recognized entities
+     * Recognized entities.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -1614,7 +1614,7 @@ public final class Ocr {
     int getEntitiesCount();
     /**
      * <pre>
-     * Recognized entities
+     * Recognized entities.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -1623,7 +1623,7 @@ public final class Ocr {
         getEntitiesOrBuilderList();
     /**
      * <pre>
-     * Recognized entities
+     * Recognized entities.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -1839,7 +1839,7 @@ public final class Ocr {
     private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Entity> entities_;
     /**
      * <pre>
-     * Recognized entities
+     * Recognized entities.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -1850,7 +1850,7 @@ public final class Ocr {
     }
     /**
      * <pre>
-     * Recognized entities
+     * Recognized entities.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -1862,7 +1862,7 @@ public final class Ocr {
     }
     /**
      * <pre>
-     * Recognized entities
+     * Recognized entities.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -1873,7 +1873,7 @@ public final class Ocr {
     }
     /**
      * <pre>
-     * Recognized entities
+     * Recognized entities.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -1884,7 +1884,7 @@ public final class Ocr {
     }
     /**
      * <pre>
-     * Recognized entities
+     * Recognized entities.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -2740,7 +2740,7 @@ public final class Ocr {
 
       /**
        * <pre>
-       * Recognized entities
+       * Recognized entities.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -2754,7 +2754,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized entities
+       * Recognized entities.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -2768,7 +2768,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized entities
+       * Recognized entities.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -2782,7 +2782,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized entities
+       * Recognized entities.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -2803,7 +2803,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized entities
+       * Recognized entities.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -2821,7 +2821,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized entities
+       * Recognized entities.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -2841,7 +2841,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized entities
+       * Recognized entities.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -2862,7 +2862,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized entities
+       * Recognized entities.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -2880,7 +2880,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized entities
+       * Recognized entities.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -2898,7 +2898,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized entities
+       * Recognized entities.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -2917,7 +2917,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized entities
+       * Recognized entities.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -2934,7 +2934,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized entities
+       * Recognized entities.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -2951,7 +2951,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized entities
+       * Recognized entities.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -2962,7 +2962,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized entities
+       * Recognized entities.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -2976,7 +2976,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized entities
+       * Recognized entities.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -2991,7 +2991,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized entities
+       * Recognized entities.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -3002,7 +3002,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized entities
+       * Recognized entities.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -3014,7 +3014,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized entities
+       * Recognized entities.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Entity entities = 4;</code>
@@ -3096,7 +3096,7 @@ public final class Ocr {
 
     /**
      * <pre>
-     * Entity name
+     * Entity name.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -3105,7 +3105,7 @@ public final class Ocr {
     java.lang.String getName();
     /**
      * <pre>
-     * Entity name
+     * Entity name.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -3116,7 +3116,7 @@ public final class Ocr {
 
     /**
      * <pre>
-     * Recognized entity text
+     * Recognized entity text.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -3125,7 +3125,7 @@ public final class Ocr {
     java.lang.String getText();
     /**
      * <pre>
-     * Recognized entity text
+     * Recognized entity text.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -3229,7 +3229,7 @@ public final class Ocr {
     private volatile java.lang.Object name_;
     /**
      * <pre>
-     * Entity name
+     * Entity name.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -3250,7 +3250,7 @@ public final class Ocr {
     }
     /**
      * <pre>
-     * Entity name
+     * Entity name.
      * </pre>
      *
      * <code>string name = 1;</code>
@@ -3275,7 +3275,7 @@ public final class Ocr {
     private volatile java.lang.Object text_;
     /**
      * <pre>
-     * Recognized entity text
+     * Recognized entity text.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -3296,7 +3296,7 @@ public final class Ocr {
     }
     /**
      * <pre>
-     * Recognized entity text
+     * Recognized entity text.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -3639,7 +3639,7 @@ public final class Ocr {
       private java.lang.Object name_ = "";
       /**
        * <pre>
-       * Entity name
+       * Entity name.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -3659,7 +3659,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Entity name
+       * Entity name.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -3680,7 +3680,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Entity name
+       * Entity name.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -3699,7 +3699,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Entity name
+       * Entity name.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -3713,7 +3713,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Entity name
+       * Entity name.
        * </pre>
        *
        * <code>string name = 1;</code>
@@ -3735,7 +3735,7 @@ public final class Ocr {
       private java.lang.Object text_ = "";
       /**
        * <pre>
-       * Recognized entity text
+       * Recognized entity text.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -3755,7 +3755,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized entity text
+       * Recognized entity text.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -3776,7 +3776,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized entity text
+       * Recognized entity text.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -3795,7 +3795,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized entity text
+       * Recognized entity text.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -3809,7 +3809,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized entity text
+       * Recognized entity text.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -6136,1097 +6136,6 @@ public final class Ocr {
 
   }
 
-  public interface AlternativeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.ocr.v1.Alternative)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Recognized text.
-     * </pre>
-     *
-     * <code>string text = 1;</code>
-     * @return The text.
-     */
-    java.lang.String getText();
-    /**
-     * <pre>
-     * Recognized text.
-     * </pre>
-     *
-     * <code>string text = 1;</code>
-     * @return The bytes for text.
-     */
-    com.google.protobuf.ByteString
-        getTextBytes();
-
-    /**
-     * <pre>
-     * Recognized words
-     * </pre>
-     *
-     * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-     */
-    java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Word> 
-        getWordsList();
-    /**
-     * <pre>
-     * Recognized words
-     * </pre>
-     *
-     * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-     */
-    yandex.cloud.api.ai.ocr.v1.Ocr.Word getWords(int index);
-    /**
-     * <pre>
-     * Recognized words
-     * </pre>
-     *
-     * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-     */
-    int getWordsCount();
-    /**
-     * <pre>
-     * Recognized words
-     * </pre>
-     *
-     * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-     */
-    java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.WordOrBuilder> 
-        getWordsOrBuilderList();
-    /**
-     * <pre>
-     * Recognized words
-     * </pre>
-     *
-     * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-     */
-    yandex.cloud.api.ai.ocr.v1.Ocr.WordOrBuilder getWordsOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code yandex.cloud.ai.ocr.v1.Alternative}
-   */
-  public static final class Alternative extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.ocr.v1.Alternative)
-      AlternativeOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Alternative.newBuilder() to construct.
-    private Alternative(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Alternative() {
-      text_ = "";
-      words_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Alternative();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Alternative(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              text_ = s;
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                words_ = new java.util.ArrayList<yandex.cloud.api.ai.ocr.v1.Ocr.Word>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              words_.add(
-                  input.readMessage(yandex.cloud.api.ai.ocr.v1.Ocr.Word.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          words_ = java.util.Collections.unmodifiableList(words_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_Alternative_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_Alternative_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              yandex.cloud.api.ai.ocr.v1.Ocr.Alternative.class, yandex.cloud.api.ai.ocr.v1.Ocr.Alternative.Builder.class);
-    }
-
-    public static final int TEXT_FIELD_NUMBER = 1;
-    private volatile java.lang.Object text_;
-    /**
-     * <pre>
-     * Recognized text.
-     * </pre>
-     *
-     * <code>string text = 1;</code>
-     * @return The text.
-     */
-    @java.lang.Override
-    public java.lang.String getText() {
-      java.lang.Object ref = text_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        text_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Recognized text.
-     * </pre>
-     *
-     * <code>string text = 1;</code>
-     * @return The bytes for text.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getTextBytes() {
-      java.lang.Object ref = text_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        text_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int WORDS_FIELD_NUMBER = 2;
-    private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Word> words_;
-    /**
-     * <pre>
-     * Recognized words
-     * </pre>
-     *
-     * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-     */
-    @java.lang.Override
-    public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Word> getWordsList() {
-      return words_;
-    }
-    /**
-     * <pre>
-     * Recognized words
-     * </pre>
-     *
-     * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.WordOrBuilder> 
-        getWordsOrBuilderList() {
-      return words_;
-    }
-    /**
-     * <pre>
-     * Recognized words
-     * </pre>
-     *
-     * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-     */
-    @java.lang.Override
-    public int getWordsCount() {
-      return words_.size();
-    }
-    /**
-     * <pre>
-     * Recognized words
-     * </pre>
-     *
-     * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.ai.ocr.v1.Ocr.Word getWords(int index) {
-      return words_.get(index);
-    }
-    /**
-     * <pre>
-     * Recognized words
-     * </pre>
-     *
-     * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.ai.ocr.v1.Ocr.WordOrBuilder getWordsOrBuilder(
-        int index) {
-      return words_.get(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, text_);
-      }
-      for (int i = 0; i < words_.size(); i++) {
-        output.writeMessage(2, words_.get(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, text_);
-      }
-      for (int i = 0; i < words_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, words_.get(i));
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof yandex.cloud.api.ai.ocr.v1.Ocr.Alternative)) {
-        return super.equals(obj);
-      }
-      yandex.cloud.api.ai.ocr.v1.Ocr.Alternative other = (yandex.cloud.api.ai.ocr.v1.Ocr.Alternative) obj;
-
-      if (!getText()
-          .equals(other.getText())) return false;
-      if (!getWordsList()
-          .equals(other.getWordsList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TEXT_FIELD_NUMBER;
-      hash = (53 * hash) + getText().hashCode();
-      if (getWordsCount() > 0) {
-        hash = (37 * hash) + WORDS_FIELD_NUMBER;
-        hash = (53 * hash) + getWordsList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static yandex.cloud.api.ai.ocr.v1.Ocr.Alternative parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.ai.ocr.v1.Ocr.Alternative parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.ai.ocr.v1.Ocr.Alternative parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.ai.ocr.v1.Ocr.Alternative parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.ai.ocr.v1.Ocr.Alternative parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static yandex.cloud.api.ai.ocr.v1.Ocr.Alternative parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static yandex.cloud.api.ai.ocr.v1.Ocr.Alternative parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.ai.ocr.v1.Ocr.Alternative parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.ai.ocr.v1.Ocr.Alternative parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.ai.ocr.v1.Ocr.Alternative parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static yandex.cloud.api.ai.ocr.v1.Ocr.Alternative parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static yandex.cloud.api.ai.ocr.v1.Ocr.Alternative parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(yandex.cloud.api.ai.ocr.v1.Ocr.Alternative prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code yandex.cloud.ai.ocr.v1.Alternative}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.ocr.v1.Alternative)
-        yandex.cloud.api.ai.ocr.v1.Ocr.AlternativeOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_Alternative_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_Alternative_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                yandex.cloud.api.ai.ocr.v1.Ocr.Alternative.class, yandex.cloud.api.ai.ocr.v1.Ocr.Alternative.Builder.class);
-      }
-
-      // Construct using yandex.cloud.api.ai.ocr.v1.Ocr.Alternative.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getWordsFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        text_ = "";
-
-        if (wordsBuilder_ == null) {
-          words_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          wordsBuilder_.clear();
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_Alternative_descriptor;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.ai.ocr.v1.Ocr.Alternative getDefaultInstanceForType() {
-        return yandex.cloud.api.ai.ocr.v1.Ocr.Alternative.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.ai.ocr.v1.Ocr.Alternative build() {
-        yandex.cloud.api.ai.ocr.v1.Ocr.Alternative result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public yandex.cloud.api.ai.ocr.v1.Ocr.Alternative buildPartial() {
-        yandex.cloud.api.ai.ocr.v1.Ocr.Alternative result = new yandex.cloud.api.ai.ocr.v1.Ocr.Alternative(this);
-        int from_bitField0_ = bitField0_;
-        result.text_ = text_;
-        if (wordsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            words_ = java.util.Collections.unmodifiableList(words_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.words_ = words_;
-        } else {
-          result.words_ = wordsBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof yandex.cloud.api.ai.ocr.v1.Ocr.Alternative) {
-          return mergeFrom((yandex.cloud.api.ai.ocr.v1.Ocr.Alternative)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(yandex.cloud.api.ai.ocr.v1.Ocr.Alternative other) {
-        if (other == yandex.cloud.api.ai.ocr.v1.Ocr.Alternative.getDefaultInstance()) return this;
-        if (!other.getText().isEmpty()) {
-          text_ = other.text_;
-          onChanged();
-        }
-        if (wordsBuilder_ == null) {
-          if (!other.words_.isEmpty()) {
-            if (words_.isEmpty()) {
-              words_ = other.words_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureWordsIsMutable();
-              words_.addAll(other.words_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.words_.isEmpty()) {
-            if (wordsBuilder_.isEmpty()) {
-              wordsBuilder_.dispose();
-              wordsBuilder_ = null;
-              words_ = other.words_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              wordsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getWordsFieldBuilder() : null;
-            } else {
-              wordsBuilder_.addAllMessages(other.words_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        yandex.cloud.api.ai.ocr.v1.Ocr.Alternative parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (yandex.cloud.api.ai.ocr.v1.Ocr.Alternative) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object text_ = "";
-      /**
-       * <pre>
-       * Recognized text.
-       * </pre>
-       *
-       * <code>string text = 1;</code>
-       * @return The text.
-       */
-      public java.lang.String getText() {
-        java.lang.Object ref = text_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          text_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Recognized text.
-       * </pre>
-       *
-       * <code>string text = 1;</code>
-       * @return The bytes for text.
-       */
-      public com.google.protobuf.ByteString
-          getTextBytes() {
-        java.lang.Object ref = text_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          text_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Recognized text.
-       * </pre>
-       *
-       * <code>string text = 1;</code>
-       * @param value The text to set.
-       * @return This builder for chaining.
-       */
-      public Builder setText(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        text_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Recognized text.
-       * </pre>
-       *
-       * <code>string text = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearText() {
-        
-        text_ = getDefaultInstance().getText();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Recognized text.
-       * </pre>
-       *
-       * <code>string text = 1;</code>
-       * @param value The bytes for text to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTextBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        text_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Word> words_ =
-        java.util.Collections.emptyList();
-      private void ensureWordsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          words_ = new java.util.ArrayList<yandex.cloud.api.ai.ocr.v1.Ocr.Word>(words_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.ai.ocr.v1.Ocr.Word, yandex.cloud.api.ai.ocr.v1.Ocr.Word.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.WordOrBuilder> wordsBuilder_;
-
-      /**
-       * <pre>
-       * Recognized words
-       * </pre>
-       *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-       */
-      public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Word> getWordsList() {
-        if (wordsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(words_);
-        } else {
-          return wordsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <pre>
-       * Recognized words
-       * </pre>
-       *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-       */
-      public int getWordsCount() {
-        if (wordsBuilder_ == null) {
-          return words_.size();
-        } else {
-          return wordsBuilder_.getCount();
-        }
-      }
-      /**
-       * <pre>
-       * Recognized words
-       * </pre>
-       *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-       */
-      public yandex.cloud.api.ai.ocr.v1.Ocr.Word getWords(int index) {
-        if (wordsBuilder_ == null) {
-          return words_.get(index);
-        } else {
-          return wordsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <pre>
-       * Recognized words
-       * </pre>
-       *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-       */
-      public Builder setWords(
-          int index, yandex.cloud.api.ai.ocr.v1.Ocr.Word value) {
-        if (wordsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureWordsIsMutable();
-          words_.set(index, value);
-          onChanged();
-        } else {
-          wordsBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Recognized words
-       * </pre>
-       *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-       */
-      public Builder setWords(
-          int index, yandex.cloud.api.ai.ocr.v1.Ocr.Word.Builder builderForValue) {
-        if (wordsBuilder_ == null) {
-          ensureWordsIsMutable();
-          words_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          wordsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Recognized words
-       * </pre>
-       *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-       */
-      public Builder addWords(yandex.cloud.api.ai.ocr.v1.Ocr.Word value) {
-        if (wordsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureWordsIsMutable();
-          words_.add(value);
-          onChanged();
-        } else {
-          wordsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Recognized words
-       * </pre>
-       *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-       */
-      public Builder addWords(
-          int index, yandex.cloud.api.ai.ocr.v1.Ocr.Word value) {
-        if (wordsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureWordsIsMutable();
-          words_.add(index, value);
-          onChanged();
-        } else {
-          wordsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Recognized words
-       * </pre>
-       *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-       */
-      public Builder addWords(
-          yandex.cloud.api.ai.ocr.v1.Ocr.Word.Builder builderForValue) {
-        if (wordsBuilder_ == null) {
-          ensureWordsIsMutable();
-          words_.add(builderForValue.build());
-          onChanged();
-        } else {
-          wordsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Recognized words
-       * </pre>
-       *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-       */
-      public Builder addWords(
-          int index, yandex.cloud.api.ai.ocr.v1.Ocr.Word.Builder builderForValue) {
-        if (wordsBuilder_ == null) {
-          ensureWordsIsMutable();
-          words_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          wordsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Recognized words
-       * </pre>
-       *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-       */
-      public Builder addAllWords(
-          java.lang.Iterable<? extends yandex.cloud.api.ai.ocr.v1.Ocr.Word> values) {
-        if (wordsBuilder_ == null) {
-          ensureWordsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, words_);
-          onChanged();
-        } else {
-          wordsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Recognized words
-       * </pre>
-       *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-       */
-      public Builder clearWords() {
-        if (wordsBuilder_ == null) {
-          words_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          wordsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Recognized words
-       * </pre>
-       *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-       */
-      public Builder removeWords(int index) {
-        if (wordsBuilder_ == null) {
-          ensureWordsIsMutable();
-          words_.remove(index);
-          onChanged();
-        } else {
-          wordsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * Recognized words
-       * </pre>
-       *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-       */
-      public yandex.cloud.api.ai.ocr.v1.Ocr.Word.Builder getWordsBuilder(
-          int index) {
-        return getWordsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * Recognized words
-       * </pre>
-       *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-       */
-      public yandex.cloud.api.ai.ocr.v1.Ocr.WordOrBuilder getWordsOrBuilder(
-          int index) {
-        if (wordsBuilder_ == null) {
-          return words_.get(index);  } else {
-          return wordsBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * Recognized words
-       * </pre>
-       *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-       */
-      public java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.WordOrBuilder> 
-           getWordsOrBuilderList() {
-        if (wordsBuilder_ != null) {
-          return wordsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(words_);
-        }
-      }
-      /**
-       * <pre>
-       * Recognized words
-       * </pre>
-       *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-       */
-      public yandex.cloud.api.ai.ocr.v1.Ocr.Word.Builder addWordsBuilder() {
-        return getWordsFieldBuilder().addBuilder(
-            yandex.cloud.api.ai.ocr.v1.Ocr.Word.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * Recognized words
-       * </pre>
-       *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-       */
-      public yandex.cloud.api.ai.ocr.v1.Ocr.Word.Builder addWordsBuilder(
-          int index) {
-        return getWordsFieldBuilder().addBuilder(
-            index, yandex.cloud.api.ai.ocr.v1.Ocr.Word.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * Recognized words
-       * </pre>
-       *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 2;</code>
-       */
-      public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Word.Builder> 
-           getWordsBuilderList() {
-        return getWordsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.ai.ocr.v1.Ocr.Word, yandex.cloud.api.ai.ocr.v1.Ocr.Word.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.WordOrBuilder> 
-          getWordsFieldBuilder() {
-        if (wordsBuilder_ == null) {
-          wordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              yandex.cloud.api.ai.ocr.v1.Ocr.Word, yandex.cloud.api.ai.ocr.v1.Ocr.Word.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.WordOrBuilder>(
-                  words_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          words_ = null;
-        }
-        return wordsBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.ocr.v1.Alternative)
-    }
-
-    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.ocr.v1.Alternative)
-    private static final yandex.cloud.api.ai.ocr.v1.Ocr.Alternative DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new yandex.cloud.api.ai.ocr.v1.Ocr.Alternative();
-    }
-
-    public static yandex.cloud.api.ai.ocr.v1.Ocr.Alternative getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Alternative>
-        PARSER = new com.google.protobuf.AbstractParser<Alternative>() {
-      @java.lang.Override
-      public Alternative parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Alternative(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Alternative> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Alternative> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public yandex.cloud.api.ai.ocr.v1.Ocr.Alternative getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface LineOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.ocr.v1.Line)
       com.google.protobuf.MessageOrBuilder {
@@ -7259,27 +6168,67 @@ public final class Ocr {
     yandex.cloud.api.ai.ocr.v1.Ocr.PolygonOrBuilder getBoundingBoxOrBuilder();
 
     /**
-     * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+     * <pre>
+     * Recognized text.
+     * </pre>
+     *
+     * <code>string text = 2;</code>
+     * @return The text.
      */
-    java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Alternative> 
-        getAlternativesList();
+    java.lang.String getText();
     /**
-     * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+     * <pre>
+     * Recognized text.
+     * </pre>
+     *
+     * <code>string text = 2;</code>
+     * @return The bytes for text.
      */
-    yandex.cloud.api.ai.ocr.v1.Ocr.Alternative getAlternatives(int index);
+    com.google.protobuf.ByteString
+        getTextBytes();
+
     /**
-     * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+     * <pre>
+     * Recognized words
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
      */
-    int getAlternativesCount();
+    java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Word> 
+        getWordsList();
     /**
-     * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+     * <pre>
+     * Recognized words
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
      */
-    java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.AlternativeOrBuilder> 
-        getAlternativesOrBuilderList();
+    yandex.cloud.api.ai.ocr.v1.Ocr.Word getWords(int index);
     /**
-     * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+     * <pre>
+     * Recognized words
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
      */
-    yandex.cloud.api.ai.ocr.v1.Ocr.AlternativeOrBuilder getAlternativesOrBuilder(
+    int getWordsCount();
+    /**
+     * <pre>
+     * Recognized words
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.WordOrBuilder> 
+        getWordsOrBuilderList();
+    /**
+     * <pre>
+     * Recognized words
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.WordOrBuilder getWordsOrBuilder(
         int index);
   }
   /**
@@ -7295,7 +6244,8 @@ public final class Ocr {
       super(builder);
     }
     private Line() {
-      alternatives_ = java.util.Collections.emptyList();
+      text_ = "";
+      words_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -7343,12 +6293,18 @@ public final class Ocr {
               break;
             }
             case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              text_ = s;
+              break;
+            }
+            case 26: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                alternatives_ = new java.util.ArrayList<yandex.cloud.api.ai.ocr.v1.Ocr.Alternative>();
+                words_ = new java.util.ArrayList<yandex.cloud.api.ai.ocr.v1.Ocr.Word>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              alternatives_.add(
-                  input.readMessage(yandex.cloud.api.ai.ocr.v1.Ocr.Alternative.parser(), extensionRegistry));
+              words_.add(
+                  input.readMessage(yandex.cloud.api.ai.ocr.v1.Ocr.Word.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -7367,7 +6323,7 @@ public final class Ocr {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          alternatives_ = java.util.Collections.unmodifiableList(alternatives_);
+          words_ = java.util.Collections.unmodifiableList(words_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -7424,44 +6380,110 @@ public final class Ocr {
       return getBoundingBox();
     }
 
-    public static final int ALTERNATIVES_FIELD_NUMBER = 2;
-    private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Alternative> alternatives_;
+    public static final int TEXT_FIELD_NUMBER = 2;
+    private volatile java.lang.Object text_;
     /**
-     * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+     * <pre>
+     * Recognized text.
+     * </pre>
+     *
+     * <code>string text = 2;</code>
+     * @return The text.
      */
     @java.lang.Override
-    public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Alternative> getAlternativesList() {
-      return alternatives_;
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        text_ = s;
+        return s;
+      }
     }
     /**
-     * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+     * <pre>
+     * Recognized text.
+     * </pre>
+     *
+     * <code>string text = 2;</code>
+     * @return The bytes for text.
      */
     @java.lang.Override
-    public java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.AlternativeOrBuilder> 
-        getAlternativesOrBuilderList() {
-      return alternatives_;
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WORDS_FIELD_NUMBER = 3;
+    private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Word> words_;
+    /**
+     * <pre>
+     * Recognized words
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Word> getWordsList() {
+      return words_;
     }
     /**
-     * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+     * <pre>
+     * Recognized words
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
      */
     @java.lang.Override
-    public int getAlternativesCount() {
-      return alternatives_.size();
+    public java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.WordOrBuilder> 
+        getWordsOrBuilderList() {
+      return words_;
     }
     /**
-     * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+     * <pre>
+     * Recognized words
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.ai.ocr.v1.Ocr.Alternative getAlternatives(int index) {
-      return alternatives_.get(index);
+    public int getWordsCount() {
+      return words_.size();
     }
     /**
-     * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+     * <pre>
+     * Recognized words
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.ai.ocr.v1.Ocr.AlternativeOrBuilder getAlternativesOrBuilder(
+    public yandex.cloud.api.ai.ocr.v1.Ocr.Word getWords(int index) {
+      return words_.get(index);
+    }
+    /**
+     * <pre>
+     * Recognized words
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.WordOrBuilder getWordsOrBuilder(
         int index) {
-      return alternatives_.get(index);
+      return words_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -7481,8 +6503,11 @@ public final class Ocr {
       if (boundingBox_ != null) {
         output.writeMessage(1, getBoundingBox());
       }
-      for (int i = 0; i < alternatives_.size(); i++) {
-        output.writeMessage(2, alternatives_.get(i));
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, text_);
+      }
+      for (int i = 0; i < words_.size(); i++) {
+        output.writeMessage(3, words_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -7497,9 +6522,12 @@ public final class Ocr {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getBoundingBox());
       }
-      for (int i = 0; i < alternatives_.size(); i++) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, text_);
+      }
+      for (int i = 0; i < words_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, alternatives_.get(i));
+          .computeMessageSize(3, words_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7521,8 +6549,10 @@ public final class Ocr {
         if (!getBoundingBox()
             .equals(other.getBoundingBox())) return false;
       }
-      if (!getAlternativesList()
-          .equals(other.getAlternativesList())) return false;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (!getWordsList()
+          .equals(other.getWordsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7538,9 +6568,11 @@ public final class Ocr {
         hash = (37 * hash) + BOUNDING_BOX_FIELD_NUMBER;
         hash = (53 * hash) + getBoundingBox().hashCode();
       }
-      if (getAlternativesCount() > 0) {
-        hash = (37 * hash) + ALTERNATIVES_FIELD_NUMBER;
-        hash = (53 * hash) + getAlternativesList().hashCode();
+      hash = (37 * hash) + TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getText().hashCode();
+      if (getWordsCount() > 0) {
+        hash = (37 * hash) + WORDS_FIELD_NUMBER;
+        hash = (53 * hash) + getWordsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7670,7 +6702,7 @@ public final class Ocr {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getAlternativesFieldBuilder();
+          getWordsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -7682,11 +6714,13 @@ public final class Ocr {
           boundingBox_ = null;
           boundingBoxBuilder_ = null;
         }
-        if (alternativesBuilder_ == null) {
-          alternatives_ = java.util.Collections.emptyList();
+        text_ = "";
+
+        if (wordsBuilder_ == null) {
+          words_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          alternativesBuilder_.clear();
+          wordsBuilder_.clear();
         }
         return this;
       }
@@ -7720,14 +6754,15 @@ public final class Ocr {
         } else {
           result.boundingBox_ = boundingBoxBuilder_.build();
         }
-        if (alternativesBuilder_ == null) {
+        result.text_ = text_;
+        if (wordsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
-            alternatives_ = java.util.Collections.unmodifiableList(alternatives_);
+            words_ = java.util.Collections.unmodifiableList(words_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
-          result.alternatives_ = alternatives_;
+          result.words_ = words_;
         } else {
-          result.alternatives_ = alternativesBuilder_.build();
+          result.words_ = wordsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -7780,29 +6815,33 @@ public final class Ocr {
         if (other.hasBoundingBox()) {
           mergeBoundingBox(other.getBoundingBox());
         }
-        if (alternativesBuilder_ == null) {
-          if (!other.alternatives_.isEmpty()) {
-            if (alternatives_.isEmpty()) {
-              alternatives_ = other.alternatives_;
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
+          onChanged();
+        }
+        if (wordsBuilder_ == null) {
+          if (!other.words_.isEmpty()) {
+            if (words_.isEmpty()) {
+              words_ = other.words_;
               bitField0_ = (bitField0_ & ~0x00000001);
             } else {
-              ensureAlternativesIsMutable();
-              alternatives_.addAll(other.alternatives_);
+              ensureWordsIsMutable();
+              words_.addAll(other.words_);
             }
             onChanged();
           }
         } else {
-          if (!other.alternatives_.isEmpty()) {
-            if (alternativesBuilder_.isEmpty()) {
-              alternativesBuilder_.dispose();
-              alternativesBuilder_ = null;
-              alternatives_ = other.alternatives_;
+          if (!other.words_.isEmpty()) {
+            if (wordsBuilder_.isEmpty()) {
+              wordsBuilder_.dispose();
+              wordsBuilder_ = null;
+              words_ = other.words_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              alternativesBuilder_ = 
+              wordsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getAlternativesFieldBuilder() : null;
+                   getWordsFieldBuilder() : null;
             } else {
-              alternativesBuilder_.addAllMessages(other.alternatives_);
+              wordsBuilder_.addAllMessages(other.words_);
             }
           }
         }
@@ -7991,244 +7030,412 @@ public final class Ocr {
         return boundingBoxBuilder_;
       }
 
-      private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Alternative> alternatives_ =
+      private java.lang.Object text_ = "";
+      /**
+       * <pre>
+       * Recognized text.
+       * </pre>
+       *
+       * <code>string text = 2;</code>
+       * @return The text.
+       */
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          text_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Recognized text.
+       * </pre>
+       *
+       * <code>string text = 2;</code>
+       * @return The bytes for text.
+       */
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Recognized text.
+       * </pre>
+       *
+       * <code>string text = 2;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Recognized text.
+       * </pre>
+       *
+       * <code>string text = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearText() {
+        
+        text_ = getDefaultInstance().getText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Recognized text.
+       * </pre>
+       *
+       * <code>string text = 2;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        text_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Word> words_ =
         java.util.Collections.emptyList();
-      private void ensureAlternativesIsMutable() {
+      private void ensureWordsIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          alternatives_ = new java.util.ArrayList<yandex.cloud.api.ai.ocr.v1.Ocr.Alternative>(alternatives_);
+          words_ = new java.util.ArrayList<yandex.cloud.api.ai.ocr.v1.Ocr.Word>(words_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.ai.ocr.v1.Ocr.Alternative, yandex.cloud.api.ai.ocr.v1.Ocr.Alternative.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.AlternativeOrBuilder> alternativesBuilder_;
+          yandex.cloud.api.ai.ocr.v1.Ocr.Word, yandex.cloud.api.ai.ocr.v1.Ocr.Word.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.WordOrBuilder> wordsBuilder_;
 
       /**
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+       * <pre>
+       * Recognized words
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
        */
-      public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Alternative> getAlternativesList() {
-        if (alternativesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(alternatives_);
+      public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Word> getWordsList() {
+        if (wordsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(words_);
         } else {
-          return alternativesBuilder_.getMessageList();
+          return wordsBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+       * <pre>
+       * Recognized words
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
        */
-      public int getAlternativesCount() {
-        if (alternativesBuilder_ == null) {
-          return alternatives_.size();
+      public int getWordsCount() {
+        if (wordsBuilder_ == null) {
+          return words_.size();
         } else {
-          return alternativesBuilder_.getCount();
+          return wordsBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+       * <pre>
+       * Recognized words
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
        */
-      public yandex.cloud.api.ai.ocr.v1.Ocr.Alternative getAlternatives(int index) {
-        if (alternativesBuilder_ == null) {
-          return alternatives_.get(index);
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Word getWords(int index) {
+        if (wordsBuilder_ == null) {
+          return words_.get(index);
         } else {
-          return alternativesBuilder_.getMessage(index);
+          return wordsBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+       * <pre>
+       * Recognized words
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
        */
-      public Builder setAlternatives(
-          int index, yandex.cloud.api.ai.ocr.v1.Ocr.Alternative value) {
-        if (alternativesBuilder_ == null) {
+      public Builder setWords(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.Word value) {
+        if (wordsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureAlternativesIsMutable();
-          alternatives_.set(index, value);
+          ensureWordsIsMutable();
+          words_.set(index, value);
           onChanged();
         } else {
-          alternativesBuilder_.setMessage(index, value);
+          wordsBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+       * <pre>
+       * Recognized words
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
        */
-      public Builder setAlternatives(
-          int index, yandex.cloud.api.ai.ocr.v1.Ocr.Alternative.Builder builderForValue) {
-        if (alternativesBuilder_ == null) {
-          ensureAlternativesIsMutable();
-          alternatives_.set(index, builderForValue.build());
+      public Builder setWords(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.Word.Builder builderForValue) {
+        if (wordsBuilder_ == null) {
+          ensureWordsIsMutable();
+          words_.set(index, builderForValue.build());
           onChanged();
         } else {
-          alternativesBuilder_.setMessage(index, builderForValue.build());
+          wordsBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+       * <pre>
+       * Recognized words
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
        */
-      public Builder addAlternatives(yandex.cloud.api.ai.ocr.v1.Ocr.Alternative value) {
-        if (alternativesBuilder_ == null) {
+      public Builder addWords(yandex.cloud.api.ai.ocr.v1.Ocr.Word value) {
+        if (wordsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureAlternativesIsMutable();
-          alternatives_.add(value);
+          ensureWordsIsMutable();
+          words_.add(value);
           onChanged();
         } else {
-          alternativesBuilder_.addMessage(value);
+          wordsBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+       * <pre>
+       * Recognized words
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
        */
-      public Builder addAlternatives(
-          int index, yandex.cloud.api.ai.ocr.v1.Ocr.Alternative value) {
-        if (alternativesBuilder_ == null) {
+      public Builder addWords(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.Word value) {
+        if (wordsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureAlternativesIsMutable();
-          alternatives_.add(index, value);
+          ensureWordsIsMutable();
+          words_.add(index, value);
           onChanged();
         } else {
-          alternativesBuilder_.addMessage(index, value);
+          wordsBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+       * <pre>
+       * Recognized words
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
        */
-      public Builder addAlternatives(
-          yandex.cloud.api.ai.ocr.v1.Ocr.Alternative.Builder builderForValue) {
-        if (alternativesBuilder_ == null) {
-          ensureAlternativesIsMutable();
-          alternatives_.add(builderForValue.build());
+      public Builder addWords(
+          yandex.cloud.api.ai.ocr.v1.Ocr.Word.Builder builderForValue) {
+        if (wordsBuilder_ == null) {
+          ensureWordsIsMutable();
+          words_.add(builderForValue.build());
           onChanged();
         } else {
-          alternativesBuilder_.addMessage(builderForValue.build());
+          wordsBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+       * <pre>
+       * Recognized words
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
        */
-      public Builder addAlternatives(
-          int index, yandex.cloud.api.ai.ocr.v1.Ocr.Alternative.Builder builderForValue) {
-        if (alternativesBuilder_ == null) {
-          ensureAlternativesIsMutable();
-          alternatives_.add(index, builderForValue.build());
+      public Builder addWords(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.Word.Builder builderForValue) {
+        if (wordsBuilder_ == null) {
+          ensureWordsIsMutable();
+          words_.add(index, builderForValue.build());
           onChanged();
         } else {
-          alternativesBuilder_.addMessage(index, builderForValue.build());
+          wordsBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+       * <pre>
+       * Recognized words
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
        */
-      public Builder addAllAlternatives(
-          java.lang.Iterable<? extends yandex.cloud.api.ai.ocr.v1.Ocr.Alternative> values) {
-        if (alternativesBuilder_ == null) {
-          ensureAlternativesIsMutable();
+      public Builder addAllWords(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.ocr.v1.Ocr.Word> values) {
+        if (wordsBuilder_ == null) {
+          ensureWordsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, alternatives_);
+              values, words_);
           onChanged();
         } else {
-          alternativesBuilder_.addAllMessages(values);
+          wordsBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+       * <pre>
+       * Recognized words
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
        */
-      public Builder clearAlternatives() {
-        if (alternativesBuilder_ == null) {
-          alternatives_ = java.util.Collections.emptyList();
+      public Builder clearWords() {
+        if (wordsBuilder_ == null) {
+          words_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
-          alternativesBuilder_.clear();
+          wordsBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+       * <pre>
+       * Recognized words
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
        */
-      public Builder removeAlternatives(int index) {
-        if (alternativesBuilder_ == null) {
-          ensureAlternativesIsMutable();
-          alternatives_.remove(index);
+      public Builder removeWords(int index) {
+        if (wordsBuilder_ == null) {
+          ensureWordsIsMutable();
+          words_.remove(index);
           onChanged();
         } else {
-          alternativesBuilder_.remove(index);
+          wordsBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+       * <pre>
+       * Recognized words
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
        */
-      public yandex.cloud.api.ai.ocr.v1.Ocr.Alternative.Builder getAlternativesBuilder(
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Word.Builder getWordsBuilder(
           int index) {
-        return getAlternativesFieldBuilder().getBuilder(index);
+        return getWordsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+       * <pre>
+       * Recognized words
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
        */
-      public yandex.cloud.api.ai.ocr.v1.Ocr.AlternativeOrBuilder getAlternativesOrBuilder(
+      public yandex.cloud.api.ai.ocr.v1.Ocr.WordOrBuilder getWordsOrBuilder(
           int index) {
-        if (alternativesBuilder_ == null) {
-          return alternatives_.get(index);  } else {
-          return alternativesBuilder_.getMessageOrBuilder(index);
+        if (wordsBuilder_ == null) {
+          return words_.get(index);  } else {
+          return wordsBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+       * <pre>
+       * Recognized words
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
        */
-      public java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.AlternativeOrBuilder> 
-           getAlternativesOrBuilderList() {
-        if (alternativesBuilder_ != null) {
-          return alternativesBuilder_.getMessageOrBuilderList();
+      public java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.WordOrBuilder> 
+           getWordsOrBuilderList() {
+        if (wordsBuilder_ != null) {
+          return wordsBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(alternatives_);
+          return java.util.Collections.unmodifiableList(words_);
         }
       }
       /**
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+       * <pre>
+       * Recognized words
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
        */
-      public yandex.cloud.api.ai.ocr.v1.Ocr.Alternative.Builder addAlternativesBuilder() {
-        return getAlternativesFieldBuilder().addBuilder(
-            yandex.cloud.api.ai.ocr.v1.Ocr.Alternative.getDefaultInstance());
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Word.Builder addWordsBuilder() {
+        return getWordsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.ocr.v1.Ocr.Word.getDefaultInstance());
       }
       /**
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+       * <pre>
+       * Recognized words
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
        */
-      public yandex.cloud.api.ai.ocr.v1.Ocr.Alternative.Builder addAlternativesBuilder(
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Word.Builder addWordsBuilder(
           int index) {
-        return getAlternativesFieldBuilder().addBuilder(
-            index, yandex.cloud.api.ai.ocr.v1.Ocr.Alternative.getDefaultInstance());
+        return getWordsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.ocr.v1.Ocr.Word.getDefaultInstance());
       }
       /**
-       * <code>repeated .yandex.cloud.ai.ocr.v1.Alternative alternatives = 2;</code>
+       * <pre>
+       * Recognized words
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
        */
-      public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Alternative.Builder> 
-           getAlternativesBuilderList() {
-        return getAlternativesFieldBuilder().getBuilderList();
+      public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Word.Builder> 
+           getWordsBuilderList() {
+        return getWordsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          yandex.cloud.api.ai.ocr.v1.Ocr.Alternative, yandex.cloud.api.ai.ocr.v1.Ocr.Alternative.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.AlternativeOrBuilder> 
-          getAlternativesFieldBuilder() {
-        if (alternativesBuilder_ == null) {
-          alternativesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              yandex.cloud.api.ai.ocr.v1.Ocr.Alternative, yandex.cloud.api.ai.ocr.v1.Ocr.Alternative.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.AlternativeOrBuilder>(
-                  alternatives_,
+          yandex.cloud.api.ai.ocr.v1.Ocr.Word, yandex.cloud.api.ai.ocr.v1.Ocr.Word.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.WordOrBuilder> 
+          getWordsFieldBuilder() {
+        if (wordsBuilder_ == null) {
+          wordsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.ocr.v1.Ocr.Word, yandex.cloud.api.ai.ocr.v1.Ocr.Word.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.WordOrBuilder>(
+                  words_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
-          alternatives_ = null;
+          words_ = null;
         }
-        return alternativesBuilder_;
+        return wordsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -8336,7 +7543,7 @@ public final class Ocr {
 
     /**
      * <pre>
-     * Id of recognized word in entities array
+     * ID of the recognized word in entities array.
      * </pre>
      *
      * <code>int64 entity_index = 3;</code>
@@ -8534,7 +7741,7 @@ public final class Ocr {
     private long entityIndex_;
     /**
      * <pre>
-     * Id of recognized word in entities array
+     * ID of the recognized word in entities array.
      * </pre>
      *
      * <code>int64 entity_index = 3;</code>
@@ -9149,7 +8356,7 @@ public final class Ocr {
       private long entityIndex_ ;
       /**
        * <pre>
-       * Id of recognized word in entities array
+       * ID of the recognized word in entities array.
        * </pre>
        *
        * <code>int64 entity_index = 3;</code>
@@ -9161,7 +8368,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Id of recognized word in entities array
+       * ID of the recognized word in entities array.
        * </pre>
        *
        * <code>int64 entity_index = 3;</code>
@@ -9176,7 +8383,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Id of recognized word in entities array
+       * ID of the recognized word in entities array.
        * </pre>
        *
        * <code>int64 entity_index = 3;</code>
@@ -9272,11 +8479,6 @@ public final class Ocr {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_ocr_v1_Block_DetectedLanguage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_yandex_cloud_ai_ocr_v1_Alternative_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_yandex_cloud_ai_ocr_v1_Alternative_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_ocr_v1_Line_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -9308,17 +8510,15 @@ public final class Ocr {
       "n\022+\n\005lines\030\002 \003(\0132\034.yandex.cloud.ai.ocr.v" +
       "1.Line\022A\n\tlanguages\030\003 \003(\0132..yandex.cloud" +
       ".ai.ocr.v1.Block.DetectedLanguage\032)\n\020Det" +
-      "ectedLanguage\022\025\n\rlanguage_code\030\001 \001(\t\"H\n\013" +
-      "Alternative\022\014\n\004text\030\001 \001(\t\022+\n\005words\030\002 \003(\013" +
-      "2\034.yandex.cloud.ai.ocr.v1.Word\"x\n\004Line\0225" +
-      "\n\014bounding_box\030\001 \001(\0132\037.yandex.cloud.ai.o" +
-      "cr.v1.Polygon\0229\n\014alternatives\030\002 \003(\0132#.ya" +
-      "ndex.cloud.ai.ocr.v1.Alternative\"a\n\004Word" +
-      "\0225\n\014bounding_box\030\001 \001(\0132\037.yandex.cloud.ai" +
-      ".ocr.v1.Polygon\022\014\n\004text\030\002 \001(\t\022\024\n\014entity_" +
-      "index\030\003 \001(\003B\\\n\032yandex.cloud.api.ai.ocr.v" +
-      "1Z>github.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/ai/ocr/v1;ocrb\006proto3"
+      "ectedLanguage\022\025\n\rlanguage_code\030\001 \001(\t\"x\n\004" +
+      "Line\0225\n\014bounding_box\030\001 \001(\0132\037.yandex.clou" +
+      "d.ai.ocr.v1.Polygon\022\014\n\004text\030\002 \001(\t\022+\n\005wor" +
+      "ds\030\003 \003(\0132\034.yandex.cloud.ai.ocr.v1.Word\"a" +
+      "\n\004Word\0225\n\014bounding_box\030\001 \001(\0132\037.yandex.cl" +
+      "oud.ai.ocr.v1.Polygon\022\014\n\004text\030\002 \001(\t\022\024\n\014e" +
+      "ntity_index\030\003 \001(\003B\\\n\032yandex.cloud.api.ai" +
+      ".ocr.v1Z>github.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/ai/ocr/v1;ocrb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9360,20 +8560,14 @@ public final class Ocr {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_ocr_v1_Block_DetectedLanguage_descriptor,
         new java.lang.String[] { "LanguageCode", });
-    internal_static_yandex_cloud_ai_ocr_v1_Alternative_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_yandex_cloud_ai_ocr_v1_Alternative_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_yandex_cloud_ai_ocr_v1_Alternative_descriptor,
-        new java.lang.String[] { "Text", "Words", });
     internal_static_yandex_cloud_ai_ocr_v1_Line_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_ai_ocr_v1_Line_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_ocr_v1_Line_descriptor,
-        new java.lang.String[] { "BoundingBox", "Alternatives", });
+        new java.lang.String[] { "BoundingBox", "Text", "Words", });
     internal_static_yandex_cloud_ai_ocr_v1_Word_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_ai_ocr_v1_Word_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_ocr_v1_Word_descriptor,

@@ -3,6 +3,9 @@ package yandex.cloud.api.ai.llm.v1alpha;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Service for tokenizing input text.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -91,10 +94,16 @@ public final class TokenizerServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Service for tokenizing input text.
+   * </pre>
    */
   public static abstract class TokenizerServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * RPC method for tokenizing input text.
+     * </pre>
      */
     public void tokenize(yandex.cloud.api.ai.llm.v1alpha.LlmService.TokenizeRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.llm.v1alpha.LlmService.TokenizeResponse> responseObserver) {
@@ -115,6 +124,9 @@ public final class TokenizerServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Service for tokenizing input text.
+   * </pre>
    */
   public static final class TokenizerServiceStub extends io.grpc.stub.AbstractAsyncStub<TokenizerServiceStub> {
     private TokenizerServiceStub(
@@ -129,6 +141,9 @@ public final class TokenizerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * RPC method for tokenizing input text.
+     * </pre>
      */
     public void tokenize(yandex.cloud.api.ai.llm.v1alpha.LlmService.TokenizeRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.llm.v1alpha.LlmService.TokenizeResponse> responseObserver) {
@@ -138,6 +153,9 @@ public final class TokenizerServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Service for tokenizing input text.
+   * </pre>
    */
   public static final class TokenizerServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<TokenizerServiceBlockingStub> {
     private TokenizerServiceBlockingStub(
@@ -152,6 +170,9 @@ public final class TokenizerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * RPC method for tokenizing input text.
+     * </pre>
      */
     public yandex.cloud.api.ai.llm.v1alpha.LlmService.TokenizeResponse tokenize(yandex.cloud.api.ai.llm.v1alpha.LlmService.TokenizeRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -160,6 +181,9 @@ public final class TokenizerServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Service for tokenizing input text.
+   * </pre>
    */
   public static final class TokenizerServiceFutureStub extends io.grpc.stub.AbstractFutureStub<TokenizerServiceFutureStub> {
     private TokenizerServiceFutureStub(
@@ -174,6 +198,9 @@ public final class TokenizerServiceGrpc {
     }
 
     /**
+     * <pre>
+     * RPC method for tokenizing input text.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.llm.v1alpha.LlmService.TokenizeResponse> tokenize(
         yandex.cloud.api.ai.llm.v1alpha.LlmService.TokenizeRequest request) {

@@ -20,8 +20,8 @@ public final class PerfDiagService {
 
     /**
      * <pre>
-     * ID of the PostgreSQL cluster to request statements history for.
-     * To get the PostgreSQL cluster ID use a [ClusterService.List] request.
+     * ID of a PostgreSQL cluster to request query statistics for.
+     * To get a PostgreSQL cluster ID, use the [ClusterService.List] method.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -30,8 +30,8 @@ public final class PerfDiagService {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the PostgreSQL cluster to request statements history for.
-     * To get the PostgreSQL cluster ID use a [ClusterService.List] request.
+     * ID of a PostgreSQL cluster to request query statistics for.
+     * To get a PostgreSQL cluster ID, use the [ClusterService.List] method.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -42,7 +42,7 @@ public final class PerfDiagService {
 
     /**
      * <pre>
-     * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -51,7 +51,7 @@ public final class PerfDiagService {
     boolean hasFromTime();
     /**
      * <pre>
-     * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -60,7 +60,7 @@ public final class PerfDiagService {
     com.google.protobuf.Timestamp getFromTime();
     /**
      * <pre>
-     * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -69,7 +69,7 @@ public final class PerfDiagService {
 
     /**
      * <pre>
-     * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -78,7 +78,7 @@ public final class PerfDiagService {
     boolean hasToTime();
     /**
      * <pre>
-     * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -87,7 +87,7 @@ public final class PerfDiagService {
     com.google.protobuf.Timestamp getToTime();
     /**
      * <pre>
-     * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -96,9 +96,7 @@ public final class PerfDiagService {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListRawStatementsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return. If the number of the results is larger than [page_size], the service returns [ListRawStatementsResponse.next_page_token]. You can use it to get the next page of the results in subsequent requests.
      * </pre>
      *
      * <code>int64 page_size = 4 [(.yandex.cloud.value) = "&lt;=10000"];</code>
@@ -108,8 +106,7 @@ public final class PerfDiagService {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
-     * [ListRawStatementsResponse.next_page_token] returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListRawStatementsResponse.next_page_token] returned by the previous SQL statement list request.
      * </pre>
      *
      * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -118,8 +115,7 @@ public final class PerfDiagService {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
-     * [ListRawStatementsResponse.next_page_token] returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListRawStatementsResponse.next_page_token] returned by the previous SQL statement list request.
      * </pre>
      *
      * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -254,8 +250,8 @@ public final class PerfDiagService {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the PostgreSQL cluster to request statements history for.
-     * To get the PostgreSQL cluster ID use a [ClusterService.List] request.
+     * ID of a PostgreSQL cluster to request query statistics for.
+     * To get a PostgreSQL cluster ID, use the [ClusterService.List] method.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -276,8 +272,8 @@ public final class PerfDiagService {
     }
     /**
      * <pre>
-     * ID of the PostgreSQL cluster to request statements history for.
-     * To get the PostgreSQL cluster ID use a [ClusterService.List] request.
+     * ID of a PostgreSQL cluster to request query statistics for.
+     * To get a PostgreSQL cluster ID, use the [ClusterService.List] method.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -302,7 +298,7 @@ public final class PerfDiagService {
     private com.google.protobuf.Timestamp fromTime_;
     /**
      * <pre>
-     * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -314,7 +310,7 @@ public final class PerfDiagService {
     }
     /**
      * <pre>
-     * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -326,7 +322,7 @@ public final class PerfDiagService {
     }
     /**
      * <pre>
-     * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -340,7 +336,7 @@ public final class PerfDiagService {
     private com.google.protobuf.Timestamp toTime_;
     /**
      * <pre>
-     * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -352,7 +348,7 @@ public final class PerfDiagService {
     }
     /**
      * <pre>
-     * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -364,7 +360,7 @@ public final class PerfDiagService {
     }
     /**
      * <pre>
-     * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -378,9 +374,7 @@ public final class PerfDiagService {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListRawStatementsResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return. If the number of the results is larger than [page_size], the service returns [ListRawStatementsResponse.next_page_token]. You can use it to get the next page of the results in subsequent requests.
      * </pre>
      *
      * <code>int64 page_size = 4 [(.yandex.cloud.value) = "&lt;=10000"];</code>
@@ -395,8 +389,7 @@ public final class PerfDiagService {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
-     * [ListRawStatementsResponse.next_page_token] returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListRawStatementsResponse.next_page_token] returned by the previous SQL statement list request.
      * </pre>
      *
      * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -417,8 +410,7 @@ public final class PerfDiagService {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
-     * [ListRawStatementsResponse.next_page_token] returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListRawStatementsResponse.next_page_token] returned by the previous SQL statement list request.
      * </pre>
      *
      * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -839,8 +831,8 @@ public final class PerfDiagService {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the PostgreSQL cluster to request statements history for.
-       * To get the PostgreSQL cluster ID use a [ClusterService.List] request.
+       * ID of a PostgreSQL cluster to request query statistics for.
+       * To get a PostgreSQL cluster ID, use the [ClusterService.List] method.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -860,8 +852,8 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * ID of the PostgreSQL cluster to request statements history for.
-       * To get the PostgreSQL cluster ID use a [ClusterService.List] request.
+       * ID of a PostgreSQL cluster to request query statistics for.
+       * To get a PostgreSQL cluster ID, use the [ClusterService.List] method.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -882,8 +874,8 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * ID of the PostgreSQL cluster to request statements history for.
-       * To get the PostgreSQL cluster ID use a [ClusterService.List] request.
+       * ID of a PostgreSQL cluster to request query statistics for.
+       * To get a PostgreSQL cluster ID, use the [ClusterService.List] method.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -902,8 +894,8 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * ID of the PostgreSQL cluster to request statements history for.
-       * To get the PostgreSQL cluster ID use a [ClusterService.List] request.
+       * ID of a PostgreSQL cluster to request query statistics for.
+       * To get a PostgreSQL cluster ID, use the [ClusterService.List] method.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -917,8 +909,8 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * ID of the PostgreSQL cluster to request statements history for.
-       * To get the PostgreSQL cluster ID use a [ClusterService.List] request.
+       * ID of a PostgreSQL cluster to request query statistics for.
+       * To get a PostgreSQL cluster ID, use the [ClusterService.List] method.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -942,7 +934,7 @@ public final class PerfDiagService {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> fromTimeBuilder_;
       /**
        * <pre>
-       * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -953,7 +945,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -968,7 +960,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -988,7 +980,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -1006,7 +998,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -1028,7 +1020,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -1046,7 +1038,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -1058,7 +1050,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -1073,7 +1065,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -1097,7 +1089,7 @@ public final class PerfDiagService {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> toTimeBuilder_;
       /**
        * <pre>
-       * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -1108,7 +1100,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -1123,7 +1115,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -1143,7 +1135,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -1161,7 +1153,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -1183,7 +1175,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -1201,7 +1193,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -1213,7 +1205,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -1228,7 +1220,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -1250,9 +1242,7 @@ public final class PerfDiagService {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListRawStatementsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return. If the number of the results is larger than [page_size], the service returns [ListRawStatementsResponse.next_page_token]. You can use it to get the next page of the results in subsequent requests.
        * </pre>
        *
        * <code>int64 page_size = 4 [(.yandex.cloud.value) = "&lt;=10000"];</code>
@@ -1264,9 +1254,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListRawStatementsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return. If the number of the results is larger than [page_size], the service returns [ListRawStatementsResponse.next_page_token]. You can use it to get the next page of the results in subsequent requests.
        * </pre>
        *
        * <code>int64 page_size = 4 [(.yandex.cloud.value) = "&lt;=10000"];</code>
@@ -1281,9 +1269,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListRawStatementsResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return. If the number of the results is larger than [page_size], the service returns [ListRawStatementsResponse.next_page_token]. You can use it to get the next page of the results in subsequent requests.
        * </pre>
        *
        * <code>int64 page_size = 4 [(.yandex.cloud.value) = "&lt;=10000"];</code>
@@ -1299,8 +1285,7 @@ public final class PerfDiagService {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
-       * [ListRawStatementsResponse.next_page_token] returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListRawStatementsResponse.next_page_token] returned by the previous SQL statement list request.
        * </pre>
        *
        * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1320,8 +1305,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
-       * [ListRawStatementsResponse.next_page_token] returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListRawStatementsResponse.next_page_token] returned by the previous SQL statement list request.
        * </pre>
        *
        * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1342,8 +1326,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
-       * [ListRawStatementsResponse.next_page_token] returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListRawStatementsResponse.next_page_token] returned by the previous SQL statement list request.
        * </pre>
        *
        * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1362,8 +1345,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
-       * [ListRawStatementsResponse.next_page_token] returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListRawStatementsResponse.next_page_token] returned by the previous SQL statement list request.
        * </pre>
        *
        * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1377,8 +1359,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
-       * [ListRawStatementsResponse.next_page_token] returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListRawStatementsResponse.next_page_token] returned by the previous SQL statement list request.
        * </pre>
        *
        * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1455,8 +1436,8 @@ public final class PerfDiagService {
 
     /**
      * <pre>
-     * ID of the PostgreSQL cluster to request statements history for.
-     * To get the PostgreSQL cluster ID use a [ClusterService.List] request.
+     * ID of a PostgreSQL cluster to request session statistics for.
+     * To get a PostgreSQL cluster ID, use the [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1465,8 +1446,8 @@ public final class PerfDiagService {
     java.lang.String getClusterId();
     /**
      * <pre>
-     * ID of the PostgreSQL cluster to request statements history for.
-     * To get the PostgreSQL cluster ID use a [ClusterService.List] request.
+     * ID of a PostgreSQL cluster to request session statistics for.
+     * To get a PostgreSQL cluster ID, use the [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1477,7 +1458,7 @@ public final class PerfDiagService {
 
     /**
      * <pre>
-     * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -1486,7 +1467,7 @@ public final class PerfDiagService {
     boolean hasFromTime();
     /**
      * <pre>
-     * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -1495,7 +1476,7 @@ public final class PerfDiagService {
     com.google.protobuf.Timestamp getFromTime();
     /**
      * <pre>
-     * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -1504,7 +1485,7 @@ public final class PerfDiagService {
 
     /**
      * <pre>
-     * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -1513,7 +1494,7 @@ public final class PerfDiagService {
     boolean hasToTime();
     /**
      * <pre>
-     * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -1522,7 +1503,7 @@ public final class PerfDiagService {
     com.google.protobuf.Timestamp getToTime();
     /**
      * <pre>
-     * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -1531,9 +1512,7 @@ public final class PerfDiagService {
 
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListRawSessionStatesResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return. If the number of the results is larger than [page_size], the service returns [ListRawSessionStatesResponse.next_page_token]. You can use it to get the next page of the results in subsequent requests.
      * </pre>
      *
      * <code>int64 page_size = 4 [(.yandex.cloud.value) = "&lt;=10000"];</code>
@@ -1543,8 +1522,7 @@ public final class PerfDiagService {
 
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
-     * [ListRawSessionStatesResponse.next_page_token] returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListRawSessionStatesResponse.next_page_token] returned by the previous PostgreSQL session list request.
      * </pre>
      *
      * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1553,8 +1531,7 @@ public final class PerfDiagService {
     java.lang.String getPageToken();
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
-     * [ListRawSessionStatesResponse.next_page_token] returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListRawSessionStatesResponse.next_page_token] returned by the previous PostgreSQL session list request.
      * </pre>
      *
      * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1689,8 +1666,8 @@ public final class PerfDiagService {
     private volatile java.lang.Object clusterId_;
     /**
      * <pre>
-     * ID of the PostgreSQL cluster to request statements history for.
-     * To get the PostgreSQL cluster ID use a [ClusterService.List] request.
+     * ID of a PostgreSQL cluster to request session statistics for.
+     * To get a PostgreSQL cluster ID, use the [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1711,8 +1688,8 @@ public final class PerfDiagService {
     }
     /**
      * <pre>
-     * ID of the PostgreSQL cluster to request statements history for.
-     * To get the PostgreSQL cluster ID use a [ClusterService.List] request.
+     * ID of a PostgreSQL cluster to request session statistics for.
+     * To get a PostgreSQL cluster ID, use the [ClusterService.List] request.
      * </pre>
      *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1737,7 +1714,7 @@ public final class PerfDiagService {
     private com.google.protobuf.Timestamp fromTime_;
     /**
      * <pre>
-     * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -1749,7 +1726,7 @@ public final class PerfDiagService {
     }
     /**
      * <pre>
-     * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -1761,7 +1738,7 @@ public final class PerfDiagService {
     }
     /**
      * <pre>
-     * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -1775,7 +1752,7 @@ public final class PerfDiagService {
     private com.google.protobuf.Timestamp toTime_;
     /**
      * <pre>
-     * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -1787,7 +1764,7 @@ public final class PerfDiagService {
     }
     /**
      * <pre>
-     * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -1799,7 +1776,7 @@ public final class PerfDiagService {
     }
     /**
      * <pre>
-     * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -1813,9 +1790,7 @@ public final class PerfDiagService {
     private long pageSize_;
     /**
      * <pre>
-     * The maximum number of results per page to return. If the number of available
-     * results is larger than [page_size], the service returns a [ListRawSessionStatesResponse.next_page_token]
-     * that can be used to get the next page of results in subsequent list requests.
+     * The maximum number of results per page to return. If the number of the results is larger than [page_size], the service returns [ListRawSessionStatesResponse.next_page_token]. You can use it to get the next page of the results in subsequent requests.
      * </pre>
      *
      * <code>int64 page_size = 4 [(.yandex.cloud.value) = "&lt;=10000"];</code>
@@ -1830,8 +1805,7 @@ public final class PerfDiagService {
     private volatile java.lang.Object pageToken_;
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
-     * [ListRawSessionStatesResponse.next_page_token] returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListRawSessionStatesResponse.next_page_token] returned by the previous PostgreSQL session list request.
      * </pre>
      *
      * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -1852,8 +1826,7 @@ public final class PerfDiagService {
     }
     /**
      * <pre>
-     * Page token. To get the next page of results, set [page_token] to the
-     * [ListRawSessionStatesResponse.next_page_token] returned by a previous list request.
+     * Page token. To get the next page of results, set [page_token] to the [ListRawSessionStatesResponse.next_page_token] returned by the previous PostgreSQL session list request.
      * </pre>
      *
      * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -2274,8 +2247,8 @@ public final class PerfDiagService {
       private java.lang.Object clusterId_ = "";
       /**
        * <pre>
-       * ID of the PostgreSQL cluster to request statements history for.
-       * To get the PostgreSQL cluster ID use a [ClusterService.List] request.
+       * ID of a PostgreSQL cluster to request session statistics for.
+       * To get a PostgreSQL cluster ID, use the [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2295,8 +2268,8 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * ID of the PostgreSQL cluster to request statements history for.
-       * To get the PostgreSQL cluster ID use a [ClusterService.List] request.
+       * ID of a PostgreSQL cluster to request session statistics for.
+       * To get a PostgreSQL cluster ID, use the [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2317,8 +2290,8 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * ID of the PostgreSQL cluster to request statements history for.
-       * To get the PostgreSQL cluster ID use a [ClusterService.List] request.
+       * ID of a PostgreSQL cluster to request session statistics for.
+       * To get a PostgreSQL cluster ID, use the [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2337,8 +2310,8 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * ID of the PostgreSQL cluster to request statements history for.
-       * To get the PostgreSQL cluster ID use a [ClusterService.List] request.
+       * ID of a PostgreSQL cluster to request session statistics for.
+       * To get a PostgreSQL cluster ID, use the [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2352,8 +2325,8 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * ID of the PostgreSQL cluster to request statements history for.
-       * To get the PostgreSQL cluster ID use a [ClusterService.List] request.
+       * ID of a PostgreSQL cluster to request session statistics for.
+       * To get a PostgreSQL cluster ID, use the [ClusterService.List] request.
        * </pre>
        *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
@@ -2377,7 +2350,7 @@ public final class PerfDiagService {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> fromTimeBuilder_;
       /**
        * <pre>
-       * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -2388,7 +2361,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -2403,7 +2376,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -2423,7 +2396,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -2441,7 +2414,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -2463,7 +2436,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -2481,7 +2454,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -2493,7 +2466,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -2508,7 +2481,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Start timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Beginning of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp from_time = 2;</code>
@@ -2532,7 +2505,7 @@ public final class PerfDiagService {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> toTimeBuilder_;
       /**
        * <pre>
-       * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -2543,7 +2516,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -2558,7 +2531,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -2578,7 +2551,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -2596,7 +2569,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -2618,7 +2591,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -2636,7 +2609,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -2648,7 +2621,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -2663,7 +2636,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * End timestamp for the request, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * End of the period for which you need to request data (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp to_time = 3;</code>
@@ -2685,9 +2658,7 @@ public final class PerfDiagService {
       private long pageSize_ ;
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListRawSessionStatesResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return. If the number of the results is larger than [page_size], the service returns [ListRawSessionStatesResponse.next_page_token]. You can use it to get the next page of the results in subsequent requests.
        * </pre>
        *
        * <code>int64 page_size = 4 [(.yandex.cloud.value) = "&lt;=10000"];</code>
@@ -2699,9 +2670,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListRawSessionStatesResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return. If the number of the results is larger than [page_size], the service returns [ListRawSessionStatesResponse.next_page_token]. You can use it to get the next page of the results in subsequent requests.
        * </pre>
        *
        * <code>int64 page_size = 4 [(.yandex.cloud.value) = "&lt;=10000"];</code>
@@ -2716,9 +2685,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * The maximum number of results per page to return. If the number of available
-       * results is larger than [page_size], the service returns a [ListRawSessionStatesResponse.next_page_token]
-       * that can be used to get the next page of results in subsequent list requests.
+       * The maximum number of results per page to return. If the number of the results is larger than [page_size], the service returns [ListRawSessionStatesResponse.next_page_token]. You can use it to get the next page of the results in subsequent requests.
        * </pre>
        *
        * <code>int64 page_size = 4 [(.yandex.cloud.value) = "&lt;=10000"];</code>
@@ -2734,8 +2701,7 @@ public final class PerfDiagService {
       private java.lang.Object pageToken_ = "";
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
-       * [ListRawSessionStatesResponse.next_page_token] returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListRawSessionStatesResponse.next_page_token] returned by the previous PostgreSQL session list request.
        * </pre>
        *
        * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -2755,8 +2721,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
-       * [ListRawSessionStatesResponse.next_page_token] returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListRawSessionStatesResponse.next_page_token] returned by the previous PostgreSQL session list request.
        * </pre>
        *
        * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -2777,8 +2742,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
-       * [ListRawSessionStatesResponse.next_page_token] returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListRawSessionStatesResponse.next_page_token] returned by the previous PostgreSQL session list request.
        * </pre>
        *
        * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -2797,8 +2761,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
-       * [ListRawSessionStatesResponse.next_page_token] returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListRawSessionStatesResponse.next_page_token] returned by the previous PostgreSQL session list request.
        * </pre>
        *
        * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -2812,8 +2775,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * Page token. To get the next page of results, set [page_token] to the
-       * [ListRawSessionStatesResponse.next_page_token] returned by a previous list request.
+       * Page token. To get the next page of results, set [page_token] to the [ListRawSessionStatesResponse.next_page_token] returned by the previous PostgreSQL session list request.
        * </pre>
        *
        * <code>string page_token = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
@@ -2889,24 +2851,44 @@ public final class PerfDiagService {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of PostgreSQL sessions.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
      */
     java.util.List<yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState> 
         getSessionStatesList();
     /**
+     * <pre>
+     * List of PostgreSQL sessions.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
      */
     yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState getSessionStates(int index);
     /**
+     * <pre>
+     * List of PostgreSQL sessions.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
      */
     int getSessionStatesCount();
     /**
+     * <pre>
+     * List of PostgreSQL sessions.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionStateOrBuilder> 
         getSessionStatesOrBuilderList();
     /**
+     * <pre>
+     * List of PostgreSQL sessions.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
      */
     yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionStateOrBuilder getSessionStatesOrBuilder(
@@ -2914,10 +2896,7 @@ public final class PerfDiagService {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListRawSessionStatesRequest.page_size], use the [next_page_token] as the value
-     * for the [ListRawSessionStatesRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results when requesting the PostgreSQL session list. If the number of the results is larger than [ListRawSessionStatesRequest.page_size], use the [next_page_token] as the value for the [ListRawSessionStatesRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -2926,10 +2905,7 @@ public final class PerfDiagService {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListRawSessionStatesRequest.page_size], use the [next_page_token] as the value
-     * for the [ListRawSessionStatesRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results when requesting the PostgreSQL session list. If the number of the results is larger than [ListRawSessionStatesRequest.page_size], use the [next_page_token] as the value for the [ListRawSessionStatesRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -3039,6 +3015,10 @@ public final class PerfDiagService {
     public static final int SESSION_STATES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState> sessionStates_;
     /**
+     * <pre>
+     * List of PostgreSQL sessions.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
      */
     @java.lang.Override
@@ -3046,6 +3026,10 @@ public final class PerfDiagService {
       return sessionStates_;
     }
     /**
+     * <pre>
+     * List of PostgreSQL sessions.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
      */
     @java.lang.Override
@@ -3054,6 +3038,10 @@ public final class PerfDiagService {
       return sessionStates_;
     }
     /**
+     * <pre>
+     * List of PostgreSQL sessions.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
      */
     @java.lang.Override
@@ -3061,6 +3049,10 @@ public final class PerfDiagService {
       return sessionStates_.size();
     }
     /**
+     * <pre>
+     * List of PostgreSQL sessions.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
      */
     @java.lang.Override
@@ -3068,6 +3060,10 @@ public final class PerfDiagService {
       return sessionStates_.get(index);
     }
     /**
+     * <pre>
+     * List of PostgreSQL sessions.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
      */
     @java.lang.Override
@@ -3080,10 +3076,7 @@ public final class PerfDiagService {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListRawSessionStatesRequest.page_size], use the [next_page_token] as the value
-     * for the [ListRawSessionStatesRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results when requesting the PostgreSQL session list. If the number of the results is larger than [ListRawSessionStatesRequest.page_size], use the [next_page_token] as the value for the [ListRawSessionStatesRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -3104,10 +3097,7 @@ public final class PerfDiagService {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListRawSessionStatesRequest.page_size], use the [next_page_token] as the value
-     * for the [ListRawSessionStatesRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results when requesting the PostgreSQL session list. If the number of the results is larger than [ListRawSessionStatesRequest.page_size], use the [next_page_token] as the value for the [ListRawSessionStatesRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -3500,6 +3490,10 @@ public final class PerfDiagService {
           yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState, yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState.Builder, yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionStateOrBuilder> sessionStatesBuilder_;
 
       /**
+       * <pre>
+       * List of PostgreSQL sessions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
        */
       public java.util.List<yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState> getSessionStatesList() {
@@ -3510,6 +3504,10 @@ public final class PerfDiagService {
         }
       }
       /**
+       * <pre>
+       * List of PostgreSQL sessions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
        */
       public int getSessionStatesCount() {
@@ -3520,6 +3518,10 @@ public final class PerfDiagService {
         }
       }
       /**
+       * <pre>
+       * List of PostgreSQL sessions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState getSessionStates(int index) {
@@ -3530,6 +3532,10 @@ public final class PerfDiagService {
         }
       }
       /**
+       * <pre>
+       * List of PostgreSQL sessions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
        */
       public Builder setSessionStates(
@@ -3547,6 +3553,10 @@ public final class PerfDiagService {
         return this;
       }
       /**
+       * <pre>
+       * List of PostgreSQL sessions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
        */
       public Builder setSessionStates(
@@ -3561,6 +3571,10 @@ public final class PerfDiagService {
         return this;
       }
       /**
+       * <pre>
+       * List of PostgreSQL sessions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
        */
       public Builder addSessionStates(yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState value) {
@@ -3577,6 +3591,10 @@ public final class PerfDiagService {
         return this;
       }
       /**
+       * <pre>
+       * List of PostgreSQL sessions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
        */
       public Builder addSessionStates(
@@ -3594,6 +3612,10 @@ public final class PerfDiagService {
         return this;
       }
       /**
+       * <pre>
+       * List of PostgreSQL sessions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
        */
       public Builder addSessionStates(
@@ -3608,6 +3630,10 @@ public final class PerfDiagService {
         return this;
       }
       /**
+       * <pre>
+       * List of PostgreSQL sessions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
        */
       public Builder addSessionStates(
@@ -3622,6 +3648,10 @@ public final class PerfDiagService {
         return this;
       }
       /**
+       * <pre>
+       * List of PostgreSQL sessions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
        */
       public Builder addAllSessionStates(
@@ -3637,6 +3667,10 @@ public final class PerfDiagService {
         return this;
       }
       /**
+       * <pre>
+       * List of PostgreSQL sessions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
        */
       public Builder clearSessionStates() {
@@ -3650,6 +3684,10 @@ public final class PerfDiagService {
         return this;
       }
       /**
+       * <pre>
+       * List of PostgreSQL sessions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
        */
       public Builder removeSessionStates(int index) {
@@ -3663,6 +3701,10 @@ public final class PerfDiagService {
         return this;
       }
       /**
+       * <pre>
+       * List of PostgreSQL sessions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState.Builder getSessionStatesBuilder(
@@ -3670,6 +3712,10 @@ public final class PerfDiagService {
         return getSessionStatesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of PostgreSQL sessions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionStateOrBuilder getSessionStatesOrBuilder(
@@ -3680,6 +3726,10 @@ public final class PerfDiagService {
         }
       }
       /**
+       * <pre>
+       * List of PostgreSQL sessions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionStateOrBuilder> 
@@ -3691,6 +3741,10 @@ public final class PerfDiagService {
         }
       }
       /**
+       * <pre>
+       * List of PostgreSQL sessions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState.Builder addSessionStatesBuilder() {
@@ -3698,6 +3752,10 @@ public final class PerfDiagService {
             yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of PostgreSQL sessions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState.Builder addSessionStatesBuilder(
@@ -3706,6 +3764,10 @@ public final class PerfDiagService {
             index, yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of PostgreSQL sessions.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.SessionState session_states = 1;</code>
        */
       public java.util.List<yandex.cloud.api.mdb.postgresql.v1.PerfDiag.SessionState.Builder> 
@@ -3730,10 +3792,7 @@ public final class PerfDiagService {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListRawSessionStatesRequest.page_size], use the [next_page_token] as the value
-       * for the [ListRawSessionStatesRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results when requesting the PostgreSQL session list. If the number of the results is larger than [ListRawSessionStatesRequest.page_size], use the [next_page_token] as the value for the [ListRawSessionStatesRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -3753,10 +3812,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListRawSessionStatesRequest.page_size], use the [next_page_token] as the value
-       * for the [ListRawSessionStatesRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results when requesting the PostgreSQL session list. If the number of the results is larger than [ListRawSessionStatesRequest.page_size], use the [next_page_token] as the value for the [ListRawSessionStatesRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -3777,10 +3833,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListRawSessionStatesRequest.page_size], use the [next_page_token] as the value
-       * for the [ListRawSessionStatesRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results when requesting the PostgreSQL session list. If the number of the results is larger than [ListRawSessionStatesRequest.page_size], use the [next_page_token] as the value for the [ListRawSessionStatesRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -3799,10 +3852,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListRawSessionStatesRequest.page_size], use the [next_page_token] as the value
-       * for the [ListRawSessionStatesRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results when requesting the PostgreSQL session list. If the number of the results is larger than [ListRawSessionStatesRequest.page_size], use the [next_page_token] as the value for the [ListRawSessionStatesRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -3816,10 +3866,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListRawSessionStatesRequest.page_size], use the [next_page_token] as the value
-       * for the [ListRawSessionStatesRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results when requesting the PostgreSQL session list. If the number of the results is larger than [ListRawSessionStatesRequest.page_size], use the [next_page_token] as the value for the [ListRawSessionStatesRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -3895,24 +3942,44 @@ public final class PerfDiagService {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of SQL statements (queries).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
      */
     java.util.List<yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStatement> 
         getStatementsList();
     /**
+     * <pre>
+     * List of SQL statements (queries).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
      */
     yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStatement getStatements(int index);
     /**
+     * <pre>
+     * List of SQL statements (queries).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
      */
     int getStatementsCount();
     /**
+     * <pre>
+     * List of SQL statements (queries).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStatementOrBuilder> 
         getStatementsOrBuilderList();
     /**
+     * <pre>
+     * List of SQL statements (queries).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
      */
     yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStatementOrBuilder getStatementsOrBuilder(
@@ -3920,10 +3987,7 @@ public final class PerfDiagService {
 
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListRawStatementsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListRawStatementsRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results when requesting the PostgreSQL session list. If the number of the results is larger than [ListRawStatementsRequest.page_size], use the [next_page_token] as the value for the [ListRawStatementsRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -3932,10 +3996,7 @@ public final class PerfDiagService {
     java.lang.String getNextPageToken();
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListRawStatementsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListRawStatementsRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results when requesting the PostgreSQL session list. If the number of the results is larger than [ListRawStatementsRequest.page_size], use the [next_page_token] as the value for the [ListRawStatementsRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -4045,6 +4106,10 @@ public final class PerfDiagService {
     public static final int STATEMENTS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStatement> statements_;
     /**
+     * <pre>
+     * List of SQL statements (queries).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
      */
     @java.lang.Override
@@ -4052,6 +4117,10 @@ public final class PerfDiagService {
       return statements_;
     }
     /**
+     * <pre>
+     * List of SQL statements (queries).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
      */
     @java.lang.Override
@@ -4060,6 +4129,10 @@ public final class PerfDiagService {
       return statements_;
     }
     /**
+     * <pre>
+     * List of SQL statements (queries).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
      */
     @java.lang.Override
@@ -4067,6 +4140,10 @@ public final class PerfDiagService {
       return statements_.size();
     }
     /**
+     * <pre>
+     * List of SQL statements (queries).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
      */
     @java.lang.Override
@@ -4074,6 +4151,10 @@ public final class PerfDiagService {
       return statements_.get(index);
     }
     /**
+     * <pre>
+     * List of SQL statements (queries).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
      */
     @java.lang.Override
@@ -4086,10 +4167,7 @@ public final class PerfDiagService {
     private volatile java.lang.Object nextPageToken_;
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListRawStatementsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListRawStatementsRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results when requesting the PostgreSQL session list. If the number of the results is larger than [ListRawStatementsRequest.page_size], use the [next_page_token] as the value for the [ListRawStatementsRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -4110,10 +4188,7 @@ public final class PerfDiagService {
     }
     /**
      * <pre>
-     * This token allows you to get the next page of results for list requests. If the number of results
-     * is larger than [ListRawStatementsRequest.page_size], use the [next_page_token] as the value
-     * for the [ListRawStatementsRequest.page_token] parameter in the next list request. Each subsequent
-     * list request will have its own [next_page_token] to continue paging through the results.
+     * This token allows you to get the next page of results when requesting the PostgreSQL session list. If the number of the results is larger than [ListRawStatementsRequest.page_size], use the [next_page_token] as the value for the [ListRawStatementsRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
      * </pre>
      *
      * <code>string next_page_token = 2;</code>
@@ -4506,6 +4581,10 @@ public final class PerfDiagService {
           yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStatement, yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStatement.Builder, yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStatementOrBuilder> statementsBuilder_;
 
       /**
+       * <pre>
+       * List of SQL statements (queries).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
        */
       public java.util.List<yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStatement> getStatementsList() {
@@ -4516,6 +4595,10 @@ public final class PerfDiagService {
         }
       }
       /**
+       * <pre>
+       * List of SQL statements (queries).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
        */
       public int getStatementsCount() {
@@ -4526,6 +4609,10 @@ public final class PerfDiagService {
         }
       }
       /**
+       * <pre>
+       * List of SQL statements (queries).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStatement getStatements(int index) {
@@ -4536,6 +4623,10 @@ public final class PerfDiagService {
         }
       }
       /**
+       * <pre>
+       * List of SQL statements (queries).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
        */
       public Builder setStatements(
@@ -4553,6 +4644,10 @@ public final class PerfDiagService {
         return this;
       }
       /**
+       * <pre>
+       * List of SQL statements (queries).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
        */
       public Builder setStatements(
@@ -4567,6 +4662,10 @@ public final class PerfDiagService {
         return this;
       }
       /**
+       * <pre>
+       * List of SQL statements (queries).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
        */
       public Builder addStatements(yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStatement value) {
@@ -4583,6 +4682,10 @@ public final class PerfDiagService {
         return this;
       }
       /**
+       * <pre>
+       * List of SQL statements (queries).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
        */
       public Builder addStatements(
@@ -4600,6 +4703,10 @@ public final class PerfDiagService {
         return this;
       }
       /**
+       * <pre>
+       * List of SQL statements (queries).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
        */
       public Builder addStatements(
@@ -4614,6 +4721,10 @@ public final class PerfDiagService {
         return this;
       }
       /**
+       * <pre>
+       * List of SQL statements (queries).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
        */
       public Builder addStatements(
@@ -4628,6 +4739,10 @@ public final class PerfDiagService {
         return this;
       }
       /**
+       * <pre>
+       * List of SQL statements (queries).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
        */
       public Builder addAllStatements(
@@ -4643,6 +4758,10 @@ public final class PerfDiagService {
         return this;
       }
       /**
+       * <pre>
+       * List of SQL statements (queries).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
        */
       public Builder clearStatements() {
@@ -4656,6 +4775,10 @@ public final class PerfDiagService {
         return this;
       }
       /**
+       * <pre>
+       * List of SQL statements (queries).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
        */
       public Builder removeStatements(int index) {
@@ -4669,6 +4792,10 @@ public final class PerfDiagService {
         return this;
       }
       /**
+       * <pre>
+       * List of SQL statements (queries).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStatement.Builder getStatementsBuilder(
@@ -4676,6 +4803,10 @@ public final class PerfDiagService {
         return getStatementsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of SQL statements (queries).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStatementOrBuilder getStatementsOrBuilder(
@@ -4686,6 +4817,10 @@ public final class PerfDiagService {
         }
       }
       /**
+       * <pre>
+       * List of SQL statements (queries).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStatementOrBuilder> 
@@ -4697,6 +4832,10 @@ public final class PerfDiagService {
         }
       }
       /**
+       * <pre>
+       * List of SQL statements (queries).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStatement.Builder addStatementsBuilder() {
@@ -4704,6 +4843,10 @@ public final class PerfDiagService {
             yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStatement.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of SQL statements (queries).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStatement.Builder addStatementsBuilder(
@@ -4712,6 +4855,10 @@ public final class PerfDiagService {
             index, yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStatement.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of SQL statements (queries).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.postgresql.v1.QueryStatement statements = 1;</code>
        */
       public java.util.List<yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStatement.Builder> 
@@ -4736,10 +4883,7 @@ public final class PerfDiagService {
       private java.lang.Object nextPageToken_ = "";
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListRawStatementsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListRawStatementsRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results when requesting the PostgreSQL session list. If the number of the results is larger than [ListRawStatementsRequest.page_size], use the [next_page_token] as the value for the [ListRawStatementsRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -4759,10 +4903,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListRawStatementsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListRawStatementsRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results when requesting the PostgreSQL session list. If the number of the results is larger than [ListRawStatementsRequest.page_size], use the [next_page_token] as the value for the [ListRawStatementsRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -4783,10 +4924,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListRawStatementsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListRawStatementsRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results when requesting the PostgreSQL session list. If the number of the results is larger than [ListRawStatementsRequest.page_size], use the [next_page_token] as the value for the [ListRawStatementsRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -4805,10 +4943,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListRawStatementsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListRawStatementsRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results when requesting the PostgreSQL session list. If the number of the results is larger than [ListRawStatementsRequest.page_size], use the [next_page_token] as the value for the [ListRawStatementsRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>
@@ -4822,10 +4957,7 @@ public final class PerfDiagService {
       }
       /**
        * <pre>
-       * This token allows you to get the next page of results for list requests. If the number of results
-       * is larger than [ListRawStatementsRequest.page_size], use the [next_page_token] as the value
-       * for the [ListRawStatementsRequest.page_token] parameter in the next list request. Each subsequent
-       * list request will have its own [next_page_token] to continue paging through the results.
+       * This token allows you to get the next page of results when requesting the PostgreSQL session list. If the number of the results is larger than [ListRawStatementsRequest.page_size], use the [next_page_token] as the value for the [ListRawStatementsRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
        * </pre>
        *
        * <code>string next_page_token = 2;</code>

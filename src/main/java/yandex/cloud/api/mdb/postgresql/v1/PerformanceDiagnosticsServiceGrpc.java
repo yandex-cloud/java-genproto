@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * A set of methods for getting PostgreSQL performance diagnostics.
+ * A set of methods for PostgreSQL performance diagnostics.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -126,14 +126,14 @@ public final class PerformanceDiagnosticsServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for getting PostgreSQL performance diagnostics.
+   * A set of methods for PostgreSQL performance diagnostics.
    * </pre>
    */
   public static abstract class PerformanceDiagnosticsServiceImplBase implements io.grpc.BindableService {
 
     /**
      * <pre>
-     * Handlers for raw data export
+     * Retrieves raw statistics on sessions. Corresponds to the [pg_stat_activity view](https://www.postgresql.org/docs/current/monitoring-stats.html#MONITORING-PG-STAT-ACTIVITY-VIEW).
      * </pre>
      */
     public void listRawSessionStates(yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesRequest request,
@@ -142,6 +142,9 @@ public final class PerformanceDiagnosticsServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves statistics on planning and execution of SQL statements (queries).
+     * </pre>
      */
     public void listRawStatements(yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawStatementsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawStatementsResponse> responseObserver) {
@@ -170,7 +173,7 @@ public final class PerformanceDiagnosticsServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for getting PostgreSQL performance diagnostics.
+   * A set of methods for PostgreSQL performance diagnostics.
    * </pre>
    */
   public static final class PerformanceDiagnosticsServiceStub extends io.grpc.stub.AbstractAsyncStub<PerformanceDiagnosticsServiceStub> {
@@ -187,7 +190,7 @@ public final class PerformanceDiagnosticsServiceGrpc {
 
     /**
      * <pre>
-     * Handlers for raw data export
+     * Retrieves raw statistics on sessions. Corresponds to the [pg_stat_activity view](https://www.postgresql.org/docs/current/monitoring-stats.html#MONITORING-PG-STAT-ACTIVITY-VIEW).
      * </pre>
      */
     public void listRawSessionStates(yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesRequest request,
@@ -197,6 +200,9 @@ public final class PerformanceDiagnosticsServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves statistics on planning and execution of SQL statements (queries).
+     * </pre>
      */
     public void listRawStatements(yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawStatementsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawStatementsResponse> responseObserver) {
@@ -207,7 +213,7 @@ public final class PerformanceDiagnosticsServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for getting PostgreSQL performance diagnostics.
+   * A set of methods for PostgreSQL performance diagnostics.
    * </pre>
    */
   public static final class PerformanceDiagnosticsServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<PerformanceDiagnosticsServiceBlockingStub> {
@@ -224,7 +230,7 @@ public final class PerformanceDiagnosticsServiceGrpc {
 
     /**
      * <pre>
-     * Handlers for raw data export
+     * Retrieves raw statistics on sessions. Corresponds to the [pg_stat_activity view](https://www.postgresql.org/docs/current/monitoring-stats.html#MONITORING-PG-STAT-ACTIVITY-VIEW).
      * </pre>
      */
     public yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesResponse listRawSessionStates(yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesRequest request) {
@@ -233,6 +239,9 @@ public final class PerformanceDiagnosticsServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves statistics on planning and execution of SQL statements (queries).
+     * </pre>
      */
     public yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawStatementsResponse listRawStatements(yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawStatementsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -242,7 +251,7 @@ public final class PerformanceDiagnosticsServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for getting PostgreSQL performance diagnostics.
+   * A set of methods for PostgreSQL performance diagnostics.
    * </pre>
    */
   public static final class PerformanceDiagnosticsServiceFutureStub extends io.grpc.stub.AbstractFutureStub<PerformanceDiagnosticsServiceFutureStub> {
@@ -259,7 +268,7 @@ public final class PerformanceDiagnosticsServiceGrpc {
 
     /**
      * <pre>
-     * Handlers for raw data export
+     * Retrieves raw statistics on sessions. Corresponds to the [pg_stat_activity view](https://www.postgresql.org/docs/current/monitoring-stats.html#MONITORING-PG-STAT-ACTIVITY-VIEW).
      * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawSessionStatesResponse> listRawSessionStates(
@@ -269,6 +278,9 @@ public final class PerformanceDiagnosticsServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves statistics on planning and execution of SQL statements (queries).
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawStatementsResponse> listRawStatements(
         yandex.cloud.api.mdb.postgresql.v1.PerfDiagService.ListRawStatementsRequest request) {

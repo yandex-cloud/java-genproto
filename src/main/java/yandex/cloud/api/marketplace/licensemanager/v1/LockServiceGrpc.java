@@ -108,27 +108,27 @@ public final class LockServiceGrpc {
     return getCreateMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.CreateLockRequest,
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.EnsureLockRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getEnsureMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Ensure",
-      requestType = yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.CreateLockRequest.class,
+      requestType = yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.EnsureLockRequest.class,
       responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.CreateLockRequest,
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.EnsureLockRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getEnsureMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.CreateLockRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getEnsureMethod;
+    io.grpc.MethodDescriptor<yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.EnsureLockRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getEnsureMethod;
     if ((getEnsureMethod = LockServiceGrpc.getEnsureMethod) == null) {
       synchronized (LockServiceGrpc.class) {
         if ((getEnsureMethod = LockServiceGrpc.getEnsureMethod) == null) {
           LockServiceGrpc.getEnsureMethod = getEnsureMethod =
-              io.grpc.MethodDescriptor.<yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.CreateLockRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              io.grpc.MethodDescriptor.<yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.EnsureLockRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Ensure"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.CreateLockRequest.getDefaultInstance()))
+                  yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.EnsureLockRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
               .setSchemaDescriptor(new LockServiceMethodDescriptorSupplier("Ensure"))
@@ -241,7 +241,7 @@ public final class LockServiceGrpc {
 
     /**
      */
-    public void ensure(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.CreateLockRequest request,
+    public void ensure(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.EnsureLockRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEnsureMethod(), responseObserver);
     }
@@ -280,7 +280,7 @@ public final class LockServiceGrpc {
             getEnsureMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.CreateLockRequest,
+                yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.EnsureLockRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_ENSURE)))
           .addMethod(
@@ -334,7 +334,7 @@ public final class LockServiceGrpc {
 
     /**
      */
-    public void ensure(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.CreateLockRequest request,
+    public void ensure(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.EnsureLockRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getEnsureMethod(), getCallOptions()), request, responseObserver);
@@ -386,7 +386,7 @@ public final class LockServiceGrpc {
 
     /**
      */
-    public yandex.cloud.api.operation.OperationOuterClass.Operation ensure(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.CreateLockRequest request) {
+    public yandex.cloud.api.operation.OperationOuterClass.Operation ensure(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.EnsureLockRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getEnsureMethod(), getCallOptions(), request);
     }
@@ -440,7 +440,7 @@ public final class LockServiceGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> ensure(
-        yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.CreateLockRequest request) {
+        yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.EnsureLockRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getEnsureMethod(), getCallOptions()), request);
     }
@@ -490,7 +490,7 @@ public final class LockServiceGrpc {
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_ENSURE:
-          serviceImpl.ensure((yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.CreateLockRequest) request,
+          serviceImpl.ensure((yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.EnsureLockRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_DELETE:

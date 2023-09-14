@@ -8511,6 +8511,283 @@ public final class UserOuterClass {
 
     /**
      * <pre>
+     * The setting sets the maximum number of retries for ClickHouse Keeper (or ZooKeeper) requests during insert into replicated MergeTree. Only Keeper requests which failed due to network error, Keeper session timeout, or request timeout are considered for retries.
+     * Default: 20 from 23.2, 0(disabled) before
+     * Min_version: 22.11
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#insert_keeper_max_retries)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value insert_keeper_max_retries = 131 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the insertKeeperMaxRetries field is set.
+     */
+    boolean hasInsertKeeperMaxRetries();
+    /**
+     * <pre>
+     * The setting sets the maximum number of retries for ClickHouse Keeper (or ZooKeeper) requests during insert into replicated MergeTree. Only Keeper requests which failed due to network error, Keeper session timeout, or request timeout are considered for retries.
+     * Default: 20 from 23.2, 0(disabled) before
+     * Min_version: 22.11
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#insert_keeper_max_retries)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value insert_keeper_max_retries = 131 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The insertKeeperMaxRetries.
+     */
+    com.google.protobuf.Int64Value getInsertKeeperMaxRetries();
+    /**
+     * <pre>
+     * The setting sets the maximum number of retries for ClickHouse Keeper (or ZooKeeper) requests during insert into replicated MergeTree. Only Keeper requests which failed due to network error, Keeper session timeout, or request timeout are considered for retries.
+     * Default: 20 from 23.2, 0(disabled) before
+     * Min_version: 22.11
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#insert_keeper_max_retries)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value insert_keeper_max_retries = 131 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getInsertKeeperMaxRetriesOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running user queries. Zero means unlimited.
+     * Default: 0 - unlimited
+     * Min_version: 22.10
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_user)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_user = 132 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxTemporaryDataOnDiskSizeForUser field is set.
+     */
+    boolean hasMaxTemporaryDataOnDiskSizeForUser();
+    /**
+     * <pre>
+     * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running user queries. Zero means unlimited.
+     * Default: 0 - unlimited
+     * Min_version: 22.10
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_user)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_user = 132 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxTemporaryDataOnDiskSizeForUser.
+     */
+    com.google.protobuf.Int64Value getMaxTemporaryDataOnDiskSizeForUser();
+    /**
+     * <pre>
+     * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running user queries. Zero means unlimited.
+     * Default: 0 - unlimited
+     * Min_version: 22.10
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_user)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_user = 132 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxTemporaryDataOnDiskSizeForUserOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running queries. Zero means unlimited.
+     * Default: 0 - unlimited
+     * Min_version: 22.10
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_query)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_query = 133 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxTemporaryDataOnDiskSizeForQuery field is set.
+     */
+    boolean hasMaxTemporaryDataOnDiskSizeForQuery();
+    /**
+     * <pre>
+     * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running queries. Zero means unlimited.
+     * Default: 0 - unlimited
+     * Min_version: 22.10
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_query)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_query = 133 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxTemporaryDataOnDiskSizeForQuery.
+     */
+    com.google.protobuf.Int64Value getMaxTemporaryDataOnDiskSizeForQuery();
+    /**
+     * <pre>
+     * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running queries. Zero means unlimited.
+     * Default: 0 - unlimited
+     * Min_version: 22.10
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_query)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_query = 133 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxTemporaryDataOnDiskSizeForQueryOrBuilder();
+
+    /**
+     * <pre>
+     * Limits maximum recursion depth in the recursive descent parser. Allows controlling the stack size.
+     * Default: 1000
+     * Special: 0 - unlimited
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_parser_depth)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_parser_depth = 134 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxParserDepth field is set.
+     */
+    boolean hasMaxParserDepth();
+    /**
+     * <pre>
+     * Limits maximum recursion depth in the recursive descent parser. Allows controlling the stack size.
+     * Default: 1000
+     * Special: 0 - unlimited
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_parser_depth)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_parser_depth = 134 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxParserDepth.
+     */
+    com.google.protobuf.Int64Value getMaxParserDepth();
+    /**
+     * <pre>
+     * Limits maximum recursion depth in the recursive descent parser. Allows controlling the stack size.
+     * Default: 1000
+     * Special: 0 - unlimited
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_parser_depth)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_parser_depth = 134 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxParserDepthOrBuilder();
+
+    /**
+     * <pre>
+     * Method of reading data from remote filesystem, one of: read, threadpool.
+     * Default: read
+     * Min_version: 21.11
+     * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L660)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.RemoteFilesystemReadMethod remote_filesystem_read_method = 135;</code>
+     * @return The enum numeric value on the wire for remoteFilesystemReadMethod.
+     */
+    int getRemoteFilesystemReadMethodValue();
+    /**
+     * <pre>
+     * Method of reading data from remote filesystem, one of: read, threadpool.
+     * Default: read
+     * Min_version: 21.11
+     * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L660)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.RemoteFilesystemReadMethod remote_filesystem_read_method = 135;</code>
+     * @return The remoteFilesystemReadMethod.
+     */
+    yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.RemoteFilesystemReadMethod getRemoteFilesystemReadMethod();
+
+    /**
+     * <pre>
+     * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * Default: 1GiB
+     * Min_version: 22.5
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator = 136 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the memoryOvercommitRatioDenominator field is set.
+     */
+    boolean hasMemoryOvercommitRatioDenominator();
+    /**
+     * <pre>
+     * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * Default: 1GiB
+     * Min_version: 22.5
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator = 136 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The memoryOvercommitRatioDenominator.
+     */
+    com.google.protobuf.Int64Value getMemoryOvercommitRatioDenominator();
+    /**
+     * <pre>
+     * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * Default: 1GiB
+     * Min_version: 22.5
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator = 136 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMemoryOvercommitRatioDenominatorOrBuilder();
+
+    /**
+     * <pre>
+     * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * Default: 1GiB
+     * Min_version: 22.5
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator_for_user = 137 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the memoryOvercommitRatioDenominatorForUser field is set.
+     */
+    boolean hasMemoryOvercommitRatioDenominatorForUser();
+    /**
+     * <pre>
+     * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * Default: 1GiB
+     * Min_version: 22.5
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator_for_user = 137 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The memoryOvercommitRatioDenominatorForUser.
+     */
+    com.google.protobuf.Int64Value getMemoryOvercommitRatioDenominatorForUser();
+    /**
+     * <pre>
+     * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * Default: 1GiB
+     * Min_version: 22.5
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator_for_user = 137 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMemoryOvercommitRatioDenominatorForUserOrBuilder();
+
+    /**
+     * <pre>
+     * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+     * Default: 5000000
+     * Min_version: 22.5
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_usage_overcommit_max_wait_microseconds = 138 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the memoryUsageOvercommitMaxWaitMicroseconds field is set.
+     */
+    boolean hasMemoryUsageOvercommitMaxWaitMicroseconds();
+    /**
+     * <pre>
+     * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+     * Default: 5000000
+     * Min_version: 22.5
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_usage_overcommit_max_wait_microseconds = 138 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The memoryUsageOvercommitMaxWaitMicroseconds.
+     */
+    com.google.protobuf.Int64Value getMemoryUsageOvercommitMaxWaitMicroseconds();
+    /**
+     * <pre>
+     * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+     * Default: 5000000
+     * Min_version: 22.5
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_usage_overcommit_max_wait_microseconds = 138 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMemoryUsageOvercommitMaxWaitMicrosecondsOrBuilder();
+
+    /**
+     * <pre>
      * The setting is deprecated and has no effect.
      * </pre>
      *
@@ -8603,6 +8880,7 @@ public final class UserOuterClass {
       formatRegexp_ = "";
       formatRegexpEscapingRule_ = 0;
       localFilesystemReadMethod_ = 0;
+      remoteFilesystemReadMethod_ = 0;
     }
 
     @java.lang.Override
@@ -10191,6 +10469,103 @@ public final class UserOuterClass {
 
               break;
             }
+            case 1050: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (insertKeeperMaxRetries_ != null) {
+                subBuilder = insertKeeperMaxRetries_.toBuilder();
+              }
+              insertKeeperMaxRetries_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(insertKeeperMaxRetries_);
+                insertKeeperMaxRetries_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1058: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxTemporaryDataOnDiskSizeForUser_ != null) {
+                subBuilder = maxTemporaryDataOnDiskSizeForUser_.toBuilder();
+              }
+              maxTemporaryDataOnDiskSizeForUser_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxTemporaryDataOnDiskSizeForUser_);
+                maxTemporaryDataOnDiskSizeForUser_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1066: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxTemporaryDataOnDiskSizeForQuery_ != null) {
+                subBuilder = maxTemporaryDataOnDiskSizeForQuery_.toBuilder();
+              }
+              maxTemporaryDataOnDiskSizeForQuery_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxTemporaryDataOnDiskSizeForQuery_);
+                maxTemporaryDataOnDiskSizeForQuery_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1074: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxParserDepth_ != null) {
+                subBuilder = maxParserDepth_.toBuilder();
+              }
+              maxParserDepth_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxParserDepth_);
+                maxParserDepth_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1080: {
+              int rawValue = input.readEnum();
+
+              remoteFilesystemReadMethod_ = rawValue;
+              break;
+            }
+            case 1090: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (memoryOvercommitRatioDenominator_ != null) {
+                subBuilder = memoryOvercommitRatioDenominator_.toBuilder();
+              }
+              memoryOvercommitRatioDenominator_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(memoryOvercommitRatioDenominator_);
+                memoryOvercommitRatioDenominator_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1098: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (memoryOvercommitRatioDenominatorForUser_ != null) {
+                subBuilder = memoryOvercommitRatioDenominatorForUser_.toBuilder();
+              }
+              memoryOvercommitRatioDenominatorForUser_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(memoryOvercommitRatioDenominatorForUser_);
+                memoryOvercommitRatioDenominatorForUser_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 1106: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (memoryUsageOvercommitMaxWaitMicroseconds_ != null) {
+                subBuilder = memoryUsageOvercommitMaxWaitMicroseconds_.toBuilder();
+              }
+              memoryUsageOvercommitMaxWaitMicroseconds_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(memoryUsageOvercommitMaxWaitMicroseconds_);
+                memoryUsageOvercommitMaxWaitMicroseconds_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -11606,6 +11981,123 @@ public final class UserOuterClass {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.UserSettings.LocalFilesystemReadMethod)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.clickhouse.v1.UserSettings.RemoteFilesystemReadMethod}
+     */
+    public enum RemoteFilesystemReadMethod
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>REMOTE_FILESYSTEM_READ_METHOD_UNSPECIFIED = 0;</code>
+       */
+      REMOTE_FILESYSTEM_READ_METHOD_UNSPECIFIED(0),
+      /**
+       * <code>REMOTE_FILESYSTEM_READ_METHOD_READ = 1;</code>
+       */
+      REMOTE_FILESYSTEM_READ_METHOD_READ(1),
+      /**
+       * <code>REMOTE_FILESYSTEM_READ_METHOD_THREADPOOL = 2;</code>
+       */
+      REMOTE_FILESYSTEM_READ_METHOD_THREADPOOL(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>REMOTE_FILESYSTEM_READ_METHOD_UNSPECIFIED = 0;</code>
+       */
+      public static final int REMOTE_FILESYSTEM_READ_METHOD_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>REMOTE_FILESYSTEM_READ_METHOD_READ = 1;</code>
+       */
+      public static final int REMOTE_FILESYSTEM_READ_METHOD_READ_VALUE = 1;
+      /**
+       * <code>REMOTE_FILESYSTEM_READ_METHOD_THREADPOOL = 2;</code>
+       */
+      public static final int REMOTE_FILESYSTEM_READ_METHOD_THREADPOOL_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static RemoteFilesystemReadMethod valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static RemoteFilesystemReadMethod forNumber(int value) {
+        switch (value) {
+          case 0: return REMOTE_FILESYSTEM_READ_METHOD_UNSPECIFIED;
+          case 1: return REMOTE_FILESYSTEM_READ_METHOD_READ;
+          case 2: return REMOTE_FILESYSTEM_READ_METHOD_THREADPOOL;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<RemoteFilesystemReadMethod>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          RemoteFilesystemReadMethod> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<RemoteFilesystemReadMethod>() {
+              public RemoteFilesystemReadMethod findValueByNumber(int number) {
+                return RemoteFilesystemReadMethod.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.getDescriptor().getEnumTypes().get(10);
+      }
+
+      private static final RemoteFilesystemReadMethod[] VALUES = values();
+
+      public static RemoteFilesystemReadMethod valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private RemoteFilesystemReadMethod(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.clickhouse.v1.UserSettings.RemoteFilesystemReadMethod)
     }
 
     public static final int READONLY_FIELD_NUMBER = 1;
@@ -16928,6 +17420,368 @@ public final class UserOuterClass {
       return getMaxReadBufferSize();
     }
 
+    public static final int INSERT_KEEPER_MAX_RETRIES_FIELD_NUMBER = 131;
+    private com.google.protobuf.Int64Value insertKeeperMaxRetries_;
+    /**
+     * <pre>
+     * The setting sets the maximum number of retries for ClickHouse Keeper (or ZooKeeper) requests during insert into replicated MergeTree. Only Keeper requests which failed due to network error, Keeper session timeout, or request timeout are considered for retries.
+     * Default: 20 from 23.2, 0(disabled) before
+     * Min_version: 22.11
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#insert_keeper_max_retries)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value insert_keeper_max_retries = 131 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the insertKeeperMaxRetries field is set.
+     */
+    @java.lang.Override
+    public boolean hasInsertKeeperMaxRetries() {
+      return insertKeeperMaxRetries_ != null;
+    }
+    /**
+     * <pre>
+     * The setting sets the maximum number of retries for ClickHouse Keeper (or ZooKeeper) requests during insert into replicated MergeTree. Only Keeper requests which failed due to network error, Keeper session timeout, or request timeout are considered for retries.
+     * Default: 20 from 23.2, 0(disabled) before
+     * Min_version: 22.11
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#insert_keeper_max_retries)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value insert_keeper_max_retries = 131 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The insertKeeperMaxRetries.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getInsertKeeperMaxRetries() {
+      return insertKeeperMaxRetries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : insertKeeperMaxRetries_;
+    }
+    /**
+     * <pre>
+     * The setting sets the maximum number of retries for ClickHouse Keeper (or ZooKeeper) requests during insert into replicated MergeTree. Only Keeper requests which failed due to network error, Keeper session timeout, or request timeout are considered for retries.
+     * Default: 20 from 23.2, 0(disabled) before
+     * Min_version: 22.11
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#insert_keeper_max_retries)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value insert_keeper_max_retries = 131 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getInsertKeeperMaxRetriesOrBuilder() {
+      return getInsertKeeperMaxRetries();
+    }
+
+    public static final int MAX_TEMPORARY_DATA_ON_DISK_SIZE_FOR_USER_FIELD_NUMBER = 132;
+    private com.google.protobuf.Int64Value maxTemporaryDataOnDiskSizeForUser_;
+    /**
+     * <pre>
+     * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running user queries. Zero means unlimited.
+     * Default: 0 - unlimited
+     * Min_version: 22.10
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_user)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_user = 132 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxTemporaryDataOnDiskSizeForUser field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxTemporaryDataOnDiskSizeForUser() {
+      return maxTemporaryDataOnDiskSizeForUser_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running user queries. Zero means unlimited.
+     * Default: 0 - unlimited
+     * Min_version: 22.10
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_user)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_user = 132 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxTemporaryDataOnDiskSizeForUser.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxTemporaryDataOnDiskSizeForUser() {
+      return maxTemporaryDataOnDiskSizeForUser_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxTemporaryDataOnDiskSizeForUser_;
+    }
+    /**
+     * <pre>
+     * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running user queries. Zero means unlimited.
+     * Default: 0 - unlimited
+     * Min_version: 22.10
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_user)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_user = 132 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxTemporaryDataOnDiskSizeForUserOrBuilder() {
+      return getMaxTemporaryDataOnDiskSizeForUser();
+    }
+
+    public static final int MAX_TEMPORARY_DATA_ON_DISK_SIZE_FOR_QUERY_FIELD_NUMBER = 133;
+    private com.google.protobuf.Int64Value maxTemporaryDataOnDiskSizeForQuery_;
+    /**
+     * <pre>
+     * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running queries. Zero means unlimited.
+     * Default: 0 - unlimited
+     * Min_version: 22.10
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_query)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_query = 133 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxTemporaryDataOnDiskSizeForQuery field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxTemporaryDataOnDiskSizeForQuery() {
+      return maxTemporaryDataOnDiskSizeForQuery_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running queries. Zero means unlimited.
+     * Default: 0 - unlimited
+     * Min_version: 22.10
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_query)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_query = 133 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxTemporaryDataOnDiskSizeForQuery.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxTemporaryDataOnDiskSizeForQuery() {
+      return maxTemporaryDataOnDiskSizeForQuery_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxTemporaryDataOnDiskSizeForQuery_;
+    }
+    /**
+     * <pre>
+     * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running queries. Zero means unlimited.
+     * Default: 0 - unlimited
+     * Min_version: 22.10
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_query)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_query = 133 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxTemporaryDataOnDiskSizeForQueryOrBuilder() {
+      return getMaxTemporaryDataOnDiskSizeForQuery();
+    }
+
+    public static final int MAX_PARSER_DEPTH_FIELD_NUMBER = 134;
+    private com.google.protobuf.Int64Value maxParserDepth_;
+    /**
+     * <pre>
+     * Limits maximum recursion depth in the recursive descent parser. Allows controlling the stack size.
+     * Default: 1000
+     * Special: 0 - unlimited
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_parser_depth)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_parser_depth = 134 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the maxParserDepth field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxParserDepth() {
+      return maxParserDepth_ != null;
+    }
+    /**
+     * <pre>
+     * Limits maximum recursion depth in the recursive descent parser. Allows controlling the stack size.
+     * Default: 1000
+     * Special: 0 - unlimited
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_parser_depth)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_parser_depth = 134 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The maxParserDepth.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxParserDepth() {
+      return maxParserDepth_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxParserDepth_;
+    }
+    /**
+     * <pre>
+     * Limits maximum recursion depth in the recursive descent parser. Allows controlling the stack size.
+     * Default: 1000
+     * Special: 0 - unlimited
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_parser_depth)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_parser_depth = 134 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxParserDepthOrBuilder() {
+      return getMaxParserDepth();
+    }
+
+    public static final int REMOTE_FILESYSTEM_READ_METHOD_FIELD_NUMBER = 135;
+    private int remoteFilesystemReadMethod_;
+    /**
+     * <pre>
+     * Method of reading data from remote filesystem, one of: read, threadpool.
+     * Default: read
+     * Min_version: 21.11
+     * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L660)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.RemoteFilesystemReadMethod remote_filesystem_read_method = 135;</code>
+     * @return The enum numeric value on the wire for remoteFilesystemReadMethod.
+     */
+    @java.lang.Override public int getRemoteFilesystemReadMethodValue() {
+      return remoteFilesystemReadMethod_;
+    }
+    /**
+     * <pre>
+     * Method of reading data from remote filesystem, one of: read, threadpool.
+     * Default: read
+     * Min_version: 21.11
+     * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L660)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.RemoteFilesystemReadMethod remote_filesystem_read_method = 135;</code>
+     * @return The remoteFilesystemReadMethod.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.RemoteFilesystemReadMethod getRemoteFilesystemReadMethod() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.RemoteFilesystemReadMethod result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.RemoteFilesystemReadMethod.valueOf(remoteFilesystemReadMethod_);
+      return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.RemoteFilesystemReadMethod.UNRECOGNIZED : result;
+    }
+
+    public static final int MEMORY_OVERCOMMIT_RATIO_DENOMINATOR_FIELD_NUMBER = 136;
+    private com.google.protobuf.Int64Value memoryOvercommitRatioDenominator_;
+    /**
+     * <pre>
+     * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * Default: 1GiB
+     * Min_version: 22.5
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator = 136 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the memoryOvercommitRatioDenominator field is set.
+     */
+    @java.lang.Override
+    public boolean hasMemoryOvercommitRatioDenominator() {
+      return memoryOvercommitRatioDenominator_ != null;
+    }
+    /**
+     * <pre>
+     * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * Default: 1GiB
+     * Min_version: 22.5
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator = 136 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The memoryOvercommitRatioDenominator.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMemoryOvercommitRatioDenominator() {
+      return memoryOvercommitRatioDenominator_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : memoryOvercommitRatioDenominator_;
+    }
+    /**
+     * <pre>
+     * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * Default: 1GiB
+     * Min_version: 22.5
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator = 136 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMemoryOvercommitRatioDenominatorOrBuilder() {
+      return getMemoryOvercommitRatioDenominator();
+    }
+
+    public static final int MEMORY_OVERCOMMIT_RATIO_DENOMINATOR_FOR_USER_FIELD_NUMBER = 137;
+    private com.google.protobuf.Int64Value memoryOvercommitRatioDenominatorForUser_;
+    /**
+     * <pre>
+     * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * Default: 1GiB
+     * Min_version: 22.5
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator_for_user = 137 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the memoryOvercommitRatioDenominatorForUser field is set.
+     */
+    @java.lang.Override
+    public boolean hasMemoryOvercommitRatioDenominatorForUser() {
+      return memoryOvercommitRatioDenominatorForUser_ != null;
+    }
+    /**
+     * <pre>
+     * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * Default: 1GiB
+     * Min_version: 22.5
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator_for_user = 137 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The memoryOvercommitRatioDenominatorForUser.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMemoryOvercommitRatioDenominatorForUser() {
+      return memoryOvercommitRatioDenominatorForUser_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : memoryOvercommitRatioDenominatorForUser_;
+    }
+    /**
+     * <pre>
+     * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+     * Default: 1GiB
+     * Min_version: 22.5
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator_for_user = 137 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMemoryOvercommitRatioDenominatorForUserOrBuilder() {
+      return getMemoryOvercommitRatioDenominatorForUser();
+    }
+
+    public static final int MEMORY_USAGE_OVERCOMMIT_MAX_WAIT_MICROSECONDS_FIELD_NUMBER = 138;
+    private com.google.protobuf.Int64Value memoryUsageOvercommitMaxWaitMicroseconds_;
+    /**
+     * <pre>
+     * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+     * Default: 5000000
+     * Min_version: 22.5
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_usage_overcommit_max_wait_microseconds = 138 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the memoryUsageOvercommitMaxWaitMicroseconds field is set.
+     */
+    @java.lang.Override
+    public boolean hasMemoryUsageOvercommitMaxWaitMicroseconds() {
+      return memoryUsageOvercommitMaxWaitMicroseconds_ != null;
+    }
+    /**
+     * <pre>
+     * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+     * Default: 5000000
+     * Min_version: 22.5
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_usage_overcommit_max_wait_microseconds = 138 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The memoryUsageOvercommitMaxWaitMicroseconds.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMemoryUsageOvercommitMaxWaitMicroseconds() {
+      return memoryUsageOvercommitMaxWaitMicroseconds_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : memoryUsageOvercommitMaxWaitMicroseconds_;
+    }
+    /**
+     * <pre>
+     * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+     * Default: 5000000
+     * Min_version: 22.5
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value memory_usage_overcommit_max_wait_microseconds = 138 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMemoryUsageOvercommitMaxWaitMicrosecondsOrBuilder() {
+      return getMemoryUsageOvercommitMaxWaitMicroseconds();
+    }
+
     public static final int COMPILE_FIELD_NUMBER = 44;
     private com.google.protobuf.BoolValue compile_;
     /**
@@ -17410,6 +18264,30 @@ public final class UserOuterClass {
       }
       if (maxReadBufferSize_ != null) {
         output.writeMessage(130, getMaxReadBufferSize());
+      }
+      if (insertKeeperMaxRetries_ != null) {
+        output.writeMessage(131, getInsertKeeperMaxRetries());
+      }
+      if (maxTemporaryDataOnDiskSizeForUser_ != null) {
+        output.writeMessage(132, getMaxTemporaryDataOnDiskSizeForUser());
+      }
+      if (maxTemporaryDataOnDiskSizeForQuery_ != null) {
+        output.writeMessage(133, getMaxTemporaryDataOnDiskSizeForQuery());
+      }
+      if (maxParserDepth_ != null) {
+        output.writeMessage(134, getMaxParserDepth());
+      }
+      if (remoteFilesystemReadMethod_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.RemoteFilesystemReadMethod.REMOTE_FILESYSTEM_READ_METHOD_UNSPECIFIED.getNumber()) {
+        output.writeEnum(135, remoteFilesystemReadMethod_);
+      }
+      if (memoryOvercommitRatioDenominator_ != null) {
+        output.writeMessage(136, getMemoryOvercommitRatioDenominator());
+      }
+      if (memoryOvercommitRatioDenominatorForUser_ != null) {
+        output.writeMessage(137, getMemoryOvercommitRatioDenominatorForUser());
+      }
+      if (memoryUsageOvercommitMaxWaitMicroseconds_ != null) {
+        output.writeMessage(138, getMemoryUsageOvercommitMaxWaitMicroseconds());
       }
       unknownFields.writeTo(output);
     }
@@ -17938,6 +18816,38 @@ public final class UserOuterClass {
       if (maxReadBufferSize_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(130, getMaxReadBufferSize());
+      }
+      if (insertKeeperMaxRetries_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(131, getInsertKeeperMaxRetries());
+      }
+      if (maxTemporaryDataOnDiskSizeForUser_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(132, getMaxTemporaryDataOnDiskSizeForUser());
+      }
+      if (maxTemporaryDataOnDiskSizeForQuery_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(133, getMaxTemporaryDataOnDiskSizeForQuery());
+      }
+      if (maxParserDepth_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(134, getMaxParserDepth());
+      }
+      if (remoteFilesystemReadMethod_ != yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.RemoteFilesystemReadMethod.REMOTE_FILESYSTEM_READ_METHOD_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(135, remoteFilesystemReadMethod_);
+      }
+      if (memoryOvercommitRatioDenominator_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(136, getMemoryOvercommitRatioDenominator());
+      }
+      if (memoryOvercommitRatioDenominatorForUser_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(137, getMemoryOvercommitRatioDenominatorForUser());
+      }
+      if (memoryUsageOvercommitMaxWaitMicroseconds_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(138, getMemoryUsageOvercommitMaxWaitMicroseconds());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -18513,6 +19423,42 @@ public final class UserOuterClass {
         if (!getMaxReadBufferSize()
             .equals(other.getMaxReadBufferSize())) return false;
       }
+      if (hasInsertKeeperMaxRetries() != other.hasInsertKeeperMaxRetries()) return false;
+      if (hasInsertKeeperMaxRetries()) {
+        if (!getInsertKeeperMaxRetries()
+            .equals(other.getInsertKeeperMaxRetries())) return false;
+      }
+      if (hasMaxTemporaryDataOnDiskSizeForUser() != other.hasMaxTemporaryDataOnDiskSizeForUser()) return false;
+      if (hasMaxTemporaryDataOnDiskSizeForUser()) {
+        if (!getMaxTemporaryDataOnDiskSizeForUser()
+            .equals(other.getMaxTemporaryDataOnDiskSizeForUser())) return false;
+      }
+      if (hasMaxTemporaryDataOnDiskSizeForQuery() != other.hasMaxTemporaryDataOnDiskSizeForQuery()) return false;
+      if (hasMaxTemporaryDataOnDiskSizeForQuery()) {
+        if (!getMaxTemporaryDataOnDiskSizeForQuery()
+            .equals(other.getMaxTemporaryDataOnDiskSizeForQuery())) return false;
+      }
+      if (hasMaxParserDepth() != other.hasMaxParserDepth()) return false;
+      if (hasMaxParserDepth()) {
+        if (!getMaxParserDepth()
+            .equals(other.getMaxParserDepth())) return false;
+      }
+      if (remoteFilesystemReadMethod_ != other.remoteFilesystemReadMethod_) return false;
+      if (hasMemoryOvercommitRatioDenominator() != other.hasMemoryOvercommitRatioDenominator()) return false;
+      if (hasMemoryOvercommitRatioDenominator()) {
+        if (!getMemoryOvercommitRatioDenominator()
+            .equals(other.getMemoryOvercommitRatioDenominator())) return false;
+      }
+      if (hasMemoryOvercommitRatioDenominatorForUser() != other.hasMemoryOvercommitRatioDenominatorForUser()) return false;
+      if (hasMemoryOvercommitRatioDenominatorForUser()) {
+        if (!getMemoryOvercommitRatioDenominatorForUser()
+            .equals(other.getMemoryOvercommitRatioDenominatorForUser())) return false;
+      }
+      if (hasMemoryUsageOvercommitMaxWaitMicroseconds() != other.hasMemoryUsageOvercommitMaxWaitMicroseconds()) return false;
+      if (hasMemoryUsageOvercommitMaxWaitMicroseconds()) {
+        if (!getMemoryUsageOvercommitMaxWaitMicroseconds()
+            .equals(other.getMemoryUsageOvercommitMaxWaitMicroseconds())) return false;
+      }
       if (hasCompile() != other.hasCompile()) return false;
       if (hasCompile()) {
         if (!getCompile()
@@ -19003,6 +19949,36 @@ public final class UserOuterClass {
       if (hasMaxReadBufferSize()) {
         hash = (37 * hash) + MAX_READ_BUFFER_SIZE_FIELD_NUMBER;
         hash = (53 * hash) + getMaxReadBufferSize().hashCode();
+      }
+      if (hasInsertKeeperMaxRetries()) {
+        hash = (37 * hash) + INSERT_KEEPER_MAX_RETRIES_FIELD_NUMBER;
+        hash = (53 * hash) + getInsertKeeperMaxRetries().hashCode();
+      }
+      if (hasMaxTemporaryDataOnDiskSizeForUser()) {
+        hash = (37 * hash) + MAX_TEMPORARY_DATA_ON_DISK_SIZE_FOR_USER_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxTemporaryDataOnDiskSizeForUser().hashCode();
+      }
+      if (hasMaxTemporaryDataOnDiskSizeForQuery()) {
+        hash = (37 * hash) + MAX_TEMPORARY_DATA_ON_DISK_SIZE_FOR_QUERY_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxTemporaryDataOnDiskSizeForQuery().hashCode();
+      }
+      if (hasMaxParserDepth()) {
+        hash = (37 * hash) + MAX_PARSER_DEPTH_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxParserDepth().hashCode();
+      }
+      hash = (37 * hash) + REMOTE_FILESYSTEM_READ_METHOD_FIELD_NUMBER;
+      hash = (53 * hash) + remoteFilesystemReadMethod_;
+      if (hasMemoryOvercommitRatioDenominator()) {
+        hash = (37 * hash) + MEMORY_OVERCOMMIT_RATIO_DENOMINATOR_FIELD_NUMBER;
+        hash = (53 * hash) + getMemoryOvercommitRatioDenominator().hashCode();
+      }
+      if (hasMemoryOvercommitRatioDenominatorForUser()) {
+        hash = (37 * hash) + MEMORY_OVERCOMMIT_RATIO_DENOMINATOR_FOR_USER_FIELD_NUMBER;
+        hash = (53 * hash) + getMemoryOvercommitRatioDenominatorForUser().hashCode();
+      }
+      if (hasMemoryUsageOvercommitMaxWaitMicroseconds()) {
+        hash = (37 * hash) + MEMORY_USAGE_OVERCOMMIT_MAX_WAIT_MICROSECONDS_FIELD_NUMBER;
+        hash = (53 * hash) + getMemoryUsageOvercommitMaxWaitMicroseconds().hashCode();
       }
       if (hasCompile()) {
         hash = (37 * hash) + COMPILE_FIELD_NUMBER;
@@ -19834,6 +20810,50 @@ public final class UserOuterClass {
           maxReadBufferSize_ = null;
           maxReadBufferSizeBuilder_ = null;
         }
+        if (insertKeeperMaxRetriesBuilder_ == null) {
+          insertKeeperMaxRetries_ = null;
+        } else {
+          insertKeeperMaxRetries_ = null;
+          insertKeeperMaxRetriesBuilder_ = null;
+        }
+        if (maxTemporaryDataOnDiskSizeForUserBuilder_ == null) {
+          maxTemporaryDataOnDiskSizeForUser_ = null;
+        } else {
+          maxTemporaryDataOnDiskSizeForUser_ = null;
+          maxTemporaryDataOnDiskSizeForUserBuilder_ = null;
+        }
+        if (maxTemporaryDataOnDiskSizeForQueryBuilder_ == null) {
+          maxTemporaryDataOnDiskSizeForQuery_ = null;
+        } else {
+          maxTemporaryDataOnDiskSizeForQuery_ = null;
+          maxTemporaryDataOnDiskSizeForQueryBuilder_ = null;
+        }
+        if (maxParserDepthBuilder_ == null) {
+          maxParserDepth_ = null;
+        } else {
+          maxParserDepth_ = null;
+          maxParserDepthBuilder_ = null;
+        }
+        remoteFilesystemReadMethod_ = 0;
+
+        if (memoryOvercommitRatioDenominatorBuilder_ == null) {
+          memoryOvercommitRatioDenominator_ = null;
+        } else {
+          memoryOvercommitRatioDenominator_ = null;
+          memoryOvercommitRatioDenominatorBuilder_ = null;
+        }
+        if (memoryOvercommitRatioDenominatorForUserBuilder_ == null) {
+          memoryOvercommitRatioDenominatorForUser_ = null;
+        } else {
+          memoryOvercommitRatioDenominatorForUser_ = null;
+          memoryOvercommitRatioDenominatorForUserBuilder_ = null;
+        }
+        if (memoryUsageOvercommitMaxWaitMicrosecondsBuilder_ == null) {
+          memoryUsageOvercommitMaxWaitMicroseconds_ = null;
+        } else {
+          memoryUsageOvercommitMaxWaitMicroseconds_ = null;
+          memoryUsageOvercommitMaxWaitMicrosecondsBuilder_ = null;
+        }
         if (compileBuilder_ == null) {
           compile_ = null;
         } else {
@@ -20435,6 +21455,42 @@ public final class UserOuterClass {
         } else {
           result.maxReadBufferSize_ = maxReadBufferSizeBuilder_.build();
         }
+        if (insertKeeperMaxRetriesBuilder_ == null) {
+          result.insertKeeperMaxRetries_ = insertKeeperMaxRetries_;
+        } else {
+          result.insertKeeperMaxRetries_ = insertKeeperMaxRetriesBuilder_.build();
+        }
+        if (maxTemporaryDataOnDiskSizeForUserBuilder_ == null) {
+          result.maxTemporaryDataOnDiskSizeForUser_ = maxTemporaryDataOnDiskSizeForUser_;
+        } else {
+          result.maxTemporaryDataOnDiskSizeForUser_ = maxTemporaryDataOnDiskSizeForUserBuilder_.build();
+        }
+        if (maxTemporaryDataOnDiskSizeForQueryBuilder_ == null) {
+          result.maxTemporaryDataOnDiskSizeForQuery_ = maxTemporaryDataOnDiskSizeForQuery_;
+        } else {
+          result.maxTemporaryDataOnDiskSizeForQuery_ = maxTemporaryDataOnDiskSizeForQueryBuilder_.build();
+        }
+        if (maxParserDepthBuilder_ == null) {
+          result.maxParserDepth_ = maxParserDepth_;
+        } else {
+          result.maxParserDepth_ = maxParserDepthBuilder_.build();
+        }
+        result.remoteFilesystemReadMethod_ = remoteFilesystemReadMethod_;
+        if (memoryOvercommitRatioDenominatorBuilder_ == null) {
+          result.memoryOvercommitRatioDenominator_ = memoryOvercommitRatioDenominator_;
+        } else {
+          result.memoryOvercommitRatioDenominator_ = memoryOvercommitRatioDenominatorBuilder_.build();
+        }
+        if (memoryOvercommitRatioDenominatorForUserBuilder_ == null) {
+          result.memoryOvercommitRatioDenominatorForUser_ = memoryOvercommitRatioDenominatorForUser_;
+        } else {
+          result.memoryOvercommitRatioDenominatorForUser_ = memoryOvercommitRatioDenominatorForUserBuilder_.build();
+        }
+        if (memoryUsageOvercommitMaxWaitMicrosecondsBuilder_ == null) {
+          result.memoryUsageOvercommitMaxWaitMicroseconds_ = memoryUsageOvercommitMaxWaitMicroseconds_;
+        } else {
+          result.memoryUsageOvercommitMaxWaitMicroseconds_ = memoryUsageOvercommitMaxWaitMicrosecondsBuilder_.build();
+        }
         if (compileBuilder_ == null) {
           result.compile_ = compile_;
         } else {
@@ -20878,6 +21934,30 @@ public final class UserOuterClass {
         }
         if (other.hasMaxReadBufferSize()) {
           mergeMaxReadBufferSize(other.getMaxReadBufferSize());
+        }
+        if (other.hasInsertKeeperMaxRetries()) {
+          mergeInsertKeeperMaxRetries(other.getInsertKeeperMaxRetries());
+        }
+        if (other.hasMaxTemporaryDataOnDiskSizeForUser()) {
+          mergeMaxTemporaryDataOnDiskSizeForUser(other.getMaxTemporaryDataOnDiskSizeForUser());
+        }
+        if (other.hasMaxTemporaryDataOnDiskSizeForQuery()) {
+          mergeMaxTemporaryDataOnDiskSizeForQuery(other.getMaxTemporaryDataOnDiskSizeForQuery());
+        }
+        if (other.hasMaxParserDepth()) {
+          mergeMaxParserDepth(other.getMaxParserDepth());
+        }
+        if (other.remoteFilesystemReadMethod_ != 0) {
+          setRemoteFilesystemReadMethodValue(other.getRemoteFilesystemReadMethodValue());
+        }
+        if (other.hasMemoryOvercommitRatioDenominator()) {
+          mergeMemoryOvercommitRatioDenominator(other.getMemoryOvercommitRatioDenominator());
+        }
+        if (other.hasMemoryOvercommitRatioDenominatorForUser()) {
+          mergeMemoryOvercommitRatioDenominatorForUser(other.getMemoryOvercommitRatioDenominatorForUser());
+        }
+        if (other.hasMemoryUsageOvercommitMaxWaitMicroseconds()) {
+          mergeMemoryUsageOvercommitMaxWaitMicroseconds(other.getMemoryUsageOvercommitMaxWaitMicroseconds());
         }
         if (other.hasCompile()) {
           mergeCompile(other.getCompile());
@@ -41085,6 +42165,1369 @@ public final class UserOuterClass {
         return maxReadBufferSizeBuilder_;
       }
 
+      private com.google.protobuf.Int64Value insertKeeperMaxRetries_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> insertKeeperMaxRetriesBuilder_;
+      /**
+       * <pre>
+       * The setting sets the maximum number of retries for ClickHouse Keeper (or ZooKeeper) requests during insert into replicated MergeTree. Only Keeper requests which failed due to network error, Keeper session timeout, or request timeout are considered for retries.
+       * Default: 20 from 23.2, 0(disabled) before
+       * Min_version: 22.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#insert_keeper_max_retries)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value insert_keeper_max_retries = 131 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the insertKeeperMaxRetries field is set.
+       */
+      public boolean hasInsertKeeperMaxRetries() {
+        return insertKeeperMaxRetriesBuilder_ != null || insertKeeperMaxRetries_ != null;
+      }
+      /**
+       * <pre>
+       * The setting sets the maximum number of retries for ClickHouse Keeper (or ZooKeeper) requests during insert into replicated MergeTree. Only Keeper requests which failed due to network error, Keeper session timeout, or request timeout are considered for retries.
+       * Default: 20 from 23.2, 0(disabled) before
+       * Min_version: 22.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#insert_keeper_max_retries)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value insert_keeper_max_retries = 131 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The insertKeeperMaxRetries.
+       */
+      public com.google.protobuf.Int64Value getInsertKeeperMaxRetries() {
+        if (insertKeeperMaxRetriesBuilder_ == null) {
+          return insertKeeperMaxRetries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : insertKeeperMaxRetries_;
+        } else {
+          return insertKeeperMaxRetriesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The setting sets the maximum number of retries for ClickHouse Keeper (or ZooKeeper) requests during insert into replicated MergeTree. Only Keeper requests which failed due to network error, Keeper session timeout, or request timeout are considered for retries.
+       * Default: 20 from 23.2, 0(disabled) before
+       * Min_version: 22.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#insert_keeper_max_retries)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value insert_keeper_max_retries = 131 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setInsertKeeperMaxRetries(com.google.protobuf.Int64Value value) {
+        if (insertKeeperMaxRetriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          insertKeeperMaxRetries_ = value;
+          onChanged();
+        } else {
+          insertKeeperMaxRetriesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The setting sets the maximum number of retries for ClickHouse Keeper (or ZooKeeper) requests during insert into replicated MergeTree. Only Keeper requests which failed due to network error, Keeper session timeout, or request timeout are considered for retries.
+       * Default: 20 from 23.2, 0(disabled) before
+       * Min_version: 22.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#insert_keeper_max_retries)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value insert_keeper_max_retries = 131 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setInsertKeeperMaxRetries(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (insertKeeperMaxRetriesBuilder_ == null) {
+          insertKeeperMaxRetries_ = builderForValue.build();
+          onChanged();
+        } else {
+          insertKeeperMaxRetriesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The setting sets the maximum number of retries for ClickHouse Keeper (or ZooKeeper) requests during insert into replicated MergeTree. Only Keeper requests which failed due to network error, Keeper session timeout, or request timeout are considered for retries.
+       * Default: 20 from 23.2, 0(disabled) before
+       * Min_version: 22.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#insert_keeper_max_retries)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value insert_keeper_max_retries = 131 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeInsertKeeperMaxRetries(com.google.protobuf.Int64Value value) {
+        if (insertKeeperMaxRetriesBuilder_ == null) {
+          if (insertKeeperMaxRetries_ != null) {
+            insertKeeperMaxRetries_ =
+              com.google.protobuf.Int64Value.newBuilder(insertKeeperMaxRetries_).mergeFrom(value).buildPartial();
+          } else {
+            insertKeeperMaxRetries_ = value;
+          }
+          onChanged();
+        } else {
+          insertKeeperMaxRetriesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The setting sets the maximum number of retries for ClickHouse Keeper (or ZooKeeper) requests during insert into replicated MergeTree. Only Keeper requests which failed due to network error, Keeper session timeout, or request timeout are considered for retries.
+       * Default: 20 from 23.2, 0(disabled) before
+       * Min_version: 22.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#insert_keeper_max_retries)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value insert_keeper_max_retries = 131 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearInsertKeeperMaxRetries() {
+        if (insertKeeperMaxRetriesBuilder_ == null) {
+          insertKeeperMaxRetries_ = null;
+          onChanged();
+        } else {
+          insertKeeperMaxRetries_ = null;
+          insertKeeperMaxRetriesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The setting sets the maximum number of retries for ClickHouse Keeper (or ZooKeeper) requests during insert into replicated MergeTree. Only Keeper requests which failed due to network error, Keeper session timeout, or request timeout are considered for retries.
+       * Default: 20 from 23.2, 0(disabled) before
+       * Min_version: 22.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#insert_keeper_max_retries)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value insert_keeper_max_retries = 131 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getInsertKeeperMaxRetriesBuilder() {
+        
+        onChanged();
+        return getInsertKeeperMaxRetriesFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The setting sets the maximum number of retries for ClickHouse Keeper (or ZooKeeper) requests during insert into replicated MergeTree. Only Keeper requests which failed due to network error, Keeper session timeout, or request timeout are considered for retries.
+       * Default: 20 from 23.2, 0(disabled) before
+       * Min_version: 22.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#insert_keeper_max_retries)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value insert_keeper_max_retries = 131 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getInsertKeeperMaxRetriesOrBuilder() {
+        if (insertKeeperMaxRetriesBuilder_ != null) {
+          return insertKeeperMaxRetriesBuilder_.getMessageOrBuilder();
+        } else {
+          return insertKeeperMaxRetries_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : insertKeeperMaxRetries_;
+        }
+      }
+      /**
+       * <pre>
+       * The setting sets the maximum number of retries for ClickHouse Keeper (or ZooKeeper) requests during insert into replicated MergeTree. Only Keeper requests which failed due to network error, Keeper session timeout, or request timeout are considered for retries.
+       * Default: 20 from 23.2, 0(disabled) before
+       * Min_version: 22.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#insert_keeper_max_retries)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value insert_keeper_max_retries = 131 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getInsertKeeperMaxRetriesFieldBuilder() {
+        if (insertKeeperMaxRetriesBuilder_ == null) {
+          insertKeeperMaxRetriesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getInsertKeeperMaxRetries(),
+                  getParentForChildren(),
+                  isClean());
+          insertKeeperMaxRetries_ = null;
+        }
+        return insertKeeperMaxRetriesBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxTemporaryDataOnDiskSizeForUser_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxTemporaryDataOnDiskSizeForUserBuilder_;
+      /**
+       * <pre>
+       * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running user queries. Zero means unlimited.
+       * Default: 0 - unlimited
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_user)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_user = 132 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxTemporaryDataOnDiskSizeForUser field is set.
+       */
+      public boolean hasMaxTemporaryDataOnDiskSizeForUser() {
+        return maxTemporaryDataOnDiskSizeForUserBuilder_ != null || maxTemporaryDataOnDiskSizeForUser_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running user queries. Zero means unlimited.
+       * Default: 0 - unlimited
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_user)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_user = 132 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxTemporaryDataOnDiskSizeForUser.
+       */
+      public com.google.protobuf.Int64Value getMaxTemporaryDataOnDiskSizeForUser() {
+        if (maxTemporaryDataOnDiskSizeForUserBuilder_ == null) {
+          return maxTemporaryDataOnDiskSizeForUser_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxTemporaryDataOnDiskSizeForUser_;
+        } else {
+          return maxTemporaryDataOnDiskSizeForUserBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running user queries. Zero means unlimited.
+       * Default: 0 - unlimited
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_user)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_user = 132 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxTemporaryDataOnDiskSizeForUser(com.google.protobuf.Int64Value value) {
+        if (maxTemporaryDataOnDiskSizeForUserBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxTemporaryDataOnDiskSizeForUser_ = value;
+          onChanged();
+        } else {
+          maxTemporaryDataOnDiskSizeForUserBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running user queries. Zero means unlimited.
+       * Default: 0 - unlimited
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_user)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_user = 132 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxTemporaryDataOnDiskSizeForUser(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxTemporaryDataOnDiskSizeForUserBuilder_ == null) {
+          maxTemporaryDataOnDiskSizeForUser_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxTemporaryDataOnDiskSizeForUserBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running user queries. Zero means unlimited.
+       * Default: 0 - unlimited
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_user)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_user = 132 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeMaxTemporaryDataOnDiskSizeForUser(com.google.protobuf.Int64Value value) {
+        if (maxTemporaryDataOnDiskSizeForUserBuilder_ == null) {
+          if (maxTemporaryDataOnDiskSizeForUser_ != null) {
+            maxTemporaryDataOnDiskSizeForUser_ =
+              com.google.protobuf.Int64Value.newBuilder(maxTemporaryDataOnDiskSizeForUser_).mergeFrom(value).buildPartial();
+          } else {
+            maxTemporaryDataOnDiskSizeForUser_ = value;
+          }
+          onChanged();
+        } else {
+          maxTemporaryDataOnDiskSizeForUserBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running user queries. Zero means unlimited.
+       * Default: 0 - unlimited
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_user)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_user = 132 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearMaxTemporaryDataOnDiskSizeForUser() {
+        if (maxTemporaryDataOnDiskSizeForUserBuilder_ == null) {
+          maxTemporaryDataOnDiskSizeForUser_ = null;
+          onChanged();
+        } else {
+          maxTemporaryDataOnDiskSizeForUser_ = null;
+          maxTemporaryDataOnDiskSizeForUserBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running user queries. Zero means unlimited.
+       * Default: 0 - unlimited
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_user)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_user = 132 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxTemporaryDataOnDiskSizeForUserBuilder() {
+        
+        onChanged();
+        return getMaxTemporaryDataOnDiskSizeForUserFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running user queries. Zero means unlimited.
+       * Default: 0 - unlimited
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_user)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_user = 132 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxTemporaryDataOnDiskSizeForUserOrBuilder() {
+        if (maxTemporaryDataOnDiskSizeForUserBuilder_ != null) {
+          return maxTemporaryDataOnDiskSizeForUserBuilder_.getMessageOrBuilder();
+        } else {
+          return maxTemporaryDataOnDiskSizeForUser_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxTemporaryDataOnDiskSizeForUser_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running user queries. Zero means unlimited.
+       * Default: 0 - unlimited
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_user)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_user = 132 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxTemporaryDataOnDiskSizeForUserFieldBuilder() {
+        if (maxTemporaryDataOnDiskSizeForUserBuilder_ == null) {
+          maxTemporaryDataOnDiskSizeForUserBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxTemporaryDataOnDiskSizeForUser(),
+                  getParentForChildren(),
+                  isClean());
+          maxTemporaryDataOnDiskSizeForUser_ = null;
+        }
+        return maxTemporaryDataOnDiskSizeForUserBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxTemporaryDataOnDiskSizeForQuery_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxTemporaryDataOnDiskSizeForQueryBuilder_;
+      /**
+       * <pre>
+       * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running queries. Zero means unlimited.
+       * Default: 0 - unlimited
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_query)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_query = 133 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxTemporaryDataOnDiskSizeForQuery field is set.
+       */
+      public boolean hasMaxTemporaryDataOnDiskSizeForQuery() {
+        return maxTemporaryDataOnDiskSizeForQueryBuilder_ != null || maxTemporaryDataOnDiskSizeForQuery_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running queries. Zero means unlimited.
+       * Default: 0 - unlimited
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_query)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_query = 133 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxTemporaryDataOnDiskSizeForQuery.
+       */
+      public com.google.protobuf.Int64Value getMaxTemporaryDataOnDiskSizeForQuery() {
+        if (maxTemporaryDataOnDiskSizeForQueryBuilder_ == null) {
+          return maxTemporaryDataOnDiskSizeForQuery_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxTemporaryDataOnDiskSizeForQuery_;
+        } else {
+          return maxTemporaryDataOnDiskSizeForQueryBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running queries. Zero means unlimited.
+       * Default: 0 - unlimited
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_query)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_query = 133 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxTemporaryDataOnDiskSizeForQuery(com.google.protobuf.Int64Value value) {
+        if (maxTemporaryDataOnDiskSizeForQueryBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxTemporaryDataOnDiskSizeForQuery_ = value;
+          onChanged();
+        } else {
+          maxTemporaryDataOnDiskSizeForQueryBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running queries. Zero means unlimited.
+       * Default: 0 - unlimited
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_query)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_query = 133 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxTemporaryDataOnDiskSizeForQuery(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxTemporaryDataOnDiskSizeForQueryBuilder_ == null) {
+          maxTemporaryDataOnDiskSizeForQuery_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxTemporaryDataOnDiskSizeForQueryBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running queries. Zero means unlimited.
+       * Default: 0 - unlimited
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_query)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_query = 133 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeMaxTemporaryDataOnDiskSizeForQuery(com.google.protobuf.Int64Value value) {
+        if (maxTemporaryDataOnDiskSizeForQueryBuilder_ == null) {
+          if (maxTemporaryDataOnDiskSizeForQuery_ != null) {
+            maxTemporaryDataOnDiskSizeForQuery_ =
+              com.google.protobuf.Int64Value.newBuilder(maxTemporaryDataOnDiskSizeForQuery_).mergeFrom(value).buildPartial();
+          } else {
+            maxTemporaryDataOnDiskSizeForQuery_ = value;
+          }
+          onChanged();
+        } else {
+          maxTemporaryDataOnDiskSizeForQueryBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running queries. Zero means unlimited.
+       * Default: 0 - unlimited
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_query)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_query = 133 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearMaxTemporaryDataOnDiskSizeForQuery() {
+        if (maxTemporaryDataOnDiskSizeForQueryBuilder_ == null) {
+          maxTemporaryDataOnDiskSizeForQuery_ = null;
+          onChanged();
+        } else {
+          maxTemporaryDataOnDiskSizeForQuery_ = null;
+          maxTemporaryDataOnDiskSizeForQueryBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running queries. Zero means unlimited.
+       * Default: 0 - unlimited
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_query)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_query = 133 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxTemporaryDataOnDiskSizeForQueryBuilder() {
+        
+        onChanged();
+        return getMaxTemporaryDataOnDiskSizeForQueryFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running queries. Zero means unlimited.
+       * Default: 0 - unlimited
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_query)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_query = 133 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxTemporaryDataOnDiskSizeForQueryOrBuilder() {
+        if (maxTemporaryDataOnDiskSizeForQueryBuilder_ != null) {
+          return maxTemporaryDataOnDiskSizeForQueryBuilder_.getMessageOrBuilder();
+        } else {
+          return maxTemporaryDataOnDiskSizeForQuery_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxTemporaryDataOnDiskSizeForQuery_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum amount of data consumed by temporary files on disk in bytes for all concurrently running queries. Zero means unlimited.
+       * Default: 0 - unlimited
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/query-complexity#settings_max_temporary_data_on_disk_size_for_query)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_temporary_data_on_disk_size_for_query = 133 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxTemporaryDataOnDiskSizeForQueryFieldBuilder() {
+        if (maxTemporaryDataOnDiskSizeForQueryBuilder_ == null) {
+          maxTemporaryDataOnDiskSizeForQueryBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxTemporaryDataOnDiskSizeForQuery(),
+                  getParentForChildren(),
+                  isClean());
+          maxTemporaryDataOnDiskSizeForQuery_ = null;
+        }
+        return maxTemporaryDataOnDiskSizeForQueryBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxParserDepth_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxParserDepthBuilder_;
+      /**
+       * <pre>
+       * Limits maximum recursion depth in the recursive descent parser. Allows controlling the stack size.
+       * Default: 1000
+       * Special: 0 - unlimited
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_parser_depth)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_parser_depth = 134 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxParserDepth field is set.
+       */
+      public boolean hasMaxParserDepth() {
+        return maxParserDepthBuilder_ != null || maxParserDepth_ != null;
+      }
+      /**
+       * <pre>
+       * Limits maximum recursion depth in the recursive descent parser. Allows controlling the stack size.
+       * Default: 1000
+       * Special: 0 - unlimited
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_parser_depth)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_parser_depth = 134 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxParserDepth.
+       */
+      public com.google.protobuf.Int64Value getMaxParserDepth() {
+        if (maxParserDepthBuilder_ == null) {
+          return maxParserDepth_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxParserDepth_;
+        } else {
+          return maxParserDepthBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Limits maximum recursion depth in the recursive descent parser. Allows controlling the stack size.
+       * Default: 1000
+       * Special: 0 - unlimited
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_parser_depth)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_parser_depth = 134 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxParserDepth(com.google.protobuf.Int64Value value) {
+        if (maxParserDepthBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxParserDepth_ = value;
+          onChanged();
+        } else {
+          maxParserDepthBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits maximum recursion depth in the recursive descent parser. Allows controlling the stack size.
+       * Default: 1000
+       * Special: 0 - unlimited
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_parser_depth)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_parser_depth = 134 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMaxParserDepth(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxParserDepthBuilder_ == null) {
+          maxParserDepth_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxParserDepthBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits maximum recursion depth in the recursive descent parser. Allows controlling the stack size.
+       * Default: 1000
+       * Special: 0 - unlimited
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_parser_depth)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_parser_depth = 134 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeMaxParserDepth(com.google.protobuf.Int64Value value) {
+        if (maxParserDepthBuilder_ == null) {
+          if (maxParserDepth_ != null) {
+            maxParserDepth_ =
+              com.google.protobuf.Int64Value.newBuilder(maxParserDepth_).mergeFrom(value).buildPartial();
+          } else {
+            maxParserDepth_ = value;
+          }
+          onChanged();
+        } else {
+          maxParserDepthBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits maximum recursion depth in the recursive descent parser. Allows controlling the stack size.
+       * Default: 1000
+       * Special: 0 - unlimited
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_parser_depth)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_parser_depth = 134 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearMaxParserDepth() {
+        if (maxParserDepthBuilder_ == null) {
+          maxParserDepth_ = null;
+          onChanged();
+        } else {
+          maxParserDepth_ = null;
+          maxParserDepthBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Limits maximum recursion depth in the recursive descent parser. Allows controlling the stack size.
+       * Default: 1000
+       * Special: 0 - unlimited
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_parser_depth)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_parser_depth = 134 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxParserDepthBuilder() {
+        
+        onChanged();
+        return getMaxParserDepthFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Limits maximum recursion depth in the recursive descent parser. Allows controlling the stack size.
+       * Default: 1000
+       * Special: 0 - unlimited
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_parser_depth)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_parser_depth = 134 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxParserDepthOrBuilder() {
+        if (maxParserDepthBuilder_ != null) {
+          return maxParserDepthBuilder_.getMessageOrBuilder();
+        } else {
+          return maxParserDepth_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxParserDepth_;
+        }
+      }
+      /**
+       * <pre>
+       * Limits maximum recursion depth in the recursive descent parser. Allows controlling the stack size.
+       * Default: 1000
+       * Special: 0 - unlimited
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#max_parser_depth)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_parser_depth = 134 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxParserDepthFieldBuilder() {
+        if (maxParserDepthBuilder_ == null) {
+          maxParserDepthBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxParserDepth(),
+                  getParentForChildren(),
+                  isClean());
+          maxParserDepth_ = null;
+        }
+        return maxParserDepthBuilder_;
+      }
+
+      private int remoteFilesystemReadMethod_ = 0;
+      /**
+       * <pre>
+       * Method of reading data from remote filesystem, one of: read, threadpool.
+       * Default: read
+       * Min_version: 21.11
+       * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L660)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.RemoteFilesystemReadMethod remote_filesystem_read_method = 135;</code>
+       * @return The enum numeric value on the wire for remoteFilesystemReadMethod.
+       */
+      @java.lang.Override public int getRemoteFilesystemReadMethodValue() {
+        return remoteFilesystemReadMethod_;
+      }
+      /**
+       * <pre>
+       * Method of reading data from remote filesystem, one of: read, threadpool.
+       * Default: read
+       * Min_version: 21.11
+       * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L660)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.RemoteFilesystemReadMethod remote_filesystem_read_method = 135;</code>
+       * @param value The enum numeric value on the wire for remoteFilesystemReadMethod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemoteFilesystemReadMethodValue(int value) {
+        
+        remoteFilesystemReadMethod_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Method of reading data from remote filesystem, one of: read, threadpool.
+       * Default: read
+       * Min_version: 21.11
+       * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L660)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.RemoteFilesystemReadMethod remote_filesystem_read_method = 135;</code>
+       * @return The remoteFilesystemReadMethod.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.RemoteFilesystemReadMethod getRemoteFilesystemReadMethod() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.RemoteFilesystemReadMethod result = yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.RemoteFilesystemReadMethod.valueOf(remoteFilesystemReadMethod_);
+        return result == null ? yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.RemoteFilesystemReadMethod.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Method of reading data from remote filesystem, one of: read, threadpool.
+       * Default: read
+       * Min_version: 21.11
+       * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L660)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.RemoteFilesystemReadMethod remote_filesystem_read_method = 135;</code>
+       * @param value The remoteFilesystemReadMethod to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRemoteFilesystemReadMethod(yandex.cloud.api.mdb.clickhouse.v1.UserOuterClass.UserSettings.RemoteFilesystemReadMethod value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        remoteFilesystemReadMethod_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Method of reading data from remote filesystem, one of: read, threadpool.
+       * Default: read
+       * Min_version: 21.11
+       * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Core/Settings.h#L660)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.clickhouse.v1.UserSettings.RemoteFilesystemReadMethod remote_filesystem_read_method = 135;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRemoteFilesystemReadMethod() {
+        
+        remoteFilesystemReadMethod_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value memoryOvercommitRatioDenominator_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> memoryOvercommitRatioDenominatorBuilder_;
+      /**
+       * <pre>
+       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * Default: 1GiB
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator = 136 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the memoryOvercommitRatioDenominator field is set.
+       */
+      public boolean hasMemoryOvercommitRatioDenominator() {
+        return memoryOvercommitRatioDenominatorBuilder_ != null || memoryOvercommitRatioDenominator_ != null;
+      }
+      /**
+       * <pre>
+       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * Default: 1GiB
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator = 136 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The memoryOvercommitRatioDenominator.
+       */
+      public com.google.protobuf.Int64Value getMemoryOvercommitRatioDenominator() {
+        if (memoryOvercommitRatioDenominatorBuilder_ == null) {
+          return memoryOvercommitRatioDenominator_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : memoryOvercommitRatioDenominator_;
+        } else {
+          return memoryOvercommitRatioDenominatorBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * Default: 1GiB
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator = 136 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMemoryOvercommitRatioDenominator(com.google.protobuf.Int64Value value) {
+        if (memoryOvercommitRatioDenominatorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          memoryOvercommitRatioDenominator_ = value;
+          onChanged();
+        } else {
+          memoryOvercommitRatioDenominatorBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * Default: 1GiB
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator = 136 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMemoryOvercommitRatioDenominator(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (memoryOvercommitRatioDenominatorBuilder_ == null) {
+          memoryOvercommitRatioDenominator_ = builderForValue.build();
+          onChanged();
+        } else {
+          memoryOvercommitRatioDenominatorBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * Default: 1GiB
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator = 136 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeMemoryOvercommitRatioDenominator(com.google.protobuf.Int64Value value) {
+        if (memoryOvercommitRatioDenominatorBuilder_ == null) {
+          if (memoryOvercommitRatioDenominator_ != null) {
+            memoryOvercommitRatioDenominator_ =
+              com.google.protobuf.Int64Value.newBuilder(memoryOvercommitRatioDenominator_).mergeFrom(value).buildPartial();
+          } else {
+            memoryOvercommitRatioDenominator_ = value;
+          }
+          onChanged();
+        } else {
+          memoryOvercommitRatioDenominatorBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * Default: 1GiB
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator = 136 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearMemoryOvercommitRatioDenominator() {
+        if (memoryOvercommitRatioDenominatorBuilder_ == null) {
+          memoryOvercommitRatioDenominator_ = null;
+          onChanged();
+        } else {
+          memoryOvercommitRatioDenominator_ = null;
+          memoryOvercommitRatioDenominatorBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * Default: 1GiB
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator = 136 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMemoryOvercommitRatioDenominatorBuilder() {
+        
+        onChanged();
+        return getMemoryOvercommitRatioDenominatorFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * Default: 1GiB
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator = 136 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMemoryOvercommitRatioDenominatorOrBuilder() {
+        if (memoryOvercommitRatioDenominatorBuilder_ != null) {
+          return memoryOvercommitRatioDenominatorBuilder_.getMessageOrBuilder();
+        } else {
+          return memoryOvercommitRatioDenominator_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : memoryOvercommitRatioDenominator_;
+        }
+      }
+      /**
+       * <pre>
+       * It represents soft memory limit in case when hard limit is reached on user level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * Default: 1GiB
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator = 136 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMemoryOvercommitRatioDenominatorFieldBuilder() {
+        if (memoryOvercommitRatioDenominatorBuilder_ == null) {
+          memoryOvercommitRatioDenominatorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMemoryOvercommitRatioDenominator(),
+                  getParentForChildren(),
+                  isClean());
+          memoryOvercommitRatioDenominator_ = null;
+        }
+        return memoryOvercommitRatioDenominatorBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value memoryOvercommitRatioDenominatorForUser_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> memoryOvercommitRatioDenominatorForUserBuilder_;
+      /**
+       * <pre>
+       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * Default: 1GiB
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator_for_user = 137 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the memoryOvercommitRatioDenominatorForUser field is set.
+       */
+      public boolean hasMemoryOvercommitRatioDenominatorForUser() {
+        return memoryOvercommitRatioDenominatorForUserBuilder_ != null || memoryOvercommitRatioDenominatorForUser_ != null;
+      }
+      /**
+       * <pre>
+       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * Default: 1GiB
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator_for_user = 137 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The memoryOvercommitRatioDenominatorForUser.
+       */
+      public com.google.protobuf.Int64Value getMemoryOvercommitRatioDenominatorForUser() {
+        if (memoryOvercommitRatioDenominatorForUserBuilder_ == null) {
+          return memoryOvercommitRatioDenominatorForUser_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : memoryOvercommitRatioDenominatorForUser_;
+        } else {
+          return memoryOvercommitRatioDenominatorForUserBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * Default: 1GiB
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator_for_user = 137 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMemoryOvercommitRatioDenominatorForUser(com.google.protobuf.Int64Value value) {
+        if (memoryOvercommitRatioDenominatorForUserBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          memoryOvercommitRatioDenominatorForUser_ = value;
+          onChanged();
+        } else {
+          memoryOvercommitRatioDenominatorForUserBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * Default: 1GiB
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator_for_user = 137 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMemoryOvercommitRatioDenominatorForUser(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (memoryOvercommitRatioDenominatorForUserBuilder_ == null) {
+          memoryOvercommitRatioDenominatorForUser_ = builderForValue.build();
+          onChanged();
+        } else {
+          memoryOvercommitRatioDenominatorForUserBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * Default: 1GiB
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator_for_user = 137 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeMemoryOvercommitRatioDenominatorForUser(com.google.protobuf.Int64Value value) {
+        if (memoryOvercommitRatioDenominatorForUserBuilder_ == null) {
+          if (memoryOvercommitRatioDenominatorForUser_ != null) {
+            memoryOvercommitRatioDenominatorForUser_ =
+              com.google.protobuf.Int64Value.newBuilder(memoryOvercommitRatioDenominatorForUser_).mergeFrom(value).buildPartial();
+          } else {
+            memoryOvercommitRatioDenominatorForUser_ = value;
+          }
+          onChanged();
+        } else {
+          memoryOvercommitRatioDenominatorForUserBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * Default: 1GiB
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator_for_user = 137 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearMemoryOvercommitRatioDenominatorForUser() {
+        if (memoryOvercommitRatioDenominatorForUserBuilder_ == null) {
+          memoryOvercommitRatioDenominatorForUser_ = null;
+          onChanged();
+        } else {
+          memoryOvercommitRatioDenominatorForUser_ = null;
+          memoryOvercommitRatioDenominatorForUserBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * Default: 1GiB
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator_for_user = 137 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMemoryOvercommitRatioDenominatorForUserBuilder() {
+        
+        onChanged();
+        return getMemoryOvercommitRatioDenominatorForUserFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * Default: 1GiB
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator_for_user = 137 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMemoryOvercommitRatioDenominatorForUserOrBuilder() {
+        if (memoryOvercommitRatioDenominatorForUserBuilder_ != null) {
+          return memoryOvercommitRatioDenominatorForUserBuilder_.getMessageOrBuilder();
+        } else {
+          return memoryOvercommitRatioDenominatorForUser_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : memoryOvercommitRatioDenominatorForUser_;
+        }
+      }
+      /**
+       * <pre>
+       * It represents soft memory limit in case when hard limit is reached on global level. This value is used to compute overcommit ratio for the query. Zero means skip the query. 
+       * Default: 1GiB
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_overcommit_ratio_denominator_for_user)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_overcommit_ratio_denominator_for_user = 137 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMemoryOvercommitRatioDenominatorForUserFieldBuilder() {
+        if (memoryOvercommitRatioDenominatorForUserBuilder_ == null) {
+          memoryOvercommitRatioDenominatorForUserBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMemoryOvercommitRatioDenominatorForUser(),
+                  getParentForChildren(),
+                  isClean());
+          memoryOvercommitRatioDenominatorForUser_ = null;
+        }
+        return memoryOvercommitRatioDenominatorForUserBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value memoryUsageOvercommitMaxWaitMicroseconds_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> memoryUsageOvercommitMaxWaitMicrosecondsBuilder_;
+      /**
+       * <pre>
+       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+       * Default: 5000000
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_usage_overcommit_max_wait_microseconds = 138 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the memoryUsageOvercommitMaxWaitMicroseconds field is set.
+       */
+      public boolean hasMemoryUsageOvercommitMaxWaitMicroseconds() {
+        return memoryUsageOvercommitMaxWaitMicrosecondsBuilder_ != null || memoryUsageOvercommitMaxWaitMicroseconds_ != null;
+      }
+      /**
+       * <pre>
+       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+       * Default: 5000000
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_usage_overcommit_max_wait_microseconds = 138 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The memoryUsageOvercommitMaxWaitMicroseconds.
+       */
+      public com.google.protobuf.Int64Value getMemoryUsageOvercommitMaxWaitMicroseconds() {
+        if (memoryUsageOvercommitMaxWaitMicrosecondsBuilder_ == null) {
+          return memoryUsageOvercommitMaxWaitMicroseconds_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : memoryUsageOvercommitMaxWaitMicroseconds_;
+        } else {
+          return memoryUsageOvercommitMaxWaitMicrosecondsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+       * Default: 5000000
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_usage_overcommit_max_wait_microseconds = 138 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMemoryUsageOvercommitMaxWaitMicroseconds(com.google.protobuf.Int64Value value) {
+        if (memoryUsageOvercommitMaxWaitMicrosecondsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          memoryUsageOvercommitMaxWaitMicroseconds_ = value;
+          onChanged();
+        } else {
+          memoryUsageOvercommitMaxWaitMicrosecondsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+       * Default: 5000000
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_usage_overcommit_max_wait_microseconds = 138 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setMemoryUsageOvercommitMaxWaitMicroseconds(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (memoryUsageOvercommitMaxWaitMicrosecondsBuilder_ == null) {
+          memoryUsageOvercommitMaxWaitMicroseconds_ = builderForValue.build();
+          onChanged();
+        } else {
+          memoryUsageOvercommitMaxWaitMicrosecondsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+       * Default: 5000000
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_usage_overcommit_max_wait_microseconds = 138 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeMemoryUsageOvercommitMaxWaitMicroseconds(com.google.protobuf.Int64Value value) {
+        if (memoryUsageOvercommitMaxWaitMicrosecondsBuilder_ == null) {
+          if (memoryUsageOvercommitMaxWaitMicroseconds_ != null) {
+            memoryUsageOvercommitMaxWaitMicroseconds_ =
+              com.google.protobuf.Int64Value.newBuilder(memoryUsageOvercommitMaxWaitMicroseconds_).mergeFrom(value).buildPartial();
+          } else {
+            memoryUsageOvercommitMaxWaitMicroseconds_ = value;
+          }
+          onChanged();
+        } else {
+          memoryUsageOvercommitMaxWaitMicrosecondsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+       * Default: 5000000
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_usage_overcommit_max_wait_microseconds = 138 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearMemoryUsageOvercommitMaxWaitMicroseconds() {
+        if (memoryUsageOvercommitMaxWaitMicrosecondsBuilder_ == null) {
+          memoryUsageOvercommitMaxWaitMicroseconds_ = null;
+          onChanged();
+        } else {
+          memoryUsageOvercommitMaxWaitMicroseconds_ = null;
+          memoryUsageOvercommitMaxWaitMicrosecondsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+       * Default: 5000000
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_usage_overcommit_max_wait_microseconds = 138 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMemoryUsageOvercommitMaxWaitMicrosecondsBuilder() {
+        
+        onChanged();
+        return getMemoryUsageOvercommitMaxWaitMicrosecondsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+       * Default: 5000000
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_usage_overcommit_max_wait_microseconds = 138 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMemoryUsageOvercommitMaxWaitMicrosecondsOrBuilder() {
+        if (memoryUsageOvercommitMaxWaitMicrosecondsBuilder_ != null) {
+          return memoryUsageOvercommitMaxWaitMicrosecondsBuilder_.getMessageOrBuilder();
+        } else {
+          return memoryUsageOvercommitMaxWaitMicroseconds_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : memoryUsageOvercommitMaxWaitMicroseconds_;
+        }
+      }
+      /**
+       * <pre>
+       * Maximum time thread will wait for memory to be freed in the case of memory overcommit on a user level. If the timeout is reached and memory is not freed, an exception is thrown. 
+       * Default: 5000000
+       * Min_version: 22.5
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#memory_usage_overcommit_max_wait_microseconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value memory_usage_overcommit_max_wait_microseconds = 138 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMemoryUsageOvercommitMaxWaitMicrosecondsFieldBuilder() {
+        if (memoryUsageOvercommitMaxWaitMicrosecondsBuilder_ == null) {
+          memoryUsageOvercommitMaxWaitMicrosecondsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMemoryUsageOvercommitMaxWaitMicroseconds(),
+                  getParentForChildren(),
+                  isClean());
+          memoryUsageOvercommitMaxWaitMicroseconds_ = null;
+        }
+        return memoryUsageOvercommitMaxWaitMicrosecondsBuilder_;
+      }
+
       private com.google.protobuf.BoolValue compile_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> compileBuilder_;
@@ -43598,7 +46041,7 @@ public final class UserOuterClass {
       "rmission\022>\n\010settings\030\004 \001(\0132,.yandex.clou" +
       "d.mdb.clickhouse.v1.UserSettings\0229\n\006quot" +
       "as\030\005 \003(\0132).yandex.cloud.mdb.clickhouse.v" +
-      "1.UserQuota\"\223W\n\014UserSettings\0226\n\010readonly" +
+      "1.UserQuota\"\365]\n\014UserSettings\0226\n\010readonly" +
       "\030\001 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
       "\0030-2\022-\n\tallow_ddl\030\002 \001(\0132\032.google.protobu" +
       "f.BoolValue\022A\n\035allow_introspection_funct" +
@@ -43822,74 +46265,96 @@ public final class UserOuterClass {
       ".cloud.mdb.clickhouse.v1.UserSettings.Lo" +
       "calFilesystemReadMethod\022B\n\024max_read_buff" +
       "er_size\030\202\001 \001(\0132\033.google.protobuf.Int64Va" +
-      "lueB\006\372\3071\002>0\022/\n\007compile\030, \001(\0132\032.google.pr" +
-      "otobuf.BoolValueB\002\030\001\022=\n\024min_count_to_com" +
-      "pile\030- \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\002\030\001\"_\n\014OverflowMode\022\035\n\031OVERFLOW_MODE_UNS" +
-      "PECIFIED\020\000\022\027\n\023OVERFLOW_MODE_THROW\020\001\022\027\n\023O" +
-      "VERFLOW_MODE_BREAK\020\002\"\241\001\n\023GroupByOverflow" +
-      "Mode\022&\n\"GROUP_BY_OVERFLOW_MODE_UNSPECIFI" +
-      "ED\020\000\022 \n\034GROUP_BY_OVERFLOW_MODE_THROW\020\001\022 " +
-      "\n\034GROUP_BY_OVERFLOW_MODE_BREAK\020\002\022\036\n\032GROU" +
-      "P_BY_OVERFLOW_MODE_ANY\020\003\"\322\001\n\026Distributed" +
-      "ProductMode\022(\n$DISTRIBUTED_PRODUCT_MODE_" +
-      "UNSPECIFIED\020\000\022!\n\035DISTRIBUTED_PRODUCT_MOD" +
-      "E_DENY\020\001\022\"\n\036DISTRIBUTED_PRODUCT_MODE_LOC" +
-      "AL\020\002\022#\n\037DISTRIBUTED_PRODUCT_MODE_GLOBAL\020" +
-      "\003\022\"\n\036DISTRIBUTED_PRODUCT_MODE_ALLOW\020\004\"q\n" +
-      "\tQuotaMode\022\032\n\026QUOTA_MODE_UNSPECIFIED\020\000\022\026" +
-      "\n\022QUOTA_MODE_DEFAULT\020\001\022\024\n\020QUOTA_MODE_KEY" +
-      "ED\020\002\022\032\n\026QUOTA_MODE_KEYED_BY_IP\020\003\"\266\002\n\033Cou" +
-      "ntDistinctImplementation\022-\n)COUNT_DISTIN" +
-      "CT_IMPLEMENTATION_UNSPECIFIED\020\000\022&\n\"COUNT" +
-      "_DISTINCT_IMPLEMENTATION_UNIQ\020\001\022/\n+COUNT" +
-      "_DISTINCT_IMPLEMENTATION_UNIQ_COMBINED\020\002" +
-      "\0222\n.COUNT_DISTINCT_IMPLEMENTATION_UNIQ_C" +
-      "OMBINED_64\020\003\022-\n)COUNT_DISTINCT_IMPLEMENT" +
-      "ATION_UNIQ_HLL_12\020\004\022,\n(COUNT_DISTINCT_IM" +
-      "PLEMENTATION_UNIQ_EXACT\020\005\"\220\002\n\rJoinAlgori" +
-      "thm\022\036\n\032JOIN_ALGORITHM_UNSPECIFIED\020\000\022\027\n\023J" +
-      "OIN_ALGORITHM_HASH\020\001\022 \n\034JOIN_ALGORITHM_P" +
-      "ARALLEL_HASH\020\002\022 \n\034JOIN_ALGORITHM_PARTIAL" +
-      "_MERGE\020\003\022\031\n\025JOIN_ALGORITHM_DIRECT\020\004\022\027\n\023J" +
-      "OIN_ALGORITHM_AUTO\020\005\022%\n!JOIN_ALGORITHM_F" +
-      "ULL_SORTING_MERGE\020\006\022\'\n#JOIN_ALGORITHM_PR" +
-      "EFER_PARTIAL_MERGE\020\007\"\255\002\n\030FormatRegexpEsc" +
-      "apingRule\022+\n\'FORMAT_REGEXP_ESCAPING_RULE" +
-      "_UNSPECIFIED\020\000\022\'\n#FORMAT_REGEXP_ESCAPING" +
-      "_RULE_ESCAPED\020\001\022&\n\"FORMAT_REGEXP_ESCAPIN" +
-      "G_RULE_QUOTED\020\002\022#\n\037FORMAT_REGEXP_ESCAPIN" +
-      "G_RULE_CSV\020\003\022$\n FORMAT_REGEXP_ESCAPING_R" +
-      "ULE_JSON\020\004\022#\n\037FORMAT_REGEXP_ESCAPING_RUL" +
-      "E_XML\020\005\022#\n\037FORMAT_REGEXP_ESCAPING_RULE_R" +
-      "AW\020\006\"\262\001\n\023DateTimeInputFormat\022&\n\"DATE_TIM" +
-      "E_INPUT_FORMAT_UNSPECIFIED\020\000\022&\n\"DATE_TIM" +
-      "E_INPUT_FORMAT_BEST_EFFORT\020\001\022 \n\034DATE_TIM" +
-      "E_INPUT_FORMAT_BASIC\020\002\022)\n%DATE_TIME_INPU" +
-      "T_FORMAT_BEST_EFFORT_US\020\003\"\260\001\n\024DateTimeOu" +
-      "tputFormat\022\'\n#DATE_TIME_OUTPUT_FORMAT_UN" +
-      "SPECIFIED\020\000\022\"\n\036DATE_TIME_OUTPUT_FORMAT_S" +
-      "IMPLE\020\001\022\037\n\033DATE_TIME_OUTPUT_FORMAT_ISO\020\002" +
-      "\022*\n&DATE_TIME_OUTPUT_FORMAT_UNIX_TIMESTA" +
-      "MP\020\003\"\362\001\n\031LocalFilesystemReadMethod\022,\n(LO" +
-      "CAL_FILESYSTEM_READ_METHOD_UNSPECIFIED\020\000" +
-      "\022%\n!LOCAL_FILESYSTEM_READ_METHOD_READ\020\001\022" +
-      "1\n-LOCAL_FILESYSTEM_READ_METHOD_PREAD_TH" +
-      "READPOOL\020\002\022&\n\"LOCAL_FILESYSTEM_READ_METH" +
-      "OD_PREAD\020\003\022%\n!LOCAL_FILESYSTEM_READ_METH" +
-      "OD_NMAP\020\004\"\356\002\n\tUserQuota\022B\n\021interval_dura" +
-      "tion\030\001 \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\n\372\3071\006>=1000\0225\n\007queries\030\002 \001(\0132\033.google.pr" +
-      "otobuf.Int64ValueB\007\372\3071\003>=0\0224\n\006errors\030\003 \001" +
-      "(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0" +
-      "\0229\n\013result_rows\030\004 \001(\0132\033.google.protobuf." +
-      "Int64ValueB\007\372\3071\003>=0\0227\n\tread_rows\030\005 \001(\0132\033" +
-      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022<\n\016" +
-      "execution_time\030\006 \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\007\372\3071\003>=0Bs\n\"yandex.cloud.api.m" +
-      "db.clickhouse.v1ZMgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/mdb/clickhous" +
-      "e/v1;clickhouseb\006proto3"
+      "lueB\006\372\3071\002>0\022H\n\031insert_keeper_max_retries" +
+      "\030\203\001 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
+      "1\003>=0\022W\n(max_temporary_data_on_disk_size" +
+      "_for_user\030\204\001 \001(\0132\033.google.protobuf.Int64" +
+      "ValueB\007\372\3071\003>=0\022X\n)max_temporary_data_on_" +
+      "disk_size_for_query\030\205\001 \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\007\372\3071\003>=0\022?\n\020max_parser_d" +
+      "epth\030\206\001 \001(\0132\033.google.protobuf.Int64Value" +
+      "B\007\372\3071\003>=0\022o\n\035remote_filesystem_read_meth" +
+      "od\030\207\001 \001(\0162G.yandex.cloud.mdb.clickhouse." +
+      "v1.UserSettings.RemoteFilesystemReadMeth" +
+      "od\022R\n#memory_overcommit_ratio_denominato" +
+      "r\030\210\001 \001(\0132\033.google.protobuf.Int64ValueB\007\372" +
+      "\3071\003>=0\022[\n,memory_overcommit_ratio_denomi" +
+      "nator_for_user\030\211\001 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\007\372\3071\003>=0\022\\\n-memory_usage_over" +
+      "commit_max_wait_microseconds\030\212\001 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\007\372\3071\003>=0\022/\n\007com" +
+      "pile\030, \001(\0132\032.google.protobuf.BoolValueB\002" +
+      "\030\001\022=\n\024min_count_to_compile\030- \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\002\030\001\"_\n\014OverflowMod" +
+      "e\022\035\n\031OVERFLOW_MODE_UNSPECIFIED\020\000\022\027\n\023OVER" +
+      "FLOW_MODE_THROW\020\001\022\027\n\023OVERFLOW_MODE_BREAK" +
+      "\020\002\"\241\001\n\023GroupByOverflowMode\022&\n\"GROUP_BY_O" +
+      "VERFLOW_MODE_UNSPECIFIED\020\000\022 \n\034GROUP_BY_O" +
+      "VERFLOW_MODE_THROW\020\001\022 \n\034GROUP_BY_OVERFLO" +
+      "W_MODE_BREAK\020\002\022\036\n\032GROUP_BY_OVERFLOW_MODE" +
+      "_ANY\020\003\"\322\001\n\026DistributedProductMode\022(\n$DIS" +
+      "TRIBUTED_PRODUCT_MODE_UNSPECIFIED\020\000\022!\n\035D" +
+      "ISTRIBUTED_PRODUCT_MODE_DENY\020\001\022\"\n\036DISTRI" +
+      "BUTED_PRODUCT_MODE_LOCAL\020\002\022#\n\037DISTRIBUTE" +
+      "D_PRODUCT_MODE_GLOBAL\020\003\022\"\n\036DISTRIBUTED_P" +
+      "RODUCT_MODE_ALLOW\020\004\"q\n\tQuotaMode\022\032\n\026QUOT" +
+      "A_MODE_UNSPECIFIED\020\000\022\026\n\022QUOTA_MODE_DEFAU" +
+      "LT\020\001\022\024\n\020QUOTA_MODE_KEYED\020\002\022\032\n\026QUOTA_MODE" +
+      "_KEYED_BY_IP\020\003\"\266\002\n\033CountDistinctImplemen" +
+      "tation\022-\n)COUNT_DISTINCT_IMPLEMENTATION_" +
+      "UNSPECIFIED\020\000\022&\n\"COUNT_DISTINCT_IMPLEMEN" +
+      "TATION_UNIQ\020\001\022/\n+COUNT_DISTINCT_IMPLEMEN" +
+      "TATION_UNIQ_COMBINED\020\002\0222\n.COUNT_DISTINCT" +
+      "_IMPLEMENTATION_UNIQ_COMBINED_64\020\003\022-\n)CO" +
+      "UNT_DISTINCT_IMPLEMENTATION_UNIQ_HLL_12\020" +
+      "\004\022,\n(COUNT_DISTINCT_IMPLEMENTATION_UNIQ_" +
+      "EXACT\020\005\"\220\002\n\rJoinAlgorithm\022\036\n\032JOIN_ALGORI" +
+      "THM_UNSPECIFIED\020\000\022\027\n\023JOIN_ALGORITHM_HASH" +
+      "\020\001\022 \n\034JOIN_ALGORITHM_PARALLEL_HASH\020\002\022 \n\034" +
+      "JOIN_ALGORITHM_PARTIAL_MERGE\020\003\022\031\n\025JOIN_A" +
+      "LGORITHM_DIRECT\020\004\022\027\n\023JOIN_ALGORITHM_AUTO" +
+      "\020\005\022%\n!JOIN_ALGORITHM_FULL_SORTING_MERGE\020" +
+      "\006\022\'\n#JOIN_ALGORITHM_PREFER_PARTIAL_MERGE" +
+      "\020\007\"\255\002\n\030FormatRegexpEscapingRule\022+\n\'FORMA" +
+      "T_REGEXP_ESCAPING_RULE_UNSPECIFIED\020\000\022\'\n#" +
+      "FORMAT_REGEXP_ESCAPING_RULE_ESCAPED\020\001\022&\n" +
+      "\"FORMAT_REGEXP_ESCAPING_RULE_QUOTED\020\002\022#\n" +
+      "\037FORMAT_REGEXP_ESCAPING_RULE_CSV\020\003\022$\n FO" +
+      "RMAT_REGEXP_ESCAPING_RULE_JSON\020\004\022#\n\037FORM" +
+      "AT_REGEXP_ESCAPING_RULE_XML\020\005\022#\n\037FORMAT_" +
+      "REGEXP_ESCAPING_RULE_RAW\020\006\"\262\001\n\023DateTimeI" +
+      "nputFormat\022&\n\"DATE_TIME_INPUT_FORMAT_UNS" +
+      "PECIFIED\020\000\022&\n\"DATE_TIME_INPUT_FORMAT_BES" +
+      "T_EFFORT\020\001\022 \n\034DATE_TIME_INPUT_FORMAT_BAS" +
+      "IC\020\002\022)\n%DATE_TIME_INPUT_FORMAT_BEST_EFFO" +
+      "RT_US\020\003\"\260\001\n\024DateTimeOutputFormat\022\'\n#DATE" +
+      "_TIME_OUTPUT_FORMAT_UNSPECIFIED\020\000\022\"\n\036DAT" +
+      "E_TIME_OUTPUT_FORMAT_SIMPLE\020\001\022\037\n\033DATE_TI" +
+      "ME_OUTPUT_FORMAT_ISO\020\002\022*\n&DATE_TIME_OUTP" +
+      "UT_FORMAT_UNIX_TIMESTAMP\020\003\"\362\001\n\031LocalFile" +
+      "systemReadMethod\022,\n(LOCAL_FILESYSTEM_REA" +
+      "D_METHOD_UNSPECIFIED\020\000\022%\n!LOCAL_FILESYST" +
+      "EM_READ_METHOD_READ\020\001\0221\n-LOCAL_FILESYSTE" +
+      "M_READ_METHOD_PREAD_THREADPOOL\020\002\022&\n\"LOCA" +
+      "L_FILESYSTEM_READ_METHOD_PREAD\020\003\022%\n!LOCA" +
+      "L_FILESYSTEM_READ_METHOD_NMAP\020\004\"\241\001\n\032Remo" +
+      "teFilesystemReadMethod\022-\n)REMOTE_FILESYS" +
+      "TEM_READ_METHOD_UNSPECIFIED\020\000\022&\n\"REMOTE_" +
+      "FILESYSTEM_READ_METHOD_READ\020\001\022,\n(REMOTE_" +
+      "FILESYSTEM_READ_METHOD_THREADPOOL\020\002\"\356\002\n\t" +
+      "UserQuota\022B\n\021interval_duration\030\001 \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\n\372\3071\006>=1000\0225\n" +
+      "\007queries\030\002 \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\007\372\3071\003>=0\0224\n\006errors\030\003 \001(\0132\033.google.pr" +
+      "otobuf.Int64ValueB\007\372\3071\003>=0\0229\n\013result_row" +
+      "s\030\004 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
+      "1\003>=0\0227\n\tread_rows\030\005 \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\007\372\3071\003>=0\022<\n\016execution_time" +
+      "\030\006 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
+      "\003>=0Bs\n\"yandex.cloud.api.mdb.clickhouse." +
+      "v1ZMgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/mdb/clickhouse/v1;clickhous" +
+      "eb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -43920,7 +46385,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_UserSettings_descriptor,
-        new java.lang.String[] { "Readonly", "AllowDdl", "AllowIntrospectionFunctions", "ConnectTimeout", "ConnectTimeoutWithFailover", "ReceiveTimeout", "SendTimeout", "TimeoutBeforeCheckingExecutionSpeed", "InsertQuorum", "InsertQuorumTimeout", "InsertQuorumParallel", "InsertNullAsDefault", "SelectSequentialConsistency", "DeduplicateBlocksInDependentMaterializedViews", "ReplicationAlterPartitionsSync", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "SkipUnavailableShards", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "Priority", "MaxThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "MaxPartitionsPerInsertBlock", "MaxConcurrentQueriesForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxRowsInSet", "MaxBytesInSet", "SetOverflowMode", "MaxRowsInJoin", "MaxBytesInJoin", "JoinOverflowMode", "JoinAlgorithm", "AnyJoinDistinctRightTableKeys", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "MinExecutionSpeed", "MinExecutionSpeedBytes", "CountDistinctImplementation", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "InputFormatNullAsDefault", "DateTimeInputFormat", "InputFormatWithNamesUseHeader", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "DateTimeOutputFormat", "LowCardinalityAllowInNativeFormat", "AllowSuspiciousLowCardinalityTypes", "EmptyResultForAggregationByEmptySet", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", "CancelHttpReadonlyQueriesOnClientClose", "MaxHttpGetRedirects", "JoinedSubqueryRequiresAlias", "JoinUseNulls", "TransformNullIn", "QuotaMode", "FlattenNested", "FormatRegexp", "FormatRegexpEscapingRule", "FormatRegexpSkipUnmatched", "AsyncInsert", "AsyncInsertThreads", "WaitForAsyncInsert", "WaitForAsyncInsertTimeout", "AsyncInsertMaxDataSize", "AsyncInsertBusyTimeout", "AsyncInsertStaleTimeout", "MemoryProfilerStep", "MemoryProfilerSampleProbability", "MaxFinalThreads", "InputFormatParallelParsing", "InputFormatImportNestedJson", "LocalFilesystemReadMethod", "MaxReadBufferSize", "Compile", "MinCountToCompile", });
+        new java.lang.String[] { "Readonly", "AllowDdl", "AllowIntrospectionFunctions", "ConnectTimeout", "ConnectTimeoutWithFailover", "ReceiveTimeout", "SendTimeout", "TimeoutBeforeCheckingExecutionSpeed", "InsertQuorum", "InsertQuorumTimeout", "InsertQuorumParallel", "InsertNullAsDefault", "SelectSequentialConsistency", "DeduplicateBlocksInDependentMaterializedViews", "ReplicationAlterPartitionsSync", "MaxReplicaDelayForDistributedQueries", "FallbackToStaleReplicasForDistributedQueries", "DistributedProductMode", "DistributedAggregationMemoryEfficient", "DistributedDdlTaskTimeout", "SkipUnavailableShards", "CompileExpressions", "MinCountToCompileExpression", "MaxBlockSize", "MinInsertBlockSizeRows", "MinInsertBlockSizeBytes", "MaxInsertBlockSize", "MinBytesToUseDirectIo", "UseUncompressedCache", "MergeTreeMaxRowsToUseCache", "MergeTreeMaxBytesToUseCache", "MergeTreeMinRowsForConcurrentRead", "MergeTreeMinBytesForConcurrentRead", "MaxBytesBeforeExternalGroupBy", "MaxBytesBeforeExternalSort", "GroupByTwoLevelThreshold", "GroupByTwoLevelThresholdBytes", "Priority", "MaxThreads", "MaxMemoryUsage", "MaxMemoryUsageForUser", "MaxNetworkBandwidth", "MaxNetworkBandwidthForUser", "MaxPartitionsPerInsertBlock", "MaxConcurrentQueriesForUser", "ForceIndexByDate", "ForcePrimaryKey", "MaxRowsToRead", "MaxBytesToRead", "ReadOverflowMode", "MaxRowsToGroupBy", "GroupByOverflowMode", "MaxRowsToSort", "MaxBytesToSort", "SortOverflowMode", "MaxResultRows", "MaxResultBytes", "ResultOverflowMode", "MaxRowsInDistinct", "MaxBytesInDistinct", "DistinctOverflowMode", "MaxRowsToTransfer", "MaxBytesToTransfer", "TransferOverflowMode", "MaxExecutionTime", "TimeoutOverflowMode", "MaxRowsInSet", "MaxBytesInSet", "SetOverflowMode", "MaxRowsInJoin", "MaxBytesInJoin", "JoinOverflowMode", "JoinAlgorithm", "AnyJoinDistinctRightTableKeys", "MaxColumnsToRead", "MaxTemporaryColumns", "MaxTemporaryNonConstColumns", "MaxQuerySize", "MaxAstDepth", "MaxAstElements", "MaxExpandedAstElements", "MinExecutionSpeed", "MinExecutionSpeedBytes", "CountDistinctImplementation", "InputFormatValuesInterpretExpressions", "InputFormatDefaultsForOmittedFields", "InputFormatNullAsDefault", "DateTimeInputFormat", "InputFormatWithNamesUseHeader", "OutputFormatJsonQuote64BitIntegers", "OutputFormatJsonQuoteDenormals", "DateTimeOutputFormat", "LowCardinalityAllowInNativeFormat", "AllowSuspiciousLowCardinalityTypes", "EmptyResultForAggregationByEmptySet", "HttpConnectionTimeout", "HttpReceiveTimeout", "HttpSendTimeout", "EnableHttpCompression", "SendProgressInHttpHeaders", "HttpHeadersProgressInterval", "AddHttpCorsHeader", "CancelHttpReadonlyQueriesOnClientClose", "MaxHttpGetRedirects", "JoinedSubqueryRequiresAlias", "JoinUseNulls", "TransformNullIn", "QuotaMode", "FlattenNested", "FormatRegexp", "FormatRegexpEscapingRule", "FormatRegexpSkipUnmatched", "AsyncInsert", "AsyncInsertThreads", "WaitForAsyncInsert", "WaitForAsyncInsertTimeout", "AsyncInsertMaxDataSize", "AsyncInsertBusyTimeout", "AsyncInsertStaleTimeout", "MemoryProfilerStep", "MemoryProfilerSampleProbability", "MaxFinalThreads", "InputFormatParallelParsing", "InputFormatImportNestedJson", "LocalFilesystemReadMethod", "MaxReadBufferSize", "InsertKeeperMaxRetries", "MaxTemporaryDataOnDiskSizeForUser", "MaxTemporaryDataOnDiskSizeForQuery", "MaxParserDepth", "RemoteFilesystemReadMethod", "MemoryOvercommitRatioDenominator", "MemoryOvercommitRatioDenominatorForUser", "MemoryUsageOvercommitMaxWaitMicroseconds", "Compile", "MinCountToCompile", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_mdb_clickhouse_v1_UserQuota_fieldAccessorTable = new

@@ -22,7 +22,7 @@ public final class VisionServiceOuterClass {
      * <pre>
      * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
      * Restrictions:
-     * * Supported file formats: JPEG, PNG.
+     * * Supported file formats: `JPEG`, `PNG`.
      * * Maximum file size: 1 MB.
      * * Image size should not exceed 20M pixels (length x width).
      * </pre>
@@ -35,7 +35,7 @@ public final class VisionServiceOuterClass {
      * <pre>
      * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
      * Restrictions:
-     * * Supported file formats: JPEG, PNG.
+     * * Supported file formats: `JPEG`, `PNG`.
      * * Maximum file size: 1 MB.
      * * Image size should not exceed 20M pixels (length x width).
      * </pre>
@@ -47,7 +47,7 @@ public final class VisionServiceOuterClass {
      * <pre>
      * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
      * Restrictions:
-     * * Supported file formats: JPEG, PNG.
+     * * Supported file formats: `JPEG`, `PNG`.
      * * Maximum file size: 1 MB.
      * * Image size should not exceed 20M pixels (length x width).
      * </pre>
@@ -59,7 +59,7 @@ public final class VisionServiceOuterClass {
      * <pre>
      * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
      * Restrictions:
-     * * Supported file formats: JPEG, PNG.
+     * * Supported file formats: `JPEG`, `PNG`.
      * * Maximum file size: 1 MB.
      * * Image size should not exceed 20M pixels (length x width).
      * </pre>
@@ -72,7 +72,7 @@ public final class VisionServiceOuterClass {
      * <pre>
      * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
      * Restrictions:
-     * * Supported file formats: JPEG, PNG.
+     * * Supported file formats: `JPEG`, `PNG`.
      * * Maximum file size: 1 MB.
      * * Image size should not exceed 20M pixels (length x width).
      * </pre>
@@ -210,7 +210,7 @@ public final class VisionServiceOuterClass {
      * <pre>
      * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
      * Restrictions:
-     * * Supported file formats: JPEG, PNG.
+     * * Supported file formats: `JPEG`, `PNG`.
      * * Maximum file size: 1 MB.
      * * Image size should not exceed 20M pixels (length x width).
      * </pre>
@@ -225,7 +225,7 @@ public final class VisionServiceOuterClass {
      * <pre>
      * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
      * Restrictions:
-     * * Supported file formats: JPEG, PNG.
+     * * Supported file formats: `JPEG`, `PNG`.
      * * Maximum file size: 1 MB.
      * * Image size should not exceed 20M pixels (length x width).
      * </pre>
@@ -241,7 +241,7 @@ public final class VisionServiceOuterClass {
      * <pre>
      * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
      * Restrictions:
-     * * Supported file formats: JPEG, PNG.
+     * * Supported file formats: `JPEG`, `PNG`.
      * * Maximum file size: 1 MB.
      * * Image size should not exceed 20M pixels (length x width).
      * </pre>
@@ -256,7 +256,7 @@ public final class VisionServiceOuterClass {
      * <pre>
      * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
      * Restrictions:
-     * * Supported file formats: JPEG, PNG.
+     * * Supported file formats: `JPEG`, `PNG`.
      * * Maximum file size: 1 MB.
      * * Image size should not exceed 20M pixels (length x width).
      * </pre>
@@ -271,7 +271,7 @@ public final class VisionServiceOuterClass {
      * <pre>
      * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
      * Restrictions:
-     * * Supported file formats: JPEG, PNG.
+     * * Supported file formats: `JPEG`, `PNG`.
      * * Maximum file size: 1 MB.
      * * Image size should not exceed 20M pixels (length x width).
      * </pre>
@@ -709,7 +709,7 @@ public final class VisionServiceOuterClass {
        * <pre>
        * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
        * Restrictions:
-       * * Supported file formats: JPEG, PNG.
+       * * Supported file formats: `JPEG`, `PNG`.
        * * Maximum file size: 1 MB.
        * * Image size should not exceed 20M pixels (length x width).
        * </pre>
@@ -727,7 +727,7 @@ public final class VisionServiceOuterClass {
        * <pre>
        * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
        * Restrictions:
-       * * Supported file formats: JPEG, PNG.
+       * * Supported file formats: `JPEG`, `PNG`.
        * * Maximum file size: 1 MB.
        * * Image size should not exceed 20M pixels (length x width).
        * </pre>
@@ -745,7 +745,7 @@ public final class VisionServiceOuterClass {
        * <pre>
        * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
        * Restrictions:
-       * * Supported file formats: JPEG, PNG.
+       * * Supported file formats: `JPEG`, `PNG`.
        * * Maximum file size: 1 MB.
        * * Image size should not exceed 20M pixels (length x width).
        * </pre>
@@ -763,7 +763,7 @@ public final class VisionServiceOuterClass {
        * <pre>
        * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
        * Restrictions:
-       * * Supported file formats: JPEG, PNG.
+       * * Supported file formats: `JPEG`, `PNG`.
        * * Maximum file size: 1 MB.
        * * Image size should not exceed 20M pixels (length x width).
        * </pre>
@@ -788,7 +788,7 @@ public final class VisionServiceOuterClass {
        * <pre>
        * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
        * Restrictions:
-       * * Supported file formats: JPEG, PNG.
+       * * Supported file formats: `JPEG`, `PNG`.
        * * Maximum file size: 1 MB.
        * * Image size should not exceed 20M pixels (length x width).
        * </pre>
@@ -810,7 +810,7 @@ public final class VisionServiceOuterClass {
        * <pre>
        * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
        * Restrictions:
-       * * Supported file formats: JPEG, PNG.
+       * * Supported file formats: `JPEG`, `PNG`.
        * * Maximum file size: 1 MB.
        * * Image size should not exceed 20M pixels (length x width).
        * </pre>
@@ -834,7 +834,7 @@ public final class VisionServiceOuterClass {
        * <pre>
        * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
        * Restrictions:
-       * * Supported file formats: JPEG, PNG.
+       * * Supported file formats: `JPEG`, `PNG`.
        * * Maximum file size: 1 MB.
        * * Image size should not exceed 20M pixels (length x width).
        * </pre>
@@ -859,7 +859,7 @@ public final class VisionServiceOuterClass {
        * <pre>
        * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
        * Restrictions:
-       * * Supported file formats: JPEG, PNG.
+       * * Supported file formats: `JPEG`, `PNG`.
        * * Maximum file size: 1 MB.
        * * Image size should not exceed 20M pixels (length x width).
        * </pre>
@@ -881,7 +881,7 @@ public final class VisionServiceOuterClass {
        * <pre>
        * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
        * Restrictions:
-       * * Supported file formats: JPEG, PNG.
+       * * Supported file formats: `JPEG`, `PNG`.
        * * Maximum file size: 1 MB.
        * * Image size should not exceed 20M pixels (length x width).
        * </pre>
@@ -903,7 +903,7 @@ public final class VisionServiceOuterClass {
        * <pre>
        * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
        * Restrictions:
-       * * Supported file formats: JPEG, PNG.
+       * * Supported file formats: `JPEG`, `PNG`.
        * * Maximum file size: 1 MB.
        * * Image size should not exceed 20M pixels (length x width).
        * </pre>
@@ -926,7 +926,7 @@ public final class VisionServiceOuterClass {
        * <pre>
        * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
        * Restrictions:
-       * * Supported file formats: JPEG, PNG.
+       * * Supported file formats: `JPEG`, `PNG`.
        * * Maximum file size: 1 MB.
        * * Image size should not exceed 20M pixels (length x width).
        * </pre>
@@ -947,7 +947,7 @@ public final class VisionServiceOuterClass {
        * <pre>
        * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
        * Restrictions:
-       * * Supported file formats: JPEG, PNG.
+       * * Supported file formats: `JPEG`, `PNG`.
        * * Maximum file size: 1 MB.
        * * Image size should not exceed 20M pixels (length x width).
        * </pre>
@@ -968,7 +968,7 @@ public final class VisionServiceOuterClass {
        * <pre>
        * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
        * Restrictions:
-       * * Supported file formats: JPEG, PNG.
+       * * Supported file formats: `JPEG`, `PNG`.
        * * Maximum file size: 1 MB.
        * * Image size should not exceed 20M pixels (length x width).
        * </pre>
@@ -983,7 +983,7 @@ public final class VisionServiceOuterClass {
        * <pre>
        * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
        * Restrictions:
-       * * Supported file formats: JPEG, PNG.
+       * * Supported file formats: `JPEG`, `PNG`.
        * * Maximum file size: 1 MB.
        * * Image size should not exceed 20M pixels (length x width).
        * </pre>
@@ -1001,7 +1001,7 @@ public final class VisionServiceOuterClass {
        * <pre>
        * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
        * Restrictions:
-       * * Supported file formats: JPEG, PNG.
+       * * Supported file formats: `JPEG`, `PNG`.
        * * Maximum file size: 1 MB.
        * * Image size should not exceed 20M pixels (length x width).
        * </pre>
@@ -1020,7 +1020,7 @@ public final class VisionServiceOuterClass {
        * <pre>
        * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
        * Restrictions:
-       * * Supported file formats: JPEG, PNG.
+       * * Supported file formats: `JPEG`, `PNG`.
        * * Maximum file size: 1 MB.
        * * Image size should not exceed 20M pixels (length x width).
        * </pre>
@@ -1035,7 +1035,7 @@ public final class VisionServiceOuterClass {
        * <pre>
        * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
        * Restrictions:
-       * * Supported file formats: JPEG, PNG.
+       * * Supported file formats: `JPEG`, `PNG`.
        * * Maximum file size: 1 MB.
        * * Image size should not exceed 20M pixels (length x width).
        * </pre>
@@ -1051,7 +1051,7 @@ public final class VisionServiceOuterClass {
        * <pre>
        * A list of specifications. Each specification contains the file to analyze and features to use for analysis.
        * Restrictions:
-       * * Supported file formats: JPEG, PNG.
+       * * Supported file formats: `JPEG`, `PNG`.
        * * Maximum file size: 1 MB.
        * * Image size should not exceed 20M pixels (length x width).
        * </pre>
@@ -4757,7 +4757,7 @@ public final class VisionServiceOuterClass {
     /**
      * <pre>
      * List of the languages to recognize text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
      * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -4768,7 +4768,7 @@ public final class VisionServiceOuterClass {
     /**
      * <pre>
      * List of the languages to recognize text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
      * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -4778,7 +4778,7 @@ public final class VisionServiceOuterClass {
     /**
      * <pre>
      * List of the languages to recognize text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
      * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -4789,7 +4789,7 @@ public final class VisionServiceOuterClass {
     /**
      * <pre>
      * List of the languages to recognize text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
      * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -4803,8 +4803,8 @@ public final class VisionServiceOuterClass {
      * <pre>
      * Model to use for text detection.
      * Possible values:
-     * * page (default) - this model is suitable for detecting multiple text entries in an image.
-     * * line - this model is suitable for cropped images with one line of text.
+     * * `page` (default): this model is suitable for detecting multiple text entries in an image.
+     * * `line`: this model is suitable for cropped images with one line of text.
      * </pre>
      *
      * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4815,8 +4815,8 @@ public final class VisionServiceOuterClass {
      * <pre>
      * Model to use for text detection.
      * Possible values:
-     * * page (default) - this model is suitable for detecting multiple text entries in an image.
-     * * line - this model is suitable for cropped images with one line of text.
+     * * `page` (default): this model is suitable for detecting multiple text entries in an image.
+     * * `line`: this model is suitable for cropped images with one line of text.
      * </pre>
      *
      * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -4928,7 +4928,7 @@ public final class VisionServiceOuterClass {
     /**
      * <pre>
      * List of the languages to recognize text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
      * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -4941,7 +4941,7 @@ public final class VisionServiceOuterClass {
     /**
      * <pre>
      * List of the languages to recognize text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
      * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -4953,7 +4953,7 @@ public final class VisionServiceOuterClass {
     /**
      * <pre>
      * List of the languages to recognize text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
      * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -4966,7 +4966,7 @@ public final class VisionServiceOuterClass {
     /**
      * <pre>
      * List of the languages to recognize text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
      * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -4984,8 +4984,8 @@ public final class VisionServiceOuterClass {
      * <pre>
      * Model to use for text detection.
      * Possible values:
-     * * page (default) - this model is suitable for detecting multiple text entries in an image.
-     * * line - this model is suitable for cropped images with one line of text.
+     * * `page` (default): this model is suitable for detecting multiple text entries in an image.
+     * * `line`: this model is suitable for cropped images with one line of text.
      * </pre>
      *
      * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5008,8 +5008,8 @@ public final class VisionServiceOuterClass {
      * <pre>
      * Model to use for text detection.
      * Possible values:
-     * * page (default) - this model is suitable for detecting multiple text entries in an image.
-     * * line - this model is suitable for cropped images with one line of text.
+     * * `page` (default): this model is suitable for detecting multiple text entries in an image.
+     * * `line`: this model is suitable for cropped images with one line of text.
      * </pre>
      *
      * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5378,7 +5378,7 @@ public final class VisionServiceOuterClass {
       /**
        * <pre>
        * List of the languages to recognize text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
        * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -5391,7 +5391,7 @@ public final class VisionServiceOuterClass {
       /**
        * <pre>
        * List of the languages to recognize text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
        * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -5403,7 +5403,7 @@ public final class VisionServiceOuterClass {
       /**
        * <pre>
        * List of the languages to recognize text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
        * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -5416,7 +5416,7 @@ public final class VisionServiceOuterClass {
       /**
        * <pre>
        * List of the languages to recognize text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
        * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -5430,7 +5430,7 @@ public final class VisionServiceOuterClass {
       /**
        * <pre>
        * List of the languages to recognize text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
        * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -5451,7 +5451,7 @@ public final class VisionServiceOuterClass {
       /**
        * <pre>
        * List of the languages to recognize text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
        * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -5471,7 +5471,7 @@ public final class VisionServiceOuterClass {
       /**
        * <pre>
        * List of the languages to recognize text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
        * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -5489,7 +5489,7 @@ public final class VisionServiceOuterClass {
       /**
        * <pre>
        * List of the languages to recognize text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
        * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -5504,7 +5504,7 @@ public final class VisionServiceOuterClass {
       /**
        * <pre>
        * List of the languages to recognize text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
        * <code>repeated string language_codes = 1 [(.yandex.cloud.size) = "1-8", (.yandex.cloud.length) = "&lt;=3"];</code>
@@ -5528,8 +5528,8 @@ public final class VisionServiceOuterClass {
        * <pre>
        * Model to use for text detection.
        * Possible values:
-       * * page (default) - this model is suitable for detecting multiple text entries in an image.
-       * * line - this model is suitable for cropped images with one line of text.
+       * * `page` (default): this model is suitable for detecting multiple text entries in an image.
+       * * `line`: this model is suitable for cropped images with one line of text.
        * </pre>
        *
        * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5551,8 +5551,8 @@ public final class VisionServiceOuterClass {
        * <pre>
        * Model to use for text detection.
        * Possible values:
-       * * page (default) - this model is suitable for detecting multiple text entries in an image.
-       * * line - this model is suitable for cropped images with one line of text.
+       * * `page` (default): this model is suitable for detecting multiple text entries in an image.
+       * * `line`: this model is suitable for cropped images with one line of text.
        * </pre>
        *
        * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5575,8 +5575,8 @@ public final class VisionServiceOuterClass {
        * <pre>
        * Model to use for text detection.
        * Possible values:
-       * * page (default) - this model is suitable for detecting multiple text entries in an image.
-       * * line - this model is suitable for cropped images with one line of text.
+       * * `page` (default): this model is suitable for detecting multiple text entries in an image.
+       * * `line`: this model is suitable for cropped images with one line of text.
        * </pre>
        *
        * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5597,8 +5597,8 @@ public final class VisionServiceOuterClass {
        * <pre>
        * Model to use for text detection.
        * Possible values:
-       * * page (default) - this model is suitable for detecting multiple text entries in an image.
-       * * line - this model is suitable for cropped images with one line of text.
+       * * `page` (default): this model is suitable for detecting multiple text entries in an image.
+       * * `line`: this model is suitable for cropped images with one line of text.
        * </pre>
        *
        * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5614,8 +5614,8 @@ public final class VisionServiceOuterClass {
        * <pre>
        * Model to use for text detection.
        * Possible values:
-       * * page (default) - this model is suitable for detecting multiple text entries in an image.
-       * * line - this model is suitable for cropped images with one line of text.
+       * * `page` (default): this model is suitable for detecting multiple text entries in an image.
+       * * `line`: this model is suitable for cropped images with one line of text.
        * </pre>
        *
        * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>

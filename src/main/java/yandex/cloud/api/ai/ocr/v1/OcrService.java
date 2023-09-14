@@ -20,7 +20,7 @@ public final class OcrService {
 
     /**
      * <pre>
-     *bytes with data
+     * Bytes with data
      * </pre>
      *
      * <code>bytes content = 1;</code>
@@ -29,7 +29,7 @@ public final class OcrService {
     boolean hasContent();
     /**
      * <pre>
-     *bytes with data
+     * Bytes with data
      * </pre>
      *
      * <code>bytes content = 1;</code>
@@ -39,7 +39,11 @@ public final class OcrService {
 
     /**
      * <pre>
-     * [MIME type](https://en.wikipedia.org/wiki/Media_type) of content (for example, `` application/pdf ``).
+     * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
+     ** Supported file formats: `JPEG`, `PNG`, `WEBP`, `PDF`.
+     ** Maximum file size: 20 MB.
+     ** Image size should not exceed 20M pixels (length x width).
+     ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
      * </pre>
      *
      * <code>string mime_type = 2;</code>
@@ -48,7 +52,11 @@ public final class OcrService {
     java.lang.String getMimeType();
     /**
      * <pre>
-     * [MIME type](https://en.wikipedia.org/wiki/Media_type) of content (for example, `` application/pdf ``).
+     * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
+     ** Supported file formats: `JPEG`, `PNG`, `WEBP`, `PDF`.
+     ** Maximum file size: 20 MB.
+     ** Image size should not exceed 20M pixels (length x width).
+     ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
      * </pre>
      *
      * <code>string mime_type = 2;</code>
@@ -60,7 +68,7 @@ public final class OcrService {
     /**
      * <pre>
      * List of the languages to recognize text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
      * <code>repeated string language_codes = 3;</code>
@@ -71,7 +79,7 @@ public final class OcrService {
     /**
      * <pre>
      * List of the languages to recognize text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
      * <code>repeated string language_codes = 3;</code>
@@ -81,7 +89,7 @@ public final class OcrService {
     /**
      * <pre>
      * List of the languages to recognize text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
      * <code>repeated string language_codes = 3;</code>
@@ -92,7 +100,7 @@ public final class OcrService {
     /**
      * <pre>
      * List of the languages to recognize text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
      * <code>repeated string language_codes = 3;</code>
@@ -104,7 +112,13 @@ public final class OcrService {
 
     /**
      * <pre>
-     * Model to use for text detection.
+     * Model to use for text detection. The maximum string length is 50 characters. Possible values:
+     ** `page` (default): this model is suitable for detecting multiple text entries in an image.
+     ** `passport`: passport, the main double-page spread.
+     ** `driver-license-front`: driver's license, the front side.
+     ** `driver-license-back`: driver's license, the reverse side.
+     ** `vehicle-registration-front`: front side of the vehicle registration certificate.
+     ** `vehicle-registration-back`: back side of the vehicle registration certificate.
      * </pre>
      *
      * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -113,7 +127,13 @@ public final class OcrService {
     java.lang.String getModel();
     /**
      * <pre>
-     * Model to use for text detection.
+     * Model to use for text detection. The maximum string length is 50 characters. Possible values:
+     ** `page` (default): this model is suitable for detecting multiple text entries in an image.
+     ** `passport`: passport, the main double-page spread.
+     ** `driver-license-front`: driver's license, the front side.
+     ** `driver-license-back`: driver's license, the reverse side.
+     ** `vehicle-registration-front`: front side of the vehicle registration certificate.
+     ** `vehicle-registration-back`: back side of the vehicle registration certificate.
      * </pre>
      *
      * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -276,7 +296,7 @@ public final class OcrService {
     public static final int CONTENT_FIELD_NUMBER = 1;
     /**
      * <pre>
-     *bytes with data
+     * Bytes with data
      * </pre>
      *
      * <code>bytes content = 1;</code>
@@ -288,7 +308,7 @@ public final class OcrService {
     }
     /**
      * <pre>
-     *bytes with data
+     * Bytes with data
      * </pre>
      *
      * <code>bytes content = 1;</code>
@@ -306,7 +326,11 @@ public final class OcrService {
     private volatile java.lang.Object mimeType_;
     /**
      * <pre>
-     * [MIME type](https://en.wikipedia.org/wiki/Media_type) of content (for example, `` application/pdf ``).
+     * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
+     ** Supported file formats: `JPEG`, `PNG`, `WEBP`, `PDF`.
+     ** Maximum file size: 20 MB.
+     ** Image size should not exceed 20M pixels (length x width).
+     ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
      * </pre>
      *
      * <code>string mime_type = 2;</code>
@@ -327,7 +351,11 @@ public final class OcrService {
     }
     /**
      * <pre>
-     * [MIME type](https://en.wikipedia.org/wiki/Media_type) of content (for example, `` application/pdf ``).
+     * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
+     ** Supported file formats: `JPEG`, `PNG`, `WEBP`, `PDF`.
+     ** Maximum file size: 20 MB.
+     ** Image size should not exceed 20M pixels (length x width).
+     ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
      * </pre>
      *
      * <code>string mime_type = 2;</code>
@@ -353,7 +381,7 @@ public final class OcrService {
     /**
      * <pre>
      * List of the languages to recognize text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
      * <code>repeated string language_codes = 3;</code>
@@ -366,7 +394,7 @@ public final class OcrService {
     /**
      * <pre>
      * List of the languages to recognize text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
      * <code>repeated string language_codes = 3;</code>
@@ -378,7 +406,7 @@ public final class OcrService {
     /**
      * <pre>
      * List of the languages to recognize text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
      * <code>repeated string language_codes = 3;</code>
@@ -391,7 +419,7 @@ public final class OcrService {
     /**
      * <pre>
      * List of the languages to recognize text.
-     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+     * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
      * </pre>
      *
      * <code>repeated string language_codes = 3;</code>
@@ -407,7 +435,13 @@ public final class OcrService {
     private volatile java.lang.Object model_;
     /**
      * <pre>
-     * Model to use for text detection.
+     * Model to use for text detection. The maximum string length is 50 characters. Possible values:
+     ** `page` (default): this model is suitable for detecting multiple text entries in an image.
+     ** `passport`: passport, the main double-page spread.
+     ** `driver-license-front`: driver's license, the front side.
+     ** `driver-license-back`: driver's license, the reverse side.
+     ** `vehicle-registration-front`: front side of the vehicle registration certificate.
+     ** `vehicle-registration-back`: back side of the vehicle registration certificate.
      * </pre>
      *
      * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -428,7 +462,13 @@ public final class OcrService {
     }
     /**
      * <pre>
-     * Model to use for text detection.
+     * Model to use for text detection. The maximum string length is 50 characters. Possible values:
+     ** `page` (default): this model is suitable for detecting multiple text entries in an image.
+     ** `passport`: passport, the main double-page spread.
+     ** `driver-license-front`: driver's license, the front side.
+     ** `driver-license-back`: driver's license, the reverse side.
+     ** `vehicle-registration-front`: front side of the vehicle registration certificate.
+     ** `vehicle-registration-back`: back side of the vehicle registration certificate.
      * </pre>
      *
      * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -862,7 +902,7 @@ public final class OcrService {
 
       /**
        * <pre>
-       *bytes with data
+       * Bytes with data
        * </pre>
        *
        * <code>bytes content = 1;</code>
@@ -873,7 +913,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       *bytes with data
+       * Bytes with data
        * </pre>
        *
        * <code>bytes content = 1;</code>
@@ -887,7 +927,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       *bytes with data
+       * Bytes with data
        * </pre>
        *
        * <code>bytes content = 1;</code>
@@ -905,7 +945,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       *bytes with data
+       * Bytes with data
        * </pre>
        *
        * <code>bytes content = 1;</code>
@@ -923,7 +963,11 @@ public final class OcrService {
       private java.lang.Object mimeType_ = "";
       /**
        * <pre>
-       * [MIME type](https://en.wikipedia.org/wiki/Media_type) of content (for example, `` application/pdf ``).
+       * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
+       ** Supported file formats: `JPEG`, `PNG`, `WEBP`, `PDF`.
+       ** Maximum file size: 20 MB.
+       ** Image size should not exceed 20M pixels (length x width).
+       ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
        * </pre>
        *
        * <code>string mime_type = 2;</code>
@@ -943,7 +987,11 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * [MIME type](https://en.wikipedia.org/wiki/Media_type) of content (for example, `` application/pdf ``).
+       * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
+       ** Supported file formats: `JPEG`, `PNG`, `WEBP`, `PDF`.
+       ** Maximum file size: 20 MB.
+       ** Image size should not exceed 20M pixels (length x width).
+       ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
        * </pre>
        *
        * <code>string mime_type = 2;</code>
@@ -964,7 +1012,11 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * [MIME type](https://en.wikipedia.org/wiki/Media_type) of content (for example, `` application/pdf ``).
+       * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
+       ** Supported file formats: `JPEG`, `PNG`, `WEBP`, `PDF`.
+       ** Maximum file size: 20 MB.
+       ** Image size should not exceed 20M pixels (length x width).
+       ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
        * </pre>
        *
        * <code>string mime_type = 2;</code>
@@ -983,7 +1035,11 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * [MIME type](https://en.wikipedia.org/wiki/Media_type) of content (for example, `` application/pdf ``).
+       * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
+       ** Supported file formats: `JPEG`, `PNG`, `WEBP`, `PDF`.
+       ** Maximum file size: 20 MB.
+       ** Image size should not exceed 20M pixels (length x width).
+       ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
        * </pre>
        *
        * <code>string mime_type = 2;</code>
@@ -997,7 +1053,11 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * [MIME type](https://en.wikipedia.org/wiki/Media_type) of content (for example, `` application/pdf ``).
+       * Specifications of the ([MIME type](https://en.wikipedia.org/wiki/Media_type)). Each specification contains the file to analyze and features to use for analysis. Restrictions:
+       ** Supported file formats: `JPEG`, `PNG`, `WEBP`, `PDF`.
+       ** Maximum file size: 20 MB.
+       ** Image size should not exceed 20M pixels (length x width).
+       ** The number of pages in a PDF file should not exceed 200 (each page counts as 1 request).
        * </pre>
        *
        * <code>string mime_type = 2;</code>
@@ -1026,7 +1086,7 @@ public final class OcrService {
       /**
        * <pre>
        * List of the languages to recognize text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
        * <code>repeated string language_codes = 3;</code>
@@ -1039,7 +1099,7 @@ public final class OcrService {
       /**
        * <pre>
        * List of the languages to recognize text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
        * <code>repeated string language_codes = 3;</code>
@@ -1051,7 +1111,7 @@ public final class OcrService {
       /**
        * <pre>
        * List of the languages to recognize text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
        * <code>repeated string language_codes = 3;</code>
@@ -1064,7 +1124,7 @@ public final class OcrService {
       /**
        * <pre>
        * List of the languages to recognize text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
        * <code>repeated string language_codes = 3;</code>
@@ -1078,7 +1138,7 @@ public final class OcrService {
       /**
        * <pre>
        * List of the languages to recognize text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
        * <code>repeated string language_codes = 3;</code>
@@ -1099,7 +1159,7 @@ public final class OcrService {
       /**
        * <pre>
        * List of the languages to recognize text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
        * <code>repeated string language_codes = 3;</code>
@@ -1119,7 +1179,7 @@ public final class OcrService {
       /**
        * <pre>
        * List of the languages to recognize text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
        * <code>repeated string language_codes = 3;</code>
@@ -1137,7 +1197,7 @@ public final class OcrService {
       /**
        * <pre>
        * List of the languages to recognize text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
        * <code>repeated string language_codes = 3;</code>
@@ -1152,7 +1212,7 @@ public final class OcrService {
       /**
        * <pre>
        * List of the languages to recognize text.
-       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `` ru ``).
+       * Specified in [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) format (for example, `ru`).
        * </pre>
        *
        * <code>repeated string language_codes = 3;</code>
@@ -1174,7 +1234,13 @@ public final class OcrService {
       private java.lang.Object model_ = "";
       /**
        * <pre>
-       * Model to use for text detection.
+       * Model to use for text detection. The maximum string length is 50 characters. Possible values:
+       ** `page` (default): this model is suitable for detecting multiple text entries in an image.
+       ** `passport`: passport, the main double-page spread.
+       ** `driver-license-front`: driver's license, the front side.
+       ** `driver-license-back`: driver's license, the reverse side.
+       ** `vehicle-registration-front`: front side of the vehicle registration certificate.
+       ** `vehicle-registration-back`: back side of the vehicle registration certificate.
        * </pre>
        *
        * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1194,7 +1260,13 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * Model to use for text detection.
+       * Model to use for text detection. The maximum string length is 50 characters. Possible values:
+       ** `page` (default): this model is suitable for detecting multiple text entries in an image.
+       ** `passport`: passport, the main double-page spread.
+       ** `driver-license-front`: driver's license, the front side.
+       ** `driver-license-back`: driver's license, the reverse side.
+       ** `vehicle-registration-front`: front side of the vehicle registration certificate.
+       ** `vehicle-registration-back`: back side of the vehicle registration certificate.
        * </pre>
        *
        * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1215,7 +1287,13 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * Model to use for text detection.
+       * Model to use for text detection. The maximum string length is 50 characters. Possible values:
+       ** `page` (default): this model is suitable for detecting multiple text entries in an image.
+       ** `passport`: passport, the main double-page spread.
+       ** `driver-license-front`: driver's license, the front side.
+       ** `driver-license-back`: driver's license, the reverse side.
+       ** `vehicle-registration-front`: front side of the vehicle registration certificate.
+       ** `vehicle-registration-back`: back side of the vehicle registration certificate.
        * </pre>
        *
        * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1234,7 +1312,13 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * Model to use for text detection.
+       * Model to use for text detection. The maximum string length is 50 characters. Possible values:
+       ** `page` (default): this model is suitable for detecting multiple text entries in an image.
+       ** `passport`: passport, the main double-page spread.
+       ** `driver-license-front`: driver's license, the front side.
+       ** `driver-license-back`: driver's license, the reverse side.
+       ** `vehicle-registration-front`: front side of the vehicle registration certificate.
+       ** `vehicle-registration-back`: back side of the vehicle registration certificate.
        * </pre>
        *
        * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1248,7 +1332,13 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * Model to use for text detection.
+       * Model to use for text detection. The maximum string length is 50 characters. Possible values:
+       ** `page` (default): this model is suitable for detecting multiple text entries in an image.
+       ** `passport`: passport, the main double-page spread.
+       ** `driver-license-front`: driver's license, the front side.
+       ** `driver-license-back`: driver's license, the reverse side.
+       ** `vehicle-registration-front`: front side of the vehicle registration certificate.
+       ** `vehicle-registration-back`: back side of the vehicle registration certificate.
        * </pre>
        *
        * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>

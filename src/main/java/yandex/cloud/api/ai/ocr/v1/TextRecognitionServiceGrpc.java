@@ -3,6 +3,9 @@ package yandex.cloud.api.ai.ocr.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for the Vision OCR service.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -91,10 +94,16 @@ public final class TextRecognitionServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for the Vision OCR service.
+   * </pre>
    */
   public static abstract class TextRecognitionServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * To send the image for text recognition.
+     * </pre>
      */
     public void recognize(yandex.cloud.api.ai.ocr.v1.OcrService.RecognizeTextRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.ocr.v1.OcrService.RecognizeTextResponse> responseObserver) {
@@ -115,6 +124,9 @@ public final class TextRecognitionServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for the Vision OCR service.
+   * </pre>
    */
   public static final class TextRecognitionServiceStub extends io.grpc.stub.AbstractAsyncStub<TextRecognitionServiceStub> {
     private TextRecognitionServiceStub(
@@ -129,6 +141,9 @@ public final class TextRecognitionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * To send the image for text recognition.
+     * </pre>
      */
     public void recognize(yandex.cloud.api.ai.ocr.v1.OcrService.RecognizeTextRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.ocr.v1.OcrService.RecognizeTextResponse> responseObserver) {
@@ -138,6 +153,9 @@ public final class TextRecognitionServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for the Vision OCR service.
+   * </pre>
    */
   public static final class TextRecognitionServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<TextRecognitionServiceBlockingStub> {
     private TextRecognitionServiceBlockingStub(
@@ -152,6 +170,9 @@ public final class TextRecognitionServiceGrpc {
     }
 
     /**
+     * <pre>
+     * To send the image for text recognition.
+     * </pre>
      */
     public java.util.Iterator<yandex.cloud.api.ai.ocr.v1.OcrService.RecognizeTextResponse> recognize(
         yandex.cloud.api.ai.ocr.v1.OcrService.RecognizeTextRequest request) {
@@ -161,6 +182,9 @@ public final class TextRecognitionServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for the Vision OCR service.
+   * </pre>
    */
   public static final class TextRecognitionServiceFutureStub extends io.grpc.stub.AbstractFutureStub<TextRecognitionServiceFutureStub> {
     private TextRecognitionServiceFutureStub(

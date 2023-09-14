@@ -4225,7 +4225,7 @@ public final class ImageServiceOuterClass {
      * <pre>
      * URI of the source image to create the new image from.
      * Currently only supports links to images that are stored in Object Storage.
-     * Currently only supports Qcow2, VMDK, and VHD formats.
+     * Currently only supports Qcow2, VMDK, and RAW formats.
      * </pre>
      *
      * <code>string uri = 11;</code>
@@ -4236,7 +4236,7 @@ public final class ImageServiceOuterClass {
      * <pre>
      * URI of the source image to create the new image from.
      * Currently only supports links to images that are stored in Object Storage.
-     * Currently only supports Qcow2, VMDK, and VHD formats.
+     * Currently only supports Qcow2, VMDK, and RAW formats.
      * </pre>
      *
      * <code>string uri = 11;</code>
@@ -4247,7 +4247,7 @@ public final class ImageServiceOuterClass {
      * <pre>
      * URI of the source image to create the new image from.
      * Currently only supports links to images that are stored in Object Storage.
-     * Currently only supports Qcow2, VMDK, and VHD formats.
+     * Currently only supports Qcow2, VMDK, and RAW formats.
      * </pre>
      *
      * <code>string uri = 11;</code>
@@ -5103,7 +5103,7 @@ public final class ImageServiceOuterClass {
      * <pre>
      * URI of the source image to create the new image from.
      * Currently only supports links to images that are stored in Object Storage.
-     * Currently only supports Qcow2, VMDK, and VHD formats.
+     * Currently only supports Qcow2, VMDK, and RAW formats.
      * </pre>
      *
      * <code>string uri = 11;</code>
@@ -5116,7 +5116,7 @@ public final class ImageServiceOuterClass {
      * <pre>
      * URI of the source image to create the new image from.
      * Currently only supports links to images that are stored in Object Storage.
-     * Currently only supports Qcow2, VMDK, and VHD formats.
+     * Currently only supports Qcow2, VMDK, and RAW formats.
      * </pre>
      *
      * <code>string uri = 11;</code>
@@ -5143,7 +5143,7 @@ public final class ImageServiceOuterClass {
      * <pre>
      * URI of the source image to create the new image from.
      * Currently only supports links to images that are stored in Object Storage.
-     * Currently only supports Qcow2, VMDK, and VHD formats.
+     * Currently only supports Qcow2, VMDK, and RAW formats.
      * </pre>
      *
      * <code>string uri = 11;</code>
@@ -7009,7 +7009,7 @@ public final class ImageServiceOuterClass {
        * <pre>
        * URI of the source image to create the new image from.
        * Currently only supports links to images that are stored in Object Storage.
-       * Currently only supports Qcow2, VMDK, and VHD formats.
+       * Currently only supports Qcow2, VMDK, and RAW formats.
        * </pre>
        *
        * <code>string uri = 11;</code>
@@ -7023,7 +7023,7 @@ public final class ImageServiceOuterClass {
        * <pre>
        * URI of the source image to create the new image from.
        * Currently only supports links to images that are stored in Object Storage.
-       * Currently only supports Qcow2, VMDK, and VHD formats.
+       * Currently only supports Qcow2, VMDK, and RAW formats.
        * </pre>
        *
        * <code>string uri = 11;</code>
@@ -7051,7 +7051,7 @@ public final class ImageServiceOuterClass {
        * <pre>
        * URI of the source image to create the new image from.
        * Currently only supports links to images that are stored in Object Storage.
-       * Currently only supports Qcow2, VMDK, and VHD formats.
+       * Currently only supports Qcow2, VMDK, and RAW formats.
        * </pre>
        *
        * <code>string uri = 11;</code>
@@ -7080,7 +7080,7 @@ public final class ImageServiceOuterClass {
        * <pre>
        * URI of the source image to create the new image from.
        * Currently only supports links to images that are stored in Object Storage.
-       * Currently only supports Qcow2, VMDK, and VHD formats.
+       * Currently only supports Qcow2, VMDK, and RAW formats.
        * </pre>
        *
        * <code>string uri = 11;</code>
@@ -7101,7 +7101,7 @@ public final class ImageServiceOuterClass {
        * <pre>
        * URI of the source image to create the new image from.
        * Currently only supports links to images that are stored in Object Storage.
-       * Currently only supports Qcow2, VMDK, and VHD formats.
+       * Currently only supports Qcow2, VMDK, and RAW formats.
        * </pre>
        *
        * <code>string uri = 11;</code>
@@ -7119,7 +7119,7 @@ public final class ImageServiceOuterClass {
        * <pre>
        * URI of the source image to create the new image from.
        * Currently only supports links to images that are stored in Object Storage.
-       * Currently only supports Qcow2, VMDK, and VHD formats.
+       * Currently only supports Qcow2, VMDK, and RAW formats.
        * </pre>
        *
        * <code>string uri = 11;</code>

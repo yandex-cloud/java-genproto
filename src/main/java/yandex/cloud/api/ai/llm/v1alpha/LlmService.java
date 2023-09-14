@@ -20,6 +20,7 @@ public final class LlmService {
 
     /**
      * <pre>
+     * The name or identifier of the model to be used for text generation.
      * Possible value for now: `general`.
      * </pre>
      *
@@ -29,6 +30,7 @@ public final class LlmService {
     java.lang.String getModel();
     /**
      * <pre>
+     * The name or identifier of the model to be used for text generation.
      * Possible value for now: `general`.
      * </pre>
      *
@@ -40,7 +42,7 @@ public final class LlmService {
 
     /**
      * <pre>
-     * Generation options
+     * Configuration options for text generation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -49,7 +51,7 @@ public final class LlmService {
     boolean hasGenerationOptions();
     /**
      * <pre>
-     * Generation options
+     * Configuration options for text generation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -58,7 +60,7 @@ public final class LlmService {
     yandex.cloud.api.ai.llm.v1alpha.Llm.GenerationOptions getGenerationOptions();
     /**
      * <pre>
-     * Generation options
+     * Configuration options for text generation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -67,7 +69,7 @@ public final class LlmService {
 
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+     * The text-based instruction for text generation.
      * </pre>
      *
      * <code>string instruction_text = 3;</code>
@@ -76,7 +78,7 @@ public final class LlmService {
     boolean hasInstructionText();
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+     * The text-based instruction for text generation.
      * </pre>
      *
      * <code>string instruction_text = 3;</code>
@@ -85,7 +87,7 @@ public final class LlmService {
     java.lang.String getInstructionText();
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+     * The text-based instruction for text generation.
      * </pre>
      *
      * <code>string instruction_text = 3;</code>
@@ -95,16 +97,28 @@ public final class LlmService {
         getInstructionTextBytes();
 
     /**
+     * <pre>
+     * A URI containing instructions for text generation.
+     * </pre>
+     *
      * <code>string instruction_uri = 5;</code>
      * @return Whether the instructionUri field is set.
      */
     boolean hasInstructionUri();
     /**
+     * <pre>
+     * A URI containing instructions for text generation.
+     * </pre>
+     *
      * <code>string instruction_uri = 5;</code>
      * @return The instructionUri.
      */
     java.lang.String getInstructionUri();
     /**
+     * <pre>
+     * A URI containing instructions for text generation.
+     * </pre>
+     *
      * <code>string instruction_uri = 5;</code>
      * @return The bytes for instructionUri.
      */
@@ -113,7 +127,7 @@ public final class LlmService {
 
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+     * The text-based request for text generation.
      * </pre>
      *
      * <code>string request_text = 4;</code>
@@ -122,7 +136,7 @@ public final class LlmService {
     boolean hasRequestText();
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+     * The text-based request for text generation.
      * </pre>
      *
      * <code>string request_text = 4;</code>
@@ -131,7 +145,7 @@ public final class LlmService {
     java.lang.String getRequestText();
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+     * The text-based request for text generation.
      * </pre>
      *
      * <code>string request_text = 4;</code>
@@ -146,7 +160,7 @@ public final class LlmService {
   }
   /**
    * <pre>
-   * Describe your query: set generation options, context in the instruction part and query in the request.
+   * Request for instructing the model to generate text.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.InstructRequest}
@@ -347,6 +361,7 @@ public final class LlmService {
     private volatile java.lang.Object model_;
     /**
      * <pre>
+     * The name or identifier of the model to be used for text generation.
      * Possible value for now: `general`.
      * </pre>
      *
@@ -368,6 +383,7 @@ public final class LlmService {
     }
     /**
      * <pre>
+     * The name or identifier of the model to be used for text generation.
      * Possible value for now: `general`.
      * </pre>
      *
@@ -393,7 +409,7 @@ public final class LlmService {
     private yandex.cloud.api.ai.llm.v1alpha.Llm.GenerationOptions generationOptions_;
     /**
      * <pre>
-     * Generation options
+     * Configuration options for text generation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -405,7 +421,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Generation options
+     * Configuration options for text generation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -417,7 +433,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Generation options
+     * Configuration options for text generation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -430,7 +446,7 @@ public final class LlmService {
     public static final int INSTRUCTION_TEXT_FIELD_NUMBER = 3;
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+     * The text-based instruction for text generation.
      * </pre>
      *
      * <code>string instruction_text = 3;</code>
@@ -441,7 +457,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+     * The text-based instruction for text generation.
      * </pre>
      *
      * <code>string instruction_text = 3;</code>
@@ -466,7 +482,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+     * The text-based instruction for text generation.
      * </pre>
      *
      * <code>string instruction_text = 3;</code>
@@ -493,6 +509,10 @@ public final class LlmService {
 
     public static final int INSTRUCTION_URI_FIELD_NUMBER = 5;
     /**
+     * <pre>
+     * A URI containing instructions for text generation.
+     * </pre>
+     *
      * <code>string instruction_uri = 5;</code>
      * @return Whether the instructionUri field is set.
      */
@@ -500,6 +520,10 @@ public final class LlmService {
       return instructionCase_ == 5;
     }
     /**
+     * <pre>
+     * A URI containing instructions for text generation.
+     * </pre>
+     *
      * <code>string instruction_uri = 5;</code>
      * @return The instructionUri.
      */
@@ -521,6 +545,10 @@ public final class LlmService {
       }
     }
     /**
+     * <pre>
+     * A URI containing instructions for text generation.
+     * </pre>
+     *
      * <code>string instruction_uri = 5;</code>
      * @return The bytes for instructionUri.
      */
@@ -546,7 +574,7 @@ public final class LlmService {
     public static final int REQUEST_TEXT_FIELD_NUMBER = 4;
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+     * The text-based request for text generation.
      * </pre>
      *
      * <code>string request_text = 4;</code>
@@ -557,7 +585,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+     * The text-based request for text generation.
      * </pre>
      *
      * <code>string request_text = 4;</code>
@@ -582,7 +610,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+     * The text-based request for text generation.
      * </pre>
      *
      * <code>string request_text = 4;</code>
@@ -839,7 +867,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Describe your query: set generation options, context in the instruction part and query in the request.
+     * Request for instructing the model to generate text.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.InstructRequest}
@@ -1079,6 +1107,7 @@ public final class LlmService {
       private java.lang.Object model_ = "";
       /**
        * <pre>
+       * The name or identifier of the model to be used for text generation.
        * Possible value for now: `general`.
        * </pre>
        *
@@ -1099,6 +1128,7 @@ public final class LlmService {
       }
       /**
        * <pre>
+       * The name or identifier of the model to be used for text generation.
        * Possible value for now: `general`.
        * </pre>
        *
@@ -1120,6 +1150,7 @@ public final class LlmService {
       }
       /**
        * <pre>
+       * The name or identifier of the model to be used for text generation.
        * Possible value for now: `general`.
        * </pre>
        *
@@ -1139,6 +1170,7 @@ public final class LlmService {
       }
       /**
        * <pre>
+       * The name or identifier of the model to be used for text generation.
        * Possible value for now: `general`.
        * </pre>
        *
@@ -1153,6 +1185,7 @@ public final class LlmService {
       }
       /**
        * <pre>
+       * The name or identifier of the model to be used for text generation.
        * Possible value for now: `general`.
        * </pre>
        *
@@ -1177,7 +1210,7 @@ public final class LlmService {
           yandex.cloud.api.ai.llm.v1alpha.Llm.GenerationOptions, yandex.cloud.api.ai.llm.v1alpha.Llm.GenerationOptions.Builder, yandex.cloud.api.ai.llm.v1alpha.Llm.GenerationOptionsOrBuilder> generationOptionsBuilder_;
       /**
        * <pre>
-       * Generation options
+       * Configuration options for text generation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -1188,7 +1221,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generation options
+       * Configuration options for text generation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -1203,7 +1236,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generation options
+       * Configuration options for text generation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -1223,7 +1256,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generation options
+       * Configuration options for text generation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -1241,7 +1274,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generation options
+       * Configuration options for text generation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -1263,7 +1296,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generation options
+       * Configuration options for text generation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -1281,7 +1314,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generation options
+       * Configuration options for text generation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -1293,7 +1326,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generation options
+       * Configuration options for text generation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -1308,7 +1341,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generation options
+       * Configuration options for text generation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -1329,7 +1362,7 @@ public final class LlmService {
 
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+       * The text-based instruction for text generation.
        * </pre>
        *
        * <code>string instruction_text = 3;</code>
@@ -1341,7 +1374,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+       * The text-based instruction for text generation.
        * </pre>
        *
        * <code>string instruction_text = 3;</code>
@@ -1367,7 +1400,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+       * The text-based instruction for text generation.
        * </pre>
        *
        * <code>string instruction_text = 3;</code>
@@ -1394,7 +1427,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+       * The text-based instruction for text generation.
        * </pre>
        *
        * <code>string instruction_text = 3;</code>
@@ -1413,7 +1446,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+       * The text-based instruction for text generation.
        * </pre>
        *
        * <code>string instruction_text = 3;</code>
@@ -1429,7 +1462,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+       * The text-based instruction for text generation.
        * </pre>
        *
        * <code>string instruction_text = 3;</code>
@@ -1449,6 +1482,10 @@ public final class LlmService {
       }
 
       /**
+       * <pre>
+       * A URI containing instructions for text generation.
+       * </pre>
+       *
        * <code>string instruction_uri = 5;</code>
        * @return Whether the instructionUri field is set.
        */
@@ -1457,6 +1494,10 @@ public final class LlmService {
         return instructionCase_ == 5;
       }
       /**
+       * <pre>
+       * A URI containing instructions for text generation.
+       * </pre>
+       *
        * <code>string instruction_uri = 5;</code>
        * @return The instructionUri.
        */
@@ -1479,6 +1520,10 @@ public final class LlmService {
         }
       }
       /**
+       * <pre>
+       * A URI containing instructions for text generation.
+       * </pre>
+       *
        * <code>string instruction_uri = 5;</code>
        * @return The bytes for instructionUri.
        */
@@ -1502,6 +1547,10 @@ public final class LlmService {
         }
       }
       /**
+       * <pre>
+       * A URI containing instructions for text generation.
+       * </pre>
+       *
        * <code>string instruction_uri = 5;</code>
        * @param value The instructionUri to set.
        * @return This builder for chaining.
@@ -1517,6 +1566,10 @@ public final class LlmService {
         return this;
       }
       /**
+       * <pre>
+       * A URI containing instructions for text generation.
+       * </pre>
+       *
        * <code>string instruction_uri = 5;</code>
        * @return This builder for chaining.
        */
@@ -1529,6 +1582,10 @@ public final class LlmService {
         return this;
       }
       /**
+       * <pre>
+       * A URI containing instructions for text generation.
+       * </pre>
+       *
        * <code>string instruction_uri = 5;</code>
        * @param value The bytes for instructionUri to set.
        * @return This builder for chaining.
@@ -1547,7 +1604,7 @@ public final class LlmService {
 
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+       * The text-based request for text generation.
        * </pre>
        *
        * <code>string request_text = 4;</code>
@@ -1559,7 +1616,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+       * The text-based request for text generation.
        * </pre>
        *
        * <code>string request_text = 4;</code>
@@ -1585,7 +1642,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+       * The text-based request for text generation.
        * </pre>
        *
        * <code>string request_text = 4;</code>
@@ -1612,7 +1669,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+       * The text-based request for text generation.
        * </pre>
        *
        * <code>string request_text = 4;</code>
@@ -1631,7 +1688,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+       * The text-based request for text generation.
        * </pre>
        *
        * <code>string request_text = 4;</code>
@@ -1647,7 +1704,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction. The total length of [instruction_text], [request_text], and [max_tokens] should be equal or less than 7400 tokens.
+       * The text-based request for text generation.
        * </pre>
        *
        * <code>string request_text = 4;</code>
@@ -1724,7 +1781,7 @@ public final class LlmService {
 
     /**
      * <pre>
-     * Generated alternatives
+     * A list of alternative text responses.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -1733,7 +1790,7 @@ public final class LlmService {
         getAlternativesList();
     /**
      * <pre>
-     * Generated alternatives
+     * A list of alternative text responses.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -1741,7 +1798,7 @@ public final class LlmService {
     yandex.cloud.api.ai.llm.v1alpha.Llm.Alternative getAlternatives(int index);
     /**
      * <pre>
-     * Generated alternatives
+     * A list of alternative text responses.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -1749,7 +1806,7 @@ public final class LlmService {
     int getAlternativesCount();
     /**
      * <pre>
-     * Generated alternatives
+     * A list of alternative text responses.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -1758,7 +1815,7 @@ public final class LlmService {
         getAlternativesOrBuilderList();
     /**
      * <pre>
-     * Generated alternatives
+     * A list of alternative text responses.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -1768,7 +1825,7 @@ public final class LlmService {
 
     /**
      * <pre>
-     * Number of tokens for instruction text and request text
+     * The number of tokens used in the prompt, including both the [instruction_text] and [request_text].
      * </pre>
      *
      * <code>int64 num_prompt_tokens = 2;</code>
@@ -1778,7 +1835,7 @@ public final class LlmService {
   }
   /**
    * <pre>
-   * Contains a set of alternative responses.
+   * Response containing generated text alternatives and token count.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.InstructResponse}
@@ -1880,7 +1937,7 @@ public final class LlmService {
     private java.util.List<yandex.cloud.api.ai.llm.v1alpha.Llm.Alternative> alternatives_;
     /**
      * <pre>
-     * Generated alternatives
+     * A list of alternative text responses.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -1891,7 +1948,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Generated alternatives
+     * A list of alternative text responses.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -1903,7 +1960,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Generated alternatives
+     * A list of alternative text responses.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -1914,7 +1971,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Generated alternatives
+     * A list of alternative text responses.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -1925,7 +1982,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Generated alternatives
+     * A list of alternative text responses.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -1940,7 +1997,7 @@ public final class LlmService {
     private long numPromptTokens_;
     /**
      * <pre>
-     * Number of tokens for instruction text and request text
+     * The number of tokens used in the prompt, including both the [instruction_text] and [request_text].
      * </pre>
      *
      * <code>int64 num_prompt_tokens = 2;</code>
@@ -2122,7 +2179,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Contains a set of alternative responses.
+     * Response containing generated text alternatives and token count.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.InstructResponse}
@@ -2329,7 +2386,7 @@ public final class LlmService {
 
       /**
        * <pre>
-       * Generated alternatives
+       * A list of alternative text responses.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -2343,7 +2400,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generated alternatives
+       * A list of alternative text responses.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -2357,7 +2414,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generated alternatives
+       * A list of alternative text responses.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -2371,7 +2428,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generated alternatives
+       * A list of alternative text responses.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -2392,7 +2449,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generated alternatives
+       * A list of alternative text responses.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -2410,7 +2467,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generated alternatives
+       * A list of alternative text responses.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -2430,7 +2487,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generated alternatives
+       * A list of alternative text responses.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -2451,7 +2508,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generated alternatives
+       * A list of alternative text responses.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -2469,7 +2526,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generated alternatives
+       * A list of alternative text responses.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -2487,7 +2544,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generated alternatives
+       * A list of alternative text responses.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -2506,7 +2563,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generated alternatives
+       * A list of alternative text responses.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -2523,7 +2580,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generated alternatives
+       * A list of alternative text responses.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -2540,7 +2597,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generated alternatives
+       * A list of alternative text responses.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -2551,7 +2608,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generated alternatives
+       * A list of alternative text responses.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -2565,7 +2622,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generated alternatives
+       * A list of alternative text responses.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -2580,7 +2637,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generated alternatives
+       * A list of alternative text responses.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -2591,7 +2648,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generated alternatives
+       * A list of alternative text responses.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -2603,7 +2660,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generated alternatives
+       * A list of alternative text responses.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Alternative alternatives = 1;</code>
@@ -2630,7 +2687,7 @@ public final class LlmService {
       private long numPromptTokens_ ;
       /**
        * <pre>
-       * Number of tokens for instruction text and request text
+       * The number of tokens used in the prompt, including both the [instruction_text] and [request_text].
        * </pre>
        *
        * <code>int64 num_prompt_tokens = 2;</code>
@@ -2642,7 +2699,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Number of tokens for instruction text and request text
+       * The number of tokens used in the prompt, including both the [instruction_text] and [request_text].
        * </pre>
        *
        * <code>int64 num_prompt_tokens = 2;</code>
@@ -2657,7 +2714,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Number of tokens for instruction text and request text
+       * The number of tokens used in the prompt, including both the [instruction_text] and [request_text].
        * </pre>
        *
        * <code>int64 num_prompt_tokens = 2;</code>
@@ -2728,6 +2785,7 @@ public final class LlmService {
 
     /**
      * <pre>
+     * The name or identifier of the model to be used for the chat.
      * Possible value for now: `general`.
      * </pre>
      *
@@ -2737,6 +2795,7 @@ public final class LlmService {
     java.lang.String getModel();
     /**
      * <pre>
+     * The name or identifier of the model to be used for the chat.
      * Possible value for now: `general`.
      * </pre>
      *
@@ -2748,7 +2807,7 @@ public final class LlmService {
 
     /**
      * <pre>
-     * Generation options
+     * Configuration options for text generation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -2757,7 +2816,7 @@ public final class LlmService {
     boolean hasGenerationOptions();
     /**
      * <pre>
-     * Generation options
+     * Configuration options for text generation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -2766,7 +2825,7 @@ public final class LlmService {
     yandex.cloud.api.ai.llm.v1alpha.Llm.GenerationOptions getGenerationOptions();
     /**
      * <pre>
-     * Generation options
+     * Configuration options for text generation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -2775,7 +2834,7 @@ public final class LlmService {
 
     /**
      * <pre>
-     * Text of the instruction.
+     * The text-based instruction for the conversation.
      * </pre>
      *
      * <code>string instruction_text = 3;</code>
@@ -2784,7 +2843,7 @@ public final class LlmService {
     boolean hasInstructionText();
     /**
      * <pre>
-     * Text of the instruction.
+     * The text-based instruction for the conversation.
      * </pre>
      *
      * <code>string instruction_text = 3;</code>
@@ -2793,7 +2852,7 @@ public final class LlmService {
     java.lang.String getInstructionText();
     /**
      * <pre>
-     * Text of the instruction.
+     * The text-based instruction for the conversation.
      * </pre>
      *
      * <code>string instruction_text = 3;</code>
@@ -2804,7 +2863,7 @@ public final class LlmService {
 
     /**
      * <pre>
-     * Message history.
+     * A list of messages in the conversation.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -2813,7 +2872,7 @@ public final class LlmService {
         getMessagesList();
     /**
      * <pre>
-     * Message history.
+     * A list of messages in the conversation.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -2821,7 +2880,7 @@ public final class LlmService {
     yandex.cloud.api.ai.llm.v1alpha.Llm.Message getMessages(int index);
     /**
      * <pre>
-     * Message history.
+     * A list of messages in the conversation.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -2829,7 +2888,7 @@ public final class LlmService {
     int getMessagesCount();
     /**
      * <pre>
-     * Message history.
+     * A list of messages in the conversation.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -2838,7 +2897,7 @@ public final class LlmService {
         getMessagesOrBuilderList();
     /**
      * <pre>
-     * Message history.
+     * A list of messages in the conversation.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -2850,7 +2909,7 @@ public final class LlmService {
   }
   /**
    * <pre>
-   * Describe your chat query: set generation options, context in the instruction part and message history.
+   * Request to engage in a chat conversation with a text generation model.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.ChatRequest}
@@ -3012,6 +3071,7 @@ public final class LlmService {
     private volatile java.lang.Object model_;
     /**
      * <pre>
+     * The name or identifier of the model to be used for the chat.
      * Possible value for now: `general`.
      * </pre>
      *
@@ -3033,6 +3093,7 @@ public final class LlmService {
     }
     /**
      * <pre>
+     * The name or identifier of the model to be used for the chat.
      * Possible value for now: `general`.
      * </pre>
      *
@@ -3058,7 +3119,7 @@ public final class LlmService {
     private yandex.cloud.api.ai.llm.v1alpha.Llm.GenerationOptions generationOptions_;
     /**
      * <pre>
-     * Generation options
+     * Configuration options for text generation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -3070,7 +3131,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Generation options
+     * Configuration options for text generation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -3082,7 +3143,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Generation options
+     * Configuration options for text generation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -3095,7 +3156,7 @@ public final class LlmService {
     public static final int INSTRUCTION_TEXT_FIELD_NUMBER = 3;
     /**
      * <pre>
-     * Text of the instruction.
+     * The text-based instruction for the conversation.
      * </pre>
      *
      * <code>string instruction_text = 3;</code>
@@ -3106,7 +3167,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Text of the instruction.
+     * The text-based instruction for the conversation.
      * </pre>
      *
      * <code>string instruction_text = 3;</code>
@@ -3131,7 +3192,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Text of the instruction.
+     * The text-based instruction for the conversation.
      * </pre>
      *
      * <code>string instruction_text = 3;</code>
@@ -3160,7 +3221,7 @@ public final class LlmService {
     private java.util.List<yandex.cloud.api.ai.llm.v1alpha.Llm.Message> messages_;
     /**
      * <pre>
-     * Message history.
+     * A list of messages in the conversation.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -3171,7 +3232,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Message history.
+     * A list of messages in the conversation.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -3183,7 +3244,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Message history.
+     * A list of messages in the conversation.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -3194,7 +3255,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Message history.
+     * A list of messages in the conversation.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -3205,7 +3266,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Message history.
+     * A list of messages in the conversation.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -3424,7 +3485,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Describe your chat query: set generation options, context in the instruction part and message history.
+     * Request to engage in a chat conversation with a text generation model.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.ChatRequest}
@@ -3667,6 +3728,7 @@ public final class LlmService {
       private java.lang.Object model_ = "";
       /**
        * <pre>
+       * The name or identifier of the model to be used for the chat.
        * Possible value for now: `general`.
        * </pre>
        *
@@ -3687,6 +3749,7 @@ public final class LlmService {
       }
       /**
        * <pre>
+       * The name or identifier of the model to be used for the chat.
        * Possible value for now: `general`.
        * </pre>
        *
@@ -3708,6 +3771,7 @@ public final class LlmService {
       }
       /**
        * <pre>
+       * The name or identifier of the model to be used for the chat.
        * Possible value for now: `general`.
        * </pre>
        *
@@ -3727,6 +3791,7 @@ public final class LlmService {
       }
       /**
        * <pre>
+       * The name or identifier of the model to be used for the chat.
        * Possible value for now: `general`.
        * </pre>
        *
@@ -3741,6 +3806,7 @@ public final class LlmService {
       }
       /**
        * <pre>
+       * The name or identifier of the model to be used for the chat.
        * Possible value for now: `general`.
        * </pre>
        *
@@ -3765,7 +3831,7 @@ public final class LlmService {
           yandex.cloud.api.ai.llm.v1alpha.Llm.GenerationOptions, yandex.cloud.api.ai.llm.v1alpha.Llm.GenerationOptions.Builder, yandex.cloud.api.ai.llm.v1alpha.Llm.GenerationOptionsOrBuilder> generationOptionsBuilder_;
       /**
        * <pre>
-       * Generation options
+       * Configuration options for text generation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -3776,7 +3842,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generation options
+       * Configuration options for text generation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -3791,7 +3857,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generation options
+       * Configuration options for text generation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -3811,7 +3877,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generation options
+       * Configuration options for text generation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -3829,7 +3895,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generation options
+       * Configuration options for text generation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -3851,7 +3917,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generation options
+       * Configuration options for text generation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -3869,7 +3935,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generation options
+       * Configuration options for text generation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -3881,7 +3947,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generation options
+       * Configuration options for text generation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -3896,7 +3962,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Generation options
+       * Configuration options for text generation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.GenerationOptions generation_options = 2;</code>
@@ -3917,7 +3983,7 @@ public final class LlmService {
 
       /**
        * <pre>
-       * Text of the instruction.
+       * The text-based instruction for the conversation.
        * </pre>
        *
        * <code>string instruction_text = 3;</code>
@@ -3929,7 +3995,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction.
+       * The text-based instruction for the conversation.
        * </pre>
        *
        * <code>string instruction_text = 3;</code>
@@ -3955,7 +4021,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction.
+       * The text-based instruction for the conversation.
        * </pre>
        *
        * <code>string instruction_text = 3;</code>
@@ -3982,7 +4048,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction.
+       * The text-based instruction for the conversation.
        * </pre>
        *
        * <code>string instruction_text = 3;</code>
@@ -4001,7 +4067,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction.
+       * The text-based instruction for the conversation.
        * </pre>
        *
        * <code>string instruction_text = 3;</code>
@@ -4017,7 +4083,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text of the instruction.
+       * The text-based instruction for the conversation.
        * </pre>
        *
        * <code>string instruction_text = 3;</code>
@@ -4050,7 +4116,7 @@ public final class LlmService {
 
       /**
        * <pre>
-       * Message history.
+       * A list of messages in the conversation.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -4064,7 +4130,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Message history.
+       * A list of messages in the conversation.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -4078,7 +4144,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Message history.
+       * A list of messages in the conversation.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -4092,7 +4158,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Message history.
+       * A list of messages in the conversation.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -4113,7 +4179,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Message history.
+       * A list of messages in the conversation.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -4131,7 +4197,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Message history.
+       * A list of messages in the conversation.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -4151,7 +4217,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Message history.
+       * A list of messages in the conversation.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -4172,7 +4238,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Message history.
+       * A list of messages in the conversation.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -4190,7 +4256,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Message history.
+       * A list of messages in the conversation.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -4208,7 +4274,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Message history.
+       * A list of messages in the conversation.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -4227,7 +4293,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Message history.
+       * A list of messages in the conversation.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -4244,7 +4310,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Message history.
+       * A list of messages in the conversation.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -4261,7 +4327,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Message history.
+       * A list of messages in the conversation.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -4272,7 +4338,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Message history.
+       * A list of messages in the conversation.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -4286,7 +4352,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Message history.
+       * A list of messages in the conversation.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -4301,7 +4367,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Message history.
+       * A list of messages in the conversation.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -4312,7 +4378,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Message history.
+       * A list of messages in the conversation.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -4324,7 +4390,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Message history.
+       * A list of messages in the conversation.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Message messages = 4;</code>
@@ -4406,7 +4472,7 @@ public final class LlmService {
 
     /**
      * <pre>
-     * Assistant's message.
+     * The assistant's message in the chat conversation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4415,7 +4481,7 @@ public final class LlmService {
     boolean hasMessage();
     /**
      * <pre>
-     * Assistant's message.
+     * The assistant's message in the chat conversation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4424,7 +4490,7 @@ public final class LlmService {
     yandex.cloud.api.ai.llm.v1alpha.Llm.Message getMessage();
     /**
      * <pre>
-     * Assistant's message.
+     * The assistant's message in the chat conversation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4433,7 +4499,7 @@ public final class LlmService {
 
     /**
      * <pre>
-     * Total number of tokens for chat request and chat response.
+     * Total number of tokens used in both the chat request and chat response.
      * </pre>
      *
      * <code>int64 num_tokens = 2;</code>
@@ -4443,7 +4509,7 @@ public final class LlmService {
   }
   /**
    * <pre>
-   * Contains a model-generated assistant's response for the chat query.
+   * Contains a model-generated response for a chat query.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.ChatResponse}
@@ -4544,7 +4610,7 @@ public final class LlmService {
     private yandex.cloud.api.ai.llm.v1alpha.Llm.Message message_;
     /**
      * <pre>
-     * Assistant's message.
+     * The assistant's message in the chat conversation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4556,7 +4622,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Assistant's message.
+     * The assistant's message in the chat conversation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4568,7 +4634,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Assistant's message.
+     * The assistant's message in the chat conversation.
      * </pre>
      *
      * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4582,7 +4648,7 @@ public final class LlmService {
     private long numTokens_;
     /**
      * <pre>
-     * Total number of tokens for chat request and chat response.
+     * Total number of tokens used in both the chat request and chat response.
      * </pre>
      *
      * <code>int64 num_tokens = 2;</code>
@@ -4767,7 +4833,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Contains a model-generated assistant's response for the chat query.
+     * Contains a model-generated response for a chat query.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.ChatResponse}
@@ -4935,7 +5001,7 @@ public final class LlmService {
           yandex.cloud.api.ai.llm.v1alpha.Llm.Message, yandex.cloud.api.ai.llm.v1alpha.Llm.Message.Builder, yandex.cloud.api.ai.llm.v1alpha.Llm.MessageOrBuilder> messageBuilder_;
       /**
        * <pre>
-       * Assistant's message.
+       * The assistant's message in the chat conversation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4946,7 +5012,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Assistant's message.
+       * The assistant's message in the chat conversation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4961,7 +5027,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Assistant's message.
+       * The assistant's message in the chat conversation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4981,7 +5047,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Assistant's message.
+       * The assistant's message in the chat conversation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -4999,7 +5065,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Assistant's message.
+       * The assistant's message in the chat conversation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -5021,7 +5087,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Assistant's message.
+       * The assistant's message in the chat conversation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -5039,7 +5105,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Assistant's message.
+       * The assistant's message in the chat conversation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -5051,7 +5117,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Assistant's message.
+       * The assistant's message in the chat conversation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -5066,7 +5132,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Assistant's message.
+       * The assistant's message in the chat conversation.
        * </pre>
        *
        * <code>.yandex.cloud.ai.llm.v1alpha.Message message = 1;</code>
@@ -5088,7 +5154,7 @@ public final class LlmService {
       private long numTokens_ ;
       /**
        * <pre>
-       * Total number of tokens for chat request and chat response.
+       * Total number of tokens used in both the chat request and chat response.
        * </pre>
        *
        * <code>int64 num_tokens = 2;</code>
@@ -5100,7 +5166,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Total number of tokens for chat request and chat response.
+       * Total number of tokens used in both the chat request and chat response.
        * </pre>
        *
        * <code>int64 num_tokens = 2;</code>
@@ -5115,7 +5181,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Total number of tokens for chat request and chat response.
+       * Total number of tokens used in both the chat request and chat response.
        * </pre>
        *
        * <code>int64 num_tokens = 2;</code>
@@ -5186,7 +5252,8 @@ public final class LlmService {
 
     /**
      * <pre>
-     * Possible value for now: `general`.
+     * The name or identifier of the model to be used for tokenization.
+     * Possible values for now: `general`, `general:embedding`.
      * </pre>
      *
      * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5195,7 +5262,8 @@ public final class LlmService {
     java.lang.String getModel();
     /**
      * <pre>
-     * Possible value for now: `general`.
+     * The name or identifier of the model to be used for tokenization.
+     * Possible values for now: `general`, `general:embedding`.
      * </pre>
      *
      * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5206,7 +5274,7 @@ public final class LlmService {
 
     /**
      * <pre>
-     * Text for tokenization request.
+     * The input text to tokenize.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -5215,7 +5283,7 @@ public final class LlmService {
     java.lang.String getText();
     /**
      * <pre>
-     * Text for tokenization request.
+     * The input text to tokenize.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -5226,7 +5294,7 @@ public final class LlmService {
   }
   /**
    * <pre>
-   * Tokenization request.
+   * Request to tokenize input text.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.TokenizeRequest}
@@ -5323,7 +5391,8 @@ public final class LlmService {
     private volatile java.lang.Object model_;
     /**
      * <pre>
-     * Possible value for now: `general`.
+     * The name or identifier of the model to be used for tokenization.
+     * Possible values for now: `general`, `general:embedding`.
      * </pre>
      *
      * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5344,7 +5413,8 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Possible value for now: `general`.
+     * The name or identifier of the model to be used for tokenization.
+     * Possible values for now: `general`, `general:embedding`.
      * </pre>
      *
      * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5369,7 +5439,7 @@ public final class LlmService {
     private volatile java.lang.Object text_;
     /**
      * <pre>
-     * Text for tokenization request.
+     * The input text to tokenize.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -5390,7 +5460,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Text for tokenization request.
+     * The input text to tokenize.
      * </pre>
      *
      * <code>string text = 2;</code>
@@ -5577,7 +5647,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Tokenization request.
+     * Request to tokenize input text.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.TokenizeRequest}
@@ -5737,7 +5807,8 @@ public final class LlmService {
       private java.lang.Object model_ = "";
       /**
        * <pre>
-       * Possible value for now: `general`.
+       * The name or identifier of the model to be used for tokenization.
+       * Possible values for now: `general`, `general:embedding`.
        * </pre>
        *
        * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5757,7 +5828,8 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Possible value for now: `general`.
+       * The name or identifier of the model to be used for tokenization.
+       * Possible values for now: `general`, `general:embedding`.
        * </pre>
        *
        * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5778,7 +5850,8 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Possible value for now: `general`.
+       * The name or identifier of the model to be used for tokenization.
+       * Possible values for now: `general`, `general:embedding`.
        * </pre>
        *
        * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5797,7 +5870,8 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Possible value for now: `general`.
+       * The name or identifier of the model to be used for tokenization.
+       * Possible values for now: `general`, `general:embedding`.
        * </pre>
        *
        * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5811,7 +5885,8 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Possible value for now: `general`.
+       * The name or identifier of the model to be used for tokenization.
+       * Possible values for now: `general`, `general:embedding`.
        * </pre>
        *
        * <code>string model = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -5833,7 +5908,7 @@ public final class LlmService {
       private java.lang.Object text_ = "";
       /**
        * <pre>
-       * Text for tokenization request.
+       * The input text to tokenize.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -5853,7 +5928,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text for tokenization request.
+       * The input text to tokenize.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -5874,7 +5949,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text for tokenization request.
+       * The input text to tokenize.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -5893,7 +5968,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text for tokenization request.
+       * The input text to tokenize.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -5907,7 +5982,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Text for tokenization request.
+       * The input text to tokenize.
        * </pre>
        *
        * <code>string text = 2;</code>
@@ -5984,7 +6059,7 @@ public final class LlmService {
 
     /**
      * <pre>
-     * Sequence of tokens in tokenized text.
+     * A list of tokens obtained from tokenization.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -5993,7 +6068,7 @@ public final class LlmService {
         getTokensList();
     /**
      * <pre>
-     * Sequence of tokens in tokenized text.
+     * A list of tokens obtained from tokenization.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6001,7 +6076,7 @@ public final class LlmService {
     yandex.cloud.api.ai.llm.v1alpha.Llm.Token getTokens(int index);
     /**
      * <pre>
-     * Sequence of tokens in tokenized text.
+     * A list of tokens obtained from tokenization.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6009,7 +6084,7 @@ public final class LlmService {
     int getTokensCount();
     /**
      * <pre>
-     * Sequence of tokens in tokenized text.
+     * A list of tokens obtained from tokenization.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6018,7 +6093,7 @@ public final class LlmService {
         getTokensOrBuilderList();
     /**
      * <pre>
-     * Sequence of tokens in tokenized text.
+     * A list of tokens obtained from tokenization.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6125,7 +6200,7 @@ public final class LlmService {
     private java.util.List<yandex.cloud.api.ai.llm.v1alpha.Llm.Token> tokens_;
     /**
      * <pre>
-     * Sequence of tokens in tokenized text.
+     * A list of tokens obtained from tokenization.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6136,7 +6211,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Sequence of tokens in tokenized text.
+     * A list of tokens obtained from tokenization.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6148,7 +6223,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Sequence of tokens in tokenized text.
+     * A list of tokens obtained from tokenization.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6159,7 +6234,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Sequence of tokens in tokenized text.
+     * A list of tokens obtained from tokenization.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6170,7 +6245,7 @@ public final class LlmService {
     }
     /**
      * <pre>
-     * Sequence of tokens in tokenized text.
+     * A list of tokens obtained from tokenization.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6541,7 +6616,7 @@ public final class LlmService {
 
       /**
        * <pre>
-       * Sequence of tokens in tokenized text.
+       * A list of tokens obtained from tokenization.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6555,7 +6630,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text.
+       * A list of tokens obtained from tokenization.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6569,7 +6644,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text.
+       * A list of tokens obtained from tokenization.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6583,7 +6658,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text.
+       * A list of tokens obtained from tokenization.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6604,7 +6679,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text.
+       * A list of tokens obtained from tokenization.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6622,7 +6697,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text.
+       * A list of tokens obtained from tokenization.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6642,7 +6717,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text.
+       * A list of tokens obtained from tokenization.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6663,7 +6738,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text.
+       * A list of tokens obtained from tokenization.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6681,7 +6756,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text.
+       * A list of tokens obtained from tokenization.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6699,7 +6774,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text.
+       * A list of tokens obtained from tokenization.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6718,7 +6793,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text.
+       * A list of tokens obtained from tokenization.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6735,7 +6810,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text.
+       * A list of tokens obtained from tokenization.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6752,7 +6827,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text.
+       * A list of tokens obtained from tokenization.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6763,7 +6838,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text.
+       * A list of tokens obtained from tokenization.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6777,7 +6852,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text.
+       * A list of tokens obtained from tokenization.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6792,7 +6867,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text.
+       * A list of tokens obtained from tokenization.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6803,7 +6878,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text.
+       * A list of tokens obtained from tokenization.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6815,7 +6890,7 @@ public final class LlmService {
       }
       /**
        * <pre>
-       * Sequence of tokens in tokenized text.
+       * A list of tokens obtained from tokenization.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.llm.v1alpha.Token tokens = 1;</code>
@@ -6896,34 +6971,58 @@ public final class LlmService {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * The type of embedding to be generated.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.llm.v1alpha.EmbeddingRequest.EmbeddingType embedding_type = 1;</code>
      * @return The enum numeric value on the wire for embeddingType.
      */
     int getEmbeddingTypeValue();
     /**
+     * <pre>
+     * The type of embedding to be generated.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.llm.v1alpha.EmbeddingRequest.EmbeddingType embedding_type = 1;</code>
      * @return The embeddingType.
      */
     yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest.EmbeddingType getEmbeddingType();
 
     /**
-     * <code>string model = 2;</code>
+     * <pre>
+     * The name or identifier of the model to be used for embedding. Possible value for now: `general:embedding`.
+     * </pre>
+     *
+     * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The model.
      */
     java.lang.String getModel();
     /**
-     * <code>string model = 2;</code>
+     * <pre>
+     * The name or identifier of the model to be used for embedding. Possible value for now: `general:embedding`.
+     * </pre>
+     *
+     * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for model.
      */
     com.google.protobuf.ByteString
         getModelBytes();
 
     /**
+     * <pre>
+     * The input text for which the embedding is requested.
+     * </pre>
+     *
      * <code>string text = 3;</code>
      * @return The text.
      */
     java.lang.String getText();
     /**
+     * <pre>
+     * The input text for which the embedding is requested.
+     * </pre>
+     *
      * <code>string text = 3;</code>
      * @return The bytes for text.
      */
@@ -6931,6 +7030,10 @@ public final class LlmService {
         getTextBytes();
   }
   /**
+   * <pre>
+   * Represents a request to obtain embeddings for text data.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.EmbeddingRequest}
    */
   public static final class EmbeddingRequest extends
@@ -7029,19 +7132,39 @@ public final class LlmService {
     }
 
     /**
+     * <pre>
+     * Enum to specify the type of embedding to be generated.
+     * </pre>
+     *
      * Protobuf enum {@code yandex.cloud.ai.llm.v1alpha.EmbeddingRequest.EmbeddingType}
      */
     public enum EmbeddingType
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
+       * <pre>
+       * Unspecified embedding type.
+       * </pre>
+       *
        * <code>EMBEDDING_TYPE_UNSPECIFIED = 0;</code>
        */
       EMBEDDING_TYPE_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Embedding for a query. Use this when you have a short query or search term
+       * that you want to obtain an embedding for. Query embeddings are typically
+       * used in information retrieval and search applications.
+       * </pre>
+       *
        * <code>EMBEDDING_TYPE_QUERY = 1;</code>
        */
       EMBEDDING_TYPE_QUERY(1),
       /**
+       * <pre>
+       * Embedding for a document. Use this when you have a longer document or a piece
+       * of text that you want to obtain an embedding for. Document embeddings are often
+       * used in natural language understanding and document similarity tasks.
+       * </pre>
+       *
        * <code>EMBEDDING_TYPE_DOCUMENT = 2;</code>
        */
       EMBEDDING_TYPE_DOCUMENT(2),
@@ -7049,14 +7172,30 @@ public final class LlmService {
       ;
 
       /**
+       * <pre>
+       * Unspecified embedding type.
+       * </pre>
+       *
        * <code>EMBEDDING_TYPE_UNSPECIFIED = 0;</code>
        */
       public static final int EMBEDDING_TYPE_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Embedding for a query. Use this when you have a short query or search term
+       * that you want to obtain an embedding for. Query embeddings are typically
+       * used in information retrieval and search applications.
+       * </pre>
+       *
        * <code>EMBEDDING_TYPE_QUERY = 1;</code>
        */
       public static final int EMBEDDING_TYPE_QUERY_VALUE = 1;
       /**
+       * <pre>
+       * Embedding for a document. Use this when you have a longer document or a piece
+       * of text that you want to obtain an embedding for. Document embeddings are often
+       * used in natural language understanding and document similarity tasks.
+       * </pre>
+       *
        * <code>EMBEDDING_TYPE_DOCUMENT = 2;</code>
        */
       public static final int EMBEDDING_TYPE_DOCUMENT_VALUE = 2;
@@ -7148,6 +7287,10 @@ public final class LlmService {
     public static final int EMBEDDING_TYPE_FIELD_NUMBER = 1;
     private int embeddingType_;
     /**
+     * <pre>
+     * The type of embedding to be generated.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.llm.v1alpha.EmbeddingRequest.EmbeddingType embedding_type = 1;</code>
      * @return The enum numeric value on the wire for embeddingType.
      */
@@ -7155,6 +7298,10 @@ public final class LlmService {
       return embeddingType_;
     }
     /**
+     * <pre>
+     * The type of embedding to be generated.
+     * </pre>
+     *
      * <code>.yandex.cloud.ai.llm.v1alpha.EmbeddingRequest.EmbeddingType embedding_type = 1;</code>
      * @return The embeddingType.
      */
@@ -7167,7 +7314,11 @@ public final class LlmService {
     public static final int MODEL_FIELD_NUMBER = 2;
     private volatile java.lang.Object model_;
     /**
-     * <code>string model = 2;</code>
+     * <pre>
+     * The name or identifier of the model to be used for embedding. Possible value for now: `general:embedding`.
+     * </pre>
+     *
+     * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The model.
      */
     @java.lang.Override
@@ -7184,7 +7335,11 @@ public final class LlmService {
       }
     }
     /**
-     * <code>string model = 2;</code>
+     * <pre>
+     * The name or identifier of the model to be used for embedding. Possible value for now: `general:embedding`.
+     * </pre>
+     *
+     * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for model.
      */
     @java.lang.Override
@@ -7205,6 +7360,10 @@ public final class LlmService {
     public static final int TEXT_FIELD_NUMBER = 3;
     private volatile java.lang.Object text_;
     /**
+     * <pre>
+     * The input text for which the embedding is requested.
+     * </pre>
+     *
      * <code>string text = 3;</code>
      * @return The text.
      */
@@ -7222,6 +7381,10 @@ public final class LlmService {
       }
     }
     /**
+     * <pre>
+     * The input text for which the embedding is requested.
+     * </pre>
+     *
      * <code>string text = 3;</code>
      * @return The bytes for text.
      */
@@ -7415,6 +7578,10 @@ public final class LlmService {
       return builder;
     }
     /**
+     * <pre>
+     * Represents a request to obtain embeddings for text data.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.EmbeddingRequest}
      */
     public static final class Builder extends
@@ -7577,6 +7744,10 @@ public final class LlmService {
 
       private int embeddingType_ = 0;
       /**
+       * <pre>
+       * The type of embedding to be generated.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.llm.v1alpha.EmbeddingRequest.EmbeddingType embedding_type = 1;</code>
        * @return The enum numeric value on the wire for embeddingType.
        */
@@ -7584,6 +7755,10 @@ public final class LlmService {
         return embeddingType_;
       }
       /**
+       * <pre>
+       * The type of embedding to be generated.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.llm.v1alpha.EmbeddingRequest.EmbeddingType embedding_type = 1;</code>
        * @param value The enum numeric value on the wire for embeddingType to set.
        * @return This builder for chaining.
@@ -7595,6 +7770,10 @@ public final class LlmService {
         return this;
       }
       /**
+       * <pre>
+       * The type of embedding to be generated.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.llm.v1alpha.EmbeddingRequest.EmbeddingType embedding_type = 1;</code>
        * @return The embeddingType.
        */
@@ -7605,6 +7784,10 @@ public final class LlmService {
         return result == null ? yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest.EmbeddingType.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * The type of embedding to be generated.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.llm.v1alpha.EmbeddingRequest.EmbeddingType embedding_type = 1;</code>
        * @param value The embeddingType to set.
        * @return This builder for chaining.
@@ -7619,6 +7802,10 @@ public final class LlmService {
         return this;
       }
       /**
+       * <pre>
+       * The type of embedding to be generated.
+       * </pre>
+       *
        * <code>.yandex.cloud.ai.llm.v1alpha.EmbeddingRequest.EmbeddingType embedding_type = 1;</code>
        * @return This builder for chaining.
        */
@@ -7631,7 +7818,11 @@ public final class LlmService {
 
       private java.lang.Object model_ = "";
       /**
-       * <code>string model = 2;</code>
+       * <pre>
+       * The name or identifier of the model to be used for embedding. Possible value for now: `general:embedding`.
+       * </pre>
+       *
+       * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The model.
        */
       public java.lang.String getModel() {
@@ -7647,7 +7838,11 @@ public final class LlmService {
         }
       }
       /**
-       * <code>string model = 2;</code>
+       * <pre>
+       * The name or identifier of the model to be used for embedding. Possible value for now: `general:embedding`.
+       * </pre>
+       *
+       * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for model.
        */
       public com.google.protobuf.ByteString
@@ -7664,7 +7859,11 @@ public final class LlmService {
         }
       }
       /**
-       * <code>string model = 2;</code>
+       * <pre>
+       * The name or identifier of the model to be used for embedding. Possible value for now: `general:embedding`.
+       * </pre>
+       *
+       * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The model to set.
        * @return This builder for chaining.
        */
@@ -7679,7 +7878,11 @@ public final class LlmService {
         return this;
       }
       /**
-       * <code>string model = 2;</code>
+       * <pre>
+       * The name or identifier of the model to be used for embedding. Possible value for now: `general:embedding`.
+       * </pre>
+       *
+       * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearModel() {
@@ -7689,7 +7892,11 @@ public final class LlmService {
         return this;
       }
       /**
-       * <code>string model = 2;</code>
+       * <pre>
+       * The name or identifier of the model to be used for embedding. Possible value for now: `general:embedding`.
+       * </pre>
+       *
+       * <code>string model = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for model to set.
        * @return This builder for chaining.
        */
@@ -7707,6 +7914,10 @@ public final class LlmService {
 
       private java.lang.Object text_ = "";
       /**
+       * <pre>
+       * The input text for which the embedding is requested.
+       * </pre>
+       *
        * <code>string text = 3;</code>
        * @return The text.
        */
@@ -7723,6 +7934,10 @@ public final class LlmService {
         }
       }
       /**
+       * <pre>
+       * The input text for which the embedding is requested.
+       * </pre>
+       *
        * <code>string text = 3;</code>
        * @return The bytes for text.
        */
@@ -7740,6 +7955,10 @@ public final class LlmService {
         }
       }
       /**
+       * <pre>
+       * The input text for which the embedding is requested.
+       * </pre>
+       *
        * <code>string text = 3;</code>
        * @param value The text to set.
        * @return This builder for chaining.
@@ -7755,6 +7974,10 @@ public final class LlmService {
         return this;
       }
       /**
+       * <pre>
+       * The input text for which the embedding is requested.
+       * </pre>
+       *
        * <code>string text = 3;</code>
        * @return This builder for chaining.
        */
@@ -7765,6 +7988,10 @@ public final class LlmService {
         return this;
       }
       /**
+       * <pre>
+       * The input text for which the embedding is requested.
+       * </pre>
+       *
        * <code>string text = 3;</code>
        * @param value The bytes for text to set.
        * @return This builder for chaining.
@@ -7838,16 +8065,28 @@ public final class LlmService {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * A repeated list of double values representing the embedding.
+     * </pre>
+     *
      * <code>repeated double embedding = 1;</code>
      * @return A list containing the embedding.
      */
     java.util.List<java.lang.Double> getEmbeddingList();
     /**
+     * <pre>
+     * A repeated list of double values representing the embedding.
+     * </pre>
+     *
      * <code>repeated double embedding = 1;</code>
      * @return The count of embedding.
      */
     int getEmbeddingCount();
     /**
+     * <pre>
+     * A repeated list of double values representing the embedding.
+     * </pre>
+     *
      * <code>repeated double embedding = 1;</code>
      * @param index The index of the element to return.
      * @return The embedding at the given index.
@@ -7855,12 +8094,20 @@ public final class LlmService {
     double getEmbedding(int index);
 
     /**
+     * <pre>
+     * The number of tokens in the input text.
+     * </pre>
+     *
      * <code>int64 num_tokens = 2;</code>
      * @return The numTokens.
      */
     long getNumTokens();
   }
   /**
+   * <pre>
+   * Represents a response containing embeddings for input text data.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.EmbeddingResponse}
    */
   public static final class EmbeddingResponse extends
@@ -7971,6 +8218,10 @@ public final class LlmService {
     public static final int EMBEDDING_FIELD_NUMBER = 1;
     private com.google.protobuf.Internal.DoubleList embedding_;
     /**
+     * <pre>
+     * A repeated list of double values representing the embedding.
+     * </pre>
+     *
      * <code>repeated double embedding = 1;</code>
      * @return A list containing the embedding.
      */
@@ -7980,6 +8231,10 @@ public final class LlmService {
       return embedding_;
     }
     /**
+     * <pre>
+     * A repeated list of double values representing the embedding.
+     * </pre>
+     *
      * <code>repeated double embedding = 1;</code>
      * @return The count of embedding.
      */
@@ -7987,6 +8242,10 @@ public final class LlmService {
       return embedding_.size();
     }
     /**
+     * <pre>
+     * A repeated list of double values representing the embedding.
+     * </pre>
+     *
      * <code>repeated double embedding = 1;</code>
      * @param index The index of the element to return.
      * @return The embedding at the given index.
@@ -7999,6 +8258,10 @@ public final class LlmService {
     public static final int NUM_TOKENS_FIELD_NUMBER = 2;
     private long numTokens_;
     /**
+     * <pre>
+     * The number of tokens in the input text.
+     * </pre>
+     *
      * <code>int64 num_tokens = 2;</code>
      * @return The numTokens.
      */
@@ -8189,6 +8452,10 @@ public final class LlmService {
       return builder;
     }
     /**
+     * <pre>
+     * Represents a response containing embeddings for input text data.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.ai.llm.v1alpha.EmbeddingResponse}
      */
     public static final class Builder extends
@@ -8362,6 +8629,10 @@ public final class LlmService {
          }
       }
       /**
+       * <pre>
+       * A repeated list of double values representing the embedding.
+       * </pre>
+       *
        * <code>repeated double embedding = 1;</code>
        * @return A list containing the embedding.
        */
@@ -8371,6 +8642,10 @@ public final class LlmService {
                  java.util.Collections.unmodifiableList(embedding_) : embedding_;
       }
       /**
+       * <pre>
+       * A repeated list of double values representing the embedding.
+       * </pre>
+       *
        * <code>repeated double embedding = 1;</code>
        * @return The count of embedding.
        */
@@ -8378,6 +8653,10 @@ public final class LlmService {
         return embedding_.size();
       }
       /**
+       * <pre>
+       * A repeated list of double values representing the embedding.
+       * </pre>
+       *
        * <code>repeated double embedding = 1;</code>
        * @param index The index of the element to return.
        * @return The embedding at the given index.
@@ -8386,6 +8665,10 @@ public final class LlmService {
         return embedding_.getDouble(index);
       }
       /**
+       * <pre>
+       * A repeated list of double values representing the embedding.
+       * </pre>
+       *
        * <code>repeated double embedding = 1;</code>
        * @param index The index to set the value at.
        * @param value The embedding to set.
@@ -8399,6 +8682,10 @@ public final class LlmService {
         return this;
       }
       /**
+       * <pre>
+       * A repeated list of double values representing the embedding.
+       * </pre>
+       *
        * <code>repeated double embedding = 1;</code>
        * @param value The embedding to add.
        * @return This builder for chaining.
@@ -8410,6 +8697,10 @@ public final class LlmService {
         return this;
       }
       /**
+       * <pre>
+       * A repeated list of double values representing the embedding.
+       * </pre>
+       *
        * <code>repeated double embedding = 1;</code>
        * @param values The embedding to add.
        * @return This builder for chaining.
@@ -8423,6 +8714,10 @@ public final class LlmService {
         return this;
       }
       /**
+       * <pre>
+       * A repeated list of double values representing the embedding.
+       * </pre>
+       *
        * <code>repeated double embedding = 1;</code>
        * @return This builder for chaining.
        */
@@ -8435,6 +8730,10 @@ public final class LlmService {
 
       private long numTokens_ ;
       /**
+       * <pre>
+       * The number of tokens in the input text.
+       * </pre>
+       *
        * <code>int64 num_tokens = 2;</code>
        * @return The numTokens.
        */
@@ -8443,6 +8742,10 @@ public final class LlmService {
         return numTokens_;
       }
       /**
+       * <pre>
+       * The number of tokens in the input text.
+       * </pre>
+       *
        * <code>int64 num_tokens = 2;</code>
        * @param value The numTokens to set.
        * @return This builder for chaining.
@@ -8454,6 +8757,10 @@ public final class LlmService {
         return this;
       }
       /**
+       * <pre>
+       * The number of tokens in the input text.
+       * </pre>
+       *
        * <code>int64 num_tokens = 2;</code>
        * @return This builder for chaining.
        */
@@ -8569,52 +8876,59 @@ public final class LlmService {
       "e.proto\022\033yandex.cloud.ai.llm.v1alpha\032%ya" +
       "ndex/cloud/ai/llm/v1alpha/llm.proto\032\034goo" +
       "gle/api/annotations.proto\032\035yandex/cloud/" +
-      "validation.proto\"\337\001\n\017InstructRequest\022\027\n\005" +
-      "model\030\001 \001(\tB\010\212\3101\004<=50\022J\n\022generation_opti" +
-      "ons\030\002 \001(\0132..yandex.cloud.ai.llm.v1alpha." +
-      "GenerationOptions\022\032\n\020instruction_text\030\003 " +
-      "\001(\tH\000\022\031\n\017instruction_uri\030\005 \001(\tH\000\022\026\n\014requ" +
-      "est_text\030\004 \001(\tH\001B\r\n\013InstructionB\t\n\007Reque" +
-      "st\"m\n\020InstructResponse\022>\n\014alternatives\030\001" +
-      " \003(\0132(.yandex.cloud.ai.llm.v1alpha.Alter" +
-      "native\022\031\n\021num_prompt_tokens\030\002 \001(\003\"\325\001\n\013Ch" +
-      "atRequest\022\027\n\005model\030\001 \001(\tB\010\212\3101\004<=50\022J\n\022ge" +
-      "neration_options\030\002 \001(\0132..yandex.cloud.ai" +
-      ".llm.v1alpha.GenerationOptions\022\032\n\020instru" +
-      "ction_text\030\003 \001(\tH\000\0226\n\010messages\030\004 \003(\0132$.y" +
-      "andex.cloud.ai.llm.v1alpha.MessageB\r\n\013In" +
-      "struction\"Y\n\014ChatResponse\0225\n\007message\030\001 \001" +
-      "(\0132$.yandex.cloud.ai.llm.v1alpha.Message" +
-      "\022\022\n\nnum_tokens\030\002 \001(\003\"8\n\017TokenizeRequest\022" +
-      "\027\n\005model\030\001 \001(\tB\010\212\3101\004<=50\022\014\n\004text\030\002 \001(\t\"F" +
-      "\n\020TokenizeResponse\0222\n\006tokens\030\001 \003(\0132\".yan" +
-      "dex.cloud.ai.llm.v1alpha.Token\"\354\001\n\020Embed" +
-      "dingRequest\022S\n\016embedding_type\030\001 \001(\0162;.ya" +
-      "ndex.cloud.ai.llm.v1alpha.EmbeddingReque" +
-      "st.EmbeddingType\022\r\n\005model\030\002 \001(\t\022\014\n\004text\030" +
-      "\003 \001(\t\"f\n\rEmbeddingType\022\036\n\032EMBEDDING_TYPE" +
-      "_UNSPECIFIED\020\000\022\030\n\024EMBEDDING_TYPE_QUERY\020\001" +
-      "\022\033\n\027EMBEDDING_TYPE_DOCUMENT\020\002\":\n\021Embeddi" +
-      "ngResponse\022\021\n\tembedding\030\001 \003(\001\022\022\n\nnum_tok" +
-      "ens\030\002 \001(\0032\242\002\n\025TextGenerationService\022\213\001\n\010" +
-      "Instruct\022,.yandex.cloud.ai.llm.v1alpha.I" +
-      "nstructRequest\032-.yandex.cloud.ai.llm.v1a" +
-      "lpha.InstructResponse\" \202\323\344\223\002\032\"\025/llm/v1al" +
-      "pha/instruct:\001*0\001\022{\n\004Chat\022(.yandex.cloud" +
-      ".ai.llm.v1alpha.ChatRequest\032).yandex.clo" +
-      "ud.ai.llm.v1alpha.ChatResponse\"\034\202\323\344\223\002\026\"\021" +
-      "/llm/v1alpha/chat:\001*0\0012\236\001\n\020TokenizerServ" +
-      "ice\022\211\001\n\010Tokenize\022,.yandex.cloud.ai.llm.v" +
-      "1alpha.TokenizeRequest\032-.yandex.cloud.ai" +
-      ".llm.v1alpha.TokenizeResponse\" \202\323\344\223\002\032\"\025/" +
-      "llm/v1alpha/tokenize:\001*2\243\001\n\021EmbeddingsSe" +
-      "rvice\022\215\001\n\tEmbedding\022-.yandex.cloud.ai.ll" +
-      "m.v1alpha.EmbeddingRequest\032..yandex.clou" +
-      "d.ai.llm.v1alpha.EmbeddingResponse\"!\202\323\344\223" +
-      "\002\033\"\026/llm/v1alpha/embedding:\001*Bf\n\037yandex." +
-      "cloud.api.ai.llm.v1alphaZCgithub.com/yan" +
-      "dex-cloud/go-genproto/yandex/cloud/ai/ll" +
-      "m/v1alpha;llmb\006proto3"
+      "validation.proto\032 yandex/cloud/api/opera" +
+      "tion.proto\032&yandex/cloud/operation/opera" +
+      "tion.proto\"\337\001\n\017InstructRequest\022\027\n\005model\030" +
+      "\001 \001(\tB\010\212\3101\004<=50\022J\n\022generation_options\030\002 " +
+      "\001(\0132..yandex.cloud.ai.llm.v1alpha.Genera" +
+      "tionOptions\022\032\n\020instruction_text\030\003 \001(\tH\000\022" +
+      "\031\n\017instruction_uri\030\005 \001(\tH\000\022\026\n\014request_te" +
+      "xt\030\004 \001(\tH\001B\r\n\013InstructionB\t\n\007Request\"m\n\020" +
+      "InstructResponse\022>\n\014alternatives\030\001 \003(\0132(" +
+      ".yandex.cloud.ai.llm.v1alpha.Alternative" +
+      "\022\031\n\021num_prompt_tokens\030\002 \001(\003\"\325\001\n\013ChatRequ" +
+      "est\022\027\n\005model\030\001 \001(\tB\010\212\3101\004<=50\022J\n\022generati" +
+      "on_options\030\002 \001(\0132..yandex.cloud.ai.llm.v" +
+      "1alpha.GenerationOptions\022\032\n\020instruction_" +
+      "text\030\003 \001(\tH\000\0226\n\010messages\030\004 \003(\0132$.yandex." +
+      "cloud.ai.llm.v1alpha.MessageB\r\n\013Instruct" +
+      "ion\"Y\n\014ChatResponse\0225\n\007message\030\001 \001(\0132$.y" +
+      "andex.cloud.ai.llm.v1alpha.Message\022\022\n\nnu" +
+      "m_tokens\030\002 \001(\003\"8\n\017TokenizeRequest\022\027\n\005mod" +
+      "el\030\001 \001(\tB\010\212\3101\004<=50\022\014\n\004text\030\002 \001(\t\"F\n\020Toke" +
+      "nizeResponse\0222\n\006tokens\030\001 \003(\0132\".yandex.cl" +
+      "oud.ai.llm.v1alpha.Token\"\366\001\n\020EmbeddingRe" +
+      "quest\022S\n\016embedding_type\030\001 \001(\0162;.yandex.c" +
+      "loud.ai.llm.v1alpha.EmbeddingRequest.Emb" +
+      "eddingType\022\027\n\005model\030\002 \001(\tB\010\212\3101\004<=50\022\014\n\004t" +
+      "ext\030\003 \001(\t\"f\n\rEmbeddingType\022\036\n\032EMBEDDING_" +
+      "TYPE_UNSPECIFIED\020\000\022\030\n\024EMBEDDING_TYPE_QUE" +
+      "RY\020\001\022\033\n\027EMBEDDING_TYPE_DOCUMENT\020\002\":\n\021Emb" +
+      "eddingResponse\022\021\n\tembedding\030\001 \003(\001\022\022\n\nnum" +
+      "_tokens\030\002 \001(\0032\242\002\n\025TextGenerationService\022" +
+      "\213\001\n\010Instruct\022,.yandex.cloud.ai.llm.v1alp" +
+      "ha.InstructRequest\032-.yandex.cloud.ai.llm" +
+      ".v1alpha.InstructResponse\" \202\323\344\223\002\032\"\025/llm/" +
+      "v1alpha/instruct:\001*0\001\022{\n\004Chat\022(.yandex.c" +
+      "loud.ai.llm.v1alpha.ChatRequest\032).yandex" +
+      ".cloud.ai.llm.v1alpha.ChatResponse\"\034\202\323\344\223" +
+      "\002\026\"\021/llm/v1alpha/chat:\001*0\0012\236\001\n\020Tokenizer" +
+      "Service\022\211\001\n\010Tokenize\022,.yandex.cloud.ai.l" +
+      "lm.v1alpha.TokenizeRequest\032-.yandex.clou" +
+      "d.ai.llm.v1alpha.TokenizeResponse\" \202\323\344\223\002" +
+      "\032\"\025/llm/v1alpha/tokenize:\001*2\243\001\n\021Embeddin" +
+      "gsService\022\215\001\n\tEmbedding\022-.yandex.cloud.a" +
+      "i.llm.v1alpha.EmbeddingRequest\032..yandex." +
+      "cloud.ai.llm.v1alpha.EmbeddingResponse\"!" +
+      "\202\323\344\223\002\033\"\026/llm/v1alpha/embedding:\001*2\267\001\n\032Te" +
+      "xtGenerationAsyncService\022\230\001\n\010Instruct\022,." +
+      "yandex.cloud.ai.llm.v1alpha.InstructRequ" +
+      "est\032!.yandex.cloud.operation.Operation\";" +
+      "\262\322*\022\022\020InstructResponse\202\323\344\223\002\037\"\032/llm/v1alp" +
+      "ha/instructAsync:\001*Bf\n\037yandex.cloud.api." +
+      "ai.llm.v1alphaZCgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/ai/llm/v1alpha;" +
+      "llmb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8622,6 +8936,8 @@ public final class LlmService {
           yandex.cloud.api.ai.llm.v1alpha.Llm.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
+          yandex.cloud.api.OperationOuterClass.getDescriptor(),
+          yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_ai_llm_v1alpha_InstructRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -8674,12 +8990,15 @@ public final class LlmService {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     yandex.cloud.api.ai.llm.v1alpha.Llm.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
+    yandex.cloud.api.OperationOuterClass.getDescriptor();
+    yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

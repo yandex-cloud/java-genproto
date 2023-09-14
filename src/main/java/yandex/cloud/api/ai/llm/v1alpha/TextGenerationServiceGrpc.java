@@ -3,6 +3,9 @@ package yandex.cloud.api.ai.llm.v1alpha;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Service for text generation and conversation.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -122,10 +125,16 @@ public final class TextGenerationServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Service for text generation and conversation.
+   * </pre>
    */
   public static abstract class TextGenerationServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * RPC method for instructing the model to generate text.
+     * </pre>
      */
     public void instruct(yandex.cloud.api.ai.llm.v1alpha.LlmService.InstructRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.llm.v1alpha.LlmService.InstructResponse> responseObserver) {
@@ -133,6 +142,9 @@ public final class TextGenerationServiceGrpc {
     }
 
     /**
+     * <pre>
+     * RPC method for engaging in a chat conversation with the model.
+     * </pre>
      */
     public void chat(yandex.cloud.api.ai.llm.v1alpha.LlmService.ChatRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.llm.v1alpha.LlmService.ChatResponse> responseObserver) {
@@ -160,6 +172,9 @@ public final class TextGenerationServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Service for text generation and conversation.
+   * </pre>
    */
   public static final class TextGenerationServiceStub extends io.grpc.stub.AbstractAsyncStub<TextGenerationServiceStub> {
     private TextGenerationServiceStub(
@@ -174,6 +189,9 @@ public final class TextGenerationServiceGrpc {
     }
 
     /**
+     * <pre>
+     * RPC method for instructing the model to generate text.
+     * </pre>
      */
     public void instruct(yandex.cloud.api.ai.llm.v1alpha.LlmService.InstructRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.llm.v1alpha.LlmService.InstructResponse> responseObserver) {
@@ -182,6 +200,9 @@ public final class TextGenerationServiceGrpc {
     }
 
     /**
+     * <pre>
+     * RPC method for engaging in a chat conversation with the model.
+     * </pre>
      */
     public void chat(yandex.cloud.api.ai.llm.v1alpha.LlmService.ChatRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.llm.v1alpha.LlmService.ChatResponse> responseObserver) {
@@ -191,6 +212,9 @@ public final class TextGenerationServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Service for text generation and conversation.
+   * </pre>
    */
   public static final class TextGenerationServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<TextGenerationServiceBlockingStub> {
     private TextGenerationServiceBlockingStub(
@@ -205,6 +229,9 @@ public final class TextGenerationServiceGrpc {
     }
 
     /**
+     * <pre>
+     * RPC method for instructing the model to generate text.
+     * </pre>
      */
     public java.util.Iterator<yandex.cloud.api.ai.llm.v1alpha.LlmService.InstructResponse> instruct(
         yandex.cloud.api.ai.llm.v1alpha.LlmService.InstructRequest request) {
@@ -213,6 +240,9 @@ public final class TextGenerationServiceGrpc {
     }
 
     /**
+     * <pre>
+     * RPC method for engaging in a chat conversation with the model.
+     * </pre>
      */
     public java.util.Iterator<yandex.cloud.api.ai.llm.v1alpha.LlmService.ChatResponse> chat(
         yandex.cloud.api.ai.llm.v1alpha.LlmService.ChatRequest request) {
@@ -222,6 +252,9 @@ public final class TextGenerationServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Service for text generation and conversation.
+   * </pre>
    */
   public static final class TextGenerationServiceFutureStub extends io.grpc.stub.AbstractFutureStub<TextGenerationServiceFutureStub> {
     private TextGenerationServiceFutureStub(

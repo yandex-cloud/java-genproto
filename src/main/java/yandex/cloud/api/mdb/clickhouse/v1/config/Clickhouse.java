@@ -1222,6 +1222,498 @@ public final class Clickhouse {
      * <code>.google.protobuf.DoubleValue total_memory_tracker_sample_probability = 45;</code>
      */
     com.google.protobuf.DoubleValueOrBuilder getTotalMemoryTrackerSampleProbabilityOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+     * Default: 8
+     * Min version: 21.11
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the backgroundCommonPoolSize field is set.
+     */
+    boolean hasBackgroundCommonPoolSize();
+    /**
+     * <pre>
+     * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+     * Default: 8
+     * Min version: 21.11
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The backgroundCommonPoolSize.
+     */
+    com.google.protobuf.Int64Value getBackgroundCommonPoolSize();
+    /**
+     * <pre>
+     * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+     * Default: 8
+     * Min version: 21.11
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getBackgroundCommonPoolSizeOrBuilder();
+
+    /**
+     * <pre>
+     * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+     * Default: 2
+     * Min_version: 21.11
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the backgroundMergesMutationsConcurrencyRatio field is set.
+     */
+    boolean hasBackgroundMergesMutationsConcurrencyRatio();
+    /**
+     * <pre>
+     * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+     * Default: 2
+     * Min_version: 21.11
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The backgroundMergesMutationsConcurrencyRatio.
+     */
+    com.google.protobuf.Int64Value getBackgroundMergesMutationsConcurrencyRatio();
+    /**
+     * <pre>
+     * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+     * Default: 2
+     * Min_version: 21.11
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getBackgroundMergesMutationsConcurrencyRatioOrBuilder();
+
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 21.9
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+     * @return Whether the queryViewsLogEnabled field is set.
+     */
+    boolean hasQueryViewsLogEnabled();
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 21.9
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+     * @return The queryViewsLogEnabled.
+     */
+    com.google.protobuf.BoolValue getQueryViewsLogEnabled();
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 21.9
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getQueryViewsLogEnabledOrBuilder();
+
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the queryViewsLogRetentionSize field is set.
+     */
+    boolean hasQueryViewsLogRetentionSize();
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The queryViewsLogRetentionSize.
+     */
+    com.google.protobuf.Int64Value getQueryViewsLogRetentionSize();
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getQueryViewsLogRetentionSizeOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the queryViewsLogRetentionTime field is set.
+     */
+    boolean hasQueryViewsLogRetentionTime();
+    /**
+     * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The queryViewsLogRetentionTime.
+     */
+    com.google.protobuf.Int64Value getQueryViewsLogRetentionTime();
+    /**
+     * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getQueryViewsLogRetentionTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 20.11
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+     * @return Whether the asynchronousMetricLogEnabled field is set.
+     */
+    boolean hasAsynchronousMetricLogEnabled();
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 20.11
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+     * @return The asynchronousMetricLogEnabled.
+     */
+    com.google.protobuf.BoolValue getAsynchronousMetricLogEnabled();
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 20.11
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getAsynchronousMetricLogEnabledOrBuilder();
+
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the asynchronousMetricLogRetentionSize field is set.
+     */
+    boolean hasAsynchronousMetricLogRetentionSize();
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The asynchronousMetricLogRetentionSize.
+     */
+    com.google.protobuf.Int64Value getAsynchronousMetricLogRetentionSize();
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getAsynchronousMetricLogRetentionSizeOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the asynchronousMetricLogRetentionTime field is set.
+     */
+    boolean hasAsynchronousMetricLogRetentionTime();
+    /**
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The asynchronousMetricLogRetentionTime.
+     */
+    com.google.protobuf.Int64Value getAsynchronousMetricLogRetentionTime();
+    /**
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getAsynchronousMetricLogRetentionTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Default: 0
+     * Min version: 20.11
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the opentelemetrySpanLogRetentionSize field is set.
+     */
+    boolean hasOpentelemetrySpanLogRetentionSize();
+    /**
+     * <pre>
+     * Default: 0
+     * Min version: 20.11
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The opentelemetrySpanLogRetentionSize.
+     */
+    com.google.protobuf.Int64Value getOpentelemetrySpanLogRetentionSize();
+    /**
+     * <pre>
+     * Default: 0
+     * Min version: 20.11
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getOpentelemetrySpanLogRetentionSizeOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the opentelemetrySpanLogRetentionTime field is set.
+     */
+    boolean hasOpentelemetrySpanLogRetentionTime();
+    /**
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The opentelemetrySpanLogRetentionTime.
+     */
+    com.google.protobuf.Int64Value getOpentelemetrySpanLogRetentionTime();
+    /**
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getOpentelemetrySpanLogRetentionTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 21.11
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+     * @return Whether the sessionLogEnabled field is set.
+     */
+    boolean hasSessionLogEnabled();
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 21.11
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+     * @return The sessionLogEnabled.
+     */
+    com.google.protobuf.BoolValue getSessionLogEnabled();
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 21.11
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getSessionLogEnabledOrBuilder();
+
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the sessionLogRetentionSize field is set.
+     */
+    boolean hasSessionLogRetentionSize();
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The sessionLogRetentionSize.
+     */
+    com.google.protobuf.Int64Value getSessionLogRetentionSize();
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSessionLogRetentionSizeOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the sessionLogRetentionTime field is set.
+     */
+    boolean hasSessionLogRetentionTime();
+    /**
+     * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The sessionLogRetentionTime.
+     */
+    com.google.protobuf.Int64Value getSessionLogRetentionTime();
+    /**
+     * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSessionLogRetentionTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 21.9
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+     * @return Whether the zookeeperLogEnabled field is set.
+     */
+    boolean hasZookeeperLogEnabled();
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 21.9
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+     * @return The zookeeperLogEnabled.
+     */
+    com.google.protobuf.BoolValue getZookeeperLogEnabled();
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 21.9
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getZookeeperLogEnabledOrBuilder();
+
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the zookeeperLogRetentionSize field is set.
+     */
+    boolean hasZookeeperLogRetentionSize();
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The zookeeperLogRetentionSize.
+     */
+    com.google.protobuf.Int64Value getZookeeperLogRetentionSize();
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getZookeeperLogRetentionSizeOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the zookeeperLogRetentionTime field is set.
+     */
+    boolean hasZookeeperLogRetentionTime();
+    /**
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The zookeeperLogRetentionTime.
+     */
+    com.google.protobuf.Int64Value getZookeeperLogRetentionTime();
+    /**
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getZookeeperLogRetentionTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 22.10
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+     * @return Whether the asynchronousInsertLogEnabled field is set.
+     */
+    boolean hasAsynchronousInsertLogEnabled();
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 22.10
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+     * @return The asynchronousInsertLogEnabled.
+     */
+    com.google.protobuf.BoolValue getAsynchronousInsertLogEnabled();
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 22.10
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getAsynchronousInsertLogEnabledOrBuilder();
+
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the asynchronousInsertLogRetentionSize field is set.
+     */
+    boolean hasAsynchronousInsertLogRetentionSize();
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The asynchronousInsertLogRetentionSize.
+     */
+    com.google.protobuf.Int64Value getAsynchronousInsertLogRetentionSize();
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getAsynchronousInsertLogRetentionSizeOrBuilder();
+
+    /**
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the asynchronousInsertLogRetentionTime field is set.
+     */
+    boolean hasAsynchronousInsertLogRetentionTime();
+    /**
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The asynchronousInsertLogRetentionTime.
+     */
+    com.google.protobuf.Int64Value getAsynchronousInsertLogRetentionTime();
+    /**
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getAsynchronousInsertLogRetentionTimeOrBuilder();
+
+    /**
+     * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+     * @return Whether the geobaseEnabled field is set.
+     */
+    boolean hasGeobaseEnabled();
+    /**
+     * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+     * @return The geobaseEnabled.
+     */
+    com.google.protobuf.BoolValue getGeobaseEnabled();
+    /**
+     * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getGeobaseEnabledOrBuilder();
   }
   /**
    * <pre>
@@ -1833,6 +2325,266 @@ public final class Clickhouse {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(backgroundMessageBrokerSchedulePoolSize_);
                 backgroundMessageBrokerSchedulePoolSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 378: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (backgroundCommonPoolSize_ != null) {
+                subBuilder = backgroundCommonPoolSize_.toBuilder();
+              }
+              backgroundCommonPoolSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(backgroundCommonPoolSize_);
+                backgroundCommonPoolSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 386: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (backgroundMergesMutationsConcurrencyRatio_ != null) {
+                subBuilder = backgroundMergesMutationsConcurrencyRatio_.toBuilder();
+              }
+              backgroundMergesMutationsConcurrencyRatio_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(backgroundMergesMutationsConcurrencyRatio_);
+                backgroundMergesMutationsConcurrencyRatio_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 394: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (queryViewsLogEnabled_ != null) {
+                subBuilder = queryViewsLogEnabled_.toBuilder();
+              }
+              queryViewsLogEnabled_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(queryViewsLogEnabled_);
+                queryViewsLogEnabled_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 402: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (queryViewsLogRetentionSize_ != null) {
+                subBuilder = queryViewsLogRetentionSize_.toBuilder();
+              }
+              queryViewsLogRetentionSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(queryViewsLogRetentionSize_);
+                queryViewsLogRetentionSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 410: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (queryViewsLogRetentionTime_ != null) {
+                subBuilder = queryViewsLogRetentionTime_.toBuilder();
+              }
+              queryViewsLogRetentionTime_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(queryViewsLogRetentionTime_);
+                queryViewsLogRetentionTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 418: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (asynchronousMetricLogEnabled_ != null) {
+                subBuilder = asynchronousMetricLogEnabled_.toBuilder();
+              }
+              asynchronousMetricLogEnabled_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(asynchronousMetricLogEnabled_);
+                asynchronousMetricLogEnabled_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 426: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (asynchronousMetricLogRetentionSize_ != null) {
+                subBuilder = asynchronousMetricLogRetentionSize_.toBuilder();
+              }
+              asynchronousMetricLogRetentionSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(asynchronousMetricLogRetentionSize_);
+                asynchronousMetricLogRetentionSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 434: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (asynchronousMetricLogRetentionTime_ != null) {
+                subBuilder = asynchronousMetricLogRetentionTime_.toBuilder();
+              }
+              asynchronousMetricLogRetentionTime_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(asynchronousMetricLogRetentionTime_);
+                asynchronousMetricLogRetentionTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 442: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (opentelemetrySpanLogRetentionSize_ != null) {
+                subBuilder = opentelemetrySpanLogRetentionSize_.toBuilder();
+              }
+              opentelemetrySpanLogRetentionSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(opentelemetrySpanLogRetentionSize_);
+                opentelemetrySpanLogRetentionSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 450: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (opentelemetrySpanLogRetentionTime_ != null) {
+                subBuilder = opentelemetrySpanLogRetentionTime_.toBuilder();
+              }
+              opentelemetrySpanLogRetentionTime_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(opentelemetrySpanLogRetentionTime_);
+                opentelemetrySpanLogRetentionTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 458: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (sessionLogEnabled_ != null) {
+                subBuilder = sessionLogEnabled_.toBuilder();
+              }
+              sessionLogEnabled_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(sessionLogEnabled_);
+                sessionLogEnabled_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 466: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (sessionLogRetentionSize_ != null) {
+                subBuilder = sessionLogRetentionSize_.toBuilder();
+              }
+              sessionLogRetentionSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(sessionLogRetentionSize_);
+                sessionLogRetentionSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 474: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (sessionLogRetentionTime_ != null) {
+                subBuilder = sessionLogRetentionTime_.toBuilder();
+              }
+              sessionLogRetentionTime_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(sessionLogRetentionTime_);
+                sessionLogRetentionTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 482: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (zookeeperLogEnabled_ != null) {
+                subBuilder = zookeeperLogEnabled_.toBuilder();
+              }
+              zookeeperLogEnabled_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(zookeeperLogEnabled_);
+                zookeeperLogEnabled_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 490: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (zookeeperLogRetentionSize_ != null) {
+                subBuilder = zookeeperLogRetentionSize_.toBuilder();
+              }
+              zookeeperLogRetentionSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(zookeeperLogRetentionSize_);
+                zookeeperLogRetentionSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 498: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (zookeeperLogRetentionTime_ != null) {
+                subBuilder = zookeeperLogRetentionTime_.toBuilder();
+              }
+              zookeeperLogRetentionTime_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(zookeeperLogRetentionTime_);
+                zookeeperLogRetentionTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 506: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (asynchronousInsertLogEnabled_ != null) {
+                subBuilder = asynchronousInsertLogEnabled_.toBuilder();
+              }
+              asynchronousInsertLogEnabled_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(asynchronousInsertLogEnabled_);
+                asynchronousInsertLogEnabled_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 514: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (asynchronousInsertLogRetentionSize_ != null) {
+                subBuilder = asynchronousInsertLogRetentionSize_.toBuilder();
+              }
+              asynchronousInsertLogRetentionSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(asynchronousInsertLogRetentionSize_);
+                asynchronousInsertLogRetentionSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 522: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (asynchronousInsertLogRetentionTime_ != null) {
+                subBuilder = asynchronousInsertLogRetentionTime_.toBuilder();
+              }
+              asynchronousInsertLogRetentionTime_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(asynchronousInsertLogRetentionTime_);
+                asynchronousInsertLogRetentionTime_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 530: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (geobaseEnabled_ != null) {
+                subBuilder = geobaseEnabled_.toBuilder();
+              }
+              geobaseEnabled_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(geobaseEnabled_);
+                geobaseEnabled_ = subBuilder.buildPartial();
               }
 
               break;
@@ -2463,6 +3215,150 @@ public final class Clickhouse {
        * <code>.google.protobuf.Int64Value number_of_free_entries_in_pool_to_execute_mutation = 20;</code>
        */
       com.google.protobuf.Int64ValueOrBuilder getNumberOfFreeEntriesInPoolToExecuteMutationOrBuilder();
+
+      /**
+       * <pre>
+       * The 'too many parts' check according to 'parts_to_delay_insert' and 'parts_to_throw_insert' will be active only if the average part size (in the relevant partition) is not larger than the specified threshold. If it is larger than the specified threshold, the INSERTs will be neither delayed or rejected. This allows to have hundreds of terabytes in a single table on a single server if the parts are successfully merged to larger parts. This does not affect the thresholds on inactive parts or total parts.
+       * Default: 1 GiB
+       * Min version: 22.10
+       * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Storages/MergeTree/MergeTreeSettings.h#L80)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_avg_part_size_for_too_many_parts = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxAvgPartSizeForTooManyParts field is set.
+       */
+      boolean hasMaxAvgPartSizeForTooManyParts();
+      /**
+       * <pre>
+       * The 'too many parts' check according to 'parts_to_delay_insert' and 'parts_to_throw_insert' will be active only if the average part size (in the relevant partition) is not larger than the specified threshold. If it is larger than the specified threshold, the INSERTs will be neither delayed or rejected. This allows to have hundreds of terabytes in a single table on a single server if the parts are successfully merged to larger parts. This does not affect the thresholds on inactive parts or total parts.
+       * Default: 1 GiB
+       * Min version: 22.10
+       * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Storages/MergeTree/MergeTreeSettings.h#L80)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_avg_part_size_for_too_many_parts = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxAvgPartSizeForTooManyParts.
+       */
+      com.google.protobuf.Int64Value getMaxAvgPartSizeForTooManyParts();
+      /**
+       * <pre>
+       * The 'too many parts' check according to 'parts_to_delay_insert' and 'parts_to_throw_insert' will be active only if the average part size (in the relevant partition) is not larger than the specified threshold. If it is larger than the specified threshold, the INSERTs will be neither delayed or rejected. This allows to have hundreds of terabytes in a single table on a single server if the parts are successfully merged to larger parts. This does not affect the thresholds on inactive parts or total parts.
+       * Default: 1 GiB
+       * Min version: 22.10
+       * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Storages/MergeTree/MergeTreeSettings.h#L80)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_avg_part_size_for_too_many_parts = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getMaxAvgPartSizeForTooManyPartsOrBuilder();
+
+      /**
+       * <pre>
+       * Merge parts if every part in the range is older than the value of min_age_to_force_merge_seconds.
+       * Default: 0 - disabled
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_age_to_force_merge_seconds = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the minAgeToForceMergeSeconds field is set.
+       */
+      boolean hasMinAgeToForceMergeSeconds();
+      /**
+       * <pre>
+       * Merge parts if every part in the range is older than the value of min_age_to_force_merge_seconds.
+       * Default: 0 - disabled
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_age_to_force_merge_seconds = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The minAgeToForceMergeSeconds.
+       */
+      com.google.protobuf.Int64Value getMinAgeToForceMergeSeconds();
+      /**
+       * <pre>
+       * Merge parts if every part in the range is older than the value of min_age_to_force_merge_seconds.
+       * Default: 0 - disabled
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_age_to_force_merge_seconds = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getMinAgeToForceMergeSecondsOrBuilder();
+
+      /**
+       * <pre>
+       * Whether min_age_to_force_merge_seconds should be applied only on the entire partition and not on subset.
+       * Default: false
+       * Min_version: 22.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue min_age_to_force_merge_on_partition_only = 23;</code>
+       * @return Whether the minAgeToForceMergeOnPartitionOnly field is set.
+       */
+      boolean hasMinAgeToForceMergeOnPartitionOnly();
+      /**
+       * <pre>
+       * Whether min_age_to_force_merge_seconds should be applied only on the entire partition and not on subset.
+       * Default: false
+       * Min_version: 22.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue min_age_to_force_merge_on_partition_only = 23;</code>
+       * @return The minAgeToForceMergeOnPartitionOnly.
+       */
+      com.google.protobuf.BoolValue getMinAgeToForceMergeOnPartitionOnly();
+      /**
+       * <pre>
+       * Whether min_age_to_force_merge_seconds should be applied only on the entire partition and not on subset.
+       * Default: false
+       * Min_version: 22.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue min_age_to_force_merge_on_partition_only = 23;</code>
+       */
+      com.google.protobuf.BoolValueOrBuilder getMinAgeToForceMergeOnPartitionOnlyOrBuilder();
+
+      /**
+       * <pre>
+       * Sleep time for merge selecting when no part is selected. A lower setting triggers selecting tasks in background_schedule_pool frequently, which results in a large number of requests to ClickHouse Keeper in large-scale clusters.
+       * Default: 5000
+       * Min_version: 21.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#merge_selecting_sleep_ms)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value merge_selecting_sleep_ms = 24 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the mergeSelectingSleepMs field is set.
+       */
+      boolean hasMergeSelectingSleepMs();
+      /**
+       * <pre>
+       * Sleep time for merge selecting when no part is selected. A lower setting triggers selecting tasks in background_schedule_pool frequently, which results in a large number of requests to ClickHouse Keeper in large-scale clusters.
+       * Default: 5000
+       * Min_version: 21.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#merge_selecting_sleep_ms)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value merge_selecting_sleep_ms = 24 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The mergeSelectingSleepMs.
+       */
+      com.google.protobuf.Int64Value getMergeSelectingSleepMs();
+      /**
+       * <pre>
+       * Sleep time for merge selecting when no part is selected. A lower setting triggers selecting tasks in background_schedule_pool frequently, which results in a large number of requests to ClickHouse Keeper in large-scale clusters.
+       * Default: 5000
+       * Min_version: 21.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#merge_selecting_sleep_ms)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value merge_selecting_sleep_ms = 24 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getMergeSelectingSleepMsOrBuilder();
     }
     /**
      * <pre>
@@ -2769,6 +3665,58 @@ public final class Clickhouse {
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(numberOfFreeEntriesInPoolToExecuteMutation_);
                   numberOfFreeEntriesInPoolToExecuteMutation_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 170: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (maxAvgPartSizeForTooManyParts_ != null) {
+                  subBuilder = maxAvgPartSizeForTooManyParts_.toBuilder();
+                }
+                maxAvgPartSizeForTooManyParts_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(maxAvgPartSizeForTooManyParts_);
+                  maxAvgPartSizeForTooManyParts_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 178: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (minAgeToForceMergeSeconds_ != null) {
+                  subBuilder = minAgeToForceMergeSeconds_.toBuilder();
+                }
+                minAgeToForceMergeSeconds_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(minAgeToForceMergeSeconds_);
+                  minAgeToForceMergeSeconds_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 186: {
+                com.google.protobuf.BoolValue.Builder subBuilder = null;
+                if (minAgeToForceMergeOnPartitionOnly_ != null) {
+                  subBuilder = minAgeToForceMergeOnPartitionOnly_.toBuilder();
+                }
+                minAgeToForceMergeOnPartitionOnly_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(minAgeToForceMergeOnPartitionOnly_);
+                  minAgeToForceMergeOnPartitionOnly_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 194: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (mergeSelectingSleepMs_ != null) {
+                  subBuilder = mergeSelectingSleepMs_.toBuilder();
+                }
+                mergeSelectingSleepMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(mergeSelectingSleepMs_);
+                  mergeSelectingSleepMs_ = subBuilder.buildPartial();
                 }
 
                 break;
@@ -3460,6 +4408,194 @@ public final class Clickhouse {
         return getNumberOfFreeEntriesInPoolToExecuteMutation();
       }
 
+      public static final int MAX_AVG_PART_SIZE_FOR_TOO_MANY_PARTS_FIELD_NUMBER = 21;
+      private com.google.protobuf.Int64Value maxAvgPartSizeForTooManyParts_;
+      /**
+       * <pre>
+       * The 'too many parts' check according to 'parts_to_delay_insert' and 'parts_to_throw_insert' will be active only if the average part size (in the relevant partition) is not larger than the specified threshold. If it is larger than the specified threshold, the INSERTs will be neither delayed or rejected. This allows to have hundreds of terabytes in a single table on a single server if the parts are successfully merged to larger parts. This does not affect the thresholds on inactive parts or total parts.
+       * Default: 1 GiB
+       * Min version: 22.10
+       * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Storages/MergeTree/MergeTreeSettings.h#L80)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_avg_part_size_for_too_many_parts = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxAvgPartSizeForTooManyParts field is set.
+       */
+      @java.lang.Override
+      public boolean hasMaxAvgPartSizeForTooManyParts() {
+        return maxAvgPartSizeForTooManyParts_ != null;
+      }
+      /**
+       * <pre>
+       * The 'too many parts' check according to 'parts_to_delay_insert' and 'parts_to_throw_insert' will be active only if the average part size (in the relevant partition) is not larger than the specified threshold. If it is larger than the specified threshold, the INSERTs will be neither delayed or rejected. This allows to have hundreds of terabytes in a single table on a single server if the parts are successfully merged to larger parts. This does not affect the thresholds on inactive parts or total parts.
+       * Default: 1 GiB
+       * Min version: 22.10
+       * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Storages/MergeTree/MergeTreeSettings.h#L80)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_avg_part_size_for_too_many_parts = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxAvgPartSizeForTooManyParts.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getMaxAvgPartSizeForTooManyParts() {
+        return maxAvgPartSizeForTooManyParts_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxAvgPartSizeForTooManyParts_;
+      }
+      /**
+       * <pre>
+       * The 'too many parts' check according to 'parts_to_delay_insert' and 'parts_to_throw_insert' will be active only if the average part size (in the relevant partition) is not larger than the specified threshold. If it is larger than the specified threshold, the INSERTs will be neither delayed or rejected. This allows to have hundreds of terabytes in a single table on a single server if the parts are successfully merged to larger parts. This does not affect the thresholds on inactive parts or total parts.
+       * Default: 1 GiB
+       * Min version: 22.10
+       * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Storages/MergeTree/MergeTreeSettings.h#L80)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_avg_part_size_for_too_many_parts = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getMaxAvgPartSizeForTooManyPartsOrBuilder() {
+        return getMaxAvgPartSizeForTooManyParts();
+      }
+
+      public static final int MIN_AGE_TO_FORCE_MERGE_SECONDS_FIELD_NUMBER = 22;
+      private com.google.protobuf.Int64Value minAgeToForceMergeSeconds_;
+      /**
+       * <pre>
+       * Merge parts if every part in the range is older than the value of min_age_to_force_merge_seconds.
+       * Default: 0 - disabled
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_age_to_force_merge_seconds = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the minAgeToForceMergeSeconds field is set.
+       */
+      @java.lang.Override
+      public boolean hasMinAgeToForceMergeSeconds() {
+        return minAgeToForceMergeSeconds_ != null;
+      }
+      /**
+       * <pre>
+       * Merge parts if every part in the range is older than the value of min_age_to_force_merge_seconds.
+       * Default: 0 - disabled
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_age_to_force_merge_seconds = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The minAgeToForceMergeSeconds.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getMinAgeToForceMergeSeconds() {
+        return minAgeToForceMergeSeconds_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minAgeToForceMergeSeconds_;
+      }
+      /**
+       * <pre>
+       * Merge parts if every part in the range is older than the value of min_age_to_force_merge_seconds.
+       * Default: 0 - disabled
+       * Min_version: 22.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value min_age_to_force_merge_seconds = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getMinAgeToForceMergeSecondsOrBuilder() {
+        return getMinAgeToForceMergeSeconds();
+      }
+
+      public static final int MIN_AGE_TO_FORCE_MERGE_ON_PARTITION_ONLY_FIELD_NUMBER = 23;
+      private com.google.protobuf.BoolValue minAgeToForceMergeOnPartitionOnly_;
+      /**
+       * <pre>
+       * Whether min_age_to_force_merge_seconds should be applied only on the entire partition and not on subset.
+       * Default: false
+       * Min_version: 22.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue min_age_to_force_merge_on_partition_only = 23;</code>
+       * @return Whether the minAgeToForceMergeOnPartitionOnly field is set.
+       */
+      @java.lang.Override
+      public boolean hasMinAgeToForceMergeOnPartitionOnly() {
+        return minAgeToForceMergeOnPartitionOnly_ != null;
+      }
+      /**
+       * <pre>
+       * Whether min_age_to_force_merge_seconds should be applied only on the entire partition and not on subset.
+       * Default: false
+       * Min_version: 22.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue min_age_to_force_merge_on_partition_only = 23;</code>
+       * @return The minAgeToForceMergeOnPartitionOnly.
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValue getMinAgeToForceMergeOnPartitionOnly() {
+        return minAgeToForceMergeOnPartitionOnly_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : minAgeToForceMergeOnPartitionOnly_;
+      }
+      /**
+       * <pre>
+       * Whether min_age_to_force_merge_seconds should be applied only on the entire partition and not on subset.
+       * Default: false
+       * Min_version: 22.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue min_age_to_force_merge_on_partition_only = 23;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValueOrBuilder getMinAgeToForceMergeOnPartitionOnlyOrBuilder() {
+        return getMinAgeToForceMergeOnPartitionOnly();
+      }
+
+      public static final int MERGE_SELECTING_SLEEP_MS_FIELD_NUMBER = 24;
+      private com.google.protobuf.Int64Value mergeSelectingSleepMs_;
+      /**
+       * <pre>
+       * Sleep time for merge selecting when no part is selected. A lower setting triggers selecting tasks in background_schedule_pool frequently, which results in a large number of requests to ClickHouse Keeper in large-scale clusters.
+       * Default: 5000
+       * Min_version: 21.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#merge_selecting_sleep_ms)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value merge_selecting_sleep_ms = 24 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the mergeSelectingSleepMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasMergeSelectingSleepMs() {
+        return mergeSelectingSleepMs_ != null;
+      }
+      /**
+       * <pre>
+       * Sleep time for merge selecting when no part is selected. A lower setting triggers selecting tasks in background_schedule_pool frequently, which results in a large number of requests to ClickHouse Keeper in large-scale clusters.
+       * Default: 5000
+       * Min_version: 21.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#merge_selecting_sleep_ms)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value merge_selecting_sleep_ms = 24 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The mergeSelectingSleepMs.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getMergeSelectingSleepMs() {
+        return mergeSelectingSleepMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mergeSelectingSleepMs_;
+      }
+      /**
+       * <pre>
+       * Sleep time for merge selecting when no part is selected. A lower setting triggers selecting tasks in background_schedule_pool frequently, which results in a large number of requests to ClickHouse Keeper in large-scale clusters.
+       * Default: 5000
+       * Min_version: 21.10
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#merge_selecting_sleep_ms)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value merge_selecting_sleep_ms = 24 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getMergeSelectingSleepMsOrBuilder() {
+        return getMergeSelectingSleepMs();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -3533,6 +4669,18 @@ public final class Clickhouse {
         }
         if (numberOfFreeEntriesInPoolToExecuteMutation_ != null) {
           output.writeMessage(20, getNumberOfFreeEntriesInPoolToExecuteMutation());
+        }
+        if (maxAvgPartSizeForTooManyParts_ != null) {
+          output.writeMessage(21, getMaxAvgPartSizeForTooManyParts());
+        }
+        if (minAgeToForceMergeSeconds_ != null) {
+          output.writeMessage(22, getMinAgeToForceMergeSeconds());
+        }
+        if (minAgeToForceMergeOnPartitionOnly_ != null) {
+          output.writeMessage(23, getMinAgeToForceMergeOnPartitionOnly());
+        }
+        if (mergeSelectingSleepMs_ != null) {
+          output.writeMessage(24, getMergeSelectingSleepMs());
         }
         unknownFields.writeTo(output);
       }
@@ -3622,6 +4770,22 @@ public final class Clickhouse {
         if (numberOfFreeEntriesInPoolToExecuteMutation_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(20, getNumberOfFreeEntriesInPoolToExecuteMutation());
+        }
+        if (maxAvgPartSizeForTooManyParts_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(21, getMaxAvgPartSizeForTooManyParts());
+        }
+        if (minAgeToForceMergeSeconds_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(22, getMinAgeToForceMergeSeconds());
+        }
+        if (minAgeToForceMergeOnPartitionOnly_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(23, getMinAgeToForceMergeOnPartitionOnly());
+        }
+        if (mergeSelectingSleepMs_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(24, getMergeSelectingSleepMs());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -3738,6 +4902,26 @@ public final class Clickhouse {
           if (!getNumberOfFreeEntriesInPoolToExecuteMutation()
               .equals(other.getNumberOfFreeEntriesInPoolToExecuteMutation())) return false;
         }
+        if (hasMaxAvgPartSizeForTooManyParts() != other.hasMaxAvgPartSizeForTooManyParts()) return false;
+        if (hasMaxAvgPartSizeForTooManyParts()) {
+          if (!getMaxAvgPartSizeForTooManyParts()
+              .equals(other.getMaxAvgPartSizeForTooManyParts())) return false;
+        }
+        if (hasMinAgeToForceMergeSeconds() != other.hasMinAgeToForceMergeSeconds()) return false;
+        if (hasMinAgeToForceMergeSeconds()) {
+          if (!getMinAgeToForceMergeSeconds()
+              .equals(other.getMinAgeToForceMergeSeconds())) return false;
+        }
+        if (hasMinAgeToForceMergeOnPartitionOnly() != other.hasMinAgeToForceMergeOnPartitionOnly()) return false;
+        if (hasMinAgeToForceMergeOnPartitionOnly()) {
+          if (!getMinAgeToForceMergeOnPartitionOnly()
+              .equals(other.getMinAgeToForceMergeOnPartitionOnly())) return false;
+        }
+        if (hasMergeSelectingSleepMs() != other.hasMergeSelectingSleepMs()) return false;
+        if (hasMergeSelectingSleepMs()) {
+          if (!getMergeSelectingSleepMs()
+              .equals(other.getMergeSelectingSleepMs())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -3828,6 +5012,22 @@ public final class Clickhouse {
         if (hasNumberOfFreeEntriesInPoolToExecuteMutation()) {
           hash = (37 * hash) + NUMBER_OF_FREE_ENTRIES_IN_POOL_TO_EXECUTE_MUTATION_FIELD_NUMBER;
           hash = (53 * hash) + getNumberOfFreeEntriesInPoolToExecuteMutation().hashCode();
+        }
+        if (hasMaxAvgPartSizeForTooManyParts()) {
+          hash = (37 * hash) + MAX_AVG_PART_SIZE_FOR_TOO_MANY_PARTS_FIELD_NUMBER;
+          hash = (53 * hash) + getMaxAvgPartSizeForTooManyParts().hashCode();
+        }
+        if (hasMinAgeToForceMergeSeconds()) {
+          hash = (37 * hash) + MIN_AGE_TO_FORCE_MERGE_SECONDS_FIELD_NUMBER;
+          hash = (53 * hash) + getMinAgeToForceMergeSeconds().hashCode();
+        }
+        if (hasMinAgeToForceMergeOnPartitionOnly()) {
+          hash = (37 * hash) + MIN_AGE_TO_FORCE_MERGE_ON_PARTITION_ONLY_FIELD_NUMBER;
+          hash = (53 * hash) + getMinAgeToForceMergeOnPartitionOnly().hashCode();
+        }
+        if (hasMergeSelectingSleepMs()) {
+          hash = (37 * hash) + MERGE_SELECTING_SLEEP_MS_FIELD_NUMBER;
+          hash = (53 * hash) + getMergeSelectingSleepMs().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -4086,6 +5286,30 @@ public final class Clickhouse {
             numberOfFreeEntriesInPoolToExecuteMutation_ = null;
             numberOfFreeEntriesInPoolToExecuteMutationBuilder_ = null;
           }
+          if (maxAvgPartSizeForTooManyPartsBuilder_ == null) {
+            maxAvgPartSizeForTooManyParts_ = null;
+          } else {
+            maxAvgPartSizeForTooManyParts_ = null;
+            maxAvgPartSizeForTooManyPartsBuilder_ = null;
+          }
+          if (minAgeToForceMergeSecondsBuilder_ == null) {
+            minAgeToForceMergeSeconds_ = null;
+          } else {
+            minAgeToForceMergeSeconds_ = null;
+            minAgeToForceMergeSecondsBuilder_ = null;
+          }
+          if (minAgeToForceMergeOnPartitionOnlyBuilder_ == null) {
+            minAgeToForceMergeOnPartitionOnly_ = null;
+          } else {
+            minAgeToForceMergeOnPartitionOnly_ = null;
+            minAgeToForceMergeOnPartitionOnlyBuilder_ = null;
+          }
+          if (mergeSelectingSleepMsBuilder_ == null) {
+            mergeSelectingSleepMs_ = null;
+          } else {
+            mergeSelectingSleepMs_ = null;
+            mergeSelectingSleepMsBuilder_ = null;
+          }
           return this;
         }
 
@@ -4212,6 +5436,26 @@ public final class Clickhouse {
           } else {
             result.numberOfFreeEntriesInPoolToExecuteMutation_ = numberOfFreeEntriesInPoolToExecuteMutationBuilder_.build();
           }
+          if (maxAvgPartSizeForTooManyPartsBuilder_ == null) {
+            result.maxAvgPartSizeForTooManyParts_ = maxAvgPartSizeForTooManyParts_;
+          } else {
+            result.maxAvgPartSizeForTooManyParts_ = maxAvgPartSizeForTooManyPartsBuilder_.build();
+          }
+          if (minAgeToForceMergeSecondsBuilder_ == null) {
+            result.minAgeToForceMergeSeconds_ = minAgeToForceMergeSeconds_;
+          } else {
+            result.minAgeToForceMergeSeconds_ = minAgeToForceMergeSecondsBuilder_.build();
+          }
+          if (minAgeToForceMergeOnPartitionOnlyBuilder_ == null) {
+            result.minAgeToForceMergeOnPartitionOnly_ = minAgeToForceMergeOnPartitionOnly_;
+          } else {
+            result.minAgeToForceMergeOnPartitionOnly_ = minAgeToForceMergeOnPartitionOnlyBuilder_.build();
+          }
+          if (mergeSelectingSleepMsBuilder_ == null) {
+            result.mergeSelectingSleepMs_ = mergeSelectingSleepMs_;
+          } else {
+            result.mergeSelectingSleepMs_ = mergeSelectingSleepMsBuilder_.build();
+          }
           onBuilt();
           return result;
         }
@@ -4319,6 +5563,18 @@ public final class Clickhouse {
           }
           if (other.hasNumberOfFreeEntriesInPoolToExecuteMutation()) {
             mergeNumberOfFreeEntriesInPoolToExecuteMutation(other.getNumberOfFreeEntriesInPoolToExecuteMutation());
+          }
+          if (other.hasMaxAvgPartSizeForTooManyParts()) {
+            mergeMaxAvgPartSizeForTooManyParts(other.getMaxAvgPartSizeForTooManyParts());
+          }
+          if (other.hasMinAgeToForceMergeSeconds()) {
+            mergeMinAgeToForceMergeSeconds(other.getMinAgeToForceMergeSeconds());
+          }
+          if (other.hasMinAgeToForceMergeOnPartitionOnly()) {
+            mergeMinAgeToForceMergeOnPartitionOnly(other.getMinAgeToForceMergeOnPartitionOnly());
+          }
+          if (other.hasMergeSelectingSleepMs()) {
+            mergeMergeSelectingSleepMs(other.getMergeSelectingSleepMs());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -7133,6 +8389,734 @@ public final class Clickhouse {
           }
           return numberOfFreeEntriesInPoolToExecuteMutationBuilder_;
         }
+
+        private com.google.protobuf.Int64Value maxAvgPartSizeForTooManyParts_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxAvgPartSizeForTooManyPartsBuilder_;
+        /**
+         * <pre>
+         * The 'too many parts' check according to 'parts_to_delay_insert' and 'parts_to_throw_insert' will be active only if the average part size (in the relevant partition) is not larger than the specified threshold. If it is larger than the specified threshold, the INSERTs will be neither delayed or rejected. This allows to have hundreds of terabytes in a single table on a single server if the parts are successfully merged to larger parts. This does not affect the thresholds on inactive parts or total parts.
+         * Default: 1 GiB
+         * Min version: 22.10
+         * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Storages/MergeTree/MergeTreeSettings.h#L80)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_avg_part_size_for_too_many_parts = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return Whether the maxAvgPartSizeForTooManyParts field is set.
+         */
+        public boolean hasMaxAvgPartSizeForTooManyParts() {
+          return maxAvgPartSizeForTooManyPartsBuilder_ != null || maxAvgPartSizeForTooManyParts_ != null;
+        }
+        /**
+         * <pre>
+         * The 'too many parts' check according to 'parts_to_delay_insert' and 'parts_to_throw_insert' will be active only if the average part size (in the relevant partition) is not larger than the specified threshold. If it is larger than the specified threshold, the INSERTs will be neither delayed or rejected. This allows to have hundreds of terabytes in a single table on a single server if the parts are successfully merged to larger parts. This does not affect the thresholds on inactive parts or total parts.
+         * Default: 1 GiB
+         * Min version: 22.10
+         * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Storages/MergeTree/MergeTreeSettings.h#L80)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_avg_part_size_for_too_many_parts = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return The maxAvgPartSizeForTooManyParts.
+         */
+        public com.google.protobuf.Int64Value getMaxAvgPartSizeForTooManyParts() {
+          if (maxAvgPartSizeForTooManyPartsBuilder_ == null) {
+            return maxAvgPartSizeForTooManyParts_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxAvgPartSizeForTooManyParts_;
+          } else {
+            return maxAvgPartSizeForTooManyPartsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * The 'too many parts' check according to 'parts_to_delay_insert' and 'parts_to_throw_insert' will be active only if the average part size (in the relevant partition) is not larger than the specified threshold. If it is larger than the specified threshold, the INSERTs will be neither delayed or rejected. This allows to have hundreds of terabytes in a single table on a single server if the parts are successfully merged to larger parts. This does not affect the thresholds on inactive parts or total parts.
+         * Default: 1 GiB
+         * Min version: 22.10
+         * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Storages/MergeTree/MergeTreeSettings.h#L80)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_avg_part_size_for_too_many_parts = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setMaxAvgPartSizeForTooManyParts(com.google.protobuf.Int64Value value) {
+          if (maxAvgPartSizeForTooManyPartsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            maxAvgPartSizeForTooManyParts_ = value;
+            onChanged();
+          } else {
+            maxAvgPartSizeForTooManyPartsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The 'too many parts' check according to 'parts_to_delay_insert' and 'parts_to_throw_insert' will be active only if the average part size (in the relevant partition) is not larger than the specified threshold. If it is larger than the specified threshold, the INSERTs will be neither delayed or rejected. This allows to have hundreds of terabytes in a single table on a single server if the parts are successfully merged to larger parts. This does not affect the thresholds on inactive parts or total parts.
+         * Default: 1 GiB
+         * Min version: 22.10
+         * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Storages/MergeTree/MergeTreeSettings.h#L80)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_avg_part_size_for_too_many_parts = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setMaxAvgPartSizeForTooManyParts(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (maxAvgPartSizeForTooManyPartsBuilder_ == null) {
+            maxAvgPartSizeForTooManyParts_ = builderForValue.build();
+            onChanged();
+          } else {
+            maxAvgPartSizeForTooManyPartsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The 'too many parts' check according to 'parts_to_delay_insert' and 'parts_to_throw_insert' will be active only if the average part size (in the relevant partition) is not larger than the specified threshold. If it is larger than the specified threshold, the INSERTs will be neither delayed or rejected. This allows to have hundreds of terabytes in a single table on a single server if the parts are successfully merged to larger parts. This does not affect the thresholds on inactive parts or total parts.
+         * Default: 1 GiB
+         * Min version: 22.10
+         * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Storages/MergeTree/MergeTreeSettings.h#L80)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_avg_part_size_for_too_many_parts = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder mergeMaxAvgPartSizeForTooManyParts(com.google.protobuf.Int64Value value) {
+          if (maxAvgPartSizeForTooManyPartsBuilder_ == null) {
+            if (maxAvgPartSizeForTooManyParts_ != null) {
+              maxAvgPartSizeForTooManyParts_ =
+                com.google.protobuf.Int64Value.newBuilder(maxAvgPartSizeForTooManyParts_).mergeFrom(value).buildPartial();
+            } else {
+              maxAvgPartSizeForTooManyParts_ = value;
+            }
+            onChanged();
+          } else {
+            maxAvgPartSizeForTooManyPartsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The 'too many parts' check according to 'parts_to_delay_insert' and 'parts_to_throw_insert' will be active only if the average part size (in the relevant partition) is not larger than the specified threshold. If it is larger than the specified threshold, the INSERTs will be neither delayed or rejected. This allows to have hundreds of terabytes in a single table on a single server if the parts are successfully merged to larger parts. This does not affect the thresholds on inactive parts or total parts.
+         * Default: 1 GiB
+         * Min version: 22.10
+         * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Storages/MergeTree/MergeTreeSettings.h#L80)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_avg_part_size_for_too_many_parts = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder clearMaxAvgPartSizeForTooManyParts() {
+          if (maxAvgPartSizeForTooManyPartsBuilder_ == null) {
+            maxAvgPartSizeForTooManyParts_ = null;
+            onChanged();
+          } else {
+            maxAvgPartSizeForTooManyParts_ = null;
+            maxAvgPartSizeForTooManyPartsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * The 'too many parts' check according to 'parts_to_delay_insert' and 'parts_to_throw_insert' will be active only if the average part size (in the relevant partition) is not larger than the specified threshold. If it is larger than the specified threshold, the INSERTs will be neither delayed or rejected. This allows to have hundreds of terabytes in a single table on a single server if the parts are successfully merged to larger parts. This does not affect the thresholds on inactive parts or total parts.
+         * Default: 1 GiB
+         * Min version: 22.10
+         * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Storages/MergeTree/MergeTreeSettings.h#L80)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_avg_part_size_for_too_many_parts = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getMaxAvgPartSizeForTooManyPartsBuilder() {
+          
+          onChanged();
+          return getMaxAvgPartSizeForTooManyPartsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * The 'too many parts' check according to 'parts_to_delay_insert' and 'parts_to_throw_insert' will be active only if the average part size (in the relevant partition) is not larger than the specified threshold. If it is larger than the specified threshold, the INSERTs will be neither delayed or rejected. This allows to have hundreds of terabytes in a single table on a single server if the parts are successfully merged to larger parts. This does not affect the thresholds on inactive parts or total parts.
+         * Default: 1 GiB
+         * Min version: 22.10
+         * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Storages/MergeTree/MergeTreeSettings.h#L80)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_avg_part_size_for_too_many_parts = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getMaxAvgPartSizeForTooManyPartsOrBuilder() {
+          if (maxAvgPartSizeForTooManyPartsBuilder_ != null) {
+            return maxAvgPartSizeForTooManyPartsBuilder_.getMessageOrBuilder();
+          } else {
+            return maxAvgPartSizeForTooManyParts_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : maxAvgPartSizeForTooManyParts_;
+          }
+        }
+        /**
+         * <pre>
+         * The 'too many parts' check according to 'parts_to_delay_insert' and 'parts_to_throw_insert' will be active only if the average part size (in the relevant partition) is not larger than the specified threshold. If it is larger than the specified threshold, the INSERTs will be neither delayed or rejected. This allows to have hundreds of terabytes in a single table on a single server if the parts are successfully merged to larger parts. This does not affect the thresholds on inactive parts or total parts.
+         * Default: 1 GiB
+         * Min version: 22.10
+         * See in-depth description in [ClickHouse GitHub](https://github.com/ClickHouse/ClickHouse/blob/f9558345e886876b9132d9c018e357f7fa9b22a3/src/Storages/MergeTree/MergeTreeSettings.h#L80)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value max_avg_part_size_for_too_many_parts = 21 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getMaxAvgPartSizeForTooManyPartsFieldBuilder() {
+          if (maxAvgPartSizeForTooManyPartsBuilder_ == null) {
+            maxAvgPartSizeForTooManyPartsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getMaxAvgPartSizeForTooManyParts(),
+                    getParentForChildren(),
+                    isClean());
+            maxAvgPartSizeForTooManyParts_ = null;
+          }
+          return maxAvgPartSizeForTooManyPartsBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value minAgeToForceMergeSeconds_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> minAgeToForceMergeSecondsBuilder_;
+        /**
+         * <pre>
+         * Merge parts if every part in the range is older than the value of min_age_to_force_merge_seconds.
+         * Default: 0 - disabled
+         * Min_version: 22.10
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_age_to_force_merge_seconds = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return Whether the minAgeToForceMergeSeconds field is set.
+         */
+        public boolean hasMinAgeToForceMergeSeconds() {
+          return minAgeToForceMergeSecondsBuilder_ != null || minAgeToForceMergeSeconds_ != null;
+        }
+        /**
+         * <pre>
+         * Merge parts if every part in the range is older than the value of min_age_to_force_merge_seconds.
+         * Default: 0 - disabled
+         * Min_version: 22.10
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_age_to_force_merge_seconds = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return The minAgeToForceMergeSeconds.
+         */
+        public com.google.protobuf.Int64Value getMinAgeToForceMergeSeconds() {
+          if (minAgeToForceMergeSecondsBuilder_ == null) {
+            return minAgeToForceMergeSeconds_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : minAgeToForceMergeSeconds_;
+          } else {
+            return minAgeToForceMergeSecondsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Merge parts if every part in the range is older than the value of min_age_to_force_merge_seconds.
+         * Default: 0 - disabled
+         * Min_version: 22.10
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_age_to_force_merge_seconds = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setMinAgeToForceMergeSeconds(com.google.protobuf.Int64Value value) {
+          if (minAgeToForceMergeSecondsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            minAgeToForceMergeSeconds_ = value;
+            onChanged();
+          } else {
+            minAgeToForceMergeSecondsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Merge parts if every part in the range is older than the value of min_age_to_force_merge_seconds.
+         * Default: 0 - disabled
+         * Min_version: 22.10
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_age_to_force_merge_seconds = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setMinAgeToForceMergeSeconds(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (minAgeToForceMergeSecondsBuilder_ == null) {
+            minAgeToForceMergeSeconds_ = builderForValue.build();
+            onChanged();
+          } else {
+            minAgeToForceMergeSecondsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Merge parts if every part in the range is older than the value of min_age_to_force_merge_seconds.
+         * Default: 0 - disabled
+         * Min_version: 22.10
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_age_to_force_merge_seconds = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder mergeMinAgeToForceMergeSeconds(com.google.protobuf.Int64Value value) {
+          if (minAgeToForceMergeSecondsBuilder_ == null) {
+            if (minAgeToForceMergeSeconds_ != null) {
+              minAgeToForceMergeSeconds_ =
+                com.google.protobuf.Int64Value.newBuilder(minAgeToForceMergeSeconds_).mergeFrom(value).buildPartial();
+            } else {
+              minAgeToForceMergeSeconds_ = value;
+            }
+            onChanged();
+          } else {
+            minAgeToForceMergeSecondsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Merge parts if every part in the range is older than the value of min_age_to_force_merge_seconds.
+         * Default: 0 - disabled
+         * Min_version: 22.10
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_age_to_force_merge_seconds = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder clearMinAgeToForceMergeSeconds() {
+          if (minAgeToForceMergeSecondsBuilder_ == null) {
+            minAgeToForceMergeSeconds_ = null;
+            onChanged();
+          } else {
+            minAgeToForceMergeSeconds_ = null;
+            minAgeToForceMergeSecondsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Merge parts if every part in the range is older than the value of min_age_to_force_merge_seconds.
+         * Default: 0 - disabled
+         * Min_version: 22.10
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_age_to_force_merge_seconds = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getMinAgeToForceMergeSecondsBuilder() {
+          
+          onChanged();
+          return getMinAgeToForceMergeSecondsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Merge parts if every part in the range is older than the value of min_age_to_force_merge_seconds.
+         * Default: 0 - disabled
+         * Min_version: 22.10
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_age_to_force_merge_seconds = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getMinAgeToForceMergeSecondsOrBuilder() {
+          if (minAgeToForceMergeSecondsBuilder_ != null) {
+            return minAgeToForceMergeSecondsBuilder_.getMessageOrBuilder();
+          } else {
+            return minAgeToForceMergeSeconds_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : minAgeToForceMergeSeconds_;
+          }
+        }
+        /**
+         * <pre>
+         * Merge parts if every part in the range is older than the value of min_age_to_force_merge_seconds.
+         * Default: 0 - disabled
+         * Min_version: 22.10
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value min_age_to_force_merge_seconds = 22 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getMinAgeToForceMergeSecondsFieldBuilder() {
+          if (minAgeToForceMergeSecondsBuilder_ == null) {
+            minAgeToForceMergeSecondsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getMinAgeToForceMergeSeconds(),
+                    getParentForChildren(),
+                    isClean());
+            minAgeToForceMergeSeconds_ = null;
+          }
+          return minAgeToForceMergeSecondsBuilder_;
+        }
+
+        private com.google.protobuf.BoolValue minAgeToForceMergeOnPartitionOnly_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> minAgeToForceMergeOnPartitionOnlyBuilder_;
+        /**
+         * <pre>
+         * Whether min_age_to_force_merge_seconds should be applied only on the entire partition and not on subset.
+         * Default: false
+         * Min_version: 22.11
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue min_age_to_force_merge_on_partition_only = 23;</code>
+         * @return Whether the minAgeToForceMergeOnPartitionOnly field is set.
+         */
+        public boolean hasMinAgeToForceMergeOnPartitionOnly() {
+          return minAgeToForceMergeOnPartitionOnlyBuilder_ != null || minAgeToForceMergeOnPartitionOnly_ != null;
+        }
+        /**
+         * <pre>
+         * Whether min_age_to_force_merge_seconds should be applied only on the entire partition and not on subset.
+         * Default: false
+         * Min_version: 22.11
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue min_age_to_force_merge_on_partition_only = 23;</code>
+         * @return The minAgeToForceMergeOnPartitionOnly.
+         */
+        public com.google.protobuf.BoolValue getMinAgeToForceMergeOnPartitionOnly() {
+          if (minAgeToForceMergeOnPartitionOnlyBuilder_ == null) {
+            return minAgeToForceMergeOnPartitionOnly_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : minAgeToForceMergeOnPartitionOnly_;
+          } else {
+            return minAgeToForceMergeOnPartitionOnlyBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Whether min_age_to_force_merge_seconds should be applied only on the entire partition and not on subset.
+         * Default: false
+         * Min_version: 22.11
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue min_age_to_force_merge_on_partition_only = 23;</code>
+         */
+        public Builder setMinAgeToForceMergeOnPartitionOnly(com.google.protobuf.BoolValue value) {
+          if (minAgeToForceMergeOnPartitionOnlyBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            minAgeToForceMergeOnPartitionOnly_ = value;
+            onChanged();
+          } else {
+            minAgeToForceMergeOnPartitionOnlyBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Whether min_age_to_force_merge_seconds should be applied only on the entire partition and not on subset.
+         * Default: false
+         * Min_version: 22.11
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue min_age_to_force_merge_on_partition_only = 23;</code>
+         */
+        public Builder setMinAgeToForceMergeOnPartitionOnly(
+            com.google.protobuf.BoolValue.Builder builderForValue) {
+          if (minAgeToForceMergeOnPartitionOnlyBuilder_ == null) {
+            minAgeToForceMergeOnPartitionOnly_ = builderForValue.build();
+            onChanged();
+          } else {
+            minAgeToForceMergeOnPartitionOnlyBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Whether min_age_to_force_merge_seconds should be applied only on the entire partition and not on subset.
+         * Default: false
+         * Min_version: 22.11
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue min_age_to_force_merge_on_partition_only = 23;</code>
+         */
+        public Builder mergeMinAgeToForceMergeOnPartitionOnly(com.google.protobuf.BoolValue value) {
+          if (minAgeToForceMergeOnPartitionOnlyBuilder_ == null) {
+            if (minAgeToForceMergeOnPartitionOnly_ != null) {
+              minAgeToForceMergeOnPartitionOnly_ =
+                com.google.protobuf.BoolValue.newBuilder(minAgeToForceMergeOnPartitionOnly_).mergeFrom(value).buildPartial();
+            } else {
+              minAgeToForceMergeOnPartitionOnly_ = value;
+            }
+            onChanged();
+          } else {
+            minAgeToForceMergeOnPartitionOnlyBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Whether min_age_to_force_merge_seconds should be applied only on the entire partition and not on subset.
+         * Default: false
+         * Min_version: 22.11
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue min_age_to_force_merge_on_partition_only = 23;</code>
+         */
+        public Builder clearMinAgeToForceMergeOnPartitionOnly() {
+          if (minAgeToForceMergeOnPartitionOnlyBuilder_ == null) {
+            minAgeToForceMergeOnPartitionOnly_ = null;
+            onChanged();
+          } else {
+            minAgeToForceMergeOnPartitionOnly_ = null;
+            minAgeToForceMergeOnPartitionOnlyBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Whether min_age_to_force_merge_seconds should be applied only on the entire partition and not on subset.
+         * Default: false
+         * Min_version: 22.11
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue min_age_to_force_merge_on_partition_only = 23;</code>
+         */
+        public com.google.protobuf.BoolValue.Builder getMinAgeToForceMergeOnPartitionOnlyBuilder() {
+          
+          onChanged();
+          return getMinAgeToForceMergeOnPartitionOnlyFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Whether min_age_to_force_merge_seconds should be applied only on the entire partition and not on subset.
+         * Default: false
+         * Min_version: 22.11
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue min_age_to_force_merge_on_partition_only = 23;</code>
+         */
+        public com.google.protobuf.BoolValueOrBuilder getMinAgeToForceMergeOnPartitionOnlyOrBuilder() {
+          if (minAgeToForceMergeOnPartitionOnlyBuilder_ != null) {
+            return minAgeToForceMergeOnPartitionOnlyBuilder_.getMessageOrBuilder();
+          } else {
+            return minAgeToForceMergeOnPartitionOnly_ == null ?
+                com.google.protobuf.BoolValue.getDefaultInstance() : minAgeToForceMergeOnPartitionOnly_;
+          }
+        }
+        /**
+         * <pre>
+         * Whether min_age_to_force_merge_seconds should be applied only on the entire partition and not on subset.
+         * Default: false
+         * Min_version: 22.11
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/merge-tree-settings#min_age_to_force_merge_seconds)
+         * </pre>
+         *
+         * <code>.google.protobuf.BoolValue min_age_to_force_merge_on_partition_only = 23;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+            getMinAgeToForceMergeOnPartitionOnlyFieldBuilder() {
+          if (minAgeToForceMergeOnPartitionOnlyBuilder_ == null) {
+            minAgeToForceMergeOnPartitionOnlyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                    getMinAgeToForceMergeOnPartitionOnly(),
+                    getParentForChildren(),
+                    isClean());
+            minAgeToForceMergeOnPartitionOnly_ = null;
+          }
+          return minAgeToForceMergeOnPartitionOnlyBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value mergeSelectingSleepMs_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> mergeSelectingSleepMsBuilder_;
+        /**
+         * <pre>
+         * Sleep time for merge selecting when no part is selected. A lower setting triggers selecting tasks in background_schedule_pool frequently, which results in a large number of requests to ClickHouse Keeper in large-scale clusters.
+         * Default: 5000
+         * Min_version: 21.10
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#merge_selecting_sleep_ms)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value merge_selecting_sleep_ms = 24 [(.yandex.cloud.value) = "&gt;0"];</code>
+         * @return Whether the mergeSelectingSleepMs field is set.
+         */
+        public boolean hasMergeSelectingSleepMs() {
+          return mergeSelectingSleepMsBuilder_ != null || mergeSelectingSleepMs_ != null;
+        }
+        /**
+         * <pre>
+         * Sleep time for merge selecting when no part is selected. A lower setting triggers selecting tasks in background_schedule_pool frequently, which results in a large number of requests to ClickHouse Keeper in large-scale clusters.
+         * Default: 5000
+         * Min_version: 21.10
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#merge_selecting_sleep_ms)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value merge_selecting_sleep_ms = 24 [(.yandex.cloud.value) = "&gt;0"];</code>
+         * @return The mergeSelectingSleepMs.
+         */
+        public com.google.protobuf.Int64Value getMergeSelectingSleepMs() {
+          if (mergeSelectingSleepMsBuilder_ == null) {
+            return mergeSelectingSleepMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : mergeSelectingSleepMs_;
+          } else {
+            return mergeSelectingSleepMsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Sleep time for merge selecting when no part is selected. A lower setting triggers selecting tasks in background_schedule_pool frequently, which results in a large number of requests to ClickHouse Keeper in large-scale clusters.
+         * Default: 5000
+         * Min_version: 21.10
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#merge_selecting_sleep_ms)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value merge_selecting_sleep_ms = 24 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        public Builder setMergeSelectingSleepMs(com.google.protobuf.Int64Value value) {
+          if (mergeSelectingSleepMsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            mergeSelectingSleepMs_ = value;
+            onChanged();
+          } else {
+            mergeSelectingSleepMsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Sleep time for merge selecting when no part is selected. A lower setting triggers selecting tasks in background_schedule_pool frequently, which results in a large number of requests to ClickHouse Keeper in large-scale clusters.
+         * Default: 5000
+         * Min_version: 21.10
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#merge_selecting_sleep_ms)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value merge_selecting_sleep_ms = 24 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        public Builder setMergeSelectingSleepMs(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (mergeSelectingSleepMsBuilder_ == null) {
+            mergeSelectingSleepMs_ = builderForValue.build();
+            onChanged();
+          } else {
+            mergeSelectingSleepMsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Sleep time for merge selecting when no part is selected. A lower setting triggers selecting tasks in background_schedule_pool frequently, which results in a large number of requests to ClickHouse Keeper in large-scale clusters.
+         * Default: 5000
+         * Min_version: 21.10
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#merge_selecting_sleep_ms)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value merge_selecting_sleep_ms = 24 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        public Builder mergeMergeSelectingSleepMs(com.google.protobuf.Int64Value value) {
+          if (mergeSelectingSleepMsBuilder_ == null) {
+            if (mergeSelectingSleepMs_ != null) {
+              mergeSelectingSleepMs_ =
+                com.google.protobuf.Int64Value.newBuilder(mergeSelectingSleepMs_).mergeFrom(value).buildPartial();
+            } else {
+              mergeSelectingSleepMs_ = value;
+            }
+            onChanged();
+          } else {
+            mergeSelectingSleepMsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Sleep time for merge selecting when no part is selected. A lower setting triggers selecting tasks in background_schedule_pool frequently, which results in a large number of requests to ClickHouse Keeper in large-scale clusters.
+         * Default: 5000
+         * Min_version: 21.10
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#merge_selecting_sleep_ms)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value merge_selecting_sleep_ms = 24 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        public Builder clearMergeSelectingSleepMs() {
+          if (mergeSelectingSleepMsBuilder_ == null) {
+            mergeSelectingSleepMs_ = null;
+            onChanged();
+          } else {
+            mergeSelectingSleepMs_ = null;
+            mergeSelectingSleepMsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Sleep time for merge selecting when no part is selected. A lower setting triggers selecting tasks in background_schedule_pool frequently, which results in a large number of requests to ClickHouse Keeper in large-scale clusters.
+         * Default: 5000
+         * Min_version: 21.10
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#merge_selecting_sleep_ms)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value merge_selecting_sleep_ms = 24 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getMergeSelectingSleepMsBuilder() {
+          
+          onChanged();
+          return getMergeSelectingSleepMsFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Sleep time for merge selecting when no part is selected. A lower setting triggers selecting tasks in background_schedule_pool frequently, which results in a large number of requests to ClickHouse Keeper in large-scale clusters.
+         * Default: 5000
+         * Min_version: 21.10
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#merge_selecting_sleep_ms)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value merge_selecting_sleep_ms = 24 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getMergeSelectingSleepMsOrBuilder() {
+          if (mergeSelectingSleepMsBuilder_ != null) {
+            return mergeSelectingSleepMsBuilder_.getMessageOrBuilder();
+          } else {
+            return mergeSelectingSleepMs_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : mergeSelectingSleepMs_;
+          }
+        }
+        /**
+         * <pre>
+         * Sleep time for merge selecting when no part is selected. A lower setting triggers selecting tasks in background_schedule_pool frequently, which results in a large number of requests to ClickHouse Keeper in large-scale clusters.
+         * Default: 5000
+         * Min_version: 21.10
+         * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/settings/settings#merge_selecting_sleep_ms)
+         * </pre>
+         *
+         * <code>.google.protobuf.Int64Value merge_selecting_sleep_ms = 24 [(.yandex.cloud.value) = "&gt;0"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getMergeSelectingSleepMsFieldBuilder() {
+          if (mergeSelectingSleepMsBuilder_ == null) {
+            mergeSelectingSleepMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getMergeSelectingSleepMs(),
+                    getParentForChildren(),
+                    isClean());
+            mergeSelectingSleepMs_ = null;
+          }
+          return mergeSelectingSleepMsBuilder_;
+        }
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -7235,6 +9219,51 @@ public final class Clickhouse {
        */
       com.google.protobuf.ByteString
           getSaslPasswordBytes();
+
+      /**
+       * <code>.google.protobuf.BoolValue enable_ssl_certificate_verification = 5;</code>
+       * @return Whether the enableSslCertificateVerification field is set.
+       */
+      boolean hasEnableSslCertificateVerification();
+      /**
+       * <code>.google.protobuf.BoolValue enable_ssl_certificate_verification = 5;</code>
+       * @return The enableSslCertificateVerification.
+       */
+      com.google.protobuf.BoolValue getEnableSslCertificateVerification();
+      /**
+       * <code>.google.protobuf.BoolValue enable_ssl_certificate_verification = 5;</code>
+       */
+      com.google.protobuf.BoolValueOrBuilder getEnableSslCertificateVerificationOrBuilder();
+
+      /**
+       * <code>.google.protobuf.Int64Value max_poll_interval_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxPollIntervalMs field is set.
+       */
+      boolean hasMaxPollIntervalMs();
+      /**
+       * <code>.google.protobuf.Int64Value max_poll_interval_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxPollIntervalMs.
+       */
+      com.google.protobuf.Int64Value getMaxPollIntervalMs();
+      /**
+       * <code>.google.protobuf.Int64Value max_poll_interval_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getMaxPollIntervalMsOrBuilder();
+
+      /**
+       * <code>.google.protobuf.Int64Value session_timeout_ms = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the sessionTimeoutMs field is set.
+       */
+      boolean hasSessionTimeoutMs();
+      /**
+       * <code>.google.protobuf.Int64Value session_timeout_ms = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The sessionTimeoutMs.
+       */
+      com.google.protobuf.Int64Value getSessionTimeoutMs();
+      /**
+       * <code>.google.protobuf.Int64Value session_timeout_ms = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getSessionTimeoutMsOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Kafka}
@@ -7307,6 +9336,45 @@ public final class Clickhouse {
                 java.lang.String s = input.readStringRequireUtf8();
 
                 saslPassword_ = s;
+                break;
+              }
+              case 42: {
+                com.google.protobuf.BoolValue.Builder subBuilder = null;
+                if (enableSslCertificateVerification_ != null) {
+                  subBuilder = enableSslCertificateVerification_.toBuilder();
+                }
+                enableSslCertificateVerification_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(enableSslCertificateVerification_);
+                  enableSslCertificateVerification_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 50: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (maxPollIntervalMs_ != null) {
+                  subBuilder = maxPollIntervalMs_.toBuilder();
+                }
+                maxPollIntervalMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(maxPollIntervalMs_);
+                  maxPollIntervalMs_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 58: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (sessionTimeoutMs_ != null) {
+                  subBuilder = sessionTimeoutMs_.toBuilder();
+                }
+                sessionTimeoutMs_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(sessionTimeoutMs_);
+                  sessionTimeoutMs_ = subBuilder.buildPartial();
+                }
+
                 break;
               }
               default: {
@@ -7725,6 +9793,84 @@ public final class Clickhouse {
         }
       }
 
+      public static final int ENABLE_SSL_CERTIFICATE_VERIFICATION_FIELD_NUMBER = 5;
+      private com.google.protobuf.BoolValue enableSslCertificateVerification_;
+      /**
+       * <code>.google.protobuf.BoolValue enable_ssl_certificate_verification = 5;</code>
+       * @return Whether the enableSslCertificateVerification field is set.
+       */
+      @java.lang.Override
+      public boolean hasEnableSslCertificateVerification() {
+        return enableSslCertificateVerification_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue enable_ssl_certificate_verification = 5;</code>
+       * @return The enableSslCertificateVerification.
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValue getEnableSslCertificateVerification() {
+        return enableSslCertificateVerification_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableSslCertificateVerification_;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue enable_ssl_certificate_verification = 5;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.BoolValueOrBuilder getEnableSslCertificateVerificationOrBuilder() {
+        return getEnableSslCertificateVerification();
+      }
+
+      public static final int MAX_POLL_INTERVAL_MS_FIELD_NUMBER = 6;
+      private com.google.protobuf.Int64Value maxPollIntervalMs_;
+      /**
+       * <code>.google.protobuf.Int64Value max_poll_interval_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the maxPollIntervalMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasMaxPollIntervalMs() {
+        return maxPollIntervalMs_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value max_poll_interval_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The maxPollIntervalMs.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getMaxPollIntervalMs() {
+        return maxPollIntervalMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxPollIntervalMs_;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value max_poll_interval_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getMaxPollIntervalMsOrBuilder() {
+        return getMaxPollIntervalMs();
+      }
+
+      public static final int SESSION_TIMEOUT_MS_FIELD_NUMBER = 7;
+      private com.google.protobuf.Int64Value sessionTimeoutMs_;
+      /**
+       * <code>.google.protobuf.Int64Value session_timeout_ms = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the sessionTimeoutMs field is set.
+       */
+      @java.lang.Override
+      public boolean hasSessionTimeoutMs() {
+        return sessionTimeoutMs_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value session_timeout_ms = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The sessionTimeoutMs.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getSessionTimeoutMs() {
+        return sessionTimeoutMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sessionTimeoutMs_;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value session_timeout_ms = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getSessionTimeoutMsOrBuilder() {
+        return getSessionTimeoutMs();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -7751,6 +9897,15 @@ public final class Clickhouse {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(saslPassword_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 4, saslPassword_);
         }
+        if (enableSslCertificateVerification_ != null) {
+          output.writeMessage(5, getEnableSslCertificateVerification());
+        }
+        if (maxPollIntervalMs_ != null) {
+          output.writeMessage(6, getMaxPollIntervalMs());
+        }
+        if (sessionTimeoutMs_ != null) {
+          output.writeMessage(7, getSessionTimeoutMs());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -7774,6 +9929,18 @@ public final class Clickhouse {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(saslPassword_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, saslPassword_);
         }
+        if (enableSslCertificateVerification_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, getEnableSslCertificateVerification());
+        }
+        if (maxPollIntervalMs_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(6, getMaxPollIntervalMs());
+        }
+        if (sessionTimeoutMs_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(7, getSessionTimeoutMs());
+        }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
@@ -7795,6 +9962,21 @@ public final class Clickhouse {
             .equals(other.getSaslUsername())) return false;
         if (!getSaslPassword()
             .equals(other.getSaslPassword())) return false;
+        if (hasEnableSslCertificateVerification() != other.hasEnableSslCertificateVerification()) return false;
+        if (hasEnableSslCertificateVerification()) {
+          if (!getEnableSslCertificateVerification()
+              .equals(other.getEnableSslCertificateVerification())) return false;
+        }
+        if (hasMaxPollIntervalMs() != other.hasMaxPollIntervalMs()) return false;
+        if (hasMaxPollIntervalMs()) {
+          if (!getMaxPollIntervalMs()
+              .equals(other.getMaxPollIntervalMs())) return false;
+        }
+        if (hasSessionTimeoutMs() != other.hasSessionTimeoutMs()) return false;
+        if (hasSessionTimeoutMs()) {
+          if (!getSessionTimeoutMs()
+              .equals(other.getSessionTimeoutMs())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -7814,6 +9996,18 @@ public final class Clickhouse {
         hash = (53 * hash) + getSaslUsername().hashCode();
         hash = (37 * hash) + SASL_PASSWORD_FIELD_NUMBER;
         hash = (53 * hash) + getSaslPassword().hashCode();
+        if (hasEnableSslCertificateVerification()) {
+          hash = (37 * hash) + ENABLE_SSL_CERTIFICATE_VERIFICATION_FIELD_NUMBER;
+          hash = (53 * hash) + getEnableSslCertificateVerification().hashCode();
+        }
+        if (hasMaxPollIntervalMs()) {
+          hash = (37 * hash) + MAX_POLL_INTERVAL_MS_FIELD_NUMBER;
+          hash = (53 * hash) + getMaxPollIntervalMs().hashCode();
+        }
+        if (hasSessionTimeoutMs()) {
+          hash = (37 * hash) + SESSION_TIMEOUT_MS_FIELD_NUMBER;
+          hash = (53 * hash) + getSessionTimeoutMs().hashCode();
+        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -7955,6 +10149,24 @@ public final class Clickhouse {
 
           saslPassword_ = "";
 
+          if (enableSslCertificateVerificationBuilder_ == null) {
+            enableSslCertificateVerification_ = null;
+          } else {
+            enableSslCertificateVerification_ = null;
+            enableSslCertificateVerificationBuilder_ = null;
+          }
+          if (maxPollIntervalMsBuilder_ == null) {
+            maxPollIntervalMs_ = null;
+          } else {
+            maxPollIntervalMs_ = null;
+            maxPollIntervalMsBuilder_ = null;
+          }
+          if (sessionTimeoutMsBuilder_ == null) {
+            sessionTimeoutMs_ = null;
+          } else {
+            sessionTimeoutMs_ = null;
+            sessionTimeoutMsBuilder_ = null;
+          }
           return this;
         }
 
@@ -7985,6 +10197,21 @@ public final class Clickhouse {
           result.saslMechanism_ = saslMechanism_;
           result.saslUsername_ = saslUsername_;
           result.saslPassword_ = saslPassword_;
+          if (enableSslCertificateVerificationBuilder_ == null) {
+            result.enableSslCertificateVerification_ = enableSslCertificateVerification_;
+          } else {
+            result.enableSslCertificateVerification_ = enableSslCertificateVerificationBuilder_.build();
+          }
+          if (maxPollIntervalMsBuilder_ == null) {
+            result.maxPollIntervalMs_ = maxPollIntervalMs_;
+          } else {
+            result.maxPollIntervalMs_ = maxPollIntervalMsBuilder_.build();
+          }
+          if (sessionTimeoutMsBuilder_ == null) {
+            result.sessionTimeoutMs_ = sessionTimeoutMs_;
+          } else {
+            result.sessionTimeoutMs_ = sessionTimeoutMsBuilder_.build();
+          }
           onBuilt();
           return result;
         }
@@ -8046,6 +10273,15 @@ public final class Clickhouse {
           if (!other.getSaslPassword().isEmpty()) {
             saslPassword_ = other.saslPassword_;
             onChanged();
+          }
+          if (other.hasEnableSslCertificateVerification()) {
+            mergeEnableSslCertificateVerification(other.getEnableSslCertificateVerification());
+          }
+          if (other.hasMaxPollIntervalMs()) {
+            mergeMaxPollIntervalMs(other.getMaxPollIntervalMs());
+          }
+          if (other.hasSessionTimeoutMs()) {
+            mergeSessionTimeoutMs(other.getSessionTimeoutMs());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -8334,6 +10570,363 @@ public final class Clickhouse {
           saslPassword_ = value;
           onChanged();
           return this;
+        }
+
+        private com.google.protobuf.BoolValue enableSslCertificateVerification_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableSslCertificateVerificationBuilder_;
+        /**
+         * <code>.google.protobuf.BoolValue enable_ssl_certificate_verification = 5;</code>
+         * @return Whether the enableSslCertificateVerification field is set.
+         */
+        public boolean hasEnableSslCertificateVerification() {
+          return enableSslCertificateVerificationBuilder_ != null || enableSslCertificateVerification_ != null;
+        }
+        /**
+         * <code>.google.protobuf.BoolValue enable_ssl_certificate_verification = 5;</code>
+         * @return The enableSslCertificateVerification.
+         */
+        public com.google.protobuf.BoolValue getEnableSslCertificateVerification() {
+          if (enableSslCertificateVerificationBuilder_ == null) {
+            return enableSslCertificateVerification_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enableSslCertificateVerification_;
+          } else {
+            return enableSslCertificateVerificationBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.google.protobuf.BoolValue enable_ssl_certificate_verification = 5;</code>
+         */
+        public Builder setEnableSslCertificateVerification(com.google.protobuf.BoolValue value) {
+          if (enableSslCertificateVerificationBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            enableSslCertificateVerification_ = value;
+            onChanged();
+          } else {
+            enableSslCertificateVerificationBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.BoolValue enable_ssl_certificate_verification = 5;</code>
+         */
+        public Builder setEnableSslCertificateVerification(
+            com.google.protobuf.BoolValue.Builder builderForValue) {
+          if (enableSslCertificateVerificationBuilder_ == null) {
+            enableSslCertificateVerification_ = builderForValue.build();
+            onChanged();
+          } else {
+            enableSslCertificateVerificationBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.BoolValue enable_ssl_certificate_verification = 5;</code>
+         */
+        public Builder mergeEnableSslCertificateVerification(com.google.protobuf.BoolValue value) {
+          if (enableSslCertificateVerificationBuilder_ == null) {
+            if (enableSslCertificateVerification_ != null) {
+              enableSslCertificateVerification_ =
+                com.google.protobuf.BoolValue.newBuilder(enableSslCertificateVerification_).mergeFrom(value).buildPartial();
+            } else {
+              enableSslCertificateVerification_ = value;
+            }
+            onChanged();
+          } else {
+            enableSslCertificateVerificationBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.BoolValue enable_ssl_certificate_verification = 5;</code>
+         */
+        public Builder clearEnableSslCertificateVerification() {
+          if (enableSslCertificateVerificationBuilder_ == null) {
+            enableSslCertificateVerification_ = null;
+            onChanged();
+          } else {
+            enableSslCertificateVerification_ = null;
+            enableSslCertificateVerificationBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.BoolValue enable_ssl_certificate_verification = 5;</code>
+         */
+        public com.google.protobuf.BoolValue.Builder getEnableSslCertificateVerificationBuilder() {
+          
+          onChanged();
+          return getEnableSslCertificateVerificationFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.google.protobuf.BoolValue enable_ssl_certificate_verification = 5;</code>
+         */
+        public com.google.protobuf.BoolValueOrBuilder getEnableSslCertificateVerificationOrBuilder() {
+          if (enableSslCertificateVerificationBuilder_ != null) {
+            return enableSslCertificateVerificationBuilder_.getMessageOrBuilder();
+          } else {
+            return enableSslCertificateVerification_ == null ?
+                com.google.protobuf.BoolValue.getDefaultInstance() : enableSslCertificateVerification_;
+          }
+        }
+        /**
+         * <code>.google.protobuf.BoolValue enable_ssl_certificate_verification = 5;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+            getEnableSslCertificateVerificationFieldBuilder() {
+          if (enableSslCertificateVerificationBuilder_ == null) {
+            enableSslCertificateVerificationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                    getEnableSslCertificateVerification(),
+                    getParentForChildren(),
+                    isClean());
+            enableSslCertificateVerification_ = null;
+          }
+          return enableSslCertificateVerificationBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value maxPollIntervalMs_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxPollIntervalMsBuilder_;
+        /**
+         * <code>.google.protobuf.Int64Value max_poll_interval_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return Whether the maxPollIntervalMs field is set.
+         */
+        public boolean hasMaxPollIntervalMs() {
+          return maxPollIntervalMsBuilder_ != null || maxPollIntervalMs_ != null;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_poll_interval_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return The maxPollIntervalMs.
+         */
+        public com.google.protobuf.Int64Value getMaxPollIntervalMs() {
+          if (maxPollIntervalMsBuilder_ == null) {
+            return maxPollIntervalMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxPollIntervalMs_;
+          } else {
+            return maxPollIntervalMsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_poll_interval_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setMaxPollIntervalMs(com.google.protobuf.Int64Value value) {
+          if (maxPollIntervalMsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            maxPollIntervalMs_ = value;
+            onChanged();
+          } else {
+            maxPollIntervalMsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_poll_interval_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setMaxPollIntervalMs(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (maxPollIntervalMsBuilder_ == null) {
+            maxPollIntervalMs_ = builderForValue.build();
+            onChanged();
+          } else {
+            maxPollIntervalMsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_poll_interval_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder mergeMaxPollIntervalMs(com.google.protobuf.Int64Value value) {
+          if (maxPollIntervalMsBuilder_ == null) {
+            if (maxPollIntervalMs_ != null) {
+              maxPollIntervalMs_ =
+                com.google.protobuf.Int64Value.newBuilder(maxPollIntervalMs_).mergeFrom(value).buildPartial();
+            } else {
+              maxPollIntervalMs_ = value;
+            }
+            onChanged();
+          } else {
+            maxPollIntervalMsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_poll_interval_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder clearMaxPollIntervalMs() {
+          if (maxPollIntervalMsBuilder_ == null) {
+            maxPollIntervalMs_ = null;
+            onChanged();
+          } else {
+            maxPollIntervalMs_ = null;
+            maxPollIntervalMsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_poll_interval_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getMaxPollIntervalMsBuilder() {
+          
+          onChanged();
+          return getMaxPollIntervalMsFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_poll_interval_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getMaxPollIntervalMsOrBuilder() {
+          if (maxPollIntervalMsBuilder_ != null) {
+            return maxPollIntervalMsBuilder_.getMessageOrBuilder();
+          } else {
+            return maxPollIntervalMs_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : maxPollIntervalMs_;
+          }
+        }
+        /**
+         * <code>.google.protobuf.Int64Value max_poll_interval_ms = 6 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getMaxPollIntervalMsFieldBuilder() {
+          if (maxPollIntervalMsBuilder_ == null) {
+            maxPollIntervalMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getMaxPollIntervalMs(),
+                    getParentForChildren(),
+                    isClean());
+            maxPollIntervalMs_ = null;
+          }
+          return maxPollIntervalMsBuilder_;
+        }
+
+        private com.google.protobuf.Int64Value sessionTimeoutMs_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> sessionTimeoutMsBuilder_;
+        /**
+         * <code>.google.protobuf.Int64Value session_timeout_ms = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return Whether the sessionTimeoutMs field is set.
+         */
+        public boolean hasSessionTimeoutMs() {
+          return sessionTimeoutMsBuilder_ != null || sessionTimeoutMs_ != null;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value session_timeout_ms = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return The sessionTimeoutMs.
+         */
+        public com.google.protobuf.Int64Value getSessionTimeoutMs() {
+          if (sessionTimeoutMsBuilder_ == null) {
+            return sessionTimeoutMs_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sessionTimeoutMs_;
+          } else {
+            return sessionTimeoutMsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.google.protobuf.Int64Value session_timeout_ms = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setSessionTimeoutMs(com.google.protobuf.Int64Value value) {
+          if (sessionTimeoutMsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            sessionTimeoutMs_ = value;
+            onChanged();
+          } else {
+            sessionTimeoutMsBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value session_timeout_ms = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setSessionTimeoutMs(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (sessionTimeoutMsBuilder_ == null) {
+            sessionTimeoutMs_ = builderForValue.build();
+            onChanged();
+          } else {
+            sessionTimeoutMsBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value session_timeout_ms = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder mergeSessionTimeoutMs(com.google.protobuf.Int64Value value) {
+          if (sessionTimeoutMsBuilder_ == null) {
+            if (sessionTimeoutMs_ != null) {
+              sessionTimeoutMs_ =
+                com.google.protobuf.Int64Value.newBuilder(sessionTimeoutMs_).mergeFrom(value).buildPartial();
+            } else {
+              sessionTimeoutMs_ = value;
+            }
+            onChanged();
+          } else {
+            sessionTimeoutMsBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value session_timeout_ms = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder clearSessionTimeoutMs() {
+          if (sessionTimeoutMsBuilder_ == null) {
+            sessionTimeoutMs_ = null;
+            onChanged();
+          } else {
+            sessionTimeoutMs_ = null;
+            sessionTimeoutMsBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value session_timeout_ms = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getSessionTimeoutMsBuilder() {
+          
+          onChanged();
+          return getSessionTimeoutMsFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.google.protobuf.Int64Value session_timeout_ms = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getSessionTimeoutMsOrBuilder() {
+          if (sessionTimeoutMsBuilder_ != null) {
+            return sessionTimeoutMsBuilder_.getMessageOrBuilder();
+          } else {
+            return sessionTimeoutMs_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : sessionTimeoutMs_;
+          }
+        }
+        /**
+         * <code>.google.protobuf.Int64Value session_timeout_ms = 7 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getSessionTimeoutMsFieldBuilder() {
+          if (sessionTimeoutMsBuilder_ == null) {
+            sessionTimeoutMsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getSessionTimeoutMs(),
+                    getParentForChildren(),
+                    isClean());
+            sessionTimeoutMs_ = null;
+          }
+          return sessionTimeoutMsBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -10177,6 +12770,21 @@ public final class Clickhouse {
        * @return The minPartSizeRatio.
        */
       double getMinPartSizeRatio();
+
+      /**
+       * <code>.google.protobuf.Int64Value level = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the level field is set.
+       */
+      boolean hasLevel();
+      /**
+       * <code>.google.protobuf.Int64Value level = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The level.
+       */
+      com.google.protobuf.Int64Value getLevel();
+      /**
+       * <code>.google.protobuf.Int64Value level = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      com.google.protobuf.Int64ValueOrBuilder getLevelOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.Compression}
@@ -10238,6 +12846,19 @@ public final class Clickhouse {
               case 25: {
 
                 minPartSizeRatio_ = input.readDouble();
+                break;
+              }
+              case 34: {
+                com.google.protobuf.Int64Value.Builder subBuilder = null;
+                if (level_ != null) {
+                  subBuilder = level_.toBuilder();
+                }
+                level_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(level_);
+                  level_ = subBuilder.buildPartial();
+                }
+
                 break;
               }
               default: {
@@ -10462,6 +13083,32 @@ public final class Clickhouse {
         return minPartSizeRatio_;
       }
 
+      public static final int LEVEL_FIELD_NUMBER = 4;
+      private com.google.protobuf.Int64Value level_;
+      /**
+       * <code>.google.protobuf.Int64Value level = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the level field is set.
+       */
+      @java.lang.Override
+      public boolean hasLevel() {
+        return level_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value level = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The level.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64Value getLevel() {
+        return level_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : level_;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value level = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.Int64ValueOrBuilder getLevelOrBuilder() {
+        return getLevel();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -10485,6 +13132,9 @@ public final class Clickhouse {
         if (java.lang.Double.doubleToRawLongBits(minPartSizeRatio_) != 0) {
           output.writeDouble(3, minPartSizeRatio_);
         }
+        if (level_ != null) {
+          output.writeMessage(4, getLevel());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -10505,6 +13155,10 @@ public final class Clickhouse {
         if (java.lang.Double.doubleToRawLongBits(minPartSizeRatio_) != 0) {
           size += com.google.protobuf.CodedOutputStream
             .computeDoubleSize(3, minPartSizeRatio_);
+        }
+        if (level_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, getLevel());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -10527,6 +13181,11 @@ public final class Clickhouse {
         if (java.lang.Double.doubleToLongBits(getMinPartSizeRatio())
             != java.lang.Double.doubleToLongBits(
                 other.getMinPartSizeRatio())) return false;
+        if (hasLevel() != other.hasLevel()) return false;
+        if (hasLevel()) {
+          if (!getLevel()
+              .equals(other.getLevel())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -10546,6 +13205,10 @@ public final class Clickhouse {
         hash = (37 * hash) + MIN_PART_SIZE_RATIO_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
             java.lang.Double.doubleToLongBits(getMinPartSizeRatio()));
+        if (hasLevel()) {
+          hash = (37 * hash) + LEVEL_FIELD_NUMBER;
+          hash = (53 * hash) + getLevel().hashCode();
+        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -10685,6 +13348,12 @@ public final class Clickhouse {
 
           minPartSizeRatio_ = 0D;
 
+          if (levelBuilder_ == null) {
+            level_ = null;
+          } else {
+            level_ = null;
+            levelBuilder_ = null;
+          }
           return this;
         }
 
@@ -10714,6 +13383,11 @@ public final class Clickhouse {
           result.method_ = method_;
           result.minPartSize_ = minPartSize_;
           result.minPartSizeRatio_ = minPartSizeRatio_;
+          if (levelBuilder_ == null) {
+            result.level_ = level_;
+          } else {
+            result.level_ = levelBuilder_.build();
+          }
           onBuilt();
           return result;
         }
@@ -10770,6 +13444,9 @@ public final class Clickhouse {
           }
           if (other.getMinPartSizeRatio() != 0D) {
             setMinPartSizeRatio(other.getMinPartSizeRatio());
+          }
+          if (other.hasLevel()) {
+            mergeLevel(other.getLevel());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -10958,6 +13635,125 @@ public final class Clickhouse {
           minPartSizeRatio_ = 0D;
           onChanged();
           return this;
+        }
+
+        private com.google.protobuf.Int64Value level_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> levelBuilder_;
+        /**
+         * <code>.google.protobuf.Int64Value level = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return Whether the level field is set.
+         */
+        public boolean hasLevel() {
+          return levelBuilder_ != null || level_ != null;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value level = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         * @return The level.
+         */
+        public com.google.protobuf.Int64Value getLevel() {
+          if (levelBuilder_ == null) {
+            return level_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : level_;
+          } else {
+            return levelBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.google.protobuf.Int64Value level = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setLevel(com.google.protobuf.Int64Value value) {
+          if (levelBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            level_ = value;
+            onChanged();
+          } else {
+            levelBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value level = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder setLevel(
+            com.google.protobuf.Int64Value.Builder builderForValue) {
+          if (levelBuilder_ == null) {
+            level_ = builderForValue.build();
+            onChanged();
+          } else {
+            levelBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value level = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder mergeLevel(com.google.protobuf.Int64Value value) {
+          if (levelBuilder_ == null) {
+            if (level_ != null) {
+              level_ =
+                com.google.protobuf.Int64Value.newBuilder(level_).mergeFrom(value).buildPartial();
+            } else {
+              level_ = value;
+            }
+            onChanged();
+          } else {
+            levelBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value level = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public Builder clearLevel() {
+          if (levelBuilder_ == null) {
+            level_ = null;
+            onChanged();
+          } else {
+            level_ = null;
+            levelBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value level = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64Value.Builder getLevelBuilder() {
+          
+          onChanged();
+          return getLevelFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.google.protobuf.Int64Value level = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        public com.google.protobuf.Int64ValueOrBuilder getLevelOrBuilder() {
+          if (levelBuilder_ != null) {
+            return levelBuilder_.getMessageOrBuilder();
+          } else {
+            return level_ == null ?
+                com.google.protobuf.Int64Value.getDefaultInstance() : level_;
+          }
+        }
+        /**
+         * <code>.google.protobuf.Int64Value level = 4 [(.yandex.cloud.value) = "&gt;=0"];</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+            getLevelFieldBuilder() {
+          if (levelBuilder_ == null) {
+            levelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                    getLevel(),
+                    getParentForChildren(),
+                    isClean());
+            level_ = null;
+          }
+          return levelBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -17297,6 +20093,18 @@ public final class Clickhouse {
          */
         com.google.protobuf.ByteString
             getPasswordBytes();
+
+        /**
+         * <code>string options = 7;</code>
+         * @return The options.
+         */
+        java.lang.String getOptions();
+        /**
+         * <code>string options = 7;</code>
+         * @return The bytes for options.
+         */
+        com.google.protobuf.ByteString
+            getOptionsBytes();
       }
       /**
        * Protobuf type {@code yandex.cloud.mdb.clickhouse.v1.config.ClickhouseConfig.ExternalDictionary.MongodbSource}
@@ -17316,6 +20124,7 @@ public final class Clickhouse {
           host_ = "";
           user_ = "";
           password_ = "";
+          options_ = "";
         }
 
         @java.lang.Override
@@ -17381,6 +20190,12 @@ public final class Clickhouse {
                   java.lang.String s = input.readStringRequireUtf8();
 
                   password_ = s;
+                  break;
+                }
+                case 58: {
+                  java.lang.String s = input.readStringRequireUtf8();
+
+                  options_ = s;
                   break;
                 }
                 default: {
@@ -17660,6 +20475,44 @@ public final class Clickhouse {
           }
         }
 
+        public static final int OPTIONS_FIELD_NUMBER = 7;
+        private volatile java.lang.Object options_;
+        /**
+         * <code>string options = 7;</code>
+         * @return The options.
+         */
+        @java.lang.Override
+        public java.lang.String getOptions() {
+          java.lang.Object ref = options_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            options_ = s;
+            return s;
+          }
+        }
+        /**
+         * <code>string options = 7;</code>
+         * @return The bytes for options.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getOptionsBytes() {
+          java.lang.Object ref = options_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            options_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
         private byte memoizedIsInitialized = -1;
         @java.lang.Override
         public final boolean isInitialized() {
@@ -17692,6 +20545,9 @@ public final class Clickhouse {
           if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
             com.google.protobuf.GeneratedMessageV3.writeString(output, 6, password_);
           }
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(options_)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 7, options_);
+          }
           unknownFields.writeTo(output);
         }
 
@@ -17720,6 +20576,9 @@ public final class Clickhouse {
           if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
             size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, password_);
           }
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(options_)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, options_);
+          }
           size += unknownFields.getSerializedSize();
           memoizedSize = size;
           return size;
@@ -17747,6 +20606,8 @@ public final class Clickhouse {
               .equals(other.getUser())) return false;
           if (!getPassword()
               .equals(other.getPassword())) return false;
+          if (!getOptions()
+              .equals(other.getOptions())) return false;
           if (!unknownFields.equals(other.unknownFields)) return false;
           return true;
         }
@@ -17771,6 +20632,8 @@ public final class Clickhouse {
           hash = (53 * hash) + getUser().hashCode();
           hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
           hash = (53 * hash) + getPassword().hashCode();
+          hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
+          hash = (53 * hash) + getOptions().hashCode();
           hash = (29 * hash) + unknownFields.hashCode();
           memoizedHashCode = hash;
           return hash;
@@ -17916,6 +20779,8 @@ public final class Clickhouse {
 
             password_ = "";
 
+            options_ = "";
+
             return this;
           }
 
@@ -17948,6 +20813,7 @@ public final class Clickhouse {
             result.port_ = port_;
             result.user_ = user_;
             result.password_ = password_;
+            result.options_ = options_;
             onBuilt();
             return result;
           }
@@ -18017,6 +20883,10 @@ public final class Clickhouse {
             }
             if (!other.getPassword().isEmpty()) {
               password_ = other.password_;
+              onChanged();
+            }
+            if (!other.getOptions().isEmpty()) {
+              options_ = other.options_;
               onChanged();
             }
             this.mergeUnknownFields(other.unknownFields);
@@ -18567,6 +21437,82 @@ public final class Clickhouse {
   checkByteStringIsUtf8(value);
             
             password_ = value;
+            onChanged();
+            return this;
+          }
+
+          private java.lang.Object options_ = "";
+          /**
+           * <code>string options = 7;</code>
+           * @return The options.
+           */
+          public java.lang.String getOptions() {
+            java.lang.Object ref = options_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              options_ = s;
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <code>string options = 7;</code>
+           * @return The bytes for options.
+           */
+          public com.google.protobuf.ByteString
+              getOptionsBytes() {
+            java.lang.Object ref = options_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              options_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <code>string options = 7;</code>
+           * @param value The options to set.
+           * @return This builder for chaining.
+           */
+          public Builder setOptions(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  
+            options_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>string options = 7;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearOptions() {
+            
+            options_ = getDefaultInstance().getOptions();
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>string options = 7;</code>
+           * @param value The bytes for options to set.
+           * @return This builder for chaining.
+           */
+          public Builder setOptionsBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+            
+            options_ = value;
             onChanged();
             return this;
           }
@@ -34520,6 +37466,718 @@ public final class Clickhouse {
       return getTotalMemoryTrackerSampleProbability();
     }
 
+    public static final int BACKGROUND_COMMON_POOL_SIZE_FIELD_NUMBER = 47;
+    private com.google.protobuf.Int64Value backgroundCommonPoolSize_;
+    /**
+     * <pre>
+     * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+     * Default: 8
+     * Min version: 21.11
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the backgroundCommonPoolSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasBackgroundCommonPoolSize() {
+      return backgroundCommonPoolSize_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+     * Default: 8
+     * Min version: 21.11
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The backgroundCommonPoolSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getBackgroundCommonPoolSize() {
+      return backgroundCommonPoolSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backgroundCommonPoolSize_;
+    }
+    /**
+     * <pre>
+     * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+     * Default: 8
+     * Min version: 21.11
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getBackgroundCommonPoolSizeOrBuilder() {
+      return getBackgroundCommonPoolSize();
+    }
+
+    public static final int BACKGROUND_MERGES_MUTATIONS_CONCURRENCY_RATIO_FIELD_NUMBER = 48;
+    private com.google.protobuf.Int64Value backgroundMergesMutationsConcurrencyRatio_;
+    /**
+     * <pre>
+     * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+     * Default: 2
+     * Min_version: 21.11
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the backgroundMergesMutationsConcurrencyRatio field is set.
+     */
+    @java.lang.Override
+    public boolean hasBackgroundMergesMutationsConcurrencyRatio() {
+      return backgroundMergesMutationsConcurrencyRatio_ != null;
+    }
+    /**
+     * <pre>
+     * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+     * Default: 2
+     * Min_version: 21.11
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The backgroundMergesMutationsConcurrencyRatio.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getBackgroundMergesMutationsConcurrencyRatio() {
+      return backgroundMergesMutationsConcurrencyRatio_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backgroundMergesMutationsConcurrencyRatio_;
+    }
+    /**
+     * <pre>
+     * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+     * Default: 2
+     * Min_version: 21.11
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getBackgroundMergesMutationsConcurrencyRatioOrBuilder() {
+      return getBackgroundMergesMutationsConcurrencyRatio();
+    }
+
+    public static final int QUERY_VIEWS_LOG_ENABLED_FIELD_NUMBER = 49;
+    private com.google.protobuf.BoolValue queryViewsLogEnabled_;
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 21.9
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+     * @return Whether the queryViewsLogEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasQueryViewsLogEnabled() {
+      return queryViewsLogEnabled_ != null;
+    }
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 21.9
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+     * @return The queryViewsLogEnabled.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getQueryViewsLogEnabled() {
+      return queryViewsLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : queryViewsLogEnabled_;
+    }
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 21.9
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getQueryViewsLogEnabledOrBuilder() {
+      return getQueryViewsLogEnabled();
+    }
+
+    public static final int QUERY_VIEWS_LOG_RETENTION_SIZE_FIELD_NUMBER = 50;
+    private com.google.protobuf.Int64Value queryViewsLogRetentionSize_;
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the queryViewsLogRetentionSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasQueryViewsLogRetentionSize() {
+      return queryViewsLogRetentionSize_ != null;
+    }
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The queryViewsLogRetentionSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getQueryViewsLogRetentionSize() {
+      return queryViewsLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryViewsLogRetentionSize_;
+    }
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getQueryViewsLogRetentionSizeOrBuilder() {
+      return getQueryViewsLogRetentionSize();
+    }
+
+    public static final int QUERY_VIEWS_LOG_RETENTION_TIME_FIELD_NUMBER = 51;
+    private com.google.protobuf.Int64Value queryViewsLogRetentionTime_;
+    /**
+     * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the queryViewsLogRetentionTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasQueryViewsLogRetentionTime() {
+      return queryViewsLogRetentionTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The queryViewsLogRetentionTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getQueryViewsLogRetentionTime() {
+      return queryViewsLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryViewsLogRetentionTime_;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getQueryViewsLogRetentionTimeOrBuilder() {
+      return getQueryViewsLogRetentionTime();
+    }
+
+    public static final int ASYNCHRONOUS_METRIC_LOG_ENABLED_FIELD_NUMBER = 52;
+    private com.google.protobuf.BoolValue asynchronousMetricLogEnabled_;
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 20.11
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+     * @return Whether the asynchronousMetricLogEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsynchronousMetricLogEnabled() {
+      return asynchronousMetricLogEnabled_ != null;
+    }
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 20.11
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+     * @return The asynchronousMetricLogEnabled.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getAsynchronousMetricLogEnabled() {
+      return asynchronousMetricLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : asynchronousMetricLogEnabled_;
+    }
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 20.11
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getAsynchronousMetricLogEnabledOrBuilder() {
+      return getAsynchronousMetricLogEnabled();
+    }
+
+    public static final int ASYNCHRONOUS_METRIC_LOG_RETENTION_SIZE_FIELD_NUMBER = 53;
+    private com.google.protobuf.Int64Value asynchronousMetricLogRetentionSize_;
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the asynchronousMetricLogRetentionSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsynchronousMetricLogRetentionSize() {
+      return asynchronousMetricLogRetentionSize_ != null;
+    }
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The asynchronousMetricLogRetentionSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getAsynchronousMetricLogRetentionSize() {
+      return asynchronousMetricLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousMetricLogRetentionSize_;
+    }
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getAsynchronousMetricLogRetentionSizeOrBuilder() {
+      return getAsynchronousMetricLogRetentionSize();
+    }
+
+    public static final int ASYNCHRONOUS_METRIC_LOG_RETENTION_TIME_FIELD_NUMBER = 54;
+    private com.google.protobuf.Int64Value asynchronousMetricLogRetentionTime_;
+    /**
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the asynchronousMetricLogRetentionTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsynchronousMetricLogRetentionTime() {
+      return asynchronousMetricLogRetentionTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The asynchronousMetricLogRetentionTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getAsynchronousMetricLogRetentionTime() {
+      return asynchronousMetricLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousMetricLogRetentionTime_;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getAsynchronousMetricLogRetentionTimeOrBuilder() {
+      return getAsynchronousMetricLogRetentionTime();
+    }
+
+    public static final int OPENTELEMETRY_SPAN_LOG_RETENTION_SIZE_FIELD_NUMBER = 55;
+    private com.google.protobuf.Int64Value opentelemetrySpanLogRetentionSize_;
+    /**
+     * <pre>
+     * Default: 0
+     * Min version: 20.11
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the opentelemetrySpanLogRetentionSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasOpentelemetrySpanLogRetentionSize() {
+      return opentelemetrySpanLogRetentionSize_ != null;
+    }
+    /**
+     * <pre>
+     * Default: 0
+     * Min version: 20.11
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The opentelemetrySpanLogRetentionSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getOpentelemetrySpanLogRetentionSize() {
+      return opentelemetrySpanLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : opentelemetrySpanLogRetentionSize_;
+    }
+    /**
+     * <pre>
+     * Default: 0
+     * Min version: 20.11
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getOpentelemetrySpanLogRetentionSizeOrBuilder() {
+      return getOpentelemetrySpanLogRetentionSize();
+    }
+
+    public static final int OPENTELEMETRY_SPAN_LOG_RETENTION_TIME_FIELD_NUMBER = 56;
+    private com.google.protobuf.Int64Value opentelemetrySpanLogRetentionTime_;
+    /**
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the opentelemetrySpanLogRetentionTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasOpentelemetrySpanLogRetentionTime() {
+      return opentelemetrySpanLogRetentionTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The opentelemetrySpanLogRetentionTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getOpentelemetrySpanLogRetentionTime() {
+      return opentelemetrySpanLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : opentelemetrySpanLogRetentionTime_;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getOpentelemetrySpanLogRetentionTimeOrBuilder() {
+      return getOpentelemetrySpanLogRetentionTime();
+    }
+
+    public static final int SESSION_LOG_ENABLED_FIELD_NUMBER = 57;
+    private com.google.protobuf.BoolValue sessionLogEnabled_;
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 21.11
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+     * @return Whether the sessionLogEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasSessionLogEnabled() {
+      return sessionLogEnabled_ != null;
+    }
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 21.11
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+     * @return The sessionLogEnabled.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getSessionLogEnabled() {
+      return sessionLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : sessionLogEnabled_;
+    }
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 21.11
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getSessionLogEnabledOrBuilder() {
+      return getSessionLogEnabled();
+    }
+
+    public static final int SESSION_LOG_RETENTION_SIZE_FIELD_NUMBER = 58;
+    private com.google.protobuf.Int64Value sessionLogRetentionSize_;
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the sessionLogRetentionSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasSessionLogRetentionSize() {
+      return sessionLogRetentionSize_ != null;
+    }
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The sessionLogRetentionSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getSessionLogRetentionSize() {
+      return sessionLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sessionLogRetentionSize_;
+    }
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getSessionLogRetentionSizeOrBuilder() {
+      return getSessionLogRetentionSize();
+    }
+
+    public static final int SESSION_LOG_RETENTION_TIME_FIELD_NUMBER = 59;
+    private com.google.protobuf.Int64Value sessionLogRetentionTime_;
+    /**
+     * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the sessionLogRetentionTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasSessionLogRetentionTime() {
+      return sessionLogRetentionTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The sessionLogRetentionTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getSessionLogRetentionTime() {
+      return sessionLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sessionLogRetentionTime_;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getSessionLogRetentionTimeOrBuilder() {
+      return getSessionLogRetentionTime();
+    }
+
+    public static final int ZOOKEEPER_LOG_ENABLED_FIELD_NUMBER = 60;
+    private com.google.protobuf.BoolValue zookeeperLogEnabled_;
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 21.9
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+     * @return Whether the zookeeperLogEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasZookeeperLogEnabled() {
+      return zookeeperLogEnabled_ != null;
+    }
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 21.9
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+     * @return The zookeeperLogEnabled.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getZookeeperLogEnabled() {
+      return zookeeperLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : zookeeperLogEnabled_;
+    }
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 21.9
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getZookeeperLogEnabledOrBuilder() {
+      return getZookeeperLogEnabled();
+    }
+
+    public static final int ZOOKEEPER_LOG_RETENTION_SIZE_FIELD_NUMBER = 61;
+    private com.google.protobuf.Int64Value zookeeperLogRetentionSize_;
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the zookeeperLogRetentionSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasZookeeperLogRetentionSize() {
+      return zookeeperLogRetentionSize_ != null;
+    }
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The zookeeperLogRetentionSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getZookeeperLogRetentionSize() {
+      return zookeeperLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : zookeeperLogRetentionSize_;
+    }
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getZookeeperLogRetentionSizeOrBuilder() {
+      return getZookeeperLogRetentionSize();
+    }
+
+    public static final int ZOOKEEPER_LOG_RETENTION_TIME_FIELD_NUMBER = 62;
+    private com.google.protobuf.Int64Value zookeeperLogRetentionTime_;
+    /**
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the zookeeperLogRetentionTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasZookeeperLogRetentionTime() {
+      return zookeeperLogRetentionTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The zookeeperLogRetentionTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getZookeeperLogRetentionTime() {
+      return zookeeperLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : zookeeperLogRetentionTime_;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getZookeeperLogRetentionTimeOrBuilder() {
+      return getZookeeperLogRetentionTime();
+    }
+
+    public static final int ASYNCHRONOUS_INSERT_LOG_ENABLED_FIELD_NUMBER = 63;
+    private com.google.protobuf.BoolValue asynchronousInsertLogEnabled_;
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 22.10
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+     * @return Whether the asynchronousInsertLogEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsynchronousInsertLogEnabled() {
+      return asynchronousInsertLogEnabled_ != null;
+    }
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 22.10
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+     * @return The asynchronousInsertLogEnabled.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getAsynchronousInsertLogEnabled() {
+      return asynchronousInsertLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : asynchronousInsertLogEnabled_;
+    }
+    /**
+     * <pre>
+     * Default: false
+     * Min version: 22.10
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getAsynchronousInsertLogEnabledOrBuilder() {
+      return getAsynchronousInsertLogEnabled();
+    }
+
+    public static final int ASYNCHRONOUS_INSERT_LOG_RETENTION_SIZE_FIELD_NUMBER = 64;
+    private com.google.protobuf.Int64Value asynchronousInsertLogRetentionSize_;
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the asynchronousInsertLogRetentionSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsynchronousInsertLogRetentionSize() {
+      return asynchronousInsertLogRetentionSize_ != null;
+    }
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The asynchronousInsertLogRetentionSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getAsynchronousInsertLogRetentionSize() {
+      return asynchronousInsertLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousInsertLogRetentionSize_;
+    }
+    /**
+     * <pre>
+     * Default: 0
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getAsynchronousInsertLogRetentionSizeOrBuilder() {
+      return getAsynchronousInsertLogRetentionSize();
+    }
+
+    public static final int ASYNCHRONOUS_INSERT_LOG_RETENTION_TIME_FIELD_NUMBER = 65;
+    private com.google.protobuf.Int64Value asynchronousInsertLogRetentionTime_;
+    /**
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the asynchronousInsertLogRetentionTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsynchronousInsertLogRetentionTime() {
+      return asynchronousInsertLogRetentionTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The asynchronousInsertLogRetentionTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getAsynchronousInsertLogRetentionTime() {
+      return asynchronousInsertLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousInsertLogRetentionTime_;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getAsynchronousInsertLogRetentionTimeOrBuilder() {
+      return getAsynchronousInsertLogRetentionTime();
+    }
+
+    public static final int GEOBASE_ENABLED_FIELD_NUMBER = 66;
+    private com.google.protobuf.BoolValue geobaseEnabled_;
+    /**
+     * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+     * @return Whether the geobaseEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasGeobaseEnabled() {
+      return geobaseEnabled_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+     * @return The geobaseEnabled.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getGeobaseEnabled() {
+      return geobaseEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : geobaseEnabled_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getGeobaseEnabledOrBuilder() {
+      return getGeobaseEnabled();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -34671,6 +38329,66 @@ public final class Clickhouse {
       }
       if (backgroundMessageBrokerSchedulePoolSize_ != null) {
         output.writeMessage(46, getBackgroundMessageBrokerSchedulePoolSize());
+      }
+      if (backgroundCommonPoolSize_ != null) {
+        output.writeMessage(47, getBackgroundCommonPoolSize());
+      }
+      if (backgroundMergesMutationsConcurrencyRatio_ != null) {
+        output.writeMessage(48, getBackgroundMergesMutationsConcurrencyRatio());
+      }
+      if (queryViewsLogEnabled_ != null) {
+        output.writeMessage(49, getQueryViewsLogEnabled());
+      }
+      if (queryViewsLogRetentionSize_ != null) {
+        output.writeMessage(50, getQueryViewsLogRetentionSize());
+      }
+      if (queryViewsLogRetentionTime_ != null) {
+        output.writeMessage(51, getQueryViewsLogRetentionTime());
+      }
+      if (asynchronousMetricLogEnabled_ != null) {
+        output.writeMessage(52, getAsynchronousMetricLogEnabled());
+      }
+      if (asynchronousMetricLogRetentionSize_ != null) {
+        output.writeMessage(53, getAsynchronousMetricLogRetentionSize());
+      }
+      if (asynchronousMetricLogRetentionTime_ != null) {
+        output.writeMessage(54, getAsynchronousMetricLogRetentionTime());
+      }
+      if (opentelemetrySpanLogRetentionSize_ != null) {
+        output.writeMessage(55, getOpentelemetrySpanLogRetentionSize());
+      }
+      if (opentelemetrySpanLogRetentionTime_ != null) {
+        output.writeMessage(56, getOpentelemetrySpanLogRetentionTime());
+      }
+      if (sessionLogEnabled_ != null) {
+        output.writeMessage(57, getSessionLogEnabled());
+      }
+      if (sessionLogRetentionSize_ != null) {
+        output.writeMessage(58, getSessionLogRetentionSize());
+      }
+      if (sessionLogRetentionTime_ != null) {
+        output.writeMessage(59, getSessionLogRetentionTime());
+      }
+      if (zookeeperLogEnabled_ != null) {
+        output.writeMessage(60, getZookeeperLogEnabled());
+      }
+      if (zookeeperLogRetentionSize_ != null) {
+        output.writeMessage(61, getZookeeperLogRetentionSize());
+      }
+      if (zookeeperLogRetentionTime_ != null) {
+        output.writeMessage(62, getZookeeperLogRetentionTime());
+      }
+      if (asynchronousInsertLogEnabled_ != null) {
+        output.writeMessage(63, getAsynchronousInsertLogEnabled());
+      }
+      if (asynchronousInsertLogRetentionSize_ != null) {
+        output.writeMessage(64, getAsynchronousInsertLogRetentionSize());
+      }
+      if (asynchronousInsertLogRetentionTime_ != null) {
+        output.writeMessage(65, getAsynchronousInsertLogRetentionTime());
+      }
+      if (geobaseEnabled_ != null) {
+        output.writeMessage(66, getGeobaseEnabled());
       }
       unknownFields.writeTo(output);
     }
@@ -34862,6 +38580,86 @@ public final class Clickhouse {
       if (backgroundMessageBrokerSchedulePoolSize_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(46, getBackgroundMessageBrokerSchedulePoolSize());
+      }
+      if (backgroundCommonPoolSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(47, getBackgroundCommonPoolSize());
+      }
+      if (backgroundMergesMutationsConcurrencyRatio_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(48, getBackgroundMergesMutationsConcurrencyRatio());
+      }
+      if (queryViewsLogEnabled_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(49, getQueryViewsLogEnabled());
+      }
+      if (queryViewsLogRetentionSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(50, getQueryViewsLogRetentionSize());
+      }
+      if (queryViewsLogRetentionTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(51, getQueryViewsLogRetentionTime());
+      }
+      if (asynchronousMetricLogEnabled_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(52, getAsynchronousMetricLogEnabled());
+      }
+      if (asynchronousMetricLogRetentionSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(53, getAsynchronousMetricLogRetentionSize());
+      }
+      if (asynchronousMetricLogRetentionTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(54, getAsynchronousMetricLogRetentionTime());
+      }
+      if (opentelemetrySpanLogRetentionSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(55, getOpentelemetrySpanLogRetentionSize());
+      }
+      if (opentelemetrySpanLogRetentionTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(56, getOpentelemetrySpanLogRetentionTime());
+      }
+      if (sessionLogEnabled_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(57, getSessionLogEnabled());
+      }
+      if (sessionLogRetentionSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(58, getSessionLogRetentionSize());
+      }
+      if (sessionLogRetentionTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(59, getSessionLogRetentionTime());
+      }
+      if (zookeeperLogEnabled_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(60, getZookeeperLogEnabled());
+      }
+      if (zookeeperLogRetentionSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(61, getZookeeperLogRetentionSize());
+      }
+      if (zookeeperLogRetentionTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(62, getZookeeperLogRetentionTime());
+      }
+      if (asynchronousInsertLogEnabled_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(63, getAsynchronousInsertLogEnabled());
+      }
+      if (asynchronousInsertLogRetentionSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(64, getAsynchronousInsertLogRetentionSize());
+      }
+      if (asynchronousInsertLogRetentionTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(65, getAsynchronousInsertLogRetentionTime());
+      }
+      if (geobaseEnabled_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(66, getGeobaseEnabled());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -35082,6 +38880,106 @@ public final class Clickhouse {
         if (!getTotalMemoryTrackerSampleProbability()
             .equals(other.getTotalMemoryTrackerSampleProbability())) return false;
       }
+      if (hasBackgroundCommonPoolSize() != other.hasBackgroundCommonPoolSize()) return false;
+      if (hasBackgroundCommonPoolSize()) {
+        if (!getBackgroundCommonPoolSize()
+            .equals(other.getBackgroundCommonPoolSize())) return false;
+      }
+      if (hasBackgroundMergesMutationsConcurrencyRatio() != other.hasBackgroundMergesMutationsConcurrencyRatio()) return false;
+      if (hasBackgroundMergesMutationsConcurrencyRatio()) {
+        if (!getBackgroundMergesMutationsConcurrencyRatio()
+            .equals(other.getBackgroundMergesMutationsConcurrencyRatio())) return false;
+      }
+      if (hasQueryViewsLogEnabled() != other.hasQueryViewsLogEnabled()) return false;
+      if (hasQueryViewsLogEnabled()) {
+        if (!getQueryViewsLogEnabled()
+            .equals(other.getQueryViewsLogEnabled())) return false;
+      }
+      if (hasQueryViewsLogRetentionSize() != other.hasQueryViewsLogRetentionSize()) return false;
+      if (hasQueryViewsLogRetentionSize()) {
+        if (!getQueryViewsLogRetentionSize()
+            .equals(other.getQueryViewsLogRetentionSize())) return false;
+      }
+      if (hasQueryViewsLogRetentionTime() != other.hasQueryViewsLogRetentionTime()) return false;
+      if (hasQueryViewsLogRetentionTime()) {
+        if (!getQueryViewsLogRetentionTime()
+            .equals(other.getQueryViewsLogRetentionTime())) return false;
+      }
+      if (hasAsynchronousMetricLogEnabled() != other.hasAsynchronousMetricLogEnabled()) return false;
+      if (hasAsynchronousMetricLogEnabled()) {
+        if (!getAsynchronousMetricLogEnabled()
+            .equals(other.getAsynchronousMetricLogEnabled())) return false;
+      }
+      if (hasAsynchronousMetricLogRetentionSize() != other.hasAsynchronousMetricLogRetentionSize()) return false;
+      if (hasAsynchronousMetricLogRetentionSize()) {
+        if (!getAsynchronousMetricLogRetentionSize()
+            .equals(other.getAsynchronousMetricLogRetentionSize())) return false;
+      }
+      if (hasAsynchronousMetricLogRetentionTime() != other.hasAsynchronousMetricLogRetentionTime()) return false;
+      if (hasAsynchronousMetricLogRetentionTime()) {
+        if (!getAsynchronousMetricLogRetentionTime()
+            .equals(other.getAsynchronousMetricLogRetentionTime())) return false;
+      }
+      if (hasOpentelemetrySpanLogRetentionSize() != other.hasOpentelemetrySpanLogRetentionSize()) return false;
+      if (hasOpentelemetrySpanLogRetentionSize()) {
+        if (!getOpentelemetrySpanLogRetentionSize()
+            .equals(other.getOpentelemetrySpanLogRetentionSize())) return false;
+      }
+      if (hasOpentelemetrySpanLogRetentionTime() != other.hasOpentelemetrySpanLogRetentionTime()) return false;
+      if (hasOpentelemetrySpanLogRetentionTime()) {
+        if (!getOpentelemetrySpanLogRetentionTime()
+            .equals(other.getOpentelemetrySpanLogRetentionTime())) return false;
+      }
+      if (hasSessionLogEnabled() != other.hasSessionLogEnabled()) return false;
+      if (hasSessionLogEnabled()) {
+        if (!getSessionLogEnabled()
+            .equals(other.getSessionLogEnabled())) return false;
+      }
+      if (hasSessionLogRetentionSize() != other.hasSessionLogRetentionSize()) return false;
+      if (hasSessionLogRetentionSize()) {
+        if (!getSessionLogRetentionSize()
+            .equals(other.getSessionLogRetentionSize())) return false;
+      }
+      if (hasSessionLogRetentionTime() != other.hasSessionLogRetentionTime()) return false;
+      if (hasSessionLogRetentionTime()) {
+        if (!getSessionLogRetentionTime()
+            .equals(other.getSessionLogRetentionTime())) return false;
+      }
+      if (hasZookeeperLogEnabled() != other.hasZookeeperLogEnabled()) return false;
+      if (hasZookeeperLogEnabled()) {
+        if (!getZookeeperLogEnabled()
+            .equals(other.getZookeeperLogEnabled())) return false;
+      }
+      if (hasZookeeperLogRetentionSize() != other.hasZookeeperLogRetentionSize()) return false;
+      if (hasZookeeperLogRetentionSize()) {
+        if (!getZookeeperLogRetentionSize()
+            .equals(other.getZookeeperLogRetentionSize())) return false;
+      }
+      if (hasZookeeperLogRetentionTime() != other.hasZookeeperLogRetentionTime()) return false;
+      if (hasZookeeperLogRetentionTime()) {
+        if (!getZookeeperLogRetentionTime()
+            .equals(other.getZookeeperLogRetentionTime())) return false;
+      }
+      if (hasAsynchronousInsertLogEnabled() != other.hasAsynchronousInsertLogEnabled()) return false;
+      if (hasAsynchronousInsertLogEnabled()) {
+        if (!getAsynchronousInsertLogEnabled()
+            .equals(other.getAsynchronousInsertLogEnabled())) return false;
+      }
+      if (hasAsynchronousInsertLogRetentionSize() != other.hasAsynchronousInsertLogRetentionSize()) return false;
+      if (hasAsynchronousInsertLogRetentionSize()) {
+        if (!getAsynchronousInsertLogRetentionSize()
+            .equals(other.getAsynchronousInsertLogRetentionSize())) return false;
+      }
+      if (hasAsynchronousInsertLogRetentionTime() != other.hasAsynchronousInsertLogRetentionTime()) return false;
+      if (hasAsynchronousInsertLogRetentionTime()) {
+        if (!getAsynchronousInsertLogRetentionTime()
+            .equals(other.getAsynchronousInsertLogRetentionTime())) return false;
+      }
+      if (hasGeobaseEnabled() != other.hasGeobaseEnabled()) return false;
+      if (hasGeobaseEnabled()) {
+        if (!getGeobaseEnabled()
+            .equals(other.getGeobaseEnabled())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -35268,6 +39166,86 @@ public final class Clickhouse {
       if (hasTotalMemoryTrackerSampleProbability()) {
         hash = (37 * hash) + TOTAL_MEMORY_TRACKER_SAMPLE_PROBABILITY_FIELD_NUMBER;
         hash = (53 * hash) + getTotalMemoryTrackerSampleProbability().hashCode();
+      }
+      if (hasBackgroundCommonPoolSize()) {
+        hash = (37 * hash) + BACKGROUND_COMMON_POOL_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getBackgroundCommonPoolSize().hashCode();
+      }
+      if (hasBackgroundMergesMutationsConcurrencyRatio()) {
+        hash = (37 * hash) + BACKGROUND_MERGES_MUTATIONS_CONCURRENCY_RATIO_FIELD_NUMBER;
+        hash = (53 * hash) + getBackgroundMergesMutationsConcurrencyRatio().hashCode();
+      }
+      if (hasQueryViewsLogEnabled()) {
+        hash = (37 * hash) + QUERY_VIEWS_LOG_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + getQueryViewsLogEnabled().hashCode();
+      }
+      if (hasQueryViewsLogRetentionSize()) {
+        hash = (37 * hash) + QUERY_VIEWS_LOG_RETENTION_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getQueryViewsLogRetentionSize().hashCode();
+      }
+      if (hasQueryViewsLogRetentionTime()) {
+        hash = (37 * hash) + QUERY_VIEWS_LOG_RETENTION_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getQueryViewsLogRetentionTime().hashCode();
+      }
+      if (hasAsynchronousMetricLogEnabled()) {
+        hash = (37 * hash) + ASYNCHRONOUS_METRIC_LOG_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + getAsynchronousMetricLogEnabled().hashCode();
+      }
+      if (hasAsynchronousMetricLogRetentionSize()) {
+        hash = (37 * hash) + ASYNCHRONOUS_METRIC_LOG_RETENTION_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getAsynchronousMetricLogRetentionSize().hashCode();
+      }
+      if (hasAsynchronousMetricLogRetentionTime()) {
+        hash = (37 * hash) + ASYNCHRONOUS_METRIC_LOG_RETENTION_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getAsynchronousMetricLogRetentionTime().hashCode();
+      }
+      if (hasOpentelemetrySpanLogRetentionSize()) {
+        hash = (37 * hash) + OPENTELEMETRY_SPAN_LOG_RETENTION_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getOpentelemetrySpanLogRetentionSize().hashCode();
+      }
+      if (hasOpentelemetrySpanLogRetentionTime()) {
+        hash = (37 * hash) + OPENTELEMETRY_SPAN_LOG_RETENTION_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getOpentelemetrySpanLogRetentionTime().hashCode();
+      }
+      if (hasSessionLogEnabled()) {
+        hash = (37 * hash) + SESSION_LOG_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + getSessionLogEnabled().hashCode();
+      }
+      if (hasSessionLogRetentionSize()) {
+        hash = (37 * hash) + SESSION_LOG_RETENTION_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getSessionLogRetentionSize().hashCode();
+      }
+      if (hasSessionLogRetentionTime()) {
+        hash = (37 * hash) + SESSION_LOG_RETENTION_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getSessionLogRetentionTime().hashCode();
+      }
+      if (hasZookeeperLogEnabled()) {
+        hash = (37 * hash) + ZOOKEEPER_LOG_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + getZookeeperLogEnabled().hashCode();
+      }
+      if (hasZookeeperLogRetentionSize()) {
+        hash = (37 * hash) + ZOOKEEPER_LOG_RETENTION_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getZookeeperLogRetentionSize().hashCode();
+      }
+      if (hasZookeeperLogRetentionTime()) {
+        hash = (37 * hash) + ZOOKEEPER_LOG_RETENTION_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getZookeeperLogRetentionTime().hashCode();
+      }
+      if (hasAsynchronousInsertLogEnabled()) {
+        hash = (37 * hash) + ASYNCHRONOUS_INSERT_LOG_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + getAsynchronousInsertLogEnabled().hashCode();
+      }
+      if (hasAsynchronousInsertLogRetentionSize()) {
+        hash = (37 * hash) + ASYNCHRONOUS_INSERT_LOG_RETENTION_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getAsynchronousInsertLogRetentionSize().hashCode();
+      }
+      if (hasAsynchronousInsertLogRetentionTime()) {
+        hash = (37 * hash) + ASYNCHRONOUS_INSERT_LOG_RETENTION_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getAsynchronousInsertLogRetentionTime().hashCode();
+      }
+      if (hasGeobaseEnabled()) {
+        hash = (37 * hash) + GEOBASE_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + getGeobaseEnabled().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -35672,6 +39650,126 @@ public final class Clickhouse {
           totalMemoryTrackerSampleProbability_ = null;
           totalMemoryTrackerSampleProbabilityBuilder_ = null;
         }
+        if (backgroundCommonPoolSizeBuilder_ == null) {
+          backgroundCommonPoolSize_ = null;
+        } else {
+          backgroundCommonPoolSize_ = null;
+          backgroundCommonPoolSizeBuilder_ = null;
+        }
+        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
+          backgroundMergesMutationsConcurrencyRatio_ = null;
+        } else {
+          backgroundMergesMutationsConcurrencyRatio_ = null;
+          backgroundMergesMutationsConcurrencyRatioBuilder_ = null;
+        }
+        if (queryViewsLogEnabledBuilder_ == null) {
+          queryViewsLogEnabled_ = null;
+        } else {
+          queryViewsLogEnabled_ = null;
+          queryViewsLogEnabledBuilder_ = null;
+        }
+        if (queryViewsLogRetentionSizeBuilder_ == null) {
+          queryViewsLogRetentionSize_ = null;
+        } else {
+          queryViewsLogRetentionSize_ = null;
+          queryViewsLogRetentionSizeBuilder_ = null;
+        }
+        if (queryViewsLogRetentionTimeBuilder_ == null) {
+          queryViewsLogRetentionTime_ = null;
+        } else {
+          queryViewsLogRetentionTime_ = null;
+          queryViewsLogRetentionTimeBuilder_ = null;
+        }
+        if (asynchronousMetricLogEnabledBuilder_ == null) {
+          asynchronousMetricLogEnabled_ = null;
+        } else {
+          asynchronousMetricLogEnabled_ = null;
+          asynchronousMetricLogEnabledBuilder_ = null;
+        }
+        if (asynchronousMetricLogRetentionSizeBuilder_ == null) {
+          asynchronousMetricLogRetentionSize_ = null;
+        } else {
+          asynchronousMetricLogRetentionSize_ = null;
+          asynchronousMetricLogRetentionSizeBuilder_ = null;
+        }
+        if (asynchronousMetricLogRetentionTimeBuilder_ == null) {
+          asynchronousMetricLogRetentionTime_ = null;
+        } else {
+          asynchronousMetricLogRetentionTime_ = null;
+          asynchronousMetricLogRetentionTimeBuilder_ = null;
+        }
+        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
+          opentelemetrySpanLogRetentionSize_ = null;
+        } else {
+          opentelemetrySpanLogRetentionSize_ = null;
+          opentelemetrySpanLogRetentionSizeBuilder_ = null;
+        }
+        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
+          opentelemetrySpanLogRetentionTime_ = null;
+        } else {
+          opentelemetrySpanLogRetentionTime_ = null;
+          opentelemetrySpanLogRetentionTimeBuilder_ = null;
+        }
+        if (sessionLogEnabledBuilder_ == null) {
+          sessionLogEnabled_ = null;
+        } else {
+          sessionLogEnabled_ = null;
+          sessionLogEnabledBuilder_ = null;
+        }
+        if (sessionLogRetentionSizeBuilder_ == null) {
+          sessionLogRetentionSize_ = null;
+        } else {
+          sessionLogRetentionSize_ = null;
+          sessionLogRetentionSizeBuilder_ = null;
+        }
+        if (sessionLogRetentionTimeBuilder_ == null) {
+          sessionLogRetentionTime_ = null;
+        } else {
+          sessionLogRetentionTime_ = null;
+          sessionLogRetentionTimeBuilder_ = null;
+        }
+        if (zookeeperLogEnabledBuilder_ == null) {
+          zookeeperLogEnabled_ = null;
+        } else {
+          zookeeperLogEnabled_ = null;
+          zookeeperLogEnabledBuilder_ = null;
+        }
+        if (zookeeperLogRetentionSizeBuilder_ == null) {
+          zookeeperLogRetentionSize_ = null;
+        } else {
+          zookeeperLogRetentionSize_ = null;
+          zookeeperLogRetentionSizeBuilder_ = null;
+        }
+        if (zookeeperLogRetentionTimeBuilder_ == null) {
+          zookeeperLogRetentionTime_ = null;
+        } else {
+          zookeeperLogRetentionTime_ = null;
+          zookeeperLogRetentionTimeBuilder_ = null;
+        }
+        if (asynchronousInsertLogEnabledBuilder_ == null) {
+          asynchronousInsertLogEnabled_ = null;
+        } else {
+          asynchronousInsertLogEnabled_ = null;
+          asynchronousInsertLogEnabledBuilder_ = null;
+        }
+        if (asynchronousInsertLogRetentionSizeBuilder_ == null) {
+          asynchronousInsertLogRetentionSize_ = null;
+        } else {
+          asynchronousInsertLogRetentionSize_ = null;
+          asynchronousInsertLogRetentionSizeBuilder_ = null;
+        }
+        if (asynchronousInsertLogRetentionTimeBuilder_ == null) {
+          asynchronousInsertLogRetentionTime_ = null;
+        } else {
+          asynchronousInsertLogRetentionTime_ = null;
+          asynchronousInsertLogRetentionTimeBuilder_ = null;
+        }
+        if (geobaseEnabledBuilder_ == null) {
+          geobaseEnabled_ = null;
+        } else {
+          geobaseEnabled_ = null;
+          geobaseEnabledBuilder_ = null;
+        }
         return this;
       }
 
@@ -35928,6 +40026,106 @@ public final class Clickhouse {
           result.totalMemoryTrackerSampleProbability_ = totalMemoryTrackerSampleProbability_;
         } else {
           result.totalMemoryTrackerSampleProbability_ = totalMemoryTrackerSampleProbabilityBuilder_.build();
+        }
+        if (backgroundCommonPoolSizeBuilder_ == null) {
+          result.backgroundCommonPoolSize_ = backgroundCommonPoolSize_;
+        } else {
+          result.backgroundCommonPoolSize_ = backgroundCommonPoolSizeBuilder_.build();
+        }
+        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
+          result.backgroundMergesMutationsConcurrencyRatio_ = backgroundMergesMutationsConcurrencyRatio_;
+        } else {
+          result.backgroundMergesMutationsConcurrencyRatio_ = backgroundMergesMutationsConcurrencyRatioBuilder_.build();
+        }
+        if (queryViewsLogEnabledBuilder_ == null) {
+          result.queryViewsLogEnabled_ = queryViewsLogEnabled_;
+        } else {
+          result.queryViewsLogEnabled_ = queryViewsLogEnabledBuilder_.build();
+        }
+        if (queryViewsLogRetentionSizeBuilder_ == null) {
+          result.queryViewsLogRetentionSize_ = queryViewsLogRetentionSize_;
+        } else {
+          result.queryViewsLogRetentionSize_ = queryViewsLogRetentionSizeBuilder_.build();
+        }
+        if (queryViewsLogRetentionTimeBuilder_ == null) {
+          result.queryViewsLogRetentionTime_ = queryViewsLogRetentionTime_;
+        } else {
+          result.queryViewsLogRetentionTime_ = queryViewsLogRetentionTimeBuilder_.build();
+        }
+        if (asynchronousMetricLogEnabledBuilder_ == null) {
+          result.asynchronousMetricLogEnabled_ = asynchronousMetricLogEnabled_;
+        } else {
+          result.asynchronousMetricLogEnabled_ = asynchronousMetricLogEnabledBuilder_.build();
+        }
+        if (asynchronousMetricLogRetentionSizeBuilder_ == null) {
+          result.asynchronousMetricLogRetentionSize_ = asynchronousMetricLogRetentionSize_;
+        } else {
+          result.asynchronousMetricLogRetentionSize_ = asynchronousMetricLogRetentionSizeBuilder_.build();
+        }
+        if (asynchronousMetricLogRetentionTimeBuilder_ == null) {
+          result.asynchronousMetricLogRetentionTime_ = asynchronousMetricLogRetentionTime_;
+        } else {
+          result.asynchronousMetricLogRetentionTime_ = asynchronousMetricLogRetentionTimeBuilder_.build();
+        }
+        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
+          result.opentelemetrySpanLogRetentionSize_ = opentelemetrySpanLogRetentionSize_;
+        } else {
+          result.opentelemetrySpanLogRetentionSize_ = opentelemetrySpanLogRetentionSizeBuilder_.build();
+        }
+        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
+          result.opentelemetrySpanLogRetentionTime_ = opentelemetrySpanLogRetentionTime_;
+        } else {
+          result.opentelemetrySpanLogRetentionTime_ = opentelemetrySpanLogRetentionTimeBuilder_.build();
+        }
+        if (sessionLogEnabledBuilder_ == null) {
+          result.sessionLogEnabled_ = sessionLogEnabled_;
+        } else {
+          result.sessionLogEnabled_ = sessionLogEnabledBuilder_.build();
+        }
+        if (sessionLogRetentionSizeBuilder_ == null) {
+          result.sessionLogRetentionSize_ = sessionLogRetentionSize_;
+        } else {
+          result.sessionLogRetentionSize_ = sessionLogRetentionSizeBuilder_.build();
+        }
+        if (sessionLogRetentionTimeBuilder_ == null) {
+          result.sessionLogRetentionTime_ = sessionLogRetentionTime_;
+        } else {
+          result.sessionLogRetentionTime_ = sessionLogRetentionTimeBuilder_.build();
+        }
+        if (zookeeperLogEnabledBuilder_ == null) {
+          result.zookeeperLogEnabled_ = zookeeperLogEnabled_;
+        } else {
+          result.zookeeperLogEnabled_ = zookeeperLogEnabledBuilder_.build();
+        }
+        if (zookeeperLogRetentionSizeBuilder_ == null) {
+          result.zookeeperLogRetentionSize_ = zookeeperLogRetentionSize_;
+        } else {
+          result.zookeeperLogRetentionSize_ = zookeeperLogRetentionSizeBuilder_.build();
+        }
+        if (zookeeperLogRetentionTimeBuilder_ == null) {
+          result.zookeeperLogRetentionTime_ = zookeeperLogRetentionTime_;
+        } else {
+          result.zookeeperLogRetentionTime_ = zookeeperLogRetentionTimeBuilder_.build();
+        }
+        if (asynchronousInsertLogEnabledBuilder_ == null) {
+          result.asynchronousInsertLogEnabled_ = asynchronousInsertLogEnabled_;
+        } else {
+          result.asynchronousInsertLogEnabled_ = asynchronousInsertLogEnabledBuilder_.build();
+        }
+        if (asynchronousInsertLogRetentionSizeBuilder_ == null) {
+          result.asynchronousInsertLogRetentionSize_ = asynchronousInsertLogRetentionSize_;
+        } else {
+          result.asynchronousInsertLogRetentionSize_ = asynchronousInsertLogRetentionSizeBuilder_.build();
+        }
+        if (asynchronousInsertLogRetentionTimeBuilder_ == null) {
+          result.asynchronousInsertLogRetentionTime_ = asynchronousInsertLogRetentionTime_;
+        } else {
+          result.asynchronousInsertLogRetentionTime_ = asynchronousInsertLogRetentionTimeBuilder_.build();
+        }
+        if (geobaseEnabledBuilder_ == null) {
+          result.geobaseEnabled_ = geobaseEnabled_;
+        } else {
+          result.geobaseEnabled_ = geobaseEnabledBuilder_.build();
         }
         onBuilt();
         return result;
@@ -36208,6 +40406,66 @@ public final class Clickhouse {
         }
         if (other.hasTotalMemoryTrackerSampleProbability()) {
           mergeTotalMemoryTrackerSampleProbability(other.getTotalMemoryTrackerSampleProbability());
+        }
+        if (other.hasBackgroundCommonPoolSize()) {
+          mergeBackgroundCommonPoolSize(other.getBackgroundCommonPoolSize());
+        }
+        if (other.hasBackgroundMergesMutationsConcurrencyRatio()) {
+          mergeBackgroundMergesMutationsConcurrencyRatio(other.getBackgroundMergesMutationsConcurrencyRatio());
+        }
+        if (other.hasQueryViewsLogEnabled()) {
+          mergeQueryViewsLogEnabled(other.getQueryViewsLogEnabled());
+        }
+        if (other.hasQueryViewsLogRetentionSize()) {
+          mergeQueryViewsLogRetentionSize(other.getQueryViewsLogRetentionSize());
+        }
+        if (other.hasQueryViewsLogRetentionTime()) {
+          mergeQueryViewsLogRetentionTime(other.getQueryViewsLogRetentionTime());
+        }
+        if (other.hasAsynchronousMetricLogEnabled()) {
+          mergeAsynchronousMetricLogEnabled(other.getAsynchronousMetricLogEnabled());
+        }
+        if (other.hasAsynchronousMetricLogRetentionSize()) {
+          mergeAsynchronousMetricLogRetentionSize(other.getAsynchronousMetricLogRetentionSize());
+        }
+        if (other.hasAsynchronousMetricLogRetentionTime()) {
+          mergeAsynchronousMetricLogRetentionTime(other.getAsynchronousMetricLogRetentionTime());
+        }
+        if (other.hasOpentelemetrySpanLogRetentionSize()) {
+          mergeOpentelemetrySpanLogRetentionSize(other.getOpentelemetrySpanLogRetentionSize());
+        }
+        if (other.hasOpentelemetrySpanLogRetentionTime()) {
+          mergeOpentelemetrySpanLogRetentionTime(other.getOpentelemetrySpanLogRetentionTime());
+        }
+        if (other.hasSessionLogEnabled()) {
+          mergeSessionLogEnabled(other.getSessionLogEnabled());
+        }
+        if (other.hasSessionLogRetentionSize()) {
+          mergeSessionLogRetentionSize(other.getSessionLogRetentionSize());
+        }
+        if (other.hasSessionLogRetentionTime()) {
+          mergeSessionLogRetentionTime(other.getSessionLogRetentionTime());
+        }
+        if (other.hasZookeeperLogEnabled()) {
+          mergeZookeeperLogEnabled(other.getZookeeperLogEnabled());
+        }
+        if (other.hasZookeeperLogRetentionSize()) {
+          mergeZookeeperLogRetentionSize(other.getZookeeperLogRetentionSize());
+        }
+        if (other.hasZookeeperLogRetentionTime()) {
+          mergeZookeeperLogRetentionTime(other.getZookeeperLogRetentionTime());
+        }
+        if (other.hasAsynchronousInsertLogEnabled()) {
+          mergeAsynchronousInsertLogEnabled(other.getAsynchronousInsertLogEnabled());
+        }
+        if (other.hasAsynchronousInsertLogRetentionSize()) {
+          mergeAsynchronousInsertLogRetentionSize(other.getAsynchronousInsertLogRetentionSize());
+        }
+        if (other.hasAsynchronousInsertLogRetentionTime()) {
+          mergeAsynchronousInsertLogRetentionTime(other.getAsynchronousInsertLogRetentionTime());
+        }
+        if (other.hasGeobaseEnabled()) {
+          mergeGeobaseEnabled(other.getGeobaseEnabled());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -43484,6 +47742,2962 @@ public final class Clickhouse {
         }
         return totalMemoryTrackerSampleProbabilityBuilder_;
       }
+
+      private com.google.protobuf.Int64Value backgroundCommonPoolSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backgroundCommonPoolSizeBuilder_;
+      /**
+       * <pre>
+       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+       * Default: 8
+       * Min version: 21.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the backgroundCommonPoolSize field is set.
+       */
+      public boolean hasBackgroundCommonPoolSize() {
+        return backgroundCommonPoolSizeBuilder_ != null || backgroundCommonPoolSize_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+       * Default: 8
+       * Min version: 21.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The backgroundCommonPoolSize.
+       */
+      public com.google.protobuf.Int64Value getBackgroundCommonPoolSize() {
+        if (backgroundCommonPoolSizeBuilder_ == null) {
+          return backgroundCommonPoolSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backgroundCommonPoolSize_;
+        } else {
+          return backgroundCommonPoolSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+       * Default: 8
+       * Min version: 21.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder setBackgroundCommonPoolSize(com.google.protobuf.Int64Value value) {
+        if (backgroundCommonPoolSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          backgroundCommonPoolSize_ = value;
+          onChanged();
+        } else {
+          backgroundCommonPoolSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+       * Default: 8
+       * Min version: 21.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder setBackgroundCommonPoolSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (backgroundCommonPoolSizeBuilder_ == null) {
+          backgroundCommonPoolSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          backgroundCommonPoolSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+       * Default: 8
+       * Min version: 21.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder mergeBackgroundCommonPoolSize(com.google.protobuf.Int64Value value) {
+        if (backgroundCommonPoolSizeBuilder_ == null) {
+          if (backgroundCommonPoolSize_ != null) {
+            backgroundCommonPoolSize_ =
+              com.google.protobuf.Int64Value.newBuilder(backgroundCommonPoolSize_).mergeFrom(value).buildPartial();
+          } else {
+            backgroundCommonPoolSize_ = value;
+          }
+          onChanged();
+        } else {
+          backgroundCommonPoolSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+       * Default: 8
+       * Min version: 21.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder clearBackgroundCommonPoolSize() {
+        if (backgroundCommonPoolSizeBuilder_ == null) {
+          backgroundCommonPoolSize_ = null;
+          onChanged();
+        } else {
+          backgroundCommonPoolSize_ = null;
+          backgroundCommonPoolSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+       * Default: 8
+       * Min version: 21.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getBackgroundCommonPoolSizeBuilder() {
+        
+        onChanged();
+        return getBackgroundCommonPoolSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+       * Default: 8
+       * Min version: 21.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getBackgroundCommonPoolSizeOrBuilder() {
+        if (backgroundCommonPoolSizeBuilder_ != null) {
+          return backgroundCommonPoolSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return backgroundCommonPoolSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : backgroundCommonPoolSize_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+       * Default: 8
+       * Min version: 21.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getBackgroundCommonPoolSizeFieldBuilder() {
+        if (backgroundCommonPoolSizeBuilder_ == null) {
+          backgroundCommonPoolSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getBackgroundCommonPoolSize(),
+                  getParentForChildren(),
+                  isClean());
+          backgroundCommonPoolSize_ = null;
+        }
+        return backgroundCommonPoolSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value backgroundMergesMutationsConcurrencyRatio_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backgroundMergesMutationsConcurrencyRatioBuilder_;
+      /**
+       * <pre>
+       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+       * Default: 2
+       * Min_version: 21.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the backgroundMergesMutationsConcurrencyRatio field is set.
+       */
+      public boolean hasBackgroundMergesMutationsConcurrencyRatio() {
+        return backgroundMergesMutationsConcurrencyRatioBuilder_ != null || backgroundMergesMutationsConcurrencyRatio_ != null;
+      }
+      /**
+       * <pre>
+       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+       * Default: 2
+       * Min_version: 21.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The backgroundMergesMutationsConcurrencyRatio.
+       */
+      public com.google.protobuf.Int64Value getBackgroundMergesMutationsConcurrencyRatio() {
+        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
+          return backgroundMergesMutationsConcurrencyRatio_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backgroundMergesMutationsConcurrencyRatio_;
+        } else {
+          return backgroundMergesMutationsConcurrencyRatioBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+       * Default: 2
+       * Min_version: 21.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder setBackgroundMergesMutationsConcurrencyRatio(com.google.protobuf.Int64Value value) {
+        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          backgroundMergesMutationsConcurrencyRatio_ = value;
+          onChanged();
+        } else {
+          backgroundMergesMutationsConcurrencyRatioBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+       * Default: 2
+       * Min_version: 21.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder setBackgroundMergesMutationsConcurrencyRatio(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
+          backgroundMergesMutationsConcurrencyRatio_ = builderForValue.build();
+          onChanged();
+        } else {
+          backgroundMergesMutationsConcurrencyRatioBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+       * Default: 2
+       * Min_version: 21.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder mergeBackgroundMergesMutationsConcurrencyRatio(com.google.protobuf.Int64Value value) {
+        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
+          if (backgroundMergesMutationsConcurrencyRatio_ != null) {
+            backgroundMergesMutationsConcurrencyRatio_ =
+              com.google.protobuf.Int64Value.newBuilder(backgroundMergesMutationsConcurrencyRatio_).mergeFrom(value).buildPartial();
+          } else {
+            backgroundMergesMutationsConcurrencyRatio_ = value;
+          }
+          onChanged();
+        } else {
+          backgroundMergesMutationsConcurrencyRatioBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+       * Default: 2
+       * Min_version: 21.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder clearBackgroundMergesMutationsConcurrencyRatio() {
+        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
+          backgroundMergesMutationsConcurrencyRatio_ = null;
+          onChanged();
+        } else {
+          backgroundMergesMutationsConcurrencyRatio_ = null;
+          backgroundMergesMutationsConcurrencyRatioBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+       * Default: 2
+       * Min_version: 21.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getBackgroundMergesMutationsConcurrencyRatioBuilder() {
+        
+        onChanged();
+        return getBackgroundMergesMutationsConcurrencyRatioFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+       * Default: 2
+       * Min_version: 21.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getBackgroundMergesMutationsConcurrencyRatioOrBuilder() {
+        if (backgroundMergesMutationsConcurrencyRatioBuilder_ != null) {
+          return backgroundMergesMutationsConcurrencyRatioBuilder_.getMessageOrBuilder();
+        } else {
+          return backgroundMergesMutationsConcurrencyRatio_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : backgroundMergesMutationsConcurrencyRatio_;
+        }
+      }
+      /**
+       * <pre>
+       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+       * Default: 2
+       * Min_version: 21.11
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getBackgroundMergesMutationsConcurrencyRatioFieldBuilder() {
+        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
+          backgroundMergesMutationsConcurrencyRatioBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getBackgroundMergesMutationsConcurrencyRatio(),
+                  getParentForChildren(),
+                  isClean());
+          backgroundMergesMutationsConcurrencyRatio_ = null;
+        }
+        return backgroundMergesMutationsConcurrencyRatioBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue queryViewsLogEnabled_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> queryViewsLogEnabledBuilder_;
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.9
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+       * @return Whether the queryViewsLogEnabled field is set.
+       */
+      public boolean hasQueryViewsLogEnabled() {
+        return queryViewsLogEnabledBuilder_ != null || queryViewsLogEnabled_ != null;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.9
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+       * @return The queryViewsLogEnabled.
+       */
+      public com.google.protobuf.BoolValue getQueryViewsLogEnabled() {
+        if (queryViewsLogEnabledBuilder_ == null) {
+          return queryViewsLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : queryViewsLogEnabled_;
+        } else {
+          return queryViewsLogEnabledBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.9
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+       */
+      public Builder setQueryViewsLogEnabled(com.google.protobuf.BoolValue value) {
+        if (queryViewsLogEnabledBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          queryViewsLogEnabled_ = value;
+          onChanged();
+        } else {
+          queryViewsLogEnabledBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.9
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+       */
+      public Builder setQueryViewsLogEnabled(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (queryViewsLogEnabledBuilder_ == null) {
+          queryViewsLogEnabled_ = builderForValue.build();
+          onChanged();
+        } else {
+          queryViewsLogEnabledBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.9
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+       */
+      public Builder mergeQueryViewsLogEnabled(com.google.protobuf.BoolValue value) {
+        if (queryViewsLogEnabledBuilder_ == null) {
+          if (queryViewsLogEnabled_ != null) {
+            queryViewsLogEnabled_ =
+              com.google.protobuf.BoolValue.newBuilder(queryViewsLogEnabled_).mergeFrom(value).buildPartial();
+          } else {
+            queryViewsLogEnabled_ = value;
+          }
+          onChanged();
+        } else {
+          queryViewsLogEnabledBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.9
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+       */
+      public Builder clearQueryViewsLogEnabled() {
+        if (queryViewsLogEnabledBuilder_ == null) {
+          queryViewsLogEnabled_ = null;
+          onChanged();
+        } else {
+          queryViewsLogEnabled_ = null;
+          queryViewsLogEnabledBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.9
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getQueryViewsLogEnabledBuilder() {
+        
+        onChanged();
+        return getQueryViewsLogEnabledFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.9
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getQueryViewsLogEnabledOrBuilder() {
+        if (queryViewsLogEnabledBuilder_ != null) {
+          return queryViewsLogEnabledBuilder_.getMessageOrBuilder();
+        } else {
+          return queryViewsLogEnabled_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : queryViewsLogEnabled_;
+        }
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.9
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getQueryViewsLogEnabledFieldBuilder() {
+        if (queryViewsLogEnabledBuilder_ == null) {
+          queryViewsLogEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getQueryViewsLogEnabled(),
+                  getParentForChildren(),
+                  isClean());
+          queryViewsLogEnabled_ = null;
+        }
+        return queryViewsLogEnabledBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value queryViewsLogRetentionSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> queryViewsLogRetentionSizeBuilder_;
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the queryViewsLogRetentionSize field is set.
+       */
+      public boolean hasQueryViewsLogRetentionSize() {
+        return queryViewsLogRetentionSizeBuilder_ != null || queryViewsLogRetentionSize_ != null;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The queryViewsLogRetentionSize.
+       */
+      public com.google.protobuf.Int64Value getQueryViewsLogRetentionSize() {
+        if (queryViewsLogRetentionSizeBuilder_ == null) {
+          return queryViewsLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryViewsLogRetentionSize_;
+        } else {
+          return queryViewsLogRetentionSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setQueryViewsLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (queryViewsLogRetentionSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          queryViewsLogRetentionSize_ = value;
+          onChanged();
+        } else {
+          queryViewsLogRetentionSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setQueryViewsLogRetentionSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (queryViewsLogRetentionSizeBuilder_ == null) {
+          queryViewsLogRetentionSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          queryViewsLogRetentionSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeQueryViewsLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (queryViewsLogRetentionSizeBuilder_ == null) {
+          if (queryViewsLogRetentionSize_ != null) {
+            queryViewsLogRetentionSize_ =
+              com.google.protobuf.Int64Value.newBuilder(queryViewsLogRetentionSize_).mergeFrom(value).buildPartial();
+          } else {
+            queryViewsLogRetentionSize_ = value;
+          }
+          onChanged();
+        } else {
+          queryViewsLogRetentionSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearQueryViewsLogRetentionSize() {
+        if (queryViewsLogRetentionSizeBuilder_ == null) {
+          queryViewsLogRetentionSize_ = null;
+          onChanged();
+        } else {
+          queryViewsLogRetentionSize_ = null;
+          queryViewsLogRetentionSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getQueryViewsLogRetentionSizeBuilder() {
+        
+        onChanged();
+        return getQueryViewsLogRetentionSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getQueryViewsLogRetentionSizeOrBuilder() {
+        if (queryViewsLogRetentionSizeBuilder_ != null) {
+          return queryViewsLogRetentionSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return queryViewsLogRetentionSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : queryViewsLogRetentionSize_;
+        }
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getQueryViewsLogRetentionSizeFieldBuilder() {
+        if (queryViewsLogRetentionSizeBuilder_ == null) {
+          queryViewsLogRetentionSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getQueryViewsLogRetentionSize(),
+                  getParentForChildren(),
+                  isClean());
+          queryViewsLogRetentionSize_ = null;
+        }
+        return queryViewsLogRetentionSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value queryViewsLogRetentionTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> queryViewsLogRetentionTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the queryViewsLogRetentionTime field is set.
+       */
+      public boolean hasQueryViewsLogRetentionTime() {
+        return queryViewsLogRetentionTimeBuilder_ != null || queryViewsLogRetentionTime_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The queryViewsLogRetentionTime.
+       */
+      public com.google.protobuf.Int64Value getQueryViewsLogRetentionTime() {
+        if (queryViewsLogRetentionTimeBuilder_ == null) {
+          return queryViewsLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryViewsLogRetentionTime_;
+        } else {
+          return queryViewsLogRetentionTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setQueryViewsLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (queryViewsLogRetentionTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          queryViewsLogRetentionTime_ = value;
+          onChanged();
+        } else {
+          queryViewsLogRetentionTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setQueryViewsLogRetentionTime(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (queryViewsLogRetentionTimeBuilder_ == null) {
+          queryViewsLogRetentionTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          queryViewsLogRetentionTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeQueryViewsLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (queryViewsLogRetentionTimeBuilder_ == null) {
+          if (queryViewsLogRetentionTime_ != null) {
+            queryViewsLogRetentionTime_ =
+              com.google.protobuf.Int64Value.newBuilder(queryViewsLogRetentionTime_).mergeFrom(value).buildPartial();
+          } else {
+            queryViewsLogRetentionTime_ = value;
+          }
+          onChanged();
+        } else {
+          queryViewsLogRetentionTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearQueryViewsLogRetentionTime() {
+        if (queryViewsLogRetentionTimeBuilder_ == null) {
+          queryViewsLogRetentionTime_ = null;
+          onChanged();
+        } else {
+          queryViewsLogRetentionTime_ = null;
+          queryViewsLogRetentionTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getQueryViewsLogRetentionTimeBuilder() {
+        
+        onChanged();
+        return getQueryViewsLogRetentionTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getQueryViewsLogRetentionTimeOrBuilder() {
+        if (queryViewsLogRetentionTimeBuilder_ != null) {
+          return queryViewsLogRetentionTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return queryViewsLogRetentionTime_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : queryViewsLogRetentionTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getQueryViewsLogRetentionTimeFieldBuilder() {
+        if (queryViewsLogRetentionTimeBuilder_ == null) {
+          queryViewsLogRetentionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getQueryViewsLogRetentionTime(),
+                  getParentForChildren(),
+                  isClean());
+          queryViewsLogRetentionTime_ = null;
+        }
+        return queryViewsLogRetentionTimeBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue asynchronousMetricLogEnabled_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> asynchronousMetricLogEnabledBuilder_;
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 20.11
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+       * @return Whether the asynchronousMetricLogEnabled field is set.
+       */
+      public boolean hasAsynchronousMetricLogEnabled() {
+        return asynchronousMetricLogEnabledBuilder_ != null || asynchronousMetricLogEnabled_ != null;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 20.11
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+       * @return The asynchronousMetricLogEnabled.
+       */
+      public com.google.protobuf.BoolValue getAsynchronousMetricLogEnabled() {
+        if (asynchronousMetricLogEnabledBuilder_ == null) {
+          return asynchronousMetricLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : asynchronousMetricLogEnabled_;
+        } else {
+          return asynchronousMetricLogEnabledBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 20.11
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+       */
+      public Builder setAsynchronousMetricLogEnabled(com.google.protobuf.BoolValue value) {
+        if (asynchronousMetricLogEnabledBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asynchronousMetricLogEnabled_ = value;
+          onChanged();
+        } else {
+          asynchronousMetricLogEnabledBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 20.11
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+       */
+      public Builder setAsynchronousMetricLogEnabled(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (asynchronousMetricLogEnabledBuilder_ == null) {
+          asynchronousMetricLogEnabled_ = builderForValue.build();
+          onChanged();
+        } else {
+          asynchronousMetricLogEnabledBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 20.11
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+       */
+      public Builder mergeAsynchronousMetricLogEnabled(com.google.protobuf.BoolValue value) {
+        if (asynchronousMetricLogEnabledBuilder_ == null) {
+          if (asynchronousMetricLogEnabled_ != null) {
+            asynchronousMetricLogEnabled_ =
+              com.google.protobuf.BoolValue.newBuilder(asynchronousMetricLogEnabled_).mergeFrom(value).buildPartial();
+          } else {
+            asynchronousMetricLogEnabled_ = value;
+          }
+          onChanged();
+        } else {
+          asynchronousMetricLogEnabledBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 20.11
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+       */
+      public Builder clearAsynchronousMetricLogEnabled() {
+        if (asynchronousMetricLogEnabledBuilder_ == null) {
+          asynchronousMetricLogEnabled_ = null;
+          onChanged();
+        } else {
+          asynchronousMetricLogEnabled_ = null;
+          asynchronousMetricLogEnabledBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 20.11
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getAsynchronousMetricLogEnabledBuilder() {
+        
+        onChanged();
+        return getAsynchronousMetricLogEnabledFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 20.11
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getAsynchronousMetricLogEnabledOrBuilder() {
+        if (asynchronousMetricLogEnabledBuilder_ != null) {
+          return asynchronousMetricLogEnabledBuilder_.getMessageOrBuilder();
+        } else {
+          return asynchronousMetricLogEnabled_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : asynchronousMetricLogEnabled_;
+        }
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 20.11
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getAsynchronousMetricLogEnabledFieldBuilder() {
+        if (asynchronousMetricLogEnabledBuilder_ == null) {
+          asynchronousMetricLogEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getAsynchronousMetricLogEnabled(),
+                  getParentForChildren(),
+                  isClean());
+          asynchronousMetricLogEnabled_ = null;
+        }
+        return asynchronousMetricLogEnabledBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value asynchronousMetricLogRetentionSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asynchronousMetricLogRetentionSizeBuilder_;
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the asynchronousMetricLogRetentionSize field is set.
+       */
+      public boolean hasAsynchronousMetricLogRetentionSize() {
+        return asynchronousMetricLogRetentionSizeBuilder_ != null || asynchronousMetricLogRetentionSize_ != null;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The asynchronousMetricLogRetentionSize.
+       */
+      public com.google.protobuf.Int64Value getAsynchronousMetricLogRetentionSize() {
+        if (asynchronousMetricLogRetentionSizeBuilder_ == null) {
+          return asynchronousMetricLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousMetricLogRetentionSize_;
+        } else {
+          return asynchronousMetricLogRetentionSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setAsynchronousMetricLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (asynchronousMetricLogRetentionSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asynchronousMetricLogRetentionSize_ = value;
+          onChanged();
+        } else {
+          asynchronousMetricLogRetentionSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setAsynchronousMetricLogRetentionSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (asynchronousMetricLogRetentionSizeBuilder_ == null) {
+          asynchronousMetricLogRetentionSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          asynchronousMetricLogRetentionSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeAsynchronousMetricLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (asynchronousMetricLogRetentionSizeBuilder_ == null) {
+          if (asynchronousMetricLogRetentionSize_ != null) {
+            asynchronousMetricLogRetentionSize_ =
+              com.google.protobuf.Int64Value.newBuilder(asynchronousMetricLogRetentionSize_).mergeFrom(value).buildPartial();
+          } else {
+            asynchronousMetricLogRetentionSize_ = value;
+          }
+          onChanged();
+        } else {
+          asynchronousMetricLogRetentionSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearAsynchronousMetricLogRetentionSize() {
+        if (asynchronousMetricLogRetentionSizeBuilder_ == null) {
+          asynchronousMetricLogRetentionSize_ = null;
+          onChanged();
+        } else {
+          asynchronousMetricLogRetentionSize_ = null;
+          asynchronousMetricLogRetentionSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getAsynchronousMetricLogRetentionSizeBuilder() {
+        
+        onChanged();
+        return getAsynchronousMetricLogRetentionSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getAsynchronousMetricLogRetentionSizeOrBuilder() {
+        if (asynchronousMetricLogRetentionSizeBuilder_ != null) {
+          return asynchronousMetricLogRetentionSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return asynchronousMetricLogRetentionSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousMetricLogRetentionSize_;
+        }
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getAsynchronousMetricLogRetentionSizeFieldBuilder() {
+        if (asynchronousMetricLogRetentionSizeBuilder_ == null) {
+          asynchronousMetricLogRetentionSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getAsynchronousMetricLogRetentionSize(),
+                  getParentForChildren(),
+                  isClean());
+          asynchronousMetricLogRetentionSize_ = null;
+        }
+        return asynchronousMetricLogRetentionSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value asynchronousMetricLogRetentionTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asynchronousMetricLogRetentionTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the asynchronousMetricLogRetentionTime field is set.
+       */
+      public boolean hasAsynchronousMetricLogRetentionTime() {
+        return asynchronousMetricLogRetentionTimeBuilder_ != null || asynchronousMetricLogRetentionTime_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The asynchronousMetricLogRetentionTime.
+       */
+      public com.google.protobuf.Int64Value getAsynchronousMetricLogRetentionTime() {
+        if (asynchronousMetricLogRetentionTimeBuilder_ == null) {
+          return asynchronousMetricLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousMetricLogRetentionTime_;
+        } else {
+          return asynchronousMetricLogRetentionTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setAsynchronousMetricLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (asynchronousMetricLogRetentionTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asynchronousMetricLogRetentionTime_ = value;
+          onChanged();
+        } else {
+          asynchronousMetricLogRetentionTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setAsynchronousMetricLogRetentionTime(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (asynchronousMetricLogRetentionTimeBuilder_ == null) {
+          asynchronousMetricLogRetentionTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          asynchronousMetricLogRetentionTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeAsynchronousMetricLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (asynchronousMetricLogRetentionTimeBuilder_ == null) {
+          if (asynchronousMetricLogRetentionTime_ != null) {
+            asynchronousMetricLogRetentionTime_ =
+              com.google.protobuf.Int64Value.newBuilder(asynchronousMetricLogRetentionTime_).mergeFrom(value).buildPartial();
+          } else {
+            asynchronousMetricLogRetentionTime_ = value;
+          }
+          onChanged();
+        } else {
+          asynchronousMetricLogRetentionTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearAsynchronousMetricLogRetentionTime() {
+        if (asynchronousMetricLogRetentionTimeBuilder_ == null) {
+          asynchronousMetricLogRetentionTime_ = null;
+          onChanged();
+        } else {
+          asynchronousMetricLogRetentionTime_ = null;
+          asynchronousMetricLogRetentionTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getAsynchronousMetricLogRetentionTimeBuilder() {
+        
+        onChanged();
+        return getAsynchronousMetricLogRetentionTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getAsynchronousMetricLogRetentionTimeOrBuilder() {
+        if (asynchronousMetricLogRetentionTimeBuilder_ != null) {
+          return asynchronousMetricLogRetentionTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return asynchronousMetricLogRetentionTime_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousMetricLogRetentionTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getAsynchronousMetricLogRetentionTimeFieldBuilder() {
+        if (asynchronousMetricLogRetentionTimeBuilder_ == null) {
+          asynchronousMetricLogRetentionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getAsynchronousMetricLogRetentionTime(),
+                  getParentForChildren(),
+                  isClean());
+          asynchronousMetricLogRetentionTime_ = null;
+        }
+        return asynchronousMetricLogRetentionTimeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value opentelemetrySpanLogRetentionSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> opentelemetrySpanLogRetentionSizeBuilder_;
+      /**
+       * <pre>
+       * Default: 0
+       * Min version: 20.11
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the opentelemetrySpanLogRetentionSize field is set.
+       */
+      public boolean hasOpentelemetrySpanLogRetentionSize() {
+        return opentelemetrySpanLogRetentionSizeBuilder_ != null || opentelemetrySpanLogRetentionSize_ != null;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * Min version: 20.11
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The opentelemetrySpanLogRetentionSize.
+       */
+      public com.google.protobuf.Int64Value getOpentelemetrySpanLogRetentionSize() {
+        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
+          return opentelemetrySpanLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : opentelemetrySpanLogRetentionSize_;
+        } else {
+          return opentelemetrySpanLogRetentionSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * Min version: 20.11
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setOpentelemetrySpanLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          opentelemetrySpanLogRetentionSize_ = value;
+          onChanged();
+        } else {
+          opentelemetrySpanLogRetentionSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * Min version: 20.11
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setOpentelemetrySpanLogRetentionSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
+          opentelemetrySpanLogRetentionSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          opentelemetrySpanLogRetentionSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * Min version: 20.11
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeOpentelemetrySpanLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
+          if (opentelemetrySpanLogRetentionSize_ != null) {
+            opentelemetrySpanLogRetentionSize_ =
+              com.google.protobuf.Int64Value.newBuilder(opentelemetrySpanLogRetentionSize_).mergeFrom(value).buildPartial();
+          } else {
+            opentelemetrySpanLogRetentionSize_ = value;
+          }
+          onChanged();
+        } else {
+          opentelemetrySpanLogRetentionSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * Min version: 20.11
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearOpentelemetrySpanLogRetentionSize() {
+        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
+          opentelemetrySpanLogRetentionSize_ = null;
+          onChanged();
+        } else {
+          opentelemetrySpanLogRetentionSize_ = null;
+          opentelemetrySpanLogRetentionSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * Min version: 20.11
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getOpentelemetrySpanLogRetentionSizeBuilder() {
+        
+        onChanged();
+        return getOpentelemetrySpanLogRetentionSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * Min version: 20.11
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getOpentelemetrySpanLogRetentionSizeOrBuilder() {
+        if (opentelemetrySpanLogRetentionSizeBuilder_ != null) {
+          return opentelemetrySpanLogRetentionSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return opentelemetrySpanLogRetentionSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : opentelemetrySpanLogRetentionSize_;
+        }
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * Min version: 20.11
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getOpentelemetrySpanLogRetentionSizeFieldBuilder() {
+        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
+          opentelemetrySpanLogRetentionSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getOpentelemetrySpanLogRetentionSize(),
+                  getParentForChildren(),
+                  isClean());
+          opentelemetrySpanLogRetentionSize_ = null;
+        }
+        return opentelemetrySpanLogRetentionSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value opentelemetrySpanLogRetentionTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> opentelemetrySpanLogRetentionTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the opentelemetrySpanLogRetentionTime field is set.
+       */
+      public boolean hasOpentelemetrySpanLogRetentionTime() {
+        return opentelemetrySpanLogRetentionTimeBuilder_ != null || opentelemetrySpanLogRetentionTime_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The opentelemetrySpanLogRetentionTime.
+       */
+      public com.google.protobuf.Int64Value getOpentelemetrySpanLogRetentionTime() {
+        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
+          return opentelemetrySpanLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : opentelemetrySpanLogRetentionTime_;
+        } else {
+          return opentelemetrySpanLogRetentionTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setOpentelemetrySpanLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          opentelemetrySpanLogRetentionTime_ = value;
+          onChanged();
+        } else {
+          opentelemetrySpanLogRetentionTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setOpentelemetrySpanLogRetentionTime(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
+          opentelemetrySpanLogRetentionTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          opentelemetrySpanLogRetentionTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeOpentelemetrySpanLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
+          if (opentelemetrySpanLogRetentionTime_ != null) {
+            opentelemetrySpanLogRetentionTime_ =
+              com.google.protobuf.Int64Value.newBuilder(opentelemetrySpanLogRetentionTime_).mergeFrom(value).buildPartial();
+          } else {
+            opentelemetrySpanLogRetentionTime_ = value;
+          }
+          onChanged();
+        } else {
+          opentelemetrySpanLogRetentionTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearOpentelemetrySpanLogRetentionTime() {
+        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
+          opentelemetrySpanLogRetentionTime_ = null;
+          onChanged();
+        } else {
+          opentelemetrySpanLogRetentionTime_ = null;
+          opentelemetrySpanLogRetentionTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getOpentelemetrySpanLogRetentionTimeBuilder() {
+        
+        onChanged();
+        return getOpentelemetrySpanLogRetentionTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getOpentelemetrySpanLogRetentionTimeOrBuilder() {
+        if (opentelemetrySpanLogRetentionTimeBuilder_ != null) {
+          return opentelemetrySpanLogRetentionTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return opentelemetrySpanLogRetentionTime_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : opentelemetrySpanLogRetentionTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getOpentelemetrySpanLogRetentionTimeFieldBuilder() {
+        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
+          opentelemetrySpanLogRetentionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getOpentelemetrySpanLogRetentionTime(),
+                  getParentForChildren(),
+                  isClean());
+          opentelemetrySpanLogRetentionTime_ = null;
+        }
+        return opentelemetrySpanLogRetentionTimeBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue sessionLogEnabled_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> sessionLogEnabledBuilder_;
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.11
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+       * @return Whether the sessionLogEnabled field is set.
+       */
+      public boolean hasSessionLogEnabled() {
+        return sessionLogEnabledBuilder_ != null || sessionLogEnabled_ != null;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.11
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+       * @return The sessionLogEnabled.
+       */
+      public com.google.protobuf.BoolValue getSessionLogEnabled() {
+        if (sessionLogEnabledBuilder_ == null) {
+          return sessionLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : sessionLogEnabled_;
+        } else {
+          return sessionLogEnabledBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.11
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+       */
+      public Builder setSessionLogEnabled(com.google.protobuf.BoolValue value) {
+        if (sessionLogEnabledBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sessionLogEnabled_ = value;
+          onChanged();
+        } else {
+          sessionLogEnabledBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.11
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+       */
+      public Builder setSessionLogEnabled(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (sessionLogEnabledBuilder_ == null) {
+          sessionLogEnabled_ = builderForValue.build();
+          onChanged();
+        } else {
+          sessionLogEnabledBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.11
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+       */
+      public Builder mergeSessionLogEnabled(com.google.protobuf.BoolValue value) {
+        if (sessionLogEnabledBuilder_ == null) {
+          if (sessionLogEnabled_ != null) {
+            sessionLogEnabled_ =
+              com.google.protobuf.BoolValue.newBuilder(sessionLogEnabled_).mergeFrom(value).buildPartial();
+          } else {
+            sessionLogEnabled_ = value;
+          }
+          onChanged();
+        } else {
+          sessionLogEnabledBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.11
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+       */
+      public Builder clearSessionLogEnabled() {
+        if (sessionLogEnabledBuilder_ == null) {
+          sessionLogEnabled_ = null;
+          onChanged();
+        } else {
+          sessionLogEnabled_ = null;
+          sessionLogEnabledBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.11
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getSessionLogEnabledBuilder() {
+        
+        onChanged();
+        return getSessionLogEnabledFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.11
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getSessionLogEnabledOrBuilder() {
+        if (sessionLogEnabledBuilder_ != null) {
+          return sessionLogEnabledBuilder_.getMessageOrBuilder();
+        } else {
+          return sessionLogEnabled_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : sessionLogEnabled_;
+        }
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.11
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getSessionLogEnabledFieldBuilder() {
+        if (sessionLogEnabledBuilder_ == null) {
+          sessionLogEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getSessionLogEnabled(),
+                  getParentForChildren(),
+                  isClean());
+          sessionLogEnabled_ = null;
+        }
+        return sessionLogEnabledBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value sessionLogRetentionSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> sessionLogRetentionSizeBuilder_;
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the sessionLogRetentionSize field is set.
+       */
+      public boolean hasSessionLogRetentionSize() {
+        return sessionLogRetentionSizeBuilder_ != null || sessionLogRetentionSize_ != null;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The sessionLogRetentionSize.
+       */
+      public com.google.protobuf.Int64Value getSessionLogRetentionSize() {
+        if (sessionLogRetentionSizeBuilder_ == null) {
+          return sessionLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sessionLogRetentionSize_;
+        } else {
+          return sessionLogRetentionSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setSessionLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (sessionLogRetentionSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sessionLogRetentionSize_ = value;
+          onChanged();
+        } else {
+          sessionLogRetentionSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setSessionLogRetentionSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (sessionLogRetentionSizeBuilder_ == null) {
+          sessionLogRetentionSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          sessionLogRetentionSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeSessionLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (sessionLogRetentionSizeBuilder_ == null) {
+          if (sessionLogRetentionSize_ != null) {
+            sessionLogRetentionSize_ =
+              com.google.protobuf.Int64Value.newBuilder(sessionLogRetentionSize_).mergeFrom(value).buildPartial();
+          } else {
+            sessionLogRetentionSize_ = value;
+          }
+          onChanged();
+        } else {
+          sessionLogRetentionSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearSessionLogRetentionSize() {
+        if (sessionLogRetentionSizeBuilder_ == null) {
+          sessionLogRetentionSize_ = null;
+          onChanged();
+        } else {
+          sessionLogRetentionSize_ = null;
+          sessionLogRetentionSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSessionLogRetentionSizeBuilder() {
+        
+        onChanged();
+        return getSessionLogRetentionSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSessionLogRetentionSizeOrBuilder() {
+        if (sessionLogRetentionSizeBuilder_ != null) {
+          return sessionLogRetentionSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return sessionLogRetentionSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : sessionLogRetentionSize_;
+        }
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSessionLogRetentionSizeFieldBuilder() {
+        if (sessionLogRetentionSizeBuilder_ == null) {
+          sessionLogRetentionSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSessionLogRetentionSize(),
+                  getParentForChildren(),
+                  isClean());
+          sessionLogRetentionSize_ = null;
+        }
+        return sessionLogRetentionSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value sessionLogRetentionTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> sessionLogRetentionTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the sessionLogRetentionTime field is set.
+       */
+      public boolean hasSessionLogRetentionTime() {
+        return sessionLogRetentionTimeBuilder_ != null || sessionLogRetentionTime_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The sessionLogRetentionTime.
+       */
+      public com.google.protobuf.Int64Value getSessionLogRetentionTime() {
+        if (sessionLogRetentionTimeBuilder_ == null) {
+          return sessionLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sessionLogRetentionTime_;
+        } else {
+          return sessionLogRetentionTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setSessionLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (sessionLogRetentionTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sessionLogRetentionTime_ = value;
+          onChanged();
+        } else {
+          sessionLogRetentionTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setSessionLogRetentionTime(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (sessionLogRetentionTimeBuilder_ == null) {
+          sessionLogRetentionTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          sessionLogRetentionTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeSessionLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (sessionLogRetentionTimeBuilder_ == null) {
+          if (sessionLogRetentionTime_ != null) {
+            sessionLogRetentionTime_ =
+              com.google.protobuf.Int64Value.newBuilder(sessionLogRetentionTime_).mergeFrom(value).buildPartial();
+          } else {
+            sessionLogRetentionTime_ = value;
+          }
+          onChanged();
+        } else {
+          sessionLogRetentionTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearSessionLogRetentionTime() {
+        if (sessionLogRetentionTimeBuilder_ == null) {
+          sessionLogRetentionTime_ = null;
+          onChanged();
+        } else {
+          sessionLogRetentionTime_ = null;
+          sessionLogRetentionTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSessionLogRetentionTimeBuilder() {
+        
+        onChanged();
+        return getSessionLogRetentionTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSessionLogRetentionTimeOrBuilder() {
+        if (sessionLogRetentionTimeBuilder_ != null) {
+          return sessionLogRetentionTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return sessionLogRetentionTime_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : sessionLogRetentionTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSessionLogRetentionTimeFieldBuilder() {
+        if (sessionLogRetentionTimeBuilder_ == null) {
+          sessionLogRetentionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSessionLogRetentionTime(),
+                  getParentForChildren(),
+                  isClean());
+          sessionLogRetentionTime_ = null;
+        }
+        return sessionLogRetentionTimeBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue zookeeperLogEnabled_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> zookeeperLogEnabledBuilder_;
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.9
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+       * @return Whether the zookeeperLogEnabled field is set.
+       */
+      public boolean hasZookeeperLogEnabled() {
+        return zookeeperLogEnabledBuilder_ != null || zookeeperLogEnabled_ != null;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.9
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+       * @return The zookeeperLogEnabled.
+       */
+      public com.google.protobuf.BoolValue getZookeeperLogEnabled() {
+        if (zookeeperLogEnabledBuilder_ == null) {
+          return zookeeperLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : zookeeperLogEnabled_;
+        } else {
+          return zookeeperLogEnabledBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.9
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+       */
+      public Builder setZookeeperLogEnabled(com.google.protobuf.BoolValue value) {
+        if (zookeeperLogEnabledBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          zookeeperLogEnabled_ = value;
+          onChanged();
+        } else {
+          zookeeperLogEnabledBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.9
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+       */
+      public Builder setZookeeperLogEnabled(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (zookeeperLogEnabledBuilder_ == null) {
+          zookeeperLogEnabled_ = builderForValue.build();
+          onChanged();
+        } else {
+          zookeeperLogEnabledBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.9
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+       */
+      public Builder mergeZookeeperLogEnabled(com.google.protobuf.BoolValue value) {
+        if (zookeeperLogEnabledBuilder_ == null) {
+          if (zookeeperLogEnabled_ != null) {
+            zookeeperLogEnabled_ =
+              com.google.protobuf.BoolValue.newBuilder(zookeeperLogEnabled_).mergeFrom(value).buildPartial();
+          } else {
+            zookeeperLogEnabled_ = value;
+          }
+          onChanged();
+        } else {
+          zookeeperLogEnabledBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.9
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+       */
+      public Builder clearZookeeperLogEnabled() {
+        if (zookeeperLogEnabledBuilder_ == null) {
+          zookeeperLogEnabled_ = null;
+          onChanged();
+        } else {
+          zookeeperLogEnabled_ = null;
+          zookeeperLogEnabledBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.9
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getZookeeperLogEnabledBuilder() {
+        
+        onChanged();
+        return getZookeeperLogEnabledFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.9
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getZookeeperLogEnabledOrBuilder() {
+        if (zookeeperLogEnabledBuilder_ != null) {
+          return zookeeperLogEnabledBuilder_.getMessageOrBuilder();
+        } else {
+          return zookeeperLogEnabled_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : zookeeperLogEnabled_;
+        }
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 21.9
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getZookeeperLogEnabledFieldBuilder() {
+        if (zookeeperLogEnabledBuilder_ == null) {
+          zookeeperLogEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getZookeeperLogEnabled(),
+                  getParentForChildren(),
+                  isClean());
+          zookeeperLogEnabled_ = null;
+        }
+        return zookeeperLogEnabledBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value zookeeperLogRetentionSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> zookeeperLogRetentionSizeBuilder_;
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the zookeeperLogRetentionSize field is set.
+       */
+      public boolean hasZookeeperLogRetentionSize() {
+        return zookeeperLogRetentionSizeBuilder_ != null || zookeeperLogRetentionSize_ != null;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The zookeeperLogRetentionSize.
+       */
+      public com.google.protobuf.Int64Value getZookeeperLogRetentionSize() {
+        if (zookeeperLogRetentionSizeBuilder_ == null) {
+          return zookeeperLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : zookeeperLogRetentionSize_;
+        } else {
+          return zookeeperLogRetentionSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setZookeeperLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (zookeeperLogRetentionSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          zookeeperLogRetentionSize_ = value;
+          onChanged();
+        } else {
+          zookeeperLogRetentionSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setZookeeperLogRetentionSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (zookeeperLogRetentionSizeBuilder_ == null) {
+          zookeeperLogRetentionSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          zookeeperLogRetentionSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeZookeeperLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (zookeeperLogRetentionSizeBuilder_ == null) {
+          if (zookeeperLogRetentionSize_ != null) {
+            zookeeperLogRetentionSize_ =
+              com.google.protobuf.Int64Value.newBuilder(zookeeperLogRetentionSize_).mergeFrom(value).buildPartial();
+          } else {
+            zookeeperLogRetentionSize_ = value;
+          }
+          onChanged();
+        } else {
+          zookeeperLogRetentionSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearZookeeperLogRetentionSize() {
+        if (zookeeperLogRetentionSizeBuilder_ == null) {
+          zookeeperLogRetentionSize_ = null;
+          onChanged();
+        } else {
+          zookeeperLogRetentionSize_ = null;
+          zookeeperLogRetentionSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getZookeeperLogRetentionSizeBuilder() {
+        
+        onChanged();
+        return getZookeeperLogRetentionSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getZookeeperLogRetentionSizeOrBuilder() {
+        if (zookeeperLogRetentionSizeBuilder_ != null) {
+          return zookeeperLogRetentionSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return zookeeperLogRetentionSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : zookeeperLogRetentionSize_;
+        }
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getZookeeperLogRetentionSizeFieldBuilder() {
+        if (zookeeperLogRetentionSizeBuilder_ == null) {
+          zookeeperLogRetentionSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getZookeeperLogRetentionSize(),
+                  getParentForChildren(),
+                  isClean());
+          zookeeperLogRetentionSize_ = null;
+        }
+        return zookeeperLogRetentionSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value zookeeperLogRetentionTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> zookeeperLogRetentionTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the zookeeperLogRetentionTime field is set.
+       */
+      public boolean hasZookeeperLogRetentionTime() {
+        return zookeeperLogRetentionTimeBuilder_ != null || zookeeperLogRetentionTime_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The zookeeperLogRetentionTime.
+       */
+      public com.google.protobuf.Int64Value getZookeeperLogRetentionTime() {
+        if (zookeeperLogRetentionTimeBuilder_ == null) {
+          return zookeeperLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : zookeeperLogRetentionTime_;
+        } else {
+          return zookeeperLogRetentionTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setZookeeperLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (zookeeperLogRetentionTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          zookeeperLogRetentionTime_ = value;
+          onChanged();
+        } else {
+          zookeeperLogRetentionTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setZookeeperLogRetentionTime(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (zookeeperLogRetentionTimeBuilder_ == null) {
+          zookeeperLogRetentionTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          zookeeperLogRetentionTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeZookeeperLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (zookeeperLogRetentionTimeBuilder_ == null) {
+          if (zookeeperLogRetentionTime_ != null) {
+            zookeeperLogRetentionTime_ =
+              com.google.protobuf.Int64Value.newBuilder(zookeeperLogRetentionTime_).mergeFrom(value).buildPartial();
+          } else {
+            zookeeperLogRetentionTime_ = value;
+          }
+          onChanged();
+        } else {
+          zookeeperLogRetentionTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearZookeeperLogRetentionTime() {
+        if (zookeeperLogRetentionTimeBuilder_ == null) {
+          zookeeperLogRetentionTime_ = null;
+          onChanged();
+        } else {
+          zookeeperLogRetentionTime_ = null;
+          zookeeperLogRetentionTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getZookeeperLogRetentionTimeBuilder() {
+        
+        onChanged();
+        return getZookeeperLogRetentionTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getZookeeperLogRetentionTimeOrBuilder() {
+        if (zookeeperLogRetentionTimeBuilder_ != null) {
+          return zookeeperLogRetentionTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return zookeeperLogRetentionTime_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : zookeeperLogRetentionTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getZookeeperLogRetentionTimeFieldBuilder() {
+        if (zookeeperLogRetentionTimeBuilder_ == null) {
+          zookeeperLogRetentionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getZookeeperLogRetentionTime(),
+                  getParentForChildren(),
+                  isClean());
+          zookeeperLogRetentionTime_ = null;
+        }
+        return zookeeperLogRetentionTimeBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue asynchronousInsertLogEnabled_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> asynchronousInsertLogEnabledBuilder_;
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 22.10
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+       * @return Whether the asynchronousInsertLogEnabled field is set.
+       */
+      public boolean hasAsynchronousInsertLogEnabled() {
+        return asynchronousInsertLogEnabledBuilder_ != null || asynchronousInsertLogEnabled_ != null;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 22.10
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+       * @return The asynchronousInsertLogEnabled.
+       */
+      public com.google.protobuf.BoolValue getAsynchronousInsertLogEnabled() {
+        if (asynchronousInsertLogEnabledBuilder_ == null) {
+          return asynchronousInsertLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : asynchronousInsertLogEnabled_;
+        } else {
+          return asynchronousInsertLogEnabledBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 22.10
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+       */
+      public Builder setAsynchronousInsertLogEnabled(com.google.protobuf.BoolValue value) {
+        if (asynchronousInsertLogEnabledBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asynchronousInsertLogEnabled_ = value;
+          onChanged();
+        } else {
+          asynchronousInsertLogEnabledBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 22.10
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+       */
+      public Builder setAsynchronousInsertLogEnabled(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (asynchronousInsertLogEnabledBuilder_ == null) {
+          asynchronousInsertLogEnabled_ = builderForValue.build();
+          onChanged();
+        } else {
+          asynchronousInsertLogEnabledBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 22.10
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+       */
+      public Builder mergeAsynchronousInsertLogEnabled(com.google.protobuf.BoolValue value) {
+        if (asynchronousInsertLogEnabledBuilder_ == null) {
+          if (asynchronousInsertLogEnabled_ != null) {
+            asynchronousInsertLogEnabled_ =
+              com.google.protobuf.BoolValue.newBuilder(asynchronousInsertLogEnabled_).mergeFrom(value).buildPartial();
+          } else {
+            asynchronousInsertLogEnabled_ = value;
+          }
+          onChanged();
+        } else {
+          asynchronousInsertLogEnabledBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 22.10
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+       */
+      public Builder clearAsynchronousInsertLogEnabled() {
+        if (asynchronousInsertLogEnabledBuilder_ == null) {
+          asynchronousInsertLogEnabled_ = null;
+          onChanged();
+        } else {
+          asynchronousInsertLogEnabled_ = null;
+          asynchronousInsertLogEnabledBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 22.10
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getAsynchronousInsertLogEnabledBuilder() {
+        
+        onChanged();
+        return getAsynchronousInsertLogEnabledFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 22.10
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getAsynchronousInsertLogEnabledOrBuilder() {
+        if (asynchronousInsertLogEnabledBuilder_ != null) {
+          return asynchronousInsertLogEnabledBuilder_.getMessageOrBuilder();
+        } else {
+          return asynchronousInsertLogEnabled_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : asynchronousInsertLogEnabled_;
+        }
+      }
+      /**
+       * <pre>
+       * Default: false
+       * Min version: 22.10
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getAsynchronousInsertLogEnabledFieldBuilder() {
+        if (asynchronousInsertLogEnabledBuilder_ == null) {
+          asynchronousInsertLogEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getAsynchronousInsertLogEnabled(),
+                  getParentForChildren(),
+                  isClean());
+          asynchronousInsertLogEnabled_ = null;
+        }
+        return asynchronousInsertLogEnabledBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value asynchronousInsertLogRetentionSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asynchronousInsertLogRetentionSizeBuilder_;
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the asynchronousInsertLogRetentionSize field is set.
+       */
+      public boolean hasAsynchronousInsertLogRetentionSize() {
+        return asynchronousInsertLogRetentionSizeBuilder_ != null || asynchronousInsertLogRetentionSize_ != null;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The asynchronousInsertLogRetentionSize.
+       */
+      public com.google.protobuf.Int64Value getAsynchronousInsertLogRetentionSize() {
+        if (asynchronousInsertLogRetentionSizeBuilder_ == null) {
+          return asynchronousInsertLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousInsertLogRetentionSize_;
+        } else {
+          return asynchronousInsertLogRetentionSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setAsynchronousInsertLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (asynchronousInsertLogRetentionSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asynchronousInsertLogRetentionSize_ = value;
+          onChanged();
+        } else {
+          asynchronousInsertLogRetentionSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setAsynchronousInsertLogRetentionSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (asynchronousInsertLogRetentionSizeBuilder_ == null) {
+          asynchronousInsertLogRetentionSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          asynchronousInsertLogRetentionSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeAsynchronousInsertLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (asynchronousInsertLogRetentionSizeBuilder_ == null) {
+          if (asynchronousInsertLogRetentionSize_ != null) {
+            asynchronousInsertLogRetentionSize_ =
+              com.google.protobuf.Int64Value.newBuilder(asynchronousInsertLogRetentionSize_).mergeFrom(value).buildPartial();
+          } else {
+            asynchronousInsertLogRetentionSize_ = value;
+          }
+          onChanged();
+        } else {
+          asynchronousInsertLogRetentionSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearAsynchronousInsertLogRetentionSize() {
+        if (asynchronousInsertLogRetentionSizeBuilder_ == null) {
+          asynchronousInsertLogRetentionSize_ = null;
+          onChanged();
+        } else {
+          asynchronousInsertLogRetentionSize_ = null;
+          asynchronousInsertLogRetentionSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getAsynchronousInsertLogRetentionSizeBuilder() {
+        
+        onChanged();
+        return getAsynchronousInsertLogRetentionSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getAsynchronousInsertLogRetentionSizeOrBuilder() {
+        if (asynchronousInsertLogRetentionSizeBuilder_ != null) {
+          return asynchronousInsertLogRetentionSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return asynchronousInsertLogRetentionSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousInsertLogRetentionSize_;
+        }
+      }
+      /**
+       * <pre>
+       * Default: 0
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getAsynchronousInsertLogRetentionSizeFieldBuilder() {
+        if (asynchronousInsertLogRetentionSizeBuilder_ == null) {
+          asynchronousInsertLogRetentionSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getAsynchronousInsertLogRetentionSize(),
+                  getParentForChildren(),
+                  isClean());
+          asynchronousInsertLogRetentionSize_ = null;
+        }
+        return asynchronousInsertLogRetentionSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value asynchronousInsertLogRetentionTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asynchronousInsertLogRetentionTimeBuilder_;
+      /**
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the asynchronousInsertLogRetentionTime field is set.
+       */
+      public boolean hasAsynchronousInsertLogRetentionTime() {
+        return asynchronousInsertLogRetentionTimeBuilder_ != null || asynchronousInsertLogRetentionTime_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The asynchronousInsertLogRetentionTime.
+       */
+      public com.google.protobuf.Int64Value getAsynchronousInsertLogRetentionTime() {
+        if (asynchronousInsertLogRetentionTimeBuilder_ == null) {
+          return asynchronousInsertLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousInsertLogRetentionTime_;
+        } else {
+          return asynchronousInsertLogRetentionTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setAsynchronousInsertLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (asynchronousInsertLogRetentionTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asynchronousInsertLogRetentionTime_ = value;
+          onChanged();
+        } else {
+          asynchronousInsertLogRetentionTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setAsynchronousInsertLogRetentionTime(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (asynchronousInsertLogRetentionTimeBuilder_ == null) {
+          asynchronousInsertLogRetentionTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          asynchronousInsertLogRetentionTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeAsynchronousInsertLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (asynchronousInsertLogRetentionTimeBuilder_ == null) {
+          if (asynchronousInsertLogRetentionTime_ != null) {
+            asynchronousInsertLogRetentionTime_ =
+              com.google.protobuf.Int64Value.newBuilder(asynchronousInsertLogRetentionTime_).mergeFrom(value).buildPartial();
+          } else {
+            asynchronousInsertLogRetentionTime_ = value;
+          }
+          onChanged();
+        } else {
+          asynchronousInsertLogRetentionTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearAsynchronousInsertLogRetentionTime() {
+        if (asynchronousInsertLogRetentionTimeBuilder_ == null) {
+          asynchronousInsertLogRetentionTime_ = null;
+          onChanged();
+        } else {
+          asynchronousInsertLogRetentionTime_ = null;
+          asynchronousInsertLogRetentionTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getAsynchronousInsertLogRetentionTimeBuilder() {
+        
+        onChanged();
+        return getAsynchronousInsertLogRetentionTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getAsynchronousInsertLogRetentionTimeOrBuilder() {
+        if (asynchronousInsertLogRetentionTimeBuilder_ != null) {
+          return asynchronousInsertLogRetentionTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return asynchronousInsertLogRetentionTime_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousInsertLogRetentionTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getAsynchronousInsertLogRetentionTimeFieldBuilder() {
+        if (asynchronousInsertLogRetentionTimeBuilder_ == null) {
+          asynchronousInsertLogRetentionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getAsynchronousInsertLogRetentionTime(),
+                  getParentForChildren(),
+                  isClean());
+          asynchronousInsertLogRetentionTime_ = null;
+        }
+        return asynchronousInsertLogRetentionTimeBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue geobaseEnabled_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> geobaseEnabledBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+       * @return Whether the geobaseEnabled field is set.
+       */
+      public boolean hasGeobaseEnabled() {
+        return geobaseEnabledBuilder_ != null || geobaseEnabled_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+       * @return The geobaseEnabled.
+       */
+      public com.google.protobuf.BoolValue getGeobaseEnabled() {
+        if (geobaseEnabledBuilder_ == null) {
+          return geobaseEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : geobaseEnabled_;
+        } else {
+          return geobaseEnabledBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+       */
+      public Builder setGeobaseEnabled(com.google.protobuf.BoolValue value) {
+        if (geobaseEnabledBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          geobaseEnabled_ = value;
+          onChanged();
+        } else {
+          geobaseEnabledBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+       */
+      public Builder setGeobaseEnabled(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (geobaseEnabledBuilder_ == null) {
+          geobaseEnabled_ = builderForValue.build();
+          onChanged();
+        } else {
+          geobaseEnabledBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+       */
+      public Builder mergeGeobaseEnabled(com.google.protobuf.BoolValue value) {
+        if (geobaseEnabledBuilder_ == null) {
+          if (geobaseEnabled_ != null) {
+            geobaseEnabled_ =
+              com.google.protobuf.BoolValue.newBuilder(geobaseEnabled_).mergeFrom(value).buildPartial();
+          } else {
+            geobaseEnabled_ = value;
+          }
+          onChanged();
+        } else {
+          geobaseEnabledBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+       */
+      public Builder clearGeobaseEnabled() {
+        if (geobaseEnabledBuilder_ == null) {
+          geobaseEnabled_ = null;
+          onChanged();
+        } else {
+          geobaseEnabled_ = null;
+          geobaseEnabledBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getGeobaseEnabledBuilder() {
+        
+        onChanged();
+        return getGeobaseEnabledFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getGeobaseEnabledOrBuilder() {
+        if (geobaseEnabledBuilder_ != null) {
+          return geobaseEnabledBuilder_.getMessageOrBuilder();
+        } else {
+          return geobaseEnabled_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : geobaseEnabled_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getGeobaseEnabledFieldBuilder() {
+        if (geobaseEnabledBuilder_ == null) {
+          geobaseEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getGeobaseEnabled(),
+                  getParentForChildren(),
+                  isClean());
+          geobaseEnabled_ = null;
+        }
+        return geobaseEnabledBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -44886,8 +52100,8 @@ public final class Clickhouse {
       "\n6yandex/cloud/mdb/clickhouse/v1/config/" +
       "clickhouse.proto\022%yandex.cloud.mdb.click" +
       "house.v1.config\032\036google/protobuf/wrapper" +
-      "s.proto\032\035yandex/cloud/validation.proto\"\207" +
-      "J\n\020ClickhouseConfig\022S\n\tlog_level\030\001 \001(\0162@" +
+      "s.proto\032\035yandex/cloud/validation.proto\"\263" +
+      "Z\n\020ClickhouseConfig\022S\n\tlog_level\030\001 \001(\0162@" +
       ".yandex.cloud.mdb.clickhouse.v1.config.C" +
       "lickhouseConfig.LogLevel\022U\n\nmerge_tree\030\002" +
       " \001(\0132A.yandex.cloud.mdb.clickhouse.v1.co" +
@@ -44966,175 +52180,227 @@ public final class Clickhouse {
       "buf.StringValue\022?\n\032total_memory_profiler" +
       "_step\030, \001(\0132\033.google.protobuf.Int64Value" +
       "\022M\n\'total_memory_tracker_sample_probabil" +
-      "ity\030- \001(\0132\034.google.protobuf.DoubleValue\032" +
-      "\202\013\n\tMergeTree\022D\n\037replicated_deduplicatio" +
-      "n_window\030\001 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\022L\n\'replicated_deduplication_window_s" +
-      "econds\030\002 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022:\n\025parts_to_delay_insert\030\003 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\022:\n\025parts_to_throw_" +
-      "insert\030\004 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\022C\n\036inactive_parts_to_delay_insert\030\t \001(" +
-      "\0132\033.google.protobuf.Int64Value\022C\n\036inacti" +
-      "ve_parts_to_throw_insert\030\n \001(\0132\033.google." +
-      "protobuf.Int64Value\022C\n\036max_replicated_me" +
-      "rges_in_queue\030\005 \001(\0132\033.google.protobuf.In" +
-      "t64Value\022^\n9number_of_free_entries_in_po" +
-      "ol_to_lower_max_size_of_merge\030\006 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\022L\n\'max_bytes_to" +
-      "_merge_at_min_space_in_pool\030\007 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\022L\n\'max_bytes_to_m" +
-      "erge_at_max_space_in_pool\030\010 \001(\0132\033.google" +
-      ".protobuf.Int64Value\022<\n\027min_bytes_for_wi" +
-      "de_part\030\013 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022;\n\026min_rows_for_wide_part\030\014 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\0227\n\023ttl_only_drop" +
-      "_parts\030\r \001(\0132\032.google.protobuf.BoolValue" +
-      "\022I\n%allow_remote_fs_zero_copy_replicatio" +
-      "n\030\016 \001(\0132\032.google.protobuf.BoolValue\022;\n\026m" +
-      "erge_with_ttl_timeout\030\017 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\022I\n$merge_with_recompres" +
-      "sion_ttl_timeout\030\020 \001(\0132\033.google.protobuf" +
-      ".Int64Value\0227\n\022max_parts_in_total\030\021 \001(\0132" +
-      "\033.google.protobuf.Int64Value\022J\n%max_numb" +
-      "er_of_merges_with_ttl_in_pool\030\022 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\0229\n\024cleanup_dela" +
-      "y_period\030\023 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\022W\n2number_of_free_entries_in_pool_to" +
-      "_execute_mutation\030\024 \001(\0132\033.google.protobu" +
-      "f.Int64Value\032\352\004\n\005Kafka\022i\n\021security_proto" +
-      "col\030\001 \001(\0162N.yandex.cloud.mdb.clickhouse." +
-      "v1.config.ClickhouseConfig.Kafka.Securit" +
-      "yProtocol\022c\n\016sasl_mechanism\030\002 \001(\0162K.yand" +
-      "ex.cloud.mdb.clickhouse.v1.config.Clickh" +
-      "ouseConfig.Kafka.SaslMechanism\022\025\n\rsasl_u" +
-      "sername\030\003 \001(\t\022\025\n\rsasl_password\030\004 \001(\t\"\267\001\n" +
-      "\020SecurityProtocol\022!\n\035SECURITY_PROTOCOL_U" +
-      "NSPECIFIED\020\000\022\037\n\033SECURITY_PROTOCOL_PLAINT" +
-      "EXT\020\001\022\031\n\025SECURITY_PROTOCOL_SSL\020\002\022$\n SECU" +
-      "RITY_PROTOCOL_SASL_PLAINTEXT\020\003\022\036\n\032SECURI" +
-      "TY_PROTOCOL_SASL_SSL\020\004\"\250\001\n\rSaslMechanism" +
-      "\022\036\n\032SASL_MECHANISM_UNSPECIFIED\020\000\022\031\n\025SASL" +
-      "_MECHANISM_GSSAPI\020\001\022\030\n\024SASL_MECHANISM_PL" +
-      "AIN\020\002\022 \n\034SASL_MECHANISM_SCRAM_SHA_256\020\003\022" +
-      " \n\034SASL_MECHANISM_SCRAM_SHA_512\020\004\032w\n\nKaf" +
-      "kaTopic\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022U\n\010settings\030" +
-      "\002 \001(\0132=.yandex.cloud.mdb.clickhouse.v1.c" +
-      "onfig.ClickhouseConfig.KafkaB\004\350\3071\001\032=\n\010Ra" +
-      "bbitmq\022\020\n\010username\030\001 \001(\t\022\020\n\010password\030\002 \001" +
-      "(\t\022\r\n\005vhost\030\003 \001(\t\032\333\001\n\013Compression\022Z\n\006met" +
-      "hod\030\001 \001(\0162J.yandex.cloud.mdb.clickhouse." +
-      "v1.config.ClickhouseConfig.Compression.M" +
-      "ethod\022\036\n\rmin_part_size\030\002 \001(\003B\007\372\3071\003>=1\022\033\n" +
-      "\023min_part_size_ratio\030\003 \001(\001\"3\n\006Method\022\026\n\022" +
-      "METHOD_UNSPECIFIED\020\000\022\007\n\003LZ4\020\001\022\010\n\004ZSTD\020\002\032" +
-      "\240\032\n\022ExternalDictionary\022\022\n\004name\030\001 \001(\tB\004\350\307" +
-      "1\001\022m\n\tstructure\030\002 \001(\0132T.yandex.cloud.mdb" +
-      ".clickhouse.v1.config.ClickhouseConfig.E" +
-      "xternalDictionary.StructureB\004\350\3071\001\022g\n\006lay" +
-      "out\030\003 \001(\0132Q.yandex.cloud.mdb.clickhouse." +
-      "v1.config.ClickhouseConfig.ExternalDicti" +
-      "onary.LayoutB\004\350\3071\001\022\030\n\016fixed_lifetime\030\004 \001" +
-      "(\003H\000\022j\n\016lifetime_range\030\005 \001(\0132P.yandex.cl" +
-      "oud.mdb.clickhouse.v1.config.ClickhouseC" +
-      "onfig.ExternalDictionary.RangeH\000\022l\n\013http" +
-      "_source\030\006 \001(\0132U.yandex.cloud.mdb.clickho" +
-      "use.v1.config.ClickhouseConfig.ExternalD" +
-      "ictionary.HttpSourceH\001\022n\n\014mysql_source\030\007" +
-      " \001(\0132V.yandex.cloud.mdb.clickhouse.v1.co" +
-      "nfig.ClickhouseConfig.ExternalDictionary" +
-      ".MysqlSourceH\001\022x\n\021clickhouse_source\030\010 \001(" +
-      "\0132[.yandex.cloud.mdb.clickhouse.v1.confi" +
-      "g.ClickhouseConfig.ExternalDictionary.Cl" +
-      "ickhouseSourceH\001\022r\n\016mongodb_source\030\t \001(\013" +
-      "2X.yandex.cloud.mdb.clickhouse.v1.config" +
-      ".ClickhouseConfig.ExternalDictionary.Mon" +
-      "godbSourceH\001\022x\n\021postgresql_source\030\n \001(\0132" +
-      "[.yandex.cloud.mdb.clickhouse.v1.config." +
-      "ClickhouseConfig.ExternalDictionary.Post" +
-      "gresqlSourceH\001\0325\n\nHttpSource\022\021\n\003url\030\001 \001(" +
-      "\tB\004\350\3071\001\022\024\n\006format\030\002 \001(\tB\004\350\3071\001\032\223\003\n\013MysqlS" +
-      "ource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004" +
-      "\350\3071\001\022\031\n\004port\030\003 \001(\003B\013\372\3071\0070-65535\022\014\n\004user\030" +
-      "\004 \001(\t\022\020\n\010password\030\005 \001(\t\022x\n\010replicas\030\006 \003(" +
-      "\0132^.yandex.cloud.mdb.clickhouse.v1.confi" +
-      "g.ClickhouseConfig.ExternalDictionary.My" +
-      "sqlSource.ReplicaB\006\202\3101\002>0\022\r\n\005where\030\007 \001(\t" +
-      "\022\030\n\020invalidate_query\030\010 \001(\t\032\177\n\007Replica\022\033\n" +
-      "\004host\030\001 \001(\tB\r\350\3071\001\212\3101\005<=253\022\034\n\010priority\030\002" +
-      " \001(\003B\n\350\3071\001\372\3071\002>0\022\031\n\004port\030\003 \001(\003B\013\372\3071\0070-65" +
-      "535\022\014\n\004user\030\004 \001(\t\022\020\n\010password\030\005 \001(\t\032\246\001\n\020" +
-      "ClickhouseSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005ta" +
-      "ble\030\002 \001(\tB\004\350\3071\001\022\033\n\004host\030\003 \001(\tB\r\350\3071\001\212\3101\005<" +
-      "=253\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022\022\n\004user\030" +
-      "\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t\022\r\n\005where\030\007" +
-      " \001(\t\032\231\001\n\rMongodbSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001" +
-      "\022\030\n\ncollection\030\002 \001(\tB\004\350\3071\001\022\033\n\004host\030\003 \001(\t" +
-      "B\r\350\3071\001\212\3101\005<=253\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-655" +
-      "35\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t" +
-      "\032\213\003\n\020PostgresqlSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022" +
-      "\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\025\n\005hosts\030\003 \003(\tB\006\202\3101" +
-      "\002>0\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022\022\n\004user\030\005" +
-      " \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t\022\030\n\020invalida" +
-      "te_query\030\007 \001(\t\022u\n\010ssl_mode\030\010 \001(\0162c.yande" +
-      "x.cloud.mdb.clickhouse.v1.config.Clickho" +
-      "useConfig.ExternalDictionary.PostgresqlS" +
-      "ource.SslMode\"g\n\007SslMode\022\030\n\024SSL_MODE_UNS" +
-      "PECIFIED\020\000\022\013\n\007DISABLE\020\001\022\t\n\005ALLOW\020\002\022\n\n\006PR" +
-      "EFER\020\003\022\r\n\tVERIFY_CA\020\004\022\017\n\013VERIFY_FULL\020\005\032\336" +
-      "\006\n\tStructure\022c\n\002id\030\001 \001(\0132W.yandex.cloud." +
+      "ity\030- \001(\0132\034.google.protobuf.DoubleValue\022" +
+      "H\n\033background_common_pool_size\030/ \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\006\372\3071\002>0\022Z\n-bac" +
+      "kground_merges_mutations_concurrency_rat" +
+      "io\0300 \001(\0132\033.google.protobuf.Int64ValueB\006\372" +
+      "\3071\002>0\022;\n\027query_views_log_enabled\0301 \001(\0132\032" +
+      ".google.protobuf.BoolValue\022L\n\036query_view" +
+      "s_log_retention_size\0302 \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\007\372\3071\003>=0\022L\n\036query_views_" +
+      "log_retention_time\0303 \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\007\372\3071\003>=0\022C\n\037asynchronous_m" +
+      "etric_log_enabled\0304 \001(\0132\032.google.protobu" +
+      "f.BoolValue\022T\n&asynchronous_metric_log_r" +
+      "etention_size\0305 \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\007\372\3071\003>=0\022T\n&asynchronous_metric" +
+      "_log_retention_time\0306 \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\007\372\3071\003>=0\022S\n%opentelemetry" +
+      "_span_log_retention_size\0307 \001(\0132\033.google." +
+      "protobuf.Int64ValueB\007\372\3071\003>=0\022S\n%opentele" +
+      "metry_span_log_retention_time\0308 \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\007\372\3071\003>=0\0227\n\023ses" +
+      "sion_log_enabled\0309 \001(\0132\032.google.protobuf" +
+      ".BoolValue\022H\n\032session_log_retention_size" +
+      "\030: \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
+      "\003>=0\022H\n\032session_log_retention_time\030; \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\0229" +
+      "\n\025zookeeper_log_enabled\030< \001(\0132\032.google.p" +
+      "rotobuf.BoolValue\022J\n\034zookeeper_log_reten" +
+      "tion_size\030= \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\007\372\3071\003>=0\022J\n\034zookeeper_log_retention" +
+      "_time\030> \001(\0132\033.google.protobuf.Int64Value" +
+      "B\007\372\3071\003>=0\022C\n\037asynchronous_insert_log_ena" +
+      "bled\030? \001(\0132\032.google.protobuf.BoolValue\022T" +
+      "\n&asynchronous_insert_log_retention_size" +
+      "\030@ \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
+      "\003>=0\022T\n&asynchronous_insert_log_retentio" +
+      "n_time\030A \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\007\372\3071\003>=0\0223\n\017geobase_enabled\030B \001(\0132\032.go" +
+      "ogle.protobuf.BoolValue\032\271\r\n\tMergeTree\022D\n" +
+      "\037replicated_deduplication_window\030\001 \001(\0132\033" +
+      ".google.protobuf.Int64Value\022L\n\'replicate" +
+      "d_deduplication_window_seconds\030\002 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\022:\n\025parts_to_de" +
+      "lay_insert\030\003 \001(\0132\033.google.protobuf.Int64" +
+      "Value\022:\n\025parts_to_throw_insert\030\004 \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\022C\n\036inactive_pa" +
+      "rts_to_delay_insert\030\t \001(\0132\033.google.proto" +
+      "buf.Int64Value\022C\n\036inactive_parts_to_thro" +
+      "w_insert\030\n \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\022C\n\036max_replicated_merges_in_queue\030\005 " +
+      "\001(\0132\033.google.protobuf.Int64Value\022^\n9numb" +
+      "er_of_free_entries_in_pool_to_lower_max_" +
+      "size_of_merge\030\006 \001(\0132\033.google.protobuf.In" +
+      "t64Value\022L\n\'max_bytes_to_merge_at_min_sp" +
+      "ace_in_pool\030\007 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\022L\n\'max_bytes_to_merge_at_max_spac" +
+      "e_in_pool\030\010 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\022<\n\027min_bytes_for_wide_part\030\013 \001(\0132\033." +
+      "google.protobuf.Int64Value\022;\n\026min_rows_f" +
+      "or_wide_part\030\014 \001(\0132\033.google.protobuf.Int" +
+      "64Value\0227\n\023ttl_only_drop_parts\030\r \001(\0132\032.g" +
+      "oogle.protobuf.BoolValue\022I\n%allow_remote" +
+      "_fs_zero_copy_replication\030\016 \001(\0132\032.google" +
+      ".protobuf.BoolValue\022;\n\026merge_with_ttl_ti" +
+      "meout\030\017 \001(\0132\033.google.protobuf.Int64Value" +
+      "\022I\n$merge_with_recompression_ttl_timeout" +
+      "\030\020 \001(\0132\033.google.protobuf.Int64Value\0227\n\022m" +
+      "ax_parts_in_total\030\021 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022J\n%max_number_of_merges_wit" +
+      "h_ttl_in_pool\030\022 \001(\0132\033.google.protobuf.In" +
+      "t64Value\0229\n\024cleanup_delay_period\030\023 \001(\0132\033" +
+      ".google.protobuf.Int64Value\022W\n2number_of" +
+      "_free_entries_in_pool_to_execute_mutatio" +
+      "n\030\024 \001(\0132\033.google.protobuf.Int64Value\022R\n$" +
+      "max_avg_part_size_for_too_many_parts\030\025 \001" +
+      "(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0" +
+      "\022L\n\036min_age_to_force_merge_seconds\030\026 \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022L" +
+      "\n(min_age_to_force_merge_on_partition_on" +
+      "ly\030\027 \001(\0132\032.google.protobuf.BoolValue\022E\n\030" +
+      "merge_selecting_sleep_ms\030\030 \001(\0132\033.google." +
+      "protobuf.Int64ValueB\006\372\3071\002>0\032\271\006\n\005Kafka\022i\n" +
+      "\021security_protocol\030\001 \001(\0162N.yandex.cloud." +
       "mdb.clickhouse.v1.config.ClickhouseConfi" +
-      "g.ExternalDictionary.Structure.Id\022e\n\003key" +
-      "\030\003 \001(\0132X.yandex.cloud.mdb.clickhouse.v1." +
-      "config.ClickhouseConfig.ExternalDictiona" +
-      "ry.Structure.Key\022q\n\trange_min\030\004 \001(\0132^.ya" +
-      "ndex.cloud.mdb.clickhouse.v1.config.Clic" +
-      "khouseConfig.ExternalDictionary.Structur" +
-      "e.Attribute\022q\n\trange_max\030\005 \001(\0132^.yandex." +
-      "cloud.mdb.clickhouse.v1.config.Clickhous" +
-      "eConfig.ExternalDictionary.Structure.Att" +
-      "ribute\022z\n\nattributes\030\002 \003(\0132^.yandex.clou" +
-      "d.mdb.clickhouse.v1.config.ClickhouseCon" +
-      "fig.ExternalDictionary.Structure.Attribu" +
-      "teB\006\202\3101\002>0\032\204\001\n\tAttribute\022\022\n\004name\030\001 \001(\tB\004" +
-      "\350\3071\001\022\022\n\004type\030\002 \001(\tB\004\350\3071\001\022\022\n\nnull_value\030\003" +
-      " \001(\t\022\022\n\nexpression\030\004 \001(\t\022\024\n\014hierarchical" +
-      "\030\005 \001(\010\022\021\n\tinjective\030\006 \001(\010\032\030\n\002Id\022\022\n\004name\030" +
-      "\001 \001(\tB\004\350\3071\001\032\201\001\n\003Key\022z\n\nattributes\030\001 \003(\0132" +
-      "^.yandex.cloud.mdb.clickhouse.v1.config." +
-      "ClickhouseConfig.ExternalDictionary.Stru" +
-      "cture.AttributeB\006\202\3101\002>0\032\213\002\n\006Layout\022j\n\004ty" +
-      "pe\030\001 \001(\0162V.yandex.cloud.mdb.clickhouse.v" +
+      "g.Kafka.SecurityProtocol\022c\n\016sasl_mechani" +
+      "sm\030\002 \001(\0162K.yandex.cloud.mdb.clickhouse.v" +
+      "1.config.ClickhouseConfig.Kafka.SaslMech" +
+      "anism\022\025\n\rsasl_username\030\003 \001(\t\022\025\n\rsasl_pas" +
+      "sword\030\004 \001(\t\022G\n#enable_ssl_certificate_ve" +
+      "rification\030\005 \001(\0132\032.google.protobuf.BoolV" +
+      "alue\022B\n\024max_poll_interval_ms\030\006 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\007\372\3071\003>=0\022@\n\022sess" +
+      "ion_timeout_ms\030\007 \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\007\372\3071\003>=0\"\267\001\n\020SecurityProtocol\022" +
+      "!\n\035SECURITY_PROTOCOL_UNSPECIFIED\020\000\022\037\n\033SE" +
+      "CURITY_PROTOCOL_PLAINTEXT\020\001\022\031\n\025SECURITY_" +
+      "PROTOCOL_SSL\020\002\022$\n SECURITY_PROTOCOL_SASL" +
+      "_PLAINTEXT\020\003\022\036\n\032SECURITY_PROTOCOL_SASL_S" +
+      "SL\020\004\"\250\001\n\rSaslMechanism\022\036\n\032SASL_MECHANISM" +
+      "_UNSPECIFIED\020\000\022\031\n\025SASL_MECHANISM_GSSAPI\020" +
+      "\001\022\030\n\024SASL_MECHANISM_PLAIN\020\002\022 \n\034SASL_MECH" +
+      "ANISM_SCRAM_SHA_256\020\003\022 \n\034SASL_MECHANISM_" +
+      "SCRAM_SHA_512\020\004\032w\n\nKafkaTopic\022\022\n\004name\030\001 " +
+      "\001(\tB\004\350\3071\001\022U\n\010settings\030\002 \001(\0132=.yandex.clo" +
+      "ud.mdb.clickhouse.v1.config.ClickhouseCo" +
+      "nfig.KafkaB\004\350\3071\001\032=\n\010Rabbitmq\022\020\n\010username" +
+      "\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\022\r\n\005vhost\030\003 \001(\t\032" +
+      "\220\002\n\013Compression\022Z\n\006method\030\001 \001(\0162J.yandex" +
+      ".cloud.mdb.clickhouse.v1.config.Clickhou" +
+      "seConfig.Compression.Method\022\036\n\rmin_part_" +
+      "size\030\002 \001(\003B\007\372\3071\003>=1\022\033\n\023min_part_size_rat" +
+      "io\030\003 \001(\001\0223\n\005level\030\004 \001(\0132\033.google.protobu" +
+      "f.Int64ValueB\007\372\3071\003>=0\"3\n\006Method\022\026\n\022METHO" +
+      "D_UNSPECIFIED\020\000\022\007\n\003LZ4\020\001\022\010\n\004ZSTD\020\002\032\261\032\n\022E" +
+      "xternalDictionary\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\022m\n" +
+      "\tstructure\030\002 \001(\0132T.yandex.cloud.mdb.clic" +
+      "khouse.v1.config.ClickhouseConfig.Extern" +
+      "alDictionary.StructureB\004\350\3071\001\022g\n\006layout\030\003" +
+      " \001(\0132Q.yandex.cloud.mdb.clickhouse.v1.co" +
+      "nfig.ClickhouseConfig.ExternalDictionary" +
+      ".LayoutB\004\350\3071\001\022\030\n\016fixed_lifetime\030\004 \001(\003H\000\022" +
+      "j\n\016lifetime_range\030\005 \001(\0132P.yandex.cloud.m" +
+      "db.clickhouse.v1.config.ClickhouseConfig" +
+      ".ExternalDictionary.RangeH\000\022l\n\013http_sour" +
+      "ce\030\006 \001(\0132U.yandex.cloud.mdb.clickhouse.v" +
       "1.config.ClickhouseConfig.ExternalDictio" +
-      "nary.Layout.TypeB\004\350\3071\001\022\025\n\rsize_in_cells\030" +
-      "\002 \001(\003\"~\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\010\n\004F" +
-      "LAT\020\001\022\n\n\006HASHED\020\002\022\026\n\022COMPLEX_KEY_HASHED\020" +
-      "\003\022\020\n\014RANGE_HASHED\020\004\022\t\n\005CACHE\020\005\022\025\n\021COMPLE" +
-      "X_KEY_CACHE\020\006\032!\n\005Range\022\013\n\003min\030\001 \001(\003\022\013\n\003m" +
-      "ax\030\002 \001(\003B\020\n\010lifetime\022\004\300\3011\001B\016\n\006source\022\004\300\301" +
-      "1\001\032\365\002\n\016GraphiteRollup\022\022\n\004name\030\001 \001(\tB\004\350\3071" +
-      "\001\022h\n\010patterns\030\002 \003(\0132N.yandex.cloud.mdb.c" +
-      "lickhouse.v1.config.ClickhouseConfig.Gra" +
-      "phiteRollup.PatternB\006\202\3101\002>0\032\344\001\n\007Pattern\022" +
-      "\016\n\006regexp\030\001 \001(\t\022\026\n\010function\030\002 \001(\tB\004\350\3071\001\022" +
-      "s\n\tretention\030\003 \003(\0132X.yandex.cloud.mdb.cl" +
-      "ickhouse.v1.config.ClickhouseConfig.Grap" +
-      "hiteRollup.Pattern.RetentionB\006\202\3101\002>0\032<\n\t" +
-      "Retention\022\024\n\003age\030\001 \001(\003B\007\372\3071\003>=0\022\031\n\tpreci" +
-      "sion\030\002 \001(\003B\006\372\3071\002>0\"d\n\010LogLevel\022\031\n\025LOG_LE" +
-      "VEL_UNSPECIFIED\020\000\022\t\n\005TRACE\020\001\022\t\n\005DEBUG\020\002\022" +
-      "\017\n\013INFORMATION\020\003\022\013\n\007WARNING\020\004\022\t\n\005ERROR\020\005" +
-      "\"\215\002\n\023ClickhouseConfigSet\022W\n\020effective_co" +
-      "nfig\030\001 \001(\01327.yandex.cloud.mdb.clickhouse" +
-      ".v1.config.ClickhouseConfigB\004\350\3071\001\022L\n\013use" +
-      "r_config\030\002 \001(\01327.yandex.cloud.mdb.clickh" +
-      "ouse.v1.config.ClickhouseConfig\022O\n\016defau" +
-      "lt_config\030\003 \001(\01327.yandex.cloud.mdb.click" +
-      "house.v1.config.ClickhouseConfigB\201\001\n)yan" +
-      "dex.cloud.api.mdb.clickhouse.v1.configZT" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/mdb/clickhouse/v1/config;clickh" +
-      "ouseb\006proto3"
+      "nary.HttpSourceH\001\022n\n\014mysql_source\030\007 \001(\0132" +
+      "V.yandex.cloud.mdb.clickhouse.v1.config." +
+      "ClickhouseConfig.ExternalDictionary.Mysq" +
+      "lSourceH\001\022x\n\021clickhouse_source\030\010 \001(\0132[.y" +
+      "andex.cloud.mdb.clickhouse.v1.config.Cli" +
+      "ckhouseConfig.ExternalDictionary.Clickho" +
+      "useSourceH\001\022r\n\016mongodb_source\030\t \001(\0132X.ya" +
+      "ndex.cloud.mdb.clickhouse.v1.config.Clic" +
+      "khouseConfig.ExternalDictionary.MongodbS" +
+      "ourceH\001\022x\n\021postgresql_source\030\n \001(\0132[.yan" +
+      "dex.cloud.mdb.clickhouse.v1.config.Click" +
+      "houseConfig.ExternalDictionary.Postgresq" +
+      "lSourceH\001\0325\n\nHttpSource\022\021\n\003url\030\001 \001(\tB\004\350\307" +
+      "1\001\022\024\n\006format\030\002 \001(\tB\004\350\3071\001\032\223\003\n\013MysqlSource" +
+      "\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022" +
+      "\031\n\004port\030\003 \001(\003B\013\372\3071\0070-65535\022\014\n\004user\030\004 \001(\t" +
+      "\022\020\n\010password\030\005 \001(\t\022x\n\010replicas\030\006 \003(\0132^.y" +
+      "andex.cloud.mdb.clickhouse.v1.config.Cli" +
+      "ckhouseConfig.ExternalDictionary.MysqlSo" +
+      "urce.ReplicaB\006\202\3101\002>0\022\r\n\005where\030\007 \001(\t\022\030\n\020i" +
+      "nvalidate_query\030\010 \001(\t\032\177\n\007Replica\022\033\n\004host" +
+      "\030\001 \001(\tB\r\350\3071\001\212\3101\005<=253\022\034\n\010priority\030\002 \001(\003B" +
+      "\n\350\3071\001\372\3071\002>0\022\031\n\004port\030\003 \001(\003B\013\372\3071\0070-65535\022\014" +
+      "\n\004user\030\004 \001(\t\022\020\n\010password\030\005 \001(\t\032\246\001\n\020Click" +
+      "houseSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002" +
+      " \001(\tB\004\350\3071\001\022\033\n\004host\030\003 \001(\tB\r\350\3071\001\212\3101\005<=253\022" +
+      "\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022\022\n\004user\030\005 \001(\t" +
+      "B\004\350\3071\001\022\020\n\010password\030\006 \001(\t\022\r\n\005where\030\007 \001(\t\032" +
+      "\252\001\n\rMongodbSource\022\020\n\002db\030\001 \001(\tB\004\350\3071\001\022\030\n\nc" +
+      "ollection\030\002 \001(\tB\004\350\3071\001\022\033\n\004host\030\003 \001(\tB\r\350\3071" +
+      "\001\212\3101\005<=253\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-65535\022\022\n" +
+      "\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t\022\017\n\007o" +
+      "ptions\030\007 \001(\t\032\213\003\n\020PostgresqlSource\022\020\n\002db\030" +
+      "\001 \001(\tB\004\350\3071\001\022\023\n\005table\030\002 \001(\tB\004\350\3071\001\022\025\n\005host" +
+      "s\030\003 \003(\tB\006\202\3101\002>0\022\031\n\004port\030\004 \001(\003B\013\372\3071\0070-655" +
+      "35\022\022\n\004user\030\005 \001(\tB\004\350\3071\001\022\020\n\010password\030\006 \001(\t" +
+      "\022\030\n\020invalidate_query\030\007 \001(\t\022u\n\010ssl_mode\030\010" +
+      " \001(\0162c.yandex.cloud.mdb.clickhouse.v1.co" +
+      "nfig.ClickhouseConfig.ExternalDictionary" +
+      ".PostgresqlSource.SslMode\"g\n\007SslMode\022\030\n\024" +
+      "SSL_MODE_UNSPECIFIED\020\000\022\013\n\007DISABLE\020\001\022\t\n\005A" +
+      "LLOW\020\002\022\n\n\006PREFER\020\003\022\r\n\tVERIFY_CA\020\004\022\017\n\013VER" +
+      "IFY_FULL\020\005\032\336\006\n\tStructure\022c\n\002id\030\001 \001(\0132W.y" +
+      "andex.cloud.mdb.clickhouse.v1.config.Cli" +
+      "ckhouseConfig.ExternalDictionary.Structu" +
+      "re.Id\022e\n\003key\030\003 \001(\0132X.yandex.cloud.mdb.cl" +
+      "ickhouse.v1.config.ClickhouseConfig.Exte" +
+      "rnalDictionary.Structure.Key\022q\n\trange_mi" +
+      "n\030\004 \001(\0132^.yandex.cloud.mdb.clickhouse.v1" +
+      ".config.ClickhouseConfig.ExternalDiction" +
+      "ary.Structure.Attribute\022q\n\trange_max\030\005 \001" +
+      "(\0132^.yandex.cloud.mdb.clickhouse.v1.conf" +
+      "ig.ClickhouseConfig.ExternalDictionary.S" +
+      "tructure.Attribute\022z\n\nattributes\030\002 \003(\0132^" +
+      ".yandex.cloud.mdb.clickhouse.v1.config.C" +
+      "lickhouseConfig.ExternalDictionary.Struc" +
+      "ture.AttributeB\006\202\3101\002>0\032\204\001\n\tAttribute\022\022\n\004" +
+      "name\030\001 \001(\tB\004\350\3071\001\022\022\n\004type\030\002 \001(\tB\004\350\3071\001\022\022\n\n" +
+      "null_value\030\003 \001(\t\022\022\n\nexpression\030\004 \001(\t\022\024\n\014" +
+      "hierarchical\030\005 \001(\010\022\021\n\tinjective\030\006 \001(\010\032\030\n" +
+      "\002Id\022\022\n\004name\030\001 \001(\tB\004\350\3071\001\032\201\001\n\003Key\022z\n\nattri" +
+      "butes\030\001 \003(\0132^.yandex.cloud.mdb.clickhous" +
+      "e.v1.config.ClickhouseConfig.ExternalDic" +
+      "tionary.Structure.AttributeB\006\202\3101\002>0\032\213\002\n\006" +
+      "Layout\022j\n\004type\030\001 \001(\0162V.yandex.cloud.mdb." +
+      "clickhouse.v1.config.ClickhouseConfig.Ex" +
+      "ternalDictionary.Layout.TypeB\004\350\3071\001\022\025\n\rsi" +
+      "ze_in_cells\030\002 \001(\003\"~\n\004Type\022\024\n\020TYPE_UNSPEC" +
+      "IFIED\020\000\022\010\n\004FLAT\020\001\022\n\n\006HASHED\020\002\022\026\n\022COMPLEX" +
+      "_KEY_HASHED\020\003\022\020\n\014RANGE_HASHED\020\004\022\t\n\005CACHE" +
+      "\020\005\022\025\n\021COMPLEX_KEY_CACHE\020\006\032!\n\005Range\022\013\n\003mi" +
+      "n\030\001 \001(\003\022\013\n\003max\030\002 \001(\003B\020\n\010lifetime\022\004\300\3011\001B\016" +
+      "\n\006source\022\004\300\3011\001\032\365\002\n\016GraphiteRollup\022\022\n\004nam" +
+      "e\030\001 \001(\tB\004\350\3071\001\022h\n\010patterns\030\002 \003(\0132N.yandex" +
+      ".cloud.mdb.clickhouse.v1.config.Clickhou" +
+      "seConfig.GraphiteRollup.PatternB\006\202\3101\002>0\032" +
+      "\344\001\n\007Pattern\022\016\n\006regexp\030\001 \001(\t\022\026\n\010function\030" +
+      "\002 \001(\tB\004\350\3071\001\022s\n\tretention\030\003 \003(\0132X.yandex." +
+      "cloud.mdb.clickhouse.v1.config.Clickhous" +
+      "eConfig.GraphiteRollup.Pattern.Retention" +
+      "B\006\202\3101\002>0\032<\n\tRetention\022\024\n\003age\030\001 \001(\003B\007\372\3071\003" +
+      ">=0\022\031\n\tprecision\030\002 \001(\003B\006\372\3071\002>0\"d\n\010LogLev" +
+      "el\022\031\n\025LOG_LEVEL_UNSPECIFIED\020\000\022\t\n\005TRACE\020\001" +
+      "\022\t\n\005DEBUG\020\002\022\017\n\013INFORMATION\020\003\022\013\n\007WARNING\020" +
+      "\004\022\t\n\005ERROR\020\005\"\215\002\n\023ClickhouseConfigSet\022W\n\020" +
+      "effective_config\030\001 \001(\01327.yandex.cloud.md" +
+      "b.clickhouse.v1.config.ClickhouseConfigB" +
+      "\004\350\3071\001\022L\n\013user_config\030\002 \001(\01327.yandex.clou" +
+      "d.mdb.clickhouse.v1.config.ClickhouseCon" +
+      "fig\022O\n\016default_config\030\003 \001(\01327.yandex.clo" +
+      "ud.mdb.clickhouse.v1.config.ClickhouseCo" +
+      "nfigB\201\001\n)yandex.cloud.api.mdb.clickhouse" +
+      ".v1.configZTgithub.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/mdb/clickhouse/v1/c" +
+      "onfig;clickhouseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -45147,19 +52413,19 @@ public final class Clickhouse {
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor,
-        new java.lang.String[] { "LogLevel", "MergeTree", "Compression", "Dictionaries", "GraphiteRollup", "Kafka", "KafkaTopics", "Rabbitmq", "MaxConnections", "MaxConcurrentQueries", "KeepAliveTimeout", "UncompressedCacheSize", "MarkCacheSize", "MaxTableSizeToDrop", "MaxPartitionSizeToDrop", "BuiltinDictionariesReloadInterval", "Timezone", "GeobaseUri", "QueryLogRetentionSize", "QueryLogRetentionTime", "QueryThreadLogEnabled", "QueryThreadLogRetentionSize", "QueryThreadLogRetentionTime", "PartLogRetentionSize", "PartLogRetentionTime", "MetricLogEnabled", "MetricLogRetentionSize", "MetricLogRetentionTime", "TraceLogEnabled", "TraceLogRetentionSize", "TraceLogRetentionTime", "TextLogEnabled", "TextLogRetentionSize", "TextLogRetentionTime", "TextLogLevel", "OpentelemetrySpanLogEnabled", "BackgroundPoolSize", "BackgroundSchedulePoolSize", "BackgroundFetchesPoolSize", "BackgroundMovePoolSize", "BackgroundDistributedSchedulePoolSize", "BackgroundBufferFlushSchedulePoolSize", "BackgroundMessageBrokerSchedulePoolSize", "DefaultDatabase", "TotalMemoryProfilerStep", "TotalMemoryTrackerSampleProbability", });
+        new java.lang.String[] { "LogLevel", "MergeTree", "Compression", "Dictionaries", "GraphiteRollup", "Kafka", "KafkaTopics", "Rabbitmq", "MaxConnections", "MaxConcurrentQueries", "KeepAliveTimeout", "UncompressedCacheSize", "MarkCacheSize", "MaxTableSizeToDrop", "MaxPartitionSizeToDrop", "BuiltinDictionariesReloadInterval", "Timezone", "GeobaseUri", "QueryLogRetentionSize", "QueryLogRetentionTime", "QueryThreadLogEnabled", "QueryThreadLogRetentionSize", "QueryThreadLogRetentionTime", "PartLogRetentionSize", "PartLogRetentionTime", "MetricLogEnabled", "MetricLogRetentionSize", "MetricLogRetentionTime", "TraceLogEnabled", "TraceLogRetentionSize", "TraceLogRetentionTime", "TextLogEnabled", "TextLogRetentionSize", "TextLogRetentionTime", "TextLogLevel", "OpentelemetrySpanLogEnabled", "BackgroundPoolSize", "BackgroundSchedulePoolSize", "BackgroundFetchesPoolSize", "BackgroundMovePoolSize", "BackgroundDistributedSchedulePoolSize", "BackgroundBufferFlushSchedulePoolSize", "BackgroundMessageBrokerSchedulePoolSize", "DefaultDatabase", "TotalMemoryProfilerStep", "TotalMemoryTrackerSampleProbability", "BackgroundCommonPoolSize", "BackgroundMergesMutationsConcurrencyRatio", "QueryViewsLogEnabled", "QueryViewsLogRetentionSize", "QueryViewsLogRetentionTime", "AsynchronousMetricLogEnabled", "AsynchronousMetricLogRetentionSize", "AsynchronousMetricLogRetentionTime", "OpentelemetrySpanLogRetentionSize", "OpentelemetrySpanLogRetentionTime", "SessionLogEnabled", "SessionLogRetentionSize", "SessionLogRetentionTime", "ZookeeperLogEnabled", "ZookeeperLogRetentionSize", "ZookeeperLogRetentionTime", "AsynchronousInsertLogEnabled", "AsynchronousInsertLogRetentionSize", "AsynchronousInsertLogRetentionTime", "GeobaseEnabled", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_descriptor,
-        new java.lang.String[] { "ReplicatedDeduplicationWindow", "ReplicatedDeduplicationWindowSeconds", "PartsToDelayInsert", "PartsToThrowInsert", "InactivePartsToDelayInsert", "InactivePartsToThrowInsert", "MaxReplicatedMergesInQueue", "NumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge", "MaxBytesToMergeAtMinSpaceInPool", "MaxBytesToMergeAtMaxSpaceInPool", "MinBytesForWidePart", "MinRowsForWidePart", "TtlOnlyDropParts", "AllowRemoteFsZeroCopyReplication", "MergeWithTtlTimeout", "MergeWithRecompressionTtlTimeout", "MaxPartsInTotal", "MaxNumberOfMergesWithTtlInPool", "CleanupDelayPeriod", "NumberOfFreeEntriesInPoolToExecuteMutation", });
+        new java.lang.String[] { "ReplicatedDeduplicationWindow", "ReplicatedDeduplicationWindowSeconds", "PartsToDelayInsert", "PartsToThrowInsert", "InactivePartsToDelayInsert", "InactivePartsToThrowInsert", "MaxReplicatedMergesInQueue", "NumberOfFreeEntriesInPoolToLowerMaxSizeOfMerge", "MaxBytesToMergeAtMinSpaceInPool", "MaxBytesToMergeAtMaxSpaceInPool", "MinBytesForWidePart", "MinRowsForWidePart", "TtlOnlyDropParts", "AllowRemoteFsZeroCopyReplication", "MergeWithTtlTimeout", "MergeWithRecompressionTtlTimeout", "MaxPartsInTotal", "MaxNumberOfMergesWithTtlInPool", "CleanupDelayPeriod", "NumberOfFreeEntriesInPoolToExecuteMutation", "MaxAvgPartSizeForTooManyParts", "MinAgeToForceMergeSeconds", "MinAgeToForceMergeOnPartitionOnly", "MergeSelectingSleepMs", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Kafka_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Kafka_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Kafka_descriptor,
-        new java.lang.String[] { "SecurityProtocol", "SaslMechanism", "SaslUsername", "SaslPassword", });
+        new java.lang.String[] { "SecurityProtocol", "SaslMechanism", "SaslUsername", "SaslPassword", "EnableSslCertificateVerification", "MaxPollIntervalMs", "SessionTimeoutMs", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_KafkaTopic_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(2);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_KafkaTopic_fieldAccessorTable = new
@@ -45177,7 +52443,7 @@ public final class Clickhouse {
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Compression_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_Compression_descriptor,
-        new java.lang.String[] { "Method", "MinPartSize", "MinPartSizeRatio", });
+        new java.lang.String[] { "Method", "MinPartSize", "MinPartSizeRatio", "Level", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_ExternalDictionary_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(5);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_ExternalDictionary_fieldAccessorTable = new
@@ -45213,7 +52479,7 @@ public final class Clickhouse {
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_ExternalDictionary_MongodbSource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_ExternalDictionary_MongodbSource_descriptor,
-        new java.lang.String[] { "Db", "Collection", "Host", "Port", "User", "Password", });
+        new java.lang.String[] { "Db", "Collection", "Host", "Port", "User", "Password", "Options", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_ExternalDictionary_PostgresqlSource_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_ExternalDictionary_descriptor.getNestedTypes().get(4);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_ExternalDictionary_PostgresqlSource_fieldAccessorTable = new

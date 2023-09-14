@@ -20,7 +20,7 @@ public final class PerfDiag {
 
     /**
      * <pre>
-     * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Time of collecting statistics on sessions (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time = 1;</code>
@@ -29,7 +29,7 @@ public final class PerfDiag {
     boolean hasTime();
     /**
      * <pre>
-     * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Time of collecting statistics on sessions (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time = 1;</code>
@@ -38,7 +38,7 @@ public final class PerfDiag {
     com.google.protobuf.Timestamp getTime();
     /**
      * <pre>
-     * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Time of collecting statistics on sessions (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time = 1;</code>
@@ -46,11 +46,19 @@ public final class PerfDiag {
     com.google.protobuf.TimestampOrBuilder getTimeOrBuilder();
 
     /**
+     * <pre>
+     * Host of the connected client.
+     * </pre>
+     *
      * <code>string host = 2;</code>
      * @return The host.
      */
     java.lang.String getHost();
     /**
+     * <pre>
+     * Host of the connected client.
+     * </pre>
+     *
      * <code>string host = 2;</code>
      * @return The bytes for host.
      */
@@ -58,17 +66,29 @@ public final class PerfDiag {
         getHostBytes();
 
     /**
+     * <pre>
+     * Server process ID. For client connections, this is a client connection ID.
+     * </pre>
+     *
      * <code>int64 pid = 3;</code>
      * @return The pid.
      */
     long getPid();
 
     /**
+     * <pre>
+     * Database ID.
+     * </pre>
+     *
      * <code>string database = 4;</code>
      * @return The database.
      */
     java.lang.String getDatabase();
     /**
+     * <pre>
+     * Database ID.
+     * </pre>
+     *
      * <code>string database = 4;</code>
      * @return The bytes for database.
      */
@@ -76,11 +96,19 @@ public final class PerfDiag {
         getDatabaseBytes();
 
     /**
+     * <pre>
+     * User ID.
+     * </pre>
+     *
      * <code>string user = 5;</code>
      * @return The user.
      */
     java.lang.String getUser();
     /**
+     * <pre>
+     * User ID.
+     * </pre>
+     *
      * <code>string user = 5;</code>
      * @return The bytes for user.
      */
@@ -88,11 +116,19 @@ public final class PerfDiag {
         getUserBytes();
 
     /**
+     * <pre>
+     * Application name on the connected client.
+     * </pre>
+     *
      * <code>string application_name = 6;</code>
      * @return The applicationName.
      */
     java.lang.String getApplicationName();
     /**
+     * <pre>
+     * Application name on the connected client.
+     * </pre>
+     *
      * <code>string application_name = 6;</code>
      * @return The bytes for applicationName.
      */
@@ -100,71 +136,135 @@ public final class PerfDiag {
         getApplicationNameBytes();
 
     /**
+     * <pre>
+     * Time when a given process was started. For client connections, this is the time when the client connected to the server.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp backend_start = 7;</code>
      * @return Whether the backendStart field is set.
      */
     boolean hasBackendStart();
     /**
+     * <pre>
+     * Time when a given process was started. For client connections, this is the time when the client connected to the server.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp backend_start = 7;</code>
      * @return The backendStart.
      */
     com.google.protobuf.Timestamp getBackendStart();
     /**
+     * <pre>
+     * Time when a given process was started. For client connections, this is the time when the client connected to the server.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp backend_start = 7;</code>
      */
     com.google.protobuf.TimestampOrBuilder getBackendStartOrBuilder();
 
     /**
+     * <pre>
+     * Time when a transaction of a given process was started. Returns [NULL] if no transaction is active.
+     * If the currently active query is the first of its transaction, the value of this parameter is equal to the value of the [query_start] parameter.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp xact_start = 8;</code>
      * @return Whether the xactStart field is set.
      */
     boolean hasXactStart();
     /**
+     * <pre>
+     * Time when a transaction of a given process was started. Returns [NULL] if no transaction is active.
+     * If the currently active query is the first of its transaction, the value of this parameter is equal to the value of the [query_start] parameter.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp xact_start = 8;</code>
      * @return The xactStart.
      */
     com.google.protobuf.Timestamp getXactStart();
     /**
+     * <pre>
+     * Time when a transaction of a given process was started. Returns [NULL] if no transaction is active.
+     * If the currently active query is the first of its transaction, the value of this parameter is equal to the value of the [query_start] parameter.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp xact_start = 8;</code>
      */
     com.google.protobuf.TimestampOrBuilder getXactStartOrBuilder();
 
     /**
+     * <pre>
+     * Time when the currently active query was started.
+     * If the [state] parameter does not take the value [active], the parameter returns the time when the lastest query was started.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp query_start = 9;</code>
      * @return Whether the queryStart field is set.
      */
     boolean hasQueryStart();
     /**
+     * <pre>
+     * Time when the currently active query was started.
+     * If the [state] parameter does not take the value [active], the parameter returns the time when the lastest query was started.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp query_start = 9;</code>
      * @return The queryStart.
      */
     com.google.protobuf.Timestamp getQueryStart();
     /**
+     * <pre>
+     * Time when the currently active query was started.
+     * If the [state] parameter does not take the value [active], the parameter returns the time when the lastest query was started.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp query_start = 9;</code>
      */
     com.google.protobuf.TimestampOrBuilder getQueryStartOrBuilder();
 
     /**
+     * <pre>
+     * Time when the [state] parameter was last changed.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp state_change = 10;</code>
      * @return Whether the stateChange field is set.
      */
     boolean hasStateChange();
     /**
+     * <pre>
+     * Time when the [state] parameter was last changed.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp state_change = 10;</code>
      * @return The stateChange.
      */
     com.google.protobuf.Timestamp getStateChange();
     /**
+     * <pre>
+     * Time when the [state] parameter was last changed.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp state_change = 10;</code>
      */
     com.google.protobuf.TimestampOrBuilder getStateChangeOrBuilder();
 
     /**
+     * <pre>
+     * Type of event for which the backend is waiting. Such an event is called a wait event. A backend refers to the process that maintains the client connection.
+     * For the list of wait events, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#WAIT-EVENT-TABLE). If the backend is not waiting for any event, the parameter returns [NULL].
+     * </pre>
+     *
      * <code>string wait_event_type = 11;</code>
      * @return The waitEventType.
      */
     java.lang.String getWaitEventType();
     /**
+     * <pre>
+     * Type of event for which the backend is waiting. Such an event is called a wait event. A backend refers to the process that maintains the client connection.
+     * For the list of wait events, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#WAIT-EVENT-TABLE). If the backend is not waiting for any event, the parameter returns [NULL].
+     * </pre>
+     *
      * <code>string wait_event_type = 11;</code>
      * @return The bytes for waitEventType.
      */
@@ -172,11 +272,21 @@ public final class PerfDiag {
         getWaitEventTypeBytes();
 
     /**
+     * <pre>
+     * Wait event name.
+     * For the list of such names, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#WAIT-EVENT-ACTIVITY-TABLE). If the backend is not waiting for any event, the parameter returns [NULL].
+     * </pre>
+     *
      * <code>string wait_event = 12;</code>
      * @return The waitEvent.
      */
     java.lang.String getWaitEvent();
     /**
+     * <pre>
+     * Wait event name.
+     * For the list of such names, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#WAIT-EVENT-ACTIVITY-TABLE). If the backend is not waiting for any event, the parameter returns [NULL].
+     * </pre>
+     *
      * <code>string wait_event = 12;</code>
      * @return The bytes for waitEvent.
      */
@@ -184,11 +294,19 @@ public final class PerfDiag {
         getWaitEventBytes();
 
     /**
+     * <pre>
+     * Current backend state. For the list of possible values, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#MONITORING-PG-STAT-ACTIVITY-VIEW).
+     * </pre>
+     *
      * <code>string state = 13;</code>
      * @return The state.
      */
     java.lang.String getState();
     /**
+     * <pre>
+     * Current backend state. For the list of possible values, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#MONITORING-PG-STAT-ACTIVITY-VIEW).
+     * </pre>
+     *
      * <code>string state = 13;</code>
      * @return The bytes for state.
      */
@@ -196,11 +314,21 @@ public final class PerfDiag {
         getStateBytes();
 
     /**
+     * <pre>
+     * Text of the most recent query.
+     * If the [state] parameter takes the value [active], the parameter shows the currently executing query. For the rest of the states, the parameter shows the last query that was executed. By default, the query text is truncated to 1024 bytes.
+     * </pre>
+     *
      * <code>string query = 14;</code>
      * @return The query.
      */
     java.lang.String getQuery();
     /**
+     * <pre>
+     * Text of the most recent query.
+     * If the [state] parameter takes the value [active], the parameter shows the currently executing query. For the rest of the states, the parameter shows the last query that was executed. By default, the query text is truncated to 1024 bytes.
+     * </pre>
+     *
      * <code>string query = 14;</code>
      * @return The bytes for query.
      */
@@ -208,11 +336,19 @@ public final class PerfDiag {
         getQueryBytes();
 
     /**
+     * <pre>
+     * Current backend type. For the list of possible values, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#MONITORING-PG-STAT-ACTIVITY-VIEW).
+     * </pre>
+     *
      * <code>string backend_type = 15;</code>
      * @return The backendType.
      */
     java.lang.String getBackendType();
     /**
+     * <pre>
+     * Current backend type. For the list of possible values, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#MONITORING-PG-STAT-ACTIVITY-VIEW).
+     * </pre>
+     *
      * <code>string backend_type = 15;</code>
      * @return The bytes for backendType.
      */
@@ -220,11 +356,25 @@ public final class PerfDiag {
         getBackendTypeBytes();
 
     /**
+     * <pre>
+     * IP address of the connected client.
+     * The parameter returns [NULL] in the following cases:
+     * - The client is connected via a Unix socket on the server.
+     * - A given process is internal (for example, autovacuum).
+     * </pre>
+     *
      * <code>string client_addr = 16;</code>
      * @return The clientAddr.
      */
     java.lang.String getClientAddr();
     /**
+     * <pre>
+     * IP address of the connected client.
+     * The parameter returns [NULL] in the following cases:
+     * - The client is connected via a Unix socket on the server.
+     * - A given process is internal (for example, autovacuum).
+     * </pre>
+     *
      * <code>string client_addr = 16;</code>
      * @return The bytes for clientAddr.
      */
@@ -232,11 +382,19 @@ public final class PerfDiag {
         getClientAddrBytes();
 
     /**
+     * <pre>
+     * Host name of the connected client (relevant for IP connections).
+     * </pre>
+     *
      * <code>string client_hostname = 17;</code>
      * @return The clientHostname.
      */
     java.lang.String getClientHostname();
     /**
+     * <pre>
+     * Host name of the connected client (relevant for IP connections).
+     * </pre>
+     *
      * <code>string client_hostname = 17;</code>
      * @return The bytes for clientHostname.
      */
@@ -244,29 +402,50 @@ public final class PerfDiag {
         getClientHostnameBytes();
 
     /**
+     * <pre>
+     * TCP port number that the client is using for communication with the server.
+     * Returns [-1] if the client is connected via a Unix socket on the server. Returns [NULL] if a given process is internal (for example, autovacuum).
+     * </pre>
+     *
      * <code>int64 client_port = 18;</code>
      * @return The clientPort.
      */
     long getClientPort();
 
     /**
+     * <pre>
+     * Top-level transaction ID, if any.
+     * </pre>
+     *
      * <code>int64 backend_xid = 19;</code>
      * @return The backendXid.
      */
     long getBackendXid();
 
     /**
+     * <pre>
+     * Current [xmin horizon].
+     * </pre>
+     *
      * <code>int64 backend_xmin = 20;</code>
      * @return The backendXmin.
      */
     long getBackendXmin();
 
     /**
+     * <pre>
+     * Process IDs that are blocking a given server process ID.
+     * </pre>
+     *
      * <code>string blocking_pids = 22;</code>
      * @return The blockingPids.
      */
     java.lang.String getBlockingPids();
     /**
+     * <pre>
+     * Process IDs that are blocking a given server process ID.
+     * </pre>
+     *
      * <code>string blocking_pids = 22;</code>
      * @return The bytes for blockingPids.
      */
@@ -274,11 +453,19 @@ public final class PerfDiag {
         getBlockingPidsBytes();
 
     /**
+     * <pre>
+     * Query ID.
+     * </pre>
+     *
      * <code>string query_id = 23;</code>
      * @return The queryId.
      */
     java.lang.String getQueryId();
     /**
+     * <pre>
+     * Query ID.
+     * </pre>
+     *
      * <code>string query_id = 23;</code>
      * @return The bytes for queryId.
      */
@@ -542,7 +729,7 @@ public final class PerfDiag {
     private com.google.protobuf.Timestamp time_;
     /**
      * <pre>
-     * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Time of collecting statistics on sessions (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time = 1;</code>
@@ -554,7 +741,7 @@ public final class PerfDiag {
     }
     /**
      * <pre>
-     * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Time of collecting statistics on sessions (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time = 1;</code>
@@ -566,7 +753,7 @@ public final class PerfDiag {
     }
     /**
      * <pre>
-     * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * Time of collecting statistics on sessions (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
      * </pre>
      *
      * <code>.google.protobuf.Timestamp time = 1;</code>
@@ -579,6 +766,10 @@ public final class PerfDiag {
     public static final int HOST_FIELD_NUMBER = 2;
     private volatile java.lang.Object host_;
     /**
+     * <pre>
+     * Host of the connected client.
+     * </pre>
+     *
      * <code>string host = 2;</code>
      * @return The host.
      */
@@ -596,6 +787,10 @@ public final class PerfDiag {
       }
     }
     /**
+     * <pre>
+     * Host of the connected client.
+     * </pre>
+     *
      * <code>string host = 2;</code>
      * @return The bytes for host.
      */
@@ -617,6 +812,10 @@ public final class PerfDiag {
     public static final int PID_FIELD_NUMBER = 3;
     private long pid_;
     /**
+     * <pre>
+     * Server process ID. For client connections, this is a client connection ID.
+     * </pre>
+     *
      * <code>int64 pid = 3;</code>
      * @return The pid.
      */
@@ -628,6 +827,10 @@ public final class PerfDiag {
     public static final int DATABASE_FIELD_NUMBER = 4;
     private volatile java.lang.Object database_;
     /**
+     * <pre>
+     * Database ID.
+     * </pre>
+     *
      * <code>string database = 4;</code>
      * @return The database.
      */
@@ -645,6 +848,10 @@ public final class PerfDiag {
       }
     }
     /**
+     * <pre>
+     * Database ID.
+     * </pre>
+     *
      * <code>string database = 4;</code>
      * @return The bytes for database.
      */
@@ -666,6 +873,10 @@ public final class PerfDiag {
     public static final int USER_FIELD_NUMBER = 5;
     private volatile java.lang.Object user_;
     /**
+     * <pre>
+     * User ID.
+     * </pre>
+     *
      * <code>string user = 5;</code>
      * @return The user.
      */
@@ -683,6 +894,10 @@ public final class PerfDiag {
       }
     }
     /**
+     * <pre>
+     * User ID.
+     * </pre>
+     *
      * <code>string user = 5;</code>
      * @return The bytes for user.
      */
@@ -704,6 +919,10 @@ public final class PerfDiag {
     public static final int APPLICATION_NAME_FIELD_NUMBER = 6;
     private volatile java.lang.Object applicationName_;
     /**
+     * <pre>
+     * Application name on the connected client.
+     * </pre>
+     *
      * <code>string application_name = 6;</code>
      * @return The applicationName.
      */
@@ -721,6 +940,10 @@ public final class PerfDiag {
       }
     }
     /**
+     * <pre>
+     * Application name on the connected client.
+     * </pre>
+     *
      * <code>string application_name = 6;</code>
      * @return The bytes for applicationName.
      */
@@ -742,6 +965,10 @@ public final class PerfDiag {
     public static final int BACKEND_START_FIELD_NUMBER = 7;
     private com.google.protobuf.Timestamp backendStart_;
     /**
+     * <pre>
+     * Time when a given process was started. For client connections, this is the time when the client connected to the server.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp backend_start = 7;</code>
      * @return Whether the backendStart field is set.
      */
@@ -750,6 +977,10 @@ public final class PerfDiag {
       return backendStart_ != null;
     }
     /**
+     * <pre>
+     * Time when a given process was started. For client connections, this is the time when the client connected to the server.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp backend_start = 7;</code>
      * @return The backendStart.
      */
@@ -758,6 +989,10 @@ public final class PerfDiag {
       return backendStart_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : backendStart_;
     }
     /**
+     * <pre>
+     * Time when a given process was started. For client connections, this is the time when the client connected to the server.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp backend_start = 7;</code>
      */
     @java.lang.Override
@@ -768,6 +1003,11 @@ public final class PerfDiag {
     public static final int XACT_START_FIELD_NUMBER = 8;
     private com.google.protobuf.Timestamp xactStart_;
     /**
+     * <pre>
+     * Time when a transaction of a given process was started. Returns [NULL] if no transaction is active.
+     * If the currently active query is the first of its transaction, the value of this parameter is equal to the value of the [query_start] parameter.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp xact_start = 8;</code>
      * @return Whether the xactStart field is set.
      */
@@ -776,6 +1016,11 @@ public final class PerfDiag {
       return xactStart_ != null;
     }
     /**
+     * <pre>
+     * Time when a transaction of a given process was started. Returns [NULL] if no transaction is active.
+     * If the currently active query is the first of its transaction, the value of this parameter is equal to the value of the [query_start] parameter.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp xact_start = 8;</code>
      * @return The xactStart.
      */
@@ -784,6 +1029,11 @@ public final class PerfDiag {
       return xactStart_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : xactStart_;
     }
     /**
+     * <pre>
+     * Time when a transaction of a given process was started. Returns [NULL] if no transaction is active.
+     * If the currently active query is the first of its transaction, the value of this parameter is equal to the value of the [query_start] parameter.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp xact_start = 8;</code>
      */
     @java.lang.Override
@@ -794,6 +1044,11 @@ public final class PerfDiag {
     public static final int QUERY_START_FIELD_NUMBER = 9;
     private com.google.protobuf.Timestamp queryStart_;
     /**
+     * <pre>
+     * Time when the currently active query was started.
+     * If the [state] parameter does not take the value [active], the parameter returns the time when the lastest query was started.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp query_start = 9;</code>
      * @return Whether the queryStart field is set.
      */
@@ -802,6 +1057,11 @@ public final class PerfDiag {
       return queryStart_ != null;
     }
     /**
+     * <pre>
+     * Time when the currently active query was started.
+     * If the [state] parameter does not take the value [active], the parameter returns the time when the lastest query was started.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp query_start = 9;</code>
      * @return The queryStart.
      */
@@ -810,6 +1070,11 @@ public final class PerfDiag {
       return queryStart_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : queryStart_;
     }
     /**
+     * <pre>
+     * Time when the currently active query was started.
+     * If the [state] parameter does not take the value [active], the parameter returns the time when the lastest query was started.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp query_start = 9;</code>
      */
     @java.lang.Override
@@ -820,6 +1085,10 @@ public final class PerfDiag {
     public static final int STATE_CHANGE_FIELD_NUMBER = 10;
     private com.google.protobuf.Timestamp stateChange_;
     /**
+     * <pre>
+     * Time when the [state] parameter was last changed.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp state_change = 10;</code>
      * @return Whether the stateChange field is set.
      */
@@ -828,6 +1097,10 @@ public final class PerfDiag {
       return stateChange_ != null;
     }
     /**
+     * <pre>
+     * Time when the [state] parameter was last changed.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp state_change = 10;</code>
      * @return The stateChange.
      */
@@ -836,6 +1109,10 @@ public final class PerfDiag {
       return stateChange_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : stateChange_;
     }
     /**
+     * <pre>
+     * Time when the [state] parameter was last changed.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp state_change = 10;</code>
      */
     @java.lang.Override
@@ -846,6 +1123,11 @@ public final class PerfDiag {
     public static final int WAIT_EVENT_TYPE_FIELD_NUMBER = 11;
     private volatile java.lang.Object waitEventType_;
     /**
+     * <pre>
+     * Type of event for which the backend is waiting. Such an event is called a wait event. A backend refers to the process that maintains the client connection.
+     * For the list of wait events, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#WAIT-EVENT-TABLE). If the backend is not waiting for any event, the parameter returns [NULL].
+     * </pre>
+     *
      * <code>string wait_event_type = 11;</code>
      * @return The waitEventType.
      */
@@ -863,6 +1145,11 @@ public final class PerfDiag {
       }
     }
     /**
+     * <pre>
+     * Type of event for which the backend is waiting. Such an event is called a wait event. A backend refers to the process that maintains the client connection.
+     * For the list of wait events, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#WAIT-EVENT-TABLE). If the backend is not waiting for any event, the parameter returns [NULL].
+     * </pre>
+     *
      * <code>string wait_event_type = 11;</code>
      * @return The bytes for waitEventType.
      */
@@ -884,6 +1171,11 @@ public final class PerfDiag {
     public static final int WAIT_EVENT_FIELD_NUMBER = 12;
     private volatile java.lang.Object waitEvent_;
     /**
+     * <pre>
+     * Wait event name.
+     * For the list of such names, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#WAIT-EVENT-ACTIVITY-TABLE). If the backend is not waiting for any event, the parameter returns [NULL].
+     * </pre>
+     *
      * <code>string wait_event = 12;</code>
      * @return The waitEvent.
      */
@@ -901,6 +1193,11 @@ public final class PerfDiag {
       }
     }
     /**
+     * <pre>
+     * Wait event name.
+     * For the list of such names, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#WAIT-EVENT-ACTIVITY-TABLE). If the backend is not waiting for any event, the parameter returns [NULL].
+     * </pre>
+     *
      * <code>string wait_event = 12;</code>
      * @return The bytes for waitEvent.
      */
@@ -922,6 +1219,10 @@ public final class PerfDiag {
     public static final int STATE_FIELD_NUMBER = 13;
     private volatile java.lang.Object state_;
     /**
+     * <pre>
+     * Current backend state. For the list of possible values, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#MONITORING-PG-STAT-ACTIVITY-VIEW).
+     * </pre>
+     *
      * <code>string state = 13;</code>
      * @return The state.
      */
@@ -939,6 +1240,10 @@ public final class PerfDiag {
       }
     }
     /**
+     * <pre>
+     * Current backend state. For the list of possible values, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#MONITORING-PG-STAT-ACTIVITY-VIEW).
+     * </pre>
+     *
      * <code>string state = 13;</code>
      * @return The bytes for state.
      */
@@ -960,6 +1265,11 @@ public final class PerfDiag {
     public static final int QUERY_FIELD_NUMBER = 14;
     private volatile java.lang.Object query_;
     /**
+     * <pre>
+     * Text of the most recent query.
+     * If the [state] parameter takes the value [active], the parameter shows the currently executing query. For the rest of the states, the parameter shows the last query that was executed. By default, the query text is truncated to 1024 bytes.
+     * </pre>
+     *
      * <code>string query = 14;</code>
      * @return The query.
      */
@@ -977,6 +1287,11 @@ public final class PerfDiag {
       }
     }
     /**
+     * <pre>
+     * Text of the most recent query.
+     * If the [state] parameter takes the value [active], the parameter shows the currently executing query. For the rest of the states, the parameter shows the last query that was executed. By default, the query text is truncated to 1024 bytes.
+     * </pre>
+     *
      * <code>string query = 14;</code>
      * @return The bytes for query.
      */
@@ -998,6 +1313,10 @@ public final class PerfDiag {
     public static final int BACKEND_TYPE_FIELD_NUMBER = 15;
     private volatile java.lang.Object backendType_;
     /**
+     * <pre>
+     * Current backend type. For the list of possible values, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#MONITORING-PG-STAT-ACTIVITY-VIEW).
+     * </pre>
+     *
      * <code>string backend_type = 15;</code>
      * @return The backendType.
      */
@@ -1015,6 +1334,10 @@ public final class PerfDiag {
       }
     }
     /**
+     * <pre>
+     * Current backend type. For the list of possible values, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#MONITORING-PG-STAT-ACTIVITY-VIEW).
+     * </pre>
+     *
      * <code>string backend_type = 15;</code>
      * @return The bytes for backendType.
      */
@@ -1036,6 +1359,13 @@ public final class PerfDiag {
     public static final int CLIENT_ADDR_FIELD_NUMBER = 16;
     private volatile java.lang.Object clientAddr_;
     /**
+     * <pre>
+     * IP address of the connected client.
+     * The parameter returns [NULL] in the following cases:
+     * - The client is connected via a Unix socket on the server.
+     * - A given process is internal (for example, autovacuum).
+     * </pre>
+     *
      * <code>string client_addr = 16;</code>
      * @return The clientAddr.
      */
@@ -1053,6 +1383,13 @@ public final class PerfDiag {
       }
     }
     /**
+     * <pre>
+     * IP address of the connected client.
+     * The parameter returns [NULL] in the following cases:
+     * - The client is connected via a Unix socket on the server.
+     * - A given process is internal (for example, autovacuum).
+     * </pre>
+     *
      * <code>string client_addr = 16;</code>
      * @return The bytes for clientAddr.
      */
@@ -1074,6 +1411,10 @@ public final class PerfDiag {
     public static final int CLIENT_HOSTNAME_FIELD_NUMBER = 17;
     private volatile java.lang.Object clientHostname_;
     /**
+     * <pre>
+     * Host name of the connected client (relevant for IP connections).
+     * </pre>
+     *
      * <code>string client_hostname = 17;</code>
      * @return The clientHostname.
      */
@@ -1091,6 +1432,10 @@ public final class PerfDiag {
       }
     }
     /**
+     * <pre>
+     * Host name of the connected client (relevant for IP connections).
+     * </pre>
+     *
      * <code>string client_hostname = 17;</code>
      * @return The bytes for clientHostname.
      */
@@ -1112,6 +1457,11 @@ public final class PerfDiag {
     public static final int CLIENT_PORT_FIELD_NUMBER = 18;
     private long clientPort_;
     /**
+     * <pre>
+     * TCP port number that the client is using for communication with the server.
+     * Returns [-1] if the client is connected via a Unix socket on the server. Returns [NULL] if a given process is internal (for example, autovacuum).
+     * </pre>
+     *
      * <code>int64 client_port = 18;</code>
      * @return The clientPort.
      */
@@ -1123,6 +1473,10 @@ public final class PerfDiag {
     public static final int BACKEND_XID_FIELD_NUMBER = 19;
     private long backendXid_;
     /**
+     * <pre>
+     * Top-level transaction ID, if any.
+     * </pre>
+     *
      * <code>int64 backend_xid = 19;</code>
      * @return The backendXid.
      */
@@ -1134,6 +1488,10 @@ public final class PerfDiag {
     public static final int BACKEND_XMIN_FIELD_NUMBER = 20;
     private long backendXmin_;
     /**
+     * <pre>
+     * Current [xmin horizon].
+     * </pre>
+     *
      * <code>int64 backend_xmin = 20;</code>
      * @return The backendXmin.
      */
@@ -1145,6 +1503,10 @@ public final class PerfDiag {
     public static final int BLOCKING_PIDS_FIELD_NUMBER = 22;
     private volatile java.lang.Object blockingPids_;
     /**
+     * <pre>
+     * Process IDs that are blocking a given server process ID.
+     * </pre>
+     *
      * <code>string blocking_pids = 22;</code>
      * @return The blockingPids.
      */
@@ -1162,6 +1524,10 @@ public final class PerfDiag {
       }
     }
     /**
+     * <pre>
+     * Process IDs that are blocking a given server process ID.
+     * </pre>
+     *
      * <code>string blocking_pids = 22;</code>
      * @return The bytes for blockingPids.
      */
@@ -1183,6 +1549,10 @@ public final class PerfDiag {
     public static final int QUERY_ID_FIELD_NUMBER = 23;
     private volatile java.lang.Object queryId_;
     /**
+     * <pre>
+     * Query ID.
+     * </pre>
+     *
      * <code>string query_id = 23;</code>
      * @return The queryId.
      */
@@ -1200,6 +1570,10 @@ public final class PerfDiag {
       }
     }
     /**
+     * <pre>
+     * Query ID.
+     * </pre>
+     *
      * <code>string query_id = 23;</code>
      * @return The bytes for queryId.
      */
@@ -1951,7 +2325,7 @@ public final class PerfDiag {
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timeBuilder_;
       /**
        * <pre>
-       * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time of collecting statistics on sessions (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 1;</code>
@@ -1962,7 +2336,7 @@ public final class PerfDiag {
       }
       /**
        * <pre>
-       * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time of collecting statistics on sessions (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 1;</code>
@@ -1977,7 +2351,7 @@ public final class PerfDiag {
       }
       /**
        * <pre>
-       * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time of collecting statistics on sessions (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 1;</code>
@@ -1997,7 +2371,7 @@ public final class PerfDiag {
       }
       /**
        * <pre>
-       * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time of collecting statistics on sessions (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 1;</code>
@@ -2015,7 +2389,7 @@ public final class PerfDiag {
       }
       /**
        * <pre>
-       * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time of collecting statistics on sessions (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 1;</code>
@@ -2037,7 +2411,7 @@ public final class PerfDiag {
       }
       /**
        * <pre>
-       * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time of collecting statistics on sessions (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 1;</code>
@@ -2055,7 +2429,7 @@ public final class PerfDiag {
       }
       /**
        * <pre>
-       * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time of collecting statistics on sessions (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 1;</code>
@@ -2067,7 +2441,7 @@ public final class PerfDiag {
       }
       /**
        * <pre>
-       * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time of collecting statistics on sessions (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 1;</code>
@@ -2082,7 +2456,7 @@ public final class PerfDiag {
       }
       /**
        * <pre>
-       * Collect timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * Time of collecting statistics on sessions (in the [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format).
        * </pre>
        *
        * <code>.google.protobuf.Timestamp time = 1;</code>
@@ -2103,6 +2477,10 @@ public final class PerfDiag {
 
       private java.lang.Object host_ = "";
       /**
+       * <pre>
+       * Host of the connected client.
+       * </pre>
+       *
        * <code>string host = 2;</code>
        * @return The host.
        */
@@ -2119,6 +2497,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Host of the connected client.
+       * </pre>
+       *
        * <code>string host = 2;</code>
        * @return The bytes for host.
        */
@@ -2136,6 +2518,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Host of the connected client.
+       * </pre>
+       *
        * <code>string host = 2;</code>
        * @param value The host to set.
        * @return This builder for chaining.
@@ -2151,6 +2537,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Host of the connected client.
+       * </pre>
+       *
        * <code>string host = 2;</code>
        * @return This builder for chaining.
        */
@@ -2161,6 +2551,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Host of the connected client.
+       * </pre>
+       *
        * <code>string host = 2;</code>
        * @param value The bytes for host to set.
        * @return This builder for chaining.
@@ -2179,6 +2573,10 @@ public final class PerfDiag {
 
       private long pid_ ;
       /**
+       * <pre>
+       * Server process ID. For client connections, this is a client connection ID.
+       * </pre>
+       *
        * <code>int64 pid = 3;</code>
        * @return The pid.
        */
@@ -2187,6 +2585,10 @@ public final class PerfDiag {
         return pid_;
       }
       /**
+       * <pre>
+       * Server process ID. For client connections, this is a client connection ID.
+       * </pre>
+       *
        * <code>int64 pid = 3;</code>
        * @param value The pid to set.
        * @return This builder for chaining.
@@ -2198,6 +2600,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Server process ID. For client connections, this is a client connection ID.
+       * </pre>
+       *
        * <code>int64 pid = 3;</code>
        * @return This builder for chaining.
        */
@@ -2210,6 +2616,10 @@ public final class PerfDiag {
 
       private java.lang.Object database_ = "";
       /**
+       * <pre>
+       * Database ID.
+       * </pre>
+       *
        * <code>string database = 4;</code>
        * @return The database.
        */
@@ -2226,6 +2636,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Database ID.
+       * </pre>
+       *
        * <code>string database = 4;</code>
        * @return The bytes for database.
        */
@@ -2243,6 +2657,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Database ID.
+       * </pre>
+       *
        * <code>string database = 4;</code>
        * @param value The database to set.
        * @return This builder for chaining.
@@ -2258,6 +2676,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Database ID.
+       * </pre>
+       *
        * <code>string database = 4;</code>
        * @return This builder for chaining.
        */
@@ -2268,6 +2690,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Database ID.
+       * </pre>
+       *
        * <code>string database = 4;</code>
        * @param value The bytes for database to set.
        * @return This builder for chaining.
@@ -2286,6 +2712,10 @@ public final class PerfDiag {
 
       private java.lang.Object user_ = "";
       /**
+       * <pre>
+       * User ID.
+       * </pre>
+       *
        * <code>string user = 5;</code>
        * @return The user.
        */
@@ -2302,6 +2732,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * User ID.
+       * </pre>
+       *
        * <code>string user = 5;</code>
        * @return The bytes for user.
        */
@@ -2319,6 +2753,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * User ID.
+       * </pre>
+       *
        * <code>string user = 5;</code>
        * @param value The user to set.
        * @return This builder for chaining.
@@ -2334,6 +2772,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * User ID.
+       * </pre>
+       *
        * <code>string user = 5;</code>
        * @return This builder for chaining.
        */
@@ -2344,6 +2786,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * User ID.
+       * </pre>
+       *
        * <code>string user = 5;</code>
        * @param value The bytes for user to set.
        * @return This builder for chaining.
@@ -2362,6 +2808,10 @@ public final class PerfDiag {
 
       private java.lang.Object applicationName_ = "";
       /**
+       * <pre>
+       * Application name on the connected client.
+       * </pre>
+       *
        * <code>string application_name = 6;</code>
        * @return The applicationName.
        */
@@ -2378,6 +2828,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Application name on the connected client.
+       * </pre>
+       *
        * <code>string application_name = 6;</code>
        * @return The bytes for applicationName.
        */
@@ -2395,6 +2849,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Application name on the connected client.
+       * </pre>
+       *
        * <code>string application_name = 6;</code>
        * @param value The applicationName to set.
        * @return This builder for chaining.
@@ -2410,6 +2868,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Application name on the connected client.
+       * </pre>
+       *
        * <code>string application_name = 6;</code>
        * @return This builder for chaining.
        */
@@ -2420,6 +2882,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Application name on the connected client.
+       * </pre>
+       *
        * <code>string application_name = 6;</code>
        * @param value The bytes for applicationName to set.
        * @return This builder for chaining.
@@ -2440,6 +2906,10 @@ public final class PerfDiag {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> backendStartBuilder_;
       /**
+       * <pre>
+       * Time when a given process was started. For client connections, this is the time when the client connected to the server.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp backend_start = 7;</code>
        * @return Whether the backendStart field is set.
        */
@@ -2447,6 +2917,10 @@ public final class PerfDiag {
         return backendStartBuilder_ != null || backendStart_ != null;
       }
       /**
+       * <pre>
+       * Time when a given process was started. For client connections, this is the time when the client connected to the server.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp backend_start = 7;</code>
        * @return The backendStart.
        */
@@ -2458,6 +2932,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Time when a given process was started. For client connections, this is the time when the client connected to the server.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp backend_start = 7;</code>
        */
       public Builder setBackendStart(com.google.protobuf.Timestamp value) {
@@ -2474,6 +2952,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time when a given process was started. For client connections, this is the time when the client connected to the server.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp backend_start = 7;</code>
        */
       public Builder setBackendStart(
@@ -2488,6 +2970,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time when a given process was started. For client connections, this is the time when the client connected to the server.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp backend_start = 7;</code>
        */
       public Builder mergeBackendStart(com.google.protobuf.Timestamp value) {
@@ -2506,6 +2992,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time when a given process was started. For client connections, this is the time when the client connected to the server.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp backend_start = 7;</code>
        */
       public Builder clearBackendStart() {
@@ -2520,6 +3010,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time when a given process was started. For client connections, this is the time when the client connected to the server.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp backend_start = 7;</code>
        */
       public com.google.protobuf.Timestamp.Builder getBackendStartBuilder() {
@@ -2528,6 +3022,10 @@ public final class PerfDiag {
         return getBackendStartFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Time when a given process was started. For client connections, this is the time when the client connected to the server.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp backend_start = 7;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getBackendStartOrBuilder() {
@@ -2539,6 +3037,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Time when a given process was started. For client connections, this is the time when the client connected to the server.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp backend_start = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2559,6 +3061,11 @@ public final class PerfDiag {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> xactStartBuilder_;
       /**
+       * <pre>
+       * Time when a transaction of a given process was started. Returns [NULL] if no transaction is active.
+       * If the currently active query is the first of its transaction, the value of this parameter is equal to the value of the [query_start] parameter.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp xact_start = 8;</code>
        * @return Whether the xactStart field is set.
        */
@@ -2566,6 +3073,11 @@ public final class PerfDiag {
         return xactStartBuilder_ != null || xactStart_ != null;
       }
       /**
+       * <pre>
+       * Time when a transaction of a given process was started. Returns [NULL] if no transaction is active.
+       * If the currently active query is the first of its transaction, the value of this parameter is equal to the value of the [query_start] parameter.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp xact_start = 8;</code>
        * @return The xactStart.
        */
@@ -2577,6 +3089,11 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Time when a transaction of a given process was started. Returns [NULL] if no transaction is active.
+       * If the currently active query is the first of its transaction, the value of this parameter is equal to the value of the [query_start] parameter.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp xact_start = 8;</code>
        */
       public Builder setXactStart(com.google.protobuf.Timestamp value) {
@@ -2593,6 +3110,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time when a transaction of a given process was started. Returns [NULL] if no transaction is active.
+       * If the currently active query is the first of its transaction, the value of this parameter is equal to the value of the [query_start] parameter.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp xact_start = 8;</code>
        */
       public Builder setXactStart(
@@ -2607,6 +3129,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time when a transaction of a given process was started. Returns [NULL] if no transaction is active.
+       * If the currently active query is the first of its transaction, the value of this parameter is equal to the value of the [query_start] parameter.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp xact_start = 8;</code>
        */
       public Builder mergeXactStart(com.google.protobuf.Timestamp value) {
@@ -2625,6 +3152,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time when a transaction of a given process was started. Returns [NULL] if no transaction is active.
+       * If the currently active query is the first of its transaction, the value of this parameter is equal to the value of the [query_start] parameter.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp xact_start = 8;</code>
        */
       public Builder clearXactStart() {
@@ -2639,6 +3171,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time when a transaction of a given process was started. Returns [NULL] if no transaction is active.
+       * If the currently active query is the first of its transaction, the value of this parameter is equal to the value of the [query_start] parameter.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp xact_start = 8;</code>
        */
       public com.google.protobuf.Timestamp.Builder getXactStartBuilder() {
@@ -2647,6 +3184,11 @@ public final class PerfDiag {
         return getXactStartFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Time when a transaction of a given process was started. Returns [NULL] if no transaction is active.
+       * If the currently active query is the first of its transaction, the value of this parameter is equal to the value of the [query_start] parameter.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp xact_start = 8;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getXactStartOrBuilder() {
@@ -2658,6 +3200,11 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Time when a transaction of a given process was started. Returns [NULL] if no transaction is active.
+       * If the currently active query is the first of its transaction, the value of this parameter is equal to the value of the [query_start] parameter.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp xact_start = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2678,6 +3225,11 @@ public final class PerfDiag {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> queryStartBuilder_;
       /**
+       * <pre>
+       * Time when the currently active query was started.
+       * If the [state] parameter does not take the value [active], the parameter returns the time when the lastest query was started.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp query_start = 9;</code>
        * @return Whether the queryStart field is set.
        */
@@ -2685,6 +3237,11 @@ public final class PerfDiag {
         return queryStartBuilder_ != null || queryStart_ != null;
       }
       /**
+       * <pre>
+       * Time when the currently active query was started.
+       * If the [state] parameter does not take the value [active], the parameter returns the time when the lastest query was started.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp query_start = 9;</code>
        * @return The queryStart.
        */
@@ -2696,6 +3253,11 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Time when the currently active query was started.
+       * If the [state] parameter does not take the value [active], the parameter returns the time when the lastest query was started.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp query_start = 9;</code>
        */
       public Builder setQueryStart(com.google.protobuf.Timestamp value) {
@@ -2712,6 +3274,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time when the currently active query was started.
+       * If the [state] parameter does not take the value [active], the parameter returns the time when the lastest query was started.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp query_start = 9;</code>
        */
       public Builder setQueryStart(
@@ -2726,6 +3293,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time when the currently active query was started.
+       * If the [state] parameter does not take the value [active], the parameter returns the time when the lastest query was started.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp query_start = 9;</code>
        */
       public Builder mergeQueryStart(com.google.protobuf.Timestamp value) {
@@ -2744,6 +3316,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time when the currently active query was started.
+       * If the [state] parameter does not take the value [active], the parameter returns the time when the lastest query was started.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp query_start = 9;</code>
        */
       public Builder clearQueryStart() {
@@ -2758,6 +3335,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time when the currently active query was started.
+       * If the [state] parameter does not take the value [active], the parameter returns the time when the lastest query was started.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp query_start = 9;</code>
        */
       public com.google.protobuf.Timestamp.Builder getQueryStartBuilder() {
@@ -2766,6 +3348,11 @@ public final class PerfDiag {
         return getQueryStartFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Time when the currently active query was started.
+       * If the [state] parameter does not take the value [active], the parameter returns the time when the lastest query was started.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp query_start = 9;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getQueryStartOrBuilder() {
@@ -2777,6 +3364,11 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Time when the currently active query was started.
+       * If the [state] parameter does not take the value [active], the parameter returns the time when the lastest query was started.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp query_start = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2797,6 +3389,10 @@ public final class PerfDiag {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> stateChangeBuilder_;
       /**
+       * <pre>
+       * Time when the [state] parameter was last changed.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp state_change = 10;</code>
        * @return Whether the stateChange field is set.
        */
@@ -2804,6 +3400,10 @@ public final class PerfDiag {
         return stateChangeBuilder_ != null || stateChange_ != null;
       }
       /**
+       * <pre>
+       * Time when the [state] parameter was last changed.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp state_change = 10;</code>
        * @return The stateChange.
        */
@@ -2815,6 +3415,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Time when the [state] parameter was last changed.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp state_change = 10;</code>
        */
       public Builder setStateChange(com.google.protobuf.Timestamp value) {
@@ -2831,6 +3435,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time when the [state] parameter was last changed.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp state_change = 10;</code>
        */
       public Builder setStateChange(
@@ -2845,6 +3453,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time when the [state] parameter was last changed.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp state_change = 10;</code>
        */
       public Builder mergeStateChange(com.google.protobuf.Timestamp value) {
@@ -2863,6 +3475,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time when the [state] parameter was last changed.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp state_change = 10;</code>
        */
       public Builder clearStateChange() {
@@ -2877,6 +3493,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time when the [state] parameter was last changed.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp state_change = 10;</code>
        */
       public com.google.protobuf.Timestamp.Builder getStateChangeBuilder() {
@@ -2885,6 +3505,10 @@ public final class PerfDiag {
         return getStateChangeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Time when the [state] parameter was last changed.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp state_change = 10;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getStateChangeOrBuilder() {
@@ -2896,6 +3520,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Time when the [state] parameter was last changed.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp state_change = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2914,6 +3542,11 @@ public final class PerfDiag {
 
       private java.lang.Object waitEventType_ = "";
       /**
+       * <pre>
+       * Type of event for which the backend is waiting. Such an event is called a wait event. A backend refers to the process that maintains the client connection.
+       * For the list of wait events, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#WAIT-EVENT-TABLE). If the backend is not waiting for any event, the parameter returns [NULL].
+       * </pre>
+       *
        * <code>string wait_event_type = 11;</code>
        * @return The waitEventType.
        */
@@ -2930,6 +3563,11 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Type of event for which the backend is waiting. Such an event is called a wait event. A backend refers to the process that maintains the client connection.
+       * For the list of wait events, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#WAIT-EVENT-TABLE). If the backend is not waiting for any event, the parameter returns [NULL].
+       * </pre>
+       *
        * <code>string wait_event_type = 11;</code>
        * @return The bytes for waitEventType.
        */
@@ -2947,6 +3585,11 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Type of event for which the backend is waiting. Such an event is called a wait event. A backend refers to the process that maintains the client connection.
+       * For the list of wait events, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#WAIT-EVENT-TABLE). If the backend is not waiting for any event, the parameter returns [NULL].
+       * </pre>
+       *
        * <code>string wait_event_type = 11;</code>
        * @param value The waitEventType to set.
        * @return This builder for chaining.
@@ -2962,6 +3605,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Type of event for which the backend is waiting. Such an event is called a wait event. A backend refers to the process that maintains the client connection.
+       * For the list of wait events, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#WAIT-EVENT-TABLE). If the backend is not waiting for any event, the parameter returns [NULL].
+       * </pre>
+       *
        * <code>string wait_event_type = 11;</code>
        * @return This builder for chaining.
        */
@@ -2972,6 +3620,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Type of event for which the backend is waiting. Such an event is called a wait event. A backend refers to the process that maintains the client connection.
+       * For the list of wait events, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#WAIT-EVENT-TABLE). If the backend is not waiting for any event, the parameter returns [NULL].
+       * </pre>
+       *
        * <code>string wait_event_type = 11;</code>
        * @param value The bytes for waitEventType to set.
        * @return This builder for chaining.
@@ -2990,6 +3643,11 @@ public final class PerfDiag {
 
       private java.lang.Object waitEvent_ = "";
       /**
+       * <pre>
+       * Wait event name.
+       * For the list of such names, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#WAIT-EVENT-ACTIVITY-TABLE). If the backend is not waiting for any event, the parameter returns [NULL].
+       * </pre>
+       *
        * <code>string wait_event = 12;</code>
        * @return The waitEvent.
        */
@@ -3006,6 +3664,11 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Wait event name.
+       * For the list of such names, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#WAIT-EVENT-ACTIVITY-TABLE). If the backend is not waiting for any event, the parameter returns [NULL].
+       * </pre>
+       *
        * <code>string wait_event = 12;</code>
        * @return The bytes for waitEvent.
        */
@@ -3023,6 +3686,11 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Wait event name.
+       * For the list of such names, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#WAIT-EVENT-ACTIVITY-TABLE). If the backend is not waiting for any event, the parameter returns [NULL].
+       * </pre>
+       *
        * <code>string wait_event = 12;</code>
        * @param value The waitEvent to set.
        * @return This builder for chaining.
@@ -3038,6 +3706,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Wait event name.
+       * For the list of such names, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#WAIT-EVENT-ACTIVITY-TABLE). If the backend is not waiting for any event, the parameter returns [NULL].
+       * </pre>
+       *
        * <code>string wait_event = 12;</code>
        * @return This builder for chaining.
        */
@@ -3048,6 +3721,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Wait event name.
+       * For the list of such names, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#WAIT-EVENT-ACTIVITY-TABLE). If the backend is not waiting for any event, the parameter returns [NULL].
+       * </pre>
+       *
        * <code>string wait_event = 12;</code>
        * @param value The bytes for waitEvent to set.
        * @return This builder for chaining.
@@ -3066,6 +3744,10 @@ public final class PerfDiag {
 
       private java.lang.Object state_ = "";
       /**
+       * <pre>
+       * Current backend state. For the list of possible values, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#MONITORING-PG-STAT-ACTIVITY-VIEW).
+       * </pre>
+       *
        * <code>string state = 13;</code>
        * @return The state.
        */
@@ -3082,6 +3764,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Current backend state. For the list of possible values, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#MONITORING-PG-STAT-ACTIVITY-VIEW).
+       * </pre>
+       *
        * <code>string state = 13;</code>
        * @return The bytes for state.
        */
@@ -3099,6 +3785,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Current backend state. For the list of possible values, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#MONITORING-PG-STAT-ACTIVITY-VIEW).
+       * </pre>
+       *
        * <code>string state = 13;</code>
        * @param value The state to set.
        * @return This builder for chaining.
@@ -3114,6 +3804,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Current backend state. For the list of possible values, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#MONITORING-PG-STAT-ACTIVITY-VIEW).
+       * </pre>
+       *
        * <code>string state = 13;</code>
        * @return This builder for chaining.
        */
@@ -3124,6 +3818,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Current backend state. For the list of possible values, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#MONITORING-PG-STAT-ACTIVITY-VIEW).
+       * </pre>
+       *
        * <code>string state = 13;</code>
        * @param value The bytes for state to set.
        * @return This builder for chaining.
@@ -3142,6 +3840,11 @@ public final class PerfDiag {
 
       private java.lang.Object query_ = "";
       /**
+       * <pre>
+       * Text of the most recent query.
+       * If the [state] parameter takes the value [active], the parameter shows the currently executing query. For the rest of the states, the parameter shows the last query that was executed. By default, the query text is truncated to 1024 bytes.
+       * </pre>
+       *
        * <code>string query = 14;</code>
        * @return The query.
        */
@@ -3158,6 +3861,11 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Text of the most recent query.
+       * If the [state] parameter takes the value [active], the parameter shows the currently executing query. For the rest of the states, the parameter shows the last query that was executed. By default, the query text is truncated to 1024 bytes.
+       * </pre>
+       *
        * <code>string query = 14;</code>
        * @return The bytes for query.
        */
@@ -3175,6 +3883,11 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Text of the most recent query.
+       * If the [state] parameter takes the value [active], the parameter shows the currently executing query. For the rest of the states, the parameter shows the last query that was executed. By default, the query text is truncated to 1024 bytes.
+       * </pre>
+       *
        * <code>string query = 14;</code>
        * @param value The query to set.
        * @return This builder for chaining.
@@ -3190,6 +3903,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Text of the most recent query.
+       * If the [state] parameter takes the value [active], the parameter shows the currently executing query. For the rest of the states, the parameter shows the last query that was executed. By default, the query text is truncated to 1024 bytes.
+       * </pre>
+       *
        * <code>string query = 14;</code>
        * @return This builder for chaining.
        */
@@ -3200,6 +3918,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Text of the most recent query.
+       * If the [state] parameter takes the value [active], the parameter shows the currently executing query. For the rest of the states, the parameter shows the last query that was executed. By default, the query text is truncated to 1024 bytes.
+       * </pre>
+       *
        * <code>string query = 14;</code>
        * @param value The bytes for query to set.
        * @return This builder for chaining.
@@ -3218,6 +3941,10 @@ public final class PerfDiag {
 
       private java.lang.Object backendType_ = "";
       /**
+       * <pre>
+       * Current backend type. For the list of possible values, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#MONITORING-PG-STAT-ACTIVITY-VIEW).
+       * </pre>
+       *
        * <code>string backend_type = 15;</code>
        * @return The backendType.
        */
@@ -3234,6 +3961,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Current backend type. For the list of possible values, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#MONITORING-PG-STAT-ACTIVITY-VIEW).
+       * </pre>
+       *
        * <code>string backend_type = 15;</code>
        * @return The bytes for backendType.
        */
@@ -3251,6 +3982,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Current backend type. For the list of possible values, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#MONITORING-PG-STAT-ACTIVITY-VIEW).
+       * </pre>
+       *
        * <code>string backend_type = 15;</code>
        * @param value The backendType to set.
        * @return This builder for chaining.
@@ -3266,6 +4001,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Current backend type. For the list of possible values, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#MONITORING-PG-STAT-ACTIVITY-VIEW).
+       * </pre>
+       *
        * <code>string backend_type = 15;</code>
        * @return This builder for chaining.
        */
@@ -3276,6 +4015,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Current backend type. For the list of possible values, see the [PostgreSQL documentation](https://www.postgresql.org/docs/current/monitoring-stats.html#MONITORING-PG-STAT-ACTIVITY-VIEW).
+       * </pre>
+       *
        * <code>string backend_type = 15;</code>
        * @param value The bytes for backendType to set.
        * @return This builder for chaining.
@@ -3294,6 +4037,13 @@ public final class PerfDiag {
 
       private java.lang.Object clientAddr_ = "";
       /**
+       * <pre>
+       * IP address of the connected client.
+       * The parameter returns [NULL] in the following cases:
+       * - The client is connected via a Unix socket on the server.
+       * - A given process is internal (for example, autovacuum).
+       * </pre>
+       *
        * <code>string client_addr = 16;</code>
        * @return The clientAddr.
        */
@@ -3310,6 +4060,13 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * IP address of the connected client.
+       * The parameter returns [NULL] in the following cases:
+       * - The client is connected via a Unix socket on the server.
+       * - A given process is internal (for example, autovacuum).
+       * </pre>
+       *
        * <code>string client_addr = 16;</code>
        * @return The bytes for clientAddr.
        */
@@ -3327,6 +4084,13 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * IP address of the connected client.
+       * The parameter returns [NULL] in the following cases:
+       * - The client is connected via a Unix socket on the server.
+       * - A given process is internal (for example, autovacuum).
+       * </pre>
+       *
        * <code>string client_addr = 16;</code>
        * @param value The clientAddr to set.
        * @return This builder for chaining.
@@ -3342,6 +4106,13 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * IP address of the connected client.
+       * The parameter returns [NULL] in the following cases:
+       * - The client is connected via a Unix socket on the server.
+       * - A given process is internal (for example, autovacuum).
+       * </pre>
+       *
        * <code>string client_addr = 16;</code>
        * @return This builder for chaining.
        */
@@ -3352,6 +4123,13 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * IP address of the connected client.
+       * The parameter returns [NULL] in the following cases:
+       * - The client is connected via a Unix socket on the server.
+       * - A given process is internal (for example, autovacuum).
+       * </pre>
+       *
        * <code>string client_addr = 16;</code>
        * @param value The bytes for clientAddr to set.
        * @return This builder for chaining.
@@ -3370,6 +4148,10 @@ public final class PerfDiag {
 
       private java.lang.Object clientHostname_ = "";
       /**
+       * <pre>
+       * Host name of the connected client (relevant for IP connections).
+       * </pre>
+       *
        * <code>string client_hostname = 17;</code>
        * @return The clientHostname.
        */
@@ -3386,6 +4168,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Host name of the connected client (relevant for IP connections).
+       * </pre>
+       *
        * <code>string client_hostname = 17;</code>
        * @return The bytes for clientHostname.
        */
@@ -3403,6 +4189,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Host name of the connected client (relevant for IP connections).
+       * </pre>
+       *
        * <code>string client_hostname = 17;</code>
        * @param value The clientHostname to set.
        * @return This builder for chaining.
@@ -3418,6 +4208,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Host name of the connected client (relevant for IP connections).
+       * </pre>
+       *
        * <code>string client_hostname = 17;</code>
        * @return This builder for chaining.
        */
@@ -3428,6 +4222,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Host name of the connected client (relevant for IP connections).
+       * </pre>
+       *
        * <code>string client_hostname = 17;</code>
        * @param value The bytes for clientHostname to set.
        * @return This builder for chaining.
@@ -3446,6 +4244,11 @@ public final class PerfDiag {
 
       private long clientPort_ ;
       /**
+       * <pre>
+       * TCP port number that the client is using for communication with the server.
+       * Returns [-1] if the client is connected via a Unix socket on the server. Returns [NULL] if a given process is internal (for example, autovacuum).
+       * </pre>
+       *
        * <code>int64 client_port = 18;</code>
        * @return The clientPort.
        */
@@ -3454,6 +4257,11 @@ public final class PerfDiag {
         return clientPort_;
       }
       /**
+       * <pre>
+       * TCP port number that the client is using for communication with the server.
+       * Returns [-1] if the client is connected via a Unix socket on the server. Returns [NULL] if a given process is internal (for example, autovacuum).
+       * </pre>
+       *
        * <code>int64 client_port = 18;</code>
        * @param value The clientPort to set.
        * @return This builder for chaining.
@@ -3465,6 +4273,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * TCP port number that the client is using for communication with the server.
+       * Returns [-1] if the client is connected via a Unix socket on the server. Returns [NULL] if a given process is internal (for example, autovacuum).
+       * </pre>
+       *
        * <code>int64 client_port = 18;</code>
        * @return This builder for chaining.
        */
@@ -3477,6 +4290,10 @@ public final class PerfDiag {
 
       private long backendXid_ ;
       /**
+       * <pre>
+       * Top-level transaction ID, if any.
+       * </pre>
+       *
        * <code>int64 backend_xid = 19;</code>
        * @return The backendXid.
        */
@@ -3485,6 +4302,10 @@ public final class PerfDiag {
         return backendXid_;
       }
       /**
+       * <pre>
+       * Top-level transaction ID, if any.
+       * </pre>
+       *
        * <code>int64 backend_xid = 19;</code>
        * @param value The backendXid to set.
        * @return This builder for chaining.
@@ -3496,6 +4317,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Top-level transaction ID, if any.
+       * </pre>
+       *
        * <code>int64 backend_xid = 19;</code>
        * @return This builder for chaining.
        */
@@ -3508,6 +4333,10 @@ public final class PerfDiag {
 
       private long backendXmin_ ;
       /**
+       * <pre>
+       * Current [xmin horizon].
+       * </pre>
+       *
        * <code>int64 backend_xmin = 20;</code>
        * @return The backendXmin.
        */
@@ -3516,6 +4345,10 @@ public final class PerfDiag {
         return backendXmin_;
       }
       /**
+       * <pre>
+       * Current [xmin horizon].
+       * </pre>
+       *
        * <code>int64 backend_xmin = 20;</code>
        * @param value The backendXmin to set.
        * @return This builder for chaining.
@@ -3527,6 +4360,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Current [xmin horizon].
+       * </pre>
+       *
        * <code>int64 backend_xmin = 20;</code>
        * @return This builder for chaining.
        */
@@ -3539,6 +4376,10 @@ public final class PerfDiag {
 
       private java.lang.Object blockingPids_ = "";
       /**
+       * <pre>
+       * Process IDs that are blocking a given server process ID.
+       * </pre>
+       *
        * <code>string blocking_pids = 22;</code>
        * @return The blockingPids.
        */
@@ -3555,6 +4396,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Process IDs that are blocking a given server process ID.
+       * </pre>
+       *
        * <code>string blocking_pids = 22;</code>
        * @return The bytes for blockingPids.
        */
@@ -3572,6 +4417,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Process IDs that are blocking a given server process ID.
+       * </pre>
+       *
        * <code>string blocking_pids = 22;</code>
        * @param value The blockingPids to set.
        * @return This builder for chaining.
@@ -3587,6 +4436,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Process IDs that are blocking a given server process ID.
+       * </pre>
+       *
        * <code>string blocking_pids = 22;</code>
        * @return This builder for chaining.
        */
@@ -3597,6 +4450,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Process IDs that are blocking a given server process ID.
+       * </pre>
+       *
        * <code>string blocking_pids = 22;</code>
        * @param value The bytes for blockingPids to set.
        * @return This builder for chaining.
@@ -3615,6 +4472,10 @@ public final class PerfDiag {
 
       private java.lang.Object queryId_ = "";
       /**
+       * <pre>
+       * Query ID.
+       * </pre>
+       *
        * <code>string query_id = 23;</code>
        * @return The queryId.
        */
@@ -3631,6 +4492,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Query ID.
+       * </pre>
+       *
        * <code>string query_id = 23;</code>
        * @return The bytes for queryId.
        */
@@ -3648,6 +4513,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Query ID.
+       * </pre>
+       *
        * <code>string query_id = 23;</code>
        * @param value The queryId to set.
        * @return This builder for chaining.
@@ -3663,6 +4532,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Query ID.
+       * </pre>
+       *
        * <code>string query_id = 23;</code>
        * @return This builder for chaining.
        */
@@ -3673,6 +4546,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Query ID.
+       * </pre>
+       *
        * <code>string query_id = 23;</code>
        * @param value The bytes for queryId to set.
        * @return This builder for chaining.
@@ -3746,11 +4623,19 @@ public final class PerfDiag {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Host of the connected client.
+     * </pre>
+     *
      * <code>string host = 1;</code>
      * @return The host.
      */
     java.lang.String getHost();
     /**
+     * <pre>
+     * Host of the connected client.
+     * </pre>
+     *
      * <code>string host = 1;</code>
      * @return The bytes for host.
      */
@@ -3758,11 +4643,19 @@ public final class PerfDiag {
         getHostBytes();
 
     /**
+     * <pre>
+     * User ID.
+     * </pre>
+     *
      * <code>string user = 2;</code>
      * @return The user.
      */
     java.lang.String getUser();
     /**
+     * <pre>
+     * User ID.
+     * </pre>
+     *
      * <code>string user = 2;</code>
      * @return The bytes for user.
      */
@@ -3770,11 +4663,19 @@ public final class PerfDiag {
         getUserBytes();
 
     /**
+     * <pre>
+     * Database ID.
+     * </pre>
+     *
      * <code>string database = 4;</code>
      * @return The database.
      */
     java.lang.String getDatabase();
     /**
+     * <pre>
+     * Database ID.
+     * </pre>
+     *
      * <code>string database = 4;</code>
      * @return The bytes for database.
      */
@@ -3782,17 +4683,29 @@ public final class PerfDiag {
         getDatabaseBytes();
 
     /**
+     * <pre>
+     * Returns [true] if a query is executed as a top-level SQL statement or if the [pg_stat_statements.track](https://www.postgresql.org/docs/current/pgstatstatements.html#id-1.11.7.41.9) parameter is set to the value [top].
+     * </pre>
+     *
      * <code>bool toplevel = 5;</code>
      * @return The toplevel.
      */
     boolean getToplevel();
 
     /**
+     * <pre>
+     * Query ID.
+     * </pre>
+     *
      * <code>string query_id = 6;</code>
      * @return The queryId.
      */
     java.lang.String getQueryId();
     /**
+     * <pre>
+     * Query ID.
+     * </pre>
+     *
      * <code>string query_id = 6;</code>
      * @return The bytes for queryId.
      */
@@ -3800,11 +4713,19 @@ public final class PerfDiag {
         getQueryIdBytes();
 
     /**
+     * <pre>
+     * Query planning ID.
+     * </pre>
+     *
      * <code>string plan_id = 7;</code>
      * @return The planId.
      */
     java.lang.String getPlanId();
     /**
+     * <pre>
+     * Query planning ID.
+     * </pre>
+     *
      * <code>string plan_id = 7;</code>
      * @return The bytes for planId.
      */
@@ -3931,6 +4852,10 @@ public final class PerfDiag {
     public static final int HOST_FIELD_NUMBER = 1;
     private volatile java.lang.Object host_;
     /**
+     * <pre>
+     * Host of the connected client.
+     * </pre>
+     *
      * <code>string host = 1;</code>
      * @return The host.
      */
@@ -3948,6 +4873,10 @@ public final class PerfDiag {
       }
     }
     /**
+     * <pre>
+     * Host of the connected client.
+     * </pre>
+     *
      * <code>string host = 1;</code>
      * @return The bytes for host.
      */
@@ -3969,6 +4898,10 @@ public final class PerfDiag {
     public static final int USER_FIELD_NUMBER = 2;
     private volatile java.lang.Object user_;
     /**
+     * <pre>
+     * User ID.
+     * </pre>
+     *
      * <code>string user = 2;</code>
      * @return The user.
      */
@@ -3986,6 +4919,10 @@ public final class PerfDiag {
       }
     }
     /**
+     * <pre>
+     * User ID.
+     * </pre>
+     *
      * <code>string user = 2;</code>
      * @return The bytes for user.
      */
@@ -4007,6 +4944,10 @@ public final class PerfDiag {
     public static final int DATABASE_FIELD_NUMBER = 4;
     private volatile java.lang.Object database_;
     /**
+     * <pre>
+     * Database ID.
+     * </pre>
+     *
      * <code>string database = 4;</code>
      * @return The database.
      */
@@ -4024,6 +4965,10 @@ public final class PerfDiag {
       }
     }
     /**
+     * <pre>
+     * Database ID.
+     * </pre>
+     *
      * <code>string database = 4;</code>
      * @return The bytes for database.
      */
@@ -4045,6 +4990,10 @@ public final class PerfDiag {
     public static final int TOPLEVEL_FIELD_NUMBER = 5;
     private boolean toplevel_;
     /**
+     * <pre>
+     * Returns [true] if a query is executed as a top-level SQL statement or if the [pg_stat_statements.track](https://www.postgresql.org/docs/current/pgstatstatements.html#id-1.11.7.41.9) parameter is set to the value [top].
+     * </pre>
+     *
      * <code>bool toplevel = 5;</code>
      * @return The toplevel.
      */
@@ -4056,6 +5005,10 @@ public final class PerfDiag {
     public static final int QUERY_ID_FIELD_NUMBER = 6;
     private volatile java.lang.Object queryId_;
     /**
+     * <pre>
+     * Query ID.
+     * </pre>
+     *
      * <code>string query_id = 6;</code>
      * @return The queryId.
      */
@@ -4073,6 +5026,10 @@ public final class PerfDiag {
       }
     }
     /**
+     * <pre>
+     * Query ID.
+     * </pre>
+     *
      * <code>string query_id = 6;</code>
      * @return The bytes for queryId.
      */
@@ -4094,6 +5051,10 @@ public final class PerfDiag {
     public static final int PLAN_ID_FIELD_NUMBER = 7;
     private volatile java.lang.Object planId_;
     /**
+     * <pre>
+     * Query planning ID.
+     * </pre>
+     *
      * <code>string plan_id = 7;</code>
      * @return The planId.
      */
@@ -4111,6 +5072,10 @@ public final class PerfDiag {
       }
     }
     /**
+     * <pre>
+     * Query planning ID.
+     * </pre>
+     *
      * <code>string plan_id = 7;</code>
      * @return The bytes for planId.
      */
@@ -4519,6 +5484,10 @@ public final class PerfDiag {
 
       private java.lang.Object host_ = "";
       /**
+       * <pre>
+       * Host of the connected client.
+       * </pre>
+       *
        * <code>string host = 1;</code>
        * @return The host.
        */
@@ -4535,6 +5504,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Host of the connected client.
+       * </pre>
+       *
        * <code>string host = 1;</code>
        * @return The bytes for host.
        */
@@ -4552,6 +5525,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Host of the connected client.
+       * </pre>
+       *
        * <code>string host = 1;</code>
        * @param value The host to set.
        * @return This builder for chaining.
@@ -4567,6 +5544,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Host of the connected client.
+       * </pre>
+       *
        * <code>string host = 1;</code>
        * @return This builder for chaining.
        */
@@ -4577,6 +5558,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Host of the connected client.
+       * </pre>
+       *
        * <code>string host = 1;</code>
        * @param value The bytes for host to set.
        * @return This builder for chaining.
@@ -4595,6 +5580,10 @@ public final class PerfDiag {
 
       private java.lang.Object user_ = "";
       /**
+       * <pre>
+       * User ID.
+       * </pre>
+       *
        * <code>string user = 2;</code>
        * @return The user.
        */
@@ -4611,6 +5600,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * User ID.
+       * </pre>
+       *
        * <code>string user = 2;</code>
        * @return The bytes for user.
        */
@@ -4628,6 +5621,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * User ID.
+       * </pre>
+       *
        * <code>string user = 2;</code>
        * @param value The user to set.
        * @return This builder for chaining.
@@ -4643,6 +5640,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * User ID.
+       * </pre>
+       *
        * <code>string user = 2;</code>
        * @return This builder for chaining.
        */
@@ -4653,6 +5654,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * User ID.
+       * </pre>
+       *
        * <code>string user = 2;</code>
        * @param value The bytes for user to set.
        * @return This builder for chaining.
@@ -4671,6 +5676,10 @@ public final class PerfDiag {
 
       private java.lang.Object database_ = "";
       /**
+       * <pre>
+       * Database ID.
+       * </pre>
+       *
        * <code>string database = 4;</code>
        * @return The database.
        */
@@ -4687,6 +5696,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Database ID.
+       * </pre>
+       *
        * <code>string database = 4;</code>
        * @return The bytes for database.
        */
@@ -4704,6 +5717,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Database ID.
+       * </pre>
+       *
        * <code>string database = 4;</code>
        * @param value The database to set.
        * @return This builder for chaining.
@@ -4719,6 +5736,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Database ID.
+       * </pre>
+       *
        * <code>string database = 4;</code>
        * @return This builder for chaining.
        */
@@ -4729,6 +5750,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Database ID.
+       * </pre>
+       *
        * <code>string database = 4;</code>
        * @param value The bytes for database to set.
        * @return This builder for chaining.
@@ -4747,6 +5772,10 @@ public final class PerfDiag {
 
       private boolean toplevel_ ;
       /**
+       * <pre>
+       * Returns [true] if a query is executed as a top-level SQL statement or if the [pg_stat_statements.track](https://www.postgresql.org/docs/current/pgstatstatements.html#id-1.11.7.41.9) parameter is set to the value [top].
+       * </pre>
+       *
        * <code>bool toplevel = 5;</code>
        * @return The toplevel.
        */
@@ -4755,6 +5784,10 @@ public final class PerfDiag {
         return toplevel_;
       }
       /**
+       * <pre>
+       * Returns [true] if a query is executed as a top-level SQL statement or if the [pg_stat_statements.track](https://www.postgresql.org/docs/current/pgstatstatements.html#id-1.11.7.41.9) parameter is set to the value [top].
+       * </pre>
+       *
        * <code>bool toplevel = 5;</code>
        * @param value The toplevel to set.
        * @return This builder for chaining.
@@ -4766,6 +5799,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Returns [true] if a query is executed as a top-level SQL statement or if the [pg_stat_statements.track](https://www.postgresql.org/docs/current/pgstatstatements.html#id-1.11.7.41.9) parameter is set to the value [top].
+       * </pre>
+       *
        * <code>bool toplevel = 5;</code>
        * @return This builder for chaining.
        */
@@ -4778,6 +5815,10 @@ public final class PerfDiag {
 
       private java.lang.Object queryId_ = "";
       /**
+       * <pre>
+       * Query ID.
+       * </pre>
+       *
        * <code>string query_id = 6;</code>
        * @return The queryId.
        */
@@ -4794,6 +5835,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Query ID.
+       * </pre>
+       *
        * <code>string query_id = 6;</code>
        * @return The bytes for queryId.
        */
@@ -4811,6 +5856,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Query ID.
+       * </pre>
+       *
        * <code>string query_id = 6;</code>
        * @param value The queryId to set.
        * @return This builder for chaining.
@@ -4826,6 +5875,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Query ID.
+       * </pre>
+       *
        * <code>string query_id = 6;</code>
        * @return This builder for chaining.
        */
@@ -4836,6 +5889,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Query ID.
+       * </pre>
+       *
        * <code>string query_id = 6;</code>
        * @param value The bytes for queryId to set.
        * @return This builder for chaining.
@@ -4854,6 +5911,10 @@ public final class PerfDiag {
 
       private java.lang.Object planId_ = "";
       /**
+       * <pre>
+       * Query planning ID.
+       * </pre>
+       *
        * <code>string plan_id = 7;</code>
        * @return The planId.
        */
@@ -4870,6 +5931,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Query planning ID.
+       * </pre>
+       *
        * <code>string plan_id = 7;</code>
        * @return The bytes for planId.
        */
@@ -4887,6 +5952,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Query planning ID.
+       * </pre>
+       *
        * <code>string plan_id = 7;</code>
        * @param value The planId to set.
        * @return This builder for chaining.
@@ -4902,6 +5971,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Query planning ID.
+       * </pre>
+       *
        * <code>string plan_id = 7;</code>
        * @return This builder for chaining.
        */
@@ -4912,6 +5985,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Query planning ID.
+       * </pre>
+       *
        * <code>string plan_id = 7;</code>
        * @param value The bytes for planId to set.
        * @return This builder for chaining.
@@ -4985,26 +6062,46 @@ public final class PerfDiag {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Time of collecting statistics on planning and execution of queries.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp time = 1;</code>
      * @return Whether the time field is set.
      */
     boolean hasTime();
     /**
+     * <pre>
+     * Time of collecting statistics on planning and execution of queries.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp time = 1;</code>
      * @return The time.
      */
     com.google.protobuf.Timestamp getTime();
     /**
+     * <pre>
+     * Time of collecting statistics on planning and execution of queries.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp time = 1;</code>
      */
     com.google.protobuf.TimestampOrBuilder getTimeOrBuilder();
 
     /**
+     * <pre>
+     * Statement text.
+     * </pre>
+     *
      * <code>string query = 2;</code>
      * @return The query.
      */
     java.lang.String getQuery();
     /**
+     * <pre>
+     * Statement text.
+     * </pre>
+     *
      * <code>string query = 2;</code>
      * @return The bytes for query.
      */
@@ -5012,11 +6109,19 @@ public final class PerfDiag {
         getQueryBytes();
 
     /**
+     * <pre>
+     * Normalized query plan.
+     * </pre>
+     *
      * <code>string normalized_plan = 3;</code>
      * @return The normalizedPlan.
      */
     java.lang.String getNormalizedPlan();
     /**
+     * <pre>
+     * Normalized query plan.
+     * </pre>
+     *
      * <code>string normalized_plan = 3;</code>
      * @return The bytes for normalizedPlan.
      */
@@ -5024,11 +6129,19 @@ public final class PerfDiag {
         getNormalizedPlanBytes();
 
     /**
+     * <pre>
+     * Example of a query execution plan (without normalization).
+     * </pre>
+     *
      * <code>string example_plan = 4;</code>
      * @return The examplePlan.
      */
     java.lang.String getExamplePlan();
     /**
+     * <pre>
+     * Example of a query execution plan (without normalization).
+     * </pre>
+     *
      * <code>string example_plan = 4;</code>
      * @return The bytes for examplePlan.
      */
@@ -5036,42 +6149,76 @@ public final class PerfDiag {
         getExamplePlanBytes();
 
     /**
+     * <pre>
+     * Number of times that a query was planned.
+     * The parameter returns a non-zero value if the [pg_stat_statements.track_planning](https://www.postgresql.org/docs/current/pgstatstatements.html#id-1.11.7.41.9) parameter is enabled.
+     * </pre>
+     *
      * <code>int64 plans = 5;</code>
      * @return The plans.
      */
     long getPlans();
 
     /**
+     * <pre>
+     * Total time taken to plan a query, in milliseconds.
+     * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+     * </pre>
+     *
      * <code>double total_plan_time = 6;</code>
      * @return The totalPlanTime.
      */
     double getTotalPlanTime();
 
     /**
+     * <pre>
+     * Minimum time taken to plan a query, in milliseconds.
+     * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+     * </pre>
+     *
      * <code>double min_plan_time = 7;</code>
      * @return The minPlanTime.
      */
     double getMinPlanTime();
 
     /**
+     * <pre>
+     * Maximum time taken to plan a query, in milliseconds.
+     * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+     * </pre>
+     *
      * <code>double max_plan_time = 8;</code>
      * @return The maxPlanTime.
      */
     double getMaxPlanTime();
 
     /**
+     * <pre>
+     * Average time taken to plan a query, in milliseconds.
+     * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+     * </pre>
+     *
      * <code>double mean_plan_time = 9;</code>
      * @return The meanPlanTime.
      */
     double getMeanPlanTime();
 
     /**
+     * <pre>
+     * Population standard deviation of the time taken to plan a query, in milliseconds.
+     * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+     * </pre>
+     *
      * <code>double stddev_plan_time = 10;</code>
      * @return The stddevPlanTime.
      */
     double getStddevPlanTime();
 
     /**
+     * <pre>
+     * Number of times that a query was executed.
+     * </pre>
+     *
      * <code>int64 calls = 11;</code>
      * @return The calls.
      */
@@ -5079,7 +6226,7 @@ public final class PerfDiag {
 
     /**
      * <pre>
-     * total_exec_time
+     * Total time taken to execute a query, in milliseconds.
      * </pre>
      *
      * <code>double total_time = 12;</code>
@@ -5089,7 +6236,7 @@ public final class PerfDiag {
 
     /**
      * <pre>
-     * min_exec_time
+     * Minimum time taken to execute a query, in milliseconds.
      * </pre>
      *
      * <code>double min_time = 13;</code>
@@ -5099,7 +6246,7 @@ public final class PerfDiag {
 
     /**
      * <pre>
-     * max_exec_time
+     * Maximum time taken to execute a query, in milliseconds.
      * </pre>
      *
      * <code>double max_time = 14;</code>
@@ -5109,7 +6256,7 @@ public final class PerfDiag {
 
     /**
      * <pre>
-     * mean_exec_time
+     * Average time taken to execute a query, in milliseconds.
      * </pre>
      *
      * <code>double mean_time = 15;</code>
@@ -5119,7 +6266,7 @@ public final class PerfDiag {
 
     /**
      * <pre>
-     * stddev_exec_time
+     * Population standard deviation of the time taken to execute a query, in milliseconds.
      * </pre>
      *
      * <code>double stddev_time = 16;</code>
@@ -5128,204 +6275,344 @@ public final class PerfDiag {
     double getStddevTime();
 
     /**
+     * <pre>
+     * Number of retrieved or affected rows.
+     * </pre>
+     *
      * <code>int64 rows = 17;</code>
      * @return The rows.
      */
     long getRows();
 
     /**
+     * <pre>
+     * Number of shared blocks that are hit from cache.
+     * </pre>
+     *
      * <code>int64 shared_blks_hit = 18;</code>
      * @return The sharedBlksHit.
      */
     long getSharedBlksHit();
 
     /**
+     * <pre>
+     * Number of read shared blocks.
+     * </pre>
+     *
      * <code>int64 shared_blks_read = 19;</code>
      * @return The sharedBlksRead.
      */
     long getSharedBlksRead();
 
     /**
+     * <pre>
+     * Number of 'dirtied' shared blocks.
+     * </pre>
+     *
      * <code>int64 shared_blks_dirtied = 20;</code>
      * @return The sharedBlksDirtied.
      */
     long getSharedBlksDirtied();
 
     /**
+     * <pre>
+     * Number of written shared blocks.
+     * </pre>
+     *
      * <code>int64 shared_blks_written = 21;</code>
      * @return The sharedBlksWritten.
      */
     long getSharedBlksWritten();
 
     /**
+     * <pre>
+     * Number of local blocks that are hit from cache.
+     * </pre>
+     *
      * <code>int64 local_blks_hit = 22;</code>
      * @return The localBlksHit.
      */
     long getLocalBlksHit();
 
     /**
+     * <pre>
+     * Number of read local blocks.
+     * </pre>
+     *
      * <code>int64 local_blks_read = 23;</code>
      * @return The localBlksRead.
      */
     long getLocalBlksRead();
 
     /**
+     * <pre>
+     * Number of 'dirtied' local blocks.
+     * </pre>
+     *
      * <code>int64 local_blks_dirtied = 24;</code>
      * @return The localBlksDirtied.
      */
     long getLocalBlksDirtied();
 
     /**
+     * <pre>
+     * Number of written local blocks.
+     * </pre>
+     *
      * <code>int64 local_blks_written = 25;</code>
      * @return The localBlksWritten.
      */
     long getLocalBlksWritten();
 
     /**
+     * <pre>
+     * Number of read temporary blocks.
+     * </pre>
+     *
      * <code>int64 temp_blks_read = 26;</code>
      * @return The tempBlksRead.
      */
     long getTempBlksRead();
 
     /**
+     * <pre>
+     * Number of written temporary blocks.
+     * </pre>
+     *
      * <code>int64 temp_blks_written = 27;</code>
      * @return The tempBlksWritten.
      */
     long getTempBlksWritten();
 
     /**
+     * <pre>
+     * Time taken to read data blocks, in milliseconds.
+     * The parameter returns a non-zero value if the [track_io_timing](https://www.postgresql.org/docs/current/runtime-config-statistics.html#GUC-TRACK-IO-TIMING) parameter is enabled.
+     * </pre>
+     *
      * <code>double blk_read_time = 28;</code>
      * @return The blkReadTime.
      */
     double getBlkReadTime();
 
     /**
+     * <pre>
+     * Time taken to record data blocks, in milliseconds.
+     * The parameter returns a non-zero value if the [track_io_timing] parameter is enabled.
+     * </pre>
+     *
      * <code>double blk_write_time = 29;</code>
      * @return The blkWriteTime.
      */
     double getBlkWriteTime();
 
     /**
+     * <pre>
+     * Time taken to read temporary data blocks, in milliseconds.
+     * The parameter returns a non-zero value if the [track_io_timing] parameter is enabled.
+     * </pre>
+     *
      * <code>double temp_blk_read_time = 30;</code>
      * @return The tempBlkReadTime.
      */
     double getTempBlkReadTime();
 
     /**
+     * <pre>
+     * Time taken to record temporary data blocks, in milliseconds.
+     * The parameter returns a non-zero value if the [track_io_timing] parameter is enabled.
+     * </pre>
+     *
      * <code>double temp_blk_write_time = 31;</code>
      * @return The tempBlkWriteTime.
      */
     double getTempBlkWriteTime();
 
     /**
+     * <pre>
+     * Number of WAL records generated during a given period.
+     * </pre>
+     *
      * <code>int64 wal_records = 32;</code>
      * @return The walRecords.
      */
     long getWalRecords();
 
     /**
+     * <pre>
+     * Number of WAL full page images generated during a given period.
+     * </pre>
+     *
      * <code>int64 wal_fpi = 33;</code>
      * @return The walFpi.
      */
     long getWalFpi();
 
     /**
+     * <pre>
+     * Number of WAL logs generated during a given period, in bytes.
+     * </pre>
+     *
      * <code>int64 wal_bytes = 34;</code>
      * @return The walBytes.
      */
     long getWalBytes();
 
     /**
+     * <pre>
+     * Number of JIT-compiled functions.
+     * </pre>
+     *
      * <code>int64 jit_functions = 35;</code>
      * @return The jitFunctions.
      */
     long getJitFunctions();
 
     /**
+     * <pre>
+     * Time taken to generate JIT code, in milliseconds.
+     * </pre>
+     *
      * <code>double jit_generation_time = 36;</code>
      * @return The jitGenerationTime.
      */
     double getJitGenerationTime();
 
     /**
+     * <pre>
+     * Number of times that functions have been inlined.
+     * </pre>
+     *
      * <code>int64 jit_inlining_count = 37;</code>
      * @return The jitInliningCount.
      */
     long getJitInliningCount();
 
     /**
+     * <pre>
+     * Time taken to inline functions, in milliseconds.
+     * </pre>
+     *
      * <code>double jit_inlining_time = 38;</code>
      * @return The jitInliningTime.
      */
     double getJitInliningTime();
 
     /**
+     * <pre>
+     * Number of times that a query was optimized.
+     * </pre>
+     *
      * <code>int64 jit_optimization_count = 39;</code>
      * @return The jitOptimizationCount.
      */
     long getJitOptimizationCount();
 
     /**
+     * <pre>
+     * Time taken to optimize a query, in milliseconds.
+     * </pre>
+     *
      * <code>double jit_optimization_time = 40;</code>
      * @return The jitOptimizationTime.
      */
     double getJitOptimizationTime();
 
     /**
+     * <pre>
+     * Number of times that code was emitted.
+     * </pre>
+     *
      * <code>int64 jit_emission_count = 41;</code>
      * @return The jitEmissionCount.
      */
     long getJitEmissionCount();
 
     /**
+     * <pre>
+     * Time taken to emit code.
+     * </pre>
+     *
      * <code>double jit_emission_time = 42;</code>
      * @return The jitEmissionTime.
      */
     double getJitEmissionTime();
 
     /**
+     * <pre>
+     * Cost of receiving a response to a query before the first row of the response is issued.
+     * </pre>
+     *
      * <code>int64 startup_cost = 43;</code>
      * @return The startupCost.
      */
     long getStartupCost();
 
     /**
+     * <pre>
+     * Cost of receiving a response to a query when all the rows of the response are issued.
+     * </pre>
+     *
      * <code>int64 total_cost = 44;</code>
      * @return The totalCost.
      */
     long getTotalCost();
 
     /**
+     * <pre>
+     * Expected number of rows that a given plan node should issue.
+     * </pre>
+     *
      * <code>int64 plan_rows = 45;</code>
      * @return The planRows.
      */
     long getPlanRows();
 
     /**
+     * <pre>
+     * Expected average size of rows that a given plan node should issue.
+     * </pre>
+     *
      * <code>int64 plan_width = 46;</code>
      * @return The planWidth.
      */
     long getPlanWidth();
 
     /**
+     * <pre>
+     * Number of bytes that the filesystem layer has read.
+     * </pre>
+     *
      * <code>int64 reads = 47;</code>
      * @return The reads.
      */
     long getReads();
 
     /**
+     * <pre>
+     * Number of bytes that the filesystem layer has written.
+     * </pre>
+     *
      * <code>int64 writes = 48;</code>
      * @return The writes.
      */
     long getWrites();
 
     /**
+     * <pre>
+     * User CPU time used.
+     * </pre>
+     *
      * <code>double user_time = 49;</code>
      * @return The userTime.
      */
     double getUserTime();
 
     /**
+     * <pre>
+     * System CPU time used.
+     * </pre>
+     *
      * <code>double system_time = 50;</code>
      * @return The systemTime.
      */
@@ -5675,6 +6962,10 @@ public final class PerfDiag {
     public static final int TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp time_;
     /**
+     * <pre>
+     * Time of collecting statistics on planning and execution of queries.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp time = 1;</code>
      * @return Whether the time field is set.
      */
@@ -5683,6 +6974,10 @@ public final class PerfDiag {
       return time_ != null;
     }
     /**
+     * <pre>
+     * Time of collecting statistics on planning and execution of queries.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp time = 1;</code>
      * @return The time.
      */
@@ -5691,6 +6986,10 @@ public final class PerfDiag {
       return time_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : time_;
     }
     /**
+     * <pre>
+     * Time of collecting statistics on planning and execution of queries.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp time = 1;</code>
      */
     @java.lang.Override
@@ -5701,6 +7000,10 @@ public final class PerfDiag {
     public static final int QUERY_FIELD_NUMBER = 2;
     private volatile java.lang.Object query_;
     /**
+     * <pre>
+     * Statement text.
+     * </pre>
+     *
      * <code>string query = 2;</code>
      * @return The query.
      */
@@ -5718,6 +7021,10 @@ public final class PerfDiag {
       }
     }
     /**
+     * <pre>
+     * Statement text.
+     * </pre>
+     *
      * <code>string query = 2;</code>
      * @return The bytes for query.
      */
@@ -5739,6 +7046,10 @@ public final class PerfDiag {
     public static final int NORMALIZED_PLAN_FIELD_NUMBER = 3;
     private volatile java.lang.Object normalizedPlan_;
     /**
+     * <pre>
+     * Normalized query plan.
+     * </pre>
+     *
      * <code>string normalized_plan = 3;</code>
      * @return The normalizedPlan.
      */
@@ -5756,6 +7067,10 @@ public final class PerfDiag {
       }
     }
     /**
+     * <pre>
+     * Normalized query plan.
+     * </pre>
+     *
      * <code>string normalized_plan = 3;</code>
      * @return The bytes for normalizedPlan.
      */
@@ -5777,6 +7092,10 @@ public final class PerfDiag {
     public static final int EXAMPLE_PLAN_FIELD_NUMBER = 4;
     private volatile java.lang.Object examplePlan_;
     /**
+     * <pre>
+     * Example of a query execution plan (without normalization).
+     * </pre>
+     *
      * <code>string example_plan = 4;</code>
      * @return The examplePlan.
      */
@@ -5794,6 +7113,10 @@ public final class PerfDiag {
       }
     }
     /**
+     * <pre>
+     * Example of a query execution plan (without normalization).
+     * </pre>
+     *
      * <code>string example_plan = 4;</code>
      * @return The bytes for examplePlan.
      */
@@ -5815,6 +7138,11 @@ public final class PerfDiag {
     public static final int PLANS_FIELD_NUMBER = 5;
     private long plans_;
     /**
+     * <pre>
+     * Number of times that a query was planned.
+     * The parameter returns a non-zero value if the [pg_stat_statements.track_planning](https://www.postgresql.org/docs/current/pgstatstatements.html#id-1.11.7.41.9) parameter is enabled.
+     * </pre>
+     *
      * <code>int64 plans = 5;</code>
      * @return The plans.
      */
@@ -5826,6 +7154,11 @@ public final class PerfDiag {
     public static final int TOTAL_PLAN_TIME_FIELD_NUMBER = 6;
     private double totalPlanTime_;
     /**
+     * <pre>
+     * Total time taken to plan a query, in milliseconds.
+     * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+     * </pre>
+     *
      * <code>double total_plan_time = 6;</code>
      * @return The totalPlanTime.
      */
@@ -5837,6 +7170,11 @@ public final class PerfDiag {
     public static final int MIN_PLAN_TIME_FIELD_NUMBER = 7;
     private double minPlanTime_;
     /**
+     * <pre>
+     * Minimum time taken to plan a query, in milliseconds.
+     * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+     * </pre>
+     *
      * <code>double min_plan_time = 7;</code>
      * @return The minPlanTime.
      */
@@ -5848,6 +7186,11 @@ public final class PerfDiag {
     public static final int MAX_PLAN_TIME_FIELD_NUMBER = 8;
     private double maxPlanTime_;
     /**
+     * <pre>
+     * Maximum time taken to plan a query, in milliseconds.
+     * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+     * </pre>
+     *
      * <code>double max_plan_time = 8;</code>
      * @return The maxPlanTime.
      */
@@ -5859,6 +7202,11 @@ public final class PerfDiag {
     public static final int MEAN_PLAN_TIME_FIELD_NUMBER = 9;
     private double meanPlanTime_;
     /**
+     * <pre>
+     * Average time taken to plan a query, in milliseconds.
+     * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+     * </pre>
+     *
      * <code>double mean_plan_time = 9;</code>
      * @return The meanPlanTime.
      */
@@ -5870,6 +7218,11 @@ public final class PerfDiag {
     public static final int STDDEV_PLAN_TIME_FIELD_NUMBER = 10;
     private double stddevPlanTime_;
     /**
+     * <pre>
+     * Population standard deviation of the time taken to plan a query, in milliseconds.
+     * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+     * </pre>
+     *
      * <code>double stddev_plan_time = 10;</code>
      * @return The stddevPlanTime.
      */
@@ -5881,6 +7234,10 @@ public final class PerfDiag {
     public static final int CALLS_FIELD_NUMBER = 11;
     private long calls_;
     /**
+     * <pre>
+     * Number of times that a query was executed.
+     * </pre>
+     *
      * <code>int64 calls = 11;</code>
      * @return The calls.
      */
@@ -5893,7 +7250,7 @@ public final class PerfDiag {
     private double totalTime_;
     /**
      * <pre>
-     * total_exec_time
+     * Total time taken to execute a query, in milliseconds.
      * </pre>
      *
      * <code>double total_time = 12;</code>
@@ -5908,7 +7265,7 @@ public final class PerfDiag {
     private double minTime_;
     /**
      * <pre>
-     * min_exec_time
+     * Minimum time taken to execute a query, in milliseconds.
      * </pre>
      *
      * <code>double min_time = 13;</code>
@@ -5923,7 +7280,7 @@ public final class PerfDiag {
     private double maxTime_;
     /**
      * <pre>
-     * max_exec_time
+     * Maximum time taken to execute a query, in milliseconds.
      * </pre>
      *
      * <code>double max_time = 14;</code>
@@ -5938,7 +7295,7 @@ public final class PerfDiag {
     private double meanTime_;
     /**
      * <pre>
-     * mean_exec_time
+     * Average time taken to execute a query, in milliseconds.
      * </pre>
      *
      * <code>double mean_time = 15;</code>
@@ -5953,7 +7310,7 @@ public final class PerfDiag {
     private double stddevTime_;
     /**
      * <pre>
-     * stddev_exec_time
+     * Population standard deviation of the time taken to execute a query, in milliseconds.
      * </pre>
      *
      * <code>double stddev_time = 16;</code>
@@ -5967,6 +7324,10 @@ public final class PerfDiag {
     public static final int ROWS_FIELD_NUMBER = 17;
     private long rows_;
     /**
+     * <pre>
+     * Number of retrieved or affected rows.
+     * </pre>
+     *
      * <code>int64 rows = 17;</code>
      * @return The rows.
      */
@@ -5978,6 +7339,10 @@ public final class PerfDiag {
     public static final int SHARED_BLKS_HIT_FIELD_NUMBER = 18;
     private long sharedBlksHit_;
     /**
+     * <pre>
+     * Number of shared blocks that are hit from cache.
+     * </pre>
+     *
      * <code>int64 shared_blks_hit = 18;</code>
      * @return The sharedBlksHit.
      */
@@ -5989,6 +7354,10 @@ public final class PerfDiag {
     public static final int SHARED_BLKS_READ_FIELD_NUMBER = 19;
     private long sharedBlksRead_;
     /**
+     * <pre>
+     * Number of read shared blocks.
+     * </pre>
+     *
      * <code>int64 shared_blks_read = 19;</code>
      * @return The sharedBlksRead.
      */
@@ -6000,6 +7369,10 @@ public final class PerfDiag {
     public static final int SHARED_BLKS_DIRTIED_FIELD_NUMBER = 20;
     private long sharedBlksDirtied_;
     /**
+     * <pre>
+     * Number of 'dirtied' shared blocks.
+     * </pre>
+     *
      * <code>int64 shared_blks_dirtied = 20;</code>
      * @return The sharedBlksDirtied.
      */
@@ -6011,6 +7384,10 @@ public final class PerfDiag {
     public static final int SHARED_BLKS_WRITTEN_FIELD_NUMBER = 21;
     private long sharedBlksWritten_;
     /**
+     * <pre>
+     * Number of written shared blocks.
+     * </pre>
+     *
      * <code>int64 shared_blks_written = 21;</code>
      * @return The sharedBlksWritten.
      */
@@ -6022,6 +7399,10 @@ public final class PerfDiag {
     public static final int LOCAL_BLKS_HIT_FIELD_NUMBER = 22;
     private long localBlksHit_;
     /**
+     * <pre>
+     * Number of local blocks that are hit from cache.
+     * </pre>
+     *
      * <code>int64 local_blks_hit = 22;</code>
      * @return The localBlksHit.
      */
@@ -6033,6 +7414,10 @@ public final class PerfDiag {
     public static final int LOCAL_BLKS_READ_FIELD_NUMBER = 23;
     private long localBlksRead_;
     /**
+     * <pre>
+     * Number of read local blocks.
+     * </pre>
+     *
      * <code>int64 local_blks_read = 23;</code>
      * @return The localBlksRead.
      */
@@ -6044,6 +7429,10 @@ public final class PerfDiag {
     public static final int LOCAL_BLKS_DIRTIED_FIELD_NUMBER = 24;
     private long localBlksDirtied_;
     /**
+     * <pre>
+     * Number of 'dirtied' local blocks.
+     * </pre>
+     *
      * <code>int64 local_blks_dirtied = 24;</code>
      * @return The localBlksDirtied.
      */
@@ -6055,6 +7444,10 @@ public final class PerfDiag {
     public static final int LOCAL_BLKS_WRITTEN_FIELD_NUMBER = 25;
     private long localBlksWritten_;
     /**
+     * <pre>
+     * Number of written local blocks.
+     * </pre>
+     *
      * <code>int64 local_blks_written = 25;</code>
      * @return The localBlksWritten.
      */
@@ -6066,6 +7459,10 @@ public final class PerfDiag {
     public static final int TEMP_BLKS_READ_FIELD_NUMBER = 26;
     private long tempBlksRead_;
     /**
+     * <pre>
+     * Number of read temporary blocks.
+     * </pre>
+     *
      * <code>int64 temp_blks_read = 26;</code>
      * @return The tempBlksRead.
      */
@@ -6077,6 +7474,10 @@ public final class PerfDiag {
     public static final int TEMP_BLKS_WRITTEN_FIELD_NUMBER = 27;
     private long tempBlksWritten_;
     /**
+     * <pre>
+     * Number of written temporary blocks.
+     * </pre>
+     *
      * <code>int64 temp_blks_written = 27;</code>
      * @return The tempBlksWritten.
      */
@@ -6088,6 +7489,11 @@ public final class PerfDiag {
     public static final int BLK_READ_TIME_FIELD_NUMBER = 28;
     private double blkReadTime_;
     /**
+     * <pre>
+     * Time taken to read data blocks, in milliseconds.
+     * The parameter returns a non-zero value if the [track_io_timing](https://www.postgresql.org/docs/current/runtime-config-statistics.html#GUC-TRACK-IO-TIMING) parameter is enabled.
+     * </pre>
+     *
      * <code>double blk_read_time = 28;</code>
      * @return The blkReadTime.
      */
@@ -6099,6 +7505,11 @@ public final class PerfDiag {
     public static final int BLK_WRITE_TIME_FIELD_NUMBER = 29;
     private double blkWriteTime_;
     /**
+     * <pre>
+     * Time taken to record data blocks, in milliseconds.
+     * The parameter returns a non-zero value if the [track_io_timing] parameter is enabled.
+     * </pre>
+     *
      * <code>double blk_write_time = 29;</code>
      * @return The blkWriteTime.
      */
@@ -6110,6 +7521,11 @@ public final class PerfDiag {
     public static final int TEMP_BLK_READ_TIME_FIELD_NUMBER = 30;
     private double tempBlkReadTime_;
     /**
+     * <pre>
+     * Time taken to read temporary data blocks, in milliseconds.
+     * The parameter returns a non-zero value if the [track_io_timing] parameter is enabled.
+     * </pre>
+     *
      * <code>double temp_blk_read_time = 30;</code>
      * @return The tempBlkReadTime.
      */
@@ -6121,6 +7537,11 @@ public final class PerfDiag {
     public static final int TEMP_BLK_WRITE_TIME_FIELD_NUMBER = 31;
     private double tempBlkWriteTime_;
     /**
+     * <pre>
+     * Time taken to record temporary data blocks, in milliseconds.
+     * The parameter returns a non-zero value if the [track_io_timing] parameter is enabled.
+     * </pre>
+     *
      * <code>double temp_blk_write_time = 31;</code>
      * @return The tempBlkWriteTime.
      */
@@ -6132,6 +7553,10 @@ public final class PerfDiag {
     public static final int WAL_RECORDS_FIELD_NUMBER = 32;
     private long walRecords_;
     /**
+     * <pre>
+     * Number of WAL records generated during a given period.
+     * </pre>
+     *
      * <code>int64 wal_records = 32;</code>
      * @return The walRecords.
      */
@@ -6143,6 +7568,10 @@ public final class PerfDiag {
     public static final int WAL_FPI_FIELD_NUMBER = 33;
     private long walFpi_;
     /**
+     * <pre>
+     * Number of WAL full page images generated during a given period.
+     * </pre>
+     *
      * <code>int64 wal_fpi = 33;</code>
      * @return The walFpi.
      */
@@ -6154,6 +7583,10 @@ public final class PerfDiag {
     public static final int WAL_BYTES_FIELD_NUMBER = 34;
     private long walBytes_;
     /**
+     * <pre>
+     * Number of WAL logs generated during a given period, in bytes.
+     * </pre>
+     *
      * <code>int64 wal_bytes = 34;</code>
      * @return The walBytes.
      */
@@ -6165,6 +7598,10 @@ public final class PerfDiag {
     public static final int JIT_FUNCTIONS_FIELD_NUMBER = 35;
     private long jitFunctions_;
     /**
+     * <pre>
+     * Number of JIT-compiled functions.
+     * </pre>
+     *
      * <code>int64 jit_functions = 35;</code>
      * @return The jitFunctions.
      */
@@ -6176,6 +7613,10 @@ public final class PerfDiag {
     public static final int JIT_GENERATION_TIME_FIELD_NUMBER = 36;
     private double jitGenerationTime_;
     /**
+     * <pre>
+     * Time taken to generate JIT code, in milliseconds.
+     * </pre>
+     *
      * <code>double jit_generation_time = 36;</code>
      * @return The jitGenerationTime.
      */
@@ -6187,6 +7628,10 @@ public final class PerfDiag {
     public static final int JIT_INLINING_COUNT_FIELD_NUMBER = 37;
     private long jitInliningCount_;
     /**
+     * <pre>
+     * Number of times that functions have been inlined.
+     * </pre>
+     *
      * <code>int64 jit_inlining_count = 37;</code>
      * @return The jitInliningCount.
      */
@@ -6198,6 +7643,10 @@ public final class PerfDiag {
     public static final int JIT_INLINING_TIME_FIELD_NUMBER = 38;
     private double jitInliningTime_;
     /**
+     * <pre>
+     * Time taken to inline functions, in milliseconds.
+     * </pre>
+     *
      * <code>double jit_inlining_time = 38;</code>
      * @return The jitInliningTime.
      */
@@ -6209,6 +7658,10 @@ public final class PerfDiag {
     public static final int JIT_OPTIMIZATION_COUNT_FIELD_NUMBER = 39;
     private long jitOptimizationCount_;
     /**
+     * <pre>
+     * Number of times that a query was optimized.
+     * </pre>
+     *
      * <code>int64 jit_optimization_count = 39;</code>
      * @return The jitOptimizationCount.
      */
@@ -6220,6 +7673,10 @@ public final class PerfDiag {
     public static final int JIT_OPTIMIZATION_TIME_FIELD_NUMBER = 40;
     private double jitOptimizationTime_;
     /**
+     * <pre>
+     * Time taken to optimize a query, in milliseconds.
+     * </pre>
+     *
      * <code>double jit_optimization_time = 40;</code>
      * @return The jitOptimizationTime.
      */
@@ -6231,6 +7688,10 @@ public final class PerfDiag {
     public static final int JIT_EMISSION_COUNT_FIELD_NUMBER = 41;
     private long jitEmissionCount_;
     /**
+     * <pre>
+     * Number of times that code was emitted.
+     * </pre>
+     *
      * <code>int64 jit_emission_count = 41;</code>
      * @return The jitEmissionCount.
      */
@@ -6242,6 +7703,10 @@ public final class PerfDiag {
     public static final int JIT_EMISSION_TIME_FIELD_NUMBER = 42;
     private double jitEmissionTime_;
     /**
+     * <pre>
+     * Time taken to emit code.
+     * </pre>
+     *
      * <code>double jit_emission_time = 42;</code>
      * @return The jitEmissionTime.
      */
@@ -6253,6 +7718,10 @@ public final class PerfDiag {
     public static final int STARTUP_COST_FIELD_NUMBER = 43;
     private long startupCost_;
     /**
+     * <pre>
+     * Cost of receiving a response to a query before the first row of the response is issued.
+     * </pre>
+     *
      * <code>int64 startup_cost = 43;</code>
      * @return The startupCost.
      */
@@ -6264,6 +7733,10 @@ public final class PerfDiag {
     public static final int TOTAL_COST_FIELD_NUMBER = 44;
     private long totalCost_;
     /**
+     * <pre>
+     * Cost of receiving a response to a query when all the rows of the response are issued.
+     * </pre>
+     *
      * <code>int64 total_cost = 44;</code>
      * @return The totalCost.
      */
@@ -6275,6 +7748,10 @@ public final class PerfDiag {
     public static final int PLAN_ROWS_FIELD_NUMBER = 45;
     private long planRows_;
     /**
+     * <pre>
+     * Expected number of rows that a given plan node should issue.
+     * </pre>
+     *
      * <code>int64 plan_rows = 45;</code>
      * @return The planRows.
      */
@@ -6286,6 +7763,10 @@ public final class PerfDiag {
     public static final int PLAN_WIDTH_FIELD_NUMBER = 46;
     private long planWidth_;
     /**
+     * <pre>
+     * Expected average size of rows that a given plan node should issue.
+     * </pre>
+     *
      * <code>int64 plan_width = 46;</code>
      * @return The planWidth.
      */
@@ -6297,6 +7778,10 @@ public final class PerfDiag {
     public static final int READS_FIELD_NUMBER = 47;
     private long reads_;
     /**
+     * <pre>
+     * Number of bytes that the filesystem layer has read.
+     * </pre>
+     *
      * <code>int64 reads = 47;</code>
      * @return The reads.
      */
@@ -6308,6 +7793,10 @@ public final class PerfDiag {
     public static final int WRITES_FIELD_NUMBER = 48;
     private long writes_;
     /**
+     * <pre>
+     * Number of bytes that the filesystem layer has written.
+     * </pre>
+     *
      * <code>int64 writes = 48;</code>
      * @return The writes.
      */
@@ -6319,6 +7808,10 @@ public final class PerfDiag {
     public static final int USER_TIME_FIELD_NUMBER = 49;
     private double userTime_;
     /**
+     * <pre>
+     * User CPU time used.
+     * </pre>
+     *
      * <code>double user_time = 49;</code>
      * @return The userTime.
      */
@@ -6330,6 +7823,10 @@ public final class PerfDiag {
     public static final int SYSTEM_TIME_FIELD_NUMBER = 50;
     private double systemTime_;
     /**
+     * <pre>
+     * System CPU time used.
+     * </pre>
+     *
      * <code>double system_time = 50;</code>
      * @return The systemTime.
      */
@@ -7556,6 +9053,10 @@ public final class PerfDiag {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timeBuilder_;
       /**
+       * <pre>
+       * Time of collecting statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp time = 1;</code>
        * @return Whether the time field is set.
        */
@@ -7563,6 +9064,10 @@ public final class PerfDiag {
         return timeBuilder_ != null || time_ != null;
       }
       /**
+       * <pre>
+       * Time of collecting statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp time = 1;</code>
        * @return The time.
        */
@@ -7574,6 +9079,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Time of collecting statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp time = 1;</code>
        */
       public Builder setTime(com.google.protobuf.Timestamp value) {
@@ -7590,6 +9099,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time of collecting statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp time = 1;</code>
        */
       public Builder setTime(
@@ -7604,6 +9117,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time of collecting statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp time = 1;</code>
        */
       public Builder mergeTime(com.google.protobuf.Timestamp value) {
@@ -7622,6 +9139,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time of collecting statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp time = 1;</code>
        */
       public Builder clearTime() {
@@ -7636,6 +9157,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time of collecting statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp time = 1;</code>
        */
       public com.google.protobuf.Timestamp.Builder getTimeBuilder() {
@@ -7644,6 +9169,10 @@ public final class PerfDiag {
         return getTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Time of collecting statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp time = 1;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getTimeOrBuilder() {
@@ -7655,6 +9184,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Time of collecting statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp time = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7673,6 +9206,10 @@ public final class PerfDiag {
 
       private java.lang.Object query_ = "";
       /**
+       * <pre>
+       * Statement text.
+       * </pre>
+       *
        * <code>string query = 2;</code>
        * @return The query.
        */
@@ -7689,6 +9226,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Statement text.
+       * </pre>
+       *
        * <code>string query = 2;</code>
        * @return The bytes for query.
        */
@@ -7706,6 +9247,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Statement text.
+       * </pre>
+       *
        * <code>string query = 2;</code>
        * @param value The query to set.
        * @return This builder for chaining.
@@ -7721,6 +9266,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Statement text.
+       * </pre>
+       *
        * <code>string query = 2;</code>
        * @return This builder for chaining.
        */
@@ -7731,6 +9280,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Statement text.
+       * </pre>
+       *
        * <code>string query = 2;</code>
        * @param value The bytes for query to set.
        * @return This builder for chaining.
@@ -7749,6 +9302,10 @@ public final class PerfDiag {
 
       private java.lang.Object normalizedPlan_ = "";
       /**
+       * <pre>
+       * Normalized query plan.
+       * </pre>
+       *
        * <code>string normalized_plan = 3;</code>
        * @return The normalizedPlan.
        */
@@ -7765,6 +9322,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Normalized query plan.
+       * </pre>
+       *
        * <code>string normalized_plan = 3;</code>
        * @return The bytes for normalizedPlan.
        */
@@ -7782,6 +9343,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Normalized query plan.
+       * </pre>
+       *
        * <code>string normalized_plan = 3;</code>
        * @param value The normalizedPlan to set.
        * @return This builder for chaining.
@@ -7797,6 +9362,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Normalized query plan.
+       * </pre>
+       *
        * <code>string normalized_plan = 3;</code>
        * @return This builder for chaining.
        */
@@ -7807,6 +9376,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Normalized query plan.
+       * </pre>
+       *
        * <code>string normalized_plan = 3;</code>
        * @param value The bytes for normalizedPlan to set.
        * @return This builder for chaining.
@@ -7825,6 +9398,10 @@ public final class PerfDiag {
 
       private java.lang.Object examplePlan_ = "";
       /**
+       * <pre>
+       * Example of a query execution plan (without normalization).
+       * </pre>
+       *
        * <code>string example_plan = 4;</code>
        * @return The examplePlan.
        */
@@ -7841,6 +9418,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Example of a query execution plan (without normalization).
+       * </pre>
+       *
        * <code>string example_plan = 4;</code>
        * @return The bytes for examplePlan.
        */
@@ -7858,6 +9439,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Example of a query execution plan (without normalization).
+       * </pre>
+       *
        * <code>string example_plan = 4;</code>
        * @param value The examplePlan to set.
        * @return This builder for chaining.
@@ -7873,6 +9458,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Example of a query execution plan (without normalization).
+       * </pre>
+       *
        * <code>string example_plan = 4;</code>
        * @return This builder for chaining.
        */
@@ -7883,6 +9472,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Example of a query execution plan (without normalization).
+       * </pre>
+       *
        * <code>string example_plan = 4;</code>
        * @param value The bytes for examplePlan to set.
        * @return This builder for chaining.
@@ -7901,6 +9494,11 @@ public final class PerfDiag {
 
       private long plans_ ;
       /**
+       * <pre>
+       * Number of times that a query was planned.
+       * The parameter returns a non-zero value if the [pg_stat_statements.track_planning](https://www.postgresql.org/docs/current/pgstatstatements.html#id-1.11.7.41.9) parameter is enabled.
+       * </pre>
+       *
        * <code>int64 plans = 5;</code>
        * @return The plans.
        */
@@ -7909,6 +9507,11 @@ public final class PerfDiag {
         return plans_;
       }
       /**
+       * <pre>
+       * Number of times that a query was planned.
+       * The parameter returns a non-zero value if the [pg_stat_statements.track_planning](https://www.postgresql.org/docs/current/pgstatstatements.html#id-1.11.7.41.9) parameter is enabled.
+       * </pre>
+       *
        * <code>int64 plans = 5;</code>
        * @param value The plans to set.
        * @return This builder for chaining.
@@ -7920,6 +9523,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Number of times that a query was planned.
+       * The parameter returns a non-zero value if the [pg_stat_statements.track_planning](https://www.postgresql.org/docs/current/pgstatstatements.html#id-1.11.7.41.9) parameter is enabled.
+       * </pre>
+       *
        * <code>int64 plans = 5;</code>
        * @return This builder for chaining.
        */
@@ -7932,6 +9540,11 @@ public final class PerfDiag {
 
       private double totalPlanTime_ ;
       /**
+       * <pre>
+       * Total time taken to plan a query, in milliseconds.
+       * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+       * </pre>
+       *
        * <code>double total_plan_time = 6;</code>
        * @return The totalPlanTime.
        */
@@ -7940,6 +9553,11 @@ public final class PerfDiag {
         return totalPlanTime_;
       }
       /**
+       * <pre>
+       * Total time taken to plan a query, in milliseconds.
+       * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+       * </pre>
+       *
        * <code>double total_plan_time = 6;</code>
        * @param value The totalPlanTime to set.
        * @return This builder for chaining.
@@ -7951,6 +9569,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Total time taken to plan a query, in milliseconds.
+       * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+       * </pre>
+       *
        * <code>double total_plan_time = 6;</code>
        * @return This builder for chaining.
        */
@@ -7963,6 +9586,11 @@ public final class PerfDiag {
 
       private double minPlanTime_ ;
       /**
+       * <pre>
+       * Minimum time taken to plan a query, in milliseconds.
+       * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+       * </pre>
+       *
        * <code>double min_plan_time = 7;</code>
        * @return The minPlanTime.
        */
@@ -7971,6 +9599,11 @@ public final class PerfDiag {
         return minPlanTime_;
       }
       /**
+       * <pre>
+       * Minimum time taken to plan a query, in milliseconds.
+       * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+       * </pre>
+       *
        * <code>double min_plan_time = 7;</code>
        * @param value The minPlanTime to set.
        * @return This builder for chaining.
@@ -7982,6 +9615,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Minimum time taken to plan a query, in milliseconds.
+       * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+       * </pre>
+       *
        * <code>double min_plan_time = 7;</code>
        * @return This builder for chaining.
        */
@@ -7994,6 +9632,11 @@ public final class PerfDiag {
 
       private double maxPlanTime_ ;
       /**
+       * <pre>
+       * Maximum time taken to plan a query, in milliseconds.
+       * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+       * </pre>
+       *
        * <code>double max_plan_time = 8;</code>
        * @return The maxPlanTime.
        */
@@ -8002,6 +9645,11 @@ public final class PerfDiag {
         return maxPlanTime_;
       }
       /**
+       * <pre>
+       * Maximum time taken to plan a query, in milliseconds.
+       * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+       * </pre>
+       *
        * <code>double max_plan_time = 8;</code>
        * @param value The maxPlanTime to set.
        * @return This builder for chaining.
@@ -8013,6 +9661,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Maximum time taken to plan a query, in milliseconds.
+       * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+       * </pre>
+       *
        * <code>double max_plan_time = 8;</code>
        * @return This builder for chaining.
        */
@@ -8025,6 +9678,11 @@ public final class PerfDiag {
 
       private double meanPlanTime_ ;
       /**
+       * <pre>
+       * Average time taken to plan a query, in milliseconds.
+       * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+       * </pre>
+       *
        * <code>double mean_plan_time = 9;</code>
        * @return The meanPlanTime.
        */
@@ -8033,6 +9691,11 @@ public final class PerfDiag {
         return meanPlanTime_;
       }
       /**
+       * <pre>
+       * Average time taken to plan a query, in milliseconds.
+       * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+       * </pre>
+       *
        * <code>double mean_plan_time = 9;</code>
        * @param value The meanPlanTime to set.
        * @return This builder for chaining.
@@ -8044,6 +9707,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Average time taken to plan a query, in milliseconds.
+       * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+       * </pre>
+       *
        * <code>double mean_plan_time = 9;</code>
        * @return This builder for chaining.
        */
@@ -8056,6 +9724,11 @@ public final class PerfDiag {
 
       private double stddevPlanTime_ ;
       /**
+       * <pre>
+       * Population standard deviation of the time taken to plan a query, in milliseconds.
+       * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+       * </pre>
+       *
        * <code>double stddev_plan_time = 10;</code>
        * @return The stddevPlanTime.
        */
@@ -8064,6 +9737,11 @@ public final class PerfDiag {
         return stddevPlanTime_;
       }
       /**
+       * <pre>
+       * Population standard deviation of the time taken to plan a query, in milliseconds.
+       * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+       * </pre>
+       *
        * <code>double stddev_plan_time = 10;</code>
        * @param value The stddevPlanTime to set.
        * @return This builder for chaining.
@@ -8075,6 +9753,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Population standard deviation of the time taken to plan a query, in milliseconds.
+       * The parameter returns a non-zero value if the [pg_stat_statements.track_planning] parameter is enabled.
+       * </pre>
+       *
        * <code>double stddev_plan_time = 10;</code>
        * @return This builder for chaining.
        */
@@ -8087,6 +9770,10 @@ public final class PerfDiag {
 
       private long calls_ ;
       /**
+       * <pre>
+       * Number of times that a query was executed.
+       * </pre>
+       *
        * <code>int64 calls = 11;</code>
        * @return The calls.
        */
@@ -8095,6 +9782,10 @@ public final class PerfDiag {
         return calls_;
       }
       /**
+       * <pre>
+       * Number of times that a query was executed.
+       * </pre>
+       *
        * <code>int64 calls = 11;</code>
        * @param value The calls to set.
        * @return This builder for chaining.
@@ -8106,6 +9797,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Number of times that a query was executed.
+       * </pre>
+       *
        * <code>int64 calls = 11;</code>
        * @return This builder for chaining.
        */
@@ -8119,7 +9814,7 @@ public final class PerfDiag {
       private double totalTime_ ;
       /**
        * <pre>
-       * total_exec_time
+       * Total time taken to execute a query, in milliseconds.
        * </pre>
        *
        * <code>double total_time = 12;</code>
@@ -8131,7 +9826,7 @@ public final class PerfDiag {
       }
       /**
        * <pre>
-       * total_exec_time
+       * Total time taken to execute a query, in milliseconds.
        * </pre>
        *
        * <code>double total_time = 12;</code>
@@ -8146,7 +9841,7 @@ public final class PerfDiag {
       }
       /**
        * <pre>
-       * total_exec_time
+       * Total time taken to execute a query, in milliseconds.
        * </pre>
        *
        * <code>double total_time = 12;</code>
@@ -8162,7 +9857,7 @@ public final class PerfDiag {
       private double minTime_ ;
       /**
        * <pre>
-       * min_exec_time
+       * Minimum time taken to execute a query, in milliseconds.
        * </pre>
        *
        * <code>double min_time = 13;</code>
@@ -8174,7 +9869,7 @@ public final class PerfDiag {
       }
       /**
        * <pre>
-       * min_exec_time
+       * Minimum time taken to execute a query, in milliseconds.
        * </pre>
        *
        * <code>double min_time = 13;</code>
@@ -8189,7 +9884,7 @@ public final class PerfDiag {
       }
       /**
        * <pre>
-       * min_exec_time
+       * Minimum time taken to execute a query, in milliseconds.
        * </pre>
        *
        * <code>double min_time = 13;</code>
@@ -8205,7 +9900,7 @@ public final class PerfDiag {
       private double maxTime_ ;
       /**
        * <pre>
-       * max_exec_time
+       * Maximum time taken to execute a query, in milliseconds.
        * </pre>
        *
        * <code>double max_time = 14;</code>
@@ -8217,7 +9912,7 @@ public final class PerfDiag {
       }
       /**
        * <pre>
-       * max_exec_time
+       * Maximum time taken to execute a query, in milliseconds.
        * </pre>
        *
        * <code>double max_time = 14;</code>
@@ -8232,7 +9927,7 @@ public final class PerfDiag {
       }
       /**
        * <pre>
-       * max_exec_time
+       * Maximum time taken to execute a query, in milliseconds.
        * </pre>
        *
        * <code>double max_time = 14;</code>
@@ -8248,7 +9943,7 @@ public final class PerfDiag {
       private double meanTime_ ;
       /**
        * <pre>
-       * mean_exec_time
+       * Average time taken to execute a query, in milliseconds.
        * </pre>
        *
        * <code>double mean_time = 15;</code>
@@ -8260,7 +9955,7 @@ public final class PerfDiag {
       }
       /**
        * <pre>
-       * mean_exec_time
+       * Average time taken to execute a query, in milliseconds.
        * </pre>
        *
        * <code>double mean_time = 15;</code>
@@ -8275,7 +9970,7 @@ public final class PerfDiag {
       }
       /**
        * <pre>
-       * mean_exec_time
+       * Average time taken to execute a query, in milliseconds.
        * </pre>
        *
        * <code>double mean_time = 15;</code>
@@ -8291,7 +9986,7 @@ public final class PerfDiag {
       private double stddevTime_ ;
       /**
        * <pre>
-       * stddev_exec_time
+       * Population standard deviation of the time taken to execute a query, in milliseconds.
        * </pre>
        *
        * <code>double stddev_time = 16;</code>
@@ -8303,7 +9998,7 @@ public final class PerfDiag {
       }
       /**
        * <pre>
-       * stddev_exec_time
+       * Population standard deviation of the time taken to execute a query, in milliseconds.
        * </pre>
        *
        * <code>double stddev_time = 16;</code>
@@ -8318,7 +10013,7 @@ public final class PerfDiag {
       }
       /**
        * <pre>
-       * stddev_exec_time
+       * Population standard deviation of the time taken to execute a query, in milliseconds.
        * </pre>
        *
        * <code>double stddev_time = 16;</code>
@@ -8333,6 +10028,10 @@ public final class PerfDiag {
 
       private long rows_ ;
       /**
+       * <pre>
+       * Number of retrieved or affected rows.
+       * </pre>
+       *
        * <code>int64 rows = 17;</code>
        * @return The rows.
        */
@@ -8341,6 +10040,10 @@ public final class PerfDiag {
         return rows_;
       }
       /**
+       * <pre>
+       * Number of retrieved or affected rows.
+       * </pre>
+       *
        * <code>int64 rows = 17;</code>
        * @param value The rows to set.
        * @return This builder for chaining.
@@ -8352,6 +10055,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Number of retrieved or affected rows.
+       * </pre>
+       *
        * <code>int64 rows = 17;</code>
        * @return This builder for chaining.
        */
@@ -8364,6 +10071,10 @@ public final class PerfDiag {
 
       private long sharedBlksHit_ ;
       /**
+       * <pre>
+       * Number of shared blocks that are hit from cache.
+       * </pre>
+       *
        * <code>int64 shared_blks_hit = 18;</code>
        * @return The sharedBlksHit.
        */
@@ -8372,6 +10083,10 @@ public final class PerfDiag {
         return sharedBlksHit_;
       }
       /**
+       * <pre>
+       * Number of shared blocks that are hit from cache.
+       * </pre>
+       *
        * <code>int64 shared_blks_hit = 18;</code>
        * @param value The sharedBlksHit to set.
        * @return This builder for chaining.
@@ -8383,6 +10098,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Number of shared blocks that are hit from cache.
+       * </pre>
+       *
        * <code>int64 shared_blks_hit = 18;</code>
        * @return This builder for chaining.
        */
@@ -8395,6 +10114,10 @@ public final class PerfDiag {
 
       private long sharedBlksRead_ ;
       /**
+       * <pre>
+       * Number of read shared blocks.
+       * </pre>
+       *
        * <code>int64 shared_blks_read = 19;</code>
        * @return The sharedBlksRead.
        */
@@ -8403,6 +10126,10 @@ public final class PerfDiag {
         return sharedBlksRead_;
       }
       /**
+       * <pre>
+       * Number of read shared blocks.
+       * </pre>
+       *
        * <code>int64 shared_blks_read = 19;</code>
        * @param value The sharedBlksRead to set.
        * @return This builder for chaining.
@@ -8414,6 +10141,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Number of read shared blocks.
+       * </pre>
+       *
        * <code>int64 shared_blks_read = 19;</code>
        * @return This builder for chaining.
        */
@@ -8426,6 +10157,10 @@ public final class PerfDiag {
 
       private long sharedBlksDirtied_ ;
       /**
+       * <pre>
+       * Number of 'dirtied' shared blocks.
+       * </pre>
+       *
        * <code>int64 shared_blks_dirtied = 20;</code>
        * @return The sharedBlksDirtied.
        */
@@ -8434,6 +10169,10 @@ public final class PerfDiag {
         return sharedBlksDirtied_;
       }
       /**
+       * <pre>
+       * Number of 'dirtied' shared blocks.
+       * </pre>
+       *
        * <code>int64 shared_blks_dirtied = 20;</code>
        * @param value The sharedBlksDirtied to set.
        * @return This builder for chaining.
@@ -8445,6 +10184,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Number of 'dirtied' shared blocks.
+       * </pre>
+       *
        * <code>int64 shared_blks_dirtied = 20;</code>
        * @return This builder for chaining.
        */
@@ -8457,6 +10200,10 @@ public final class PerfDiag {
 
       private long sharedBlksWritten_ ;
       /**
+       * <pre>
+       * Number of written shared blocks.
+       * </pre>
+       *
        * <code>int64 shared_blks_written = 21;</code>
        * @return The sharedBlksWritten.
        */
@@ -8465,6 +10212,10 @@ public final class PerfDiag {
         return sharedBlksWritten_;
       }
       /**
+       * <pre>
+       * Number of written shared blocks.
+       * </pre>
+       *
        * <code>int64 shared_blks_written = 21;</code>
        * @param value The sharedBlksWritten to set.
        * @return This builder for chaining.
@@ -8476,6 +10227,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Number of written shared blocks.
+       * </pre>
+       *
        * <code>int64 shared_blks_written = 21;</code>
        * @return This builder for chaining.
        */
@@ -8488,6 +10243,10 @@ public final class PerfDiag {
 
       private long localBlksHit_ ;
       /**
+       * <pre>
+       * Number of local blocks that are hit from cache.
+       * </pre>
+       *
        * <code>int64 local_blks_hit = 22;</code>
        * @return The localBlksHit.
        */
@@ -8496,6 +10255,10 @@ public final class PerfDiag {
         return localBlksHit_;
       }
       /**
+       * <pre>
+       * Number of local blocks that are hit from cache.
+       * </pre>
+       *
        * <code>int64 local_blks_hit = 22;</code>
        * @param value The localBlksHit to set.
        * @return This builder for chaining.
@@ -8507,6 +10270,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Number of local blocks that are hit from cache.
+       * </pre>
+       *
        * <code>int64 local_blks_hit = 22;</code>
        * @return This builder for chaining.
        */
@@ -8519,6 +10286,10 @@ public final class PerfDiag {
 
       private long localBlksRead_ ;
       /**
+       * <pre>
+       * Number of read local blocks.
+       * </pre>
+       *
        * <code>int64 local_blks_read = 23;</code>
        * @return The localBlksRead.
        */
@@ -8527,6 +10298,10 @@ public final class PerfDiag {
         return localBlksRead_;
       }
       /**
+       * <pre>
+       * Number of read local blocks.
+       * </pre>
+       *
        * <code>int64 local_blks_read = 23;</code>
        * @param value The localBlksRead to set.
        * @return This builder for chaining.
@@ -8538,6 +10313,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Number of read local blocks.
+       * </pre>
+       *
        * <code>int64 local_blks_read = 23;</code>
        * @return This builder for chaining.
        */
@@ -8550,6 +10329,10 @@ public final class PerfDiag {
 
       private long localBlksDirtied_ ;
       /**
+       * <pre>
+       * Number of 'dirtied' local blocks.
+       * </pre>
+       *
        * <code>int64 local_blks_dirtied = 24;</code>
        * @return The localBlksDirtied.
        */
@@ -8558,6 +10341,10 @@ public final class PerfDiag {
         return localBlksDirtied_;
       }
       /**
+       * <pre>
+       * Number of 'dirtied' local blocks.
+       * </pre>
+       *
        * <code>int64 local_blks_dirtied = 24;</code>
        * @param value The localBlksDirtied to set.
        * @return This builder for chaining.
@@ -8569,6 +10356,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Number of 'dirtied' local blocks.
+       * </pre>
+       *
        * <code>int64 local_blks_dirtied = 24;</code>
        * @return This builder for chaining.
        */
@@ -8581,6 +10372,10 @@ public final class PerfDiag {
 
       private long localBlksWritten_ ;
       /**
+       * <pre>
+       * Number of written local blocks.
+       * </pre>
+       *
        * <code>int64 local_blks_written = 25;</code>
        * @return The localBlksWritten.
        */
@@ -8589,6 +10384,10 @@ public final class PerfDiag {
         return localBlksWritten_;
       }
       /**
+       * <pre>
+       * Number of written local blocks.
+       * </pre>
+       *
        * <code>int64 local_blks_written = 25;</code>
        * @param value The localBlksWritten to set.
        * @return This builder for chaining.
@@ -8600,6 +10399,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Number of written local blocks.
+       * </pre>
+       *
        * <code>int64 local_blks_written = 25;</code>
        * @return This builder for chaining.
        */
@@ -8612,6 +10415,10 @@ public final class PerfDiag {
 
       private long tempBlksRead_ ;
       /**
+       * <pre>
+       * Number of read temporary blocks.
+       * </pre>
+       *
        * <code>int64 temp_blks_read = 26;</code>
        * @return The tempBlksRead.
        */
@@ -8620,6 +10427,10 @@ public final class PerfDiag {
         return tempBlksRead_;
       }
       /**
+       * <pre>
+       * Number of read temporary blocks.
+       * </pre>
+       *
        * <code>int64 temp_blks_read = 26;</code>
        * @param value The tempBlksRead to set.
        * @return This builder for chaining.
@@ -8631,6 +10442,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Number of read temporary blocks.
+       * </pre>
+       *
        * <code>int64 temp_blks_read = 26;</code>
        * @return This builder for chaining.
        */
@@ -8643,6 +10458,10 @@ public final class PerfDiag {
 
       private long tempBlksWritten_ ;
       /**
+       * <pre>
+       * Number of written temporary blocks.
+       * </pre>
+       *
        * <code>int64 temp_blks_written = 27;</code>
        * @return The tempBlksWritten.
        */
@@ -8651,6 +10470,10 @@ public final class PerfDiag {
         return tempBlksWritten_;
       }
       /**
+       * <pre>
+       * Number of written temporary blocks.
+       * </pre>
+       *
        * <code>int64 temp_blks_written = 27;</code>
        * @param value The tempBlksWritten to set.
        * @return This builder for chaining.
@@ -8662,6 +10485,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Number of written temporary blocks.
+       * </pre>
+       *
        * <code>int64 temp_blks_written = 27;</code>
        * @return This builder for chaining.
        */
@@ -8674,6 +10501,11 @@ public final class PerfDiag {
 
       private double blkReadTime_ ;
       /**
+       * <pre>
+       * Time taken to read data blocks, in milliseconds.
+       * The parameter returns a non-zero value if the [track_io_timing](https://www.postgresql.org/docs/current/runtime-config-statistics.html#GUC-TRACK-IO-TIMING) parameter is enabled.
+       * </pre>
+       *
        * <code>double blk_read_time = 28;</code>
        * @return The blkReadTime.
        */
@@ -8682,6 +10514,11 @@ public final class PerfDiag {
         return blkReadTime_;
       }
       /**
+       * <pre>
+       * Time taken to read data blocks, in milliseconds.
+       * The parameter returns a non-zero value if the [track_io_timing](https://www.postgresql.org/docs/current/runtime-config-statistics.html#GUC-TRACK-IO-TIMING) parameter is enabled.
+       * </pre>
+       *
        * <code>double blk_read_time = 28;</code>
        * @param value The blkReadTime to set.
        * @return This builder for chaining.
@@ -8693,6 +10530,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time taken to read data blocks, in milliseconds.
+       * The parameter returns a non-zero value if the [track_io_timing](https://www.postgresql.org/docs/current/runtime-config-statistics.html#GUC-TRACK-IO-TIMING) parameter is enabled.
+       * </pre>
+       *
        * <code>double blk_read_time = 28;</code>
        * @return This builder for chaining.
        */
@@ -8705,6 +10547,11 @@ public final class PerfDiag {
 
       private double blkWriteTime_ ;
       /**
+       * <pre>
+       * Time taken to record data blocks, in milliseconds.
+       * The parameter returns a non-zero value if the [track_io_timing] parameter is enabled.
+       * </pre>
+       *
        * <code>double blk_write_time = 29;</code>
        * @return The blkWriteTime.
        */
@@ -8713,6 +10560,11 @@ public final class PerfDiag {
         return blkWriteTime_;
       }
       /**
+       * <pre>
+       * Time taken to record data blocks, in milliseconds.
+       * The parameter returns a non-zero value if the [track_io_timing] parameter is enabled.
+       * </pre>
+       *
        * <code>double blk_write_time = 29;</code>
        * @param value The blkWriteTime to set.
        * @return This builder for chaining.
@@ -8724,6 +10576,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time taken to record data blocks, in milliseconds.
+       * The parameter returns a non-zero value if the [track_io_timing] parameter is enabled.
+       * </pre>
+       *
        * <code>double blk_write_time = 29;</code>
        * @return This builder for chaining.
        */
@@ -8736,6 +10593,11 @@ public final class PerfDiag {
 
       private double tempBlkReadTime_ ;
       /**
+       * <pre>
+       * Time taken to read temporary data blocks, in milliseconds.
+       * The parameter returns a non-zero value if the [track_io_timing] parameter is enabled.
+       * </pre>
+       *
        * <code>double temp_blk_read_time = 30;</code>
        * @return The tempBlkReadTime.
        */
@@ -8744,6 +10606,11 @@ public final class PerfDiag {
         return tempBlkReadTime_;
       }
       /**
+       * <pre>
+       * Time taken to read temporary data blocks, in milliseconds.
+       * The parameter returns a non-zero value if the [track_io_timing] parameter is enabled.
+       * </pre>
+       *
        * <code>double temp_blk_read_time = 30;</code>
        * @param value The tempBlkReadTime to set.
        * @return This builder for chaining.
@@ -8755,6 +10622,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time taken to read temporary data blocks, in milliseconds.
+       * The parameter returns a non-zero value if the [track_io_timing] parameter is enabled.
+       * </pre>
+       *
        * <code>double temp_blk_read_time = 30;</code>
        * @return This builder for chaining.
        */
@@ -8767,6 +10639,11 @@ public final class PerfDiag {
 
       private double tempBlkWriteTime_ ;
       /**
+       * <pre>
+       * Time taken to record temporary data blocks, in milliseconds.
+       * The parameter returns a non-zero value if the [track_io_timing] parameter is enabled.
+       * </pre>
+       *
        * <code>double temp_blk_write_time = 31;</code>
        * @return The tempBlkWriteTime.
        */
@@ -8775,6 +10652,11 @@ public final class PerfDiag {
         return tempBlkWriteTime_;
       }
       /**
+       * <pre>
+       * Time taken to record temporary data blocks, in milliseconds.
+       * The parameter returns a non-zero value if the [track_io_timing] parameter is enabled.
+       * </pre>
+       *
        * <code>double temp_blk_write_time = 31;</code>
        * @param value The tempBlkWriteTime to set.
        * @return This builder for chaining.
@@ -8786,6 +10668,11 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time taken to record temporary data blocks, in milliseconds.
+       * The parameter returns a non-zero value if the [track_io_timing] parameter is enabled.
+       * </pre>
+       *
        * <code>double temp_blk_write_time = 31;</code>
        * @return This builder for chaining.
        */
@@ -8798,6 +10685,10 @@ public final class PerfDiag {
 
       private long walRecords_ ;
       /**
+       * <pre>
+       * Number of WAL records generated during a given period.
+       * </pre>
+       *
        * <code>int64 wal_records = 32;</code>
        * @return The walRecords.
        */
@@ -8806,6 +10697,10 @@ public final class PerfDiag {
         return walRecords_;
       }
       /**
+       * <pre>
+       * Number of WAL records generated during a given period.
+       * </pre>
+       *
        * <code>int64 wal_records = 32;</code>
        * @param value The walRecords to set.
        * @return This builder for chaining.
@@ -8817,6 +10712,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Number of WAL records generated during a given period.
+       * </pre>
+       *
        * <code>int64 wal_records = 32;</code>
        * @return This builder for chaining.
        */
@@ -8829,6 +10728,10 @@ public final class PerfDiag {
 
       private long walFpi_ ;
       /**
+       * <pre>
+       * Number of WAL full page images generated during a given period.
+       * </pre>
+       *
        * <code>int64 wal_fpi = 33;</code>
        * @return The walFpi.
        */
@@ -8837,6 +10740,10 @@ public final class PerfDiag {
         return walFpi_;
       }
       /**
+       * <pre>
+       * Number of WAL full page images generated during a given period.
+       * </pre>
+       *
        * <code>int64 wal_fpi = 33;</code>
        * @param value The walFpi to set.
        * @return This builder for chaining.
@@ -8848,6 +10755,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Number of WAL full page images generated during a given period.
+       * </pre>
+       *
        * <code>int64 wal_fpi = 33;</code>
        * @return This builder for chaining.
        */
@@ -8860,6 +10771,10 @@ public final class PerfDiag {
 
       private long walBytes_ ;
       /**
+       * <pre>
+       * Number of WAL logs generated during a given period, in bytes.
+       * </pre>
+       *
        * <code>int64 wal_bytes = 34;</code>
        * @return The walBytes.
        */
@@ -8868,6 +10783,10 @@ public final class PerfDiag {
         return walBytes_;
       }
       /**
+       * <pre>
+       * Number of WAL logs generated during a given period, in bytes.
+       * </pre>
+       *
        * <code>int64 wal_bytes = 34;</code>
        * @param value The walBytes to set.
        * @return This builder for chaining.
@@ -8879,6 +10798,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Number of WAL logs generated during a given period, in bytes.
+       * </pre>
+       *
        * <code>int64 wal_bytes = 34;</code>
        * @return This builder for chaining.
        */
@@ -8891,6 +10814,10 @@ public final class PerfDiag {
 
       private long jitFunctions_ ;
       /**
+       * <pre>
+       * Number of JIT-compiled functions.
+       * </pre>
+       *
        * <code>int64 jit_functions = 35;</code>
        * @return The jitFunctions.
        */
@@ -8899,6 +10826,10 @@ public final class PerfDiag {
         return jitFunctions_;
       }
       /**
+       * <pre>
+       * Number of JIT-compiled functions.
+       * </pre>
+       *
        * <code>int64 jit_functions = 35;</code>
        * @param value The jitFunctions to set.
        * @return This builder for chaining.
@@ -8910,6 +10841,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Number of JIT-compiled functions.
+       * </pre>
+       *
        * <code>int64 jit_functions = 35;</code>
        * @return This builder for chaining.
        */
@@ -8922,6 +10857,10 @@ public final class PerfDiag {
 
       private double jitGenerationTime_ ;
       /**
+       * <pre>
+       * Time taken to generate JIT code, in milliseconds.
+       * </pre>
+       *
        * <code>double jit_generation_time = 36;</code>
        * @return The jitGenerationTime.
        */
@@ -8930,6 +10869,10 @@ public final class PerfDiag {
         return jitGenerationTime_;
       }
       /**
+       * <pre>
+       * Time taken to generate JIT code, in milliseconds.
+       * </pre>
+       *
        * <code>double jit_generation_time = 36;</code>
        * @param value The jitGenerationTime to set.
        * @return This builder for chaining.
@@ -8941,6 +10884,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time taken to generate JIT code, in milliseconds.
+       * </pre>
+       *
        * <code>double jit_generation_time = 36;</code>
        * @return This builder for chaining.
        */
@@ -8953,6 +10900,10 @@ public final class PerfDiag {
 
       private long jitInliningCount_ ;
       /**
+       * <pre>
+       * Number of times that functions have been inlined.
+       * </pre>
+       *
        * <code>int64 jit_inlining_count = 37;</code>
        * @return The jitInliningCount.
        */
@@ -8961,6 +10912,10 @@ public final class PerfDiag {
         return jitInliningCount_;
       }
       /**
+       * <pre>
+       * Number of times that functions have been inlined.
+       * </pre>
+       *
        * <code>int64 jit_inlining_count = 37;</code>
        * @param value The jitInliningCount to set.
        * @return This builder for chaining.
@@ -8972,6 +10927,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Number of times that functions have been inlined.
+       * </pre>
+       *
        * <code>int64 jit_inlining_count = 37;</code>
        * @return This builder for chaining.
        */
@@ -8984,6 +10943,10 @@ public final class PerfDiag {
 
       private double jitInliningTime_ ;
       /**
+       * <pre>
+       * Time taken to inline functions, in milliseconds.
+       * </pre>
+       *
        * <code>double jit_inlining_time = 38;</code>
        * @return The jitInliningTime.
        */
@@ -8992,6 +10955,10 @@ public final class PerfDiag {
         return jitInliningTime_;
       }
       /**
+       * <pre>
+       * Time taken to inline functions, in milliseconds.
+       * </pre>
+       *
        * <code>double jit_inlining_time = 38;</code>
        * @param value The jitInliningTime to set.
        * @return This builder for chaining.
@@ -9003,6 +10970,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time taken to inline functions, in milliseconds.
+       * </pre>
+       *
        * <code>double jit_inlining_time = 38;</code>
        * @return This builder for chaining.
        */
@@ -9015,6 +10986,10 @@ public final class PerfDiag {
 
       private long jitOptimizationCount_ ;
       /**
+       * <pre>
+       * Number of times that a query was optimized.
+       * </pre>
+       *
        * <code>int64 jit_optimization_count = 39;</code>
        * @return The jitOptimizationCount.
        */
@@ -9023,6 +10998,10 @@ public final class PerfDiag {
         return jitOptimizationCount_;
       }
       /**
+       * <pre>
+       * Number of times that a query was optimized.
+       * </pre>
+       *
        * <code>int64 jit_optimization_count = 39;</code>
        * @param value The jitOptimizationCount to set.
        * @return This builder for chaining.
@@ -9034,6 +11013,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Number of times that a query was optimized.
+       * </pre>
+       *
        * <code>int64 jit_optimization_count = 39;</code>
        * @return This builder for chaining.
        */
@@ -9046,6 +11029,10 @@ public final class PerfDiag {
 
       private double jitOptimizationTime_ ;
       /**
+       * <pre>
+       * Time taken to optimize a query, in milliseconds.
+       * </pre>
+       *
        * <code>double jit_optimization_time = 40;</code>
        * @return The jitOptimizationTime.
        */
@@ -9054,6 +11041,10 @@ public final class PerfDiag {
         return jitOptimizationTime_;
       }
       /**
+       * <pre>
+       * Time taken to optimize a query, in milliseconds.
+       * </pre>
+       *
        * <code>double jit_optimization_time = 40;</code>
        * @param value The jitOptimizationTime to set.
        * @return This builder for chaining.
@@ -9065,6 +11056,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time taken to optimize a query, in milliseconds.
+       * </pre>
+       *
        * <code>double jit_optimization_time = 40;</code>
        * @return This builder for chaining.
        */
@@ -9077,6 +11072,10 @@ public final class PerfDiag {
 
       private long jitEmissionCount_ ;
       /**
+       * <pre>
+       * Number of times that code was emitted.
+       * </pre>
+       *
        * <code>int64 jit_emission_count = 41;</code>
        * @return The jitEmissionCount.
        */
@@ -9085,6 +11084,10 @@ public final class PerfDiag {
         return jitEmissionCount_;
       }
       /**
+       * <pre>
+       * Number of times that code was emitted.
+       * </pre>
+       *
        * <code>int64 jit_emission_count = 41;</code>
        * @param value The jitEmissionCount to set.
        * @return This builder for chaining.
@@ -9096,6 +11099,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Number of times that code was emitted.
+       * </pre>
+       *
        * <code>int64 jit_emission_count = 41;</code>
        * @return This builder for chaining.
        */
@@ -9108,6 +11115,10 @@ public final class PerfDiag {
 
       private double jitEmissionTime_ ;
       /**
+       * <pre>
+       * Time taken to emit code.
+       * </pre>
+       *
        * <code>double jit_emission_time = 42;</code>
        * @return The jitEmissionTime.
        */
@@ -9116,6 +11127,10 @@ public final class PerfDiag {
         return jitEmissionTime_;
       }
       /**
+       * <pre>
+       * Time taken to emit code.
+       * </pre>
+       *
        * <code>double jit_emission_time = 42;</code>
        * @param value The jitEmissionTime to set.
        * @return This builder for chaining.
@@ -9127,6 +11142,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Time taken to emit code.
+       * </pre>
+       *
        * <code>double jit_emission_time = 42;</code>
        * @return This builder for chaining.
        */
@@ -9139,6 +11158,10 @@ public final class PerfDiag {
 
       private long startupCost_ ;
       /**
+       * <pre>
+       * Cost of receiving a response to a query before the first row of the response is issued.
+       * </pre>
+       *
        * <code>int64 startup_cost = 43;</code>
        * @return The startupCost.
        */
@@ -9147,6 +11170,10 @@ public final class PerfDiag {
         return startupCost_;
       }
       /**
+       * <pre>
+       * Cost of receiving a response to a query before the first row of the response is issued.
+       * </pre>
+       *
        * <code>int64 startup_cost = 43;</code>
        * @param value The startupCost to set.
        * @return This builder for chaining.
@@ -9158,6 +11185,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Cost of receiving a response to a query before the first row of the response is issued.
+       * </pre>
+       *
        * <code>int64 startup_cost = 43;</code>
        * @return This builder for chaining.
        */
@@ -9170,6 +11201,10 @@ public final class PerfDiag {
 
       private long totalCost_ ;
       /**
+       * <pre>
+       * Cost of receiving a response to a query when all the rows of the response are issued.
+       * </pre>
+       *
        * <code>int64 total_cost = 44;</code>
        * @return The totalCost.
        */
@@ -9178,6 +11213,10 @@ public final class PerfDiag {
         return totalCost_;
       }
       /**
+       * <pre>
+       * Cost of receiving a response to a query when all the rows of the response are issued.
+       * </pre>
+       *
        * <code>int64 total_cost = 44;</code>
        * @param value The totalCost to set.
        * @return This builder for chaining.
@@ -9189,6 +11228,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Cost of receiving a response to a query when all the rows of the response are issued.
+       * </pre>
+       *
        * <code>int64 total_cost = 44;</code>
        * @return This builder for chaining.
        */
@@ -9201,6 +11244,10 @@ public final class PerfDiag {
 
       private long planRows_ ;
       /**
+       * <pre>
+       * Expected number of rows that a given plan node should issue.
+       * </pre>
+       *
        * <code>int64 plan_rows = 45;</code>
        * @return The planRows.
        */
@@ -9209,6 +11256,10 @@ public final class PerfDiag {
         return planRows_;
       }
       /**
+       * <pre>
+       * Expected number of rows that a given plan node should issue.
+       * </pre>
+       *
        * <code>int64 plan_rows = 45;</code>
        * @param value The planRows to set.
        * @return This builder for chaining.
@@ -9220,6 +11271,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Expected number of rows that a given plan node should issue.
+       * </pre>
+       *
        * <code>int64 plan_rows = 45;</code>
        * @return This builder for chaining.
        */
@@ -9232,6 +11287,10 @@ public final class PerfDiag {
 
       private long planWidth_ ;
       /**
+       * <pre>
+       * Expected average size of rows that a given plan node should issue.
+       * </pre>
+       *
        * <code>int64 plan_width = 46;</code>
        * @return The planWidth.
        */
@@ -9240,6 +11299,10 @@ public final class PerfDiag {
         return planWidth_;
       }
       /**
+       * <pre>
+       * Expected average size of rows that a given plan node should issue.
+       * </pre>
+       *
        * <code>int64 plan_width = 46;</code>
        * @param value The planWidth to set.
        * @return This builder for chaining.
@@ -9251,6 +11314,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Expected average size of rows that a given plan node should issue.
+       * </pre>
+       *
        * <code>int64 plan_width = 46;</code>
        * @return This builder for chaining.
        */
@@ -9263,6 +11330,10 @@ public final class PerfDiag {
 
       private long reads_ ;
       /**
+       * <pre>
+       * Number of bytes that the filesystem layer has read.
+       * </pre>
+       *
        * <code>int64 reads = 47;</code>
        * @return The reads.
        */
@@ -9271,6 +11342,10 @@ public final class PerfDiag {
         return reads_;
       }
       /**
+       * <pre>
+       * Number of bytes that the filesystem layer has read.
+       * </pre>
+       *
        * <code>int64 reads = 47;</code>
        * @param value The reads to set.
        * @return This builder for chaining.
@@ -9282,6 +11357,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Number of bytes that the filesystem layer has read.
+       * </pre>
+       *
        * <code>int64 reads = 47;</code>
        * @return This builder for chaining.
        */
@@ -9294,6 +11373,10 @@ public final class PerfDiag {
 
       private long writes_ ;
       /**
+       * <pre>
+       * Number of bytes that the filesystem layer has written.
+       * </pre>
+       *
        * <code>int64 writes = 48;</code>
        * @return The writes.
        */
@@ -9302,6 +11385,10 @@ public final class PerfDiag {
         return writes_;
       }
       /**
+       * <pre>
+       * Number of bytes that the filesystem layer has written.
+       * </pre>
+       *
        * <code>int64 writes = 48;</code>
        * @param value The writes to set.
        * @return This builder for chaining.
@@ -9313,6 +11400,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Number of bytes that the filesystem layer has written.
+       * </pre>
+       *
        * <code>int64 writes = 48;</code>
        * @return This builder for chaining.
        */
@@ -9325,6 +11416,10 @@ public final class PerfDiag {
 
       private double userTime_ ;
       /**
+       * <pre>
+       * User CPU time used.
+       * </pre>
+       *
        * <code>double user_time = 49;</code>
        * @return The userTime.
        */
@@ -9333,6 +11428,10 @@ public final class PerfDiag {
         return userTime_;
       }
       /**
+       * <pre>
+       * User CPU time used.
+       * </pre>
+       *
        * <code>double user_time = 49;</code>
        * @param value The userTime to set.
        * @return This builder for chaining.
@@ -9344,6 +11443,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * User CPU time used.
+       * </pre>
+       *
        * <code>double user_time = 49;</code>
        * @return This builder for chaining.
        */
@@ -9356,6 +11459,10 @@ public final class PerfDiag {
 
       private double systemTime_ ;
       /**
+       * <pre>
+       * System CPU time used.
+       * </pre>
+       *
        * <code>double system_time = 50;</code>
        * @return The systemTime.
        */
@@ -9364,6 +11471,10 @@ public final class PerfDiag {
         return systemTime_;
       }
       /**
+       * <pre>
+       * System CPU time used.
+       * </pre>
+       *
        * <code>double system_time = 50;</code>
        * @param value The systemTime to set.
        * @return This builder for chaining.
@@ -9375,6 +11486,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * System CPU time used.
+       * </pre>
+       *
        * <code>double system_time = 50;</code>
        * @return This builder for chaining.
        */
@@ -9442,31 +11557,55 @@ public final class PerfDiag {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Primary keys in tables with the statistics on planning and execution of queries.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.PrimaryKey key = 1;</code>
      * @return Whether the key field is set.
      */
     boolean hasKey();
     /**
+     * <pre>
+     * Primary keys in tables with the statistics on planning and execution of queries.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.PrimaryKey key = 1;</code>
      * @return The key.
      */
     yandex.cloud.api.mdb.postgresql.v1.PerfDiag.PrimaryKey getKey();
     /**
+     * <pre>
+     * Primary keys in tables with the statistics on planning and execution of queries.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.PrimaryKey key = 1;</code>
      */
     yandex.cloud.api.mdb.postgresql.v1.PerfDiag.PrimaryKeyOrBuilder getKeyOrBuilder();
 
     /**
+     * <pre>
+     * Statistics on planning and execution of queries.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.QueryStats stats = 2;</code>
      * @return Whether the stats field is set.
      */
     boolean hasStats();
     /**
+     * <pre>
+     * Statistics on planning and execution of queries.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.QueryStats stats = 2;</code>
      * @return The stats.
      */
     yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStats getStats();
     /**
+     * <pre>
+     * Statistics on planning and execution of queries.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.QueryStats stats = 2;</code>
      */
     yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStatsOrBuilder getStatsOrBuilder();
@@ -9577,6 +11716,10 @@ public final class PerfDiag {
     public static final int KEY_FIELD_NUMBER = 1;
     private yandex.cloud.api.mdb.postgresql.v1.PerfDiag.PrimaryKey key_;
     /**
+     * <pre>
+     * Primary keys in tables with the statistics on planning and execution of queries.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.PrimaryKey key = 1;</code>
      * @return Whether the key field is set.
      */
@@ -9585,6 +11728,10 @@ public final class PerfDiag {
       return key_ != null;
     }
     /**
+     * <pre>
+     * Primary keys in tables with the statistics on planning and execution of queries.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.PrimaryKey key = 1;</code>
      * @return The key.
      */
@@ -9593,6 +11740,10 @@ public final class PerfDiag {
       return key_ == null ? yandex.cloud.api.mdb.postgresql.v1.PerfDiag.PrimaryKey.getDefaultInstance() : key_;
     }
     /**
+     * <pre>
+     * Primary keys in tables with the statistics on planning and execution of queries.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.PrimaryKey key = 1;</code>
      */
     @java.lang.Override
@@ -9603,6 +11754,10 @@ public final class PerfDiag {
     public static final int STATS_FIELD_NUMBER = 2;
     private yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStats stats_;
     /**
+     * <pre>
+     * Statistics on planning and execution of queries.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.QueryStats stats = 2;</code>
      * @return Whether the stats field is set.
      */
@@ -9611,6 +11766,10 @@ public final class PerfDiag {
       return stats_ != null;
     }
     /**
+     * <pre>
+     * Statistics on planning and execution of queries.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.QueryStats stats = 2;</code>
      * @return The stats.
      */
@@ -9619,6 +11778,10 @@ public final class PerfDiag {
       return stats_ == null ? yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStats.getDefaultInstance() : stats_;
     }
     /**
+     * <pre>
+     * Statistics on planning and execution of queries.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.postgresql.v1.QueryStats stats = 2;</code>
      */
     @java.lang.Override
@@ -9975,6 +12138,10 @@ public final class PerfDiag {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.postgresql.v1.PerfDiag.PrimaryKey, yandex.cloud.api.mdb.postgresql.v1.PerfDiag.PrimaryKey.Builder, yandex.cloud.api.mdb.postgresql.v1.PerfDiag.PrimaryKeyOrBuilder> keyBuilder_;
       /**
+       * <pre>
+       * Primary keys in tables with the statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.PrimaryKey key = 1;</code>
        * @return Whether the key field is set.
        */
@@ -9982,6 +12149,10 @@ public final class PerfDiag {
         return keyBuilder_ != null || key_ != null;
       }
       /**
+       * <pre>
+       * Primary keys in tables with the statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.PrimaryKey key = 1;</code>
        * @return The key.
        */
@@ -9993,6 +12164,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Primary keys in tables with the statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.PrimaryKey key = 1;</code>
        */
       public Builder setKey(yandex.cloud.api.mdb.postgresql.v1.PerfDiag.PrimaryKey value) {
@@ -10009,6 +12184,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Primary keys in tables with the statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.PrimaryKey key = 1;</code>
        */
       public Builder setKey(
@@ -10023,6 +12202,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Primary keys in tables with the statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.PrimaryKey key = 1;</code>
        */
       public Builder mergeKey(yandex.cloud.api.mdb.postgresql.v1.PerfDiag.PrimaryKey value) {
@@ -10041,6 +12224,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Primary keys in tables with the statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.PrimaryKey key = 1;</code>
        */
       public Builder clearKey() {
@@ -10055,6 +12242,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Primary keys in tables with the statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.PrimaryKey key = 1;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.PerfDiag.PrimaryKey.Builder getKeyBuilder() {
@@ -10063,6 +12254,10 @@ public final class PerfDiag {
         return getKeyFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Primary keys in tables with the statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.PrimaryKey key = 1;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.PerfDiag.PrimaryKeyOrBuilder getKeyOrBuilder() {
@@ -10074,6 +12269,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Primary keys in tables with the statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.PrimaryKey key = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -10094,6 +12293,10 @@ public final class PerfDiag {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStats, yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStats.Builder, yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStatsOrBuilder> statsBuilder_;
       /**
+       * <pre>
+       * Statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.QueryStats stats = 2;</code>
        * @return Whether the stats field is set.
        */
@@ -10101,6 +12304,10 @@ public final class PerfDiag {
         return statsBuilder_ != null || stats_ != null;
       }
       /**
+       * <pre>
+       * Statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.QueryStats stats = 2;</code>
        * @return The stats.
        */
@@ -10112,6 +12319,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.QueryStats stats = 2;</code>
        */
       public Builder setStats(yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStats value) {
@@ -10128,6 +12339,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.QueryStats stats = 2;</code>
        */
       public Builder setStats(
@@ -10142,6 +12357,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.QueryStats stats = 2;</code>
        */
       public Builder mergeStats(yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStats value) {
@@ -10160,6 +12379,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.QueryStats stats = 2;</code>
        */
       public Builder clearStats() {
@@ -10174,6 +12397,10 @@ public final class PerfDiag {
         return this;
       }
       /**
+       * <pre>
+       * Statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.QueryStats stats = 2;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStats.Builder getStatsBuilder() {
@@ -10182,6 +12409,10 @@ public final class PerfDiag {
         return getStatsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.QueryStats stats = 2;</code>
        */
       public yandex.cloud.api.mdb.postgresql.v1.PerfDiag.QueryStatsOrBuilder getStatsOrBuilder() {
@@ -10193,6 +12424,10 @@ public final class PerfDiag {
         }
       }
       /**
+       * <pre>
+       * Statistics on planning and execution of queries.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.postgresql.v1.QueryStats stats = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

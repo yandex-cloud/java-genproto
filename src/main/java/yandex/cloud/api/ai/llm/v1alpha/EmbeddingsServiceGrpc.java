@@ -3,6 +3,9 @@ package yandex.cloud.api.ai.llm.v1alpha;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * Service for obtaining embeddings for text data.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -91,10 +94,16 @@ public final class EmbeddingsServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Service for obtaining embeddings for text data.
+   * </pre>
    */
   public static abstract class EmbeddingsServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * RPC method to obtain embeddings for input text data.
+     * </pre>
      */
     public void embedding(yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse> responseObserver) {
@@ -115,6 +124,9 @@ public final class EmbeddingsServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Service for obtaining embeddings for text data.
+   * </pre>
    */
   public static final class EmbeddingsServiceStub extends io.grpc.stub.AbstractAsyncStub<EmbeddingsServiceStub> {
     private EmbeddingsServiceStub(
@@ -129,6 +141,9 @@ public final class EmbeddingsServiceGrpc {
     }
 
     /**
+     * <pre>
+     * RPC method to obtain embeddings for input text data.
+     * </pre>
      */
     public void embedding(yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse> responseObserver) {
@@ -138,6 +153,9 @@ public final class EmbeddingsServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Service for obtaining embeddings for text data.
+   * </pre>
    */
   public static final class EmbeddingsServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<EmbeddingsServiceBlockingStub> {
     private EmbeddingsServiceBlockingStub(
@@ -152,6 +170,9 @@ public final class EmbeddingsServiceGrpc {
     }
 
     /**
+     * <pre>
+     * RPC method to obtain embeddings for input text data.
+     * </pre>
      */
     public yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse embedding(yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -160,6 +181,9 @@ public final class EmbeddingsServiceGrpc {
   }
 
   /**
+   * <pre>
+   * Service for obtaining embeddings for text data.
+   * </pre>
    */
   public static final class EmbeddingsServiceFutureStub extends io.grpc.stub.AbstractFutureStub<EmbeddingsServiceFutureStub> {
     private EmbeddingsServiceFutureStub(
@@ -174,6 +198,9 @@ public final class EmbeddingsServiceGrpc {
     }
 
     /**
+     * <pre>
+     * RPC method to obtain embeddings for input text data.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingResponse> embedding(
         yandex.cloud.api.ai.llm.v1alpha.LlmService.EmbeddingRequest request) {
