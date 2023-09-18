@@ -25962,7 +25962,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+     * Threshold of storage usage (in percent) that triggers automatic scaling of the storage during the maintenance window. Zero value means disabled threshold.
      * </pre>
      *
      * <code>int64 planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
@@ -25972,7 +25972,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+     * Threshold of storage usage (in percent) that triggers immediate automatic scaling of the storage. Zero value means disabled threshold.
      * </pre>
      *
      * <code>int64 emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
@@ -25982,7 +25982,7 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
-     * Limit on how large the storage for database instances can automatically grow, in bytes.
+     * New storage size (in bytes) that is set when one of the thresholds is achieved.
      * </pre>
      *
      * <code>int64 disk_size_limit = 3;</code>
@@ -26086,7 +26086,7 @@ public final class ClusterOuterClass {
     private long plannedUsageThreshold_;
     /**
      * <pre>
-     * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+     * Threshold of storage usage (in percent) that triggers automatic scaling of the storage during the maintenance window. Zero value means disabled threshold.
      * </pre>
      *
      * <code>int64 planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
@@ -26101,7 +26101,7 @@ public final class ClusterOuterClass {
     private long emergencyUsageThreshold_;
     /**
      * <pre>
-     * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+     * Threshold of storage usage (in percent) that triggers immediate automatic scaling of the storage. Zero value means disabled threshold.
      * </pre>
      *
      * <code>int64 emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
@@ -26116,7 +26116,7 @@ public final class ClusterOuterClass {
     private long diskSizeLimit_;
     /**
      * <pre>
-     * Limit on how large the storage for database instances can automatically grow, in bytes.
+     * New storage size (in bytes) that is set when one of the thresholds is achieved.
      * </pre>
      *
      * <code>int64 disk_size_limit = 3;</code>
@@ -26469,7 +26469,7 @@ public final class ClusterOuterClass {
       private long plannedUsageThreshold_ ;
       /**
        * <pre>
-       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * Threshold of storage usage (in percent) that triggers automatic scaling of the storage during the maintenance window. Zero value means disabled threshold.
        * </pre>
        *
        * <code>int64 planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
@@ -26481,7 +26481,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * Threshold of storage usage (in percent) that triggers automatic scaling of the storage during the maintenance window. Zero value means disabled threshold.
        * </pre>
        *
        * <code>int64 planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
@@ -26496,7 +26496,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Amount of used storage for automatic disk scaling in the maintenance window, 0 means disabled, in percent.
+       * Threshold of storage usage (in percent) that triggers automatic scaling of the storage during the maintenance window. Zero value means disabled threshold.
        * </pre>
        *
        * <code>int64 planned_usage_threshold = 1 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
@@ -26512,7 +26512,7 @@ public final class ClusterOuterClass {
       private long emergencyUsageThreshold_ ;
       /**
        * <pre>
-       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * Threshold of storage usage (in percent) that triggers immediate automatic scaling of the storage. Zero value means disabled threshold.
        * </pre>
        *
        * <code>int64 emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
@@ -26524,7 +26524,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * Threshold of storage usage (in percent) that triggers immediate automatic scaling of the storage. Zero value means disabled threshold.
        * </pre>
        *
        * <code>int64 emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
@@ -26539,7 +26539,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Amount of used storage for immediately  automatic disk scaling, 0 means disabled, in percent.
+       * Threshold of storage usage (in percent) that triggers immediate automatic scaling of the storage. Zero value means disabled threshold.
        * </pre>
        *
        * <code>int64 emergency_usage_threshold = 2 [(.yandex.cloud.required) = false, (.yandex.cloud.value) = "0-100"];</code>
@@ -26555,7 +26555,7 @@ public final class ClusterOuterClass {
       private long diskSizeLimit_ ;
       /**
        * <pre>
-       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * New storage size (in bytes) that is set when one of the thresholds is achieved.
        * </pre>
        *
        * <code>int64 disk_size_limit = 3;</code>
@@ -26567,7 +26567,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * New storage size (in bytes) that is set when one of the thresholds is achieved.
        * </pre>
        *
        * <code>int64 disk_size_limit = 3;</code>
@@ -26582,7 +26582,7 @@ public final class ClusterOuterClass {
       }
       /**
        * <pre>
-       * Limit on how large the storage for database instances can automatically grow, in bytes.
+       * New storage size (in bytes) that is set when one of the thresholds is achieved.
        * </pre>
        *
        * <code>int64 disk_size_limit = 3;</code>

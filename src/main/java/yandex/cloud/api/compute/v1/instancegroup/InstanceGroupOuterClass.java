@@ -17278,6 +17278,27 @@ public final class InstanceGroupOuterClass {
      * @return The strategy.
      */
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DeployPolicy.Strategy getStrategy();
+
+    /**
+     * <pre>
+     * If instance update requires a less disruptive action than [minimal_action],
+     * Instance Groups performs [minimal_action] to execute the update
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.DeployPolicy.MinimalAction minimal_action = 14;</code>
+     * @return The enum numeric value on the wire for minimalAction.
+     */
+    int getMinimalActionValue();
+    /**
+     * <pre>
+     * If instance update requires a less disruptive action than [minimal_action],
+     * Instance Groups performs [minimal_action] to execute the update
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.DeployPolicy.MinimalAction minimal_action = 14;</code>
+     * @return The minimalAction.
+     */
+    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DeployPolicy.MinimalAction getMinimalAction();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.DeployPolicy}
@@ -17293,6 +17314,7 @@ public final class InstanceGroupOuterClass {
     }
     private DeployPolicy() {
       strategy_ = 0;
+      minimalAction_ = 0;
     }
 
     @java.lang.Override
@@ -17362,6 +17384,12 @@ public final class InstanceGroupOuterClass {
               int rawValue = input.readEnum();
 
               strategy_ = rawValue;
+              break;
+            }
+            case 112: {
+              int rawValue = input.readEnum();
+
+              minimalAction_ = rawValue;
               break;
             }
             default: {
@@ -17531,6 +17559,156 @@ public final class InstanceGroupOuterClass {
       // @@protoc_insertion_point(enum_scope:yandex.cloud.compute.v1.instancegroup.DeployPolicy.Strategy)
     }
 
+    /**
+     * Protobuf enum {@code yandex.cloud.compute.v1.instancegroup.DeployPolicy.MinimalAction}
+     */
+    public enum MinimalAction
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>MINIMAL_ACTION_UNSPECIFIED = 0;</code>
+       */
+      MINIMAL_ACTION_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Updating an instance without stopping. This is the default.
+       * </pre>
+       *
+       * <code>LIVE_UPDATE = 1;</code>
+       */
+      LIVE_UPDATE(1),
+      /**
+       * <pre>
+       * Updating an instance with restart: stopping and then starting the instance.
+       * </pre>
+       *
+       * <code>RESTART = 2;</code>
+       */
+      RESTART(2),
+      /**
+       * <pre>
+       * Re-creating an instance: deleting an instance and creating a new one.
+       * </pre>
+       *
+       * <code>RECREATE = 3;</code>
+       */
+      RECREATE(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>MINIMAL_ACTION_UNSPECIFIED = 0;</code>
+       */
+      public static final int MINIMAL_ACTION_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Updating an instance without stopping. This is the default.
+       * </pre>
+       *
+       * <code>LIVE_UPDATE = 1;</code>
+       */
+      public static final int LIVE_UPDATE_VALUE = 1;
+      /**
+       * <pre>
+       * Updating an instance with restart: stopping and then starting the instance.
+       * </pre>
+       *
+       * <code>RESTART = 2;</code>
+       */
+      public static final int RESTART_VALUE = 2;
+      /**
+       * <pre>
+       * Re-creating an instance: deleting an instance and creating a new one.
+       * </pre>
+       *
+       * <code>RECREATE = 3;</code>
+       */
+      public static final int RECREATE_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static MinimalAction valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static MinimalAction forNumber(int value) {
+        switch (value) {
+          case 0: return MINIMAL_ACTION_UNSPECIFIED;
+          case 1: return LIVE_UPDATE;
+          case 2: return RESTART;
+          case 3: return RECREATE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<MinimalAction>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          MinimalAction> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<MinimalAction>() {
+              public MinimalAction findValueByNumber(int number) {
+                return MinimalAction.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DeployPolicy.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final MinimalAction[] VALUES = values();
+
+      public static MinimalAction valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private MinimalAction(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.compute.v1.instancegroup.DeployPolicy.MinimalAction)
+    }
+
     public static final int MAX_UNAVAILABLE_FIELD_NUMBER = 1;
     private long maxUnavailable_;
     /**
@@ -17671,6 +17849,35 @@ public final class InstanceGroupOuterClass {
       return result == null ? yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DeployPolicy.Strategy.UNRECOGNIZED : result;
     }
 
+    public static final int MINIMAL_ACTION_FIELD_NUMBER = 14;
+    private int minimalAction_;
+    /**
+     * <pre>
+     * If instance update requires a less disruptive action than [minimal_action],
+     * Instance Groups performs [minimal_action] to execute the update
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.DeployPolicy.MinimalAction minimal_action = 14;</code>
+     * @return The enum numeric value on the wire for minimalAction.
+     */
+    @java.lang.Override public int getMinimalActionValue() {
+      return minimalAction_;
+    }
+    /**
+     * <pre>
+     * If instance update requires a less disruptive action than [minimal_action],
+     * Instance Groups performs [minimal_action] to execute the update
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.DeployPolicy.MinimalAction minimal_action = 14;</code>
+     * @return The minimalAction.
+     */
+    @java.lang.Override public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DeployPolicy.MinimalAction getMinimalAction() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DeployPolicy.MinimalAction result = yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DeployPolicy.MinimalAction.valueOf(minimalAction_);
+      return result == null ? yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DeployPolicy.MinimalAction.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -17702,6 +17909,9 @@ public final class InstanceGroupOuterClass {
       }
       if (strategy_ != yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DeployPolicy.Strategy.STRATEGY_UNSPECIFIED.getNumber()) {
         output.writeEnum(8, strategy_);
+      }
+      if (minimalAction_ != yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DeployPolicy.MinimalAction.MINIMAL_ACTION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(14, minimalAction_);
       }
       unknownFields.writeTo(output);
     }
@@ -17736,6 +17946,10 @@ public final class InstanceGroupOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(8, strategy_);
       }
+      if (minimalAction_ != yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DeployPolicy.MinimalAction.MINIMAL_ACTION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(14, minimalAction_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -17765,6 +17979,7 @@ public final class InstanceGroupOuterClass {
             .equals(other.getStartupDuration())) return false;
       }
       if (strategy_ != other.strategy_) return false;
+      if (minimalAction_ != other.minimalAction_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -17794,6 +18009,8 @@ public final class InstanceGroupOuterClass {
       }
       hash = (37 * hash) + STRATEGY_FIELD_NUMBER;
       hash = (53 * hash) + strategy_;
+      hash = (37 * hash) + MINIMAL_ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + minimalAction_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -17943,6 +18160,8 @@ public final class InstanceGroupOuterClass {
         }
         strategy_ = 0;
 
+        minimalAction_ = 0;
+
         return this;
       }
 
@@ -17979,6 +18198,7 @@ public final class InstanceGroupOuterClass {
           result.startupDuration_ = startupDurationBuilder_.build();
         }
         result.strategy_ = strategy_;
+        result.minimalAction_ = minimalAction_;
         onBuilt();
         return result;
       }
@@ -18044,6 +18264,9 @@ public final class InstanceGroupOuterClass {
         }
         if (other.strategy_ != 0) {
           setStrategyValue(other.getStrategyValue());
+        }
+        if (other.minimalAction_ != 0) {
+          setMinimalActionValue(other.getMinimalActionValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -18516,6 +18739,85 @@ public final class InstanceGroupOuterClass {
       public Builder clearStrategy() {
         
         strategy_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int minimalAction_ = 0;
+      /**
+       * <pre>
+       * If instance update requires a less disruptive action than [minimal_action],
+       * Instance Groups performs [minimal_action] to execute the update
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.DeployPolicy.MinimalAction minimal_action = 14;</code>
+       * @return The enum numeric value on the wire for minimalAction.
+       */
+      @java.lang.Override public int getMinimalActionValue() {
+        return minimalAction_;
+      }
+      /**
+       * <pre>
+       * If instance update requires a less disruptive action than [minimal_action],
+       * Instance Groups performs [minimal_action] to execute the update
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.DeployPolicy.MinimalAction minimal_action = 14;</code>
+       * @param value The enum numeric value on the wire for minimalAction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinimalActionValue(int value) {
+        
+        minimalAction_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If instance update requires a less disruptive action than [minimal_action],
+       * Instance Groups performs [minimal_action] to execute the update
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.DeployPolicy.MinimalAction minimal_action = 14;</code>
+       * @return The minimalAction.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DeployPolicy.MinimalAction getMinimalAction() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DeployPolicy.MinimalAction result = yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DeployPolicy.MinimalAction.valueOf(minimalAction_);
+        return result == null ? yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DeployPolicy.MinimalAction.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * If instance update requires a less disruptive action than [minimal_action],
+       * Instance Groups performs [minimal_action] to execute the update
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.DeployPolicy.MinimalAction minimal_action = 14;</code>
+       * @param value The minimalAction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinimalAction(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.DeployPolicy.MinimalAction value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        minimalAction_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If instance update requires a less disruptive action than [minimal_action],
+       * Instance Groups performs [minimal_action] to execute the update
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.DeployPolicy.MinimalAction minimal_action = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinimalAction() {
+        
+        minimalAction_ = 0;
         onChanged();
         return this;
       }
@@ -57369,7 +57671,7 @@ public final class InstanceGroupOuterClass {
       "LIZATION\020\001\022\014\n\010WORKLOAD\020\002\"A\n\nMetricType\022\033" +
       "\n\027METRIC_TYPE_UNSPECIFIED\020\000\022\t\n\005GAUGE\020\001\022\013" +
       "\n\007COUNTER\020\002\032%\n\nFixedScale\022\027\n\004size\030\001 \001(\003B" +
-      "\t\372\3071\0051-100B\022\n\nscale_type\022\004\300\3011\001\"\356\002\n\014Deplo" +
+      "\t\372\3071\0051-100B\022\n\nscale_type\022\004\300\3011\001\"\246\004\n\014Deplo" +
       "yPolicy\022\"\n\017max_unavailable\030\001 \001(\003B\t\372\3071\0050-" +
       "100\022\037\n\014max_deleting\030\002 \001(\003B\t\372\3071\0050-100\022\037\n\014" +
       "max_creating\030\003 \001(\003B\t\372\3071\0050-100\022 \n\rmax_exp" +
@@ -57377,191 +57679,195 @@ public final class InstanceGroupOuterClass {
       "ion\030\007 \001(\0132\031.google.protobuf.DurationB\t\372\307" +
       "1\0050m-1h\022N\n\010strategy\030\010 \001(\0162<.yandex.cloud" +
       ".compute.v1.instancegroup.DeployPolicy.S" +
-      "trategy\"F\n\010Strategy\022\030\n\024STRATEGY_UNSPECIF" +
-      "IED\020\000\022\r\n\tPROACTIVE\020\001\022\021\n\rOPPORTUNISTIC\020\002\"" +
-      "\261\001\n\020AllocationPolicy\022T\n\005zones\030\001 \003(\0132<.ya" +
-      "ndex.cloud.compute.v1.instancegroup.Allo" +
-      "cationPolicy.ZoneB\007\202\3101\003>=1\032G\n\004Zone\022\025\n\007zo" +
-      "ne_id\030\001 \001(\tB\004\350\3071\001\022(\n\022instance_tags_pool\030" +
-      "\002 \003(\tB\014\220\3101\001\212\3101\0043-50\"\336\t\n\020InstanceTemplate" +
-      "\022\036\n\013description\030\001 \001(\tB\t\212\3101\005<=256\022\212\001\n\006lab" +
-      "els\030\002 \003(\0132C.yandex.cloud.compute.v1.inst" +
-      "ancegroup.InstanceTemplate.LabelsEntryB5" +
-      "\202\3101\004<=64\212\3101\005<=128\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-" +
-      "_./\\@0-9a-z]*\022\031\n\013platform_id\030\003 \001(\tB\004\350\3071\001" +
-      "\022R\n\016resources_spec\030\004 \001(\01324.yandex.cloud." +
-      "compute.v1.instancegroup.ResourcesSpecB\004" +
-      "\350\3071\001\022\216\001\n\010metadata\030\005 \003(\0132E.yandex.cloud.c" +
-      "ompute.v1.instancegroup.InstanceTemplate" +
-      ".MetadataEntryB5\202\3101\005<=128\212\3101\010<=262144\262\3101" +
-      "\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022U\n\016boot_di" +
-      "sk_spec\030\006 \001(\01327.yandex.cloud.compute.v1." +
-      "instancegroup.AttachedDiskSpecB\004\350\3071\001\022^\n\024" +
-      "secondary_disk_specs\030\007 \003(\01327.yandex.clou" +
-      "d.compute.v1.instancegroup.AttachedDiskS" +
-      "pecB\007\202\3101\003<=3\022c\n\027network_interface_specs\030" +
-      "\010 \003(\0132;.yandex.cloud.compute.v1.instance" +
-      "group.NetworkInterfaceSpecB\005\202\3101\0011\022R\n\021sch" +
-      "eduling_policy\030\t \001(\01327.yandex.cloud.comp" +
-      "ute.v1.instancegroup.SchedulingPolicy\022\032\n" +
-      "\022service_account_id\030\n \001(\t\022P\n\020network_set" +
-      "tings\030\013 \001(\01326.yandex.cloud.compute.v1.in" +
-      "stancegroup.NetworkSettings\022\027\n\004name\030\014 \001(" +
-      "\tB\t\212\3101\005<=128\022\033\n\010hostname\030\r \001(\tB\t\212\3101\005<=12" +
-      "8\022P\n\020placement_policy\030\016 \001(\01326.yandex.clo" +
-      "ud.compute.v1.instancegroup.PlacementPol" +
-      "icy\022W\n\020filesystem_specs\030\017 \003(\0132=.yandex.c" +
-      "loud.compute.v1.instancegroup.AttachedFi" +
-      "lesystemSpec\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMetadataEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\217\002\n\026Attache" +
-      "dFilesystemSpec\022P\n\004mode\030\001 \001(\0162B.yandex.c" +
-      "loud.compute.v1.instancegroup.AttachedFi" +
-      "lesystemSpec.Mode\022/\n\013device_name\030\002 \001(\tB\032" +
-      "\362\3071\026|[a-z][-_0-9a-z]{0,19}\0225\n\rfilesystem" +
-      "_id\030\003 \001(\tB\036\212\3101\005<=128\362\3071\021[-a-zA-Z0-9._{}]" +
-      "*\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_" +
-      "ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"\335\002\n\017PlacementPoli" +
-      "cy\022\032\n\022placement_group_id\030\001 \001(\t\022d\n\023host_a" +
-      "ffinity_rules\030\002 \003(\0132G.yandex.cloud.compu" +
-      "te.v1.instancegroup.PlacementPolicy.Host" +
-      "AffinityRule\032\307\001\n\020HostAffinityRule\022\013\n\003key" +
-      "\030\001 \001(\t\022\\\n\002op\030\002 \001(\0162P.yandex.cloud.comput" +
-      "e.v1.instancegroup.PlacementPolicy.HostA" +
-      "ffinityRule.Operator\022\016\n\006values\030\003 \003(\t\"8\n\010" +
-      "Operator\022\030\n\024OPERATOR_UNSPECIFIED\020\000\022\006\n\002IN" +
-      "\020\001\022\n\n\006NOT_IN\020\002\"\337\001\n\rResourcesSpec\022\"\n\006memo" +
-      "ry\030\001 \001(\003B\022\372\3071\016<=824633720832\022e\n\005cores\030\002 " +
-      "\001(\003BV\372\3071R2,4,6,8,10,12,14,16,18,20,22,24" +
-      ",26,28,30,32,34,36,40,44,48,52,56,60,64," +
-      "68,72,76,80\022(\n\rcore_fraction\030\003 \001(\003B\021\372\3071\r" +
-      "0,5,20,50,100\022\031\n\004gpus\030\004 \001(\003B\013\372\3071\0070,1,2,4" +
-      "\"\334\004\n\020AttachedDiskSpec\022P\n\004mode\030\001 \001(\0162<.ya" +
-      "ndex.cloud.compute.v1.instancegroup.Atta" +
-      "chedDiskSpec.ModeB\004\350\3071\001\022/\n\013device_name\030\002" +
-      " \001(\tB\032\362\3071\026|[a-z][-_0-9a-z]{0,19}\022Y\n\tdisk" +
-      "_spec\030\003 \001(\0132@.yandex.cloud.compute.v1.in" +
-      "stancegroup.AttachedDiskSpec.DiskSpecB\004\350" +
-      "\3071\001\022/\n\007disk_id\030\004 \001(\tB\036\212\3101\005<=128\362\3071\021[-a-z" +
-      "A-Z0-9._{}]*\022\027\n\004name\030\007 \001(\tB\t\212\3101\005<=128\032\342\001" +
-      "\n\010DiskSpec\022\036\n\013description\030\001 \001(\tB\t\212\3101\005<=2" +
-      "56\022\025\n\007type_id\030\002 \001(\tB\004\350\3071\001\022(\n\004size\030\003 \001(\003B" +
-      "\032\372\3071\0264194304-28587302322176\022\034\n\010image_id\030" +
-      "\004 \001(\tB\010\212\3101\004<=50H\000\022\037\n\013snapshot_id\030\005 \001(\tB\010" +
-      "\212\3101\004<=50H\000\022&\n\036preserve_after_instance_de" +
-      "lete\030\006 \001(\010B\016\n\014source_oneof\";\n\004Mode\022\024\n\020MO" +
-      "DE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_" +
-      "WRITE\020\002\"\222\002\n\024NetworkInterfaceSpec\022\022\n\nnetw" +
-      "ork_id\030\001 \001(\t\022\022\n\nsubnet_ids\030\002 \003(\t\022Z\n\027prim" +
-      "ary_v4_address_spec\030\003 \001(\01329.yandex.cloud" +
-      ".compute.v1.instancegroup.PrimaryAddress" +
-      "Spec\022Z\n\027primary_v6_address_spec\030\004 \001(\01329." +
-      "yandex.cloud.compute.v1.instancegroup.Pr" +
-      "imaryAddressSpec\022\032\n\022security_group_ids\030\005" +
-      " \003(\t\"\312\001\n\022PrimaryAddressSpec\022S\n\023one_to_on" +
-      "e_nat_spec\030\001 \001(\01326.yandex.cloud.compute." +
-      "v1.instancegroup.OneToOneNatSpec\022N\n\020dns_" +
-      "record_specs\030\002 \003(\01324.yandex.cloud.comput" +
-      "e.v1.instancegroup.DnsRecordSpec\022\017\n\007addr" +
-      "ess\030\003 \001(\t\"\270\001\n\017OneToOneNatSpec\022D\n\nip_vers" +
-      "ion\030\001 \001(\01620.yandex.cloud.compute.v1.inst" +
-      "ancegroup.IpVersion\022\017\n\007address\030\002 \001(\t\022N\n\020" +
-      "dns_record_specs\030\003 \003(\01324.yandex.cloud.co" +
-      "mpute.v1.instancegroup.DnsRecordSpec\"_\n\r" +
-      "DnsRecordSpec\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns" +
-      "_zone_id\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400" +
-      "\022\013\n\003ptr\030\004 \001(\010\"\'\n\020SchedulingPolicy\022\023\n\013pre" +
-      "emptible\030\001 \001(\010\"\274\001\n\017NetworkSettings\022I\n\004ty" +
-      "pe\030\001 \001(\0162;.yandex.cloud.compute.v1.insta" +
-      "ncegroup.NetworkSettings.Type\"^\n\004Type\022\024\n" +
-      "\020TYPE_UNSPECIFIED\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOF" +
-      "TWARE_ACCELERATED\020\002\022\030\n\024HARDWARE_ACCELERA" +
-      "TED\020\003\"\316\001\n\020LoadBalancerSpec\022Q\n\021target_gro" +
-      "up_spec\030\001 \001(\01326.yandex.cloud.compute.v1." +
-      "instancegroup.TargetGroupSpec\022I\n\034max_ope" +
-      "ning_traffic_duration\030\002 \001(\0132\031.google.pro" +
-      "tobuf.DurationB\010\372\3071\004>=1s\022\034\n\024ignore_healt" +
-      "h_checks\030\004 \001(\010\"\262\002\n\017TargetGroupSpec\0222\n\004na" +
-      "me\030\001 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z" +
-      "0-9])?\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<=256\022\233" +
-      "\001\n\006labels\030\003 \003(\0132B.yandex.cloud.compute.v" +
-      "1.instancegroup.TargetGroupSpec.LabelsEn" +
-      "tryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*" +
-      "\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\032-\n\013" +
+      "trategy\022Y\n\016minimal_action\030\016 \001(\0162A.yandex" +
+      ".cloud.compute.v1.instancegroup.DeployPo" +
+      "licy.MinimalAction\"F\n\010Strategy\022\030\n\024STRATE" +
+      "GY_UNSPECIFIED\020\000\022\r\n\tPROACTIVE\020\001\022\021\n\rOPPOR" +
+      "TUNISTIC\020\002\"[\n\rMinimalAction\022\036\n\032MINIMAL_A" +
+      "CTION_UNSPECIFIED\020\000\022\017\n\013LIVE_UPDATE\020\001\022\013\n\007" +
+      "RESTART\020\002\022\014\n\010RECREATE\020\003\"\261\001\n\020AllocationPo" +
+      "licy\022T\n\005zones\030\001 \003(\0132<.yandex.cloud.compu" +
+      "te.v1.instancegroup.AllocationPolicy.Zon" +
+      "eB\007\202\3101\003>=1\032G\n\004Zone\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071" +
+      "\001\022(\n\022instance_tags_pool\030\002 \003(\tB\014\220\3101\001\212\3101\0043" +
+      "-50\"\336\t\n\020InstanceTemplate\022\036\n\013description\030" +
+      "\001 \001(\tB\t\212\3101\005<=256\022\212\001\n\006labels\030\002 \003(\0132C.yand" +
+      "ex.cloud.compute.v1.instancegroup.Instan" +
+      "ceTemplate.LabelsEntryB5\202\3101\004<=64\212\3101\005<=12" +
+      "8\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\031\n" +
+      "\013platform_id\030\003 \001(\tB\004\350\3071\001\022R\n\016resources_sp" +
+      "ec\030\004 \001(\01324.yandex.cloud.compute.v1.insta" +
+      "ncegroup.ResourcesSpecB\004\350\3071\001\022\216\001\n\010metadat" +
+      "a\030\005 \003(\0132E.yandex.cloud.compute.v1.instan" +
+      "cegroup.InstanceTemplate.MetadataEntryB5" +
+      "\202\3101\005<=128\212\3101\010<=262144\262\3101\006\032\0041-63\262\3101\022\022\020[a-" +
+      "z][-_0-9a-z]*\022U\n\016boot_disk_spec\030\006 \001(\01327." +
+      "yandex.cloud.compute.v1.instancegroup.At" +
+      "tachedDiskSpecB\004\350\3071\001\022^\n\024secondary_disk_s" +
+      "pecs\030\007 \003(\01327.yandex.cloud.compute.v1.ins" +
+      "tancegroup.AttachedDiskSpecB\007\202\3101\003<=3\022c\n\027" +
+      "network_interface_specs\030\010 \003(\0132;.yandex.c" +
+      "loud.compute.v1.instancegroup.NetworkInt" +
+      "erfaceSpecB\005\202\3101\0011\022R\n\021scheduling_policy\030\t" +
+      " \001(\01327.yandex.cloud.compute.v1.instanceg" +
+      "roup.SchedulingPolicy\022\032\n\022service_account" +
+      "_id\030\n \001(\t\022P\n\020network_settings\030\013 \001(\01326.ya" +
+      "ndex.cloud.compute.v1.instancegroup.Netw" +
+      "orkSettings\022\027\n\004name\030\014 \001(\tB\t\212\3101\005<=128\022\033\n\010" +
+      "hostname\030\r \001(\tB\t\212\3101\005<=128\022P\n\020placement_p" +
+      "olicy\030\016 \001(\01326.yandex.cloud.compute.v1.in" +
+      "stancegroup.PlacementPolicy\022W\n\020filesyste" +
+      "m_specs\030\017 \003(\0132=.yandex.cloud.compute.v1." +
+      "instancegroup.AttachedFilesystemSpec\032-\n\013" +
       "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\"\352\001\n\033ApplicationLoadBalancerSpec\022b\n\021t" +
-      "arget_group_spec\030\001 \001(\0132A.yandex.cloud.co" +
-      "mpute.v1.instancegroup.ApplicationTarget" +
-      "GroupSpecB\004\350\3071\001\022I\n\034max_opening_traffic_d" +
-      "uration\030\002 \001(\0132\031.google.protobuf.Duration" +
-      "B\010\372\3071\004>=1s\022\034\n\024ignore_health_checks\030\003 \001(\010" +
-      "\"\315\001\n\032ApplicationTargetGroupSpec\022\014\n\004name\030" +
-      "\001 \001(\t\022\023\n\013description\030\002 \001(\t\022]\n\006labels\030\003 \003" +
-      "(\0132M.yandex.cloud.compute.v1.instancegro" +
-      "up.ApplicationTargetGroupSpec.LabelsEntr" +
-      "y\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
-      " \001(\t:\0028\001\"\272\001\n\020HealthChecksSpec\022[\n\022health_" +
-      "check_specs\030\001 \003(\01326.yandex.cloud.compute" +
-      ".v1.instancegroup.HealthCheckSpecB\007\202\3101\003>" +
-      "=1\022I\n\034max_checking_health_duration\030\002 \001(\013" +
-      "2\031.google.protobuf.DurationB\010\372\3071\004>=1s\"\244\004" +
-      "\n\017HealthCheckSpec\0228\n\010interval\030\001 \001(\0132\031.go" +
-      "ogle.protobuf.DurationB\013\372\3071\0071s-300s\0226\n\007t" +
-      "imeout\030\002 \001(\0132\031.google.protobuf.DurationB" +
-      "\n\372\3071\0061s-60s\0225\n\023unhealthy_threshold\030\003 \001(\003" +
-      "B\030\372\3071\0240,2,3,4,5,6,7,8,9,10\0223\n\021healthy_th" +
-      "reshold\030\004 \001(\003B\030\372\3071\0240,2,3,4,5,6,7,8,9,10\022" +
-      "X\n\013tcp_options\030\005 \001(\0132A.yandex.cloud.comp" +
-      "ute.v1.instancegroup.HealthCheckSpec.Tcp" +
-      "OptionsH\000\022Z\n\014http_options\030\006 \001(\0132B.yandex" +
-      ".cloud.compute.v1.instancegroup.HealthCh" +
-      "eckSpec.HttpOptionsH\000\032\'\n\nTcpOptions\022\031\n\004p" +
-      "ort\030\001 \001(\003B\013\372\3071\0071-65535\0326\n\013HttpOptions\022\031\n" +
-      "\004port\030\001 \001(\003B\013\372\3071\0071-65535\022\014\n\004path\030\002 \001(\tB\034" +
-      "\n\024health_check_options\022\004\300\3011\001\"\327\005\n\017Managed" +
-      "Instance\022\n\n\002id\030\001 \001(\t\022M\n\006status\030\002 \001(\0162=.y" +
-      "andex.cloud.compute.v1.instancegroup.Man" +
-      "agedInstance.Status\022\023\n\013instance_id\030\003 \001(\t" +
-      "\022\014\n\004fqdn\030\004 \001(\t\022\014\n\004name\030\005 \001(\t\022\026\n\016status_m" +
-      "essage\030\006 \001(\t\022\017\n\007zone_id\030\007 \001(\t\022S\n\022network" +
-      "_interfaces\030\010 \003(\01327.yandex.cloud.compute" +
-      ".v1.instancegroup.NetworkInterface\0225\n\021st" +
-      "atus_changed_at\030\t \001(\0132\032.google.protobuf." +
-      "Timestamp\022\024\n\014instance_tag\030\016 \001(\t\"\354\002\n\006Stat" +
-      "us\022\026\n\022STATUS_UNSPECIFIED\020\000\022\025\n\021CREATING_I" +
-      "NSTANCE\020\013\022\025\n\021UPDATING_INSTANCE\020\014\022\025\n\021DELE" +
-      "TING_INSTANCE\020\r\022\025\n\021STARTING_INSTANCE\020\016\022\025" +
-      "\n\021STOPPING_INSTANCE\020\017\022\035\n\031AWAITING_STARTU" +
-      "P_DURATION\020\020\022\023\n\017CHECKING_HEALTH\020\021\022\023\n\017OPE" +
-      "NING_TRAFFIC\020\022\022\034\n\030AWAITING_WARMUP_DURATI" +
-      "ON\020\023\022\023\n\017CLOSING_TRAFFIC\020\024\022\022\n\016RUNNING_ACT" +
-      "UAL\020\025\022\024\n\020RUNNING_OUTDATED\020\026\022\013\n\007STOPPED\020\027" +
-      "\022\013\n\007DELETED\020\030\022\027\n\023PREPARING_RESOURCES\020\031\"\357" +
-      "\001\n\020NetworkInterface\022\r\n\005index\030\001 \001(\t\022\023\n\013ma" +
-      "c_address\030\002 \001(\t\022\021\n\tsubnet_id\030\003 \001(\t\022Q\n\022pr" +
-      "imary_v4_address\030\004 \001(\01325.yandex.cloud.co" +
-      "mpute.v1.instancegroup.PrimaryAddress\022Q\n" +
-      "\022primary_v6_address\030\005 \001(\01325.yandex.cloud" +
-      ".compute.v1.instancegroup.PrimaryAddress" +
-      "\"\264\001\n\016PrimaryAddress\022\017\n\007address\030\001 \001(\t\022J\n\016" +
-      "one_to_one_nat\030\002 \001(\01322.yandex.cloud.comp" +
-      "ute.v1.instancegroup.OneToOneNat\022E\n\013dns_" +
-      "records\030\003 \003(\01320.yandex.cloud.compute.v1." +
-      "instancegroup.DnsRecord\"\253\001\n\013OneToOneNat\022" +
-      "\017\n\007address\030\001 \001(\t\022D\n\nip_version\030\002 \001(\01620.y" +
-      "andex.cloud.compute.v1.instancegroup.IpV" +
-      "ersion\022E\n\013dns_records\030\003 \003(\01320.yandex.clo" +
-      "ud.compute.v1.instancegroup.DnsRecord\"[\n" +
-      "\tDnsRecord\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zo" +
-      "ne_id\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n" +
-      "\003ptr\030\004 \001(\010\"K\n\tLogRecord\022-\n\ttimestamp\030\001 \001" +
-      "(\0132\032.google.protobuf.Timestamp\022\017\n\007messag" +
-      "e\030\002 \001(\t*;\n\tIpVersion\022\032\n\026IP_VERSION_UNSPE" +
-      "CIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020\002B\204\001\n)yandex." +
-      "cloud.api.compute.v1.instancegroupZWgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/compute/v1/instancegroup;instancegr" +
-      "oupb\006proto3"
+      "\0028\001\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001\"\217\002\n\026AttachedFilesystemSpec\022" +
+      "P\n\004mode\030\001 \001(\0162B.yandex.cloud.compute.v1." +
+      "instancegroup.AttachedFilesystemSpec.Mod" +
+      "e\022/\n\013device_name\030\002 \001(\tB\032\362\3071\026|[a-z][-_0-9" +
+      "a-z]{0,19}\0225\n\rfilesystem_id\030\003 \001(\tB\036\212\3101\005<" +
+      "=128\362\3071\021[-a-zA-Z0-9._{}]*\";\n\004Mode\022\024\n\020MOD" +
+      "E_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_W" +
+      "RITE\020\002\"\335\002\n\017PlacementPolicy\022\032\n\022placement_" +
+      "group_id\030\001 \001(\t\022d\n\023host_affinity_rules\030\002 " +
+      "\003(\0132G.yandex.cloud.compute.v1.instancegr" +
+      "oup.PlacementPolicy.HostAffinityRule\032\307\001\n" +
+      "\020HostAffinityRule\022\013\n\003key\030\001 \001(\t\022\\\n\002op\030\002 \001" +
+      "(\0162P.yandex.cloud.compute.v1.instancegro" +
+      "up.PlacementPolicy.HostAffinityRule.Oper" +
+      "ator\022\016\n\006values\030\003 \003(\t\"8\n\010Operator\022\030\n\024OPER" +
+      "ATOR_UNSPECIFIED\020\000\022\006\n\002IN\020\001\022\n\n\006NOT_IN\020\002\"\337" +
+      "\001\n\rResourcesSpec\022\"\n\006memory\030\001 \001(\003B\022\372\3071\016<=" +
+      "824633720832\022e\n\005cores\030\002 \001(\003BV\372\3071R2,4,6,8" +
+      ",10,12,14,16,18,20,22,24,26,28,30,32,34," +
+      "36,40,44,48,52,56,60,64,68,72,76,80\022(\n\rc" +
+      "ore_fraction\030\003 \001(\003B\021\372\3071\r0,5,20,50,100\022\031\n" +
+      "\004gpus\030\004 \001(\003B\013\372\3071\0070,1,2,4\"\334\004\n\020AttachedDis" +
+      "kSpec\022P\n\004mode\030\001 \001(\0162<.yandex.cloud.compu" +
+      "te.v1.instancegroup.AttachedDiskSpec.Mod" +
+      "eB\004\350\3071\001\022/\n\013device_name\030\002 \001(\tB\032\362\3071\026|[a-z]" +
+      "[-_0-9a-z]{0,19}\022Y\n\tdisk_spec\030\003 \001(\0132@.ya" +
+      "ndex.cloud.compute.v1.instancegroup.Atta" +
+      "chedDiskSpec.DiskSpecB\004\350\3071\001\022/\n\007disk_id\030\004" +
+      " \001(\tB\036\212\3101\005<=128\362\3071\021[-a-zA-Z0-9._{}]*\022\027\n\004" +
+      "name\030\007 \001(\tB\t\212\3101\005<=128\032\342\001\n\010DiskSpec\022\036\n\013de" +
+      "scription\030\001 \001(\tB\t\212\3101\005<=256\022\025\n\007type_id\030\002 " +
+      "\001(\tB\004\350\3071\001\022(\n\004size\030\003 \001(\003B\032\372\3071\0264194304-285" +
+      "87302322176\022\034\n\010image_id\030\004 \001(\tB\010\212\3101\004<=50H" +
+      "\000\022\037\n\013snapshot_id\030\005 \001(\tB\010\212\3101\004<=50H\000\022&\n\036pr" +
+      "eserve_after_instance_delete\030\006 \001(\010B\016\n\014so" +
+      "urce_oneof\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000" +
+      "\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"\222\002\n\024Netw" +
+      "orkInterfaceSpec\022\022\n\nnetwork_id\030\001 \001(\t\022\022\n\n" +
+      "subnet_ids\030\002 \003(\t\022Z\n\027primary_v4_address_s" +
+      "pec\030\003 \001(\01329.yandex.cloud.compute.v1.inst" +
+      "ancegroup.PrimaryAddressSpec\022Z\n\027primary_" +
+      "v6_address_spec\030\004 \001(\01329.yandex.cloud.com" +
+      "pute.v1.instancegroup.PrimaryAddressSpec" +
+      "\022\032\n\022security_group_ids\030\005 \003(\t\"\312\001\n\022Primary" +
+      "AddressSpec\022S\n\023one_to_one_nat_spec\030\001 \001(\013" +
+      "26.yandex.cloud.compute.v1.instancegroup" +
+      ".OneToOneNatSpec\022N\n\020dns_record_specs\030\002 \003" +
+      "(\01324.yandex.cloud.compute.v1.instancegro" +
+      "up.DnsRecordSpec\022\017\n\007address\030\003 \001(\t\"\270\001\n\017On" +
+      "eToOneNatSpec\022D\n\nip_version\030\001 \001(\01620.yand" +
+      "ex.cloud.compute.v1.instancegroup.IpVers" +
+      "ion\022\017\n\007address\030\002 \001(\t\022N\n\020dns_record_specs" +
+      "\030\003 \003(\01324.yandex.cloud.compute.v1.instanc" +
+      "egroup.DnsRecordSpec\"_\n\rDnsRecordSpec\022\022\n" +
+      "\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001(\t\022\030" +
+      "\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"\'\n" +
+      "\020SchedulingPolicy\022\023\n\013preemptible\030\001 \001(\010\"\274" +
+      "\001\n\017NetworkSettings\022I\n\004type\030\001 \001(\0162;.yande" +
+      "x.cloud.compute.v1.instancegroup.Network" +
+      "Settings.Type\"^\n\004Type\022\024\n\020TYPE_UNSPECIFIE" +
+      "D\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWARE_ACCELERATE" +
+      "D\020\002\022\030\n\024HARDWARE_ACCELERATED\020\003\"\316\001\n\020LoadBa" +
+      "lancerSpec\022Q\n\021target_group_spec\030\001 \001(\01326." +
+      "yandex.cloud.compute.v1.instancegroup.Ta" +
+      "rgetGroupSpec\022I\n\034max_opening_traffic_dur" +
+      "ation\030\002 \001(\0132\031.google.protobuf.DurationB\010" +
+      "\372\3071\004>=1s\022\034\n\024ignore_health_checks\030\004 \001(\010\"\262" +
+      "\002\n\017TargetGroupSpec\0222\n\004name\030\001 \001(\tB$\362\3071 |[" +
+      "a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descri" +
+      "ption\030\002 \001(\tB\t\212\3101\005<=256\022\233\001\n\006labels\030\003 \003(\0132" +
+      "B.yandex.cloud.compute.v1.instancegroup." +
+      "TargetGroupSpec.LabelsEntryBG\202\3101\004<=64\212\3101" +
+      "\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024" +
+      "[a-z][-_./\\@0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\352\001\n\033Applicat" +
+      "ionLoadBalancerSpec\022b\n\021target_group_spec" +
+      "\030\001 \001(\0132A.yandex.cloud.compute.v1.instanc" +
+      "egroup.ApplicationTargetGroupSpecB\004\350\3071\001\022" +
+      "I\n\034max_opening_traffic_duration\030\002 \001(\0132\031." +
+      "google.protobuf.DurationB\010\372\3071\004>=1s\022\034\n\024ig" +
+      "nore_health_checks\030\003 \001(\010\"\315\001\n\032Application" +
+      "TargetGroupSpec\022\014\n\004name\030\001 \001(\t\022\023\n\013descrip" +
+      "tion\030\002 \001(\t\022]\n\006labels\030\003 \003(\0132M.yandex.clou" +
+      "d.compute.v1.instancegroup.ApplicationTa" +
+      "rgetGroupSpec.LabelsEntry\032-\n\013LabelsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\272\001\n\020Hea" +
+      "lthChecksSpec\022[\n\022health_check_specs\030\001 \003(" +
+      "\01326.yandex.cloud.compute.v1.instancegrou" +
+      "p.HealthCheckSpecB\007\202\3101\003>=1\022I\n\034max_checki" +
+      "ng_health_duration\030\002 \001(\0132\031.google.protob" +
+      "uf.DurationB\010\372\3071\004>=1s\"\244\004\n\017HealthCheckSpe" +
+      "c\0228\n\010interval\030\001 \001(\0132\031.google.protobuf.Du" +
+      "rationB\013\372\3071\0071s-300s\0226\n\007timeout\030\002 \001(\0132\031.g" +
+      "oogle.protobuf.DurationB\n\372\3071\0061s-60s\0225\n\023u" +
+      "nhealthy_threshold\030\003 \001(\003B\030\372\3071\0240,2,3,4,5," +
+      "6,7,8,9,10\0223\n\021healthy_threshold\030\004 \001(\003B\030\372" +
+      "\3071\0240,2,3,4,5,6,7,8,9,10\022X\n\013tcp_options\030\005" +
+      " \001(\0132A.yandex.cloud.compute.v1.instanceg" +
+      "roup.HealthCheckSpec.TcpOptionsH\000\022Z\n\014htt" +
+      "p_options\030\006 \001(\0132B.yandex.cloud.compute.v" +
+      "1.instancegroup.HealthCheckSpec.HttpOpti" +
+      "onsH\000\032\'\n\nTcpOptions\022\031\n\004port\030\001 \001(\003B\013\372\3071\0071" +
+      "-65535\0326\n\013HttpOptions\022\031\n\004port\030\001 \001(\003B\013\372\3071" +
+      "\0071-65535\022\014\n\004path\030\002 \001(\tB\034\n\024health_check_o" +
+      "ptions\022\004\300\3011\001\"\327\005\n\017ManagedInstance\022\n\n\002id\030\001" +
+      " \001(\t\022M\n\006status\030\002 \001(\0162=.yandex.cloud.comp" +
+      "ute.v1.instancegroup.ManagedInstance.Sta" +
+      "tus\022\023\n\013instance_id\030\003 \001(\t\022\014\n\004fqdn\030\004 \001(\t\022\014" +
+      "\n\004name\030\005 \001(\t\022\026\n\016status_message\030\006 \001(\t\022\017\n\007" +
+      "zone_id\030\007 \001(\t\022S\n\022network_interfaces\030\010 \003(" +
+      "\01327.yandex.cloud.compute.v1.instancegrou" +
+      "p.NetworkInterface\0225\n\021status_changed_at\030" +
+      "\t \001(\0132\032.google.protobuf.Timestamp\022\024\n\014ins" +
+      "tance_tag\030\016 \001(\t\"\354\002\n\006Status\022\026\n\022STATUS_UNS" +
+      "PECIFIED\020\000\022\025\n\021CREATING_INSTANCE\020\013\022\025\n\021UPD" +
+      "ATING_INSTANCE\020\014\022\025\n\021DELETING_INSTANCE\020\r\022" +
+      "\025\n\021STARTING_INSTANCE\020\016\022\025\n\021STOPPING_INSTA" +
+      "NCE\020\017\022\035\n\031AWAITING_STARTUP_DURATION\020\020\022\023\n\017" +
+      "CHECKING_HEALTH\020\021\022\023\n\017OPENING_TRAFFIC\020\022\022\034" +
+      "\n\030AWAITING_WARMUP_DURATION\020\023\022\023\n\017CLOSING_" +
+      "TRAFFIC\020\024\022\022\n\016RUNNING_ACTUAL\020\025\022\024\n\020RUNNING" +
+      "_OUTDATED\020\026\022\013\n\007STOPPED\020\027\022\013\n\007DELETED\020\030\022\027\n" +
+      "\023PREPARING_RESOURCES\020\031\"\357\001\n\020NetworkInterf" +
+      "ace\022\r\n\005index\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\t\022" +
+      "\021\n\tsubnet_id\030\003 \001(\t\022Q\n\022primary_v4_address" +
+      "\030\004 \001(\01325.yandex.cloud.compute.v1.instanc" +
+      "egroup.PrimaryAddress\022Q\n\022primary_v6_addr" +
+      "ess\030\005 \001(\01325.yandex.cloud.compute.v1.inst" +
+      "ancegroup.PrimaryAddress\"\264\001\n\016PrimaryAddr" +
+      "ess\022\017\n\007address\030\001 \001(\t\022J\n\016one_to_one_nat\030\002" +
+      " \001(\01322.yandex.cloud.compute.v1.instanceg" +
+      "roup.OneToOneNat\022E\n\013dns_records\030\003 \003(\01320." +
+      "yandex.cloud.compute.v1.instancegroup.Dn" +
+      "sRecord\"\253\001\n\013OneToOneNat\022\017\n\007address\030\001 \001(\t" +
+      "\022D\n\nip_version\030\002 \001(\01620.yandex.cloud.comp" +
+      "ute.v1.instancegroup.IpVersion\022E\n\013dns_re" +
+      "cords\030\003 \003(\01320.yandex.cloud.compute.v1.in" +
+      "stancegroup.DnsRecord\"[\n\tDnsRecord\022\022\n\004fq" +
+      "dn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001(\t\022\030\n\003t" +
+      "tl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"K\n\tLo" +
+      "gRecord\022-\n\ttimestamp\030\001 \001(\0132\032.google.prot" +
+      "obuf.Timestamp\022\017\n\007message\030\002 \001(\t*;\n\tIpVer" +
+      "sion\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4" +
+      "\020\001\022\010\n\004IPV6\020\002B\204\001\n)yandex.cloud.api.comput" +
+      "e.v1.instancegroupZWgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/compute/v1/" +
+      "instancegroup;instancegroupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -57653,7 +57959,7 @@ public final class InstanceGroupOuterClass {
     internal_static_yandex_cloud_compute_v1_instancegroup_DeployPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_DeployPolicy_descriptor,
-        new java.lang.String[] { "MaxUnavailable", "MaxDeleting", "MaxCreating", "MaxExpansion", "StartupDuration", "Strategy", });
+        new java.lang.String[] { "MaxUnavailable", "MaxDeleting", "MaxCreating", "MaxExpansion", "StartupDuration", "Strategy", "MinimalAction", });
     internal_static_yandex_cloud_compute_v1_instancegroup_AllocationPolicy_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_compute_v1_instancegroup_AllocationPolicy_fieldAccessorTable = new

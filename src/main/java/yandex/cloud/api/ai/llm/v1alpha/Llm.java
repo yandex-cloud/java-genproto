@@ -30,7 +30,7 @@ public final class Llm {
 
     /**
      * <pre>
-     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
      * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
      * </pre>
      *
@@ -40,7 +40,7 @@ public final class Llm {
     boolean hasTemperature();
     /**
      * <pre>
-     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
      * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
      * </pre>
      *
@@ -50,7 +50,7 @@ public final class Llm {
     com.google.protobuf.DoubleValue getTemperature();
     /**
      * <pre>
-     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
      * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
      * </pre>
      *
@@ -219,7 +219,7 @@ public final class Llm {
     private com.google.protobuf.DoubleValue temperature_;
     /**
      * <pre>
-     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
      * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
      * </pre>
      *
@@ -232,7 +232,7 @@ public final class Llm {
     }
     /**
      * <pre>
-     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
      * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
      * </pre>
      *
@@ -245,7 +245,7 @@ public final class Llm {
     }
     /**
      * <pre>
-     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+     * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
      * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
      * </pre>
      *
@@ -712,7 +712,7 @@ public final class Llm {
           com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> temperatureBuilder_;
       /**
        * <pre>
-       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
        * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
        * </pre>
        *
@@ -724,7 +724,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
        * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
        * </pre>
        *
@@ -740,7 +740,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
        * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
        * </pre>
        *
@@ -761,7 +761,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
        * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
        * </pre>
        *
@@ -780,7 +780,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
        * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
        * </pre>
        *
@@ -803,7 +803,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
        * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
        * </pre>
        *
@@ -822,7 +822,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
        * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
        * </pre>
        *
@@ -835,7 +835,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
        * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
        * </pre>
        *
@@ -851,7 +851,7 @@ public final class Llm {
       }
       /**
        * <pre>
-       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and infinity.
+       * Affects creativity and randomness of responses. Should be a double number between 0 (inclusive) and 1 (inclusive).
        * Lower values produce more straightforward responses, while higher values lead to increased creativity and randomness.
        * </pre>
        *
