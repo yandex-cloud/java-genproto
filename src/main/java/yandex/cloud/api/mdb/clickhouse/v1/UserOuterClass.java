@@ -2601,7 +2601,7 @@ public final class UserOuterClass {
      * Name of the ClickHouse user.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_][a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -2610,7 +2610,7 @@ public final class UserOuterClass {
      * Name of the ClickHouse user.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_][a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -2877,7 +2877,7 @@ public final class UserOuterClass {
      * Name of the ClickHouse user.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_][a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -2898,7 +2898,7 @@ public final class UserOuterClass {
      * Name of the ClickHouse user.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_][a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -3575,7 +3575,7 @@ public final class UserOuterClass {
        * Name of the ClickHouse user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_][a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -3595,7 +3595,7 @@ public final class UserOuterClass {
        * Name of the ClickHouse user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_][a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -3616,7 +3616,7 @@ public final class UserOuterClass {
        * Name of the ClickHouse user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_][a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -3635,7 +3635,7 @@ public final class UserOuterClass {
        * Name of the ClickHouse user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_][a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -3649,7 +3649,7 @@ public final class UserOuterClass {
        * Name of the ClickHouse user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_][a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -46034,327 +46034,327 @@ public final class UserOuterClass {
       "mdb.clickhouse.v1.UserSettings\0229\n\006quotas" +
       "\030\005 \003(\0132).yandex.cloud.mdb.clickhouse.v1." +
       "UserQuota\")\n\nPermission\022\025\n\rdatabase_name" +
-      "\030\001 \001(\tJ\004\010\002\020\003\"\224\002\n\010UserSpec\022+\n\004name\030\001 \001(\tB" +
-      "\035\350\3071\001\212\3101\004<=63\362\3071\r[a-zA-Z0-9_]*\022\037\n\010passwo" +
-      "rd\030\002 \001(\tB\r\350\3071\001\212\3101\0058-128\022?\n\013permissions\030\003" +
-      " \003(\0132*.yandex.cloud.mdb.clickhouse.v1.Pe" +
-      "rmission\022>\n\010settings\030\004 \001(\0132,.yandex.clou" +
-      "d.mdb.clickhouse.v1.UserSettings\0229\n\006quot" +
-      "as\030\005 \003(\0132).yandex.cloud.mdb.clickhouse.v" +
-      "1.UserQuota\"\365]\n\014UserSettings\0226\n\010readonly" +
-      "\030\001 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
-      "\0030-2\022-\n\tallow_ddl\030\002 \001(\0132\032.google.protobu" +
-      "f.BoolValue\022A\n\035allow_introspection_funct" +
-      "ions\030` \001(\0132\032.google.protobuf.BoolValue\022<" +
-      "\n\017connect_timeout\030\' \001(\0132\033.google.protobu" +
-      "f.Int64ValueB\006\372\3071\002>0\022J\n\035connect_timeout_" +
-      "with_failover\030a \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\006\372\3071\002>0\022<\n\017receive_timeout\030( \001(" +
-      "\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>0\0229" +
-      "\n\014send_timeout\030) \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\006\372\3071\002>0\022L\n\'timeout_before_chec" +
-      "king_execution_speed\030b \001(\0132\033.google.prot" +
-      "obuf.Int64Value\022;\n\rinsert_quorum\030\003 \001(\0132\033" +
-      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022F\n\025" +
-      "insert_quorum_timeout\030\004 \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\n\372\3071\006>=1000\022:\n\026insert_q" +
-      "uorum_parallel\030c \001(\0132\032.google.protobuf.B" +
-      "oolValue\022:\n\026insert_null_as_default\030d \001(\013" +
-      "2\032.google.protobuf.BoolValue\022A\n\035select_s" +
-      "equential_consistency\030\005 \001(\0132\032.google.pro" +
-      "tobuf.BoolValue\022V\n2deduplicate_blocks_in" +
-      "_dependent_materialized_views\030e \001(\0132\032.go" +
-      "ogle.protobuf.BoolValue\022O\n!replication_a" +
-      "lter_partitions_sync\030* \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\007\372\3071\0030-2\022Z\n)max_replica_" +
-      "delay_for_distributed_queries\030\006 \001(\0132\033.go" +
-      "ogle.protobuf.Int64ValueB\n\372\3071\006>=1000\022V\n2" +
-      "fallback_to_stale_replicas_for_distribut" +
-      "ed_queries\030\007 \001(\0132\032.google.protobuf.BoolV" +
-      "alue\022e\n\030distributed_product_mode\030+ \001(\0162C" +
-      ".yandex.cloud.mdb.clickhouse.v1.UserSett" +
-      "ings.DistributedProductMode\022L\n(distribut" +
-      "ed_aggregation_memory_efficient\030H \001(\0132\032." +
-      "google.protobuf.BoolValue\022A\n\034distributed" +
-      "_ddl_task_timeout\030I \001(\0132\033.google.protobu" +
-      "f.Int64Value\022;\n\027skip_unavailable_shards\030" +
-      "Q \001(\0132\032.google.protobuf.BoolValue\0227\n\023com" +
-      "pile_expressions\030. \001(\0132\032.google.protobuf" +
-      ".BoolValue\022M\n\037min_count_to_compile_expre" +
-      "ssion\030/ \001(\0132\033.google.protobuf.Int64Value" +
-      "B\007\372\3071\003>=0\022;\n\016max_block_size\030\t \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueB\006\372\3071\002>0\022H\n\032min_in" +
-      "sert_block_size_rows\0300 \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\007\372\3071\003>=0\022I\n\033min_insert_b" +
-      "lock_size_bytes\0301 \001(\0132\033.google.protobuf." +
-      "Int64ValueB\007\372\3071\003>=0\022B\n\025max_insert_block_" +
-      "size\030\n \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\006\372\3071\002>0\022H\n\032min_bytes_to_use_direct_io\0302 " +
-      "\001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=" +
-      "0\022:\n\026use_uncompressed_cache\0303 \001(\0132\032.goog" +
-      "le.protobuf.BoolValue\022M\n merge_tree_max_" +
-      "rows_to_use_cache\0304 \001(\0132\033.google.protobu" +
-      "f.Int64ValueB\006\372\3071\002>0\022N\n!merge_tree_max_b" +
-      "ytes_to_use_cache\0305 \001(\0132\033.google.protobu" +
-      "f.Int64ValueB\006\372\3071\002>0\022T\n\'merge_tree_min_r" +
-      "ows_for_concurrent_read\0306 \001(\0132\033.google.p" +
-      "rotobuf.Int64ValueB\006\372\3071\002>0\022U\n(merge_tree" +
-      "_min_bytes_for_concurrent_read\0307 \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\006\372\3071\002>0\022G\n\"max" +
-      "_bytes_before_external_group_by\030J \001(\0132\033." +
-      "google.protobuf.Int64Value\022C\n\036max_bytes_" +
-      "before_external_sort\030K \001(\0132\033.google.prot" +
-      "obuf.Int64Value\022A\n\034group_by_two_level_th" +
-      "reshold\030L \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022G\n\"group_by_two_level_threshold_bytes" +
-      "\030M \001(\0132\033.google.protobuf.Int64Value\0226\n\010p" +
-      "riority\0308 \001(\0132\033.google.protobuf.Int64Val" +
-      "ueB\007\372\3071\003>=0\0228\n\013max_threads\030\010 \001(\0132\033.googl" +
-      "e.protobuf.Int64ValueB\006\372\3071\002>0\022>\n\020max_mem" +
-      "ory_usage\030\013 \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\007\372\3071\003>=0\022G\n\031max_memory_usage_for_us" +
-      "er\030\014 \001(\0132\033.google.protobuf.Int64ValueB\007\372" +
-      "\3071\003>=0\022:\n\025max_network_bandwidth\0309 \001(\0132\033." +
-      "google.protobuf.Int64Value\022C\n\036max_networ" +
-      "k_bandwidth_for_user\030: \001(\0132\033.google.prot" +
-      "obuf.Int64Value\022D\n\037max_partitions_per_in" +
-      "sert_block\030f \001(\0132\033.google.protobuf.Int64" +
-      "Value\022D\n\037max_concurrent_queries_for_user" +
-      "\030g \001(\0132\033.google.protobuf.Int64Value\0227\n\023f" +
-      "orce_index_by_date\030; \001(\0132\032.google.protob" +
-      "uf.BoolValue\0225\n\021force_primary_key\030< \001(\0132" +
-      "\032.google.protobuf.BoolValue\022>\n\020max_rows_" +
-      "to_read\030\r \001(\0132\033.google.protobuf.Int64Val" +
-      "ueB\007\372\3071\003>=0\022?\n\021max_bytes_to_read\030\016 \001(\0132\033" +
-      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022U\n\022" +
-      "read_overflow_mode\030\017 \001(\01629.yandex.cloud." +
-      "mdb.clickhouse.v1.UserSettings.OverflowM" +
-      "ode\022B\n\024max_rows_to_group_by\030\020 \001(\0132\033.goog" +
-      "le.protobuf.Int64ValueB\007\372\3071\003>=0\022`\n\026group" +
-      "_by_overflow_mode\030\021 \001(\0162@.yandex.cloud.m" +
-      "db.clickhouse.v1.UserSettings.GroupByOve" +
-      "rflowMode\022>\n\020max_rows_to_sort\030\022 \001(\0132\033.go" +
-      "ogle.protobuf.Int64ValueB\007\372\3071\003>=0\022?\n\021max" +
-      "_bytes_to_sort\030\023 \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\007\372\3071\003>=0\022U\n\022sort_overflow_mode" +
-      "\030\024 \001(\01629.yandex.cloud.mdb.clickhouse.v1." +
-      "UserSettings.OverflowMode\022=\n\017max_result_" +
-      "rows\030\025 \001(\0132\033.google.protobuf.Int64ValueB" +
-      "\007\372\3071\003>=0\022>\n\020max_result_bytes\030\026 \001(\0132\033.goo" +
-      "gle.protobuf.Int64ValueB\007\372\3071\003>=0\022W\n\024resu" +
-      "lt_overflow_mode\030\027 \001(\01629.yandex.cloud.md" +
-      "b.clickhouse.v1.UserSettings.OverflowMod" +
-      "e\022B\n\024max_rows_in_distinct\030\030 \001(\0132\033.google" +
-      ".protobuf.Int64ValueB\007\372\3071\003>=0\022C\n\025max_byt" +
-      "es_in_distinct\030\031 \001(\0132\033.google.protobuf.I" +
-      "nt64ValueB\007\372\3071\003>=0\022Y\n\026distinct_overflow_" +
-      "mode\030\032 \001(\01629.yandex.cloud.mdb.clickhouse" +
-      ".v1.UserSettings.OverflowMode\022B\n\024max_row" +
-      "s_to_transfer\030\033 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\007\372\3071\003>=0\022C\n\025max_bytes_to_transf" +
-      "er\030\034 \001(\0132\033.google.protobuf.Int64ValueB\007\372" +
-      "\3071\003>=0\022Y\n\026transfer_overflow_mode\030\035 \001(\01629" +
-      ".yandex.cloud.mdb.clickhouse.v1.UserSett" +
-      "ings.OverflowMode\022@\n\022max_execution_time\030" +
-      "\036 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003" +
-      ">=0\022X\n\025timeout_overflow_mode\030\037 \001(\01629.yan" +
-      "dex.cloud.mdb.clickhouse.v1.UserSettings" +
-      ".OverflowMode\022=\n\017max_rows_in_set\030W \001(\0132\033" +
-      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022>\n\020" +
-      "max_bytes_in_set\030X \001(\0132\033.google.protobuf" +
-      ".Int64ValueB\007\372\3071\003>=0\022T\n\021set_overflow_mod" +
-      "e\030Y \001(\01629.yandex.cloud.mdb.clickhouse.v1" +
-      ".UserSettings.OverflowMode\022>\n\020max_rows_i" +
-      "n_join\030Z \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\007\372\3071\003>=0\022?\n\021max_bytes_in_join\030[ \001(\0132\033." +
-      "google.protobuf.Int64ValueB\007\372\3071\003>=0\022U\n\022j" +
-      "oin_overflow_mode\030\\ \001(\01629.yandex.cloud.m" +
+      "\030\001 \001(\tJ\004\010\002\020\003\"\241\002\n\010UserSpec\0228\n\004name\030\001 \001(\tB" +
+      "*\350\3071\001\212\3101\004<=63\362\3071\032[a-zA-Z0-9_][a-zA-Z0-9_" +
+      "-]*\022\037\n\010password\030\002 \001(\tB\r\350\3071\001\212\3101\0058-128\022?\n\013" +
+      "permissions\030\003 \003(\0132*.yandex.cloud.mdb.cli" +
+      "ckhouse.v1.Permission\022>\n\010settings\030\004 \001(\0132" +
+      ",.yandex.cloud.mdb.clickhouse.v1.UserSet" +
+      "tings\0229\n\006quotas\030\005 \003(\0132).yandex.cloud.mdb" +
+      ".clickhouse.v1.UserQuota\"\365]\n\014UserSetting" +
+      "s\0226\n\010readonly\030\001 \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\007\372\3071\0030-2\022-\n\tallow_ddl\030\002 \001(\0132\032.g" +
+      "oogle.protobuf.BoolValue\022A\n\035allow_intros" +
+      "pection_functions\030` \001(\0132\032.google.protobu" +
+      "f.BoolValue\022<\n\017connect_timeout\030\' \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\006\372\3071\002>0\022J\n\035con" +
+      "nect_timeout_with_failover\030a \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\006\372\3071\002>0\022<\n\017receive" +
+      "_timeout\030( \001(\0132\033.google.protobuf.Int64Va" +
+      "lueB\006\372\3071\002>0\0229\n\014send_timeout\030) \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\006\372\3071\002>0\022L\n\'timeou" +
+      "t_before_checking_execution_speed\030b \001(\0132" +
+      "\033.google.protobuf.Int64Value\022;\n\rinsert_q" +
+      "uorum\030\003 \001(\0132\033.google.protobuf.Int64Value" +
+      "B\007\372\3071\003>=0\022F\n\025insert_quorum_timeout\030\004 \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\n\372\3071\006>=100" +
+      "0\022:\n\026insert_quorum_parallel\030c \001(\0132\032.goog" +
+      "le.protobuf.BoolValue\022:\n\026insert_null_as_" +
+      "default\030d \001(\0132\032.google.protobuf.BoolValu" +
+      "e\022A\n\035select_sequential_consistency\030\005 \001(\013" +
+      "2\032.google.protobuf.BoolValue\022V\n2deduplic" +
+      "ate_blocks_in_dependent_materialized_vie" +
+      "ws\030e \001(\0132\032.google.protobuf.BoolValue\022O\n!" +
+      "replication_alter_partitions_sync\030* \001(\0132" +
+      "\033.google.protobuf.Int64ValueB\007\372\3071\0030-2\022Z\n" +
+      ")max_replica_delay_for_distributed_queri" +
+      "es\030\006 \001(\0132\033.google.protobuf.Int64ValueB\n\372" +
+      "\3071\006>=1000\022V\n2fallback_to_stale_replicas_" +
+      "for_distributed_queries\030\007 \001(\0132\032.google.p" +
+      "rotobuf.BoolValue\022e\n\030distributed_product" +
+      "_mode\030+ \001(\0162C.yandex.cloud.mdb.clickhous" +
+      "e.v1.UserSettings.DistributedProductMode" +
+      "\022L\n(distributed_aggregation_memory_effic" +
+      "ient\030H \001(\0132\032.google.protobuf.BoolValue\022A" +
+      "\n\034distributed_ddl_task_timeout\030I \001(\0132\033.g" +
+      "oogle.protobuf.Int64Value\022;\n\027skip_unavai" +
+      "lable_shards\030Q \001(\0132\032.google.protobuf.Boo" +
+      "lValue\0227\n\023compile_expressions\030. \001(\0132\032.go" +
+      "ogle.protobuf.BoolValue\022M\n\037min_count_to_" +
+      "compile_expression\030/ \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\007\372\3071\003>=0\022;\n\016max_block_size" +
+      "\030\t \001(\0132\033.google.protobuf.Int64ValueB\006\372\3071" +
+      "\002>0\022H\n\032min_insert_block_size_rows\0300 \001(\0132" +
+      "\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022I\n" +
+      "\033min_insert_block_size_bytes\0301 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\007\372\3071\003>=0\022B\n\025max_" +
+      "insert_block_size\030\n \001(\0132\033.google.protobu" +
+      "f.Int64ValueB\006\372\3071\002>0\022H\n\032min_bytes_to_use" +
+      "_direct_io\0302 \001(\0132\033.google.protobuf.Int64" +
+      "ValueB\007\372\3071\003>=0\022:\n\026use_uncompressed_cache" +
+      "\0303 \001(\0132\032.google.protobuf.BoolValue\022M\n me" +
+      "rge_tree_max_rows_to_use_cache\0304 \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\006\372\3071\002>0\022N\n!mer" +
+      "ge_tree_max_bytes_to_use_cache\0305 \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\006\372\3071\002>0\022T\n\'mer" +
+      "ge_tree_min_rows_for_concurrent_read\0306 \001" +
+      "(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>0\022" +
+      "U\n(merge_tree_min_bytes_for_concurrent_r" +
+      "ead\0307 \001(\0132\033.google.protobuf.Int64ValueB\006" +
+      "\372\3071\002>0\022G\n\"max_bytes_before_external_grou" +
+      "p_by\030J \001(\0132\033.google.protobuf.Int64Value\022" +
+      "C\n\036max_bytes_before_external_sort\030K \001(\0132" +
+      "\033.google.protobuf.Int64Value\022A\n\034group_by" +
+      "_two_level_threshold\030L \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022G\n\"group_by_two_level_th" +
+      "reshold_bytes\030M \001(\0132\033.google.protobuf.In" +
+      "t64Value\0226\n\010priority\0308 \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\007\372\3071\003>=0\0228\n\013max_threads\030" +
+      "\010 \001(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002" +
+      ">0\022>\n\020max_memory_usage\030\013 \001(\0132\033.google.pr" +
+      "otobuf.Int64ValueB\007\372\3071\003>=0\022G\n\031max_memory" +
+      "_usage_for_user\030\014 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\007\372\3071\003>=0\022:\n\025max_network_bandw" +
+      "idth\0309 \001(\0132\033.google.protobuf.Int64Value\022" +
+      "C\n\036max_network_bandwidth_for_user\030: \001(\0132" +
+      "\033.google.protobuf.Int64Value\022D\n\037max_part" +
+      "itions_per_insert_block\030f \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\022D\n\037max_concurrent_que" +
+      "ries_for_user\030g \001(\0132\033.google.protobuf.In" +
+      "t64Value\0227\n\023force_index_by_date\030; \001(\0132\032." +
+      "google.protobuf.BoolValue\0225\n\021force_prima" +
+      "ry_key\030< \001(\0132\032.google.protobuf.BoolValue" +
+      "\022>\n\020max_rows_to_read\030\r \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\007\372\3071\003>=0\022?\n\021max_bytes_to" +
+      "_read\030\016 \001(\0132\033.google.protobuf.Int64Value" +
+      "B\007\372\3071\003>=0\022U\n\022read_overflow_mode\030\017 \001(\01629." +
+      "yandex.cloud.mdb.clickhouse.v1.UserSetti" +
+      "ngs.OverflowMode\022B\n\024max_rows_to_group_by" +
+      "\030\020 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
+      "\003>=0\022`\n\026group_by_overflow_mode\030\021 \001(\0162@.y" +
+      "andex.cloud.mdb.clickhouse.v1.UserSettin" +
+      "gs.GroupByOverflowMode\022>\n\020max_rows_to_so" +
+      "rt\030\022 \001(\0132\033.google.protobuf.Int64ValueB\007\372" +
+      "\3071\003>=0\022?\n\021max_bytes_to_sort\030\023 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\007\372\3071\003>=0\022U\n\022sort_" +
+      "overflow_mode\030\024 \001(\01629.yandex.cloud.mdb.c" +
+      "lickhouse.v1.UserSettings.OverflowMode\022=" +
+      "\n\017max_result_rows\030\025 \001(\0132\033.google.protobu" +
+      "f.Int64ValueB\007\372\3071\003>=0\022>\n\020max_result_byte" +
+      "s\030\026 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
+      "1\003>=0\022W\n\024result_overflow_mode\030\027 \001(\01629.ya" +
+      "ndex.cloud.mdb.clickhouse.v1.UserSetting" +
+      "s.OverflowMode\022B\n\024max_rows_in_distinct\030\030" +
+      " \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>" +
+      "=0\022C\n\025max_bytes_in_distinct\030\031 \001(\0132\033.goog" +
+      "le.protobuf.Int64ValueB\007\372\3071\003>=0\022Y\n\026disti" +
+      "nct_overflow_mode\030\032 \001(\01629.yandex.cloud.m" +
       "db.clickhouse.v1.UserSettings.OverflowMo" +
-      "de\022R\n\016join_algorithm\030h \003(\0162:.yandex.clou" +
-      "d.mdb.clickhouse.v1.UserSettings.JoinAlg" +
-      "orithm\022F\n\"any_join_distinct_right_table_" +
-      "keys\030i \001(\0132\032.google.protobuf.BoolValue\022A" +
-      "\n\023max_columns_to_read\030  \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\007\372\3071\003>=0\022C\n\025max_tempora" +
-      "ry_columns\030! \001(\0132\033.google.protobuf.Int64" +
-      "ValueB\007\372\3071\003>=0\022M\n\037max_temporary_non_cons" +
-      "t_columns\030\" \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\007\372\3071\003>=0\022;\n\016max_query_size\030# \001(\0132\033." +
-      "google.protobuf.Int64ValueB\006\372\3071\002>0\022:\n\rma" +
-      "x_ast_depth\030$ \001(\0132\033.google.protobuf.Int6" +
-      "4ValueB\006\372\3071\002>0\022=\n\020max_ast_elements\030% \001(\013" +
-      "2\033.google.protobuf.Int64ValueB\006\372\3071\002>0\022F\n" +
-      "\031max_expanded_ast_elements\030& \001(\0132\033.googl" +
-      "e.protobuf.Int64ValueB\006\372\3071\002>0\022A\n\023min_exe" +
-      "cution_speed\030T \001(\0132\033.google.protobuf.Int" +
-      "64ValueB\007\372\3071\003>=0\022G\n\031min_execution_speed_" +
-      "bytes\030U \001(\0132\033.google.protobuf.Int64Value" +
-      "B\007\372\3071\003>=0\022o\n\035count_distinct_implementati" +
-      "on\030V \001(\0162H.yandex.cloud.mdb.clickhouse.v" +
-      "1.UserSettings.CountDistinctImplementati" +
-      "on\022M\n)input_format_values_interpret_expr" +
-      "essions\030= \001(\0132\032.google.protobuf.BoolValu" +
-      "e\022L\n(input_format_defaults_for_omitted_f" +
-      "ields\030> \001(\0132\032.google.protobuf.BoolValue\022" +
-      "@\n\034input_format_null_as_default\030j \001(\0132\032." +
-      "google.protobuf.BoolValue\022`\n\026date_time_i" +
-      "nput_format\030k \001(\0162@.yandex.cloud.mdb.cli" +
-      "ckhouse.v1.UserSettings.DateTimeInputFor" +
-      "mat\022F\n\"input_format_with_names_use_heade" +
-      "r\030l \001(\0132\032.google.protobuf.BoolValue\022p\n\'o" +
-      "utput_format_json_quote_64bit_integers\030?" +
-      " \001(\0132\032.google.protobuf.BoolValueR#output" +
-      "FormatJsonQuote_64bitIntegers\022F\n\"output_" +
-      "format_json_quote_denormals\030@ \001(\0132\032.goog" +
-      "le.protobuf.BoolValue\022b\n\027date_time_outpu" +
-      "t_format\030m \001(\0162A.yandex.cloud.mdb.clickh" +
-      "ouse.v1.UserSettings.DateTimeOutputForma" +
-      "t\022J\n&low_cardinality_allow_in_native_for" +
-      "mat\030N \001(\0132\032.google.protobuf.BoolValue\022J\n" +
-      "&allow_suspicious_low_cardinality_types\030" +
-      "n \001(\0132\032.google.protobuf.BoolValue\022M\n)emp" +
-      "ty_result_for_aggregation_by_empty_set\030O" +
-      " \001(\0132\032.google.protobuf.BoolValue\022<\n\027http" +
-      "_connection_timeout\030A \001(\0132\033.google.proto" +
-      "buf.Int64Value\0229\n\024http_receive_timeout\030B" +
-      " \001(\0132\033.google.protobuf.Int64Value\0226\n\021htt" +
-      "p_send_timeout\030C \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022;\n\027enable_http_compression\030D \001" +
-      "(\0132\032.google.protobuf.BoolValue\022A\n\035send_p" +
-      "rogress_in_http_headers\030E \001(\0132\032.google.p" +
-      "rotobuf.BoolValue\022C\n\036http_headers_progre" +
-      "ss_interval\030F \001(\0132\033.google.protobuf.Int6" +
-      "4Value\0228\n\024add_http_cors_header\030G \001(\0132\032.g" +
-      "oogle.protobuf.BoolValue\022P\n,cancel_http_" +
-      "readonly_queries_on_client_close\030o \001(\0132\032" +
-      ".google.protobuf.BoolValue\022;\n\026max_http_g" +
-      "et_redirects\030p \001(\0132\033.google.protobuf.Int" +
-      "64Value\022B\n\036joined_subquery_requires_alia" +
-      "s\030] \001(\0132\032.google.protobuf.BoolValue\0222\n\016j" +
-      "oin_use_nulls\030^ \001(\0132\032.google.protobuf.Bo" +
-      "olValue\0225\n\021transform_null_in\030_ \001(\0132\032.goo" +
-      "gle.protobuf.BoolValue\022J\n\nquota_mode\030P \001" +
-      "(\01626.yandex.cloud.mdb.clickhouse.v1.User" +
-      "Settings.QuotaMode\0222\n\016flatten_nested\030q \001" +
-      "(\0132\032.google.protobuf.BoolValue\022\025\n\rformat" +
-      "_regexp\030r \001(\t\022j\n\033format_regexp_escaping_" +
-      "rule\030s \001(\0162E.yandex.cloud.mdb.clickhouse" +
-      ".v1.UserSettings.FormatRegexpEscapingRul" +
-      "e\022@\n\034format_regexp_skip_unmatched\030t \001(\0132" +
-      "\032.google.protobuf.BoolValue\0220\n\014async_ins" +
-      "ert\030u \001(\0132\032.google.protobuf.BoolValue\0229\n" +
-      "\024async_insert_threads\030v \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\0229\n\025wait_for_async_inser" +
-      "t\030w \001(\0132\032.google.protobuf.BoolValue\022B\n\035w" +
-      "ait_for_async_insert_timeout\030x \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\022?\n\032async_insert_" +
-      "max_data_size\030y \001(\0132\033.google.protobuf.In" +
-      "t64Value\022>\n\031async_insert_busy_timeout\030z " +
-      "\001(\0132\033.google.protobuf.Int64Value\022?\n\032asyn" +
-      "c_insert_stale_timeout\030{ \001(\0132\033.google.pr" +
-      "otobuf.Int64Value\0229\n\024memory_profiler_ste" +
-      "p\030| \001(\0132\033.google.protobuf.Int64Value\022H\n\"" +
-      "memory_profiler_sample_probability\030} \001(\013" +
-      "2\034.google.protobuf.DoubleValue\022?\n\021max_fi" +
-      "nal_threads\030~ \001(\0132\033.google.protobuf.Int6" +
-      "4ValueB\007\372\3071\003>=0\022A\n\035input_format_parallel" +
-      "_parsing\030\177 \001(\0132\032.google.protobuf.BoolVal" +
-      "ue\022D\n\037input_format_import_nested_json\030\200\001" +
-      " \001(\0132\032.google.protobuf.BoolValue\022m\n\034loca" +
-      "l_filesystem_read_method\030\201\001 \001(\0162F.yandex" +
-      ".cloud.mdb.clickhouse.v1.UserSettings.Lo" +
-      "calFilesystemReadMethod\022B\n\024max_read_buff" +
-      "er_size\030\202\001 \001(\0132\033.google.protobuf.Int64Va" +
-      "lueB\006\372\3071\002>0\022H\n\031insert_keeper_max_retries" +
-      "\030\203\001 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
-      "1\003>=0\022W\n(max_temporary_data_on_disk_size" +
-      "_for_user\030\204\001 \001(\0132\033.google.protobuf.Int64" +
-      "ValueB\007\372\3071\003>=0\022X\n)max_temporary_data_on_" +
-      "disk_size_for_query\030\205\001 \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\007\372\3071\003>=0\022?\n\020max_parser_d" +
-      "epth\030\206\001 \001(\0132\033.google.protobuf.Int64Value" +
-      "B\007\372\3071\003>=0\022o\n\035remote_filesystem_read_meth" +
-      "od\030\207\001 \001(\0162G.yandex.cloud.mdb.clickhouse." +
-      "v1.UserSettings.RemoteFilesystemReadMeth" +
-      "od\022R\n#memory_overcommit_ratio_denominato" +
-      "r\030\210\001 \001(\0132\033.google.protobuf.Int64ValueB\007\372" +
-      "\3071\003>=0\022[\n,memory_overcommit_ratio_denomi" +
-      "nator_for_user\030\211\001 \001(\0132\033.google.protobuf." +
-      "Int64ValueB\007\372\3071\003>=0\022\\\n-memory_usage_over" +
-      "commit_max_wait_microseconds\030\212\001 \001(\0132\033.go" +
-      "ogle.protobuf.Int64ValueB\007\372\3071\003>=0\022/\n\007com" +
-      "pile\030, \001(\0132\032.google.protobuf.BoolValueB\002" +
-      "\030\001\022=\n\024min_count_to_compile\030- \001(\0132\033.googl" +
-      "e.protobuf.Int64ValueB\002\030\001\"_\n\014OverflowMod" +
-      "e\022\035\n\031OVERFLOW_MODE_UNSPECIFIED\020\000\022\027\n\023OVER" +
-      "FLOW_MODE_THROW\020\001\022\027\n\023OVERFLOW_MODE_BREAK" +
-      "\020\002\"\241\001\n\023GroupByOverflowMode\022&\n\"GROUP_BY_O" +
-      "VERFLOW_MODE_UNSPECIFIED\020\000\022 \n\034GROUP_BY_O" +
-      "VERFLOW_MODE_THROW\020\001\022 \n\034GROUP_BY_OVERFLO" +
-      "W_MODE_BREAK\020\002\022\036\n\032GROUP_BY_OVERFLOW_MODE" +
-      "_ANY\020\003\"\322\001\n\026DistributedProductMode\022(\n$DIS" +
-      "TRIBUTED_PRODUCT_MODE_UNSPECIFIED\020\000\022!\n\035D" +
-      "ISTRIBUTED_PRODUCT_MODE_DENY\020\001\022\"\n\036DISTRI" +
-      "BUTED_PRODUCT_MODE_LOCAL\020\002\022#\n\037DISTRIBUTE" +
-      "D_PRODUCT_MODE_GLOBAL\020\003\022\"\n\036DISTRIBUTED_P" +
-      "RODUCT_MODE_ALLOW\020\004\"q\n\tQuotaMode\022\032\n\026QUOT" +
-      "A_MODE_UNSPECIFIED\020\000\022\026\n\022QUOTA_MODE_DEFAU" +
-      "LT\020\001\022\024\n\020QUOTA_MODE_KEYED\020\002\022\032\n\026QUOTA_MODE" +
-      "_KEYED_BY_IP\020\003\"\266\002\n\033CountDistinctImplemen" +
-      "tation\022-\n)COUNT_DISTINCT_IMPLEMENTATION_" +
-      "UNSPECIFIED\020\000\022&\n\"COUNT_DISTINCT_IMPLEMEN" +
-      "TATION_UNIQ\020\001\022/\n+COUNT_DISTINCT_IMPLEMEN" +
-      "TATION_UNIQ_COMBINED\020\002\0222\n.COUNT_DISTINCT" +
-      "_IMPLEMENTATION_UNIQ_COMBINED_64\020\003\022-\n)CO" +
-      "UNT_DISTINCT_IMPLEMENTATION_UNIQ_HLL_12\020" +
-      "\004\022,\n(COUNT_DISTINCT_IMPLEMENTATION_UNIQ_" +
-      "EXACT\020\005\"\220\002\n\rJoinAlgorithm\022\036\n\032JOIN_ALGORI" +
-      "THM_UNSPECIFIED\020\000\022\027\n\023JOIN_ALGORITHM_HASH" +
-      "\020\001\022 \n\034JOIN_ALGORITHM_PARALLEL_HASH\020\002\022 \n\034" +
-      "JOIN_ALGORITHM_PARTIAL_MERGE\020\003\022\031\n\025JOIN_A" +
-      "LGORITHM_DIRECT\020\004\022\027\n\023JOIN_ALGORITHM_AUTO" +
-      "\020\005\022%\n!JOIN_ALGORITHM_FULL_SORTING_MERGE\020" +
-      "\006\022\'\n#JOIN_ALGORITHM_PREFER_PARTIAL_MERGE" +
-      "\020\007\"\255\002\n\030FormatRegexpEscapingRule\022+\n\'FORMA" +
-      "T_REGEXP_ESCAPING_RULE_UNSPECIFIED\020\000\022\'\n#" +
-      "FORMAT_REGEXP_ESCAPING_RULE_ESCAPED\020\001\022&\n" +
-      "\"FORMAT_REGEXP_ESCAPING_RULE_QUOTED\020\002\022#\n" +
-      "\037FORMAT_REGEXP_ESCAPING_RULE_CSV\020\003\022$\n FO" +
-      "RMAT_REGEXP_ESCAPING_RULE_JSON\020\004\022#\n\037FORM" +
-      "AT_REGEXP_ESCAPING_RULE_XML\020\005\022#\n\037FORMAT_" +
-      "REGEXP_ESCAPING_RULE_RAW\020\006\"\262\001\n\023DateTimeI" +
-      "nputFormat\022&\n\"DATE_TIME_INPUT_FORMAT_UNS" +
-      "PECIFIED\020\000\022&\n\"DATE_TIME_INPUT_FORMAT_BES" +
-      "T_EFFORT\020\001\022 \n\034DATE_TIME_INPUT_FORMAT_BAS" +
-      "IC\020\002\022)\n%DATE_TIME_INPUT_FORMAT_BEST_EFFO" +
-      "RT_US\020\003\"\260\001\n\024DateTimeOutputFormat\022\'\n#DATE" +
-      "_TIME_OUTPUT_FORMAT_UNSPECIFIED\020\000\022\"\n\036DAT" +
-      "E_TIME_OUTPUT_FORMAT_SIMPLE\020\001\022\037\n\033DATE_TI" +
-      "ME_OUTPUT_FORMAT_ISO\020\002\022*\n&DATE_TIME_OUTP" +
-      "UT_FORMAT_UNIX_TIMESTAMP\020\003\"\362\001\n\031LocalFile" +
-      "systemReadMethod\022,\n(LOCAL_FILESYSTEM_REA" +
-      "D_METHOD_UNSPECIFIED\020\000\022%\n!LOCAL_FILESYST" +
-      "EM_READ_METHOD_READ\020\001\0221\n-LOCAL_FILESYSTE" +
-      "M_READ_METHOD_PREAD_THREADPOOL\020\002\022&\n\"LOCA" +
-      "L_FILESYSTEM_READ_METHOD_PREAD\020\003\022%\n!LOCA" +
-      "L_FILESYSTEM_READ_METHOD_NMAP\020\004\"\241\001\n\032Remo" +
-      "teFilesystemReadMethod\022-\n)REMOTE_FILESYS" +
-      "TEM_READ_METHOD_UNSPECIFIED\020\000\022&\n\"REMOTE_" +
-      "FILESYSTEM_READ_METHOD_READ\020\001\022,\n(REMOTE_" +
-      "FILESYSTEM_READ_METHOD_THREADPOOL\020\002\"\356\002\n\t" +
-      "UserQuota\022B\n\021interval_duration\030\001 \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\n\372\3071\006>=1000\0225\n" +
-      "\007queries\030\002 \001(\0132\033.google.protobuf.Int64Va" +
-      "lueB\007\372\3071\003>=0\0224\n\006errors\030\003 \001(\0132\033.google.pr" +
-      "otobuf.Int64ValueB\007\372\3071\003>=0\0229\n\013result_row" +
-      "s\030\004 \001(\0132\033.google.protobuf.Int64ValueB\007\372\307" +
-      "1\003>=0\0227\n\tread_rows\030\005 \001(\0132\033.google.protob" +
-      "uf.Int64ValueB\007\372\3071\003>=0\022<\n\016execution_time" +
-      "\030\006 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
-      "\003>=0Bs\n\"yandex.cloud.api.mdb.clickhouse." +
-      "v1ZMgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/mdb/clickhouse/v1;clickhous" +
-      "eb\006proto3"
+      "de\022B\n\024max_rows_to_transfer\030\033 \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\007\372\3071\003>=0\022C\n\025max_by" +
+      "tes_to_transfer\030\034 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\007\372\3071\003>=0\022Y\n\026transfer_overflow" +
+      "_mode\030\035 \001(\01629.yandex.cloud.mdb.clickhous" +
+      "e.v1.UserSettings.OverflowMode\022@\n\022max_ex" +
+      "ecution_time\030\036 \001(\0132\033.google.protobuf.Int" +
+      "64ValueB\007\372\3071\003>=0\022X\n\025timeout_overflow_mod" +
+      "e\030\037 \001(\01629.yandex.cloud.mdb.clickhouse.v1" +
+      ".UserSettings.OverflowMode\022=\n\017max_rows_i" +
+      "n_set\030W \001(\0132\033.google.protobuf.Int64Value" +
+      "B\007\372\3071\003>=0\022>\n\020max_bytes_in_set\030X \001(\0132\033.go" +
+      "ogle.protobuf.Int64ValueB\007\372\3071\003>=0\022T\n\021set" +
+      "_overflow_mode\030Y \001(\01629.yandex.cloud.mdb." +
+      "clickhouse.v1.UserSettings.OverflowMode\022" +
+      ">\n\020max_rows_in_join\030Z \001(\0132\033.google.proto" +
+      "buf.Int64ValueB\007\372\3071\003>=0\022?\n\021max_bytes_in_" +
+      "join\030[ \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\007\372\3071\003>=0\022U\n\022join_overflow_mode\030\\ \001(\01629.y" +
+      "andex.cloud.mdb.clickhouse.v1.UserSettin" +
+      "gs.OverflowMode\022R\n\016join_algorithm\030h \003(\0162" +
+      ":.yandex.cloud.mdb.clickhouse.v1.UserSet" +
+      "tings.JoinAlgorithm\022F\n\"any_join_distinct" +
+      "_right_table_keys\030i \001(\0132\032.google.protobu" +
+      "f.BoolValue\022A\n\023max_columns_to_read\030  \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022C" +
+      "\n\025max_temporary_columns\030! \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueB\007\372\3071\003>=0\022M\n\037max_tempo" +
+      "rary_non_const_columns\030\" \001(\0132\033.google.pr" +
+      "otobuf.Int64ValueB\007\372\3071\003>=0\022;\n\016max_query_" +
+      "size\030# \001(\0132\033.google.protobuf.Int64ValueB" +
+      "\006\372\3071\002>0\022:\n\rmax_ast_depth\030$ \001(\0132\033.google." +
+      "protobuf.Int64ValueB\006\372\3071\002>0\022=\n\020max_ast_e" +
+      "lements\030% \001(\0132\033.google.protobuf.Int64Val" +
+      "ueB\006\372\3071\002>0\022F\n\031max_expanded_ast_elements\030" +
+      "& \001(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002" +
+      ">0\022A\n\023min_execution_speed\030T \001(\0132\033.google" +
+      ".protobuf.Int64ValueB\007\372\3071\003>=0\022G\n\031min_exe" +
+      "cution_speed_bytes\030U \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\007\372\3071\003>=0\022o\n\035count_distinct" +
+      "_implementation\030V \001(\0162H.yandex.cloud.mdb" +
+      ".clickhouse.v1.UserSettings.CountDistinc" +
+      "tImplementation\022M\n)input_format_values_i" +
+      "nterpret_expressions\030= \001(\0132\032.google.prot" +
+      "obuf.BoolValue\022L\n(input_format_defaults_" +
+      "for_omitted_fields\030> \001(\0132\032.google.protob" +
+      "uf.BoolValue\022@\n\034input_format_null_as_def" +
+      "ault\030j \001(\0132\032.google.protobuf.BoolValue\022`" +
+      "\n\026date_time_input_format\030k \001(\0162@.yandex." +
+      "cloud.mdb.clickhouse.v1.UserSettings.Dat" +
+      "eTimeInputFormat\022F\n\"input_format_with_na" +
+      "mes_use_header\030l \001(\0132\032.google.protobuf.B" +
+      "oolValue\022p\n\'output_format_json_quote_64b" +
+      "it_integers\030? \001(\0132\032.google.protobuf.Bool" +
+      "ValueR#outputFormatJsonQuote_64bitIntege" +
+      "rs\022F\n\"output_format_json_quote_denormals" +
+      "\030@ \001(\0132\032.google.protobuf.BoolValue\022b\n\027da" +
+      "te_time_output_format\030m \001(\0162A.yandex.clo" +
+      "ud.mdb.clickhouse.v1.UserSettings.DateTi" +
+      "meOutputFormat\022J\n&low_cardinality_allow_" +
+      "in_native_format\030N \001(\0132\032.google.protobuf" +
+      ".BoolValue\022J\n&allow_suspicious_low_cardi" +
+      "nality_types\030n \001(\0132\032.google.protobuf.Boo" +
+      "lValue\022M\n)empty_result_for_aggregation_b" +
+      "y_empty_set\030O \001(\0132\032.google.protobuf.Bool" +
+      "Value\022<\n\027http_connection_timeout\030A \001(\0132\033" +
+      ".google.protobuf.Int64Value\0229\n\024http_rece" +
+      "ive_timeout\030B \001(\0132\033.google.protobuf.Int6" +
+      "4Value\0226\n\021http_send_timeout\030C \001(\0132\033.goog" +
+      "le.protobuf.Int64Value\022;\n\027enable_http_co" +
+      "mpression\030D \001(\0132\032.google.protobuf.BoolVa" +
+      "lue\022A\n\035send_progress_in_http_headers\030E \001" +
+      "(\0132\032.google.protobuf.BoolValue\022C\n\036http_h" +
+      "eaders_progress_interval\030F \001(\0132\033.google." +
+      "protobuf.Int64Value\0228\n\024add_http_cors_hea" +
+      "der\030G \001(\0132\032.google.protobuf.BoolValue\022P\n" +
+      ",cancel_http_readonly_queries_on_client_" +
+      "close\030o \001(\0132\032.google.protobuf.BoolValue\022" +
+      ";\n\026max_http_get_redirects\030p \001(\0132\033.google" +
+      ".protobuf.Int64Value\022B\n\036joined_subquery_" +
+      "requires_alias\030] \001(\0132\032.google.protobuf.B" +
+      "oolValue\0222\n\016join_use_nulls\030^ \001(\0132\032.googl" +
+      "e.protobuf.BoolValue\0225\n\021transform_null_i" +
+      "n\030_ \001(\0132\032.google.protobuf.BoolValue\022J\n\nq" +
+      "uota_mode\030P \001(\01626.yandex.cloud.mdb.click" +
+      "house.v1.UserSettings.QuotaMode\0222\n\016flatt" +
+      "en_nested\030q \001(\0132\032.google.protobuf.BoolVa" +
+      "lue\022\025\n\rformat_regexp\030r \001(\t\022j\n\033format_reg" +
+      "exp_escaping_rule\030s \001(\0162E.yandex.cloud.m" +
+      "db.clickhouse.v1.UserSettings.FormatRege" +
+      "xpEscapingRule\022@\n\034format_regexp_skip_unm" +
+      "atched\030t \001(\0132\032.google.protobuf.BoolValue" +
+      "\0220\n\014async_insert\030u \001(\0132\032.google.protobuf" +
+      ".BoolValue\0229\n\024async_insert_threads\030v \001(\013" +
+      "2\033.google.protobuf.Int64Value\0229\n\025wait_fo" +
+      "r_async_insert\030w \001(\0132\032.google.protobuf.B" +
+      "oolValue\022B\n\035wait_for_async_insert_timeou" +
+      "t\030x \001(\0132\033.google.protobuf.Int64Value\022?\n\032" +
+      "async_insert_max_data_size\030y \001(\0132\033.googl" +
+      "e.protobuf.Int64Value\022>\n\031async_insert_bu" +
+      "sy_timeout\030z \001(\0132\033.google.protobuf.Int64" +
+      "Value\022?\n\032async_insert_stale_timeout\030{ \001(" +
+      "\0132\033.google.protobuf.Int64Value\0229\n\024memory" +
+      "_profiler_step\030| \001(\0132\033.google.protobuf.I" +
+      "nt64Value\022H\n\"memory_profiler_sample_prob" +
+      "ability\030} \001(\0132\034.google.protobuf.DoubleVa" +
+      "lue\022?\n\021max_final_threads\030~ \001(\0132\033.google." +
+      "protobuf.Int64ValueB\007\372\3071\003>=0\022A\n\035input_fo" +
+      "rmat_parallel_parsing\030\177 \001(\0132\032.google.pro" +
+      "tobuf.BoolValue\022D\n\037input_format_import_n" +
+      "ested_json\030\200\001 \001(\0132\032.google.protobuf.Bool" +
+      "Value\022m\n\034local_filesystem_read_method\030\201\001" +
+      " \001(\0162F.yandex.cloud.mdb.clickhouse.v1.Us" +
+      "erSettings.LocalFilesystemReadMethod\022B\n\024" +
+      "max_read_buffer_size\030\202\001 \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\006\372\3071\002>0\022H\n\031insert_keepe" +
+      "r_max_retries\030\203\001 \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\007\372\3071\003>=0\022W\n(max_temporary_data" +
+      "_on_disk_size_for_user\030\204\001 \001(\0132\033.google.p" +
+      "rotobuf.Int64ValueB\007\372\3071\003>=0\022X\n)max_tempo" +
+      "rary_data_on_disk_size_for_query\030\205\001 \001(\0132" +
+      "\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022?\n" +
+      "\020max_parser_depth\030\206\001 \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\007\372\3071\003>=0\022o\n\035remote_filesys" +
+      "tem_read_method\030\207\001 \001(\0162G.yandex.cloud.md" +
+      "b.clickhouse.v1.UserSettings.RemoteFiles" +
+      "ystemReadMethod\022R\n#memory_overcommit_rat" +
+      "io_denominator\030\210\001 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\007\372\3071\003>=0\022[\n,memory_overcommit" +
+      "_ratio_denominator_for_user\030\211\001 \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\007\372\3071\003>=0\022\\\n-memo" +
+      "ry_usage_overcommit_max_wait_microsecond" +
+      "s\030\212\001 \001(\0132\033.google.protobuf.Int64ValueB\007\372" +
+      "\3071\003>=0\022/\n\007compile\030, \001(\0132\032.google.protobu" +
+      "f.BoolValueB\002\030\001\022=\n\024min_count_to_compile\030" +
+      "- \001(\0132\033.google.protobuf.Int64ValueB\002\030\001\"_" +
+      "\n\014OverflowMode\022\035\n\031OVERFLOW_MODE_UNSPECIF" +
+      "IED\020\000\022\027\n\023OVERFLOW_MODE_THROW\020\001\022\027\n\023OVERFL" +
+      "OW_MODE_BREAK\020\002\"\241\001\n\023GroupByOverflowMode\022" +
+      "&\n\"GROUP_BY_OVERFLOW_MODE_UNSPECIFIED\020\000\022" +
+      " \n\034GROUP_BY_OVERFLOW_MODE_THROW\020\001\022 \n\034GRO" +
+      "UP_BY_OVERFLOW_MODE_BREAK\020\002\022\036\n\032GROUP_BY_" +
+      "OVERFLOW_MODE_ANY\020\003\"\322\001\n\026DistributedProdu" +
+      "ctMode\022(\n$DISTRIBUTED_PRODUCT_MODE_UNSPE" +
+      "CIFIED\020\000\022!\n\035DISTRIBUTED_PRODUCT_MODE_DEN" +
+      "Y\020\001\022\"\n\036DISTRIBUTED_PRODUCT_MODE_LOCAL\020\002\022" +
+      "#\n\037DISTRIBUTED_PRODUCT_MODE_GLOBAL\020\003\022\"\n\036" +
+      "DISTRIBUTED_PRODUCT_MODE_ALLOW\020\004\"q\n\tQuot" +
+      "aMode\022\032\n\026QUOTA_MODE_UNSPECIFIED\020\000\022\026\n\022QUO" +
+      "TA_MODE_DEFAULT\020\001\022\024\n\020QUOTA_MODE_KEYED\020\002\022" +
+      "\032\n\026QUOTA_MODE_KEYED_BY_IP\020\003\"\266\002\n\033CountDis" +
+      "tinctImplementation\022-\n)COUNT_DISTINCT_IM" +
+      "PLEMENTATION_UNSPECIFIED\020\000\022&\n\"COUNT_DIST" +
+      "INCT_IMPLEMENTATION_UNIQ\020\001\022/\n+COUNT_DIST" +
+      "INCT_IMPLEMENTATION_UNIQ_COMBINED\020\002\0222\n.C" +
+      "OUNT_DISTINCT_IMPLEMENTATION_UNIQ_COMBIN" +
+      "ED_64\020\003\022-\n)COUNT_DISTINCT_IMPLEMENTATION" +
+      "_UNIQ_HLL_12\020\004\022,\n(COUNT_DISTINCT_IMPLEME" +
+      "NTATION_UNIQ_EXACT\020\005\"\220\002\n\rJoinAlgorithm\022\036" +
+      "\n\032JOIN_ALGORITHM_UNSPECIFIED\020\000\022\027\n\023JOIN_A" +
+      "LGORITHM_HASH\020\001\022 \n\034JOIN_ALGORITHM_PARALL" +
+      "EL_HASH\020\002\022 \n\034JOIN_ALGORITHM_PARTIAL_MERG" +
+      "E\020\003\022\031\n\025JOIN_ALGORITHM_DIRECT\020\004\022\027\n\023JOIN_A" +
+      "LGORITHM_AUTO\020\005\022%\n!JOIN_ALGORITHM_FULL_S" +
+      "ORTING_MERGE\020\006\022\'\n#JOIN_ALGORITHM_PREFER_" +
+      "PARTIAL_MERGE\020\007\"\255\002\n\030FormatRegexpEscaping" +
+      "Rule\022+\n\'FORMAT_REGEXP_ESCAPING_RULE_UNSP" +
+      "ECIFIED\020\000\022\'\n#FORMAT_REGEXP_ESCAPING_RULE" +
+      "_ESCAPED\020\001\022&\n\"FORMAT_REGEXP_ESCAPING_RUL" +
+      "E_QUOTED\020\002\022#\n\037FORMAT_REGEXP_ESCAPING_RUL" +
+      "E_CSV\020\003\022$\n FORMAT_REGEXP_ESCAPING_RULE_J" +
+      "SON\020\004\022#\n\037FORMAT_REGEXP_ESCAPING_RULE_XML" +
+      "\020\005\022#\n\037FORMAT_REGEXP_ESCAPING_RULE_RAW\020\006\"" +
+      "\262\001\n\023DateTimeInputFormat\022&\n\"DATE_TIME_INP" +
+      "UT_FORMAT_UNSPECIFIED\020\000\022&\n\"DATE_TIME_INP" +
+      "UT_FORMAT_BEST_EFFORT\020\001\022 \n\034DATE_TIME_INP" +
+      "UT_FORMAT_BASIC\020\002\022)\n%DATE_TIME_INPUT_FOR" +
+      "MAT_BEST_EFFORT_US\020\003\"\260\001\n\024DateTimeOutputF" +
+      "ormat\022\'\n#DATE_TIME_OUTPUT_FORMAT_UNSPECI" +
+      "FIED\020\000\022\"\n\036DATE_TIME_OUTPUT_FORMAT_SIMPLE" +
+      "\020\001\022\037\n\033DATE_TIME_OUTPUT_FORMAT_ISO\020\002\022*\n&D" +
+      "ATE_TIME_OUTPUT_FORMAT_UNIX_TIMESTAMP\020\003\"" +
+      "\362\001\n\031LocalFilesystemReadMethod\022,\n(LOCAL_F" +
+      "ILESYSTEM_READ_METHOD_UNSPECIFIED\020\000\022%\n!L" +
+      "OCAL_FILESYSTEM_READ_METHOD_READ\020\001\0221\n-LO" +
+      "CAL_FILESYSTEM_READ_METHOD_PREAD_THREADP" +
+      "OOL\020\002\022&\n\"LOCAL_FILESYSTEM_READ_METHOD_PR" +
+      "EAD\020\003\022%\n!LOCAL_FILESYSTEM_READ_METHOD_NM" +
+      "AP\020\004\"\241\001\n\032RemoteFilesystemReadMethod\022-\n)R" +
+      "EMOTE_FILESYSTEM_READ_METHOD_UNSPECIFIED" +
+      "\020\000\022&\n\"REMOTE_FILESYSTEM_READ_METHOD_READ" +
+      "\020\001\022,\n(REMOTE_FILESYSTEM_READ_METHOD_THRE" +
+      "ADPOOL\020\002\"\356\002\n\tUserQuota\022B\n\021interval_durat" +
+      "ion\030\001 \001(\0132\033.google.protobuf.Int64ValueB\n" +
+      "\372\3071\006>=1000\0225\n\007queries\030\002 \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\007\372\3071\003>=0\0224\n\006errors\030\003 \001(" +
+      "\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\022" +
+      "9\n\013result_rows\030\004 \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\007\372\3071\003>=0\0227\n\tread_rows\030\005 \001(\0132\033." +
+      "google.protobuf.Int64ValueB\007\372\3071\003>=0\022<\n\016e" +
+      "xecution_time\030\006 \001(\0132\033.google.protobuf.In" +
+      "t64ValueB\007\372\3071\003>=0Bs\n\"yandex.cloud.api.md" +
+      "b.clickhouse.v1ZMgithub.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/mdb/clickhouse" +
+      "/v1;clickhouseb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

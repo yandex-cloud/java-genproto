@@ -508,6 +508,33 @@ public final class Clickhouse {
 
     /**
      * <pre>
+     * Enable or disable geobase.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+     * @return Whether the geobaseEnabled field is set.
+     */
+    boolean hasGeobaseEnabled();
+    /**
+     * <pre>
+     * Enable or disable geobase.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+     * @return The geobaseEnabled.
+     */
+    com.google.protobuf.BoolValue getGeobaseEnabled();
+    /**
+     * <pre>
+     * Enable or disable geobase.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getGeobaseEnabledOrBuilder();
+
+    /**
+     * <pre>
      * Address of the archive with the user geobase in Object Storage.
      * </pre>
      *
@@ -1014,19 +1041,529 @@ public final class Clickhouse {
     yandex.cloud.api.mdb.clickhouse.v1.config.Clickhouse.ClickhouseConfig.LogLevel getTextLogLevel();
 
     /**
+     * <pre>
+     * Enable or disable opentelemetry_span_log system table. Default value: false.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue opentelemetry_span_log_enabled = 42;</code>
      * @return Whether the opentelemetrySpanLogEnabled field is set.
      */
     boolean hasOpentelemetrySpanLogEnabled();
     /**
+     * <pre>
+     * Enable or disable opentelemetry_span_log system table. Default value: false.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue opentelemetry_span_log_enabled = 42;</code>
      * @return The opentelemetrySpanLogEnabled.
      */
     com.google.protobuf.BoolValue getOpentelemetrySpanLogEnabled();
     /**
+     * <pre>
+     * Enable or disable opentelemetry_span_log system table. Default value: false.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue opentelemetry_span_log_enabled = 42;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getOpentelemetrySpanLogEnabledOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum size that opentelemetry_span_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of opentelemetry_span_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the opentelemetrySpanLogRetentionSize field is set.
+     */
+    boolean hasOpentelemetrySpanLogRetentionSize();
+    /**
+     * <pre>
+     * The maximum size that opentelemetry_span_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of opentelemetry_span_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The opentelemetrySpanLogRetentionSize.
+     */
+    com.google.protobuf.Int64Value getOpentelemetrySpanLogRetentionSize();
+    /**
+     * <pre>
+     * The maximum size that opentelemetry_span_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of opentelemetry_span_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getOpentelemetrySpanLogRetentionSizeOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum time that opentelemetry_span_log records will be retained before removal. If set to 0,
+     * automatic removal of opentelemetry_span_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the opentelemetrySpanLogRetentionTime field is set.
+     */
+    boolean hasOpentelemetrySpanLogRetentionTime();
+    /**
+     * <pre>
+     * The maximum time that opentelemetry_span_log records will be retained before removal. If set to 0,
+     * automatic removal of opentelemetry_span_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The opentelemetrySpanLogRetentionTime.
+     */
+    com.google.protobuf.Int64Value getOpentelemetrySpanLogRetentionTime();
+    /**
+     * <pre>
+     * The maximum time that opentelemetry_span_log records will be retained before removal. If set to 0,
+     * automatic removal of opentelemetry_span_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getOpentelemetrySpanLogRetentionTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Enable or disable query_views_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+     * @return Whether the queryViewsLogEnabled field is set.
+     */
+    boolean hasQueryViewsLogEnabled();
+    /**
+     * <pre>
+     * Enable or disable query_views_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+     * @return The queryViewsLogEnabled.
+     */
+    com.google.protobuf.BoolValue getQueryViewsLogEnabled();
+    /**
+     * <pre>
+     * Enable or disable query_views_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getQueryViewsLogEnabledOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum size that query_views_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of query_views_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the queryViewsLogRetentionSize field is set.
+     */
+    boolean hasQueryViewsLogRetentionSize();
+    /**
+     * <pre>
+     * The maximum size that query_views_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of query_views_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The queryViewsLogRetentionSize.
+     */
+    com.google.protobuf.Int64Value getQueryViewsLogRetentionSize();
+    /**
+     * <pre>
+     * The maximum size that query_views_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of query_views_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getQueryViewsLogRetentionSizeOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum time that query_views_log records will be retained before removal. If set to 0,
+     * automatic removal of query_views_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the queryViewsLogRetentionTime field is set.
+     */
+    boolean hasQueryViewsLogRetentionTime();
+    /**
+     * <pre>
+     * The maximum time that query_views_log records will be retained before removal. If set to 0,
+     * automatic removal of query_views_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The queryViewsLogRetentionTime.
+     */
+    com.google.protobuf.Int64Value getQueryViewsLogRetentionTime();
+    /**
+     * <pre>
+     * The maximum time that query_views_log records will be retained before removal. If set to 0,
+     * automatic removal of query_views_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getQueryViewsLogRetentionTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Enable or disable asynchronous_metric_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+     * @return Whether the asynchronousMetricLogEnabled field is set.
+     */
+    boolean hasAsynchronousMetricLogEnabled();
+    /**
+     * <pre>
+     * Enable or disable asynchronous_metric_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+     * @return The asynchronousMetricLogEnabled.
+     */
+    com.google.protobuf.BoolValue getAsynchronousMetricLogEnabled();
+    /**
+     * <pre>
+     * Enable or disable asynchronous_metric_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getAsynchronousMetricLogEnabledOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum size that asynchronous_metric_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of asynchronous_metric_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the asynchronousMetricLogRetentionSize field is set.
+     */
+    boolean hasAsynchronousMetricLogRetentionSize();
+    /**
+     * <pre>
+     * The maximum size that asynchronous_metric_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of asynchronous_metric_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The asynchronousMetricLogRetentionSize.
+     */
+    com.google.protobuf.Int64Value getAsynchronousMetricLogRetentionSize();
+    /**
+     * <pre>
+     * The maximum size that asynchronous_metric_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of asynchronous_metric_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getAsynchronousMetricLogRetentionSizeOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum time that asynchronous_metric_log records will be retained before removal. If set to 0,
+     * automatic removal of asynchronous_metric_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the asynchronousMetricLogRetentionTime field is set.
+     */
+    boolean hasAsynchronousMetricLogRetentionTime();
+    /**
+     * <pre>
+     * The maximum time that asynchronous_metric_log records will be retained before removal. If set to 0,
+     * automatic removal of asynchronous_metric_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The asynchronousMetricLogRetentionTime.
+     */
+    com.google.protobuf.Int64Value getAsynchronousMetricLogRetentionTime();
+    /**
+     * <pre>
+     * The maximum time that asynchronous_metric_log records will be retained before removal. If set to 0,
+     * automatic removal of asynchronous_metric_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getAsynchronousMetricLogRetentionTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Enable or disable session_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+     * @return Whether the sessionLogEnabled field is set.
+     */
+    boolean hasSessionLogEnabled();
+    /**
+     * <pre>
+     * Enable or disable session_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+     * @return The sessionLogEnabled.
+     */
+    com.google.protobuf.BoolValue getSessionLogEnabled();
+    /**
+     * <pre>
+     * Enable or disable session_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getSessionLogEnabledOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum size that session_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of session_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the sessionLogRetentionSize field is set.
+     */
+    boolean hasSessionLogRetentionSize();
+    /**
+     * <pre>
+     * The maximum size that session_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of session_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The sessionLogRetentionSize.
+     */
+    com.google.protobuf.Int64Value getSessionLogRetentionSize();
+    /**
+     * <pre>
+     * The maximum size that session_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of session_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSessionLogRetentionSizeOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum time that session_log records will be retained before removal. If set to 0,
+     * automatic removal of session_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the sessionLogRetentionTime field is set.
+     */
+    boolean hasSessionLogRetentionTime();
+    /**
+     * <pre>
+     * The maximum time that session_log records will be retained before removal. If set to 0,
+     * automatic removal of session_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The sessionLogRetentionTime.
+     */
+    com.google.protobuf.Int64Value getSessionLogRetentionTime();
+    /**
+     * <pre>
+     * The maximum time that session_log records will be retained before removal. If set to 0,
+     * automatic removal of session_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSessionLogRetentionTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Enable or disable zookeeper_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+     * @return Whether the zookeeperLogEnabled field is set.
+     */
+    boolean hasZookeeperLogEnabled();
+    /**
+     * <pre>
+     * Enable or disable zookeeper_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+     * @return The zookeeperLogEnabled.
+     */
+    com.google.protobuf.BoolValue getZookeeperLogEnabled();
+    /**
+     * <pre>
+     * Enable or disable zookeeper_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getZookeeperLogEnabledOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum size that zookeeper_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of zookeeper_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the zookeeperLogRetentionSize field is set.
+     */
+    boolean hasZookeeperLogRetentionSize();
+    /**
+     * <pre>
+     * The maximum size that zookeeper_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of zookeeper_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The zookeeperLogRetentionSize.
+     */
+    com.google.protobuf.Int64Value getZookeeperLogRetentionSize();
+    /**
+     * <pre>
+     * The maximum size that zookeeper_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of zookeeper_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getZookeeperLogRetentionSizeOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum time that zookeeper_log records will be retained before removal. If set to 0,
+     * automatic removal of zookeeper_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the zookeeperLogRetentionTime field is set.
+     */
+    boolean hasZookeeperLogRetentionTime();
+    /**
+     * <pre>
+     * The maximum time that zookeeper_log records will be retained before removal. If set to 0,
+     * automatic removal of zookeeper_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The zookeeperLogRetentionTime.
+     */
+    com.google.protobuf.Int64Value getZookeeperLogRetentionTime();
+    /**
+     * <pre>
+     * The maximum time that zookeeper_log records will be retained before removal. If set to 0,
+     * automatic removal of zookeeper_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getZookeeperLogRetentionTimeOrBuilder();
+
+    /**
+     * <pre>
+     * Enable or disable asynchronous_insert_log system table. Default value: false.
+     * Minimal required ClickHouse version: 22.10.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+     * @return Whether the asynchronousInsertLogEnabled field is set.
+     */
+    boolean hasAsynchronousInsertLogEnabled();
+    /**
+     * <pre>
+     * Enable or disable asynchronous_insert_log system table. Default value: false.
+     * Minimal required ClickHouse version: 22.10.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+     * @return The asynchronousInsertLogEnabled.
+     */
+    com.google.protobuf.BoolValue getAsynchronousInsertLogEnabled();
+    /**
+     * <pre>
+     * Enable or disable asynchronous_insert_log system table. Default value: false.
+     * Minimal required ClickHouse version: 22.10.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getAsynchronousInsertLogEnabledOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum size that asynchronous_insert_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of asynchronous_insert_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the asynchronousInsertLogRetentionSize field is set.
+     */
+    boolean hasAsynchronousInsertLogRetentionSize();
+    /**
+     * <pre>
+     * The maximum size that asynchronous_insert_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of asynchronous_insert_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The asynchronousInsertLogRetentionSize.
+     */
+    com.google.protobuf.Int64Value getAsynchronousInsertLogRetentionSize();
+    /**
+     * <pre>
+     * The maximum size that asynchronous_insert_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of asynchronous_insert_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getAsynchronousInsertLogRetentionSizeOrBuilder();
+
+    /**
+     * <pre>
+     * The maximum time that asynchronous_insert_log records will be retained before removal. If set to 0,
+     * automatic removal of asynchronous_insert_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the asynchronousInsertLogRetentionTime field is set.
+     */
+    boolean hasAsynchronousInsertLogRetentionTime();
+    /**
+     * <pre>
+     * The maximum time that asynchronous_insert_log records will be retained before removal. If set to 0,
+     * automatic removal of asynchronous_insert_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The asynchronousInsertLogRetentionTime.
+     */
+    com.google.protobuf.Int64Value getAsynchronousInsertLogRetentionTime();
+    /**
+     * <pre>
+     * The maximum time that asynchronous_insert_log records will be retained before removal. If set to 0,
+     * automatic removal of asynchronous_insert_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getAsynchronousInsertLogRetentionTimeOrBuilder();
 
     /**
      * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -1042,6 +1579,39 @@ public final class Clickhouse {
      * <code>.google.protobuf.Int64Value background_pool_size = 33 [(.yandex.cloud.value) = "&gt;0"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getBackgroundPoolSizeOrBuilder();
+
+    /**
+     * <pre>
+     * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+     * Default: 2
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the backgroundMergesMutationsConcurrencyRatio field is set.
+     */
+    boolean hasBackgroundMergesMutationsConcurrencyRatio();
+    /**
+     * <pre>
+     * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+     * Default: 2
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The backgroundMergesMutationsConcurrencyRatio.
+     */
+    com.google.protobuf.Int64Value getBackgroundMergesMutationsConcurrencyRatio();
+    /**
+     * <pre>
+     * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+     * Default: 2
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getBackgroundMergesMutationsConcurrencyRatioOrBuilder();
 
     /**
      * <code>.google.protobuf.Int64Value background_schedule_pool_size = 34 [(.yandex.cloud.value) = "&gt;0"];</code>
@@ -1150,6 +1720,39 @@ public final class Clickhouse {
 
     /**
      * <pre>
+     * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+     * Default: 8
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the backgroundCommonPoolSize field is set.
+     */
+    boolean hasBackgroundCommonPoolSize();
+    /**
+     * <pre>
+     * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+     * Default: 8
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The backgroundCommonPoolSize.
+     */
+    com.google.protobuf.Int64Value getBackgroundCommonPoolSize();
+    /**
+     * <pre>
+     * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+     * Default: 8
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getBackgroundCommonPoolSizeOrBuilder();
+
+    /**
+     * <pre>
      * The default database.
      * To get a list of cluster databases, see [Yandex Managed ClickHouse documentation](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/databases#list-db).
      * </pre>
@@ -1222,498 +1825,6 @@ public final class Clickhouse {
      * <code>.google.protobuf.DoubleValue total_memory_tracker_sample_probability = 45;</code>
      */
     com.google.protobuf.DoubleValueOrBuilder getTotalMemoryTrackerSampleProbabilityOrBuilder();
-
-    /**
-     * <pre>
-     * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
-     * Default: 8
-     * Min version: 21.11
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
-     * @return Whether the backgroundCommonPoolSize field is set.
-     */
-    boolean hasBackgroundCommonPoolSize();
-    /**
-     * <pre>
-     * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
-     * Default: 8
-     * Min version: 21.11
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
-     * @return The backgroundCommonPoolSize.
-     */
-    com.google.protobuf.Int64Value getBackgroundCommonPoolSize();
-    /**
-     * <pre>
-     * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
-     * Default: 8
-     * Min version: 21.11
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
-     */
-    com.google.protobuf.Int64ValueOrBuilder getBackgroundCommonPoolSizeOrBuilder();
-
-    /**
-     * <pre>
-     * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
-     * Default: 2
-     * Min_version: 21.11
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
-     * @return Whether the backgroundMergesMutationsConcurrencyRatio field is set.
-     */
-    boolean hasBackgroundMergesMutationsConcurrencyRatio();
-    /**
-     * <pre>
-     * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
-     * Default: 2
-     * Min_version: 21.11
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
-     * @return The backgroundMergesMutationsConcurrencyRatio.
-     */
-    com.google.protobuf.Int64Value getBackgroundMergesMutationsConcurrencyRatio();
-    /**
-     * <pre>
-     * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
-     * Default: 2
-     * Min_version: 21.11
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
-     */
-    com.google.protobuf.Int64ValueOrBuilder getBackgroundMergesMutationsConcurrencyRatioOrBuilder();
-
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 21.9
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
-     * @return Whether the queryViewsLogEnabled field is set.
-     */
-    boolean hasQueryViewsLogEnabled();
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 21.9
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
-     * @return The queryViewsLogEnabled.
-     */
-    com.google.protobuf.BoolValue getQueryViewsLogEnabled();
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 21.9
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
-     */
-    com.google.protobuf.BoolValueOrBuilder getQueryViewsLogEnabledOrBuilder();
-
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the queryViewsLogRetentionSize field is set.
-     */
-    boolean hasQueryViewsLogRetentionSize();
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The queryViewsLogRetentionSize.
-     */
-    com.google.protobuf.Int64Value getQueryViewsLogRetentionSize();
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    com.google.protobuf.Int64ValueOrBuilder getQueryViewsLogRetentionSizeOrBuilder();
-
-    /**
-     * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the queryViewsLogRetentionTime field is set.
-     */
-    boolean hasQueryViewsLogRetentionTime();
-    /**
-     * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The queryViewsLogRetentionTime.
-     */
-    com.google.protobuf.Int64Value getQueryViewsLogRetentionTime();
-    /**
-     * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    com.google.protobuf.Int64ValueOrBuilder getQueryViewsLogRetentionTimeOrBuilder();
-
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 20.11
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
-     * @return Whether the asynchronousMetricLogEnabled field is set.
-     */
-    boolean hasAsynchronousMetricLogEnabled();
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 20.11
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
-     * @return The asynchronousMetricLogEnabled.
-     */
-    com.google.protobuf.BoolValue getAsynchronousMetricLogEnabled();
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 20.11
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
-     */
-    com.google.protobuf.BoolValueOrBuilder getAsynchronousMetricLogEnabledOrBuilder();
-
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the asynchronousMetricLogRetentionSize field is set.
-     */
-    boolean hasAsynchronousMetricLogRetentionSize();
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The asynchronousMetricLogRetentionSize.
-     */
-    com.google.protobuf.Int64Value getAsynchronousMetricLogRetentionSize();
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    com.google.protobuf.Int64ValueOrBuilder getAsynchronousMetricLogRetentionSizeOrBuilder();
-
-    /**
-     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the asynchronousMetricLogRetentionTime field is set.
-     */
-    boolean hasAsynchronousMetricLogRetentionTime();
-    /**
-     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The asynchronousMetricLogRetentionTime.
-     */
-    com.google.protobuf.Int64Value getAsynchronousMetricLogRetentionTime();
-    /**
-     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    com.google.protobuf.Int64ValueOrBuilder getAsynchronousMetricLogRetentionTimeOrBuilder();
-
-    /**
-     * <pre>
-     * Default: 0
-     * Min version: 20.11
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the opentelemetrySpanLogRetentionSize field is set.
-     */
-    boolean hasOpentelemetrySpanLogRetentionSize();
-    /**
-     * <pre>
-     * Default: 0
-     * Min version: 20.11
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The opentelemetrySpanLogRetentionSize.
-     */
-    com.google.protobuf.Int64Value getOpentelemetrySpanLogRetentionSize();
-    /**
-     * <pre>
-     * Default: 0
-     * Min version: 20.11
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    com.google.protobuf.Int64ValueOrBuilder getOpentelemetrySpanLogRetentionSizeOrBuilder();
-
-    /**
-     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the opentelemetrySpanLogRetentionTime field is set.
-     */
-    boolean hasOpentelemetrySpanLogRetentionTime();
-    /**
-     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The opentelemetrySpanLogRetentionTime.
-     */
-    com.google.protobuf.Int64Value getOpentelemetrySpanLogRetentionTime();
-    /**
-     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    com.google.protobuf.Int64ValueOrBuilder getOpentelemetrySpanLogRetentionTimeOrBuilder();
-
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 21.11
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
-     * @return Whether the sessionLogEnabled field is set.
-     */
-    boolean hasSessionLogEnabled();
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 21.11
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
-     * @return The sessionLogEnabled.
-     */
-    com.google.protobuf.BoolValue getSessionLogEnabled();
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 21.11
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
-     */
-    com.google.protobuf.BoolValueOrBuilder getSessionLogEnabledOrBuilder();
-
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the sessionLogRetentionSize field is set.
-     */
-    boolean hasSessionLogRetentionSize();
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The sessionLogRetentionSize.
-     */
-    com.google.protobuf.Int64Value getSessionLogRetentionSize();
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    com.google.protobuf.Int64ValueOrBuilder getSessionLogRetentionSizeOrBuilder();
-
-    /**
-     * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the sessionLogRetentionTime field is set.
-     */
-    boolean hasSessionLogRetentionTime();
-    /**
-     * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The sessionLogRetentionTime.
-     */
-    com.google.protobuf.Int64Value getSessionLogRetentionTime();
-    /**
-     * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    com.google.protobuf.Int64ValueOrBuilder getSessionLogRetentionTimeOrBuilder();
-
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 21.9
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
-     * @return Whether the zookeeperLogEnabled field is set.
-     */
-    boolean hasZookeeperLogEnabled();
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 21.9
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
-     * @return The zookeeperLogEnabled.
-     */
-    com.google.protobuf.BoolValue getZookeeperLogEnabled();
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 21.9
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
-     */
-    com.google.protobuf.BoolValueOrBuilder getZookeeperLogEnabledOrBuilder();
-
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the zookeeperLogRetentionSize field is set.
-     */
-    boolean hasZookeeperLogRetentionSize();
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The zookeeperLogRetentionSize.
-     */
-    com.google.protobuf.Int64Value getZookeeperLogRetentionSize();
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    com.google.protobuf.Int64ValueOrBuilder getZookeeperLogRetentionSizeOrBuilder();
-
-    /**
-     * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the zookeeperLogRetentionTime field is set.
-     */
-    boolean hasZookeeperLogRetentionTime();
-    /**
-     * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The zookeeperLogRetentionTime.
-     */
-    com.google.protobuf.Int64Value getZookeeperLogRetentionTime();
-    /**
-     * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    com.google.protobuf.Int64ValueOrBuilder getZookeeperLogRetentionTimeOrBuilder();
-
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 22.10
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
-     * @return Whether the asynchronousInsertLogEnabled field is set.
-     */
-    boolean hasAsynchronousInsertLogEnabled();
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 22.10
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
-     * @return The asynchronousInsertLogEnabled.
-     */
-    com.google.protobuf.BoolValue getAsynchronousInsertLogEnabled();
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 22.10
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
-     */
-    com.google.protobuf.BoolValueOrBuilder getAsynchronousInsertLogEnabledOrBuilder();
-
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the asynchronousInsertLogRetentionSize field is set.
-     */
-    boolean hasAsynchronousInsertLogRetentionSize();
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The asynchronousInsertLogRetentionSize.
-     */
-    com.google.protobuf.Int64Value getAsynchronousInsertLogRetentionSize();
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    com.google.protobuf.Int64ValueOrBuilder getAsynchronousInsertLogRetentionSizeOrBuilder();
-
-    /**
-     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the asynchronousInsertLogRetentionTime field is set.
-     */
-    boolean hasAsynchronousInsertLogRetentionTime();
-    /**
-     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The asynchronousInsertLogRetentionTime.
-     */
-    com.google.protobuf.Int64Value getAsynchronousInsertLogRetentionTime();
-    /**
-     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    com.google.protobuf.Int64ValueOrBuilder getAsynchronousInsertLogRetentionTimeOrBuilder();
-
-    /**
-     * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
-     * @return Whether the geobaseEnabled field is set.
-     */
-    boolean hasGeobaseEnabled();
-    /**
-     * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
-     * @return The geobaseEnabled.
-     */
-    com.google.protobuf.BoolValue getGeobaseEnabled();
-    /**
-     * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
-     */
-    com.google.protobuf.BoolValueOrBuilder getGeobaseEnabledOrBuilder();
   }
   /**
    * <pre>
@@ -36418,6 +36529,44 @@ public final class Clickhouse {
       }
     }
 
+    public static final int GEOBASE_ENABLED_FIELD_NUMBER = 66;
+    private com.google.protobuf.BoolValue geobaseEnabled_;
+    /**
+     * <pre>
+     * Enable or disable geobase.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+     * @return Whether the geobaseEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasGeobaseEnabled() {
+      return geobaseEnabled_ != null;
+    }
+    /**
+     * <pre>
+     * Enable or disable geobase.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+     * @return The geobaseEnabled.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getGeobaseEnabled() {
+      return geobaseEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : geobaseEnabled_;
+    }
+    /**
+     * <pre>
+     * Enable or disable geobase.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getGeobaseEnabledOrBuilder() {
+      return getGeobaseEnabled();
+    }
+
     public static final int GEOBASE_URI_FIELD_NUMBER = 15;
     private volatile java.lang.Object geobaseUri_;
     /**
@@ -37138,6 +37287,10 @@ public final class Clickhouse {
     public static final int OPENTELEMETRY_SPAN_LOG_ENABLED_FIELD_NUMBER = 42;
     private com.google.protobuf.BoolValue opentelemetrySpanLogEnabled_;
     /**
+     * <pre>
+     * Enable or disable opentelemetry_span_log system table. Default value: false.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue opentelemetry_span_log_enabled = 42;</code>
      * @return Whether the opentelemetrySpanLogEnabled field is set.
      */
@@ -37146,6 +37299,10 @@ public final class Clickhouse {
       return opentelemetrySpanLogEnabled_ != null;
     }
     /**
+     * <pre>
+     * Enable or disable opentelemetry_span_log system table. Default value: false.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue opentelemetry_span_log_enabled = 42;</code>
      * @return The opentelemetrySpanLogEnabled.
      */
@@ -37154,11 +37311,700 @@ public final class Clickhouse {
       return opentelemetrySpanLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : opentelemetrySpanLogEnabled_;
     }
     /**
+     * <pre>
+     * Enable or disable opentelemetry_span_log system table. Default value: false.
+     * </pre>
+     *
      * <code>.google.protobuf.BoolValue opentelemetry_span_log_enabled = 42;</code>
      */
     @java.lang.Override
     public com.google.protobuf.BoolValueOrBuilder getOpentelemetrySpanLogEnabledOrBuilder() {
       return getOpentelemetrySpanLogEnabled();
+    }
+
+    public static final int OPENTELEMETRY_SPAN_LOG_RETENTION_SIZE_FIELD_NUMBER = 55;
+    private com.google.protobuf.Int64Value opentelemetrySpanLogRetentionSize_;
+    /**
+     * <pre>
+     * The maximum size that opentelemetry_span_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of opentelemetry_span_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the opentelemetrySpanLogRetentionSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasOpentelemetrySpanLogRetentionSize() {
+      return opentelemetrySpanLogRetentionSize_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum size that opentelemetry_span_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of opentelemetry_span_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The opentelemetrySpanLogRetentionSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getOpentelemetrySpanLogRetentionSize() {
+      return opentelemetrySpanLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : opentelemetrySpanLogRetentionSize_;
+    }
+    /**
+     * <pre>
+     * The maximum size that opentelemetry_span_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of opentelemetry_span_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getOpentelemetrySpanLogRetentionSizeOrBuilder() {
+      return getOpentelemetrySpanLogRetentionSize();
+    }
+
+    public static final int OPENTELEMETRY_SPAN_LOG_RETENTION_TIME_FIELD_NUMBER = 56;
+    private com.google.protobuf.Int64Value opentelemetrySpanLogRetentionTime_;
+    /**
+     * <pre>
+     * The maximum time that opentelemetry_span_log records will be retained before removal. If set to 0,
+     * automatic removal of opentelemetry_span_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the opentelemetrySpanLogRetentionTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasOpentelemetrySpanLogRetentionTime() {
+      return opentelemetrySpanLogRetentionTime_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum time that opentelemetry_span_log records will be retained before removal. If set to 0,
+     * automatic removal of opentelemetry_span_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The opentelemetrySpanLogRetentionTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getOpentelemetrySpanLogRetentionTime() {
+      return opentelemetrySpanLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : opentelemetrySpanLogRetentionTime_;
+    }
+    /**
+     * <pre>
+     * The maximum time that opentelemetry_span_log records will be retained before removal. If set to 0,
+     * automatic removal of opentelemetry_span_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getOpentelemetrySpanLogRetentionTimeOrBuilder() {
+      return getOpentelemetrySpanLogRetentionTime();
+    }
+
+    public static final int QUERY_VIEWS_LOG_ENABLED_FIELD_NUMBER = 49;
+    private com.google.protobuf.BoolValue queryViewsLogEnabled_;
+    /**
+     * <pre>
+     * Enable or disable query_views_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+     * @return Whether the queryViewsLogEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasQueryViewsLogEnabled() {
+      return queryViewsLogEnabled_ != null;
+    }
+    /**
+     * <pre>
+     * Enable or disable query_views_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+     * @return The queryViewsLogEnabled.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getQueryViewsLogEnabled() {
+      return queryViewsLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : queryViewsLogEnabled_;
+    }
+    /**
+     * <pre>
+     * Enable or disable query_views_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getQueryViewsLogEnabledOrBuilder() {
+      return getQueryViewsLogEnabled();
+    }
+
+    public static final int QUERY_VIEWS_LOG_RETENTION_SIZE_FIELD_NUMBER = 50;
+    private com.google.protobuf.Int64Value queryViewsLogRetentionSize_;
+    /**
+     * <pre>
+     * The maximum size that query_views_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of query_views_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the queryViewsLogRetentionSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasQueryViewsLogRetentionSize() {
+      return queryViewsLogRetentionSize_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum size that query_views_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of query_views_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The queryViewsLogRetentionSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getQueryViewsLogRetentionSize() {
+      return queryViewsLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryViewsLogRetentionSize_;
+    }
+    /**
+     * <pre>
+     * The maximum size that query_views_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of query_views_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getQueryViewsLogRetentionSizeOrBuilder() {
+      return getQueryViewsLogRetentionSize();
+    }
+
+    public static final int QUERY_VIEWS_LOG_RETENTION_TIME_FIELD_NUMBER = 51;
+    private com.google.protobuf.Int64Value queryViewsLogRetentionTime_;
+    /**
+     * <pre>
+     * The maximum time that query_views_log records will be retained before removal. If set to 0,
+     * automatic removal of query_views_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the queryViewsLogRetentionTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasQueryViewsLogRetentionTime() {
+      return queryViewsLogRetentionTime_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum time that query_views_log records will be retained before removal. If set to 0,
+     * automatic removal of query_views_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The queryViewsLogRetentionTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getQueryViewsLogRetentionTime() {
+      return queryViewsLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryViewsLogRetentionTime_;
+    }
+    /**
+     * <pre>
+     * The maximum time that query_views_log records will be retained before removal. If set to 0,
+     * automatic removal of query_views_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getQueryViewsLogRetentionTimeOrBuilder() {
+      return getQueryViewsLogRetentionTime();
+    }
+
+    public static final int ASYNCHRONOUS_METRIC_LOG_ENABLED_FIELD_NUMBER = 52;
+    private com.google.protobuf.BoolValue asynchronousMetricLogEnabled_;
+    /**
+     * <pre>
+     * Enable or disable asynchronous_metric_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+     * @return Whether the asynchronousMetricLogEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsynchronousMetricLogEnabled() {
+      return asynchronousMetricLogEnabled_ != null;
+    }
+    /**
+     * <pre>
+     * Enable or disable asynchronous_metric_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+     * @return The asynchronousMetricLogEnabled.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getAsynchronousMetricLogEnabled() {
+      return asynchronousMetricLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : asynchronousMetricLogEnabled_;
+    }
+    /**
+     * <pre>
+     * Enable or disable asynchronous_metric_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getAsynchronousMetricLogEnabledOrBuilder() {
+      return getAsynchronousMetricLogEnabled();
+    }
+
+    public static final int ASYNCHRONOUS_METRIC_LOG_RETENTION_SIZE_FIELD_NUMBER = 53;
+    private com.google.protobuf.Int64Value asynchronousMetricLogRetentionSize_;
+    /**
+     * <pre>
+     * The maximum size that asynchronous_metric_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of asynchronous_metric_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the asynchronousMetricLogRetentionSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsynchronousMetricLogRetentionSize() {
+      return asynchronousMetricLogRetentionSize_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum size that asynchronous_metric_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of asynchronous_metric_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The asynchronousMetricLogRetentionSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getAsynchronousMetricLogRetentionSize() {
+      return asynchronousMetricLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousMetricLogRetentionSize_;
+    }
+    /**
+     * <pre>
+     * The maximum size that asynchronous_metric_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of asynchronous_metric_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getAsynchronousMetricLogRetentionSizeOrBuilder() {
+      return getAsynchronousMetricLogRetentionSize();
+    }
+
+    public static final int ASYNCHRONOUS_METRIC_LOG_RETENTION_TIME_FIELD_NUMBER = 54;
+    private com.google.protobuf.Int64Value asynchronousMetricLogRetentionTime_;
+    /**
+     * <pre>
+     * The maximum time that asynchronous_metric_log records will be retained before removal. If set to 0,
+     * automatic removal of asynchronous_metric_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the asynchronousMetricLogRetentionTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsynchronousMetricLogRetentionTime() {
+      return asynchronousMetricLogRetentionTime_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum time that asynchronous_metric_log records will be retained before removal. If set to 0,
+     * automatic removal of asynchronous_metric_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The asynchronousMetricLogRetentionTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getAsynchronousMetricLogRetentionTime() {
+      return asynchronousMetricLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousMetricLogRetentionTime_;
+    }
+    /**
+     * <pre>
+     * The maximum time that asynchronous_metric_log records will be retained before removal. If set to 0,
+     * automatic removal of asynchronous_metric_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getAsynchronousMetricLogRetentionTimeOrBuilder() {
+      return getAsynchronousMetricLogRetentionTime();
+    }
+
+    public static final int SESSION_LOG_ENABLED_FIELD_NUMBER = 57;
+    private com.google.protobuf.BoolValue sessionLogEnabled_;
+    /**
+     * <pre>
+     * Enable or disable session_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+     * @return Whether the sessionLogEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasSessionLogEnabled() {
+      return sessionLogEnabled_ != null;
+    }
+    /**
+     * <pre>
+     * Enable or disable session_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+     * @return The sessionLogEnabled.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getSessionLogEnabled() {
+      return sessionLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : sessionLogEnabled_;
+    }
+    /**
+     * <pre>
+     * Enable or disable session_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getSessionLogEnabledOrBuilder() {
+      return getSessionLogEnabled();
+    }
+
+    public static final int SESSION_LOG_RETENTION_SIZE_FIELD_NUMBER = 58;
+    private com.google.protobuf.Int64Value sessionLogRetentionSize_;
+    /**
+     * <pre>
+     * The maximum size that session_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of session_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the sessionLogRetentionSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasSessionLogRetentionSize() {
+      return sessionLogRetentionSize_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum size that session_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of session_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The sessionLogRetentionSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getSessionLogRetentionSize() {
+      return sessionLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sessionLogRetentionSize_;
+    }
+    /**
+     * <pre>
+     * The maximum size that session_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of session_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getSessionLogRetentionSizeOrBuilder() {
+      return getSessionLogRetentionSize();
+    }
+
+    public static final int SESSION_LOG_RETENTION_TIME_FIELD_NUMBER = 59;
+    private com.google.protobuf.Int64Value sessionLogRetentionTime_;
+    /**
+     * <pre>
+     * The maximum time that session_log records will be retained before removal. If set to 0,
+     * automatic removal of session_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the sessionLogRetentionTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasSessionLogRetentionTime() {
+      return sessionLogRetentionTime_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum time that session_log records will be retained before removal. If set to 0,
+     * automatic removal of session_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The sessionLogRetentionTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getSessionLogRetentionTime() {
+      return sessionLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sessionLogRetentionTime_;
+    }
+    /**
+     * <pre>
+     * The maximum time that session_log records will be retained before removal. If set to 0,
+     * automatic removal of session_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getSessionLogRetentionTimeOrBuilder() {
+      return getSessionLogRetentionTime();
+    }
+
+    public static final int ZOOKEEPER_LOG_ENABLED_FIELD_NUMBER = 60;
+    private com.google.protobuf.BoolValue zookeeperLogEnabled_;
+    /**
+     * <pre>
+     * Enable or disable zookeeper_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+     * @return Whether the zookeeperLogEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasZookeeperLogEnabled() {
+      return zookeeperLogEnabled_ != null;
+    }
+    /**
+     * <pre>
+     * Enable or disable zookeeper_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+     * @return The zookeeperLogEnabled.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getZookeeperLogEnabled() {
+      return zookeeperLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : zookeeperLogEnabled_;
+    }
+    /**
+     * <pre>
+     * Enable or disable zookeeper_log system table. Default value: false.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getZookeeperLogEnabledOrBuilder() {
+      return getZookeeperLogEnabled();
+    }
+
+    public static final int ZOOKEEPER_LOG_RETENTION_SIZE_FIELD_NUMBER = 61;
+    private com.google.protobuf.Int64Value zookeeperLogRetentionSize_;
+    /**
+     * <pre>
+     * The maximum size that zookeeper_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of zookeeper_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the zookeeperLogRetentionSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasZookeeperLogRetentionSize() {
+      return zookeeperLogRetentionSize_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum size that zookeeper_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of zookeeper_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The zookeeperLogRetentionSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getZookeeperLogRetentionSize() {
+      return zookeeperLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : zookeeperLogRetentionSize_;
+    }
+    /**
+     * <pre>
+     * The maximum size that zookeeper_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of zookeeper_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getZookeeperLogRetentionSizeOrBuilder() {
+      return getZookeeperLogRetentionSize();
+    }
+
+    public static final int ZOOKEEPER_LOG_RETENTION_TIME_FIELD_NUMBER = 62;
+    private com.google.protobuf.Int64Value zookeeperLogRetentionTime_;
+    /**
+     * <pre>
+     * The maximum time that zookeeper_log records will be retained before removal. If set to 0,
+     * automatic removal of zookeeper_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the zookeeperLogRetentionTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasZookeeperLogRetentionTime() {
+      return zookeeperLogRetentionTime_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum time that zookeeper_log records will be retained before removal. If set to 0,
+     * automatic removal of zookeeper_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The zookeeperLogRetentionTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getZookeeperLogRetentionTime() {
+      return zookeeperLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : zookeeperLogRetentionTime_;
+    }
+    /**
+     * <pre>
+     * The maximum time that zookeeper_log records will be retained before removal. If set to 0,
+     * automatic removal of zookeeper_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getZookeeperLogRetentionTimeOrBuilder() {
+      return getZookeeperLogRetentionTime();
+    }
+
+    public static final int ASYNCHRONOUS_INSERT_LOG_ENABLED_FIELD_NUMBER = 63;
+    private com.google.protobuf.BoolValue asynchronousInsertLogEnabled_;
+    /**
+     * <pre>
+     * Enable or disable asynchronous_insert_log system table. Default value: false.
+     * Minimal required ClickHouse version: 22.10.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+     * @return Whether the asynchronousInsertLogEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsynchronousInsertLogEnabled() {
+      return asynchronousInsertLogEnabled_ != null;
+    }
+    /**
+     * <pre>
+     * Enable or disable asynchronous_insert_log system table. Default value: false.
+     * Minimal required ClickHouse version: 22.10.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+     * @return The asynchronousInsertLogEnabled.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getAsynchronousInsertLogEnabled() {
+      return asynchronousInsertLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : asynchronousInsertLogEnabled_;
+    }
+    /**
+     * <pre>
+     * Enable or disable asynchronous_insert_log system table. Default value: false.
+     * Minimal required ClickHouse version: 22.10.
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getAsynchronousInsertLogEnabledOrBuilder() {
+      return getAsynchronousInsertLogEnabled();
+    }
+
+    public static final int ASYNCHRONOUS_INSERT_LOG_RETENTION_SIZE_FIELD_NUMBER = 64;
+    private com.google.protobuf.Int64Value asynchronousInsertLogRetentionSize_;
+    /**
+     * <pre>
+     * The maximum size that asynchronous_insert_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of asynchronous_insert_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the asynchronousInsertLogRetentionSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsynchronousInsertLogRetentionSize() {
+      return asynchronousInsertLogRetentionSize_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum size that asynchronous_insert_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of asynchronous_insert_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The asynchronousInsertLogRetentionSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getAsynchronousInsertLogRetentionSize() {
+      return asynchronousInsertLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousInsertLogRetentionSize_;
+    }
+    /**
+     * <pre>
+     * The maximum size that asynchronous_insert_log can grow to before old data will be removed. If set to 0 (default),
+     * automatic removal of asynchronous_insert_log data based on size is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getAsynchronousInsertLogRetentionSizeOrBuilder() {
+      return getAsynchronousInsertLogRetentionSize();
+    }
+
+    public static final int ASYNCHRONOUS_INSERT_LOG_RETENTION_TIME_FIELD_NUMBER = 65;
+    private com.google.protobuf.Int64Value asynchronousInsertLogRetentionTime_;
+    /**
+     * <pre>
+     * The maximum time that asynchronous_insert_log records will be retained before removal. If set to 0,
+     * automatic removal of asynchronous_insert_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return Whether the asynchronousInsertLogRetentionTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasAsynchronousInsertLogRetentionTime() {
+      return asynchronousInsertLogRetentionTime_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum time that asynchronous_insert_log records will be retained before removal. If set to 0,
+     * automatic removal of asynchronous_insert_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     * @return The asynchronousInsertLogRetentionTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getAsynchronousInsertLogRetentionTime() {
+      return asynchronousInsertLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousInsertLogRetentionTime_;
+    }
+    /**
+     * <pre>
+     * The maximum time that asynchronous_insert_log records will be retained before removal. If set to 0,
+     * automatic removal of asynchronous_insert_log data based on time is disabled.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getAsynchronousInsertLogRetentionTimeOrBuilder() {
+      return getAsynchronousInsertLogRetentionTime();
     }
 
     public static final int BACKGROUND_POOL_SIZE_FIELD_NUMBER = 33;
@@ -37185,6 +38031,50 @@ public final class Clickhouse {
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getBackgroundPoolSizeOrBuilder() {
       return getBackgroundPoolSize();
+    }
+
+    public static final int BACKGROUND_MERGES_MUTATIONS_CONCURRENCY_RATIO_FIELD_NUMBER = 48;
+    private com.google.protobuf.Int64Value backgroundMergesMutationsConcurrencyRatio_;
+    /**
+     * <pre>
+     * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+     * Default: 2
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the backgroundMergesMutationsConcurrencyRatio field is set.
+     */
+    @java.lang.Override
+    public boolean hasBackgroundMergesMutationsConcurrencyRatio() {
+      return backgroundMergesMutationsConcurrencyRatio_ != null;
+    }
+    /**
+     * <pre>
+     * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+     * Default: 2
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The backgroundMergesMutationsConcurrencyRatio.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getBackgroundMergesMutationsConcurrencyRatio() {
+      return backgroundMergesMutationsConcurrencyRatio_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backgroundMergesMutationsConcurrencyRatio_;
+    }
+    /**
+     * <pre>
+     * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+     * Default: 2
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getBackgroundMergesMutationsConcurrencyRatioOrBuilder() {
+      return getBackgroundMergesMutationsConcurrencyRatio();
     }
 
     public static final int BACKGROUND_SCHEDULE_POOL_SIZE_FIELD_NUMBER = 34;
@@ -37358,6 +38248,50 @@ public final class Clickhouse {
       return getBackgroundMessageBrokerSchedulePoolSize();
     }
 
+    public static final int BACKGROUND_COMMON_POOL_SIZE_FIELD_NUMBER = 47;
+    private com.google.protobuf.Int64Value backgroundCommonPoolSize_;
+    /**
+     * <pre>
+     * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+     * Default: 8
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return Whether the backgroundCommonPoolSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasBackgroundCommonPoolSize() {
+      return backgroundCommonPoolSize_ != null;
+    }
+    /**
+     * <pre>
+     * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+     * Default: 8
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+     * @return The backgroundCommonPoolSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getBackgroundCommonPoolSize() {
+      return backgroundCommonPoolSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backgroundCommonPoolSize_;
+    }
+    /**
+     * <pre>
+     * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+     * Default: 8
+     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getBackgroundCommonPoolSizeOrBuilder() {
+      return getBackgroundCommonPoolSize();
+    }
+
     public static final int DEFAULT_DATABASE_FIELD_NUMBER = 43;
     private com.google.protobuf.StringValue defaultDatabase_;
     /**
@@ -37464,718 +38398,6 @@ public final class Clickhouse {
     @java.lang.Override
     public com.google.protobuf.DoubleValueOrBuilder getTotalMemoryTrackerSampleProbabilityOrBuilder() {
       return getTotalMemoryTrackerSampleProbability();
-    }
-
-    public static final int BACKGROUND_COMMON_POOL_SIZE_FIELD_NUMBER = 47;
-    private com.google.protobuf.Int64Value backgroundCommonPoolSize_;
-    /**
-     * <pre>
-     * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
-     * Default: 8
-     * Min version: 21.11
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
-     * @return Whether the backgroundCommonPoolSize field is set.
-     */
-    @java.lang.Override
-    public boolean hasBackgroundCommonPoolSize() {
-      return backgroundCommonPoolSize_ != null;
-    }
-    /**
-     * <pre>
-     * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
-     * Default: 8
-     * Min version: 21.11
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
-     * @return The backgroundCommonPoolSize.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64Value getBackgroundCommonPoolSize() {
-      return backgroundCommonPoolSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backgroundCommonPoolSize_;
-    }
-    /**
-     * <pre>
-     * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
-     * Default: 8
-     * Min version: 21.11
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64ValueOrBuilder getBackgroundCommonPoolSizeOrBuilder() {
-      return getBackgroundCommonPoolSize();
-    }
-
-    public static final int BACKGROUND_MERGES_MUTATIONS_CONCURRENCY_RATIO_FIELD_NUMBER = 48;
-    private com.google.protobuf.Int64Value backgroundMergesMutationsConcurrencyRatio_;
-    /**
-     * <pre>
-     * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
-     * Default: 2
-     * Min_version: 21.11
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
-     * @return Whether the backgroundMergesMutationsConcurrencyRatio field is set.
-     */
-    @java.lang.Override
-    public boolean hasBackgroundMergesMutationsConcurrencyRatio() {
-      return backgroundMergesMutationsConcurrencyRatio_ != null;
-    }
-    /**
-     * <pre>
-     * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
-     * Default: 2
-     * Min_version: 21.11
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
-     * @return The backgroundMergesMutationsConcurrencyRatio.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64Value getBackgroundMergesMutationsConcurrencyRatio() {
-      return backgroundMergesMutationsConcurrencyRatio_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backgroundMergesMutationsConcurrencyRatio_;
-    }
-    /**
-     * <pre>
-     * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
-     * Default: 2
-     * Min_version: 21.11
-     * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64ValueOrBuilder getBackgroundMergesMutationsConcurrencyRatioOrBuilder() {
-      return getBackgroundMergesMutationsConcurrencyRatio();
-    }
-
-    public static final int QUERY_VIEWS_LOG_ENABLED_FIELD_NUMBER = 49;
-    private com.google.protobuf.BoolValue queryViewsLogEnabled_;
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 21.9
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
-     * @return Whether the queryViewsLogEnabled field is set.
-     */
-    @java.lang.Override
-    public boolean hasQueryViewsLogEnabled() {
-      return queryViewsLogEnabled_ != null;
-    }
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 21.9
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
-     * @return The queryViewsLogEnabled.
-     */
-    @java.lang.Override
-    public com.google.protobuf.BoolValue getQueryViewsLogEnabled() {
-      return queryViewsLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : queryViewsLogEnabled_;
-    }
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 21.9
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.BoolValueOrBuilder getQueryViewsLogEnabledOrBuilder() {
-      return getQueryViewsLogEnabled();
-    }
-
-    public static final int QUERY_VIEWS_LOG_RETENTION_SIZE_FIELD_NUMBER = 50;
-    private com.google.protobuf.Int64Value queryViewsLogRetentionSize_;
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the queryViewsLogRetentionSize field is set.
-     */
-    @java.lang.Override
-    public boolean hasQueryViewsLogRetentionSize() {
-      return queryViewsLogRetentionSize_ != null;
-    }
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The queryViewsLogRetentionSize.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64Value getQueryViewsLogRetentionSize() {
-      return queryViewsLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryViewsLogRetentionSize_;
-    }
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64ValueOrBuilder getQueryViewsLogRetentionSizeOrBuilder() {
-      return getQueryViewsLogRetentionSize();
-    }
-
-    public static final int QUERY_VIEWS_LOG_RETENTION_TIME_FIELD_NUMBER = 51;
-    private com.google.protobuf.Int64Value queryViewsLogRetentionTime_;
-    /**
-     * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the queryViewsLogRetentionTime field is set.
-     */
-    @java.lang.Override
-    public boolean hasQueryViewsLogRetentionTime() {
-      return queryViewsLogRetentionTime_ != null;
-    }
-    /**
-     * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The queryViewsLogRetentionTime.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64Value getQueryViewsLogRetentionTime() {
-      return queryViewsLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryViewsLogRetentionTime_;
-    }
-    /**
-     * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64ValueOrBuilder getQueryViewsLogRetentionTimeOrBuilder() {
-      return getQueryViewsLogRetentionTime();
-    }
-
-    public static final int ASYNCHRONOUS_METRIC_LOG_ENABLED_FIELD_NUMBER = 52;
-    private com.google.protobuf.BoolValue asynchronousMetricLogEnabled_;
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 20.11
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
-     * @return Whether the asynchronousMetricLogEnabled field is set.
-     */
-    @java.lang.Override
-    public boolean hasAsynchronousMetricLogEnabled() {
-      return asynchronousMetricLogEnabled_ != null;
-    }
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 20.11
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
-     * @return The asynchronousMetricLogEnabled.
-     */
-    @java.lang.Override
-    public com.google.protobuf.BoolValue getAsynchronousMetricLogEnabled() {
-      return asynchronousMetricLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : asynchronousMetricLogEnabled_;
-    }
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 20.11
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.BoolValueOrBuilder getAsynchronousMetricLogEnabledOrBuilder() {
-      return getAsynchronousMetricLogEnabled();
-    }
-
-    public static final int ASYNCHRONOUS_METRIC_LOG_RETENTION_SIZE_FIELD_NUMBER = 53;
-    private com.google.protobuf.Int64Value asynchronousMetricLogRetentionSize_;
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the asynchronousMetricLogRetentionSize field is set.
-     */
-    @java.lang.Override
-    public boolean hasAsynchronousMetricLogRetentionSize() {
-      return asynchronousMetricLogRetentionSize_ != null;
-    }
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The asynchronousMetricLogRetentionSize.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64Value getAsynchronousMetricLogRetentionSize() {
-      return asynchronousMetricLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousMetricLogRetentionSize_;
-    }
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64ValueOrBuilder getAsynchronousMetricLogRetentionSizeOrBuilder() {
-      return getAsynchronousMetricLogRetentionSize();
-    }
-
-    public static final int ASYNCHRONOUS_METRIC_LOG_RETENTION_TIME_FIELD_NUMBER = 54;
-    private com.google.protobuf.Int64Value asynchronousMetricLogRetentionTime_;
-    /**
-     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the asynchronousMetricLogRetentionTime field is set.
-     */
-    @java.lang.Override
-    public boolean hasAsynchronousMetricLogRetentionTime() {
-      return asynchronousMetricLogRetentionTime_ != null;
-    }
-    /**
-     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The asynchronousMetricLogRetentionTime.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64Value getAsynchronousMetricLogRetentionTime() {
-      return asynchronousMetricLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousMetricLogRetentionTime_;
-    }
-    /**
-     * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64ValueOrBuilder getAsynchronousMetricLogRetentionTimeOrBuilder() {
-      return getAsynchronousMetricLogRetentionTime();
-    }
-
-    public static final int OPENTELEMETRY_SPAN_LOG_RETENTION_SIZE_FIELD_NUMBER = 55;
-    private com.google.protobuf.Int64Value opentelemetrySpanLogRetentionSize_;
-    /**
-     * <pre>
-     * Default: 0
-     * Min version: 20.11
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the opentelemetrySpanLogRetentionSize field is set.
-     */
-    @java.lang.Override
-    public boolean hasOpentelemetrySpanLogRetentionSize() {
-      return opentelemetrySpanLogRetentionSize_ != null;
-    }
-    /**
-     * <pre>
-     * Default: 0
-     * Min version: 20.11
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The opentelemetrySpanLogRetentionSize.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64Value getOpentelemetrySpanLogRetentionSize() {
-      return opentelemetrySpanLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : opentelemetrySpanLogRetentionSize_;
-    }
-    /**
-     * <pre>
-     * Default: 0
-     * Min version: 20.11
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64ValueOrBuilder getOpentelemetrySpanLogRetentionSizeOrBuilder() {
-      return getOpentelemetrySpanLogRetentionSize();
-    }
-
-    public static final int OPENTELEMETRY_SPAN_LOG_RETENTION_TIME_FIELD_NUMBER = 56;
-    private com.google.protobuf.Int64Value opentelemetrySpanLogRetentionTime_;
-    /**
-     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the opentelemetrySpanLogRetentionTime field is set.
-     */
-    @java.lang.Override
-    public boolean hasOpentelemetrySpanLogRetentionTime() {
-      return opentelemetrySpanLogRetentionTime_ != null;
-    }
-    /**
-     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The opentelemetrySpanLogRetentionTime.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64Value getOpentelemetrySpanLogRetentionTime() {
-      return opentelemetrySpanLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : opentelemetrySpanLogRetentionTime_;
-    }
-    /**
-     * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64ValueOrBuilder getOpentelemetrySpanLogRetentionTimeOrBuilder() {
-      return getOpentelemetrySpanLogRetentionTime();
-    }
-
-    public static final int SESSION_LOG_ENABLED_FIELD_NUMBER = 57;
-    private com.google.protobuf.BoolValue sessionLogEnabled_;
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 21.11
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
-     * @return Whether the sessionLogEnabled field is set.
-     */
-    @java.lang.Override
-    public boolean hasSessionLogEnabled() {
-      return sessionLogEnabled_ != null;
-    }
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 21.11
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
-     * @return The sessionLogEnabled.
-     */
-    @java.lang.Override
-    public com.google.protobuf.BoolValue getSessionLogEnabled() {
-      return sessionLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : sessionLogEnabled_;
-    }
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 21.11
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.BoolValueOrBuilder getSessionLogEnabledOrBuilder() {
-      return getSessionLogEnabled();
-    }
-
-    public static final int SESSION_LOG_RETENTION_SIZE_FIELD_NUMBER = 58;
-    private com.google.protobuf.Int64Value sessionLogRetentionSize_;
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the sessionLogRetentionSize field is set.
-     */
-    @java.lang.Override
-    public boolean hasSessionLogRetentionSize() {
-      return sessionLogRetentionSize_ != null;
-    }
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The sessionLogRetentionSize.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64Value getSessionLogRetentionSize() {
-      return sessionLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sessionLogRetentionSize_;
-    }
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64ValueOrBuilder getSessionLogRetentionSizeOrBuilder() {
-      return getSessionLogRetentionSize();
-    }
-
-    public static final int SESSION_LOG_RETENTION_TIME_FIELD_NUMBER = 59;
-    private com.google.protobuf.Int64Value sessionLogRetentionTime_;
-    /**
-     * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the sessionLogRetentionTime field is set.
-     */
-    @java.lang.Override
-    public boolean hasSessionLogRetentionTime() {
-      return sessionLogRetentionTime_ != null;
-    }
-    /**
-     * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The sessionLogRetentionTime.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64Value getSessionLogRetentionTime() {
-      return sessionLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sessionLogRetentionTime_;
-    }
-    /**
-     * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64ValueOrBuilder getSessionLogRetentionTimeOrBuilder() {
-      return getSessionLogRetentionTime();
-    }
-
-    public static final int ZOOKEEPER_LOG_ENABLED_FIELD_NUMBER = 60;
-    private com.google.protobuf.BoolValue zookeeperLogEnabled_;
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 21.9
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
-     * @return Whether the zookeeperLogEnabled field is set.
-     */
-    @java.lang.Override
-    public boolean hasZookeeperLogEnabled() {
-      return zookeeperLogEnabled_ != null;
-    }
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 21.9
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
-     * @return The zookeeperLogEnabled.
-     */
-    @java.lang.Override
-    public com.google.protobuf.BoolValue getZookeeperLogEnabled() {
-      return zookeeperLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : zookeeperLogEnabled_;
-    }
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 21.9
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.BoolValueOrBuilder getZookeeperLogEnabledOrBuilder() {
-      return getZookeeperLogEnabled();
-    }
-
-    public static final int ZOOKEEPER_LOG_RETENTION_SIZE_FIELD_NUMBER = 61;
-    private com.google.protobuf.Int64Value zookeeperLogRetentionSize_;
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the zookeeperLogRetentionSize field is set.
-     */
-    @java.lang.Override
-    public boolean hasZookeeperLogRetentionSize() {
-      return zookeeperLogRetentionSize_ != null;
-    }
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The zookeeperLogRetentionSize.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64Value getZookeeperLogRetentionSize() {
-      return zookeeperLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : zookeeperLogRetentionSize_;
-    }
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64ValueOrBuilder getZookeeperLogRetentionSizeOrBuilder() {
-      return getZookeeperLogRetentionSize();
-    }
-
-    public static final int ZOOKEEPER_LOG_RETENTION_TIME_FIELD_NUMBER = 62;
-    private com.google.protobuf.Int64Value zookeeperLogRetentionTime_;
-    /**
-     * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the zookeeperLogRetentionTime field is set.
-     */
-    @java.lang.Override
-    public boolean hasZookeeperLogRetentionTime() {
-      return zookeeperLogRetentionTime_ != null;
-    }
-    /**
-     * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The zookeeperLogRetentionTime.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64Value getZookeeperLogRetentionTime() {
-      return zookeeperLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : zookeeperLogRetentionTime_;
-    }
-    /**
-     * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64ValueOrBuilder getZookeeperLogRetentionTimeOrBuilder() {
-      return getZookeeperLogRetentionTime();
-    }
-
-    public static final int ASYNCHRONOUS_INSERT_LOG_ENABLED_FIELD_NUMBER = 63;
-    private com.google.protobuf.BoolValue asynchronousInsertLogEnabled_;
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 22.10
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
-     * @return Whether the asynchronousInsertLogEnabled field is set.
-     */
-    @java.lang.Override
-    public boolean hasAsynchronousInsertLogEnabled() {
-      return asynchronousInsertLogEnabled_ != null;
-    }
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 22.10
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
-     * @return The asynchronousInsertLogEnabled.
-     */
-    @java.lang.Override
-    public com.google.protobuf.BoolValue getAsynchronousInsertLogEnabled() {
-      return asynchronousInsertLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : asynchronousInsertLogEnabled_;
-    }
-    /**
-     * <pre>
-     * Default: false
-     * Min version: 22.10
-     * </pre>
-     *
-     * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.BoolValueOrBuilder getAsynchronousInsertLogEnabledOrBuilder() {
-      return getAsynchronousInsertLogEnabled();
-    }
-
-    public static final int ASYNCHRONOUS_INSERT_LOG_RETENTION_SIZE_FIELD_NUMBER = 64;
-    private com.google.protobuf.Int64Value asynchronousInsertLogRetentionSize_;
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the asynchronousInsertLogRetentionSize field is set.
-     */
-    @java.lang.Override
-    public boolean hasAsynchronousInsertLogRetentionSize() {
-      return asynchronousInsertLogRetentionSize_ != null;
-    }
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The asynchronousInsertLogRetentionSize.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64Value getAsynchronousInsertLogRetentionSize() {
-      return asynchronousInsertLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousInsertLogRetentionSize_;
-    }
-    /**
-     * <pre>
-     * Default: 0
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64ValueOrBuilder getAsynchronousInsertLogRetentionSizeOrBuilder() {
-      return getAsynchronousInsertLogRetentionSize();
-    }
-
-    public static final int ASYNCHRONOUS_INSERT_LOG_RETENTION_TIME_FIELD_NUMBER = 65;
-    private com.google.protobuf.Int64Value asynchronousInsertLogRetentionTime_;
-    /**
-     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return Whether the asynchronousInsertLogRetentionTime field is set.
-     */
-    @java.lang.Override
-    public boolean hasAsynchronousInsertLogRetentionTime() {
-      return asynchronousInsertLogRetentionTime_ != null;
-    }
-    /**
-     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     * @return The asynchronousInsertLogRetentionTime.
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64Value getAsynchronousInsertLogRetentionTime() {
-      return asynchronousInsertLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousInsertLogRetentionTime_;
-    }
-    /**
-     * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.Int64ValueOrBuilder getAsynchronousInsertLogRetentionTimeOrBuilder() {
-      return getAsynchronousInsertLogRetentionTime();
-    }
-
-    public static final int GEOBASE_ENABLED_FIELD_NUMBER = 66;
-    private com.google.protobuf.BoolValue geobaseEnabled_;
-    /**
-     * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
-     * @return Whether the geobaseEnabled field is set.
-     */
-    @java.lang.Override
-    public boolean hasGeobaseEnabled() {
-      return geobaseEnabled_ != null;
-    }
-    /**
-     * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
-     * @return The geobaseEnabled.
-     */
-    @java.lang.Override
-    public com.google.protobuf.BoolValue getGeobaseEnabled() {
-      return geobaseEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : geobaseEnabled_;
-    }
-    /**
-     * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
-     */
-    @java.lang.Override
-    public com.google.protobuf.BoolValueOrBuilder getGeobaseEnabledOrBuilder() {
-      return getGeobaseEnabled();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -38742,6 +38964,11 @@ public final class Clickhouse {
       }
       if (!getTimezone()
           .equals(other.getTimezone())) return false;
+      if (hasGeobaseEnabled() != other.hasGeobaseEnabled()) return false;
+      if (hasGeobaseEnabled()) {
+        if (!getGeobaseEnabled()
+            .equals(other.getGeobaseEnabled())) return false;
+      }
       if (!getGeobaseUri()
           .equals(other.getGeobaseUri())) return false;
       if (hasQueryLogRetentionSize() != other.hasQueryLogRetentionSize()) return false;
@@ -38830,65 +39057,15 @@ public final class Clickhouse {
         if (!getOpentelemetrySpanLogEnabled()
             .equals(other.getOpentelemetrySpanLogEnabled())) return false;
       }
-      if (hasBackgroundPoolSize() != other.hasBackgroundPoolSize()) return false;
-      if (hasBackgroundPoolSize()) {
-        if (!getBackgroundPoolSize()
-            .equals(other.getBackgroundPoolSize())) return false;
+      if (hasOpentelemetrySpanLogRetentionSize() != other.hasOpentelemetrySpanLogRetentionSize()) return false;
+      if (hasOpentelemetrySpanLogRetentionSize()) {
+        if (!getOpentelemetrySpanLogRetentionSize()
+            .equals(other.getOpentelemetrySpanLogRetentionSize())) return false;
       }
-      if (hasBackgroundSchedulePoolSize() != other.hasBackgroundSchedulePoolSize()) return false;
-      if (hasBackgroundSchedulePoolSize()) {
-        if (!getBackgroundSchedulePoolSize()
-            .equals(other.getBackgroundSchedulePoolSize())) return false;
-      }
-      if (hasBackgroundFetchesPoolSize() != other.hasBackgroundFetchesPoolSize()) return false;
-      if (hasBackgroundFetchesPoolSize()) {
-        if (!getBackgroundFetchesPoolSize()
-            .equals(other.getBackgroundFetchesPoolSize())) return false;
-      }
-      if (hasBackgroundMovePoolSize() != other.hasBackgroundMovePoolSize()) return false;
-      if (hasBackgroundMovePoolSize()) {
-        if (!getBackgroundMovePoolSize()
-            .equals(other.getBackgroundMovePoolSize())) return false;
-      }
-      if (hasBackgroundDistributedSchedulePoolSize() != other.hasBackgroundDistributedSchedulePoolSize()) return false;
-      if (hasBackgroundDistributedSchedulePoolSize()) {
-        if (!getBackgroundDistributedSchedulePoolSize()
-            .equals(other.getBackgroundDistributedSchedulePoolSize())) return false;
-      }
-      if (hasBackgroundBufferFlushSchedulePoolSize() != other.hasBackgroundBufferFlushSchedulePoolSize()) return false;
-      if (hasBackgroundBufferFlushSchedulePoolSize()) {
-        if (!getBackgroundBufferFlushSchedulePoolSize()
-            .equals(other.getBackgroundBufferFlushSchedulePoolSize())) return false;
-      }
-      if (hasBackgroundMessageBrokerSchedulePoolSize() != other.hasBackgroundMessageBrokerSchedulePoolSize()) return false;
-      if (hasBackgroundMessageBrokerSchedulePoolSize()) {
-        if (!getBackgroundMessageBrokerSchedulePoolSize()
-            .equals(other.getBackgroundMessageBrokerSchedulePoolSize())) return false;
-      }
-      if (hasDefaultDatabase() != other.hasDefaultDatabase()) return false;
-      if (hasDefaultDatabase()) {
-        if (!getDefaultDatabase()
-            .equals(other.getDefaultDatabase())) return false;
-      }
-      if (hasTotalMemoryProfilerStep() != other.hasTotalMemoryProfilerStep()) return false;
-      if (hasTotalMemoryProfilerStep()) {
-        if (!getTotalMemoryProfilerStep()
-            .equals(other.getTotalMemoryProfilerStep())) return false;
-      }
-      if (hasTotalMemoryTrackerSampleProbability() != other.hasTotalMemoryTrackerSampleProbability()) return false;
-      if (hasTotalMemoryTrackerSampleProbability()) {
-        if (!getTotalMemoryTrackerSampleProbability()
-            .equals(other.getTotalMemoryTrackerSampleProbability())) return false;
-      }
-      if (hasBackgroundCommonPoolSize() != other.hasBackgroundCommonPoolSize()) return false;
-      if (hasBackgroundCommonPoolSize()) {
-        if (!getBackgroundCommonPoolSize()
-            .equals(other.getBackgroundCommonPoolSize())) return false;
-      }
-      if (hasBackgroundMergesMutationsConcurrencyRatio() != other.hasBackgroundMergesMutationsConcurrencyRatio()) return false;
-      if (hasBackgroundMergesMutationsConcurrencyRatio()) {
-        if (!getBackgroundMergesMutationsConcurrencyRatio()
-            .equals(other.getBackgroundMergesMutationsConcurrencyRatio())) return false;
+      if (hasOpentelemetrySpanLogRetentionTime() != other.hasOpentelemetrySpanLogRetentionTime()) return false;
+      if (hasOpentelemetrySpanLogRetentionTime()) {
+        if (!getOpentelemetrySpanLogRetentionTime()
+            .equals(other.getOpentelemetrySpanLogRetentionTime())) return false;
       }
       if (hasQueryViewsLogEnabled() != other.hasQueryViewsLogEnabled()) return false;
       if (hasQueryViewsLogEnabled()) {
@@ -38919,16 +39096,6 @@ public final class Clickhouse {
       if (hasAsynchronousMetricLogRetentionTime()) {
         if (!getAsynchronousMetricLogRetentionTime()
             .equals(other.getAsynchronousMetricLogRetentionTime())) return false;
-      }
-      if (hasOpentelemetrySpanLogRetentionSize() != other.hasOpentelemetrySpanLogRetentionSize()) return false;
-      if (hasOpentelemetrySpanLogRetentionSize()) {
-        if (!getOpentelemetrySpanLogRetentionSize()
-            .equals(other.getOpentelemetrySpanLogRetentionSize())) return false;
-      }
-      if (hasOpentelemetrySpanLogRetentionTime() != other.hasOpentelemetrySpanLogRetentionTime()) return false;
-      if (hasOpentelemetrySpanLogRetentionTime()) {
-        if (!getOpentelemetrySpanLogRetentionTime()
-            .equals(other.getOpentelemetrySpanLogRetentionTime())) return false;
       }
       if (hasSessionLogEnabled() != other.hasSessionLogEnabled()) return false;
       if (hasSessionLogEnabled()) {
@@ -38975,10 +39142,65 @@ public final class Clickhouse {
         if (!getAsynchronousInsertLogRetentionTime()
             .equals(other.getAsynchronousInsertLogRetentionTime())) return false;
       }
-      if (hasGeobaseEnabled() != other.hasGeobaseEnabled()) return false;
-      if (hasGeobaseEnabled()) {
-        if (!getGeobaseEnabled()
-            .equals(other.getGeobaseEnabled())) return false;
+      if (hasBackgroundPoolSize() != other.hasBackgroundPoolSize()) return false;
+      if (hasBackgroundPoolSize()) {
+        if (!getBackgroundPoolSize()
+            .equals(other.getBackgroundPoolSize())) return false;
+      }
+      if (hasBackgroundMergesMutationsConcurrencyRatio() != other.hasBackgroundMergesMutationsConcurrencyRatio()) return false;
+      if (hasBackgroundMergesMutationsConcurrencyRatio()) {
+        if (!getBackgroundMergesMutationsConcurrencyRatio()
+            .equals(other.getBackgroundMergesMutationsConcurrencyRatio())) return false;
+      }
+      if (hasBackgroundSchedulePoolSize() != other.hasBackgroundSchedulePoolSize()) return false;
+      if (hasBackgroundSchedulePoolSize()) {
+        if (!getBackgroundSchedulePoolSize()
+            .equals(other.getBackgroundSchedulePoolSize())) return false;
+      }
+      if (hasBackgroundFetchesPoolSize() != other.hasBackgroundFetchesPoolSize()) return false;
+      if (hasBackgroundFetchesPoolSize()) {
+        if (!getBackgroundFetchesPoolSize()
+            .equals(other.getBackgroundFetchesPoolSize())) return false;
+      }
+      if (hasBackgroundMovePoolSize() != other.hasBackgroundMovePoolSize()) return false;
+      if (hasBackgroundMovePoolSize()) {
+        if (!getBackgroundMovePoolSize()
+            .equals(other.getBackgroundMovePoolSize())) return false;
+      }
+      if (hasBackgroundDistributedSchedulePoolSize() != other.hasBackgroundDistributedSchedulePoolSize()) return false;
+      if (hasBackgroundDistributedSchedulePoolSize()) {
+        if (!getBackgroundDistributedSchedulePoolSize()
+            .equals(other.getBackgroundDistributedSchedulePoolSize())) return false;
+      }
+      if (hasBackgroundBufferFlushSchedulePoolSize() != other.hasBackgroundBufferFlushSchedulePoolSize()) return false;
+      if (hasBackgroundBufferFlushSchedulePoolSize()) {
+        if (!getBackgroundBufferFlushSchedulePoolSize()
+            .equals(other.getBackgroundBufferFlushSchedulePoolSize())) return false;
+      }
+      if (hasBackgroundMessageBrokerSchedulePoolSize() != other.hasBackgroundMessageBrokerSchedulePoolSize()) return false;
+      if (hasBackgroundMessageBrokerSchedulePoolSize()) {
+        if (!getBackgroundMessageBrokerSchedulePoolSize()
+            .equals(other.getBackgroundMessageBrokerSchedulePoolSize())) return false;
+      }
+      if (hasBackgroundCommonPoolSize() != other.hasBackgroundCommonPoolSize()) return false;
+      if (hasBackgroundCommonPoolSize()) {
+        if (!getBackgroundCommonPoolSize()
+            .equals(other.getBackgroundCommonPoolSize())) return false;
+      }
+      if (hasDefaultDatabase() != other.hasDefaultDatabase()) return false;
+      if (hasDefaultDatabase()) {
+        if (!getDefaultDatabase()
+            .equals(other.getDefaultDatabase())) return false;
+      }
+      if (hasTotalMemoryProfilerStep() != other.hasTotalMemoryProfilerStep()) return false;
+      if (hasTotalMemoryProfilerStep()) {
+        if (!getTotalMemoryProfilerStep()
+            .equals(other.getTotalMemoryProfilerStep())) return false;
+      }
+      if (hasTotalMemoryTrackerSampleProbability() != other.hasTotalMemoryTrackerSampleProbability()) return false;
+      if (hasTotalMemoryTrackerSampleProbability()) {
+        if (!getTotalMemoryTrackerSampleProbability()
+            .equals(other.getTotalMemoryTrackerSampleProbability())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -39055,6 +39277,10 @@ public final class Clickhouse {
       }
       hash = (37 * hash) + TIMEZONE_FIELD_NUMBER;
       hash = (53 * hash) + getTimezone().hashCode();
+      if (hasGeobaseEnabled()) {
+        hash = (37 * hash) + GEOBASE_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + getGeobaseEnabled().hashCode();
+      }
       hash = (37 * hash) + GEOBASE_URI_FIELD_NUMBER;
       hash = (53 * hash) + getGeobaseUri().hashCode();
       if (hasQueryLogRetentionSize()) {
@@ -39127,53 +39353,13 @@ public final class Clickhouse {
         hash = (37 * hash) + OPENTELEMETRY_SPAN_LOG_ENABLED_FIELD_NUMBER;
         hash = (53 * hash) + getOpentelemetrySpanLogEnabled().hashCode();
       }
-      if (hasBackgroundPoolSize()) {
-        hash = (37 * hash) + BACKGROUND_POOL_SIZE_FIELD_NUMBER;
-        hash = (53 * hash) + getBackgroundPoolSize().hashCode();
+      if (hasOpentelemetrySpanLogRetentionSize()) {
+        hash = (37 * hash) + OPENTELEMETRY_SPAN_LOG_RETENTION_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getOpentelemetrySpanLogRetentionSize().hashCode();
       }
-      if (hasBackgroundSchedulePoolSize()) {
-        hash = (37 * hash) + BACKGROUND_SCHEDULE_POOL_SIZE_FIELD_NUMBER;
-        hash = (53 * hash) + getBackgroundSchedulePoolSize().hashCode();
-      }
-      if (hasBackgroundFetchesPoolSize()) {
-        hash = (37 * hash) + BACKGROUND_FETCHES_POOL_SIZE_FIELD_NUMBER;
-        hash = (53 * hash) + getBackgroundFetchesPoolSize().hashCode();
-      }
-      if (hasBackgroundMovePoolSize()) {
-        hash = (37 * hash) + BACKGROUND_MOVE_POOL_SIZE_FIELD_NUMBER;
-        hash = (53 * hash) + getBackgroundMovePoolSize().hashCode();
-      }
-      if (hasBackgroundDistributedSchedulePoolSize()) {
-        hash = (37 * hash) + BACKGROUND_DISTRIBUTED_SCHEDULE_POOL_SIZE_FIELD_NUMBER;
-        hash = (53 * hash) + getBackgroundDistributedSchedulePoolSize().hashCode();
-      }
-      if (hasBackgroundBufferFlushSchedulePoolSize()) {
-        hash = (37 * hash) + BACKGROUND_BUFFER_FLUSH_SCHEDULE_POOL_SIZE_FIELD_NUMBER;
-        hash = (53 * hash) + getBackgroundBufferFlushSchedulePoolSize().hashCode();
-      }
-      if (hasBackgroundMessageBrokerSchedulePoolSize()) {
-        hash = (37 * hash) + BACKGROUND_MESSAGE_BROKER_SCHEDULE_POOL_SIZE_FIELD_NUMBER;
-        hash = (53 * hash) + getBackgroundMessageBrokerSchedulePoolSize().hashCode();
-      }
-      if (hasDefaultDatabase()) {
-        hash = (37 * hash) + DEFAULT_DATABASE_FIELD_NUMBER;
-        hash = (53 * hash) + getDefaultDatabase().hashCode();
-      }
-      if (hasTotalMemoryProfilerStep()) {
-        hash = (37 * hash) + TOTAL_MEMORY_PROFILER_STEP_FIELD_NUMBER;
-        hash = (53 * hash) + getTotalMemoryProfilerStep().hashCode();
-      }
-      if (hasTotalMemoryTrackerSampleProbability()) {
-        hash = (37 * hash) + TOTAL_MEMORY_TRACKER_SAMPLE_PROBABILITY_FIELD_NUMBER;
-        hash = (53 * hash) + getTotalMemoryTrackerSampleProbability().hashCode();
-      }
-      if (hasBackgroundCommonPoolSize()) {
-        hash = (37 * hash) + BACKGROUND_COMMON_POOL_SIZE_FIELD_NUMBER;
-        hash = (53 * hash) + getBackgroundCommonPoolSize().hashCode();
-      }
-      if (hasBackgroundMergesMutationsConcurrencyRatio()) {
-        hash = (37 * hash) + BACKGROUND_MERGES_MUTATIONS_CONCURRENCY_RATIO_FIELD_NUMBER;
-        hash = (53 * hash) + getBackgroundMergesMutationsConcurrencyRatio().hashCode();
+      if (hasOpentelemetrySpanLogRetentionTime()) {
+        hash = (37 * hash) + OPENTELEMETRY_SPAN_LOG_RETENTION_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getOpentelemetrySpanLogRetentionTime().hashCode();
       }
       if (hasQueryViewsLogEnabled()) {
         hash = (37 * hash) + QUERY_VIEWS_LOG_ENABLED_FIELD_NUMBER;
@@ -39198,14 +39384,6 @@ public final class Clickhouse {
       if (hasAsynchronousMetricLogRetentionTime()) {
         hash = (37 * hash) + ASYNCHRONOUS_METRIC_LOG_RETENTION_TIME_FIELD_NUMBER;
         hash = (53 * hash) + getAsynchronousMetricLogRetentionTime().hashCode();
-      }
-      if (hasOpentelemetrySpanLogRetentionSize()) {
-        hash = (37 * hash) + OPENTELEMETRY_SPAN_LOG_RETENTION_SIZE_FIELD_NUMBER;
-        hash = (53 * hash) + getOpentelemetrySpanLogRetentionSize().hashCode();
-      }
-      if (hasOpentelemetrySpanLogRetentionTime()) {
-        hash = (37 * hash) + OPENTELEMETRY_SPAN_LOG_RETENTION_TIME_FIELD_NUMBER;
-        hash = (53 * hash) + getOpentelemetrySpanLogRetentionTime().hashCode();
       }
       if (hasSessionLogEnabled()) {
         hash = (37 * hash) + SESSION_LOG_ENABLED_FIELD_NUMBER;
@@ -39243,9 +39421,53 @@ public final class Clickhouse {
         hash = (37 * hash) + ASYNCHRONOUS_INSERT_LOG_RETENTION_TIME_FIELD_NUMBER;
         hash = (53 * hash) + getAsynchronousInsertLogRetentionTime().hashCode();
       }
-      if (hasGeobaseEnabled()) {
-        hash = (37 * hash) + GEOBASE_ENABLED_FIELD_NUMBER;
-        hash = (53 * hash) + getGeobaseEnabled().hashCode();
+      if (hasBackgroundPoolSize()) {
+        hash = (37 * hash) + BACKGROUND_POOL_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getBackgroundPoolSize().hashCode();
+      }
+      if (hasBackgroundMergesMutationsConcurrencyRatio()) {
+        hash = (37 * hash) + BACKGROUND_MERGES_MUTATIONS_CONCURRENCY_RATIO_FIELD_NUMBER;
+        hash = (53 * hash) + getBackgroundMergesMutationsConcurrencyRatio().hashCode();
+      }
+      if (hasBackgroundSchedulePoolSize()) {
+        hash = (37 * hash) + BACKGROUND_SCHEDULE_POOL_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getBackgroundSchedulePoolSize().hashCode();
+      }
+      if (hasBackgroundFetchesPoolSize()) {
+        hash = (37 * hash) + BACKGROUND_FETCHES_POOL_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getBackgroundFetchesPoolSize().hashCode();
+      }
+      if (hasBackgroundMovePoolSize()) {
+        hash = (37 * hash) + BACKGROUND_MOVE_POOL_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getBackgroundMovePoolSize().hashCode();
+      }
+      if (hasBackgroundDistributedSchedulePoolSize()) {
+        hash = (37 * hash) + BACKGROUND_DISTRIBUTED_SCHEDULE_POOL_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getBackgroundDistributedSchedulePoolSize().hashCode();
+      }
+      if (hasBackgroundBufferFlushSchedulePoolSize()) {
+        hash = (37 * hash) + BACKGROUND_BUFFER_FLUSH_SCHEDULE_POOL_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getBackgroundBufferFlushSchedulePoolSize().hashCode();
+      }
+      if (hasBackgroundMessageBrokerSchedulePoolSize()) {
+        hash = (37 * hash) + BACKGROUND_MESSAGE_BROKER_SCHEDULE_POOL_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getBackgroundMessageBrokerSchedulePoolSize().hashCode();
+      }
+      if (hasBackgroundCommonPoolSize()) {
+        hash = (37 * hash) + BACKGROUND_COMMON_POOL_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getBackgroundCommonPoolSize().hashCode();
+      }
+      if (hasDefaultDatabase()) {
+        hash = (37 * hash) + DEFAULT_DATABASE_FIELD_NUMBER;
+        hash = (53 * hash) + getDefaultDatabase().hashCode();
+      }
+      if (hasTotalMemoryProfilerStep()) {
+        hash = (37 * hash) + TOTAL_MEMORY_PROFILER_STEP_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalMemoryProfilerStep().hashCode();
+      }
+      if (hasTotalMemoryTrackerSampleProbability()) {
+        hash = (37 * hash) + TOTAL_MEMORY_TRACKER_SAMPLE_PROBABILITY_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalMemoryTrackerSampleProbability().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -39484,6 +39706,12 @@ public final class Clickhouse {
         }
         timezone_ = "";
 
+        if (geobaseEnabledBuilder_ == null) {
+          geobaseEnabled_ = null;
+        } else {
+          geobaseEnabled_ = null;
+          geobaseEnabledBuilder_ = null;
+        }
         geobaseUri_ = "";
 
         if (queryLogRetentionSizeBuilder_ == null) {
@@ -39590,77 +39818,17 @@ public final class Clickhouse {
           opentelemetrySpanLogEnabled_ = null;
           opentelemetrySpanLogEnabledBuilder_ = null;
         }
-        if (backgroundPoolSizeBuilder_ == null) {
-          backgroundPoolSize_ = null;
+        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
+          opentelemetrySpanLogRetentionSize_ = null;
         } else {
-          backgroundPoolSize_ = null;
-          backgroundPoolSizeBuilder_ = null;
+          opentelemetrySpanLogRetentionSize_ = null;
+          opentelemetrySpanLogRetentionSizeBuilder_ = null;
         }
-        if (backgroundSchedulePoolSizeBuilder_ == null) {
-          backgroundSchedulePoolSize_ = null;
+        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
+          opentelemetrySpanLogRetentionTime_ = null;
         } else {
-          backgroundSchedulePoolSize_ = null;
-          backgroundSchedulePoolSizeBuilder_ = null;
-        }
-        if (backgroundFetchesPoolSizeBuilder_ == null) {
-          backgroundFetchesPoolSize_ = null;
-        } else {
-          backgroundFetchesPoolSize_ = null;
-          backgroundFetchesPoolSizeBuilder_ = null;
-        }
-        if (backgroundMovePoolSizeBuilder_ == null) {
-          backgroundMovePoolSize_ = null;
-        } else {
-          backgroundMovePoolSize_ = null;
-          backgroundMovePoolSizeBuilder_ = null;
-        }
-        if (backgroundDistributedSchedulePoolSizeBuilder_ == null) {
-          backgroundDistributedSchedulePoolSize_ = null;
-        } else {
-          backgroundDistributedSchedulePoolSize_ = null;
-          backgroundDistributedSchedulePoolSizeBuilder_ = null;
-        }
-        if (backgroundBufferFlushSchedulePoolSizeBuilder_ == null) {
-          backgroundBufferFlushSchedulePoolSize_ = null;
-        } else {
-          backgroundBufferFlushSchedulePoolSize_ = null;
-          backgroundBufferFlushSchedulePoolSizeBuilder_ = null;
-        }
-        if (backgroundMessageBrokerSchedulePoolSizeBuilder_ == null) {
-          backgroundMessageBrokerSchedulePoolSize_ = null;
-        } else {
-          backgroundMessageBrokerSchedulePoolSize_ = null;
-          backgroundMessageBrokerSchedulePoolSizeBuilder_ = null;
-        }
-        if (defaultDatabaseBuilder_ == null) {
-          defaultDatabase_ = null;
-        } else {
-          defaultDatabase_ = null;
-          defaultDatabaseBuilder_ = null;
-        }
-        if (totalMemoryProfilerStepBuilder_ == null) {
-          totalMemoryProfilerStep_ = null;
-        } else {
-          totalMemoryProfilerStep_ = null;
-          totalMemoryProfilerStepBuilder_ = null;
-        }
-        if (totalMemoryTrackerSampleProbabilityBuilder_ == null) {
-          totalMemoryTrackerSampleProbability_ = null;
-        } else {
-          totalMemoryTrackerSampleProbability_ = null;
-          totalMemoryTrackerSampleProbabilityBuilder_ = null;
-        }
-        if (backgroundCommonPoolSizeBuilder_ == null) {
-          backgroundCommonPoolSize_ = null;
-        } else {
-          backgroundCommonPoolSize_ = null;
-          backgroundCommonPoolSizeBuilder_ = null;
-        }
-        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
-          backgroundMergesMutationsConcurrencyRatio_ = null;
-        } else {
-          backgroundMergesMutationsConcurrencyRatio_ = null;
-          backgroundMergesMutationsConcurrencyRatioBuilder_ = null;
+          opentelemetrySpanLogRetentionTime_ = null;
+          opentelemetrySpanLogRetentionTimeBuilder_ = null;
         }
         if (queryViewsLogEnabledBuilder_ == null) {
           queryViewsLogEnabled_ = null;
@@ -39697,18 +39865,6 @@ public final class Clickhouse {
         } else {
           asynchronousMetricLogRetentionTime_ = null;
           asynchronousMetricLogRetentionTimeBuilder_ = null;
-        }
-        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
-          opentelemetrySpanLogRetentionSize_ = null;
-        } else {
-          opentelemetrySpanLogRetentionSize_ = null;
-          opentelemetrySpanLogRetentionSizeBuilder_ = null;
-        }
-        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
-          opentelemetrySpanLogRetentionTime_ = null;
-        } else {
-          opentelemetrySpanLogRetentionTime_ = null;
-          opentelemetrySpanLogRetentionTimeBuilder_ = null;
         }
         if (sessionLogEnabledBuilder_ == null) {
           sessionLogEnabled_ = null;
@@ -39764,11 +39920,77 @@ public final class Clickhouse {
           asynchronousInsertLogRetentionTime_ = null;
           asynchronousInsertLogRetentionTimeBuilder_ = null;
         }
-        if (geobaseEnabledBuilder_ == null) {
-          geobaseEnabled_ = null;
+        if (backgroundPoolSizeBuilder_ == null) {
+          backgroundPoolSize_ = null;
         } else {
-          geobaseEnabled_ = null;
-          geobaseEnabledBuilder_ = null;
+          backgroundPoolSize_ = null;
+          backgroundPoolSizeBuilder_ = null;
+        }
+        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
+          backgroundMergesMutationsConcurrencyRatio_ = null;
+        } else {
+          backgroundMergesMutationsConcurrencyRatio_ = null;
+          backgroundMergesMutationsConcurrencyRatioBuilder_ = null;
+        }
+        if (backgroundSchedulePoolSizeBuilder_ == null) {
+          backgroundSchedulePoolSize_ = null;
+        } else {
+          backgroundSchedulePoolSize_ = null;
+          backgroundSchedulePoolSizeBuilder_ = null;
+        }
+        if (backgroundFetchesPoolSizeBuilder_ == null) {
+          backgroundFetchesPoolSize_ = null;
+        } else {
+          backgroundFetchesPoolSize_ = null;
+          backgroundFetchesPoolSizeBuilder_ = null;
+        }
+        if (backgroundMovePoolSizeBuilder_ == null) {
+          backgroundMovePoolSize_ = null;
+        } else {
+          backgroundMovePoolSize_ = null;
+          backgroundMovePoolSizeBuilder_ = null;
+        }
+        if (backgroundDistributedSchedulePoolSizeBuilder_ == null) {
+          backgroundDistributedSchedulePoolSize_ = null;
+        } else {
+          backgroundDistributedSchedulePoolSize_ = null;
+          backgroundDistributedSchedulePoolSizeBuilder_ = null;
+        }
+        if (backgroundBufferFlushSchedulePoolSizeBuilder_ == null) {
+          backgroundBufferFlushSchedulePoolSize_ = null;
+        } else {
+          backgroundBufferFlushSchedulePoolSize_ = null;
+          backgroundBufferFlushSchedulePoolSizeBuilder_ = null;
+        }
+        if (backgroundMessageBrokerSchedulePoolSizeBuilder_ == null) {
+          backgroundMessageBrokerSchedulePoolSize_ = null;
+        } else {
+          backgroundMessageBrokerSchedulePoolSize_ = null;
+          backgroundMessageBrokerSchedulePoolSizeBuilder_ = null;
+        }
+        if (backgroundCommonPoolSizeBuilder_ == null) {
+          backgroundCommonPoolSize_ = null;
+        } else {
+          backgroundCommonPoolSize_ = null;
+          backgroundCommonPoolSizeBuilder_ = null;
+        }
+        if (defaultDatabaseBuilder_ == null) {
+          defaultDatabase_ = null;
+        } else {
+          defaultDatabase_ = null;
+          defaultDatabaseBuilder_ = null;
+        }
+        if (totalMemoryProfilerStepBuilder_ == null) {
+          totalMemoryProfilerStep_ = null;
+        } else {
+          totalMemoryProfilerStep_ = null;
+          totalMemoryProfilerStepBuilder_ = null;
+        }
+        if (totalMemoryTrackerSampleProbabilityBuilder_ == null) {
+          totalMemoryTrackerSampleProbability_ = null;
+        } else {
+          totalMemoryTrackerSampleProbability_ = null;
+          totalMemoryTrackerSampleProbabilityBuilder_ = null;
         }
         return this;
       }
@@ -39890,6 +40112,11 @@ public final class Clickhouse {
           result.builtinDictionariesReloadInterval_ = builtinDictionariesReloadIntervalBuilder_.build();
         }
         result.timezone_ = timezone_;
+        if (geobaseEnabledBuilder_ == null) {
+          result.geobaseEnabled_ = geobaseEnabled_;
+        } else {
+          result.geobaseEnabled_ = geobaseEnabledBuilder_.build();
+        }
         result.geobaseUri_ = geobaseUri_;
         if (queryLogRetentionSizeBuilder_ == null) {
           result.queryLogRetentionSize_ = queryLogRetentionSize_;
@@ -39977,65 +40204,15 @@ public final class Clickhouse {
         } else {
           result.opentelemetrySpanLogEnabled_ = opentelemetrySpanLogEnabledBuilder_.build();
         }
-        if (backgroundPoolSizeBuilder_ == null) {
-          result.backgroundPoolSize_ = backgroundPoolSize_;
+        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
+          result.opentelemetrySpanLogRetentionSize_ = opentelemetrySpanLogRetentionSize_;
         } else {
-          result.backgroundPoolSize_ = backgroundPoolSizeBuilder_.build();
+          result.opentelemetrySpanLogRetentionSize_ = opentelemetrySpanLogRetentionSizeBuilder_.build();
         }
-        if (backgroundSchedulePoolSizeBuilder_ == null) {
-          result.backgroundSchedulePoolSize_ = backgroundSchedulePoolSize_;
+        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
+          result.opentelemetrySpanLogRetentionTime_ = opentelemetrySpanLogRetentionTime_;
         } else {
-          result.backgroundSchedulePoolSize_ = backgroundSchedulePoolSizeBuilder_.build();
-        }
-        if (backgroundFetchesPoolSizeBuilder_ == null) {
-          result.backgroundFetchesPoolSize_ = backgroundFetchesPoolSize_;
-        } else {
-          result.backgroundFetchesPoolSize_ = backgroundFetchesPoolSizeBuilder_.build();
-        }
-        if (backgroundMovePoolSizeBuilder_ == null) {
-          result.backgroundMovePoolSize_ = backgroundMovePoolSize_;
-        } else {
-          result.backgroundMovePoolSize_ = backgroundMovePoolSizeBuilder_.build();
-        }
-        if (backgroundDistributedSchedulePoolSizeBuilder_ == null) {
-          result.backgroundDistributedSchedulePoolSize_ = backgroundDistributedSchedulePoolSize_;
-        } else {
-          result.backgroundDistributedSchedulePoolSize_ = backgroundDistributedSchedulePoolSizeBuilder_.build();
-        }
-        if (backgroundBufferFlushSchedulePoolSizeBuilder_ == null) {
-          result.backgroundBufferFlushSchedulePoolSize_ = backgroundBufferFlushSchedulePoolSize_;
-        } else {
-          result.backgroundBufferFlushSchedulePoolSize_ = backgroundBufferFlushSchedulePoolSizeBuilder_.build();
-        }
-        if (backgroundMessageBrokerSchedulePoolSizeBuilder_ == null) {
-          result.backgroundMessageBrokerSchedulePoolSize_ = backgroundMessageBrokerSchedulePoolSize_;
-        } else {
-          result.backgroundMessageBrokerSchedulePoolSize_ = backgroundMessageBrokerSchedulePoolSizeBuilder_.build();
-        }
-        if (defaultDatabaseBuilder_ == null) {
-          result.defaultDatabase_ = defaultDatabase_;
-        } else {
-          result.defaultDatabase_ = defaultDatabaseBuilder_.build();
-        }
-        if (totalMemoryProfilerStepBuilder_ == null) {
-          result.totalMemoryProfilerStep_ = totalMemoryProfilerStep_;
-        } else {
-          result.totalMemoryProfilerStep_ = totalMemoryProfilerStepBuilder_.build();
-        }
-        if (totalMemoryTrackerSampleProbabilityBuilder_ == null) {
-          result.totalMemoryTrackerSampleProbability_ = totalMemoryTrackerSampleProbability_;
-        } else {
-          result.totalMemoryTrackerSampleProbability_ = totalMemoryTrackerSampleProbabilityBuilder_.build();
-        }
-        if (backgroundCommonPoolSizeBuilder_ == null) {
-          result.backgroundCommonPoolSize_ = backgroundCommonPoolSize_;
-        } else {
-          result.backgroundCommonPoolSize_ = backgroundCommonPoolSizeBuilder_.build();
-        }
-        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
-          result.backgroundMergesMutationsConcurrencyRatio_ = backgroundMergesMutationsConcurrencyRatio_;
-        } else {
-          result.backgroundMergesMutationsConcurrencyRatio_ = backgroundMergesMutationsConcurrencyRatioBuilder_.build();
+          result.opentelemetrySpanLogRetentionTime_ = opentelemetrySpanLogRetentionTimeBuilder_.build();
         }
         if (queryViewsLogEnabledBuilder_ == null) {
           result.queryViewsLogEnabled_ = queryViewsLogEnabled_;
@@ -40066,16 +40243,6 @@ public final class Clickhouse {
           result.asynchronousMetricLogRetentionTime_ = asynchronousMetricLogRetentionTime_;
         } else {
           result.asynchronousMetricLogRetentionTime_ = asynchronousMetricLogRetentionTimeBuilder_.build();
-        }
-        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
-          result.opentelemetrySpanLogRetentionSize_ = opentelemetrySpanLogRetentionSize_;
-        } else {
-          result.opentelemetrySpanLogRetentionSize_ = opentelemetrySpanLogRetentionSizeBuilder_.build();
-        }
-        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
-          result.opentelemetrySpanLogRetentionTime_ = opentelemetrySpanLogRetentionTime_;
-        } else {
-          result.opentelemetrySpanLogRetentionTime_ = opentelemetrySpanLogRetentionTimeBuilder_.build();
         }
         if (sessionLogEnabledBuilder_ == null) {
           result.sessionLogEnabled_ = sessionLogEnabled_;
@@ -40122,10 +40289,65 @@ public final class Clickhouse {
         } else {
           result.asynchronousInsertLogRetentionTime_ = asynchronousInsertLogRetentionTimeBuilder_.build();
         }
-        if (geobaseEnabledBuilder_ == null) {
-          result.geobaseEnabled_ = geobaseEnabled_;
+        if (backgroundPoolSizeBuilder_ == null) {
+          result.backgroundPoolSize_ = backgroundPoolSize_;
         } else {
-          result.geobaseEnabled_ = geobaseEnabledBuilder_.build();
+          result.backgroundPoolSize_ = backgroundPoolSizeBuilder_.build();
+        }
+        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
+          result.backgroundMergesMutationsConcurrencyRatio_ = backgroundMergesMutationsConcurrencyRatio_;
+        } else {
+          result.backgroundMergesMutationsConcurrencyRatio_ = backgroundMergesMutationsConcurrencyRatioBuilder_.build();
+        }
+        if (backgroundSchedulePoolSizeBuilder_ == null) {
+          result.backgroundSchedulePoolSize_ = backgroundSchedulePoolSize_;
+        } else {
+          result.backgroundSchedulePoolSize_ = backgroundSchedulePoolSizeBuilder_.build();
+        }
+        if (backgroundFetchesPoolSizeBuilder_ == null) {
+          result.backgroundFetchesPoolSize_ = backgroundFetchesPoolSize_;
+        } else {
+          result.backgroundFetchesPoolSize_ = backgroundFetchesPoolSizeBuilder_.build();
+        }
+        if (backgroundMovePoolSizeBuilder_ == null) {
+          result.backgroundMovePoolSize_ = backgroundMovePoolSize_;
+        } else {
+          result.backgroundMovePoolSize_ = backgroundMovePoolSizeBuilder_.build();
+        }
+        if (backgroundDistributedSchedulePoolSizeBuilder_ == null) {
+          result.backgroundDistributedSchedulePoolSize_ = backgroundDistributedSchedulePoolSize_;
+        } else {
+          result.backgroundDistributedSchedulePoolSize_ = backgroundDistributedSchedulePoolSizeBuilder_.build();
+        }
+        if (backgroundBufferFlushSchedulePoolSizeBuilder_ == null) {
+          result.backgroundBufferFlushSchedulePoolSize_ = backgroundBufferFlushSchedulePoolSize_;
+        } else {
+          result.backgroundBufferFlushSchedulePoolSize_ = backgroundBufferFlushSchedulePoolSizeBuilder_.build();
+        }
+        if (backgroundMessageBrokerSchedulePoolSizeBuilder_ == null) {
+          result.backgroundMessageBrokerSchedulePoolSize_ = backgroundMessageBrokerSchedulePoolSize_;
+        } else {
+          result.backgroundMessageBrokerSchedulePoolSize_ = backgroundMessageBrokerSchedulePoolSizeBuilder_.build();
+        }
+        if (backgroundCommonPoolSizeBuilder_ == null) {
+          result.backgroundCommonPoolSize_ = backgroundCommonPoolSize_;
+        } else {
+          result.backgroundCommonPoolSize_ = backgroundCommonPoolSizeBuilder_.build();
+        }
+        if (defaultDatabaseBuilder_ == null) {
+          result.defaultDatabase_ = defaultDatabase_;
+        } else {
+          result.defaultDatabase_ = defaultDatabaseBuilder_.build();
+        }
+        if (totalMemoryProfilerStepBuilder_ == null) {
+          result.totalMemoryProfilerStep_ = totalMemoryProfilerStep_;
+        } else {
+          result.totalMemoryProfilerStep_ = totalMemoryProfilerStepBuilder_.build();
+        }
+        if (totalMemoryTrackerSampleProbabilityBuilder_ == null) {
+          result.totalMemoryTrackerSampleProbability_ = totalMemoryTrackerSampleProbability_;
+        } else {
+          result.totalMemoryTrackerSampleProbability_ = totalMemoryTrackerSampleProbabilityBuilder_.build();
         }
         onBuilt();
         return result;
@@ -40319,6 +40541,9 @@ public final class Clickhouse {
           timezone_ = other.timezone_;
           onChanged();
         }
+        if (other.hasGeobaseEnabled()) {
+          mergeGeobaseEnabled(other.getGeobaseEnabled());
+        }
         if (!other.getGeobaseUri().isEmpty()) {
           geobaseUri_ = other.geobaseUri_;
           onChanged();
@@ -40377,41 +40602,11 @@ public final class Clickhouse {
         if (other.hasOpentelemetrySpanLogEnabled()) {
           mergeOpentelemetrySpanLogEnabled(other.getOpentelemetrySpanLogEnabled());
         }
-        if (other.hasBackgroundPoolSize()) {
-          mergeBackgroundPoolSize(other.getBackgroundPoolSize());
+        if (other.hasOpentelemetrySpanLogRetentionSize()) {
+          mergeOpentelemetrySpanLogRetentionSize(other.getOpentelemetrySpanLogRetentionSize());
         }
-        if (other.hasBackgroundSchedulePoolSize()) {
-          mergeBackgroundSchedulePoolSize(other.getBackgroundSchedulePoolSize());
-        }
-        if (other.hasBackgroundFetchesPoolSize()) {
-          mergeBackgroundFetchesPoolSize(other.getBackgroundFetchesPoolSize());
-        }
-        if (other.hasBackgroundMovePoolSize()) {
-          mergeBackgroundMovePoolSize(other.getBackgroundMovePoolSize());
-        }
-        if (other.hasBackgroundDistributedSchedulePoolSize()) {
-          mergeBackgroundDistributedSchedulePoolSize(other.getBackgroundDistributedSchedulePoolSize());
-        }
-        if (other.hasBackgroundBufferFlushSchedulePoolSize()) {
-          mergeBackgroundBufferFlushSchedulePoolSize(other.getBackgroundBufferFlushSchedulePoolSize());
-        }
-        if (other.hasBackgroundMessageBrokerSchedulePoolSize()) {
-          mergeBackgroundMessageBrokerSchedulePoolSize(other.getBackgroundMessageBrokerSchedulePoolSize());
-        }
-        if (other.hasDefaultDatabase()) {
-          mergeDefaultDatabase(other.getDefaultDatabase());
-        }
-        if (other.hasTotalMemoryProfilerStep()) {
-          mergeTotalMemoryProfilerStep(other.getTotalMemoryProfilerStep());
-        }
-        if (other.hasTotalMemoryTrackerSampleProbability()) {
-          mergeTotalMemoryTrackerSampleProbability(other.getTotalMemoryTrackerSampleProbability());
-        }
-        if (other.hasBackgroundCommonPoolSize()) {
-          mergeBackgroundCommonPoolSize(other.getBackgroundCommonPoolSize());
-        }
-        if (other.hasBackgroundMergesMutationsConcurrencyRatio()) {
-          mergeBackgroundMergesMutationsConcurrencyRatio(other.getBackgroundMergesMutationsConcurrencyRatio());
+        if (other.hasOpentelemetrySpanLogRetentionTime()) {
+          mergeOpentelemetrySpanLogRetentionTime(other.getOpentelemetrySpanLogRetentionTime());
         }
         if (other.hasQueryViewsLogEnabled()) {
           mergeQueryViewsLogEnabled(other.getQueryViewsLogEnabled());
@@ -40430,12 +40625,6 @@ public final class Clickhouse {
         }
         if (other.hasAsynchronousMetricLogRetentionTime()) {
           mergeAsynchronousMetricLogRetentionTime(other.getAsynchronousMetricLogRetentionTime());
-        }
-        if (other.hasOpentelemetrySpanLogRetentionSize()) {
-          mergeOpentelemetrySpanLogRetentionSize(other.getOpentelemetrySpanLogRetentionSize());
-        }
-        if (other.hasOpentelemetrySpanLogRetentionTime()) {
-          mergeOpentelemetrySpanLogRetentionTime(other.getOpentelemetrySpanLogRetentionTime());
         }
         if (other.hasSessionLogEnabled()) {
           mergeSessionLogEnabled(other.getSessionLogEnabled());
@@ -40464,8 +40653,41 @@ public final class Clickhouse {
         if (other.hasAsynchronousInsertLogRetentionTime()) {
           mergeAsynchronousInsertLogRetentionTime(other.getAsynchronousInsertLogRetentionTime());
         }
-        if (other.hasGeobaseEnabled()) {
-          mergeGeobaseEnabled(other.getGeobaseEnabled());
+        if (other.hasBackgroundPoolSize()) {
+          mergeBackgroundPoolSize(other.getBackgroundPoolSize());
+        }
+        if (other.hasBackgroundMergesMutationsConcurrencyRatio()) {
+          mergeBackgroundMergesMutationsConcurrencyRatio(other.getBackgroundMergesMutationsConcurrencyRatio());
+        }
+        if (other.hasBackgroundSchedulePoolSize()) {
+          mergeBackgroundSchedulePoolSize(other.getBackgroundSchedulePoolSize());
+        }
+        if (other.hasBackgroundFetchesPoolSize()) {
+          mergeBackgroundFetchesPoolSize(other.getBackgroundFetchesPoolSize());
+        }
+        if (other.hasBackgroundMovePoolSize()) {
+          mergeBackgroundMovePoolSize(other.getBackgroundMovePoolSize());
+        }
+        if (other.hasBackgroundDistributedSchedulePoolSize()) {
+          mergeBackgroundDistributedSchedulePoolSize(other.getBackgroundDistributedSchedulePoolSize());
+        }
+        if (other.hasBackgroundBufferFlushSchedulePoolSize()) {
+          mergeBackgroundBufferFlushSchedulePoolSize(other.getBackgroundBufferFlushSchedulePoolSize());
+        }
+        if (other.hasBackgroundMessageBrokerSchedulePoolSize()) {
+          mergeBackgroundMessageBrokerSchedulePoolSize(other.getBackgroundMessageBrokerSchedulePoolSize());
+        }
+        if (other.hasBackgroundCommonPoolSize()) {
+          mergeBackgroundCommonPoolSize(other.getBackgroundCommonPoolSize());
+        }
+        if (other.hasDefaultDatabase()) {
+          mergeDefaultDatabase(other.getDefaultDatabase());
+        }
+        if (other.hasTotalMemoryProfilerStep()) {
+          mergeTotalMemoryProfilerStep(other.getTotalMemoryProfilerStep());
+        }
+        if (other.hasTotalMemoryTrackerSampleProbability()) {
+          mergeTotalMemoryTrackerSampleProbability(other.getTotalMemoryTrackerSampleProbability());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -43541,6 +43763,161 @@ public final class Clickhouse {
         return this;
       }
 
+      private com.google.protobuf.BoolValue geobaseEnabled_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> geobaseEnabledBuilder_;
+      /**
+       * <pre>
+       * Enable or disable geobase.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+       * @return Whether the geobaseEnabled field is set.
+       */
+      public boolean hasGeobaseEnabled() {
+        return geobaseEnabledBuilder_ != null || geobaseEnabled_ != null;
+      }
+      /**
+       * <pre>
+       * Enable or disable geobase.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+       * @return The geobaseEnabled.
+       */
+      public com.google.protobuf.BoolValue getGeobaseEnabled() {
+        if (geobaseEnabledBuilder_ == null) {
+          return geobaseEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : geobaseEnabled_;
+        } else {
+          return geobaseEnabledBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enable or disable geobase.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+       */
+      public Builder setGeobaseEnabled(com.google.protobuf.BoolValue value) {
+        if (geobaseEnabledBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          geobaseEnabled_ = value;
+          onChanged();
+        } else {
+          geobaseEnabledBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable geobase.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+       */
+      public Builder setGeobaseEnabled(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (geobaseEnabledBuilder_ == null) {
+          geobaseEnabled_ = builderForValue.build();
+          onChanged();
+        } else {
+          geobaseEnabledBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable geobase.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+       */
+      public Builder mergeGeobaseEnabled(com.google.protobuf.BoolValue value) {
+        if (geobaseEnabledBuilder_ == null) {
+          if (geobaseEnabled_ != null) {
+            geobaseEnabled_ =
+              com.google.protobuf.BoolValue.newBuilder(geobaseEnabled_).mergeFrom(value).buildPartial();
+          } else {
+            geobaseEnabled_ = value;
+          }
+          onChanged();
+        } else {
+          geobaseEnabledBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable geobase.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+       */
+      public Builder clearGeobaseEnabled() {
+        if (geobaseEnabledBuilder_ == null) {
+          geobaseEnabled_ = null;
+          onChanged();
+        } else {
+          geobaseEnabled_ = null;
+          geobaseEnabledBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable geobase.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getGeobaseEnabledBuilder() {
+        
+        onChanged();
+        return getGeobaseEnabledFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enable or disable geobase.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getGeobaseEnabledOrBuilder() {
+        if (geobaseEnabledBuilder_ != null) {
+          return geobaseEnabledBuilder_.getMessageOrBuilder();
+        } else {
+          return geobaseEnabled_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : geobaseEnabled_;
+        }
+      }
+      /**
+       * <pre>
+       * Enable or disable geobase.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getGeobaseEnabledFieldBuilder() {
+        if (geobaseEnabledBuilder_ == null) {
+          geobaseEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getGeobaseEnabled(),
+                  getParentForChildren(),
+                  isClean());
+          geobaseEnabled_ = null;
+        }
+        return geobaseEnabledBuilder_;
+      }
+
       private java.lang.Object geobaseUri_ = "";
       /**
        * <pre>
@@ -46303,6 +46680,10 @@ public final class Clickhouse {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> opentelemetrySpanLogEnabledBuilder_;
       /**
+       * <pre>
+       * Enable or disable opentelemetry_span_log system table. Default value: false.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue opentelemetry_span_log_enabled = 42;</code>
        * @return Whether the opentelemetrySpanLogEnabled field is set.
        */
@@ -46310,6 +46691,10 @@ public final class Clickhouse {
         return opentelemetrySpanLogEnabledBuilder_ != null || opentelemetrySpanLogEnabled_ != null;
       }
       /**
+       * <pre>
+       * Enable or disable opentelemetry_span_log system table. Default value: false.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue opentelemetry_span_log_enabled = 42;</code>
        * @return The opentelemetrySpanLogEnabled.
        */
@@ -46321,6 +46706,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Enable or disable opentelemetry_span_log system table. Default value: false.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue opentelemetry_span_log_enabled = 42;</code>
        */
       public Builder setOpentelemetrySpanLogEnabled(com.google.protobuf.BoolValue value) {
@@ -46337,6 +46726,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Enable or disable opentelemetry_span_log system table. Default value: false.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue opentelemetry_span_log_enabled = 42;</code>
        */
       public Builder setOpentelemetrySpanLogEnabled(
@@ -46351,6 +46744,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Enable or disable opentelemetry_span_log system table. Default value: false.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue opentelemetry_span_log_enabled = 42;</code>
        */
       public Builder mergeOpentelemetrySpanLogEnabled(com.google.protobuf.BoolValue value) {
@@ -46369,6 +46766,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Enable or disable opentelemetry_span_log system table. Default value: false.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue opentelemetry_span_log_enabled = 42;</code>
        */
       public Builder clearOpentelemetrySpanLogEnabled() {
@@ -46383,6 +46784,10 @@ public final class Clickhouse {
         return this;
       }
       /**
+       * <pre>
+       * Enable or disable opentelemetry_span_log system table. Default value: false.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue opentelemetry_span_log_enabled = 42;</code>
        */
       public com.google.protobuf.BoolValue.Builder getOpentelemetrySpanLogEnabledBuilder() {
@@ -46391,6 +46796,10 @@ public final class Clickhouse {
         return getOpentelemetrySpanLogEnabledFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Enable or disable opentelemetry_span_log system table. Default value: false.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue opentelemetry_span_log_enabled = 42;</code>
        */
       public com.google.protobuf.BoolValueOrBuilder getOpentelemetrySpanLogEnabledOrBuilder() {
@@ -46402,6 +46811,10 @@ public final class Clickhouse {
         }
       }
       /**
+       * <pre>
+       * Enable or disable opentelemetry_span_log system table. Default value: false.
+       * </pre>
+       *
        * <code>.google.protobuf.BoolValue opentelemetry_span_log_enabled = 42;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -46416,6 +46829,2758 @@ public final class Clickhouse {
           opentelemetrySpanLogEnabled_ = null;
         }
         return opentelemetrySpanLogEnabledBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value opentelemetrySpanLogRetentionSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> opentelemetrySpanLogRetentionSizeBuilder_;
+      /**
+       * <pre>
+       * The maximum size that opentelemetry_span_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of opentelemetry_span_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the opentelemetrySpanLogRetentionSize field is set.
+       */
+      public boolean hasOpentelemetrySpanLogRetentionSize() {
+        return opentelemetrySpanLogRetentionSizeBuilder_ != null || opentelemetrySpanLogRetentionSize_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum size that opentelemetry_span_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of opentelemetry_span_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The opentelemetrySpanLogRetentionSize.
+       */
+      public com.google.protobuf.Int64Value getOpentelemetrySpanLogRetentionSize() {
+        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
+          return opentelemetrySpanLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : opentelemetrySpanLogRetentionSize_;
+        } else {
+          return opentelemetrySpanLogRetentionSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size that opentelemetry_span_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of opentelemetry_span_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setOpentelemetrySpanLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          opentelemetrySpanLogRetentionSize_ = value;
+          onChanged();
+        } else {
+          opentelemetrySpanLogRetentionSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that opentelemetry_span_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of opentelemetry_span_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setOpentelemetrySpanLogRetentionSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
+          opentelemetrySpanLogRetentionSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          opentelemetrySpanLogRetentionSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that opentelemetry_span_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of opentelemetry_span_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeOpentelemetrySpanLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
+          if (opentelemetrySpanLogRetentionSize_ != null) {
+            opentelemetrySpanLogRetentionSize_ =
+              com.google.protobuf.Int64Value.newBuilder(opentelemetrySpanLogRetentionSize_).mergeFrom(value).buildPartial();
+          } else {
+            opentelemetrySpanLogRetentionSize_ = value;
+          }
+          onChanged();
+        } else {
+          opentelemetrySpanLogRetentionSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that opentelemetry_span_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of opentelemetry_span_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearOpentelemetrySpanLogRetentionSize() {
+        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
+          opentelemetrySpanLogRetentionSize_ = null;
+          onChanged();
+        } else {
+          opentelemetrySpanLogRetentionSize_ = null;
+          opentelemetrySpanLogRetentionSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that opentelemetry_span_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of opentelemetry_span_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getOpentelemetrySpanLogRetentionSizeBuilder() {
+        
+        onChanged();
+        return getOpentelemetrySpanLogRetentionSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum size that opentelemetry_span_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of opentelemetry_span_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getOpentelemetrySpanLogRetentionSizeOrBuilder() {
+        if (opentelemetrySpanLogRetentionSizeBuilder_ != null) {
+          return opentelemetrySpanLogRetentionSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return opentelemetrySpanLogRetentionSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : opentelemetrySpanLogRetentionSize_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size that opentelemetry_span_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of opentelemetry_span_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getOpentelemetrySpanLogRetentionSizeFieldBuilder() {
+        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
+          opentelemetrySpanLogRetentionSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getOpentelemetrySpanLogRetentionSize(),
+                  getParentForChildren(),
+                  isClean());
+          opentelemetrySpanLogRetentionSize_ = null;
+        }
+        return opentelemetrySpanLogRetentionSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value opentelemetrySpanLogRetentionTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> opentelemetrySpanLogRetentionTimeBuilder_;
+      /**
+       * <pre>
+       * The maximum time that opentelemetry_span_log records will be retained before removal. If set to 0,
+       * automatic removal of opentelemetry_span_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the opentelemetrySpanLogRetentionTime field is set.
+       */
+      public boolean hasOpentelemetrySpanLogRetentionTime() {
+        return opentelemetrySpanLogRetentionTimeBuilder_ != null || opentelemetrySpanLogRetentionTime_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum time that opentelemetry_span_log records will be retained before removal. If set to 0,
+       * automatic removal of opentelemetry_span_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The opentelemetrySpanLogRetentionTime.
+       */
+      public com.google.protobuf.Int64Value getOpentelemetrySpanLogRetentionTime() {
+        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
+          return opentelemetrySpanLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : opentelemetrySpanLogRetentionTime_;
+        } else {
+          return opentelemetrySpanLogRetentionTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time that opentelemetry_span_log records will be retained before removal. If set to 0,
+       * automatic removal of opentelemetry_span_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setOpentelemetrySpanLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          opentelemetrySpanLogRetentionTime_ = value;
+          onChanged();
+        } else {
+          opentelemetrySpanLogRetentionTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that opentelemetry_span_log records will be retained before removal. If set to 0,
+       * automatic removal of opentelemetry_span_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setOpentelemetrySpanLogRetentionTime(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
+          opentelemetrySpanLogRetentionTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          opentelemetrySpanLogRetentionTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that opentelemetry_span_log records will be retained before removal. If set to 0,
+       * automatic removal of opentelemetry_span_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeOpentelemetrySpanLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
+          if (opentelemetrySpanLogRetentionTime_ != null) {
+            opentelemetrySpanLogRetentionTime_ =
+              com.google.protobuf.Int64Value.newBuilder(opentelemetrySpanLogRetentionTime_).mergeFrom(value).buildPartial();
+          } else {
+            opentelemetrySpanLogRetentionTime_ = value;
+          }
+          onChanged();
+        } else {
+          opentelemetrySpanLogRetentionTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that opentelemetry_span_log records will be retained before removal. If set to 0,
+       * automatic removal of opentelemetry_span_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearOpentelemetrySpanLogRetentionTime() {
+        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
+          opentelemetrySpanLogRetentionTime_ = null;
+          onChanged();
+        } else {
+          opentelemetrySpanLogRetentionTime_ = null;
+          opentelemetrySpanLogRetentionTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that opentelemetry_span_log records will be retained before removal. If set to 0,
+       * automatic removal of opentelemetry_span_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getOpentelemetrySpanLogRetentionTimeBuilder() {
+        
+        onChanged();
+        return getOpentelemetrySpanLogRetentionTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum time that opentelemetry_span_log records will be retained before removal. If set to 0,
+       * automatic removal of opentelemetry_span_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getOpentelemetrySpanLogRetentionTimeOrBuilder() {
+        if (opentelemetrySpanLogRetentionTimeBuilder_ != null) {
+          return opentelemetrySpanLogRetentionTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return opentelemetrySpanLogRetentionTime_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : opentelemetrySpanLogRetentionTime_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time that opentelemetry_span_log records will be retained before removal. If set to 0,
+       * automatic removal of opentelemetry_span_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getOpentelemetrySpanLogRetentionTimeFieldBuilder() {
+        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
+          opentelemetrySpanLogRetentionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getOpentelemetrySpanLogRetentionTime(),
+                  getParentForChildren(),
+                  isClean());
+          opentelemetrySpanLogRetentionTime_ = null;
+        }
+        return opentelemetrySpanLogRetentionTimeBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue queryViewsLogEnabled_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> queryViewsLogEnabledBuilder_;
+      /**
+       * <pre>
+       * Enable or disable query_views_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+       * @return Whether the queryViewsLogEnabled field is set.
+       */
+      public boolean hasQueryViewsLogEnabled() {
+        return queryViewsLogEnabledBuilder_ != null || queryViewsLogEnabled_ != null;
+      }
+      /**
+       * <pre>
+       * Enable or disable query_views_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+       * @return The queryViewsLogEnabled.
+       */
+      public com.google.protobuf.BoolValue getQueryViewsLogEnabled() {
+        if (queryViewsLogEnabledBuilder_ == null) {
+          return queryViewsLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : queryViewsLogEnabled_;
+        } else {
+          return queryViewsLogEnabledBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enable or disable query_views_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+       */
+      public Builder setQueryViewsLogEnabled(com.google.protobuf.BoolValue value) {
+        if (queryViewsLogEnabledBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          queryViewsLogEnabled_ = value;
+          onChanged();
+        } else {
+          queryViewsLogEnabledBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable query_views_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+       */
+      public Builder setQueryViewsLogEnabled(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (queryViewsLogEnabledBuilder_ == null) {
+          queryViewsLogEnabled_ = builderForValue.build();
+          onChanged();
+        } else {
+          queryViewsLogEnabledBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable query_views_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+       */
+      public Builder mergeQueryViewsLogEnabled(com.google.protobuf.BoolValue value) {
+        if (queryViewsLogEnabledBuilder_ == null) {
+          if (queryViewsLogEnabled_ != null) {
+            queryViewsLogEnabled_ =
+              com.google.protobuf.BoolValue.newBuilder(queryViewsLogEnabled_).mergeFrom(value).buildPartial();
+          } else {
+            queryViewsLogEnabled_ = value;
+          }
+          onChanged();
+        } else {
+          queryViewsLogEnabledBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable query_views_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+       */
+      public Builder clearQueryViewsLogEnabled() {
+        if (queryViewsLogEnabledBuilder_ == null) {
+          queryViewsLogEnabled_ = null;
+          onChanged();
+        } else {
+          queryViewsLogEnabled_ = null;
+          queryViewsLogEnabledBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable query_views_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getQueryViewsLogEnabledBuilder() {
+        
+        onChanged();
+        return getQueryViewsLogEnabledFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enable or disable query_views_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getQueryViewsLogEnabledOrBuilder() {
+        if (queryViewsLogEnabledBuilder_ != null) {
+          return queryViewsLogEnabledBuilder_.getMessageOrBuilder();
+        } else {
+          return queryViewsLogEnabled_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : queryViewsLogEnabled_;
+        }
+      }
+      /**
+       * <pre>
+       * Enable or disable query_views_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getQueryViewsLogEnabledFieldBuilder() {
+        if (queryViewsLogEnabledBuilder_ == null) {
+          queryViewsLogEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getQueryViewsLogEnabled(),
+                  getParentForChildren(),
+                  isClean());
+          queryViewsLogEnabled_ = null;
+        }
+        return queryViewsLogEnabledBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value queryViewsLogRetentionSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> queryViewsLogRetentionSizeBuilder_;
+      /**
+       * <pre>
+       * The maximum size that query_views_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of query_views_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the queryViewsLogRetentionSize field is set.
+       */
+      public boolean hasQueryViewsLogRetentionSize() {
+        return queryViewsLogRetentionSizeBuilder_ != null || queryViewsLogRetentionSize_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum size that query_views_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of query_views_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The queryViewsLogRetentionSize.
+       */
+      public com.google.protobuf.Int64Value getQueryViewsLogRetentionSize() {
+        if (queryViewsLogRetentionSizeBuilder_ == null) {
+          return queryViewsLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryViewsLogRetentionSize_;
+        } else {
+          return queryViewsLogRetentionSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size that query_views_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of query_views_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setQueryViewsLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (queryViewsLogRetentionSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          queryViewsLogRetentionSize_ = value;
+          onChanged();
+        } else {
+          queryViewsLogRetentionSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that query_views_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of query_views_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setQueryViewsLogRetentionSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (queryViewsLogRetentionSizeBuilder_ == null) {
+          queryViewsLogRetentionSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          queryViewsLogRetentionSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that query_views_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of query_views_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeQueryViewsLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (queryViewsLogRetentionSizeBuilder_ == null) {
+          if (queryViewsLogRetentionSize_ != null) {
+            queryViewsLogRetentionSize_ =
+              com.google.protobuf.Int64Value.newBuilder(queryViewsLogRetentionSize_).mergeFrom(value).buildPartial();
+          } else {
+            queryViewsLogRetentionSize_ = value;
+          }
+          onChanged();
+        } else {
+          queryViewsLogRetentionSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that query_views_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of query_views_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearQueryViewsLogRetentionSize() {
+        if (queryViewsLogRetentionSizeBuilder_ == null) {
+          queryViewsLogRetentionSize_ = null;
+          onChanged();
+        } else {
+          queryViewsLogRetentionSize_ = null;
+          queryViewsLogRetentionSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that query_views_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of query_views_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getQueryViewsLogRetentionSizeBuilder() {
+        
+        onChanged();
+        return getQueryViewsLogRetentionSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum size that query_views_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of query_views_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getQueryViewsLogRetentionSizeOrBuilder() {
+        if (queryViewsLogRetentionSizeBuilder_ != null) {
+          return queryViewsLogRetentionSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return queryViewsLogRetentionSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : queryViewsLogRetentionSize_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size that query_views_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of query_views_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getQueryViewsLogRetentionSizeFieldBuilder() {
+        if (queryViewsLogRetentionSizeBuilder_ == null) {
+          queryViewsLogRetentionSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getQueryViewsLogRetentionSize(),
+                  getParentForChildren(),
+                  isClean());
+          queryViewsLogRetentionSize_ = null;
+        }
+        return queryViewsLogRetentionSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value queryViewsLogRetentionTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> queryViewsLogRetentionTimeBuilder_;
+      /**
+       * <pre>
+       * The maximum time that query_views_log records will be retained before removal. If set to 0,
+       * automatic removal of query_views_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the queryViewsLogRetentionTime field is set.
+       */
+      public boolean hasQueryViewsLogRetentionTime() {
+        return queryViewsLogRetentionTimeBuilder_ != null || queryViewsLogRetentionTime_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum time that query_views_log records will be retained before removal. If set to 0,
+       * automatic removal of query_views_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The queryViewsLogRetentionTime.
+       */
+      public com.google.protobuf.Int64Value getQueryViewsLogRetentionTime() {
+        if (queryViewsLogRetentionTimeBuilder_ == null) {
+          return queryViewsLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryViewsLogRetentionTime_;
+        } else {
+          return queryViewsLogRetentionTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time that query_views_log records will be retained before removal. If set to 0,
+       * automatic removal of query_views_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setQueryViewsLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (queryViewsLogRetentionTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          queryViewsLogRetentionTime_ = value;
+          onChanged();
+        } else {
+          queryViewsLogRetentionTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that query_views_log records will be retained before removal. If set to 0,
+       * automatic removal of query_views_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setQueryViewsLogRetentionTime(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (queryViewsLogRetentionTimeBuilder_ == null) {
+          queryViewsLogRetentionTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          queryViewsLogRetentionTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that query_views_log records will be retained before removal. If set to 0,
+       * automatic removal of query_views_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeQueryViewsLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (queryViewsLogRetentionTimeBuilder_ == null) {
+          if (queryViewsLogRetentionTime_ != null) {
+            queryViewsLogRetentionTime_ =
+              com.google.protobuf.Int64Value.newBuilder(queryViewsLogRetentionTime_).mergeFrom(value).buildPartial();
+          } else {
+            queryViewsLogRetentionTime_ = value;
+          }
+          onChanged();
+        } else {
+          queryViewsLogRetentionTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that query_views_log records will be retained before removal. If set to 0,
+       * automatic removal of query_views_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearQueryViewsLogRetentionTime() {
+        if (queryViewsLogRetentionTimeBuilder_ == null) {
+          queryViewsLogRetentionTime_ = null;
+          onChanged();
+        } else {
+          queryViewsLogRetentionTime_ = null;
+          queryViewsLogRetentionTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that query_views_log records will be retained before removal. If set to 0,
+       * automatic removal of query_views_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getQueryViewsLogRetentionTimeBuilder() {
+        
+        onChanged();
+        return getQueryViewsLogRetentionTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum time that query_views_log records will be retained before removal. If set to 0,
+       * automatic removal of query_views_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getQueryViewsLogRetentionTimeOrBuilder() {
+        if (queryViewsLogRetentionTimeBuilder_ != null) {
+          return queryViewsLogRetentionTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return queryViewsLogRetentionTime_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : queryViewsLogRetentionTime_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time that query_views_log records will be retained before removal. If set to 0,
+       * automatic removal of query_views_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getQueryViewsLogRetentionTimeFieldBuilder() {
+        if (queryViewsLogRetentionTimeBuilder_ == null) {
+          queryViewsLogRetentionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getQueryViewsLogRetentionTime(),
+                  getParentForChildren(),
+                  isClean());
+          queryViewsLogRetentionTime_ = null;
+        }
+        return queryViewsLogRetentionTimeBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue asynchronousMetricLogEnabled_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> asynchronousMetricLogEnabledBuilder_;
+      /**
+       * <pre>
+       * Enable or disable asynchronous_metric_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+       * @return Whether the asynchronousMetricLogEnabled field is set.
+       */
+      public boolean hasAsynchronousMetricLogEnabled() {
+        return asynchronousMetricLogEnabledBuilder_ != null || asynchronousMetricLogEnabled_ != null;
+      }
+      /**
+       * <pre>
+       * Enable or disable asynchronous_metric_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+       * @return The asynchronousMetricLogEnabled.
+       */
+      public com.google.protobuf.BoolValue getAsynchronousMetricLogEnabled() {
+        if (asynchronousMetricLogEnabledBuilder_ == null) {
+          return asynchronousMetricLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : asynchronousMetricLogEnabled_;
+        } else {
+          return asynchronousMetricLogEnabledBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enable or disable asynchronous_metric_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+       */
+      public Builder setAsynchronousMetricLogEnabled(com.google.protobuf.BoolValue value) {
+        if (asynchronousMetricLogEnabledBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asynchronousMetricLogEnabled_ = value;
+          onChanged();
+        } else {
+          asynchronousMetricLogEnabledBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable asynchronous_metric_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+       */
+      public Builder setAsynchronousMetricLogEnabled(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (asynchronousMetricLogEnabledBuilder_ == null) {
+          asynchronousMetricLogEnabled_ = builderForValue.build();
+          onChanged();
+        } else {
+          asynchronousMetricLogEnabledBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable asynchronous_metric_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+       */
+      public Builder mergeAsynchronousMetricLogEnabled(com.google.protobuf.BoolValue value) {
+        if (asynchronousMetricLogEnabledBuilder_ == null) {
+          if (asynchronousMetricLogEnabled_ != null) {
+            asynchronousMetricLogEnabled_ =
+              com.google.protobuf.BoolValue.newBuilder(asynchronousMetricLogEnabled_).mergeFrom(value).buildPartial();
+          } else {
+            asynchronousMetricLogEnabled_ = value;
+          }
+          onChanged();
+        } else {
+          asynchronousMetricLogEnabledBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable asynchronous_metric_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+       */
+      public Builder clearAsynchronousMetricLogEnabled() {
+        if (asynchronousMetricLogEnabledBuilder_ == null) {
+          asynchronousMetricLogEnabled_ = null;
+          onChanged();
+        } else {
+          asynchronousMetricLogEnabled_ = null;
+          asynchronousMetricLogEnabledBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable asynchronous_metric_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getAsynchronousMetricLogEnabledBuilder() {
+        
+        onChanged();
+        return getAsynchronousMetricLogEnabledFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enable or disable asynchronous_metric_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getAsynchronousMetricLogEnabledOrBuilder() {
+        if (asynchronousMetricLogEnabledBuilder_ != null) {
+          return asynchronousMetricLogEnabledBuilder_.getMessageOrBuilder();
+        } else {
+          return asynchronousMetricLogEnabled_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : asynchronousMetricLogEnabled_;
+        }
+      }
+      /**
+       * <pre>
+       * Enable or disable asynchronous_metric_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getAsynchronousMetricLogEnabledFieldBuilder() {
+        if (asynchronousMetricLogEnabledBuilder_ == null) {
+          asynchronousMetricLogEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getAsynchronousMetricLogEnabled(),
+                  getParentForChildren(),
+                  isClean());
+          asynchronousMetricLogEnabled_ = null;
+        }
+        return asynchronousMetricLogEnabledBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value asynchronousMetricLogRetentionSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asynchronousMetricLogRetentionSizeBuilder_;
+      /**
+       * <pre>
+       * The maximum size that asynchronous_metric_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of asynchronous_metric_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the asynchronousMetricLogRetentionSize field is set.
+       */
+      public boolean hasAsynchronousMetricLogRetentionSize() {
+        return asynchronousMetricLogRetentionSizeBuilder_ != null || asynchronousMetricLogRetentionSize_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum size that asynchronous_metric_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of asynchronous_metric_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The asynchronousMetricLogRetentionSize.
+       */
+      public com.google.protobuf.Int64Value getAsynchronousMetricLogRetentionSize() {
+        if (asynchronousMetricLogRetentionSizeBuilder_ == null) {
+          return asynchronousMetricLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousMetricLogRetentionSize_;
+        } else {
+          return asynchronousMetricLogRetentionSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size that asynchronous_metric_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of asynchronous_metric_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setAsynchronousMetricLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (asynchronousMetricLogRetentionSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asynchronousMetricLogRetentionSize_ = value;
+          onChanged();
+        } else {
+          asynchronousMetricLogRetentionSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that asynchronous_metric_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of asynchronous_metric_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setAsynchronousMetricLogRetentionSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (asynchronousMetricLogRetentionSizeBuilder_ == null) {
+          asynchronousMetricLogRetentionSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          asynchronousMetricLogRetentionSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that asynchronous_metric_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of asynchronous_metric_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeAsynchronousMetricLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (asynchronousMetricLogRetentionSizeBuilder_ == null) {
+          if (asynchronousMetricLogRetentionSize_ != null) {
+            asynchronousMetricLogRetentionSize_ =
+              com.google.protobuf.Int64Value.newBuilder(asynchronousMetricLogRetentionSize_).mergeFrom(value).buildPartial();
+          } else {
+            asynchronousMetricLogRetentionSize_ = value;
+          }
+          onChanged();
+        } else {
+          asynchronousMetricLogRetentionSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that asynchronous_metric_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of asynchronous_metric_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearAsynchronousMetricLogRetentionSize() {
+        if (asynchronousMetricLogRetentionSizeBuilder_ == null) {
+          asynchronousMetricLogRetentionSize_ = null;
+          onChanged();
+        } else {
+          asynchronousMetricLogRetentionSize_ = null;
+          asynchronousMetricLogRetentionSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that asynchronous_metric_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of asynchronous_metric_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getAsynchronousMetricLogRetentionSizeBuilder() {
+        
+        onChanged();
+        return getAsynchronousMetricLogRetentionSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum size that asynchronous_metric_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of asynchronous_metric_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getAsynchronousMetricLogRetentionSizeOrBuilder() {
+        if (asynchronousMetricLogRetentionSizeBuilder_ != null) {
+          return asynchronousMetricLogRetentionSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return asynchronousMetricLogRetentionSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousMetricLogRetentionSize_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size that asynchronous_metric_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of asynchronous_metric_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getAsynchronousMetricLogRetentionSizeFieldBuilder() {
+        if (asynchronousMetricLogRetentionSizeBuilder_ == null) {
+          asynchronousMetricLogRetentionSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getAsynchronousMetricLogRetentionSize(),
+                  getParentForChildren(),
+                  isClean());
+          asynchronousMetricLogRetentionSize_ = null;
+        }
+        return asynchronousMetricLogRetentionSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value asynchronousMetricLogRetentionTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asynchronousMetricLogRetentionTimeBuilder_;
+      /**
+       * <pre>
+       * The maximum time that asynchronous_metric_log records will be retained before removal. If set to 0,
+       * automatic removal of asynchronous_metric_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the asynchronousMetricLogRetentionTime field is set.
+       */
+      public boolean hasAsynchronousMetricLogRetentionTime() {
+        return asynchronousMetricLogRetentionTimeBuilder_ != null || asynchronousMetricLogRetentionTime_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum time that asynchronous_metric_log records will be retained before removal. If set to 0,
+       * automatic removal of asynchronous_metric_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The asynchronousMetricLogRetentionTime.
+       */
+      public com.google.protobuf.Int64Value getAsynchronousMetricLogRetentionTime() {
+        if (asynchronousMetricLogRetentionTimeBuilder_ == null) {
+          return asynchronousMetricLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousMetricLogRetentionTime_;
+        } else {
+          return asynchronousMetricLogRetentionTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time that asynchronous_metric_log records will be retained before removal. If set to 0,
+       * automatic removal of asynchronous_metric_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setAsynchronousMetricLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (asynchronousMetricLogRetentionTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asynchronousMetricLogRetentionTime_ = value;
+          onChanged();
+        } else {
+          asynchronousMetricLogRetentionTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that asynchronous_metric_log records will be retained before removal. If set to 0,
+       * automatic removal of asynchronous_metric_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setAsynchronousMetricLogRetentionTime(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (asynchronousMetricLogRetentionTimeBuilder_ == null) {
+          asynchronousMetricLogRetentionTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          asynchronousMetricLogRetentionTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that asynchronous_metric_log records will be retained before removal. If set to 0,
+       * automatic removal of asynchronous_metric_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeAsynchronousMetricLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (asynchronousMetricLogRetentionTimeBuilder_ == null) {
+          if (asynchronousMetricLogRetentionTime_ != null) {
+            asynchronousMetricLogRetentionTime_ =
+              com.google.protobuf.Int64Value.newBuilder(asynchronousMetricLogRetentionTime_).mergeFrom(value).buildPartial();
+          } else {
+            asynchronousMetricLogRetentionTime_ = value;
+          }
+          onChanged();
+        } else {
+          asynchronousMetricLogRetentionTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that asynchronous_metric_log records will be retained before removal. If set to 0,
+       * automatic removal of asynchronous_metric_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearAsynchronousMetricLogRetentionTime() {
+        if (asynchronousMetricLogRetentionTimeBuilder_ == null) {
+          asynchronousMetricLogRetentionTime_ = null;
+          onChanged();
+        } else {
+          asynchronousMetricLogRetentionTime_ = null;
+          asynchronousMetricLogRetentionTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that asynchronous_metric_log records will be retained before removal. If set to 0,
+       * automatic removal of asynchronous_metric_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getAsynchronousMetricLogRetentionTimeBuilder() {
+        
+        onChanged();
+        return getAsynchronousMetricLogRetentionTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum time that asynchronous_metric_log records will be retained before removal. If set to 0,
+       * automatic removal of asynchronous_metric_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getAsynchronousMetricLogRetentionTimeOrBuilder() {
+        if (asynchronousMetricLogRetentionTimeBuilder_ != null) {
+          return asynchronousMetricLogRetentionTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return asynchronousMetricLogRetentionTime_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousMetricLogRetentionTime_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time that asynchronous_metric_log records will be retained before removal. If set to 0,
+       * automatic removal of asynchronous_metric_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getAsynchronousMetricLogRetentionTimeFieldBuilder() {
+        if (asynchronousMetricLogRetentionTimeBuilder_ == null) {
+          asynchronousMetricLogRetentionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getAsynchronousMetricLogRetentionTime(),
+                  getParentForChildren(),
+                  isClean());
+          asynchronousMetricLogRetentionTime_ = null;
+        }
+        return asynchronousMetricLogRetentionTimeBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue sessionLogEnabled_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> sessionLogEnabledBuilder_;
+      /**
+       * <pre>
+       * Enable or disable session_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+       * @return Whether the sessionLogEnabled field is set.
+       */
+      public boolean hasSessionLogEnabled() {
+        return sessionLogEnabledBuilder_ != null || sessionLogEnabled_ != null;
+      }
+      /**
+       * <pre>
+       * Enable or disable session_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+       * @return The sessionLogEnabled.
+       */
+      public com.google.protobuf.BoolValue getSessionLogEnabled() {
+        if (sessionLogEnabledBuilder_ == null) {
+          return sessionLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : sessionLogEnabled_;
+        } else {
+          return sessionLogEnabledBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enable or disable session_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+       */
+      public Builder setSessionLogEnabled(com.google.protobuf.BoolValue value) {
+        if (sessionLogEnabledBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sessionLogEnabled_ = value;
+          onChanged();
+        } else {
+          sessionLogEnabledBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable session_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+       */
+      public Builder setSessionLogEnabled(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (sessionLogEnabledBuilder_ == null) {
+          sessionLogEnabled_ = builderForValue.build();
+          onChanged();
+        } else {
+          sessionLogEnabledBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable session_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+       */
+      public Builder mergeSessionLogEnabled(com.google.protobuf.BoolValue value) {
+        if (sessionLogEnabledBuilder_ == null) {
+          if (sessionLogEnabled_ != null) {
+            sessionLogEnabled_ =
+              com.google.protobuf.BoolValue.newBuilder(sessionLogEnabled_).mergeFrom(value).buildPartial();
+          } else {
+            sessionLogEnabled_ = value;
+          }
+          onChanged();
+        } else {
+          sessionLogEnabledBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable session_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+       */
+      public Builder clearSessionLogEnabled() {
+        if (sessionLogEnabledBuilder_ == null) {
+          sessionLogEnabled_ = null;
+          onChanged();
+        } else {
+          sessionLogEnabled_ = null;
+          sessionLogEnabledBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable session_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getSessionLogEnabledBuilder() {
+        
+        onChanged();
+        return getSessionLogEnabledFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enable or disable session_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getSessionLogEnabledOrBuilder() {
+        if (sessionLogEnabledBuilder_ != null) {
+          return sessionLogEnabledBuilder_.getMessageOrBuilder();
+        } else {
+          return sessionLogEnabled_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : sessionLogEnabled_;
+        }
+      }
+      /**
+       * <pre>
+       * Enable or disable session_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getSessionLogEnabledFieldBuilder() {
+        if (sessionLogEnabledBuilder_ == null) {
+          sessionLogEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getSessionLogEnabled(),
+                  getParentForChildren(),
+                  isClean());
+          sessionLogEnabled_ = null;
+        }
+        return sessionLogEnabledBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value sessionLogRetentionSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> sessionLogRetentionSizeBuilder_;
+      /**
+       * <pre>
+       * The maximum size that session_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of session_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the sessionLogRetentionSize field is set.
+       */
+      public boolean hasSessionLogRetentionSize() {
+        return sessionLogRetentionSizeBuilder_ != null || sessionLogRetentionSize_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum size that session_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of session_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The sessionLogRetentionSize.
+       */
+      public com.google.protobuf.Int64Value getSessionLogRetentionSize() {
+        if (sessionLogRetentionSizeBuilder_ == null) {
+          return sessionLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sessionLogRetentionSize_;
+        } else {
+          return sessionLogRetentionSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size that session_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of session_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setSessionLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (sessionLogRetentionSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sessionLogRetentionSize_ = value;
+          onChanged();
+        } else {
+          sessionLogRetentionSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that session_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of session_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setSessionLogRetentionSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (sessionLogRetentionSizeBuilder_ == null) {
+          sessionLogRetentionSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          sessionLogRetentionSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that session_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of session_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeSessionLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (sessionLogRetentionSizeBuilder_ == null) {
+          if (sessionLogRetentionSize_ != null) {
+            sessionLogRetentionSize_ =
+              com.google.protobuf.Int64Value.newBuilder(sessionLogRetentionSize_).mergeFrom(value).buildPartial();
+          } else {
+            sessionLogRetentionSize_ = value;
+          }
+          onChanged();
+        } else {
+          sessionLogRetentionSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that session_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of session_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearSessionLogRetentionSize() {
+        if (sessionLogRetentionSizeBuilder_ == null) {
+          sessionLogRetentionSize_ = null;
+          onChanged();
+        } else {
+          sessionLogRetentionSize_ = null;
+          sessionLogRetentionSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that session_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of session_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSessionLogRetentionSizeBuilder() {
+        
+        onChanged();
+        return getSessionLogRetentionSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum size that session_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of session_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSessionLogRetentionSizeOrBuilder() {
+        if (sessionLogRetentionSizeBuilder_ != null) {
+          return sessionLogRetentionSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return sessionLogRetentionSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : sessionLogRetentionSize_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size that session_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of session_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSessionLogRetentionSizeFieldBuilder() {
+        if (sessionLogRetentionSizeBuilder_ == null) {
+          sessionLogRetentionSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSessionLogRetentionSize(),
+                  getParentForChildren(),
+                  isClean());
+          sessionLogRetentionSize_ = null;
+        }
+        return sessionLogRetentionSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value sessionLogRetentionTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> sessionLogRetentionTimeBuilder_;
+      /**
+       * <pre>
+       * The maximum time that session_log records will be retained before removal. If set to 0,
+       * automatic removal of session_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the sessionLogRetentionTime field is set.
+       */
+      public boolean hasSessionLogRetentionTime() {
+        return sessionLogRetentionTimeBuilder_ != null || sessionLogRetentionTime_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum time that session_log records will be retained before removal. If set to 0,
+       * automatic removal of session_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The sessionLogRetentionTime.
+       */
+      public com.google.protobuf.Int64Value getSessionLogRetentionTime() {
+        if (sessionLogRetentionTimeBuilder_ == null) {
+          return sessionLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sessionLogRetentionTime_;
+        } else {
+          return sessionLogRetentionTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time that session_log records will be retained before removal. If set to 0,
+       * automatic removal of session_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setSessionLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (sessionLogRetentionTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sessionLogRetentionTime_ = value;
+          onChanged();
+        } else {
+          sessionLogRetentionTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that session_log records will be retained before removal. If set to 0,
+       * automatic removal of session_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setSessionLogRetentionTime(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (sessionLogRetentionTimeBuilder_ == null) {
+          sessionLogRetentionTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          sessionLogRetentionTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that session_log records will be retained before removal. If set to 0,
+       * automatic removal of session_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeSessionLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (sessionLogRetentionTimeBuilder_ == null) {
+          if (sessionLogRetentionTime_ != null) {
+            sessionLogRetentionTime_ =
+              com.google.protobuf.Int64Value.newBuilder(sessionLogRetentionTime_).mergeFrom(value).buildPartial();
+          } else {
+            sessionLogRetentionTime_ = value;
+          }
+          onChanged();
+        } else {
+          sessionLogRetentionTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that session_log records will be retained before removal. If set to 0,
+       * automatic removal of session_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearSessionLogRetentionTime() {
+        if (sessionLogRetentionTimeBuilder_ == null) {
+          sessionLogRetentionTime_ = null;
+          onChanged();
+        } else {
+          sessionLogRetentionTime_ = null;
+          sessionLogRetentionTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that session_log records will be retained before removal. If set to 0,
+       * automatic removal of session_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSessionLogRetentionTimeBuilder() {
+        
+        onChanged();
+        return getSessionLogRetentionTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum time that session_log records will be retained before removal. If set to 0,
+       * automatic removal of session_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSessionLogRetentionTimeOrBuilder() {
+        if (sessionLogRetentionTimeBuilder_ != null) {
+          return sessionLogRetentionTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return sessionLogRetentionTime_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : sessionLogRetentionTime_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time that session_log records will be retained before removal. If set to 0,
+       * automatic removal of session_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSessionLogRetentionTimeFieldBuilder() {
+        if (sessionLogRetentionTimeBuilder_ == null) {
+          sessionLogRetentionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSessionLogRetentionTime(),
+                  getParentForChildren(),
+                  isClean());
+          sessionLogRetentionTime_ = null;
+        }
+        return sessionLogRetentionTimeBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue zookeeperLogEnabled_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> zookeeperLogEnabledBuilder_;
+      /**
+       * <pre>
+       * Enable or disable zookeeper_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+       * @return Whether the zookeeperLogEnabled field is set.
+       */
+      public boolean hasZookeeperLogEnabled() {
+        return zookeeperLogEnabledBuilder_ != null || zookeeperLogEnabled_ != null;
+      }
+      /**
+       * <pre>
+       * Enable or disable zookeeper_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+       * @return The zookeeperLogEnabled.
+       */
+      public com.google.protobuf.BoolValue getZookeeperLogEnabled() {
+        if (zookeeperLogEnabledBuilder_ == null) {
+          return zookeeperLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : zookeeperLogEnabled_;
+        } else {
+          return zookeeperLogEnabledBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enable or disable zookeeper_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+       */
+      public Builder setZookeeperLogEnabled(com.google.protobuf.BoolValue value) {
+        if (zookeeperLogEnabledBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          zookeeperLogEnabled_ = value;
+          onChanged();
+        } else {
+          zookeeperLogEnabledBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable zookeeper_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+       */
+      public Builder setZookeeperLogEnabled(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (zookeeperLogEnabledBuilder_ == null) {
+          zookeeperLogEnabled_ = builderForValue.build();
+          onChanged();
+        } else {
+          zookeeperLogEnabledBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable zookeeper_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+       */
+      public Builder mergeZookeeperLogEnabled(com.google.protobuf.BoolValue value) {
+        if (zookeeperLogEnabledBuilder_ == null) {
+          if (zookeeperLogEnabled_ != null) {
+            zookeeperLogEnabled_ =
+              com.google.protobuf.BoolValue.newBuilder(zookeeperLogEnabled_).mergeFrom(value).buildPartial();
+          } else {
+            zookeeperLogEnabled_ = value;
+          }
+          onChanged();
+        } else {
+          zookeeperLogEnabledBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable zookeeper_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+       */
+      public Builder clearZookeeperLogEnabled() {
+        if (zookeeperLogEnabledBuilder_ == null) {
+          zookeeperLogEnabled_ = null;
+          onChanged();
+        } else {
+          zookeeperLogEnabled_ = null;
+          zookeeperLogEnabledBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable zookeeper_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getZookeeperLogEnabledBuilder() {
+        
+        onChanged();
+        return getZookeeperLogEnabledFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enable or disable zookeeper_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getZookeeperLogEnabledOrBuilder() {
+        if (zookeeperLogEnabledBuilder_ != null) {
+          return zookeeperLogEnabledBuilder_.getMessageOrBuilder();
+        } else {
+          return zookeeperLogEnabled_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : zookeeperLogEnabled_;
+        }
+      }
+      /**
+       * <pre>
+       * Enable or disable zookeeper_log system table. Default value: false.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getZookeeperLogEnabledFieldBuilder() {
+        if (zookeeperLogEnabledBuilder_ == null) {
+          zookeeperLogEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getZookeeperLogEnabled(),
+                  getParentForChildren(),
+                  isClean());
+          zookeeperLogEnabled_ = null;
+        }
+        return zookeeperLogEnabledBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value zookeeperLogRetentionSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> zookeeperLogRetentionSizeBuilder_;
+      /**
+       * <pre>
+       * The maximum size that zookeeper_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of zookeeper_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the zookeeperLogRetentionSize field is set.
+       */
+      public boolean hasZookeeperLogRetentionSize() {
+        return zookeeperLogRetentionSizeBuilder_ != null || zookeeperLogRetentionSize_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum size that zookeeper_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of zookeeper_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The zookeeperLogRetentionSize.
+       */
+      public com.google.protobuf.Int64Value getZookeeperLogRetentionSize() {
+        if (zookeeperLogRetentionSizeBuilder_ == null) {
+          return zookeeperLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : zookeeperLogRetentionSize_;
+        } else {
+          return zookeeperLogRetentionSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size that zookeeper_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of zookeeper_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setZookeeperLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (zookeeperLogRetentionSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          zookeeperLogRetentionSize_ = value;
+          onChanged();
+        } else {
+          zookeeperLogRetentionSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that zookeeper_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of zookeeper_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setZookeeperLogRetentionSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (zookeeperLogRetentionSizeBuilder_ == null) {
+          zookeeperLogRetentionSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          zookeeperLogRetentionSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that zookeeper_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of zookeeper_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeZookeeperLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (zookeeperLogRetentionSizeBuilder_ == null) {
+          if (zookeeperLogRetentionSize_ != null) {
+            zookeeperLogRetentionSize_ =
+              com.google.protobuf.Int64Value.newBuilder(zookeeperLogRetentionSize_).mergeFrom(value).buildPartial();
+          } else {
+            zookeeperLogRetentionSize_ = value;
+          }
+          onChanged();
+        } else {
+          zookeeperLogRetentionSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that zookeeper_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of zookeeper_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearZookeeperLogRetentionSize() {
+        if (zookeeperLogRetentionSizeBuilder_ == null) {
+          zookeeperLogRetentionSize_ = null;
+          onChanged();
+        } else {
+          zookeeperLogRetentionSize_ = null;
+          zookeeperLogRetentionSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that zookeeper_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of zookeeper_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getZookeeperLogRetentionSizeBuilder() {
+        
+        onChanged();
+        return getZookeeperLogRetentionSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum size that zookeeper_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of zookeeper_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getZookeeperLogRetentionSizeOrBuilder() {
+        if (zookeeperLogRetentionSizeBuilder_ != null) {
+          return zookeeperLogRetentionSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return zookeeperLogRetentionSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : zookeeperLogRetentionSize_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size that zookeeper_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of zookeeper_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getZookeeperLogRetentionSizeFieldBuilder() {
+        if (zookeeperLogRetentionSizeBuilder_ == null) {
+          zookeeperLogRetentionSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getZookeeperLogRetentionSize(),
+                  getParentForChildren(),
+                  isClean());
+          zookeeperLogRetentionSize_ = null;
+        }
+        return zookeeperLogRetentionSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value zookeeperLogRetentionTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> zookeeperLogRetentionTimeBuilder_;
+      /**
+       * <pre>
+       * The maximum time that zookeeper_log records will be retained before removal. If set to 0,
+       * automatic removal of zookeeper_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the zookeeperLogRetentionTime field is set.
+       */
+      public boolean hasZookeeperLogRetentionTime() {
+        return zookeeperLogRetentionTimeBuilder_ != null || zookeeperLogRetentionTime_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum time that zookeeper_log records will be retained before removal. If set to 0,
+       * automatic removal of zookeeper_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The zookeeperLogRetentionTime.
+       */
+      public com.google.protobuf.Int64Value getZookeeperLogRetentionTime() {
+        if (zookeeperLogRetentionTimeBuilder_ == null) {
+          return zookeeperLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : zookeeperLogRetentionTime_;
+        } else {
+          return zookeeperLogRetentionTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time that zookeeper_log records will be retained before removal. If set to 0,
+       * automatic removal of zookeeper_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setZookeeperLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (zookeeperLogRetentionTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          zookeeperLogRetentionTime_ = value;
+          onChanged();
+        } else {
+          zookeeperLogRetentionTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that zookeeper_log records will be retained before removal. If set to 0,
+       * automatic removal of zookeeper_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setZookeeperLogRetentionTime(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (zookeeperLogRetentionTimeBuilder_ == null) {
+          zookeeperLogRetentionTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          zookeeperLogRetentionTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that zookeeper_log records will be retained before removal. If set to 0,
+       * automatic removal of zookeeper_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeZookeeperLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (zookeeperLogRetentionTimeBuilder_ == null) {
+          if (zookeeperLogRetentionTime_ != null) {
+            zookeeperLogRetentionTime_ =
+              com.google.protobuf.Int64Value.newBuilder(zookeeperLogRetentionTime_).mergeFrom(value).buildPartial();
+          } else {
+            zookeeperLogRetentionTime_ = value;
+          }
+          onChanged();
+        } else {
+          zookeeperLogRetentionTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that zookeeper_log records will be retained before removal. If set to 0,
+       * automatic removal of zookeeper_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearZookeeperLogRetentionTime() {
+        if (zookeeperLogRetentionTimeBuilder_ == null) {
+          zookeeperLogRetentionTime_ = null;
+          onChanged();
+        } else {
+          zookeeperLogRetentionTime_ = null;
+          zookeeperLogRetentionTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that zookeeper_log records will be retained before removal. If set to 0,
+       * automatic removal of zookeeper_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getZookeeperLogRetentionTimeBuilder() {
+        
+        onChanged();
+        return getZookeeperLogRetentionTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum time that zookeeper_log records will be retained before removal. If set to 0,
+       * automatic removal of zookeeper_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getZookeeperLogRetentionTimeOrBuilder() {
+        if (zookeeperLogRetentionTimeBuilder_ != null) {
+          return zookeeperLogRetentionTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return zookeeperLogRetentionTime_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : zookeeperLogRetentionTime_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time that zookeeper_log records will be retained before removal. If set to 0,
+       * automatic removal of zookeeper_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getZookeeperLogRetentionTimeFieldBuilder() {
+        if (zookeeperLogRetentionTimeBuilder_ == null) {
+          zookeeperLogRetentionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getZookeeperLogRetentionTime(),
+                  getParentForChildren(),
+                  isClean());
+          zookeeperLogRetentionTime_ = null;
+        }
+        return zookeeperLogRetentionTimeBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue asynchronousInsertLogEnabled_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> asynchronousInsertLogEnabledBuilder_;
+      /**
+       * <pre>
+       * Enable or disable asynchronous_insert_log system table. Default value: false.
+       * Minimal required ClickHouse version: 22.10.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+       * @return Whether the asynchronousInsertLogEnabled field is set.
+       */
+      public boolean hasAsynchronousInsertLogEnabled() {
+        return asynchronousInsertLogEnabledBuilder_ != null || asynchronousInsertLogEnabled_ != null;
+      }
+      /**
+       * <pre>
+       * Enable or disable asynchronous_insert_log system table. Default value: false.
+       * Minimal required ClickHouse version: 22.10.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+       * @return The asynchronousInsertLogEnabled.
+       */
+      public com.google.protobuf.BoolValue getAsynchronousInsertLogEnabled() {
+        if (asynchronousInsertLogEnabledBuilder_ == null) {
+          return asynchronousInsertLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : asynchronousInsertLogEnabled_;
+        } else {
+          return asynchronousInsertLogEnabledBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enable or disable asynchronous_insert_log system table. Default value: false.
+       * Minimal required ClickHouse version: 22.10.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+       */
+      public Builder setAsynchronousInsertLogEnabled(com.google.protobuf.BoolValue value) {
+        if (asynchronousInsertLogEnabledBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asynchronousInsertLogEnabled_ = value;
+          onChanged();
+        } else {
+          asynchronousInsertLogEnabledBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable asynchronous_insert_log system table. Default value: false.
+       * Minimal required ClickHouse version: 22.10.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+       */
+      public Builder setAsynchronousInsertLogEnabled(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (asynchronousInsertLogEnabledBuilder_ == null) {
+          asynchronousInsertLogEnabled_ = builderForValue.build();
+          onChanged();
+        } else {
+          asynchronousInsertLogEnabledBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable asynchronous_insert_log system table. Default value: false.
+       * Minimal required ClickHouse version: 22.10.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+       */
+      public Builder mergeAsynchronousInsertLogEnabled(com.google.protobuf.BoolValue value) {
+        if (asynchronousInsertLogEnabledBuilder_ == null) {
+          if (asynchronousInsertLogEnabled_ != null) {
+            asynchronousInsertLogEnabled_ =
+              com.google.protobuf.BoolValue.newBuilder(asynchronousInsertLogEnabled_).mergeFrom(value).buildPartial();
+          } else {
+            asynchronousInsertLogEnabled_ = value;
+          }
+          onChanged();
+        } else {
+          asynchronousInsertLogEnabledBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable asynchronous_insert_log system table. Default value: false.
+       * Minimal required ClickHouse version: 22.10.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+       */
+      public Builder clearAsynchronousInsertLogEnabled() {
+        if (asynchronousInsertLogEnabledBuilder_ == null) {
+          asynchronousInsertLogEnabled_ = null;
+          onChanged();
+        } else {
+          asynchronousInsertLogEnabled_ = null;
+          asynchronousInsertLogEnabledBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enable or disable asynchronous_insert_log system table. Default value: false.
+       * Minimal required ClickHouse version: 22.10.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getAsynchronousInsertLogEnabledBuilder() {
+        
+        onChanged();
+        return getAsynchronousInsertLogEnabledFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enable or disable asynchronous_insert_log system table. Default value: false.
+       * Minimal required ClickHouse version: 22.10.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getAsynchronousInsertLogEnabledOrBuilder() {
+        if (asynchronousInsertLogEnabledBuilder_ != null) {
+          return asynchronousInsertLogEnabledBuilder_.getMessageOrBuilder();
+        } else {
+          return asynchronousInsertLogEnabled_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : asynchronousInsertLogEnabled_;
+        }
+      }
+      /**
+       * <pre>
+       * Enable or disable asynchronous_insert_log system table. Default value: false.
+       * Minimal required ClickHouse version: 22.10.
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getAsynchronousInsertLogEnabledFieldBuilder() {
+        if (asynchronousInsertLogEnabledBuilder_ == null) {
+          asynchronousInsertLogEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getAsynchronousInsertLogEnabled(),
+                  getParentForChildren(),
+                  isClean());
+          asynchronousInsertLogEnabled_ = null;
+        }
+        return asynchronousInsertLogEnabledBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value asynchronousInsertLogRetentionSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asynchronousInsertLogRetentionSizeBuilder_;
+      /**
+       * <pre>
+       * The maximum size that asynchronous_insert_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of asynchronous_insert_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the asynchronousInsertLogRetentionSize field is set.
+       */
+      public boolean hasAsynchronousInsertLogRetentionSize() {
+        return asynchronousInsertLogRetentionSizeBuilder_ != null || asynchronousInsertLogRetentionSize_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum size that asynchronous_insert_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of asynchronous_insert_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The asynchronousInsertLogRetentionSize.
+       */
+      public com.google.protobuf.Int64Value getAsynchronousInsertLogRetentionSize() {
+        if (asynchronousInsertLogRetentionSizeBuilder_ == null) {
+          return asynchronousInsertLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousInsertLogRetentionSize_;
+        } else {
+          return asynchronousInsertLogRetentionSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size that asynchronous_insert_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of asynchronous_insert_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setAsynchronousInsertLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (asynchronousInsertLogRetentionSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asynchronousInsertLogRetentionSize_ = value;
+          onChanged();
+        } else {
+          asynchronousInsertLogRetentionSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that asynchronous_insert_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of asynchronous_insert_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setAsynchronousInsertLogRetentionSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (asynchronousInsertLogRetentionSizeBuilder_ == null) {
+          asynchronousInsertLogRetentionSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          asynchronousInsertLogRetentionSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that asynchronous_insert_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of asynchronous_insert_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeAsynchronousInsertLogRetentionSize(com.google.protobuf.Int64Value value) {
+        if (asynchronousInsertLogRetentionSizeBuilder_ == null) {
+          if (asynchronousInsertLogRetentionSize_ != null) {
+            asynchronousInsertLogRetentionSize_ =
+              com.google.protobuf.Int64Value.newBuilder(asynchronousInsertLogRetentionSize_).mergeFrom(value).buildPartial();
+          } else {
+            asynchronousInsertLogRetentionSize_ = value;
+          }
+          onChanged();
+        } else {
+          asynchronousInsertLogRetentionSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that asynchronous_insert_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of asynchronous_insert_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearAsynchronousInsertLogRetentionSize() {
+        if (asynchronousInsertLogRetentionSizeBuilder_ == null) {
+          asynchronousInsertLogRetentionSize_ = null;
+          onChanged();
+        } else {
+          asynchronousInsertLogRetentionSize_ = null;
+          asynchronousInsertLogRetentionSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum size that asynchronous_insert_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of asynchronous_insert_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getAsynchronousInsertLogRetentionSizeBuilder() {
+        
+        onChanged();
+        return getAsynchronousInsertLogRetentionSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum size that asynchronous_insert_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of asynchronous_insert_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getAsynchronousInsertLogRetentionSizeOrBuilder() {
+        if (asynchronousInsertLogRetentionSizeBuilder_ != null) {
+          return asynchronousInsertLogRetentionSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return asynchronousInsertLogRetentionSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousInsertLogRetentionSize_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum size that asynchronous_insert_log can grow to before old data will be removed. If set to 0 (default),
+       * automatic removal of asynchronous_insert_log data based on size is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getAsynchronousInsertLogRetentionSizeFieldBuilder() {
+        if (asynchronousInsertLogRetentionSizeBuilder_ == null) {
+          asynchronousInsertLogRetentionSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getAsynchronousInsertLogRetentionSize(),
+                  getParentForChildren(),
+                  isClean());
+          asynchronousInsertLogRetentionSize_ = null;
+        }
+        return asynchronousInsertLogRetentionSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value asynchronousInsertLogRetentionTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asynchronousInsertLogRetentionTimeBuilder_;
+      /**
+       * <pre>
+       * The maximum time that asynchronous_insert_log records will be retained before removal. If set to 0,
+       * automatic removal of asynchronous_insert_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return Whether the asynchronousInsertLogRetentionTime field is set.
+       */
+      public boolean hasAsynchronousInsertLogRetentionTime() {
+        return asynchronousInsertLogRetentionTimeBuilder_ != null || asynchronousInsertLogRetentionTime_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum time that asynchronous_insert_log records will be retained before removal. If set to 0,
+       * automatic removal of asynchronous_insert_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       * @return The asynchronousInsertLogRetentionTime.
+       */
+      public com.google.protobuf.Int64Value getAsynchronousInsertLogRetentionTime() {
+        if (asynchronousInsertLogRetentionTimeBuilder_ == null) {
+          return asynchronousInsertLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousInsertLogRetentionTime_;
+        } else {
+          return asynchronousInsertLogRetentionTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time that asynchronous_insert_log records will be retained before removal. If set to 0,
+       * automatic removal of asynchronous_insert_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setAsynchronousInsertLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (asynchronousInsertLogRetentionTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          asynchronousInsertLogRetentionTime_ = value;
+          onChanged();
+        } else {
+          asynchronousInsertLogRetentionTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that asynchronous_insert_log records will be retained before removal. If set to 0,
+       * automatic removal of asynchronous_insert_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder setAsynchronousInsertLogRetentionTime(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (asynchronousInsertLogRetentionTimeBuilder_ == null) {
+          asynchronousInsertLogRetentionTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          asynchronousInsertLogRetentionTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that asynchronous_insert_log records will be retained before removal. If set to 0,
+       * automatic removal of asynchronous_insert_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder mergeAsynchronousInsertLogRetentionTime(com.google.protobuf.Int64Value value) {
+        if (asynchronousInsertLogRetentionTimeBuilder_ == null) {
+          if (asynchronousInsertLogRetentionTime_ != null) {
+            asynchronousInsertLogRetentionTime_ =
+              com.google.protobuf.Int64Value.newBuilder(asynchronousInsertLogRetentionTime_).mergeFrom(value).buildPartial();
+          } else {
+            asynchronousInsertLogRetentionTime_ = value;
+          }
+          onChanged();
+        } else {
+          asynchronousInsertLogRetentionTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that asynchronous_insert_log records will be retained before removal. If set to 0,
+       * automatic removal of asynchronous_insert_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public Builder clearAsynchronousInsertLogRetentionTime() {
+        if (asynchronousInsertLogRetentionTimeBuilder_ == null) {
+          asynchronousInsertLogRetentionTime_ = null;
+          onChanged();
+        } else {
+          asynchronousInsertLogRetentionTime_ = null;
+          asynchronousInsertLogRetentionTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum time that asynchronous_insert_log records will be retained before removal. If set to 0,
+       * automatic removal of asynchronous_insert_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getAsynchronousInsertLogRetentionTimeBuilder() {
+        
+        onChanged();
+        return getAsynchronousInsertLogRetentionTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum time that asynchronous_insert_log records will be retained before removal. If set to 0,
+       * automatic removal of asynchronous_insert_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getAsynchronousInsertLogRetentionTimeOrBuilder() {
+        if (asynchronousInsertLogRetentionTimeBuilder_ != null) {
+          return asynchronousInsertLogRetentionTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return asynchronousInsertLogRetentionTime_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousInsertLogRetentionTime_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum time that asynchronous_insert_log records will be retained before removal. If set to 0,
+       * automatic removal of asynchronous_insert_log data based on time is disabled.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getAsynchronousInsertLogRetentionTimeFieldBuilder() {
+        if (asynchronousInsertLogRetentionTimeBuilder_ == null) {
+          asynchronousInsertLogRetentionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getAsynchronousInsertLogRetentionTime(),
+                  getParentForChildren(),
+                  isClean());
+          asynchronousInsertLogRetentionTime_ = null;
+        }
+        return asynchronousInsertLogRetentionTimeBuilder_;
       }
 
       private com.google.protobuf.Int64Value backgroundPoolSize_;
@@ -46535,6 +49700,179 @@ public final class Clickhouse {
           backgroundPoolSize_ = null;
         }
         return backgroundPoolSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value backgroundMergesMutationsConcurrencyRatio_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backgroundMergesMutationsConcurrencyRatioBuilder_;
+      /**
+       * <pre>
+       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+       * Default: 2
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the backgroundMergesMutationsConcurrencyRatio field is set.
+       */
+      public boolean hasBackgroundMergesMutationsConcurrencyRatio() {
+        return backgroundMergesMutationsConcurrencyRatioBuilder_ != null || backgroundMergesMutationsConcurrencyRatio_ != null;
+      }
+      /**
+       * <pre>
+       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+       * Default: 2
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The backgroundMergesMutationsConcurrencyRatio.
+       */
+      public com.google.protobuf.Int64Value getBackgroundMergesMutationsConcurrencyRatio() {
+        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
+          return backgroundMergesMutationsConcurrencyRatio_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backgroundMergesMutationsConcurrencyRatio_;
+        } else {
+          return backgroundMergesMutationsConcurrencyRatioBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+       * Default: 2
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder setBackgroundMergesMutationsConcurrencyRatio(com.google.protobuf.Int64Value value) {
+        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          backgroundMergesMutationsConcurrencyRatio_ = value;
+          onChanged();
+        } else {
+          backgroundMergesMutationsConcurrencyRatioBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+       * Default: 2
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder setBackgroundMergesMutationsConcurrencyRatio(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
+          backgroundMergesMutationsConcurrencyRatio_ = builderForValue.build();
+          onChanged();
+        } else {
+          backgroundMergesMutationsConcurrencyRatioBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+       * Default: 2
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder mergeBackgroundMergesMutationsConcurrencyRatio(com.google.protobuf.Int64Value value) {
+        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
+          if (backgroundMergesMutationsConcurrencyRatio_ != null) {
+            backgroundMergesMutationsConcurrencyRatio_ =
+              com.google.protobuf.Int64Value.newBuilder(backgroundMergesMutationsConcurrencyRatio_).mergeFrom(value).buildPartial();
+          } else {
+            backgroundMergesMutationsConcurrencyRatio_ = value;
+          }
+          onChanged();
+        } else {
+          backgroundMergesMutationsConcurrencyRatioBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+       * Default: 2
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder clearBackgroundMergesMutationsConcurrencyRatio() {
+        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
+          backgroundMergesMutationsConcurrencyRatio_ = null;
+          onChanged();
+        } else {
+          backgroundMergesMutationsConcurrencyRatio_ = null;
+          backgroundMergesMutationsConcurrencyRatioBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+       * Default: 2
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getBackgroundMergesMutationsConcurrencyRatioBuilder() {
+        
+        onChanged();
+        return getBackgroundMergesMutationsConcurrencyRatioFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+       * Default: 2
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getBackgroundMergesMutationsConcurrencyRatioOrBuilder() {
+        if (backgroundMergesMutationsConcurrencyRatioBuilder_ != null) {
+          return backgroundMergesMutationsConcurrencyRatioBuilder_.getMessageOrBuilder();
+        } else {
+          return backgroundMergesMutationsConcurrencyRatio_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : backgroundMergesMutationsConcurrencyRatio_;
+        }
+      }
+      /**
+       * <pre>
+       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
+       * Default: 2
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getBackgroundMergesMutationsConcurrencyRatioFieldBuilder() {
+        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
+          backgroundMergesMutationsConcurrencyRatioBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getBackgroundMergesMutationsConcurrencyRatio(),
+                  getParentForChildren(),
+                  isClean());
+          backgroundMergesMutationsConcurrencyRatio_ = null;
+        }
+        return backgroundMergesMutationsConcurrencyRatioBuilder_;
       }
 
       private com.google.protobuf.Int64Value backgroundSchedulePoolSize_;
@@ -47296,6 +50634,179 @@ public final class Clickhouse {
         return backgroundMessageBrokerSchedulePoolSizeBuilder_;
       }
 
+      private com.google.protobuf.Int64Value backgroundCommonPoolSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backgroundCommonPoolSizeBuilder_;
+      /**
+       * <pre>
+       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+       * Default: 8
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return Whether the backgroundCommonPoolSize field is set.
+       */
+      public boolean hasBackgroundCommonPoolSize() {
+        return backgroundCommonPoolSizeBuilder_ != null || backgroundCommonPoolSize_ != null;
+      }
+      /**
+       * <pre>
+       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+       * Default: 8
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+       * @return The backgroundCommonPoolSize.
+       */
+      public com.google.protobuf.Int64Value getBackgroundCommonPoolSize() {
+        if (backgroundCommonPoolSizeBuilder_ == null) {
+          return backgroundCommonPoolSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backgroundCommonPoolSize_;
+        } else {
+          return backgroundCommonPoolSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+       * Default: 8
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder setBackgroundCommonPoolSize(com.google.protobuf.Int64Value value) {
+        if (backgroundCommonPoolSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          backgroundCommonPoolSize_ = value;
+          onChanged();
+        } else {
+          backgroundCommonPoolSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+       * Default: 8
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder setBackgroundCommonPoolSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (backgroundCommonPoolSizeBuilder_ == null) {
+          backgroundCommonPoolSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          backgroundCommonPoolSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+       * Default: 8
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder mergeBackgroundCommonPoolSize(com.google.protobuf.Int64Value value) {
+        if (backgroundCommonPoolSizeBuilder_ == null) {
+          if (backgroundCommonPoolSize_ != null) {
+            backgroundCommonPoolSize_ =
+              com.google.protobuf.Int64Value.newBuilder(backgroundCommonPoolSize_).mergeFrom(value).buildPartial();
+          } else {
+            backgroundCommonPoolSize_ = value;
+          }
+          onChanged();
+        } else {
+          backgroundCommonPoolSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+       * Default: 8
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public Builder clearBackgroundCommonPoolSize() {
+        if (backgroundCommonPoolSizeBuilder_ == null) {
+          backgroundCommonPoolSize_ = null;
+          onChanged();
+        } else {
+          backgroundCommonPoolSize_ = null;
+          backgroundCommonPoolSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+       * Default: 8
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getBackgroundCommonPoolSizeBuilder() {
+        
+        onChanged();
+        return getBackgroundCommonPoolSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+       * Default: 8
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getBackgroundCommonPoolSizeOrBuilder() {
+        if (backgroundCommonPoolSizeBuilder_ != null) {
+          return backgroundCommonPoolSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return backgroundCommonPoolSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : backgroundCommonPoolSize_;
+        }
+      }
+      /**
+       * <pre>
+       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
+       * Default: 8
+       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getBackgroundCommonPoolSizeFieldBuilder() {
+        if (backgroundCommonPoolSizeBuilder_ == null) {
+          backgroundCommonPoolSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getBackgroundCommonPoolSize(),
+                  getParentForChildren(),
+                  isClean());
+          backgroundCommonPoolSize_ = null;
+        }
+        return backgroundCommonPoolSizeBuilder_;
+      }
+
       private com.google.protobuf.StringValue defaultDatabase_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> defaultDatabaseBuilder_;
@@ -47741,2962 +51252,6 @@ public final class Clickhouse {
           totalMemoryTrackerSampleProbability_ = null;
         }
         return totalMemoryTrackerSampleProbabilityBuilder_;
-      }
-
-      private com.google.protobuf.Int64Value backgroundCommonPoolSize_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backgroundCommonPoolSizeBuilder_;
-      /**
-       * <pre>
-       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
-       * Default: 8
-       * Min version: 21.11
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
-       * @return Whether the backgroundCommonPoolSize field is set.
-       */
-      public boolean hasBackgroundCommonPoolSize() {
-        return backgroundCommonPoolSizeBuilder_ != null || backgroundCommonPoolSize_ != null;
-      }
-      /**
-       * <pre>
-       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
-       * Default: 8
-       * Min version: 21.11
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
-       * @return The backgroundCommonPoolSize.
-       */
-      public com.google.protobuf.Int64Value getBackgroundCommonPoolSize() {
-        if (backgroundCommonPoolSizeBuilder_ == null) {
-          return backgroundCommonPoolSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backgroundCommonPoolSize_;
-        } else {
-          return backgroundCommonPoolSizeBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
-       * Default: 8
-       * Min version: 21.11
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
-       */
-      public Builder setBackgroundCommonPoolSize(com.google.protobuf.Int64Value value) {
-        if (backgroundCommonPoolSizeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          backgroundCommonPoolSize_ = value;
-          onChanged();
-        } else {
-          backgroundCommonPoolSizeBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
-       * Default: 8
-       * Min version: 21.11
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
-       */
-      public Builder setBackgroundCommonPoolSize(
-          com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (backgroundCommonPoolSizeBuilder_ == null) {
-          backgroundCommonPoolSize_ = builderForValue.build();
-          onChanged();
-        } else {
-          backgroundCommonPoolSizeBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
-       * Default: 8
-       * Min version: 21.11
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
-       */
-      public Builder mergeBackgroundCommonPoolSize(com.google.protobuf.Int64Value value) {
-        if (backgroundCommonPoolSizeBuilder_ == null) {
-          if (backgroundCommonPoolSize_ != null) {
-            backgroundCommonPoolSize_ =
-              com.google.protobuf.Int64Value.newBuilder(backgroundCommonPoolSize_).mergeFrom(value).buildPartial();
-          } else {
-            backgroundCommonPoolSize_ = value;
-          }
-          onChanged();
-        } else {
-          backgroundCommonPoolSizeBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
-       * Default: 8
-       * Min version: 21.11
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
-       */
-      public Builder clearBackgroundCommonPoolSize() {
-        if (backgroundCommonPoolSizeBuilder_ == null) {
-          backgroundCommonPoolSize_ = null;
-          onChanged();
-        } else {
-          backgroundCommonPoolSize_ = null;
-          backgroundCommonPoolSizeBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
-       * Default: 8
-       * Min version: 21.11
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
-       */
-      public com.google.protobuf.Int64Value.Builder getBackgroundCommonPoolSizeBuilder() {
-        
-        onChanged();
-        return getBackgroundCommonPoolSizeFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
-       * Default: 8
-       * Min version: 21.11
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
-       */
-      public com.google.protobuf.Int64ValueOrBuilder getBackgroundCommonPoolSizeOrBuilder() {
-        if (backgroundCommonPoolSizeBuilder_ != null) {
-          return backgroundCommonPoolSizeBuilder_.getMessageOrBuilder();
-        } else {
-          return backgroundCommonPoolSize_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : backgroundCommonPoolSize_;
-        }
-      }
-      /**
-       * <pre>
-       * The maximum number of threads that will be used for performing a variety of operations (mostly garbage collection) for *MergeTree-engine tables in a background.
-       * Default: 8
-       * Min version: 21.11
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_common_pool_size)
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value background_common_pool_size = 47 [(.yandex.cloud.value) = "&gt;0"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getBackgroundCommonPoolSizeFieldBuilder() {
-        if (backgroundCommonPoolSizeBuilder_ == null) {
-          backgroundCommonPoolSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getBackgroundCommonPoolSize(),
-                  getParentForChildren(),
-                  isClean());
-          backgroundCommonPoolSize_ = null;
-        }
-        return backgroundCommonPoolSizeBuilder_;
-      }
-
-      private com.google.protobuf.Int64Value backgroundMergesMutationsConcurrencyRatio_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backgroundMergesMutationsConcurrencyRatioBuilder_;
-      /**
-       * <pre>
-       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
-       * Default: 2
-       * Min_version: 21.11
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
-       * @return Whether the backgroundMergesMutationsConcurrencyRatio field is set.
-       */
-      public boolean hasBackgroundMergesMutationsConcurrencyRatio() {
-        return backgroundMergesMutationsConcurrencyRatioBuilder_ != null || backgroundMergesMutationsConcurrencyRatio_ != null;
-      }
-      /**
-       * <pre>
-       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
-       * Default: 2
-       * Min_version: 21.11
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
-       * @return The backgroundMergesMutationsConcurrencyRatio.
-       */
-      public com.google.protobuf.Int64Value getBackgroundMergesMutationsConcurrencyRatio() {
-        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
-          return backgroundMergesMutationsConcurrencyRatio_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backgroundMergesMutationsConcurrencyRatio_;
-        } else {
-          return backgroundMergesMutationsConcurrencyRatioBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
-       * Default: 2
-       * Min_version: 21.11
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
-       */
-      public Builder setBackgroundMergesMutationsConcurrencyRatio(com.google.protobuf.Int64Value value) {
-        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          backgroundMergesMutationsConcurrencyRatio_ = value;
-          onChanged();
-        } else {
-          backgroundMergesMutationsConcurrencyRatioBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
-       * Default: 2
-       * Min_version: 21.11
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
-       */
-      public Builder setBackgroundMergesMutationsConcurrencyRatio(
-          com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
-          backgroundMergesMutationsConcurrencyRatio_ = builderForValue.build();
-          onChanged();
-        } else {
-          backgroundMergesMutationsConcurrencyRatioBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
-       * Default: 2
-       * Min_version: 21.11
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
-       */
-      public Builder mergeBackgroundMergesMutationsConcurrencyRatio(com.google.protobuf.Int64Value value) {
-        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
-          if (backgroundMergesMutationsConcurrencyRatio_ != null) {
-            backgroundMergesMutationsConcurrencyRatio_ =
-              com.google.protobuf.Int64Value.newBuilder(backgroundMergesMutationsConcurrencyRatio_).mergeFrom(value).buildPartial();
-          } else {
-            backgroundMergesMutationsConcurrencyRatio_ = value;
-          }
-          onChanged();
-        } else {
-          backgroundMergesMutationsConcurrencyRatioBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
-       * Default: 2
-       * Min_version: 21.11
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
-       */
-      public Builder clearBackgroundMergesMutationsConcurrencyRatio() {
-        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
-          backgroundMergesMutationsConcurrencyRatio_ = null;
-          onChanged();
-        } else {
-          backgroundMergesMutationsConcurrencyRatio_ = null;
-          backgroundMergesMutationsConcurrencyRatioBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
-       * Default: 2
-       * Min_version: 21.11
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
-       */
-      public com.google.protobuf.Int64Value.Builder getBackgroundMergesMutationsConcurrencyRatioBuilder() {
-        
-        onChanged();
-        return getBackgroundMergesMutationsConcurrencyRatioFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
-       * Default: 2
-       * Min_version: 21.11
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
-       */
-      public com.google.protobuf.Int64ValueOrBuilder getBackgroundMergesMutationsConcurrencyRatioOrBuilder() {
-        if (backgroundMergesMutationsConcurrencyRatioBuilder_ != null) {
-          return backgroundMergesMutationsConcurrencyRatioBuilder_.getMessageOrBuilder();
-        } else {
-          return backgroundMergesMutationsConcurrencyRatio_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : backgroundMergesMutationsConcurrencyRatio_;
-        }
-      }
-      /**
-       * <pre>
-       * Sets a ratio between the number of threads and the number of background merges and mutations that can be executed concurrently. For example, if the ratio equals to 2 and background_pool_size is set to 16 then ClickHouse can execute 32 background merges concurrently. This is possible, because background operations could be suspended and postponed. This is needed to give small merges more execution priority. You can only increase this ratio at runtime. To lower it you have to restart the server. The same as for background_pool_size setting background_merges_mutations_concurrency_ratio could be applied from the default profile for backward compatibility.
-       * Default: 2
-       * Min_version: 21.11
-       * See in-depth description in [ClickHouse documentation](https://clickhouse.com/docs/en/operations/server-configuration-parameters/settings#background_merges_mutations_concurrency_ratio)
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value background_merges_mutations_concurrency_ratio = 48 [(.yandex.cloud.value) = "&gt;0"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getBackgroundMergesMutationsConcurrencyRatioFieldBuilder() {
-        if (backgroundMergesMutationsConcurrencyRatioBuilder_ == null) {
-          backgroundMergesMutationsConcurrencyRatioBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getBackgroundMergesMutationsConcurrencyRatio(),
-                  getParentForChildren(),
-                  isClean());
-          backgroundMergesMutationsConcurrencyRatio_ = null;
-        }
-        return backgroundMergesMutationsConcurrencyRatioBuilder_;
-      }
-
-      private com.google.protobuf.BoolValue queryViewsLogEnabled_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> queryViewsLogEnabledBuilder_;
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.9
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
-       * @return Whether the queryViewsLogEnabled field is set.
-       */
-      public boolean hasQueryViewsLogEnabled() {
-        return queryViewsLogEnabledBuilder_ != null || queryViewsLogEnabled_ != null;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.9
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
-       * @return The queryViewsLogEnabled.
-       */
-      public com.google.protobuf.BoolValue getQueryViewsLogEnabled() {
-        if (queryViewsLogEnabledBuilder_ == null) {
-          return queryViewsLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : queryViewsLogEnabled_;
-        } else {
-          return queryViewsLogEnabledBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.9
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
-       */
-      public Builder setQueryViewsLogEnabled(com.google.protobuf.BoolValue value) {
-        if (queryViewsLogEnabledBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          queryViewsLogEnabled_ = value;
-          onChanged();
-        } else {
-          queryViewsLogEnabledBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.9
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
-       */
-      public Builder setQueryViewsLogEnabled(
-          com.google.protobuf.BoolValue.Builder builderForValue) {
-        if (queryViewsLogEnabledBuilder_ == null) {
-          queryViewsLogEnabled_ = builderForValue.build();
-          onChanged();
-        } else {
-          queryViewsLogEnabledBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.9
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
-       */
-      public Builder mergeQueryViewsLogEnabled(com.google.protobuf.BoolValue value) {
-        if (queryViewsLogEnabledBuilder_ == null) {
-          if (queryViewsLogEnabled_ != null) {
-            queryViewsLogEnabled_ =
-              com.google.protobuf.BoolValue.newBuilder(queryViewsLogEnabled_).mergeFrom(value).buildPartial();
-          } else {
-            queryViewsLogEnabled_ = value;
-          }
-          onChanged();
-        } else {
-          queryViewsLogEnabledBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.9
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
-       */
-      public Builder clearQueryViewsLogEnabled() {
-        if (queryViewsLogEnabledBuilder_ == null) {
-          queryViewsLogEnabled_ = null;
-          onChanged();
-        } else {
-          queryViewsLogEnabled_ = null;
-          queryViewsLogEnabledBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.9
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
-       */
-      public com.google.protobuf.BoolValue.Builder getQueryViewsLogEnabledBuilder() {
-        
-        onChanged();
-        return getQueryViewsLogEnabledFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.9
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
-       */
-      public com.google.protobuf.BoolValueOrBuilder getQueryViewsLogEnabledOrBuilder() {
-        if (queryViewsLogEnabledBuilder_ != null) {
-          return queryViewsLogEnabledBuilder_.getMessageOrBuilder();
-        } else {
-          return queryViewsLogEnabled_ == null ?
-              com.google.protobuf.BoolValue.getDefaultInstance() : queryViewsLogEnabled_;
-        }
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.9
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue query_views_log_enabled = 49;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
-          getQueryViewsLogEnabledFieldBuilder() {
-        if (queryViewsLogEnabledBuilder_ == null) {
-          queryViewsLogEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
-                  getQueryViewsLogEnabled(),
-                  getParentForChildren(),
-                  isClean());
-          queryViewsLogEnabled_ = null;
-        }
-        return queryViewsLogEnabledBuilder_;
-      }
-
-      private com.google.protobuf.Int64Value queryViewsLogRetentionSize_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> queryViewsLogRetentionSizeBuilder_;
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return Whether the queryViewsLogRetentionSize field is set.
-       */
-      public boolean hasQueryViewsLogRetentionSize() {
-        return queryViewsLogRetentionSizeBuilder_ != null || queryViewsLogRetentionSize_ != null;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return The queryViewsLogRetentionSize.
-       */
-      public com.google.protobuf.Int64Value getQueryViewsLogRetentionSize() {
-        if (queryViewsLogRetentionSizeBuilder_ == null) {
-          return queryViewsLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryViewsLogRetentionSize_;
-        } else {
-          return queryViewsLogRetentionSizeBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setQueryViewsLogRetentionSize(com.google.protobuf.Int64Value value) {
-        if (queryViewsLogRetentionSizeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          queryViewsLogRetentionSize_ = value;
-          onChanged();
-        } else {
-          queryViewsLogRetentionSizeBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setQueryViewsLogRetentionSize(
-          com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (queryViewsLogRetentionSizeBuilder_ == null) {
-          queryViewsLogRetentionSize_ = builderForValue.build();
-          onChanged();
-        } else {
-          queryViewsLogRetentionSizeBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder mergeQueryViewsLogRetentionSize(com.google.protobuf.Int64Value value) {
-        if (queryViewsLogRetentionSizeBuilder_ == null) {
-          if (queryViewsLogRetentionSize_ != null) {
-            queryViewsLogRetentionSize_ =
-              com.google.protobuf.Int64Value.newBuilder(queryViewsLogRetentionSize_).mergeFrom(value).buildPartial();
-          } else {
-            queryViewsLogRetentionSize_ = value;
-          }
-          onChanged();
-        } else {
-          queryViewsLogRetentionSizeBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder clearQueryViewsLogRetentionSize() {
-        if (queryViewsLogRetentionSizeBuilder_ == null) {
-          queryViewsLogRetentionSize_ = null;
-          onChanged();
-        } else {
-          queryViewsLogRetentionSize_ = null;
-          queryViewsLogRetentionSizeBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64Value.Builder getQueryViewsLogRetentionSizeBuilder() {
-        
-        onChanged();
-        return getQueryViewsLogRetentionSizeFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64ValueOrBuilder getQueryViewsLogRetentionSizeOrBuilder() {
-        if (queryViewsLogRetentionSizeBuilder_ != null) {
-          return queryViewsLogRetentionSizeBuilder_.getMessageOrBuilder();
-        } else {
-          return queryViewsLogRetentionSize_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : queryViewsLogRetentionSize_;
-        }
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value query_views_log_retention_size = 50 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getQueryViewsLogRetentionSizeFieldBuilder() {
-        if (queryViewsLogRetentionSizeBuilder_ == null) {
-          queryViewsLogRetentionSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getQueryViewsLogRetentionSize(),
-                  getParentForChildren(),
-                  isClean());
-          queryViewsLogRetentionSize_ = null;
-        }
-        return queryViewsLogRetentionSizeBuilder_;
-      }
-
-      private com.google.protobuf.Int64Value queryViewsLogRetentionTime_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> queryViewsLogRetentionTimeBuilder_;
-      /**
-       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return Whether the queryViewsLogRetentionTime field is set.
-       */
-      public boolean hasQueryViewsLogRetentionTime() {
-        return queryViewsLogRetentionTimeBuilder_ != null || queryViewsLogRetentionTime_ != null;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return The queryViewsLogRetentionTime.
-       */
-      public com.google.protobuf.Int64Value getQueryViewsLogRetentionTime() {
-        if (queryViewsLogRetentionTimeBuilder_ == null) {
-          return queryViewsLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : queryViewsLogRetentionTime_;
-        } else {
-          return queryViewsLogRetentionTimeBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setQueryViewsLogRetentionTime(com.google.protobuf.Int64Value value) {
-        if (queryViewsLogRetentionTimeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          queryViewsLogRetentionTime_ = value;
-          onChanged();
-        } else {
-          queryViewsLogRetentionTimeBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setQueryViewsLogRetentionTime(
-          com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (queryViewsLogRetentionTimeBuilder_ == null) {
-          queryViewsLogRetentionTime_ = builderForValue.build();
-          onChanged();
-        } else {
-          queryViewsLogRetentionTimeBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder mergeQueryViewsLogRetentionTime(com.google.protobuf.Int64Value value) {
-        if (queryViewsLogRetentionTimeBuilder_ == null) {
-          if (queryViewsLogRetentionTime_ != null) {
-            queryViewsLogRetentionTime_ =
-              com.google.protobuf.Int64Value.newBuilder(queryViewsLogRetentionTime_).mergeFrom(value).buildPartial();
-          } else {
-            queryViewsLogRetentionTime_ = value;
-          }
-          onChanged();
-        } else {
-          queryViewsLogRetentionTimeBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder clearQueryViewsLogRetentionTime() {
-        if (queryViewsLogRetentionTimeBuilder_ == null) {
-          queryViewsLogRetentionTime_ = null;
-          onChanged();
-        } else {
-          queryViewsLogRetentionTime_ = null;
-          queryViewsLogRetentionTimeBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64Value.Builder getQueryViewsLogRetentionTimeBuilder() {
-        
-        onChanged();
-        return getQueryViewsLogRetentionTimeFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64ValueOrBuilder getQueryViewsLogRetentionTimeOrBuilder() {
-        if (queryViewsLogRetentionTimeBuilder_ != null) {
-          return queryViewsLogRetentionTimeBuilder_.getMessageOrBuilder();
-        } else {
-          return queryViewsLogRetentionTime_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : queryViewsLogRetentionTime_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Int64Value query_views_log_retention_time = 51 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getQueryViewsLogRetentionTimeFieldBuilder() {
-        if (queryViewsLogRetentionTimeBuilder_ == null) {
-          queryViewsLogRetentionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getQueryViewsLogRetentionTime(),
-                  getParentForChildren(),
-                  isClean());
-          queryViewsLogRetentionTime_ = null;
-        }
-        return queryViewsLogRetentionTimeBuilder_;
-      }
-
-      private com.google.protobuf.BoolValue asynchronousMetricLogEnabled_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> asynchronousMetricLogEnabledBuilder_;
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 20.11
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
-       * @return Whether the asynchronousMetricLogEnabled field is set.
-       */
-      public boolean hasAsynchronousMetricLogEnabled() {
-        return asynchronousMetricLogEnabledBuilder_ != null || asynchronousMetricLogEnabled_ != null;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 20.11
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
-       * @return The asynchronousMetricLogEnabled.
-       */
-      public com.google.protobuf.BoolValue getAsynchronousMetricLogEnabled() {
-        if (asynchronousMetricLogEnabledBuilder_ == null) {
-          return asynchronousMetricLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : asynchronousMetricLogEnabled_;
-        } else {
-          return asynchronousMetricLogEnabledBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 20.11
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
-       */
-      public Builder setAsynchronousMetricLogEnabled(com.google.protobuf.BoolValue value) {
-        if (asynchronousMetricLogEnabledBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          asynchronousMetricLogEnabled_ = value;
-          onChanged();
-        } else {
-          asynchronousMetricLogEnabledBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 20.11
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
-       */
-      public Builder setAsynchronousMetricLogEnabled(
-          com.google.protobuf.BoolValue.Builder builderForValue) {
-        if (asynchronousMetricLogEnabledBuilder_ == null) {
-          asynchronousMetricLogEnabled_ = builderForValue.build();
-          onChanged();
-        } else {
-          asynchronousMetricLogEnabledBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 20.11
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
-       */
-      public Builder mergeAsynchronousMetricLogEnabled(com.google.protobuf.BoolValue value) {
-        if (asynchronousMetricLogEnabledBuilder_ == null) {
-          if (asynchronousMetricLogEnabled_ != null) {
-            asynchronousMetricLogEnabled_ =
-              com.google.protobuf.BoolValue.newBuilder(asynchronousMetricLogEnabled_).mergeFrom(value).buildPartial();
-          } else {
-            asynchronousMetricLogEnabled_ = value;
-          }
-          onChanged();
-        } else {
-          asynchronousMetricLogEnabledBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 20.11
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
-       */
-      public Builder clearAsynchronousMetricLogEnabled() {
-        if (asynchronousMetricLogEnabledBuilder_ == null) {
-          asynchronousMetricLogEnabled_ = null;
-          onChanged();
-        } else {
-          asynchronousMetricLogEnabled_ = null;
-          asynchronousMetricLogEnabledBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 20.11
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
-       */
-      public com.google.protobuf.BoolValue.Builder getAsynchronousMetricLogEnabledBuilder() {
-        
-        onChanged();
-        return getAsynchronousMetricLogEnabledFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 20.11
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
-       */
-      public com.google.protobuf.BoolValueOrBuilder getAsynchronousMetricLogEnabledOrBuilder() {
-        if (asynchronousMetricLogEnabledBuilder_ != null) {
-          return asynchronousMetricLogEnabledBuilder_.getMessageOrBuilder();
-        } else {
-          return asynchronousMetricLogEnabled_ == null ?
-              com.google.protobuf.BoolValue.getDefaultInstance() : asynchronousMetricLogEnabled_;
-        }
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 20.11
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue asynchronous_metric_log_enabled = 52;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
-          getAsynchronousMetricLogEnabledFieldBuilder() {
-        if (asynchronousMetricLogEnabledBuilder_ == null) {
-          asynchronousMetricLogEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
-                  getAsynchronousMetricLogEnabled(),
-                  getParentForChildren(),
-                  isClean());
-          asynchronousMetricLogEnabled_ = null;
-        }
-        return asynchronousMetricLogEnabledBuilder_;
-      }
-
-      private com.google.protobuf.Int64Value asynchronousMetricLogRetentionSize_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asynchronousMetricLogRetentionSizeBuilder_;
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return Whether the asynchronousMetricLogRetentionSize field is set.
-       */
-      public boolean hasAsynchronousMetricLogRetentionSize() {
-        return asynchronousMetricLogRetentionSizeBuilder_ != null || asynchronousMetricLogRetentionSize_ != null;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return The asynchronousMetricLogRetentionSize.
-       */
-      public com.google.protobuf.Int64Value getAsynchronousMetricLogRetentionSize() {
-        if (asynchronousMetricLogRetentionSizeBuilder_ == null) {
-          return asynchronousMetricLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousMetricLogRetentionSize_;
-        } else {
-          return asynchronousMetricLogRetentionSizeBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setAsynchronousMetricLogRetentionSize(com.google.protobuf.Int64Value value) {
-        if (asynchronousMetricLogRetentionSizeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          asynchronousMetricLogRetentionSize_ = value;
-          onChanged();
-        } else {
-          asynchronousMetricLogRetentionSizeBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setAsynchronousMetricLogRetentionSize(
-          com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (asynchronousMetricLogRetentionSizeBuilder_ == null) {
-          asynchronousMetricLogRetentionSize_ = builderForValue.build();
-          onChanged();
-        } else {
-          asynchronousMetricLogRetentionSizeBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder mergeAsynchronousMetricLogRetentionSize(com.google.protobuf.Int64Value value) {
-        if (asynchronousMetricLogRetentionSizeBuilder_ == null) {
-          if (asynchronousMetricLogRetentionSize_ != null) {
-            asynchronousMetricLogRetentionSize_ =
-              com.google.protobuf.Int64Value.newBuilder(asynchronousMetricLogRetentionSize_).mergeFrom(value).buildPartial();
-          } else {
-            asynchronousMetricLogRetentionSize_ = value;
-          }
-          onChanged();
-        } else {
-          asynchronousMetricLogRetentionSizeBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder clearAsynchronousMetricLogRetentionSize() {
-        if (asynchronousMetricLogRetentionSizeBuilder_ == null) {
-          asynchronousMetricLogRetentionSize_ = null;
-          onChanged();
-        } else {
-          asynchronousMetricLogRetentionSize_ = null;
-          asynchronousMetricLogRetentionSizeBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64Value.Builder getAsynchronousMetricLogRetentionSizeBuilder() {
-        
-        onChanged();
-        return getAsynchronousMetricLogRetentionSizeFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64ValueOrBuilder getAsynchronousMetricLogRetentionSizeOrBuilder() {
-        if (asynchronousMetricLogRetentionSizeBuilder_ != null) {
-          return asynchronousMetricLogRetentionSizeBuilder_.getMessageOrBuilder();
-        } else {
-          return asynchronousMetricLogRetentionSize_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousMetricLogRetentionSize_;
-        }
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_size = 53 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getAsynchronousMetricLogRetentionSizeFieldBuilder() {
-        if (asynchronousMetricLogRetentionSizeBuilder_ == null) {
-          asynchronousMetricLogRetentionSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getAsynchronousMetricLogRetentionSize(),
-                  getParentForChildren(),
-                  isClean());
-          asynchronousMetricLogRetentionSize_ = null;
-        }
-        return asynchronousMetricLogRetentionSizeBuilder_;
-      }
-
-      private com.google.protobuf.Int64Value asynchronousMetricLogRetentionTime_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asynchronousMetricLogRetentionTimeBuilder_;
-      /**
-       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return Whether the asynchronousMetricLogRetentionTime field is set.
-       */
-      public boolean hasAsynchronousMetricLogRetentionTime() {
-        return asynchronousMetricLogRetentionTimeBuilder_ != null || asynchronousMetricLogRetentionTime_ != null;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return The asynchronousMetricLogRetentionTime.
-       */
-      public com.google.protobuf.Int64Value getAsynchronousMetricLogRetentionTime() {
-        if (asynchronousMetricLogRetentionTimeBuilder_ == null) {
-          return asynchronousMetricLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousMetricLogRetentionTime_;
-        } else {
-          return asynchronousMetricLogRetentionTimeBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setAsynchronousMetricLogRetentionTime(com.google.protobuf.Int64Value value) {
-        if (asynchronousMetricLogRetentionTimeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          asynchronousMetricLogRetentionTime_ = value;
-          onChanged();
-        } else {
-          asynchronousMetricLogRetentionTimeBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setAsynchronousMetricLogRetentionTime(
-          com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (asynchronousMetricLogRetentionTimeBuilder_ == null) {
-          asynchronousMetricLogRetentionTime_ = builderForValue.build();
-          onChanged();
-        } else {
-          asynchronousMetricLogRetentionTimeBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder mergeAsynchronousMetricLogRetentionTime(com.google.protobuf.Int64Value value) {
-        if (asynchronousMetricLogRetentionTimeBuilder_ == null) {
-          if (asynchronousMetricLogRetentionTime_ != null) {
-            asynchronousMetricLogRetentionTime_ =
-              com.google.protobuf.Int64Value.newBuilder(asynchronousMetricLogRetentionTime_).mergeFrom(value).buildPartial();
-          } else {
-            asynchronousMetricLogRetentionTime_ = value;
-          }
-          onChanged();
-        } else {
-          asynchronousMetricLogRetentionTimeBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder clearAsynchronousMetricLogRetentionTime() {
-        if (asynchronousMetricLogRetentionTimeBuilder_ == null) {
-          asynchronousMetricLogRetentionTime_ = null;
-          onChanged();
-        } else {
-          asynchronousMetricLogRetentionTime_ = null;
-          asynchronousMetricLogRetentionTimeBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64Value.Builder getAsynchronousMetricLogRetentionTimeBuilder() {
-        
-        onChanged();
-        return getAsynchronousMetricLogRetentionTimeFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64ValueOrBuilder getAsynchronousMetricLogRetentionTimeOrBuilder() {
-        if (asynchronousMetricLogRetentionTimeBuilder_ != null) {
-          return asynchronousMetricLogRetentionTimeBuilder_.getMessageOrBuilder();
-        } else {
-          return asynchronousMetricLogRetentionTime_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousMetricLogRetentionTime_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Int64Value asynchronous_metric_log_retention_time = 54 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getAsynchronousMetricLogRetentionTimeFieldBuilder() {
-        if (asynchronousMetricLogRetentionTimeBuilder_ == null) {
-          asynchronousMetricLogRetentionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getAsynchronousMetricLogRetentionTime(),
-                  getParentForChildren(),
-                  isClean());
-          asynchronousMetricLogRetentionTime_ = null;
-        }
-        return asynchronousMetricLogRetentionTimeBuilder_;
-      }
-
-      private com.google.protobuf.Int64Value opentelemetrySpanLogRetentionSize_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> opentelemetrySpanLogRetentionSizeBuilder_;
-      /**
-       * <pre>
-       * Default: 0
-       * Min version: 20.11
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return Whether the opentelemetrySpanLogRetentionSize field is set.
-       */
-      public boolean hasOpentelemetrySpanLogRetentionSize() {
-        return opentelemetrySpanLogRetentionSizeBuilder_ != null || opentelemetrySpanLogRetentionSize_ != null;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * Min version: 20.11
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return The opentelemetrySpanLogRetentionSize.
-       */
-      public com.google.protobuf.Int64Value getOpentelemetrySpanLogRetentionSize() {
-        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
-          return opentelemetrySpanLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : opentelemetrySpanLogRetentionSize_;
-        } else {
-          return opentelemetrySpanLogRetentionSizeBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * Min version: 20.11
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setOpentelemetrySpanLogRetentionSize(com.google.protobuf.Int64Value value) {
-        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          opentelemetrySpanLogRetentionSize_ = value;
-          onChanged();
-        } else {
-          opentelemetrySpanLogRetentionSizeBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * Min version: 20.11
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setOpentelemetrySpanLogRetentionSize(
-          com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
-          opentelemetrySpanLogRetentionSize_ = builderForValue.build();
-          onChanged();
-        } else {
-          opentelemetrySpanLogRetentionSizeBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * Min version: 20.11
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder mergeOpentelemetrySpanLogRetentionSize(com.google.protobuf.Int64Value value) {
-        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
-          if (opentelemetrySpanLogRetentionSize_ != null) {
-            opentelemetrySpanLogRetentionSize_ =
-              com.google.protobuf.Int64Value.newBuilder(opentelemetrySpanLogRetentionSize_).mergeFrom(value).buildPartial();
-          } else {
-            opentelemetrySpanLogRetentionSize_ = value;
-          }
-          onChanged();
-        } else {
-          opentelemetrySpanLogRetentionSizeBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * Min version: 20.11
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder clearOpentelemetrySpanLogRetentionSize() {
-        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
-          opentelemetrySpanLogRetentionSize_ = null;
-          onChanged();
-        } else {
-          opentelemetrySpanLogRetentionSize_ = null;
-          opentelemetrySpanLogRetentionSizeBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * Min version: 20.11
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64Value.Builder getOpentelemetrySpanLogRetentionSizeBuilder() {
-        
-        onChanged();
-        return getOpentelemetrySpanLogRetentionSizeFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * Min version: 20.11
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64ValueOrBuilder getOpentelemetrySpanLogRetentionSizeOrBuilder() {
-        if (opentelemetrySpanLogRetentionSizeBuilder_ != null) {
-          return opentelemetrySpanLogRetentionSizeBuilder_.getMessageOrBuilder();
-        } else {
-          return opentelemetrySpanLogRetentionSize_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : opentelemetrySpanLogRetentionSize_;
-        }
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * Min version: 20.11
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_size = 55 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getOpentelemetrySpanLogRetentionSizeFieldBuilder() {
-        if (opentelemetrySpanLogRetentionSizeBuilder_ == null) {
-          opentelemetrySpanLogRetentionSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getOpentelemetrySpanLogRetentionSize(),
-                  getParentForChildren(),
-                  isClean());
-          opentelemetrySpanLogRetentionSize_ = null;
-        }
-        return opentelemetrySpanLogRetentionSizeBuilder_;
-      }
-
-      private com.google.protobuf.Int64Value opentelemetrySpanLogRetentionTime_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> opentelemetrySpanLogRetentionTimeBuilder_;
-      /**
-       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return Whether the opentelemetrySpanLogRetentionTime field is set.
-       */
-      public boolean hasOpentelemetrySpanLogRetentionTime() {
-        return opentelemetrySpanLogRetentionTimeBuilder_ != null || opentelemetrySpanLogRetentionTime_ != null;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return The opentelemetrySpanLogRetentionTime.
-       */
-      public com.google.protobuf.Int64Value getOpentelemetrySpanLogRetentionTime() {
-        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
-          return opentelemetrySpanLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : opentelemetrySpanLogRetentionTime_;
-        } else {
-          return opentelemetrySpanLogRetentionTimeBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setOpentelemetrySpanLogRetentionTime(com.google.protobuf.Int64Value value) {
-        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          opentelemetrySpanLogRetentionTime_ = value;
-          onChanged();
-        } else {
-          opentelemetrySpanLogRetentionTimeBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setOpentelemetrySpanLogRetentionTime(
-          com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
-          opentelemetrySpanLogRetentionTime_ = builderForValue.build();
-          onChanged();
-        } else {
-          opentelemetrySpanLogRetentionTimeBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder mergeOpentelemetrySpanLogRetentionTime(com.google.protobuf.Int64Value value) {
-        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
-          if (opentelemetrySpanLogRetentionTime_ != null) {
-            opentelemetrySpanLogRetentionTime_ =
-              com.google.protobuf.Int64Value.newBuilder(opentelemetrySpanLogRetentionTime_).mergeFrom(value).buildPartial();
-          } else {
-            opentelemetrySpanLogRetentionTime_ = value;
-          }
-          onChanged();
-        } else {
-          opentelemetrySpanLogRetentionTimeBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder clearOpentelemetrySpanLogRetentionTime() {
-        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
-          opentelemetrySpanLogRetentionTime_ = null;
-          onChanged();
-        } else {
-          opentelemetrySpanLogRetentionTime_ = null;
-          opentelemetrySpanLogRetentionTimeBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64Value.Builder getOpentelemetrySpanLogRetentionTimeBuilder() {
-        
-        onChanged();
-        return getOpentelemetrySpanLogRetentionTimeFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64ValueOrBuilder getOpentelemetrySpanLogRetentionTimeOrBuilder() {
-        if (opentelemetrySpanLogRetentionTimeBuilder_ != null) {
-          return opentelemetrySpanLogRetentionTimeBuilder_.getMessageOrBuilder();
-        } else {
-          return opentelemetrySpanLogRetentionTime_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : opentelemetrySpanLogRetentionTime_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Int64Value opentelemetry_span_log_retention_time = 56 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getOpentelemetrySpanLogRetentionTimeFieldBuilder() {
-        if (opentelemetrySpanLogRetentionTimeBuilder_ == null) {
-          opentelemetrySpanLogRetentionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getOpentelemetrySpanLogRetentionTime(),
-                  getParentForChildren(),
-                  isClean());
-          opentelemetrySpanLogRetentionTime_ = null;
-        }
-        return opentelemetrySpanLogRetentionTimeBuilder_;
-      }
-
-      private com.google.protobuf.BoolValue sessionLogEnabled_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> sessionLogEnabledBuilder_;
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.11
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
-       * @return Whether the sessionLogEnabled field is set.
-       */
-      public boolean hasSessionLogEnabled() {
-        return sessionLogEnabledBuilder_ != null || sessionLogEnabled_ != null;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.11
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
-       * @return The sessionLogEnabled.
-       */
-      public com.google.protobuf.BoolValue getSessionLogEnabled() {
-        if (sessionLogEnabledBuilder_ == null) {
-          return sessionLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : sessionLogEnabled_;
-        } else {
-          return sessionLogEnabledBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.11
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
-       */
-      public Builder setSessionLogEnabled(com.google.protobuf.BoolValue value) {
-        if (sessionLogEnabledBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          sessionLogEnabled_ = value;
-          onChanged();
-        } else {
-          sessionLogEnabledBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.11
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
-       */
-      public Builder setSessionLogEnabled(
-          com.google.protobuf.BoolValue.Builder builderForValue) {
-        if (sessionLogEnabledBuilder_ == null) {
-          sessionLogEnabled_ = builderForValue.build();
-          onChanged();
-        } else {
-          sessionLogEnabledBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.11
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
-       */
-      public Builder mergeSessionLogEnabled(com.google.protobuf.BoolValue value) {
-        if (sessionLogEnabledBuilder_ == null) {
-          if (sessionLogEnabled_ != null) {
-            sessionLogEnabled_ =
-              com.google.protobuf.BoolValue.newBuilder(sessionLogEnabled_).mergeFrom(value).buildPartial();
-          } else {
-            sessionLogEnabled_ = value;
-          }
-          onChanged();
-        } else {
-          sessionLogEnabledBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.11
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
-       */
-      public Builder clearSessionLogEnabled() {
-        if (sessionLogEnabledBuilder_ == null) {
-          sessionLogEnabled_ = null;
-          onChanged();
-        } else {
-          sessionLogEnabled_ = null;
-          sessionLogEnabledBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.11
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
-       */
-      public com.google.protobuf.BoolValue.Builder getSessionLogEnabledBuilder() {
-        
-        onChanged();
-        return getSessionLogEnabledFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.11
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
-       */
-      public com.google.protobuf.BoolValueOrBuilder getSessionLogEnabledOrBuilder() {
-        if (sessionLogEnabledBuilder_ != null) {
-          return sessionLogEnabledBuilder_.getMessageOrBuilder();
-        } else {
-          return sessionLogEnabled_ == null ?
-              com.google.protobuf.BoolValue.getDefaultInstance() : sessionLogEnabled_;
-        }
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.11
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue session_log_enabled = 57;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
-          getSessionLogEnabledFieldBuilder() {
-        if (sessionLogEnabledBuilder_ == null) {
-          sessionLogEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
-                  getSessionLogEnabled(),
-                  getParentForChildren(),
-                  isClean());
-          sessionLogEnabled_ = null;
-        }
-        return sessionLogEnabledBuilder_;
-      }
-
-      private com.google.protobuf.Int64Value sessionLogRetentionSize_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> sessionLogRetentionSizeBuilder_;
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return Whether the sessionLogRetentionSize field is set.
-       */
-      public boolean hasSessionLogRetentionSize() {
-        return sessionLogRetentionSizeBuilder_ != null || sessionLogRetentionSize_ != null;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return The sessionLogRetentionSize.
-       */
-      public com.google.protobuf.Int64Value getSessionLogRetentionSize() {
-        if (sessionLogRetentionSizeBuilder_ == null) {
-          return sessionLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sessionLogRetentionSize_;
-        } else {
-          return sessionLogRetentionSizeBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setSessionLogRetentionSize(com.google.protobuf.Int64Value value) {
-        if (sessionLogRetentionSizeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          sessionLogRetentionSize_ = value;
-          onChanged();
-        } else {
-          sessionLogRetentionSizeBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setSessionLogRetentionSize(
-          com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (sessionLogRetentionSizeBuilder_ == null) {
-          sessionLogRetentionSize_ = builderForValue.build();
-          onChanged();
-        } else {
-          sessionLogRetentionSizeBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder mergeSessionLogRetentionSize(com.google.protobuf.Int64Value value) {
-        if (sessionLogRetentionSizeBuilder_ == null) {
-          if (sessionLogRetentionSize_ != null) {
-            sessionLogRetentionSize_ =
-              com.google.protobuf.Int64Value.newBuilder(sessionLogRetentionSize_).mergeFrom(value).buildPartial();
-          } else {
-            sessionLogRetentionSize_ = value;
-          }
-          onChanged();
-        } else {
-          sessionLogRetentionSizeBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder clearSessionLogRetentionSize() {
-        if (sessionLogRetentionSizeBuilder_ == null) {
-          sessionLogRetentionSize_ = null;
-          onChanged();
-        } else {
-          sessionLogRetentionSize_ = null;
-          sessionLogRetentionSizeBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64Value.Builder getSessionLogRetentionSizeBuilder() {
-        
-        onChanged();
-        return getSessionLogRetentionSizeFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64ValueOrBuilder getSessionLogRetentionSizeOrBuilder() {
-        if (sessionLogRetentionSizeBuilder_ != null) {
-          return sessionLogRetentionSizeBuilder_.getMessageOrBuilder();
-        } else {
-          return sessionLogRetentionSize_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : sessionLogRetentionSize_;
-        }
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value session_log_retention_size = 58 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getSessionLogRetentionSizeFieldBuilder() {
-        if (sessionLogRetentionSizeBuilder_ == null) {
-          sessionLogRetentionSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getSessionLogRetentionSize(),
-                  getParentForChildren(),
-                  isClean());
-          sessionLogRetentionSize_ = null;
-        }
-        return sessionLogRetentionSizeBuilder_;
-      }
-
-      private com.google.protobuf.Int64Value sessionLogRetentionTime_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> sessionLogRetentionTimeBuilder_;
-      /**
-       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return Whether the sessionLogRetentionTime field is set.
-       */
-      public boolean hasSessionLogRetentionTime() {
-        return sessionLogRetentionTimeBuilder_ != null || sessionLogRetentionTime_ != null;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return The sessionLogRetentionTime.
-       */
-      public com.google.protobuf.Int64Value getSessionLogRetentionTime() {
-        if (sessionLogRetentionTimeBuilder_ == null) {
-          return sessionLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : sessionLogRetentionTime_;
-        } else {
-          return sessionLogRetentionTimeBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setSessionLogRetentionTime(com.google.protobuf.Int64Value value) {
-        if (sessionLogRetentionTimeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          sessionLogRetentionTime_ = value;
-          onChanged();
-        } else {
-          sessionLogRetentionTimeBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setSessionLogRetentionTime(
-          com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (sessionLogRetentionTimeBuilder_ == null) {
-          sessionLogRetentionTime_ = builderForValue.build();
-          onChanged();
-        } else {
-          sessionLogRetentionTimeBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder mergeSessionLogRetentionTime(com.google.protobuf.Int64Value value) {
-        if (sessionLogRetentionTimeBuilder_ == null) {
-          if (sessionLogRetentionTime_ != null) {
-            sessionLogRetentionTime_ =
-              com.google.protobuf.Int64Value.newBuilder(sessionLogRetentionTime_).mergeFrom(value).buildPartial();
-          } else {
-            sessionLogRetentionTime_ = value;
-          }
-          onChanged();
-        } else {
-          sessionLogRetentionTimeBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder clearSessionLogRetentionTime() {
-        if (sessionLogRetentionTimeBuilder_ == null) {
-          sessionLogRetentionTime_ = null;
-          onChanged();
-        } else {
-          sessionLogRetentionTime_ = null;
-          sessionLogRetentionTimeBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64Value.Builder getSessionLogRetentionTimeBuilder() {
-        
-        onChanged();
-        return getSessionLogRetentionTimeFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64ValueOrBuilder getSessionLogRetentionTimeOrBuilder() {
-        if (sessionLogRetentionTimeBuilder_ != null) {
-          return sessionLogRetentionTimeBuilder_.getMessageOrBuilder();
-        } else {
-          return sessionLogRetentionTime_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : sessionLogRetentionTime_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Int64Value session_log_retention_time = 59 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getSessionLogRetentionTimeFieldBuilder() {
-        if (sessionLogRetentionTimeBuilder_ == null) {
-          sessionLogRetentionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getSessionLogRetentionTime(),
-                  getParentForChildren(),
-                  isClean());
-          sessionLogRetentionTime_ = null;
-        }
-        return sessionLogRetentionTimeBuilder_;
-      }
-
-      private com.google.protobuf.BoolValue zookeeperLogEnabled_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> zookeeperLogEnabledBuilder_;
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.9
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
-       * @return Whether the zookeeperLogEnabled field is set.
-       */
-      public boolean hasZookeeperLogEnabled() {
-        return zookeeperLogEnabledBuilder_ != null || zookeeperLogEnabled_ != null;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.9
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
-       * @return The zookeeperLogEnabled.
-       */
-      public com.google.protobuf.BoolValue getZookeeperLogEnabled() {
-        if (zookeeperLogEnabledBuilder_ == null) {
-          return zookeeperLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : zookeeperLogEnabled_;
-        } else {
-          return zookeeperLogEnabledBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.9
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
-       */
-      public Builder setZookeeperLogEnabled(com.google.protobuf.BoolValue value) {
-        if (zookeeperLogEnabledBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          zookeeperLogEnabled_ = value;
-          onChanged();
-        } else {
-          zookeeperLogEnabledBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.9
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
-       */
-      public Builder setZookeeperLogEnabled(
-          com.google.protobuf.BoolValue.Builder builderForValue) {
-        if (zookeeperLogEnabledBuilder_ == null) {
-          zookeeperLogEnabled_ = builderForValue.build();
-          onChanged();
-        } else {
-          zookeeperLogEnabledBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.9
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
-       */
-      public Builder mergeZookeeperLogEnabled(com.google.protobuf.BoolValue value) {
-        if (zookeeperLogEnabledBuilder_ == null) {
-          if (zookeeperLogEnabled_ != null) {
-            zookeeperLogEnabled_ =
-              com.google.protobuf.BoolValue.newBuilder(zookeeperLogEnabled_).mergeFrom(value).buildPartial();
-          } else {
-            zookeeperLogEnabled_ = value;
-          }
-          onChanged();
-        } else {
-          zookeeperLogEnabledBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.9
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
-       */
-      public Builder clearZookeeperLogEnabled() {
-        if (zookeeperLogEnabledBuilder_ == null) {
-          zookeeperLogEnabled_ = null;
-          onChanged();
-        } else {
-          zookeeperLogEnabled_ = null;
-          zookeeperLogEnabledBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.9
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
-       */
-      public com.google.protobuf.BoolValue.Builder getZookeeperLogEnabledBuilder() {
-        
-        onChanged();
-        return getZookeeperLogEnabledFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.9
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
-       */
-      public com.google.protobuf.BoolValueOrBuilder getZookeeperLogEnabledOrBuilder() {
-        if (zookeeperLogEnabledBuilder_ != null) {
-          return zookeeperLogEnabledBuilder_.getMessageOrBuilder();
-        } else {
-          return zookeeperLogEnabled_ == null ?
-              com.google.protobuf.BoolValue.getDefaultInstance() : zookeeperLogEnabled_;
-        }
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 21.9
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue zookeeper_log_enabled = 60;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
-          getZookeeperLogEnabledFieldBuilder() {
-        if (zookeeperLogEnabledBuilder_ == null) {
-          zookeeperLogEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
-                  getZookeeperLogEnabled(),
-                  getParentForChildren(),
-                  isClean());
-          zookeeperLogEnabled_ = null;
-        }
-        return zookeeperLogEnabledBuilder_;
-      }
-
-      private com.google.protobuf.Int64Value zookeeperLogRetentionSize_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> zookeeperLogRetentionSizeBuilder_;
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return Whether the zookeeperLogRetentionSize field is set.
-       */
-      public boolean hasZookeeperLogRetentionSize() {
-        return zookeeperLogRetentionSizeBuilder_ != null || zookeeperLogRetentionSize_ != null;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return The zookeeperLogRetentionSize.
-       */
-      public com.google.protobuf.Int64Value getZookeeperLogRetentionSize() {
-        if (zookeeperLogRetentionSizeBuilder_ == null) {
-          return zookeeperLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : zookeeperLogRetentionSize_;
-        } else {
-          return zookeeperLogRetentionSizeBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setZookeeperLogRetentionSize(com.google.protobuf.Int64Value value) {
-        if (zookeeperLogRetentionSizeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          zookeeperLogRetentionSize_ = value;
-          onChanged();
-        } else {
-          zookeeperLogRetentionSizeBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setZookeeperLogRetentionSize(
-          com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (zookeeperLogRetentionSizeBuilder_ == null) {
-          zookeeperLogRetentionSize_ = builderForValue.build();
-          onChanged();
-        } else {
-          zookeeperLogRetentionSizeBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder mergeZookeeperLogRetentionSize(com.google.protobuf.Int64Value value) {
-        if (zookeeperLogRetentionSizeBuilder_ == null) {
-          if (zookeeperLogRetentionSize_ != null) {
-            zookeeperLogRetentionSize_ =
-              com.google.protobuf.Int64Value.newBuilder(zookeeperLogRetentionSize_).mergeFrom(value).buildPartial();
-          } else {
-            zookeeperLogRetentionSize_ = value;
-          }
-          onChanged();
-        } else {
-          zookeeperLogRetentionSizeBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder clearZookeeperLogRetentionSize() {
-        if (zookeeperLogRetentionSizeBuilder_ == null) {
-          zookeeperLogRetentionSize_ = null;
-          onChanged();
-        } else {
-          zookeeperLogRetentionSize_ = null;
-          zookeeperLogRetentionSizeBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64Value.Builder getZookeeperLogRetentionSizeBuilder() {
-        
-        onChanged();
-        return getZookeeperLogRetentionSizeFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64ValueOrBuilder getZookeeperLogRetentionSizeOrBuilder() {
-        if (zookeeperLogRetentionSizeBuilder_ != null) {
-          return zookeeperLogRetentionSizeBuilder_.getMessageOrBuilder();
-        } else {
-          return zookeeperLogRetentionSize_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : zookeeperLogRetentionSize_;
-        }
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value zookeeper_log_retention_size = 61 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getZookeeperLogRetentionSizeFieldBuilder() {
-        if (zookeeperLogRetentionSizeBuilder_ == null) {
-          zookeeperLogRetentionSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getZookeeperLogRetentionSize(),
-                  getParentForChildren(),
-                  isClean());
-          zookeeperLogRetentionSize_ = null;
-        }
-        return zookeeperLogRetentionSizeBuilder_;
-      }
-
-      private com.google.protobuf.Int64Value zookeeperLogRetentionTime_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> zookeeperLogRetentionTimeBuilder_;
-      /**
-       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return Whether the zookeeperLogRetentionTime field is set.
-       */
-      public boolean hasZookeeperLogRetentionTime() {
-        return zookeeperLogRetentionTimeBuilder_ != null || zookeeperLogRetentionTime_ != null;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return The zookeeperLogRetentionTime.
-       */
-      public com.google.protobuf.Int64Value getZookeeperLogRetentionTime() {
-        if (zookeeperLogRetentionTimeBuilder_ == null) {
-          return zookeeperLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : zookeeperLogRetentionTime_;
-        } else {
-          return zookeeperLogRetentionTimeBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setZookeeperLogRetentionTime(com.google.protobuf.Int64Value value) {
-        if (zookeeperLogRetentionTimeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          zookeeperLogRetentionTime_ = value;
-          onChanged();
-        } else {
-          zookeeperLogRetentionTimeBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setZookeeperLogRetentionTime(
-          com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (zookeeperLogRetentionTimeBuilder_ == null) {
-          zookeeperLogRetentionTime_ = builderForValue.build();
-          onChanged();
-        } else {
-          zookeeperLogRetentionTimeBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder mergeZookeeperLogRetentionTime(com.google.protobuf.Int64Value value) {
-        if (zookeeperLogRetentionTimeBuilder_ == null) {
-          if (zookeeperLogRetentionTime_ != null) {
-            zookeeperLogRetentionTime_ =
-              com.google.protobuf.Int64Value.newBuilder(zookeeperLogRetentionTime_).mergeFrom(value).buildPartial();
-          } else {
-            zookeeperLogRetentionTime_ = value;
-          }
-          onChanged();
-        } else {
-          zookeeperLogRetentionTimeBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder clearZookeeperLogRetentionTime() {
-        if (zookeeperLogRetentionTimeBuilder_ == null) {
-          zookeeperLogRetentionTime_ = null;
-          onChanged();
-        } else {
-          zookeeperLogRetentionTime_ = null;
-          zookeeperLogRetentionTimeBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64Value.Builder getZookeeperLogRetentionTimeBuilder() {
-        
-        onChanged();
-        return getZookeeperLogRetentionTimeFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64ValueOrBuilder getZookeeperLogRetentionTimeOrBuilder() {
-        if (zookeeperLogRetentionTimeBuilder_ != null) {
-          return zookeeperLogRetentionTimeBuilder_.getMessageOrBuilder();
-        } else {
-          return zookeeperLogRetentionTime_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : zookeeperLogRetentionTime_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Int64Value zookeeper_log_retention_time = 62 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getZookeeperLogRetentionTimeFieldBuilder() {
-        if (zookeeperLogRetentionTimeBuilder_ == null) {
-          zookeeperLogRetentionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getZookeeperLogRetentionTime(),
-                  getParentForChildren(),
-                  isClean());
-          zookeeperLogRetentionTime_ = null;
-        }
-        return zookeeperLogRetentionTimeBuilder_;
-      }
-
-      private com.google.protobuf.BoolValue asynchronousInsertLogEnabled_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> asynchronousInsertLogEnabledBuilder_;
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 22.10
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
-       * @return Whether the asynchronousInsertLogEnabled field is set.
-       */
-      public boolean hasAsynchronousInsertLogEnabled() {
-        return asynchronousInsertLogEnabledBuilder_ != null || asynchronousInsertLogEnabled_ != null;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 22.10
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
-       * @return The asynchronousInsertLogEnabled.
-       */
-      public com.google.protobuf.BoolValue getAsynchronousInsertLogEnabled() {
-        if (asynchronousInsertLogEnabledBuilder_ == null) {
-          return asynchronousInsertLogEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : asynchronousInsertLogEnabled_;
-        } else {
-          return asynchronousInsertLogEnabledBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 22.10
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
-       */
-      public Builder setAsynchronousInsertLogEnabled(com.google.protobuf.BoolValue value) {
-        if (asynchronousInsertLogEnabledBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          asynchronousInsertLogEnabled_ = value;
-          onChanged();
-        } else {
-          asynchronousInsertLogEnabledBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 22.10
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
-       */
-      public Builder setAsynchronousInsertLogEnabled(
-          com.google.protobuf.BoolValue.Builder builderForValue) {
-        if (asynchronousInsertLogEnabledBuilder_ == null) {
-          asynchronousInsertLogEnabled_ = builderForValue.build();
-          onChanged();
-        } else {
-          asynchronousInsertLogEnabledBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 22.10
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
-       */
-      public Builder mergeAsynchronousInsertLogEnabled(com.google.protobuf.BoolValue value) {
-        if (asynchronousInsertLogEnabledBuilder_ == null) {
-          if (asynchronousInsertLogEnabled_ != null) {
-            asynchronousInsertLogEnabled_ =
-              com.google.protobuf.BoolValue.newBuilder(asynchronousInsertLogEnabled_).mergeFrom(value).buildPartial();
-          } else {
-            asynchronousInsertLogEnabled_ = value;
-          }
-          onChanged();
-        } else {
-          asynchronousInsertLogEnabledBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 22.10
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
-       */
-      public Builder clearAsynchronousInsertLogEnabled() {
-        if (asynchronousInsertLogEnabledBuilder_ == null) {
-          asynchronousInsertLogEnabled_ = null;
-          onChanged();
-        } else {
-          asynchronousInsertLogEnabled_ = null;
-          asynchronousInsertLogEnabledBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 22.10
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
-       */
-      public com.google.protobuf.BoolValue.Builder getAsynchronousInsertLogEnabledBuilder() {
-        
-        onChanged();
-        return getAsynchronousInsertLogEnabledFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 22.10
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
-       */
-      public com.google.protobuf.BoolValueOrBuilder getAsynchronousInsertLogEnabledOrBuilder() {
-        if (asynchronousInsertLogEnabledBuilder_ != null) {
-          return asynchronousInsertLogEnabledBuilder_.getMessageOrBuilder();
-        } else {
-          return asynchronousInsertLogEnabled_ == null ?
-              com.google.protobuf.BoolValue.getDefaultInstance() : asynchronousInsertLogEnabled_;
-        }
-      }
-      /**
-       * <pre>
-       * Default: false
-       * Min version: 22.10
-       * </pre>
-       *
-       * <code>.google.protobuf.BoolValue asynchronous_insert_log_enabled = 63;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
-          getAsynchronousInsertLogEnabledFieldBuilder() {
-        if (asynchronousInsertLogEnabledBuilder_ == null) {
-          asynchronousInsertLogEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
-                  getAsynchronousInsertLogEnabled(),
-                  getParentForChildren(),
-                  isClean());
-          asynchronousInsertLogEnabled_ = null;
-        }
-        return asynchronousInsertLogEnabledBuilder_;
-      }
-
-      private com.google.protobuf.Int64Value asynchronousInsertLogRetentionSize_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asynchronousInsertLogRetentionSizeBuilder_;
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return Whether the asynchronousInsertLogRetentionSize field is set.
-       */
-      public boolean hasAsynchronousInsertLogRetentionSize() {
-        return asynchronousInsertLogRetentionSizeBuilder_ != null || asynchronousInsertLogRetentionSize_ != null;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return The asynchronousInsertLogRetentionSize.
-       */
-      public com.google.protobuf.Int64Value getAsynchronousInsertLogRetentionSize() {
-        if (asynchronousInsertLogRetentionSizeBuilder_ == null) {
-          return asynchronousInsertLogRetentionSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousInsertLogRetentionSize_;
-        } else {
-          return asynchronousInsertLogRetentionSizeBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setAsynchronousInsertLogRetentionSize(com.google.protobuf.Int64Value value) {
-        if (asynchronousInsertLogRetentionSizeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          asynchronousInsertLogRetentionSize_ = value;
-          onChanged();
-        } else {
-          asynchronousInsertLogRetentionSizeBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setAsynchronousInsertLogRetentionSize(
-          com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (asynchronousInsertLogRetentionSizeBuilder_ == null) {
-          asynchronousInsertLogRetentionSize_ = builderForValue.build();
-          onChanged();
-        } else {
-          asynchronousInsertLogRetentionSizeBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder mergeAsynchronousInsertLogRetentionSize(com.google.protobuf.Int64Value value) {
-        if (asynchronousInsertLogRetentionSizeBuilder_ == null) {
-          if (asynchronousInsertLogRetentionSize_ != null) {
-            asynchronousInsertLogRetentionSize_ =
-              com.google.protobuf.Int64Value.newBuilder(asynchronousInsertLogRetentionSize_).mergeFrom(value).buildPartial();
-          } else {
-            asynchronousInsertLogRetentionSize_ = value;
-          }
-          onChanged();
-        } else {
-          asynchronousInsertLogRetentionSizeBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder clearAsynchronousInsertLogRetentionSize() {
-        if (asynchronousInsertLogRetentionSizeBuilder_ == null) {
-          asynchronousInsertLogRetentionSize_ = null;
-          onChanged();
-        } else {
-          asynchronousInsertLogRetentionSize_ = null;
-          asynchronousInsertLogRetentionSizeBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64Value.Builder getAsynchronousInsertLogRetentionSizeBuilder() {
-        
-        onChanged();
-        return getAsynchronousInsertLogRetentionSizeFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64ValueOrBuilder getAsynchronousInsertLogRetentionSizeOrBuilder() {
-        if (asynchronousInsertLogRetentionSizeBuilder_ != null) {
-          return asynchronousInsertLogRetentionSizeBuilder_.getMessageOrBuilder();
-        } else {
-          return asynchronousInsertLogRetentionSize_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousInsertLogRetentionSize_;
-        }
-      }
-      /**
-       * <pre>
-       * Default: 0
-       * </pre>
-       *
-       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_size = 64 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getAsynchronousInsertLogRetentionSizeFieldBuilder() {
-        if (asynchronousInsertLogRetentionSizeBuilder_ == null) {
-          asynchronousInsertLogRetentionSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getAsynchronousInsertLogRetentionSize(),
-                  getParentForChildren(),
-                  isClean());
-          asynchronousInsertLogRetentionSize_ = null;
-        }
-        return asynchronousInsertLogRetentionSizeBuilder_;
-      }
-
-      private com.google.protobuf.Int64Value asynchronousInsertLogRetentionTime_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> asynchronousInsertLogRetentionTimeBuilder_;
-      /**
-       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return Whether the asynchronousInsertLogRetentionTime field is set.
-       */
-      public boolean hasAsynchronousInsertLogRetentionTime() {
-        return asynchronousInsertLogRetentionTimeBuilder_ != null || asynchronousInsertLogRetentionTime_ != null;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       * @return The asynchronousInsertLogRetentionTime.
-       */
-      public com.google.protobuf.Int64Value getAsynchronousInsertLogRetentionTime() {
-        if (asynchronousInsertLogRetentionTimeBuilder_ == null) {
-          return asynchronousInsertLogRetentionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousInsertLogRetentionTime_;
-        } else {
-          return asynchronousInsertLogRetentionTimeBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setAsynchronousInsertLogRetentionTime(com.google.protobuf.Int64Value value) {
-        if (asynchronousInsertLogRetentionTimeBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          asynchronousInsertLogRetentionTime_ = value;
-          onChanged();
-        } else {
-          asynchronousInsertLogRetentionTimeBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder setAsynchronousInsertLogRetentionTime(
-          com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (asynchronousInsertLogRetentionTimeBuilder_ == null) {
-          asynchronousInsertLogRetentionTime_ = builderForValue.build();
-          onChanged();
-        } else {
-          asynchronousInsertLogRetentionTimeBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder mergeAsynchronousInsertLogRetentionTime(com.google.protobuf.Int64Value value) {
-        if (asynchronousInsertLogRetentionTimeBuilder_ == null) {
-          if (asynchronousInsertLogRetentionTime_ != null) {
-            asynchronousInsertLogRetentionTime_ =
-              com.google.protobuf.Int64Value.newBuilder(asynchronousInsertLogRetentionTime_).mergeFrom(value).buildPartial();
-          } else {
-            asynchronousInsertLogRetentionTime_ = value;
-          }
-          onChanged();
-        } else {
-          asynchronousInsertLogRetentionTimeBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public Builder clearAsynchronousInsertLogRetentionTime() {
-        if (asynchronousInsertLogRetentionTimeBuilder_ == null) {
-          asynchronousInsertLogRetentionTime_ = null;
-          onChanged();
-        } else {
-          asynchronousInsertLogRetentionTime_ = null;
-          asynchronousInsertLogRetentionTimeBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64Value.Builder getAsynchronousInsertLogRetentionTimeBuilder() {
-        
-        onChanged();
-        return getAsynchronousInsertLogRetentionTimeFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      public com.google.protobuf.Int64ValueOrBuilder getAsynchronousInsertLogRetentionTimeOrBuilder() {
-        if (asynchronousInsertLogRetentionTimeBuilder_ != null) {
-          return asynchronousInsertLogRetentionTimeBuilder_.getMessageOrBuilder();
-        } else {
-          return asynchronousInsertLogRetentionTime_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : asynchronousInsertLogRetentionTime_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.Int64Value asynchronous_insert_log_retention_time = 65 [(.yandex.cloud.value) = "&gt;=0"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getAsynchronousInsertLogRetentionTimeFieldBuilder() {
-        if (asynchronousInsertLogRetentionTimeBuilder_ == null) {
-          asynchronousInsertLogRetentionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getAsynchronousInsertLogRetentionTime(),
-                  getParentForChildren(),
-                  isClean());
-          asynchronousInsertLogRetentionTime_ = null;
-        }
-        return asynchronousInsertLogRetentionTimeBuilder_;
-      }
-
-      private com.google.protobuf.BoolValue geobaseEnabled_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> geobaseEnabledBuilder_;
-      /**
-       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
-       * @return Whether the geobaseEnabled field is set.
-       */
-      public boolean hasGeobaseEnabled() {
-        return geobaseEnabledBuilder_ != null || geobaseEnabled_ != null;
-      }
-      /**
-       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
-       * @return The geobaseEnabled.
-       */
-      public com.google.protobuf.BoolValue getGeobaseEnabled() {
-        if (geobaseEnabledBuilder_ == null) {
-          return geobaseEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : geobaseEnabled_;
-        } else {
-          return geobaseEnabledBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
-       */
-      public Builder setGeobaseEnabled(com.google.protobuf.BoolValue value) {
-        if (geobaseEnabledBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          geobaseEnabled_ = value;
-          onChanged();
-        } else {
-          geobaseEnabledBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
-       */
-      public Builder setGeobaseEnabled(
-          com.google.protobuf.BoolValue.Builder builderForValue) {
-        if (geobaseEnabledBuilder_ == null) {
-          geobaseEnabled_ = builderForValue.build();
-          onChanged();
-        } else {
-          geobaseEnabledBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
-       */
-      public Builder mergeGeobaseEnabled(com.google.protobuf.BoolValue value) {
-        if (geobaseEnabledBuilder_ == null) {
-          if (geobaseEnabled_ != null) {
-            geobaseEnabled_ =
-              com.google.protobuf.BoolValue.newBuilder(geobaseEnabled_).mergeFrom(value).buildPartial();
-          } else {
-            geobaseEnabled_ = value;
-          }
-          onChanged();
-        } else {
-          geobaseEnabledBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
-       */
-      public Builder clearGeobaseEnabled() {
-        if (geobaseEnabledBuilder_ == null) {
-          geobaseEnabled_ = null;
-          onChanged();
-        } else {
-          geobaseEnabled_ = null;
-          geobaseEnabledBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
-       */
-      public com.google.protobuf.BoolValue.Builder getGeobaseEnabledBuilder() {
-        
-        onChanged();
-        return getGeobaseEnabledFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
-       */
-      public com.google.protobuf.BoolValueOrBuilder getGeobaseEnabledOrBuilder() {
-        if (geobaseEnabledBuilder_ != null) {
-          return geobaseEnabledBuilder_.getMessageOrBuilder();
-        } else {
-          return geobaseEnabled_ == null ?
-              com.google.protobuf.BoolValue.getDefaultInstance() : geobaseEnabled_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.BoolValue geobase_enabled = 66;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
-          getGeobaseEnabledFieldBuilder() {
-        if (geobaseEnabledBuilder_ == null) {
-          geobaseEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
-                  getGeobaseEnabled(),
-                  getParentForChildren(),
-                  isClean());
-          geobaseEnabled_ = null;
-        }
-        return geobaseEnabledBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -52132,93 +52687,93 @@ public final class Clickhouse {
       "on_size_to_drop\030\r \001(\0132\033.google.protobuf." +
       "Int64Value\022M\n$builtin_dictionaries_reloa" +
       "d_interval\030\014 \001(\0132\033.google.protobuf.Int64" +
-      "ValueB\002\030\001\022\020\n\010timezone\030\016 \001(\t\022\023\n\013geobase_u" +
-      "ri\030\017 \001(\t\022=\n\030query_log_retention_size\030\020 \001" +
-      "(\0132\033.google.protobuf.Int64Value\022=\n\030query" +
-      "_log_retention_time\030\021 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022<\n\030query_thread_log_enabl" +
-      "ed\030\022 \001(\0132\032.google.protobuf.BoolValue\022D\n\037" +
-      "query_thread_log_retention_size\030\023 \001(\0132\033." +
-      "google.protobuf.Int64Value\022D\n\037query_thre" +
-      "ad_log_retention_time\030\024 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\022<\n\027part_log_retention_s" +
-      "ize\030\025 \001(\0132\033.google.protobuf.Int64Value\022<" +
-      "\n\027part_log_retention_time\030\026 \001(\0132\033.google" +
-      ".protobuf.Int64Value\0226\n\022metric_log_enabl" +
-      "ed\030\027 \001(\0132\032.google.protobuf.BoolValue\022>\n\031" +
-      "metric_log_retention_size\030\030 \001(\0132\033.google" +
-      ".protobuf.Int64Value\022>\n\031metric_log_reten" +
-      "tion_time\030\031 \001(\0132\033.google.protobuf.Int64V" +
-      "alue\0225\n\021trace_log_enabled\030\032 \001(\0132\032.google" +
-      ".protobuf.BoolValue\022=\n\030trace_log_retenti" +
-      "on_size\030\033 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022=\n\030trace_log_retention_time\030\034 \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\0224\n\020text_log_en" +
-      "abled\030\035 \001(\0132\032.google.protobuf.BoolValue\022" +
-      "<\n\027text_log_retention_size\030\036 \001(\0132\033.googl" +
-      "e.protobuf.Int64Value\022<\n\027text_log_retent" +
-      "ion_time\030\037 \001(\0132\033.google.protobuf.Int64Va" +
-      "lue\022X\n\016text_log_level\030  \001(\0162@.yandex.clo" +
-      "ud.mdb.clickhouse.v1.config.ClickhouseCo" +
-      "nfig.LogLevel\022B\n\036opentelemetry_span_log_" +
-      "enabled\030* \001(\0132\032.google.protobuf.BoolValu" +
-      "e\022A\n\024background_pool_size\030! \001(\0132\033.google" +
-      ".protobuf.Int64ValueB\006\372\3071\002>0\022J\n\035backgrou" +
-      "nd_schedule_pool_size\030\" \001(\0132\033.google.pro" +
-      "tobuf.Int64ValueB\006\372\3071\002>0\022I\n\034background_f" +
-      "etches_pool_size\030& \001(\0132\033.google.protobuf" +
-      ".Int64ValueB\006\372\3071\002>0\022F\n\031background_move_p" +
-      "ool_size\030\' \001(\0132\033.google.protobuf.Int64Va" +
-      "lueB\006\372\3071\002>0\022V\n)background_distributed_sc" +
-      "hedule_pool_size\030( \001(\0132\033.google.protobuf" +
-      ".Int64ValueB\006\372\3071\002>0\022W\n*background_buffer" +
-      "_flush_schedule_pool_size\030) \001(\0132\033.google" +
-      ".protobuf.Int64ValueB\006\372\3071\002>0\022Y\n,backgrou" +
-      "nd_message_broker_schedule_pool_size\030. \001" +
-      "(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>0\022" +
-      "6\n\020default_database\030+ \001(\0132\034.google.proto" +
-      "buf.StringValue\022?\n\032total_memory_profiler" +
-      "_step\030, \001(\0132\033.google.protobuf.Int64Value" +
-      "\022M\n\'total_memory_tracker_sample_probabil" +
-      "ity\030- \001(\0132\034.google.protobuf.DoubleValue\022" +
-      "H\n\033background_common_pool_size\030/ \001(\0132\033.g" +
-      "oogle.protobuf.Int64ValueB\006\372\3071\002>0\022Z\n-bac" +
-      "kground_merges_mutations_concurrency_rat" +
-      "io\0300 \001(\0132\033.google.protobuf.Int64ValueB\006\372" +
-      "\3071\002>0\022;\n\027query_views_log_enabled\0301 \001(\0132\032" +
-      ".google.protobuf.BoolValue\022L\n\036query_view" +
-      "s_log_retention_size\0302 \001(\0132\033.google.prot" +
-      "obuf.Int64ValueB\007\372\3071\003>=0\022L\n\036query_views_" +
-      "log_retention_time\0303 \001(\0132\033.google.protob" +
-      "uf.Int64ValueB\007\372\3071\003>=0\022C\n\037asynchronous_m" +
-      "etric_log_enabled\0304 \001(\0132\032.google.protobu" +
-      "f.BoolValue\022T\n&asynchronous_metric_log_r" +
-      "etention_size\0305 \001(\0132\033.google.protobuf.In" +
-      "t64ValueB\007\372\3071\003>=0\022T\n&asynchronous_metric" +
-      "_log_retention_time\0306 \001(\0132\033.google.proto" +
-      "buf.Int64ValueB\007\372\3071\003>=0\022S\n%opentelemetry" +
-      "_span_log_retention_size\0307 \001(\0132\033.google." +
-      "protobuf.Int64ValueB\007\372\3071\003>=0\022S\n%opentele" +
-      "metry_span_log_retention_time\0308 \001(\0132\033.go" +
-      "ogle.protobuf.Int64ValueB\007\372\3071\003>=0\0227\n\023ses" +
-      "sion_log_enabled\0309 \001(\0132\032.google.protobuf" +
-      ".BoolValue\022H\n\032session_log_retention_size" +
-      "\030: \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
-      "\003>=0\022H\n\032session_log_retention_time\030; \001(\013" +
-      "2\033.google.protobuf.Int64ValueB\007\372\3071\003>=0\0229" +
-      "\n\025zookeeper_log_enabled\030< \001(\0132\032.google.p" +
-      "rotobuf.BoolValue\022J\n\034zookeeper_log_reten" +
-      "tion_size\030= \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\007\372\3071\003>=0\022J\n\034zookeeper_log_retention" +
-      "_time\030> \001(\0132\033.google.protobuf.Int64Value" +
-      "B\007\372\3071\003>=0\022C\n\037asynchronous_insert_log_ena" +
-      "bled\030? \001(\0132\032.google.protobuf.BoolValue\022T" +
-      "\n&asynchronous_insert_log_retention_size" +
-      "\030@ \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071" +
-      "\003>=0\022T\n&asynchronous_insert_log_retentio" +
-      "n_time\030A \001(\0132\033.google.protobuf.Int64Valu" +
-      "eB\007\372\3071\003>=0\0223\n\017geobase_enabled\030B \001(\0132\032.go" +
-      "ogle.protobuf.BoolValue\032\271\r\n\tMergeTree\022D\n" +
+      "ValueB\002\030\001\022\020\n\010timezone\030\016 \001(\t\0223\n\017geobase_e" +
+      "nabled\030B \001(\0132\032.google.protobuf.BoolValue" +
+      "\022\023\n\013geobase_uri\030\017 \001(\t\022=\n\030query_log_reten" +
+      "tion_size\030\020 \001(\0132\033.google.protobuf.Int64V" +
+      "alue\022=\n\030query_log_retention_time\030\021 \001(\0132\033" +
+      ".google.protobuf.Int64Value\022<\n\030query_thr" +
+      "ead_log_enabled\030\022 \001(\0132\032.google.protobuf." +
+      "BoolValue\022D\n\037query_thread_log_retention_" +
+      "size\030\023 \001(\0132\033.google.protobuf.Int64Value\022" +
+      "D\n\037query_thread_log_retention_time\030\024 \001(\013" +
+      "2\033.google.protobuf.Int64Value\022<\n\027part_lo" +
+      "g_retention_size\030\025 \001(\0132\033.google.protobuf" +
+      ".Int64Value\022<\n\027part_log_retention_time\030\026" +
+      " \001(\0132\033.google.protobuf.Int64Value\0226\n\022met" +
+      "ric_log_enabled\030\027 \001(\0132\032.google.protobuf." +
+      "BoolValue\022>\n\031metric_log_retention_size\030\030" +
+      " \001(\0132\033.google.protobuf.Int64Value\022>\n\031met" +
+      "ric_log_retention_time\030\031 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\0225\n\021trace_log_enabled\030\032" +
+      " \001(\0132\032.google.protobuf.BoolValue\022=\n\030trac" +
+      "e_log_retention_size\030\033 \001(\0132\033.google.prot" +
+      "obuf.Int64Value\022=\n\030trace_log_retention_t" +
+      "ime\030\034 \001(\0132\033.google.protobuf.Int64Value\0224" +
+      "\n\020text_log_enabled\030\035 \001(\0132\032.google.protob" +
+      "uf.BoolValue\022<\n\027text_log_retention_size\030" +
+      "\036 \001(\0132\033.google.protobuf.Int64Value\022<\n\027te" +
+      "xt_log_retention_time\030\037 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022X\n\016text_log_level\030  \001(\016" +
+      "2@.yandex.cloud.mdb.clickhouse.v1.config" +
+      ".ClickhouseConfig.LogLevel\022B\n\036openteleme" +
+      "try_span_log_enabled\030* \001(\0132\032.google.prot" +
+      "obuf.BoolValue\022S\n%opentelemetry_span_log" +
+      "_retention_size\0307 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\007\372\3071\003>=0\022S\n%opentelemetry_spa" +
+      "n_log_retention_time\0308 \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\007\372\3071\003>=0\022;\n\027query_views_" +
+      "log_enabled\0301 \001(\0132\032.google.protobuf.Bool" +
+      "Value\022L\n\036query_views_log_retention_size\030" +
+      "2 \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003" +
+      ">=0\022L\n\036query_views_log_retention_time\0303 " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>=" +
+      "0\022C\n\037asynchronous_metric_log_enabled\0304 \001" +
+      "(\0132\032.google.protobuf.BoolValue\022T\n&asynch" +
+      "ronous_metric_log_retention_size\0305 \001(\0132\033" +
+      ".google.protobuf.Int64ValueB\007\372\3071\003>=0\022T\n&" +
+      "asynchronous_metric_log_retention_time\0306" +
+      " \001(\0132\033.google.protobuf.Int64ValueB\007\372\3071\003>" +
+      "=0\0227\n\023session_log_enabled\0309 \001(\0132\032.google" +
+      ".protobuf.BoolValue\022H\n\032session_log_reten" +
+      "tion_size\030: \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\007\372\3071\003>=0\022H\n\032session_log_retention_t" +
+      "ime\030; \001(\0132\033.google.protobuf.Int64ValueB\007" +
+      "\372\3071\003>=0\0229\n\025zookeeper_log_enabled\030< \001(\0132\032" +
+      ".google.protobuf.BoolValue\022J\n\034zookeeper_" +
+      "log_retention_size\030= \001(\0132\033.google.protob" +
+      "uf.Int64ValueB\007\372\3071\003>=0\022J\n\034zookeeper_log_" +
+      "retention_time\030> \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\007\372\3071\003>=0\022C\n\037asynchronous_inser" +
+      "t_log_enabled\030? \001(\0132\032.google.protobuf.Bo" +
+      "olValue\022T\n&asynchronous_insert_log_reten" +
+      "tion_size\030@ \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\007\372\3071\003>=0\022T\n&asynchronous_insert_log" +
+      "_retention_time\030A \001(\0132\033.google.protobuf." +
+      "Int64ValueB\007\372\3071\003>=0\022A\n\024background_pool_s" +
+      "ize\030! \001(\0132\033.google.protobuf.Int64ValueB\006" +
+      "\372\3071\002>0\022Z\n-background_merges_mutations_co" +
+      "ncurrency_ratio\0300 \001(\0132\033.google.protobuf." +
+      "Int64ValueB\006\372\3071\002>0\022J\n\035background_schedul" +
+      "e_pool_size\030\" \001(\0132\033.google.protobuf.Int6" +
+      "4ValueB\006\372\3071\002>0\022I\n\034background_fetches_poo" +
+      "l_size\030& \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\006\372\3071\002>0\022F\n\031background_move_pool_size\030\'" +
+      " \001(\0132\033.google.protobuf.Int64ValueB\006\372\3071\002>" +
+      "0\022V\n)background_distributed_schedule_poo" +
+      "l_size\030( \001(\0132\033.google.protobuf.Int64Valu" +
+      "eB\006\372\3071\002>0\022W\n*background_buffer_flush_sch" +
+      "edule_pool_size\030) \001(\0132\033.google.protobuf." +
+      "Int64ValueB\006\372\3071\002>0\022Y\n,background_message" +
+      "_broker_schedule_pool_size\030. \001(\0132\033.googl" +
+      "e.protobuf.Int64ValueB\006\372\3071\002>0\022H\n\033backgro" +
+      "und_common_pool_size\030/ \001(\0132\033.google.prot" +
+      "obuf.Int64ValueB\006\372\3071\002>0\0226\n\020default_datab" +
+      "ase\030+ \001(\0132\034.google.protobuf.StringValue\022" +
+      "?\n\032total_memory_profiler_step\030, \001(\0132\033.go" +
+      "ogle.protobuf.Int64Value\022M\n\'total_memory" +
+      "_tracker_sample_probability\030- \001(\0132\034.goog" +
+      "le.protobuf.DoubleValue\032\271\r\n\tMergeTree\022D\n" +
       "\037replicated_deduplication_window\030\001 \001(\0132\033" +
       ".google.protobuf.Int64Value\022L\n\'replicate" +
       "d_deduplication_window_seconds\030\002 \001(\0132\033.g" +
@@ -52413,7 +52968,7 @@ public final class Clickhouse {
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor,
-        new java.lang.String[] { "LogLevel", "MergeTree", "Compression", "Dictionaries", "GraphiteRollup", "Kafka", "KafkaTopics", "Rabbitmq", "MaxConnections", "MaxConcurrentQueries", "KeepAliveTimeout", "UncompressedCacheSize", "MarkCacheSize", "MaxTableSizeToDrop", "MaxPartitionSizeToDrop", "BuiltinDictionariesReloadInterval", "Timezone", "GeobaseUri", "QueryLogRetentionSize", "QueryLogRetentionTime", "QueryThreadLogEnabled", "QueryThreadLogRetentionSize", "QueryThreadLogRetentionTime", "PartLogRetentionSize", "PartLogRetentionTime", "MetricLogEnabled", "MetricLogRetentionSize", "MetricLogRetentionTime", "TraceLogEnabled", "TraceLogRetentionSize", "TraceLogRetentionTime", "TextLogEnabled", "TextLogRetentionSize", "TextLogRetentionTime", "TextLogLevel", "OpentelemetrySpanLogEnabled", "BackgroundPoolSize", "BackgroundSchedulePoolSize", "BackgroundFetchesPoolSize", "BackgroundMovePoolSize", "BackgroundDistributedSchedulePoolSize", "BackgroundBufferFlushSchedulePoolSize", "BackgroundMessageBrokerSchedulePoolSize", "DefaultDatabase", "TotalMemoryProfilerStep", "TotalMemoryTrackerSampleProbability", "BackgroundCommonPoolSize", "BackgroundMergesMutationsConcurrencyRatio", "QueryViewsLogEnabled", "QueryViewsLogRetentionSize", "QueryViewsLogRetentionTime", "AsynchronousMetricLogEnabled", "AsynchronousMetricLogRetentionSize", "AsynchronousMetricLogRetentionTime", "OpentelemetrySpanLogRetentionSize", "OpentelemetrySpanLogRetentionTime", "SessionLogEnabled", "SessionLogRetentionSize", "SessionLogRetentionTime", "ZookeeperLogEnabled", "ZookeeperLogRetentionSize", "ZookeeperLogRetentionTime", "AsynchronousInsertLogEnabled", "AsynchronousInsertLogRetentionSize", "AsynchronousInsertLogRetentionTime", "GeobaseEnabled", });
+        new java.lang.String[] { "LogLevel", "MergeTree", "Compression", "Dictionaries", "GraphiteRollup", "Kafka", "KafkaTopics", "Rabbitmq", "MaxConnections", "MaxConcurrentQueries", "KeepAliveTimeout", "UncompressedCacheSize", "MarkCacheSize", "MaxTableSizeToDrop", "MaxPartitionSizeToDrop", "BuiltinDictionariesReloadInterval", "Timezone", "GeobaseEnabled", "GeobaseUri", "QueryLogRetentionSize", "QueryLogRetentionTime", "QueryThreadLogEnabled", "QueryThreadLogRetentionSize", "QueryThreadLogRetentionTime", "PartLogRetentionSize", "PartLogRetentionTime", "MetricLogEnabled", "MetricLogRetentionSize", "MetricLogRetentionTime", "TraceLogEnabled", "TraceLogRetentionSize", "TraceLogRetentionTime", "TextLogEnabled", "TextLogRetentionSize", "TextLogRetentionTime", "TextLogLevel", "OpentelemetrySpanLogEnabled", "OpentelemetrySpanLogRetentionSize", "OpentelemetrySpanLogRetentionTime", "QueryViewsLogEnabled", "QueryViewsLogRetentionSize", "QueryViewsLogRetentionTime", "AsynchronousMetricLogEnabled", "AsynchronousMetricLogRetentionSize", "AsynchronousMetricLogRetentionTime", "SessionLogEnabled", "SessionLogRetentionSize", "SessionLogRetentionTime", "ZookeeperLogEnabled", "ZookeeperLogRetentionSize", "ZookeeperLogRetentionTime", "AsynchronousInsertLogEnabled", "AsynchronousInsertLogRetentionSize", "AsynchronousInsertLogRetentionTime", "BackgroundPoolSize", "BackgroundMergesMutationsConcurrencyRatio", "BackgroundSchedulePoolSize", "BackgroundFetchesPoolSize", "BackgroundMovePoolSize", "BackgroundDistributedSchedulePoolSize", "BackgroundBufferFlushSchedulePoolSize", "BackgroundMessageBrokerSchedulePoolSize", "BackgroundCommonPoolSize", "DefaultDatabase", "TotalMemoryProfilerStep", "TotalMemoryTrackerSampleProbability", });
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_descriptor =
       internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_clickhouse_v1_config_ClickhouseConfig_MergeTree_fieldAccessorTable = new

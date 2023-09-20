@@ -3085,6 +3085,33 @@ public final class HostGroupOuterClass {
      */
     com.google.protobuf.ByteString
         getServerIdBytes();
+
+    /**
+     * <pre>
+     * Set temporarily if maintenance is planned for this host, and a new host was provided as a replacement.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.Replacement replacement = 4;</code>
+     * @return Whether the replacement field is set.
+     */
+    boolean hasReplacement();
+    /**
+     * <pre>
+     * Set temporarily if maintenance is planned for this host, and a new host was provided as a replacement.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.Replacement replacement = 4;</code>
+     * @return The replacement.
+     */
+    yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement getReplacement();
+    /**
+     * <pre>
+     * Set temporarily if maintenance is planned for this host, and a new host was provided as a replacement.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.Replacement replacement = 4;</code>
+     */
+    yandex.cloud.api.compute.v1.HostGroupOuterClass.ReplacementOrBuilder getReplacementOrBuilder();
   }
   /**
    * <pre>
@@ -3154,6 +3181,19 @@ public final class HostGroupOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               serverId_ = s;
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement.Builder subBuilder = null;
+              if (replacement_ != null) {
+                subBuilder = replacement_.toBuilder();
+              }
+              replacement_ = input.readMessage(yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(replacement_);
+                replacement_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -3424,6 +3464,44 @@ public final class HostGroupOuterClass {
       }
     }
 
+    public static final int REPLACEMENT_FIELD_NUMBER = 4;
+    private yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement replacement_;
+    /**
+     * <pre>
+     * Set temporarily if maintenance is planned for this host, and a new host was provided as a replacement.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.Replacement replacement = 4;</code>
+     * @return Whether the replacement field is set.
+     */
+    @java.lang.Override
+    public boolean hasReplacement() {
+      return replacement_ != null;
+    }
+    /**
+     * <pre>
+     * Set temporarily if maintenance is planned for this host, and a new host was provided as a replacement.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.Replacement replacement = 4;</code>
+     * @return The replacement.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement getReplacement() {
+      return replacement_ == null ? yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement.getDefaultInstance() : replacement_;
+    }
+    /**
+     * <pre>
+     * Set temporarily if maintenance is planned for this host, and a new host was provided as a replacement.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.Replacement replacement = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.HostGroupOuterClass.ReplacementOrBuilder getReplacementOrBuilder() {
+      return getReplacement();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3447,6 +3525,9 @@ public final class HostGroupOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serverId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, serverId_);
       }
+      if (replacement_ != null) {
+        output.writeMessage(4, getReplacement());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3465,6 +3546,10 @@ public final class HostGroupOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serverId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, serverId_);
+      }
+      if (replacement_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getReplacement());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3486,6 +3571,11 @@ public final class HostGroupOuterClass {
       if (status_ != other.status_) return false;
       if (!getServerId()
           .equals(other.getServerId())) return false;
+      if (hasReplacement() != other.hasReplacement()) return false;
+      if (hasReplacement()) {
+        if (!getReplacement()
+            .equals(other.getReplacement())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3503,6 +3593,10 @@ public final class HostGroupOuterClass {
       hash = (53 * hash) + status_;
       hash = (37 * hash) + SERVER_ID_FIELD_NUMBER;
       hash = (53 * hash) + getServerId().hashCode();
+      if (hasReplacement()) {
+        hash = (37 * hash) + REPLACEMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getReplacement().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3646,6 +3740,12 @@ public final class HostGroupOuterClass {
 
         serverId_ = "";
 
+        if (replacementBuilder_ == null) {
+          replacement_ = null;
+        } else {
+          replacement_ = null;
+          replacementBuilder_ = null;
+        }
         return this;
       }
 
@@ -3675,6 +3775,11 @@ public final class HostGroupOuterClass {
         result.id_ = id_;
         result.status_ = status_;
         result.serverId_ = serverId_;
+        if (replacementBuilder_ == null) {
+          result.replacement_ = replacement_;
+        } else {
+          result.replacement_ = replacementBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -3733,6 +3838,9 @@ public final class HostGroupOuterClass {
         if (!other.getServerId().isEmpty()) {
           serverId_ = other.serverId_;
           onChanged();
+        }
+        if (other.hasReplacement()) {
+          mergeReplacement(other.getReplacement());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4027,6 +4135,161 @@ public final class HostGroupOuterClass {
         serverId_ = value;
         onChanged();
         return this;
+      }
+
+      private yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement replacement_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement, yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement.Builder, yandex.cloud.api.compute.v1.HostGroupOuterClass.ReplacementOrBuilder> replacementBuilder_;
+      /**
+       * <pre>
+       * Set temporarily if maintenance is planned for this host, and a new host was provided as a replacement.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.Replacement replacement = 4;</code>
+       * @return Whether the replacement field is set.
+       */
+      public boolean hasReplacement() {
+        return replacementBuilder_ != null || replacement_ != null;
+      }
+      /**
+       * <pre>
+       * Set temporarily if maintenance is planned for this host, and a new host was provided as a replacement.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.Replacement replacement = 4;</code>
+       * @return The replacement.
+       */
+      public yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement getReplacement() {
+        if (replacementBuilder_ == null) {
+          return replacement_ == null ? yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement.getDefaultInstance() : replacement_;
+        } else {
+          return replacementBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Set temporarily if maintenance is planned for this host, and a new host was provided as a replacement.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.Replacement replacement = 4;</code>
+       */
+      public Builder setReplacement(yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement value) {
+        if (replacementBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          replacement_ = value;
+          onChanged();
+        } else {
+          replacementBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Set temporarily if maintenance is planned for this host, and a new host was provided as a replacement.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.Replacement replacement = 4;</code>
+       */
+      public Builder setReplacement(
+          yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement.Builder builderForValue) {
+        if (replacementBuilder_ == null) {
+          replacement_ = builderForValue.build();
+          onChanged();
+        } else {
+          replacementBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Set temporarily if maintenance is planned for this host, and a new host was provided as a replacement.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.Replacement replacement = 4;</code>
+       */
+      public Builder mergeReplacement(yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement value) {
+        if (replacementBuilder_ == null) {
+          if (replacement_ != null) {
+            replacement_ =
+              yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement.newBuilder(replacement_).mergeFrom(value).buildPartial();
+          } else {
+            replacement_ = value;
+          }
+          onChanged();
+        } else {
+          replacementBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Set temporarily if maintenance is planned for this host, and a new host was provided as a replacement.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.Replacement replacement = 4;</code>
+       */
+      public Builder clearReplacement() {
+        if (replacementBuilder_ == null) {
+          replacement_ = null;
+          onChanged();
+        } else {
+          replacement_ = null;
+          replacementBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Set temporarily if maintenance is planned for this host, and a new host was provided as a replacement.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.Replacement replacement = 4;</code>
+       */
+      public yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement.Builder getReplacementBuilder() {
+        
+        onChanged();
+        return getReplacementFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Set temporarily if maintenance is planned for this host, and a new host was provided as a replacement.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.Replacement replacement = 4;</code>
+       */
+      public yandex.cloud.api.compute.v1.HostGroupOuterClass.ReplacementOrBuilder getReplacementOrBuilder() {
+        if (replacementBuilder_ != null) {
+          return replacementBuilder_.getMessageOrBuilder();
+        } else {
+          return replacement_ == null ?
+              yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement.getDefaultInstance() : replacement_;
+        }
+      }
+      /**
+       * <pre>
+       * Set temporarily if maintenance is planned for this host, and a new host was provided as a replacement.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.Replacement replacement = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement, yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement.Builder, yandex.cloud.api.compute.v1.HostGroupOuterClass.ReplacementOrBuilder> 
+          getReplacementFieldBuilder() {
+        if (replacementBuilder_ == null) {
+          replacementBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement, yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement.Builder, yandex.cloud.api.compute.v1.HostGroupOuterClass.ReplacementOrBuilder>(
+                  getReplacement(),
+                  getParentForChildren(),
+                  isClean());
+          replacement_ = null;
+        }
+        return replacementBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5288,6 +5551,873 @@ public final class HostGroupOuterClass {
 
   }
 
+  public interface ReplacementOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.Replacement)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the host which replaces this one.
+     * </pre>
+     *
+     * <code>string host_id = 1;</code>
+     * @return The hostId.
+     */
+    java.lang.String getHostId();
+    /**
+     * <pre>
+     * ID of the host which replaces this one.
+     * </pre>
+     *
+     * <code>string host_id = 1;</code>
+     * @return The bytes for hostId.
+     */
+    com.google.protobuf.ByteString
+        getHostIdBytes();
+
+    /**
+     * <pre>
+     * The date and time when this host will be automatically freed of instances.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deadline_at = 2;</code>
+     * @return Whether the deadlineAt field is set.
+     */
+    boolean hasDeadlineAt();
+    /**
+     * <pre>
+     * The date and time when this host will be automatically freed of instances.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deadline_at = 2;</code>
+     * @return The deadlineAt.
+     */
+    com.google.protobuf.Timestamp getDeadlineAt();
+    /**
+     * <pre>
+     * The date and time when this host will be automatically freed of instances.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deadline_at = 2;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDeadlineAtOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.Replacement}
+   */
+  public static final class Replacement extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.Replacement)
+      ReplacementOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Replacement.newBuilder() to construct.
+    private Replacement(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Replacement() {
+      hostId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Replacement();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Replacement(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              hostId_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (deadlineAt_ != null) {
+                subBuilder = deadlineAt_.toBuilder();
+              }
+              deadlineAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(deadlineAt_);
+                deadlineAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.HostGroupOuterClass.internal_static_yandex_cloud_compute_v1_Replacement_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.HostGroupOuterClass.internal_static_yandex_cloud_compute_v1_Replacement_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement.class, yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement.Builder.class);
+    }
+
+    public static final int HOST_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object hostId_;
+    /**
+     * <pre>
+     * ID of the host which replaces this one.
+     * </pre>
+     *
+     * <code>string host_id = 1;</code>
+     * @return The hostId.
+     */
+    @java.lang.Override
+    public java.lang.String getHostId() {
+      java.lang.Object ref = hostId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hostId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the host which replaces this one.
+     * </pre>
+     *
+     * <code>string host_id = 1;</code>
+     * @return The bytes for hostId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHostIdBytes() {
+      java.lang.Object ref = hostId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hostId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEADLINE_AT_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp deadlineAt_;
+    /**
+     * <pre>
+     * The date and time when this host will be automatically freed of instances.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deadline_at = 2;</code>
+     * @return Whether the deadlineAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeadlineAt() {
+      return deadlineAt_ != null;
+    }
+    /**
+     * <pre>
+     * The date and time when this host will be automatically freed of instances.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deadline_at = 2;</code>
+     * @return The deadlineAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getDeadlineAt() {
+      return deadlineAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deadlineAt_;
+    }
+    /**
+     * <pre>
+     * The date and time when this host will be automatically freed of instances.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deadline_at = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getDeadlineAtOrBuilder() {
+      return getDeadlineAt();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hostId_);
+      }
+      if (deadlineAt_ != null) {
+        output.writeMessage(2, getDeadlineAt());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hostId_);
+      }
+      if (deadlineAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getDeadlineAt());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement other = (yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement) obj;
+
+      if (!getHostId()
+          .equals(other.getHostId())) return false;
+      if (hasDeadlineAt() != other.hasDeadlineAt()) return false;
+      if (hasDeadlineAt()) {
+        if (!getDeadlineAt()
+            .equals(other.getDeadlineAt())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HOST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getHostId().hashCode();
+      if (hasDeadlineAt()) {
+        hash = (37 * hash) + DEADLINE_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getDeadlineAt().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.Replacement}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.Replacement)
+        yandex.cloud.api.compute.v1.HostGroupOuterClass.ReplacementOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.HostGroupOuterClass.internal_static_yandex_cloud_compute_v1_Replacement_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.HostGroupOuterClass.internal_static_yandex_cloud_compute_v1_Replacement_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement.class, yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        hostId_ = "";
+
+        if (deadlineAtBuilder_ == null) {
+          deadlineAt_ = null;
+        } else {
+          deadlineAt_ = null;
+          deadlineAtBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.HostGroupOuterClass.internal_static_yandex_cloud_compute_v1_Replacement_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement build() {
+        yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement buildPartial() {
+        yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement result = new yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement(this);
+        result.hostId_ = hostId_;
+        if (deadlineAtBuilder_ == null) {
+          result.deadlineAt_ = deadlineAt_;
+        } else {
+          result.deadlineAt_ = deadlineAtBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement) {
+          return mergeFrom((yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement other) {
+        if (other == yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement.getDefaultInstance()) return this;
+        if (!other.getHostId().isEmpty()) {
+          hostId_ = other.hostId_;
+          onChanged();
+        }
+        if (other.hasDeadlineAt()) {
+          mergeDeadlineAt(other.getDeadlineAt());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object hostId_ = "";
+      /**
+       * <pre>
+       * ID of the host which replaces this one.
+       * </pre>
+       *
+       * <code>string host_id = 1;</code>
+       * @return The hostId.
+       */
+      public java.lang.String getHostId() {
+        java.lang.Object ref = hostId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hostId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the host which replaces this one.
+       * </pre>
+       *
+       * <code>string host_id = 1;</code>
+       * @return The bytes for hostId.
+       */
+      public com.google.protobuf.ByteString
+          getHostIdBytes() {
+        java.lang.Object ref = hostId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hostId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the host which replaces this one.
+       * </pre>
+       *
+       * <code>string host_id = 1;</code>
+       * @param value The hostId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        hostId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the host which replaces this one.
+       * </pre>
+       *
+       * <code>string host_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHostId() {
+        
+        hostId_ = getDefaultInstance().getHostId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the host which replaces this one.
+       * </pre>
+       *
+       * <code>string host_id = 1;</code>
+       * @param value The bytes for hostId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        hostId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp deadlineAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> deadlineAtBuilder_;
+      /**
+       * <pre>
+       * The date and time when this host will be automatically freed of instances.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deadline_at = 2;</code>
+       * @return Whether the deadlineAt field is set.
+       */
+      public boolean hasDeadlineAt() {
+        return deadlineAtBuilder_ != null || deadlineAt_ != null;
+      }
+      /**
+       * <pre>
+       * The date and time when this host will be automatically freed of instances.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deadline_at = 2;</code>
+       * @return The deadlineAt.
+       */
+      public com.google.protobuf.Timestamp getDeadlineAt() {
+        if (deadlineAtBuilder_ == null) {
+          return deadlineAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deadlineAt_;
+        } else {
+          return deadlineAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The date and time when this host will be automatically freed of instances.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deadline_at = 2;</code>
+       */
+      public Builder setDeadlineAt(com.google.protobuf.Timestamp value) {
+        if (deadlineAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deadlineAt_ = value;
+          onChanged();
+        } else {
+          deadlineAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The date and time when this host will be automatically freed of instances.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deadline_at = 2;</code>
+       */
+      public Builder setDeadlineAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (deadlineAtBuilder_ == null) {
+          deadlineAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          deadlineAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The date and time when this host will be automatically freed of instances.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deadline_at = 2;</code>
+       */
+      public Builder mergeDeadlineAt(com.google.protobuf.Timestamp value) {
+        if (deadlineAtBuilder_ == null) {
+          if (deadlineAt_ != null) {
+            deadlineAt_ =
+              com.google.protobuf.Timestamp.newBuilder(deadlineAt_).mergeFrom(value).buildPartial();
+          } else {
+            deadlineAt_ = value;
+          }
+          onChanged();
+        } else {
+          deadlineAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The date and time when this host will be automatically freed of instances.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deadline_at = 2;</code>
+       */
+      public Builder clearDeadlineAt() {
+        if (deadlineAtBuilder_ == null) {
+          deadlineAt_ = null;
+          onChanged();
+        } else {
+          deadlineAt_ = null;
+          deadlineAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The date and time when this host will be automatically freed of instances.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deadline_at = 2;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDeadlineAtBuilder() {
+        
+        onChanged();
+        return getDeadlineAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The date and time when this host will be automatically freed of instances.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deadline_at = 2;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDeadlineAtOrBuilder() {
+        if (deadlineAtBuilder_ != null) {
+          return deadlineAtBuilder_.getMessageOrBuilder();
+        } else {
+          return deadlineAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : deadlineAt_;
+        }
+      }
+      /**
+       * <pre>
+       * The date and time when this host will be automatically freed of instances.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deadline_at = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDeadlineAtFieldBuilder() {
+        if (deadlineAtBuilder_ == null) {
+          deadlineAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDeadlineAt(),
+                  getParentForChildren(),
+                  isClean());
+          deadlineAt_ = null;
+        }
+        return deadlineAtBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.Replacement)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.Replacement)
+    private static final yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement();
+    }
+
+    public static yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Replacement>
+        PARSER = new com.google.protobuf.AbstractParser<Replacement>() {
+      @java.lang.Override
+      public Replacement parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Replacement(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Replacement> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Replacement> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.HostGroupOuterClass.Replacement getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_compute_v1_HostGroup_descriptor;
   private static final 
@@ -5313,6 +6443,11 @@ public final class HostGroupOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_compute_v1_ScalePolicy_FixedScale_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_Replacement_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_Replacement_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5338,18 +6473,22 @@ public final class HostGroupOuterClass {
       "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
       ":\0028\001\"U\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014" +
       "\n\010CREATING\020\001\022\t\n\005READY\020\002\022\014\n\010UPDATING\020\003\022\014\n" +
-      "\010DELETING\020\004\"\217\001\n\004Host\022\n\n\002id\030\001 \001(\t\0224\n\006stat" +
+      "\010DELETING\020\004\"\312\001\n\004Host\022\n\n\002id\030\001 \001(\t\0224\n\006stat" +
       "us\030\002 \001(\0162$.yandex.cloud.compute.v1.Host." +
-      "Status\022\021\n\tserver_id\030\003 \001(\t\"2\n\006Status\022\026\n\022S" +
-      "TATUS_UNSPECIFIED\020\000\022\006\n\002UP\020\001\022\010\n\004DOWN\020\002\"\177\n" +
-      "\013ScalePolicy\022F\n\013fixed_scale\030\001 \001(\0132/.yand" +
-      "ex.cloud.compute.v1.ScalePolicy.FixedSca" +
-      "leH\000\032\032\n\nFixedScale\022\014\n\004size\030\001 \001(\003B\014\n\nscal" +
-      "e_type*Q\n\021MaintenancePolicy\022\"\n\036MAINTENAN" +
-      "CE_POLICY_UNSPECIFIED\020\000\022\013\n\007RESTART\020\001\022\013\n\007" +
-      "MIGRATE\020\002Bb\n\033yandex.cloud.api.compute.v1" +
-      "ZCgithub.com/yandex-cloud/go-genproto/ya" +
-      "ndex/cloud/compute/v1;computeb\006proto3"
+      "Status\022\021\n\tserver_id\030\003 \001(\t\0229\n\013replacement" +
+      "\030\004 \001(\0132$.yandex.cloud.compute.v1.Replace" +
+      "ment\"2\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\006" +
+      "\n\002UP\020\001\022\010\n\004DOWN\020\002\"\177\n\013ScalePolicy\022F\n\013fixed" +
+      "_scale\030\001 \001(\0132/.yandex.cloud.compute.v1.S" +
+      "calePolicy.FixedScaleH\000\032\032\n\nFixedScale\022\014\n" +
+      "\004size\030\001 \001(\003B\014\n\nscale_type\"O\n\013Replacement" +
+      "\022\017\n\007host_id\030\001 \001(\t\022/\n\013deadline_at\030\002 \001(\0132\032" +
+      ".google.protobuf.Timestamp*Q\n\021Maintenanc" +
+      "ePolicy\022\"\n\036MAINTENANCE_POLICY_UNSPECIFIE" +
+      "D\020\000\022\013\n\007RESTART\020\001\022\013\n\007MIGRATE\020\002Bb\n\033yandex." +
+      "cloud.api.compute.v1ZCgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/compute/v" +
+      "1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5373,7 +6512,7 @@ public final class HostGroupOuterClass {
     internal_static_yandex_cloud_compute_v1_Host_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_Host_descriptor,
-        new java.lang.String[] { "Id", "Status", "ServerId", });
+        new java.lang.String[] { "Id", "Status", "ServerId", "Replacement", });
     internal_static_yandex_cloud_compute_v1_ScalePolicy_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_yandex_cloud_compute_v1_ScalePolicy_fieldAccessorTable = new
@@ -5386,6 +6525,12 @@ public final class HostGroupOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_ScalePolicy_FixedScale_descriptor,
         new java.lang.String[] { "Size", });
+    internal_static_yandex_cloud_compute_v1_Replacement_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_compute_v1_Replacement_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_Replacement_descriptor,
+        new java.lang.String[] { "HostId", "DeadlineAt", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
