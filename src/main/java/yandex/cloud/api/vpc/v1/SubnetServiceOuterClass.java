@@ -19256,6 +19256,1292 @@ public final class SubnetServiceOuterClass {
 
   }
 
+  public interface RelocateSubnetRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.vpc.v1.RelocateSubnetRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subnetId.
+     */
+    java.lang.String getSubnetId();
+    /**
+     * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subnetId.
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdBytes();
+
+    /**
+     * <code>string destination_zone_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The destinationZoneId.
+     */
+    java.lang.String getDestinationZoneId();
+    /**
+     * <code>string destination_zone_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for destinationZoneId.
+     */
+    com.google.protobuf.ByteString
+        getDestinationZoneIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.vpc.v1.RelocateSubnetRequest}
+   */
+  public static final class RelocateSubnetRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.RelocateSubnetRequest)
+      RelocateSubnetRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RelocateSubnetRequest.newBuilder() to construct.
+    private RelocateSubnetRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RelocateSubnetRequest() {
+      subnetId_ = "";
+      destinationZoneId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RelocateSubnetRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RelocateSubnetRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subnetId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              destinationZoneId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_RelocateSubnetRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_RelocateSubnetRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest.Builder.class);
+    }
+
+    public static final int SUBNET_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object subnetId_;
+    /**
+     * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The subnetId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubnetId() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subnetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for subnetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubnetIdBytes() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subnetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESTINATION_ZONE_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object destinationZoneId_;
+    /**
+     * <code>string destination_zone_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The destinationZoneId.
+     */
+    @java.lang.Override
+    public java.lang.String getDestinationZoneId() {
+      java.lang.Object ref = destinationZoneId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        destinationZoneId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string destination_zone_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for destinationZoneId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDestinationZoneIdBytes() {
+      java.lang.Object ref = destinationZoneId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        destinationZoneId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationZoneId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, destinationZoneId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(destinationZoneId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, destinationZoneId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest) obj;
+
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!getDestinationZoneId()
+          .equals(other.getDestinationZoneId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubnetId().hashCode();
+      hash = (37 * hash) + DESTINATION_ZONE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDestinationZoneId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.vpc.v1.RelocateSubnetRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.vpc.v1.RelocateSubnetRequest)
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_RelocateSubnetRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_RelocateSubnetRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        subnetId_ = "";
+
+        destinationZoneId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_RelocateSubnetRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest build() {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest buildPartial() {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest result = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest(this);
+        result.subnetId_ = subnetId_;
+        result.destinationZoneId_ = destinationZoneId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest) {
+          return mergeFrom((yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest other) {
+        if (other == yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest.getDefaultInstance()) return this;
+        if (!other.getSubnetId().isEmpty()) {
+          subnetId_ = other.subnetId_;
+          onChanged();
+        }
+        if (!other.getDestinationZoneId().isEmpty()) {
+          destinationZoneId_ = other.destinationZoneId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object subnetId_ = "";
+      /**
+       * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The subnetId.
+       */
+      public java.lang.String getSubnetId() {
+        java.lang.Object ref = subnetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subnetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for subnetId.
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdBytes() {
+        java.lang.Object ref = subnetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubnetId() {
+        
+        subnetId_ = getDefaultInstance().getSubnetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subnet_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object destinationZoneId_ = "";
+      /**
+       * <code>string destination_zone_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The destinationZoneId.
+       */
+      public java.lang.String getDestinationZoneId() {
+        java.lang.Object ref = destinationZoneId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          destinationZoneId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string destination_zone_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for destinationZoneId.
+       */
+      public com.google.protobuf.ByteString
+          getDestinationZoneIdBytes() {
+        java.lang.Object ref = destinationZoneId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          destinationZoneId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string destination_zone_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The destinationZoneId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationZoneId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        destinationZoneId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string destination_zone_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDestinationZoneId() {
+        
+        destinationZoneId_ = getDefaultInstance().getDestinationZoneId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string destination_zone_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for destinationZoneId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDestinationZoneIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        destinationZoneId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.vpc.v1.RelocateSubnetRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.vpc.v1.RelocateSubnetRequest)
+    private static final yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest();
+    }
+
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RelocateSubnetRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RelocateSubnetRequest>() {
+      @java.lang.Override
+      public RelocateSubnetRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RelocateSubnetRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RelocateSubnetRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RelocateSubnetRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RelocateSubnetMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.vpc.v1.RelocateSubnetMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string subnet_id = 1;</code>
+     * @return The subnetId.
+     */
+    java.lang.String getSubnetId();
+    /**
+     * <code>string subnet_id = 1;</code>
+     * @return The bytes for subnetId.
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.vpc.v1.RelocateSubnetMetadata}
+   */
+  public static final class RelocateSubnetMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.vpc.v1.RelocateSubnetMetadata)
+      RelocateSubnetMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RelocateSubnetMetadata.newBuilder() to construct.
+    private RelocateSubnetMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RelocateSubnetMetadata() {
+      subnetId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RelocateSubnetMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RelocateSubnetMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              subnetId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_RelocateSubnetMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_RelocateSubnetMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata.Builder.class);
+    }
+
+    public static final int SUBNET_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object subnetId_;
+    /**
+     * <code>string subnet_id = 1;</code>
+     * @return The subnetId.
+     */
+    @java.lang.Override
+    public java.lang.String getSubnetId() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subnetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string subnet_id = 1;</code>
+     * @return The bytes for subnetId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubnetIdBytes() {
+      java.lang.Object ref = subnetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subnetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subnetId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(subnetId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subnetId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata other = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata) obj;
+
+      if (!getSubnetId()
+          .equals(other.getSubnetId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBNET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSubnetId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.vpc.v1.RelocateSubnetMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.vpc.v1.RelocateSubnetMetadata)
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_RelocateSubnetMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_RelocateSubnetMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata.class, yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        subnetId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.internal_static_yandex_cloud_vpc_v1_RelocateSubnetMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata build() {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata buildPartial() {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata result = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata(this);
+        result.subnetId_ = subnetId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata) {
+          return mergeFrom((yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata other) {
+        if (other == yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata.getDefaultInstance()) return this;
+        if (!other.getSubnetId().isEmpty()) {
+          subnetId_ = other.subnetId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object subnetId_ = "";
+      /**
+       * <code>string subnet_id = 1;</code>
+       * @return The subnetId.
+       */
+      public java.lang.String getSubnetId() {
+        java.lang.Object ref = subnetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subnetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string subnet_id = 1;</code>
+       * @return The bytes for subnetId.
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdBytes() {
+        java.lang.Object ref = subnetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subnetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string subnet_id = 1;</code>
+       * @param value The subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subnet_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubnetId() {
+        
+        subnetId_ = getDefaultInstance().getSubnetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string subnet_id = 1;</code>
+       * @param value The bytes for subnetId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        subnetId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.vpc.v1.RelocateSubnetMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.vpc.v1.RelocateSubnetMetadata)
+    private static final yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata();
+    }
+
+    public static yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RelocateSubnetMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<RelocateSubnetMetadata>() {
+      @java.lang.Override
+      public RelocateSubnetMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RelocateSubnetMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RelocateSubnetMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RelocateSubnetMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_vpc_v1_GetSubnetRequest_descriptor;
   private static final 
@@ -19366,6 +20652,16 @@ public final class SubnetServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_vpc_v1_UsedAddress_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_vpc_v1_RelocateSubnetRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_vpc_v1_RelocateSubnetRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_vpc_v1_RelocateSubnetMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_vpc_v1_RelocateSubnetMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -19444,49 +20740,57 @@ public final class SubnetServiceOuterClass {
       "\017\n\007address\030\001 \001(\t\0222\n\nip_version\030\002 \001(\0162\036.y" +
       "andex.cloud.vpc.v1.IpVersion\0225\n\nreferenc" +
       "es\030\003 \003(\0132!.yandex.cloud.reference.Refere" +
-      "nce2\317\014\n\rSubnetService\022n\n\003Get\022%.yandex.cl" +
-      "oud.vpc.v1.GetSubnetRequest\032\033.yandex.clo" +
-      "ud.vpc.v1.Subnet\"#\202\323\344\223\002\035\022\033/vpc/v1/subnet" +
-      "s/{subnet_id}\022r\n\004List\022\'.yandex.cloud.vpc" +
-      ".v1.ListSubnetsRequest\032(.yandex.cloud.vp" +
-      "c.v1.ListSubnetsResponse\"\027\202\323\344\223\002\021\022\017/vpc/v" +
-      "1/subnets\022\223\001\n\006Create\022(.yandex.cloud.vpc." +
-      "v1.CreateSubnetRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"<\202\323\344\223\002\024\"\017/vpc/v1/subne" +
-      "ts:\001*\262\322*\036\n\024CreateSubnetMetadata\022\006Subnet\022" +
-      "\237\001\n\006Update\022(.yandex.cloud.vpc.v1.UpdateS" +
+      "nce\"[\n\025RelocateSubnetRequest\022\037\n\tsubnet_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\023destination_zon" +
+      "e_id\030\002 \001(\tB\004\350\3071\001\"+\n\026RelocateSubnetMetada" +
+      "ta\022\021\n\tsubnet_id\030\001 \001(\t2\200\016\n\rSubnetService\022" +
+      "n\n\003Get\022%.yandex.cloud.vpc.v1.GetSubnetRe" +
+      "quest\032\033.yandex.cloud.vpc.v1.Subnet\"#\202\323\344\223" +
+      "\002\035\022\033/vpc/v1/subnets/{subnet_id}\022r\n\004List\022" +
+      "\'.yandex.cloud.vpc.v1.ListSubnetsRequest" +
+      "\032(.yandex.cloud.vpc.v1.ListSubnetsRespon" +
+      "se\"\027\202\323\344\223\002\021\022\017/vpc/v1/subnets\022\223\001\n\006Create\022(" +
+      ".yandex.cloud.vpc.v1.CreateSubnetRequest" +
+      "\032!.yandex.cloud.operation.Operation\"<\202\323\344" +
+      "\223\002\024\"\017/vpc/v1/subnets:\001*\262\322*\036\n\024CreateSubne" +
+      "tMetadata\022\006Subnet\022\237\001\n\006Update\022(.yandex.cl" +
+      "oud.vpc.v1.UpdateSubnetRequest\032!.yandex." +
+      "cloud.operation.Operation\"H\202\323\344\223\002 2\033/vpc/" +
+      "v1/subnets/{subnet_id}:\001*\262\322*\036\n\024UpdateSub" +
+      "netMetadata\022\006Subnet\022\275\001\n\rAddCidrBlocks\022/." +
+      "yandex.cloud.vpc.v1.AddSubnetCidrBlocksR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"X\202\323\344\223\0020\"+/vpc/v1/subnets/{subnet_id}:a" +
+      "dd-cidr-blocks:\001*\262\322*\036\n\024UpdateSubnetMetad" +
+      "ata\022\006Subnet\022\306\001\n\020RemoveCidrBlocks\0222.yande" +
+      "x.cloud.vpc.v1.RemoveSubnetCidrBlocksReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "[\202\323\344\223\0023\"./vpc/v1/subnets/{subnet_id}:rem" +
+      "ove-cidr-blocks:\001*\262\322*\036\n\024UpdateSubnetMeta" +
+      "data\022\006Subnet\022\253\001\n\006Delete\022(.yandex.cloud.v" +
+      "pc.v1.DeleteSubnetRequest\032!.yandex.cloud" +
+      ".operation.Operation\"T\202\323\344\223\002\035*\033/vpc/v1/su" +
+      "bnets/{subnet_id}\262\322*-\n\024DeleteSubnetMetad" +
+      "ata\022\025google.protobuf.Empty\022\245\001\n\016ListOpera" +
+      "tions\0220.yandex.cloud.vpc.v1.ListSubnetOp" +
+      "erationsRequest\0321.yandex.cloud.vpc.v1.Li" +
+      "stSubnetOperationsResponse\".\202\323\344\223\002(\022&/vpc" +
+      "/v1/subnets/{subnet_id}/operations\022\236\001\n\004M" +
+      "ove\022&.yandex.cloud.vpc.v1.MoveSubnetRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"K" +
+      "\202\323\344\223\002%\" /vpc/v1/subnets/{subnet_id}:move" +
+      ":\001*\262\322*\034\n\022MoveSubnetMetadata\022\006Subnet\022\256\001\n\010" +
+      "Relocate\022*.yandex.cloud.vpc.v1.RelocateS" +
       "ubnetRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"H\202\323\344\223\002 2\033/vpc/v1/subnets/{subnet" +
-      "_id}:\001*\262\322*\036\n\024UpdateSubnetMetadata\022\006Subne" +
-      "t\022\275\001\n\rAddCidrBlocks\022/.yandex.cloud.vpc.v" +
-      "1.AddSubnetCidrBlocksRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"X\202\323\344\223\0020\"+/vpc/v1" +
-      "/subnets/{subnet_id}:add-cidr-blocks:\001*\262" +
-      "\322*\036\n\024UpdateSubnetMetadata\022\006Subnet\022\306\001\n\020Re" +
-      "moveCidrBlocks\0222.yandex.cloud.vpc.v1.Rem" +
-      "oveSubnetCidrBlocksRequest\032!.yandex.clou" +
-      "d.operation.Operation\"[\202\323\344\223\0023\"./vpc/v1/s" +
-      "ubnets/{subnet_id}:remove-cidr-blocks:\001*" +
-      "\262\322*\036\n\024UpdateSubnetMetadata\022\006Subnet\022\253\001\n\006D" +
-      "elete\022(.yandex.cloud.vpc.v1.DeleteSubnet" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"T\202\323\344\223\002\035*\033/vpc/v1/subnets/{subnet_id}\262" +
-      "\322*-\n\024DeleteSubnetMetadata\022\025google.protob" +
-      "uf.Empty\022\245\001\n\016ListOperations\0220.yandex.clo" +
-      "ud.vpc.v1.ListSubnetOperationsRequest\0321." +
-      "yandex.cloud.vpc.v1.ListSubnetOperations" +
-      "Response\".\202\323\344\223\002(\022&/vpc/v1/subnets/{subne" +
-      "t_id}/operations\022\236\001\n\004Move\022&.yandex.cloud" +
-      ".vpc.v1.MoveSubnetRequest\032!.yandex.cloud" +
-      ".operation.Operation\"K\202\323\344\223\002%\" /vpc/v1/su" +
-      "bnets/{subnet_id}:move:\001*\262\322*\034\n\022MoveSubne" +
-      "tMetadata\022\006Subnet\022\241\001\n\021ListUsedAddresses\022" +
-      "-.yandex.cloud.vpc.v1.ListUsedAddressesR" +
-      "equest\032..yandex.cloud.vpc.v1.ListUsedAdd" +
-      "ressesResponse\"-\202\323\344\223\002\'\022%/vpc/v1/subnets/" +
-      "{subnet_id}/addressesBV\n\027yandex.cloud.ap" +
-      "i.vpc.v1Z;github.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/vpc/v1;vpcb\006proto3"
+      "eration\"S\202\323\344\223\002)\"$/vpc/v1/subnets/{subnet" +
+      "_id}:relocate:\001*\262\322* \n\026RelocateSubnetMeta" +
+      "data\022\006Subnet\022\241\001\n\021ListUsedAddresses\022-.yan" +
+      "dex.cloud.vpc.v1.ListUsedAddressesReques" +
+      "t\032..yandex.cloud.vpc.v1.ListUsedAddresse" +
+      "sResponse\"-\202\323\344\223\002\'\022%/vpc/v1/subnets/{subn" +
+      "et_id}/addressesBV\n\027yandex.cloud.api.vpc" +
+      ".v1Z;github.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/vpc/v1;vpcb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -19631,6 +20935,18 @@ public final class SubnetServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_vpc_v1_UsedAddress_descriptor,
         new java.lang.String[] { "Address", "IpVersion", "References", });
+    internal_static_yandex_cloud_vpc_v1_RelocateSubnetRequest_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_yandex_cloud_vpc_v1_RelocateSubnetRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_vpc_v1_RelocateSubnetRequest_descriptor,
+        new java.lang.String[] { "SubnetId", "DestinationZoneId", });
+    internal_static_yandex_cloud_vpc_v1_RelocateSubnetMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_yandex_cloud_vpc_v1_RelocateSubnetMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_vpc_v1_RelocateSubnetMetadata_descriptor,
+        new java.lang.String[] { "SubnetId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

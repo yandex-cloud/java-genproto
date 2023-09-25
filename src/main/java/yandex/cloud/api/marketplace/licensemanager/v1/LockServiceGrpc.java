@@ -3,6 +3,9 @@ package yandex.cloud.api.marketplace.licensemanager.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for managing subscription locks.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -215,10 +218,16 @@ public final class LockServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing subscription locks.
+   * </pre>
    */
   public static abstract class LockServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specified subscription lock.
+     * </pre>
      */
     public void get(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.GetLockRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock> responseObserver) {
@@ -226,6 +235,9 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the subscription lock for specified subscription instance and resource.
+     * </pre>
      */
     public void getByInstanceAndResource(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.GetLockByInstanceAndResourceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock> responseObserver) {
@@ -233,6 +245,9 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Locks the specified subscription instance to the resource.
+     * </pre>
      */
     public void create(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.CreateLockRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -240,6 +255,10 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Checks if the she specified subscription is already locked to the specified resource.
+     * If it is not locked, locks the subscription to the resource.
+     * </pre>
      */
     public void ensure(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.EnsureLockRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -247,6 +266,9 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Unlocks the specified subscription lock.
+     * </pre>
      */
     public void delete(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.DeleteLockRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -295,6 +317,9 @@ public final class LockServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing subscription locks.
+   * </pre>
    */
   public static final class LockServiceStub extends io.grpc.stub.AbstractAsyncStub<LockServiceStub> {
     private LockServiceStub(
@@ -309,6 +334,9 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified subscription lock.
+     * </pre>
      */
     public void get(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.GetLockRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock> responseObserver) {
@@ -317,6 +345,9 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the subscription lock for specified subscription instance and resource.
+     * </pre>
      */
     public void getByInstanceAndResource(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.GetLockByInstanceAndResourceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock> responseObserver) {
@@ -325,6 +356,9 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Locks the specified subscription instance to the resource.
+     * </pre>
      */
     public void create(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.CreateLockRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -333,6 +367,10 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Checks if the she specified subscription is already locked to the specified resource.
+     * If it is not locked, locks the subscription to the resource.
+     * </pre>
      */
     public void ensure(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.EnsureLockRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -341,6 +379,9 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Unlocks the specified subscription lock.
+     * </pre>
      */
     public void delete(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.DeleteLockRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -350,6 +391,9 @@ public final class LockServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing subscription locks.
+   * </pre>
    */
   public static final class LockServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<LockServiceBlockingStub> {
     private LockServiceBlockingStub(
@@ -364,6 +408,9 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified subscription lock.
+     * </pre>
      */
     public yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock get(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.GetLockRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -371,6 +418,9 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the subscription lock for specified subscription instance and resource.
+     * </pre>
      */
     public yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock getByInstanceAndResource(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.GetLockByInstanceAndResourceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -378,6 +428,9 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Locks the specified subscription instance to the resource.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.CreateLockRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -385,6 +438,10 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Checks if the she specified subscription is already locked to the specified resource.
+     * If it is not locked, locks the subscription to the resource.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation ensure(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.EnsureLockRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -392,6 +449,9 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Unlocks the specified subscription lock.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.DeleteLockRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -400,6 +460,9 @@ public final class LockServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing subscription locks.
+   * </pre>
    */
   public static final class LockServiceFutureStub extends io.grpc.stub.AbstractFutureStub<LockServiceFutureStub> {
     private LockServiceFutureStub(
@@ -414,6 +477,9 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified subscription lock.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock> get(
         yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.GetLockRequest request) {
@@ -422,6 +488,9 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the subscription lock for specified subscription instance and resource.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock> getByInstanceAndResource(
         yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.GetLockByInstanceAndResourceRequest request) {
@@ -430,6 +499,9 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Locks the specified subscription instance to the resource.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.CreateLockRequest request) {
@@ -438,6 +510,10 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Checks if the she specified subscription is already locked to the specified resource.
+     * If it is not locked, locks the subscription to the resource.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> ensure(
         yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.EnsureLockRequest request) {
@@ -446,6 +522,9 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Unlocks the specified subscription lock.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.DeleteLockRequest request) {

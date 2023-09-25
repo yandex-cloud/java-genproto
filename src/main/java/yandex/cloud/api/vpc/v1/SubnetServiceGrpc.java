@@ -297,6 +297,37 @@ public final class SubnetServiceGrpc {
     return getMoveMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRelocateMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Relocate",
+      requestType = yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRelocateMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getRelocateMethod;
+    if ((getRelocateMethod = SubnetServiceGrpc.getRelocateMethod) == null) {
+      synchronized (SubnetServiceGrpc.class) {
+        if ((getRelocateMethod = SubnetServiceGrpc.getRelocateMethod) == null) {
+          SubnetServiceGrpc.getRelocateMethod = getRelocateMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Relocate"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new SubnetServiceMethodDescriptorSupplier("Relocate"))
+              .build();
+        }
+      }
+    }
+    return getRelocateMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesRequest,
       yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.ListUsedAddressesResponse> getListUsedAddressesMethod;
 
@@ -475,6 +506,13 @@ public final class SubnetServiceGrpc {
     }
 
     /**
+     */
+    public void relocate(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRelocateMethod(), responseObserver);
+    }
+
+    /**
      * <pre>
      * List used addresses in specified subnet.
      * </pre>
@@ -549,6 +587,13 @@ public final class SubnetServiceGrpc {
                 yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.MoveSubnetRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_MOVE)))
+          .addMethod(
+            getRelocateMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_RELOCATE)))
           .addMethod(
             getListUsedAddressesMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -682,6 +727,14 @@ public final class SubnetServiceGrpc {
     }
 
     /**
+     */
+    public void relocate(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRelocateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
      * <pre>
      * List used addresses in specified subnet.
      * </pre>
@@ -803,6 +856,13 @@ public final class SubnetServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation move(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.MoveSubnetRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getMoveMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation relocate(yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRelocateMethod(), getCallOptions(), request);
     }
 
     /**
@@ -938,6 +998,14 @@ public final class SubnetServiceGrpc {
     }
 
     /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> relocate(
+        yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRelocateMethod(), getCallOptions()), request);
+    }
+
+    /**
      * <pre>
      * List used addresses in specified subnet.
      * </pre>
@@ -958,7 +1026,8 @@ public final class SubnetServiceGrpc {
   private static final int METHODID_DELETE = 6;
   private static final int METHODID_LIST_OPERATIONS = 7;
   private static final int METHODID_MOVE = 8;
-  private static final int METHODID_LIST_USED_ADDRESSES = 9;
+  private static final int METHODID_RELOCATE = 9;
+  private static final int METHODID_LIST_USED_ADDRESSES = 10;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1011,6 +1080,10 @@ public final class SubnetServiceGrpc {
           break;
         case METHODID_MOVE:
           serviceImpl.move((yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.MoveSubnetRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_RELOCATE:
+          serviceImpl.relocate((yandex.cloud.api.vpc.v1.SubnetServiceOuterClass.RelocateSubnetRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_LIST_USED_ADDRESSES:
@@ -1087,6 +1160,7 @@ public final class SubnetServiceGrpc {
               .addMethod(getDeleteMethod())
               .addMethod(getListOperationsMethod())
               .addMethod(getMoveMethod())
+              .addMethod(getRelocateMethod())
               .addMethod(getListUsedAddressesMethod())
               .build();
         }

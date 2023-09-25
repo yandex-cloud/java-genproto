@@ -3,6 +3,9 @@ package yandex.cloud.api.marketplace.licensemanager.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for managing subscription instances.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -122,10 +125,17 @@ public final class InstanceServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing subscription instances.
+   * </pre>
    */
   public static abstract class InstanceServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns the specified subscription instance.
+     * To get the list of all available subscription instances, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.marketplace.licensemanager.v1.InstanceServiceOuterClass.GetInstanceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance> responseObserver) {
@@ -133,6 +143,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of subscription instances in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.marketplace.licensemanager.v1.InstanceServiceOuterClass.ListInstancesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.licensemanager.v1.InstanceServiceOuterClass.ListInstancesResponse> responseObserver) {
@@ -160,6 +173,9 @@ public final class InstanceServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing subscription instances.
+   * </pre>
    */
   public static final class InstanceServiceStub extends io.grpc.stub.AbstractAsyncStub<InstanceServiceStub> {
     private InstanceServiceStub(
@@ -174,6 +190,10 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified subscription instance.
+     * To get the list of all available subscription instances, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.marketplace.licensemanager.v1.InstanceServiceOuterClass.GetInstanceRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance> responseObserver) {
@@ -182,6 +202,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of subscription instances in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.marketplace.licensemanager.v1.InstanceServiceOuterClass.ListInstancesRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.licensemanager.v1.InstanceServiceOuterClass.ListInstancesResponse> responseObserver) {
@@ -191,6 +214,9 @@ public final class InstanceServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing subscription instances.
+   * </pre>
    */
   public static final class InstanceServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<InstanceServiceBlockingStub> {
     private InstanceServiceBlockingStub(
@@ -205,6 +231,10 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified subscription instance.
+     * To get the list of all available subscription instances, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance get(yandex.cloud.api.marketplace.licensemanager.v1.InstanceServiceOuterClass.GetInstanceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -212,6 +242,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of subscription instances in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.marketplace.licensemanager.v1.InstanceServiceOuterClass.ListInstancesResponse list(yandex.cloud.api.marketplace.licensemanager.v1.InstanceServiceOuterClass.ListInstancesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -220,6 +253,9 @@ public final class InstanceServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing subscription instances.
+   * </pre>
    */
   public static final class InstanceServiceFutureStub extends io.grpc.stub.AbstractFutureStub<InstanceServiceFutureStub> {
     private InstanceServiceFutureStub(
@@ -234,6 +270,10 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified subscription instance.
+     * To get the list of all available subscription instances, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance> get(
         yandex.cloud.api.marketplace.licensemanager.v1.InstanceServiceOuterClass.GetInstanceRequest request) {
@@ -242,6 +282,9 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of subscription instances in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.marketplace.licensemanager.v1.InstanceServiceOuterClass.ListInstancesResponse> list(
         yandex.cloud.api.marketplace.licensemanager.v1.InstanceServiceOuterClass.ListInstancesRequest request) {

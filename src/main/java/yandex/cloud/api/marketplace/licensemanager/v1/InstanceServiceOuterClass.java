@@ -19,11 +19,19 @@ public final class InstanceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the subscription instance.
+     * </pre>
+     *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The instanceId.
      */
     java.lang.String getInstanceId();
     /**
+     * <pre>
+     * ID of the subscription instance.
+     * </pre>
+     *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for instanceId.
      */
@@ -117,6 +125,10 @@ public final class InstanceServiceOuterClass {
     public static final int INSTANCE_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object instanceId_;
     /**
+     * <pre>
+     * ID of the subscription instance.
+     * </pre>
+     *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The instanceId.
      */
@@ -134,6 +146,10 @@ public final class InstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the subscription instance.
+     * </pre>
+     *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for instanceId.
      */
@@ -456,6 +472,10 @@ public final class InstanceServiceOuterClass {
 
       private java.lang.Object instanceId_ = "";
       /**
+       * <pre>
+       * ID of the subscription instance.
+       * </pre>
+       *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The instanceId.
        */
@@ -472,6 +492,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription instance.
+       * </pre>
+       *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for instanceId.
        */
@@ -489,6 +513,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription instance.
+       * </pre>
+       *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The instanceId to set.
        * @return This builder for chaining.
@@ -504,6 +532,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription instance.
+       * </pre>
+       *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -514,6 +546,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription instance.
+       * </pre>
+       *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for instanceId to set.
        * @return This builder for chaining.
@@ -587,11 +623,19 @@ public final class InstanceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder that the subscription instance belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder that the subscription instance belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -599,17 +643,34 @@ public final class InstanceServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListInstancesResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListInstancesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListInstancesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
@@ -617,11 +678,29 @@ public final class InstanceServiceOuterClass {
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters subscription instances listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Instance.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-subscription-instance`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The filter.
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters subscription instances listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Instance.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-subscription-instance`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for filter.
      */
@@ -629,11 +708,19 @@ public final class InstanceServiceOuterClass {
         getFilterBytes();
 
     /**
+     * <pre>
+     * Sorting order for the list of subscription instances.
+     * </pre>
+     *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The orderBy.
      */
     java.lang.String getOrderBy();
     /**
+     * <pre>
+     * Sorting order for the list of subscription instances.
+     * </pre>
+     *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for orderBy.
      */
@@ -753,6 +840,10 @@ public final class InstanceServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder that the subscription instance belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The folderId.
      */
@@ -770,6 +861,10 @@ public final class InstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder that the subscription instance belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for folderId.
      */
@@ -791,6 +886,13 @@ public final class InstanceServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListInstancesResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
      * @return The pageSize.
      */
@@ -802,6 +904,11 @@ public final class InstanceServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListInstancesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
@@ -819,6 +926,11 @@ public final class InstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListInstancesResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
@@ -840,6 +952,15 @@ public final class InstanceServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 4;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters subscription instances listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Instance.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-subscription-instance`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The filter.
      */
@@ -857,6 +978,15 @@ public final class InstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters subscription instances listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Instance.name] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name=my-subscription-instance`.
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for filter.
      */
@@ -878,6 +1008,10 @@ public final class InstanceServiceOuterClass {
     public static final int ORDER_BY_FIELD_NUMBER = 5;
     private volatile java.lang.Object orderBy_;
     /**
+     * <pre>
+     * Sorting order for the list of subscription instances.
+     * </pre>
+     *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The orderBy.
      */
@@ -895,6 +1029,10 @@ public final class InstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Sorting order for the list of subscription instances.
+     * </pre>
+     *
      * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for orderBy.
      */
@@ -1286,6 +1424,10 @@ public final class InstanceServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder that the subscription instance belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The folderId.
        */
@@ -1302,6 +1444,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the subscription instance belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for folderId.
        */
@@ -1319,6 +1465,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the subscription instance belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -1334,6 +1484,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the subscription instance belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -1344,6 +1498,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the subscription instance belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -1362,6 +1520,13 @@ public final class InstanceServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListInstancesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        * @return The pageSize.
        */
@@ -1370,6 +1535,13 @@ public final class InstanceServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListInstancesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -1381,6 +1553,13 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListInstancesResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
        * @return This builder for chaining.
        */
@@ -1393,6 +1572,11 @@ public final class InstanceServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListInstancesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The pageToken.
        */
@@ -1409,6 +1593,11 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListInstancesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The bytes for pageToken.
        */
@@ -1426,6 +1615,11 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListInstancesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -1441,6 +1635,11 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListInstancesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
@@ -1451,6 +1650,11 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListInstancesResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -1469,6 +1673,15 @@ public final class InstanceServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters subscription instances listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Instance.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-subscription-instance`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The filter.
        */
@@ -1485,6 +1698,15 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters subscription instances listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Instance.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-subscription-instance`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The bytes for filter.
        */
@@ -1502,6 +1724,15 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters subscription instances listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Instance.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-subscription-instance`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The filter to set.
        * @return This builder for chaining.
@@ -1517,6 +1748,15 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters subscription instances listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Instance.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-subscription-instance`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
@@ -1527,6 +1767,15 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters subscription instances listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Instance.name] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name=my-subscription-instance`.
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The bytes for filter to set.
        * @return This builder for chaining.
@@ -1545,6 +1794,10 @@ public final class InstanceServiceOuterClass {
 
       private java.lang.Object orderBy_ = "";
       /**
+       * <pre>
+       * Sorting order for the list of subscription instances.
+       * </pre>
+       *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The orderBy.
        */
@@ -1561,6 +1814,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Sorting order for the list of subscription instances.
+       * </pre>
+       *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The bytes for orderBy.
        */
@@ -1578,6 +1835,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Sorting order for the list of subscription instances.
+       * </pre>
+       *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The orderBy to set.
        * @return This builder for chaining.
@@ -1593,6 +1854,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Sorting order for the list of subscription instances.
+       * </pre>
+       *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
@@ -1603,6 +1868,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Sorting order for the list of subscription instances.
+       * </pre>
+       *
        * <code>string order_by = 5 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The bytes for orderBy to set.
        * @return This builder for chaining.
@@ -1676,35 +1945,69 @@ public final class InstanceServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of subscription instances.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
      */
     java.util.List<yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance> 
         getInstancesList();
     /**
+     * <pre>
+     * List of subscription instances.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
      */
     yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance getInstances(int index);
     /**
+     * <pre>
+     * List of subscription instances.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
      */
     int getInstancesCount();
     /**
+     * <pre>
+     * List of subscription instances.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.InstanceOrBuilder> 
         getInstancesOrBuilderList();
     /**
+     * <pre>
+     * List of subscription instances.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
      */
     yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.InstanceOrBuilder getInstancesOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListInstancesRequest.page_size], use `next_page_token` as the value
+     * for the [ListInstancesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListInstancesRequest.page_size], use `next_page_token` as the value
+     * for the [ListInstancesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -1812,6 +2115,10 @@ public final class InstanceServiceOuterClass {
     public static final int INSTANCES_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance> instances_;
     /**
+     * <pre>
+     * List of subscription instances.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
      */
     @java.lang.Override
@@ -1819,6 +2126,10 @@ public final class InstanceServiceOuterClass {
       return instances_;
     }
     /**
+     * <pre>
+     * List of subscription instances.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
      */
     @java.lang.Override
@@ -1827,6 +2138,10 @@ public final class InstanceServiceOuterClass {
       return instances_;
     }
     /**
+     * <pre>
+     * List of subscription instances.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
      */
     @java.lang.Override
@@ -1834,6 +2149,10 @@ public final class InstanceServiceOuterClass {
       return instances_.size();
     }
     /**
+     * <pre>
+     * List of subscription instances.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
      */
     @java.lang.Override
@@ -1841,6 +2160,10 @@ public final class InstanceServiceOuterClass {
       return instances_.get(index);
     }
     /**
+     * <pre>
+     * List of subscription instances.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
      */
     @java.lang.Override
@@ -1852,6 +2175,13 @@ public final class InstanceServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListInstancesRequest.page_size], use `next_page_token` as the value
+     * for the [ListInstancesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
@@ -1869,6 +2199,13 @@ public final class InstanceServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListInstancesRequest.page_size], use `next_page_token` as the value
+     * for the [ListInstancesRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -2259,6 +2596,10 @@ public final class InstanceServiceOuterClass {
           yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance, yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance.Builder, yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.InstanceOrBuilder> instancesBuilder_;
 
       /**
+       * <pre>
+       * List of subscription instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
        */
       public java.util.List<yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance> getInstancesList() {
@@ -2269,6 +2610,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of subscription instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
        */
       public int getInstancesCount() {
@@ -2279,6 +2624,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of subscription instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
        */
       public yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance getInstances(int index) {
@@ -2289,6 +2638,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of subscription instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
        */
       public Builder setInstances(
@@ -2306,6 +2659,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subscription instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
        */
       public Builder setInstances(
@@ -2320,6 +2677,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subscription instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
        */
       public Builder addInstances(yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance value) {
@@ -2336,6 +2697,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subscription instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
        */
       public Builder addInstances(
@@ -2353,6 +2718,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subscription instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
        */
       public Builder addInstances(
@@ -2367,6 +2736,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subscription instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
        */
       public Builder addInstances(
@@ -2381,6 +2754,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subscription instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
        */
       public Builder addAllInstances(
@@ -2396,6 +2773,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subscription instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
        */
       public Builder clearInstances() {
@@ -2409,6 +2790,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subscription instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
        */
       public Builder removeInstances(int index) {
@@ -2422,6 +2807,10 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subscription instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
        */
       public yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance.Builder getInstancesBuilder(
@@ -2429,6 +2818,10 @@ public final class InstanceServiceOuterClass {
         return getInstancesFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of subscription instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
        */
       public yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.InstanceOrBuilder getInstancesOrBuilder(
@@ -2439,6 +2832,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of subscription instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.InstanceOrBuilder> 
@@ -2450,6 +2847,10 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of subscription instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
        */
       public yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance.Builder addInstancesBuilder() {
@@ -2457,6 +2858,10 @@ public final class InstanceServiceOuterClass {
             yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of subscription instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
        */
       public yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance.Builder addInstancesBuilder(
@@ -2465,6 +2870,10 @@ public final class InstanceServiceOuterClass {
             index, yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of subscription instances.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Instance instances = 1;</code>
        */
       public java.util.List<yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance.Builder> 
@@ -2488,6 +2897,13 @@ public final class InstanceServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListInstancesRequest.page_size], use `next_page_token` as the value
+       * for the [ListInstancesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The nextPageToken.
        */
@@ -2504,6 +2920,13 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListInstancesRequest.page_size], use `next_page_token` as the value
+       * for the [ListInstancesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The bytes for nextPageToken.
        */
@@ -2521,6 +2944,13 @@ public final class InstanceServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListInstancesRequest.page_size], use `next_page_token` as the value
+       * for the [ListInstancesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -2536,6 +2966,13 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListInstancesRequest.page_size], use `next_page_token` as the value
+       * for the [ListInstancesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return This builder for chaining.
        */
@@ -2546,6 +2983,13 @@ public final class InstanceServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListInstancesRequest.page_size], use `next_page_token` as the value
+       * for the [ListInstancesRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.

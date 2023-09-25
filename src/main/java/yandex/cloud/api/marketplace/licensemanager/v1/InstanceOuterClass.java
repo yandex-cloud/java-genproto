@@ -19,11 +19,19 @@ public final class InstanceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the subscription instance.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the subscription instance.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -31,11 +39,19 @@ public final class InstanceOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * ID of the cloud that the subscription instance belongs to.
+     * </pre>
+     *
      * <code>string cloud_id = 2;</code>
      * @return The cloudId.
      */
     java.lang.String getCloudId();
     /**
+     * <pre>
+     * ID of the cloud that the subscription instance belongs to.
+     * </pre>
+     *
      * <code>string cloud_id = 2;</code>
      * @return The bytes for cloudId.
      */
@@ -43,11 +59,19 @@ public final class InstanceOuterClass {
         getCloudIdBytes();
 
     /**
+     * <pre>
+     * ID of the folder that the subscription instance belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 3;</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder that the subscription instance belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 3;</code>
      * @return The bytes for folderId.
      */
@@ -55,11 +79,19 @@ public final class InstanceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * ID of the subscription template that was used to create subscription instance.
+     * </pre>
+     *
      * <code>string template_id = 4;</code>
      * @return The templateId.
      */
     java.lang.String getTemplateId();
     /**
+     * <pre>
+     * ID of the subscription template that was used to create subscription instance.
+     * </pre>
+     *
      * <code>string template_id = 4;</code>
      * @return The bytes for templateId.
      */
@@ -67,11 +99,19 @@ public final class InstanceOuterClass {
         getTemplateIdBytes();
 
     /**
+     * <pre>
+     * ID of the version of subscription template.
+     * </pre>
+     *
      * <code>string template_version_id = 5;</code>
      * @return The templateVersionId.
      */
     java.lang.String getTemplateVersionId();
     /**
+     * <pre>
+     * ID of the version of subscription template.
+     * </pre>
+     *
      * <code>string template_version_id = 5;</code>
      * @return The bytes for templateVersionId.
      */
@@ -79,11 +119,19 @@ public final class InstanceOuterClass {
         getTemplateVersionIdBytes();
 
     /**
+     * <pre>
+     * Description of the subscription instance.
+     * </pre>
+     *
      * <code>string description = 14;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the subscription instance.
+     * </pre>
+     *
      * <code>string description = 14;</code>
      * @return The bytes for description.
      */
@@ -91,111 +139,199 @@ public final class InstanceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Timestamp of the start of the subscription.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 7;</code>
      * @return Whether the startTime field is set.
      */
     boolean hasStartTime();
     /**
+     * <pre>
+     * Timestamp of the start of the subscription.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 7;</code>
      * @return The startTime.
      */
     com.google.protobuf.Timestamp getStartTime();
     /**
+     * <pre>
+     * Timestamp of the start of the subscription.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 7;</code>
      */
     com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
 
     /**
+     * <pre>
+     * Timestamp of the end of the subscription.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp end_time = 8;</code>
      * @return Whether the endTime field is set.
      */
     boolean hasEndTime();
     /**
+     * <pre>
+     * Timestamp of the end of the subscription.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp end_time = 8;</code>
      * @return The endTime.
      */
     com.google.protobuf.Timestamp getEndTime();
     /**
+     * <pre>
+     * Timestamp of the end of the subscription.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp end_time = 8;</code>
      */
     com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
 
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 9;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 9;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 9;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 10;</code>
      * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
+     * <pre>
+     * Update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 10;</code>
      * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
+     * <pre>
+     * Update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 10;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Subscription state.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.licensemanager.v1.Instance.State state = 11;</code>
      * @return The enum numeric value on the wire for state.
      */
     int getStateValue();
     /**
+     * <pre>
+     * Subscription state.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.licensemanager.v1.Instance.State state = 11;</code>
      * @return The state.
      */
     yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance.State getState();
 
     /**
+     * <pre>
+     * List of subscription locks.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
      */
     java.util.List<yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock> 
         getLocksList();
     /**
+     * <pre>
+     * List of subscription locks.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
      */
     yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock getLocks(int index);
     /**
+     * <pre>
+     * List of subscription locks.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
      */
     int getLocksCount();
     /**
+     * <pre>
+     * List of subscription locks.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
      */
     java.util.List<? extends yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.LockOrBuilder> 
         getLocksOrBuilderList();
     /**
+     * <pre>
+     * List of subscription locks.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
      */
     yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.LockOrBuilder getLocksOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Subscription template.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.licensemanager.v1.Template license_template = 13;</code>
      * @return Whether the licenseTemplate field is set.
      */
     boolean hasLicenseTemplate();
     /**
+     * <pre>
+     * Subscription template.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.licensemanager.v1.Template license_template = 13;</code>
      * @return The licenseTemplate.
      */
     yandex.cloud.api.marketplace.licensemanager.v1.TemplateOuterClass.Template getLicenseTemplate();
     /**
+     * <pre>
+     * Subscription template.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.licensemanager.v1.Template license_template = 13;</code>
      */
     yandex.cloud.api.marketplace.licensemanager.v1.TemplateOuterClass.TemplateOrBuilder getLicenseTemplateOrBuilder();
@@ -415,26 +551,50 @@ public final class InstanceOuterClass {
        */
       STATE_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Subscription created but not active yet.
+       * </pre>
+       *
        * <code>PENDING = 1;</code>
        */
       PENDING(1),
       /**
+       * <pre>
+       * Subscription is active.
+       * </pre>
+       *
        * <code>ACTIVE = 2;</code>
        */
       ACTIVE(2),
       /**
+       * <pre>
+       * Subscription canceled. It is still active, but won't be automatically renewed after the end of the current period.
+       * </pre>
+       *
        * <code>CANCELLED = 3;</code>
        */
       CANCELLED(3),
       /**
+       * <pre>
+       * Subscription expired.
+       * </pre>
+       *
        * <code>EXPIRED = 4;</code>
        */
       EXPIRED(4),
       /**
+       * <pre>
+       * Subscription deprecated.
+       * </pre>
+       *
        * <code>DEPRECATED = 5;</code>
        */
       DEPRECATED(5),
       /**
+       * <pre>
+       * Subscription deleted.
+       * </pre>
+       *
        * <code>DELETED = 6;</code>
        */
       DELETED(6),
@@ -446,26 +606,50 @@ public final class InstanceOuterClass {
        */
       public static final int STATE_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Subscription created but not active yet.
+       * </pre>
+       *
        * <code>PENDING = 1;</code>
        */
       public static final int PENDING_VALUE = 1;
       /**
+       * <pre>
+       * Subscription is active.
+       * </pre>
+       *
        * <code>ACTIVE = 2;</code>
        */
       public static final int ACTIVE_VALUE = 2;
       /**
+       * <pre>
+       * Subscription canceled. It is still active, but won't be automatically renewed after the end of the current period.
+       * </pre>
+       *
        * <code>CANCELLED = 3;</code>
        */
       public static final int CANCELLED_VALUE = 3;
       /**
+       * <pre>
+       * Subscription expired.
+       * </pre>
+       *
        * <code>EXPIRED = 4;</code>
        */
       public static final int EXPIRED_VALUE = 4;
       /**
+       * <pre>
+       * Subscription deprecated.
+       * </pre>
+       *
        * <code>DEPRECATED = 5;</code>
        */
       public static final int DEPRECATED_VALUE = 5;
       /**
+       * <pre>
+       * Subscription deleted.
+       * </pre>
+       *
        * <code>DELETED = 6;</code>
        */
       public static final int DELETED_VALUE = 6;
@@ -561,6 +745,10 @@ public final class InstanceOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the subscription instance.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -578,6 +766,10 @@ public final class InstanceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the subscription instance.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -599,6 +791,10 @@ public final class InstanceOuterClass {
     public static final int CLOUD_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object cloudId_;
     /**
+     * <pre>
+     * ID of the cloud that the subscription instance belongs to.
+     * </pre>
+     *
      * <code>string cloud_id = 2;</code>
      * @return The cloudId.
      */
@@ -616,6 +812,10 @@ public final class InstanceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the cloud that the subscription instance belongs to.
+     * </pre>
+     *
      * <code>string cloud_id = 2;</code>
      * @return The bytes for cloudId.
      */
@@ -637,6 +837,10 @@ public final class InstanceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder that the subscription instance belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 3;</code>
      * @return The folderId.
      */
@@ -654,6 +858,10 @@ public final class InstanceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder that the subscription instance belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 3;</code>
      * @return The bytes for folderId.
      */
@@ -675,6 +883,10 @@ public final class InstanceOuterClass {
     public static final int TEMPLATE_ID_FIELD_NUMBER = 4;
     private volatile java.lang.Object templateId_;
     /**
+     * <pre>
+     * ID of the subscription template that was used to create subscription instance.
+     * </pre>
+     *
      * <code>string template_id = 4;</code>
      * @return The templateId.
      */
@@ -692,6 +904,10 @@ public final class InstanceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the subscription template that was used to create subscription instance.
+     * </pre>
+     *
      * <code>string template_id = 4;</code>
      * @return The bytes for templateId.
      */
@@ -713,6 +929,10 @@ public final class InstanceOuterClass {
     public static final int TEMPLATE_VERSION_ID_FIELD_NUMBER = 5;
     private volatile java.lang.Object templateVersionId_;
     /**
+     * <pre>
+     * ID of the version of subscription template.
+     * </pre>
+     *
      * <code>string template_version_id = 5;</code>
      * @return The templateVersionId.
      */
@@ -730,6 +950,10 @@ public final class InstanceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the version of subscription template.
+     * </pre>
+     *
      * <code>string template_version_id = 5;</code>
      * @return The bytes for templateVersionId.
      */
@@ -751,6 +975,10 @@ public final class InstanceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 14;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the subscription instance.
+     * </pre>
+     *
      * <code>string description = 14;</code>
      * @return The description.
      */
@@ -768,6 +996,10 @@ public final class InstanceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the subscription instance.
+     * </pre>
+     *
      * <code>string description = 14;</code>
      * @return The bytes for description.
      */
@@ -789,6 +1021,10 @@ public final class InstanceOuterClass {
     public static final int START_TIME_FIELD_NUMBER = 7;
     private com.google.protobuf.Timestamp startTime_;
     /**
+     * <pre>
+     * Timestamp of the start of the subscription.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 7;</code>
      * @return Whether the startTime field is set.
      */
@@ -797,6 +1033,10 @@ public final class InstanceOuterClass {
       return startTime_ != null;
     }
     /**
+     * <pre>
+     * Timestamp of the start of the subscription.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 7;</code>
      * @return The startTime.
      */
@@ -805,6 +1045,10 @@ public final class InstanceOuterClass {
       return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
     }
     /**
+     * <pre>
+     * Timestamp of the start of the subscription.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 7;</code>
      */
     @java.lang.Override
@@ -815,6 +1059,10 @@ public final class InstanceOuterClass {
     public static final int END_TIME_FIELD_NUMBER = 8;
     private com.google.protobuf.Timestamp endTime_;
     /**
+     * <pre>
+     * Timestamp of the end of the subscription.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp end_time = 8;</code>
      * @return Whether the endTime field is set.
      */
@@ -823,6 +1071,10 @@ public final class InstanceOuterClass {
       return endTime_ != null;
     }
     /**
+     * <pre>
+     * Timestamp of the end of the subscription.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp end_time = 8;</code>
      * @return The endTime.
      */
@@ -831,6 +1083,10 @@ public final class InstanceOuterClass {
       return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
     }
     /**
+     * <pre>
+     * Timestamp of the end of the subscription.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp end_time = 8;</code>
      */
     @java.lang.Override
@@ -841,6 +1097,10 @@ public final class InstanceOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 9;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 9;</code>
      * @return Whether the createdAt field is set.
      */
@@ -849,6 +1109,10 @@ public final class InstanceOuterClass {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 9;</code>
      * @return The createdAt.
      */
@@ -857,6 +1121,10 @@ public final class InstanceOuterClass {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 9;</code>
      */
     @java.lang.Override
@@ -867,6 +1135,10 @@ public final class InstanceOuterClass {
     public static final int UPDATED_AT_FIELD_NUMBER = 10;
     private com.google.protobuf.Timestamp updatedAt_;
     /**
+     * <pre>
+     * Update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 10;</code>
      * @return Whether the updatedAt field is set.
      */
@@ -875,6 +1147,10 @@ public final class InstanceOuterClass {
       return updatedAt_ != null;
     }
     /**
+     * <pre>
+     * Update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 10;</code>
      * @return The updatedAt.
      */
@@ -883,6 +1159,10 @@ public final class InstanceOuterClass {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
     /**
+     * <pre>
+     * Update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 10;</code>
      */
     @java.lang.Override
@@ -893,6 +1173,10 @@ public final class InstanceOuterClass {
     public static final int STATE_FIELD_NUMBER = 11;
     private int state_;
     /**
+     * <pre>
+     * Subscription state.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.licensemanager.v1.Instance.State state = 11;</code>
      * @return The enum numeric value on the wire for state.
      */
@@ -900,6 +1184,10 @@ public final class InstanceOuterClass {
       return state_;
     }
     /**
+     * <pre>
+     * Subscription state.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.licensemanager.v1.Instance.State state = 11;</code>
      * @return The state.
      */
@@ -912,6 +1200,10 @@ public final class InstanceOuterClass {
     public static final int LOCKS_FIELD_NUMBER = 12;
     private java.util.List<yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock> locks_;
     /**
+     * <pre>
+     * List of subscription locks.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
      */
     @java.lang.Override
@@ -919,6 +1211,10 @@ public final class InstanceOuterClass {
       return locks_;
     }
     /**
+     * <pre>
+     * List of subscription locks.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
      */
     @java.lang.Override
@@ -927,6 +1223,10 @@ public final class InstanceOuterClass {
       return locks_;
     }
     /**
+     * <pre>
+     * List of subscription locks.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
      */
     @java.lang.Override
@@ -934,6 +1234,10 @@ public final class InstanceOuterClass {
       return locks_.size();
     }
     /**
+     * <pre>
+     * List of subscription locks.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
      */
     @java.lang.Override
@@ -941,6 +1245,10 @@ public final class InstanceOuterClass {
       return locks_.get(index);
     }
     /**
+     * <pre>
+     * List of subscription locks.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
      */
     @java.lang.Override
@@ -952,6 +1260,10 @@ public final class InstanceOuterClass {
     public static final int LICENSE_TEMPLATE_FIELD_NUMBER = 13;
     private yandex.cloud.api.marketplace.licensemanager.v1.TemplateOuterClass.Template licenseTemplate_;
     /**
+     * <pre>
+     * Subscription template.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.licensemanager.v1.Template license_template = 13;</code>
      * @return Whether the licenseTemplate field is set.
      */
@@ -960,6 +1272,10 @@ public final class InstanceOuterClass {
       return licenseTemplate_ != null;
     }
     /**
+     * <pre>
+     * Subscription template.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.licensemanager.v1.Template license_template = 13;</code>
      * @return The licenseTemplate.
      */
@@ -968,6 +1284,10 @@ public final class InstanceOuterClass {
       return licenseTemplate_ == null ? yandex.cloud.api.marketplace.licensemanager.v1.TemplateOuterClass.Template.getDefaultInstance() : licenseTemplate_;
     }
     /**
+     * <pre>
+     * Subscription template.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.licensemanager.v1.Template license_template = 13;</code>
      */
     @java.lang.Override
@@ -1587,6 +1907,10 @@ public final class InstanceOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the subscription instance.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -1603,6 +1927,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription instance.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -1620,6 +1948,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription instance.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -1635,6 +1967,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription instance.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1645,6 +1981,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription instance.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -1663,6 +2003,10 @@ public final class InstanceOuterClass {
 
       private java.lang.Object cloudId_ = "";
       /**
+       * <pre>
+       * ID of the cloud that the subscription instance belongs to.
+       * </pre>
+       *
        * <code>string cloud_id = 2;</code>
        * @return The cloudId.
        */
@@ -1679,6 +2023,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the cloud that the subscription instance belongs to.
+       * </pre>
+       *
        * <code>string cloud_id = 2;</code>
        * @return The bytes for cloudId.
        */
@@ -1696,6 +2044,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the cloud that the subscription instance belongs to.
+       * </pre>
+       *
        * <code>string cloud_id = 2;</code>
        * @param value The cloudId to set.
        * @return This builder for chaining.
@@ -1711,6 +2063,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the cloud that the subscription instance belongs to.
+       * </pre>
+       *
        * <code>string cloud_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -1721,6 +2077,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the cloud that the subscription instance belongs to.
+       * </pre>
+       *
        * <code>string cloud_id = 2;</code>
        * @param value The bytes for cloudId to set.
        * @return This builder for chaining.
@@ -1739,6 +2099,10 @@ public final class InstanceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder that the subscription instance belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 3;</code>
        * @return The folderId.
        */
@@ -1755,6 +2119,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the subscription instance belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 3;</code>
        * @return The bytes for folderId.
        */
@@ -1772,6 +2140,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the subscription instance belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 3;</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -1787,6 +2159,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the subscription instance belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 3;</code>
        * @return This builder for chaining.
        */
@@ -1797,6 +2173,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the subscription instance belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 3;</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -1815,6 +2195,10 @@ public final class InstanceOuterClass {
 
       private java.lang.Object templateId_ = "";
       /**
+       * <pre>
+       * ID of the subscription template that was used to create subscription instance.
+       * </pre>
+       *
        * <code>string template_id = 4;</code>
        * @return The templateId.
        */
@@ -1831,6 +2215,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription template that was used to create subscription instance.
+       * </pre>
+       *
        * <code>string template_id = 4;</code>
        * @return The bytes for templateId.
        */
@@ -1848,6 +2236,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription template that was used to create subscription instance.
+       * </pre>
+       *
        * <code>string template_id = 4;</code>
        * @param value The templateId to set.
        * @return This builder for chaining.
@@ -1863,6 +2255,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription template that was used to create subscription instance.
+       * </pre>
+       *
        * <code>string template_id = 4;</code>
        * @return This builder for chaining.
        */
@@ -1873,6 +2269,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription template that was used to create subscription instance.
+       * </pre>
+       *
        * <code>string template_id = 4;</code>
        * @param value The bytes for templateId to set.
        * @return This builder for chaining.
@@ -1891,6 +2291,10 @@ public final class InstanceOuterClass {
 
       private java.lang.Object templateVersionId_ = "";
       /**
+       * <pre>
+       * ID of the version of subscription template.
+       * </pre>
+       *
        * <code>string template_version_id = 5;</code>
        * @return The templateVersionId.
        */
@@ -1907,6 +2311,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the version of subscription template.
+       * </pre>
+       *
        * <code>string template_version_id = 5;</code>
        * @return The bytes for templateVersionId.
        */
@@ -1924,6 +2332,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the version of subscription template.
+       * </pre>
+       *
        * <code>string template_version_id = 5;</code>
        * @param value The templateVersionId to set.
        * @return This builder for chaining.
@@ -1939,6 +2351,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the version of subscription template.
+       * </pre>
+       *
        * <code>string template_version_id = 5;</code>
        * @return This builder for chaining.
        */
@@ -1949,6 +2365,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the version of subscription template.
+       * </pre>
+       *
        * <code>string template_version_id = 5;</code>
        * @param value The bytes for templateVersionId to set.
        * @return This builder for chaining.
@@ -1967,6 +2387,10 @@ public final class InstanceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the subscription instance.
+       * </pre>
+       *
        * <code>string description = 14;</code>
        * @return The description.
        */
@@ -1983,6 +2407,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the subscription instance.
+       * </pre>
+       *
        * <code>string description = 14;</code>
        * @return The bytes for description.
        */
@@ -2000,6 +2428,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the subscription instance.
+       * </pre>
+       *
        * <code>string description = 14;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -2015,6 +2447,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the subscription instance.
+       * </pre>
+       *
        * <code>string description = 14;</code>
        * @return This builder for chaining.
        */
@@ -2025,6 +2461,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the subscription instance.
+       * </pre>
+       *
        * <code>string description = 14;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -2045,6 +2485,10 @@ public final class InstanceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
       /**
+       * <pre>
+       * Timestamp of the start of the subscription.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 7;</code>
        * @return Whether the startTime field is set.
        */
@@ -2052,6 +2496,10 @@ public final class InstanceOuterClass {
         return startTimeBuilder_ != null || startTime_ != null;
       }
       /**
+       * <pre>
+       * Timestamp of the start of the subscription.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 7;</code>
        * @return The startTime.
        */
@@ -2063,6 +2511,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp of the start of the subscription.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 7;</code>
        */
       public Builder setStartTime(com.google.protobuf.Timestamp value) {
@@ -2079,6 +2531,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the start of the subscription.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 7;</code>
        */
       public Builder setStartTime(
@@ -2093,6 +2549,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the start of the subscription.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 7;</code>
        */
       public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
@@ -2111,6 +2571,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the start of the subscription.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 7;</code>
        */
       public Builder clearStartTime() {
@@ -2125,6 +2589,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the start of the subscription.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 7;</code>
        */
       public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
@@ -2133,6 +2601,10 @@ public final class InstanceOuterClass {
         return getStartTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Timestamp of the start of the subscription.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 7;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
@@ -2144,6 +2616,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp of the start of the subscription.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2164,6 +2640,10 @@ public final class InstanceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
       /**
+       * <pre>
+       * Timestamp of the end of the subscription.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp end_time = 8;</code>
        * @return Whether the endTime field is set.
        */
@@ -2171,6 +2651,10 @@ public final class InstanceOuterClass {
         return endTimeBuilder_ != null || endTime_ != null;
       }
       /**
+       * <pre>
+       * Timestamp of the end of the subscription.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp end_time = 8;</code>
        * @return The endTime.
        */
@@ -2182,6 +2666,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp of the end of the subscription.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp end_time = 8;</code>
        */
       public Builder setEndTime(com.google.protobuf.Timestamp value) {
@@ -2198,6 +2686,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the end of the subscription.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp end_time = 8;</code>
        */
       public Builder setEndTime(
@@ -2212,6 +2704,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the end of the subscription.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp end_time = 8;</code>
        */
       public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
@@ -2230,6 +2726,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the end of the subscription.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp end_time = 8;</code>
        */
       public Builder clearEndTime() {
@@ -2244,6 +2744,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the end of the subscription.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp end_time = 8;</code>
        */
       public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
@@ -2252,6 +2756,10 @@ public final class InstanceOuterClass {
         return getEndTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Timestamp of the end of the subscription.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp end_time = 8;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
@@ -2263,6 +2771,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp of the end of the subscription.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp end_time = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2283,6 +2795,10 @@ public final class InstanceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 9;</code>
        * @return Whether the createdAt field is set.
        */
@@ -2290,6 +2806,10 @@ public final class InstanceOuterClass {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 9;</code>
        * @return The createdAt.
        */
@@ -2301,6 +2821,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 9;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -2317,6 +2841,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 9;</code>
        */
       public Builder setCreatedAt(
@@ -2331,6 +2859,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 9;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -2349,6 +2881,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 9;</code>
        */
       public Builder clearCreatedAt() {
@@ -2363,6 +2899,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 9;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -2371,6 +2911,10 @@ public final class InstanceOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 9;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -2382,6 +2926,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2402,6 +2950,10 @@ public final class InstanceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 10;</code>
        * @return Whether the updatedAt field is set.
        */
@@ -2409,6 +2961,10 @@ public final class InstanceOuterClass {
         return updatedAtBuilder_ != null || updatedAt_ != null;
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 10;</code>
        * @return The updatedAt.
        */
@@ -2420,6 +2976,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 10;</code>
        */
       public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -2436,6 +2996,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 10;</code>
        */
       public Builder setUpdatedAt(
@@ -2450,6 +3014,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 10;</code>
        */
       public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -2468,6 +3036,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 10;</code>
        */
       public Builder clearUpdatedAt() {
@@ -2482,6 +3054,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 10;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
@@ -2490,6 +3066,10 @@ public final class InstanceOuterClass {
         return getUpdatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 10;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
@@ -2501,6 +3081,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2519,6 +3103,10 @@ public final class InstanceOuterClass {
 
       private int state_ = 0;
       /**
+       * <pre>
+       * Subscription state.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Instance.State state = 11;</code>
        * @return The enum numeric value on the wire for state.
        */
@@ -2526,6 +3114,10 @@ public final class InstanceOuterClass {
         return state_;
       }
       /**
+       * <pre>
+       * Subscription state.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Instance.State state = 11;</code>
        * @param value The enum numeric value on the wire for state to set.
        * @return This builder for chaining.
@@ -2537,6 +3129,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Subscription state.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Instance.State state = 11;</code>
        * @return The state.
        */
@@ -2547,6 +3143,10 @@ public final class InstanceOuterClass {
         return result == null ? yandex.cloud.api.marketplace.licensemanager.v1.InstanceOuterClass.Instance.State.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Subscription state.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Instance.State state = 11;</code>
        * @param value The state to set.
        * @return This builder for chaining.
@@ -2561,6 +3161,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Subscription state.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Instance.State state = 11;</code>
        * @return This builder for chaining.
        */
@@ -2584,6 +3188,10 @@ public final class InstanceOuterClass {
           yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock, yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.Builder, yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.LockOrBuilder> locksBuilder_;
 
       /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
        */
       public java.util.List<yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock> getLocksList() {
@@ -2594,6 +3202,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
        */
       public int getLocksCount() {
@@ -2604,6 +3216,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
        */
       public yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock getLocks(int index) {
@@ -2614,6 +3230,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
        */
       public Builder setLocks(
@@ -2631,6 +3251,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
        */
       public Builder setLocks(
@@ -2645,6 +3269,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
        */
       public Builder addLocks(yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock value) {
@@ -2661,6 +3289,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
        */
       public Builder addLocks(
@@ -2678,6 +3310,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
        */
       public Builder addLocks(
@@ -2692,6 +3328,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
        */
       public Builder addLocks(
@@ -2706,6 +3346,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
        */
       public Builder addAllLocks(
@@ -2721,6 +3365,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
        */
       public Builder clearLocks() {
@@ -2734,6 +3382,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
        */
       public Builder removeLocks(int index) {
@@ -2747,6 +3399,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
        */
       public yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.Builder getLocksBuilder(
@@ -2754,6 +3410,10 @@ public final class InstanceOuterClass {
         return getLocksFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
        */
       public yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.LockOrBuilder getLocksOrBuilder(
@@ -2764,6 +3424,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
        */
       public java.util.List<? extends yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.LockOrBuilder> 
@@ -2775,6 +3439,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
        */
       public yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.Builder addLocksBuilder() {
@@ -2782,6 +3450,10 @@ public final class InstanceOuterClass {
             yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
        */
       public yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.Builder addLocksBuilder(
@@ -2790,6 +3462,10 @@ public final class InstanceOuterClass {
             index, yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 12;</code>
        */
       public java.util.List<yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.Builder> 
@@ -2815,6 +3491,10 @@ public final class InstanceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.marketplace.licensemanager.v1.TemplateOuterClass.Template, yandex.cloud.api.marketplace.licensemanager.v1.TemplateOuterClass.Template.Builder, yandex.cloud.api.marketplace.licensemanager.v1.TemplateOuterClass.TemplateOrBuilder> licenseTemplateBuilder_;
       /**
+       * <pre>
+       * Subscription template.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Template license_template = 13;</code>
        * @return Whether the licenseTemplate field is set.
        */
@@ -2822,6 +3502,10 @@ public final class InstanceOuterClass {
         return licenseTemplateBuilder_ != null || licenseTemplate_ != null;
       }
       /**
+       * <pre>
+       * Subscription template.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Template license_template = 13;</code>
        * @return The licenseTemplate.
        */
@@ -2833,6 +3517,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Subscription template.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Template license_template = 13;</code>
        */
       public Builder setLicenseTemplate(yandex.cloud.api.marketplace.licensemanager.v1.TemplateOuterClass.Template value) {
@@ -2849,6 +3537,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Subscription template.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Template license_template = 13;</code>
        */
       public Builder setLicenseTemplate(
@@ -2863,6 +3555,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Subscription template.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Template license_template = 13;</code>
        */
       public Builder mergeLicenseTemplate(yandex.cloud.api.marketplace.licensemanager.v1.TemplateOuterClass.Template value) {
@@ -2881,6 +3577,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Subscription template.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Template license_template = 13;</code>
        */
       public Builder clearLicenseTemplate() {
@@ -2895,6 +3595,10 @@ public final class InstanceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Subscription template.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Template license_template = 13;</code>
        */
       public yandex.cloud.api.marketplace.licensemanager.v1.TemplateOuterClass.Template.Builder getLicenseTemplateBuilder() {
@@ -2903,6 +3607,10 @@ public final class InstanceOuterClass {
         return getLicenseTemplateFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Subscription template.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Template license_template = 13;</code>
        */
       public yandex.cloud.api.marketplace.licensemanager.v1.TemplateOuterClass.TemplateOrBuilder getLicenseTemplateOrBuilder() {
@@ -2914,6 +3622,10 @@ public final class InstanceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Subscription template.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Template license_template = 13;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

@@ -19,11 +19,19 @@ public final class LockServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string lock_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The lockId.
      */
     java.lang.String getLockId();
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string lock_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for lockId.
      */
@@ -117,6 +125,10 @@ public final class LockServiceOuterClass {
     public static final int LOCK_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object lockId_;
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string lock_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The lockId.
      */
@@ -134,6 +146,10 @@ public final class LockServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string lock_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for lockId.
      */
@@ -456,6 +472,10 @@ public final class LockServiceOuterClass {
 
       private java.lang.Object lockId_ = "";
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The lockId.
        */
@@ -472,6 +492,10 @@ public final class LockServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for lockId.
        */
@@ -489,6 +513,10 @@ public final class LockServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The lockId to set.
        * @return This builder for chaining.
@@ -504,6 +532,10 @@ public final class LockServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -514,6 +546,10 @@ public final class LockServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for lockId to set.
        * @return This builder for chaining.
@@ -588,7 +624,7 @@ public final class LockServiceOuterClass {
 
     /**
      * <pre>
-     * license
+     * ID of the subscription instance.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -597,7 +633,7 @@ public final class LockServiceOuterClass {
     java.lang.String getInstanceId();
     /**
      * <pre>
-     * license
+     * ID of the subscription instance.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -607,11 +643,19 @@ public final class LockServiceOuterClass {
         getInstanceIdBytes();
 
     /**
+     * <pre>
+     * ID of the resource to which the subscription will be locked.
+     * </pre>
+     *
      * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The resourceId.
      */
     java.lang.String getResourceId();
     /**
+     * <pre>
+     * ID of the resource to which the subscription will be locked.
+     * </pre>
+     *
      * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for resourceId.
      */
@@ -713,7 +757,7 @@ public final class LockServiceOuterClass {
     private volatile java.lang.Object instanceId_;
     /**
      * <pre>
-     * license
+     * ID of the subscription instance.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -734,7 +778,7 @@ public final class LockServiceOuterClass {
     }
     /**
      * <pre>
-     * license
+     * ID of the subscription instance.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -758,6 +802,10 @@ public final class LockServiceOuterClass {
     public static final int RESOURCE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object resourceId_;
     /**
+     * <pre>
+     * ID of the resource to which the subscription will be locked.
+     * </pre>
+     *
      * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The resourceId.
      */
@@ -775,6 +823,10 @@ public final class LockServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the resource to which the subscription will be locked.
+     * </pre>
+     *
      * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for resourceId.
      */
@@ -1115,7 +1167,7 @@ public final class LockServiceOuterClass {
       private java.lang.Object instanceId_ = "";
       /**
        * <pre>
-       * license
+       * ID of the subscription instance.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -1135,7 +1187,7 @@ public final class LockServiceOuterClass {
       }
       /**
        * <pre>
-       * license
+       * ID of the subscription instance.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -1156,7 +1208,7 @@ public final class LockServiceOuterClass {
       }
       /**
        * <pre>
-       * license
+       * ID of the subscription instance.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -1175,7 +1227,7 @@ public final class LockServiceOuterClass {
       }
       /**
        * <pre>
-       * license
+       * ID of the subscription instance.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -1189,7 +1241,7 @@ public final class LockServiceOuterClass {
       }
       /**
        * <pre>
-       * license
+       * ID of the subscription instance.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -1210,6 +1262,10 @@ public final class LockServiceOuterClass {
 
       private java.lang.Object resourceId_ = "";
       /**
+       * <pre>
+       * ID of the resource to which the subscription will be locked.
+       * </pre>
+       *
        * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The resourceId.
        */
@@ -1226,6 +1282,10 @@ public final class LockServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the resource to which the subscription will be locked.
+       * </pre>
+       *
        * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for resourceId.
        */
@@ -1243,6 +1303,10 @@ public final class LockServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the resource to which the subscription will be locked.
+       * </pre>
+       *
        * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The resourceId to set.
        * @return This builder for chaining.
@@ -1258,6 +1322,10 @@ public final class LockServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the resource to which the subscription will be locked.
+       * </pre>
+       *
        * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -1268,6 +1336,10 @@ public final class LockServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the resource to which the subscription will be locked.
+       * </pre>
+       *
        * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for resourceId to set.
        * @return This builder for chaining.
@@ -1342,7 +1414,7 @@ public final class LockServiceOuterClass {
 
     /**
      * <pre>
-     * license
+     * ID of the subscription instance.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -1351,7 +1423,7 @@ public final class LockServiceOuterClass {
     java.lang.String getInstanceId();
     /**
      * <pre>
-     * license
+     * ID of the subscription instance.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -1361,11 +1433,19 @@ public final class LockServiceOuterClass {
         getInstanceIdBytes();
 
     /**
+     * <pre>
+     * ID of the resource to which the subscription will be locked.
+     * </pre>
+     *
      * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The resourceId.
      */
     java.lang.String getResourceId();
     /**
+     * <pre>
+     * ID of the resource to which the subscription will be locked.
+     * </pre>
+     *
      * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for resourceId.
      */
@@ -1467,7 +1547,7 @@ public final class LockServiceOuterClass {
     private volatile java.lang.Object instanceId_;
     /**
      * <pre>
-     * license
+     * ID of the subscription instance.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -1488,7 +1568,7 @@ public final class LockServiceOuterClass {
     }
     /**
      * <pre>
-     * license
+     * ID of the subscription instance.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -1512,6 +1592,10 @@ public final class LockServiceOuterClass {
     public static final int RESOURCE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object resourceId_;
     /**
+     * <pre>
+     * ID of the resource to which the subscription will be locked.
+     * </pre>
+     *
      * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The resourceId.
      */
@@ -1529,6 +1613,10 @@ public final class LockServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the resource to which the subscription will be locked.
+     * </pre>
+     *
      * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for resourceId.
      */
@@ -1869,7 +1957,7 @@ public final class LockServiceOuterClass {
       private java.lang.Object instanceId_ = "";
       /**
        * <pre>
-       * license
+       * ID of the subscription instance.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -1889,7 +1977,7 @@ public final class LockServiceOuterClass {
       }
       /**
        * <pre>
-       * license
+       * ID of the subscription instance.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -1910,7 +1998,7 @@ public final class LockServiceOuterClass {
       }
       /**
        * <pre>
-       * license
+       * ID of the subscription instance.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -1929,7 +2017,7 @@ public final class LockServiceOuterClass {
       }
       /**
        * <pre>
-       * license
+       * ID of the subscription instance.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -1943,7 +2031,7 @@ public final class LockServiceOuterClass {
       }
       /**
        * <pre>
-       * license
+       * ID of the subscription instance.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -1964,6 +2052,10 @@ public final class LockServiceOuterClass {
 
       private java.lang.Object resourceId_ = "";
       /**
+       * <pre>
+       * ID of the resource to which the subscription will be locked.
+       * </pre>
+       *
        * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The resourceId.
        */
@@ -1980,6 +2072,10 @@ public final class LockServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the resource to which the subscription will be locked.
+       * </pre>
+       *
        * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for resourceId.
        */
@@ -1997,6 +2093,10 @@ public final class LockServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the resource to which the subscription will be locked.
+       * </pre>
+       *
        * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The resourceId to set.
        * @return This builder for chaining.
@@ -2012,6 +2112,10 @@ public final class LockServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the resource to which the subscription will be locked.
+       * </pre>
+       *
        * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -2022,6 +2126,10 @@ public final class LockServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the resource to which the subscription will be locked.
+       * </pre>
+       *
        * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for resourceId to set.
        * @return This builder for chaining.
@@ -2095,11 +2203,19 @@ public final class LockServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string lock_id = 1;</code>
      * @return The lockId.
      */
     java.lang.String getLockId();
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string lock_id = 1;</code>
      * @return The bytes for lockId.
      */
@@ -2193,6 +2309,10 @@ public final class LockServiceOuterClass {
     public static final int LOCK_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object lockId_;
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string lock_id = 1;</code>
      * @return The lockId.
      */
@@ -2210,6 +2330,10 @@ public final class LockServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string lock_id = 1;</code>
      * @return The bytes for lockId.
      */
@@ -2532,6 +2656,10 @@ public final class LockServiceOuterClass {
 
       private java.lang.Object lockId_ = "";
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1;</code>
        * @return The lockId.
        */
@@ -2548,6 +2676,10 @@ public final class LockServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1;</code>
        * @return The bytes for lockId.
        */
@@ -2565,6 +2697,10 @@ public final class LockServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1;</code>
        * @param value The lockId to set.
        * @return This builder for chaining.
@@ -2580,6 +2716,10 @@ public final class LockServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -2590,6 +2730,10 @@ public final class LockServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1;</code>
        * @param value The bytes for lockId to set.
        * @return This builder for chaining.
@@ -2663,11 +2807,19 @@ public final class LockServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string lock_id = 1;</code>
      * @return The lockId.
      */
     java.lang.String getLockId();
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string lock_id = 1;</code>
      * @return The bytes for lockId.
      */
@@ -2761,6 +2913,10 @@ public final class LockServiceOuterClass {
     public static final int LOCK_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object lockId_;
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string lock_id = 1;</code>
      * @return The lockId.
      */
@@ -2778,6 +2934,10 @@ public final class LockServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string lock_id = 1;</code>
      * @return The bytes for lockId.
      */
@@ -3100,6 +3260,10 @@ public final class LockServiceOuterClass {
 
       private java.lang.Object lockId_ = "";
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1;</code>
        * @return The lockId.
        */
@@ -3116,6 +3280,10 @@ public final class LockServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1;</code>
        * @return The bytes for lockId.
        */
@@ -3133,6 +3301,10 @@ public final class LockServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1;</code>
        * @param value The lockId to set.
        * @return This builder for chaining.
@@ -3148,6 +3320,10 @@ public final class LockServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -3158,6 +3334,10 @@ public final class LockServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1;</code>
        * @param value The bytes for lockId to set.
        * @return This builder for chaining.
@@ -3231,11 +3411,19 @@ public final class LockServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string lock_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The lockId.
      */
     java.lang.String getLockId();
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string lock_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for lockId.
      */
@@ -3329,6 +3517,10 @@ public final class LockServiceOuterClass {
     public static final int LOCK_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object lockId_;
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string lock_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The lockId.
      */
@@ -3346,6 +3538,10 @@ public final class LockServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string lock_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for lockId.
      */
@@ -3668,6 +3864,10 @@ public final class LockServiceOuterClass {
 
       private java.lang.Object lockId_ = "";
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The lockId.
        */
@@ -3684,6 +3884,10 @@ public final class LockServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for lockId.
        */
@@ -3701,6 +3905,10 @@ public final class LockServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The lockId to set.
        * @return This builder for chaining.
@@ -3716,6 +3924,10 @@ public final class LockServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -3726,6 +3938,10 @@ public final class LockServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for lockId to set.
        * @return This builder for chaining.
@@ -3799,11 +4015,19 @@ public final class LockServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string lock_id = 1;</code>
      * @return The lockId.
      */
     java.lang.String getLockId();
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string lock_id = 1;</code>
      * @return The bytes for lockId.
      */
@@ -3897,6 +4121,10 @@ public final class LockServiceOuterClass {
     public static final int LOCK_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object lockId_;
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string lock_id = 1;</code>
      * @return The lockId.
      */
@@ -3914,6 +4142,10 @@ public final class LockServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string lock_id = 1;</code>
      * @return The bytes for lockId.
      */
@@ -4236,6 +4468,10 @@ public final class LockServiceOuterClass {
 
       private java.lang.Object lockId_ = "";
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1;</code>
        * @return The lockId.
        */
@@ -4252,6 +4488,10 @@ public final class LockServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1;</code>
        * @return The bytes for lockId.
        */
@@ -4269,6 +4509,10 @@ public final class LockServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1;</code>
        * @param value The lockId to set.
        * @return This builder for chaining.
@@ -4284,6 +4528,10 @@ public final class LockServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -4294,6 +4542,10 @@ public final class LockServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string lock_id = 1;</code>
        * @param value The bytes for lockId to set.
        * @return This builder for chaining.
@@ -4368,7 +4620,7 @@ public final class LockServiceOuterClass {
 
     /**
      * <pre>
-     * license
+     * ID of the subscription instance.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -4377,7 +4629,7 @@ public final class LockServiceOuterClass {
     java.lang.String getInstanceId();
     /**
      * <pre>
-     * license
+     * ID of the subscription instance.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -4387,11 +4639,19 @@ public final class LockServiceOuterClass {
         getInstanceIdBytes();
 
     /**
+     * <pre>
+     * ID of the resource to which the subscription will be locked.
+     * </pre>
+     *
      * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The resourceId.
      */
     java.lang.String getResourceId();
     /**
+     * <pre>
+     * ID of the resource to which the subscription will be locked.
+     * </pre>
+     *
      * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for resourceId.
      */
@@ -4493,7 +4753,7 @@ public final class LockServiceOuterClass {
     private volatile java.lang.Object instanceId_;
     /**
      * <pre>
-     * license
+     * ID of the subscription instance.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -4514,7 +4774,7 @@ public final class LockServiceOuterClass {
     }
     /**
      * <pre>
-     * license
+     * ID of the subscription instance.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -4538,6 +4798,10 @@ public final class LockServiceOuterClass {
     public static final int RESOURCE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object resourceId_;
     /**
+     * <pre>
+     * ID of the resource to which the subscription will be locked.
+     * </pre>
+     *
      * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The resourceId.
      */
@@ -4555,6 +4819,10 @@ public final class LockServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the resource to which the subscription will be locked.
+     * </pre>
+     *
      * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for resourceId.
      */
@@ -4895,7 +5163,7 @@ public final class LockServiceOuterClass {
       private java.lang.Object instanceId_ = "";
       /**
        * <pre>
-       * license
+       * ID of the subscription instance.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -4915,7 +5183,7 @@ public final class LockServiceOuterClass {
       }
       /**
        * <pre>
-       * license
+       * ID of the subscription instance.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -4936,7 +5204,7 @@ public final class LockServiceOuterClass {
       }
       /**
        * <pre>
-       * license
+       * ID of the subscription instance.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -4955,7 +5223,7 @@ public final class LockServiceOuterClass {
       }
       /**
        * <pre>
-       * license
+       * ID of the subscription instance.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -4969,7 +5237,7 @@ public final class LockServiceOuterClass {
       }
       /**
        * <pre>
-       * license
+       * ID of the subscription instance.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -4990,6 +5258,10 @@ public final class LockServiceOuterClass {
 
       private java.lang.Object resourceId_ = "";
       /**
+       * <pre>
+       * ID of the resource to which the subscription will be locked.
+       * </pre>
+       *
        * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The resourceId.
        */
@@ -5006,6 +5278,10 @@ public final class LockServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the resource to which the subscription will be locked.
+       * </pre>
+       *
        * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for resourceId.
        */
@@ -5023,6 +5299,10 @@ public final class LockServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the resource to which the subscription will be locked.
+       * </pre>
+       *
        * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The resourceId to set.
        * @return This builder for chaining.
@@ -5038,6 +5318,10 @@ public final class LockServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the resource to which the subscription will be locked.
+       * </pre>
+       *
        * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -5048,6 +5332,10 @@ public final class LockServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the resource to which the subscription will be locked.
+       * </pre>
+       *
        * <code>string resource_id = 2 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for resourceId to set.
        * @return This builder for chaining.

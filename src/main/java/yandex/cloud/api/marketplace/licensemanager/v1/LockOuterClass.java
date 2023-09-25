@@ -19,11 +19,19 @@ public final class LockOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -31,11 +39,19 @@ public final class LockOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * ID of the subscription instance.
+     * </pre>
+     *
      * <code>string instance_id = 2;</code>
      * @return The instanceId.
      */
     java.lang.String getInstanceId();
     /**
+     * <pre>
+     * ID of the subscription instance.
+     * </pre>
+     *
      * <code>string instance_id = 2;</code>
      * @return The bytes for instanceId.
      */
@@ -43,11 +59,19 @@ public final class LockOuterClass {
         getInstanceIdBytes();
 
     /**
+     * <pre>
+     * ID of the resource.
+     * </pre>
+     *
      * <code>string resource_id = 3;</code>
      * @return The resourceId.
      */
     java.lang.String getResourceId();
     /**
+     * <pre>
+     * ID of the resource.
+     * </pre>
+     *
      * <code>string resource_id = 3;</code>
      * @return The bytes for resourceId.
      */
@@ -55,71 +79,127 @@ public final class LockOuterClass {
         getResourceIdBytes();
 
     /**
+     * <pre>
+     * Timestamp of the start of the subscription lock.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 4;</code>
      * @return Whether the startTime field is set.
      */
     boolean hasStartTime();
     /**
+     * <pre>
+     * Timestamp of the start of the subscription lock.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 4;</code>
      * @return The startTime.
      */
     com.google.protobuf.Timestamp getStartTime();
     /**
+     * <pre>
+     * Timestamp of the start of the subscription lock.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 4;</code>
      */
     com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
 
     /**
+     * <pre>
+     * Timestamp of the end of the subscription lock.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp end_time = 5;</code>
      * @return Whether the endTime field is set.
      */
     boolean hasEndTime();
     /**
+     * <pre>
+     * Timestamp of the end of the subscription lock.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp end_time = 5;</code>
      * @return The endTime.
      */
     com.google.protobuf.Timestamp getEndTime();
     /**
+     * <pre>
+     * Timestamp of the end of the subscription lock.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp end_time = 5;</code>
      */
     com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
 
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 7;</code>
      * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
+     * <pre>
+     * Update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 7;</code>
      * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
+     * <pre>
+     * Update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 7;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Subscription lock state.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.licensemanager.v1.Lock.State state = 8;</code>
      * @return The enum numeric value on the wire for state.
      */
     int getStateValue();
     /**
+     * <pre>
+     * Subscription lock state.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.licensemanager.v1.Lock.State state = 8;</code>
      * @return The state.
      */
@@ -292,14 +372,26 @@ public final class LockOuterClass {
        */
       STATE_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Subscription unlocked.
+       * </pre>
+       *
        * <code>UNLOCKED = 1;</code>
        */
       UNLOCKED(1),
       /**
+       * <pre>
+       * Subscription locked to the resource.
+       * </pre>
+       *
        * <code>LOCKED = 2;</code>
        */
       LOCKED(2),
       /**
+       * <pre>
+       * Subscription lock deleted.
+       * </pre>
+       *
        * <code>DELETED = 3;</code>
        */
       DELETED(3),
@@ -311,14 +403,26 @@ public final class LockOuterClass {
        */
       public static final int STATE_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Subscription unlocked.
+       * </pre>
+       *
        * <code>UNLOCKED = 1;</code>
        */
       public static final int UNLOCKED_VALUE = 1;
       /**
+       * <pre>
+       * Subscription locked to the resource.
+       * </pre>
+       *
        * <code>LOCKED = 2;</code>
        */
       public static final int LOCKED_VALUE = 2;
       /**
+       * <pre>
+       * Subscription lock deleted.
+       * </pre>
+       *
        * <code>DELETED = 3;</code>
        */
       public static final int DELETED_VALUE = 3;
@@ -411,6 +515,10 @@ public final class LockOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -428,6 +536,10 @@ public final class LockOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the subscription lock.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -449,6 +561,10 @@ public final class LockOuterClass {
     public static final int INSTANCE_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object instanceId_;
     /**
+     * <pre>
+     * ID of the subscription instance.
+     * </pre>
+     *
      * <code>string instance_id = 2;</code>
      * @return The instanceId.
      */
@@ -466,6 +582,10 @@ public final class LockOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the subscription instance.
+     * </pre>
+     *
      * <code>string instance_id = 2;</code>
      * @return The bytes for instanceId.
      */
@@ -487,6 +607,10 @@ public final class LockOuterClass {
     public static final int RESOURCE_ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object resourceId_;
     /**
+     * <pre>
+     * ID of the resource.
+     * </pre>
+     *
      * <code>string resource_id = 3;</code>
      * @return The resourceId.
      */
@@ -504,6 +628,10 @@ public final class LockOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the resource.
+     * </pre>
+     *
      * <code>string resource_id = 3;</code>
      * @return The bytes for resourceId.
      */
@@ -525,6 +653,10 @@ public final class LockOuterClass {
     public static final int START_TIME_FIELD_NUMBER = 4;
     private com.google.protobuf.Timestamp startTime_;
     /**
+     * <pre>
+     * Timestamp of the start of the subscription lock.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 4;</code>
      * @return Whether the startTime field is set.
      */
@@ -533,6 +665,10 @@ public final class LockOuterClass {
       return startTime_ != null;
     }
     /**
+     * <pre>
+     * Timestamp of the start of the subscription lock.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 4;</code>
      * @return The startTime.
      */
@@ -541,6 +677,10 @@ public final class LockOuterClass {
       return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
     }
     /**
+     * <pre>
+     * Timestamp of the start of the subscription lock.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp start_time = 4;</code>
      */
     @java.lang.Override
@@ -551,6 +691,10 @@ public final class LockOuterClass {
     public static final int END_TIME_FIELD_NUMBER = 5;
     private com.google.protobuf.Timestamp endTime_;
     /**
+     * <pre>
+     * Timestamp of the end of the subscription lock.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp end_time = 5;</code>
      * @return Whether the endTime field is set.
      */
@@ -559,6 +703,10 @@ public final class LockOuterClass {
       return endTime_ != null;
     }
     /**
+     * <pre>
+     * Timestamp of the end of the subscription lock.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp end_time = 5;</code>
      * @return The endTime.
      */
@@ -567,6 +715,10 @@ public final class LockOuterClass {
       return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
     }
     /**
+     * <pre>
+     * Timestamp of the end of the subscription lock.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp end_time = 5;</code>
      */
     @java.lang.Override
@@ -577,6 +729,10 @@ public final class LockOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 6;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      * @return Whether the createdAt field is set.
      */
@@ -585,6 +741,10 @@ public final class LockOuterClass {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      * @return The createdAt.
      */
@@ -593,6 +753,10 @@ public final class LockOuterClass {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 6;</code>
      */
     @java.lang.Override
@@ -603,6 +767,10 @@ public final class LockOuterClass {
     public static final int UPDATED_AT_FIELD_NUMBER = 7;
     private com.google.protobuf.Timestamp updatedAt_;
     /**
+     * <pre>
+     * Update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 7;</code>
      * @return Whether the updatedAt field is set.
      */
@@ -611,6 +779,10 @@ public final class LockOuterClass {
       return updatedAt_ != null;
     }
     /**
+     * <pre>
+     * Update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 7;</code>
      * @return The updatedAt.
      */
@@ -619,6 +791,10 @@ public final class LockOuterClass {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
     /**
+     * <pre>
+     * Update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 7;</code>
      */
     @java.lang.Override
@@ -629,6 +805,10 @@ public final class LockOuterClass {
     public static final int STATE_FIELD_NUMBER = 8;
     private int state_;
     /**
+     * <pre>
+     * Subscription lock state.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.licensemanager.v1.Lock.State state = 8;</code>
      * @return The enum numeric value on the wire for state.
      */
@@ -636,6 +816,10 @@ public final class LockOuterClass {
       return state_;
     }
     /**
+     * <pre>
+     * Subscription lock state.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.licensemanager.v1.Lock.State state = 8;</code>
      * @return The state.
      */
@@ -1119,6 +1303,10 @@ public final class LockOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -1135,6 +1323,10 @@ public final class LockOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -1152,6 +1344,10 @@ public final class LockOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -1167,6 +1363,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1177,6 +1377,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription lock.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -1195,6 +1399,10 @@ public final class LockOuterClass {
 
       private java.lang.Object instanceId_ = "";
       /**
+       * <pre>
+       * ID of the subscription instance.
+       * </pre>
+       *
        * <code>string instance_id = 2;</code>
        * @return The instanceId.
        */
@@ -1211,6 +1419,10 @@ public final class LockOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription instance.
+       * </pre>
+       *
        * <code>string instance_id = 2;</code>
        * @return The bytes for instanceId.
        */
@@ -1228,6 +1440,10 @@ public final class LockOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription instance.
+       * </pre>
+       *
        * <code>string instance_id = 2;</code>
        * @param value The instanceId to set.
        * @return This builder for chaining.
@@ -1243,6 +1459,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription instance.
+       * </pre>
+       *
        * <code>string instance_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -1253,6 +1473,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription instance.
+       * </pre>
+       *
        * <code>string instance_id = 2;</code>
        * @param value The bytes for instanceId to set.
        * @return This builder for chaining.
@@ -1271,6 +1495,10 @@ public final class LockOuterClass {
 
       private java.lang.Object resourceId_ = "";
       /**
+       * <pre>
+       * ID of the resource.
+       * </pre>
+       *
        * <code>string resource_id = 3;</code>
        * @return The resourceId.
        */
@@ -1287,6 +1515,10 @@ public final class LockOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the resource.
+       * </pre>
+       *
        * <code>string resource_id = 3;</code>
        * @return The bytes for resourceId.
        */
@@ -1304,6 +1536,10 @@ public final class LockOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the resource.
+       * </pre>
+       *
        * <code>string resource_id = 3;</code>
        * @param value The resourceId to set.
        * @return This builder for chaining.
@@ -1319,6 +1555,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the resource.
+       * </pre>
+       *
        * <code>string resource_id = 3;</code>
        * @return This builder for chaining.
        */
@@ -1329,6 +1569,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the resource.
+       * </pre>
+       *
        * <code>string resource_id = 3;</code>
        * @param value The bytes for resourceId to set.
        * @return This builder for chaining.
@@ -1349,6 +1593,10 @@ public final class LockOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
       /**
+       * <pre>
+       * Timestamp of the start of the subscription lock.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 4;</code>
        * @return Whether the startTime field is set.
        */
@@ -1356,6 +1604,10 @@ public final class LockOuterClass {
         return startTimeBuilder_ != null || startTime_ != null;
       }
       /**
+       * <pre>
+       * Timestamp of the start of the subscription lock.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 4;</code>
        * @return The startTime.
        */
@@ -1367,6 +1619,10 @@ public final class LockOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp of the start of the subscription lock.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 4;</code>
        */
       public Builder setStartTime(com.google.protobuf.Timestamp value) {
@@ -1383,6 +1639,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the start of the subscription lock.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 4;</code>
        */
       public Builder setStartTime(
@@ -1397,6 +1657,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the start of the subscription lock.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 4;</code>
        */
       public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
@@ -1415,6 +1679,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the start of the subscription lock.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 4;</code>
        */
       public Builder clearStartTime() {
@@ -1429,6 +1697,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the start of the subscription lock.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 4;</code>
        */
       public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
@@ -1437,6 +1709,10 @@ public final class LockOuterClass {
         return getStartTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Timestamp of the start of the subscription lock.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 4;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
@@ -1448,6 +1724,10 @@ public final class LockOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp of the start of the subscription lock.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp start_time = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1468,6 +1748,10 @@ public final class LockOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
       /**
+       * <pre>
+       * Timestamp of the end of the subscription lock.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp end_time = 5;</code>
        * @return Whether the endTime field is set.
        */
@@ -1475,6 +1759,10 @@ public final class LockOuterClass {
         return endTimeBuilder_ != null || endTime_ != null;
       }
       /**
+       * <pre>
+       * Timestamp of the end of the subscription lock.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp end_time = 5;</code>
        * @return The endTime.
        */
@@ -1486,6 +1774,10 @@ public final class LockOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp of the end of the subscription lock.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp end_time = 5;</code>
        */
       public Builder setEndTime(com.google.protobuf.Timestamp value) {
@@ -1502,6 +1794,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the end of the subscription lock.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp end_time = 5;</code>
        */
       public Builder setEndTime(
@@ -1516,6 +1812,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the end of the subscription lock.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp end_time = 5;</code>
        */
       public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
@@ -1534,6 +1834,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the end of the subscription lock.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp end_time = 5;</code>
        */
       public Builder clearEndTime() {
@@ -1548,6 +1852,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Timestamp of the end of the subscription lock.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp end_time = 5;</code>
        */
       public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
@@ -1556,6 +1864,10 @@ public final class LockOuterClass {
         return getEndTimeFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Timestamp of the end of the subscription lock.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp end_time = 5;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
@@ -1567,6 +1879,10 @@ public final class LockOuterClass {
         }
       }
       /**
+       * <pre>
+       * Timestamp of the end of the subscription lock.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp end_time = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1587,6 +1903,10 @@ public final class LockOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        * @return Whether the createdAt field is set.
        */
@@ -1594,6 +1914,10 @@ public final class LockOuterClass {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        * @return The createdAt.
        */
@@ -1605,6 +1929,10 @@ public final class LockOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1621,6 +1949,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public Builder setCreatedAt(
@@ -1635,6 +1967,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1653,6 +1989,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public Builder clearCreatedAt() {
@@ -1667,6 +2007,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -1675,6 +2019,10 @@ public final class LockOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -1686,6 +2034,10 @@ public final class LockOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1706,6 +2058,10 @@ public final class LockOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        * @return Whether the updatedAt field is set.
        */
@@ -1713,6 +2069,10 @@ public final class LockOuterClass {
         return updatedAtBuilder_ != null || updatedAt_ != null;
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        * @return The updatedAt.
        */
@@ -1724,6 +2084,10 @@ public final class LockOuterClass {
         }
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        */
       public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -1740,6 +2104,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        */
       public Builder setUpdatedAt(
@@ -1754,6 +2122,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        */
       public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -1772,6 +2144,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        */
       public Builder clearUpdatedAt() {
@@ -1786,6 +2162,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
@@ -1794,6 +2174,10 @@ public final class LockOuterClass {
         return getUpdatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
@@ -1805,6 +2189,10 @@ public final class LockOuterClass {
         }
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1823,6 +2211,10 @@ public final class LockOuterClass {
 
       private int state_ = 0;
       /**
+       * <pre>
+       * Subscription lock state.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Lock.State state = 8;</code>
        * @return The enum numeric value on the wire for state.
        */
@@ -1830,6 +2222,10 @@ public final class LockOuterClass {
         return state_;
       }
       /**
+       * <pre>
+       * Subscription lock state.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Lock.State state = 8;</code>
        * @param value The enum numeric value on the wire for state to set.
        * @return This builder for chaining.
@@ -1841,6 +2237,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Subscription lock state.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Lock.State state = 8;</code>
        * @return The state.
        */
@@ -1851,6 +2251,10 @@ public final class LockOuterClass {
         return result == null ? yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.State.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Subscription lock state.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Lock.State state = 8;</code>
        * @param value The state to set.
        * @return This builder for chaining.
@@ -1865,6 +2269,10 @@ public final class LockOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Subscription lock state.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Lock.State state = 8;</code>
        * @return This builder for chaining.
        */

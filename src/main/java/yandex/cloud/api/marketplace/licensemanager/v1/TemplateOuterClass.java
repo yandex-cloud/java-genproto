@@ -19,11 +19,19 @@ public final class TemplateOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the subscription template.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the subscription template.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -31,11 +39,19 @@ public final class TemplateOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * Version of the subscription template.
+     * </pre>
+     *
      * <code>string version_id = 2;</code>
      * @return The versionId.
      */
     java.lang.String getVersionId();
     /**
+     * <pre>
+     * Version of the subscription template.
+     * </pre>
+     *
      * <code>string version_id = 2;</code>
      * @return The bytes for versionId.
      */
@@ -43,11 +59,19 @@ public final class TemplateOuterClass {
         getVersionIdBytes();
 
     /**
+     * <pre>
+     * Name of the subscription template.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the subscription template.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -55,11 +79,19 @@ public final class TemplateOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * ID of publisher.
+     * </pre>
+     *
      * <code>string publisher_id = 4;</code>
      * @return The publisherId.
      */
     java.lang.String getPublisherId();
     /**
+     * <pre>
+     * ID of publisher.
+     * </pre>
+     *
      * <code>string publisher_id = 4;</code>
      * @return The bytes for publisherId.
      */
@@ -67,11 +99,19 @@ public final class TemplateOuterClass {
         getPublisherIdBytes();
 
     /**
+     * <pre>
+     * ID of product.
+     * </pre>
+     *
      * <code>string product_id = 5;</code>
      * @return The productId.
      */
     java.lang.String getProductId();
     /**
+     * <pre>
+     * ID of product.
+     * </pre>
+     *
      * <code>string product_id = 5;</code>
      * @return The bytes for productId.
      */
@@ -79,11 +119,19 @@ public final class TemplateOuterClass {
         getProductIdBytes();
 
     /**
+     * <pre>
+     * ID of tariff.
+     * </pre>
+     *
      * <code>string tariff_id = 6;</code>
      * @return The tariffId.
      */
     java.lang.String getTariffId();
     /**
+     * <pre>
+     * ID of tariff.
+     * </pre>
+     *
      * <code>string tariff_id = 6;</code>
      * @return The bytes for tariffId.
      */
@@ -91,11 +139,19 @@ public final class TemplateOuterClass {
         getTariffIdBytes();
 
     /**
+     * <pre>
+     * ID of subscription SKU.
+     * </pre>
+     *
      * <code>string license_sku_id = 7;</code>
      * @return The licenseSkuId.
      */
     java.lang.String getLicenseSkuId();
     /**
+     * <pre>
+     * ID of subscription SKU.
+     * </pre>
+     *
      * <code>string license_sku_id = 7;</code>
      * @return The bytes for licenseSkuId.
      */
@@ -103,11 +159,19 @@ public final class TemplateOuterClass {
         getLicenseSkuIdBytes();
 
     /**
+     * <pre>
+     * Subscription period.
+     * </pre>
+     *
      * <code>string period = 8;</code>
      * @return The period.
      */
     java.lang.String getPeriod();
     /**
+     * <pre>
+     * Subscription period.
+     * </pre>
+     *
      * <code>string period = 8;</code>
      * @return The bytes for period.
      */
@@ -115,41 +179,73 @@ public final class TemplateOuterClass {
         getPeriodBytes();
 
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 9;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 9;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 9;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 10;</code>
      * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
+     * <pre>
+     * Update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 10;</code>
      * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
+     * <pre>
+     * Update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 10;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
 
     /**
+     * <pre>
+     * Subscription template state.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.licensemanager.v1.Template.State state = 11;</code>
      * @return The enum numeric value on the wire for state.
      */
     int getStateValue();
     /**
+     * <pre>
+     * Subscription template state.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.licensemanager.v1.Template.State state = 11;</code>
      * @return The state.
      */
@@ -331,18 +427,34 @@ public final class TemplateOuterClass {
        */
       STATE_UNSPECIFIED(0),
       /**
+       * <pre>
+       * Subscription template created but not active yet.
+       * </pre>
+       *
        * <code>PENDING = 1;</code>
        */
       PENDING(1),
       /**
+       * <pre>
+       * Subscription template is active.
+       * </pre>
+       *
        * <code>ACTIVE = 2;</code>
        */
       ACTIVE(2),
       /**
+       * <pre>
+       * Subscription template deprecated.
+       * </pre>
+       *
        * <code>DEPRECATED = 3;</code>
        */
       DEPRECATED(3),
       /**
+       * <pre>
+       * Subscription template deleted.
+       * </pre>
+       *
        * <code>DELETED = 4;</code>
        */
       DELETED(4),
@@ -354,18 +466,34 @@ public final class TemplateOuterClass {
        */
       public static final int STATE_UNSPECIFIED_VALUE = 0;
       /**
+       * <pre>
+       * Subscription template created but not active yet.
+       * </pre>
+       *
        * <code>PENDING = 1;</code>
        */
       public static final int PENDING_VALUE = 1;
       /**
+       * <pre>
+       * Subscription template is active.
+       * </pre>
+       *
        * <code>ACTIVE = 2;</code>
        */
       public static final int ACTIVE_VALUE = 2;
       /**
+       * <pre>
+       * Subscription template deprecated.
+       * </pre>
+       *
        * <code>DEPRECATED = 3;</code>
        */
       public static final int DEPRECATED_VALUE = 3;
       /**
+       * <pre>
+       * Subscription template deleted.
+       * </pre>
+       *
        * <code>DELETED = 4;</code>
        */
       public static final int DELETED_VALUE = 4;
@@ -459,6 +587,10 @@ public final class TemplateOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the subscription template.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -476,6 +608,10 @@ public final class TemplateOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the subscription template.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -497,6 +633,10 @@ public final class TemplateOuterClass {
     public static final int VERSION_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object versionId_;
     /**
+     * <pre>
+     * Version of the subscription template.
+     * </pre>
+     *
      * <code>string version_id = 2;</code>
      * @return The versionId.
      */
@@ -514,6 +654,10 @@ public final class TemplateOuterClass {
       }
     }
     /**
+     * <pre>
+     * Version of the subscription template.
+     * </pre>
+     *
      * <code>string version_id = 2;</code>
      * @return The bytes for versionId.
      */
@@ -535,6 +679,10 @@ public final class TemplateOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the subscription template.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
@@ -552,6 +700,10 @@ public final class TemplateOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the subscription template.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -573,6 +725,10 @@ public final class TemplateOuterClass {
     public static final int PUBLISHER_ID_FIELD_NUMBER = 4;
     private volatile java.lang.Object publisherId_;
     /**
+     * <pre>
+     * ID of publisher.
+     * </pre>
+     *
      * <code>string publisher_id = 4;</code>
      * @return The publisherId.
      */
@@ -590,6 +746,10 @@ public final class TemplateOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of publisher.
+     * </pre>
+     *
      * <code>string publisher_id = 4;</code>
      * @return The bytes for publisherId.
      */
@@ -611,6 +771,10 @@ public final class TemplateOuterClass {
     public static final int PRODUCT_ID_FIELD_NUMBER = 5;
     private volatile java.lang.Object productId_;
     /**
+     * <pre>
+     * ID of product.
+     * </pre>
+     *
      * <code>string product_id = 5;</code>
      * @return The productId.
      */
@@ -628,6 +792,10 @@ public final class TemplateOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of product.
+     * </pre>
+     *
      * <code>string product_id = 5;</code>
      * @return The bytes for productId.
      */
@@ -649,6 +817,10 @@ public final class TemplateOuterClass {
     public static final int TARIFF_ID_FIELD_NUMBER = 6;
     private volatile java.lang.Object tariffId_;
     /**
+     * <pre>
+     * ID of tariff.
+     * </pre>
+     *
      * <code>string tariff_id = 6;</code>
      * @return The tariffId.
      */
@@ -666,6 +838,10 @@ public final class TemplateOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of tariff.
+     * </pre>
+     *
      * <code>string tariff_id = 6;</code>
      * @return The bytes for tariffId.
      */
@@ -687,6 +863,10 @@ public final class TemplateOuterClass {
     public static final int LICENSE_SKU_ID_FIELD_NUMBER = 7;
     private volatile java.lang.Object licenseSkuId_;
     /**
+     * <pre>
+     * ID of subscription SKU.
+     * </pre>
+     *
      * <code>string license_sku_id = 7;</code>
      * @return The licenseSkuId.
      */
@@ -704,6 +884,10 @@ public final class TemplateOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of subscription SKU.
+     * </pre>
+     *
      * <code>string license_sku_id = 7;</code>
      * @return The bytes for licenseSkuId.
      */
@@ -725,6 +909,10 @@ public final class TemplateOuterClass {
     public static final int PERIOD_FIELD_NUMBER = 8;
     private volatile java.lang.Object period_;
     /**
+     * <pre>
+     * Subscription period.
+     * </pre>
+     *
      * <code>string period = 8;</code>
      * @return The period.
      */
@@ -742,6 +930,10 @@ public final class TemplateOuterClass {
       }
     }
     /**
+     * <pre>
+     * Subscription period.
+     * </pre>
+     *
      * <code>string period = 8;</code>
      * @return The bytes for period.
      */
@@ -763,6 +955,10 @@ public final class TemplateOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 9;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 9;</code>
      * @return Whether the createdAt field is set.
      */
@@ -771,6 +967,10 @@ public final class TemplateOuterClass {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 9;</code>
      * @return The createdAt.
      */
@@ -779,6 +979,10 @@ public final class TemplateOuterClass {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 9;</code>
      */
     @java.lang.Override
@@ -789,6 +993,10 @@ public final class TemplateOuterClass {
     public static final int UPDATED_AT_FIELD_NUMBER = 10;
     private com.google.protobuf.Timestamp updatedAt_;
     /**
+     * <pre>
+     * Update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 10;</code>
      * @return Whether the updatedAt field is set.
      */
@@ -797,6 +1005,10 @@ public final class TemplateOuterClass {
       return updatedAt_ != null;
     }
     /**
+     * <pre>
+     * Update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 10;</code>
      * @return The updatedAt.
      */
@@ -805,6 +1017,10 @@ public final class TemplateOuterClass {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
     /**
+     * <pre>
+     * Update timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp updated_at = 10;</code>
      */
     @java.lang.Override
@@ -815,6 +1031,10 @@ public final class TemplateOuterClass {
     public static final int STATE_FIELD_NUMBER = 11;
     private int state_;
     /**
+     * <pre>
+     * Subscription template state.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.licensemanager.v1.Template.State state = 11;</code>
      * @return The enum numeric value on the wire for state.
      */
@@ -822,6 +1042,10 @@ public final class TemplateOuterClass {
       return state_;
     }
     /**
+     * <pre>
+     * Subscription template state.
+     * </pre>
+     *
      * <code>.yandex.cloud.marketplace.licensemanager.v1.Template.State state = 11;</code>
      * @return The state.
      */
@@ -1330,6 +1554,10 @@ public final class TemplateOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the subscription template.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -1346,6 +1574,10 @@ public final class TemplateOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription template.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -1363,6 +1595,10 @@ public final class TemplateOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the subscription template.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -1378,6 +1614,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription template.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1388,6 +1628,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the subscription template.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -1406,6 +1650,10 @@ public final class TemplateOuterClass {
 
       private java.lang.Object versionId_ = "";
       /**
+       * <pre>
+       * Version of the subscription template.
+       * </pre>
+       *
        * <code>string version_id = 2;</code>
        * @return The versionId.
        */
@@ -1422,6 +1670,10 @@ public final class TemplateOuterClass {
         }
       }
       /**
+       * <pre>
+       * Version of the subscription template.
+       * </pre>
+       *
        * <code>string version_id = 2;</code>
        * @return The bytes for versionId.
        */
@@ -1439,6 +1691,10 @@ public final class TemplateOuterClass {
         }
       }
       /**
+       * <pre>
+       * Version of the subscription template.
+       * </pre>
+       *
        * <code>string version_id = 2;</code>
        * @param value The versionId to set.
        * @return This builder for chaining.
@@ -1454,6 +1710,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version of the subscription template.
+       * </pre>
+       *
        * <code>string version_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -1464,6 +1724,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version of the subscription template.
+       * </pre>
+       *
        * <code>string version_id = 2;</code>
        * @param value The bytes for versionId to set.
        * @return This builder for chaining.
@@ -1482,6 +1746,10 @@ public final class TemplateOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the subscription template.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The name.
        */
@@ -1498,6 +1766,10 @@ public final class TemplateOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the subscription template.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The bytes for name.
        */
@@ -1515,6 +1787,10 @@ public final class TemplateOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the subscription template.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -1530,6 +1806,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the subscription template.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return This builder for chaining.
        */
@@ -1540,6 +1820,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the subscription template.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -1558,6 +1842,10 @@ public final class TemplateOuterClass {
 
       private java.lang.Object publisherId_ = "";
       /**
+       * <pre>
+       * ID of publisher.
+       * </pre>
+       *
        * <code>string publisher_id = 4;</code>
        * @return The publisherId.
        */
@@ -1574,6 +1862,10 @@ public final class TemplateOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of publisher.
+       * </pre>
+       *
        * <code>string publisher_id = 4;</code>
        * @return The bytes for publisherId.
        */
@@ -1591,6 +1883,10 @@ public final class TemplateOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of publisher.
+       * </pre>
+       *
        * <code>string publisher_id = 4;</code>
        * @param value The publisherId to set.
        * @return This builder for chaining.
@@ -1606,6 +1902,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of publisher.
+       * </pre>
+       *
        * <code>string publisher_id = 4;</code>
        * @return This builder for chaining.
        */
@@ -1616,6 +1916,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of publisher.
+       * </pre>
+       *
        * <code>string publisher_id = 4;</code>
        * @param value The bytes for publisherId to set.
        * @return This builder for chaining.
@@ -1634,6 +1938,10 @@ public final class TemplateOuterClass {
 
       private java.lang.Object productId_ = "";
       /**
+       * <pre>
+       * ID of product.
+       * </pre>
+       *
        * <code>string product_id = 5;</code>
        * @return The productId.
        */
@@ -1650,6 +1958,10 @@ public final class TemplateOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of product.
+       * </pre>
+       *
        * <code>string product_id = 5;</code>
        * @return The bytes for productId.
        */
@@ -1667,6 +1979,10 @@ public final class TemplateOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of product.
+       * </pre>
+       *
        * <code>string product_id = 5;</code>
        * @param value The productId to set.
        * @return This builder for chaining.
@@ -1682,6 +1998,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of product.
+       * </pre>
+       *
        * <code>string product_id = 5;</code>
        * @return This builder for chaining.
        */
@@ -1692,6 +2012,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of product.
+       * </pre>
+       *
        * <code>string product_id = 5;</code>
        * @param value The bytes for productId to set.
        * @return This builder for chaining.
@@ -1710,6 +2034,10 @@ public final class TemplateOuterClass {
 
       private java.lang.Object tariffId_ = "";
       /**
+       * <pre>
+       * ID of tariff.
+       * </pre>
+       *
        * <code>string tariff_id = 6;</code>
        * @return The tariffId.
        */
@@ -1726,6 +2054,10 @@ public final class TemplateOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of tariff.
+       * </pre>
+       *
        * <code>string tariff_id = 6;</code>
        * @return The bytes for tariffId.
        */
@@ -1743,6 +2075,10 @@ public final class TemplateOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of tariff.
+       * </pre>
+       *
        * <code>string tariff_id = 6;</code>
        * @param value The tariffId to set.
        * @return This builder for chaining.
@@ -1758,6 +2094,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of tariff.
+       * </pre>
+       *
        * <code>string tariff_id = 6;</code>
        * @return This builder for chaining.
        */
@@ -1768,6 +2108,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of tariff.
+       * </pre>
+       *
        * <code>string tariff_id = 6;</code>
        * @param value The bytes for tariffId to set.
        * @return This builder for chaining.
@@ -1786,6 +2130,10 @@ public final class TemplateOuterClass {
 
       private java.lang.Object licenseSkuId_ = "";
       /**
+       * <pre>
+       * ID of subscription SKU.
+       * </pre>
+       *
        * <code>string license_sku_id = 7;</code>
        * @return The licenseSkuId.
        */
@@ -1802,6 +2150,10 @@ public final class TemplateOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of subscription SKU.
+       * </pre>
+       *
        * <code>string license_sku_id = 7;</code>
        * @return The bytes for licenseSkuId.
        */
@@ -1819,6 +2171,10 @@ public final class TemplateOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of subscription SKU.
+       * </pre>
+       *
        * <code>string license_sku_id = 7;</code>
        * @param value The licenseSkuId to set.
        * @return This builder for chaining.
@@ -1834,6 +2190,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of subscription SKU.
+       * </pre>
+       *
        * <code>string license_sku_id = 7;</code>
        * @return This builder for chaining.
        */
@@ -1844,6 +2204,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of subscription SKU.
+       * </pre>
+       *
        * <code>string license_sku_id = 7;</code>
        * @param value The bytes for licenseSkuId to set.
        * @return This builder for chaining.
@@ -1862,6 +2226,10 @@ public final class TemplateOuterClass {
 
       private java.lang.Object period_ = "";
       /**
+       * <pre>
+       * Subscription period.
+       * </pre>
+       *
        * <code>string period = 8;</code>
        * @return The period.
        */
@@ -1878,6 +2246,10 @@ public final class TemplateOuterClass {
         }
       }
       /**
+       * <pre>
+       * Subscription period.
+       * </pre>
+       *
        * <code>string period = 8;</code>
        * @return The bytes for period.
        */
@@ -1895,6 +2267,10 @@ public final class TemplateOuterClass {
         }
       }
       /**
+       * <pre>
+       * Subscription period.
+       * </pre>
+       *
        * <code>string period = 8;</code>
        * @param value The period to set.
        * @return This builder for chaining.
@@ -1910,6 +2286,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Subscription period.
+       * </pre>
+       *
        * <code>string period = 8;</code>
        * @return This builder for chaining.
        */
@@ -1920,6 +2300,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Subscription period.
+       * </pre>
+       *
        * <code>string period = 8;</code>
        * @param value The bytes for period to set.
        * @return This builder for chaining.
@@ -1940,6 +2324,10 @@ public final class TemplateOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 9;</code>
        * @return Whether the createdAt field is set.
        */
@@ -1947,6 +2335,10 @@ public final class TemplateOuterClass {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 9;</code>
        * @return The createdAt.
        */
@@ -1958,6 +2350,10 @@ public final class TemplateOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 9;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1974,6 +2370,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 9;</code>
        */
       public Builder setCreatedAt(
@@ -1988,6 +2388,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 9;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -2006,6 +2410,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 9;</code>
        */
       public Builder clearCreatedAt() {
@@ -2020,6 +2428,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 9;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -2028,6 +2440,10 @@ public final class TemplateOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 9;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -2039,6 +2455,10 @@ public final class TemplateOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2059,6 +2479,10 @@ public final class TemplateOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 10;</code>
        * @return Whether the updatedAt field is set.
        */
@@ -2066,6 +2490,10 @@ public final class TemplateOuterClass {
         return updatedAtBuilder_ != null || updatedAt_ != null;
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 10;</code>
        * @return The updatedAt.
        */
@@ -2077,6 +2505,10 @@ public final class TemplateOuterClass {
         }
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 10;</code>
        */
       public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -2093,6 +2525,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 10;</code>
        */
       public Builder setUpdatedAt(
@@ -2107,6 +2543,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 10;</code>
        */
       public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
@@ -2125,6 +2565,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 10;</code>
        */
       public Builder clearUpdatedAt() {
@@ -2139,6 +2583,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 10;</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
@@ -2147,6 +2595,10 @@ public final class TemplateOuterClass {
         return getUpdatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 10;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
@@ -2158,6 +2610,10 @@ public final class TemplateOuterClass {
         }
       }
       /**
+       * <pre>
+       * Update timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp updated_at = 10;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2176,6 +2632,10 @@ public final class TemplateOuterClass {
 
       private int state_ = 0;
       /**
+       * <pre>
+       * Subscription template state.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Template.State state = 11;</code>
        * @return The enum numeric value on the wire for state.
        */
@@ -2183,6 +2643,10 @@ public final class TemplateOuterClass {
         return state_;
       }
       /**
+       * <pre>
+       * Subscription template state.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Template.State state = 11;</code>
        * @param value The enum numeric value on the wire for state to set.
        * @return This builder for chaining.
@@ -2194,6 +2658,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Subscription template state.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Template.State state = 11;</code>
        * @return The state.
        */
@@ -2204,6 +2672,10 @@ public final class TemplateOuterClass {
         return result == null ? yandex.cloud.api.marketplace.licensemanager.v1.TemplateOuterClass.Template.State.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Subscription template state.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Template.State state = 11;</code>
        * @param value The state to set.
        * @return This builder for chaining.
@@ -2218,6 +2690,10 @@ public final class TemplateOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Subscription template state.
+       * </pre>
+       *
        * <code>.yandex.cloud.marketplace.licensemanager.v1.Template.State state = 11;</code>
        * @return This builder for chaining.
        */
