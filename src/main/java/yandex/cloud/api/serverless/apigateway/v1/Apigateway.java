@@ -7378,7 +7378,7 @@ public final class Apigateway {
      * It describes percentage of requests, which will be processed by canary.
      * </pre>
      *
-     * <code>int64 weight = 1 [(.yandex.cloud.value) = "1-99"];</code>
+     * <code>int64 weight = 1 [(.yandex.cloud.value) = "0-99"];</code>
      * @return The weight.
      */
     long getWeight();
@@ -7552,7 +7552,7 @@ public final class Apigateway {
      * It describes percentage of requests, which will be processed by canary.
      * </pre>
      *
-     * <code>int64 weight = 1 [(.yandex.cloud.value) = "1-99"];</code>
+     * <code>int64 weight = 1 [(.yandex.cloud.value) = "0-99"];</code>
      * @return The weight.
      */
     @java.lang.Override
@@ -8017,7 +8017,7 @@ public final class Apigateway {
        * It describes percentage of requests, which will be processed by canary.
        * </pre>
        *
-       * <code>int64 weight = 1 [(.yandex.cloud.value) = "1-99"];</code>
+       * <code>int64 weight = 1 [(.yandex.cloud.value) = "0-99"];</code>
        * @return The weight.
        */
       @java.lang.Override
@@ -8029,7 +8029,7 @@ public final class Apigateway {
        * It describes percentage of requests, which will be processed by canary.
        * </pre>
        *
-       * <code>int64 weight = 1 [(.yandex.cloud.value) = "1-99"];</code>
+       * <code>int64 weight = 1 [(.yandex.cloud.value) = "0-99"];</code>
        * @param value The weight to set.
        * @return This builder for chaining.
        */
@@ -8044,7 +8044,7 @@ public final class Apigateway {
        * It describes percentage of requests, which will be processed by canary.
        * </pre>
        *
-       * <code>int64 weight = 1 [(.yandex.cloud.value) = "1-99"];</code>
+       * <code>int64 weight = 1 [(.yandex.cloud.value) = "0-99"];</code>
        * @return This builder for chaining.
        */
       public Builder clearWeight() {
@@ -9358,7 +9358,7 @@ public final class Apigateway {
       "er_id\030\003 \001(\tH\000\022:\n\tmin_level\030\004 \001(\0162\'.yande" +
       "x.cloud.logging.v1.LogLevel.LevelB\r\n\013des" +
       "tination\"\343\001\n\006Canary\022\030\n\006weight\030\001 \001(\003B\010\372\3071" +
-      "\0041-99\022W\n\tvariables\030\002 \003(\0132<.yandex.cloud." +
+      "\0040-99\022W\n\tvariables\030\002 \003(\0132<.yandex.cloud." +
       "serverless.apigateway.v1.Canary.Variable" +
       "sEntryB\006\202\3101\002>0\032f\n\016VariablesEntry\022\013\n\003key\030" +
       "\001 \001(\t\022C\n\005value\030\002 \001(\01324.yandex.cloud.serv" +

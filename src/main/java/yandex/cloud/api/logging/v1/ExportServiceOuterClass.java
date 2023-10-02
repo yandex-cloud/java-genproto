@@ -51,11 +51,11 @@ public final class ExportServiceOuterClass {
      * <code>.yandex.cloud.logging.v1.ExportParams params = 3 [(.yandex.cloud.required) = true];</code>
      * @return The params.
      */
-    yandex.cloud.api.logging.v1.Export.ExportParams getParams();
+    yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams getParams();
     /**
      * <code>.yandex.cloud.logging.v1.ExportParams params = 3 [(.yandex.cloud.required) = true];</code>
      */
-    yandex.cloud.api.logging.v1.Export.ExportParamsOrBuilder getParamsOrBuilder();
+    yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder getParamsOrBuilder();
 
     /**
      * <code>string result_filename = 4 [(.yandex.cloud.required) = true];</code>
@@ -160,11 +160,11 @@ public final class ExportServiceOuterClass {
               break;
             }
             case 26: {
-              yandex.cloud.api.logging.v1.Export.ExportParams.Builder subBuilder = null;
+              yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder subBuilder = null;
               if (params_ != null) {
                 subBuilder = params_.toBuilder();
               }
-              params_ = input.readMessage(yandex.cloud.api.logging.v1.Export.ExportParams.parser(), extensionRegistry);
+              params_ = input.readMessage(yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(params_);
                 params_ = subBuilder.buildPartial();
@@ -313,7 +313,7 @@ public final class ExportServiceOuterClass {
     }
 
     public static final int PARAMS_FIELD_NUMBER = 3;
-    private yandex.cloud.api.logging.v1.Export.ExportParams params_;
+    private yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams params_;
     /**
      * <code>.yandex.cloud.logging.v1.ExportParams params = 3 [(.yandex.cloud.required) = true];</code>
      * @return Whether the params field is set.
@@ -327,14 +327,14 @@ public final class ExportServiceOuterClass {
      * @return The params.
      */
     @java.lang.Override
-    public yandex.cloud.api.logging.v1.Export.ExportParams getParams() {
-      return params_ == null ? yandex.cloud.api.logging.v1.Export.ExportParams.getDefaultInstance() : params_;
+    public yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams getParams() {
+      return params_ == null ? yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.getDefaultInstance() : params_;
     }
     /**
      * <code>.yandex.cloud.logging.v1.ExportParams params = 3 [(.yandex.cloud.required) = true];</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.logging.v1.Export.ExportParamsOrBuilder getParamsOrBuilder() {
+    public yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder getParamsOrBuilder() {
       return getParams();
     }
 
@@ -1006,9 +1006,9 @@ public final class ExportServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.logging.v1.Export.ExportParams params_;
+      private yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams params_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.logging.v1.Export.ExportParams, yandex.cloud.api.logging.v1.Export.ExportParams.Builder, yandex.cloud.api.logging.v1.Export.ExportParamsOrBuilder> paramsBuilder_;
+          yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder> paramsBuilder_;
       /**
        * <code>.yandex.cloud.logging.v1.ExportParams params = 3 [(.yandex.cloud.required) = true];</code>
        * @return Whether the params field is set.
@@ -1020,9 +1020,9 @@ public final class ExportServiceOuterClass {
        * <code>.yandex.cloud.logging.v1.ExportParams params = 3 [(.yandex.cloud.required) = true];</code>
        * @return The params.
        */
-      public yandex.cloud.api.logging.v1.Export.ExportParams getParams() {
+      public yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams getParams() {
         if (paramsBuilder_ == null) {
-          return params_ == null ? yandex.cloud.api.logging.v1.Export.ExportParams.getDefaultInstance() : params_;
+          return params_ == null ? yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.getDefaultInstance() : params_;
         } else {
           return paramsBuilder_.getMessage();
         }
@@ -1030,7 +1030,7 @@ public final class ExportServiceOuterClass {
       /**
        * <code>.yandex.cloud.logging.v1.ExportParams params = 3 [(.yandex.cloud.required) = true];</code>
        */
-      public Builder setParams(yandex.cloud.api.logging.v1.Export.ExportParams value) {
+      public Builder setParams(yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams value) {
         if (paramsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1047,7 +1047,7 @@ public final class ExportServiceOuterClass {
        * <code>.yandex.cloud.logging.v1.ExportParams params = 3 [(.yandex.cloud.required) = true];</code>
        */
       public Builder setParams(
-          yandex.cloud.api.logging.v1.Export.ExportParams.Builder builderForValue) {
+          yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder builderForValue) {
         if (paramsBuilder_ == null) {
           params_ = builderForValue.build();
           onChanged();
@@ -1060,11 +1060,11 @@ public final class ExportServiceOuterClass {
       /**
        * <code>.yandex.cloud.logging.v1.ExportParams params = 3 [(.yandex.cloud.required) = true];</code>
        */
-      public Builder mergeParams(yandex.cloud.api.logging.v1.Export.ExportParams value) {
+      public Builder mergeParams(yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams value) {
         if (paramsBuilder_ == null) {
           if (params_ != null) {
             params_ =
-              yandex.cloud.api.logging.v1.Export.ExportParams.newBuilder(params_).mergeFrom(value).buildPartial();
+              yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.newBuilder(params_).mergeFrom(value).buildPartial();
           } else {
             params_ = value;
           }
@@ -1092,7 +1092,7 @@ public final class ExportServiceOuterClass {
       /**
        * <code>.yandex.cloud.logging.v1.ExportParams params = 3 [(.yandex.cloud.required) = true];</code>
        */
-      public yandex.cloud.api.logging.v1.Export.ExportParams.Builder getParamsBuilder() {
+      public yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder getParamsBuilder() {
         
         onChanged();
         return getParamsFieldBuilder().getBuilder();
@@ -1100,23 +1100,23 @@ public final class ExportServiceOuterClass {
       /**
        * <code>.yandex.cloud.logging.v1.ExportParams params = 3 [(.yandex.cloud.required) = true];</code>
        */
-      public yandex.cloud.api.logging.v1.Export.ExportParamsOrBuilder getParamsOrBuilder() {
+      public yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder getParamsOrBuilder() {
         if (paramsBuilder_ != null) {
           return paramsBuilder_.getMessageOrBuilder();
         } else {
           return params_ == null ?
-              yandex.cloud.api.logging.v1.Export.ExportParams.getDefaultInstance() : params_;
+              yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.getDefaultInstance() : params_;
         }
       }
       /**
        * <code>.yandex.cloud.logging.v1.ExportParams params = 3 [(.yandex.cloud.required) = true];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.logging.v1.Export.ExportParams, yandex.cloud.api.logging.v1.Export.ExportParams.Builder, yandex.cloud.api.logging.v1.Export.ExportParamsOrBuilder> 
+          yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder> 
           getParamsFieldBuilder() {
         if (paramsBuilder_ == null) {
           paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.logging.v1.Export.ExportParams, yandex.cloud.api.logging.v1.Export.ExportParams.Builder, yandex.cloud.api.logging.v1.Export.ExportParamsOrBuilder>(
+              yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder>(
                   getParams(),
                   getParentForChildren(),
                   isClean());
@@ -1528,11 +1528,11 @@ public final class ExportServiceOuterClass {
      * <code>.yandex.cloud.logging.v1.ExportParams params = 3;</code>
      * @return The params.
      */
-    yandex.cloud.api.logging.v1.Export.ExportParams getParams();
+    yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams getParams();
     /**
      * <code>.yandex.cloud.logging.v1.ExportParams params = 3;</code>
      */
-    yandex.cloud.api.logging.v1.Export.ExportParamsOrBuilder getParamsOrBuilder();
+    yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder getParamsOrBuilder();
 
     /**
      * <code>string result_filename = 4;</code>
@@ -1637,11 +1637,11 @@ public final class ExportServiceOuterClass {
               break;
             }
             case 26: {
-              yandex.cloud.api.logging.v1.Export.ExportParams.Builder subBuilder = null;
+              yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder subBuilder = null;
               if (params_ != null) {
                 subBuilder = params_.toBuilder();
               }
-              params_ = input.readMessage(yandex.cloud.api.logging.v1.Export.ExportParams.parser(), extensionRegistry);
+              params_ = input.readMessage(yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(params_);
                 params_ = subBuilder.buildPartial();
@@ -1790,7 +1790,7 @@ public final class ExportServiceOuterClass {
     }
 
     public static final int PARAMS_FIELD_NUMBER = 3;
-    private yandex.cloud.api.logging.v1.Export.ExportParams params_;
+    private yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams params_;
     /**
      * <code>.yandex.cloud.logging.v1.ExportParams params = 3;</code>
      * @return Whether the params field is set.
@@ -1804,14 +1804,14 @@ public final class ExportServiceOuterClass {
      * @return The params.
      */
     @java.lang.Override
-    public yandex.cloud.api.logging.v1.Export.ExportParams getParams() {
-      return params_ == null ? yandex.cloud.api.logging.v1.Export.ExportParams.getDefaultInstance() : params_;
+    public yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams getParams() {
+      return params_ == null ? yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.getDefaultInstance() : params_;
     }
     /**
      * <code>.yandex.cloud.logging.v1.ExportParams params = 3;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.logging.v1.Export.ExportParamsOrBuilder getParamsOrBuilder() {
+    public yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder getParamsOrBuilder() {
       return getParams();
     }
 
@@ -2483,9 +2483,9 @@ public final class ExportServiceOuterClass {
         return this;
       }
 
-      private yandex.cloud.api.logging.v1.Export.ExportParams params_;
+      private yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams params_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.logging.v1.Export.ExportParams, yandex.cloud.api.logging.v1.Export.ExportParams.Builder, yandex.cloud.api.logging.v1.Export.ExportParamsOrBuilder> paramsBuilder_;
+          yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder> paramsBuilder_;
       /**
        * <code>.yandex.cloud.logging.v1.ExportParams params = 3;</code>
        * @return Whether the params field is set.
@@ -2497,9 +2497,9 @@ public final class ExportServiceOuterClass {
        * <code>.yandex.cloud.logging.v1.ExportParams params = 3;</code>
        * @return The params.
        */
-      public yandex.cloud.api.logging.v1.Export.ExportParams getParams() {
+      public yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams getParams() {
         if (paramsBuilder_ == null) {
-          return params_ == null ? yandex.cloud.api.logging.v1.Export.ExportParams.getDefaultInstance() : params_;
+          return params_ == null ? yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.getDefaultInstance() : params_;
         } else {
           return paramsBuilder_.getMessage();
         }
@@ -2507,7 +2507,7 @@ public final class ExportServiceOuterClass {
       /**
        * <code>.yandex.cloud.logging.v1.ExportParams params = 3;</code>
        */
-      public Builder setParams(yandex.cloud.api.logging.v1.Export.ExportParams value) {
+      public Builder setParams(yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams value) {
         if (paramsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2524,7 +2524,7 @@ public final class ExportServiceOuterClass {
        * <code>.yandex.cloud.logging.v1.ExportParams params = 3;</code>
        */
       public Builder setParams(
-          yandex.cloud.api.logging.v1.Export.ExportParams.Builder builderForValue) {
+          yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder builderForValue) {
         if (paramsBuilder_ == null) {
           params_ = builderForValue.build();
           onChanged();
@@ -2537,11 +2537,11 @@ public final class ExportServiceOuterClass {
       /**
        * <code>.yandex.cloud.logging.v1.ExportParams params = 3;</code>
        */
-      public Builder mergeParams(yandex.cloud.api.logging.v1.Export.ExportParams value) {
+      public Builder mergeParams(yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams value) {
         if (paramsBuilder_ == null) {
           if (params_ != null) {
             params_ =
-              yandex.cloud.api.logging.v1.Export.ExportParams.newBuilder(params_).mergeFrom(value).buildPartial();
+              yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.newBuilder(params_).mergeFrom(value).buildPartial();
           } else {
             params_ = value;
           }
@@ -2569,7 +2569,7 @@ public final class ExportServiceOuterClass {
       /**
        * <code>.yandex.cloud.logging.v1.ExportParams params = 3;</code>
        */
-      public yandex.cloud.api.logging.v1.Export.ExportParams.Builder getParamsBuilder() {
+      public yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder getParamsBuilder() {
         
         onChanged();
         return getParamsFieldBuilder().getBuilder();
@@ -2577,23 +2577,23 @@ public final class ExportServiceOuterClass {
       /**
        * <code>.yandex.cloud.logging.v1.ExportParams params = 3;</code>
        */
-      public yandex.cloud.api.logging.v1.Export.ExportParamsOrBuilder getParamsOrBuilder() {
+      public yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder getParamsOrBuilder() {
         if (paramsBuilder_ != null) {
           return paramsBuilder_.getMessageOrBuilder();
         } else {
           return params_ == null ?
-              yandex.cloud.api.logging.v1.Export.ExportParams.getDefaultInstance() : params_;
+              yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.getDefaultInstance() : params_;
         }
       }
       /**
        * <code>.yandex.cloud.logging.v1.ExportParams params = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.logging.v1.Export.ExportParams, yandex.cloud.api.logging.v1.Export.ExportParams.Builder, yandex.cloud.api.logging.v1.Export.ExportParamsOrBuilder> 
+          yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder> 
           getParamsFieldBuilder() {
         if (paramsBuilder_ == null) {
           paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.logging.v1.Export.ExportParams, yandex.cloud.api.logging.v1.Export.ExportParams.Builder, yandex.cloud.api.logging.v1.Export.ExportParamsOrBuilder>(
+              yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder>(
                   getParams(),
                   getParentForChildren(),
                   isClean());
@@ -3836,6 +3836,11865 @@ public final class ExportServiceOuterClass {
 
   }
 
+  public interface GetExportRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.logging.v1.GetExportRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the export to return.
+     * To get a export ID make a [ExportService.List] request.
+     * </pre>
+     *
+     * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The exportId.
+     */
+    java.lang.String getExportId();
+    /**
+     * <pre>
+     * ID of the export to return.
+     * To get a export ID make a [ExportService.List] request.
+     * </pre>
+     *
+     * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for exportId.
+     */
+    com.google.protobuf.ByteString
+        getExportIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.logging.v1.GetExportRequest}
+   */
+  public static final class GetExportRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.GetExportRequest)
+      GetExportRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetExportRequest.newBuilder() to construct.
+    private GetExportRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetExportRequest() {
+      exportId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetExportRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetExportRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              exportId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_GetExportRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_GetExportRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest.class, yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest.Builder.class);
+    }
+
+    public static final int EXPORT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object exportId_;
+    /**
+     * <pre>
+     * ID of the export to return.
+     * To get a export ID make a [ExportService.List] request.
+     * </pre>
+     *
+     * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The exportId.
+     */
+    @java.lang.Override
+    public java.lang.String getExportId() {
+      java.lang.Object ref = exportId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        exportId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the export to return.
+     * To get a export ID make a [ExportService.List] request.
+     * </pre>
+     *
+     * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for exportId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExportIdBytes() {
+      java.lang.Object ref = exportId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        exportId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exportId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, exportId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exportId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, exportId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest other = (yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest) obj;
+
+      if (!getExportId()
+          .equals(other.getExportId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + EXPORT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getExportId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.logging.v1.GetExportRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.logging.v1.GetExportRequest)
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_GetExportRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_GetExportRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest.class, yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        exportId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_GetExportRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest build() {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest buildPartial() {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest result = new yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest(this);
+        result.exportId_ = exportId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest) {
+          return mergeFrom((yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest other) {
+        if (other == yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest.getDefaultInstance()) return this;
+        if (!other.getExportId().isEmpty()) {
+          exportId_ = other.exportId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object exportId_ = "";
+      /**
+       * <pre>
+       * ID of the export to return.
+       * To get a export ID make a [ExportService.List] request.
+       * </pre>
+       *
+       * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The exportId.
+       */
+      public java.lang.String getExportId() {
+        java.lang.Object ref = exportId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          exportId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the export to return.
+       * To get a export ID make a [ExportService.List] request.
+       * </pre>
+       *
+       * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The bytes for exportId.
+       */
+      public com.google.protobuf.ByteString
+          getExportIdBytes() {
+        java.lang.Object ref = exportId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          exportId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the export to return.
+       * To get a export ID make a [ExportService.List] request.
+       * </pre>
+       *
+       * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The exportId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExportId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        exportId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the export to return.
+       * To get a export ID make a [ExportService.List] request.
+       * </pre>
+       *
+       * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExportId() {
+        
+        exportId_ = getDefaultInstance().getExportId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the export to return.
+       * To get a export ID make a [ExportService.List] request.
+       * </pre>
+       *
+       * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The bytes for exportId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExportIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        exportId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.logging.v1.GetExportRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.logging.v1.GetExportRequest)
+    private static final yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest();
+    }
+
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetExportRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetExportRequest>() {
+      @java.lang.Override
+      public GetExportRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetExportRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetExportRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetExportRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.logging.v1.ExportServiceOuterClass.GetExportRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListExportsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.logging.v1.ListExportsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Folder ID of the exports to return.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * Folder ID of the exports to return.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListExportssResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 3;</code>
+     * @return The pageSize.
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListExportsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListExportsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+
+    /**
+     * <pre>
+     * A filter expression that filters exports listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Export.name] field.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name="my-export"`.
+     * </pre>
+     *
+     * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
+     */
+    java.lang.String getFilter();
+    /**
+     * <pre>
+     * A filter expression that filters exports listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Export.name] field.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name="my-export"`.
+     * </pre>
+     *
+     * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
+     */
+    com.google.protobuf.ByteString
+        getFilterBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.logging.v1.ListExportsRequest}
+   */
+  public static final class ListExportsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.ListExportsRequest)
+      ListExportsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListExportsRequest.newBuilder() to construct.
+    private ListExportsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListExportsRequest() {
+      folderId_ = "";
+      pageToken_ = "";
+      filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListExportsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListExportsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
+              break;
+            }
+            case 24: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              filter_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_ListExportsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_ListExportsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest.class, yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest.Builder.class);
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * Folder ID of the exports to return.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The folderId.
+     */
+    @java.lang.Override
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Folder ID of the exports to return.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for folderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 3;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListExportssResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 3;</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 4;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListExportsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListExportsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILTER_FIELD_NUMBER = 5;
+    private volatile java.lang.Object filter_;
+    /**
+     * <pre>
+     * A filter expression that filters exports listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Export.name] field.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name="my-export"`.
+     * </pre>
+     *
+     * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
+     */
+    @java.lang.Override
+    public java.lang.String getFilter() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A filter expression that filters exports listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can only be applied to the [Export.name] field.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `name="my-export"`.
+     * </pre>
+     *
+     * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFilterBytes() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(3, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, pageToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, filter_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, pageToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, filter_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest other = (yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest) obj;
+
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (37 * hash) + FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getFilter().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.logging.v1.ListExportsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.logging.v1.ListExportsRequest)
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_ListExportsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_ListExportsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest.class, yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        folderId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        filter_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_ListExportsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest build() {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest buildPartial() {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest result = new yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest(this);
+        result.folderId_ = folderId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        result.filter_ = filter_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest) {
+          return mergeFrom((yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest other) {
+        if (other == yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest.getDefaultInstance()) return this;
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        if (!other.getFilter().isEmpty()) {
+          filter_ = other.filter_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * Folder ID of the exports to return.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The folderId.
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Folder ID of the exports to return.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The bytes for folderId.
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Folder ID of the exports to return.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Folder ID of the exports to return.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Folder ID of the exports to return.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListExportssResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 3;</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListExportssResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 3;</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListExportssResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListExportsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListExportsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListExportsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListExportsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListExportsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object filter_ = "";
+      /**
+       * <pre>
+       * A filter expression that filters exports listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Export.name] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name="my-export"`.
+       * </pre>
+       *
+       * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
+       */
+      public java.lang.String getFilter() {
+        java.lang.Object ref = filter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters exports listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Export.name] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name="my-export"`.
+       * </pre>
+       *
+       * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
+       */
+      public com.google.protobuf.ByteString
+          getFilterBytes() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters exports listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Export.name] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name="my-export"`.
+       * </pre>
+       *
+       * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters exports listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Export.name] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name="my-export"`.
+       * </pre>
+       *
+       * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilter() {
+        
+        filter_ = getDefaultInstance().getFilter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters exports listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can only be applied to the [Export.name] field.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `name="my-export"`.
+       * </pre>
+       *
+       * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.logging.v1.ListExportsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.logging.v1.ListExportsRequest)
+    private static final yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest();
+    }
+
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListExportsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListExportsRequest>() {
+      @java.lang.Override
+      public ListExportsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListExportsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListExportsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListExportsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListExportsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.logging.v1.ListExportsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of exports in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.logging.v1.ExportOuterClass.Export> 
+        getExportsList();
+    /**
+     * <pre>
+     * List of exports in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+     */
+    yandex.cloud.api.logging.v1.ExportOuterClass.Export getExports(int index);
+    /**
+     * <pre>
+     * List of exports in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+     */
+    int getExportsCount();
+    /**
+     * <pre>
+     * List of exports in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.logging.v1.ExportOuterClass.ExportOrBuilder> 
+        getExportsOrBuilderList();
+    /**
+     * <pre>
+     * List of exports in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+     */
+    yandex.cloud.api.logging.v1.ExportOuterClass.ExportOrBuilder getExportsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListExportsRequest.page_size], use `next_page_token` as the value
+     * for the [ListExportsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListExportsRequest.page_size], use `next_page_token` as the value
+     * for the [ListExportsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.logging.v1.ListExportsResponse}
+   */
+  public static final class ListExportsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.ListExportsResponse)
+      ListExportsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListExportsResponse.newBuilder() to construct.
+    private ListExportsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListExportsResponse() {
+      exports_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListExportsResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListExportsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                exports_ = new java.util.ArrayList<yandex.cloud.api.logging.v1.ExportOuterClass.Export>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              exports_.add(
+                  input.readMessage(yandex.cloud.api.logging.v1.ExportOuterClass.Export.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          exports_ = java.util.Collections.unmodifiableList(exports_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_ListExportsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_ListExportsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse.class, yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse.Builder.class);
+    }
+
+    public static final int EXPORTS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.logging.v1.ExportOuterClass.Export> exports_;
+    /**
+     * <pre>
+     * List of exports in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.logging.v1.ExportOuterClass.Export> getExportsList() {
+      return exports_;
+    }
+    /**
+     * <pre>
+     * List of exports in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.logging.v1.ExportOuterClass.ExportOrBuilder> 
+        getExportsOrBuilderList() {
+      return exports_;
+    }
+    /**
+     * <pre>
+     * List of exports in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+     */
+    @java.lang.Override
+    public int getExportsCount() {
+      return exports_.size();
+    }
+    /**
+     * <pre>
+     * List of exports in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.logging.v1.ExportOuterClass.Export getExports(int index) {
+      return exports_.get(index);
+    }
+    /**
+     * <pre>
+     * List of exports in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.logging.v1.ExportOuterClass.ExportOrBuilder getExportsOrBuilder(
+        int index) {
+      return exports_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListExportsRequest.page_size], use `next_page_token` as the value
+     * for the [ListExportsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListExportsRequest.page_size], use `next_page_token` as the value
+     * for the [ListExportsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < exports_.size(); i++) {
+        output.writeMessage(1, exports_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < exports_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, exports_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse other = (yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse) obj;
+
+      if (!getExportsList()
+          .equals(other.getExportsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getExportsCount() > 0) {
+        hash = (37 * hash) + EXPORTS_FIELD_NUMBER;
+        hash = (53 * hash) + getExportsList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.logging.v1.ListExportsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.logging.v1.ListExportsResponse)
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_ListExportsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_ListExportsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse.class, yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getExportsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (exportsBuilder_ == null) {
+          exports_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          exportsBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_ListExportsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse build() {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse buildPartial() {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse result = new yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (exportsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            exports_ = java.util.Collections.unmodifiableList(exports_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.exports_ = exports_;
+        } else {
+          result.exports_ = exportsBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse) {
+          return mergeFrom((yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse other) {
+        if (other == yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse.getDefaultInstance()) return this;
+        if (exportsBuilder_ == null) {
+          if (!other.exports_.isEmpty()) {
+            if (exports_.isEmpty()) {
+              exports_ = other.exports_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureExportsIsMutable();
+              exports_.addAll(other.exports_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.exports_.isEmpty()) {
+            if (exportsBuilder_.isEmpty()) {
+              exportsBuilder_.dispose();
+              exportsBuilder_ = null;
+              exports_ = other.exports_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              exportsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getExportsFieldBuilder() : null;
+            } else {
+              exportsBuilder_.addAllMessages(other.exports_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.logging.v1.ExportOuterClass.Export> exports_ =
+        java.util.Collections.emptyList();
+      private void ensureExportsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          exports_ = new java.util.ArrayList<yandex.cloud.api.logging.v1.ExportOuterClass.Export>(exports_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.logging.v1.ExportOuterClass.Export, yandex.cloud.api.logging.v1.ExportOuterClass.Export.Builder, yandex.cloud.api.logging.v1.ExportOuterClass.ExportOrBuilder> exportsBuilder_;
+
+      /**
+       * <pre>
+       * List of exports in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.logging.v1.ExportOuterClass.Export> getExportsList() {
+        if (exportsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(exports_);
+        } else {
+          return exportsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of exports in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+       */
+      public int getExportsCount() {
+        if (exportsBuilder_ == null) {
+          return exports_.size();
+        } else {
+          return exportsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of exports in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+       */
+      public yandex.cloud.api.logging.v1.ExportOuterClass.Export getExports(int index) {
+        if (exportsBuilder_ == null) {
+          return exports_.get(index);
+        } else {
+          return exportsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of exports in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+       */
+      public Builder setExports(
+          int index, yandex.cloud.api.logging.v1.ExportOuterClass.Export value) {
+        if (exportsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExportsIsMutable();
+          exports_.set(index, value);
+          onChanged();
+        } else {
+          exportsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of exports in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+       */
+      public Builder setExports(
+          int index, yandex.cloud.api.logging.v1.ExportOuterClass.Export.Builder builderForValue) {
+        if (exportsBuilder_ == null) {
+          ensureExportsIsMutable();
+          exports_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          exportsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of exports in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+       */
+      public Builder addExports(yandex.cloud.api.logging.v1.ExportOuterClass.Export value) {
+        if (exportsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExportsIsMutable();
+          exports_.add(value);
+          onChanged();
+        } else {
+          exportsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of exports in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+       */
+      public Builder addExports(
+          int index, yandex.cloud.api.logging.v1.ExportOuterClass.Export value) {
+        if (exportsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureExportsIsMutable();
+          exports_.add(index, value);
+          onChanged();
+        } else {
+          exportsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of exports in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+       */
+      public Builder addExports(
+          yandex.cloud.api.logging.v1.ExportOuterClass.Export.Builder builderForValue) {
+        if (exportsBuilder_ == null) {
+          ensureExportsIsMutable();
+          exports_.add(builderForValue.build());
+          onChanged();
+        } else {
+          exportsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of exports in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+       */
+      public Builder addExports(
+          int index, yandex.cloud.api.logging.v1.ExportOuterClass.Export.Builder builderForValue) {
+        if (exportsBuilder_ == null) {
+          ensureExportsIsMutable();
+          exports_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          exportsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of exports in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+       */
+      public Builder addAllExports(
+          java.lang.Iterable<? extends yandex.cloud.api.logging.v1.ExportOuterClass.Export> values) {
+        if (exportsBuilder_ == null) {
+          ensureExportsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, exports_);
+          onChanged();
+        } else {
+          exportsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of exports in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+       */
+      public Builder clearExports() {
+        if (exportsBuilder_ == null) {
+          exports_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          exportsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of exports in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+       */
+      public Builder removeExports(int index) {
+        if (exportsBuilder_ == null) {
+          ensureExportsIsMutable();
+          exports_.remove(index);
+          onChanged();
+        } else {
+          exportsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of exports in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+       */
+      public yandex.cloud.api.logging.v1.ExportOuterClass.Export.Builder getExportsBuilder(
+          int index) {
+        return getExportsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of exports in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+       */
+      public yandex.cloud.api.logging.v1.ExportOuterClass.ExportOrBuilder getExportsOrBuilder(
+          int index) {
+        if (exportsBuilder_ == null) {
+          return exports_.get(index);  } else {
+          return exportsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of exports in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.logging.v1.ExportOuterClass.ExportOrBuilder> 
+           getExportsOrBuilderList() {
+        if (exportsBuilder_ != null) {
+          return exportsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(exports_);
+        }
+      }
+      /**
+       * <pre>
+       * List of exports in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+       */
+      public yandex.cloud.api.logging.v1.ExportOuterClass.Export.Builder addExportsBuilder() {
+        return getExportsFieldBuilder().addBuilder(
+            yandex.cloud.api.logging.v1.ExportOuterClass.Export.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of exports in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+       */
+      public yandex.cloud.api.logging.v1.ExportOuterClass.Export.Builder addExportsBuilder(
+          int index) {
+        return getExportsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.logging.v1.ExportOuterClass.Export.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of exports in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.logging.v1.Export exports = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.logging.v1.ExportOuterClass.Export.Builder> 
+           getExportsBuilderList() {
+        return getExportsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.logging.v1.ExportOuterClass.Export, yandex.cloud.api.logging.v1.ExportOuterClass.Export.Builder, yandex.cloud.api.logging.v1.ExportOuterClass.ExportOrBuilder> 
+          getExportsFieldBuilder() {
+        if (exportsBuilder_ == null) {
+          exportsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.logging.v1.ExportOuterClass.Export, yandex.cloud.api.logging.v1.ExportOuterClass.Export.Builder, yandex.cloud.api.logging.v1.ExportOuterClass.ExportOrBuilder>(
+                  exports_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          exports_ = null;
+        }
+        return exportsBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListExportsRequest.page_size], use `next_page_token` as the value
+       * for the [ListExportsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListExportsRequest.page_size], use `next_page_token` as the value
+       * for the [ListExportsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListExportsRequest.page_size], use `next_page_token` as the value
+       * for the [ListExportsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListExportsRequest.page_size], use `next_page_token` as the value
+       * for the [ListExportsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListExportsRequest.page_size], use `next_page_token` as the value
+       * for the [ListExportsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.logging.v1.ListExportsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.logging.v1.ListExportsResponse)
+    private static final yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse();
+    }
+
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListExportsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListExportsResponse>() {
+      @java.lang.Override
+      public ListExportsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListExportsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListExportsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListExportsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CreateExportRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.logging.v1.CreateExportRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the folder to create a export in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * ID of the folder to create a export in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+
+    /**
+     * <pre>
+     * Name of the export.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * Name of the export.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * Description of the export.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * Description of the export.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * Export labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * Export labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * Export labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * Export labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * Export labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * Logging Group ID logs exported from
+     * </pre>
+     *
+     * <code>string group_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The groupId.
+     */
+    java.lang.String getGroupId();
+    /**
+     * <pre>
+     * Logging Group ID logs exported from
+     * </pre>
+     *
+     * <code>string group_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for groupId.
+     */
+    com.google.protobuf.ByteString
+        getGroupIdBytes();
+
+    /**
+     * <pre>
+     * Logging Sink ID logs exported to
+     * </pre>
+     *
+     * <code>string sink_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The sinkId.
+     */
+    java.lang.String getSinkId();
+    /**
+     * <pre>
+     * Logging Sink ID logs exported to
+     * </pre>
+     *
+     * <code>string sink_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for sinkId.
+     */
+    com.google.protobuf.ByteString
+        getSinkIdBytes();
+
+    /**
+     * <pre>
+     * Parameters for logs filtration
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.ExportParams params = 7 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * Parameters for logs filtration
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.ExportParams params = 7 [(.yandex.cloud.required) = true];</code>
+     * @return The params.
+     */
+    yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams getParams();
+    /**
+     * <pre>
+     * Parameters for logs filtration
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.ExportParams params = 7 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.logging.v1.CreateExportRequest}
+   */
+  public static final class CreateExportRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.CreateExportRequest)
+      CreateExportRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateExportRequest.newBuilder() to construct.
+    private CreateExportRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateExportRequest() {
+      folderId_ = "";
+      name_ = "";
+      description_ = "";
+      groupId_ = "";
+      sinkId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateExportRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreateExportRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              groupId_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              sinkId_ = s;
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder subBuilder = null;
+              if (params_ != null) {
+                subBuilder = params_.toBuilder();
+              }
+              params_ = input.readMessage(yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(params_);
+                params_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_CreateExportRequest_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 4:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_CreateExportRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest.class, yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest.Builder.class);
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * ID of the folder to create a export in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The folderId.
+     */
+    @java.lang.Override
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the folder to create a export in.
+     * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+     * </pre>
+     *
+     * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for folderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * Name of the export.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Name of the export.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * Description of the export.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Description of the export.
+     * </pre>
+     *
+     * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 4;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_CreateExportRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * Export labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * Export labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * Export labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Export labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int GROUP_ID_FIELD_NUMBER = 5;
+    private volatile java.lang.Object groupId_;
+    /**
+     * <pre>
+     * Logging Group ID logs exported from
+     * </pre>
+     *
+     * <code>string group_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The groupId.
+     */
+    @java.lang.Override
+    public java.lang.String getGroupId() {
+      java.lang.Object ref = groupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        groupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Logging Group ID logs exported from
+     * </pre>
+     *
+     * <code>string group_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for groupId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGroupIdBytes() {
+      java.lang.Object ref = groupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        groupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SINK_ID_FIELD_NUMBER = 6;
+    private volatile java.lang.Object sinkId_;
+    /**
+     * <pre>
+     * Logging Sink ID logs exported to
+     * </pre>
+     *
+     * <code>string sink_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The sinkId.
+     */
+    @java.lang.Override
+    public java.lang.String getSinkId() {
+      java.lang.Object ref = sinkId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sinkId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Logging Sink ID logs exported to
+     * </pre>
+     *
+     * <code>string sink_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for sinkId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSinkIdBytes() {
+      java.lang.Object ref = sinkId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sinkId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 7;
+    private yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams params_;
+    /**
+     * <pre>
+     * Parameters for logs filtration
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.ExportParams params = 7 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * Parameters for logs filtration
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.ExportParams params = 7 [(.yandex.cloud.required) = true];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams getParams() {
+      return params_ == null ? yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * Parameters for logs filtration
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.ExportParams params = 7 [(.yandex.cloud.required) = true];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder getParamsOrBuilder() {
+      return getParams();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          4);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, groupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sinkId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, sinkId_);
+      }
+      if (params_ != null) {
+        output.writeMessage(7, getParams());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, labels__);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, groupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sinkId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, sinkId_);
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getParams());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest other = (yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest) obj;
+
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getGroupId()
+          .equals(other.getGroupId())) return false;
+      if (!getSinkId()
+          .equals(other.getSinkId())) return false;
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      hash = (37 * hash) + GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getGroupId().hashCode();
+      hash = (37 * hash) + SINK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSinkId().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.logging.v1.CreateExportRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.logging.v1.CreateExportRequest)
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_CreateExportRequest_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_CreateExportRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest.class, yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        folderId_ = "";
+
+        name_ = "";
+
+        description_ = "";
+
+        internalGetMutableLabels().clear();
+        groupId_ = "";
+
+        sinkId_ = "";
+
+        if (paramsBuilder_ == null) {
+          params_ = null;
+        } else {
+          params_ = null;
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_CreateExportRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest build() {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest buildPartial() {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest result = new yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.folderId_ = folderId_;
+        result.name_ = name_;
+        result.description_ = description_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
+        result.groupId_ = groupId_;
+        result.sinkId_ = sinkId_;
+        if (paramsBuilder_ == null) {
+          result.params_ = params_;
+        } else {
+          result.params_ = paramsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest) {
+          return mergeFrom((yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest other) {
+        if (other == yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest.getDefaultInstance()) return this;
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
+          onChanged();
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
+        if (!other.getGroupId().isEmpty()) {
+          groupId_ = other.groupId_;
+          onChanged();
+        }
+        if (!other.getSinkId().isEmpty()) {
+          sinkId_ = other.sinkId_;
+          onChanged();
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * ID of the folder to create a export in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The folderId.
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder to create a export in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The bytes for folderId.
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder to create a export in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder to create a export in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder to create a export in.
+       * To get a folder ID make a [yandex.cloud.resourcemanager.v1.FolderService.List] request.
+       * </pre>
+       *
+       * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * Name of the export.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the export.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Name of the export.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the export.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Name of the export.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * Description of the export.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the export.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Description of the export.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the export.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Description of the export.
+       * </pre>
+       *
+       * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * Export labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * Export labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * Export labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * Export labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * Export labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * Export labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * Export labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 4 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private java.lang.Object groupId_ = "";
+      /**
+       * <pre>
+       * Logging Group ID logs exported from
+       * </pre>
+       *
+       * <code>string group_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The groupId.
+       */
+      public java.lang.String getGroupId() {
+        java.lang.Object ref = groupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          groupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Logging Group ID logs exported from
+       * </pre>
+       *
+       * <code>string group_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The bytes for groupId.
+       */
+      public com.google.protobuf.ByteString
+          getGroupIdBytes() {
+        java.lang.Object ref = groupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          groupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Logging Group ID logs exported from
+       * </pre>
+       *
+       * <code>string group_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The groupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        groupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Logging Group ID logs exported from
+       * </pre>
+       *
+       * <code>string group_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroupId() {
+        
+        groupId_ = getDefaultInstance().getGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Logging Group ID logs exported from
+       * </pre>
+       *
+       * <code>string group_id = 5 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The bytes for groupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        groupId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sinkId_ = "";
+      /**
+       * <pre>
+       * Logging Sink ID logs exported to
+       * </pre>
+       *
+       * <code>string sink_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The sinkId.
+       */
+      public java.lang.String getSinkId() {
+        java.lang.Object ref = sinkId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sinkId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Logging Sink ID logs exported to
+       * </pre>
+       *
+       * <code>string sink_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The bytes for sinkId.
+       */
+      public com.google.protobuf.ByteString
+          getSinkIdBytes() {
+        java.lang.Object ref = sinkId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sinkId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Logging Sink ID logs exported to
+       * </pre>
+       *
+       * <code>string sink_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The sinkId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSinkId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sinkId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Logging Sink ID logs exported to
+       * </pre>
+       *
+       * <code>string sink_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSinkId() {
+        
+        sinkId_ = getDefaultInstance().getSinkId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Logging Sink ID logs exported to
+       * </pre>
+       *
+       * <code>string sink_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The bytes for sinkId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSinkIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sinkId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * Parameters for logs filtration
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.ExportParams params = 7 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return paramsBuilder_ != null || params_ != null;
+      }
+      /**
+       * <pre>
+       * Parameters for logs filtration
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.ExportParams params = 7 [(.yandex.cloud.required) = true];</code>
+       * @return The params.
+       */
+      public yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Parameters for logs filtration
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.ExportParams params = 7 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setParams(yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+          onChanged();
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for logs filtration
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.ExportParams params = 7 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setParams(
+          yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+          onChanged();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for logs filtration
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.ExportParams params = 7 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder mergeParams(yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams value) {
+        if (paramsBuilder_ == null) {
+          if (params_ != null) {
+            params_ =
+              yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.newBuilder(params_).mergeFrom(value).buildPartial();
+          } else {
+            params_ = value;
+          }
+          onChanged();
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for logs filtration
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.ExportParams params = 7 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearParams() {
+        if (paramsBuilder_ == null) {
+          params_ = null;
+          onChanged();
+        } else {
+          params_ = null;
+          paramsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Parameters for logs filtration
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.ExportParams params = 7 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder getParamsBuilder() {
+        
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Parameters for logs filtration
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.ExportParams params = 7 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * Parameters for logs filtration
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.ExportParams params = 7 [(.yandex.cloud.required) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.logging.v1.CreateExportRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.logging.v1.CreateExportRequest)
+    private static final yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest();
+    }
+
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreateExportRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CreateExportRequest>() {
+      @java.lang.Override
+      public CreateExportRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreateExportRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateExportRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateExportRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CreateExportMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.logging.v1.CreateExportMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the export being created.
+     * </pre>
+     *
+     * <code>string export_id = 1;</code>
+     * @return The exportId.
+     */
+    java.lang.String getExportId();
+    /**
+     * <pre>
+     * ID of the export being created.
+     * </pre>
+     *
+     * <code>string export_id = 1;</code>
+     * @return The bytes for exportId.
+     */
+    com.google.protobuf.ByteString
+        getExportIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.logging.v1.CreateExportMetadata}
+   */
+  public static final class CreateExportMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.CreateExportMetadata)
+      CreateExportMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreateExportMetadata.newBuilder() to construct.
+    private CreateExportMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreateExportMetadata() {
+      exportId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateExportMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreateExportMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              exportId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_CreateExportMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_CreateExportMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata.class, yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata.Builder.class);
+    }
+
+    public static final int EXPORT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object exportId_;
+    /**
+     * <pre>
+     * ID of the export being created.
+     * </pre>
+     *
+     * <code>string export_id = 1;</code>
+     * @return The exportId.
+     */
+    @java.lang.Override
+    public java.lang.String getExportId() {
+      java.lang.Object ref = exportId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        exportId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the export being created.
+     * </pre>
+     *
+     * <code>string export_id = 1;</code>
+     * @return The bytes for exportId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExportIdBytes() {
+      java.lang.Object ref = exportId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        exportId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exportId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, exportId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exportId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, exportId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata other = (yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata) obj;
+
+      if (!getExportId()
+          .equals(other.getExportId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + EXPORT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getExportId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.logging.v1.CreateExportMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.logging.v1.CreateExportMetadata)
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_CreateExportMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_CreateExportMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata.class, yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        exportId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_CreateExportMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata build() {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata buildPartial() {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata result = new yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata(this);
+        result.exportId_ = exportId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata) {
+          return mergeFrom((yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata other) {
+        if (other == yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata.getDefaultInstance()) return this;
+        if (!other.getExportId().isEmpty()) {
+          exportId_ = other.exportId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object exportId_ = "";
+      /**
+       * <pre>
+       * ID of the export being created.
+       * </pre>
+       *
+       * <code>string export_id = 1;</code>
+       * @return The exportId.
+       */
+      public java.lang.String getExportId() {
+        java.lang.Object ref = exportId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          exportId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the export being created.
+       * </pre>
+       *
+       * <code>string export_id = 1;</code>
+       * @return The bytes for exportId.
+       */
+      public com.google.protobuf.ByteString
+          getExportIdBytes() {
+        java.lang.Object ref = exportId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          exportId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the export being created.
+       * </pre>
+       *
+       * <code>string export_id = 1;</code>
+       * @param value The exportId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExportId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        exportId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the export being created.
+       * </pre>
+       *
+       * <code>string export_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExportId() {
+        
+        exportId_ = getDefaultInstance().getExportId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the export being created.
+       * </pre>
+       *
+       * <code>string export_id = 1;</code>
+       * @param value The bytes for exportId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExportIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        exportId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.logging.v1.CreateExportMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.logging.v1.CreateExportMetadata)
+    private static final yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata();
+    }
+
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreateExportMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<CreateExportMetadata>() {
+      @java.lang.Override
+      public CreateExportMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreateExportMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreateExportMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreateExportMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.logging.v1.ExportServiceOuterClass.CreateExportMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateExportRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.logging.v1.UpdateExportRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the export to update.
+     * To get a export ID make a [ExportService.List] request.
+     * </pre>
+     *
+     * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The exportId.
+     */
+    java.lang.String getExportId();
+    /**
+     * <pre>
+     * ID of the export to update.
+     * To get a export ID make a [ExportService.List] request.
+     * </pre>
+     *
+     * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for exportId.
+     */
+    com.google.protobuf.ByteString
+        getExportIdBytes();
+
+    /**
+     * <pre>
+     * Field mask that specifies which attributes of the function should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
+     */
+    boolean hasUpdateMask();
+    /**
+     * <pre>
+     * Field mask that specifies which attributes of the function should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
+     */
+    com.google.protobuf.FieldMask getUpdateMask();
+    /**
+     * <pre>
+     * Field mask that specifies which attributes of the function should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
+
+    /**
+     * <pre>
+     * New name of the export.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <pre>
+     * New name of the export.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <pre>
+     * New Description of the export.
+     * </pre>
+     *
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <pre>
+     * New Description of the export.
+     * </pre>
+     *
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <pre>
+     * New export labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    int getLabelsCount();
+    /**
+     * <pre>
+     * New export labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    boolean containsLabels(
+        java.lang.String key);
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabels();
+    /**
+     * <pre>
+     * New export labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getLabelsMap();
+    /**
+     * <pre>
+     * New export labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <pre>
+     * New export labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    java.lang.String getLabelsOrThrow(
+        java.lang.String key);
+
+    /**
+     * <pre>
+     * New logging Group ID logs exported from
+     * </pre>
+     *
+     * <code>string group_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The groupId.
+     */
+    java.lang.String getGroupId();
+    /**
+     * <pre>
+     * New logging Group ID logs exported from
+     * </pre>
+     *
+     * <code>string group_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for groupId.
+     */
+    com.google.protobuf.ByteString
+        getGroupIdBytes();
+
+    /**
+     * <pre>
+     * New logging Sink ID logs exported to
+     * </pre>
+     *
+     * <code>string sink_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The sinkId.
+     */
+    java.lang.String getSinkId();
+    /**
+     * <pre>
+     * New logging Sink ID logs exported to
+     * </pre>
+     *
+     * <code>string sink_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for sinkId.
+     */
+    com.google.protobuf.ByteString
+        getSinkIdBytes();
+
+    /**
+     * <pre>
+     * New parameters for logs filtration
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.ExportParams params = 8 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the params field is set.
+     */
+    boolean hasParams();
+    /**
+     * <pre>
+     * New parameters for logs filtration
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.ExportParams params = 8 [(.yandex.cloud.required) = true];</code>
+     * @return The params.
+     */
+    yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams getParams();
+    /**
+     * <pre>
+     * New parameters for logs filtration
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.ExportParams params = 8 [(.yandex.cloud.required) = true];</code>
+     */
+    yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder getParamsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.logging.v1.UpdateExportRequest}
+   */
+  public static final class UpdateExportRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.UpdateExportRequest)
+      UpdateExportRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateExportRequest.newBuilder() to construct.
+    private UpdateExportRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateExportRequest() {
+      exportId_ = "";
+      name_ = "";
+      description_ = "";
+      groupId_ = "";
+      sinkId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateExportRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateExportRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              exportId_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.FieldMask.Builder subBuilder = null;
+              if (updateMask_ != null) {
+                subBuilder = updateMask_.toBuilder();
+              }
+              updateMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(updateMask_);
+                updateMask_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                labels_ = com.google.protobuf.MapField.newMapField(
+                    LabelsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              labels__ = input.readMessage(
+                  LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              labels_.getMutableMap().put(
+                  labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              groupId_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              sinkId_ = s;
+              break;
+            }
+            case 66: {
+              yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder subBuilder = null;
+              if (params_ != null) {
+                subBuilder = params_.toBuilder();
+              }
+              params_ = input.readMessage(yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(params_);
+                params_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_UpdateExportRequest_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 5:
+          return internalGetLabels();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_UpdateExportRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest.class, yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest.Builder.class);
+    }
+
+    public static final int EXPORT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object exportId_;
+    /**
+     * <pre>
+     * ID of the export to update.
+     * To get a export ID make a [ExportService.List] request.
+     * </pre>
+     *
+     * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The exportId.
+     */
+    @java.lang.Override
+    public java.lang.String getExportId() {
+      java.lang.Object ref = exportId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        exportId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the export to update.
+     * To get a export ID make a [ExportService.List] request.
+     * </pre>
+     *
+     * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for exportId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExportIdBytes() {
+      java.lang.Object ref = exportId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        exportId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UPDATE_MASK_FIELD_NUMBER = 2;
+    private com.google.protobuf.FieldMask updateMask_;
+    /**
+     * <pre>
+     * Field mask that specifies which attributes of the function should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return Whether the updateMask field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdateMask() {
+      return updateMask_ != null;
+    }
+    /**
+     * <pre>
+     * Field mask that specifies which attributes of the function should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     * @return The updateMask.
+     */
+    @java.lang.Override
+    public com.google.protobuf.FieldMask getUpdateMask() {
+      return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+    }
+    /**
+     * <pre>
+     * Field mask that specifies which attributes of the function should be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+      return getUpdateMask();
+    }
+
+    public static final int NAME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object name_;
+    /**
+     * <pre>
+     * New name of the export.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * New name of the export.
+     * The name must be unique within the folder.
+     * </pre>
+     *
+     * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 4;
+    private volatile java.lang.Object description_;
+    /**
+     * <pre>
+     * New Description of the export.
+     * </pre>
+     *
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * New Description of the export.
+     * </pre>
+     *
+     * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LABELS_FIELD_NUMBER = 5;
+    private static final class LabelsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_UpdateExportRequest_LabelsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> labels_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetLabels() {
+      if (labels_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            LabelsDefaultEntryHolder.defaultEntry);
+      }
+      return labels_;
+    }
+
+    public int getLabelsCount() {
+      return internalGetLabels().getMap().size();
+    }
+    /**
+     * <pre>
+     * New export labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+
+    @java.lang.Override
+    public boolean containsLabels(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetLabels().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getLabelsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+      return getLabelsMap();
+    }
+    /**
+     * <pre>
+     * New export labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+      return internalGetLabels().getMap();
+    }
+    /**
+     * <pre>
+     * New export labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * New export labels as `key:value` pairs.
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getLabelsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetLabels().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public static final int GROUP_ID_FIELD_NUMBER = 6;
+    private volatile java.lang.Object groupId_;
+    /**
+     * <pre>
+     * New logging Group ID logs exported from
+     * </pre>
+     *
+     * <code>string group_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The groupId.
+     */
+    @java.lang.Override
+    public java.lang.String getGroupId() {
+      java.lang.Object ref = groupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        groupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * New logging Group ID logs exported from
+     * </pre>
+     *
+     * <code>string group_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for groupId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGroupIdBytes() {
+      java.lang.Object ref = groupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        groupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SINK_ID_FIELD_NUMBER = 7;
+    private volatile java.lang.Object sinkId_;
+    /**
+     * <pre>
+     * New logging Sink ID logs exported to
+     * </pre>
+     *
+     * <code>string sink_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The sinkId.
+     */
+    @java.lang.Override
+    public java.lang.String getSinkId() {
+      java.lang.Object ref = sinkId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sinkId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * New logging Sink ID logs exported to
+     * </pre>
+     *
+     * <code>string sink_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for sinkId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSinkIdBytes() {
+      java.lang.Object ref = sinkId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sinkId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PARAMS_FIELD_NUMBER = 8;
+    private yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams params_;
+    /**
+     * <pre>
+     * New parameters for logs filtration
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.ExportParams params = 8 [(.yandex.cloud.required) = true];</code>
+     * @return Whether the params field is set.
+     */
+    @java.lang.Override
+    public boolean hasParams() {
+      return params_ != null;
+    }
+    /**
+     * <pre>
+     * New parameters for logs filtration
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.ExportParams params = 8 [(.yandex.cloud.required) = true];</code>
+     * @return The params.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams getParams() {
+      return params_ == null ? yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.getDefaultInstance() : params_;
+    }
+    /**
+     * <pre>
+     * New parameters for logs filtration
+     * </pre>
+     *
+     * <code>.yandex.cloud.logging.v1.ExportParams params = 8 [(.yandex.cloud.required) = true];</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder getParamsOrBuilder() {
+      return getParams();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exportId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, exportId_);
+      }
+      if (updateMask_ != null) {
+        output.writeMessage(2, getUpdateMask());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetLabels(),
+          LabelsDefaultEntryHolder.defaultEntry,
+          5);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, groupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sinkId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, sinkId_);
+      }
+      if (params_ != null) {
+        output.writeMessage(8, getParams());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exportId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, exportId_);
+      }
+      if (updateMask_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getUpdateMask());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetLabels().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        labels__ = LabelsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, labels__);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(groupId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, groupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sinkId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, sinkId_);
+      }
+      if (params_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getParams());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest other = (yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest) obj;
+
+      if (!getExportId()
+          .equals(other.getExportId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
+      if (hasUpdateMask()) {
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
+      }
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (!internalGetLabels().equals(
+          other.internalGetLabels())) return false;
+      if (!getGroupId()
+          .equals(other.getGroupId())) return false;
+      if (!getSinkId()
+          .equals(other.getSinkId())) return false;
+      if (hasParams() != other.hasParams()) return false;
+      if (hasParams()) {
+        if (!getParams()
+            .equals(other.getParams())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + EXPORT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getExportId().hashCode();
+      if (hasUpdateMask()) {
+        hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdateMask().hashCode();
+      }
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (!internalGetLabels().getMap().isEmpty()) {
+        hash = (37 * hash) + LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      hash = (37 * hash) + GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getGroupId().hashCode();
+      hash = (37 * hash) + SINK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getSinkId().hashCode();
+      if (hasParams()) {
+        hash = (37 * hash) + PARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getParams().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.logging.v1.UpdateExportRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.logging.v1.UpdateExportRequest)
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_UpdateExportRequest_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 5:
+            return internalGetLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 5:
+            return internalGetMutableLabels();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_UpdateExportRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest.class, yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        exportId_ = "";
+
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+        name_ = "";
+
+        description_ = "";
+
+        internalGetMutableLabels().clear();
+        groupId_ = "";
+
+        sinkId_ = "";
+
+        if (paramsBuilder_ == null) {
+          params_ = null;
+        } else {
+          params_ = null;
+          paramsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_UpdateExportRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest build() {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest buildPartial() {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest result = new yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest(this);
+        int from_bitField0_ = bitField0_;
+        result.exportId_ = exportId_;
+        if (updateMaskBuilder_ == null) {
+          result.updateMask_ = updateMask_;
+        } else {
+          result.updateMask_ = updateMaskBuilder_.build();
+        }
+        result.name_ = name_;
+        result.description_ = description_;
+        result.labels_ = internalGetLabels();
+        result.labels_.makeImmutable();
+        result.groupId_ = groupId_;
+        result.sinkId_ = sinkId_;
+        if (paramsBuilder_ == null) {
+          result.params_ = params_;
+        } else {
+          result.params_ = paramsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest) {
+          return mergeFrom((yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest other) {
+        if (other == yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest.getDefaultInstance()) return this;
+        if (!other.getExportId().isEmpty()) {
+          exportId_ = other.exportId_;
+          onChanged();
+        }
+        if (other.hasUpdateMask()) {
+          mergeUpdateMask(other.getUpdateMask());
+        }
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        internalGetMutableLabels().mergeFrom(
+            other.internalGetLabels());
+        if (!other.getGroupId().isEmpty()) {
+          groupId_ = other.groupId_;
+          onChanged();
+        }
+        if (!other.getSinkId().isEmpty()) {
+          sinkId_ = other.sinkId_;
+          onChanged();
+        }
+        if (other.hasParams()) {
+          mergeParams(other.getParams());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object exportId_ = "";
+      /**
+       * <pre>
+       * ID of the export to update.
+       * To get a export ID make a [ExportService.List] request.
+       * </pre>
+       *
+       * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The exportId.
+       */
+      public java.lang.String getExportId() {
+        java.lang.Object ref = exportId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          exportId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the export to update.
+       * To get a export ID make a [ExportService.List] request.
+       * </pre>
+       *
+       * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The bytes for exportId.
+       */
+      public com.google.protobuf.ByteString
+          getExportIdBytes() {
+        java.lang.Object ref = exportId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          exportId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the export to update.
+       * To get a export ID make a [ExportService.List] request.
+       * </pre>
+       *
+       * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The exportId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExportId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        exportId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the export to update.
+       * To get a export ID make a [ExportService.List] request.
+       * </pre>
+       *
+       * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExportId() {
+        
+        exportId_ = getDefaultInstance().getExportId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the export to update.
+       * To get a export ID make a [ExportService.List] request.
+       * </pre>
+       *
+       * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The bytes for exportId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExportIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        exportId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.FieldMask updateMask_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return Whether the updateMask field is set.
+       */
+      public boolean hasUpdateMask() {
+        return updateMaskBuilder_ != null || updateMask_ != null;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       * @return The updateMask.
+       */
+      public com.google.protobuf.FieldMask getUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        } else {
+          return updateMaskBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updateMask_ = value;
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder setUpdateMask(
+          com.google.protobuf.FieldMask.Builder builderForValue) {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = builderForValue.build();
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (updateMask_ != null) {
+            updateMask_ =
+              com.google.protobuf.FieldMask.newBuilder(updateMask_).mergeFrom(value).buildPartial();
+          } else {
+            updateMask_ = value;
+          }
+          onChanged();
+        } else {
+          updateMaskBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public Builder clearUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+          onChanged();
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
+        
+        onChanged();
+        return getUpdateMaskFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+        if (updateMaskBuilder_ != null) {
+          return updateMaskBuilder_.getMessageOrBuilder();
+        } else {
+          return updateMask_ == null ?
+              com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        }
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which attributes of the function should be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+          getUpdateMaskFieldBuilder() {
+        if (updateMaskBuilder_ == null) {
+          updateMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                  getUpdateMask(),
+                  getParentForChildren(),
+                  isClean());
+          updateMask_ = null;
+        }
+        return updateMaskBuilder_;
+      }
+
+      private java.lang.Object name_ = "";
+      /**
+       * <pre>
+       * New name of the export.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New name of the export.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New name of the export.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New name of the export.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New name of the export.
+       * The name must be unique within the folder.
+       * </pre>
+       *
+       * <code>string name = 3 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <pre>
+       * New Description of the export.
+       * </pre>
+       *
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New Description of the export.
+       * </pre>
+       *
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New Description of the export.
+       * </pre>
+       *
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New Description of the export.
+       * </pre>
+       *
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New Description of the export.
+       * </pre>
+       *
+       * <code>string description = 4 [(.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> labels_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetLabels() {
+        if (labels_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        return labels_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableLabels() {
+        onChanged();;
+        if (labels_ == null) {
+          labels_ = com.google.protobuf.MapField.newMapField(
+              LabelsDefaultEntryHolder.defaultEntry);
+        }
+        if (!labels_.isMutable()) {
+          labels_ = labels_.copy();
+        }
+        return labels_;
+      }
+
+      public int getLabelsCount() {
+        return internalGetLabels().getMap().size();
+      }
+      /**
+       * <pre>
+       * New export labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      @java.lang.Override
+      public boolean containsLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetLabels().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getLabelsMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getLabels() {
+        return getLabelsMap();
+      }
+      /**
+       * <pre>
+       * New export labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, java.lang.String> getLabelsMap() {
+        return internalGetLabels().getMap();
+      }
+      /**
+       * <pre>
+       * New export labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * New export labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      @java.lang.Override
+
+      public java.lang.String getLabelsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetLabels().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearLabels() {
+        internalGetMutableLabels().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * New export labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder removeLabels(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableLabels().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableLabels() {
+        return internalGetMutableLabels().getMutableMap();
+      }
+      /**
+       * <pre>
+       * New export labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+      public Builder putLabels(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableLabels().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * New export labels as `key:value` pairs.
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; labels = 5 [(.yandex.cloud.pattern) = "[-_0-9a-z]*", (.yandex.cloud.size) = "&lt;=64", (.yandex.cloud.length) = "&lt;=63", (.yandex.cloud.map_key) = { ... }</code>
+       */
+
+      public Builder putAllLabels(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableLabels().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+
+      private java.lang.Object groupId_ = "";
+      /**
+       * <pre>
+       * New logging Group ID logs exported from
+       * </pre>
+       *
+       * <code>string group_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The groupId.
+       */
+      public java.lang.String getGroupId() {
+        java.lang.Object ref = groupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          groupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New logging Group ID logs exported from
+       * </pre>
+       *
+       * <code>string group_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The bytes for groupId.
+       */
+      public com.google.protobuf.ByteString
+          getGroupIdBytes() {
+        java.lang.Object ref = groupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          groupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New logging Group ID logs exported from
+       * </pre>
+       *
+       * <code>string group_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The groupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        groupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New logging Group ID logs exported from
+       * </pre>
+       *
+       * <code>string group_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGroupId() {
+        
+        groupId_ = getDefaultInstance().getGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New logging Group ID logs exported from
+       * </pre>
+       *
+       * <code>string group_id = 6 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The bytes for groupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        groupId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sinkId_ = "";
+      /**
+       * <pre>
+       * New logging Sink ID logs exported to
+       * </pre>
+       *
+       * <code>string sink_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The sinkId.
+       */
+      public java.lang.String getSinkId() {
+        java.lang.Object ref = sinkId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sinkId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New logging Sink ID logs exported to
+       * </pre>
+       *
+       * <code>string sink_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The bytes for sinkId.
+       */
+      public com.google.protobuf.ByteString
+          getSinkIdBytes() {
+        java.lang.Object ref = sinkId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sinkId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * New logging Sink ID logs exported to
+       * </pre>
+       *
+       * <code>string sink_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The sinkId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSinkId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sinkId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New logging Sink ID logs exported to
+       * </pre>
+       *
+       * <code>string sink_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSinkId() {
+        
+        sinkId_ = getDefaultInstance().getSinkId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New logging Sink ID logs exported to
+       * </pre>
+       *
+       * <code>string sink_id = 7 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The bytes for sinkId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSinkIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sinkId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams params_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder> paramsBuilder_;
+      /**
+       * <pre>
+       * New parameters for logs filtration
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.ExportParams params = 8 [(.yandex.cloud.required) = true];</code>
+       * @return Whether the params field is set.
+       */
+      public boolean hasParams() {
+        return paramsBuilder_ != null || params_ != null;
+      }
+      /**
+       * <pre>
+       * New parameters for logs filtration
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.ExportParams params = 8 [(.yandex.cloud.required) = true];</code>
+       * @return The params.
+       */
+      public yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams getParams() {
+        if (paramsBuilder_ == null) {
+          return params_ == null ? yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.getDefaultInstance() : params_;
+        } else {
+          return paramsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * New parameters for logs filtration
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.ExportParams params = 8 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setParams(yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams value) {
+        if (paramsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          params_ = value;
+          onChanged();
+        } else {
+          paramsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New parameters for logs filtration
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.ExportParams params = 8 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder setParams(
+          yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder builderForValue) {
+        if (paramsBuilder_ == null) {
+          params_ = builderForValue.build();
+          onChanged();
+        } else {
+          paramsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New parameters for logs filtration
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.ExportParams params = 8 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder mergeParams(yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams value) {
+        if (paramsBuilder_ == null) {
+          if (params_ != null) {
+            params_ =
+              yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.newBuilder(params_).mergeFrom(value).buildPartial();
+          } else {
+            params_ = value;
+          }
+          onChanged();
+        } else {
+          paramsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New parameters for logs filtration
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.ExportParams params = 8 [(.yandex.cloud.required) = true];</code>
+       */
+      public Builder clearParams() {
+        if (paramsBuilder_ == null) {
+          params_ = null;
+          onChanged();
+        } else {
+          params_ = null;
+          paramsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * New parameters for logs filtration
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.ExportParams params = 8 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder getParamsBuilder() {
+        
+        onChanged();
+        return getParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * New parameters for logs filtration
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.ExportParams params = 8 [(.yandex.cloud.required) = true];</code>
+       */
+      public yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder getParamsOrBuilder() {
+        if (paramsBuilder_ != null) {
+          return paramsBuilder_.getMessageOrBuilder();
+        } else {
+          return params_ == null ?
+              yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.getDefaultInstance() : params_;
+        }
+      }
+      /**
+       * <pre>
+       * New parameters for logs filtration
+       * </pre>
+       *
+       * <code>.yandex.cloud.logging.v1.ExportParams params = 8 [(.yandex.cloud.required) = true];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder> 
+          getParamsFieldBuilder() {
+        if (paramsBuilder_ == null) {
+          paramsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParams.Builder, yandex.cloud.api.logging.v1.ExportOuterClass.ExportParamsOrBuilder>(
+                  getParams(),
+                  getParentForChildren(),
+                  isClean());
+          params_ = null;
+        }
+        return paramsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.logging.v1.UpdateExportRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.logging.v1.UpdateExportRequest)
+    private static final yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest();
+    }
+
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateExportRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateExportRequest>() {
+      @java.lang.Override
+      public UpdateExportRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateExportRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateExportRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateExportRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateExportMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.logging.v1.UpdateExportMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the export being updated.
+     * </pre>
+     *
+     * <code>string export_id = 1;</code>
+     * @return The exportId.
+     */
+    java.lang.String getExportId();
+    /**
+     * <pre>
+     * ID of the export being updated.
+     * </pre>
+     *
+     * <code>string export_id = 1;</code>
+     * @return The bytes for exportId.
+     */
+    com.google.protobuf.ByteString
+        getExportIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.logging.v1.UpdateExportMetadata}
+   */
+  public static final class UpdateExportMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.UpdateExportMetadata)
+      UpdateExportMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateExportMetadata.newBuilder() to construct.
+    private UpdateExportMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateExportMetadata() {
+      exportId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateExportMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateExportMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              exportId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_UpdateExportMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_UpdateExportMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata.class, yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata.Builder.class);
+    }
+
+    public static final int EXPORT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object exportId_;
+    /**
+     * <pre>
+     * ID of the export being updated.
+     * </pre>
+     *
+     * <code>string export_id = 1;</code>
+     * @return The exportId.
+     */
+    @java.lang.Override
+    public java.lang.String getExportId() {
+      java.lang.Object ref = exportId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        exportId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the export being updated.
+     * </pre>
+     *
+     * <code>string export_id = 1;</code>
+     * @return The bytes for exportId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExportIdBytes() {
+      java.lang.Object ref = exportId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        exportId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exportId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, exportId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exportId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, exportId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata other = (yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata) obj;
+
+      if (!getExportId()
+          .equals(other.getExportId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + EXPORT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getExportId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.logging.v1.UpdateExportMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.logging.v1.UpdateExportMetadata)
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_UpdateExportMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_UpdateExportMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata.class, yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        exportId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_UpdateExportMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata build() {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata buildPartial() {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata result = new yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata(this);
+        result.exportId_ = exportId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata) {
+          return mergeFrom((yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata other) {
+        if (other == yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata.getDefaultInstance()) return this;
+        if (!other.getExportId().isEmpty()) {
+          exportId_ = other.exportId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object exportId_ = "";
+      /**
+       * <pre>
+       * ID of the export being updated.
+       * </pre>
+       *
+       * <code>string export_id = 1;</code>
+       * @return The exportId.
+       */
+      public java.lang.String getExportId() {
+        java.lang.Object ref = exportId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          exportId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the export being updated.
+       * </pre>
+       *
+       * <code>string export_id = 1;</code>
+       * @return The bytes for exportId.
+       */
+      public com.google.protobuf.ByteString
+          getExportIdBytes() {
+        java.lang.Object ref = exportId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          exportId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the export being updated.
+       * </pre>
+       *
+       * <code>string export_id = 1;</code>
+       * @param value The exportId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExportId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        exportId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the export being updated.
+       * </pre>
+       *
+       * <code>string export_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExportId() {
+        
+        exportId_ = getDefaultInstance().getExportId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the export being updated.
+       * </pre>
+       *
+       * <code>string export_id = 1;</code>
+       * @param value The bytes for exportId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExportIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        exportId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.logging.v1.UpdateExportMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.logging.v1.UpdateExportMetadata)
+    private static final yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata();
+    }
+
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateExportMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateExportMetadata>() {
+      @java.lang.Override
+      public UpdateExportMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateExportMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateExportMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateExportMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.logging.v1.ExportServiceOuterClass.UpdateExportMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteExportRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.logging.v1.DeleteExportRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the export to delete.
+     * To get a export ID make a [ExportService.List] request.
+     * </pre>
+     *
+     * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The exportId.
+     */
+    java.lang.String getExportId();
+    /**
+     * <pre>
+     * ID of the export to delete.
+     * To get a export ID make a [ExportService.List] request.
+     * </pre>
+     *
+     * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for exportId.
+     */
+    com.google.protobuf.ByteString
+        getExportIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.logging.v1.DeleteExportRequest}
+   */
+  public static final class DeleteExportRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.DeleteExportRequest)
+      DeleteExportRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteExportRequest.newBuilder() to construct.
+    private DeleteExportRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteExportRequest() {
+      exportId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteExportRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteExportRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              exportId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_DeleteExportRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_DeleteExportRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest.class, yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest.Builder.class);
+    }
+
+    public static final int EXPORT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object exportId_;
+    /**
+     * <pre>
+     * ID of the export to delete.
+     * To get a export ID make a [ExportService.List] request.
+     * </pre>
+     *
+     * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The exportId.
+     */
+    @java.lang.Override
+    public java.lang.String getExportId() {
+      java.lang.Object ref = exportId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        exportId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the export to delete.
+     * To get a export ID make a [ExportService.List] request.
+     * </pre>
+     *
+     * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for exportId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExportIdBytes() {
+      java.lang.Object ref = exportId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        exportId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exportId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, exportId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exportId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, exportId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest other = (yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest) obj;
+
+      if (!getExportId()
+          .equals(other.getExportId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + EXPORT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getExportId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.logging.v1.DeleteExportRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.logging.v1.DeleteExportRequest)
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_DeleteExportRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_DeleteExportRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest.class, yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        exportId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_DeleteExportRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest build() {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest buildPartial() {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest result = new yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest(this);
+        result.exportId_ = exportId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest) {
+          return mergeFrom((yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest other) {
+        if (other == yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest.getDefaultInstance()) return this;
+        if (!other.getExportId().isEmpty()) {
+          exportId_ = other.exportId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object exportId_ = "";
+      /**
+       * <pre>
+       * ID of the export to delete.
+       * To get a export ID make a [ExportService.List] request.
+       * </pre>
+       *
+       * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The exportId.
+       */
+      public java.lang.String getExportId() {
+        java.lang.Object ref = exportId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          exportId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the export to delete.
+       * To get a export ID make a [ExportService.List] request.
+       * </pre>
+       *
+       * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The bytes for exportId.
+       */
+      public com.google.protobuf.ByteString
+          getExportIdBytes() {
+        java.lang.Object ref = exportId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          exportId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the export to delete.
+       * To get a export ID make a [ExportService.List] request.
+       * </pre>
+       *
+       * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The exportId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExportId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        exportId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the export to delete.
+       * To get a export ID make a [ExportService.List] request.
+       * </pre>
+       *
+       * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExportId() {
+        
+        exportId_ = getDefaultInstance().getExportId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the export to delete.
+       * To get a export ID make a [ExportService.List] request.
+       * </pre>
+       *
+       * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The bytes for exportId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExportIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        exportId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.logging.v1.DeleteExportRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.logging.v1.DeleteExportRequest)
+    private static final yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest();
+    }
+
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteExportRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteExportRequest>() {
+      @java.lang.Override
+      public DeleteExportRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteExportRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteExportRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteExportRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteExportMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.logging.v1.DeleteExportMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the export being deleted.
+     * </pre>
+     *
+     * <code>string export_id = 1;</code>
+     * @return The exportId.
+     */
+    java.lang.String getExportId();
+    /**
+     * <pre>
+     * ID of the export being deleted.
+     * </pre>
+     *
+     * <code>string export_id = 1;</code>
+     * @return The bytes for exportId.
+     */
+    com.google.protobuf.ByteString
+        getExportIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.logging.v1.DeleteExportMetadata}
+   */
+  public static final class DeleteExportMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.DeleteExportMetadata)
+      DeleteExportMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteExportMetadata.newBuilder() to construct.
+    private DeleteExportMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteExportMetadata() {
+      exportId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteExportMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteExportMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              exportId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_DeleteExportMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_DeleteExportMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata.class, yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata.Builder.class);
+    }
+
+    public static final int EXPORT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object exportId_;
+    /**
+     * <pre>
+     * ID of the export being deleted.
+     * </pre>
+     *
+     * <code>string export_id = 1;</code>
+     * @return The exportId.
+     */
+    @java.lang.Override
+    public java.lang.String getExportId() {
+      java.lang.Object ref = exportId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        exportId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the export being deleted.
+     * </pre>
+     *
+     * <code>string export_id = 1;</code>
+     * @return The bytes for exportId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExportIdBytes() {
+      java.lang.Object ref = exportId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        exportId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exportId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, exportId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exportId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, exportId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata other = (yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata) obj;
+
+      if (!getExportId()
+          .equals(other.getExportId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + EXPORT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getExportId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.logging.v1.DeleteExportMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.logging.v1.DeleteExportMetadata)
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_DeleteExportMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_DeleteExportMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata.class, yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        exportId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_DeleteExportMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata build() {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata buildPartial() {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata result = new yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata(this);
+        result.exportId_ = exportId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata) {
+          return mergeFrom((yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata other) {
+        if (other == yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata.getDefaultInstance()) return this;
+        if (!other.getExportId().isEmpty()) {
+          exportId_ = other.exportId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object exportId_ = "";
+      /**
+       * <pre>
+       * ID of the export being deleted.
+       * </pre>
+       *
+       * <code>string export_id = 1;</code>
+       * @return The exportId.
+       */
+      public java.lang.String getExportId() {
+        java.lang.Object ref = exportId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          exportId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the export being deleted.
+       * </pre>
+       *
+       * <code>string export_id = 1;</code>
+       * @return The bytes for exportId.
+       */
+      public com.google.protobuf.ByteString
+          getExportIdBytes() {
+        java.lang.Object ref = exportId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          exportId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the export being deleted.
+       * </pre>
+       *
+       * <code>string export_id = 1;</code>
+       * @param value The exportId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExportId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        exportId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the export being deleted.
+       * </pre>
+       *
+       * <code>string export_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExportId() {
+        
+        exportId_ = getDefaultInstance().getExportId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the export being deleted.
+       * </pre>
+       *
+       * <code>string export_id = 1;</code>
+       * @param value The bytes for exportId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExportIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        exportId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.logging.v1.DeleteExportMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.logging.v1.DeleteExportMetadata)
+    private static final yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata();
+    }
+
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteExportMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteExportMetadata>() {
+      @java.lang.Override
+      public DeleteExportMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteExportMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteExportMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteExportMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.logging.v1.ExportServiceOuterClass.DeleteExportMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListExportOperationsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.logging.v1.ListExportOperationsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the export to list operations for.
+     * To get a export ID make a [ExportService.List] request.
+     * </pre>
+     *
+     * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The exportId.
+     */
+    java.lang.String getExportId();
+    /**
+     * <pre>
+     * ID of the export to list operations for.
+     * To get a export ID make a [ExportService.List] request.
+     * </pre>
+     *
+     * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for exportId.
+     */
+    com.google.protobuf.ByteString
+        getExportIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListExportOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListExportOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListExportOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the [operation.Operation.description], [operation.Operation.created_at], [operation.Operation.modified_at], [operation.Operation.created_by], [operation.Operation.done] fields.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Examples of a filter: `done=false`, `created_by='John.Doe'`.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
+     */
+    java.lang.String getFilter();
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the [operation.Operation.description], [operation.Operation.created_at], [operation.Operation.modified_at], [operation.Operation.created_by], [operation.Operation.done] fields.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Examples of a filter: `done=false`, `created_by='John.Doe'`.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
+     */
+    com.google.protobuf.ByteString
+        getFilterBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.logging.v1.ListExportOperationsRequest}
+   */
+  public static final class ListExportOperationsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.ListExportOperationsRequest)
+      ListExportOperationsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListExportOperationsRequest.newBuilder() to construct.
+    private ListExportOperationsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListExportOperationsRequest() {
+      exportId_ = "";
+      pageToken_ = "";
+      filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListExportOperationsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListExportOperationsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              exportId_ = s;
+              break;
+            }
+            case 16: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              filter_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_ListExportOperationsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_ListExportOperationsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest.class, yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest.Builder.class);
+    }
+
+    public static final int EXPORT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object exportId_;
+    /**
+     * <pre>
+     * ID of the export to list operations for.
+     * To get a export ID make a [ExportService.List] request.
+     * </pre>
+     *
+     * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The exportId.
+     */
+    @java.lang.Override
+    public java.lang.String getExportId() {
+      java.lang.Object ref = exportId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        exportId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the export to list operations for.
+     * To get a export ID make a [ExportService.List] request.
+     * </pre>
+     *
+     * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+     * @return The bytes for exportId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getExportIdBytes() {
+      java.lang.Object ref = exportId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        exportId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListExportOperationsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListExportOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListExportOperationsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILTER_FIELD_NUMBER = 4;
+    private volatile java.lang.Object filter_;
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the [operation.Operation.description], [operation.Operation.created_at], [operation.Operation.modified_at], [operation.Operation.created_by], [operation.Operation.done] fields.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Examples of a filter: `done=false`, `created_by='John.Doe'`.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
+     */
+    @java.lang.Override
+    public java.lang.String getFilter() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A filter expression that filters resources listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently filtering can be applied to the [operation.Operation.description], [operation.Operation.created_at], [operation.Operation.modified_at], [operation.Operation.created_by], [operation.Operation.done] fields.
+     * 2. An `=` operator.
+     * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Examples of a filter: `done=false`, `created_by='John.Doe'`.
+     * </pre>
+     *
+     * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFilterBytes() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exportId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, exportId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exportId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, exportId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest other = (yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest) obj;
+
+      if (!getExportId()
+          .equals(other.getExportId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + EXPORT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getExportId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (37 * hash) + FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getFilter().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.logging.v1.ListExportOperationsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.logging.v1.ListExportOperationsRequest)
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_ListExportOperationsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_ListExportOperationsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest.class, yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        exportId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        filter_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_ListExportOperationsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest build() {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest buildPartial() {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest result = new yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest(this);
+        result.exportId_ = exportId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        result.filter_ = filter_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest) {
+          return mergeFrom((yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest other) {
+        if (other == yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest.getDefaultInstance()) return this;
+        if (!other.getExportId().isEmpty()) {
+          exportId_ = other.exportId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        if (!other.getFilter().isEmpty()) {
+          filter_ = other.filter_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object exportId_ = "";
+      /**
+       * <pre>
+       * ID of the export to list operations for.
+       * To get a export ID make a [ExportService.List] request.
+       * </pre>
+       *
+       * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The exportId.
+       */
+      public java.lang.String getExportId() {
+        java.lang.Object ref = exportId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          exportId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the export to list operations for.
+       * To get a export ID make a [ExportService.List] request.
+       * </pre>
+       *
+       * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return The bytes for exportId.
+       */
+      public com.google.protobuf.ByteString
+          getExportIdBytes() {
+        java.lang.Object ref = exportId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          exportId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the export to list operations for.
+       * To get a export ID make a [ExportService.List] request.
+       * </pre>
+       *
+       * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The exportId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExportId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        exportId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the export to list operations for.
+       * To get a export ID make a [ExportService.List] request.
+       * </pre>
+       *
+       * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearExportId() {
+        
+        exportId_ = getDefaultInstance().getExportId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the export to list operations for.
+       * To get a export ID make a [ExportService.List] request.
+       * </pre>
+       *
+       * <code>string export_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=64"];</code>
+       * @param value The bytes for exportId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setExportIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        exportId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListExportOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListExportOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListExportOperationsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListExportOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListExportOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListExportOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListExportOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListExportOperationsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object filter_ = "";
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [operation.Operation.description], [operation.Operation.created_at], [operation.Operation.modified_at], [operation.Operation.created_by], [operation.Operation.done] fields.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Examples of a filter: `done=false`, `created_by='John.Doe'`.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
+       */
+      public java.lang.String getFilter() {
+        java.lang.Object ref = filter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [operation.Operation.description], [operation.Operation.created_at], [operation.Operation.modified_at], [operation.Operation.created_by], [operation.Operation.done] fields.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Examples of a filter: `done=false`, `created_by='John.Doe'`.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
+       */
+      public com.google.protobuf.ByteString
+          getFilterBytes() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [operation.Operation.description], [operation.Operation.created_at], [operation.Operation.modified_at], [operation.Operation.created_by], [operation.Operation.done] fields.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Examples of a filter: `done=false`, `created_by='John.Doe'`.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [operation.Operation.description], [operation.Operation.created_at], [operation.Operation.modified_at], [operation.Operation.created_by], [operation.Operation.done] fields.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Examples of a filter: `done=false`, `created_by='John.Doe'`.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilter() {
+        
+        filter_ = getDefaultInstance().getFilter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters resources listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently filtering can be applied to the [operation.Operation.description], [operation.Operation.created_at], [operation.Operation.modified_at], [operation.Operation.created_by], [operation.Operation.done] fields.
+       * 2. An `=` operator.
+       * 3. The value in double quotes (`"`). Must be 3-63 characters long and match the regular expression `[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Examples of a filter: `done=false`, `created_by='John.Doe'`.
+       * </pre>
+       *
+       * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.logging.v1.ListExportOperationsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.logging.v1.ListExportOperationsRequest)
+    private static final yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest();
+    }
+
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListExportOperationsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListExportOperationsRequest>() {
+      @java.lang.Override
+      public ListExportOperationsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListExportOperationsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListExportOperationsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListExportOperationsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListExportOperationsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.logging.v1.ListExportOperationsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of operations for the specified export.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> 
+        getOperationsList();
+    /**
+     * <pre>
+     * List of operations for the specified export.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index);
+    /**
+     * <pre>
+     * List of operations for the specified export.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    int getOperationsCount();
+    /**
+     * <pre>
+     * List of operations for the specified export.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
+        getOperationsOrBuilderList();
+    /**
+     * <pre>
+     * List of operations for the specified export.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListOExportperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListExportOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListOExportperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListExportOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.logging.v1.ListExportOperationsResponse}
+   */
+  public static final class ListExportOperationsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.logging.v1.ListExportOperationsResponse)
+      ListExportOperationsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListExportOperationsResponse.newBuilder() to construct.
+    private ListExportOperationsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListExportOperationsResponse() {
+      operations_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListExportOperationsResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListExportOperationsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              operations_.add(
+                  input.readMessage(yandex.cloud.api.operation.OperationOuterClass.Operation.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          operations_ = java.util.Collections.unmodifiableList(operations_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_ListExportOperationsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_ListExportOperationsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse.class, yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse.Builder.class);
+    }
+
+    public static final int OPERATIONS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_;
+    /**
+     * <pre>
+     * List of operations for the specified export.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
+      return operations_;
+    }
+    /**
+     * <pre>
+     * List of operations for the specified export.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
+        getOperationsOrBuilderList() {
+      return operations_;
+    }
+    /**
+     * <pre>
+     * List of operations for the specified export.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    @java.lang.Override
+    public int getOperationsCount() {
+      return operations_.size();
+    }
+    /**
+     * <pre>
+     * List of operations for the specified export.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
+      return operations_.get(index);
+    }
+    /**
+     * <pre>
+     * List of operations for the specified export.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
+        int index) {
+      return operations_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListOExportperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListExportOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListOExportperationsRequest.page_size], use `next_page_token` as the value
+     * for the [ListExportOperationsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < operations_.size(); i++) {
+        output.writeMessage(1, operations_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < operations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, operations_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse other = (yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse) obj;
+
+      if (!getOperationsList()
+          .equals(other.getOperationsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getOperationsCount() > 0) {
+        hash = (37 * hash) + OPERATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getOperationsList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.logging.v1.ListExportOperationsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.logging.v1.ListExportOperationsResponse)
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_ListExportOperationsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_ListExportOperationsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse.class, yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getOperationsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (operationsBuilder_ == null) {
+          operations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          operationsBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.internal_static_yandex_cloud_logging_v1_ListExportOperationsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse build() {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse buildPartial() {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse result = new yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (operationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            operations_ = java.util.Collections.unmodifiableList(operations_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.operations_ = operations_;
+        } else {
+          result.operations_ = operationsBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse) {
+          return mergeFrom((yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse other) {
+        if (other == yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse.getDefaultInstance()) return this;
+        if (operationsBuilder_ == null) {
+          if (!other.operations_.isEmpty()) {
+            if (operations_.isEmpty()) {
+              operations_ = other.operations_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureOperationsIsMutable();
+              operations_.addAll(other.operations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.operations_.isEmpty()) {
+            if (operationsBuilder_.isEmpty()) {
+              operationsBuilder_.dispose();
+              operationsBuilder_ = null;
+              operations_ = other.operations_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              operationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOperationsFieldBuilder() : null;
+            } else {
+              operationsBuilder_.addAllMessages(other.operations_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> operations_ =
+        java.util.Collections.emptyList();
+      private void ensureOperationsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          operations_ = new java.util.ArrayList<yandex.cloud.api.operation.OperationOuterClass.Operation>(operations_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> operationsBuilder_;
+
+      /**
+       * <pre>
+       * List of operations for the specified export.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation> getOperationsList() {
+        if (operationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(operations_);
+        } else {
+          return operationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of operations for the specified export.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public int getOperationsCount() {
+        if (operationsBuilder_ == null) {
+          return operations_.size();
+        } else {
+          return operationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of operations for the specified export.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public yandex.cloud.api.operation.OperationOuterClass.Operation getOperations(int index) {
+        if (operationsBuilder_ == null) {
+          return operations_.get(index);
+        } else {
+          return operationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of operations for the specified export.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder setOperations(
+          int index, yandex.cloud.api.operation.OperationOuterClass.Operation value) {
+        if (operationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOperationsIsMutable();
+          operations_.set(index, value);
+          onChanged();
+        } else {
+          operationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified export.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder setOperations(
+          int index, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder builderForValue) {
+        if (operationsBuilder_ == null) {
+          ensureOperationsIsMutable();
+          operations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          operationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified export.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder addOperations(yandex.cloud.api.operation.OperationOuterClass.Operation value) {
+        if (operationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOperationsIsMutable();
+          operations_.add(value);
+          onChanged();
+        } else {
+          operationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified export.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder addOperations(
+          int index, yandex.cloud.api.operation.OperationOuterClass.Operation value) {
+        if (operationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOperationsIsMutable();
+          operations_.add(index, value);
+          onChanged();
+        } else {
+          operationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified export.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder addOperations(
+          yandex.cloud.api.operation.OperationOuterClass.Operation.Builder builderForValue) {
+        if (operationsBuilder_ == null) {
+          ensureOperationsIsMutable();
+          operations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          operationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified export.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder addOperations(
+          int index, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder builderForValue) {
+        if (operationsBuilder_ == null) {
+          ensureOperationsIsMutable();
+          operations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          operationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified export.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder addAllOperations(
+          java.lang.Iterable<? extends yandex.cloud.api.operation.OperationOuterClass.Operation> values) {
+        if (operationsBuilder_ == null) {
+          ensureOperationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, operations_);
+          onChanged();
+        } else {
+          operationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified export.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder clearOperations() {
+        if (operationsBuilder_ == null) {
+          operations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          operationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified export.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public Builder removeOperations(int index) {
+        if (operationsBuilder_ == null) {
+          ensureOperationsIsMutable();
+          operations_.remove(index);
+          onChanged();
+        } else {
+          operationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of operations for the specified export.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder getOperationsBuilder(
+          int index) {
+        return getOperationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of operations for the specified export.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder getOperationsOrBuilder(
+          int index) {
+        if (operationsBuilder_ == null) {
+          return operations_.get(index);  } else {
+          return operationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of operations for the specified export.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
+           getOperationsOrBuilderList() {
+        if (operationsBuilder_ != null) {
+          return operationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(operations_);
+        }
+      }
+      /**
+       * <pre>
+       * List of operations for the specified export.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder() {
+        return getOperationsFieldBuilder().addBuilder(
+            yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of operations for the specified export.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public yandex.cloud.api.operation.OperationOuterClass.Operation.Builder addOperationsBuilder(
+          int index) {
+        return getOperationsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of operations for the specified export.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.operation.Operation operations = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.operation.OperationOuterClass.Operation.Builder> 
+           getOperationsBuilderList() {
+        return getOperationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder> 
+          getOperationsFieldBuilder() {
+        if (operationsBuilder_ == null) {
+          operationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.operation.OperationOuterClass.Operation, yandex.cloud.api.operation.OperationOuterClass.Operation.Builder, yandex.cloud.api.operation.OperationOuterClass.OperationOrBuilder>(
+                  operations_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          operations_ = null;
+        }
+        return operationsBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListOExportperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListExportOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListOExportperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListExportOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListOExportperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListExportOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListOExportperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListExportOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListOExportperationsRequest.page_size], use `next_page_token` as the value
+       * for the [ListExportOperationsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.logging.v1.ListExportOperationsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.logging.v1.ListExportOperationsResponse)
+    private static final yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse();
+    }
+
+    public static yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListExportOperationsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListExportOperationsResponse>() {
+      @java.lang.Override
+      public ListExportOperationsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListExportOperationsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListExportOperationsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListExportOperationsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.logging.v1.ExportServiceOuterClass.ListExportOperationsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_logging_v1_RunExportRequest_descriptor;
   private static final 
@@ -3851,6 +15710,71 @@ public final class ExportServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_logging_v1_RunExportMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_logging_v1_GetExportRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_logging_v1_GetExportRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_logging_v1_ListExportsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_logging_v1_ListExportsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_logging_v1_ListExportsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_logging_v1_ListExportsResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_logging_v1_CreateExportRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_logging_v1_CreateExportRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_logging_v1_CreateExportRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_logging_v1_CreateExportRequest_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_logging_v1_CreateExportMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_logging_v1_CreateExportMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_logging_v1_UpdateExportRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_logging_v1_UpdateExportRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_logging_v1_UpdateExportRequest_LabelsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_logging_v1_UpdateExportRequest_LabelsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_logging_v1_UpdateExportMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_logging_v1_UpdateExportMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_logging_v1_DeleteExportRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_logging_v1_DeleteExportRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_logging_v1_DeleteExportMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_logging_v1_DeleteExportMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_logging_v1_ListExportOperationsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_logging_v1_ListExportOperationsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_logging_v1_ListExportOperationsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_logging_v1_ListExportOperationsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3862,41 +15786,127 @@ public final class ExportServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n,yandex/cloud/logging/v1/export_service" +
       ".proto\022\027yandex.cloud.logging.v1\032\034google/" +
-      "api/annotations.proto\032\037google/protobuf/t" +
-      "imestamp.proto\032 yandex/cloud/api/operati" +
-      "on.proto\032$yandex/cloud/logging/v1/export" +
-      ".proto\032&yandex/cloud/operation/operation" +
-      ".proto\032\035yandex/cloud/validation.proto\"\217\002" +
-      "\n\020RunExportRequest\022\036\n\010group_id\030\001 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=64\022\035\n\007sink_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=6" +
-      "4\022;\n\006params\030\003 \001(\0132%.yandex.cloud.logging" +
-      ".v1.ExportParamsB\004\350\3071\001\022\035\n\017result_filenam" +
-      "e\030\004 \001(\tB\004\350\3071\001\022/\n\005since\030\005 \001(\0132\032.google.pr" +
-      "otobuf.TimestampB\004\350\3071\001\022/\n\005until\030\006 \001(\0132\032." +
-      "google.protobuf.TimestampB\004\350\3071\001\"\333\001\n\020RunE" +
-      "xportDetails\022\020\n\010group_id\030\001 \001(\t\022\017\n\007sink_i" +
-      "d\030\002 \001(\t\0225\n\006params\030\003 \001(\0132%.yandex.cloud.l" +
-      "ogging.v1.ExportParams\022\027\n\017result_filenam" +
-      "e\030\004 \001(\t\022)\n\005since\030\005 \001(\0132\032.google.protobuf" +
-      ".Timestamp\022)\n\005until\030\006 \001(\0132\032.google.proto" +
-      "buf.Timestamp\"O\n\021RunExportMetadata\022\020\n\010gr" +
-      "oup_id\030\001 \001(\t\022\017\n\007sink_id\030\002 \001(\t\022\027\n\017result_" +
-      "filename\030\003 \001(\t2\261\001\n\rExportService\022\237\001\n\003Run" +
-      "\022).yandex.cloud.logging.v1.RunExportRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"J" +
-      "\202\323\344\223\002\033\"\026/logging/v1/run-export:\001*\262\322*%\n\021R" +
-      "unExportMetadata\022\020RunExportDetailsBb\n\033ya" +
-      "ndex.cloud.api.logging.v1ZCgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/logg" +
-      "ing/v1;loggingb\006proto3"
+      "api/annotations.proto\032 google/protobuf/f" +
+      "ield_mask.proto\032\037google/protobuf/timesta" +
+      "mp.proto\032 yandex/cloud/api/operation.pro" +
+      "to\032 yandex/cloud/access/access.proto\032$ya" +
+      "ndex/cloud/logging/v1/export.proto\032&yand" +
+      "ex/cloud/operation/operation.proto\032\035yand" +
+      "ex/cloud/validation.proto\"\217\002\n\020RunExportR" +
+      "equest\022\036\n\010group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\022\035" +
+      "\n\007sink_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=64\022;\n\006params\030" +
+      "\003 \001(\0132%.yandex.cloud.logging.v1.ExportPa" +
+      "ramsB\004\350\3071\001\022\035\n\017result_filename\030\004 \001(\tB\004\350\3071" +
+      "\001\022/\n\005since\030\005 \001(\0132\032.google.protobuf.Times" +
+      "tampB\004\350\3071\001\022/\n\005until\030\006 \001(\0132\032.google.proto" +
+      "buf.TimestampB\004\350\3071\001\"\333\001\n\020RunExportDetails" +
+      "\022\020\n\010group_id\030\001 \001(\t\022\017\n\007sink_id\030\002 \001(\t\0225\n\006p" +
+      "arams\030\003 \001(\0132%.yandex.cloud.logging.v1.Ex" +
+      "portParams\022\027\n\017result_filename\030\004 \001(\t\022)\n\005s" +
+      "ince\030\005 \001(\0132\032.google.protobuf.Timestamp\022)" +
+      "\n\005until\030\006 \001(\0132\032.google.protobuf.Timestam" +
+      "p\"O\n\021RunExportMetadata\022\020\n\010group_id\030\001 \001(\t" +
+      "\022\017\n\007sink_id\030\002 \001(\t\022\027\n\017result_filename\030\003 \001" +
+      "(\t\"3\n\020GetExportRequest\022\037\n\texport_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=64\"\203\001\n\022ListExportsRequest\022\037" +
+      "\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\022\021\n\tpage_" +
+      "size\030\003 \001(\003\022\035\n\npage_token\030\004 \001(\tB\t\212\3101\005<=10" +
+      "0\022\032\n\006filter\030\005 \001(\tB\n\212\3101\006<=1000\"`\n\023ListExp" +
+      "ortsResponse\0220\n\007exports\030\001 \003(\0132\037.yandex.c" +
+      "loud.logging.v1.Export\022\027\n\017next_page_toke" +
+      "n\030\002 \001(\t\"\276\003\n\023CreateExportRequest\022\037\n\tfolde" +
+      "r_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\022/\n\004name\030\002 \001(\tB!" +
+      "\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013des" +
+      "cription\030\003 \001(\tB\t\212\3101\005<=256\022\211\001\n\006labels\030\004 \003" +
+      "(\01328.yandex.cloud.logging.v1.CreateExpor" +
+      "tRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\307" +
+      "1\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9" +
+      "a-z]*\022\036\n\010group_id\030\005 \001(\tB\014\350\3071\001\212\3101\004<=64\022\035\n" +
+      "\007sink_id\030\006 \001(\tB\014\350\3071\001\212\3101\004<=64\022;\n\006params\030\007" +
+      " \001(\0132%.yandex.cloud.logging.v1.ExportPar" +
+      "amsB\004\350\3071\001\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
+      "\005value\030\002 \001(\t:\0028\001\")\n\024CreateExportMetadata" +
+      "\022\021\n\texport_id\030\001 \001(\t\"\357\003\n\023UpdateExportRequ" +
+      "est\022\037\n\texport_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\022/\n\013" +
+      "update_mask\030\002 \001(\0132\032.google.protobuf.Fiel" +
+      "dMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]" +
+      "{1,61}[a-z0-9]\022\036\n\013description\030\004 \001(\tB\t\212\3101" +
+      "\005<=256\022\211\001\n\006labels\030\005 \003(\01328.yandex.cloud.l" +
+      "ogging.v1.UpdateExportRequest.LabelsEntr" +
+      "yB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\004" +
+      "1-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022\036\n\010group_id\030\006" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=64\022\035\n\007sink_id\030\007 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=64\022;\n\006params\030\010 \001(\0132%.yandex.cloud" +
+      ".logging.v1.ExportParamsB\004\350\3071\001\032-\n\013Labels" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\")\n" +
+      "\024UpdateExportMetadata\022\021\n\texport_id\030\001 \001(\t" +
+      "\"6\n\023DeleteExportRequest\022\037\n\texport_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=64\")\n\024DeleteExportMetadata" +
+      "\022\021\n\texport_id\030\001 \001(\t\"\230\001\n\033ListExportOperat" +
+      "ionsRequest\022\037\n\texport_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=64\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\np" +
+      "age_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001" +
+      "(\tB\n\212\3101\006<=1000\"n\n\034ListExportOperationsRe" +
+      "sponse\0225\n\noperations\030\001 \003(\0132!.yandex.clou" +
+      "d.operation.Operation\022\027\n\017next_page_token" +
+      "\030\002 \001(\t2\354\r\n\rExportService\022\237\001\n\003Run\022).yande" +
+      "x.cloud.logging.v1.RunExportRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"J\202\323\344\223\002\033\"\026" +
+      "/logging/v1/run-export:\001*\262\322*%\n\021RunExport" +
+      "Metadata\022\020RunExportDetails\022z\n\003Get\022).yand" +
+      "ex.cloud.logging.v1.GetExportRequest\032\037.y" +
+      "andex.cloud.logging.v1.Export\"\'\202\323\344\223\002!\022\037/" +
+      "logging/v1/exports/{export_id}\022~\n\004List\022+" +
+      ".yandex.cloud.logging.v1.ListExportsRequ" +
+      "est\032,.yandex.cloud.logging.v1.ListExport" +
+      "sResponse\"\033\202\323\344\223\002\025\022\023/logging/v1/exports\022\233" +
+      "\001\n\006Create\022,.yandex.cloud.logging.v1.Crea" +
+      "teExportRequest\032!.yandex.cloud.operation" +
+      ".Operation\"@\202\323\344\223\002\030\"\023/logging/v1/exports:" +
+      "\001*\262\322*\036\n\024CreateExportMetadata\022\006Export\022\247\001\n" +
+      "\006Update\022,.yandex.cloud.logging.v1.Update" +
+      "ExportRequest\032!.yandex.cloud.operation.O" +
+      "peration\"L\202\323\344\223\002$2\037/logging/v1/exports/{e" +
+      "xport_id}:\001*\262\322*\036\n\024UpdateExportMetadata\022\006" +
+      "Export\022\263\001\n\006Delete\022,.yandex.cloud.logging" +
+      ".v1.DeleteExportRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"X\202\323\344\223\002!*\037/logging/v1/" +
+      "exports/{export_id}\262\322*-\n\024DeleteExportMet" +
+      "adata\022\025google.protobuf.Empty\022\261\001\n\016ListOpe" +
+      "rations\0224.yandex.cloud.logging.v1.ListEx" +
+      "portOperationsRequest\0325.yandex.cloud.log" +
+      "ging.v1.ListExportOperationsResponse\"2\202\323" +
+      "\344\223\002,\022*/logging/v1/exports/{export_id}/op" +
+      "erations\022\263\001\n\022ListAccessBindings\022..yandex" +
+      ".cloud.access.ListAccessBindingsRequest\032" +
+      "/.yandex.cloud.access.ListAccessBindings" +
+      "Response\"<\202\323\344\223\0026\0224/logging/v1/exports/{r" +
+      "esource_id}:listAccessBindings\022\342\001\n\021SetAc" +
+      "cessBindings\022-.yandex.cloud.access.SetAc" +
+      "cessBindingsRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"{\202\323\344\223\0028\"3/logging/v1/expo" +
+      "rts/{resource_id}:setAccessBindings:\001*\262\322" +
+      "*9\n access.SetAccessBindingsMetadata\022\025go" +
+      "ogle.protobuf.Empty\022\357\001\n\024UpdateAccessBind" +
+      "ings\0220.yandex.cloud.access.UpdateAccessB" +
+      "indingsRequest\032!.yandex.cloud.operation." +
+      "Operation\"\201\001\202\323\344\223\002;26/logging/v1/exports/" +
+      "{resource_id}:updateAccessBindings:\001*\262\322*" +
+      "<\n#access.UpdateAccessBindingsMetadata\022\025" +
+      "google.protobuf.EmptyBb\n\033yandex.cloud.ap" +
+      "i.logging.v1ZCgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/logging/v1;loggin" +
+      "gb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
-          yandex.cloud.api.logging.v1.Export.getDescriptor(),
+          yandex.cloud.api.access.Access.getDescriptor(),
+          yandex.cloud.api.logging.v1.ExportOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
@@ -3918,18 +15928,102 @@ public final class ExportServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_logging_v1_RunExportMetadata_descriptor,
         new java.lang.String[] { "GroupId", "SinkId", "ResultFilename", });
+    internal_static_yandex_cloud_logging_v1_GetExportRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_logging_v1_GetExportRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_logging_v1_GetExportRequest_descriptor,
+        new java.lang.String[] { "ExportId", });
+    internal_static_yandex_cloud_logging_v1_ListExportsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_logging_v1_ListExportsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_logging_v1_ListExportsRequest_descriptor,
+        new java.lang.String[] { "FolderId", "PageSize", "PageToken", "Filter", });
+    internal_static_yandex_cloud_logging_v1_ListExportsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_logging_v1_ListExportsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_logging_v1_ListExportsResponse_descriptor,
+        new java.lang.String[] { "Exports", "NextPageToken", });
+    internal_static_yandex_cloud_logging_v1_CreateExportRequest_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_logging_v1_CreateExportRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_logging_v1_CreateExportRequest_descriptor,
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "GroupId", "SinkId", "Params", });
+    internal_static_yandex_cloud_logging_v1_CreateExportRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_logging_v1_CreateExportRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_logging_v1_CreateExportRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_logging_v1_CreateExportRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_logging_v1_CreateExportMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_yandex_cloud_logging_v1_CreateExportMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_logging_v1_CreateExportMetadata_descriptor,
+        new java.lang.String[] { "ExportId", });
+    internal_static_yandex_cloud_logging_v1_UpdateExportRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_logging_v1_UpdateExportRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_logging_v1_UpdateExportRequest_descriptor,
+        new java.lang.String[] { "ExportId", "UpdateMask", "Name", "Description", "Labels", "GroupId", "SinkId", "Params", });
+    internal_static_yandex_cloud_logging_v1_UpdateExportRequest_LabelsEntry_descriptor =
+      internal_static_yandex_cloud_logging_v1_UpdateExportRequest_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_logging_v1_UpdateExportRequest_LabelsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_logging_v1_UpdateExportRequest_LabelsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_logging_v1_UpdateExportMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_logging_v1_UpdateExportMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_logging_v1_UpdateExportMetadata_descriptor,
+        new java.lang.String[] { "ExportId", });
+    internal_static_yandex_cloud_logging_v1_DeleteExportRequest_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_logging_v1_DeleteExportRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_logging_v1_DeleteExportRequest_descriptor,
+        new java.lang.String[] { "ExportId", });
+    internal_static_yandex_cloud_logging_v1_DeleteExportMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_logging_v1_DeleteExportMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_logging_v1_DeleteExportMetadata_descriptor,
+        new java.lang.String[] { "ExportId", });
+    internal_static_yandex_cloud_logging_v1_ListExportOperationsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_logging_v1_ListExportOperationsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_logging_v1_ListExportOperationsRequest_descriptor,
+        new java.lang.String[] { "ExportId", "PageSize", "PageToken", "Filter", });
+    internal_static_yandex_cloud_logging_v1_ListExportOperationsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_logging_v1_ListExportOperationsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_logging_v1_ListExportOperationsResponse_descriptor,
+        new java.lang.String[] { "Operations", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
     registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.mapKey);
+    registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
+    registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
-    yandex.cloud.api.logging.v1.Export.getDescriptor();
+    yandex.cloud.api.access.Access.getDescriptor();
+    yandex.cloud.api.logging.v1.ExportOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }
