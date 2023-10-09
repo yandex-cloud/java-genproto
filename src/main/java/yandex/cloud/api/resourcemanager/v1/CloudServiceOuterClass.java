@@ -10161,6 +10161,41 @@ public final class CloudServiceOuterClass {
      * <code>.google.protobuf.Timestamp delete_after = 2;</code>
      */
     com.google.protobuf.TimestampOrBuilder getDeleteAfterOrBuilder();
+
+    /**
+     * <pre>
+     * Information about operation cancellation
+     * </pre>
+     *
+     * <code>string cancelled_by = 3;</code>
+     * @return The cancelledBy.
+     */
+    java.lang.String getCancelledBy();
+    /**
+     * <pre>
+     * Information about operation cancellation
+     * </pre>
+     *
+     * <code>string cancelled_by = 3;</code>
+     * @return The bytes for cancelledBy.
+     */
+    com.google.protobuf.ByteString
+        getCancelledByBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+     * @return Whether the cancelledAt field is set.
+     */
+    boolean hasCancelledAt();
+    /**
+     * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+     * @return The cancelledAt.
+     */
+    com.google.protobuf.Timestamp getCancelledAt();
+    /**
+     * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCancelledAtOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.resourcemanager.v1.DeleteCloudMetadata}
@@ -10176,6 +10211,7 @@ public final class CloudServiceOuterClass {
     }
     private DeleteCloudMetadata() {
       cloudId_ = "";
+      cancelledBy_ = "";
     }
 
     @java.lang.Override
@@ -10223,6 +10259,25 @@ public final class CloudServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(deleteAfter_);
                 deleteAfter_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              cancelledBy_ = s;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (cancelledAt_ != null) {
+                subBuilder = cancelledAt_.toBuilder();
+              }
+              cancelledAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cancelledAt_);
+                cancelledAt_ = subBuilder.buildPartial();
               }
 
               break;
@@ -10343,6 +10398,78 @@ public final class CloudServiceOuterClass {
       return getDeleteAfter();
     }
 
+    public static final int CANCELLED_BY_FIELD_NUMBER = 3;
+    private volatile java.lang.Object cancelledBy_;
+    /**
+     * <pre>
+     * Information about operation cancellation
+     * </pre>
+     *
+     * <code>string cancelled_by = 3;</code>
+     * @return The cancelledBy.
+     */
+    @java.lang.Override
+    public java.lang.String getCancelledBy() {
+      java.lang.Object ref = cancelledBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cancelledBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Information about operation cancellation
+     * </pre>
+     *
+     * <code>string cancelled_by = 3;</code>
+     * @return The bytes for cancelledBy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCancelledByBytes() {
+      java.lang.Object ref = cancelledBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cancelledBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CANCELLED_AT_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp cancelledAt_;
+    /**
+     * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+     * @return Whether the cancelledAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCancelledAt() {
+      return cancelledAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+     * @return The cancelledAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCancelledAt() {
+      return cancelledAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : cancelledAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCancelledAtOrBuilder() {
+      return getCancelledAt();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10363,6 +10490,12 @@ public final class CloudServiceOuterClass {
       if (deleteAfter_ != null) {
         output.writeMessage(2, getDeleteAfter());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cancelledBy_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, cancelledBy_);
+      }
+      if (cancelledAt_ != null) {
+        output.writeMessage(4, getCancelledAt());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -10378,6 +10511,13 @@ public final class CloudServiceOuterClass {
       if (deleteAfter_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDeleteAfter());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cancelledBy_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, cancelledBy_);
+      }
+      if (cancelledAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getCancelledAt());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10401,6 +10541,13 @@ public final class CloudServiceOuterClass {
         if (!getDeleteAfter()
             .equals(other.getDeleteAfter())) return false;
       }
+      if (!getCancelledBy()
+          .equals(other.getCancelledBy())) return false;
+      if (hasCancelledAt() != other.hasCancelledAt()) return false;
+      if (hasCancelledAt()) {
+        if (!getCancelledAt()
+            .equals(other.getCancelledAt())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10417,6 +10564,12 @@ public final class CloudServiceOuterClass {
       if (hasDeleteAfter()) {
         hash = (37 * hash) + DELETE_AFTER_FIELD_NUMBER;
         hash = (53 * hash) + getDeleteAfter().hashCode();
+      }
+      hash = (37 * hash) + CANCELLED_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getCancelledBy().hashCode();
+      if (hasCancelledAt()) {
+        hash = (37 * hash) + CANCELLED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCancelledAt().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -10559,6 +10712,14 @@ public final class CloudServiceOuterClass {
           deleteAfter_ = null;
           deleteAfterBuilder_ = null;
         }
+        cancelledBy_ = "";
+
+        if (cancelledAtBuilder_ == null) {
+          cancelledAt_ = null;
+        } else {
+          cancelledAt_ = null;
+          cancelledAtBuilder_ = null;
+        }
         return this;
       }
 
@@ -10590,6 +10751,12 @@ public final class CloudServiceOuterClass {
           result.deleteAfter_ = deleteAfter_;
         } else {
           result.deleteAfter_ = deleteAfterBuilder_.build();
+        }
+        result.cancelledBy_ = cancelledBy_;
+        if (cancelledAtBuilder_ == null) {
+          result.cancelledAt_ = cancelledAt_;
+        } else {
+          result.cancelledAt_ = cancelledAtBuilder_.build();
         }
         onBuilt();
         return result;
@@ -10645,6 +10812,13 @@ public final class CloudServiceOuterClass {
         }
         if (other.hasDeleteAfter()) {
           mergeDeleteAfter(other.getDeleteAfter());
+        }
+        if (!other.getCancelledBy().isEmpty()) {
+          cancelledBy_ = other.cancelledBy_;
+          onChanged();
+        }
+        if (other.hasCancelledAt()) {
+          mergeCancelledAt(other.getCancelledAt());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10925,6 +11099,221 @@ public final class CloudServiceOuterClass {
         }
         return deleteAfterBuilder_;
       }
+
+      private java.lang.Object cancelledBy_ = "";
+      /**
+       * <pre>
+       * Information about operation cancellation
+       * </pre>
+       *
+       * <code>string cancelled_by = 3;</code>
+       * @return The cancelledBy.
+       */
+      public java.lang.String getCancelledBy() {
+        java.lang.Object ref = cancelledBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cancelledBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Information about operation cancellation
+       * </pre>
+       *
+       * <code>string cancelled_by = 3;</code>
+       * @return The bytes for cancelledBy.
+       */
+      public com.google.protobuf.ByteString
+          getCancelledByBytes() {
+        java.lang.Object ref = cancelledBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cancelledBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Information about operation cancellation
+       * </pre>
+       *
+       * <code>string cancelled_by = 3;</code>
+       * @param value The cancelledBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCancelledBy(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cancelledBy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Information about operation cancellation
+       * </pre>
+       *
+       * <code>string cancelled_by = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCancelledBy() {
+        
+        cancelledBy_ = getDefaultInstance().getCancelledBy();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Information about operation cancellation
+       * </pre>
+       *
+       * <code>string cancelled_by = 3;</code>
+       * @param value The bytes for cancelledBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCancelledByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cancelledBy_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp cancelledAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> cancelledAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+       * @return Whether the cancelledAt field is set.
+       */
+      public boolean hasCancelledAt() {
+        return cancelledAtBuilder_ != null || cancelledAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+       * @return The cancelledAt.
+       */
+      public com.google.protobuf.Timestamp getCancelledAt() {
+        if (cancelledAtBuilder_ == null) {
+          return cancelledAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : cancelledAt_;
+        } else {
+          return cancelledAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+       */
+      public Builder setCancelledAt(com.google.protobuf.Timestamp value) {
+        if (cancelledAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cancelledAt_ = value;
+          onChanged();
+        } else {
+          cancelledAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+       */
+      public Builder setCancelledAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (cancelledAtBuilder_ == null) {
+          cancelledAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          cancelledAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+       */
+      public Builder mergeCancelledAt(com.google.protobuf.Timestamp value) {
+        if (cancelledAtBuilder_ == null) {
+          if (cancelledAt_ != null) {
+            cancelledAt_ =
+              com.google.protobuf.Timestamp.newBuilder(cancelledAt_).mergeFrom(value).buildPartial();
+          } else {
+            cancelledAt_ = value;
+          }
+          onChanged();
+        } else {
+          cancelledAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+       */
+      public Builder clearCancelledAt() {
+        if (cancelledAtBuilder_ == null) {
+          cancelledAt_ = null;
+          onChanged();
+        } else {
+          cancelledAt_ = null;
+          cancelledAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCancelledAtBuilder() {
+        
+        onChanged();
+        return getCancelledAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCancelledAtOrBuilder() {
+        if (cancelledAtBuilder_ != null) {
+          return cancelledAtBuilder_.getMessageOrBuilder();
+        } else {
+          return cancelledAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : cancelledAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCancelledAtFieldBuilder() {
+        if (cancelledAtBuilder_ == null) {
+          cancelledAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCancelledAt(),
+                  getParentForChildren(),
+                  isClean());
+          cancelledAt_ = null;
+        }
+        return cancelledAtBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -11097,57 +11486,58 @@ public final class CloudServiceOuterClass {
       "oudMetadata\022\020\n\010cloud_id\030\001 \001(\t\"f\n\022DeleteC" +
       "loudRequest\022\036\n\010cloud_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
       "=50\0220\n\014delete_after\030\002 \001(\0132\032.google.proto" +
-      "buf.Timestamp\"Y\n\023DeleteCloudMetadata\022\020\n\010" +
-      "cloud_id\030\001 \001(\t\0220\n\014delete_after\030\002 \001(\0132\032.g" +
-      "oogle.protobuf.Timestamp2\350\r\n\014CloudServic" +
-      "e\022\217\001\n\003Get\0220.yandex.cloud.resourcemanager" +
-      ".v1.GetCloudRequest\032&.yandex.cloud.resou" +
-      "rcemanager.v1.Cloud\".\202\323\344\223\002(\022&/resource-m" +
-      "anager/v1/clouds/{cloud_id}\022\224\001\n\004List\0222.y" +
-      "andex.cloud.resourcemanager.v1.ListCloud" +
-      "sRequest\0323.yandex.cloud.resourcemanager." +
-      "v1.ListCloudsResponse\"#\202\323\344\223\002\035\022\033/resource" +
-      "-manager/v1/clouds\022\250\001\n\006Create\0223.yandex.c" +
-      "loud.resourcemanager.v1.CreateCloudReque" +
-      "st\032!.yandex.cloud.operation.Operation\"F\202" +
-      "\323\344\223\002 \"\033/resource-manager/v1/clouds:\001*\262\322*" +
-      "\034\n\023CreateCloudMetadata\022\005Cloud\022\263\001\n\006Update" +
-      "\0223.yandex.cloud.resourcemanager.v1.Updat" +
-      "eCloudRequest\032!.yandex.cloud.operation.O" +
-      "peration\"Q\202\323\344\223\002+2&/resource-manager/v1/c" +
-      "louds/{cloud_id}:\001*\262\322*\034\n\023UpdateCloudMeta" +
-      "data\022\005Cloud\022\300\001\n\006Delete\0223.yandex.cloud.re" +
-      "sourcemanager.v1.DeleteCloudRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"^\202\323\344\223\002(*&" +
-      "/resource-manager/v1/clouds/{cloud_id}\262\322" +
-      "*,\n\023DeleteCloudMetadata\022\025google.protobuf" +
-      ".Empty\022\306\001\n\016ListOperations\022;.yandex.cloud" +
-      ".resourcemanager.v1.ListCloudOperationsR" +
-      "equest\032<.yandex.cloud.resourcemanager.v1" +
-      ".ListCloudOperationsResponse\"9\202\323\344\223\0023\0221/r" +
-      "esource-manager/v1/clouds/{cloud_id}/ope" +
-      "rations\022\273\001\n\022ListAccessBindings\022..yandex." +
-      "cloud.access.ListAccessBindingsRequest\032/" +
-      ".yandex.cloud.access.ListAccessBindingsR" +
-      "esponse\"D\202\323\344\223\002>\022</resource-manager/v1/cl" +
-      "ouds/{resource_id}:listAccessBindings\022\372\001" +
-      "\n\021SetAccessBindings\022-.yandex.cloud.acces" +
-      "s.SetAccessBindingsRequest\032!.yandex.clou" +
-      "d.operation.Operation\"\222\001\202\323\344\223\002@\";/resourc" +
-      "e-manager/v1/clouds/{resource_id}:setAcc" +
-      "essBindings:\001*\262\322*H\n access.SetAccessBind" +
-      "ingsMetadata\022$access.AccessBindingsOpera" +
-      "tionResult\022\206\002\n\024UpdateAccessBindings\0220.ya" +
-      "ndex.cloud.access.UpdateAccessBindingsRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"\230\001\202\323\344\223\002C\">/resource-manager/v1/clouds/{" +
-      "resource_id}:updateAccessBindings:\001*\262\322*K" +
-      "\n#access.UpdateAccessBindingsMetadata\022$a" +
-      "ccess.AccessBindingsOperationResultBz\n#y" +
-      "andex.cloud.api.resourcemanager.v1ZSgith" +
-      "ub.com/yandex-cloud/go-genproto/yandex/c" +
-      "loud/resourcemanager/v1;resourcemanagerb" +
-      "\006proto3"
+      "buf.Timestamp\"\241\001\n\023DeleteCloudMetadata\022\020\n" +
+      "\010cloud_id\030\001 \001(\t\0220\n\014delete_after\030\002 \001(\0132\032." +
+      "google.protobuf.Timestamp\022\024\n\014cancelled_b" +
+      "y\030\003 \001(\t\0220\n\014cancelled_at\030\004 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp2\350\r\n\014CloudService\022\217\001\n\003G" +
+      "et\0220.yandex.cloud.resourcemanager.v1.Get" +
+      "CloudRequest\032&.yandex.cloud.resourcemana" +
+      "ger.v1.Cloud\".\202\323\344\223\002(\022&/resource-manager/" +
+      "v1/clouds/{cloud_id}\022\224\001\n\004List\0222.yandex.c" +
+      "loud.resourcemanager.v1.ListCloudsReques" +
+      "t\0323.yandex.cloud.resourcemanager.v1.List" +
+      "CloudsResponse\"#\202\323\344\223\002\035\022\033/resource-manage" +
+      "r/v1/clouds\022\250\001\n\006Create\0223.yandex.cloud.re" +
+      "sourcemanager.v1.CreateCloudRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"F\202\323\344\223\002 \"\033" +
+      "/resource-manager/v1/clouds:\001*\262\322*\034\n\023Crea" +
+      "teCloudMetadata\022\005Cloud\022\263\001\n\006Update\0223.yand" +
+      "ex.cloud.resourcemanager.v1.UpdateCloudR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"Q\202\323\344\223\002+2&/resource-manager/v1/clouds/{" +
+      "cloud_id}:\001*\262\322*\034\n\023UpdateCloudMetadata\022\005C" +
+      "loud\022\300\001\n\006Delete\0223.yandex.cloud.resourcem" +
+      "anager.v1.DeleteCloudRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"^\202\323\344\223\002(*&/resour" +
+      "ce-manager/v1/clouds/{cloud_id}\262\322*,\n\023Del" +
+      "eteCloudMetadata\022\025google.protobuf.Empty\022" +
+      "\306\001\n\016ListOperations\022;.yandex.cloud.resour" +
+      "cemanager.v1.ListCloudOperationsRequest\032" +
+      "<.yandex.cloud.resourcemanager.v1.ListCl" +
+      "oudOperationsResponse\"9\202\323\344\223\0023\0221/resource" +
+      "-manager/v1/clouds/{cloud_id}/operations" +
+      "\022\273\001\n\022ListAccessBindings\022..yandex.cloud.a" +
+      "ccess.ListAccessBindingsRequest\032/.yandex" +
+      ".cloud.access.ListAccessBindingsResponse" +
+      "\"D\202\323\344\223\002>\022</resource-manager/v1/clouds/{r" +
+      "esource_id}:listAccessBindings\022\372\001\n\021SetAc" +
+      "cessBindings\022-.yandex.cloud.access.SetAc" +
+      "cessBindingsRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"\222\001\202\323\344\223\002@\";/resource-manag" +
+      "er/v1/clouds/{resource_id}:setAccessBind" +
+      "ings:\001*\262\322*H\n access.SetAccessBindingsMet" +
+      "adata\022$access.AccessBindingsOperationRes" +
+      "ult\022\206\002\n\024UpdateAccessBindings\0220.yandex.cl" +
+      "oud.access.UpdateAccessBindingsRequest\032!" +
+      ".yandex.cloud.operation.Operation\"\230\001\202\323\344\223" +
+      "\002C\">/resource-manager/v1/clouds/{resourc" +
+      "e_id}:updateAccessBindings:\001*\262\322*K\n#acces" +
+      "s.UpdateAccessBindingsMetadata\022$access.A" +
+      "ccessBindingsOperationResultBz\n#yandex.c" +
+      "loud.api.resourcemanager.v1ZSgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/re" +
+      "sourcemanager/v1;resourcemanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11238,7 +11628,7 @@ public final class CloudServiceOuterClass {
     internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_resourcemanager_v1_DeleteCloudMetadata_descriptor,
-        new java.lang.String[] { "CloudId", "DeleteAfter", });
+        new java.lang.String[] { "CloudId", "DeleteAfter", "CancelledBy", "CancelledAt", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

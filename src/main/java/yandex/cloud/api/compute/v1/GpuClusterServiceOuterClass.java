@@ -13312,90 +13312,110 @@ public final class GpuClusterServiceOuterClass {
       "\n1yandex/cloud/compute/v1/gpu_cluster_se" +
       "rvice.proto\022\027yandex.cloud.compute.v1\032\034go" +
       "ogle/api/annotations.proto\032 google/proto" +
-      "buf/field_mask.proto\032 yandex/cloud/api/o" +
-      "peration.proto\032&yandex/cloud/compute/v1/" +
-      "instance.proto\032)yandex/cloud/compute/v1/" +
-      "gpu_cluster.proto\032&yandex/cloud/operatio" +
-      "n/operation.proto\032\035yandex/cloud/validati" +
-      "on.proto\".\n\024GetGpuClusterRequest\022\026\n\016gpu_" +
-      "cluster_id\030\001 \001(\t\"\260\001\n\026ListGpuClustersRequ" +
-      "est\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\t" +
-      "page_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_toke" +
-      "n\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006" +
-      "<=1000\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=100\"m\n\027L" +
-      "istGpuClustersResponse\0229\n\014gpu_clusters\030\001" +
-      " \003(\0132#.yandex.cloud.compute.v1.GpuCluste" +
-      "r\022\027\n\017next_page_token\030\002 \001(\t\"\246\002\n\027CreateGpu" +
-      "ClusterRequest\022\021\n\tfolder_id\030\001 \001(\t\022\014\n\004nam" +
-      "e\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022L\n\006labels\030\004" +
-      " \003(\0132<.yandex.cloud.compute.v1.CreateGpu" +
-      "ClusterRequest.LabelsEntry\022\017\n\007zone_id\030\005 " +
-      "\001(\t\022G\n\021interconnect_type\030\006 \001(\0162,.yandex." +
-      "cloud.compute.v1.GpuInterconnectType\032-\n\013" +
-      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\"2\n\030CreateGpuClusterMetadata\022\026\n\016gpu_c" +
-      "luster_id\030\001 \001(\t\"\202\002\n\027UpdateGpuClusterRequ" +
-      "est\022\026\n\016gpu_cluster_id\030\001 \001(\t\022/\n\013update_ma" +
-      "sk\030\002 \001(\0132\032.google.protobuf.FieldMask\022\014\n\004" +
-      "name\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022L\n\006label" +
-      "s\030\005 \003(\0132<.yandex.cloud.compute.v1.Update" +
-      "GpuClusterRequest.LabelsEntry\032-\n\013LabelsE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"2\n\030" +
-      "UpdateGpuClusterMetadata\022\026\n\016gpu_cluster_" +
-      "id\030\001 \001(\t\"1\n\027DeleteGpuClusterRequest\022\026\n\016g" +
-      "pu_cluster_id\030\001 \001(\t\"2\n\030DeleteGpuClusterM" +
-      "etadata\022\026\n\016gpu_cluster_id\030\001 \001(\t\"`\n\037ListG" +
-      "puClusterOperationsRequest\022\026\n\016gpu_cluste" +
-      "r_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_to" +
-      "ken\030\003 \001(\t\"r\n ListGpuClusterOperationsRes" +
-      "ponse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud" +
-      ".operation.Operation\022\027\n\017next_page_token\030" +
-      "\002 \001(\t\"o\n\036ListGpuClusterInstancesRequest\022" +
-      "\026\n\016gpu_cluster_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001" +
-      "(\003\022\022\n\npage_token\030\003 \001(\t\022\016\n\006filter\030\004 \001(\t\"p" +
-      "\n\037ListGpuClusterInstancesResponse\0224\n\tins" +
-      "tances\030\001 \003(\0132!.yandex.cloud.compute.v1.I" +
-      "nstance\022\027\n\017next_page_token\030\002 \001(\t2\350\t\n\021Gpu" +
-      "ClusterService\022\213\001\n\003Get\022-.yandex.cloud.co" +
-      "mpute.v1.GetGpuClusterRequest\032#.yandex.c" +
-      "loud.compute.v1.GpuCluster\"0\202\323\344\223\002*\022(/com" +
-      "pute/v1/gpuClusters/{gpu_cluster_id}\022\212\001\n" +
-      "\004List\022/.yandex.cloud.compute.v1.ListGpuC" +
-      "lustersRequest\0320.yandex.cloud.compute.v1" +
-      ".ListGpuClustersResponse\"\037\202\323\344\223\002\031\022\027/compu" +
-      "te/v1/gpuClusters\022\253\001\n\006Create\0220.yandex.cl" +
-      "oud.compute.v1.CreateGpuClusterRequest\032!" +
-      ".yandex.cloud.operation.Operation\"L\202\323\344\223\002" +
-      "\034\"\027/compute/v1/gpuClusters:\001*\262\322*&\n\030Creat" +
-      "eGpuClusterMetadata\022\nGpuCluster\022\274\001\n\006Upda" +
-      "te\0220.yandex.cloud.compute.v1.UpdateGpuCl" +
-      "usterRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"]\202\323\344\223\002-2(/compute/v1/gpuClusters" +
-      "/{gpu_cluster_id}:\001*\262\322*&\n\030UpdateGpuClust" +
-      "erMetadata\022\nGpuCluster\022\304\001\n\006Delete\0220.yand" +
-      "ex.cloud.compute.v1.DeleteGpuClusterRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"e" +
-      "\202\323\344\223\002**(/compute/v1/gpuClusters/{gpu_clu" +
-      "ster_id}\262\322*1\n\030DeleteGpuClusterMetadata\022\025" +
-      "google.protobuf.Empty\022\302\001\n\016ListOperations" +
-      "\0228.yandex.cloud.compute.v1.ListGpuCluste" +
-      "rOperationsRequest\0329.yandex.cloud.comput" +
-      "e.v1.ListGpuClusterOperationsResponse\";\202" +
-      "\323\344\223\0025\0223/compute/v1/gpuClusters/{gpu_clus" +
-      "ter_id}/operations\022\276\001\n\rListInstances\0227.y" +
-      "andex.cloud.compute.v1.ListGpuClusterIns" +
-      "tancesRequest\0328.yandex.cloud.compute.v1." +
-      "ListGpuClusterInstancesResponse\":\202\323\344\223\0024\022" +
-      "2/compute/v1/gpuClusters/{gpu_cluster_id" +
-      "}/instancesBb\n\033yandex.cloud.api.compute." +
-      "v1ZCgithub.com/yandex-cloud/go-genproto/" +
-      "yandex/cloud/compute/v1;computeb\006proto3"
+      "buf/field_mask.proto\032 yandex/cloud/acces" +
+      "s/access.proto\032 yandex/cloud/api/operati" +
+      "on.proto\032&yandex/cloud/compute/v1/instan" +
+      "ce.proto\032)yandex/cloud/compute/v1/gpu_cl" +
+      "uster.proto\032&yandex/cloud/operation/oper" +
+      "ation.proto\032\035yandex/cloud/validation.pro" +
+      "to\".\n\024GetGpuClusterRequest\022\026\n\016gpu_cluste" +
+      "r_id\030\001 \001(\t\"\260\001\n\026ListGpuClustersRequest\022\037\n" +
+      "\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_s" +
+      "ize\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(" +
+      "\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000" +
+      "\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=100\"m\n\027ListGpu" +
+      "ClustersResponse\0229\n\014gpu_clusters\030\001 \003(\0132#" +
+      ".yandex.cloud.compute.v1.GpuCluster\022\027\n\017n" +
+      "ext_page_token\030\002 \001(\t\"\246\002\n\027CreateGpuCluste" +
+      "rRequest\022\021\n\tfolder_id\030\001 \001(\t\022\014\n\004name\030\002 \001(" +
+      "\t\022\023\n\013description\030\003 \001(\t\022L\n\006labels\030\004 \003(\0132<" +
+      ".yandex.cloud.compute.v1.CreateGpuCluste" +
+      "rRequest.LabelsEntry\022\017\n\007zone_id\030\005 \001(\t\022G\n" +
+      "\021interconnect_type\030\006 \001(\0162,.yandex.cloud." +
+      "compute.v1.GpuInterconnectType\032-\n\013Labels" +
+      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"2\n" +
+      "\030CreateGpuClusterMetadata\022\026\n\016gpu_cluster" +
+      "_id\030\001 \001(\t\"\202\002\n\027UpdateGpuClusterRequest\022\026\n" +
+      "\016gpu_cluster_id\030\001 \001(\t\022/\n\013update_mask\030\002 \001" +
+      "(\0132\032.google.protobuf.FieldMask\022\014\n\004name\030\003" +
+      " \001(\t\022\023\n\013description\030\004 \001(\t\022L\n\006labels\030\005 \003(" +
+      "\0132<.yandex.cloud.compute.v1.UpdateGpuClu" +
+      "sterRequest.LabelsEntry\032-\n\013LabelsEntry\022\013" +
+      "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"2\n\030Update" +
+      "GpuClusterMetadata\022\026\n\016gpu_cluster_id\030\001 \001" +
+      "(\t\"1\n\027DeleteGpuClusterRequest\022\026\n\016gpu_clu" +
+      "ster_id\030\001 \001(\t\"2\n\030DeleteGpuClusterMetadat" +
+      "a\022\026\n\016gpu_cluster_id\030\001 \001(\t\"`\n\037ListGpuClus" +
+      "terOperationsRequest\022\026\n\016gpu_cluster_id\030\001" +
+      " \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_token\030\003 " +
+      "\001(\t\"r\n ListGpuClusterOperationsResponse\022" +
+      "5\n\noperations\030\001 \003(\0132!.yandex.cloud.opera" +
+      "tion.Operation\022\027\n\017next_page_token\030\002 \001(\t\"" +
+      "o\n\036ListGpuClusterInstancesRequest\022\026\n\016gpu" +
+      "_cluster_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\n" +
+      "page_token\030\003 \001(\t\022\016\n\006filter\030\004 \001(\t\"p\n\037List" +
+      "GpuClusterInstancesResponse\0224\n\tinstances" +
+      "\030\001 \003(\0132!.yandex.cloud.compute.v1.Instanc" +
+      "e\022\027\n\017next_page_token\030\002 \001(\t2\240\017\n\021GpuCluste" +
+      "rService\022\213\001\n\003Get\022-.yandex.cloud.compute." +
+      "v1.GetGpuClusterRequest\032#.yandex.cloud.c" +
+      "ompute.v1.GpuCluster\"0\202\323\344\223\002*\022(/compute/v" +
+      "1/gpuClusters/{gpu_cluster_id}\022\212\001\n\004List\022" +
+      "/.yandex.cloud.compute.v1.ListGpuCluster" +
+      "sRequest\0320.yandex.cloud.compute.v1.ListG" +
+      "puClustersResponse\"\037\202\323\344\223\002\031\022\027/compute/v1/" +
+      "gpuClusters\022\253\001\n\006Create\0220.yandex.cloud.co" +
+      "mpute.v1.CreateGpuClusterRequest\032!.yande" +
+      "x.cloud.operation.Operation\"L\202\323\344\223\002\034\"\027/co" +
+      "mpute/v1/gpuClusters:\001*\262\322*&\n\030CreateGpuCl" +
+      "usterMetadata\022\nGpuCluster\022\274\001\n\006Update\0220.y" +
+      "andex.cloud.compute.v1.UpdateGpuClusterR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"]\202\323\344\223\002-2(/compute/v1/gpuClusters/{gpu_" +
+      "cluster_id}:\001*\262\322*&\n\030UpdateGpuClusterMeta" +
+      "data\022\nGpuCluster\022\304\001\n\006Delete\0220.yandex.clo" +
+      "ud.compute.v1.DeleteGpuClusterRequest\032!." +
+      "yandex.cloud.operation.Operation\"e\202\323\344\223\002*" +
+      "*(/compute/v1/gpuClusters/{gpu_cluster_i" +
+      "d}\262\322*1\n\030DeleteGpuClusterMetadata\022\025google" +
+      ".protobuf.Empty\022\302\001\n\016ListOperations\0228.yan" +
+      "dex.cloud.compute.v1.ListGpuClusterOpera" +
+      "tionsRequest\0329.yandex.cloud.compute.v1.L" +
+      "istGpuClusterOperationsResponse\";\202\323\344\223\0025\022" +
+      "3/compute/v1/gpuClusters/{gpu_cluster_id" +
+      "}/operations\022\276\001\n\rListInstances\0227.yandex." +
+      "cloud.compute.v1.ListGpuClusterInstances" +
+      "Request\0328.yandex.cloud.compute.v1.ListGp" +
+      "uClusterInstancesResponse\":\202\323\344\223\0024\0222/comp" +
+      "ute/v1/gpuClusters/{gpu_cluster_id}/inst" +
+      "ances\022\267\001\n\022ListAccessBindings\022..yandex.cl" +
+      "oud.access.ListAccessBindingsRequest\032/.y" +
+      "andex.cloud.access.ListAccessBindingsRes" +
+      "ponse\"@\202\323\344\223\002:\0228/compute/v1/gpuClusters/{" +
+      "resource_id}:listAccessBindings\022\366\001\n\021SetA" +
+      "ccessBindings\022-.yandex.cloud.access.SetA" +
+      "ccessBindingsRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"\216\001\202\323\344\223\002<\"7/compute/v1/gp" +
+      "uClusters/{resource_id}:setAccessBinding" +
+      "s:\001*\262\322*H\n access.SetAccessBindingsMetada" +
+      "ta\022$access.AccessBindingsOperationResult" +
+      "\022\202\002\n\024UpdateAccessBindings\0220.yandex.cloud" +
+      ".access.UpdateAccessBindingsRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"\224\001\202\323\344\223\002?\"" +
+      ":/compute/v1/gpuClusters/{resource_id}:u" +
+      "pdateAccessBindings:\001*\262\322*K\n#access.Updat" +
+      "eAccessBindingsMetadata\022$access.AccessBi" +
+      "ndingsOperationResultBb\n\033yandex.cloud.ap" +
+      "i.compute.v1ZCgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/compute/v1;comput" +
+      "eb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.compute.v1.InstanceOuterClass.getDescriptor(),
           yandex.cloud.api.compute.v1.GpuClusterOuterClass.getDescriptor(),
@@ -13503,6 +13523,7 @@ public final class GpuClusterServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.compute.v1.InstanceOuterClass.getDescriptor();
     yandex.cloud.api.compute.v1.GpuClusterOuterClass.getDescriptor();

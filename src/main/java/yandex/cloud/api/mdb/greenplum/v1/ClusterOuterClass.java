@@ -9786,6 +9786,33 @@ public final class ClusterOuterClass {
 
     /**
      * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+     * @return Whether the backupRetainPeriodDays field is set.
+     */
+    boolean hasBackupRetainPeriodDays();
+    /**
+     * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+     * @return The backupRetainPeriodDays.
+     */
+    com.google.protobuf.Int64Value getBackupRetainPeriodDays();
+    /**
+     * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder();
+
+    /**
+     * <pre>
      * Access policy for external services.
      * </pre>
      *
@@ -9961,6 +9988,19 @@ public final class ClusterOuterClass {
               assignPublicIp_ = input.readBool();
               break;
             }
+            case 74: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (backupRetainPeriodDays_ != null) {
+                subBuilder = backupRetainPeriodDays_.toBuilder();
+              }
+              backupRetainPeriodDays_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(backupRetainPeriodDays_);
+                backupRetainPeriodDays_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -10075,6 +10115,44 @@ public final class ClusterOuterClass {
     @java.lang.Override
     public com.google.type.TimeOfDayOrBuilder getBackupWindowStartOrBuilder() {
       return getBackupWindowStart();
+    }
+
+    public static final int BACKUP_RETAIN_PERIOD_DAYS_FIELD_NUMBER = 9;
+    private com.google.protobuf.Int64Value backupRetainPeriodDays_;
+    /**
+     * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+     * @return Whether the backupRetainPeriodDays field is set.
+     */
+    @java.lang.Override
+    public boolean hasBackupRetainPeriodDays() {
+      return backupRetainPeriodDays_ != null;
+    }
+    /**
+     * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+     * @return The backupRetainPeriodDays.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getBackupRetainPeriodDays() {
+      return backupRetainPeriodDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backupRetainPeriodDays_;
+    }
+    /**
+     * <pre>
+     * Retention policy of automated backups.
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder() {
+      return getBackupRetainPeriodDays();
     }
 
     public static final int ACCESS_FIELD_NUMBER = 3;
@@ -10257,6 +10335,9 @@ public final class ClusterOuterClass {
       if (assignPublicIp_ != false) {
         output.writeBool(6, assignPublicIp_);
       }
+      if (backupRetainPeriodDays_ != null) {
+        output.writeMessage(9, getBackupRetainPeriodDays());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -10287,6 +10368,10 @@ public final class ClusterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(6, assignPublicIp_);
       }
+      if (backupRetainPeriodDays_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getBackupRetainPeriodDays());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -10308,6 +10393,11 @@ public final class ClusterOuterClass {
       if (hasBackupWindowStart()) {
         if (!getBackupWindowStart()
             .equals(other.getBackupWindowStart())) return false;
+      }
+      if (hasBackupRetainPeriodDays() != other.hasBackupRetainPeriodDays()) return false;
+      if (hasBackupRetainPeriodDays()) {
+        if (!getBackupRetainPeriodDays()
+            .equals(other.getBackupRetainPeriodDays())) return false;
       }
       if (hasAccess() != other.hasAccess()) return false;
       if (hasAccess()) {
@@ -10336,6 +10426,10 @@ public final class ClusterOuterClass {
       if (hasBackupWindowStart()) {
         hash = (37 * hash) + BACKUP_WINDOW_START_FIELD_NUMBER;
         hash = (53 * hash) + getBackupWindowStart().hashCode();
+      }
+      if (hasBackupRetainPeriodDays()) {
+        hash = (37 * hash) + BACKUP_RETAIN_PERIOD_DAYS_FIELD_NUMBER;
+        hash = (53 * hash) + getBackupRetainPeriodDays().hashCode();
       }
       if (hasAccess()) {
         hash = (37 * hash) + ACCESS_FIELD_NUMBER;
@@ -10489,6 +10583,12 @@ public final class ClusterOuterClass {
           backupWindowStart_ = null;
           backupWindowStartBuilder_ = null;
         }
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDays_ = null;
+        } else {
+          backupRetainPeriodDays_ = null;
+          backupRetainPeriodDaysBuilder_ = null;
+        }
         if (accessBuilder_ == null) {
           access_ = null;
         } else {
@@ -10532,6 +10632,11 @@ public final class ClusterOuterClass {
           result.backupWindowStart_ = backupWindowStart_;
         } else {
           result.backupWindowStart_ = backupWindowStartBuilder_.build();
+        }
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          result.backupRetainPeriodDays_ = backupRetainPeriodDays_;
+        } else {
+          result.backupRetainPeriodDays_ = backupRetainPeriodDaysBuilder_.build();
         }
         if (accessBuilder_ == null) {
           result.access_ = access_;
@@ -10595,6 +10700,9 @@ public final class ClusterOuterClass {
         }
         if (other.hasBackupWindowStart()) {
           mergeBackupWindowStart(other.getBackupWindowStart());
+        }
+        if (other.hasBackupRetainPeriodDays()) {
+          mergeBackupRetainPeriodDays(other.getBackupRetainPeriodDays());
         }
         if (other.hasAccess()) {
           mergeAccess(other.getAccess());
@@ -10888,6 +10996,161 @@ public final class ClusterOuterClass {
           backupWindowStart_ = null;
         }
         return backupWindowStartBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value backupRetainPeriodDays_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> backupRetainPeriodDaysBuilder_;
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+       * @return Whether the backupRetainPeriodDays field is set.
+       */
+      public boolean hasBackupRetainPeriodDays() {
+        return backupRetainPeriodDaysBuilder_ != null || backupRetainPeriodDays_ != null;
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+       * @return The backupRetainPeriodDays.
+       */
+      public com.google.protobuf.Int64Value getBackupRetainPeriodDays() {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          return backupRetainPeriodDays_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : backupRetainPeriodDays_;
+        } else {
+          return backupRetainPeriodDaysBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+       */
+      public Builder setBackupRetainPeriodDays(com.google.protobuf.Int64Value value) {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          backupRetainPeriodDays_ = value;
+          onChanged();
+        } else {
+          backupRetainPeriodDaysBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+       */
+      public Builder setBackupRetainPeriodDays(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDays_ = builderForValue.build();
+          onChanged();
+        } else {
+          backupRetainPeriodDaysBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+       */
+      public Builder mergeBackupRetainPeriodDays(com.google.protobuf.Int64Value value) {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          if (backupRetainPeriodDays_ != null) {
+            backupRetainPeriodDays_ =
+              com.google.protobuf.Int64Value.newBuilder(backupRetainPeriodDays_).mergeFrom(value).buildPartial();
+          } else {
+            backupRetainPeriodDays_ = value;
+          }
+          onChanged();
+        } else {
+          backupRetainPeriodDaysBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+       */
+      public Builder clearBackupRetainPeriodDays() {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDays_ = null;
+          onChanged();
+        } else {
+          backupRetainPeriodDays_ = null;
+          backupRetainPeriodDaysBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getBackupRetainPeriodDaysBuilder() {
+        
+        onChanged();
+        return getBackupRetainPeriodDaysFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder() {
+        if (backupRetainPeriodDaysBuilder_ != null) {
+          return backupRetainPeriodDaysBuilder_.getMessageOrBuilder();
+        } else {
+          return backupRetainPeriodDays_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : backupRetainPeriodDays_;
+        }
+      }
+      /**
+       * <pre>
+       * Retention policy of automated backups.
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getBackupRetainPeriodDaysFieldBuilder() {
+        if (backupRetainPeriodDaysBuilder_ == null) {
+          backupRetainPeriodDaysBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getBackupRetainPeriodDays(),
+                  getParentForChildren(),
+                  isClean());
+          backupRetainPeriodDays_ = null;
+        }
+        return backupRetainPeriodDaysBuilder_;
       }
 
       private yandex.cloud.api.mdb.greenplum.v1.ClusterOuterClass.Access access_;
@@ -14749,96 +15012,100 @@ public final class ClusterOuterClass {
     java.lang.String[] descriptorData = {
       "\n+yandex/cloud/mdb/greenplum/v1/cluster." +
       "proto\022\035yandex.cloud.mdb.greenplum.v1\032\037go" +
-      "ogle/protobuf/timestamp.proto\032\033google/ty" +
-      "pe/timeofday.proto\032\035yandex/cloud/validat" +
-      "ion.proto\032*yandex/cloud/mdb/greenplum/v1" +
-      "/config.proto\032/yandex/cloud/mdb/greenplu" +
-      "m/v1/maintenance.proto\032\'yandex/cloud/mdb" +
-      "/greenplum/v1/pxf.proto\"\365\013\n\007Cluster\022\n\n\002i" +
-      "d\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at" +
-      "\030\003 \001(\0132\032.google.protobuf.Timestamp\022\032\n\004na" +
-      "me\030\004 \001(\tB\014\350\3071\001\212\3101\004<=63\022>\n\006config\030\005 \001(\0132." +
-      ".yandex.cloud.mdb.greenplum.v1.Greenplum" +
-      "Config\022\036\n\013description\030\006 \001(\tB\t\212\3101\005<=256\022B" +
-      "\n\006labels\030\007 \003(\01322.yandex.cloud.mdb.greenp" +
-      "lum.v1.Cluster.LabelsEntry\022G\n\013environmen" +
-      "t\030\010 \001(\01622.yandex.cloud.mdb.greenplum.v1." +
-      "Cluster.Environment\022=\n\nmonitoring\030\t \003(\0132" +
-      ").yandex.cloud.mdb.greenplum.v1.Monitori" +
-      "ng\022L\n\rmaster_config\030\n \001(\01325.yandex.cloud" +
-      ".mdb.greenplum.v1.MasterSubclusterConfig" +
-      "\022N\n\016segment_config\030\013 \001(\01326.yandex.cloud." +
-      "mdb.greenplum.v1.SegmentSubclusterConfig" +
-      "\022\031\n\021master_host_count\030\014 \001(\003\022\032\n\022segment_h" +
-      "ost_count\030\r \001(\003\022\027\n\017segment_in_host\030\016 \001(\003" +
-      "\022\022\n\nnetwork_id\030\017 \001(\t\022=\n\006health\030\020 \001(\0162-.y" +
-      "andex.cloud.mdb.greenplum.v1.Cluster.Hea" +
-      "lth\022=\n\006status\030\021 \001(\0162-.yandex.cloud.mdb.g" +
-      "reenplum.v1.Cluster.Status\022L\n\022maintenanc" +
-      "e_window\030\022 \001(\01320.yandex.cloud.mdb.greenp" +
-      "lum.v1.MaintenanceWindow\022N\n\021planned_oper" +
-      "ation\030\023 \001(\01323.yandex.cloud.mdb.greenplum" +
-      ".v1.MaintenanceOperation\022\032\n\022security_gro" +
-      "up_ids\030\024 \003(\t\022\021\n\tuser_name\030\025 \001(\t\022\033\n\023delet" +
-      "ion_protection\030\026 \001(\010\022\026\n\016host_group_ids\030\027" +
-      " \003(\t\022G\n\016cluster_config\030\030 \001(\0132/.yandex.cl" +
-      "oud.mdb.greenplum.v1.ClusterConfigSet\022B\n" +
-      "\rcloud_storage\030\032 \001(\0132+.yandex.cloud.mdb." +
-      "greenplum.v1.CloudStorage\032-\n\013LabelsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013Envi" +
-      "ronment\022\033\n\027ENVIRONMENT_UNSPECIFIED\020\000\022\016\n\n" +
-      "PRODUCTION\020\001\022\r\n\tPRESTABLE\020\002\"O\n\006Health\022\022\n" +
-      "\016HEALTH_UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014" +
-      "\n\010DEGRADED\020\003\022\016\n\nUNBALANCED\020\004\"y\n\006Status\022\022" +
-      "\n\016STATUS_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNN" +
-      "ING\020\002\022\t\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPI" +
-      "NG\020\005\022\013\n\007STOPPED\020\006\022\014\n\010STARTING\020\007\"\311\006\n\020Clus" +
-      "terConfigSet\022s\n\031greenplum_config_set_6_1" +
-      "7\030\001 \001(\01325.yandex.cloud.mdb.greenplum.v1." +
-      "GreenplumConfigSet6_17H\000R\027greenplumConfi" +
-      "gSet_6_17\022s\n\031greenplum_config_set_6_19\030\002" +
-      " \001(\01325.yandex.cloud.mdb.greenplum.v1.Gre" +
-      "enplumConfigSet6_19H\000R\027greenplumConfigSe" +
-      "t_6_19\022s\n\031greenplum_config_set_6_21\030\004 \001(" +
-      "\01325.yandex.cloud.mdb.greenplum.v1.Greenp" +
-      "lumConfigSet6_21H\000R\027greenplumConfigSet_6" +
-      "_21\022s\n\031greenplum_config_set_6_22\030\005 \001(\01325" +
-      ".yandex.cloud.mdb.greenplum.v1.Greenplum" +
-      "ConfigSet6_22H\000R\027greenplumConfigSet_6_22" +
-      "\022j\n\026greenplum_config_set_6\030\t \001(\01322.yande" +
-      "x.cloud.mdb.greenplum.v1.GreenplumConfig" +
-      "Set6H\000R\024greenplumConfigSet_6\022F\n\004pool\030\003 \001" +
-      "(\01328.yandex.cloud.mdb.greenplum.v1.Conne" +
-      "ctionPoolerConfigSet\022X\n\025background_activ" +
-      "ities\030\006 \001(\01329.yandex.cloud.mdb.greenplum" +
-      ".v1.BackgroundActivitiesConfig\022?\n\npxf_co" +
-      "nfig\030\010 \001(\0132+.yandex.cloud.mdb.greenplum." +
-      "v1.PXFConfigSetB\022\n\020greenplum_config\"=\n\nM" +
-      "onitoring\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002" +
-      " \001(\t\022\014\n\004link\030\003 \001(\t\"\340\001\n\017GreenplumConfig\022\017" +
-      "\n\007version\030\001 \001(\t\0223\n\023backup_window_start\030\002" +
-      " \001(\0132\026.google.type.TimeOfDay\0225\n\006access\030\003" +
-      " \001(\0132%.yandex.cloud.mdb.greenplum.v1.Acc" +
-      "ess\022\031\n\007zone_id\030\004 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet" +
-      "_id\030\005 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_public_ip\030" +
-      "\006 \001(\010\"C\n\006Access\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007we" +
-      "b_sql\030\002 \001(\010\022\025\n\rdata_transfer\030\003 \001(\010\"\326\001\n\026G" +
-      "reenplumRestoreConfig\0223\n\023backup_window_s" +
-      "tart\030\001 \001(\0132\026.google.type.TimeOfDay\0225\n\006ac" +
-      "cess\030\002 \001(\0132%.yandex.cloud.mdb.greenplum." +
-      "v1.Access\022\031\n\007zone_id\030\003 \001(\tB\010\212\3101\004<=50\022\033\n\t" +
-      "subnet_id\030\004 \001(\tB\010\212\3101\004<=50\022\030\n\020assign_publ" +
-      "ic_ip\030\005 \001(\010\"A\n\020RestoreResources\022\032\n\022resou" +
-      "rce_preset_id\030\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\"\036" +
-      "\n\014CloudStorage\022\016\n\006enable\030\001 \001(\010Bp\n!yandex" +
-      ".cloud.api.mdb.greenplum.v1ZKgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/md" +
-      "b/greenplum/v1;greenplumb\006proto3"
+      "ogle/protobuf/timestamp.proto\032\036google/pr" +
+      "otobuf/wrappers.proto\032\033google/type/timeo" +
+      "fday.proto\032\035yandex/cloud/validation.prot" +
+      "o\032*yandex/cloud/mdb/greenplum/v1/config." +
+      "proto\032/yandex/cloud/mdb/greenplum/v1/mai" +
+      "ntenance.proto\032\'yandex/cloud/mdb/greenpl" +
+      "um/v1/pxf.proto\"\365\013\n\007Cluster\022\n\n\002id\030\001 \001(\t\022" +
+      "\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032" +
+      ".google.protobuf.Timestamp\022\032\n\004name\030\004 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=63\022>\n\006config\030\005 \001(\0132..yandex." +
+      "cloud.mdb.greenplum.v1.GreenplumConfig\022\036" +
+      "\n\013description\030\006 \001(\tB\t\212\3101\005<=256\022B\n\006labels" +
+      "\030\007 \003(\01322.yandex.cloud.mdb.greenplum.v1.C" +
+      "luster.LabelsEntry\022G\n\013environment\030\010 \001(\0162" +
+      "2.yandex.cloud.mdb.greenplum.v1.Cluster." +
+      "Environment\022=\n\nmonitoring\030\t \003(\0132).yandex" +
+      ".cloud.mdb.greenplum.v1.Monitoring\022L\n\rma" +
+      "ster_config\030\n \001(\01325.yandex.cloud.mdb.gre" +
+      "enplum.v1.MasterSubclusterConfig\022N\n\016segm" +
+      "ent_config\030\013 \001(\01326.yandex.cloud.mdb.gree" +
+      "nplum.v1.SegmentSubclusterConfig\022\031\n\021mast" +
+      "er_host_count\030\014 \001(\003\022\032\n\022segment_host_coun" +
+      "t\030\r \001(\003\022\027\n\017segment_in_host\030\016 \001(\003\022\022\n\nnetw" +
+      "ork_id\030\017 \001(\t\022=\n\006health\030\020 \001(\0162-.yandex.cl" +
+      "oud.mdb.greenplum.v1.Cluster.Health\022=\n\006s" +
+      "tatus\030\021 \001(\0162-.yandex.cloud.mdb.greenplum" +
+      ".v1.Cluster.Status\022L\n\022maintenance_window" +
+      "\030\022 \001(\01320.yandex.cloud.mdb.greenplum.v1.M" +
+      "aintenanceWindow\022N\n\021planned_operation\030\023 " +
+      "\001(\01323.yandex.cloud.mdb.greenplum.v1.Main" +
+      "tenanceOperation\022\032\n\022security_group_ids\030\024" +
+      " \003(\t\022\021\n\tuser_name\030\025 \001(\t\022\033\n\023deletion_prot" +
+      "ection\030\026 \001(\010\022\026\n\016host_group_ids\030\027 \003(\t\022G\n\016" +
+      "cluster_config\030\030 \001(\0132/.yandex.cloud.mdb." +
+      "greenplum.v1.ClusterConfigSet\022B\n\rcloud_s" +
+      "torage\030\032 \001(\0132+.yandex.cloud.mdb.greenplu" +
+      "m.v1.CloudStorage\032-\n\013LabelsEntry\022\013\n\003key\030" +
+      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"I\n\013Environment\022" +
+      "\033\n\027ENVIRONMENT_UNSPECIFIED\020\000\022\016\n\nPRODUCTI" +
+      "ON\020\001\022\r\n\tPRESTABLE\020\002\"O\n\006Health\022\022\n\016HEALTH_" +
+      "UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRAD" +
+      "ED\020\003\022\016\n\nUNBALANCED\020\004\"y\n\006Status\022\022\n\016STATUS" +
+      "_UNKNOWN\020\000\022\014\n\010CREATING\020\001\022\013\n\007RUNNING\020\002\022\t\n" +
+      "\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n\007" +
+      "STOPPED\020\006\022\014\n\010STARTING\020\007\"\311\006\n\020ClusterConfi" +
+      "gSet\022s\n\031greenplum_config_set_6_17\030\001 \001(\0132" +
+      "5.yandex.cloud.mdb.greenplum.v1.Greenplu" +
+      "mConfigSet6_17H\000R\027greenplumConfigSet_6_1" +
+      "7\022s\n\031greenplum_config_set_6_19\030\002 \001(\01325.y" +
+      "andex.cloud.mdb.greenplum.v1.GreenplumCo" +
+      "nfigSet6_19H\000R\027greenplumConfigSet_6_19\022s" +
+      "\n\031greenplum_config_set_6_21\030\004 \001(\01325.yand" +
+      "ex.cloud.mdb.greenplum.v1.GreenplumConfi" +
+      "gSet6_21H\000R\027greenplumConfigSet_6_21\022s\n\031g" +
+      "reenplum_config_set_6_22\030\005 \001(\01325.yandex." +
+      "cloud.mdb.greenplum.v1.GreenplumConfigSe" +
+      "t6_22H\000R\027greenplumConfigSet_6_22\022j\n\026gree" +
+      "nplum_config_set_6\030\t \001(\01322.yandex.cloud." +
+      "mdb.greenplum.v1.GreenplumConfigSet6H\000R\024" +
+      "greenplumConfigSet_6\022F\n\004pool\030\003 \001(\01328.yan" +
+      "dex.cloud.mdb.greenplum.v1.ConnectionPoo" +
+      "lerConfigSet\022X\n\025background_activities\030\006 " +
+      "\001(\01329.yandex.cloud.mdb.greenplum.v1.Back" +
+      "groundActivitiesConfig\022?\n\npxf_config\030\010 \001" +
+      "(\0132+.yandex.cloud.mdb.greenplum.v1.PXFCo" +
+      "nfigSetB\022\n\020greenplum_config\"=\n\nMonitorin" +
+      "g\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004" +
+      "link\030\003 \001(\t\"\251\002\n\017GreenplumConfig\022\017\n\007versio" +
+      "n\030\001 \001(\t\0223\n\023backup_window_start\030\002 \001(\0132\026.g" +
+      "oogle.type.TimeOfDay\022G\n\031backup_retain_pe" +
+      "riod_days\030\t \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\007\372\3071\0031-7\0225\n\006access\030\003 \001(\0132%.yandex.c" +
+      "loud.mdb.greenplum.v1.Access\022\031\n\007zone_id\030" +
+      "\004 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\005 \001(\tB\010\212\3101\004" +
+      "<=50\022\030\n\020assign_public_ip\030\006 \001(\010\"C\n\006Access" +
+      "\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022\025\n\r" +
+      "data_transfer\030\003 \001(\010\"\326\001\n\026GreenplumRestore" +
+      "Config\0223\n\023backup_window_start\030\001 \001(\0132\026.go" +
+      "ogle.type.TimeOfDay\0225\n\006access\030\002 \001(\0132%.ya" +
+      "ndex.cloud.mdb.greenplum.v1.Access\022\031\n\007zo" +
+      "ne_id\030\003 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\004 \001(\t" +
+      "B\010\212\3101\004<=50\022\030\n\020assign_public_ip\030\005 \001(\010\"A\n\020" +
+      "RestoreResources\022\032\n\022resource_preset_id\030\001" +
+      " \001(\t\022\021\n\tdisk_size\030\002 \001(\003\"\036\n\014CloudStorage\022" +
+      "\016\n\006enable\030\001 \001(\010Bp\n!yandex.cloud.api.mdb." +
+      "greenplum.v1ZKgithub.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/mdb/greenplum/v1;" +
+      "greenplumb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.WrappersProto.getDescriptor(),
           com.google.type.TimeOfDayProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
           yandex.cloud.api.mdb.greenplum.v1.Config.getDescriptor(),
@@ -14874,7 +15141,7 @@ public final class ClusterOuterClass {
     internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_GreenplumConfig_descriptor,
-        new java.lang.String[] { "Version", "BackupWindowStart", "Access", "ZoneId", "SubnetId", "AssignPublicIp", });
+        new java.lang.String[] { "Version", "BackupWindowStart", "BackupRetainPeriodDays", "Access", "ZoneId", "SubnetId", "AssignPublicIp", });
     internal_static_yandex_cloud_mdb_greenplum_v1_Access_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_mdb_greenplum_v1_Access_fieldAccessorTable = new
@@ -14903,9 +15170,11 @@ public final class ClusterOuterClass {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.WrappersProto.getDescriptor();
     com.google.type.TimeOfDayProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
     yandex.cloud.api.mdb.greenplum.v1.Config.getDescriptor();

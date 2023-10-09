@@ -8147,6 +8147,41 @@ public final class FolderServiceOuterClass {
      * <code>.google.protobuf.Timestamp delete_after = 2;</code>
      */
     com.google.protobuf.TimestampOrBuilder getDeleteAfterOrBuilder();
+
+    /**
+     * <pre>
+     * Information about operation cancellation
+     * </pre>
+     *
+     * <code>string cancelled_by = 3;</code>
+     * @return The cancelledBy.
+     */
+    java.lang.String getCancelledBy();
+    /**
+     * <pre>
+     * Information about operation cancellation
+     * </pre>
+     *
+     * <code>string cancelled_by = 3;</code>
+     * @return The bytes for cancelledBy.
+     */
+    com.google.protobuf.ByteString
+        getCancelledByBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+     * @return Whether the cancelledAt field is set.
+     */
+    boolean hasCancelledAt();
+    /**
+     * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+     * @return The cancelledAt.
+     */
+    com.google.protobuf.Timestamp getCancelledAt();
+    /**
+     * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCancelledAtOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.resourcemanager.v1.DeleteFolderMetadata}
@@ -8162,6 +8197,7 @@ public final class FolderServiceOuterClass {
     }
     private DeleteFolderMetadata() {
       folderId_ = "";
+      cancelledBy_ = "";
     }
 
     @java.lang.Override
@@ -8209,6 +8245,25 @@ public final class FolderServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(deleteAfter_);
                 deleteAfter_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              cancelledBy_ = s;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (cancelledAt_ != null) {
+                subBuilder = cancelledAt_.toBuilder();
+              }
+              cancelledAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cancelledAt_);
+                cancelledAt_ = subBuilder.buildPartial();
               }
 
               break;
@@ -8329,6 +8384,78 @@ public final class FolderServiceOuterClass {
       return getDeleteAfter();
     }
 
+    public static final int CANCELLED_BY_FIELD_NUMBER = 3;
+    private volatile java.lang.Object cancelledBy_;
+    /**
+     * <pre>
+     * Information about operation cancellation
+     * </pre>
+     *
+     * <code>string cancelled_by = 3;</code>
+     * @return The cancelledBy.
+     */
+    @java.lang.Override
+    public java.lang.String getCancelledBy() {
+      java.lang.Object ref = cancelledBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cancelledBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Information about operation cancellation
+     * </pre>
+     *
+     * <code>string cancelled_by = 3;</code>
+     * @return The bytes for cancelledBy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCancelledByBytes() {
+      java.lang.Object ref = cancelledBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cancelledBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CANCELLED_AT_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp cancelledAt_;
+    /**
+     * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+     * @return Whether the cancelledAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCancelledAt() {
+      return cancelledAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+     * @return The cancelledAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCancelledAt() {
+      return cancelledAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : cancelledAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCancelledAtOrBuilder() {
+      return getCancelledAt();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8349,6 +8476,12 @@ public final class FolderServiceOuterClass {
       if (deleteAfter_ != null) {
         output.writeMessage(2, getDeleteAfter());
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cancelledBy_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, cancelledBy_);
+      }
+      if (cancelledAt_ != null) {
+        output.writeMessage(4, getCancelledAt());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -8364,6 +8497,13 @@ public final class FolderServiceOuterClass {
       if (deleteAfter_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDeleteAfter());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cancelledBy_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, cancelledBy_);
+      }
+      if (cancelledAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getCancelledAt());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8387,6 +8527,13 @@ public final class FolderServiceOuterClass {
         if (!getDeleteAfter()
             .equals(other.getDeleteAfter())) return false;
       }
+      if (!getCancelledBy()
+          .equals(other.getCancelledBy())) return false;
+      if (hasCancelledAt() != other.hasCancelledAt()) return false;
+      if (hasCancelledAt()) {
+        if (!getCancelledAt()
+            .equals(other.getCancelledAt())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8403,6 +8550,12 @@ public final class FolderServiceOuterClass {
       if (hasDeleteAfter()) {
         hash = (37 * hash) + DELETE_AFTER_FIELD_NUMBER;
         hash = (53 * hash) + getDeleteAfter().hashCode();
+      }
+      hash = (37 * hash) + CANCELLED_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getCancelledBy().hashCode();
+      if (hasCancelledAt()) {
+        hash = (37 * hash) + CANCELLED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCancelledAt().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8545,6 +8698,14 @@ public final class FolderServiceOuterClass {
           deleteAfter_ = null;
           deleteAfterBuilder_ = null;
         }
+        cancelledBy_ = "";
+
+        if (cancelledAtBuilder_ == null) {
+          cancelledAt_ = null;
+        } else {
+          cancelledAt_ = null;
+          cancelledAtBuilder_ = null;
+        }
         return this;
       }
 
@@ -8576,6 +8737,12 @@ public final class FolderServiceOuterClass {
           result.deleteAfter_ = deleteAfter_;
         } else {
           result.deleteAfter_ = deleteAfterBuilder_.build();
+        }
+        result.cancelledBy_ = cancelledBy_;
+        if (cancelledAtBuilder_ == null) {
+          result.cancelledAt_ = cancelledAt_;
+        } else {
+          result.cancelledAt_ = cancelledAtBuilder_.build();
         }
         onBuilt();
         return result;
@@ -8631,6 +8798,13 @@ public final class FolderServiceOuterClass {
         }
         if (other.hasDeleteAfter()) {
           mergeDeleteAfter(other.getDeleteAfter());
+        }
+        if (!other.getCancelledBy().isEmpty()) {
+          cancelledBy_ = other.cancelledBy_;
+          onChanged();
+        }
+        if (other.hasCancelledAt()) {
+          mergeCancelledAt(other.getCancelledAt());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8910,6 +9084,221 @@ public final class FolderServiceOuterClass {
           deleteAfter_ = null;
         }
         return deleteAfterBuilder_;
+      }
+
+      private java.lang.Object cancelledBy_ = "";
+      /**
+       * <pre>
+       * Information about operation cancellation
+       * </pre>
+       *
+       * <code>string cancelled_by = 3;</code>
+       * @return The cancelledBy.
+       */
+      public java.lang.String getCancelledBy() {
+        java.lang.Object ref = cancelledBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cancelledBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Information about operation cancellation
+       * </pre>
+       *
+       * <code>string cancelled_by = 3;</code>
+       * @return The bytes for cancelledBy.
+       */
+      public com.google.protobuf.ByteString
+          getCancelledByBytes() {
+        java.lang.Object ref = cancelledBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cancelledBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Information about operation cancellation
+       * </pre>
+       *
+       * <code>string cancelled_by = 3;</code>
+       * @param value The cancelledBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCancelledBy(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cancelledBy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Information about operation cancellation
+       * </pre>
+       *
+       * <code>string cancelled_by = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCancelledBy() {
+        
+        cancelledBy_ = getDefaultInstance().getCancelledBy();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Information about operation cancellation
+       * </pre>
+       *
+       * <code>string cancelled_by = 3;</code>
+       * @param value The bytes for cancelledBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCancelledByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cancelledBy_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp cancelledAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> cancelledAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+       * @return Whether the cancelledAt field is set.
+       */
+      public boolean hasCancelledAt() {
+        return cancelledAtBuilder_ != null || cancelledAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+       * @return The cancelledAt.
+       */
+      public com.google.protobuf.Timestamp getCancelledAt() {
+        if (cancelledAtBuilder_ == null) {
+          return cancelledAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : cancelledAt_;
+        } else {
+          return cancelledAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+       */
+      public Builder setCancelledAt(com.google.protobuf.Timestamp value) {
+        if (cancelledAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cancelledAt_ = value;
+          onChanged();
+        } else {
+          cancelledAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+       */
+      public Builder setCancelledAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (cancelledAtBuilder_ == null) {
+          cancelledAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          cancelledAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+       */
+      public Builder mergeCancelledAt(com.google.protobuf.Timestamp value) {
+        if (cancelledAtBuilder_ == null) {
+          if (cancelledAt_ != null) {
+            cancelledAt_ =
+              com.google.protobuf.Timestamp.newBuilder(cancelledAt_).mergeFrom(value).buildPartial();
+          } else {
+            cancelledAt_ = value;
+          }
+          onChanged();
+        } else {
+          cancelledAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+       */
+      public Builder clearCancelledAt() {
+        if (cancelledAtBuilder_ == null) {
+          cancelledAt_ = null;
+          onChanged();
+        } else {
+          cancelledAt_ = null;
+          cancelledAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCancelledAtBuilder() {
+        
+        onChanged();
+        return getCancelledAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCancelledAtOrBuilder() {
+        if (cancelledAtBuilder_ != null) {
+          return cancelledAtBuilder_.getMessageOrBuilder();
+        } else {
+          return cancelledAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : cancelledAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp cancelled_at = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCancelledAtFieldBuilder() {
+        if (cancelledAtBuilder_ == null) {
+          cancelledAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCancelledAt(),
+                  getParentForChildren(),
+                  isClean());
+          cancelledAt_ = null;
+        }
+        return cancelledAtBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11109,64 +11498,66 @@ public final class FolderServiceOuterClass {
       ")\n\024UpdateFolderMetadata\022\021\n\tfolder_id\030\001 \001" +
       "(\t\"h\n\023DeleteFolderRequest\022\037\n\tfolder_id\030\001" +
       " \001(\tB\014\350\3071\001\212\3101\004<=50\0220\n\014delete_after\030\002 \001(\013" +
-      "2\032.google.protobuf.Timestamp\"[\n\024DeleteFo" +
-      "lderMetadata\022\021\n\tfolder_id\030\001 \001(\t\0220\n\014delet" +
-      "e_after\030\002 \001(\0132\032.google.protobuf.Timestam" +
-      "p\"}\n\033ListFolderOperationsRequest\022\037\n\tfold" +
-      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002" +
-      " \001(\003B\n\372\3071\006<=1000\022\036\n\npage_token\030\003 \001(\tB\n\212\310" +
-      "1\006<=2000\"n\n\034ListFolderOperationsResponse" +
-      "\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.oper" +
-      "ation.Operation\022\027\n\017next_page_token\030\002 \001(\t" +
-      "2\204\016\n\rFolderService\022\223\001\n\003Get\0221.yandex.clou" +
-      "d.resourcemanager.v1.GetFolderRequest\032\'." +
-      "yandex.cloud.resourcemanager.v1.Folder\"0" +
-      "\202\323\344\223\002*\022(/resource-manager/v1/folders/{fo" +
-      "lder_id}\022\227\001\n\004List\0223.yandex.cloud.resourc" +
-      "emanager.v1.ListFoldersRequest\0324.yandex." +
-      "cloud.resourcemanager.v1.ListFoldersResp" +
-      "onse\"$\202\323\344\223\002\036\022\034/resource-manager/v1/folde" +
-      "rs\022\254\001\n\006Create\0224.yandex.cloud.resourceman" +
-      "ager.v1.CreateFolderRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"I\202\323\344\223\002!\"\034/resourc" +
-      "e-manager/v1/folders:\001*\262\322*\036\n\024CreateFolde" +
-      "rMetadata\022\006Folder\022\270\001\n\006Update\0224.yandex.cl" +
-      "oud.resourcemanager.v1.UpdateFolderReque" +
-      "st\032!.yandex.cloud.operation.Operation\"U\202" +
-      "\323\344\223\002-2(/resource-manager/v1/folders/{fol" +
-      "der_id}:\001*\262\322*\036\n\024UpdateFolderMetadata\022\006Fo" +
-      "lder\022\304\001\n\006Delete\0224.yandex.cloud.resourcem" +
-      "anager.v1.DeleteFolderRequest\032!.yandex.c" +
-      "loud.operation.Operation\"a\202\323\344\223\002**(/resou" +
-      "rce-manager/v1/folders/{folder_id}\262\322*-\n\024" +
-      "DeleteFolderMetadata\022\025google.protobuf.Em" +
-      "pty\022\312\001\n\016ListOperations\022<.yandex.cloud.re" +
-      "sourcemanager.v1.ListFolderOperationsReq" +
-      "uest\032=.yandex.cloud.resourcemanager.v1.L" +
-      "istFolderOperationsResponse\";\202\323\344\223\0025\0223/re" +
-      "source-manager/v1/folders/{folder_id}/op" +
-      "erations\022\274\001\n\022ListAccessBindings\022..yandex" +
-      ".cloud.access.ListAccessBindingsRequest\032" +
-      "/.yandex.cloud.access.ListAccessBindings" +
-      "Response\"E\202\323\344\223\002?\022=/resource-manager/v1/f" +
-      "olders/{resource_id}:listAccessBindings\022" +
-      "\373\001\n\021SetAccessBindings\022-.yandex.cloud.acc" +
-      "ess.SetAccessBindingsRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"\223\001\202\323\344\223\002A\"</resou" +
-      "rce-manager/v1/folders/{resource_id}:set" +
-      "AccessBindings:\001*\262\322*H\n access.SetAccessB" +
-      "indingsMetadata\022$access.AccessBindingsOp" +
-      "erationResult\022\207\002\n\024UpdateAccessBindings\0220" +
-      ".yandex.cloud.access.UpdateAccessBinding" +
-      "sRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"\231\001\202\323\344\223\002D\"?/resource-manager/v1/folde" +
-      "rs/{resource_id}:updateAccessBindings:\001*" +
-      "\262\322*K\n#access.UpdateAccessBindingsMetadat" +
-      "a\022$access.AccessBindingsOperationResultB" +
-      "z\n#yandex.cloud.api.resourcemanager.v1ZS" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/resourcemanager/v1;resourcemana" +
-      "gerb\006proto3"
+      "2\032.google.protobuf.Timestamp\"\243\001\n\024DeleteF" +
+      "olderMetadata\022\021\n\tfolder_id\030\001 \001(\t\0220\n\014dele" +
+      "te_after\030\002 \001(\0132\032.google.protobuf.Timesta" +
+      "mp\022\024\n\014cancelled_by\030\003 \001(\t\0220\n\014cancelled_at" +
+      "\030\004 \001(\0132\032.google.protobuf.Timestamp\"}\n\033Li" +
+      "stFolderOperationsRequest\022\037\n\tfolder_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
+      "\3071\006<=1000\022\036\n\npage_token\030\003 \001(\tB\n\212\3101\006<=200" +
+      "0\"n\n\034ListFolderOperationsResponse\0225\n\nope" +
+      "rations\030\001 \003(\0132!.yandex.cloud.operation.O" +
+      "peration\022\027\n\017next_page_token\030\002 \001(\t2\204\016\n\rFo" +
+      "lderService\022\223\001\n\003Get\0221.yandex.cloud.resou" +
+      "rcemanager.v1.GetFolderRequest\032\'.yandex." +
+      "cloud.resourcemanager.v1.Folder\"0\202\323\344\223\002*\022" +
+      "(/resource-manager/v1/folders/{folder_id" +
+      "}\022\227\001\n\004List\0223.yandex.cloud.resourcemanage" +
+      "r.v1.ListFoldersRequest\0324.yandex.cloud.r" +
+      "esourcemanager.v1.ListFoldersResponse\"$\202" +
+      "\323\344\223\002\036\022\034/resource-manager/v1/folders\022\254\001\n\006" +
+      "Create\0224.yandex.cloud.resourcemanager.v1" +
+      ".CreateFolderRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"I\202\323\344\223\002!\"\034/resource-manag" +
+      "er/v1/folders:\001*\262\322*\036\n\024CreateFolderMetada" +
+      "ta\022\006Folder\022\270\001\n\006Update\0224.yandex.cloud.res" +
+      "ourcemanager.v1.UpdateFolderRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"U\202\323\344\223\002-2(" +
+      "/resource-manager/v1/folders/{folder_id}" +
+      ":\001*\262\322*\036\n\024UpdateFolderMetadata\022\006Folder\022\304\001" +
+      "\n\006Delete\0224.yandex.cloud.resourcemanager." +
+      "v1.DeleteFolderRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"a\202\323\344\223\002**(/resource-man" +
+      "ager/v1/folders/{folder_id}\262\322*-\n\024DeleteF" +
+      "olderMetadata\022\025google.protobuf.Empty\022\312\001\n" +
+      "\016ListOperations\022<.yandex.cloud.resourcem" +
+      "anager.v1.ListFolderOperationsRequest\032=." +
+      "yandex.cloud.resourcemanager.v1.ListFold" +
+      "erOperationsResponse\";\202\323\344\223\0025\0223/resource-" +
+      "manager/v1/folders/{folder_id}/operation" +
+      "s\022\274\001\n\022ListAccessBindings\022..yandex.cloud." +
+      "access.ListAccessBindingsRequest\032/.yande" +
+      "x.cloud.access.ListAccessBindingsRespons" +
+      "e\"E\202\323\344\223\002?\022=/resource-manager/v1/folders/" +
+      "{resource_id}:listAccessBindings\022\373\001\n\021Set" +
+      "AccessBindings\022-.yandex.cloud.access.Set" +
+      "AccessBindingsRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"\223\001\202\323\344\223\002A\"</resource-man" +
+      "ager/v1/folders/{resource_id}:setAccessB" +
+      "indings:\001*\262\322*H\n access.SetAccessBindings" +
+      "Metadata\022$access.AccessBindingsOperation" +
+      "Result\022\207\002\n\024UpdateAccessBindings\0220.yandex" +
+      ".cloud.access.UpdateAccessBindingsReques" +
+      "t\032!.yandex.cloud.operation.Operation\"\231\001\202" +
+      "\323\344\223\002D\"?/resource-manager/v1/folders/{res" +
+      "ource_id}:updateAccessBindings:\001*\262\322*K\n#a" +
+      "ccess.UpdateAccessBindingsMetadata\022$acce" +
+      "ss.AccessBindingsOperationResultBz\n#yand" +
+      "ex.cloud.api.resourcemanager.v1ZSgithub." +
+      "com/yandex-cloud/go-genproto/yandex/clou" +
+      "d/resourcemanager/v1;resourcemanagerb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11245,7 +11636,7 @@ public final class FolderServiceOuterClass {
     internal_static_yandex_cloud_resourcemanager_v1_DeleteFolderMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_resourcemanager_v1_DeleteFolderMetadata_descriptor,
-        new java.lang.String[] { "FolderId", "DeleteAfter", });
+        new java.lang.String[] { "FolderId", "DeleteAfter", "CancelledBy", "CancelledAt", });
     internal_static_yandex_cloud_resourcemanager_v1_ListFolderOperationsRequest_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_resourcemanager_v1_ListFolderOperationsRequest_fieldAccessorTable = new

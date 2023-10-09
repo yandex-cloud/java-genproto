@@ -11456,88 +11456,107 @@ public final class FilesystemServiceOuterClass {
       "\n0yandex/cloud/compute/v1/filesystem_ser" +
       "vice.proto\022\027yandex.cloud.compute.v1\032\034goo" +
       "gle/api/annotations.proto\032 google/protob" +
-      "uf/field_mask.proto\032 yandex/cloud/api/op" +
-      "eration.proto\032(yandex/cloud/compute/v1/f" +
-      "ilesystem.proto\032&yandex/cloud/operation/" +
-      "operation.proto\032\035yandex/cloud/validation" +
-      ".proto\";\n\024GetFilesystemRequest\022#\n\rfilesy" +
-      "stem_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\260\001\n\026ListFile" +
-      "systemsRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212" +
-      "\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035" +
-      "\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030" +
-      "\004 \001(\tB\n\212\3101\006<=1000\022\033\n\010order_by\030\005 \001(\tB\t\212\3101" +
-      "\005<=100\"l\n\027ListFilesystemsResponse\0228\n\013fil" +
-      "esystems\030\001 \003(\0132#.yandex.cloud.compute.v1" +
-      ".Filesystem\022\027\n\017next_page_token\030\002 \001(\t\"\267\003\n" +
-      "\027CreateFilesystemRequest\022\037\n\tfolder_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a" +
-      "-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descrip" +
-      "tion\030\003 \001(\tB\t\212\3101\005<=256\022\225\001\n\006labels\030\004 \003(\0132<" +
-      ".yandex.cloud.compute.v1.CreateFilesyste" +
-      "mRequest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\307" +
-      "1\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-" +
-      "_./\\@0-9a-z]*\022\031\n\007type_id\030\005 \001(\tB\010\212\3101\004<=50" +
-      "\022\035\n\007zone_id\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022\022\n\004size\030" +
-      "\007 \001(\003B\004\350\3071\001\022\022\n\nblock_size\030\010 \001(\003\032-\n\013Label" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"1" +
-      "\n\030CreateFilesystemMetadata\022\025\n\rfilesystem" +
-      "_id\030\001 \001(\t\"\230\003\n\027UpdateFilesystemRequest\022#\n" +
-      "\rfilesystem_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013up" +
-      "date_mask\030\002 \001(\0132\032.google.protobuf.FieldM" +
-      "ask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{" +
-      "0,61}[a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\310" +
-      "1\005<=256\022\225\001\n\006labels\030\005 \003(\0132<.yandex.cloud." +
-      "compute.v1.UpdateFilesystemRequest.Label" +
-      "sEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-" +
-      "z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022" +
-      "\014\n\004size\030\006 \001(\003\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\"1\n\030UpdateFilesystem" +
-      "Metadata\022\025\n\rfilesystem_id\030\001 \001(\t\">\n\027Delet" +
-      "eFilesystemRequest\022#\n\rfilesystem_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\"1\n\030DeleteFilesystemMetad" +
-      "ata\022\025\n\rfilesystem_id\030\001 \001(\t\"\204\001\n\037ListFiles" +
-      "ystemOperationsRequest\022#\n\rfilesystem_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n" +
-      "\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=10" +
-      "0\"r\n ListFilesystemOperationsResponse\0225\n" +
-      "\noperations\030\001 \003(\0132!.yandex.cloud.operati" +
-      "on.Operation\022\027\n\017next_page_token\030\002 \001(\t2\243\010" +
-      "\n\021FilesystemService\022\212\001\n\003Get\022-.yandex.clo" +
-      "ud.compute.v1.GetFilesystemRequest\032#.yan" +
-      "dex.cloud.compute.v1.Filesystem\"/\202\323\344\223\002)\022" +
-      "\'/compute/v1/filesystems/{filesystem_id}" +
-      "\022\212\001\n\004List\022/.yandex.cloud.compute.v1.List" +
-      "FilesystemsRequest\0320.yandex.cloud.comput" +
-      "e.v1.ListFilesystemsResponse\"\037\202\323\344\223\002\031\022\027/c" +
-      "ompute/v1/filesystems\022\253\001\n\006Create\0220.yande" +
+      "uf/field_mask.proto\032 yandex/cloud/access" +
+      "/access.proto\032 yandex/cloud/api/operatio" +
+      "n.proto\032(yandex/cloud/compute/v1/filesys" +
+      "tem.proto\032&yandex/cloud/operation/operat" +
+      "ion.proto\032\035yandex/cloud/validation.proto" +
+      "\";\n\024GetFilesystemRequest\022#\n\rfilesystem_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\260\001\n\026ListFilesystem" +
+      "sRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage" +
+      "_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB" +
+      "\n\212\3101\006<=1000\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=100" +
+      "\"l\n\027ListFilesystemsResponse\0228\n\013filesyste" +
+      "ms\030\001 \003(\0132#.yandex.cloud.compute.v1.Files" +
+      "ystem\022\027\n\017next_page_token\030\002 \001(\t\"\267\003\n\027Creat" +
+      "eFilesystemRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-" +
+      "a-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\003" +
+      " \001(\tB\t\212\3101\005<=256\022\225\001\n\006labels\030\004 \003(\0132<.yande" +
       "x.cloud.compute.v1.CreateFilesystemReque" +
-      "st\032!.yandex.cloud.operation.Operation\"L\202" +
-      "\323\344\223\002\034\"\027/compute/v1/filesystems:\001*\262\322*&\n\030C" +
-      "reateFilesystemMetadata\022\nFilesystem\022\273\001\n\006" +
-      "Update\0220.yandex.cloud.compute.v1.UpdateF" +
-      "ilesystemRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"\\\202\323\344\223\002,2\'/compute/v1/filesys" +
-      "tems/{filesystem_id}:\001*\262\322*&\n\030UpdateFiles" +
-      "ystemMetadata\022\nFilesystem\022\303\001\n\006Delete\0220.y" +
-      "andex.cloud.compute.v1.DeleteFilesystemR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"d\202\323\344\223\002)*\'/compute/v1/filesystems/{file" +
-      "system_id}\262\322*1\n\030DeleteFilesystemMetadata" +
-      "\022\025google.protobuf.Empty\022\301\001\n\016ListOperatio" +
-      "ns\0228.yandex.cloud.compute.v1.ListFilesys" +
-      "temOperationsRequest\0329.yandex.cloud.comp" +
-      "ute.v1.ListFilesystemOperationsResponse\"" +
-      ":\202\323\344\223\0024\0222/compute/v1/filesystems/{filesy" +
-      "stem_id}/operationsBb\n\033yandex.cloud.api." +
-      "compute.v1ZCgithub.com/yandex-cloud/go-g" +
-      "enproto/yandex/cloud/compute/v1;computeb" +
-      "\006proto3"
+      "st.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_." +
+      "/\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0" +
+      "-9a-z]*\022\031\n\007type_id\030\005 \001(\tB\010\212\3101\004<=50\022\035\n\007zo" +
+      "ne_id\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022\022\n\004size\030\007 \001(\003B" +
+      "\004\350\3071\001\022\022\n\nblock_size\030\010 \001(\003\032-\n\013LabelsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"1\n\030Crea" +
+      "teFilesystemMetadata\022\025\n\rfilesystem_id\030\001 " +
+      "\001(\t\"\230\003\n\027UpdateFilesystemRequest\022#\n\rfiles" +
+      "ystem_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_m" +
+      "ask\030\002 \001(\0132\032.google.protobuf.FieldMask\0222\n" +
+      "\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[" +
+      "a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=25" +
+      "6\022\225\001\n\006labels\030\005 \003(\0132<.yandex.cloud.comput" +
+      "e.v1.UpdateFilesystemRequest.LabelsEntry" +
+      "BG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101" +
+      "\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\014\n\004siz" +
+      "e\030\006 \001(\003\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\"1\n\030UpdateFilesystemMetada" +
+      "ta\022\025\n\rfilesystem_id\030\001 \001(\t\">\n\027DeleteFiles" +
+      "ystemRequest\022#\n\rfilesystem_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\"1\n\030DeleteFilesystemMetadata\022\025\n" +
+      "\rfilesystem_id\030\001 \001(\t\"\204\001\n\037ListFilesystemO" +
+      "perationsRequest\022#\n\rfilesystem_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=" +
+      "1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\"r\n L" +
+      "istFilesystemOperationsResponse\0225\n\nopera" +
+      "tions\030\001 \003(\0132!.yandex.cloud.operation.Ope" +
+      "ration\022\027\n\017next_page_token\030\002 \001(\t2\333\r\n\021File" +
+      "systemService\022\212\001\n\003Get\022-.yandex.cloud.com" +
+      "pute.v1.GetFilesystemRequest\032#.yandex.cl" +
+      "oud.compute.v1.Filesystem\"/\202\323\344\223\002)\022\'/comp" +
+      "ute/v1/filesystems/{filesystem_id}\022\212\001\n\004L" +
+      "ist\022/.yandex.cloud.compute.v1.ListFilesy" +
+      "stemsRequest\0320.yandex.cloud.compute.v1.L" +
+      "istFilesystemsResponse\"\037\202\323\344\223\002\031\022\027/compute" +
+      "/v1/filesystems\022\253\001\n\006Create\0220.yandex.clou" +
+      "d.compute.v1.CreateFilesystemRequest\032!.y" +
+      "andex.cloud.operation.Operation\"L\202\323\344\223\002\034\"" +
+      "\027/compute/v1/filesystems:\001*\262\322*&\n\030CreateF" +
+      "ilesystemMetadata\022\nFilesystem\022\273\001\n\006Update" +
+      "\0220.yandex.cloud.compute.v1.UpdateFilesys" +
+      "temRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"\\\202\323\344\223\002,2\'/compute/v1/filesystems/{" +
+      "filesystem_id}:\001*\262\322*&\n\030UpdateFilesystemM" +
+      "etadata\022\nFilesystem\022\303\001\n\006Delete\0220.yandex." +
+      "cloud.compute.v1.DeleteFilesystemRequest" +
+      "\032!.yandex.cloud.operation.Operation\"d\202\323\344" +
+      "\223\002)*\'/compute/v1/filesystems/{filesystem" +
+      "_id}\262\322*1\n\030DeleteFilesystemMetadata\022\025goog" +
+      "le.protobuf.Empty\022\301\001\n\016ListOperations\0228.y" +
+      "andex.cloud.compute.v1.ListFilesystemOpe" +
+      "rationsRequest\0329.yandex.cloud.compute.v1" +
+      ".ListFilesystemOperationsResponse\":\202\323\344\223\002" +
+      "4\0222/compute/v1/filesystems/{filesystem_i" +
+      "d}/operations\022\267\001\n\022ListAccessBindings\022..y" +
+      "andex.cloud.access.ListAccessBindingsReq" +
+      "uest\032/.yandex.cloud.access.ListAccessBin" +
+      "dingsResponse\"@\202\323\344\223\002:\0228/compute/v1/files" +
+      "ystems/{resource_id}:listAccessBindings\022" +
+      "\366\001\n\021SetAccessBindings\022-.yandex.cloud.acc" +
+      "ess.SetAccessBindingsRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"\216\001\202\323\344\223\002<\"7/compu" +
+      "te/v1/filesystems/{resource_id}:setAcces" +
+      "sBindings:\001*\262\322*H\n access.SetAccessBindin" +
+      "gsMetadata\022$access.AccessBindingsOperati" +
+      "onResult\022\202\002\n\024UpdateAccessBindings\0220.yand" +
+      "ex.cloud.access.UpdateAccessBindingsRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"\224" +
+      "\001\202\323\344\223\002?\":/compute/v1/filesystems/{resour" +
+      "ce_id}:updateAccessBindings:\001*\262\322*K\n#acce" +
+      "ss.UpdateAccessBindingsMetadata\022$access." +
+      "AccessBindingsOperationResultBb\n\033yandex." +
+      "cloud.api.compute.v1ZCgithub.com/yandex-" +
+      "cloud/go-genproto/yandex/cloud/compute/v" +
+      "1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.compute.v1.FilesystemOuterClass.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
@@ -11635,6 +11654,7 @@ public final class FilesystemServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.compute.v1.FilesystemOuterClass.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();

@@ -235,6 +235,99 @@ public final class DiskPlacementGroupServiceGrpc {
     return getListOperationsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest,
+      yandex.cloud.api.access.Access.ListAccessBindingsResponse> getListAccessBindingsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListAccessBindings",
+      requestType = yandex.cloud.api.access.Access.ListAccessBindingsRequest.class,
+      responseType = yandex.cloud.api.access.Access.ListAccessBindingsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest,
+      yandex.cloud.api.access.Access.ListAccessBindingsResponse> getListAccessBindingsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest, yandex.cloud.api.access.Access.ListAccessBindingsResponse> getListAccessBindingsMethod;
+    if ((getListAccessBindingsMethod = DiskPlacementGroupServiceGrpc.getListAccessBindingsMethod) == null) {
+      synchronized (DiskPlacementGroupServiceGrpc.class) {
+        if ((getListAccessBindingsMethod = DiskPlacementGroupServiceGrpc.getListAccessBindingsMethod) == null) {
+          DiskPlacementGroupServiceGrpc.getListAccessBindingsMethod = getListAccessBindingsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.ListAccessBindingsRequest, yandex.cloud.api.access.Access.ListAccessBindingsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAccessBindings"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.ListAccessBindingsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.ListAccessBindingsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DiskPlacementGroupServiceMethodDescriptorSupplier("ListAccessBindings"))
+              .build();
+        }
+      }
+    }
+    return getListAccessBindingsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getSetAccessBindingsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetAccessBindings",
+      requestType = yandex.cloud.api.access.Access.SetAccessBindingsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getSetAccessBindingsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getSetAccessBindingsMethod;
+    if ((getSetAccessBindingsMethod = DiskPlacementGroupServiceGrpc.getSetAccessBindingsMethod) == null) {
+      synchronized (DiskPlacementGroupServiceGrpc.class) {
+        if ((getSetAccessBindingsMethod = DiskPlacementGroupServiceGrpc.getSetAccessBindingsMethod) == null) {
+          DiskPlacementGroupServiceGrpc.getSetAccessBindingsMethod = getSetAccessBindingsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.SetAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetAccessBindings"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.SetAccessBindingsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new DiskPlacementGroupServiceMethodDescriptorSupplier("SetAccessBindings"))
+              .build();
+        }
+      }
+    }
+    return getSetAccessBindingsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateAccessBindingsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateAccessBindings",
+      requestType = yandex.cloud.api.access.Access.UpdateAccessBindingsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateAccessBindingsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateAccessBindingsMethod;
+    if ((getUpdateAccessBindingsMethod = DiskPlacementGroupServiceGrpc.getUpdateAccessBindingsMethod) == null) {
+      synchronized (DiskPlacementGroupServiceGrpc.class) {
+        if ((getUpdateAccessBindingsMethod = DiskPlacementGroupServiceGrpc.getUpdateAccessBindingsMethod) == null) {
+          DiskPlacementGroupServiceGrpc.getUpdateAccessBindingsMethod = getUpdateAccessBindingsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAccessBindings"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.UpdateAccessBindingsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new DiskPlacementGroupServiceMethodDescriptorSupplier("UpdateAccessBindings"))
+              .build();
+        }
+      }
+    }
+    return getUpdateAccessBindingsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -356,6 +449,36 @@ public final class DiskPlacementGroupServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Lists access bindings for the disk placement group.
+     * </pre>
+     */
+    public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Sets access bindings for the disk placement group.
+     * </pre>
+     */
+    public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetAccessBindingsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates access bindings for the disk placement group.
+     * </pre>
+     */
+    public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -407,6 +530,27 @@ public final class DiskPlacementGroupServiceGrpc {
                 yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupOperationsRequest,
                 yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupOperationsResponse>(
                   this, METHODID_LIST_OPERATIONS)))
+          .addMethod(
+            getListAccessBindingsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.access.Access.ListAccessBindingsRequest,
+                yandex.cloud.api.access.Access.ListAccessBindingsResponse>(
+                  this, METHODID_LIST_ACCESS_BINDINGS)))
+          .addMethod(
+            getSetAccessBindingsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.access.Access.SetAccessBindingsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_SET_ACCESS_BINDINGS)))
+          .addMethod(
+            getUpdateAccessBindingsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_UPDATE_ACCESS_BINDINGS)))
           .build();
     }
   }
@@ -504,6 +648,39 @@ public final class DiskPlacementGroupServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Lists access bindings for the disk placement group.
+     * </pre>
+     */
+    public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Sets access bindings for the disk placement group.
+     * </pre>
+     */
+    public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates access bindings for the disk placement group.
+     * </pre>
+     */
+    public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -591,6 +768,36 @@ public final class DiskPlacementGroupServiceGrpc {
     public yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupOperationsResponse listOperations(yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupOperationsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOperationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists access bindings for the disk placement group.
+     * </pre>
+     */
+    public yandex.cloud.api.access.Access.ListAccessBindingsResponse listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListAccessBindingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Sets access bindings for the disk placement group.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetAccessBindingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates access bindings for the disk placement group.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateAccessBindingsMethod(), getCallOptions(), request);
     }
   }
 
@@ -687,6 +894,39 @@ public final class DiskPlacementGroupServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Lists access bindings for the disk placement group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.access.Access.ListAccessBindingsResponse> listAccessBindings(
+        yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Sets access bindings for the disk placement group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setAccessBindings(
+        yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates access bindings for the disk placement group.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateAccessBindings(
+        yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -696,6 +936,9 @@ public final class DiskPlacementGroupServiceGrpc {
   private static final int METHODID_DELETE = 4;
   private static final int METHODID_LIST_DISKS = 5;
   private static final int METHODID_LIST_OPERATIONS = 6;
+  private static final int METHODID_LIST_ACCESS_BINDINGS = 7;
+  private static final int METHODID_SET_ACCESS_BINDINGS = 8;
+  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -741,6 +984,18 @@ public final class DiskPlacementGroupServiceGrpc {
         case METHODID_LIST_OPERATIONS:
           serviceImpl.listOperations((yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupOperationsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.DiskPlacementGroupServiceOuterClass.ListDiskPlacementGroupOperationsResponse>) responseObserver);
+          break;
+        case METHODID_LIST_ACCESS_BINDINGS:
+          serviceImpl.listAccessBindings((yandex.cloud.api.access.Access.ListAccessBindingsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse>) responseObserver);
+          break;
+        case METHODID_SET_ACCESS_BINDINGS:
+          serviceImpl.setAccessBindings((yandex.cloud.api.access.Access.SetAccessBindingsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_UPDATE_ACCESS_BINDINGS:
+          serviceImpl.updateAccessBindings((yandex.cloud.api.access.Access.UpdateAccessBindingsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -810,6 +1065,9 @@ public final class DiskPlacementGroupServiceGrpc {
               .addMethod(getDeleteMethod())
               .addMethod(getListDisksMethod())
               .addMethod(getListOperationsMethod())
+              .addMethod(getListAccessBindingsMethod())
+              .addMethod(getSetAccessBindingsMethod())
+              .addMethod(getUpdateAccessBindingsMethod())
               .build();
         }
       }

@@ -359,6 +359,99 @@ public final class SnapshotScheduleServiceGrpc {
     return getListDisksMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest,
+      yandex.cloud.api.access.Access.ListAccessBindingsResponse> getListAccessBindingsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListAccessBindings",
+      requestType = yandex.cloud.api.access.Access.ListAccessBindingsRequest.class,
+      responseType = yandex.cloud.api.access.Access.ListAccessBindingsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest,
+      yandex.cloud.api.access.Access.ListAccessBindingsResponse> getListAccessBindingsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest, yandex.cloud.api.access.Access.ListAccessBindingsResponse> getListAccessBindingsMethod;
+    if ((getListAccessBindingsMethod = SnapshotScheduleServiceGrpc.getListAccessBindingsMethod) == null) {
+      synchronized (SnapshotScheduleServiceGrpc.class) {
+        if ((getListAccessBindingsMethod = SnapshotScheduleServiceGrpc.getListAccessBindingsMethod) == null) {
+          SnapshotScheduleServiceGrpc.getListAccessBindingsMethod = getListAccessBindingsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.ListAccessBindingsRequest, yandex.cloud.api.access.Access.ListAccessBindingsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListAccessBindings"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.ListAccessBindingsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.ListAccessBindingsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new SnapshotScheduleServiceMethodDescriptorSupplier("ListAccessBindings"))
+              .build();
+        }
+      }
+    }
+    return getListAccessBindingsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getSetAccessBindingsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetAccessBindings",
+      requestType = yandex.cloud.api.access.Access.SetAccessBindingsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getSetAccessBindingsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.SetAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getSetAccessBindingsMethod;
+    if ((getSetAccessBindingsMethod = SnapshotScheduleServiceGrpc.getSetAccessBindingsMethod) == null) {
+      synchronized (SnapshotScheduleServiceGrpc.class) {
+        if ((getSetAccessBindingsMethod = SnapshotScheduleServiceGrpc.getSetAccessBindingsMethod) == null) {
+          SnapshotScheduleServiceGrpc.getSetAccessBindingsMethod = getSetAccessBindingsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.SetAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetAccessBindings"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.SetAccessBindingsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new SnapshotScheduleServiceMethodDescriptorSupplier("SetAccessBindings"))
+              .build();
+        }
+      }
+    }
+    return getSetAccessBindingsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateAccessBindingsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateAccessBindings",
+      requestType = yandex.cloud.api.access.Access.UpdateAccessBindingsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateAccessBindingsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateAccessBindingsMethod;
+    if ((getUpdateAccessBindingsMethod = SnapshotScheduleServiceGrpc.getUpdateAccessBindingsMethod) == null) {
+      synchronized (SnapshotScheduleServiceGrpc.class) {
+        if ((getUpdateAccessBindingsMethod = SnapshotScheduleServiceGrpc.getUpdateAccessBindingsMethod) == null) {
+          SnapshotScheduleServiceGrpc.getUpdateAccessBindingsMethod = getUpdateAccessBindingsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.access.Access.UpdateAccessBindingsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateAccessBindings"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.access.Access.UpdateAccessBindingsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new SnapshotScheduleServiceMethodDescriptorSupplier("UpdateAccessBindings"))
+              .build();
+        }
+      }
+    }
+    return getUpdateAccessBindingsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -531,6 +624,36 @@ public final class SnapshotScheduleServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListDisksMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Lists access bindings for the snapshot schedule.
+     * </pre>
+     */
+    public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAccessBindingsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Sets access bindings for the snapshot schedule.
+     * </pre>
+     */
+    public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetAccessBindingsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates access bindings for the snapshot schedule.
+     * </pre>
+     */
+    public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -610,6 +733,27 @@ public final class SnapshotScheduleServiceGrpc {
                 yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.ListSnapshotScheduleDisksRequest,
                 yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.ListSnapshotScheduleDisksResponse>(
                   this, METHODID_LIST_DISKS)))
+          .addMethod(
+            getListAccessBindingsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.access.Access.ListAccessBindingsRequest,
+                yandex.cloud.api.access.Access.ListAccessBindingsResponse>(
+                  this, METHODID_LIST_ACCESS_BINDINGS)))
+          .addMethod(
+            getSetAccessBindingsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.access.Access.SetAccessBindingsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_SET_ACCESS_BINDINGS)))
+          .addMethod(
+            getUpdateAccessBindingsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_UPDATE_ACCESS_BINDINGS)))
           .build();
     }
   }
@@ -762,6 +906,39 @@ public final class SnapshotScheduleServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListDisksMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Lists access bindings for the snapshot schedule.
+     * </pre>
+     */
+    public void listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Sets access bindings for the snapshot schedule.
+     * </pre>
+     */
+    public void setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Updates access bindings for the snapshot schedule.
+     * </pre>
+     */
+    public void updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -900,6 +1077,36 @@ public final class SnapshotScheduleServiceGrpc {
     public yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.ListSnapshotScheduleDisksResponse listDisks(yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.ListSnapshotScheduleDisksRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListDisksMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists access bindings for the snapshot schedule.
+     * </pre>
+     */
+    public yandex.cloud.api.access.Access.ListAccessBindingsResponse listAccessBindings(yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListAccessBindingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Sets access bindings for the snapshot schedule.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation setAccessBindings(yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetAccessBindingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Updates access bindings for the snapshot schedule.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateAccessBindingsMethod(), getCallOptions(), request);
     }
   }
 
@@ -1051,6 +1258,39 @@ public final class SnapshotScheduleServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListDisksMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Lists access bindings for the snapshot schedule.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.access.Access.ListAccessBindingsResponse> listAccessBindings(
+        yandex.cloud.api.access.Access.ListAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListAccessBindingsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Sets access bindings for the snapshot schedule.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> setAccessBindings(
+        yandex.cloud.api.access.Access.SetAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetAccessBindingsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Updates access bindings for the snapshot schedule.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> updateAccessBindings(
+        yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET = 0;
@@ -1064,6 +1304,9 @@ public final class SnapshotScheduleServiceGrpc {
   private static final int METHODID_LIST_OPERATIONS = 8;
   private static final int METHODID_LIST_SNAPSHOTS = 9;
   private static final int METHODID_LIST_DISKS = 10;
+  private static final int METHODID_LIST_ACCESS_BINDINGS = 11;
+  private static final int METHODID_SET_ACCESS_BINDINGS = 12;
+  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 13;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1125,6 +1368,18 @@ public final class SnapshotScheduleServiceGrpc {
         case METHODID_LIST_DISKS:
           serviceImpl.listDisks((yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.ListSnapshotScheduleDisksRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.compute.v1.SnapshotScheduleServiceOuterClass.ListSnapshotScheduleDisksResponse>) responseObserver);
+          break;
+        case METHODID_LIST_ACCESS_BINDINGS:
+          serviceImpl.listAccessBindings((yandex.cloud.api.access.Access.ListAccessBindingsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse>) responseObserver);
+          break;
+        case METHODID_SET_ACCESS_BINDINGS:
+          serviceImpl.setAccessBindings((yandex.cloud.api.access.Access.SetAccessBindingsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_UPDATE_ACCESS_BINDINGS:
+          serviceImpl.updateAccessBindings((yandex.cloud.api.access.Access.UpdateAccessBindingsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1198,6 +1453,9 @@ public final class SnapshotScheduleServiceGrpc {
               .addMethod(getListOperationsMethod())
               .addMethod(getListSnapshotsMethod())
               .addMethod(getListDisksMethod())
+              .addMethod(getListAccessBindingsMethod())
+              .addMethod(getSetAccessBindingsMethod())
+              .addMethod(getUpdateAccessBindingsMethod())
               .build();
         }
       }

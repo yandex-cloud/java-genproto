@@ -18330,116 +18330,135 @@ public final class DiskServiceOuterClass {
       "\n*yandex/cloud/compute/v1/disk_service.p" +
       "roto\022\027yandex.cloud.compute.v1\032\034google/ap" +
       "i/annotations.proto\032 google/protobuf/fie" +
-      "ld_mask.proto\032 yandex/cloud/api/operatio" +
-      "n.proto\032\"yandex/cloud/compute/v1/disk.pr" +
-      "oto\032/yandex/cloud/compute/v1/snapshot_sc" +
-      "hedule.proto\032&yandex/cloud/operation/ope" +
-      "ration.proto\032\035yandex/cloud/validation.pr" +
-      "oto\"/\n\016GetDiskRequest\022\035\n\007disk_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\"\252\001\n\020ListDisksRequest\022\037\n\tfol" +
-      "der_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030" +
-      "\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212" +
-      "\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\022\033\n\010" +
-      "order_by\030\005 \001(\tB\t\212\3101\005<=100\"Z\n\021ListDisksRe" +
-      "sponse\022,\n\005disks\030\001 \003(\0132\035.yandex.cloud.com" +
-      "pute.v1.Disk\022\027\n\017next_page_token\030\002 \001(\t\"\372\004" +
-      "\n\021CreateDiskRequest\022\037\n\tfolder_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([" +
-      "-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030" +
-      "\003 \001(\tB\t\212\3101\005<=256\022\217\001\n\006labels\030\004 \003(\01326.yand" +
-      "ex.cloud.compute.v1.CreateDiskRequest.La" +
-      "belsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-" +
-      "9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z" +
-      "]*\022\031\n\007type_id\030\005 \001(\tB\010\212\3101\004<=50\022\035\n\007zone_id" +
-      "\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004size\030\007 \001(\003B\036\350\3071\001" +
-      "\372\3071\0264194304-28587302322176\022\034\n\010image_id\030\010" +
-      " \001(\tB\010\212\3101\004<=50H\000\022\037\n\013snapshot_id\030\t \001(\tB\010\212" +
-      "\3101\004<=50H\000\022\022\n\nblock_size\030\n \001(\003\022K\n\025disk_pl" +
-      "acement_policy\030\013 \001(\0132,.yandex.cloud.comp" +
-      "ute.v1.DiskPlacementPolicy\022\035\n\025snapshot_s" +
-      "chedule_ids\030\014 \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\010\n\006source\"%\n\022Cr" +
-      "eateDiskMetadata\022\017\n\007disk_id\030\001 \001(\t\"\356\003\n\021Up" +
-      "dateDiskRequest\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.pro" +
-      "tobuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z" +
-      "]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descripti" +
-      "on\030\004 \001(\tB\t\212\3101\005<=256\022\217\001\n\006labels\030\005 \003(\01326.y" +
-      "andex.cloud.compute.v1.UpdateDiskRequest" +
-      ".LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\" +
-      "@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9" +
-      "a-z]*\022\'\n\004size\030\006 \001(\003B\031\372\3071\0254194304-4398046" +
-      "511104\022K\n\025disk_placement_policy\030\007 \001(\0132,." +
-      "yandex.cloud.compute.v1.DiskPlacementPol" +
-      "icy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\"%\n\022UpdateDiskMetadata\022\017\n\007disk" +
-      "_id\030\001 \001(\t\"2\n\021DeleteDiskRequest\022\035\n\007disk_i" +
-      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"%\n\022DeleteDiskMetad" +
-      "ata\022\017\n\007disk_id\030\001 \001(\t\"x\n\031ListDiskOperatio" +
-      "nsRequest\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_" +
-      "token\030\003 \001(\tB\t\212\3101\005<=100\"l\n\032ListDiskOperat" +
-      "ionsResponse\0225\n\noperations\030\001 \003(\0132!.yande" +
-      "x.cloud.operation.Operation\022\027\n\017next_page" +
-      "_token\030\002 \001(\t\"]\n\017MoveDiskRequest\022\035\n\007disk_" +
-      "id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_fo" +
-      "lder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\\\n\020MoveDiskM" +
-      "etadata\022\017\n\007disk_id\030\001 \001(\t\022\030\n\020source_folde" +
-      "r_id\030\002 \001(\t\022\035\n\025destination_folder_id\030\003 \001(" +
-      "\t\"_\n\023RelocateDiskRequest\022\035\n\007disk_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\022)\n\023destination_zone_id\030\002" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\"\\\n\024RelocateDiskMetada" +
-      "ta\022\017\n\007disk_id\030\001 \001(\t\022\026\n\016source_zone_id\030\002 " +
-      "\001(\t\022\033\n\023destination_zone_id\030\003 \001(\t\"Z\n List" +
-      "DiskSnapshotSchedulesRequest\022\017\n\007disk_id\030" +
-      "\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_token\030\003" +
-      " \001(\t\"\203\001\n!ListDiskSnapshotSchedulesRespon" +
-      "se\022E\n\022snapshot_schedules\030\001 \003(\0132).yandex." +
-      "cloud.compute.v1.SnapshotSchedule\022\027\n\017nex" +
-      "t_page_token\030\002 \001(\t2\352\n\n\013DiskService\022r\n\003Ge" +
-      "t\022\'.yandex.cloud.compute.v1.GetDiskReque" +
-      "st\032\035.yandex.cloud.compute.v1.Disk\"#\202\323\344\223\002" +
-      "\035\022\033/compute/v1/disks/{disk_id}\022x\n\004List\022)" +
-      ".yandex.cloud.compute.v1.ListDisksReques" +
-      "t\032*.yandex.cloud.compute.v1.ListDisksRes" +
-      "ponse\"\031\202\323\344\223\002\023\022\021/compute/v1/disks\022\223\001\n\006Cre" +
-      "ate\022*.yandex.cloud.compute.v1.CreateDisk" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\":\202\323\344\223\002\026\"\021/compute/v1/disks:\001*\262\322*\032\n\022Cr" +
-      "eateDiskMetadata\022\004Disk\022\235\001\n\006Update\022*.yand" +
-      "ex.cloud.compute.v1.UpdateDiskRequest\032!." +
-      "yandex.cloud.operation.Operation\"D\202\323\344\223\002 " +
-      "2\033/compute/v1/disks/{disk_id}:\001*\262\322*\032\n\022Up" +
-      "dateDiskMetadata\022\004Disk\022\253\001\n\006Delete\022*.yand" +
-      "ex.cloud.compute.v1.DeleteDiskRequest\032!." +
-      "yandex.cloud.operation.Operation\"R\202\323\344\223\002\035" +
-      "*\033/compute/v1/disks/{disk_id}\262\322*+\n\022Delet" +
-      "eDiskMetadata\022\025google.protobuf.Empty\022\251\001\n" +
-      "\016ListOperations\0222.yandex.cloud.compute.v" +
-      "1.ListDiskOperationsRequest\0323.yandex.clo" +
-      "ud.compute.v1.ListDiskOperationsResponse" +
-      "\".\202\323\344\223\002(\022&/compute/v1/disks/{disk_id}/op" +
-      "erations\022\234\001\n\004Move\022(.yandex.cloud.compute" +
-      ".v1.MoveDiskRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"G\202\323\344\223\002%\" /compute/v1/disk" +
-      "s/{disk_id}:move:\001*\262\322*\030\n\020MoveDiskMetadat" +
-      "a\022\004Disk\022\254\001\n\010Relocate\022,.yandex.cloud.comp" +
-      "ute.v1.RelocateDiskRequest\032!.yandex.clou" +
-      "d.operation.Operation\"O\202\323\344\223\002)\"$/compute/" +
-      "v1/disks/{disk_id}:relocate:\001*\262\322*\034\n\024Relo" +
-      "cateDiskMetadata\022\004Disk\022\216\001\n\025ListSnapshotS" +
-      "chedules\0229.yandex.cloud.compute.v1.ListD" +
-      "iskSnapshotSchedulesRequest\032:.yandex.clo" +
-      "ud.compute.v1.ListDiskSnapshotSchedulesR" +
-      "esponseBb\n\033yandex.cloud.api.compute.v1ZC" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/compute/v1;computeb\006proto3"
+      "ld_mask.proto\032 yandex/cloud/access/acces" +
+      "s.proto\032 yandex/cloud/api/operation.prot" +
+      "o\032\"yandex/cloud/compute/v1/disk.proto\032/y" +
+      "andex/cloud/compute/v1/snapshot_schedule" +
+      ".proto\032&yandex/cloud/operation/operation" +
+      ".proto\032\035yandex/cloud/validation.proto\"/\n" +
+      "\016GetDiskRequest\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\"\252\001\n\020ListDisksRequest\022\037\n\tfolder_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B" +
+      "\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=1" +
+      "00\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\022\033\n\010order_" +
+      "by\030\005 \001(\tB\t\212\3101\005<=100\"Z\n\021ListDisksResponse" +
+      "\022,\n\005disks\030\001 \003(\0132\035.yandex.cloud.compute.v" +
+      "1.Disk\022\027\n\017next_page_token\030\002 \001(\t\"\372\004\n\021Crea" +
+      "teDiskRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-" +
+      "9]{0,61}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB" +
+      "\t\212\3101\005<=256\022\217\001\n\006labels\030\004 \003(\01326.yandex.clo" +
+      "ud.compute.v1.CreateDiskRequest.LabelsEn" +
+      "tryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*" +
+      "\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\031\n\007" +
+      "type_id\030\005 \001(\tB\010\212\3101\004<=50\022\035\n\007zone_id\030\006 \001(\t" +
+      "B\014\350\3071\001\212\3101\004<=50\022,\n\004size\030\007 \001(\003B\036\350\3071\001\372\3071\02641" +
+      "94304-28587302322176\022\034\n\010image_id\030\010 \001(\tB\010" +
+      "\212\3101\004<=50H\000\022\037\n\013snapshot_id\030\t \001(\tB\010\212\3101\004<=5" +
+      "0H\000\022\022\n\nblock_size\030\n \001(\003\022K\n\025disk_placemen" +
+      "t_policy\030\013 \001(\0132,.yandex.cloud.compute.v1" +
+      ".DiskPlacementPolicy\022\035\n\025snapshot_schedul" +
+      "e_ids\030\014 \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "\r\n\005value\030\002 \001(\t:\0028\001B\010\n\006source\"%\n\022CreateDi" +
+      "skMetadata\022\017\n\007disk_id\030\001 \001(\t\"\356\003\n\021UpdateDi" +
+      "skRequest\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022/\n\013update_mask\030\002 \001(\0132\032.google.protobuf." +
+      "FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-" +
+      "z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\004 \001" +
+      "(\tB\t\212\3101\005<=256\022\217\001\n\006labels\030\005 \003(\01326.yandex." +
+      "cloud.compute.v1.UpdateDiskRequest.Label" +
+      "sEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-" +
+      "z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022" +
+      "\'\n\004size\030\006 \001(\003B\031\372\3071\0254194304-4398046511104" +
+      "\022K\n\025disk_placement_policy\030\007 \001(\0132,.yandex" +
+      ".cloud.compute.v1.DiskPlacementPolicy\032-\n" +
+      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001\"%\n\022UpdateDiskMetadata\022\017\n\007disk_id\030\001 " +
+      "\001(\t\"2\n\021DeleteDiskRequest\022\035\n\007disk_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\"%\n\022DeleteDiskMetadata\022\017\n" +
+      "\007disk_id\030\001 \001(\t\"x\n\031ListDiskOperationsRequ" +
+      "est\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpa" +
+      "ge_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030" +
+      "\003 \001(\tB\t\212\3101\005<=100\"l\n\032ListDiskOperationsRe" +
+      "sponse\0225\n\noperations\030\001 \003(\0132!.yandex.clou" +
+      "d.operation.Operation\022\027\n\017next_page_token" +
+      "\030\002 \001(\t\"]\n\017MoveDiskRequest\022\035\n\007disk_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022+\n\025destination_folder_i" +
+      "d\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\\\n\020MoveDiskMetadat" +
+      "a\022\017\n\007disk_id\030\001 \001(\t\022\030\n\020source_folder_id\030\002" +
+      " \001(\t\022\035\n\025destination_folder_id\030\003 \001(\t\"_\n\023R" +
+      "elocateDiskRequest\022\035\n\007disk_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\022)\n\023destination_zone_id\030\002 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\"\\\n\024RelocateDiskMetadata\022\017\n\007" +
+      "disk_id\030\001 \001(\t\022\026\n\016source_zone_id\030\002 \001(\t\022\033\n" +
+      "\023destination_zone_id\030\003 \001(\t\"Z\n ListDiskSn" +
+      "apshotSchedulesRequest\022\017\n\007disk_id\030\001 \001(\t\022" +
+      "\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"\203" +
+      "\001\n!ListDiskSnapshotSchedulesResponse\022E\n\022" +
+      "snapshot_schedules\030\001 \003(\0132).yandex.cloud." +
+      "compute.v1.SnapshotSchedule\022\027\n\017next_page" +
+      "_token\030\002 \001(\t2\220\020\n\013DiskService\022r\n\003Get\022\'.ya" +
+      "ndex.cloud.compute.v1.GetDiskRequest\032\035.y" +
+      "andex.cloud.compute.v1.Disk\"#\202\323\344\223\002\035\022\033/co" +
+      "mpute/v1/disks/{disk_id}\022x\n\004List\022).yande" +
+      "x.cloud.compute.v1.ListDisksRequest\032*.ya" +
+      "ndex.cloud.compute.v1.ListDisksResponse\"" +
+      "\031\202\323\344\223\002\023\022\021/compute/v1/disks\022\223\001\n\006Create\022*." +
+      "yandex.cloud.compute.v1.CreateDiskReques" +
+      "t\032!.yandex.cloud.operation.Operation\":\202\323" +
+      "\344\223\002\026\"\021/compute/v1/disks:\001*\262\322*\032\n\022CreateDi" +
+      "skMetadata\022\004Disk\022\235\001\n\006Update\022*.yandex.clo" +
+      "ud.compute.v1.UpdateDiskRequest\032!.yandex" +
+      ".cloud.operation.Operation\"D\202\323\344\223\002 2\033/com" +
+      "pute/v1/disks/{disk_id}:\001*\262\322*\032\n\022UpdateDi" +
+      "skMetadata\022\004Disk\022\253\001\n\006Delete\022*.yandex.clo" +
+      "ud.compute.v1.DeleteDiskRequest\032!.yandex" +
+      ".cloud.operation.Operation\"R\202\323\344\223\002\035*\033/com" +
+      "pute/v1/disks/{disk_id}\262\322*+\n\022DeleteDiskM" +
+      "etadata\022\025google.protobuf.Empty\022\251\001\n\016ListO" +
+      "perations\0222.yandex.cloud.compute.v1.List" +
+      "DiskOperationsRequest\0323.yandex.cloud.com" +
+      "pute.v1.ListDiskOperationsResponse\".\202\323\344\223" +
+      "\002(\022&/compute/v1/disks/{disk_id}/operatio" +
+      "ns\022\234\001\n\004Move\022(.yandex.cloud.compute.v1.Mo" +
+      "veDiskRequest\032!.yandex.cloud.operation.O" +
+      "peration\"G\202\323\344\223\002%\" /compute/v1/disks/{dis" +
+      "k_id}:move:\001*\262\322*\030\n\020MoveDiskMetadata\022\004Dis" +
+      "k\022\254\001\n\010Relocate\022,.yandex.cloud.compute.v1" +
+      ".RelocateDiskRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"O\202\323\344\223\002)\"$/compute/v1/dis" +
+      "ks/{disk_id}:relocate:\001*\262\322*\034\n\024RelocateDi" +
+      "skMetadata\022\004Disk\022\216\001\n\025ListSnapshotSchedul" +
+      "es\0229.yandex.cloud.compute.v1.ListDiskSna" +
+      "pshotSchedulesRequest\032:.yandex.cloud.com" +
+      "pute.v1.ListDiskSnapshotSchedulesRespons" +
+      "e\022\261\001\n\022ListAccessBindings\022..yandex.cloud." +
+      "access.ListAccessBindingsRequest\032/.yande" +
+      "x.cloud.access.ListAccessBindingsRespons" +
+      "e\":\202\323\344\223\0024\0222/compute/v1/disks/{resource_i" +
+      "d}:listAccessBindings\022\360\001\n\021SetAccessBindi" +
+      "ngs\022-.yandex.cloud.access.SetAccessBindi" +
+      "ngsRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"\210\001\202\323\344\223\0026\"1/compute/v1/disks/{resou" +
+      "rce_id}:setAccessBindings:\001*\262\322*H\n access" +
+      ".SetAccessBindingsMetadata\022$access.Acces" +
+      "sBindingsOperationResult\022\374\001\n\024UpdateAcces" +
+      "sBindings\0220.yandex.cloud.access.UpdateAc" +
+      "cessBindingsRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"\216\001\202\323\344\223\0029\"4/compute/v1/dis" +
+      "ks/{resource_id}:updateAccessBindings:\001*" +
+      "\262\322*K\n#access.UpdateAccessBindingsMetadat" +
+      "a\022$access.AccessBindingsOperationResultB" +
+      "b\n\033yandex.cloud.api.compute.v1ZCgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/compute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.compute.v1.DiskOuterClass.getDescriptor(),
           yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.getDescriptor(),
@@ -18574,6 +18593,7 @@ public final class DiskServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.compute.v1.DiskOuterClass.getDescriptor();
     yandex.cloud.api.compute.v1.SnapshotScheduleOuterClass.getDescriptor();

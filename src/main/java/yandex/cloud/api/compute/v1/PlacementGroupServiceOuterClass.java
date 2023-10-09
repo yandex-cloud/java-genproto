@@ -13323,98 +13323,117 @@ public final class PlacementGroupServiceOuterClass {
       "p_service.proto\022\027yandex.cloud.compute.v1" +
       "\032\034google/api/annotations.proto\032 google/p" +
       "rotobuf/field_mask.proto\032 yandex/cloud/a" +
-      "pi/operation.proto\032&yandex/cloud/compute" +
-      "/v1/instance.proto\032-yandex/cloud/compute" +
-      "/v1/placement_group.proto\032&yandex/cloud/" +
-      "operation/operation.proto\032\035yandex/cloud/" +
-      "validation.proto\"6\n\030GetPlacementGroupReq" +
-      "uest\022\032\n\022placement_group_id\030\001 \001(\t\"\264\001\n\032Lis" +
-      "tPlacementGroupsRequest\022\037\n\tfolder_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071" +
-      "\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032" +
-      "\n\006filter\030\004 \001(\tB\n\212\3101\006<=1000\022\033\n\010order_by\030\005" +
-      " \001(\tB\t\212\3101\005<=100\"y\n\033ListPlacementGroupsRe" +
-      "sponse\022A\n\020placement_groups\030\001 \003(\0132\'.yande" +
-      "x.cloud.compute.v1.PlacementGroup\022\027\n\017nex" +
-      "t_page_token\030\002 \001(\t\"\244\003\n\033CreatePlacementGr" +
-      "oupRequest\022\021\n\tfolder_id\030\001 \001(\t\022\014\n\004name\030\002 " +
-      "\001(\t\022\023\n\013description\030\003 \001(\t\022P\n\006labels\030\004 \003(\013" +
-      "2@.yandex.cloud.compute.v1.CreatePlaceme" +
-      "ntGroupRequest.LabelsEntry\022U\n\031spread_pla" +
-      "cement_strategy\030\005 \001(\01320.yandex.cloud.com" +
-      "pute.v1.SpreadPlacementStrategyH\000\022[\n\034par" +
-      "tition_placement_strategy\030\006 \001(\01323.yandex" +
-      ".cloud.compute.v1.PartitionPlacementStra" +
-      "tegyH\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001B\032\n\022placement_strategy\022\004\300\3011" +
-      "\001\":\n\034CreatePlacementGroupMetadata\022\032\n\022pla" +
-      "cement_group_id\030\001 \001(\t\"\216\002\n\033UpdatePlacemen" +
-      "tGroupRequest\022\032\n\022placement_group_id\030\001 \001(" +
-      "\t\022/\n\013update_mask\030\002 \001(\0132\032.google.protobuf" +
-      ".FieldMask\022\014\n\004name\030\003 \001(\t\022\023\n\013description\030" +
-      "\004 \001(\t\022P\n\006labels\030\005 \003(\0132@.yandex.cloud.com" +
-      "pute.v1.UpdatePlacementGroupRequest.Labe" +
-      "lsEntry\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
-      "alue\030\002 \001(\t:\0028\001\":\n\034UpdatePlacementGroupMe" +
-      "tadata\022\032\n\022placement_group_id\030\001 \001(\t\"9\n\033De" +
-      "letePlacementGroupRequest\022\032\n\022placement_g" +
-      "roup_id\030\001 \001(\t\":\n\034DeletePlacementGroupMet" +
-      "adata\022\032\n\022placement_group_id\030\001 \001(\t\"g\n\"Lis" +
-      "tPlacementGroupInstancesRequest\022\032\n\022place" +
-      "ment_group_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022" +
-      "\n\npage_token\030\003 \001(\t\"t\n#ListPlacementGroup" +
-      "InstancesResponse\0224\n\tinstances\030\001 \003(\0132!.y" +
-      "andex.cloud.compute.v1.Instance\022\027\n\017next_" +
-      "page_token\030\002 \001(\t\"h\n#ListPlacementGroupOp" +
-      "erationsRequest\022\032\n\022placement_group_id\030\001 " +
-      "\001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001" +
-      "(\t\"v\n$ListPlacementGroupOperationsRespon" +
-      "se\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.op" +
-      "eration.Operation\022\027\n\017next_page_token\030\002 \001" +
-      "(\t2\334\n\n\025PlacementGroupService\022\233\001\n\003Get\0221.y" +
-      "andex.cloud.compute.v1.GetPlacementGroup" +
-      "Request\032\'.yandex.cloud.compute.v1.Placem" +
-      "entGroup\"8\202\323\344\223\0022\0220/compute/v1/placementG" +
-      "roups/{placement_group_id}\022\226\001\n\004List\0223.ya" +
-      "ndex.cloud.compute.v1.ListPlacementGroup" +
-      "sRequest\0324.yandex.cloud.compute.v1.ListP" +
-      "lacementGroupsResponse\"#\202\323\344\223\002\035\022\033/compute" +
-      "/v1/placementGroups\022\273\001\n\006Create\0224.yandex." +
-      "cloud.compute.v1.CreatePlacementGroupReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "X\202\323\344\223\002 \"\033/compute/v1/placementGroups:\001*\262" +
-      "\322*.\n\034CreatePlacementGroupMetadata\022\016Place" +
-      "mentGroup\022\320\001\n\006Update\0224.yandex.cloud.comp" +
-      "ute.v1.UpdatePlacementGroupRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"m\202\323\344\223\002520/" +
-      "compute/v1/placementGroups/{placement_gr" +
-      "oup_id}:\001*\262\322*.\n\034UpdatePlacementGroupMeta" +
-      "data\022\016PlacementGroup\022\324\001\n\006Delete\0224.yandex" +
-      ".cloud.compute.v1.DeletePlacementGroupRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"q\202\323\344\223\0022*0/compute/v1/placementGroups/{p" +
-      "lacement_group_id}\262\322*5\n\034DeletePlacementG" +
-      "roupMetadata\022\025google.protobuf.Empty\022\316\001\n\r" +
-      "ListInstances\022;.yandex.cloud.compute.v1." +
-      "ListPlacementGroupInstancesRequest\032<.yan" +
-      "dex.cloud.compute.v1.ListPlacementGroupI" +
-      "nstancesResponse\"B\202\323\344\223\002<\022:/compute/v1/pl" +
-      "acementGroups/{placement_group_id}/insta" +
-      "nces\022\322\001\n\016ListOperations\022<.yandex.cloud.c" +
-      "ompute.v1.ListPlacementGroupOperationsRe" +
-      "quest\032=.yandex.cloud.compute.v1.ListPlac" +
-      "ementGroupOperationsResponse\"C\202\323\344\223\002=\022;/c" +
-      "ompute/v1/placementGroups/{placement_gro" +
-      "up_id}/operationsBb\n\033yandex.cloud.api.co" +
-      "mpute.v1ZCgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/compute/v1;computeb\006p" +
-      "roto3"
+      "ccess/access.proto\032 yandex/cloud/api/ope" +
+      "ration.proto\032&yandex/cloud/compute/v1/in" +
+      "stance.proto\032-yandex/cloud/compute/v1/pl" +
+      "acement_group.proto\032&yandex/cloud/operat" +
+      "ion/operation.proto\032\035yandex/cloud/valida" +
+      "tion.proto\"6\n\030GetPlacementGroupRequest\022\032" +
+      "\n\022placement_group_id\030\001 \001(\t\"\264\001\n\032ListPlace" +
+      "mentGroupsRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\307" +
+      "1\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=100" +
+      "0\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filt" +
+      "er\030\004 \001(\tB\n\212\3101\006<=1000\022\033\n\010order_by\030\005 \001(\tB\t" +
+      "\212\3101\005<=100\"y\n\033ListPlacementGroupsResponse" +
+      "\022A\n\020placement_groups\030\001 \003(\0132\'.yandex.clou" +
+      "d.compute.v1.PlacementGroup\022\027\n\017next_page" +
+      "_token\030\002 \001(\t\"\244\003\n\033CreatePlacementGroupReq" +
+      "uest\022\021\n\tfolder_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\023\n" +
+      "\013description\030\003 \001(\t\022P\n\006labels\030\004 \003(\0132@.yan" +
+      "dex.cloud.compute.v1.CreatePlacementGrou" +
+      "pRequest.LabelsEntry\022U\n\031spread_placement" +
+      "_strategy\030\005 \001(\01320.yandex.cloud.compute.v" +
+      "1.SpreadPlacementStrategyH\000\022[\n\034partition" +
+      "_placement_strategy\030\006 \001(\01323.yandex.cloud" +
+      ".compute.v1.PartitionPlacementStrategyH\000" +
+      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t:\0028\001B\032\n\022placement_strategy\022\004\300\3011\001\":\n\034C" +
+      "reatePlacementGroupMetadata\022\032\n\022placement" +
+      "_group_id\030\001 \001(\t\"\216\002\n\033UpdatePlacementGroup" +
+      "Request\022\032\n\022placement_group_id\030\001 \001(\t\022/\n\013u" +
+      "pdate_mask\030\002 \001(\0132\032.google.protobuf.Field" +
+      "Mask\022\014\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022" +
+      "P\n\006labels\030\005 \003(\0132@.yandex.cloud.compute.v" +
+      "1.UpdatePlacementGroupRequest.LabelsEntr" +
+      "y\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002" +
+      " \001(\t:\0028\001\":\n\034UpdatePlacementGroupMetadata" +
+      "\022\032\n\022placement_group_id\030\001 \001(\t\"9\n\033DeletePl" +
+      "acementGroupRequest\022\032\n\022placement_group_i" +
+      "d\030\001 \001(\t\":\n\034DeletePlacementGroupMetadata\022" +
+      "\032\n\022placement_group_id\030\001 \001(\t\"g\n\"ListPlace" +
+      "mentGroupInstancesRequest\022\032\n\022placement_g" +
+      "roup_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage" +
+      "_token\030\003 \001(\t\"t\n#ListPlacementGroupInstan" +
+      "cesResponse\0224\n\tinstances\030\001 \003(\0132!.yandex." +
+      "cloud.compute.v1.Instance\022\027\n\017next_page_t" +
+      "oken\030\002 \001(\t\"h\n#ListPlacementGroupOperatio" +
+      "nsRequest\022\032\n\022placement_group_id\030\001 \001(\t\022\021\n" +
+      "\tpage_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"v\n$" +
+      "ListPlacementGroupOperationsResponse\0225\n\n" +
+      "operations\030\001 \003(\0132!.yandex.cloud.operatio" +
+      "n.Operation\022\027\n\017next_page_token\030\002 \001(\t2\240\020\n" +
+      "\025PlacementGroupService\022\233\001\n\003Get\0221.yandex." +
+      "cloud.compute.v1.GetPlacementGroupReques" +
+      "t\032\'.yandex.cloud.compute.v1.PlacementGro" +
+      "up\"8\202\323\344\223\0022\0220/compute/v1/placementGroups/" +
+      "{placement_group_id}\022\226\001\n\004List\0223.yandex.c" +
+      "loud.compute.v1.ListPlacementGroupsReque" +
+      "st\0324.yandex.cloud.compute.v1.ListPlaceme" +
+      "ntGroupsResponse\"#\202\323\344\223\002\035\022\033/compute/v1/pl" +
+      "acementGroups\022\273\001\n\006Create\0224.yandex.cloud." +
+      "compute.v1.CreatePlacementGroupRequest\032!" +
+      ".yandex.cloud.operation.Operation\"X\202\323\344\223\002" +
+      " \"\033/compute/v1/placementGroups:\001*\262\322*.\n\034C" +
+      "reatePlacementGroupMetadata\022\016PlacementGr" +
+      "oup\022\320\001\n\006Update\0224.yandex.cloud.compute.v1" +
+      ".UpdatePlacementGroupRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"m\202\323\344\223\002520/comput" +
+      "e/v1/placementGroups/{placement_group_id" +
+      "}:\001*\262\322*.\n\034UpdatePlacementGroupMetadata\022\016" +
+      "PlacementGroup\022\324\001\n\006Delete\0224.yandex.cloud" +
+      ".compute.v1.DeletePlacementGroupRequest\032" +
+      "!.yandex.cloud.operation.Operation\"q\202\323\344\223" +
+      "\0022*0/compute/v1/placementGroups/{placeme" +
+      "nt_group_id}\262\322*5\n\034DeletePlacementGroupMe" +
+      "tadata\022\025google.protobuf.Empty\022\316\001\n\rListIn" +
+      "stances\022;.yandex.cloud.compute.v1.ListPl" +
+      "acementGroupInstancesRequest\032<.yandex.cl" +
+      "oud.compute.v1.ListPlacementGroupInstanc" +
+      "esResponse\"B\202\323\344\223\002<\022:/compute/v1/placemen" +
+      "tGroups/{placement_group_id}/instances\022\322" +
+      "\001\n\016ListOperations\022<.yandex.cloud.compute" +
+      ".v1.ListPlacementGroupOperationsRequest\032" +
+      "=.yandex.cloud.compute.v1.ListPlacementG" +
+      "roupOperationsResponse\"C\202\323\344\223\002=\022;/compute" +
+      "/v1/placementGroups/{placement_group_id}" +
+      "/operations\022\273\001\n\022ListAccessBindings\022..yan" +
+      "dex.cloud.access.ListAccessBindingsReque" +
+      "st\032/.yandex.cloud.access.ListAccessBindi" +
+      "ngsResponse\"D\202\323\344\223\002>\022</compute/v1/placeme" +
+      "ntGroups/{resource_id}:listAccessBinding" +
+      "s\022\372\001\n\021SetAccessBindings\022-.yandex.cloud.a" +
+      "ccess.SetAccessBindingsRequest\032!.yandex." +
+      "cloud.operation.Operation\"\222\001\202\323\344\223\002@\";/com" +
+      "pute/v1/placementGroups/{resource_id}:se" +
+      "tAccessBindings:\001*\262\322*H\n access.SetAccess" +
+      "BindingsMetadata\022$access.AccessBindingsO" +
+      "perationResult\022\206\002\n\024UpdateAccessBindings\022" +
+      "0.yandex.cloud.access.UpdateAccessBindin" +
+      "gsRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"\230\001\202\323\344\223\002C\">/compute/v1/placementGrou" +
+      "ps/{resource_id}:updateAccessBindings:\001*" +
+      "\262\322*K\n#access.UpdateAccessBindingsMetadat" +
+      "a\022$access.AccessBindingsOperationResultB" +
+      "b\n\033yandex.cloud.api.compute.v1ZCgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/compute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.compute.v1.InstanceOuterClass.getDescriptor(),
           yandex.cloud.api.compute.v1.PlacementGroupOuterClass.getDescriptor(),
@@ -13523,6 +13542,7 @@ public final class PlacementGroupServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.compute.v1.InstanceOuterClass.getDescriptor();
     yandex.cloud.api.compute.v1.PlacementGroupOuterClass.getDescriptor();

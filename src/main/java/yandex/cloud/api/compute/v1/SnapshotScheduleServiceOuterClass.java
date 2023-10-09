@@ -21538,141 +21538,160 @@ public final class SnapshotScheduleServiceOuterClass {
       "ule_service.proto\022\027yandex.cloud.compute." +
       "v1\032\034google/api/annotations.proto\032 google" +
       "/protobuf/field_mask.proto\032\036google/proto" +
-      "buf/duration.proto\032 yandex/cloud/api/ope" +
-      "ration.proto\032\"yandex/cloud/compute/v1/di" +
-      "sk.proto\032&yandex/cloud/compute/v1/snapsh" +
-      "ot.proto\032/yandex/cloud/compute/v1/snapsh" +
-      "ot_schedule.proto\032&yandex/cloud/operatio" +
-      "n/operation.proto\032\035yandex/cloud/validati" +
-      "on.proto\":\n\032GetSnapshotScheduleRequest\022\034" +
-      "\n\024snapshot_schedule_id\030\001 \001(\t\"\266\001\n\034ListSna" +
-      "pshotSchedulesRequest\022\037\n\tfolder_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<" +
-      "=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006" +
-      "filter\030\004 \001(\tB\n\212\3101\006<=1000\022\033\n\010order_by\030\005 \001" +
-      "(\tB\t\212\3101\005<=100\"\177\n\035ListSnapshotSchedulesRe" +
-      "sponse\022E\n\022snapshot_schedules\030\001 \003(\0132).yan" +
-      "dex.cloud.compute.v1.SnapshotSchedule\022\027\n" +
-      "\017next_page_token\030\002 \001(\t\"\317\003\n\035CreateSnapsho" +
-      "tScheduleRequest\022\021\n\tfolder_id\030\001 \001(\t\022\014\n\004n" +
-      "ame\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022R\n\006labels" +
-      "\030\004 \003(\0132B.yandex.cloud.compute.v1.CreateS" +
-      "napshotScheduleRequest.LabelsEntry\022@\n\017sc" +
-      "hedule_policy\030\005 \001(\0132\'.yandex.cloud.compu" +
-      "te.v1.SchedulePolicy\0225\n\020retention_period" +
-      "\030\006 \001(\0132\031.google.protobuf.DurationH\000\022\030\n\016s" +
-      "napshot_count\030\007 \001(\003H\000\022<\n\rsnapshot_spec\030\010" +
-      " \001(\0132%.yandex.cloud.compute.v1.SnapshotS" +
-      "pec\022\020\n\010disk_ids\030\t \003(\t\032-\n\013LabelsEntry\022\013\n\003" +
-      "key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\022\n\020retentio" +
-      "n_policy\">\n\036CreateSnapshotScheduleMetada" +
-      "ta\022\034\n\024snapshot_schedule_id\030\001 \001(\t\"\371\003\n\035Upd" +
-      "ateSnapshotScheduleRequest\022\034\n\024snapshot_s" +
-      "chedule_id\030\001 \001(\t\022/\n\013update_mask\030\002 \001(\0132\032." +
-      "google.protobuf.FieldMask\022\014\n\004name\030\003 \001(\t\022" +
-      "\023\n\013description\030\004 \001(\t\022R\n\006labels\030\005 \003(\0132B.y" +
-      "andex.cloud.compute.v1.UpdateSnapshotSch" +
-      "eduleRequest.LabelsEntry\022@\n\017schedule_pol" +
-      "icy\030\006 \001(\0132\'.yandex.cloud.compute.v1.Sche" +
-      "dulePolicy\0225\n\020retention_period\030\007 \001(\0132\031.g" +
-      "oogle.protobuf.DurationH\000\022\030\n\016snapshot_co" +
-      "unt\030\010 \001(\003H\000\022<\n\rsnapshot_spec\030\t \001(\0132%.yan" +
-      "dex.cloud.compute.v1.SnapshotSpec\032-\n\013Lab" +
-      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
-      "B\022\n\020retention_policy\">\n\036UpdateSnapshotSc" +
-      "heduleMetadata\022\034\n\024snapshot_schedule_id\030\001" +
-      " \001(\t\"=\n\035DeleteSnapshotScheduleRequest\022\034\n" +
-      "\024snapshot_schedule_id\030\001 \001(\t\">\n\036DeleteSna" +
-      "pshotScheduleMetadata\022\034\n\024snapshot_schedu" +
-      "le_id\030\001 \001(\t\">\n\036DisableSnapshotScheduleRe" +
-      "quest\022\034\n\024snapshot_schedule_id\030\001 \001(\t\"?\n\037D" +
-      "isableSnapshotScheduleMetadata\022\034\n\024snapsh" +
-      "ot_schedule_id\030\001 \001(\t\"=\n\035EnableSnapshotSc" +
-      "heduleRequest\022\034\n\024snapshot_schedule_id\030\001 " +
-      "\001(\t\">\n\036EnableSnapshotScheduleMetadata\022\034\n" +
-      "\024snapshot_schedule_id\030\001 \001(\t\"l\n%ListSnaps" +
-      "hotScheduleOperationsRequest\022\034\n\024snapshot" +
-      "_schedule_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n" +
-      "\npage_token\030\003 \001(\t\"x\n&ListSnapshotSchedul" +
-      "eOperationsResponse\0225\n\noperations\030\001 \003(\0132" +
-      "!.yandex.cloud.operation.Operation\022\027\n\017ne" +
-      "xt_page_token\030\002 \001(\t\"k\n$ListSnapshotSched" +
-      "uleSnapshotsRequest\022\034\n\024snapshot_schedule" +
-      "_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_tok" +
-      "en\030\003 \001(\t\"v\n%ListSnapshotScheduleSnapshot" +
-      "sResponse\0224\n\tsnapshots\030\001 \003(\0132!.yandex.cl" +
-      "oud.compute.v1.Snapshot\022\027\n\017next_page_tok" +
-      "en\030\002 \001(\t\"g\n ListSnapshotScheduleDisksReq" +
-      "uest\022\034\n\024snapshot_schedule_id\030\001 \001(\t\022\021\n\tpa" +
-      "ge_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"j\n!Lis" +
-      "tSnapshotScheduleDisksResponse\022,\n\005disks\030" +
-      "\001 \003(\0132\035.yandex.cloud.compute.v1.Disk\022\027\n\017" +
-      "next_page_token\030\002 \001(\t\"_\n\"UpdateSnapshotS" +
-      "cheduleDisksRequest\022\034\n\024snapshot_schedule" +
-      "_id\030\001 \001(\t\022\016\n\006remove\030\002 \003(\t\022\013\n\003add\030\003 \003(\t\"C" +
-      "\n#UpdateSnapshotScheduleDisksMetadata\022\034\n" +
-      "\024snapshot_schedule_id\030\001 \001(\t2\244\022\n\027Snapshot" +
-      "ScheduleService\022\243\001\n\003Get\0223.yandex.cloud.c" +
-      "ompute.v1.GetSnapshotScheduleRequest\032).y" +
-      "andex.cloud.compute.v1.SnapshotSchedule\"" +
-      "<\202\323\344\223\0026\0224/compute/v1/snapshotSchedules/{" +
-      "snapshot_schedule_id}\022\234\001\n\004List\0225.yandex." +
-      "cloud.compute.v1.ListSnapshotSchedulesRe" +
-      "quest\0326.yandex.cloud.compute.v1.ListSnap" +
-      "shotSchedulesResponse\"%\202\323\344\223\002\037\022\035/compute/" +
-      "v1/snapshotSchedules\022\303\001\n\006Create\0226.yandex" +
-      ".cloud.compute.v1.CreateSnapshotSchedule" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"^\202\323\344\223\002\"\"\035/compute/v1/snapshotSchedule" +
-      "s:\001*\262\322*2\n\036CreateSnapshotScheduleMetadata" +
-      "\022\020SnapshotSchedule\022\332\001\n\006Update\0226.yandex.c" +
-      "loud.compute.v1.UpdateSnapshotScheduleRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"u\202\323\344\223\002924/compute/v1/snapshotSchedules/" +
-      "{snapshot_schedule_id}:\001*\262\322*2\n\036UpdateSna" +
-      "pshotScheduleMetadata\022\020SnapshotSchedule\022" +
-      "\334\001\n\006Delete\0226.yandex.cloud.compute.v1.Del" +
-      "eteSnapshotScheduleRequest\032!.yandex.clou" +
-      "d.operation.Operation\"w\202\323\344\223\0026*4/compute/" +
-      "v1/snapshotSchedules/{snapshot_schedule_" +
-      "id}\262\322*7\n\036DeleteSnapshotScheduleMetadata\022" +
-      "\025google.protobuf.Empty\022\366\001\n\013UpdateDisks\022;" +
-      ".yandex.cloud.compute.v1.UpdateSnapshotS" +
-      "cheduleDisksRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"\206\001\202\323\344\223\002E2@/compute/v1/sna" +
-      "pshotSchedules/{snapshot_schedule_id}:up" +
-      "dateDisks:\001*\262\322*7\n#UpdateSnapshotSchedule" +
-      "DisksMetadata\022\020SnapshotSchedule\022\345\001\n\007Disa" +
-      "ble\0227.yandex.cloud.compute.v1.DisableSna" +
+      "buf/duration.proto\032 yandex/cloud/access/" +
+      "access.proto\032 yandex/cloud/api/operation" +
+      ".proto\032\"yandex/cloud/compute/v1/disk.pro" +
+      "to\032&yandex/cloud/compute/v1/snapshot.pro" +
+      "to\032/yandex/cloud/compute/v1/snapshot_sch" +
+      "edule.proto\032&yandex/cloud/operation/oper" +
+      "ation.proto\032\035yandex/cloud/validation.pro" +
+      "to\":\n\032GetSnapshotScheduleRequest\022\034\n\024snap" +
+      "shot_schedule_id\030\001 \001(\t\"\266\001\n\034ListSnapshotS" +
+      "chedulesRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022" +
+      "\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter" +
+      "\030\004 \001(\tB\n\212\3101\006<=1000\022\033\n\010order_by\030\005 \001(\tB\t\212\310" +
+      "1\005<=100\"\177\n\035ListSnapshotSchedulesResponse" +
+      "\022E\n\022snapshot_schedules\030\001 \003(\0132).yandex.cl" +
+      "oud.compute.v1.SnapshotSchedule\022\027\n\017next_" +
+      "page_token\030\002 \001(\t\"\317\003\n\035CreateSnapshotSched" +
+      "uleRequest\022\021\n\tfolder_id\030\001 \001(\t\022\014\n\004name\030\002 " +
+      "\001(\t\022\023\n\013description\030\003 \001(\t\022R\n\006labels\030\004 \003(\013" +
+      "2B.yandex.cloud.compute.v1.CreateSnapsho" +
+      "tScheduleRequest.LabelsEntry\022@\n\017schedule" +
+      "_policy\030\005 \001(\0132\'.yandex.cloud.compute.v1." +
+      "SchedulePolicy\0225\n\020retention_period\030\006 \001(\013" +
+      "2\031.google.protobuf.DurationH\000\022\030\n\016snapsho" +
+      "t_count\030\007 \001(\003H\000\022<\n\rsnapshot_spec\030\010 \001(\0132%" +
+      ".yandex.cloud.compute.v1.SnapshotSpec\022\020\n" +
+      "\010disk_ids\030\t \003(\t\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
+      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\022\n\020retention_poli" +
+      "cy\">\n\036CreateSnapshotScheduleMetadata\022\034\n\024" +
+      "snapshot_schedule_id\030\001 \001(\t\"\371\003\n\035UpdateSna" +
+      "pshotScheduleRequest\022\034\n\024snapshot_schedul" +
+      "e_id\030\001 \001(\t\022/\n\013update_mask\030\002 \001(\0132\032.google" +
+      ".protobuf.FieldMask\022\014\n\004name\030\003 \001(\t\022\023\n\013des" +
+      "cription\030\004 \001(\t\022R\n\006labels\030\005 \003(\0132B.yandex." +
+      "cloud.compute.v1.UpdateSnapshotScheduleR" +
+      "equest.LabelsEntry\022@\n\017schedule_policy\030\006 " +
+      "\001(\0132\'.yandex.cloud.compute.v1.SchedulePo" +
+      "licy\0225\n\020retention_period\030\007 \001(\0132\031.google." +
+      "protobuf.DurationH\000\022\030\n\016snapshot_count\030\010 " +
+      "\001(\003H\000\022<\n\rsnapshot_spec\030\t \001(\0132%.yandex.cl" +
+      "oud.compute.v1.SnapshotSpec\032-\n\013LabelsEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\022\n\020re" +
+      "tention_policy\">\n\036UpdateSnapshotSchedule" +
+      "Metadata\022\034\n\024snapshot_schedule_id\030\001 \001(\t\"=" +
+      "\n\035DeleteSnapshotScheduleRequest\022\034\n\024snaps" +
+      "hot_schedule_id\030\001 \001(\t\">\n\036DeleteSnapshotS" +
+      "cheduleMetadata\022\034\n\024snapshot_schedule_id\030" +
+      "\001 \001(\t\">\n\036DisableSnapshotScheduleRequest\022" +
+      "\034\n\024snapshot_schedule_id\030\001 \001(\t\"?\n\037Disable" +
+      "SnapshotScheduleMetadata\022\034\n\024snapshot_sch" +
+      "edule_id\030\001 \001(\t\"=\n\035EnableSnapshotSchedule" +
+      "Request\022\034\n\024snapshot_schedule_id\030\001 \001(\t\">\n" +
+      "\036EnableSnapshotScheduleMetadata\022\034\n\024snaps" +
+      "hot_schedule_id\030\001 \001(\t\"l\n%ListSnapshotSch" +
+      "eduleOperationsRequest\022\034\n\024snapshot_sched" +
+      "ule_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_" +
+      "token\030\003 \001(\t\"x\n&ListSnapshotScheduleOpera" +
+      "tionsResponse\0225\n\noperations\030\001 \003(\0132!.yand" +
+      "ex.cloud.operation.Operation\022\027\n\017next_pag" +
+      "e_token\030\002 \001(\t\"k\n$ListSnapshotScheduleSna" +
+      "pshotsRequest\022\034\n\024snapshot_schedule_id\030\001 " +
+      "\001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001" +
+      "(\t\"v\n%ListSnapshotScheduleSnapshotsRespo" +
+      "nse\0224\n\tsnapshots\030\001 \003(\0132!.yandex.cloud.co" +
+      "mpute.v1.Snapshot\022\027\n\017next_page_token\030\002 \001" +
+      "(\t\"g\n ListSnapshotScheduleDisksRequest\022\034" +
+      "\n\024snapshot_schedule_id\030\001 \001(\t\022\021\n\tpage_siz" +
+      "e\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\"j\n!ListSnaps" +
+      "hotScheduleDisksResponse\022,\n\005disks\030\001 \003(\0132" +
+      "\035.yandex.cloud.compute.v1.Disk\022\027\n\017next_p" +
+      "age_token\030\002 \001(\t\"_\n\"UpdateSnapshotSchedul" +
+      "eDisksRequest\022\034\n\024snapshot_schedule_id\030\001 " +
+      "\001(\t\022\016\n\006remove\030\002 \003(\t\022\013\n\003add\030\003 \003(\t\"C\n#Upda" +
+      "teSnapshotScheduleDisksMetadata\022\034\n\024snaps" +
+      "hot_schedule_id\030\001 \001(\t2\356\027\n\027SnapshotSchedu" +
+      "leService\022\243\001\n\003Get\0223.yandex.cloud.compute" +
+      ".v1.GetSnapshotScheduleRequest\032).yandex." +
+      "cloud.compute.v1.SnapshotSchedule\"<\202\323\344\223\002" +
+      "6\0224/compute/v1/snapshotSchedules/{snapsh" +
+      "ot_schedule_id}\022\234\001\n\004List\0225.yandex.cloud." +
+      "compute.v1.ListSnapshotSchedulesRequest\032" +
+      "6.yandex.cloud.compute.v1.ListSnapshotSc" +
+      "hedulesResponse\"%\202\323\344\223\002\037\022\035/compute/v1/sna" +
+      "pshotSchedules\022\303\001\n\006Create\0226.yandex.cloud" +
+      ".compute.v1.CreateSnapshotScheduleReques" +
+      "t\032!.yandex.cloud.operation.Operation\"^\202\323" +
+      "\344\223\002\"\"\035/compute/v1/snapshotSchedules:\001*\262\322" +
+      "*2\n\036CreateSnapshotScheduleMetadata\022\020Snap" +
+      "shotSchedule\022\332\001\n\006Update\0226.yandex.cloud.c" +
+      "ompute.v1.UpdateSnapshotScheduleRequest\032" +
+      "!.yandex.cloud.operation.Operation\"u\202\323\344\223" +
+      "\002924/compute/v1/snapshotSchedules/{snaps" +
+      "hot_schedule_id}:\001*\262\322*2\n\036UpdateSnapshotS" +
+      "cheduleMetadata\022\020SnapshotSchedule\022\334\001\n\006De" +
+      "lete\0226.yandex.cloud.compute.v1.DeleteSna" +
       "pshotScheduleRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"~\202\323\344\223\002A\"</compute/v1/sna" +
-      "pshotSchedules/{snapshot_schedule_id}:di" +
-      "sable:\001*\262\322*3\n\037DisableSnapshotScheduleMet" +
-      "adata\022\020SnapshotSchedule\022\341\001\n\006Enable\0226.yan" +
-      "dex.cloud.compute.v1.EnableSnapshotSched" +
-      "uleRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"|\202\323\344\223\002@\";/compute/v1/snapshotSched" +
-      "ules/{snapshot_schedule_id}:enable:\001*\262\322*" +
-      "2\n\036EnableSnapshotScheduleMetadata\022\020Snaps" +
-      "hotSchedule\022\332\001\n\016ListOperations\022>.yandex." +
-      "cloud.compute.v1.ListSnapshotScheduleOpe" +
-      "rationsRequest\032?.yandex.cloud.compute.v1" +
-      ".ListSnapshotScheduleOperationsResponse\"" +
-      "G\202\323\344\223\002A\022?/compute/v1/snapshotSchedules/{" +
-      "snapshot_schedule_id}/operations\022\326\001\n\rLis" +
-      "tSnapshots\022=.yandex.cloud.compute.v1.Lis" +
-      "tSnapshotScheduleSnapshotsRequest\032>.yand" +
-      "ex.cloud.compute.v1.ListSnapshotSchedule" +
-      "SnapshotsResponse\"F\202\323\344\223\002@\022>/compute/v1/s" +
-      "napshotSchedules/{snapshot_schedule_id}/" +
-      "snapshots\022\306\001\n\tListDisks\0229.yandex.cloud.c" +
-      "ompute.v1.ListSnapshotScheduleDisksReque" +
-      "st\032:.yandex.cloud.compute.v1.ListSnapsho" +
-      "tScheduleDisksResponse\"B\202\323\344\223\002<\022:/compute" +
-      "/v1/snapshotSchedules/{snapshot_schedule" +
-      "_id}/disksBb\n\033yandex.cloud.api.compute.v" +
-      "1ZCgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/compute/v1;computeb\006proto3"
+      "ation.Operation\"w\202\323\344\223\0026*4/compute/v1/sna" +
+      "pshotSchedules/{snapshot_schedule_id}\262\322*" +
+      "7\n\036DeleteSnapshotScheduleMetadata\022\025googl" +
+      "e.protobuf.Empty\022\366\001\n\013UpdateDisks\022;.yande" +
+      "x.cloud.compute.v1.UpdateSnapshotSchedul" +
+      "eDisksRequest\032!.yandex.cloud.operation.O" +
+      "peration\"\206\001\202\323\344\223\002E2@/compute/v1/snapshotS" +
+      "chedules/{snapshot_schedule_id}:updateDi" +
+      "sks:\001*\262\322*7\n#UpdateSnapshotScheduleDisksM" +
+      "etadata\022\020SnapshotSchedule\022\345\001\n\007Disable\0227." +
+      "yandex.cloud.compute.v1.DisableSnapshotS" +
+      "cheduleRequest\032!.yandex.cloud.operation." +
+      "Operation\"~\202\323\344\223\002A\"</compute/v1/snapshotS" +
+      "chedules/{snapshot_schedule_id}:disable:" +
+      "\001*\262\322*3\n\037DisableSnapshotScheduleMetadata\022" +
+      "\020SnapshotSchedule\022\341\001\n\006Enable\0226.yandex.cl" +
+      "oud.compute.v1.EnableSnapshotScheduleReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "|\202\323\344\223\002@\";/compute/v1/snapshotSchedules/{" +
+      "snapshot_schedule_id}:enable:\001*\262\322*2\n\036Ena" +
+      "bleSnapshotScheduleMetadata\022\020SnapshotSch" +
+      "edule\022\332\001\n\016ListOperations\022>.yandex.cloud." +
+      "compute.v1.ListSnapshotScheduleOperation" +
+      "sRequest\032?.yandex.cloud.compute.v1.ListS" +
+      "napshotScheduleOperationsResponse\"G\202\323\344\223\002" +
+      "A\022?/compute/v1/snapshotSchedules/{snapsh" +
+      "ot_schedule_id}/operations\022\326\001\n\rListSnaps" +
+      "hots\022=.yandex.cloud.compute.v1.ListSnaps" +
+      "hotScheduleSnapshotsRequest\032>.yandex.clo" +
+      "ud.compute.v1.ListSnapshotScheduleSnapsh" +
+      "otsResponse\"F\202\323\344\223\002@\022>/compute/v1/snapsho" +
+      "tSchedules/{snapshot_schedule_id}/snapsh" +
+      "ots\022\306\001\n\tListDisks\0229.yandex.cloud.compute" +
+      ".v1.ListSnapshotScheduleDisksRequest\032:.y" +
+      "andex.cloud.compute.v1.ListSnapshotSched" +
+      "uleDisksResponse\"B\202\323\344\223\002<\022:/compute/v1/sn" +
+      "apshotSchedules/{snapshot_schedule_id}/d" +
+      "isks\022\275\001\n\022ListAccessBindings\022..yandex.clo" +
+      "ud.access.ListAccessBindingsRequest\032/.ya" +
+      "ndex.cloud.access.ListAccessBindingsResp" +
+      "onse\"F\202\323\344\223\002@\022>/compute/v1/snapshotSchedu" +
+      "les/{resource_id}:listAccessBindings\022\374\001\n" +
+      "\021SetAccessBindings\022-.yandex.cloud.access" +
+      ".SetAccessBindingsRequest\032!.yandex.cloud" +
+      ".operation.Operation\"\224\001\202\323\344\223\002B\"=/compute/" +
+      "v1/snapshotSchedules/{resource_id}:setAc" +
+      "cessBindings:\001*\262\322*H\n access.SetAccessBin" +
+      "dingsMetadata\022$access.AccessBindingsOper" +
+      "ationResult\022\210\002\n\024UpdateAccessBindings\0220.y" +
+      "andex.cloud.access.UpdateAccessBindingsR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"\232\001\202\323\344\223\002E\"@/compute/v1/snapshotSchedule" +
+      "s/{resource_id}:updateAccessBindings:\001*\262" +
+      "\322*K\n#access.UpdateAccessBindingsMetadata" +
+      "\022$access.AccessBindingsOperationResultBb" +
+      "\n\033yandex.cloud.api.compute.v1ZCgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "compute/v1;computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21680,6 +21699,7 @@ public final class SnapshotScheduleServiceOuterClass {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           com.google.protobuf.DurationProto.getDescriptor(),
+          yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.compute.v1.DiskOuterClass.getDescriptor(),
           yandex.cloud.api.compute.v1.SnapshotOuterClass.getDescriptor(),
@@ -21837,6 +21857,7 @@ public final class SnapshotScheduleServiceOuterClass {
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.DurationProto.getDescriptor();
+    yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.compute.v1.DiskOuterClass.getDescriptor();
     yandex.cloud.api.compute.v1.SnapshotOuterClass.getDescriptor();

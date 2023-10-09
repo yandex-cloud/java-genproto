@@ -3586,6 +3586,17719 @@ public final class Pxf {
 
   }
 
+  public interface PXFDatasourceS3OrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string access_key = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The accessKey.
+     */
+    java.lang.String getAccessKey();
+    /**
+     * <code>string access_key = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The bytes for accessKey.
+     */
+    com.google.protobuf.ByteString
+        getAccessKeyBytes();
+
+    /**
+     * <code>string secret_key = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The secretKey.
+     */
+    java.lang.String getSecretKey();
+    /**
+     * <code>string secret_key = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The bytes for secretKey.
+     */
+    com.google.protobuf.ByteString
+        getSecretKeyBytes();
+
+    /**
+     * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
+     * @return Whether the fastUpload field is set.
+     */
+    boolean hasFastUpload();
+    /**
+     * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
+     * @return The fastUpload.
+     */
+    com.google.protobuf.BoolValue getFastUpload();
+    /**
+     * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getFastUploadOrBuilder();
+
+    /**
+     * <code>string endpoint = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The endpoint.
+     */
+    java.lang.String getEndpoint();
+    /**
+     * <code>string endpoint = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The bytes for endpoint.
+     */
+    com.google.protobuf.ByteString
+        getEndpointBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3}
+   */
+  public static final class PXFDatasourceS3 extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3)
+      PXFDatasourceS3OrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PXFDatasourceS3.newBuilder() to construct.
+    private PXFDatasourceS3(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PXFDatasourceS3() {
+      accessKey_ = "";
+      secretKey_ = "";
+      endpoint_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PXFDatasourceS3();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PXFDatasourceS3(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              accessKey_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              secretKey_ = s;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (fastUpload_ != null) {
+                subBuilder = fastUpload_.toBuilder();
+              }
+              fastUpload_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(fastUpload_);
+                fastUpload_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              endpoint_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceS3_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceS3_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.class, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.Builder.class);
+    }
+
+    public static final int ACCESS_KEY_FIELD_NUMBER = 1;
+    private volatile java.lang.Object accessKey_;
+    /**
+     * <code>string access_key = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The accessKey.
+     */
+    @java.lang.Override
+    public java.lang.String getAccessKey() {
+      java.lang.Object ref = accessKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        accessKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string access_key = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The bytes for accessKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAccessKeyBytes() {
+      java.lang.Object ref = accessKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        accessKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SECRET_KEY_FIELD_NUMBER = 2;
+    private volatile java.lang.Object secretKey_;
+    /**
+     * <code>string secret_key = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The secretKey.
+     */
+    @java.lang.Override
+    public java.lang.String getSecretKey() {
+      java.lang.Object ref = secretKey_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        secretKey_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string secret_key = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The bytes for secretKey.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecretKeyBytes() {
+      java.lang.Object ref = secretKey_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        secretKey_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FAST_UPLOAD_FIELD_NUMBER = 3;
+    private com.google.protobuf.BoolValue fastUpload_;
+    /**
+     * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
+     * @return Whether the fastUpload field is set.
+     */
+    @java.lang.Override
+    public boolean hasFastUpload() {
+      return fastUpload_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
+     * @return The fastUpload.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getFastUpload() {
+      return fastUpload_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : fastUpload_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getFastUploadOrBuilder() {
+      return getFastUpload();
+    }
+
+    public static final int ENDPOINT_FIELD_NUMBER = 4;
+    private volatile java.lang.Object endpoint_;
+    /**
+     * <code>string endpoint = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The endpoint.
+     */
+    @java.lang.Override
+    public java.lang.String getEndpoint() {
+      java.lang.Object ref = endpoint_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        endpoint_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string endpoint = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The bytes for endpoint.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEndpointBytes() {
+      java.lang.Object ref = endpoint_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        endpoint_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessKey_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, accessKey_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secretKey_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, secretKey_);
+      }
+      if (fastUpload_ != null) {
+        output.writeMessage(3, getFastUpload());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpoint_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, endpoint_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessKey_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, accessKey_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(secretKey_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, secretKey_);
+      }
+      if (fastUpload_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getFastUpload());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endpoint_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, endpoint_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 other = (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3) obj;
+
+      if (!getAccessKey()
+          .equals(other.getAccessKey())) return false;
+      if (!getSecretKey()
+          .equals(other.getSecretKey())) return false;
+      if (hasFastUpload() != other.hasFastUpload()) return false;
+      if (hasFastUpload()) {
+        if (!getFastUpload()
+            .equals(other.getFastUpload())) return false;
+      }
+      if (!getEndpoint()
+          .equals(other.getEndpoint())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ACCESS_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getAccessKey().hashCode();
+      hash = (37 * hash) + SECRET_KEY_FIELD_NUMBER;
+      hash = (53 * hash) + getSecretKey().hashCode();
+      if (hasFastUpload()) {
+        hash = (37 * hash) + FAST_UPLOAD_FIELD_NUMBER;
+        hash = (53 * hash) + getFastUpload().hashCode();
+      }
+      hash = (37 * hash) + ENDPOINT_FIELD_NUMBER;
+      hash = (53 * hash) + getEndpoint().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3)
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3OrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceS3_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceS3_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.class, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        accessKey_ = "";
+
+        secretKey_ = "";
+
+        if (fastUploadBuilder_ == null) {
+          fastUpload_ = null;
+        } else {
+          fastUpload_ = null;
+          fastUploadBuilder_ = null;
+        }
+        endpoint_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceS3_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 build() {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 result = new yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3(this);
+        result.accessKey_ = accessKey_;
+        result.secretKey_ = secretKey_;
+        if (fastUploadBuilder_ == null) {
+          result.fastUpload_ = fastUpload_;
+        } else {
+          result.fastUpload_ = fastUploadBuilder_.build();
+        }
+        result.endpoint_ = endpoint_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.getDefaultInstance()) return this;
+        if (!other.getAccessKey().isEmpty()) {
+          accessKey_ = other.accessKey_;
+          onChanged();
+        }
+        if (!other.getSecretKey().isEmpty()) {
+          secretKey_ = other.secretKey_;
+          onChanged();
+        }
+        if (other.hasFastUpload()) {
+          mergeFastUpload(other.getFastUpload());
+        }
+        if (!other.getEndpoint().isEmpty()) {
+          endpoint_ = other.endpoint_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object accessKey_ = "";
+      /**
+       * <code>string access_key = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return The accessKey.
+       */
+      public java.lang.String getAccessKey() {
+        java.lang.Object ref = accessKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          accessKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string access_key = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return The bytes for accessKey.
+       */
+      public com.google.protobuf.ByteString
+          getAccessKeyBytes() {
+        java.lang.Object ref = accessKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          accessKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string access_key = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @param value The accessKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        accessKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string access_key = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccessKey() {
+        
+        accessKey_ = getDefaultInstance().getAccessKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string access_key = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @param value The bytes for accessKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccessKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        accessKey_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object secretKey_ = "";
+      /**
+       * <code>string secret_key = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return The secretKey.
+       */
+      public java.lang.String getSecretKey() {
+        java.lang.Object ref = secretKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          secretKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string secret_key = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return The bytes for secretKey.
+       */
+      public com.google.protobuf.ByteString
+          getSecretKeyBytes() {
+        java.lang.Object ref = secretKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          secretKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string secret_key = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @param value The secretKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        secretKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string secret_key = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecretKey() {
+        
+        secretKey_ = getDefaultInstance().getSecretKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string secret_key = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @param value The bytes for secretKey to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecretKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        secretKey_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.BoolValue fastUpload_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> fastUploadBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
+       * @return Whether the fastUpload field is set.
+       */
+      public boolean hasFastUpload() {
+        return fastUploadBuilder_ != null || fastUpload_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
+       * @return The fastUpload.
+       */
+      public com.google.protobuf.BoolValue getFastUpload() {
+        if (fastUploadBuilder_ == null) {
+          return fastUpload_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : fastUpload_;
+        } else {
+          return fastUploadBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
+       */
+      public Builder setFastUpload(com.google.protobuf.BoolValue value) {
+        if (fastUploadBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          fastUpload_ = value;
+          onChanged();
+        } else {
+          fastUploadBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
+       */
+      public Builder setFastUpload(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (fastUploadBuilder_ == null) {
+          fastUpload_ = builderForValue.build();
+          onChanged();
+        } else {
+          fastUploadBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
+       */
+      public Builder mergeFastUpload(com.google.protobuf.BoolValue value) {
+        if (fastUploadBuilder_ == null) {
+          if (fastUpload_ != null) {
+            fastUpload_ =
+              com.google.protobuf.BoolValue.newBuilder(fastUpload_).mergeFrom(value).buildPartial();
+          } else {
+            fastUpload_ = value;
+          }
+          onChanged();
+        } else {
+          fastUploadBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
+       */
+      public Builder clearFastUpload() {
+        if (fastUploadBuilder_ == null) {
+          fastUpload_ = null;
+          onChanged();
+        } else {
+          fastUpload_ = null;
+          fastUploadBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getFastUploadBuilder() {
+        
+        onChanged();
+        return getFastUploadFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getFastUploadOrBuilder() {
+        if (fastUploadBuilder_ != null) {
+          return fastUploadBuilder_.getMessageOrBuilder();
+        } else {
+          return fastUpload_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : fastUpload_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue fast_upload = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getFastUploadFieldBuilder() {
+        if (fastUploadBuilder_ == null) {
+          fastUploadBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getFastUpload(),
+                  getParentForChildren(),
+                  isClean());
+          fastUpload_ = null;
+        }
+        return fastUploadBuilder_;
+      }
+
+      private java.lang.Object endpoint_ = "";
+      /**
+       * <code>string endpoint = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return The endpoint.
+       */
+      public java.lang.String getEndpoint() {
+        java.lang.Object ref = endpoint_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          endpoint_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string endpoint = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return The bytes for endpoint.
+       */
+      public com.google.protobuf.ByteString
+          getEndpointBytes() {
+        java.lang.Object ref = endpoint_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          endpoint_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string endpoint = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @param value The endpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpoint(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        endpoint_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string endpoint = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEndpoint() {
+        
+        endpoint_ = getDefaultInstance().getEndpoint();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string endpoint = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @param value The bytes for endpoint to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEndpointBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        endpoint_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3)
+    private static final yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PXFDatasourceS3>
+        PARSER = new com.google.protobuf.AbstractParser<PXFDatasourceS3>() {
+      @java.lang.Override
+      public PXFDatasourceS3 parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PXFDatasourceS3(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PXFDatasourceS3> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PXFDatasourceS3> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PXFDatasourceJDBCOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Matches jdbc.driver
+     * </pre>
+     *
+     * <code>string driver = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The driver.
+     */
+    java.lang.String getDriver();
+    /**
+     * <pre>
+     * Matches jdbc.driver
+     * </pre>
+     *
+     * <code>string driver = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for driver.
+     */
+    com.google.protobuf.ByteString
+        getDriverBytes();
+
+    /**
+     * <pre>
+     * Matches jdbc.url
+     * </pre>
+     *
+     * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The url.
+     */
+    java.lang.String getUrl();
+    /**
+     * <pre>
+     * Matches jdbc.url
+     * </pre>
+     *
+     * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The bytes for url.
+     */
+    com.google.protobuf.ByteString
+        getUrlBytes();
+
+    /**
+     * <pre>
+     * Matches jdbc.user
+     * </pre>
+     *
+     * <code>string user = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The user.
+     */
+    java.lang.String getUser();
+    /**
+     * <pre>
+     * Matches jdbc.user
+     * </pre>
+     *
+     * <code>string user = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The bytes for user.
+     */
+    com.google.protobuf.ByteString
+        getUserBytes();
+
+    /**
+     * <pre>
+     * Matches jdbc.password
+     * </pre>
+     *
+     * <code>string password = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The password.
+     */
+    java.lang.String getPassword();
+    /**
+     * <pre>
+     * Matches jdbc.password
+     * </pre>
+     *
+     * <code>string password = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The bytes for password.
+     */
+    com.google.protobuf.ByteString
+        getPasswordBytes();
+
+    /**
+     * <pre>
+     * Matches jdbc.statement.batchsize
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
+     * @return Whether the statementBatchSize field is set.
+     */
+    boolean hasStatementBatchSize();
+    /**
+     * <pre>
+     * Matches jdbc.statement.batchsize
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
+     * @return The statementBatchSize.
+     */
+    com.google.protobuf.Int64Value getStatementBatchSize();
+    /**
+     * <pre>
+     * Matches jdbc.statement.batchsize
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getStatementBatchSizeOrBuilder();
+
+    /**
+     * <pre>
+     * Matches jdbc.statement.fetchsize
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
+     * @return Whether the statementFetchSize field is set.
+     */
+    boolean hasStatementFetchSize();
+    /**
+     * <pre>
+     * Matches jdbc.statement.fetchsize
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
+     * @return The statementFetchSize.
+     */
+    com.google.protobuf.Int64Value getStatementFetchSize();
+    /**
+     * <pre>
+     * Matches jdbc.statement.fetchsize
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getStatementFetchSizeOrBuilder();
+
+    /**
+     * <pre>
+     * Matches jdbc.statement.querytimeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+     * @return Whether the statementQueryTimeout field is set.
+     */
+    boolean hasStatementQueryTimeout();
+    /**
+     * <pre>
+     * Matches jdbc.statement.querytimeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+     * @return The statementQueryTimeout.
+     */
+    com.google.protobuf.Int64Value getStatementQueryTimeout();
+    /**
+     * <pre>
+     * Matches jdbc.statement.querytimeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getStatementQueryTimeoutOrBuilder();
+
+    /**
+     * <pre>
+     * Matches jdbc.pool.enabled
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
+     * @return Whether the poolEnabled field is set.
+     */
+    boolean hasPoolEnabled();
+    /**
+     * <pre>
+     * Matches jdbc.pool.enabled
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
+     * @return The poolEnabled.
+     */
+    com.google.protobuf.BoolValue getPoolEnabled();
+    /**
+     * <pre>
+     * Matches jdbc.pool.enabled
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getPoolEnabledOrBuilder();
+
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.maximumpoolsize
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+     * @return Whether the poolMaximumSize field is set.
+     */
+    boolean hasPoolMaximumSize();
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.maximumpoolsize
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+     * @return The poolMaximumSize.
+     */
+    com.google.protobuf.Int64Value getPoolMaximumSize();
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.maximumpoolsize
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getPoolMaximumSizeOrBuilder();
+
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.connectiontimeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
+     * @return Whether the poolConnectionTimeout field is set.
+     */
+    boolean hasPoolConnectionTimeout();
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.connectiontimeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
+     * @return The poolConnectionTimeout.
+     */
+    com.google.protobuf.Int64Value getPoolConnectionTimeout();
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.connectiontimeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getPoolConnectionTimeoutOrBuilder();
+
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.idletimeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
+     * @return Whether the poolIdleTimeout field is set.
+     */
+    boolean hasPoolIdleTimeout();
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.idletimeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
+     * @return The poolIdleTimeout.
+     */
+    com.google.protobuf.Int64Value getPoolIdleTimeout();
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.idletimeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getPoolIdleTimeoutOrBuilder();
+
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.minimumidle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
+     * @return Whether the poolMinimumIdle field is set.
+     */
+    boolean hasPoolMinimumIdle();
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.minimumidle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
+     * @return The poolMinimumIdle.
+     */
+    com.google.protobuf.Int64Value getPoolMinimumIdle();
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.minimumidle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getPoolMinimumIdleOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC}
+   */
+  public static final class PXFDatasourceJDBC extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC)
+      PXFDatasourceJDBCOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PXFDatasourceJDBC.newBuilder() to construct.
+    private PXFDatasourceJDBC(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PXFDatasourceJDBC() {
+      driver_ = "";
+      url_ = "";
+      user_ = "";
+      password_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PXFDatasourceJDBC();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PXFDatasourceJDBC(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              driver_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              url_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              user_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              password_ = s;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (statementBatchSize_ != null) {
+                subBuilder = statementBatchSize_.toBuilder();
+              }
+              statementBatchSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(statementBatchSize_);
+                statementBatchSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (statementFetchSize_ != null) {
+                subBuilder = statementFetchSize_.toBuilder();
+              }
+              statementFetchSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(statementFetchSize_);
+                statementFetchSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (statementQueryTimeout_ != null) {
+                subBuilder = statementQueryTimeout_.toBuilder();
+              }
+              statementQueryTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(statementQueryTimeout_);
+                statementQueryTimeout_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (poolEnabled_ != null) {
+                subBuilder = poolEnabled_.toBuilder();
+              }
+              poolEnabled_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(poolEnabled_);
+                poolEnabled_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (poolMaximumSize_ != null) {
+                subBuilder = poolMaximumSize_.toBuilder();
+              }
+              poolMaximumSize_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(poolMaximumSize_);
+                poolMaximumSize_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (poolConnectionTimeout_ != null) {
+                subBuilder = poolConnectionTimeout_.toBuilder();
+              }
+              poolConnectionTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(poolConnectionTimeout_);
+                poolConnectionTimeout_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (poolIdleTimeout_ != null) {
+                subBuilder = poolIdleTimeout_.toBuilder();
+              }
+              poolIdleTimeout_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(poolIdleTimeout_);
+                poolIdleTimeout_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 98: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (poolMinimumIdle_ != null) {
+                subBuilder = poolMinimumIdle_.toBuilder();
+              }
+              poolMinimumIdle_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(poolMinimumIdle_);
+                poolMinimumIdle_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceJDBC_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceJDBC_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.class, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.Builder.class);
+    }
+
+    public static final int DRIVER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object driver_;
+    /**
+     * <pre>
+     * Matches jdbc.driver
+     * </pre>
+     *
+     * <code>string driver = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The driver.
+     */
+    @java.lang.Override
+    public java.lang.String getDriver() {
+      java.lang.Object ref = driver_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        driver_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Matches jdbc.driver
+     * </pre>
+     *
+     * <code>string driver = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for driver.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDriverBytes() {
+      java.lang.Object ref = driver_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        driver_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int URL_FIELD_NUMBER = 2;
+    private volatile java.lang.Object url_;
+    /**
+     * <pre>
+     * Matches jdbc.url
+     * </pre>
+     *
+     * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The url.
+     */
+    @java.lang.Override
+    public java.lang.String getUrl() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        url_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Matches jdbc.url
+     * </pre>
+     *
+     * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The bytes for url.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUrlBytes() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        url_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USER_FIELD_NUMBER = 3;
+    private volatile java.lang.Object user_;
+    /**
+     * <pre>
+     * Matches jdbc.user
+     * </pre>
+     *
+     * <code>string user = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The user.
+     */
+    @java.lang.Override
+    public java.lang.String getUser() {
+      java.lang.Object ref = user_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        user_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Matches jdbc.user
+     * </pre>
+     *
+     * <code>string user = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The bytes for user.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUserBytes() {
+      java.lang.Object ref = user_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        user_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PASSWORD_FIELD_NUMBER = 4;
+    private volatile java.lang.Object password_;
+    /**
+     * <pre>
+     * Matches jdbc.password
+     * </pre>
+     *
+     * <code>string password = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The password.
+     */
+    @java.lang.Override
+    public java.lang.String getPassword() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        password_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Matches jdbc.password
+     * </pre>
+     *
+     * <code>string password = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The bytes for password.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPasswordBytes() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        password_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATEMENT_BATCH_SIZE_FIELD_NUMBER = 5;
+    private com.google.protobuf.Int64Value statementBatchSize_;
+    /**
+     * <pre>
+     * Matches jdbc.statement.batchsize
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
+     * @return Whether the statementBatchSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasStatementBatchSize() {
+      return statementBatchSize_ != null;
+    }
+    /**
+     * <pre>
+     * Matches jdbc.statement.batchsize
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
+     * @return The statementBatchSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getStatementBatchSize() {
+      return statementBatchSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : statementBatchSize_;
+    }
+    /**
+     * <pre>
+     * Matches jdbc.statement.batchsize
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getStatementBatchSizeOrBuilder() {
+      return getStatementBatchSize();
+    }
+
+    public static final int STATEMENT_FETCH_SIZE_FIELD_NUMBER = 6;
+    private com.google.protobuf.Int64Value statementFetchSize_;
+    /**
+     * <pre>
+     * Matches jdbc.statement.fetchsize
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
+     * @return Whether the statementFetchSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasStatementFetchSize() {
+      return statementFetchSize_ != null;
+    }
+    /**
+     * <pre>
+     * Matches jdbc.statement.fetchsize
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
+     * @return The statementFetchSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getStatementFetchSize() {
+      return statementFetchSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : statementFetchSize_;
+    }
+    /**
+     * <pre>
+     * Matches jdbc.statement.fetchsize
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getStatementFetchSizeOrBuilder() {
+      return getStatementFetchSize();
+    }
+
+    public static final int STATEMENT_QUERY_TIMEOUT_FIELD_NUMBER = 7;
+    private com.google.protobuf.Int64Value statementQueryTimeout_;
+    /**
+     * <pre>
+     * Matches jdbc.statement.querytimeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+     * @return Whether the statementQueryTimeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasStatementQueryTimeout() {
+      return statementQueryTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * Matches jdbc.statement.querytimeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+     * @return The statementQueryTimeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getStatementQueryTimeout() {
+      return statementQueryTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : statementQueryTimeout_;
+    }
+    /**
+     * <pre>
+     * Matches jdbc.statement.querytimeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getStatementQueryTimeoutOrBuilder() {
+      return getStatementQueryTimeout();
+    }
+
+    public static final int POOL_ENABLED_FIELD_NUMBER = 8;
+    private com.google.protobuf.BoolValue poolEnabled_;
+    /**
+     * <pre>
+     * Matches jdbc.pool.enabled
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
+     * @return Whether the poolEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasPoolEnabled() {
+      return poolEnabled_ != null;
+    }
+    /**
+     * <pre>
+     * Matches jdbc.pool.enabled
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
+     * @return The poolEnabled.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getPoolEnabled() {
+      return poolEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : poolEnabled_;
+    }
+    /**
+     * <pre>
+     * Matches jdbc.pool.enabled
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getPoolEnabledOrBuilder() {
+      return getPoolEnabled();
+    }
+
+    public static final int POOL_MAXIMUM_SIZE_FIELD_NUMBER = 9;
+    private com.google.protobuf.Int64Value poolMaximumSize_;
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.maximumpoolsize
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+     * @return Whether the poolMaximumSize field is set.
+     */
+    @java.lang.Override
+    public boolean hasPoolMaximumSize() {
+      return poolMaximumSize_ != null;
+    }
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.maximumpoolsize
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+     * @return The poolMaximumSize.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getPoolMaximumSize() {
+      return poolMaximumSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : poolMaximumSize_;
+    }
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.maximumpoolsize
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getPoolMaximumSizeOrBuilder() {
+      return getPoolMaximumSize();
+    }
+
+    public static final int POOL_CONNECTION_TIMEOUT_FIELD_NUMBER = 10;
+    private com.google.protobuf.Int64Value poolConnectionTimeout_;
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.connectiontimeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
+     * @return Whether the poolConnectionTimeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasPoolConnectionTimeout() {
+      return poolConnectionTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.connectiontimeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
+     * @return The poolConnectionTimeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getPoolConnectionTimeout() {
+      return poolConnectionTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : poolConnectionTimeout_;
+    }
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.connectiontimeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getPoolConnectionTimeoutOrBuilder() {
+      return getPoolConnectionTimeout();
+    }
+
+    public static final int POOL_IDLE_TIMEOUT_FIELD_NUMBER = 11;
+    private com.google.protobuf.Int64Value poolIdleTimeout_;
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.idletimeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
+     * @return Whether the poolIdleTimeout field is set.
+     */
+    @java.lang.Override
+    public boolean hasPoolIdleTimeout() {
+      return poolIdleTimeout_ != null;
+    }
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.idletimeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
+     * @return The poolIdleTimeout.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getPoolIdleTimeout() {
+      return poolIdleTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : poolIdleTimeout_;
+    }
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.idletimeout
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getPoolIdleTimeoutOrBuilder() {
+      return getPoolIdleTimeout();
+    }
+
+    public static final int POOL_MINIMUM_IDLE_FIELD_NUMBER = 12;
+    private com.google.protobuf.Int64Value poolMinimumIdle_;
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.minimumidle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
+     * @return Whether the poolMinimumIdle field is set.
+     */
+    @java.lang.Override
+    public boolean hasPoolMinimumIdle() {
+      return poolMinimumIdle_ != null;
+    }
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.minimumidle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
+     * @return The poolMinimumIdle.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getPoolMinimumIdle() {
+      return poolMinimumIdle_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : poolMinimumIdle_;
+    }
+    /**
+     * <pre>
+     * Matches jdbc.pool.property.minimumidle
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getPoolMinimumIdleOrBuilder() {
+      return getPoolMinimumIdle();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(driver_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, driver_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, url_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, user_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, password_);
+      }
+      if (statementBatchSize_ != null) {
+        output.writeMessage(5, getStatementBatchSize());
+      }
+      if (statementFetchSize_ != null) {
+        output.writeMessage(6, getStatementFetchSize());
+      }
+      if (statementQueryTimeout_ != null) {
+        output.writeMessage(7, getStatementQueryTimeout());
+      }
+      if (poolEnabled_ != null) {
+        output.writeMessage(8, getPoolEnabled());
+      }
+      if (poolMaximumSize_ != null) {
+        output.writeMessage(9, getPoolMaximumSize());
+      }
+      if (poolConnectionTimeout_ != null) {
+        output.writeMessage(10, getPoolConnectionTimeout());
+      }
+      if (poolIdleTimeout_ != null) {
+        output.writeMessage(11, getPoolIdleTimeout());
+      }
+      if (poolMinimumIdle_ != null) {
+        output.writeMessage(12, getPoolMinimumIdle());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(driver_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, driver_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(url_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, url_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(user_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, user_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, password_);
+      }
+      if (statementBatchSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getStatementBatchSize());
+      }
+      if (statementFetchSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getStatementFetchSize());
+      }
+      if (statementQueryTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getStatementQueryTimeout());
+      }
+      if (poolEnabled_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getPoolEnabled());
+      }
+      if (poolMaximumSize_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getPoolMaximumSize());
+      }
+      if (poolConnectionTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getPoolConnectionTimeout());
+      }
+      if (poolIdleTimeout_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getPoolIdleTimeout());
+      }
+      if (poolMinimumIdle_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, getPoolMinimumIdle());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC other = (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC) obj;
+
+      if (!getDriver()
+          .equals(other.getDriver())) return false;
+      if (!getUrl()
+          .equals(other.getUrl())) return false;
+      if (!getUser()
+          .equals(other.getUser())) return false;
+      if (!getPassword()
+          .equals(other.getPassword())) return false;
+      if (hasStatementBatchSize() != other.hasStatementBatchSize()) return false;
+      if (hasStatementBatchSize()) {
+        if (!getStatementBatchSize()
+            .equals(other.getStatementBatchSize())) return false;
+      }
+      if (hasStatementFetchSize() != other.hasStatementFetchSize()) return false;
+      if (hasStatementFetchSize()) {
+        if (!getStatementFetchSize()
+            .equals(other.getStatementFetchSize())) return false;
+      }
+      if (hasStatementQueryTimeout() != other.hasStatementQueryTimeout()) return false;
+      if (hasStatementQueryTimeout()) {
+        if (!getStatementQueryTimeout()
+            .equals(other.getStatementQueryTimeout())) return false;
+      }
+      if (hasPoolEnabled() != other.hasPoolEnabled()) return false;
+      if (hasPoolEnabled()) {
+        if (!getPoolEnabled()
+            .equals(other.getPoolEnabled())) return false;
+      }
+      if (hasPoolMaximumSize() != other.hasPoolMaximumSize()) return false;
+      if (hasPoolMaximumSize()) {
+        if (!getPoolMaximumSize()
+            .equals(other.getPoolMaximumSize())) return false;
+      }
+      if (hasPoolConnectionTimeout() != other.hasPoolConnectionTimeout()) return false;
+      if (hasPoolConnectionTimeout()) {
+        if (!getPoolConnectionTimeout()
+            .equals(other.getPoolConnectionTimeout())) return false;
+      }
+      if (hasPoolIdleTimeout() != other.hasPoolIdleTimeout()) return false;
+      if (hasPoolIdleTimeout()) {
+        if (!getPoolIdleTimeout()
+            .equals(other.getPoolIdleTimeout())) return false;
+      }
+      if (hasPoolMinimumIdle() != other.hasPoolMinimumIdle()) return false;
+      if (hasPoolMinimumIdle()) {
+        if (!getPoolMinimumIdle()
+            .equals(other.getPoolMinimumIdle())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DRIVER_FIELD_NUMBER;
+      hash = (53 * hash) + getDriver().hashCode();
+      hash = (37 * hash) + URL_FIELD_NUMBER;
+      hash = (53 * hash) + getUrl().hashCode();
+      hash = (37 * hash) + USER_FIELD_NUMBER;
+      hash = (53 * hash) + getUser().hashCode();
+      hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
+      hash = (53 * hash) + getPassword().hashCode();
+      if (hasStatementBatchSize()) {
+        hash = (37 * hash) + STATEMENT_BATCH_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getStatementBatchSize().hashCode();
+      }
+      if (hasStatementFetchSize()) {
+        hash = (37 * hash) + STATEMENT_FETCH_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getStatementFetchSize().hashCode();
+      }
+      if (hasStatementQueryTimeout()) {
+        hash = (37 * hash) + STATEMENT_QUERY_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getStatementQueryTimeout().hashCode();
+      }
+      if (hasPoolEnabled()) {
+        hash = (37 * hash) + POOL_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolEnabled().hashCode();
+      }
+      if (hasPoolMaximumSize()) {
+        hash = (37 * hash) + POOL_MAXIMUM_SIZE_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolMaximumSize().hashCode();
+      }
+      if (hasPoolConnectionTimeout()) {
+        hash = (37 * hash) + POOL_CONNECTION_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolConnectionTimeout().hashCode();
+      }
+      if (hasPoolIdleTimeout()) {
+        hash = (37 * hash) + POOL_IDLE_TIMEOUT_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolIdleTimeout().hashCode();
+      }
+      if (hasPoolMinimumIdle()) {
+        hash = (37 * hash) + POOL_MINIMUM_IDLE_FIELD_NUMBER;
+        hash = (53 * hash) + getPoolMinimumIdle().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC)
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBCOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceJDBC_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceJDBC_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.class, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        driver_ = "";
+
+        url_ = "";
+
+        user_ = "";
+
+        password_ = "";
+
+        if (statementBatchSizeBuilder_ == null) {
+          statementBatchSize_ = null;
+        } else {
+          statementBatchSize_ = null;
+          statementBatchSizeBuilder_ = null;
+        }
+        if (statementFetchSizeBuilder_ == null) {
+          statementFetchSize_ = null;
+        } else {
+          statementFetchSize_ = null;
+          statementFetchSizeBuilder_ = null;
+        }
+        if (statementQueryTimeoutBuilder_ == null) {
+          statementQueryTimeout_ = null;
+        } else {
+          statementQueryTimeout_ = null;
+          statementQueryTimeoutBuilder_ = null;
+        }
+        if (poolEnabledBuilder_ == null) {
+          poolEnabled_ = null;
+        } else {
+          poolEnabled_ = null;
+          poolEnabledBuilder_ = null;
+        }
+        if (poolMaximumSizeBuilder_ == null) {
+          poolMaximumSize_ = null;
+        } else {
+          poolMaximumSize_ = null;
+          poolMaximumSizeBuilder_ = null;
+        }
+        if (poolConnectionTimeoutBuilder_ == null) {
+          poolConnectionTimeout_ = null;
+        } else {
+          poolConnectionTimeout_ = null;
+          poolConnectionTimeoutBuilder_ = null;
+        }
+        if (poolIdleTimeoutBuilder_ == null) {
+          poolIdleTimeout_ = null;
+        } else {
+          poolIdleTimeout_ = null;
+          poolIdleTimeoutBuilder_ = null;
+        }
+        if (poolMinimumIdleBuilder_ == null) {
+          poolMinimumIdle_ = null;
+        } else {
+          poolMinimumIdle_ = null;
+          poolMinimumIdleBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceJDBC_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC build() {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC result = new yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC(this);
+        result.driver_ = driver_;
+        result.url_ = url_;
+        result.user_ = user_;
+        result.password_ = password_;
+        if (statementBatchSizeBuilder_ == null) {
+          result.statementBatchSize_ = statementBatchSize_;
+        } else {
+          result.statementBatchSize_ = statementBatchSizeBuilder_.build();
+        }
+        if (statementFetchSizeBuilder_ == null) {
+          result.statementFetchSize_ = statementFetchSize_;
+        } else {
+          result.statementFetchSize_ = statementFetchSizeBuilder_.build();
+        }
+        if (statementQueryTimeoutBuilder_ == null) {
+          result.statementQueryTimeout_ = statementQueryTimeout_;
+        } else {
+          result.statementQueryTimeout_ = statementQueryTimeoutBuilder_.build();
+        }
+        if (poolEnabledBuilder_ == null) {
+          result.poolEnabled_ = poolEnabled_;
+        } else {
+          result.poolEnabled_ = poolEnabledBuilder_.build();
+        }
+        if (poolMaximumSizeBuilder_ == null) {
+          result.poolMaximumSize_ = poolMaximumSize_;
+        } else {
+          result.poolMaximumSize_ = poolMaximumSizeBuilder_.build();
+        }
+        if (poolConnectionTimeoutBuilder_ == null) {
+          result.poolConnectionTimeout_ = poolConnectionTimeout_;
+        } else {
+          result.poolConnectionTimeout_ = poolConnectionTimeoutBuilder_.build();
+        }
+        if (poolIdleTimeoutBuilder_ == null) {
+          result.poolIdleTimeout_ = poolIdleTimeout_;
+        } else {
+          result.poolIdleTimeout_ = poolIdleTimeoutBuilder_.build();
+        }
+        if (poolMinimumIdleBuilder_ == null) {
+          result.poolMinimumIdle_ = poolMinimumIdle_;
+        } else {
+          result.poolMinimumIdle_ = poolMinimumIdleBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.getDefaultInstance()) return this;
+        if (!other.getDriver().isEmpty()) {
+          driver_ = other.driver_;
+          onChanged();
+        }
+        if (!other.getUrl().isEmpty()) {
+          url_ = other.url_;
+          onChanged();
+        }
+        if (!other.getUser().isEmpty()) {
+          user_ = other.user_;
+          onChanged();
+        }
+        if (!other.getPassword().isEmpty()) {
+          password_ = other.password_;
+          onChanged();
+        }
+        if (other.hasStatementBatchSize()) {
+          mergeStatementBatchSize(other.getStatementBatchSize());
+        }
+        if (other.hasStatementFetchSize()) {
+          mergeStatementFetchSize(other.getStatementFetchSize());
+        }
+        if (other.hasStatementQueryTimeout()) {
+          mergeStatementQueryTimeout(other.getStatementQueryTimeout());
+        }
+        if (other.hasPoolEnabled()) {
+          mergePoolEnabled(other.getPoolEnabled());
+        }
+        if (other.hasPoolMaximumSize()) {
+          mergePoolMaximumSize(other.getPoolMaximumSize());
+        }
+        if (other.hasPoolConnectionTimeout()) {
+          mergePoolConnectionTimeout(other.getPoolConnectionTimeout());
+        }
+        if (other.hasPoolIdleTimeout()) {
+          mergePoolIdleTimeout(other.getPoolIdleTimeout());
+        }
+        if (other.hasPoolMinimumIdle()) {
+          mergePoolMinimumIdle(other.getPoolMinimumIdle());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object driver_ = "";
+      /**
+       * <pre>
+       * Matches jdbc.driver
+       * </pre>
+       *
+       * <code>string driver = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The driver.
+       */
+      public java.lang.String getDriver() {
+        java.lang.Object ref = driver_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          driver_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.driver
+       * </pre>
+       *
+       * <code>string driver = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for driver.
+       */
+      public com.google.protobuf.ByteString
+          getDriverBytes() {
+        java.lang.Object ref = driver_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          driver_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.driver
+       * </pre>
+       *
+       * <code>string driver = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The driver to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDriver(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        driver_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.driver
+       * </pre>
+       *
+       * <code>string driver = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDriver() {
+        
+        driver_ = getDefaultInstance().getDriver();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.driver
+       * </pre>
+       *
+       * <code>string driver = 1 [(.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for driver to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDriverBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        driver_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object url_ = "";
+      /**
+       * <pre>
+       * Matches jdbc.url
+       * </pre>
+       *
+       * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return The url.
+       */
+      public java.lang.String getUrl() {
+        java.lang.Object ref = url_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          url_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.url
+       * </pre>
+       *
+       * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return The bytes for url.
+       */
+      public com.google.protobuf.ByteString
+          getUrlBytes() {
+        java.lang.Object ref = url_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          url_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.url
+       * </pre>
+       *
+       * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @param value The url to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        url_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.url
+       * </pre>
+       *
+       * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUrl() {
+        
+        url_ = getDefaultInstance().getUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.url
+       * </pre>
+       *
+       * <code>string url = 2 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @param value The bytes for url to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        url_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object user_ = "";
+      /**
+       * <pre>
+       * Matches jdbc.user
+       * </pre>
+       *
+       * <code>string user = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return The user.
+       */
+      public java.lang.String getUser() {
+        java.lang.Object ref = user_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          user_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.user
+       * </pre>
+       *
+       * <code>string user = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return The bytes for user.
+       */
+      public com.google.protobuf.ByteString
+          getUserBytes() {
+        java.lang.Object ref = user_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          user_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.user
+       * </pre>
+       *
+       * <code>string user = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @param value The user to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUser(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        user_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.user
+       * </pre>
+       *
+       * <code>string user = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUser() {
+        
+        user_ = getDefaultInstance().getUser();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.user
+       * </pre>
+       *
+       * <code>string user = 3 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @param value The bytes for user to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        user_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object password_ = "";
+      /**
+       * <pre>
+       * Matches jdbc.password
+       * </pre>
+       *
+       * <code>string password = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return The password.
+       */
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          password_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.password
+       * </pre>
+       *
+       * <code>string password = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return The bytes for password.
+       */
+      public com.google.protobuf.ByteString
+          getPasswordBytes() {
+        java.lang.Object ref = password_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          password_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.password
+       * </pre>
+       *
+       * <code>string password = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @param value The password to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPassword(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        password_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.password
+       * </pre>
+       *
+       * <code>string password = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPassword() {
+        
+        password_ = getDefaultInstance().getPassword();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.password
+       * </pre>
+       *
+       * <code>string password = 4 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @param value The bytes for password to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPasswordBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        password_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value statementBatchSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> statementBatchSizeBuilder_;
+      /**
+       * <pre>
+       * Matches jdbc.statement.batchsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
+       * @return Whether the statementBatchSize field is set.
+       */
+      public boolean hasStatementBatchSize() {
+        return statementBatchSizeBuilder_ != null || statementBatchSize_ != null;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.batchsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
+       * @return The statementBatchSize.
+       */
+      public com.google.protobuf.Int64Value getStatementBatchSize() {
+        if (statementBatchSizeBuilder_ == null) {
+          return statementBatchSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : statementBatchSize_;
+        } else {
+          return statementBatchSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.batchsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
+       */
+      public Builder setStatementBatchSize(com.google.protobuf.Int64Value value) {
+        if (statementBatchSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          statementBatchSize_ = value;
+          onChanged();
+        } else {
+          statementBatchSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.batchsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
+       */
+      public Builder setStatementBatchSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (statementBatchSizeBuilder_ == null) {
+          statementBatchSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          statementBatchSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.batchsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
+       */
+      public Builder mergeStatementBatchSize(com.google.protobuf.Int64Value value) {
+        if (statementBatchSizeBuilder_ == null) {
+          if (statementBatchSize_ != null) {
+            statementBatchSize_ =
+              com.google.protobuf.Int64Value.newBuilder(statementBatchSize_).mergeFrom(value).buildPartial();
+          } else {
+            statementBatchSize_ = value;
+          }
+          onChanged();
+        } else {
+          statementBatchSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.batchsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
+       */
+      public Builder clearStatementBatchSize() {
+        if (statementBatchSizeBuilder_ == null) {
+          statementBatchSize_ = null;
+          onChanged();
+        } else {
+          statementBatchSize_ = null;
+          statementBatchSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.batchsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getStatementBatchSizeBuilder() {
+        
+        onChanged();
+        return getStatementBatchSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.batchsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getStatementBatchSizeOrBuilder() {
+        if (statementBatchSizeBuilder_ != null) {
+          return statementBatchSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return statementBatchSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : statementBatchSize_;
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.batchsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_batch_size = 5 [(.yandex.cloud.value) = "50-1000"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getStatementBatchSizeFieldBuilder() {
+        if (statementBatchSizeBuilder_ == null) {
+          statementBatchSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getStatementBatchSize(),
+                  getParentForChildren(),
+                  isClean());
+          statementBatchSize_ = null;
+        }
+        return statementBatchSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value statementFetchSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> statementFetchSizeBuilder_;
+      /**
+       * <pre>
+       * Matches jdbc.statement.fetchsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
+       * @return Whether the statementFetchSize field is set.
+       */
+      public boolean hasStatementFetchSize() {
+        return statementFetchSizeBuilder_ != null || statementFetchSize_ != null;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.fetchsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
+       * @return The statementFetchSize.
+       */
+      public com.google.protobuf.Int64Value getStatementFetchSize() {
+        if (statementFetchSizeBuilder_ == null) {
+          return statementFetchSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : statementFetchSize_;
+        } else {
+          return statementFetchSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.fetchsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
+       */
+      public Builder setStatementFetchSize(com.google.protobuf.Int64Value value) {
+        if (statementFetchSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          statementFetchSize_ = value;
+          onChanged();
+        } else {
+          statementFetchSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.fetchsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
+       */
+      public Builder setStatementFetchSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (statementFetchSizeBuilder_ == null) {
+          statementFetchSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          statementFetchSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.fetchsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
+       */
+      public Builder mergeStatementFetchSize(com.google.protobuf.Int64Value value) {
+        if (statementFetchSizeBuilder_ == null) {
+          if (statementFetchSize_ != null) {
+            statementFetchSize_ =
+              com.google.protobuf.Int64Value.newBuilder(statementFetchSize_).mergeFrom(value).buildPartial();
+          } else {
+            statementFetchSize_ = value;
+          }
+          onChanged();
+        } else {
+          statementFetchSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.fetchsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
+       */
+      public Builder clearStatementFetchSize() {
+        if (statementFetchSizeBuilder_ == null) {
+          statementFetchSize_ = null;
+          onChanged();
+        } else {
+          statementFetchSize_ = null;
+          statementFetchSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.fetchsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getStatementFetchSizeBuilder() {
+        
+        onChanged();
+        return getStatementFetchSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.fetchsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getStatementFetchSizeOrBuilder() {
+        if (statementFetchSizeBuilder_ != null) {
+          return statementFetchSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return statementFetchSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : statementFetchSize_;
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.fetchsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_fetch_size = 6 [(.yandex.cloud.value) = "50-10000"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getStatementFetchSizeFieldBuilder() {
+        if (statementFetchSizeBuilder_ == null) {
+          statementFetchSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getStatementFetchSize(),
+                  getParentForChildren(),
+                  isClean());
+          statementFetchSize_ = null;
+        }
+        return statementFetchSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value statementQueryTimeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> statementQueryTimeoutBuilder_;
+      /**
+       * <pre>
+       * Matches jdbc.statement.querytimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+       * @return Whether the statementQueryTimeout field is set.
+       */
+      public boolean hasStatementQueryTimeout() {
+        return statementQueryTimeoutBuilder_ != null || statementQueryTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.querytimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+       * @return The statementQueryTimeout.
+       */
+      public com.google.protobuf.Int64Value getStatementQueryTimeout() {
+        if (statementQueryTimeoutBuilder_ == null) {
+          return statementQueryTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : statementQueryTimeout_;
+        } else {
+          return statementQueryTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.querytimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+       */
+      public Builder setStatementQueryTimeout(com.google.protobuf.Int64Value value) {
+        if (statementQueryTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          statementQueryTimeout_ = value;
+          onChanged();
+        } else {
+          statementQueryTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.querytimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+       */
+      public Builder setStatementQueryTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (statementQueryTimeoutBuilder_ == null) {
+          statementQueryTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          statementQueryTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.querytimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+       */
+      public Builder mergeStatementQueryTimeout(com.google.protobuf.Int64Value value) {
+        if (statementQueryTimeoutBuilder_ == null) {
+          if (statementQueryTimeout_ != null) {
+            statementQueryTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(statementQueryTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            statementQueryTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          statementQueryTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.querytimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+       */
+      public Builder clearStatementQueryTimeout() {
+        if (statementQueryTimeoutBuilder_ == null) {
+          statementQueryTimeout_ = null;
+          onChanged();
+        } else {
+          statementQueryTimeout_ = null;
+          statementQueryTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.querytimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getStatementQueryTimeoutBuilder() {
+        
+        onChanged();
+        return getStatementQueryTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.querytimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getStatementQueryTimeoutOrBuilder() {
+        if (statementQueryTimeoutBuilder_ != null) {
+          return statementQueryTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return statementQueryTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : statementQueryTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.statement.querytimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value statement_query_timeout = 7 [(.yandex.cloud.value) = "5-600"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getStatementQueryTimeoutFieldBuilder() {
+        if (statementQueryTimeoutBuilder_ == null) {
+          statementQueryTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getStatementQueryTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          statementQueryTimeout_ = null;
+        }
+        return statementQueryTimeoutBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue poolEnabled_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> poolEnabledBuilder_;
+      /**
+       * <pre>
+       * Matches jdbc.pool.enabled
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
+       * @return Whether the poolEnabled field is set.
+       */
+      public boolean hasPoolEnabled() {
+        return poolEnabledBuilder_ != null || poolEnabled_ != null;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.enabled
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
+       * @return The poolEnabled.
+       */
+      public com.google.protobuf.BoolValue getPoolEnabled() {
+        if (poolEnabledBuilder_ == null) {
+          return poolEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : poolEnabled_;
+        } else {
+          return poolEnabledBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.enabled
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
+       */
+      public Builder setPoolEnabled(com.google.protobuf.BoolValue value) {
+        if (poolEnabledBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          poolEnabled_ = value;
+          onChanged();
+        } else {
+          poolEnabledBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.enabled
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
+       */
+      public Builder setPoolEnabled(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (poolEnabledBuilder_ == null) {
+          poolEnabled_ = builderForValue.build();
+          onChanged();
+        } else {
+          poolEnabledBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.enabled
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
+       */
+      public Builder mergePoolEnabled(com.google.protobuf.BoolValue value) {
+        if (poolEnabledBuilder_ == null) {
+          if (poolEnabled_ != null) {
+            poolEnabled_ =
+              com.google.protobuf.BoolValue.newBuilder(poolEnabled_).mergeFrom(value).buildPartial();
+          } else {
+            poolEnabled_ = value;
+          }
+          onChanged();
+        } else {
+          poolEnabledBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.enabled
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
+       */
+      public Builder clearPoolEnabled() {
+        if (poolEnabledBuilder_ == null) {
+          poolEnabled_ = null;
+          onChanged();
+        } else {
+          poolEnabled_ = null;
+          poolEnabledBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.enabled
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getPoolEnabledBuilder() {
+        
+        onChanged();
+        return getPoolEnabledFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.enabled
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getPoolEnabledOrBuilder() {
+        if (poolEnabledBuilder_ != null) {
+          return poolEnabledBuilder_.getMessageOrBuilder();
+        } else {
+          return poolEnabled_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : poolEnabled_;
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.enabled
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue pool_enabled = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getPoolEnabledFieldBuilder() {
+        if (poolEnabledBuilder_ == null) {
+          poolEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getPoolEnabled(),
+                  getParentForChildren(),
+                  isClean());
+          poolEnabled_ = null;
+        }
+        return poolEnabledBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value poolMaximumSize_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> poolMaximumSizeBuilder_;
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.maximumpoolsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+       * @return Whether the poolMaximumSize field is set.
+       */
+      public boolean hasPoolMaximumSize() {
+        return poolMaximumSizeBuilder_ != null || poolMaximumSize_ != null;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.maximumpoolsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+       * @return The poolMaximumSize.
+       */
+      public com.google.protobuf.Int64Value getPoolMaximumSize() {
+        if (poolMaximumSizeBuilder_ == null) {
+          return poolMaximumSize_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : poolMaximumSize_;
+        } else {
+          return poolMaximumSizeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.maximumpoolsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+       */
+      public Builder setPoolMaximumSize(com.google.protobuf.Int64Value value) {
+        if (poolMaximumSizeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          poolMaximumSize_ = value;
+          onChanged();
+        } else {
+          poolMaximumSizeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.maximumpoolsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+       */
+      public Builder setPoolMaximumSize(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (poolMaximumSizeBuilder_ == null) {
+          poolMaximumSize_ = builderForValue.build();
+          onChanged();
+        } else {
+          poolMaximumSizeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.maximumpoolsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+       */
+      public Builder mergePoolMaximumSize(com.google.protobuf.Int64Value value) {
+        if (poolMaximumSizeBuilder_ == null) {
+          if (poolMaximumSize_ != null) {
+            poolMaximumSize_ =
+              com.google.protobuf.Int64Value.newBuilder(poolMaximumSize_).mergeFrom(value).buildPartial();
+          } else {
+            poolMaximumSize_ = value;
+          }
+          onChanged();
+        } else {
+          poolMaximumSizeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.maximumpoolsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+       */
+      public Builder clearPoolMaximumSize() {
+        if (poolMaximumSizeBuilder_ == null) {
+          poolMaximumSize_ = null;
+          onChanged();
+        } else {
+          poolMaximumSize_ = null;
+          poolMaximumSizeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.maximumpoolsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getPoolMaximumSizeBuilder() {
+        
+        onChanged();
+        return getPoolMaximumSizeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.maximumpoolsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getPoolMaximumSizeOrBuilder() {
+        if (poolMaximumSizeBuilder_ != null) {
+          return poolMaximumSizeBuilder_.getMessageOrBuilder();
+        } else {
+          return poolMaximumSize_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : poolMaximumSize_;
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.maximumpoolsize
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_maximum_size = 9 [(.yandex.cloud.value) = "10-200"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getPoolMaximumSizeFieldBuilder() {
+        if (poolMaximumSizeBuilder_ == null) {
+          poolMaximumSizeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getPoolMaximumSize(),
+                  getParentForChildren(),
+                  isClean());
+          poolMaximumSize_ = null;
+        }
+        return poolMaximumSizeBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value poolConnectionTimeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> poolConnectionTimeoutBuilder_;
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.connectiontimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
+       * @return Whether the poolConnectionTimeout field is set.
+       */
+      public boolean hasPoolConnectionTimeout() {
+        return poolConnectionTimeoutBuilder_ != null || poolConnectionTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.connectiontimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
+       * @return The poolConnectionTimeout.
+       */
+      public com.google.protobuf.Int64Value getPoolConnectionTimeout() {
+        if (poolConnectionTimeoutBuilder_ == null) {
+          return poolConnectionTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : poolConnectionTimeout_;
+        } else {
+          return poolConnectionTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.connectiontimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
+       */
+      public Builder setPoolConnectionTimeout(com.google.protobuf.Int64Value value) {
+        if (poolConnectionTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          poolConnectionTimeout_ = value;
+          onChanged();
+        } else {
+          poolConnectionTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.connectiontimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
+       */
+      public Builder setPoolConnectionTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (poolConnectionTimeoutBuilder_ == null) {
+          poolConnectionTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          poolConnectionTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.connectiontimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
+       */
+      public Builder mergePoolConnectionTimeout(com.google.protobuf.Int64Value value) {
+        if (poolConnectionTimeoutBuilder_ == null) {
+          if (poolConnectionTimeout_ != null) {
+            poolConnectionTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(poolConnectionTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            poolConnectionTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          poolConnectionTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.connectiontimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
+       */
+      public Builder clearPoolConnectionTimeout() {
+        if (poolConnectionTimeoutBuilder_ == null) {
+          poolConnectionTimeout_ = null;
+          onChanged();
+        } else {
+          poolConnectionTimeout_ = null;
+          poolConnectionTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.connectiontimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getPoolConnectionTimeoutBuilder() {
+        
+        onChanged();
+        return getPoolConnectionTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.connectiontimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getPoolConnectionTimeoutOrBuilder() {
+        if (poolConnectionTimeoutBuilder_ != null) {
+          return poolConnectionTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return poolConnectionTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : poolConnectionTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.connectiontimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_connection_timeout = 10 [(.yandex.cloud.value) = "5000-600000"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getPoolConnectionTimeoutFieldBuilder() {
+        if (poolConnectionTimeoutBuilder_ == null) {
+          poolConnectionTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getPoolConnectionTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          poolConnectionTimeout_ = null;
+        }
+        return poolConnectionTimeoutBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value poolIdleTimeout_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> poolIdleTimeoutBuilder_;
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.idletimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
+       * @return Whether the poolIdleTimeout field is set.
+       */
+      public boolean hasPoolIdleTimeout() {
+        return poolIdleTimeoutBuilder_ != null || poolIdleTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.idletimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
+       * @return The poolIdleTimeout.
+       */
+      public com.google.protobuf.Int64Value getPoolIdleTimeout() {
+        if (poolIdleTimeoutBuilder_ == null) {
+          return poolIdleTimeout_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : poolIdleTimeout_;
+        } else {
+          return poolIdleTimeoutBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.idletimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
+       */
+      public Builder setPoolIdleTimeout(com.google.protobuf.Int64Value value) {
+        if (poolIdleTimeoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          poolIdleTimeout_ = value;
+          onChanged();
+        } else {
+          poolIdleTimeoutBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.idletimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
+       */
+      public Builder setPoolIdleTimeout(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (poolIdleTimeoutBuilder_ == null) {
+          poolIdleTimeout_ = builderForValue.build();
+          onChanged();
+        } else {
+          poolIdleTimeoutBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.idletimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
+       */
+      public Builder mergePoolIdleTimeout(com.google.protobuf.Int64Value value) {
+        if (poolIdleTimeoutBuilder_ == null) {
+          if (poolIdleTimeout_ != null) {
+            poolIdleTimeout_ =
+              com.google.protobuf.Int64Value.newBuilder(poolIdleTimeout_).mergeFrom(value).buildPartial();
+          } else {
+            poolIdleTimeout_ = value;
+          }
+          onChanged();
+        } else {
+          poolIdleTimeoutBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.idletimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
+       */
+      public Builder clearPoolIdleTimeout() {
+        if (poolIdleTimeoutBuilder_ == null) {
+          poolIdleTimeout_ = null;
+          onChanged();
+        } else {
+          poolIdleTimeout_ = null;
+          poolIdleTimeoutBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.idletimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getPoolIdleTimeoutBuilder() {
+        
+        onChanged();
+        return getPoolIdleTimeoutFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.idletimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getPoolIdleTimeoutOrBuilder() {
+        if (poolIdleTimeoutBuilder_ != null) {
+          return poolIdleTimeoutBuilder_.getMessageOrBuilder();
+        } else {
+          return poolIdleTimeout_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : poolIdleTimeout_;
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.idletimeout
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_idle_timeout = 11 [(.yandex.cloud.value) = "5000-600000"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getPoolIdleTimeoutFieldBuilder() {
+        if (poolIdleTimeoutBuilder_ == null) {
+          poolIdleTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getPoolIdleTimeout(),
+                  getParentForChildren(),
+                  isClean());
+          poolIdleTimeout_ = null;
+        }
+        return poolIdleTimeoutBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value poolMinimumIdle_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> poolMinimumIdleBuilder_;
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.minimumidle
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
+       * @return Whether the poolMinimumIdle field is set.
+       */
+      public boolean hasPoolMinimumIdle() {
+        return poolMinimumIdleBuilder_ != null || poolMinimumIdle_ != null;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.minimumidle
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
+       * @return The poolMinimumIdle.
+       */
+      public com.google.protobuf.Int64Value getPoolMinimumIdle() {
+        if (poolMinimumIdleBuilder_ == null) {
+          return poolMinimumIdle_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : poolMinimumIdle_;
+        } else {
+          return poolMinimumIdleBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.minimumidle
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
+       */
+      public Builder setPoolMinimumIdle(com.google.protobuf.Int64Value value) {
+        if (poolMinimumIdleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          poolMinimumIdle_ = value;
+          onChanged();
+        } else {
+          poolMinimumIdleBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.minimumidle
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
+       */
+      public Builder setPoolMinimumIdle(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (poolMinimumIdleBuilder_ == null) {
+          poolMinimumIdle_ = builderForValue.build();
+          onChanged();
+        } else {
+          poolMinimumIdleBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.minimumidle
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
+       */
+      public Builder mergePoolMinimumIdle(com.google.protobuf.Int64Value value) {
+        if (poolMinimumIdleBuilder_ == null) {
+          if (poolMinimumIdle_ != null) {
+            poolMinimumIdle_ =
+              com.google.protobuf.Int64Value.newBuilder(poolMinimumIdle_).mergeFrom(value).buildPartial();
+          } else {
+            poolMinimumIdle_ = value;
+          }
+          onChanged();
+        } else {
+          poolMinimumIdleBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.minimumidle
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
+       */
+      public Builder clearPoolMinimumIdle() {
+        if (poolMinimumIdleBuilder_ == null) {
+          poolMinimumIdle_ = null;
+          onChanged();
+        } else {
+          poolMinimumIdle_ = null;
+          poolMinimumIdleBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.minimumidle
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getPoolMinimumIdleBuilder() {
+        
+        onChanged();
+        return getPoolMinimumIdleFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.minimumidle
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getPoolMinimumIdleOrBuilder() {
+        if (poolMinimumIdleBuilder_ != null) {
+          return poolMinimumIdleBuilder_.getMessageOrBuilder();
+        } else {
+          return poolMinimumIdle_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : poolMinimumIdle_;
+        }
+      }
+      /**
+       * <pre>
+       * Matches jdbc.pool.property.minimumidle
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value pool_minimum_idle = 12 [(.yandex.cloud.value) = "0-200"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getPoolMinimumIdleFieldBuilder() {
+        if (poolMinimumIdleBuilder_ == null) {
+          poolMinimumIdleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getPoolMinimumIdle(),
+                  getParentForChildren(),
+                  isClean());
+          poolMinimumIdle_ = null;
+        }
+        return poolMinimumIdleBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC)
+    private static final yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PXFDatasourceJDBC>
+        PARSER = new com.google.protobuf.AbstractParser<PXFDatasourceJDBC>() {
+      @java.lang.Override
+      public PXFDatasourceJDBC parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PXFDatasourceJDBC(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PXFDatasourceJDBC> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PXFDatasourceJDBC> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PXFDatasourceCoreOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string default_fs = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The defaultFs.
+     */
+    java.lang.String getDefaultFs();
+    /**
+     * <code>string default_fs = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The bytes for defaultFs.
+     */
+    com.google.protobuf.ByteString
+        getDefaultFsBytes();
+
+    /**
+     * <code>string security_auth_to_local = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The securityAuthToLocal.
+     */
+    java.lang.String getSecurityAuthToLocal();
+    /**
+     * <code>string security_auth_to_local = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for securityAuthToLocal.
+     */
+    com.google.protobuf.ByteString
+        getSecurityAuthToLocalBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore}
+   */
+  public static final class PXFDatasourceCore extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore)
+      PXFDatasourceCoreOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PXFDatasourceCore.newBuilder() to construct.
+    private PXFDatasourceCore(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PXFDatasourceCore() {
+      defaultFs_ = "";
+      securityAuthToLocal_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PXFDatasourceCore();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PXFDatasourceCore(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              defaultFs_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              securityAuthToLocal_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceCore_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceCore_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.class, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.Builder.class);
+    }
+
+    public static final int DEFAULT_FS_FIELD_NUMBER = 1;
+    private volatile java.lang.Object defaultFs_;
+    /**
+     * <code>string default_fs = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The defaultFs.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultFs() {
+      java.lang.Object ref = defaultFs_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultFs_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string default_fs = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+     * @return The bytes for defaultFs.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultFsBytes() {
+      java.lang.Object ref = defaultFs_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultFs_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SECURITY_AUTH_TO_LOCAL_FIELD_NUMBER = 2;
+    private volatile java.lang.Object securityAuthToLocal_;
+    /**
+     * <code>string security_auth_to_local = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The securityAuthToLocal.
+     */
+    @java.lang.Override
+    public java.lang.String getSecurityAuthToLocal() {
+      java.lang.Object ref = securityAuthToLocal_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        securityAuthToLocal_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string security_auth_to_local = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for securityAuthToLocal.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSecurityAuthToLocalBytes() {
+      java.lang.Object ref = securityAuthToLocal_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        securityAuthToLocal_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultFs_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, defaultFs_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityAuthToLocal_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, securityAuthToLocal_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultFs_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, defaultFs_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(securityAuthToLocal_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, securityAuthToLocal_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore other = (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore) obj;
+
+      if (!getDefaultFs()
+          .equals(other.getDefaultFs())) return false;
+      if (!getSecurityAuthToLocal()
+          .equals(other.getSecurityAuthToLocal())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DEFAULT_FS_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultFs().hashCode();
+      hash = (37 * hash) + SECURITY_AUTH_TO_LOCAL_FIELD_NUMBER;
+      hash = (53 * hash) + getSecurityAuthToLocal().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore)
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCoreOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceCore_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceCore_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.class, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        defaultFs_ = "";
+
+        securityAuthToLocal_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceCore_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore build() {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore result = new yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore(this);
+        result.defaultFs_ = defaultFs_;
+        result.securityAuthToLocal_ = securityAuthToLocal_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.getDefaultInstance()) return this;
+        if (!other.getDefaultFs().isEmpty()) {
+          defaultFs_ = other.defaultFs_;
+          onChanged();
+        }
+        if (!other.getSecurityAuthToLocal().isEmpty()) {
+          securityAuthToLocal_ = other.securityAuthToLocal_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object defaultFs_ = "";
+      /**
+       * <code>string default_fs = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return The defaultFs.
+       */
+      public java.lang.String getDefaultFs() {
+        java.lang.Object ref = defaultFs_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          defaultFs_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string default_fs = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return The bytes for defaultFs.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultFsBytes() {
+        java.lang.Object ref = defaultFs_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultFs_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string default_fs = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @param value The defaultFs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultFs(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        defaultFs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string default_fs = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultFs() {
+        
+        defaultFs_ = getDefaultInstance().getDefaultFs();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string default_fs = 1 [(.yandex.cloud.length) = "&lt;=200"];</code>
+       * @param value The bytes for defaultFs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultFsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        defaultFs_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object securityAuthToLocal_ = "";
+      /**
+       * <code>string security_auth_to_local = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The securityAuthToLocal.
+       */
+      public java.lang.String getSecurityAuthToLocal() {
+        java.lang.Object ref = securityAuthToLocal_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          securityAuthToLocal_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string security_auth_to_local = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for securityAuthToLocal.
+       */
+      public com.google.protobuf.ByteString
+          getSecurityAuthToLocalBytes() {
+        java.lang.Object ref = securityAuthToLocal_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          securityAuthToLocal_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string security_auth_to_local = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The securityAuthToLocal to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityAuthToLocal(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        securityAuthToLocal_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string security_auth_to_local = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSecurityAuthToLocal() {
+        
+        securityAuthToLocal_ = getDefaultInstance().getSecurityAuthToLocal();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string security_auth_to_local = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for securityAuthToLocal to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSecurityAuthToLocalBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        securityAuthToLocal_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore)
+    private static final yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PXFDatasourceCore>
+        PARSER = new com.google.protobuf.AbstractParser<PXFDatasourceCore>() {
+      @java.lang.Override
+      public PXFDatasourceCore parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PXFDatasourceCore(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PXFDatasourceCore> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PXFDatasourceCore> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PXFDatasourceKerberosOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.google.protobuf.BoolValue enable = 1;</code>
+     * @return Whether the enable field is set.
+     */
+    boolean hasEnable();
+    /**
+     * <code>.google.protobuf.BoolValue enable = 1;</code>
+     * @return The enable.
+     */
+    com.google.protobuf.BoolValue getEnable();
+    /**
+     * <code>.google.protobuf.BoolValue enable = 1;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getEnableOrBuilder();
+
+    /**
+     * <code>string primary = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     * @return The primary.
+     */
+    java.lang.String getPrimary();
+    /**
+     * <code>string primary = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     * @return The bytes for primary.
+     */
+    com.google.protobuf.ByteString
+        getPrimaryBytes();
+
+    /**
+     * <code>string realm = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The realm.
+     */
+    java.lang.String getRealm();
+    /**
+     * <code>string realm = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for realm.
+     */
+    com.google.protobuf.ByteString
+        getRealmBytes();
+
+    /**
+     * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @return A list containing the kdcServers.
+     */
+    java.util.List<java.lang.String>
+        getKdcServersList();
+    /**
+     * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @return The count of kdcServers.
+     */
+    int getKdcServersCount();
+    /**
+     * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @param index The index of the element to return.
+     * @return The kdcServers at the given index.
+     */
+    java.lang.String getKdcServers(int index);
+    /**
+     * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the kdcServers at the given index.
+     */
+    com.google.protobuf.ByteString
+        getKdcServersBytes(int index);
+
+    /**
+     * <code>string admin_server = 5 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     * @return The adminServer.
+     */
+    java.lang.String getAdminServer();
+    /**
+     * <code>string admin_server = 5 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     * @return The bytes for adminServer.
+     */
+    com.google.protobuf.ByteString
+        getAdminServerBytes();
+
+    /**
+     * <code>string default_domain = 6 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     * @return The defaultDomain.
+     */
+    java.lang.String getDefaultDomain();
+    /**
+     * <code>string default_domain = 6 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     * @return The bytes for defaultDomain.
+     */
+    com.google.protobuf.ByteString
+        getDefaultDomainBytes();
+
+    /**
+     * <code>string keytab_base64 = 7 [(.yandex.cloud.pattern) = "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$", (.yandex.cloud.length) = "&lt;=65536"];</code>
+     * @return The keytabBase64.
+     */
+    java.lang.String getKeytabBase64();
+    /**
+     * <code>string keytab_base64 = 7 [(.yandex.cloud.pattern) = "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$", (.yandex.cloud.length) = "&lt;=65536"];</code>
+     * @return The bytes for keytabBase64.
+     */
+    com.google.protobuf.ByteString
+        getKeytabBase64Bytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos}
+   */
+  public static final class PXFDatasourceKerberos extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos)
+      PXFDatasourceKerberosOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PXFDatasourceKerberos.newBuilder() to construct.
+    private PXFDatasourceKerberos(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PXFDatasourceKerberos() {
+      primary_ = "";
+      realm_ = "";
+      kdcServers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      adminServer_ = "";
+      defaultDomain_ = "";
+      keytabBase64_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PXFDatasourceKerberos();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PXFDatasourceKerberos(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (enable_ != null) {
+                subBuilder = enable_.toBuilder();
+              }
+              enable_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(enable_);
+                enable_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              primary_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              realm_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                kdcServers_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              kdcServers_.add(s);
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              adminServer_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              defaultDomain_ = s;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              keytabBase64_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          kdcServers_ = kdcServers_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceKerberos_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceKerberos_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.class, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.Builder.class);
+    }
+
+    public static final int ENABLE_FIELD_NUMBER = 1;
+    private com.google.protobuf.BoolValue enable_;
+    /**
+     * <code>.google.protobuf.BoolValue enable = 1;</code>
+     * @return Whether the enable field is set.
+     */
+    @java.lang.Override
+    public boolean hasEnable() {
+      return enable_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue enable = 1;</code>
+     * @return The enable.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getEnable() {
+      return enable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enable_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue enable = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getEnableOrBuilder() {
+      return getEnable();
+    }
+
+    public static final int PRIMARY_FIELD_NUMBER = 2;
+    private volatile java.lang.Object primary_;
+    /**
+     * <code>string primary = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     * @return The primary.
+     */
+    @java.lang.Override
+    public java.lang.String getPrimary() {
+      java.lang.Object ref = primary_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        primary_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string primary = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     * @return The bytes for primary.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrimaryBytes() {
+      java.lang.Object ref = primary_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        primary_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REALM_FIELD_NUMBER = 3;
+    private volatile java.lang.Object realm_;
+    /**
+     * <code>string realm = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The realm.
+     */
+    @java.lang.Override
+    public java.lang.String getRealm() {
+      java.lang.Object ref = realm_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        realm_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string realm = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for realm.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRealmBytes() {
+      java.lang.Object ref = realm_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        realm_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int KDC_SERVERS_FIELD_NUMBER = 4;
+    private com.google.protobuf.LazyStringList kdcServers_;
+    /**
+     * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @return A list containing the kdcServers.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getKdcServersList() {
+      return kdcServers_;
+    }
+    /**
+     * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @return The count of kdcServers.
+     */
+    public int getKdcServersCount() {
+      return kdcServers_.size();
+    }
+    /**
+     * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @param index The index of the element to return.
+     * @return The kdcServers at the given index.
+     */
+    public java.lang.String getKdcServers(int index) {
+      return kdcServers_.get(index);
+    }
+    /**
+     * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the kdcServers at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getKdcServersBytes(int index) {
+      return kdcServers_.getByteString(index);
+    }
+
+    public static final int ADMIN_SERVER_FIELD_NUMBER = 5;
+    private volatile java.lang.Object adminServer_;
+    /**
+     * <code>string admin_server = 5 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     * @return The adminServer.
+     */
+    @java.lang.Override
+    public java.lang.String getAdminServer() {
+      java.lang.Object ref = adminServer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        adminServer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string admin_server = 5 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     * @return The bytes for adminServer.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAdminServerBytes() {
+      java.lang.Object ref = adminServer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        adminServer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEFAULT_DOMAIN_FIELD_NUMBER = 6;
+    private volatile java.lang.Object defaultDomain_;
+    /**
+     * <code>string default_domain = 6 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     * @return The defaultDomain.
+     */
+    @java.lang.Override
+    public java.lang.String getDefaultDomain() {
+      java.lang.Object ref = defaultDomain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        defaultDomain_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string default_domain = 6 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     * @return The bytes for defaultDomain.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDefaultDomainBytes() {
+      java.lang.Object ref = defaultDomain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        defaultDomain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int KEYTAB_BASE64_FIELD_NUMBER = 7;
+    private volatile java.lang.Object keytabBase64_;
+    /**
+     * <code>string keytab_base64 = 7 [(.yandex.cloud.pattern) = "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$", (.yandex.cloud.length) = "&lt;=65536"];</code>
+     * @return The keytabBase64.
+     */
+    @java.lang.Override
+    public java.lang.String getKeytabBase64() {
+      java.lang.Object ref = keytabBase64_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        keytabBase64_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string keytab_base64 = 7 [(.yandex.cloud.pattern) = "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$", (.yandex.cloud.length) = "&lt;=65536"];</code>
+     * @return The bytes for keytabBase64.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getKeytabBase64Bytes() {
+      java.lang.Object ref = keytabBase64_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        keytabBase64_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (enable_ != null) {
+        output.writeMessage(1, getEnable());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(primary_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, primary_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(realm_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, realm_);
+      }
+      for (int i = 0; i < kdcServers_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, kdcServers_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(adminServer_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, adminServer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultDomain_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, defaultDomain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keytabBase64_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, keytabBase64_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (enable_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getEnable());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(primary_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, primary_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(realm_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, realm_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < kdcServers_.size(); i++) {
+          dataSize += computeStringSizeNoTag(kdcServers_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getKdcServersList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(adminServer_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, adminServer_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultDomain_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, defaultDomain_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keytabBase64_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, keytabBase64_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos other = (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos) obj;
+
+      if (hasEnable() != other.hasEnable()) return false;
+      if (hasEnable()) {
+        if (!getEnable()
+            .equals(other.getEnable())) return false;
+      }
+      if (!getPrimary()
+          .equals(other.getPrimary())) return false;
+      if (!getRealm()
+          .equals(other.getRealm())) return false;
+      if (!getKdcServersList()
+          .equals(other.getKdcServersList())) return false;
+      if (!getAdminServer()
+          .equals(other.getAdminServer())) return false;
+      if (!getDefaultDomain()
+          .equals(other.getDefaultDomain())) return false;
+      if (!getKeytabBase64()
+          .equals(other.getKeytabBase64())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasEnable()) {
+        hash = (37 * hash) + ENABLE_FIELD_NUMBER;
+        hash = (53 * hash) + getEnable().hashCode();
+      }
+      hash = (37 * hash) + PRIMARY_FIELD_NUMBER;
+      hash = (53 * hash) + getPrimary().hashCode();
+      hash = (37 * hash) + REALM_FIELD_NUMBER;
+      hash = (53 * hash) + getRealm().hashCode();
+      if (getKdcServersCount() > 0) {
+        hash = (37 * hash) + KDC_SERVERS_FIELD_NUMBER;
+        hash = (53 * hash) + getKdcServersList().hashCode();
+      }
+      hash = (37 * hash) + ADMIN_SERVER_FIELD_NUMBER;
+      hash = (53 * hash) + getAdminServer().hashCode();
+      hash = (37 * hash) + DEFAULT_DOMAIN_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultDomain().hashCode();
+      hash = (37 * hash) + KEYTAB_BASE64_FIELD_NUMBER;
+      hash = (53 * hash) + getKeytabBase64().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos)
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberosOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceKerberos_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceKerberos_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.class, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (enableBuilder_ == null) {
+          enable_ = null;
+        } else {
+          enable_ = null;
+          enableBuilder_ = null;
+        }
+        primary_ = "";
+
+        realm_ = "";
+
+        kdcServers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        adminServer_ = "";
+
+        defaultDomain_ = "";
+
+        keytabBase64_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceKerberos_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos build() {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos result = new yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos(this);
+        int from_bitField0_ = bitField0_;
+        if (enableBuilder_ == null) {
+          result.enable_ = enable_;
+        } else {
+          result.enable_ = enableBuilder_.build();
+        }
+        result.primary_ = primary_;
+        result.realm_ = realm_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          kdcServers_ = kdcServers_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.kdcServers_ = kdcServers_;
+        result.adminServer_ = adminServer_;
+        result.defaultDomain_ = defaultDomain_;
+        result.keytabBase64_ = keytabBase64_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.getDefaultInstance()) return this;
+        if (other.hasEnable()) {
+          mergeEnable(other.getEnable());
+        }
+        if (!other.getPrimary().isEmpty()) {
+          primary_ = other.primary_;
+          onChanged();
+        }
+        if (!other.getRealm().isEmpty()) {
+          realm_ = other.realm_;
+          onChanged();
+        }
+        if (!other.kdcServers_.isEmpty()) {
+          if (kdcServers_.isEmpty()) {
+            kdcServers_ = other.kdcServers_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureKdcServersIsMutable();
+            kdcServers_.addAll(other.kdcServers_);
+          }
+          onChanged();
+        }
+        if (!other.getAdminServer().isEmpty()) {
+          adminServer_ = other.adminServer_;
+          onChanged();
+        }
+        if (!other.getDefaultDomain().isEmpty()) {
+          defaultDomain_ = other.defaultDomain_;
+          onChanged();
+        }
+        if (!other.getKeytabBase64().isEmpty()) {
+          keytabBase64_ = other.keytabBase64_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.BoolValue enable_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> enableBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue enable = 1;</code>
+       * @return Whether the enable field is set.
+       */
+      public boolean hasEnable() {
+        return enableBuilder_ != null || enable_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue enable = 1;</code>
+       * @return The enable.
+       */
+      public com.google.protobuf.BoolValue getEnable() {
+        if (enableBuilder_ == null) {
+          return enable_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : enable_;
+        } else {
+          return enableBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue enable = 1;</code>
+       */
+      public Builder setEnable(com.google.protobuf.BoolValue value) {
+        if (enableBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          enable_ = value;
+          onChanged();
+        } else {
+          enableBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue enable = 1;</code>
+       */
+      public Builder setEnable(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (enableBuilder_ == null) {
+          enable_ = builderForValue.build();
+          onChanged();
+        } else {
+          enableBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue enable = 1;</code>
+       */
+      public Builder mergeEnable(com.google.protobuf.BoolValue value) {
+        if (enableBuilder_ == null) {
+          if (enable_ != null) {
+            enable_ =
+              com.google.protobuf.BoolValue.newBuilder(enable_).mergeFrom(value).buildPartial();
+          } else {
+            enable_ = value;
+          }
+          onChanged();
+        } else {
+          enableBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue enable = 1;</code>
+       */
+      public Builder clearEnable() {
+        if (enableBuilder_ == null) {
+          enable_ = null;
+          onChanged();
+        } else {
+          enable_ = null;
+          enableBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue enable = 1;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getEnableBuilder() {
+        
+        onChanged();
+        return getEnableFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue enable = 1;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getEnableOrBuilder() {
+        if (enableBuilder_ != null) {
+          return enableBuilder_.getMessageOrBuilder();
+        } else {
+          return enable_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : enable_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue enable = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getEnableFieldBuilder() {
+        if (enableBuilder_ == null) {
+          enableBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getEnable(),
+                  getParentForChildren(),
+                  isClean());
+          enable_ = null;
+        }
+        return enableBuilder_;
+      }
+
+      private java.lang.Object primary_ = "";
+      /**
+       * <code>string primary = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @return The primary.
+       */
+      public java.lang.String getPrimary() {
+        java.lang.Object ref = primary_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          primary_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string primary = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @return The bytes for primary.
+       */
+      public com.google.protobuf.ByteString
+          getPrimaryBytes() {
+        java.lang.Object ref = primary_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          primary_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string primary = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @param value The primary to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrimary(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        primary_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string primary = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrimary() {
+        
+        primary_ = getDefaultInstance().getPrimary();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string primary = 2 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @param value The bytes for primary to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrimaryBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        primary_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object realm_ = "";
+      /**
+       * <code>string realm = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The realm.
+       */
+      public java.lang.String getRealm() {
+        java.lang.Object ref = realm_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          realm_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string realm = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for realm.
+       */
+      public com.google.protobuf.ByteString
+          getRealmBytes() {
+        java.lang.Object ref = realm_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          realm_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string realm = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The realm to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRealm(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        realm_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string realm = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRealm() {
+        
+        realm_ = getDefaultInstance().getRealm();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string realm = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for realm to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRealmBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        realm_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList kdcServers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureKdcServersIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          kdcServers_ = new com.google.protobuf.LazyStringArrayList(kdcServers_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @return A list containing the kdcServers.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getKdcServersList() {
+        return kdcServers_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @return The count of kdcServers.
+       */
+      public int getKdcServersCount() {
+        return kdcServers_.size();
+      }
+      /**
+       * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param index The index of the element to return.
+       * @return The kdcServers at the given index.
+       */
+      public java.lang.String getKdcServers(int index) {
+        return kdcServers_.get(index);
+      }
+      /**
+       * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the kdcServers at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getKdcServersBytes(int index) {
+        return kdcServers_.getByteString(index);
+      }
+      /**
+       * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param index The index to set the value at.
+       * @param value The kdcServers to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKdcServers(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureKdcServersIsMutable();
+        kdcServers_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param value The kdcServers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addKdcServers(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureKdcServersIsMutable();
+        kdcServers_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param values The kdcServers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllKdcServers(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureKdcServersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, kdcServers_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKdcServers() {
+        kdcServers_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string kdc_servers = 4 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param value The bytes of the kdcServers to add.
+       * @return This builder for chaining.
+       */
+      public Builder addKdcServersBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureKdcServersIsMutable();
+        kdcServers_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object adminServer_ = "";
+      /**
+       * <code>string admin_server = 5 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @return The adminServer.
+       */
+      public java.lang.String getAdminServer() {
+        java.lang.Object ref = adminServer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          adminServer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string admin_server = 5 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @return The bytes for adminServer.
+       */
+      public com.google.protobuf.ByteString
+          getAdminServerBytes() {
+        java.lang.Object ref = adminServer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          adminServer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string admin_server = 5 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @param value The adminServer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdminServer(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        adminServer_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string admin_server = 5 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAdminServer() {
+        
+        adminServer_ = getDefaultInstance().getAdminServer();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string admin_server = 5 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @param value The bytes for adminServer to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAdminServerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        adminServer_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object defaultDomain_ = "";
+      /**
+       * <code>string default_domain = 6 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @return The defaultDomain.
+       */
+      public java.lang.String getDefaultDomain() {
+        java.lang.Object ref = defaultDomain_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          defaultDomain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string default_domain = 6 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @return The bytes for defaultDomain.
+       */
+      public com.google.protobuf.ByteString
+          getDefaultDomainBytes() {
+        java.lang.Object ref = defaultDomain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultDomain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string default_domain = 6 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @param value The defaultDomain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultDomain(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        defaultDomain_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string default_domain = 6 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDefaultDomain() {
+        
+        defaultDomain_ = getDefaultInstance().getDefaultDomain();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string default_domain = 6 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @param value The bytes for defaultDomain to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDefaultDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        defaultDomain_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object keytabBase64_ = "";
+      /**
+       * <code>string keytab_base64 = 7 [(.yandex.cloud.pattern) = "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$", (.yandex.cloud.length) = "&lt;=65536"];</code>
+       * @return The keytabBase64.
+       */
+      public java.lang.String getKeytabBase64() {
+        java.lang.Object ref = keytabBase64_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          keytabBase64_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string keytab_base64 = 7 [(.yandex.cloud.pattern) = "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$", (.yandex.cloud.length) = "&lt;=65536"];</code>
+       * @return The bytes for keytabBase64.
+       */
+      public com.google.protobuf.ByteString
+          getKeytabBase64Bytes() {
+        java.lang.Object ref = keytabBase64_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          keytabBase64_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string keytab_base64 = 7 [(.yandex.cloud.pattern) = "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$", (.yandex.cloud.length) = "&lt;=65536"];</code>
+       * @param value The keytabBase64 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeytabBase64(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        keytabBase64_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string keytab_base64 = 7 [(.yandex.cloud.pattern) = "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$", (.yandex.cloud.length) = "&lt;=65536"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearKeytabBase64() {
+        
+        keytabBase64_ = getDefaultInstance().getKeytabBase64();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string keytab_base64 = 7 [(.yandex.cloud.pattern) = "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$", (.yandex.cloud.length) = "&lt;=65536"];</code>
+       * @param value The bytes for keytabBase64 to set.
+       * @return This builder for chaining.
+       */
+      public Builder setKeytabBase64Bytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        keytabBase64_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos)
+    private static final yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PXFDatasourceKerberos>
+        PARSER = new com.google.protobuf.AbstractParser<PXFDatasourceKerberos>() {
+      @java.lang.Override
+      public PXFDatasourceKerberos parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PXFDatasourceKerberos(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PXFDatasourceKerberos> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PXFDatasourceKerberos> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PXFDatasourceHDFSDfsNamenodeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string rpc_address = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The rpcAddress.
+     */
+    java.lang.String getRpcAddress();
+    /**
+     * <code>string rpc_address = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for rpcAddress.
+     */
+    com.google.protobuf.ByteString
+        getRpcAddressBytes();
+
+    /**
+     * <code>string service_rpc_address = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The serviceRpcAddress.
+     */
+    java.lang.String getServiceRpcAddress();
+    /**
+     * <code>string service_rpc_address = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for serviceRpcAddress.
+     */
+    com.google.protobuf.ByteString
+        getServiceRpcAddressBytes();
+
+    /**
+     * <code>string http_address = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The httpAddress.
+     */
+    java.lang.String getHttpAddress();
+    /**
+     * <code>string http_address = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for httpAddress.
+     */
+    com.google.protobuf.ByteString
+        getHttpAddressBytes();
+
+    /**
+     * <code>string https_address = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The httpsAddress.
+     */
+    java.lang.String getHttpsAddress();
+    /**
+     * <code>string https_address = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for httpsAddress.
+     */
+    com.google.protobuf.ByteString
+        getHttpsAddressBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode}
+   */
+  public static final class PXFDatasourceHDFSDfsNamenode extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode)
+      PXFDatasourceHDFSDfsNamenodeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PXFDatasourceHDFSDfsNamenode.newBuilder() to construct.
+    private PXFDatasourceHDFSDfsNamenode(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PXFDatasourceHDFSDfsNamenode() {
+      rpcAddress_ = "";
+      serviceRpcAddress_ = "";
+      httpAddress_ = "";
+      httpsAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PXFDatasourceHDFSDfsNamenode();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PXFDatasourceHDFSDfsNamenode(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              rpcAddress_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              serviceRpcAddress_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              httpAddress_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              httpsAddress_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfsNamenode_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfsNamenode_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode.class, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode.Builder.class);
+    }
+
+    public static final int RPC_ADDRESS_FIELD_NUMBER = 1;
+    private volatile java.lang.Object rpcAddress_;
+    /**
+     * <code>string rpc_address = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The rpcAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getRpcAddress() {
+      java.lang.Object ref = rpcAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        rpcAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string rpc_address = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for rpcAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRpcAddressBytes() {
+      java.lang.Object ref = rpcAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        rpcAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SERVICE_RPC_ADDRESS_FIELD_NUMBER = 2;
+    private volatile java.lang.Object serviceRpcAddress_;
+    /**
+     * <code>string service_rpc_address = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The serviceRpcAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getServiceRpcAddress() {
+      java.lang.Object ref = serviceRpcAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceRpcAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string service_rpc_address = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for serviceRpcAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getServiceRpcAddressBytes() {
+      java.lang.Object ref = serviceRpcAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceRpcAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HTTP_ADDRESS_FIELD_NUMBER = 3;
+    private volatile java.lang.Object httpAddress_;
+    /**
+     * <code>string http_address = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The httpAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getHttpAddress() {
+      java.lang.Object ref = httpAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        httpAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string http_address = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for httpAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHttpAddressBytes() {
+      java.lang.Object ref = httpAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        httpAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HTTPS_ADDRESS_FIELD_NUMBER = 4;
+    private volatile java.lang.Object httpsAddress_;
+    /**
+     * <code>string https_address = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The httpsAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getHttpsAddress() {
+      java.lang.Object ref = httpsAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        httpsAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string https_address = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for httpsAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHttpsAddressBytes() {
+      java.lang.Object ref = httpsAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        httpsAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rpcAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, rpcAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceRpcAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, serviceRpcAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, httpAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpsAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, httpsAddress_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rpcAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, rpcAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(serviceRpcAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, serviceRpcAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, httpAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(httpsAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, httpsAddress_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode other = (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode) obj;
+
+      if (!getRpcAddress()
+          .equals(other.getRpcAddress())) return false;
+      if (!getServiceRpcAddress()
+          .equals(other.getServiceRpcAddress())) return false;
+      if (!getHttpAddress()
+          .equals(other.getHttpAddress())) return false;
+      if (!getHttpsAddress()
+          .equals(other.getHttpsAddress())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RPC_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getRpcAddress().hashCode();
+      hash = (37 * hash) + SERVICE_RPC_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getServiceRpcAddress().hashCode();
+      hash = (37 * hash) + HTTP_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getHttpAddress().hashCode();
+      hash = (37 * hash) + HTTPS_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getHttpsAddress().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode)
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenodeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfsNamenode_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfsNamenode_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode.class, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        rpcAddress_ = "";
+
+        serviceRpcAddress_ = "";
+
+        httpAddress_ = "";
+
+        httpsAddress_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfsNamenode_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode build() {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode result = new yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode(this);
+        result.rpcAddress_ = rpcAddress_;
+        result.serviceRpcAddress_ = serviceRpcAddress_;
+        result.httpAddress_ = httpAddress_;
+        result.httpsAddress_ = httpsAddress_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode.getDefaultInstance()) return this;
+        if (!other.getRpcAddress().isEmpty()) {
+          rpcAddress_ = other.rpcAddress_;
+          onChanged();
+        }
+        if (!other.getServiceRpcAddress().isEmpty()) {
+          serviceRpcAddress_ = other.serviceRpcAddress_;
+          onChanged();
+        }
+        if (!other.getHttpAddress().isEmpty()) {
+          httpAddress_ = other.httpAddress_;
+          onChanged();
+        }
+        if (!other.getHttpsAddress().isEmpty()) {
+          httpsAddress_ = other.httpsAddress_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object rpcAddress_ = "";
+      /**
+       * <code>string rpc_address = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The rpcAddress.
+       */
+      public java.lang.String getRpcAddress() {
+        java.lang.Object ref = rpcAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          rpcAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string rpc_address = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for rpcAddress.
+       */
+      public com.google.protobuf.ByteString
+          getRpcAddressBytes() {
+        java.lang.Object ref = rpcAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          rpcAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string rpc_address = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The rpcAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRpcAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        rpcAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string rpc_address = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRpcAddress() {
+        
+        rpcAddress_ = getDefaultInstance().getRpcAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string rpc_address = 1 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for rpcAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRpcAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        rpcAddress_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object serviceRpcAddress_ = "";
+      /**
+       * <code>string service_rpc_address = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The serviceRpcAddress.
+       */
+      public java.lang.String getServiceRpcAddress() {
+        java.lang.Object ref = serviceRpcAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          serviceRpcAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string service_rpc_address = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for serviceRpcAddress.
+       */
+      public com.google.protobuf.ByteString
+          getServiceRpcAddressBytes() {
+        java.lang.Object ref = serviceRpcAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          serviceRpcAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string service_rpc_address = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The serviceRpcAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceRpcAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        serviceRpcAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_rpc_address = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearServiceRpcAddress() {
+        
+        serviceRpcAddress_ = getDefaultInstance().getServiceRpcAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string service_rpc_address = 2 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for serviceRpcAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setServiceRpcAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        serviceRpcAddress_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object httpAddress_ = "";
+      /**
+       * <code>string http_address = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The httpAddress.
+       */
+      public java.lang.String getHttpAddress() {
+        java.lang.Object ref = httpAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          httpAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string http_address = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for httpAddress.
+       */
+      public com.google.protobuf.ByteString
+          getHttpAddressBytes() {
+        java.lang.Object ref = httpAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          httpAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string http_address = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The httpAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHttpAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        httpAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string http_address = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHttpAddress() {
+        
+        httpAddress_ = getDefaultInstance().getHttpAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string http_address = 3 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for httpAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHttpAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        httpAddress_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object httpsAddress_ = "";
+      /**
+       * <code>string https_address = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The httpsAddress.
+       */
+      public java.lang.String getHttpsAddress() {
+        java.lang.Object ref = httpsAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          httpsAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string https_address = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for httpsAddress.
+       */
+      public com.google.protobuf.ByteString
+          getHttpsAddressBytes() {
+        java.lang.Object ref = httpsAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          httpsAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string https_address = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The httpsAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHttpsAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        httpsAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string https_address = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHttpsAddress() {
+        
+        httpsAddress_ = getDefaultInstance().getHttpsAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string https_address = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for httpsAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHttpsAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        httpsAddress_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode)
+    private static final yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PXFDatasourceHDFSDfsNamenode>
+        PARSER = new com.google.protobuf.AbstractParser<PXFDatasourceHDFSDfsNamenode>() {
+      @java.lang.Override
+      public PXFDatasourceHDFSDfsNamenode parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PXFDatasourceHDFSDfsNamenode(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PXFDatasourceHDFSDfsNamenode> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PXFDatasourceHDFSDfsNamenode> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PXFDatasourceHDFSDfsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
+     * @return Whether the haAutomaticFailoverEnabled field is set.
+     */
+    boolean hasHaAutomaticFailoverEnabled();
+    /**
+     * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
+     * @return The haAutomaticFailoverEnabled.
+     */
+    com.google.protobuf.BoolValue getHaAutomaticFailoverEnabled();
+    /**
+     * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getHaAutomaticFailoverEnabledOrBuilder();
+
+    /**
+     * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
+     * @return Whether the blockAccessTokenEnabled field is set.
+     */
+    boolean hasBlockAccessTokenEnabled();
+    /**
+     * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
+     * @return The blockAccessTokenEnabled.
+     */
+    com.google.protobuf.BoolValue getBlockAccessTokenEnabled();
+    /**
+     * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getBlockAccessTokenEnabledOrBuilder();
+
+    /**
+     * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
+     * @return Whether the useDatanodeHostname field is set.
+     */
+    boolean hasUseDatanodeHostname();
+    /**
+     * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
+     * @return The useDatanodeHostname.
+     */
+    com.google.protobuf.BoolValue getUseDatanodeHostname();
+    /**
+     * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getUseDatanodeHostnameOrBuilder();
+
+    /**
+     * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+     */
+    int getNamenodesCount();
+    /**
+     * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+     */
+    boolean containsNamenodes(
+        java.lang.String key);
+    /**
+     * Use {@link #getNamenodesMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode>
+    getNamenodes();
+    /**
+     * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+     */
+    java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode>
+    getNamenodesMap();
+    /**
+     * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+     */
+
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode getNamenodesOrDefault(
+        java.lang.String key,
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode defaultValue);
+    /**
+     * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+     */
+
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode getNamenodesOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs}
+   */
+  public static final class PXFDatasourceHDFSDfs extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs)
+      PXFDatasourceHDFSDfsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PXFDatasourceHDFSDfs.newBuilder() to construct.
+    private PXFDatasourceHDFSDfs(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PXFDatasourceHDFSDfs() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PXFDatasourceHDFSDfs();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PXFDatasourceHDFSDfs(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (haAutomaticFailoverEnabled_ != null) {
+                subBuilder = haAutomaticFailoverEnabled_.toBuilder();
+              }
+              haAutomaticFailoverEnabled_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(haAutomaticFailoverEnabled_);
+                haAutomaticFailoverEnabled_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (blockAccessTokenEnabled_ != null) {
+                subBuilder = blockAccessTokenEnabled_.toBuilder();
+              }
+              blockAccessTokenEnabled_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(blockAccessTokenEnabled_);
+                blockAccessTokenEnabled_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (useDatanodeHostname_ != null) {
+                subBuilder = useDatanodeHostname_.toBuilder();
+              }
+              useDatanodeHostname_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(useDatanodeHostname_);
+                useDatanodeHostname_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                namenodes_ = com.google.protobuf.MapField.newMapField(
+                    NamenodesDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode>
+              namenodes__ = input.readMessage(
+                  NamenodesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              namenodes_.getMutableMap().put(
+                  namenodes__.getKey(), namenodes__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfs_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 4:
+          return internalGetNamenodes();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfs_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs.class, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs.Builder.class);
+    }
+
+    public static final int HA_AUTOMATIC_FAILOVER_ENABLED_FIELD_NUMBER = 1;
+    private com.google.protobuf.BoolValue haAutomaticFailoverEnabled_;
+    /**
+     * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
+     * @return Whether the haAutomaticFailoverEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasHaAutomaticFailoverEnabled() {
+      return haAutomaticFailoverEnabled_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
+     * @return The haAutomaticFailoverEnabled.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getHaAutomaticFailoverEnabled() {
+      return haAutomaticFailoverEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : haAutomaticFailoverEnabled_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getHaAutomaticFailoverEnabledOrBuilder() {
+      return getHaAutomaticFailoverEnabled();
+    }
+
+    public static final int BLOCK_ACCESS_TOKEN_ENABLED_FIELD_NUMBER = 2;
+    private com.google.protobuf.BoolValue blockAccessTokenEnabled_;
+    /**
+     * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
+     * @return Whether the blockAccessTokenEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasBlockAccessTokenEnabled() {
+      return blockAccessTokenEnabled_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
+     * @return The blockAccessTokenEnabled.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getBlockAccessTokenEnabled() {
+      return blockAccessTokenEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : blockAccessTokenEnabled_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getBlockAccessTokenEnabledOrBuilder() {
+      return getBlockAccessTokenEnabled();
+    }
+
+    public static final int USE_DATANODE_HOSTNAME_FIELD_NUMBER = 3;
+    private com.google.protobuf.BoolValue useDatanodeHostname_;
+    /**
+     * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
+     * @return Whether the useDatanodeHostname field is set.
+     */
+    @java.lang.Override
+    public boolean hasUseDatanodeHostname() {
+      return useDatanodeHostname_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
+     * @return The useDatanodeHostname.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getUseDatanodeHostname() {
+      return useDatanodeHostname_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : useDatanodeHostname_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getUseDatanodeHostnameOrBuilder() {
+      return getUseDatanodeHostname();
+    }
+
+    public static final int NAMENODES_FIELD_NUMBER = 4;
+    private static final class NamenodesDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode>newDefaultInstance(
+                  yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfs_NamenodesEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode> namenodes_;
+    private com.google.protobuf.MapField<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode>
+    internalGetNamenodes() {
+      if (namenodes_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            NamenodesDefaultEntryHolder.defaultEntry);
+      }
+      return namenodes_;
+    }
+
+    public int getNamenodesCount() {
+      return internalGetNamenodes().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+     */
+
+    @java.lang.Override
+    public boolean containsNamenodes(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetNamenodes().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getNamenodesMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode> getNamenodes() {
+      return getNamenodesMap();
+    }
+    /**
+     * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode> getNamenodesMap() {
+      return internalGetNamenodes().getMap();
+    }
+    /**
+     * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+     */
+    @java.lang.Override
+
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode getNamenodesOrDefault(
+        java.lang.String key,
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode> map =
+          internalGetNamenodes().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+     */
+    @java.lang.Override
+
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode getNamenodesOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode> map =
+          internalGetNamenodes().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (haAutomaticFailoverEnabled_ != null) {
+        output.writeMessage(1, getHaAutomaticFailoverEnabled());
+      }
+      if (blockAccessTokenEnabled_ != null) {
+        output.writeMessage(2, getBlockAccessTokenEnabled());
+      }
+      if (useDatanodeHostname_ != null) {
+        output.writeMessage(3, getUseDatanodeHostname());
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetNamenodes(),
+          NamenodesDefaultEntryHolder.defaultEntry,
+          4);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (haAutomaticFailoverEnabled_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getHaAutomaticFailoverEnabled());
+      }
+      if (blockAccessTokenEnabled_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getBlockAccessTokenEnabled());
+      }
+      if (useDatanodeHostname_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getUseDatanodeHostname());
+      }
+      for (java.util.Map.Entry<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode> entry
+           : internalGetNamenodes().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode>
+        namenodes__ = NamenodesDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, namenodes__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs other = (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs) obj;
+
+      if (hasHaAutomaticFailoverEnabled() != other.hasHaAutomaticFailoverEnabled()) return false;
+      if (hasHaAutomaticFailoverEnabled()) {
+        if (!getHaAutomaticFailoverEnabled()
+            .equals(other.getHaAutomaticFailoverEnabled())) return false;
+      }
+      if (hasBlockAccessTokenEnabled() != other.hasBlockAccessTokenEnabled()) return false;
+      if (hasBlockAccessTokenEnabled()) {
+        if (!getBlockAccessTokenEnabled()
+            .equals(other.getBlockAccessTokenEnabled())) return false;
+      }
+      if (hasUseDatanodeHostname() != other.hasUseDatanodeHostname()) return false;
+      if (hasUseDatanodeHostname()) {
+        if (!getUseDatanodeHostname()
+            .equals(other.getUseDatanodeHostname())) return false;
+      }
+      if (!internalGetNamenodes().equals(
+          other.internalGetNamenodes())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasHaAutomaticFailoverEnabled()) {
+        hash = (37 * hash) + HA_AUTOMATIC_FAILOVER_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + getHaAutomaticFailoverEnabled().hashCode();
+      }
+      if (hasBlockAccessTokenEnabled()) {
+        hash = (37 * hash) + BLOCK_ACCESS_TOKEN_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + getBlockAccessTokenEnabled().hashCode();
+      }
+      if (hasUseDatanodeHostname()) {
+        hash = (37 * hash) + USE_DATANODE_HOSTNAME_FIELD_NUMBER;
+        hash = (53 * hash) + getUseDatanodeHostname().hashCode();
+      }
+      if (!internalGetNamenodes().getMap().isEmpty()) {
+        hash = (37 * hash) + NAMENODES_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetNamenodes().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs)
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfs_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetNamenodes();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetMutableNamenodes();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfs_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs.class, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (haAutomaticFailoverEnabledBuilder_ == null) {
+          haAutomaticFailoverEnabled_ = null;
+        } else {
+          haAutomaticFailoverEnabled_ = null;
+          haAutomaticFailoverEnabledBuilder_ = null;
+        }
+        if (blockAccessTokenEnabledBuilder_ == null) {
+          blockAccessTokenEnabled_ = null;
+        } else {
+          blockAccessTokenEnabled_ = null;
+          blockAccessTokenEnabledBuilder_ = null;
+        }
+        if (useDatanodeHostnameBuilder_ == null) {
+          useDatanodeHostname_ = null;
+        } else {
+          useDatanodeHostname_ = null;
+          useDatanodeHostnameBuilder_ = null;
+        }
+        internalGetMutableNamenodes().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfs_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs build() {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs result = new yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs(this);
+        int from_bitField0_ = bitField0_;
+        if (haAutomaticFailoverEnabledBuilder_ == null) {
+          result.haAutomaticFailoverEnabled_ = haAutomaticFailoverEnabled_;
+        } else {
+          result.haAutomaticFailoverEnabled_ = haAutomaticFailoverEnabledBuilder_.build();
+        }
+        if (blockAccessTokenEnabledBuilder_ == null) {
+          result.blockAccessTokenEnabled_ = blockAccessTokenEnabled_;
+        } else {
+          result.blockAccessTokenEnabled_ = blockAccessTokenEnabledBuilder_.build();
+        }
+        if (useDatanodeHostnameBuilder_ == null) {
+          result.useDatanodeHostname_ = useDatanodeHostname_;
+        } else {
+          result.useDatanodeHostname_ = useDatanodeHostnameBuilder_.build();
+        }
+        result.namenodes_ = internalGetNamenodes();
+        result.namenodes_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs.getDefaultInstance()) return this;
+        if (other.hasHaAutomaticFailoverEnabled()) {
+          mergeHaAutomaticFailoverEnabled(other.getHaAutomaticFailoverEnabled());
+        }
+        if (other.hasBlockAccessTokenEnabled()) {
+          mergeBlockAccessTokenEnabled(other.getBlockAccessTokenEnabled());
+        }
+        if (other.hasUseDatanodeHostname()) {
+          mergeUseDatanodeHostname(other.getUseDatanodeHostname());
+        }
+        internalGetMutableNamenodes().mergeFrom(
+            other.internalGetNamenodes());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.BoolValue haAutomaticFailoverEnabled_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> haAutomaticFailoverEnabledBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
+       * @return Whether the haAutomaticFailoverEnabled field is set.
+       */
+      public boolean hasHaAutomaticFailoverEnabled() {
+        return haAutomaticFailoverEnabledBuilder_ != null || haAutomaticFailoverEnabled_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
+       * @return The haAutomaticFailoverEnabled.
+       */
+      public com.google.protobuf.BoolValue getHaAutomaticFailoverEnabled() {
+        if (haAutomaticFailoverEnabledBuilder_ == null) {
+          return haAutomaticFailoverEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : haAutomaticFailoverEnabled_;
+        } else {
+          return haAutomaticFailoverEnabledBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
+       */
+      public Builder setHaAutomaticFailoverEnabled(com.google.protobuf.BoolValue value) {
+        if (haAutomaticFailoverEnabledBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          haAutomaticFailoverEnabled_ = value;
+          onChanged();
+        } else {
+          haAutomaticFailoverEnabledBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
+       */
+      public Builder setHaAutomaticFailoverEnabled(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (haAutomaticFailoverEnabledBuilder_ == null) {
+          haAutomaticFailoverEnabled_ = builderForValue.build();
+          onChanged();
+        } else {
+          haAutomaticFailoverEnabledBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
+       */
+      public Builder mergeHaAutomaticFailoverEnabled(com.google.protobuf.BoolValue value) {
+        if (haAutomaticFailoverEnabledBuilder_ == null) {
+          if (haAutomaticFailoverEnabled_ != null) {
+            haAutomaticFailoverEnabled_ =
+              com.google.protobuf.BoolValue.newBuilder(haAutomaticFailoverEnabled_).mergeFrom(value).buildPartial();
+          } else {
+            haAutomaticFailoverEnabled_ = value;
+          }
+          onChanged();
+        } else {
+          haAutomaticFailoverEnabledBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
+       */
+      public Builder clearHaAutomaticFailoverEnabled() {
+        if (haAutomaticFailoverEnabledBuilder_ == null) {
+          haAutomaticFailoverEnabled_ = null;
+          onChanged();
+        } else {
+          haAutomaticFailoverEnabled_ = null;
+          haAutomaticFailoverEnabledBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getHaAutomaticFailoverEnabledBuilder() {
+        
+        onChanged();
+        return getHaAutomaticFailoverEnabledFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getHaAutomaticFailoverEnabledOrBuilder() {
+        if (haAutomaticFailoverEnabledBuilder_ != null) {
+          return haAutomaticFailoverEnabledBuilder_.getMessageOrBuilder();
+        } else {
+          return haAutomaticFailoverEnabled_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : haAutomaticFailoverEnabled_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue ha_automatic_failover_enabled = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getHaAutomaticFailoverEnabledFieldBuilder() {
+        if (haAutomaticFailoverEnabledBuilder_ == null) {
+          haAutomaticFailoverEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getHaAutomaticFailoverEnabled(),
+                  getParentForChildren(),
+                  isClean());
+          haAutomaticFailoverEnabled_ = null;
+        }
+        return haAutomaticFailoverEnabledBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue blockAccessTokenEnabled_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> blockAccessTokenEnabledBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
+       * @return Whether the blockAccessTokenEnabled field is set.
+       */
+      public boolean hasBlockAccessTokenEnabled() {
+        return blockAccessTokenEnabledBuilder_ != null || blockAccessTokenEnabled_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
+       * @return The blockAccessTokenEnabled.
+       */
+      public com.google.protobuf.BoolValue getBlockAccessTokenEnabled() {
+        if (blockAccessTokenEnabledBuilder_ == null) {
+          return blockAccessTokenEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : blockAccessTokenEnabled_;
+        } else {
+          return blockAccessTokenEnabledBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
+       */
+      public Builder setBlockAccessTokenEnabled(com.google.protobuf.BoolValue value) {
+        if (blockAccessTokenEnabledBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          blockAccessTokenEnabled_ = value;
+          onChanged();
+        } else {
+          blockAccessTokenEnabledBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
+       */
+      public Builder setBlockAccessTokenEnabled(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (blockAccessTokenEnabledBuilder_ == null) {
+          blockAccessTokenEnabled_ = builderForValue.build();
+          onChanged();
+        } else {
+          blockAccessTokenEnabledBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
+       */
+      public Builder mergeBlockAccessTokenEnabled(com.google.protobuf.BoolValue value) {
+        if (blockAccessTokenEnabledBuilder_ == null) {
+          if (blockAccessTokenEnabled_ != null) {
+            blockAccessTokenEnabled_ =
+              com.google.protobuf.BoolValue.newBuilder(blockAccessTokenEnabled_).mergeFrom(value).buildPartial();
+          } else {
+            blockAccessTokenEnabled_ = value;
+          }
+          onChanged();
+        } else {
+          blockAccessTokenEnabledBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
+       */
+      public Builder clearBlockAccessTokenEnabled() {
+        if (blockAccessTokenEnabledBuilder_ == null) {
+          blockAccessTokenEnabled_ = null;
+          onChanged();
+        } else {
+          blockAccessTokenEnabled_ = null;
+          blockAccessTokenEnabledBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getBlockAccessTokenEnabledBuilder() {
+        
+        onChanged();
+        return getBlockAccessTokenEnabledFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getBlockAccessTokenEnabledOrBuilder() {
+        if (blockAccessTokenEnabledBuilder_ != null) {
+          return blockAccessTokenEnabledBuilder_.getMessageOrBuilder();
+        } else {
+          return blockAccessTokenEnabled_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : blockAccessTokenEnabled_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue block_access_token_enabled = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getBlockAccessTokenEnabledFieldBuilder() {
+        if (blockAccessTokenEnabledBuilder_ == null) {
+          blockAccessTokenEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getBlockAccessTokenEnabled(),
+                  getParentForChildren(),
+                  isClean());
+          blockAccessTokenEnabled_ = null;
+        }
+        return blockAccessTokenEnabledBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue useDatanodeHostname_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> useDatanodeHostnameBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
+       * @return Whether the useDatanodeHostname field is set.
+       */
+      public boolean hasUseDatanodeHostname() {
+        return useDatanodeHostnameBuilder_ != null || useDatanodeHostname_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
+       * @return The useDatanodeHostname.
+       */
+      public com.google.protobuf.BoolValue getUseDatanodeHostname() {
+        if (useDatanodeHostnameBuilder_ == null) {
+          return useDatanodeHostname_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : useDatanodeHostname_;
+        } else {
+          return useDatanodeHostnameBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
+       */
+      public Builder setUseDatanodeHostname(com.google.protobuf.BoolValue value) {
+        if (useDatanodeHostnameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          useDatanodeHostname_ = value;
+          onChanged();
+        } else {
+          useDatanodeHostnameBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
+       */
+      public Builder setUseDatanodeHostname(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (useDatanodeHostnameBuilder_ == null) {
+          useDatanodeHostname_ = builderForValue.build();
+          onChanged();
+        } else {
+          useDatanodeHostnameBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
+       */
+      public Builder mergeUseDatanodeHostname(com.google.protobuf.BoolValue value) {
+        if (useDatanodeHostnameBuilder_ == null) {
+          if (useDatanodeHostname_ != null) {
+            useDatanodeHostname_ =
+              com.google.protobuf.BoolValue.newBuilder(useDatanodeHostname_).mergeFrom(value).buildPartial();
+          } else {
+            useDatanodeHostname_ = value;
+          }
+          onChanged();
+        } else {
+          useDatanodeHostnameBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
+       */
+      public Builder clearUseDatanodeHostname() {
+        if (useDatanodeHostnameBuilder_ == null) {
+          useDatanodeHostname_ = null;
+          onChanged();
+        } else {
+          useDatanodeHostname_ = null;
+          useDatanodeHostnameBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getUseDatanodeHostnameBuilder() {
+        
+        onChanged();
+        return getUseDatanodeHostnameFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getUseDatanodeHostnameOrBuilder() {
+        if (useDatanodeHostnameBuilder_ != null) {
+          return useDatanodeHostnameBuilder_.getMessageOrBuilder();
+        } else {
+          return useDatanodeHostname_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : useDatanodeHostname_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue use_datanode_hostname = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getUseDatanodeHostnameFieldBuilder() {
+        if (useDatanodeHostnameBuilder_ == null) {
+          useDatanodeHostnameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getUseDatanodeHostname(),
+                  getParentForChildren(),
+                  isClean());
+          useDatanodeHostname_ = null;
+        }
+        return useDatanodeHostnameBuilder_;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode> namenodes_;
+      private com.google.protobuf.MapField<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode>
+      internalGetNamenodes() {
+        if (namenodes_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              NamenodesDefaultEntryHolder.defaultEntry);
+        }
+        return namenodes_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode>
+      internalGetMutableNamenodes() {
+        onChanged();;
+        if (namenodes_ == null) {
+          namenodes_ = com.google.protobuf.MapField.newMapField(
+              NamenodesDefaultEntryHolder.defaultEntry);
+        }
+        if (!namenodes_.isMutable()) {
+          namenodes_ = namenodes_.copy();
+        }
+        return namenodes_;
+      }
+
+      public int getNamenodesCount() {
+        return internalGetNamenodes().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+       */
+
+      @java.lang.Override
+      public boolean containsNamenodes(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetNamenodes().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getNamenodesMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode> getNamenodes() {
+        return getNamenodesMap();
+      }
+      /**
+       * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode> getNamenodesMap() {
+        return internalGetNamenodes().getMap();
+      }
+      /**
+       * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+       */
+      @java.lang.Override
+
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode getNamenodesOrDefault(
+          java.lang.String key,
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode> map =
+            internalGetNamenodes().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+       */
+      @java.lang.Override
+
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode getNamenodesOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode> map =
+            internalGetNamenodes().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearNamenodes() {
+        internalGetMutableNamenodes().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+       */
+
+      public Builder removeNamenodes(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableNamenodes().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode>
+      getMutableNamenodes() {
+        return internalGetMutableNamenodes().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+       */
+      public Builder putNamenodes(
+          java.lang.String key,
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableNamenodes().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfsNamenode&gt; namenodes = 4 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+       */
+
+      public Builder putAllNamenodes(
+          java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsNamenode> values) {
+        internalGetMutableNamenodes().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs)
+    private static final yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PXFDatasourceHDFSDfs>
+        PARSER = new com.google.protobuf.AbstractParser<PXFDatasourceHDFSDfs>() {
+      @java.lang.Override
+      public PXFDatasourceHDFSDfs parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PXFDatasourceHDFSDfs(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PXFDatasourceHDFSDfs> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PXFDatasourceHDFSDfs> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PXFDatasourceHDFSYarnHaRmOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string resourcemanager_address = 1;</code>
+     * @return The resourcemanagerAddress.
+     */
+    java.lang.String getResourcemanagerAddress();
+    /**
+     * <code>string resourcemanager_address = 1;</code>
+     * @return The bytes for resourcemanagerAddress.
+     */
+    com.google.protobuf.ByteString
+        getResourcemanagerAddressBytes();
+
+    /**
+     * <code>string resourcemanager_scheduler_address = 2;</code>
+     * @return The resourcemanagerSchedulerAddress.
+     */
+    java.lang.String getResourcemanagerSchedulerAddress();
+    /**
+     * <code>string resourcemanager_scheduler_address = 2;</code>
+     * @return The bytes for resourcemanagerSchedulerAddress.
+     */
+    com.google.protobuf.ByteString
+        getResourcemanagerSchedulerAddressBytes();
+
+    /**
+     * <code>string resourcemanager_resource_tracker_address = 3;</code>
+     * @return The resourcemanagerResourceTrackerAddress.
+     */
+    java.lang.String getResourcemanagerResourceTrackerAddress();
+    /**
+     * <code>string resourcemanager_resource_tracker_address = 3;</code>
+     * @return The bytes for resourcemanagerResourceTrackerAddress.
+     */
+    com.google.protobuf.ByteString
+        getResourcemanagerResourceTrackerAddressBytes();
+
+    /**
+     * <code>string resourcemanager_admin_address = 4;</code>
+     * @return The resourcemanagerAdminAddress.
+     */
+    java.lang.String getResourcemanagerAdminAddress();
+    /**
+     * <code>string resourcemanager_admin_address = 4;</code>
+     * @return The bytes for resourcemanagerAdminAddress.
+     */
+    com.google.protobuf.ByteString
+        getResourcemanagerAdminAddressBytes();
+
+    /**
+     * <code>string resourcemanager_webapp_address = 5;</code>
+     * @return The resourcemanagerWebappAddress.
+     */
+    java.lang.String getResourcemanagerWebappAddress();
+    /**
+     * <code>string resourcemanager_webapp_address = 5;</code>
+     * @return The bytes for resourcemanagerWebappAddress.
+     */
+    com.google.protobuf.ByteString
+        getResourcemanagerWebappAddressBytes();
+
+    /**
+     * <code>string resourcemanager_webapp_https_address = 6;</code>
+     * @return The resourcemanagerWebappHttpsAddress.
+     */
+    java.lang.String getResourcemanagerWebappHttpsAddress();
+    /**
+     * <code>string resourcemanager_webapp_https_address = 6;</code>
+     * @return The bytes for resourcemanagerWebappHttpsAddress.
+     */
+    com.google.protobuf.ByteString
+        getResourcemanagerWebappHttpsAddressBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm}
+   */
+  public static final class PXFDatasourceHDFSYarnHaRm extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm)
+      PXFDatasourceHDFSYarnHaRmOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PXFDatasourceHDFSYarnHaRm.newBuilder() to construct.
+    private PXFDatasourceHDFSYarnHaRm(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PXFDatasourceHDFSYarnHaRm() {
+      resourcemanagerAddress_ = "";
+      resourcemanagerSchedulerAddress_ = "";
+      resourcemanagerResourceTrackerAddress_ = "";
+      resourcemanagerAdminAddress_ = "";
+      resourcemanagerWebappAddress_ = "";
+      resourcemanagerWebappHttpsAddress_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PXFDatasourceHDFSYarnHaRm();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PXFDatasourceHDFSYarnHaRm(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resourcemanagerAddress_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resourcemanagerSchedulerAddress_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resourcemanagerResourceTrackerAddress_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resourcemanagerAdminAddress_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resourcemanagerWebappAddress_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resourcemanagerWebappHttpsAddress_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarnHaRm_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarnHaRm_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm.class, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm.Builder.class);
+    }
+
+    public static final int RESOURCEMANAGER_ADDRESS_FIELD_NUMBER = 1;
+    private volatile java.lang.Object resourcemanagerAddress_;
+    /**
+     * <code>string resourcemanager_address = 1;</code>
+     * @return The resourcemanagerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getResourcemanagerAddress() {
+      java.lang.Object ref = resourcemanagerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourcemanagerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string resourcemanager_address = 1;</code>
+     * @return The bytes for resourcemanagerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourcemanagerAddressBytes() {
+      java.lang.Object ref = resourcemanagerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourcemanagerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESOURCEMANAGER_SCHEDULER_ADDRESS_FIELD_NUMBER = 2;
+    private volatile java.lang.Object resourcemanagerSchedulerAddress_;
+    /**
+     * <code>string resourcemanager_scheduler_address = 2;</code>
+     * @return The resourcemanagerSchedulerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getResourcemanagerSchedulerAddress() {
+      java.lang.Object ref = resourcemanagerSchedulerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourcemanagerSchedulerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string resourcemanager_scheduler_address = 2;</code>
+     * @return The bytes for resourcemanagerSchedulerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourcemanagerSchedulerAddressBytes() {
+      java.lang.Object ref = resourcemanagerSchedulerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourcemanagerSchedulerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESOURCEMANAGER_RESOURCE_TRACKER_ADDRESS_FIELD_NUMBER = 3;
+    private volatile java.lang.Object resourcemanagerResourceTrackerAddress_;
+    /**
+     * <code>string resourcemanager_resource_tracker_address = 3;</code>
+     * @return The resourcemanagerResourceTrackerAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getResourcemanagerResourceTrackerAddress() {
+      java.lang.Object ref = resourcemanagerResourceTrackerAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourcemanagerResourceTrackerAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string resourcemanager_resource_tracker_address = 3;</code>
+     * @return The bytes for resourcemanagerResourceTrackerAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourcemanagerResourceTrackerAddressBytes() {
+      java.lang.Object ref = resourcemanagerResourceTrackerAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourcemanagerResourceTrackerAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESOURCEMANAGER_ADMIN_ADDRESS_FIELD_NUMBER = 4;
+    private volatile java.lang.Object resourcemanagerAdminAddress_;
+    /**
+     * <code>string resourcemanager_admin_address = 4;</code>
+     * @return The resourcemanagerAdminAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getResourcemanagerAdminAddress() {
+      java.lang.Object ref = resourcemanagerAdminAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourcemanagerAdminAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string resourcemanager_admin_address = 4;</code>
+     * @return The bytes for resourcemanagerAdminAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourcemanagerAdminAddressBytes() {
+      java.lang.Object ref = resourcemanagerAdminAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourcemanagerAdminAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESOURCEMANAGER_WEBAPP_ADDRESS_FIELD_NUMBER = 5;
+    private volatile java.lang.Object resourcemanagerWebappAddress_;
+    /**
+     * <code>string resourcemanager_webapp_address = 5;</code>
+     * @return The resourcemanagerWebappAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getResourcemanagerWebappAddress() {
+      java.lang.Object ref = resourcemanagerWebappAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourcemanagerWebappAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string resourcemanager_webapp_address = 5;</code>
+     * @return The bytes for resourcemanagerWebappAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourcemanagerWebappAddressBytes() {
+      java.lang.Object ref = resourcemanagerWebappAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourcemanagerWebappAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESOURCEMANAGER_WEBAPP_HTTPS_ADDRESS_FIELD_NUMBER = 6;
+    private volatile java.lang.Object resourcemanagerWebappHttpsAddress_;
+    /**
+     * <code>string resourcemanager_webapp_https_address = 6;</code>
+     * @return The resourcemanagerWebappHttpsAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getResourcemanagerWebappHttpsAddress() {
+      java.lang.Object ref = resourcemanagerWebappHttpsAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourcemanagerWebappHttpsAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string resourcemanager_webapp_https_address = 6;</code>
+     * @return The bytes for resourcemanagerWebappHttpsAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourcemanagerWebappHttpsAddressBytes() {
+      java.lang.Object ref = resourcemanagerWebappHttpsAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourcemanagerWebappHttpsAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcemanagerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourcemanagerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcemanagerSchedulerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, resourcemanagerSchedulerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcemanagerResourceTrackerAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, resourcemanagerResourceTrackerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcemanagerAdminAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, resourcemanagerAdminAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcemanagerWebappAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, resourcemanagerWebappAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcemanagerWebappHttpsAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, resourcemanagerWebappHttpsAddress_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcemanagerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourcemanagerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcemanagerSchedulerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, resourcemanagerSchedulerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcemanagerResourceTrackerAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, resourcemanagerResourceTrackerAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcemanagerAdminAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, resourcemanagerAdminAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcemanagerWebappAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, resourcemanagerWebappAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcemanagerWebappHttpsAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, resourcemanagerWebappHttpsAddress_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm other = (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm) obj;
+
+      if (!getResourcemanagerAddress()
+          .equals(other.getResourcemanagerAddress())) return false;
+      if (!getResourcemanagerSchedulerAddress()
+          .equals(other.getResourcemanagerSchedulerAddress())) return false;
+      if (!getResourcemanagerResourceTrackerAddress()
+          .equals(other.getResourcemanagerResourceTrackerAddress())) return false;
+      if (!getResourcemanagerAdminAddress()
+          .equals(other.getResourcemanagerAdminAddress())) return false;
+      if (!getResourcemanagerWebappAddress()
+          .equals(other.getResourcemanagerWebappAddress())) return false;
+      if (!getResourcemanagerWebappHttpsAddress()
+          .equals(other.getResourcemanagerWebappHttpsAddress())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESOURCEMANAGER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getResourcemanagerAddress().hashCode();
+      hash = (37 * hash) + RESOURCEMANAGER_SCHEDULER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getResourcemanagerSchedulerAddress().hashCode();
+      hash = (37 * hash) + RESOURCEMANAGER_RESOURCE_TRACKER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getResourcemanagerResourceTrackerAddress().hashCode();
+      hash = (37 * hash) + RESOURCEMANAGER_ADMIN_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getResourcemanagerAdminAddress().hashCode();
+      hash = (37 * hash) + RESOURCEMANAGER_WEBAPP_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getResourcemanagerWebappAddress().hashCode();
+      hash = (37 * hash) + RESOURCEMANAGER_WEBAPP_HTTPS_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getResourcemanagerWebappHttpsAddress().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm)
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRmOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarnHaRm_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarnHaRm_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm.class, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        resourcemanagerAddress_ = "";
+
+        resourcemanagerSchedulerAddress_ = "";
+
+        resourcemanagerResourceTrackerAddress_ = "";
+
+        resourcemanagerAdminAddress_ = "";
+
+        resourcemanagerWebappAddress_ = "";
+
+        resourcemanagerWebappHttpsAddress_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarnHaRm_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm build() {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm result = new yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm(this);
+        result.resourcemanagerAddress_ = resourcemanagerAddress_;
+        result.resourcemanagerSchedulerAddress_ = resourcemanagerSchedulerAddress_;
+        result.resourcemanagerResourceTrackerAddress_ = resourcemanagerResourceTrackerAddress_;
+        result.resourcemanagerAdminAddress_ = resourcemanagerAdminAddress_;
+        result.resourcemanagerWebappAddress_ = resourcemanagerWebappAddress_;
+        result.resourcemanagerWebappHttpsAddress_ = resourcemanagerWebappHttpsAddress_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm.getDefaultInstance()) return this;
+        if (!other.getResourcemanagerAddress().isEmpty()) {
+          resourcemanagerAddress_ = other.resourcemanagerAddress_;
+          onChanged();
+        }
+        if (!other.getResourcemanagerSchedulerAddress().isEmpty()) {
+          resourcemanagerSchedulerAddress_ = other.resourcemanagerSchedulerAddress_;
+          onChanged();
+        }
+        if (!other.getResourcemanagerResourceTrackerAddress().isEmpty()) {
+          resourcemanagerResourceTrackerAddress_ = other.resourcemanagerResourceTrackerAddress_;
+          onChanged();
+        }
+        if (!other.getResourcemanagerAdminAddress().isEmpty()) {
+          resourcemanagerAdminAddress_ = other.resourcemanagerAdminAddress_;
+          onChanged();
+        }
+        if (!other.getResourcemanagerWebappAddress().isEmpty()) {
+          resourcemanagerWebappAddress_ = other.resourcemanagerWebappAddress_;
+          onChanged();
+        }
+        if (!other.getResourcemanagerWebappHttpsAddress().isEmpty()) {
+          resourcemanagerWebappHttpsAddress_ = other.resourcemanagerWebappHttpsAddress_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object resourcemanagerAddress_ = "";
+      /**
+       * <code>string resourcemanager_address = 1;</code>
+       * @return The resourcemanagerAddress.
+       */
+      public java.lang.String getResourcemanagerAddress() {
+        java.lang.Object ref = resourcemanagerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourcemanagerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string resourcemanager_address = 1;</code>
+       * @return The bytes for resourcemanagerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getResourcemanagerAddressBytes() {
+        java.lang.Object ref = resourcemanagerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourcemanagerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string resourcemanager_address = 1;</code>
+       * @param value The resourcemanagerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourcemanagerAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resourcemanagerAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resourcemanager_address = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourcemanagerAddress() {
+        
+        resourcemanagerAddress_ = getDefaultInstance().getResourcemanagerAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resourcemanager_address = 1;</code>
+       * @param value The bytes for resourcemanagerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourcemanagerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resourcemanagerAddress_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object resourcemanagerSchedulerAddress_ = "";
+      /**
+       * <code>string resourcemanager_scheduler_address = 2;</code>
+       * @return The resourcemanagerSchedulerAddress.
+       */
+      public java.lang.String getResourcemanagerSchedulerAddress() {
+        java.lang.Object ref = resourcemanagerSchedulerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourcemanagerSchedulerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string resourcemanager_scheduler_address = 2;</code>
+       * @return The bytes for resourcemanagerSchedulerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getResourcemanagerSchedulerAddressBytes() {
+        java.lang.Object ref = resourcemanagerSchedulerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourcemanagerSchedulerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string resourcemanager_scheduler_address = 2;</code>
+       * @param value The resourcemanagerSchedulerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourcemanagerSchedulerAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resourcemanagerSchedulerAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resourcemanager_scheduler_address = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourcemanagerSchedulerAddress() {
+        
+        resourcemanagerSchedulerAddress_ = getDefaultInstance().getResourcemanagerSchedulerAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resourcemanager_scheduler_address = 2;</code>
+       * @param value The bytes for resourcemanagerSchedulerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourcemanagerSchedulerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resourcemanagerSchedulerAddress_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object resourcemanagerResourceTrackerAddress_ = "";
+      /**
+       * <code>string resourcemanager_resource_tracker_address = 3;</code>
+       * @return The resourcemanagerResourceTrackerAddress.
+       */
+      public java.lang.String getResourcemanagerResourceTrackerAddress() {
+        java.lang.Object ref = resourcemanagerResourceTrackerAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourcemanagerResourceTrackerAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string resourcemanager_resource_tracker_address = 3;</code>
+       * @return The bytes for resourcemanagerResourceTrackerAddress.
+       */
+      public com.google.protobuf.ByteString
+          getResourcemanagerResourceTrackerAddressBytes() {
+        java.lang.Object ref = resourcemanagerResourceTrackerAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourcemanagerResourceTrackerAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string resourcemanager_resource_tracker_address = 3;</code>
+       * @param value The resourcemanagerResourceTrackerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourcemanagerResourceTrackerAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resourcemanagerResourceTrackerAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resourcemanager_resource_tracker_address = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourcemanagerResourceTrackerAddress() {
+        
+        resourcemanagerResourceTrackerAddress_ = getDefaultInstance().getResourcemanagerResourceTrackerAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resourcemanager_resource_tracker_address = 3;</code>
+       * @param value The bytes for resourcemanagerResourceTrackerAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourcemanagerResourceTrackerAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resourcemanagerResourceTrackerAddress_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object resourcemanagerAdminAddress_ = "";
+      /**
+       * <code>string resourcemanager_admin_address = 4;</code>
+       * @return The resourcemanagerAdminAddress.
+       */
+      public java.lang.String getResourcemanagerAdminAddress() {
+        java.lang.Object ref = resourcemanagerAdminAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourcemanagerAdminAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string resourcemanager_admin_address = 4;</code>
+       * @return The bytes for resourcemanagerAdminAddress.
+       */
+      public com.google.protobuf.ByteString
+          getResourcemanagerAdminAddressBytes() {
+        java.lang.Object ref = resourcemanagerAdminAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourcemanagerAdminAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string resourcemanager_admin_address = 4;</code>
+       * @param value The resourcemanagerAdminAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourcemanagerAdminAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resourcemanagerAdminAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resourcemanager_admin_address = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourcemanagerAdminAddress() {
+        
+        resourcemanagerAdminAddress_ = getDefaultInstance().getResourcemanagerAdminAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resourcemanager_admin_address = 4;</code>
+       * @param value The bytes for resourcemanagerAdminAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourcemanagerAdminAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resourcemanagerAdminAddress_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object resourcemanagerWebappAddress_ = "";
+      /**
+       * <code>string resourcemanager_webapp_address = 5;</code>
+       * @return The resourcemanagerWebappAddress.
+       */
+      public java.lang.String getResourcemanagerWebappAddress() {
+        java.lang.Object ref = resourcemanagerWebappAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourcemanagerWebappAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string resourcemanager_webapp_address = 5;</code>
+       * @return The bytes for resourcemanagerWebappAddress.
+       */
+      public com.google.protobuf.ByteString
+          getResourcemanagerWebappAddressBytes() {
+        java.lang.Object ref = resourcemanagerWebappAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourcemanagerWebappAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string resourcemanager_webapp_address = 5;</code>
+       * @param value The resourcemanagerWebappAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourcemanagerWebappAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resourcemanagerWebappAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resourcemanager_webapp_address = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourcemanagerWebappAddress() {
+        
+        resourcemanagerWebappAddress_ = getDefaultInstance().getResourcemanagerWebappAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resourcemanager_webapp_address = 5;</code>
+       * @param value The bytes for resourcemanagerWebappAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourcemanagerWebappAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resourcemanagerWebappAddress_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object resourcemanagerWebappHttpsAddress_ = "";
+      /**
+       * <code>string resourcemanager_webapp_https_address = 6;</code>
+       * @return The resourcemanagerWebappHttpsAddress.
+       */
+      public java.lang.String getResourcemanagerWebappHttpsAddress() {
+        java.lang.Object ref = resourcemanagerWebappHttpsAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourcemanagerWebappHttpsAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string resourcemanager_webapp_https_address = 6;</code>
+       * @return The bytes for resourcemanagerWebappHttpsAddress.
+       */
+      public com.google.protobuf.ByteString
+          getResourcemanagerWebappHttpsAddressBytes() {
+        java.lang.Object ref = resourcemanagerWebappHttpsAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourcemanagerWebappHttpsAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string resourcemanager_webapp_https_address = 6;</code>
+       * @param value The resourcemanagerWebappHttpsAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourcemanagerWebappHttpsAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resourcemanagerWebappHttpsAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resourcemanager_webapp_https_address = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourcemanagerWebappHttpsAddress() {
+        
+        resourcemanagerWebappHttpsAddress_ = getDefaultInstance().getResourcemanagerWebappHttpsAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resourcemanager_webapp_https_address = 6;</code>
+       * @param value The bytes for resourcemanagerWebappHttpsAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourcemanagerWebappHttpsAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resourcemanagerWebappHttpsAddress_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm)
+    private static final yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PXFDatasourceHDFSYarnHaRm>
+        PARSER = new com.google.protobuf.AbstractParser<PXFDatasourceHDFSYarnHaRm>() {
+      @java.lang.Override
+      public PXFDatasourceHDFSYarnHaRm parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PXFDatasourceHDFSYarnHaRm(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PXFDatasourceHDFSYarnHaRm> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PXFDatasourceHDFSYarnHaRm> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PXFDatasourceHDFSYarnOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
+     * @return Whether the resourcemanagerHaEnabled field is set.
+     */
+    boolean hasResourcemanagerHaEnabled();
+    /**
+     * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
+     * @return The resourcemanagerHaEnabled.
+     */
+    com.google.protobuf.BoolValue getResourcemanagerHaEnabled();
+    /**
+     * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getResourcemanagerHaEnabledOrBuilder();
+
+    /**
+     * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
+     * @return Whether the resourcemanagerHaAutoFailoverEnabled field is set.
+     */
+    boolean hasResourcemanagerHaAutoFailoverEnabled();
+    /**
+     * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
+     * @return The resourcemanagerHaAutoFailoverEnabled.
+     */
+    com.google.protobuf.BoolValue getResourcemanagerHaAutoFailoverEnabled();
+    /**
+     * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getResourcemanagerHaAutoFailoverEnabledOrBuilder();
+
+    /**
+     * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
+     * @return Whether the resourcemanagerHaAutoFailoverEmbedded field is set.
+     */
+    boolean hasResourcemanagerHaAutoFailoverEmbedded();
+    /**
+     * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
+     * @return The resourcemanagerHaAutoFailoverEmbedded.
+     */
+    com.google.protobuf.BoolValue getResourcemanagerHaAutoFailoverEmbedded();
+    /**
+     * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getResourcemanagerHaAutoFailoverEmbeddedOrBuilder();
+
+    /**
+     * <code>string resourcemanager_cluster_id = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The resourcemanagerClusterId.
+     */
+    java.lang.String getResourcemanagerClusterId();
+    /**
+     * <code>string resourcemanager_cluster_id = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for resourcemanagerClusterId.
+     */
+    com.google.protobuf.ByteString
+        getResourcemanagerClusterIdBytes();
+
+    /**
+     * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+     */
+    int getHaRmCount();
+    /**
+     * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+     */
+    boolean containsHaRm(
+        java.lang.String key);
+    /**
+     * Use {@link #getHaRmMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm>
+    getHaRm();
+    /**
+     * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+     */
+    java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm>
+    getHaRmMap();
+    /**
+     * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+     */
+
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm getHaRmOrDefault(
+        java.lang.String key,
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm defaultValue);
+    /**
+     * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+     */
+
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm getHaRmOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn}
+   */
+  public static final class PXFDatasourceHDFSYarn extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn)
+      PXFDatasourceHDFSYarnOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PXFDatasourceHDFSYarn.newBuilder() to construct.
+    private PXFDatasourceHDFSYarn(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PXFDatasourceHDFSYarn() {
+      resourcemanagerClusterId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PXFDatasourceHDFSYarn();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PXFDatasourceHDFSYarn(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (resourcemanagerHaEnabled_ != null) {
+                subBuilder = resourcemanagerHaEnabled_.toBuilder();
+              }
+              resourcemanagerHaEnabled_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(resourcemanagerHaEnabled_);
+                resourcemanagerHaEnabled_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (resourcemanagerHaAutoFailoverEnabled_ != null) {
+                subBuilder = resourcemanagerHaAutoFailoverEnabled_.toBuilder();
+              }
+              resourcemanagerHaAutoFailoverEnabled_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(resourcemanagerHaAutoFailoverEnabled_);
+                resourcemanagerHaAutoFailoverEnabled_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (resourcemanagerHaAutoFailoverEmbedded_ != null) {
+                subBuilder = resourcemanagerHaAutoFailoverEmbedded_.toBuilder();
+              }
+              resourcemanagerHaAutoFailoverEmbedded_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(resourcemanagerHaAutoFailoverEmbedded_);
+                resourcemanagerHaAutoFailoverEmbedded_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resourcemanagerClusterId_ = s;
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                haRm_ = com.google.protobuf.MapField.newMapField(
+                    HaRmDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm>
+              haRm__ = input.readMessage(
+                  HaRmDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              haRm_.getMutableMap().put(
+                  haRm__.getKey(), haRm__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarn_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 5:
+          return internalGetHaRm();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarn_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn.class, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn.Builder.class);
+    }
+
+    public static final int RESOURCEMANAGER_HA_ENABLED_FIELD_NUMBER = 1;
+    private com.google.protobuf.BoolValue resourcemanagerHaEnabled_;
+    /**
+     * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
+     * @return Whether the resourcemanagerHaEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasResourcemanagerHaEnabled() {
+      return resourcemanagerHaEnabled_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
+     * @return The resourcemanagerHaEnabled.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getResourcemanagerHaEnabled() {
+      return resourcemanagerHaEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : resourcemanagerHaEnabled_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getResourcemanagerHaEnabledOrBuilder() {
+      return getResourcemanagerHaEnabled();
+    }
+
+    public static final int RESOURCEMANAGER_HA_AUTO_FAILOVER_ENABLED_FIELD_NUMBER = 2;
+    private com.google.protobuf.BoolValue resourcemanagerHaAutoFailoverEnabled_;
+    /**
+     * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
+     * @return Whether the resourcemanagerHaAutoFailoverEnabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasResourcemanagerHaAutoFailoverEnabled() {
+      return resourcemanagerHaAutoFailoverEnabled_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
+     * @return The resourcemanagerHaAutoFailoverEnabled.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getResourcemanagerHaAutoFailoverEnabled() {
+      return resourcemanagerHaAutoFailoverEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : resourcemanagerHaAutoFailoverEnabled_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getResourcemanagerHaAutoFailoverEnabledOrBuilder() {
+      return getResourcemanagerHaAutoFailoverEnabled();
+    }
+
+    public static final int RESOURCEMANAGER_HA_AUTO_FAILOVER_EMBEDDED_FIELD_NUMBER = 3;
+    private com.google.protobuf.BoolValue resourcemanagerHaAutoFailoverEmbedded_;
+    /**
+     * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
+     * @return Whether the resourcemanagerHaAutoFailoverEmbedded field is set.
+     */
+    @java.lang.Override
+    public boolean hasResourcemanagerHaAutoFailoverEmbedded() {
+      return resourcemanagerHaAutoFailoverEmbedded_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
+     * @return The resourcemanagerHaAutoFailoverEmbedded.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getResourcemanagerHaAutoFailoverEmbedded() {
+      return resourcemanagerHaAutoFailoverEmbedded_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : resourcemanagerHaAutoFailoverEmbedded_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getResourcemanagerHaAutoFailoverEmbeddedOrBuilder() {
+      return getResourcemanagerHaAutoFailoverEmbedded();
+    }
+
+    public static final int RESOURCEMANAGER_CLUSTER_ID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object resourcemanagerClusterId_;
+    /**
+     * <code>string resourcemanager_cluster_id = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The resourcemanagerClusterId.
+     */
+    @java.lang.Override
+    public java.lang.String getResourcemanagerClusterId() {
+      java.lang.Object ref = resourcemanagerClusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourcemanagerClusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string resourcemanager_cluster_id = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for resourcemanagerClusterId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourcemanagerClusterIdBytes() {
+      java.lang.Object ref = resourcemanagerClusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourcemanagerClusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HA_RM_FIELD_NUMBER = 5;
+    private static final class HaRmDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm>newDefaultInstance(
+                  yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarn_HaRmEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                  yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm.getDefaultInstance());
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm> haRm_;
+    private com.google.protobuf.MapField<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm>
+    internalGetHaRm() {
+      if (haRm_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            HaRmDefaultEntryHolder.defaultEntry);
+      }
+      return haRm_;
+    }
+
+    public int getHaRmCount() {
+      return internalGetHaRm().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+     */
+
+    @java.lang.Override
+    public boolean containsHaRm(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetHaRm().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getHaRmMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm> getHaRm() {
+      return getHaRmMap();
+    }
+    /**
+     * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm> getHaRmMap() {
+      return internalGetHaRm().getMap();
+    }
+    /**
+     * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+     */
+    @java.lang.Override
+
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm getHaRmOrDefault(
+        java.lang.String key,
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm> map =
+          internalGetHaRm().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+     */
+    @java.lang.Override
+
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm getHaRmOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm> map =
+          internalGetHaRm().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (resourcemanagerHaEnabled_ != null) {
+        output.writeMessage(1, getResourcemanagerHaEnabled());
+      }
+      if (resourcemanagerHaAutoFailoverEnabled_ != null) {
+        output.writeMessage(2, getResourcemanagerHaAutoFailoverEnabled());
+      }
+      if (resourcemanagerHaAutoFailoverEmbedded_ != null) {
+        output.writeMessage(3, getResourcemanagerHaAutoFailoverEmbedded());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcemanagerClusterId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, resourcemanagerClusterId_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetHaRm(),
+          HaRmDefaultEntryHolder.defaultEntry,
+          5);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (resourcemanagerHaEnabled_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getResourcemanagerHaEnabled());
+      }
+      if (resourcemanagerHaAutoFailoverEnabled_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getResourcemanagerHaAutoFailoverEnabled());
+      }
+      if (resourcemanagerHaAutoFailoverEmbedded_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getResourcemanagerHaAutoFailoverEmbedded());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourcemanagerClusterId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, resourcemanagerClusterId_);
+      }
+      for (java.util.Map.Entry<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm> entry
+           : internalGetHaRm().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm>
+        haRm__ = HaRmDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, haRm__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn other = (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn) obj;
+
+      if (hasResourcemanagerHaEnabled() != other.hasResourcemanagerHaEnabled()) return false;
+      if (hasResourcemanagerHaEnabled()) {
+        if (!getResourcemanagerHaEnabled()
+            .equals(other.getResourcemanagerHaEnabled())) return false;
+      }
+      if (hasResourcemanagerHaAutoFailoverEnabled() != other.hasResourcemanagerHaAutoFailoverEnabled()) return false;
+      if (hasResourcemanagerHaAutoFailoverEnabled()) {
+        if (!getResourcemanagerHaAutoFailoverEnabled()
+            .equals(other.getResourcemanagerHaAutoFailoverEnabled())) return false;
+      }
+      if (hasResourcemanagerHaAutoFailoverEmbedded() != other.hasResourcemanagerHaAutoFailoverEmbedded()) return false;
+      if (hasResourcemanagerHaAutoFailoverEmbedded()) {
+        if (!getResourcemanagerHaAutoFailoverEmbedded()
+            .equals(other.getResourcemanagerHaAutoFailoverEmbedded())) return false;
+      }
+      if (!getResourcemanagerClusterId()
+          .equals(other.getResourcemanagerClusterId())) return false;
+      if (!internalGetHaRm().equals(
+          other.internalGetHaRm())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasResourcemanagerHaEnabled()) {
+        hash = (37 * hash) + RESOURCEMANAGER_HA_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + getResourcemanagerHaEnabled().hashCode();
+      }
+      if (hasResourcemanagerHaAutoFailoverEnabled()) {
+        hash = (37 * hash) + RESOURCEMANAGER_HA_AUTO_FAILOVER_ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + getResourcemanagerHaAutoFailoverEnabled().hashCode();
+      }
+      if (hasResourcemanagerHaAutoFailoverEmbedded()) {
+        hash = (37 * hash) + RESOURCEMANAGER_HA_AUTO_FAILOVER_EMBEDDED_FIELD_NUMBER;
+        hash = (53 * hash) + getResourcemanagerHaAutoFailoverEmbedded().hashCode();
+      }
+      hash = (37 * hash) + RESOURCEMANAGER_CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getResourcemanagerClusterId().hashCode();
+      if (!internalGetHaRm().getMap().isEmpty()) {
+        hash = (37 * hash) + HA_RM_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetHaRm().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn)
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarn_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 5:
+            return internalGetHaRm();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 5:
+            return internalGetMutableHaRm();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarn_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn.class, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (resourcemanagerHaEnabledBuilder_ == null) {
+          resourcemanagerHaEnabled_ = null;
+        } else {
+          resourcemanagerHaEnabled_ = null;
+          resourcemanagerHaEnabledBuilder_ = null;
+        }
+        if (resourcemanagerHaAutoFailoverEnabledBuilder_ == null) {
+          resourcemanagerHaAutoFailoverEnabled_ = null;
+        } else {
+          resourcemanagerHaAutoFailoverEnabled_ = null;
+          resourcemanagerHaAutoFailoverEnabledBuilder_ = null;
+        }
+        if (resourcemanagerHaAutoFailoverEmbeddedBuilder_ == null) {
+          resourcemanagerHaAutoFailoverEmbedded_ = null;
+        } else {
+          resourcemanagerHaAutoFailoverEmbedded_ = null;
+          resourcemanagerHaAutoFailoverEmbeddedBuilder_ = null;
+        }
+        resourcemanagerClusterId_ = "";
+
+        internalGetMutableHaRm().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarn_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn build() {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn result = new yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn(this);
+        int from_bitField0_ = bitField0_;
+        if (resourcemanagerHaEnabledBuilder_ == null) {
+          result.resourcemanagerHaEnabled_ = resourcemanagerHaEnabled_;
+        } else {
+          result.resourcemanagerHaEnabled_ = resourcemanagerHaEnabledBuilder_.build();
+        }
+        if (resourcemanagerHaAutoFailoverEnabledBuilder_ == null) {
+          result.resourcemanagerHaAutoFailoverEnabled_ = resourcemanagerHaAutoFailoverEnabled_;
+        } else {
+          result.resourcemanagerHaAutoFailoverEnabled_ = resourcemanagerHaAutoFailoverEnabledBuilder_.build();
+        }
+        if (resourcemanagerHaAutoFailoverEmbeddedBuilder_ == null) {
+          result.resourcemanagerHaAutoFailoverEmbedded_ = resourcemanagerHaAutoFailoverEmbedded_;
+        } else {
+          result.resourcemanagerHaAutoFailoverEmbedded_ = resourcemanagerHaAutoFailoverEmbeddedBuilder_.build();
+        }
+        result.resourcemanagerClusterId_ = resourcemanagerClusterId_;
+        result.haRm_ = internalGetHaRm();
+        result.haRm_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn.getDefaultInstance()) return this;
+        if (other.hasResourcemanagerHaEnabled()) {
+          mergeResourcemanagerHaEnabled(other.getResourcemanagerHaEnabled());
+        }
+        if (other.hasResourcemanagerHaAutoFailoverEnabled()) {
+          mergeResourcemanagerHaAutoFailoverEnabled(other.getResourcemanagerHaAutoFailoverEnabled());
+        }
+        if (other.hasResourcemanagerHaAutoFailoverEmbedded()) {
+          mergeResourcemanagerHaAutoFailoverEmbedded(other.getResourcemanagerHaAutoFailoverEmbedded());
+        }
+        if (!other.getResourcemanagerClusterId().isEmpty()) {
+          resourcemanagerClusterId_ = other.resourcemanagerClusterId_;
+          onChanged();
+        }
+        internalGetMutableHaRm().mergeFrom(
+            other.internalGetHaRm());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.BoolValue resourcemanagerHaEnabled_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> resourcemanagerHaEnabledBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
+       * @return Whether the resourcemanagerHaEnabled field is set.
+       */
+      public boolean hasResourcemanagerHaEnabled() {
+        return resourcemanagerHaEnabledBuilder_ != null || resourcemanagerHaEnabled_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
+       * @return The resourcemanagerHaEnabled.
+       */
+      public com.google.protobuf.BoolValue getResourcemanagerHaEnabled() {
+        if (resourcemanagerHaEnabledBuilder_ == null) {
+          return resourcemanagerHaEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : resourcemanagerHaEnabled_;
+        } else {
+          return resourcemanagerHaEnabledBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
+       */
+      public Builder setResourcemanagerHaEnabled(com.google.protobuf.BoolValue value) {
+        if (resourcemanagerHaEnabledBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          resourcemanagerHaEnabled_ = value;
+          onChanged();
+        } else {
+          resourcemanagerHaEnabledBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
+       */
+      public Builder setResourcemanagerHaEnabled(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (resourcemanagerHaEnabledBuilder_ == null) {
+          resourcemanagerHaEnabled_ = builderForValue.build();
+          onChanged();
+        } else {
+          resourcemanagerHaEnabledBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
+       */
+      public Builder mergeResourcemanagerHaEnabled(com.google.protobuf.BoolValue value) {
+        if (resourcemanagerHaEnabledBuilder_ == null) {
+          if (resourcemanagerHaEnabled_ != null) {
+            resourcemanagerHaEnabled_ =
+              com.google.protobuf.BoolValue.newBuilder(resourcemanagerHaEnabled_).mergeFrom(value).buildPartial();
+          } else {
+            resourcemanagerHaEnabled_ = value;
+          }
+          onChanged();
+        } else {
+          resourcemanagerHaEnabledBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
+       */
+      public Builder clearResourcemanagerHaEnabled() {
+        if (resourcemanagerHaEnabledBuilder_ == null) {
+          resourcemanagerHaEnabled_ = null;
+          onChanged();
+        } else {
+          resourcemanagerHaEnabled_ = null;
+          resourcemanagerHaEnabledBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getResourcemanagerHaEnabledBuilder() {
+        
+        onChanged();
+        return getResourcemanagerHaEnabledFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getResourcemanagerHaEnabledOrBuilder() {
+        if (resourcemanagerHaEnabledBuilder_ != null) {
+          return resourcemanagerHaEnabledBuilder_.getMessageOrBuilder();
+        } else {
+          return resourcemanagerHaEnabled_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : resourcemanagerHaEnabled_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_enabled = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getResourcemanagerHaEnabledFieldBuilder() {
+        if (resourcemanagerHaEnabledBuilder_ == null) {
+          resourcemanagerHaEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getResourcemanagerHaEnabled(),
+                  getParentForChildren(),
+                  isClean());
+          resourcemanagerHaEnabled_ = null;
+        }
+        return resourcemanagerHaEnabledBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue resourcemanagerHaAutoFailoverEnabled_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> resourcemanagerHaAutoFailoverEnabledBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
+       * @return Whether the resourcemanagerHaAutoFailoverEnabled field is set.
+       */
+      public boolean hasResourcemanagerHaAutoFailoverEnabled() {
+        return resourcemanagerHaAutoFailoverEnabledBuilder_ != null || resourcemanagerHaAutoFailoverEnabled_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
+       * @return The resourcemanagerHaAutoFailoverEnabled.
+       */
+      public com.google.protobuf.BoolValue getResourcemanagerHaAutoFailoverEnabled() {
+        if (resourcemanagerHaAutoFailoverEnabledBuilder_ == null) {
+          return resourcemanagerHaAutoFailoverEnabled_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : resourcemanagerHaAutoFailoverEnabled_;
+        } else {
+          return resourcemanagerHaAutoFailoverEnabledBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
+       */
+      public Builder setResourcemanagerHaAutoFailoverEnabled(com.google.protobuf.BoolValue value) {
+        if (resourcemanagerHaAutoFailoverEnabledBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          resourcemanagerHaAutoFailoverEnabled_ = value;
+          onChanged();
+        } else {
+          resourcemanagerHaAutoFailoverEnabledBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
+       */
+      public Builder setResourcemanagerHaAutoFailoverEnabled(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (resourcemanagerHaAutoFailoverEnabledBuilder_ == null) {
+          resourcemanagerHaAutoFailoverEnabled_ = builderForValue.build();
+          onChanged();
+        } else {
+          resourcemanagerHaAutoFailoverEnabledBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
+       */
+      public Builder mergeResourcemanagerHaAutoFailoverEnabled(com.google.protobuf.BoolValue value) {
+        if (resourcemanagerHaAutoFailoverEnabledBuilder_ == null) {
+          if (resourcemanagerHaAutoFailoverEnabled_ != null) {
+            resourcemanagerHaAutoFailoverEnabled_ =
+              com.google.protobuf.BoolValue.newBuilder(resourcemanagerHaAutoFailoverEnabled_).mergeFrom(value).buildPartial();
+          } else {
+            resourcemanagerHaAutoFailoverEnabled_ = value;
+          }
+          onChanged();
+        } else {
+          resourcemanagerHaAutoFailoverEnabledBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
+       */
+      public Builder clearResourcemanagerHaAutoFailoverEnabled() {
+        if (resourcemanagerHaAutoFailoverEnabledBuilder_ == null) {
+          resourcemanagerHaAutoFailoverEnabled_ = null;
+          onChanged();
+        } else {
+          resourcemanagerHaAutoFailoverEnabled_ = null;
+          resourcemanagerHaAutoFailoverEnabledBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getResourcemanagerHaAutoFailoverEnabledBuilder() {
+        
+        onChanged();
+        return getResourcemanagerHaAutoFailoverEnabledFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getResourcemanagerHaAutoFailoverEnabledOrBuilder() {
+        if (resourcemanagerHaAutoFailoverEnabledBuilder_ != null) {
+          return resourcemanagerHaAutoFailoverEnabledBuilder_.getMessageOrBuilder();
+        } else {
+          return resourcemanagerHaAutoFailoverEnabled_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : resourcemanagerHaAutoFailoverEnabled_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_enabled = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getResourcemanagerHaAutoFailoverEnabledFieldBuilder() {
+        if (resourcemanagerHaAutoFailoverEnabledBuilder_ == null) {
+          resourcemanagerHaAutoFailoverEnabledBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getResourcemanagerHaAutoFailoverEnabled(),
+                  getParentForChildren(),
+                  isClean());
+          resourcemanagerHaAutoFailoverEnabled_ = null;
+        }
+        return resourcemanagerHaAutoFailoverEnabledBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue resourcemanagerHaAutoFailoverEmbedded_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> resourcemanagerHaAutoFailoverEmbeddedBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
+       * @return Whether the resourcemanagerHaAutoFailoverEmbedded field is set.
+       */
+      public boolean hasResourcemanagerHaAutoFailoverEmbedded() {
+        return resourcemanagerHaAutoFailoverEmbeddedBuilder_ != null || resourcemanagerHaAutoFailoverEmbedded_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
+       * @return The resourcemanagerHaAutoFailoverEmbedded.
+       */
+      public com.google.protobuf.BoolValue getResourcemanagerHaAutoFailoverEmbedded() {
+        if (resourcemanagerHaAutoFailoverEmbeddedBuilder_ == null) {
+          return resourcemanagerHaAutoFailoverEmbedded_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : resourcemanagerHaAutoFailoverEmbedded_;
+        } else {
+          return resourcemanagerHaAutoFailoverEmbeddedBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
+       */
+      public Builder setResourcemanagerHaAutoFailoverEmbedded(com.google.protobuf.BoolValue value) {
+        if (resourcemanagerHaAutoFailoverEmbeddedBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          resourcemanagerHaAutoFailoverEmbedded_ = value;
+          onChanged();
+        } else {
+          resourcemanagerHaAutoFailoverEmbeddedBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
+       */
+      public Builder setResourcemanagerHaAutoFailoverEmbedded(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (resourcemanagerHaAutoFailoverEmbeddedBuilder_ == null) {
+          resourcemanagerHaAutoFailoverEmbedded_ = builderForValue.build();
+          onChanged();
+        } else {
+          resourcemanagerHaAutoFailoverEmbeddedBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
+       */
+      public Builder mergeResourcemanagerHaAutoFailoverEmbedded(com.google.protobuf.BoolValue value) {
+        if (resourcemanagerHaAutoFailoverEmbeddedBuilder_ == null) {
+          if (resourcemanagerHaAutoFailoverEmbedded_ != null) {
+            resourcemanagerHaAutoFailoverEmbedded_ =
+              com.google.protobuf.BoolValue.newBuilder(resourcemanagerHaAutoFailoverEmbedded_).mergeFrom(value).buildPartial();
+          } else {
+            resourcemanagerHaAutoFailoverEmbedded_ = value;
+          }
+          onChanged();
+        } else {
+          resourcemanagerHaAutoFailoverEmbeddedBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
+       */
+      public Builder clearResourcemanagerHaAutoFailoverEmbedded() {
+        if (resourcemanagerHaAutoFailoverEmbeddedBuilder_ == null) {
+          resourcemanagerHaAutoFailoverEmbedded_ = null;
+          onChanged();
+        } else {
+          resourcemanagerHaAutoFailoverEmbedded_ = null;
+          resourcemanagerHaAutoFailoverEmbeddedBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getResourcemanagerHaAutoFailoverEmbeddedBuilder() {
+        
+        onChanged();
+        return getResourcemanagerHaAutoFailoverEmbeddedFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getResourcemanagerHaAutoFailoverEmbeddedOrBuilder() {
+        if (resourcemanagerHaAutoFailoverEmbeddedBuilder_ != null) {
+          return resourcemanagerHaAutoFailoverEmbeddedBuilder_.getMessageOrBuilder();
+        } else {
+          return resourcemanagerHaAutoFailoverEmbedded_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : resourcemanagerHaAutoFailoverEmbedded_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue resourcemanager_ha_auto_failover_embedded = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getResourcemanagerHaAutoFailoverEmbeddedFieldBuilder() {
+        if (resourcemanagerHaAutoFailoverEmbeddedBuilder_ == null) {
+          resourcemanagerHaAutoFailoverEmbeddedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getResourcemanagerHaAutoFailoverEmbedded(),
+                  getParentForChildren(),
+                  isClean());
+          resourcemanagerHaAutoFailoverEmbedded_ = null;
+        }
+        return resourcemanagerHaAutoFailoverEmbeddedBuilder_;
+      }
+
+      private java.lang.Object resourcemanagerClusterId_ = "";
+      /**
+       * <code>string resourcemanager_cluster_id = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The resourcemanagerClusterId.
+       */
+      public java.lang.String getResourcemanagerClusterId() {
+        java.lang.Object ref = resourcemanagerClusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourcemanagerClusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string resourcemanager_cluster_id = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for resourcemanagerClusterId.
+       */
+      public com.google.protobuf.ByteString
+          getResourcemanagerClusterIdBytes() {
+        java.lang.Object ref = resourcemanagerClusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourcemanagerClusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string resourcemanager_cluster_id = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The resourcemanagerClusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourcemanagerClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resourcemanagerClusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resourcemanager_cluster_id = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourcemanagerClusterId() {
+        
+        resourcemanagerClusterId_ = getDefaultInstance().getResourcemanagerClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resourcemanager_cluster_id = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for resourcemanagerClusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourcemanagerClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resourcemanagerClusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm> haRm_;
+      private com.google.protobuf.MapField<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm>
+      internalGetHaRm() {
+        if (haRm_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              HaRmDefaultEntryHolder.defaultEntry);
+        }
+        return haRm_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm>
+      internalGetMutableHaRm() {
+        onChanged();;
+        if (haRm_ == null) {
+          haRm_ = com.google.protobuf.MapField.newMapField(
+              HaRmDefaultEntryHolder.defaultEntry);
+        }
+        if (!haRm_.isMutable()) {
+          haRm_ = haRm_.copy();
+        }
+        return haRm_;
+      }
+
+      public int getHaRmCount() {
+        return internalGetHaRm().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+       */
+
+      @java.lang.Override
+      public boolean containsHaRm(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        return internalGetHaRm().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getHaRmMap()} instead.
+       */
+      @java.lang.Override
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm> getHaRm() {
+        return getHaRmMap();
+      }
+      /**
+       * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+       */
+      @java.lang.Override
+
+      public java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm> getHaRmMap() {
+        return internalGetHaRm().getMap();
+      }
+      /**
+       * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+       */
+      @java.lang.Override
+
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm getHaRmOrDefault(
+          java.lang.String key,
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm defaultValue) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm> map =
+            internalGetHaRm().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+       */
+      @java.lang.Override
+
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm getHaRmOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm> map =
+            internalGetHaRm().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearHaRm() {
+        internalGetMutableHaRm().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+       */
+
+      public Builder removeHaRm(
+          java.lang.String key) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        internalGetMutableHaRm().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm>
+      getMutableHaRm() {
+        return internalGetMutableHaRm().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+       */
+      public Builder putHaRm(
+          java.lang.String key,
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm value) {
+        if (key == null) { throw new NullPointerException("map key"); }
+        if (value == null) {
+  throw new NullPointerException("map value");
+}
+
+        internalGetMutableHaRm().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, .yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarnHaRm&gt; ha_rm = 5 [(.yandex.cloud.size) = "&lt;=10000"];</code>
+       */
+
+      public Builder putAllHaRm(
+          java.util.Map<java.lang.String, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnHaRm> values) {
+        internalGetMutableHaRm().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn)
+    private static final yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PXFDatasourceHDFSYarn>
+        PARSER = new com.google.protobuf.AbstractParser<PXFDatasourceHDFSYarn>() {
+      @java.lang.Override
+      public PXFDatasourceHDFSYarn parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PXFDatasourceHDFSYarn(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PXFDatasourceHDFSYarn> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PXFDatasourceHDFSYarn> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PXFDatasourceHDFSOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+     * @return Whether the core field is set.
+     */
+    boolean hasCore();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+     * @return The core.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore getCore();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCoreOrBuilder getCoreOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+     * @return Whether the kerberos field is set.
+     */
+    boolean hasKerberos();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+     * @return The kerberos.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos getKerberos();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberosOrBuilder getKerberosOrBuilder();
+
+    /**
+     * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+     * @return Whether the userImpersonation field is set.
+     */
+    boolean hasUserImpersonation();
+    /**
+     * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+     * @return The userImpersonation.
+     */
+    com.google.protobuf.BoolValue getUserImpersonation();
+    /**
+     * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getUserImpersonationOrBuilder();
+
+    /**
+     * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     * @return The username.
+     */
+    java.lang.String getUsername();
+    /**
+     * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     * @return The bytes for username.
+     */
+    com.google.protobuf.ByteString
+        getUsernameBytes();
+
+    /**
+     * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+     * @return Whether the saslConnectionRetries field is set.
+     */
+    boolean hasSaslConnectionRetries();
+    /**
+     * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+     * @return The saslConnectionRetries.
+     */
+    com.google.protobuf.Int64Value getSaslConnectionRetries();
+    /**
+     * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSaslConnectionRetriesOrBuilder();
+
+    /**
+     * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @return A list containing the zkHosts.
+     */
+    java.util.List<java.lang.String>
+        getZkHostsList();
+    /**
+     * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @return The count of zkHosts.
+     */
+    int getZkHostsCount();
+    /**
+     * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @param index The index of the element to return.
+     * @return The zkHosts at the given index.
+     */
+    java.lang.String getZkHosts(int index);
+    /**
+     * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zkHosts at the given index.
+     */
+    com.google.protobuf.ByteString
+        getZkHostsBytes(int index);
+
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
+     * @return Whether the dfs field is set.
+     */
+    boolean hasDfs();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
+     * @return The dfs.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs getDfs();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsOrBuilder getDfsOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
+     * @return Whether the yarn field is set.
+     */
+    boolean hasYarn();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
+     * @return The yarn.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn getYarn();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnOrBuilder getYarnOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS}
+   */
+  public static final class PXFDatasourceHDFS extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS)
+      PXFDatasourceHDFSOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PXFDatasourceHDFS.newBuilder() to construct.
+    private PXFDatasourceHDFS(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PXFDatasourceHDFS() {
+      username_ = "";
+      zkHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PXFDatasourceHDFS();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PXFDatasourceHDFS(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.Builder subBuilder = null;
+              if (core_ != null) {
+                subBuilder = core_.toBuilder();
+              }
+              core_ = input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(core_);
+                core_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.Builder subBuilder = null;
+              if (kerberos_ != null) {
+                subBuilder = kerberos_.toBuilder();
+              }
+              kerberos_ = input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(kerberos_);
+                kerberos_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (userImpersonation_ != null) {
+                subBuilder = userImpersonation_.toBuilder();
+              }
+              userImpersonation_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(userImpersonation_);
+                userImpersonation_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              username_ = s;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (saslConnectionRetries_ != null) {
+                subBuilder = saslConnectionRetries_.toBuilder();
+              }
+              saslConnectionRetries_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(saslConnectionRetries_);
+                saslConnectionRetries_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                zkHosts_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              zkHosts_.add(s);
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs.Builder subBuilder = null;
+              if (dfs_ != null) {
+                subBuilder = dfs_.toBuilder();
+              }
+              dfs_ = input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dfs_);
+                dfs_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn.Builder subBuilder = null;
+              if (yarn_ != null) {
+                subBuilder = yarn_.toBuilder();
+              }
+              yarn_ = input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(yarn_);
+                yarn_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          zkHosts_ = zkHosts_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFS_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFS_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.class, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.Builder.class);
+    }
+
+    public static final int CORE_FIELD_NUMBER = 1;
+    private yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore core_;
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+     * @return Whether the core field is set.
+     */
+    @java.lang.Override
+    public boolean hasCore() {
+      return core_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+     * @return The core.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore getCore() {
+      return core_ == null ? yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.getDefaultInstance() : core_;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCoreOrBuilder getCoreOrBuilder() {
+      return getCore();
+    }
+
+    public static final int KERBEROS_FIELD_NUMBER = 2;
+    private yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos kerberos_;
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+     * @return Whether the kerberos field is set.
+     */
+    @java.lang.Override
+    public boolean hasKerberos() {
+      return kerberos_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+     * @return The kerberos.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos getKerberos() {
+      return kerberos_ == null ? yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.getDefaultInstance() : kerberos_;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberosOrBuilder getKerberosOrBuilder() {
+      return getKerberos();
+    }
+
+    public static final int USER_IMPERSONATION_FIELD_NUMBER = 3;
+    private com.google.protobuf.BoolValue userImpersonation_;
+    /**
+     * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+     * @return Whether the userImpersonation field is set.
+     */
+    @java.lang.Override
+    public boolean hasUserImpersonation() {
+      return userImpersonation_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+     * @return The userImpersonation.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getUserImpersonation() {
+      return userImpersonation_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : userImpersonation_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getUserImpersonationOrBuilder() {
+      return getUserImpersonation();
+    }
+
+    public static final int USERNAME_FIELD_NUMBER = 4;
+    private volatile java.lang.Object username_;
+    /**
+     * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     * @return The username.
+     */
+    @java.lang.Override
+    public java.lang.String getUsername() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        username_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     * @return The bytes for username.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUsernameBytes() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        username_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SASL_CONNECTION_RETRIES_FIELD_NUMBER = 5;
+    private com.google.protobuf.Int64Value saslConnectionRetries_;
+    /**
+     * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+     * @return Whether the saslConnectionRetries field is set.
+     */
+    @java.lang.Override
+    public boolean hasSaslConnectionRetries() {
+      return saslConnectionRetries_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+     * @return The saslConnectionRetries.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getSaslConnectionRetries() {
+      return saslConnectionRetries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : saslConnectionRetries_;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getSaslConnectionRetriesOrBuilder() {
+      return getSaslConnectionRetries();
+    }
+
+    public static final int ZK_HOSTS_FIELD_NUMBER = 6;
+    private com.google.protobuf.LazyStringList zkHosts_;
+    /**
+     * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @return A list containing the zkHosts.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getZkHostsList() {
+      return zkHosts_;
+    }
+    /**
+     * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @return The count of zkHosts.
+     */
+    public int getZkHostsCount() {
+      return zkHosts_.size();
+    }
+    /**
+     * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @param index The index of the element to return.
+     * @return The zkHosts at the given index.
+     */
+    public java.lang.String getZkHosts(int index) {
+      return zkHosts_.get(index);
+    }
+    /**
+     * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zkHosts at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getZkHostsBytes(int index) {
+      return zkHosts_.getByteString(index);
+    }
+
+    public static final int DFS_FIELD_NUMBER = 7;
+    private yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs dfs_;
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
+     * @return Whether the dfs field is set.
+     */
+    @java.lang.Override
+    public boolean hasDfs() {
+      return dfs_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
+     * @return The dfs.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs getDfs() {
+      return dfs_ == null ? yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs.getDefaultInstance() : dfs_;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsOrBuilder getDfsOrBuilder() {
+      return getDfs();
+    }
+
+    public static final int YARN_FIELD_NUMBER = 8;
+    private yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn yarn_;
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
+     * @return Whether the yarn field is set.
+     */
+    @java.lang.Override
+    public boolean hasYarn() {
+      return yarn_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
+     * @return The yarn.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn getYarn() {
+      return yarn_ == null ? yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn.getDefaultInstance() : yarn_;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnOrBuilder getYarnOrBuilder() {
+      return getYarn();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (core_ != null) {
+        output.writeMessage(1, getCore());
+      }
+      if (kerberos_ != null) {
+        output.writeMessage(2, getKerberos());
+      }
+      if (userImpersonation_ != null) {
+        output.writeMessage(3, getUserImpersonation());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, username_);
+      }
+      if (saslConnectionRetries_ != null) {
+        output.writeMessage(5, getSaslConnectionRetries());
+      }
+      for (int i = 0; i < zkHosts_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, zkHosts_.getRaw(i));
+      }
+      if (dfs_ != null) {
+        output.writeMessage(7, getDfs());
+      }
+      if (yarn_ != null) {
+        output.writeMessage(8, getYarn());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (core_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCore());
+      }
+      if (kerberos_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getKerberos());
+      }
+      if (userImpersonation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getUserImpersonation());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, username_);
+      }
+      if (saslConnectionRetries_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getSaslConnectionRetries());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < zkHosts_.size(); i++) {
+          dataSize += computeStringSizeNoTag(zkHosts_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getZkHostsList().size();
+      }
+      if (dfs_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getDfs());
+      }
+      if (yarn_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getYarn());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS other = (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS) obj;
+
+      if (hasCore() != other.hasCore()) return false;
+      if (hasCore()) {
+        if (!getCore()
+            .equals(other.getCore())) return false;
+      }
+      if (hasKerberos() != other.hasKerberos()) return false;
+      if (hasKerberos()) {
+        if (!getKerberos()
+            .equals(other.getKerberos())) return false;
+      }
+      if (hasUserImpersonation() != other.hasUserImpersonation()) return false;
+      if (hasUserImpersonation()) {
+        if (!getUserImpersonation()
+            .equals(other.getUserImpersonation())) return false;
+      }
+      if (!getUsername()
+          .equals(other.getUsername())) return false;
+      if (hasSaslConnectionRetries() != other.hasSaslConnectionRetries()) return false;
+      if (hasSaslConnectionRetries()) {
+        if (!getSaslConnectionRetries()
+            .equals(other.getSaslConnectionRetries())) return false;
+      }
+      if (!getZkHostsList()
+          .equals(other.getZkHostsList())) return false;
+      if (hasDfs() != other.hasDfs()) return false;
+      if (hasDfs()) {
+        if (!getDfs()
+            .equals(other.getDfs())) return false;
+      }
+      if (hasYarn() != other.hasYarn()) return false;
+      if (hasYarn()) {
+        if (!getYarn()
+            .equals(other.getYarn())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCore()) {
+        hash = (37 * hash) + CORE_FIELD_NUMBER;
+        hash = (53 * hash) + getCore().hashCode();
+      }
+      if (hasKerberos()) {
+        hash = (37 * hash) + KERBEROS_FIELD_NUMBER;
+        hash = (53 * hash) + getKerberos().hashCode();
+      }
+      if (hasUserImpersonation()) {
+        hash = (37 * hash) + USER_IMPERSONATION_FIELD_NUMBER;
+        hash = (53 * hash) + getUserImpersonation().hashCode();
+      }
+      hash = (37 * hash) + USERNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getUsername().hashCode();
+      if (hasSaslConnectionRetries()) {
+        hash = (37 * hash) + SASL_CONNECTION_RETRIES_FIELD_NUMBER;
+        hash = (53 * hash) + getSaslConnectionRetries().hashCode();
+      }
+      if (getZkHostsCount() > 0) {
+        hash = (37 * hash) + ZK_HOSTS_FIELD_NUMBER;
+        hash = (53 * hash) + getZkHostsList().hashCode();
+      }
+      if (hasDfs()) {
+        hash = (37 * hash) + DFS_FIELD_NUMBER;
+        hash = (53 * hash) + getDfs().hashCode();
+      }
+      if (hasYarn()) {
+        hash = (37 * hash) + YARN_FIELD_NUMBER;
+        hash = (53 * hash) + getYarn().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS)
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFS_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFS_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.class, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (coreBuilder_ == null) {
+          core_ = null;
+        } else {
+          core_ = null;
+          coreBuilder_ = null;
+        }
+        if (kerberosBuilder_ == null) {
+          kerberos_ = null;
+        } else {
+          kerberos_ = null;
+          kerberosBuilder_ = null;
+        }
+        if (userImpersonationBuilder_ == null) {
+          userImpersonation_ = null;
+        } else {
+          userImpersonation_ = null;
+          userImpersonationBuilder_ = null;
+        }
+        username_ = "";
+
+        if (saslConnectionRetriesBuilder_ == null) {
+          saslConnectionRetries_ = null;
+        } else {
+          saslConnectionRetries_ = null;
+          saslConnectionRetriesBuilder_ = null;
+        }
+        zkHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (dfsBuilder_ == null) {
+          dfs_ = null;
+        } else {
+          dfs_ = null;
+          dfsBuilder_ = null;
+        }
+        if (yarnBuilder_ == null) {
+          yarn_ = null;
+        } else {
+          yarn_ = null;
+          yarnBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFS_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS build() {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS result = new yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS(this);
+        int from_bitField0_ = bitField0_;
+        if (coreBuilder_ == null) {
+          result.core_ = core_;
+        } else {
+          result.core_ = coreBuilder_.build();
+        }
+        if (kerberosBuilder_ == null) {
+          result.kerberos_ = kerberos_;
+        } else {
+          result.kerberos_ = kerberosBuilder_.build();
+        }
+        if (userImpersonationBuilder_ == null) {
+          result.userImpersonation_ = userImpersonation_;
+        } else {
+          result.userImpersonation_ = userImpersonationBuilder_.build();
+        }
+        result.username_ = username_;
+        if (saslConnectionRetriesBuilder_ == null) {
+          result.saslConnectionRetries_ = saslConnectionRetries_;
+        } else {
+          result.saslConnectionRetries_ = saslConnectionRetriesBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000001) != 0)) {
+          zkHosts_ = zkHosts_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.zkHosts_ = zkHosts_;
+        if (dfsBuilder_ == null) {
+          result.dfs_ = dfs_;
+        } else {
+          result.dfs_ = dfsBuilder_.build();
+        }
+        if (yarnBuilder_ == null) {
+          result.yarn_ = yarn_;
+        } else {
+          result.yarn_ = yarnBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.getDefaultInstance()) return this;
+        if (other.hasCore()) {
+          mergeCore(other.getCore());
+        }
+        if (other.hasKerberos()) {
+          mergeKerberos(other.getKerberos());
+        }
+        if (other.hasUserImpersonation()) {
+          mergeUserImpersonation(other.getUserImpersonation());
+        }
+        if (!other.getUsername().isEmpty()) {
+          username_ = other.username_;
+          onChanged();
+        }
+        if (other.hasSaslConnectionRetries()) {
+          mergeSaslConnectionRetries(other.getSaslConnectionRetries());
+        }
+        if (!other.zkHosts_.isEmpty()) {
+          if (zkHosts_.isEmpty()) {
+            zkHosts_ = other.zkHosts_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureZkHostsIsMutable();
+            zkHosts_.addAll(other.zkHosts_);
+          }
+          onChanged();
+        }
+        if (other.hasDfs()) {
+          mergeDfs(other.getDfs());
+        }
+        if (other.hasYarn()) {
+          mergeYarn(other.getYarn());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore core_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCoreOrBuilder> coreBuilder_;
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+       * @return Whether the core field is set.
+       */
+      public boolean hasCore() {
+        return coreBuilder_ != null || core_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+       * @return The core.
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore getCore() {
+        if (coreBuilder_ == null) {
+          return core_ == null ? yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.getDefaultInstance() : core_;
+        } else {
+          return coreBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+       */
+      public Builder setCore(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore value) {
+        if (coreBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          core_ = value;
+          onChanged();
+        } else {
+          coreBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+       */
+      public Builder setCore(
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.Builder builderForValue) {
+        if (coreBuilder_ == null) {
+          core_ = builderForValue.build();
+          onChanged();
+        } else {
+          coreBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+       */
+      public Builder mergeCore(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore value) {
+        if (coreBuilder_ == null) {
+          if (core_ != null) {
+            core_ =
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.newBuilder(core_).mergeFrom(value).buildPartial();
+          } else {
+            core_ = value;
+          }
+          onChanged();
+        } else {
+          coreBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+       */
+      public Builder clearCore() {
+        if (coreBuilder_ == null) {
+          core_ = null;
+          onChanged();
+        } else {
+          core_ = null;
+          coreBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.Builder getCoreBuilder() {
+        
+        onChanged();
+        return getCoreFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCoreOrBuilder getCoreOrBuilder() {
+        if (coreBuilder_ != null) {
+          return coreBuilder_.getMessageOrBuilder();
+        } else {
+          return core_ == null ?
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.getDefaultInstance() : core_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCoreOrBuilder> 
+          getCoreFieldBuilder() {
+        if (coreBuilder_ == null) {
+          coreBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCoreOrBuilder>(
+                  getCore(),
+                  getParentForChildren(),
+                  isClean());
+          core_ = null;
+        }
+        return coreBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos kerberos_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberosOrBuilder> kerberosBuilder_;
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+       * @return Whether the kerberos field is set.
+       */
+      public boolean hasKerberos() {
+        return kerberosBuilder_ != null || kerberos_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+       * @return The kerberos.
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos getKerberos() {
+        if (kerberosBuilder_ == null) {
+          return kerberos_ == null ? yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.getDefaultInstance() : kerberos_;
+        } else {
+          return kerberosBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+       */
+      public Builder setKerberos(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos value) {
+        if (kerberosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          kerberos_ = value;
+          onChanged();
+        } else {
+          kerberosBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+       */
+      public Builder setKerberos(
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.Builder builderForValue) {
+        if (kerberosBuilder_ == null) {
+          kerberos_ = builderForValue.build();
+          onChanged();
+        } else {
+          kerberosBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+       */
+      public Builder mergeKerberos(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos value) {
+        if (kerberosBuilder_ == null) {
+          if (kerberos_ != null) {
+            kerberos_ =
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.newBuilder(kerberos_).mergeFrom(value).buildPartial();
+          } else {
+            kerberos_ = value;
+          }
+          onChanged();
+        } else {
+          kerberosBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+       */
+      public Builder clearKerberos() {
+        if (kerberosBuilder_ == null) {
+          kerberos_ = null;
+          onChanged();
+        } else {
+          kerberos_ = null;
+          kerberosBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.Builder getKerberosBuilder() {
+        
+        onChanged();
+        return getKerberosFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberosOrBuilder getKerberosOrBuilder() {
+        if (kerberosBuilder_ != null) {
+          return kerberosBuilder_.getMessageOrBuilder();
+        } else {
+          return kerberos_ == null ?
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.getDefaultInstance() : kerberos_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberosOrBuilder> 
+          getKerberosFieldBuilder() {
+        if (kerberosBuilder_ == null) {
+          kerberosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberosOrBuilder>(
+                  getKerberos(),
+                  getParentForChildren(),
+                  isClean());
+          kerberos_ = null;
+        }
+        return kerberosBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue userImpersonation_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> userImpersonationBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+       * @return Whether the userImpersonation field is set.
+       */
+      public boolean hasUserImpersonation() {
+        return userImpersonationBuilder_ != null || userImpersonation_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+       * @return The userImpersonation.
+       */
+      public com.google.protobuf.BoolValue getUserImpersonation() {
+        if (userImpersonationBuilder_ == null) {
+          return userImpersonation_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : userImpersonation_;
+        } else {
+          return userImpersonationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+       */
+      public Builder setUserImpersonation(com.google.protobuf.BoolValue value) {
+        if (userImpersonationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          userImpersonation_ = value;
+          onChanged();
+        } else {
+          userImpersonationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+       */
+      public Builder setUserImpersonation(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (userImpersonationBuilder_ == null) {
+          userImpersonation_ = builderForValue.build();
+          onChanged();
+        } else {
+          userImpersonationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+       */
+      public Builder mergeUserImpersonation(com.google.protobuf.BoolValue value) {
+        if (userImpersonationBuilder_ == null) {
+          if (userImpersonation_ != null) {
+            userImpersonation_ =
+              com.google.protobuf.BoolValue.newBuilder(userImpersonation_).mergeFrom(value).buildPartial();
+          } else {
+            userImpersonation_ = value;
+          }
+          onChanged();
+        } else {
+          userImpersonationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+       */
+      public Builder clearUserImpersonation() {
+        if (userImpersonationBuilder_ == null) {
+          userImpersonation_ = null;
+          onChanged();
+        } else {
+          userImpersonation_ = null;
+          userImpersonationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getUserImpersonationBuilder() {
+        
+        onChanged();
+        return getUserImpersonationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getUserImpersonationOrBuilder() {
+        if (userImpersonationBuilder_ != null) {
+          return userImpersonationBuilder_.getMessageOrBuilder();
+        } else {
+          return userImpersonation_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : userImpersonation_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getUserImpersonationFieldBuilder() {
+        if (userImpersonationBuilder_ == null) {
+          userImpersonationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getUserImpersonation(),
+                  getParentForChildren(),
+                  isClean());
+          userImpersonation_ = null;
+        }
+        return userImpersonationBuilder_;
+      }
+
+      private java.lang.Object username_ = "";
+      /**
+       * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @return The username.
+       */
+      public java.lang.String getUsername() {
+        java.lang.Object ref = username_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          username_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @return The bytes for username.
+       */
+      public com.google.protobuf.ByteString
+          getUsernameBytes() {
+        java.lang.Object ref = username_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          username_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @param value The username to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsername(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        username_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUsername() {
+        
+        username_ = getDefaultInstance().getUsername();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @param value The bytes for username to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsernameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        username_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value saslConnectionRetries_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> saslConnectionRetriesBuilder_;
+      /**
+       * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+       * @return Whether the saslConnectionRetries field is set.
+       */
+      public boolean hasSaslConnectionRetries() {
+        return saslConnectionRetriesBuilder_ != null || saslConnectionRetries_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+       * @return The saslConnectionRetries.
+       */
+      public com.google.protobuf.Int64Value getSaslConnectionRetries() {
+        if (saslConnectionRetriesBuilder_ == null) {
+          return saslConnectionRetries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : saslConnectionRetries_;
+        } else {
+          return saslConnectionRetriesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+       */
+      public Builder setSaslConnectionRetries(com.google.protobuf.Int64Value value) {
+        if (saslConnectionRetriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          saslConnectionRetries_ = value;
+          onChanged();
+        } else {
+          saslConnectionRetriesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+       */
+      public Builder setSaslConnectionRetries(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (saslConnectionRetriesBuilder_ == null) {
+          saslConnectionRetries_ = builderForValue.build();
+          onChanged();
+        } else {
+          saslConnectionRetriesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+       */
+      public Builder mergeSaslConnectionRetries(com.google.protobuf.Int64Value value) {
+        if (saslConnectionRetriesBuilder_ == null) {
+          if (saslConnectionRetries_ != null) {
+            saslConnectionRetries_ =
+              com.google.protobuf.Int64Value.newBuilder(saslConnectionRetries_).mergeFrom(value).buildPartial();
+          } else {
+            saslConnectionRetries_ = value;
+          }
+          onChanged();
+        } else {
+          saslConnectionRetriesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+       */
+      public Builder clearSaslConnectionRetries() {
+        if (saslConnectionRetriesBuilder_ == null) {
+          saslConnectionRetries_ = null;
+          onChanged();
+        } else {
+          saslConnectionRetries_ = null;
+          saslConnectionRetriesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSaslConnectionRetriesBuilder() {
+        
+        onChanged();
+        return getSaslConnectionRetriesFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSaslConnectionRetriesOrBuilder() {
+        if (saslConnectionRetriesBuilder_ != null) {
+          return saslConnectionRetriesBuilder_.getMessageOrBuilder();
+        } else {
+          return saslConnectionRetries_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : saslConnectionRetries_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSaslConnectionRetriesFieldBuilder() {
+        if (saslConnectionRetriesBuilder_ == null) {
+          saslConnectionRetriesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSaslConnectionRetries(),
+                  getParentForChildren(),
+                  isClean());
+          saslConnectionRetries_ = null;
+        }
+        return saslConnectionRetriesBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList zkHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureZkHostsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          zkHosts_ = new com.google.protobuf.LazyStringArrayList(zkHosts_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @return A list containing the zkHosts.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getZkHostsList() {
+        return zkHosts_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @return The count of zkHosts.
+       */
+      public int getZkHostsCount() {
+        return zkHosts_.size();
+      }
+      /**
+       * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param index The index of the element to return.
+       * @return The zkHosts at the given index.
+       */
+      public java.lang.String getZkHosts(int index) {
+        return zkHosts_.get(index);
+      }
+      /**
+       * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the zkHosts at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getZkHostsBytes(int index) {
+        return zkHosts_.getByteString(index);
+      }
+      /**
+       * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param index The index to set the value at.
+       * @param value The zkHosts to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZkHosts(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZkHostsIsMutable();
+        zkHosts_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param value The zkHosts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZkHosts(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZkHostsIsMutable();
+        zkHosts_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param values The zkHosts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllZkHosts(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureZkHostsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, zkHosts_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZkHosts() {
+        zkHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param value The bytes of the zkHosts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZkHostsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureZkHostsIsMutable();
+        zkHosts_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs dfs_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsOrBuilder> dfsBuilder_;
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
+       * @return Whether the dfs field is set.
+       */
+      public boolean hasDfs() {
+        return dfsBuilder_ != null || dfs_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
+       * @return The dfs.
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs getDfs() {
+        if (dfsBuilder_ == null) {
+          return dfs_ == null ? yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs.getDefaultInstance() : dfs_;
+        } else {
+          return dfsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
+       */
+      public Builder setDfs(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs value) {
+        if (dfsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dfs_ = value;
+          onChanged();
+        } else {
+          dfsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
+       */
+      public Builder setDfs(
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs.Builder builderForValue) {
+        if (dfsBuilder_ == null) {
+          dfs_ = builderForValue.build();
+          onChanged();
+        } else {
+          dfsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
+       */
+      public Builder mergeDfs(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs value) {
+        if (dfsBuilder_ == null) {
+          if (dfs_ != null) {
+            dfs_ =
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs.newBuilder(dfs_).mergeFrom(value).buildPartial();
+          } else {
+            dfs_ = value;
+          }
+          onChanged();
+        } else {
+          dfsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
+       */
+      public Builder clearDfs() {
+        if (dfsBuilder_ == null) {
+          dfs_ = null;
+          onChanged();
+        } else {
+          dfs_ = null;
+          dfsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs.Builder getDfsBuilder() {
+        
+        onChanged();
+        return getDfsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsOrBuilder getDfsOrBuilder() {
+        if (dfsBuilder_ != null) {
+          return dfsBuilder_.getMessageOrBuilder();
+        } else {
+          return dfs_ == null ?
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs.getDefaultInstance() : dfs_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSDfs dfs = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsOrBuilder> 
+          getDfsFieldBuilder() {
+        if (dfsBuilder_ == null) {
+          dfsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfs.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSDfsOrBuilder>(
+                  getDfs(),
+                  getParentForChildren(),
+                  isClean());
+          dfs_ = null;
+        }
+        return dfsBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn yarn_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnOrBuilder> yarnBuilder_;
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
+       * @return Whether the yarn field is set.
+       */
+      public boolean hasYarn() {
+        return yarnBuilder_ != null || yarn_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
+       * @return The yarn.
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn getYarn() {
+        if (yarnBuilder_ == null) {
+          return yarn_ == null ? yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn.getDefaultInstance() : yarn_;
+        } else {
+          return yarnBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
+       */
+      public Builder setYarn(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn value) {
+        if (yarnBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          yarn_ = value;
+          onChanged();
+        } else {
+          yarnBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
+       */
+      public Builder setYarn(
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn.Builder builderForValue) {
+        if (yarnBuilder_ == null) {
+          yarn_ = builderForValue.build();
+          onChanged();
+        } else {
+          yarnBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
+       */
+      public Builder mergeYarn(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn value) {
+        if (yarnBuilder_ == null) {
+          if (yarn_ != null) {
+            yarn_ =
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn.newBuilder(yarn_).mergeFrom(value).buildPartial();
+          } else {
+            yarn_ = value;
+          }
+          onChanged();
+        } else {
+          yarnBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
+       */
+      public Builder clearYarn() {
+        if (yarnBuilder_ == null) {
+          yarn_ = null;
+          onChanged();
+        } else {
+          yarn_ = null;
+          yarnBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn.Builder getYarnBuilder() {
+        
+        onChanged();
+        return getYarnFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnOrBuilder getYarnOrBuilder() {
+        if (yarnBuilder_ != null) {
+          return yarnBuilder_.getMessageOrBuilder();
+        } else {
+          return yarn_ == null ?
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn.getDefaultInstance() : yarn_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFSYarn yarn = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnOrBuilder> 
+          getYarnFieldBuilder() {
+        if (yarnBuilder_ == null) {
+          yarnBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarn.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSYarnOrBuilder>(
+                  getYarn(),
+                  getParentForChildren(),
+                  isClean());
+          yarn_ = null;
+        }
+        return yarnBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS)
+    private static final yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PXFDatasourceHDFS>
+        PARSER = new com.google.protobuf.AbstractParser<PXFDatasourceHDFS>() {
+      @java.lang.Override
+      public PXFDatasourceHDFS parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PXFDatasourceHDFS(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PXFDatasourceHDFS> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PXFDatasourceHDFS> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PXFDatasourceHiveOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+     * @return Whether the core field is set.
+     */
+    boolean hasCore();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+     * @return The core.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore getCore();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCoreOrBuilder getCoreOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+     * @return Whether the kerberos field is set.
+     */
+    boolean hasKerberos();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+     * @return The kerberos.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos getKerberos();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberosOrBuilder getKerberosOrBuilder();
+
+    /**
+     * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+     * @return Whether the userImpersonation field is set.
+     */
+    boolean hasUserImpersonation();
+    /**
+     * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+     * @return The userImpersonation.
+     */
+    com.google.protobuf.BoolValue getUserImpersonation();
+    /**
+     * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getUserImpersonationOrBuilder();
+
+    /**
+     * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     * @return The username.
+     */
+    java.lang.String getUsername();
+    /**
+     * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     * @return The bytes for username.
+     */
+    com.google.protobuf.ByteString
+        getUsernameBytes();
+
+    /**
+     * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+     * @return Whether the saslConnectionRetries field is set.
+     */
+    boolean hasSaslConnectionRetries();
+    /**
+     * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+     * @return The saslConnectionRetries.
+     */
+    com.google.protobuf.Int64Value getSaslConnectionRetries();
+    /**
+     * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getSaslConnectionRetriesOrBuilder();
+
+    /**
+     * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @return A list containing the zkHosts.
+     */
+    java.util.List<java.lang.String>
+        getZkHostsList();
+    /**
+     * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @return The count of zkHosts.
+     */
+    int getZkHostsCount();
+    /**
+     * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @param index The index of the element to return.
+     * @return The zkHosts at the given index.
+     */
+    java.lang.String getZkHosts(int index);
+    /**
+     * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zkHosts at the given index.
+     */
+    com.google.protobuf.ByteString
+        getZkHostsBytes(int index);
+
+    /**
+     * <code>.google.protobuf.BoolValue ppd = 7;</code>
+     * @return Whether the ppd field is set.
+     */
+    boolean hasPpd();
+    /**
+     * <code>.google.protobuf.BoolValue ppd = 7;</code>
+     * @return The ppd.
+     */
+    com.google.protobuf.BoolValue getPpd();
+    /**
+     * <code>.google.protobuf.BoolValue ppd = 7;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getPpdOrBuilder();
+
+    /**
+     * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @return A list containing the metastoreUris.
+     */
+    java.util.List<java.lang.String>
+        getMetastoreUrisList();
+    /**
+     * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @return The count of metastoreUris.
+     */
+    int getMetastoreUrisCount();
+    /**
+     * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @param index The index of the element to return.
+     * @return The metastoreUris at the given index.
+     */
+    java.lang.String getMetastoreUris(int index);
+    /**
+     * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the metastoreUris at the given index.
+     */
+    com.google.protobuf.ByteString
+        getMetastoreUrisBytes(int index);
+
+    /**
+     * <code>string metastore_kerberos_principal = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The metastoreKerberosPrincipal.
+     */
+    java.lang.String getMetastoreKerberosPrincipal();
+    /**
+     * <code>string metastore_kerberos_principal = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for metastoreKerberosPrincipal.
+     */
+    com.google.protobuf.ByteString
+        getMetastoreKerberosPrincipalBytes();
+
+    /**
+     * <code>string auth_kerberos_principal = 10 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The authKerberosPrincipal.
+     */
+    java.lang.String getAuthKerberosPrincipal();
+    /**
+     * <code>string auth_kerberos_principal = 10 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for authKerberosPrincipal.
+     */
+    com.google.protobuf.ByteString
+        getAuthKerberosPrincipalBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive}
+   */
+  public static final class PXFDatasourceHive extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive)
+      PXFDatasourceHiveOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PXFDatasourceHive.newBuilder() to construct.
+    private PXFDatasourceHive(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PXFDatasourceHive() {
+      username_ = "";
+      zkHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      metastoreUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      metastoreKerberosPrincipal_ = "";
+      authKerberosPrincipal_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PXFDatasourceHive();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PXFDatasourceHive(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.Builder subBuilder = null;
+              if (core_ != null) {
+                subBuilder = core_.toBuilder();
+              }
+              core_ = input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(core_);
+                core_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.Builder subBuilder = null;
+              if (kerberos_ != null) {
+                subBuilder = kerberos_.toBuilder();
+              }
+              kerberos_ = input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(kerberos_);
+                kerberos_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (userImpersonation_ != null) {
+                subBuilder = userImpersonation_.toBuilder();
+              }
+              userImpersonation_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(userImpersonation_);
+                userImpersonation_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              username_ = s;
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (saslConnectionRetries_ != null) {
+                subBuilder = saslConnectionRetries_.toBuilder();
+              }
+              saslConnectionRetries_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(saslConnectionRetries_);
+                saslConnectionRetries_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                zkHosts_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              zkHosts_.add(s);
+              break;
+            }
+            case 58: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (ppd_ != null) {
+                subBuilder = ppd_.toBuilder();
+              }
+              ppd_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(ppd_);
+                ppd_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                metastoreUris_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              metastoreUris_.add(s);
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              metastoreKerberosPrincipal_ = s;
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              authKerberosPrincipal_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          zkHosts_ = zkHosts_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          metastoreUris_ = metastoreUris_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHive_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHive_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.class, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.Builder.class);
+    }
+
+    public static final int CORE_FIELD_NUMBER = 1;
+    private yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore core_;
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+     * @return Whether the core field is set.
+     */
+    @java.lang.Override
+    public boolean hasCore() {
+      return core_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+     * @return The core.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore getCore() {
+      return core_ == null ? yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.getDefaultInstance() : core_;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCoreOrBuilder getCoreOrBuilder() {
+      return getCore();
+    }
+
+    public static final int KERBEROS_FIELD_NUMBER = 2;
+    private yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos kerberos_;
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+     * @return Whether the kerberos field is set.
+     */
+    @java.lang.Override
+    public boolean hasKerberos() {
+      return kerberos_ != null;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+     * @return The kerberos.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos getKerberos() {
+      return kerberos_ == null ? yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.getDefaultInstance() : kerberos_;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberosOrBuilder getKerberosOrBuilder() {
+      return getKerberos();
+    }
+
+    public static final int USER_IMPERSONATION_FIELD_NUMBER = 3;
+    private com.google.protobuf.BoolValue userImpersonation_;
+    /**
+     * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+     * @return Whether the userImpersonation field is set.
+     */
+    @java.lang.Override
+    public boolean hasUserImpersonation() {
+      return userImpersonation_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+     * @return The userImpersonation.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getUserImpersonation() {
+      return userImpersonation_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : userImpersonation_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getUserImpersonationOrBuilder() {
+      return getUserImpersonation();
+    }
+
+    public static final int USERNAME_FIELD_NUMBER = 4;
+    private volatile java.lang.Object username_;
+    /**
+     * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     * @return The username.
+     */
+    @java.lang.Override
+    public java.lang.String getUsername() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        username_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
+     * @return The bytes for username.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getUsernameBytes() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        username_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SASL_CONNECTION_RETRIES_FIELD_NUMBER = 5;
+    private com.google.protobuf.Int64Value saslConnectionRetries_;
+    /**
+     * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+     * @return Whether the saslConnectionRetries field is set.
+     */
+    @java.lang.Override
+    public boolean hasSaslConnectionRetries() {
+      return saslConnectionRetries_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+     * @return The saslConnectionRetries.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getSaslConnectionRetries() {
+      return saslConnectionRetries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : saslConnectionRetries_;
+    }
+    /**
+     * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getSaslConnectionRetriesOrBuilder() {
+      return getSaslConnectionRetries();
+    }
+
+    public static final int ZK_HOSTS_FIELD_NUMBER = 6;
+    private com.google.protobuf.LazyStringList zkHosts_;
+    /**
+     * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @return A list containing the zkHosts.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getZkHostsList() {
+      return zkHosts_;
+    }
+    /**
+     * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @return The count of zkHosts.
+     */
+    public int getZkHostsCount() {
+      return zkHosts_.size();
+    }
+    /**
+     * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @param index The index of the element to return.
+     * @return The zkHosts at the given index.
+     */
+    public java.lang.String getZkHosts(int index) {
+      return zkHosts_.get(index);
+    }
+    /**
+     * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zkHosts at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getZkHostsBytes(int index) {
+      return zkHosts_.getByteString(index);
+    }
+
+    public static final int PPD_FIELD_NUMBER = 7;
+    private com.google.protobuf.BoolValue ppd_;
+    /**
+     * <code>.google.protobuf.BoolValue ppd = 7;</code>
+     * @return Whether the ppd field is set.
+     */
+    @java.lang.Override
+    public boolean hasPpd() {
+      return ppd_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue ppd = 7;</code>
+     * @return The ppd.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getPpd() {
+      return ppd_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : ppd_;
+    }
+    /**
+     * <code>.google.protobuf.BoolValue ppd = 7;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getPpdOrBuilder() {
+      return getPpd();
+    }
+
+    public static final int METASTORE_URIS_FIELD_NUMBER = 8;
+    private com.google.protobuf.LazyStringList metastoreUris_;
+    /**
+     * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @return A list containing the metastoreUris.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getMetastoreUrisList() {
+      return metastoreUris_;
+    }
+    /**
+     * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @return The count of metastoreUris.
+     */
+    public int getMetastoreUrisCount() {
+      return metastoreUris_.size();
+    }
+    /**
+     * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @param index The index of the element to return.
+     * @return The metastoreUris at the given index.
+     */
+    public java.lang.String getMetastoreUris(int index) {
+      return metastoreUris_.get(index);
+    }
+    /**
+     * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the metastoreUris at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getMetastoreUrisBytes(int index) {
+      return metastoreUris_.getByteString(index);
+    }
+
+    public static final int METASTORE_KERBEROS_PRINCIPAL_FIELD_NUMBER = 9;
+    private volatile java.lang.Object metastoreKerberosPrincipal_;
+    /**
+     * <code>string metastore_kerberos_principal = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The metastoreKerberosPrincipal.
+     */
+    @java.lang.Override
+    public java.lang.String getMetastoreKerberosPrincipal() {
+      java.lang.Object ref = metastoreKerberosPrincipal_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        metastoreKerberosPrincipal_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string metastore_kerberos_principal = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for metastoreKerberosPrincipal.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getMetastoreKerberosPrincipalBytes() {
+      java.lang.Object ref = metastoreKerberosPrincipal_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        metastoreKerberosPrincipal_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AUTH_KERBEROS_PRINCIPAL_FIELD_NUMBER = 10;
+    private volatile java.lang.Object authKerberosPrincipal_;
+    /**
+     * <code>string auth_kerberos_principal = 10 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The authKerberosPrincipal.
+     */
+    @java.lang.Override
+    public java.lang.String getAuthKerberosPrincipal() {
+      java.lang.Object ref = authKerberosPrincipal_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        authKerberosPrincipal_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string auth_kerberos_principal = 10 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for authKerberosPrincipal.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAuthKerberosPrincipalBytes() {
+      java.lang.Object ref = authKerberosPrincipal_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        authKerberosPrincipal_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (core_ != null) {
+        output.writeMessage(1, getCore());
+      }
+      if (kerberos_ != null) {
+        output.writeMessage(2, getKerberos());
+      }
+      if (userImpersonation_ != null) {
+        output.writeMessage(3, getUserImpersonation());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, username_);
+      }
+      if (saslConnectionRetries_ != null) {
+        output.writeMessage(5, getSaslConnectionRetries());
+      }
+      for (int i = 0; i < zkHosts_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, zkHosts_.getRaw(i));
+      }
+      if (ppd_ != null) {
+        output.writeMessage(7, getPpd());
+      }
+      for (int i = 0; i < metastoreUris_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, metastoreUris_.getRaw(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metastoreKerberosPrincipal_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, metastoreKerberosPrincipal_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authKerberosPrincipal_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, authKerberosPrincipal_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (core_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCore());
+      }
+      if (kerberos_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getKerberos());
+      }
+      if (userImpersonation_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getUserImpersonation());
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, username_);
+      }
+      if (saslConnectionRetries_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getSaslConnectionRetries());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < zkHosts_.size(); i++) {
+          dataSize += computeStringSizeNoTag(zkHosts_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getZkHostsList().size();
+      }
+      if (ppd_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getPpd());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < metastoreUris_.size(); i++) {
+          dataSize += computeStringSizeNoTag(metastoreUris_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getMetastoreUrisList().size();
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metastoreKerberosPrincipal_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, metastoreKerberosPrincipal_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authKerberosPrincipal_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, authKerberosPrincipal_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive other = (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive) obj;
+
+      if (hasCore() != other.hasCore()) return false;
+      if (hasCore()) {
+        if (!getCore()
+            .equals(other.getCore())) return false;
+      }
+      if (hasKerberos() != other.hasKerberos()) return false;
+      if (hasKerberos()) {
+        if (!getKerberos()
+            .equals(other.getKerberos())) return false;
+      }
+      if (hasUserImpersonation() != other.hasUserImpersonation()) return false;
+      if (hasUserImpersonation()) {
+        if (!getUserImpersonation()
+            .equals(other.getUserImpersonation())) return false;
+      }
+      if (!getUsername()
+          .equals(other.getUsername())) return false;
+      if (hasSaslConnectionRetries() != other.hasSaslConnectionRetries()) return false;
+      if (hasSaslConnectionRetries()) {
+        if (!getSaslConnectionRetries()
+            .equals(other.getSaslConnectionRetries())) return false;
+      }
+      if (!getZkHostsList()
+          .equals(other.getZkHostsList())) return false;
+      if (hasPpd() != other.hasPpd()) return false;
+      if (hasPpd()) {
+        if (!getPpd()
+            .equals(other.getPpd())) return false;
+      }
+      if (!getMetastoreUrisList()
+          .equals(other.getMetastoreUrisList())) return false;
+      if (!getMetastoreKerberosPrincipal()
+          .equals(other.getMetastoreKerberosPrincipal())) return false;
+      if (!getAuthKerberosPrincipal()
+          .equals(other.getAuthKerberosPrincipal())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCore()) {
+        hash = (37 * hash) + CORE_FIELD_NUMBER;
+        hash = (53 * hash) + getCore().hashCode();
+      }
+      if (hasKerberos()) {
+        hash = (37 * hash) + KERBEROS_FIELD_NUMBER;
+        hash = (53 * hash) + getKerberos().hashCode();
+      }
+      if (hasUserImpersonation()) {
+        hash = (37 * hash) + USER_IMPERSONATION_FIELD_NUMBER;
+        hash = (53 * hash) + getUserImpersonation().hashCode();
+      }
+      hash = (37 * hash) + USERNAME_FIELD_NUMBER;
+      hash = (53 * hash) + getUsername().hashCode();
+      if (hasSaslConnectionRetries()) {
+        hash = (37 * hash) + SASL_CONNECTION_RETRIES_FIELD_NUMBER;
+        hash = (53 * hash) + getSaslConnectionRetries().hashCode();
+      }
+      if (getZkHostsCount() > 0) {
+        hash = (37 * hash) + ZK_HOSTS_FIELD_NUMBER;
+        hash = (53 * hash) + getZkHostsList().hashCode();
+      }
+      if (hasPpd()) {
+        hash = (37 * hash) + PPD_FIELD_NUMBER;
+        hash = (53 * hash) + getPpd().hashCode();
+      }
+      if (getMetastoreUrisCount() > 0) {
+        hash = (37 * hash) + METASTORE_URIS_FIELD_NUMBER;
+        hash = (53 * hash) + getMetastoreUrisList().hashCode();
+      }
+      hash = (37 * hash) + METASTORE_KERBEROS_PRINCIPAL_FIELD_NUMBER;
+      hash = (53 * hash) + getMetastoreKerberosPrincipal().hashCode();
+      hash = (37 * hash) + AUTH_KERBEROS_PRINCIPAL_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthKerberosPrincipal().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive)
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHiveOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHive_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHive_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.class, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (coreBuilder_ == null) {
+          core_ = null;
+        } else {
+          core_ = null;
+          coreBuilder_ = null;
+        }
+        if (kerberosBuilder_ == null) {
+          kerberos_ = null;
+        } else {
+          kerberos_ = null;
+          kerberosBuilder_ = null;
+        }
+        if (userImpersonationBuilder_ == null) {
+          userImpersonation_ = null;
+        } else {
+          userImpersonation_ = null;
+          userImpersonationBuilder_ = null;
+        }
+        username_ = "";
+
+        if (saslConnectionRetriesBuilder_ == null) {
+          saslConnectionRetries_ = null;
+        } else {
+          saslConnectionRetries_ = null;
+          saslConnectionRetriesBuilder_ = null;
+        }
+        zkHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (ppdBuilder_ == null) {
+          ppd_ = null;
+        } else {
+          ppd_ = null;
+          ppdBuilder_ = null;
+        }
+        metastoreUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        metastoreKerberosPrincipal_ = "";
+
+        authKerberosPrincipal_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHive_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive build() {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive result = new yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive(this);
+        int from_bitField0_ = bitField0_;
+        if (coreBuilder_ == null) {
+          result.core_ = core_;
+        } else {
+          result.core_ = coreBuilder_.build();
+        }
+        if (kerberosBuilder_ == null) {
+          result.kerberos_ = kerberos_;
+        } else {
+          result.kerberos_ = kerberosBuilder_.build();
+        }
+        if (userImpersonationBuilder_ == null) {
+          result.userImpersonation_ = userImpersonation_;
+        } else {
+          result.userImpersonation_ = userImpersonationBuilder_.build();
+        }
+        result.username_ = username_;
+        if (saslConnectionRetriesBuilder_ == null) {
+          result.saslConnectionRetries_ = saslConnectionRetries_;
+        } else {
+          result.saslConnectionRetries_ = saslConnectionRetriesBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000001) != 0)) {
+          zkHosts_ = zkHosts_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.zkHosts_ = zkHosts_;
+        if (ppdBuilder_ == null) {
+          result.ppd_ = ppd_;
+        } else {
+          result.ppd_ = ppdBuilder_.build();
+        }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          metastoreUris_ = metastoreUris_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.metastoreUris_ = metastoreUris_;
+        result.metastoreKerberosPrincipal_ = metastoreKerberosPrincipal_;
+        result.authKerberosPrincipal_ = authKerberosPrincipal_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.getDefaultInstance()) return this;
+        if (other.hasCore()) {
+          mergeCore(other.getCore());
+        }
+        if (other.hasKerberos()) {
+          mergeKerberos(other.getKerberos());
+        }
+        if (other.hasUserImpersonation()) {
+          mergeUserImpersonation(other.getUserImpersonation());
+        }
+        if (!other.getUsername().isEmpty()) {
+          username_ = other.username_;
+          onChanged();
+        }
+        if (other.hasSaslConnectionRetries()) {
+          mergeSaslConnectionRetries(other.getSaslConnectionRetries());
+        }
+        if (!other.zkHosts_.isEmpty()) {
+          if (zkHosts_.isEmpty()) {
+            zkHosts_ = other.zkHosts_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureZkHostsIsMutable();
+            zkHosts_.addAll(other.zkHosts_);
+          }
+          onChanged();
+        }
+        if (other.hasPpd()) {
+          mergePpd(other.getPpd());
+        }
+        if (!other.metastoreUris_.isEmpty()) {
+          if (metastoreUris_.isEmpty()) {
+            metastoreUris_ = other.metastoreUris_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureMetastoreUrisIsMutable();
+            metastoreUris_.addAll(other.metastoreUris_);
+          }
+          onChanged();
+        }
+        if (!other.getMetastoreKerberosPrincipal().isEmpty()) {
+          metastoreKerberosPrincipal_ = other.metastoreKerberosPrincipal_;
+          onChanged();
+        }
+        if (!other.getAuthKerberosPrincipal().isEmpty()) {
+          authKerberosPrincipal_ = other.authKerberosPrincipal_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore core_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCoreOrBuilder> coreBuilder_;
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+       * @return Whether the core field is set.
+       */
+      public boolean hasCore() {
+        return coreBuilder_ != null || core_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+       * @return The core.
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore getCore() {
+        if (coreBuilder_ == null) {
+          return core_ == null ? yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.getDefaultInstance() : core_;
+        } else {
+          return coreBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+       */
+      public Builder setCore(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore value) {
+        if (coreBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          core_ = value;
+          onChanged();
+        } else {
+          coreBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+       */
+      public Builder setCore(
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.Builder builderForValue) {
+        if (coreBuilder_ == null) {
+          core_ = builderForValue.build();
+          onChanged();
+        } else {
+          coreBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+       */
+      public Builder mergeCore(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore value) {
+        if (coreBuilder_ == null) {
+          if (core_ != null) {
+            core_ =
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.newBuilder(core_).mergeFrom(value).buildPartial();
+          } else {
+            core_ = value;
+          }
+          onChanged();
+        } else {
+          coreBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+       */
+      public Builder clearCore() {
+        if (coreBuilder_ == null) {
+          core_ = null;
+          onChanged();
+        } else {
+          core_ = null;
+          coreBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.Builder getCoreBuilder() {
+        
+        onChanged();
+        return getCoreFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCoreOrBuilder getCoreOrBuilder() {
+        if (coreBuilder_ != null) {
+          return coreBuilder_.getMessageOrBuilder();
+        } else {
+          return core_ == null ?
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.getDefaultInstance() : core_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceCore core = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCoreOrBuilder> 
+          getCoreFieldBuilder() {
+        if (coreBuilder_ == null) {
+          coreBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCore.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceCoreOrBuilder>(
+                  getCore(),
+                  getParentForChildren(),
+                  isClean());
+          core_ = null;
+        }
+        return coreBuilder_;
+      }
+
+      private yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos kerberos_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberosOrBuilder> kerberosBuilder_;
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+       * @return Whether the kerberos field is set.
+       */
+      public boolean hasKerberos() {
+        return kerberosBuilder_ != null || kerberos_ != null;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+       * @return The kerberos.
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos getKerberos() {
+        if (kerberosBuilder_ == null) {
+          return kerberos_ == null ? yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.getDefaultInstance() : kerberos_;
+        } else {
+          return kerberosBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+       */
+      public Builder setKerberos(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos value) {
+        if (kerberosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          kerberos_ = value;
+          onChanged();
+        } else {
+          kerberosBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+       */
+      public Builder setKerberos(
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.Builder builderForValue) {
+        if (kerberosBuilder_ == null) {
+          kerberos_ = builderForValue.build();
+          onChanged();
+        } else {
+          kerberosBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+       */
+      public Builder mergeKerberos(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos value) {
+        if (kerberosBuilder_ == null) {
+          if (kerberos_ != null) {
+            kerberos_ =
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.newBuilder(kerberos_).mergeFrom(value).buildPartial();
+          } else {
+            kerberos_ = value;
+          }
+          onChanged();
+        } else {
+          kerberosBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+       */
+      public Builder clearKerberos() {
+        if (kerberosBuilder_ == null) {
+          kerberos_ = null;
+          onChanged();
+        } else {
+          kerberos_ = null;
+          kerberosBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.Builder getKerberosBuilder() {
+        
+        onChanged();
+        return getKerberosFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberosOrBuilder getKerberosOrBuilder() {
+        if (kerberosBuilder_ != null) {
+          return kerberosBuilder_.getMessageOrBuilder();
+        } else {
+          return kerberos_ == null ?
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.getDefaultInstance() : kerberos_;
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceKerberos kerberos = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberosOrBuilder> 
+          getKerberosFieldBuilder() {
+        if (kerberosBuilder_ == null) {
+          kerberosBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberos.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceKerberosOrBuilder>(
+                  getKerberos(),
+                  getParentForChildren(),
+                  isClean());
+          kerberos_ = null;
+        }
+        return kerberosBuilder_;
+      }
+
+      private com.google.protobuf.BoolValue userImpersonation_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> userImpersonationBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+       * @return Whether the userImpersonation field is set.
+       */
+      public boolean hasUserImpersonation() {
+        return userImpersonationBuilder_ != null || userImpersonation_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+       * @return The userImpersonation.
+       */
+      public com.google.protobuf.BoolValue getUserImpersonation() {
+        if (userImpersonationBuilder_ == null) {
+          return userImpersonation_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : userImpersonation_;
+        } else {
+          return userImpersonationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+       */
+      public Builder setUserImpersonation(com.google.protobuf.BoolValue value) {
+        if (userImpersonationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          userImpersonation_ = value;
+          onChanged();
+        } else {
+          userImpersonationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+       */
+      public Builder setUserImpersonation(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (userImpersonationBuilder_ == null) {
+          userImpersonation_ = builderForValue.build();
+          onChanged();
+        } else {
+          userImpersonationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+       */
+      public Builder mergeUserImpersonation(com.google.protobuf.BoolValue value) {
+        if (userImpersonationBuilder_ == null) {
+          if (userImpersonation_ != null) {
+            userImpersonation_ =
+              com.google.protobuf.BoolValue.newBuilder(userImpersonation_).mergeFrom(value).buildPartial();
+          } else {
+            userImpersonation_ = value;
+          }
+          onChanged();
+        } else {
+          userImpersonationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+       */
+      public Builder clearUserImpersonation() {
+        if (userImpersonationBuilder_ == null) {
+          userImpersonation_ = null;
+          onChanged();
+        } else {
+          userImpersonation_ = null;
+          userImpersonationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getUserImpersonationBuilder() {
+        
+        onChanged();
+        return getUserImpersonationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getUserImpersonationOrBuilder() {
+        if (userImpersonationBuilder_ != null) {
+          return userImpersonationBuilder_.getMessageOrBuilder();
+        } else {
+          return userImpersonation_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : userImpersonation_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue user_impersonation = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getUserImpersonationFieldBuilder() {
+        if (userImpersonationBuilder_ == null) {
+          userImpersonationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getUserImpersonation(),
+                  getParentForChildren(),
+                  isClean());
+          userImpersonation_ = null;
+        }
+        return userImpersonationBuilder_;
+      }
+
+      private java.lang.Object username_ = "";
+      /**
+       * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @return The username.
+       */
+      public java.lang.String getUsername() {
+        java.lang.Object ref = username_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          username_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @return The bytes for username.
+       */
+      public com.google.protobuf.ByteString
+          getUsernameBytes() {
+        java.lang.Object ref = username_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          username_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @param value The username to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsername(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        username_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUsername() {
+        
+        username_ = getDefaultInstance().getUsername();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string username = 4 [(.yandex.cloud.length) = "&lt;=128"];</code>
+       * @param value The bytes for username to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUsernameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        username_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value saslConnectionRetries_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> saslConnectionRetriesBuilder_;
+      /**
+       * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+       * @return Whether the saslConnectionRetries field is set.
+       */
+      public boolean hasSaslConnectionRetries() {
+        return saslConnectionRetriesBuilder_ != null || saslConnectionRetries_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+       * @return The saslConnectionRetries.
+       */
+      public com.google.protobuf.Int64Value getSaslConnectionRetries() {
+        if (saslConnectionRetriesBuilder_ == null) {
+          return saslConnectionRetries_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : saslConnectionRetries_;
+        } else {
+          return saslConnectionRetriesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+       */
+      public Builder setSaslConnectionRetries(com.google.protobuf.Int64Value value) {
+        if (saslConnectionRetriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          saslConnectionRetries_ = value;
+          onChanged();
+        } else {
+          saslConnectionRetriesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+       */
+      public Builder setSaslConnectionRetries(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (saslConnectionRetriesBuilder_ == null) {
+          saslConnectionRetries_ = builderForValue.build();
+          onChanged();
+        } else {
+          saslConnectionRetriesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+       */
+      public Builder mergeSaslConnectionRetries(com.google.protobuf.Int64Value value) {
+        if (saslConnectionRetriesBuilder_ == null) {
+          if (saslConnectionRetries_ != null) {
+            saslConnectionRetries_ =
+              com.google.protobuf.Int64Value.newBuilder(saslConnectionRetries_).mergeFrom(value).buildPartial();
+          } else {
+            saslConnectionRetries_ = value;
+          }
+          onChanged();
+        } else {
+          saslConnectionRetriesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+       */
+      public Builder clearSaslConnectionRetries() {
+        if (saslConnectionRetriesBuilder_ == null) {
+          saslConnectionRetries_ = null;
+          onChanged();
+        } else {
+          saslConnectionRetries_ = null;
+          saslConnectionRetriesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getSaslConnectionRetriesBuilder() {
+        
+        onChanged();
+        return getSaslConnectionRetriesFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getSaslConnectionRetriesOrBuilder() {
+        if (saslConnectionRetriesBuilder_ != null) {
+          return saslConnectionRetriesBuilder_.getMessageOrBuilder();
+        } else {
+          return saslConnectionRetries_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : saslConnectionRetries_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Int64Value sasl_connection_retries = 5 [(.yandex.cloud.value) = "1-50"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getSaslConnectionRetriesFieldBuilder() {
+        if (saslConnectionRetriesBuilder_ == null) {
+          saslConnectionRetriesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getSaslConnectionRetries(),
+                  getParentForChildren(),
+                  isClean());
+          saslConnectionRetries_ = null;
+        }
+        return saslConnectionRetriesBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList zkHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureZkHostsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          zkHosts_ = new com.google.protobuf.LazyStringArrayList(zkHosts_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @return A list containing the zkHosts.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getZkHostsList() {
+        return zkHosts_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @return The count of zkHosts.
+       */
+      public int getZkHostsCount() {
+        return zkHosts_.size();
+      }
+      /**
+       * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param index The index of the element to return.
+       * @return The zkHosts at the given index.
+       */
+      public java.lang.String getZkHosts(int index) {
+        return zkHosts_.get(index);
+      }
+      /**
+       * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the zkHosts at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getZkHostsBytes(int index) {
+        return zkHosts_.getByteString(index);
+      }
+      /**
+       * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param index The index to set the value at.
+       * @param value The zkHosts to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZkHosts(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZkHostsIsMutable();
+        zkHosts_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param value The zkHosts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZkHosts(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZkHostsIsMutable();
+        zkHosts_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param values The zkHosts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllZkHosts(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureZkHostsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, zkHosts_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZkHosts() {
+        zkHosts_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string zk_hosts = 6 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param value The bytes of the zkHosts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZkHostsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureZkHostsIsMutable();
+        zkHosts_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.BoolValue ppd_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> ppdBuilder_;
+      /**
+       * <code>.google.protobuf.BoolValue ppd = 7;</code>
+       * @return Whether the ppd field is set.
+       */
+      public boolean hasPpd() {
+        return ppdBuilder_ != null || ppd_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue ppd = 7;</code>
+       * @return The ppd.
+       */
+      public com.google.protobuf.BoolValue getPpd() {
+        if (ppdBuilder_ == null) {
+          return ppd_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : ppd_;
+        } else {
+          return ppdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue ppd = 7;</code>
+       */
+      public Builder setPpd(com.google.protobuf.BoolValue value) {
+        if (ppdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ppd_ = value;
+          onChanged();
+        } else {
+          ppdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue ppd = 7;</code>
+       */
+      public Builder setPpd(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (ppdBuilder_ == null) {
+          ppd_ = builderForValue.build();
+          onChanged();
+        } else {
+          ppdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue ppd = 7;</code>
+       */
+      public Builder mergePpd(com.google.protobuf.BoolValue value) {
+        if (ppdBuilder_ == null) {
+          if (ppd_ != null) {
+            ppd_ =
+              com.google.protobuf.BoolValue.newBuilder(ppd_).mergeFrom(value).buildPartial();
+          } else {
+            ppd_ = value;
+          }
+          onChanged();
+        } else {
+          ppdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue ppd = 7;</code>
+       */
+      public Builder clearPpd() {
+        if (ppdBuilder_ == null) {
+          ppd_ = null;
+          onChanged();
+        } else {
+          ppd_ = null;
+          ppdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BoolValue ppd = 7;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getPpdBuilder() {
+        
+        onChanged();
+        return getPpdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BoolValue ppd = 7;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getPpdOrBuilder() {
+        if (ppdBuilder_ != null) {
+          return ppdBuilder_.getMessageOrBuilder();
+        } else {
+          return ppd_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : ppd_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BoolValue ppd = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getPpdFieldBuilder() {
+        if (ppdBuilder_ == null) {
+          ppdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getPpd(),
+                  getParentForChildren(),
+                  isClean());
+          ppd_ = null;
+        }
+        return ppdBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList metastoreUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureMetastoreUrisIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          metastoreUris_ = new com.google.protobuf.LazyStringArrayList(metastoreUris_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @return A list containing the metastoreUris.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getMetastoreUrisList() {
+        return metastoreUris_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @return The count of metastoreUris.
+       */
+      public int getMetastoreUrisCount() {
+        return metastoreUris_.size();
+      }
+      /**
+       * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param index The index of the element to return.
+       * @return The metastoreUris at the given index.
+       */
+      public java.lang.String getMetastoreUris(int index) {
+        return metastoreUris_.get(index);
+      }
+      /**
+       * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the metastoreUris at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getMetastoreUrisBytes(int index) {
+        return metastoreUris_.getByteString(index);
+      }
+      /**
+       * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param index The index to set the value at.
+       * @param value The metastoreUris to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetastoreUris(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureMetastoreUrisIsMutable();
+        metastoreUris_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param value The metastoreUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMetastoreUris(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureMetastoreUrisIsMutable();
+        metastoreUris_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param values The metastoreUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMetastoreUris(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureMetastoreUrisIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, metastoreUris_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMetastoreUris() {
+        metastoreUris_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string metastore_uris = 8 [(.yandex.cloud.size) = "&lt;=200", (.yandex.cloud.length) = "1-200"];</code>
+       * @param value The bytes of the metastoreUris to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMetastoreUrisBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureMetastoreUrisIsMutable();
+        metastoreUris_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object metastoreKerberosPrincipal_ = "";
+      /**
+       * <code>string metastore_kerberos_principal = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The metastoreKerberosPrincipal.
+       */
+      public java.lang.String getMetastoreKerberosPrincipal() {
+        java.lang.Object ref = metastoreKerberosPrincipal_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          metastoreKerberosPrincipal_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string metastore_kerberos_principal = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for metastoreKerberosPrincipal.
+       */
+      public com.google.protobuf.ByteString
+          getMetastoreKerberosPrincipalBytes() {
+        java.lang.Object ref = metastoreKerberosPrincipal_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          metastoreKerberosPrincipal_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string metastore_kerberos_principal = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The metastoreKerberosPrincipal to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetastoreKerberosPrincipal(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        metastoreKerberosPrincipal_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string metastore_kerberos_principal = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMetastoreKerberosPrincipal() {
+        
+        metastoreKerberosPrincipal_ = getDefaultInstance().getMetastoreKerberosPrincipal();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string metastore_kerberos_principal = 9 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for metastoreKerberosPrincipal to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMetastoreKerberosPrincipalBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        metastoreKerberosPrincipal_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object authKerberosPrincipal_ = "";
+      /**
+       * <code>string auth_kerberos_principal = 10 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The authKerberosPrincipal.
+       */
+      public java.lang.String getAuthKerberosPrincipal() {
+        java.lang.Object ref = authKerberosPrincipal_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          authKerberosPrincipal_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string auth_kerberos_principal = 10 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for authKerberosPrincipal.
+       */
+      public com.google.protobuf.ByteString
+          getAuthKerberosPrincipalBytes() {
+        java.lang.Object ref = authKerberosPrincipal_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          authKerberosPrincipal_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string auth_kerberos_principal = 10 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The authKerberosPrincipal to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthKerberosPrincipal(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        authKerberosPrincipal_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string auth_kerberos_principal = 10 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAuthKerberosPrincipal() {
+        
+        authKerberosPrincipal_ = getDefaultInstance().getAuthKerberosPrincipal();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string auth_kerberos_principal = 10 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for authKerberosPrincipal to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAuthKerberosPrincipalBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        authKerberosPrincipal_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive)
+    private static final yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PXFDatasourceHive>
+        PARSER = new com.google.protobuf.AbstractParser<PXFDatasourceHive>() {
+      @java.lang.Override
+      public PXFDatasourceHive parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PXFDatasourceHive(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PXFDatasourceHive> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PXFDatasourceHive> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PXFDatasourceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.greenplum.v1.PXFDatasource)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
+     * @return Whether the s3 field is set.
+     */
+    boolean hasS3();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
+     * @return The s3.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 getS3();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3OrBuilder getS3OrBuilder();
+
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
+     * @return Whether the jdbc field is set.
+     */
+    boolean hasJdbc();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
+     * @return The jdbc.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC getJdbc();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBCOrBuilder getJdbcOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
+     * @return Whether the hdfs field is set.
+     */
+    boolean hasHdfs();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
+     * @return The hdfs.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS getHdfs();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSOrBuilder getHdfsOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
+     * @return Whether the hive field is set.
+     */
+    boolean hasHive();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
+     * @return The hive.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive getHive();
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
+     */
+    yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHiveOrBuilder getHiveOrBuilder();
+
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource.SettingsCase getSettingsCase();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasource}
+   */
+  public static final class PXFDatasource extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.mdb.greenplum.v1.PXFDatasource)
+      PXFDatasourceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PXFDatasource.newBuilder() to construct.
+    private PXFDatasource(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PXFDatasource() {
+      name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PXFDatasource();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PXFDatasource(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.Builder subBuilder = null;
+              if (settingsCase_ == 2) {
+                subBuilder = ((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3) settings_).toBuilder();
+              }
+              settings_ =
+                  input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3) settings_);
+                settings_ = subBuilder.buildPartial();
+              }
+              settingsCase_ = 2;
+              break;
+            }
+            case 26: {
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.Builder subBuilder = null;
+              if (settingsCase_ == 3) {
+                subBuilder = ((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC) settings_).toBuilder();
+              }
+              settings_ =
+                  input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC) settings_);
+                settings_ = subBuilder.buildPartial();
+              }
+              settingsCase_ = 3;
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.Builder subBuilder = null;
+              if (settingsCase_ == 4) {
+                subBuilder = ((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS) settings_).toBuilder();
+              }
+              settings_ =
+                  input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS) settings_);
+                settings_ = subBuilder.buildPartial();
+              }
+              settingsCase_ = 4;
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.Builder subBuilder = null;
+              if (settingsCase_ == 5) {
+                subBuilder = ((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive) settings_).toBuilder();
+              }
+              settings_ =
+                  input.readMessage(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive) settings_);
+                settings_ = subBuilder.buildPartial();
+              }
+              settingsCase_ = 5;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasource_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasource_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource.class, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource.Builder.class);
+    }
+
+    private int settingsCase_ = 0;
+    private java.lang.Object settings_;
+    public enum SettingsCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      S3(2),
+      JDBC(3),
+      HDFS(4),
+      HIVE(5),
+      SETTINGS_NOT_SET(0);
+      private final int value;
+      private SettingsCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SettingsCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static SettingsCase forNumber(int value) {
+        switch (value) {
+          case 2: return S3;
+          case 3: return JDBC;
+          case 4: return HDFS;
+          case 5: return HIVE;
+          case 0: return SETTINGS_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public SettingsCase
+    getSettingsCase() {
+      return SettingsCase.forNumber(
+          settingsCase_);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int S3_FIELD_NUMBER = 2;
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
+     * @return Whether the s3 field is set.
+     */
+    @java.lang.Override
+    public boolean hasS3() {
+      return settingsCase_ == 2;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
+     * @return The s3.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 getS3() {
+      if (settingsCase_ == 2) {
+         return (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3) settings_;
+      }
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3OrBuilder getS3OrBuilder() {
+      if (settingsCase_ == 2) {
+         return (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3) settings_;
+      }
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.getDefaultInstance();
+    }
+
+    public static final int JDBC_FIELD_NUMBER = 3;
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
+     * @return Whether the jdbc field is set.
+     */
+    @java.lang.Override
+    public boolean hasJdbc() {
+      return settingsCase_ == 3;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
+     * @return The jdbc.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC getJdbc() {
+      if (settingsCase_ == 3) {
+         return (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC) settings_;
+      }
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBCOrBuilder getJdbcOrBuilder() {
+      if (settingsCase_ == 3) {
+         return (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC) settings_;
+      }
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.getDefaultInstance();
+    }
+
+    public static final int HDFS_FIELD_NUMBER = 4;
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
+     * @return Whether the hdfs field is set.
+     */
+    @java.lang.Override
+    public boolean hasHdfs() {
+      return settingsCase_ == 4;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
+     * @return The hdfs.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS getHdfs() {
+      if (settingsCase_ == 4) {
+         return (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS) settings_;
+      }
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSOrBuilder getHdfsOrBuilder() {
+      if (settingsCase_ == 4) {
+         return (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS) settings_;
+      }
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.getDefaultInstance();
+    }
+
+    public static final int HIVE_FIELD_NUMBER = 5;
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
+     * @return Whether the hive field is set.
+     */
+    @java.lang.Override
+    public boolean hasHive() {
+      return settingsCase_ == 5;
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
+     * @return The hive.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive getHive() {
+      if (settingsCase_ == 5) {
+         return (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive) settings_;
+      }
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHiveOrBuilder getHiveOrBuilder() {
+      if (settingsCase_ == 5) {
+         return (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive) settings_;
+      }
+      return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (settingsCase_ == 2) {
+        output.writeMessage(2, (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3) settings_);
+      }
+      if (settingsCase_ == 3) {
+        output.writeMessage(3, (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC) settings_);
+      }
+      if (settingsCase_ == 4) {
+        output.writeMessage(4, (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS) settings_);
+      }
+      if (settingsCase_ == 5) {
+        output.writeMessage(5, (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive) settings_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (settingsCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3) settings_);
+      }
+      if (settingsCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC) settings_);
+      }
+      if (settingsCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS) settings_);
+      }
+      if (settingsCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive) settings_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource other = (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getSettingsCase().equals(other.getSettingsCase())) return false;
+      switch (settingsCase_) {
+        case 2:
+          if (!getS3()
+              .equals(other.getS3())) return false;
+          break;
+        case 3:
+          if (!getJdbc()
+              .equals(other.getJdbc())) return false;
+          break;
+        case 4:
+          if (!getHdfs()
+              .equals(other.getHdfs())) return false;
+          break;
+        case 5:
+          if (!getHive()
+              .equals(other.getHive())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      switch (settingsCase_) {
+        case 2:
+          hash = (37 * hash) + S3_FIELD_NUMBER;
+          hash = (53 * hash) + getS3().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + JDBC_FIELD_NUMBER;
+          hash = (53 * hash) + getJdbc().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + HDFS_FIELD_NUMBER;
+          hash = (53 * hash) + getHdfs().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + HIVE_FIELD_NUMBER;
+          hash = (53 * hash) + getHive().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.PXFDatasource}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.mdb.greenplum.v1.PXFDatasource)
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasource_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasource_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource.class, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        settingsCase_ = 0;
+        settings_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasource_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource getDefaultInstanceForType() {
+        return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource build() {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource buildPartial() {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource result = new yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource(this);
+        result.name_ = name_;
+        if (settingsCase_ == 2) {
+          if (s3Builder_ == null) {
+            result.settings_ = settings_;
+          } else {
+            result.settings_ = s3Builder_.build();
+          }
+        }
+        if (settingsCase_ == 3) {
+          if (jdbcBuilder_ == null) {
+            result.settings_ = settings_;
+          } else {
+            result.settings_ = jdbcBuilder_.build();
+          }
+        }
+        if (settingsCase_ == 4) {
+          if (hdfsBuilder_ == null) {
+            result.settings_ = settings_;
+          } else {
+            result.settings_ = hdfsBuilder_.build();
+          }
+        }
+        if (settingsCase_ == 5) {
+          if (hiveBuilder_ == null) {
+            result.settings_ = settings_;
+          } else {
+            result.settings_ = hiveBuilder_.build();
+          }
+        }
+        result.settingsCase_ = settingsCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource) {
+          return mergeFrom((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource other) {
+        if (other == yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        switch (other.getSettingsCase()) {
+          case S3: {
+            mergeS3(other.getS3());
+            break;
+          }
+          case JDBC: {
+            mergeJdbc(other.getJdbc());
+            break;
+          }
+          case HDFS: {
+            mergeHdfs(other.getHdfs());
+            break;
+          }
+          case HIVE: {
+            mergeHive(other.getHive());
+            break;
+          }
+          case SETTINGS_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int settingsCase_ = 0;
+      private java.lang.Object settings_;
+      public SettingsCase
+          getSettingsCase() {
+        return SettingsCase.forNumber(
+            settingsCase_);
+      }
+
+      public Builder clearSettings() {
+        settingsCase_ = 0;
+        settings_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "3-200"];</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3OrBuilder> s3Builder_;
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
+       * @return Whether the s3 field is set.
+       */
+      @java.lang.Override
+      public boolean hasS3() {
+        return settingsCase_ == 2;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
+       * @return The s3.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 getS3() {
+        if (s3Builder_ == null) {
+          if (settingsCase_ == 2) {
+            return (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3) settings_;
+          }
+          return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.getDefaultInstance();
+        } else {
+          if (settingsCase_ == 2) {
+            return s3Builder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
+       */
+      public Builder setS3(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 value) {
+        if (s3Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          settings_ = value;
+          onChanged();
+        } else {
+          s3Builder_.setMessage(value);
+        }
+        settingsCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
+       */
+      public Builder setS3(
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.Builder builderForValue) {
+        if (s3Builder_ == null) {
+          settings_ = builderForValue.build();
+          onChanged();
+        } else {
+          s3Builder_.setMessage(builderForValue.build());
+        }
+        settingsCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
+       */
+      public Builder mergeS3(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3 value) {
+        if (s3Builder_ == null) {
+          if (settingsCase_ == 2 &&
+              settings_ != yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.getDefaultInstance()) {
+            settings_ = yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.newBuilder((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3) settings_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            settings_ = value;
+          }
+          onChanged();
+        } else {
+          if (settingsCase_ == 2) {
+            s3Builder_.mergeFrom(value);
+          }
+          s3Builder_.setMessage(value);
+        }
+        settingsCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
+       */
+      public Builder clearS3() {
+        if (s3Builder_ == null) {
+          if (settingsCase_ == 2) {
+            settingsCase_ = 0;
+            settings_ = null;
+            onChanged();
+          }
+        } else {
+          if (settingsCase_ == 2) {
+            settingsCase_ = 0;
+            settings_ = null;
+          }
+          s3Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.Builder getS3Builder() {
+        return getS3FieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3OrBuilder getS3OrBuilder() {
+        if ((settingsCase_ == 2) && (s3Builder_ != null)) {
+          return s3Builder_.getMessageOrBuilder();
+        } else {
+          if (settingsCase_ == 2) {
+            return (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3) settings_;
+          }
+          return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceS3 s3 = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3OrBuilder> 
+          getS3FieldBuilder() {
+        if (s3Builder_ == null) {
+          if (!(settingsCase_ == 2)) {
+            settings_ = yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.getDefaultInstance();
+          }
+          s3Builder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3OrBuilder>(
+                  (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceS3) settings_,
+                  getParentForChildren(),
+                  isClean());
+          settings_ = null;
+        }
+        settingsCase_ = 2;
+        onChanged();;
+        return s3Builder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBCOrBuilder> jdbcBuilder_;
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
+       * @return Whether the jdbc field is set.
+       */
+      @java.lang.Override
+      public boolean hasJdbc() {
+        return settingsCase_ == 3;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
+       * @return The jdbc.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC getJdbc() {
+        if (jdbcBuilder_ == null) {
+          if (settingsCase_ == 3) {
+            return (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC) settings_;
+          }
+          return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.getDefaultInstance();
+        } else {
+          if (settingsCase_ == 3) {
+            return jdbcBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
+       */
+      public Builder setJdbc(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC value) {
+        if (jdbcBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          settings_ = value;
+          onChanged();
+        } else {
+          jdbcBuilder_.setMessage(value);
+        }
+        settingsCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
+       */
+      public Builder setJdbc(
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.Builder builderForValue) {
+        if (jdbcBuilder_ == null) {
+          settings_ = builderForValue.build();
+          onChanged();
+        } else {
+          jdbcBuilder_.setMessage(builderForValue.build());
+        }
+        settingsCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
+       */
+      public Builder mergeJdbc(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC value) {
+        if (jdbcBuilder_ == null) {
+          if (settingsCase_ == 3 &&
+              settings_ != yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.getDefaultInstance()) {
+            settings_ = yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.newBuilder((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC) settings_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            settings_ = value;
+          }
+          onChanged();
+        } else {
+          if (settingsCase_ == 3) {
+            jdbcBuilder_.mergeFrom(value);
+          }
+          jdbcBuilder_.setMessage(value);
+        }
+        settingsCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
+       */
+      public Builder clearJdbc() {
+        if (jdbcBuilder_ == null) {
+          if (settingsCase_ == 3) {
+            settingsCase_ = 0;
+            settings_ = null;
+            onChanged();
+          }
+        } else {
+          if (settingsCase_ == 3) {
+            settingsCase_ = 0;
+            settings_ = null;
+          }
+          jdbcBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.Builder getJdbcBuilder() {
+        return getJdbcFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBCOrBuilder getJdbcOrBuilder() {
+        if ((settingsCase_ == 3) && (jdbcBuilder_ != null)) {
+          return jdbcBuilder_.getMessageOrBuilder();
+        } else {
+          if (settingsCase_ == 3) {
+            return (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC) settings_;
+          }
+          return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceJDBC jdbc = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBCOrBuilder> 
+          getJdbcFieldBuilder() {
+        if (jdbcBuilder_ == null) {
+          if (!(settingsCase_ == 3)) {
+            settings_ = yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.getDefaultInstance();
+          }
+          jdbcBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBCOrBuilder>(
+                  (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceJDBC) settings_,
+                  getParentForChildren(),
+                  isClean());
+          settings_ = null;
+        }
+        settingsCase_ = 3;
+        onChanged();;
+        return jdbcBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSOrBuilder> hdfsBuilder_;
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
+       * @return Whether the hdfs field is set.
+       */
+      @java.lang.Override
+      public boolean hasHdfs() {
+        return settingsCase_ == 4;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
+       * @return The hdfs.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS getHdfs() {
+        if (hdfsBuilder_ == null) {
+          if (settingsCase_ == 4) {
+            return (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS) settings_;
+          }
+          return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.getDefaultInstance();
+        } else {
+          if (settingsCase_ == 4) {
+            return hdfsBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
+       */
+      public Builder setHdfs(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS value) {
+        if (hdfsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          settings_ = value;
+          onChanged();
+        } else {
+          hdfsBuilder_.setMessage(value);
+        }
+        settingsCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
+       */
+      public Builder setHdfs(
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.Builder builderForValue) {
+        if (hdfsBuilder_ == null) {
+          settings_ = builderForValue.build();
+          onChanged();
+        } else {
+          hdfsBuilder_.setMessage(builderForValue.build());
+        }
+        settingsCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
+       */
+      public Builder mergeHdfs(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS value) {
+        if (hdfsBuilder_ == null) {
+          if (settingsCase_ == 4 &&
+              settings_ != yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.getDefaultInstance()) {
+            settings_ = yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.newBuilder((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS) settings_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            settings_ = value;
+          }
+          onChanged();
+        } else {
+          if (settingsCase_ == 4) {
+            hdfsBuilder_.mergeFrom(value);
+          }
+          hdfsBuilder_.setMessage(value);
+        }
+        settingsCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
+       */
+      public Builder clearHdfs() {
+        if (hdfsBuilder_ == null) {
+          if (settingsCase_ == 4) {
+            settingsCase_ = 0;
+            settings_ = null;
+            onChanged();
+          }
+        } else {
+          if (settingsCase_ == 4) {
+            settingsCase_ = 0;
+            settings_ = null;
+          }
+          hdfsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.Builder getHdfsBuilder() {
+        return getHdfsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSOrBuilder getHdfsOrBuilder() {
+        if ((settingsCase_ == 4) && (hdfsBuilder_ != null)) {
+          return hdfsBuilder_.getMessageOrBuilder();
+        } else {
+          if (settingsCase_ == 4) {
+            return (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS) settings_;
+          }
+          return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHDFS hdfs = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSOrBuilder> 
+          getHdfsFieldBuilder() {
+        if (hdfsBuilder_ == null) {
+          if (!(settingsCase_ == 4)) {
+            settings_ = yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.getDefaultInstance();
+          }
+          hdfsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFSOrBuilder>(
+                  (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHDFS) settings_,
+                  getParentForChildren(),
+                  isClean());
+          settings_ = null;
+        }
+        settingsCase_ = 4;
+        onChanged();;
+        return hdfsBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHiveOrBuilder> hiveBuilder_;
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
+       * @return Whether the hive field is set.
+       */
+      @java.lang.Override
+      public boolean hasHive() {
+        return settingsCase_ == 5;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
+       * @return The hive.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive getHive() {
+        if (hiveBuilder_ == null) {
+          if (settingsCase_ == 5) {
+            return (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive) settings_;
+          }
+          return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.getDefaultInstance();
+        } else {
+          if (settingsCase_ == 5) {
+            return hiveBuilder_.getMessage();
+          }
+          return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
+       */
+      public Builder setHive(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive value) {
+        if (hiveBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          settings_ = value;
+          onChanged();
+        } else {
+          hiveBuilder_.setMessage(value);
+        }
+        settingsCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
+       */
+      public Builder setHive(
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.Builder builderForValue) {
+        if (hiveBuilder_ == null) {
+          settings_ = builderForValue.build();
+          onChanged();
+        } else {
+          hiveBuilder_.setMessage(builderForValue.build());
+        }
+        settingsCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
+       */
+      public Builder mergeHive(yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive value) {
+        if (hiveBuilder_ == null) {
+          if (settingsCase_ == 5 &&
+              settings_ != yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.getDefaultInstance()) {
+            settings_ = yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.newBuilder((yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive) settings_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            settings_ = value;
+          }
+          onChanged();
+        } else {
+          if (settingsCase_ == 5) {
+            hiveBuilder_.mergeFrom(value);
+          }
+          hiveBuilder_.setMessage(value);
+        }
+        settingsCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
+       */
+      public Builder clearHive() {
+        if (hiveBuilder_ == null) {
+          if (settingsCase_ == 5) {
+            settingsCase_ = 0;
+            settings_ = null;
+            onChanged();
+          }
+        } else {
+          if (settingsCase_ == 5) {
+            settingsCase_ = 0;
+            settings_ = null;
+          }
+          hiveBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
+       */
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.Builder getHiveBuilder() {
+        return getHiveFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHiveOrBuilder getHiveOrBuilder() {
+        if ((settingsCase_ == 5) && (hiveBuilder_ != null)) {
+          return hiveBuilder_.getMessageOrBuilder();
+        } else {
+          if (settingsCase_ == 5) {
+            return (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive) settings_;
+          }
+          return yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.mdb.greenplum.v1.PXFDatasourceHive hive = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHiveOrBuilder> 
+          getHiveFieldBuilder() {
+        if (hiveBuilder_ == null) {
+          if (!(settingsCase_ == 5)) {
+            settings_ = yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.getDefaultInstance();
+          }
+          hiveBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive.Builder, yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHiveOrBuilder>(
+                  (yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasourceHive) settings_,
+                  getParentForChildren(),
+                  isClean());
+          settings_ = null;
+        }
+        settingsCase_ = 5;
+        onChanged();;
+        return hiveBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.mdb.greenplum.v1.PXFDatasource)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.mdb.greenplum.v1.PXFDatasource)
+    private static final yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource();
+    }
+
+    public static yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PXFDatasource>
+        PARSER = new com.google.protobuf.AbstractParser<PXFDatasource>() {
+      @java.lang.Override
+      public PXFDatasource parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PXFDatasource(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PXFDatasource> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PXFDatasource> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.mdb.greenplum.v1.Pxf.PXFDatasource getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_mdb_greenplum_v1_PXFConfig_descriptor;
   private static final 
@@ -3596,6 +21309,71 @@ public final class Pxf {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_mdb_greenplum_v1_PXFConfigSet_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceS3_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceS3_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceJDBC_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceJDBC_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceCore_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceCore_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceKerberos_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceKerberos_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfsNamenode_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfsNamenode_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfs_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfs_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfs_NamenodesEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfs_NamenodesEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarnHaRm_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarnHaRm_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarn_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarn_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarn_HaRmEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarn_HaRmEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFS_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFS_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHive_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHive_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasource_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasource_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3628,10 +21406,110 @@ public final class Pxf {
       "nfigB\004\350\3071\001\022=\n\013user_config\030\002 \001(\0132(.yandex" +
       ".cloud.mdb.greenplum.v1.PXFConfig\022@\n\016def" +
       "ault_config\030\003 \001(\0132(.yandex.cloud.mdb.gre" +
-      "enplum.v1.PXFConfigBp\n!yandex.cloud.api." +
-      "mdb.greenplum.v1ZKgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/mdb/greenplum" +
-      "/v1;greenplumb\006proto3"
+      "enplum.v1.PXFConfig\"\235\001\n\017PXFDatasourceS3\022" +
+      "\035\n\naccess_key\030\001 \001(\tB\t\212\3101\005<=200\022\035\n\nsecret" +
+      "_key\030\002 \001(\tB\t\212\3101\005<=200\022/\n\013fast_upload\030\003 \001" +
+      "(\0132\032.google.protobuf.BoolValue\022\033\n\010endpoi" +
+      "nt\030\004 \001(\tB\t\212\3101\005<=200\"\246\005\n\021PXFDatasourceJDB" +
+      "C\022\030\n\006driver\030\001 \001(\tB\010\212\3101\004<=50\022\026\n\003url\030\002 \001(\t" +
+      "B\t\212\3101\005<=200\022\027\n\004user\030\003 \001(\tB\t\212\3101\005<=200\022\033\n\010" +
+      "password\030\004 \001(\tB\t\212\3101\005<=200\022F\n\024statement_b" +
+      "atch_size\030\005 \001(\0132\033.google.protobuf.Int64V" +
+      "alueB\013\372\3071\00750-1000\022G\n\024statement_fetch_siz" +
+      "e\030\006 \001(\0132\033.google.protobuf.Int64ValueB\014\372\307" +
+      "1\01050-10000\022G\n\027statement_query_timeout\030\007 " +
+      "\001(\0132\033.google.protobuf.Int64ValueB\t\372\3071\0055-" +
+      "600\0220\n\014pool_enabled\030\010 \001(\0132\032.google.proto" +
+      "buf.BoolValue\022B\n\021pool_maximum_size\030\t \001(\013" +
+      "2\033.google.protobuf.Int64ValueB\n\372\3071\00610-20" +
+      "0\022M\n\027pool_connection_timeout\030\n \001(\0132\033.goo" +
+      "gle.protobuf.Int64ValueB\017\372\3071\0135000-600000" +
+      "\022G\n\021pool_idle_timeout\030\013 \001(\0132\033.google.pro" +
+      "tobuf.Int64ValueB\017\372\3071\0135000-600000\022A\n\021poo" +
+      "l_minimum_idle\030\014 \001(\0132\033.google.protobuf.I" +
+      "nt64ValueB\t\372\3071\0050-200\"^\n\021PXFDatasourceCor" +
+      "e\022\035\n\ndefault_fs\030\001 \001(\tB\t\212\3101\005<=200\022*\n\026secu" +
+      "rity_auth_to_local\030\002 \001(\tB\n\212\3101\006<=1000\"\317\002\n" +
+      "\025PXFDatasourceKerberos\022*\n\006enable\030\001 \001(\0132\032" +
+      ".google.protobuf.BoolValue\022\032\n\007primary\030\002 " +
+      "\001(\tB\t\212\3101\005<=128\022\031\n\005realm\030\003 \001(\tB\n\212\3101\006<=100" +
+      "0\022\'\n\013kdc_servers\030\004 \003(\tB\022\202\3101\005<=200\212\3101\0051-2" +
+      "00\022\037\n\014admin_server\030\005 \001(\tB\t\212\3101\005<=128\022!\n\016d" +
+      "efault_domain\030\006 \001(\tB\t\212\3101\005<=128\022f\n\rkeytab" +
+      "_base64\030\007 \001(\tBO\362\3071@^(?:[A-Za-z0-9+/]{4})" +
+      "*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=" +
+      ")?$\212\3101\007<=65536\"\255\001\n\034PXFDatasourceHDFSDfsN" +
+      "amenode\022\037\n\013rpc_address\030\001 \001(\tB\n\212\3101\006<=1000" +
+      "\022\'\n\023service_rpc_address\030\002 \001(\tB\n\212\3101\006<=100" +
+      "0\022 \n\014http_address\030\003 \001(\tB\n\212\3101\006<=1000\022!\n\rh" +
+      "ttps_address\030\004 \001(\tB\n\212\3101\006<=1000\"\247\003\n\024PXFDa" +
+      "tasourceHDFSDfs\022A\n\035ha_automatic_failover" +
+      "_enabled\030\001 \001(\0132\032.google.protobuf.BoolVal" +
+      "ue\022>\n\032block_access_token_enabled\030\002 \001(\0132\032" +
+      ".google.protobuf.BoolValue\0229\n\025use_datano" +
+      "de_hostname\030\003 \001(\0132\032.google.protobuf.Bool" +
+      "Value\022b\n\tnamenodes\030\004 \003(\0132B.yandex.cloud." +
+      "mdb.greenplum.v1.PXFDatasourceHDFSDfs.Na" +
+      "menodesEntryB\013\202\3101\007<=10000\032m\n\016NamenodesEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022J\n\005value\030\002 \001(\0132;.yandex" +
+      ".cloud.mdb.greenplum.v1.PXFDatasourceHDF" +
+      "SDfsNamenode:\0028\001\"\226\002\n\031PXFDatasourceHDFSYa" +
+      "rnHaRm\022\037\n\027resourcemanager_address\030\001 \001(\t\022" +
+      ")\n!resourcemanager_scheduler_address\030\002 \001" +
+      "(\t\0220\n(resourcemanager_resource_tracker_a" +
+      "ddress\030\003 \001(\t\022%\n\035resourcemanager_admin_ad" +
+      "dress\030\004 \001(\t\022&\n\036resourcemanager_webapp_ad" +
+      "dress\030\005 \001(\t\022,\n$resourcemanager_webapp_ht" +
+      "tps_address\030\006 \001(\t\"\347\003\n\025PXFDatasourceHDFSY" +
+      "arn\022>\n\032resourcemanager_ha_enabled\030\001 \001(\0132" +
+      "\032.google.protobuf.BoolValue\022L\n(resourcem" +
+      "anager_ha_auto_failover_enabled\030\002 \001(\0132\032." +
+      "google.protobuf.BoolValue\022M\n)resourceman" +
+      "ager_ha_auto_failover_embedded\030\003 \001(\0132\032.g" +
+      "oogle.protobuf.BoolValue\022.\n\032resourcemana" +
+      "ger_cluster_id\030\004 \001(\tB\n\212\3101\006<=1000\022Z\n\005ha_r" +
+      "m\030\005 \003(\0132>.yandex.cloud.mdb.greenplum.v1." +
+      "PXFDatasourceHDFSYarn.HaRmEntryB\013\202\3101\007<=1" +
+      "0000\032e\n\tHaRmEntry\022\013\n\003key\030\001 \001(\t\022G\n\005value\030" +
+      "\002 \001(\01328.yandex.cloud.mdb.greenplum.v1.PX" +
+      "FDatasourceHDFSYarnHaRm:\0028\001\"\344\003\n\021PXFDatas" +
+      "ourceHDFS\022>\n\004core\030\001 \001(\01320.yandex.cloud.m" +
+      "db.greenplum.v1.PXFDatasourceCore\022F\n\010ker" +
+      "beros\030\002 \001(\01324.yandex.cloud.mdb.greenplum" +
+      ".v1.PXFDatasourceKerberos\0226\n\022user_impers" +
+      "onation\030\003 \001(\0132\032.google.protobuf.BoolValu" +
+      "e\022\033\n\010username\030\004 \001(\tB\t\212\3101\005<=128\022F\n\027sasl_c" +
+      "onnection_retries\030\005 \001(\0132\033.google.protobu" +
+      "f.Int64ValueB\010\372\3071\0041-50\022$\n\010zk_hosts\030\006 \003(\t" +
+      "B\022\202\3101\005<=200\212\3101\0051-200\022@\n\003dfs\030\007 \001(\01323.yand" +
+      "ex.cloud.mdb.greenplum.v1.PXFDatasourceH" +
+      "DFSDfs\022B\n\004yarn\030\010 \001(\01324.yandex.cloud.mdb." +
+      "greenplum.v1.PXFDatasourceHDFSYarn\"\222\004\n\021P" +
+      "XFDatasourceHive\022>\n\004core\030\001 \001(\01320.yandex." +
+      "cloud.mdb.greenplum.v1.PXFDatasourceCore" +
+      "\022F\n\010kerberos\030\002 \001(\01324.yandex.cloud.mdb.gr" +
+      "eenplum.v1.PXFDatasourceKerberos\0226\n\022user" +
+      "_impersonation\030\003 \001(\0132\032.google.protobuf.B" +
+      "oolValue\022\033\n\010username\030\004 \001(\tB\t\212\3101\005<=128\022F\n" +
+      "\027sasl_connection_retries\030\005 \001(\0132\033.google." +
+      "protobuf.Int64ValueB\010\372\3071\0041-50\022$\n\010zk_host" +
+      "s\030\006 \003(\tB\022\202\3101\005<=200\212\3101\0051-200\022\'\n\003ppd\030\007 \001(\013" +
+      "2\032.google.protobuf.BoolValue\022*\n\016metastor" +
+      "e_uris\030\010 \003(\tB\022\202\3101\005<=200\212\3101\0051-200\0220\n\034meta" +
+      "store_kerberos_principal\030\t \001(\tB\n\212\3101\006<=10" +
+      "00\022+\n\027auth_kerberos_principal\030\n \001(\tB\n\212\3101" +
+      "\006<=1000\"\274\002\n\rPXFDatasource\022\033\n\004name\030\001 \001(\tB" +
+      "\r\350\3071\001\212\3101\0053-200\022<\n\002s3\030\002 \001(\0132..yandex.clou" +
+      "d.mdb.greenplum.v1.PXFDatasourceS3H\000\022@\n\004" +
+      "jdbc\030\003 \001(\01320.yandex.cloud.mdb.greenplum." +
+      "v1.PXFDatasourceJDBCH\000\022@\n\004hdfs\030\004 \001(\01320.y" +
+      "andex.cloud.mdb.greenplum.v1.PXFDatasour" +
+      "ceHDFSH\000\022@\n\004hive\030\005 \001(\01320.yandex.cloud.md" +
+      "b.greenplum.v1.PXFDatasourceHiveH\000B\n\n\010se" +
+      "ttingsBp\n!yandex.cloud.api.mdb.greenplum" +
+      ".v1ZKgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/mdb/greenplum/v1;greenplum" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3651,9 +21529,90 @@ public final class Pxf {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_PXFConfigSet_descriptor,
         new java.lang.String[] { "EffectiveConfig", "UserConfig", "DefaultConfig", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceS3_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceS3_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceS3_descriptor,
+        new java.lang.String[] { "AccessKey", "SecretKey", "FastUpload", "Endpoint", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceJDBC_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceJDBC_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceJDBC_descriptor,
+        new java.lang.String[] { "Driver", "Url", "User", "Password", "StatementBatchSize", "StatementFetchSize", "StatementQueryTimeout", "PoolEnabled", "PoolMaximumSize", "PoolConnectionTimeout", "PoolIdleTimeout", "PoolMinimumIdle", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceCore_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceCore_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceCore_descriptor,
+        new java.lang.String[] { "DefaultFs", "SecurityAuthToLocal", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceKerberos_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceKerberos_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceKerberos_descriptor,
+        new java.lang.String[] { "Enable", "Primary", "Realm", "KdcServers", "AdminServer", "DefaultDomain", "KeytabBase64", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfsNamenode_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfsNamenode_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfsNamenode_descriptor,
+        new java.lang.String[] { "RpcAddress", "ServiceRpcAddress", "HttpAddress", "HttpsAddress", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfs_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfs_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfs_descriptor,
+        new java.lang.String[] { "HaAutomaticFailoverEnabled", "BlockAccessTokenEnabled", "UseDatanodeHostname", "Namenodes", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfs_NamenodesEntry_descriptor =
+      internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfs_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfs_NamenodesEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSDfs_NamenodesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarnHaRm_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarnHaRm_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarnHaRm_descriptor,
+        new java.lang.String[] { "ResourcemanagerAddress", "ResourcemanagerSchedulerAddress", "ResourcemanagerResourceTrackerAddress", "ResourcemanagerAdminAddress", "ResourcemanagerWebappAddress", "ResourcemanagerWebappHttpsAddress", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarn_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarn_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarn_descriptor,
+        new java.lang.String[] { "ResourcemanagerHaEnabled", "ResourcemanagerHaAutoFailoverEnabled", "ResourcemanagerHaAutoFailoverEmbedded", "ResourcemanagerClusterId", "HaRm", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarn_HaRmEntry_descriptor =
+      internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarn_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarn_HaRmEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFSYarn_HaRmEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFS_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFS_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHDFS_descriptor,
+        new java.lang.String[] { "Core", "Kerberos", "UserImpersonation", "Username", "SaslConnectionRetries", "ZkHosts", "Dfs", "Yarn", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHive_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHive_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasourceHive_descriptor,
+        new java.lang.String[] { "Core", "Kerberos", "UserImpersonation", "Username", "SaslConnectionRetries", "ZkHosts", "Ppd", "MetastoreUris", "MetastoreKerberosPrincipal", "AuthKerberosPrincipal", });
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasource_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasource_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_mdb_greenplum_v1_PXFDatasource_descriptor,
+        new java.lang.String[] { "Name", "S3", "Jdbc", "Hdfs", "Hive", "Settings", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(yandex.cloud.api.Validation.length);
+    registry.add(yandex.cloud.api.Validation.pattern);
     registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.size);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

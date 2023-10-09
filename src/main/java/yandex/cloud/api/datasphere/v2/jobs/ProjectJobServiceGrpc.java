@@ -173,35 +173,35 @@ public final class ProjectJobServiceGrpc {
     return getReadStdLogsMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsRequest,
-      yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsResponse> getDownloadStdLogsMethod;
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsRequest,
+      yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsResponse> getReadLogsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "DownloadStdLogs",
-      requestType = yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsRequest.class,
-      responseType = yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsRequest,
-      yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsResponse> getDownloadStdLogsMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsRequest, yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsResponse> getDownloadStdLogsMethod;
-    if ((getDownloadStdLogsMethod = ProjectJobServiceGrpc.getDownloadStdLogsMethod) == null) {
+      fullMethodName = SERVICE_NAME + '/' + "ReadLogs",
+      requestType = yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsRequest.class,
+      responseType = yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsRequest,
+      yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsResponse> getReadLogsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsRequest, yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsResponse> getReadLogsMethod;
+    if ((getReadLogsMethod = ProjectJobServiceGrpc.getReadLogsMethod) == null) {
       synchronized (ProjectJobServiceGrpc.class) {
-        if ((getDownloadStdLogsMethod = ProjectJobServiceGrpc.getDownloadStdLogsMethod) == null) {
-          ProjectJobServiceGrpc.getDownloadStdLogsMethod = getDownloadStdLogsMethod =
-              io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsRequest, yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DownloadStdLogs"))
+        if ((getReadLogsMethod = ProjectJobServiceGrpc.getReadLogsMethod) == null) {
+          ProjectJobServiceGrpc.getReadLogsMethod = getReadLogsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsRequest, yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ReadLogs"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsRequest.getDefaultInstance()))
+                  yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ProjectJobServiceMethodDescriptorSupplier("DownloadStdLogs"))
+                  yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ProjectJobServiceMethodDescriptorSupplier("ReadLogs"))
               .build();
         }
       }
     }
-    return getDownloadStdLogsMethod;
+    return getReadLogsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.ListProjectJobRequest,
@@ -393,6 +393,7 @@ public final class ProjectJobServiceGrpc {
      * Returns stream of job logs.
      * </pre>
      */
+    @java.lang.Deprecated
     public void readStdLogs(yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobStdLogsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobStdLogsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReadStdLogsMethod(), responseObserver);
@@ -400,12 +401,12 @@ public final class ProjectJobServiceGrpc {
 
     /**
      * <pre>
-     * Returns URL for downloading job logs.
+     * Returns stream of job logs.
      * </pre>
      */
-    public void downloadStdLogs(yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDownloadStdLogsMethod(), responseObserver);
+    public void readLogs(yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReadLogsMethod(), responseObserver);
     }
 
     /**
@@ -476,12 +477,12 @@ public final class ProjectJobServiceGrpc {
                 yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobStdLogsResponse>(
                   this, METHODID_READ_STD_LOGS)))
           .addMethod(
-            getDownloadStdLogsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
+            getReadLogsMethod(),
+            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
               new MethodHandlers<
-                yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsRequest,
-                yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsResponse>(
-                  this, METHODID_DOWNLOAD_STD_LOGS)))
+                yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsRequest,
+                yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsResponse>(
+                  this, METHODID_READ_LOGS)))
           .addMethod(
             getListMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -573,6 +574,7 @@ public final class ProjectJobServiceGrpc {
      * Returns stream of job logs.
      * </pre>
      */
+    @java.lang.Deprecated
     public void readStdLogs(yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobStdLogsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobStdLogsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
@@ -581,13 +583,13 @@ public final class ProjectJobServiceGrpc {
 
     /**
      * <pre>
-     * Returns URL for downloading job logs.
+     * Returns stream of job logs.
      * </pre>
      */
-    public void downloadStdLogs(yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getDownloadStdLogsMethod(), getCallOptions()), request, responseObserver);
+    public void readLogs(yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getReadLogsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -686,6 +688,7 @@ public final class ProjectJobServiceGrpc {
      * Returns stream of job logs.
      * </pre>
      */
+    @java.lang.Deprecated
     public java.util.Iterator<yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobStdLogsResponse> readStdLogs(
         yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobStdLogsRequest request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
@@ -694,12 +697,13 @@ public final class ProjectJobServiceGrpc {
 
     /**
      * <pre>
-     * Returns URL for downloading job logs.
+     * Returns stream of job logs.
      * </pre>
      */
-    public yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsResponse downloadStdLogs(yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getDownloadStdLogsMethod(), getCallOptions(), request);
+    public java.util.Iterator<yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsResponse> readLogs(
+        yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getReadLogsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -796,17 +800,6 @@ public final class ProjectJobServiceGrpc {
 
     /**
      * <pre>
-     * Returns URL for downloading job logs.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsResponse> downloadStdLogs(
-        yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getDownloadStdLogsMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * Lists jobs.
      * </pre>
      */
@@ -844,7 +837,7 @@ public final class ProjectJobServiceGrpc {
   private static final int METHODID_CANCEL = 2;
   private static final int METHODID_FINALIZE = 3;
   private static final int METHODID_READ_STD_LOGS = 4;
-  private static final int METHODID_DOWNLOAD_STD_LOGS = 5;
+  private static final int METHODID_READ_LOGS = 5;
   private static final int METHODID_LIST = 6;
   private static final int METHODID_GET = 7;
   private static final int METHODID_DELETE = 8;
@@ -886,9 +879,9 @@ public final class ProjectJobServiceGrpc {
           serviceImpl.readStdLogs((yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobStdLogsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobStdLogsResponse>) responseObserver);
           break;
-        case METHODID_DOWNLOAD_STD_LOGS:
-          serviceImpl.downloadStdLogs((yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobStdLogsResponse>) responseObserver);
+        case METHODID_READ_LOGS:
+          serviceImpl.readLogs((yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsResponse>) responseObserver);
           break;
         case METHODID_LIST:
           serviceImpl.list((yandex.cloud.api.datasphere.v2.jobs.DSPJS.ListProjectJobRequest) request,
@@ -968,7 +961,7 @@ public final class ProjectJobServiceGrpc {
               .addMethod(getCancelMethod())
               .addMethod(getFinalizeMethod())
               .addMethod(getReadStdLogsMethod())
-              .addMethod(getDownloadStdLogsMethod())
+              .addMethod(getReadLogsMethod())
               .addMethod(getListMethod())
               .addMethod(getGetMethod())
               .addMethod(getDeleteMethod())
