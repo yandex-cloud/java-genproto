@@ -80,6 +80,37 @@ public final class LockServiceGrpc {
     return getGetByInstanceAndResourceMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest,
+      yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse> getListMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "List",
+      requestType = yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest.class,
+      responseType = yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest,
+      yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse> getListMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest, yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse> getListMethod;
+    if ((getListMethod = LockServiceGrpc.getListMethod) == null) {
+      synchronized (LockServiceGrpc.class) {
+        if ((getListMethod = LockServiceGrpc.getListMethod) == null) {
+          LockServiceGrpc.getListMethod = getListMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest, yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new LockServiceMethodDescriptorSupplier("List"))
+              .build();
+        }
+      }
+    }
+    return getListMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.CreateLockRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod;
 
@@ -245,6 +276,13 @@ public final class LockServiceGrpc {
     }
 
     /**
+     */
+    public void list(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
+    }
+
+    /**
      * <pre>
      * Locks the specified subscription instance to the resource.
      * </pre>
@@ -291,6 +329,13 @@ public final class LockServiceGrpc {
                 yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.GetLockByInstanceAndResourceRequest,
                 yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock>(
                   this, METHODID_GET_BY_INSTANCE_AND_RESOURCE)))
+          .addMethod(
+            getListMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest,
+                yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse>(
+                  this, METHODID_LIST)))
           .addMethod(
             getCreateMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -353,6 +398,14 @@ public final class LockServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetByInstanceAndResourceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void list(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -428,6 +481,13 @@ public final class LockServiceGrpc {
     }
 
     /**
+     */
+    public yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse list(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListMethod(), getCallOptions(), request);
+    }
+
+    /**
      * <pre>
      * Locks the specified subscription instance to the resource.
      * </pre>
@@ -499,6 +559,14 @@ public final class LockServiceGrpc {
     }
 
     /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse> list(
+        yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListMethod(), getCallOptions()), request);
+    }
+
+    /**
      * <pre>
      * Locks the specified subscription instance to the resource.
      * </pre>
@@ -535,9 +603,10 @@ public final class LockServiceGrpc {
 
   private static final int METHODID_GET = 0;
   private static final int METHODID_GET_BY_INSTANCE_AND_RESOURCE = 1;
-  private static final int METHODID_CREATE = 2;
-  private static final int METHODID_ENSURE = 3;
-  private static final int METHODID_DELETE = 4;
+  private static final int METHODID_LIST = 2;
+  private static final int METHODID_CREATE = 3;
+  private static final int METHODID_ENSURE = 4;
+  private static final int METHODID_DELETE = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -563,6 +632,10 @@ public final class LockServiceGrpc {
         case METHODID_GET_BY_INSTANCE_AND_RESOURCE:
           serviceImpl.getByInstanceAndResource((yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.GetLockByInstanceAndResourceRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock>) responseObserver);
+          break;
+        case METHODID_LIST:
+          serviceImpl.list((yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse>) responseObserver);
           break;
         case METHODID_CREATE:
           serviceImpl.create((yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.CreateLockRequest) request,
@@ -639,6 +712,7 @@ public final class LockServiceGrpc {
               .setSchemaDescriptor(new LockServiceFileDescriptorSupplier())
               .addMethod(getGetMethod())
               .addMethod(getGetByInstanceAndResourceMethod())
+              .addMethod(getListMethod())
               .addMethod(getCreateMethod())
               .addMethod(getEnsureMethod())
               .addMethod(getDeleteMethod())

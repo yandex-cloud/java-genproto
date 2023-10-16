@@ -125,6 +125,18 @@ public final class AgentOuterClass {
      */
     com.google.protobuf.ByteString
         getCurrentJobIdBytes();
+
+    /**
+     * <code>string agent_version_id = 10;</code>
+     * @return The agentVersionId.
+     */
+    java.lang.String getAgentVersionId();
+    /**
+     * <code>string agent_version_id = 10;</code>
+     * @return The bytes for agentVersionId.
+     */
+    com.google.protobuf.ByteString
+        getAgentVersionIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.loadtesting.api.v1.agent.Agent}
@@ -147,6 +159,7 @@ public final class AgentOuterClass {
       status_ = 0;
       errors_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       currentJobId_ = "";
+      agentVersionId_ = "";
     }
 
     @java.lang.Override
@@ -229,6 +242,12 @@ public final class AgentOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               currentJobId_ = s;
+              break;
+            }
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              agentVersionId_ = s;
               break;
             }
             default: {
@@ -548,6 +567,44 @@ public final class AgentOuterClass {
       }
     }
 
+    public static final int AGENT_VERSION_ID_FIELD_NUMBER = 10;
+    private volatile java.lang.Object agentVersionId_;
+    /**
+     * <code>string agent_version_id = 10;</code>
+     * @return The agentVersionId.
+     */
+    @java.lang.Override
+    public java.lang.String getAgentVersionId() {
+      java.lang.Object ref = agentVersionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        agentVersionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string agent_version_id = 10;</code>
+     * @return The bytes for agentVersionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getAgentVersionIdBytes() {
+      java.lang.Object ref = agentVersionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        agentVersionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -585,6 +642,9 @@ public final class AgentOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currentJobId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, currentJobId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentVersionId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 10, agentVersionId_);
       }
       unknownFields.writeTo(output);
     }
@@ -625,6 +685,9 @@ public final class AgentOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currentJobId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, currentJobId_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(agentVersionId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, agentVersionId_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -655,6 +718,8 @@ public final class AgentOuterClass {
           .equals(other.getErrorsList())) return false;
       if (!getCurrentJobId()
           .equals(other.getCurrentJobId())) return false;
+      if (!getAgentVersionId()
+          .equals(other.getAgentVersionId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -684,6 +749,8 @@ public final class AgentOuterClass {
       }
       hash = (37 * hash) + CURRENT_JOB_ID_FIELD_NUMBER;
       hash = (53 * hash) + getCurrentJobId().hashCode();
+      hash = (37 * hash) + AGENT_VERSION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getAgentVersionId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -833,6 +900,8 @@ public final class AgentOuterClass {
         bitField0_ = (bitField0_ & ~0x00000001);
         currentJobId_ = "";
 
+        agentVersionId_ = "";
+
         return this;
       }
 
@@ -872,6 +941,7 @@ public final class AgentOuterClass {
         }
         result.errors_ = errors_;
         result.currentJobId_ = currentJobId_;
+        result.agentVersionId_ = agentVersionId_;
         onBuilt();
         return result;
       }
@@ -955,6 +1025,10 @@ public final class AgentOuterClass {
         }
         if (!other.getCurrentJobId().isEmpty()) {
           currentJobId_ = other.currentJobId_;
+          onChanged();
+        }
+        if (!other.getAgentVersionId().isEmpty()) {
+          agentVersionId_ = other.agentVersionId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -1606,6 +1680,82 @@ public final class AgentOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object agentVersionId_ = "";
+      /**
+       * <code>string agent_version_id = 10;</code>
+       * @return The agentVersionId.
+       */
+      public java.lang.String getAgentVersionId() {
+        java.lang.Object ref = agentVersionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          agentVersionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string agent_version_id = 10;</code>
+       * @return The bytes for agentVersionId.
+       */
+      public com.google.protobuf.ByteString
+          getAgentVersionIdBytes() {
+        java.lang.Object ref = agentVersionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          agentVersionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string agent_version_id = 10;</code>
+       * @param value The agentVersionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAgentVersionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        agentVersionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string agent_version_id = 10;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAgentVersionId() {
+        
+        agentVersionId_ = getDefaultInstance().getAgentVersionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string agent_version_id = 10;</code>
+       * @param value The bytes for agentVersionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAgentVersionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        agentVersionId_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1676,16 +1826,16 @@ public final class AgentOuterClass {
       "\n1yandex/cloud/loadtesting/api/v1/agent/" +
       "agent.proto\022%yandex.cloud.loadtesting.ap" +
       "i.v1.agent\0322yandex/cloud/loadtesting/api" +
-      "/v1/agent/status.proto\"\315\001\n\005Agent\022\n\n\002id\030\001" +
+      "/v1/agent/status.proto\"\347\001\n\005Agent\022\n\n\002id\030\001" +
       " \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\023\n" +
       "\013description\030\004 \001(\t\022\033\n\023compute_instance_i" +
       "d\030\005 \001(\t\022=\n\006status\030\007 \001(\0162-.yandex.cloud.l" +
       "oadtesting.api.v1.agent.Status\022\016\n\006errors" +
-      "\030\010 \003(\t\022\026\n\016current_job_id\030\t \001(\tB|\n)yandex" +
-      ".cloud.api.loadtesting.api.v1.agentZOgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/loadtesting/api/v1/agent;agentb\006pr" +
-      "oto3"
+      "\030\010 \003(\t\022\026\n\016current_job_id\030\t \001(\t\022\030\n\020agent_" +
+      "version_id\030\n \001(\tB|\n)yandex.cloud.api.loa" +
+      "dtesting.api.v1.agentZOgithub.com/yandex" +
+      "-cloud/go-genproto/yandex/cloud/loadtest" +
+      "ing/api/v1/agent;agentb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1697,7 +1847,7 @@ public final class AgentOuterClass {
     internal_static_yandex_cloud_loadtesting_api_v1_agent_Agent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_api_v1_agent_Agent_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "Name", "Description", "ComputeInstanceId", "Status", "Errors", "CurrentJobId", });
+        new java.lang.String[] { "Id", "FolderId", "Name", "Description", "ComputeInstanceId", "Status", "Errors", "CurrentJobId", "AgentVersionId", });
     yandex.cloud.api.loadtesting.api.v1.agent.StatusOuterClass.getDescriptor();
   }
 

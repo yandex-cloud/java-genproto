@@ -638,6 +638,37 @@ public final class ClusterServiceGrpc {
     return getDeleteHostsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.RestartClusterHostsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRestartHostsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RestartHosts",
+      requestType = yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.RestartClusterHostsRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.RestartClusterHostsRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRestartHostsMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.RestartClusterHostsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getRestartHostsMethod;
+    if ((getRestartHostsMethod = ClusterServiceGrpc.getRestartHostsMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getRestartHostsMethod = ClusterServiceGrpc.getRestartHostsMethod) == null) {
+          ClusterServiceGrpc.getRestartHostsMethod = getRestartHostsMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.RestartClusterHostsRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RestartHosts"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.RestartClusterHostsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("RestartHosts"))
+              .build();
+        }
+      }
+    }
+    return getRestartHostsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.GetClusterShardRequest,
       yandex.cloud.api.mdb.clickhouse.v1.ClusterOuterClass.Shard> getGetShardMethod;
 
@@ -1326,6 +1357,13 @@ public final class ClusterServiceGrpc {
     }
 
     /**
+     */
+    public void restartHosts(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.RestartClusterHostsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRestartHostsMethod(), responseObserver);
+    }
+
+    /**
      * <pre>
      * Returns the specified shard.
      * </pre>
@@ -1607,6 +1645,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterHostsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_DELETE_HOSTS)))
+          .addMethod(
+            getRestartHostsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.RestartClusterHostsRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_RESTART_HOSTS)))
           .addMethod(
             getGetShardMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1946,6 +1991,14 @@ public final class ClusterServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteHostsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void restartHosts(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.RestartClusterHostsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRestartHostsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -2324,6 +2377,13 @@ public final class ClusterServiceGrpc {
     }
 
     /**
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation restartHosts(yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.RestartClusterHostsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRestartHostsMethod(), getCallOptions(), request);
+    }
+
+    /**
      * <pre>
      * Returns the specified shard.
      * </pre>
@@ -2693,6 +2753,14 @@ public final class ClusterServiceGrpc {
     }
 
     /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> restartHosts(
+        yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.RestartClusterHostsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRestartHostsMethod(), getCallOptions()), request);
+    }
+
+    /**
      * <pre>
      * Returns the specified shard.
      * </pre>
@@ -2867,20 +2935,21 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_ADD_HOSTS = 17;
   private static final int METHODID_UPDATE_HOSTS = 18;
   private static final int METHODID_DELETE_HOSTS = 19;
-  private static final int METHODID_GET_SHARD = 20;
-  private static final int METHODID_LIST_SHARDS = 21;
-  private static final int METHODID_ADD_SHARD = 22;
-  private static final int METHODID_UPDATE_SHARD = 23;
-  private static final int METHODID_DELETE_SHARD = 24;
-  private static final int METHODID_GET_SHARD_GROUP = 25;
-  private static final int METHODID_LIST_SHARD_GROUPS = 26;
-  private static final int METHODID_CREATE_SHARD_GROUP = 27;
-  private static final int METHODID_UPDATE_SHARD_GROUP = 28;
-  private static final int METHODID_DELETE_SHARD_GROUP = 29;
-  private static final int METHODID_LIST_EXTERNAL_DICTIONARIES = 30;
-  private static final int METHODID_CREATE_EXTERNAL_DICTIONARY = 31;
-  private static final int METHODID_UPDATE_EXTERNAL_DICTIONARY = 32;
-  private static final int METHODID_DELETE_EXTERNAL_DICTIONARY = 33;
+  private static final int METHODID_RESTART_HOSTS = 20;
+  private static final int METHODID_GET_SHARD = 21;
+  private static final int METHODID_LIST_SHARDS = 22;
+  private static final int METHODID_ADD_SHARD = 23;
+  private static final int METHODID_UPDATE_SHARD = 24;
+  private static final int METHODID_DELETE_SHARD = 25;
+  private static final int METHODID_GET_SHARD_GROUP = 26;
+  private static final int METHODID_LIST_SHARD_GROUPS = 27;
+  private static final int METHODID_CREATE_SHARD_GROUP = 28;
+  private static final int METHODID_UPDATE_SHARD_GROUP = 29;
+  private static final int METHODID_DELETE_SHARD_GROUP = 30;
+  private static final int METHODID_LIST_EXTERNAL_DICTIONARIES = 31;
+  private static final int METHODID_CREATE_EXTERNAL_DICTIONARY = 32;
+  private static final int METHODID_UPDATE_EXTERNAL_DICTIONARY = 33;
+  private static final int METHODID_DELETE_EXTERNAL_DICTIONARY = 34;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2977,6 +3046,10 @@ public final class ClusterServiceGrpc {
           break;
         case METHODID_DELETE_HOSTS:
           serviceImpl.deleteHosts((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.DeleteClusterHostsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_RESTART_HOSTS:
+          serviceImpl.restartHosts((yandex.cloud.api.mdb.clickhouse.v1.ClusterServiceOuterClass.RestartClusterHostsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_GET_SHARD:
@@ -3116,6 +3189,7 @@ public final class ClusterServiceGrpc {
               .addMethod(getAddHostsMethod())
               .addMethod(getUpdateHostsMethod())
               .addMethod(getDeleteHostsMethod())
+              .addMethod(getRestartHostsMethod())
               .addMethod(getGetShardMethod())
               .addMethod(getListShardsMethod())
               .addMethod(getAddShardMethod())

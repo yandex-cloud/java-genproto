@@ -5404,6 +5404,2632 @@ public final class LockServiceOuterClass {
 
   }
 
+  public interface ListLocksRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.marketplace.licensemanager.v1.ListLocksRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the resource that the subscription locks belong to.
+     * </pre>
+     *
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The resourceId.
+     */
+    java.lang.String getResourceId();
+    /**
+     * <pre>
+     * ID of the resource that the subscription locks belong to.
+     * </pre>
+     *
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for resourceId.
+     */
+    com.google.protobuf.ByteString
+        getResourceIdBytes();
+
+    /**
+     * <pre>
+     * ID of the folder that the subscription locks belong to.
+     * </pre>
+     *
+     * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * ID of the folder that the subscription locks belong to.
+     * </pre>
+     *
+     * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListLocksResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListLocksResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListLocksResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+
+    /**
+     * <pre>
+     * A filter expression that filters subscription locks listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Lock.product_id] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `product_id=my-product-id`.
+     * </pre>
+     *
+     * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
+     */
+    java.lang.String getFilter();
+    /**
+     * <pre>
+     * A filter expression that filters subscription locks listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Lock.product_id] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `product_id=my-product-id`.
+     * </pre>
+     *
+     * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
+     */
+    com.google.protobuf.ByteString
+        getFilterBytes();
+
+    /**
+     * <pre>
+     * Sorting order for the list of subscription locks.
+     * </pre>
+     *
+     * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The orderBy.
+     */
+    java.lang.String getOrderBy();
+    /**
+     * <pre>
+     * Sorting order for the list of subscription locks.
+     * </pre>
+     *
+     * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for orderBy.
+     */
+    com.google.protobuf.ByteString
+        getOrderByBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.marketplace.licensemanager.v1.ListLocksRequest}
+   */
+  public static final class ListLocksRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.marketplace.licensemanager.v1.ListLocksRequest)
+      ListLocksRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListLocksRequest.newBuilder() to construct.
+    private ListLocksRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListLocksRequest() {
+      resourceId_ = "";
+      folderId_ = "";
+      pageToken_ = "";
+      filter_ = "";
+      orderBy_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListLocksRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListLocksRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resourceId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
+              break;
+            }
+            case 24: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              filter_ = s;
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              orderBy_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.internal_static_yandex_cloud_marketplace_licensemanager_v1_ListLocksRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.internal_static_yandex_cloud_marketplace_licensemanager_v1_ListLocksRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest.class, yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest.Builder.class);
+    }
+
+    public static final int RESOURCE_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object resourceId_;
+    /**
+     * <pre>
+     * ID of the resource that the subscription locks belong to.
+     * </pre>
+     *
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The resourceId.
+     */
+    @java.lang.Override
+    public java.lang.String getResourceId() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the resource that the subscription locks belong to.
+     * </pre>
+     *
+     * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for resourceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceIdBytes() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * ID of the folder that the subscription locks belong to.
+     * </pre>
+     *
+     * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The folderId.
+     */
+    @java.lang.Override
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the folder that the subscription locks belong to.
+     * </pre>
+     *
+     * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for folderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 3;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListLocksResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 4;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListLocksResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the
+     * [ListLocksResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILTER_FIELD_NUMBER = 5;
+    private volatile java.lang.Object filter_;
+    /**
+     * <pre>
+     * A filter expression that filters subscription locks listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Lock.product_id] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `product_id=my-product-id`.
+     * </pre>
+     *
+     * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The filter.
+     */
+    @java.lang.Override
+    public java.lang.String getFilter() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A filter expression that filters subscription locks listed in the response.
+     * The expression must specify:
+     * 1. The field name. Currently you can use filtering only on [Lock.product_id] field.
+     * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+     * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+     * Example of a filter: `product_id=my-product-id`.
+     * </pre>
+     *
+     * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+     * @return The bytes for filter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFilterBytes() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORDER_BY_FIELD_NUMBER = 6;
+    private volatile java.lang.Object orderBy_;
+    /**
+     * <pre>
+     * Sorting order for the list of subscription locks.
+     * </pre>
+     *
+     * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The orderBy.
+     */
+    @java.lang.Override
+    public java.lang.String getOrderBy() {
+      java.lang.Object ref = orderBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orderBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Sorting order for the list of subscription locks.
+     * </pre>
+     *
+     * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+     * @return The bytes for orderBy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOrderByBytes() {
+      java.lang.Object ref = orderBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orderBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(3, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, pageToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, filter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, orderBy_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, pageToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, filter_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderBy_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, orderBy_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest other = (yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest) obj;
+
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!getOrderBy()
+          .equals(other.getOrderBy())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getResourceId().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (37 * hash) + FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getFilter().hashCode();
+      hash = (37 * hash) + ORDER_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getOrderBy().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.marketplace.licensemanager.v1.ListLocksRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.marketplace.licensemanager.v1.ListLocksRequest)
+        yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.internal_static_yandex_cloud_marketplace_licensemanager_v1_ListLocksRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.internal_static_yandex_cloud_marketplace_licensemanager_v1_ListLocksRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest.class, yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        resourceId_ = "";
+
+        folderId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        filter_ = "";
+
+        orderBy_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.internal_static_yandex_cloud_marketplace_licensemanager_v1_ListLocksRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest build() {
+        yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest buildPartial() {
+        yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest result = new yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest(this);
+        result.resourceId_ = resourceId_;
+        result.folderId_ = folderId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        result.filter_ = filter_;
+        result.orderBy_ = orderBy_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest) {
+          return mergeFrom((yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest other) {
+        if (other == yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest.getDefaultInstance()) return this;
+        if (!other.getResourceId().isEmpty()) {
+          resourceId_ = other.resourceId_;
+          onChanged();
+        }
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        if (!other.getFilter().isEmpty()) {
+          filter_ = other.filter_;
+          onChanged();
+        }
+        if (!other.getOrderBy().isEmpty()) {
+          orderBy_ = other.orderBy_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object resourceId_ = "";
+      /**
+       * <pre>
+       * ID of the resource that the subscription locks belong to.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The resourceId.
+       */
+      public java.lang.String getResourceId() {
+        java.lang.Object ref = resourceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the resource that the subscription locks belong to.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for resourceId.
+       */
+      public com.google.protobuf.ByteString
+          getResourceIdBytes() {
+        java.lang.Object ref = resourceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the resource that the subscription locks belong to.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the resource that the subscription locks belong to.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceId() {
+        
+        resourceId_ = getDefaultInstance().getResourceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the resource that the subscription locks belong to.
+       * </pre>
+       *
+       * <code>string resource_id = 1 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * ID of the folder that the subscription locks belong to.
+       * </pre>
+       *
+       * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The folderId.
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder that the subscription locks belong to.
+       * </pre>
+       *
+       * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for folderId.
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder that the subscription locks belong to.
+       * </pre>
+       *
+       * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder that the subscription locks belong to.
+       * </pre>
+       *
+       * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder that the subscription locks belong to.
+       * </pre>
+       *
+       * <code>string folder_id = 2 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListLocksResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListLocksResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListLocksResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 3 [(.yandex.cloud.value) = "0-1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListLocksResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The pageToken.
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListLocksResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for pageToken.
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListLocksResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListLocksResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the
+       * [ListLocksResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 4 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object filter_ = "";
+      /**
+       * <pre>
+       * A filter expression that filters subscription locks listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Lock.product_id] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `product_id=my-product-id`.
+       * </pre>
+       *
+       * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The filter.
+       */
+      public java.lang.String getFilter() {
+        java.lang.Object ref = filter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters subscription locks listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Lock.product_id] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `product_id=my-product-id`.
+       * </pre>
+       *
+       * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return The bytes for filter.
+       */
+      public com.google.protobuf.ByteString
+          getFilterBytes() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters subscription locks listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Lock.product_id] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `product_id=my-product-id`.
+       * </pre>
+       *
+       * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters subscription locks listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Lock.product_id] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `product_id=my-product-id`.
+       * </pre>
+       *
+       * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilter() {
+        
+        filter_ = getDefaultInstance().getFilter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters subscription locks listed in the response.
+       * The expression must specify:
+       * 1. The field name. Currently you can use filtering only on [Lock.product_id] field.
+       * 2. An operator. Can be either `=` or `!=` for single values, `IN` or `NOT IN` for lists of values.
+       * 3. The value. Must be 3-63 characters long and match the regular expression `^[a-z][-a-z0-9]{1,61}[a-z0-9]`.
+       * Example of a filter: `product_id=my-product-id`.
+       * </pre>
+       *
+       * <code>string filter = 5 [(.yandex.cloud.length) = "&lt;=1000"];</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object orderBy_ = "";
+      /**
+       * <pre>
+       * Sorting order for the list of subscription locks.
+       * </pre>
+       *
+       * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The orderBy.
+       */
+      public java.lang.String getOrderBy() {
+        java.lang.Object ref = orderBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          orderBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Sorting order for the list of subscription locks.
+       * </pre>
+       *
+       * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return The bytes for orderBy.
+       */
+      public com.google.protobuf.ByteString
+          getOrderByBytes() {
+        java.lang.Object ref = orderBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          orderBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Sorting order for the list of subscription locks.
+       * </pre>
+       *
+       * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The orderBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderBy(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        orderBy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sorting order for the list of subscription locks.
+       * </pre>
+       *
+       * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrderBy() {
+        
+        orderBy_ = getDefaultInstance().getOrderBy();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sorting order for the list of subscription locks.
+       * </pre>
+       *
+       * <code>string order_by = 6 [(.yandex.cloud.length) = "&lt;=100"];</code>
+       * @param value The bytes for orderBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        orderBy_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.marketplace.licensemanager.v1.ListLocksRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.marketplace.licensemanager.v1.ListLocksRequest)
+    private static final yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest();
+    }
+
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListLocksRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListLocksRequest>() {
+      @java.lang.Override
+      public ListLocksRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListLocksRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListLocksRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListLocksRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListLocksResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.marketplace.licensemanager.v1.ListLocksResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of subscription locks.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock> 
+        getLocksList();
+    /**
+     * <pre>
+     * List of subscription locks.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+     */
+    yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock getLocks(int index);
+    /**
+     * <pre>
+     * List of subscription locks.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+     */
+    int getLocksCount();
+    /**
+     * <pre>
+     * List of subscription locks.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.LockOrBuilder> 
+        getLocksOrBuilderList();
+    /**
+     * <pre>
+     * List of subscription locks.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+     */
+    yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.LockOrBuilder getLocksOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListLocksRequest.page_size], use `next_page_token` as the value
+     * for the [ListLocksRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListLocksRequest.page_size], use `next_page_token` as the value
+     * for the [ListLocksRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.marketplace.licensemanager.v1.ListLocksResponse}
+   */
+  public static final class ListLocksResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.marketplace.licensemanager.v1.ListLocksResponse)
+      ListLocksResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListLocksResponse.newBuilder() to construct.
+    private ListLocksResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListLocksResponse() {
+      locks_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListLocksResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListLocksResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                locks_ = new java.util.ArrayList<yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              locks_.add(
+                  input.readMessage(yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          locks_ = java.util.Collections.unmodifiableList(locks_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.internal_static_yandex_cloud_marketplace_licensemanager_v1_ListLocksResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.internal_static_yandex_cloud_marketplace_licensemanager_v1_ListLocksResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse.class, yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse.Builder.class);
+    }
+
+    public static final int LOCKS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock> locks_;
+    /**
+     * <pre>
+     * List of subscription locks.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock> getLocksList() {
+      return locks_;
+    }
+    /**
+     * <pre>
+     * List of subscription locks.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.LockOrBuilder> 
+        getLocksOrBuilderList() {
+      return locks_;
+    }
+    /**
+     * <pre>
+     * List of subscription locks.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+     */
+    @java.lang.Override
+    public int getLocksCount() {
+      return locks_.size();
+    }
+    /**
+     * <pre>
+     * List of subscription locks.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock getLocks(int index) {
+      return locks_.get(index);
+    }
+    /**
+     * <pre>
+     * List of subscription locks.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.LockOrBuilder getLocksOrBuilder(
+        int index) {
+      return locks_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListLocksRequest.page_size], use `next_page_token` as the value
+     * for the [ListLocksRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListLocksRequest.page_size], use `next_page_token` as the value
+     * for the [ListLocksRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < locks_.size(); i++) {
+        output.writeMessage(1, locks_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < locks_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, locks_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse other = (yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse) obj;
+
+      if (!getLocksList()
+          .equals(other.getLocksList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getLocksCount() > 0) {
+        hash = (37 * hash) + LOCKS_FIELD_NUMBER;
+        hash = (53 * hash) + getLocksList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.marketplace.licensemanager.v1.ListLocksResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.marketplace.licensemanager.v1.ListLocksResponse)
+        yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.internal_static_yandex_cloud_marketplace_licensemanager_v1_ListLocksResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.internal_static_yandex_cloud_marketplace_licensemanager_v1_ListLocksResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse.class, yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLocksFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (locksBuilder_ == null) {
+          locks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          locksBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.internal_static_yandex_cloud_marketplace_licensemanager_v1_ListLocksResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse build() {
+        yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse buildPartial() {
+        yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse result = new yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (locksBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            locks_ = java.util.Collections.unmodifiableList(locks_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.locks_ = locks_;
+        } else {
+          result.locks_ = locksBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse) {
+          return mergeFrom((yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse other) {
+        if (other == yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse.getDefaultInstance()) return this;
+        if (locksBuilder_ == null) {
+          if (!other.locks_.isEmpty()) {
+            if (locks_.isEmpty()) {
+              locks_ = other.locks_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureLocksIsMutable();
+              locks_.addAll(other.locks_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.locks_.isEmpty()) {
+            if (locksBuilder_.isEmpty()) {
+              locksBuilder_.dispose();
+              locksBuilder_ = null;
+              locks_ = other.locks_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              locksBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLocksFieldBuilder() : null;
+            } else {
+              locksBuilder_.addAllMessages(other.locks_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock> locks_ =
+        java.util.Collections.emptyList();
+      private void ensureLocksIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          locks_ = new java.util.ArrayList<yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock>(locks_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock, yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.Builder, yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.LockOrBuilder> locksBuilder_;
+
+      /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock> getLocksList() {
+        if (locksBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(locks_);
+        } else {
+          return locksBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+       */
+      public int getLocksCount() {
+        if (locksBuilder_ == null) {
+          return locks_.size();
+        } else {
+          return locksBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+       */
+      public yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock getLocks(int index) {
+        if (locksBuilder_ == null) {
+          return locks_.get(index);
+        } else {
+          return locksBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+       */
+      public Builder setLocks(
+          int index, yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock value) {
+        if (locksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocksIsMutable();
+          locks_.set(index, value);
+          onChanged();
+        } else {
+          locksBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+       */
+      public Builder setLocks(
+          int index, yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.Builder builderForValue) {
+        if (locksBuilder_ == null) {
+          ensureLocksIsMutable();
+          locks_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          locksBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+       */
+      public Builder addLocks(yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock value) {
+        if (locksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocksIsMutable();
+          locks_.add(value);
+          onChanged();
+        } else {
+          locksBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+       */
+      public Builder addLocks(
+          int index, yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock value) {
+        if (locksBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLocksIsMutable();
+          locks_.add(index, value);
+          onChanged();
+        } else {
+          locksBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+       */
+      public Builder addLocks(
+          yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.Builder builderForValue) {
+        if (locksBuilder_ == null) {
+          ensureLocksIsMutable();
+          locks_.add(builderForValue.build());
+          onChanged();
+        } else {
+          locksBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+       */
+      public Builder addLocks(
+          int index, yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.Builder builderForValue) {
+        if (locksBuilder_ == null) {
+          ensureLocksIsMutable();
+          locks_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          locksBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+       */
+      public Builder addAllLocks(
+          java.lang.Iterable<? extends yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock> values) {
+        if (locksBuilder_ == null) {
+          ensureLocksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, locks_);
+          onChanged();
+        } else {
+          locksBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+       */
+      public Builder clearLocks() {
+        if (locksBuilder_ == null) {
+          locks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          locksBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+       */
+      public Builder removeLocks(int index) {
+        if (locksBuilder_ == null) {
+          ensureLocksIsMutable();
+          locks_.remove(index);
+          onChanged();
+        } else {
+          locksBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+       */
+      public yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.Builder getLocksBuilder(
+          int index) {
+        return getLocksFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+       */
+      public yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.LockOrBuilder getLocksOrBuilder(
+          int index) {
+        if (locksBuilder_ == null) {
+          return locks_.get(index);  } else {
+          return locksBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.LockOrBuilder> 
+           getLocksOrBuilderList() {
+        if (locksBuilder_ != null) {
+          return locksBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(locks_);
+        }
+      }
+      /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+       */
+      public yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.Builder addLocksBuilder() {
+        return getLocksFieldBuilder().addBuilder(
+            yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+       */
+      public yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.Builder addLocksBuilder(
+          int index) {
+        return getLocksFieldBuilder().addBuilder(
+            index, yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of subscription locks.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.marketplace.licensemanager.v1.Lock locks = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.Builder> 
+           getLocksBuilderList() {
+        return getLocksFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock, yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.Builder, yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.LockOrBuilder> 
+          getLocksFieldBuilder() {
+        if (locksBuilder_ == null) {
+          locksBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock, yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.Builder, yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.LockOrBuilder>(
+                  locks_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          locks_ = null;
+        }
+        return locksBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListLocksRequest.page_size], use `next_page_token` as the value
+       * for the [ListLocksRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListLocksRequest.page_size], use `next_page_token` as the value
+       * for the [ListLocksRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListLocksRequest.page_size], use `next_page_token` as the value
+       * for the [ListLocksRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListLocksRequest.page_size], use `next_page_token` as the value
+       * for the [ListLocksRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListLocksRequest.page_size], use `next_page_token` as the value
+       * for the [ListLocksRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.marketplace.licensemanager.v1.ListLocksResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.marketplace.licensemanager.v1.ListLocksResponse)
+    private static final yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse();
+    }
+
+    public static yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListLocksResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListLocksResponse>() {
+      @java.lang.Override
+      public ListLocksResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListLocksResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListLocksResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListLocksResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_marketplace_licensemanager_v1_GetLockRequest_descriptor;
   private static final 
@@ -5444,6 +8070,16 @@ public final class LockServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_marketplace_licensemanager_v1_GetLockByInstanceAndResourceRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_marketplace_licensemanager_v1_ListLocksRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_marketplace_licensemanager_v1_ListLocksRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_marketplace_licensemanager_v1_ListLocksResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_marketplace_licensemanager_v1_ListLocksResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -5471,37 +8107,49 @@ public final class LockServiceOuterClass {
       " \001(\tB\004\350\3071\001\"%\n\022DeleteLockMetadata\022\017\n\007lock" +
       "_id\030\001 \001(\t\"[\n#GetLockByInstanceAndResourc" +
       "eRequest\022\031\n\013instance_id\030\001 \001(\tB\004\350\3071\001\022\031\n\013r" +
-      "esource_id\030\002 \001(\tB\004\350\3071\0012\210\010\n\013LockService\022\254" +
-      "\001\n\003Get\022:.yandex.cloud.marketplace.licens" +
-      "emanager.v1.GetLockRequest\0320.yandex.clou" +
-      "d.marketplace.licensemanager.v1.Lock\"7\202\323" +
-      "\344\223\0021\022//marketplace/license-manager/v1/lo" +
-      "cks/{lock_id}\022\345\001\n\030GetByInstanceAndResour" +
-      "ce\022O.yandex.cloud.marketplace.licenseman" +
-      "ager.v1.GetLockByInstanceAndResourceRequ" +
-      "est\0320.yandex.cloud.marketplace.licensema" +
-      "nager.v1.Lock\"F\202\323\344\223\002@\022>/marketplace/lice" +
-      "nse-manager/v1/locks:getByInstanceAndRes" +
-      "ource\022\272\001\n\006Create\022=.yandex.cloud.marketpl" +
-      "ace.licensemanager.v1.CreateLockRequest\032" +
-      "!.yandex.cloud.operation.Operation\"N\202\323\344\223" +
-      "\002*\"%/marketplace/license-manager/v1/lock" +
-      "s:\001*\262\322*\032\n\022CreateLockMetadata\022\004Lock\022\317\001\n\006E" +
-      "nsure\022=.yandex.cloud.marketplace.license" +
-      "manager.v1.EnsureLockRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"c\202\323\344\223\002?\":/market" +
-      "place/license-manager/v1/locks/{instance" +
-      "_id}:ensure:\001*\262\322*\032\n\022EnsureLockMetadata\022\004" +
-      "Lock\022\322\001\n\006Delete\022=.yandex.cloud.marketpla" +
-      "ce.licensemanager.v1.DeleteLockRequest\032!" +
-      ".yandex.cloud.operation.Operation\"f\202\323\344\223\002" +
-      "1*//marketplace/license-manager/v1/locks" +
-      "/{lock_id}\262\322*+\n\022DeleteLockMetadata\022\025goog" +
-      "le.protobuf.EmptyB\217\001\n.yandex.cloud.api.m" +
-      "arketplace.licensemanager.v1Z]github.com" +
-      "/yandex-cloud/go-genproto/yandex/cloud/m" +
-      "arketplace/licensemanager/v1;licensemana" +
-      "gerb\006proto3"
+      "esource_id\030\002 \001(\tB\004\350\3071\001\"\275\001\n\020ListLocksRequ" +
+      "est\022\031\n\013resource_id\030\001 \001(\tB\004\350\3071\001\022\027\n\tfolder" +
+      "_id\030\002 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\003 \001(\003B\n\372\3071\006" +
+      "0-1000\022\035\n\npage_token\030\004 \001(\tB\t\212\3101\005<=100\022\032\n" +
+      "\006filter\030\005 \001(\tB\n\212\3101\006<=1000\022\033\n\010order_by\030\006 " +
+      "\001(\tB\t\212\3101\005<=100\"m\n\021ListLocksResponse\022?\n\005l" +
+      "ocks\030\001 \003(\01320.yandex.cloud.marketplace.li" +
+      "censemanager.v1.Lock\022\027\n\017next_page_token\030" +
+      "\002 \001(\t2\275\t\n\013LockService\022\254\001\n\003Get\022:.yandex.c" +
+      "loud.marketplace.licensemanager.v1.GetLo" +
+      "ckRequest\0320.yandex.cloud.marketplace.lic" +
+      "ensemanager.v1.Lock\"7\202\323\344\223\0021\022//marketplac" +
+      "e/license-manager/v1/locks/{lock_id}\022\345\001\n" +
+      "\030GetByInstanceAndResource\022O.yandex.cloud" +
+      ".marketplace.licensemanager.v1.GetLockBy" +
+      "InstanceAndResourceRequest\0320.yandex.clou" +
+      "d.marketplace.licensemanager.v1.Lock\"F\202\323" +
+      "\344\223\002@\022>/marketplace/license-manager/v1/lo" +
+      "cks:getByInstanceAndResource\022\262\001\n\004List\022<." +
+      "yandex.cloud.marketplace.licensemanager." +
+      "v1.ListLocksRequest\032=.yandex.cloud.marke" +
+      "tplace.licensemanager.v1.ListLocksRespon" +
+      "se\"-\202\323\344\223\002\'\022%/marketplace/license-manager" +
+      "/v1/locks\022\272\001\n\006Create\022=.yandex.cloud.mark" +
+      "etplace.licensemanager.v1.CreateLockRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"N" +
+      "\202\323\344\223\002*\"%/marketplace/license-manager/v1/" +
+      "locks:\001*\262\322*\032\n\022CreateLockMetadata\022\004Lock\022\317" +
+      "\001\n\006Ensure\022=.yandex.cloud.marketplace.lic" +
+      "ensemanager.v1.EnsureLockRequest\032!.yande" +
+      "x.cloud.operation.Operation\"c\202\323\344\223\002?\":/ma" +
+      "rketplace/license-manager/v1/locks/{inst" +
+      "ance_id}:ensure:\001*\262\322*\032\n\022EnsureLockMetada" +
+      "ta\022\004Lock\022\322\001\n\006Delete\022=.yandex.cloud.marke" +
+      "tplace.licensemanager.v1.DeleteLockReque" +
+      "st\032!.yandex.cloud.operation.Operation\"f\202" +
+      "\323\344\223\0021*//marketplace/license-manager/v1/l" +
+      "ocks/{lock_id}\262\322*+\n\022DeleteLockMetadata\022\025" +
+      "google.protobuf.EmptyB\217\001\n.yandex.cloud.a" +
+      "pi.marketplace.licensemanager.v1Z]github" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/marketplace/licensemanager/v1;license" +
+      "managerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5560,11 +8208,25 @@ public final class LockServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_marketplace_licensemanager_v1_GetLockByInstanceAndResourceRequest_descriptor,
         new java.lang.String[] { "InstanceId", "ResourceId", });
+    internal_static_yandex_cloud_marketplace_licensemanager_v1_ListLocksRequest_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_marketplace_licensemanager_v1_ListLocksRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_marketplace_licensemanager_v1_ListLocksRequest_descriptor,
+        new java.lang.String[] { "ResourceId", "FolderId", "PageSize", "PageToken", "Filter", "OrderBy", });
+    internal_static_yandex_cloud_marketplace_licensemanager_v1_ListLocksResponse_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_marketplace_licensemanager_v1_ListLocksResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_marketplace_licensemanager_v1_ListLocksResponse_descriptor,
+        new java.lang.String[] { "Locks", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.OperationOuterClass.operation);
+    registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
+    registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();

@@ -204,6 +204,26 @@ public final class LockOuterClass {
      * @return The state.
      */
     yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.State getState();
+
+    /**
+     * <pre>
+     * ID of the subscription template.
+     * </pre>
+     *
+     * <code>string template_id = 9;</code>
+     * @return The templateId.
+     */
+    java.lang.String getTemplateId();
+    /**
+     * <pre>
+     * ID of the subscription template.
+     * </pre>
+     *
+     * <code>string template_id = 9;</code>
+     * @return The bytes for templateId.
+     */
+    com.google.protobuf.ByteString
+        getTemplateIdBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.marketplace.licensemanager.v1.Lock}
@@ -222,6 +242,7 @@ public final class LockOuterClass {
       instanceId_ = "";
       resourceId_ = "";
       state_ = 0;
+      templateId_ = "";
     }
 
     @java.lang.Override
@@ -328,6 +349,12 @@ public final class LockOuterClass {
               int rawValue = input.readEnum();
 
               state_ = rawValue;
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              templateId_ = s;
               break;
             }
             default: {
@@ -829,6 +856,52 @@ public final class LockOuterClass {
       return result == null ? yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.State.UNRECOGNIZED : result;
     }
 
+    public static final int TEMPLATE_ID_FIELD_NUMBER = 9;
+    private volatile java.lang.Object templateId_;
+    /**
+     * <pre>
+     * ID of the subscription template.
+     * </pre>
+     *
+     * <code>string template_id = 9;</code>
+     * @return The templateId.
+     */
+    @java.lang.Override
+    public java.lang.String getTemplateId() {
+      java.lang.Object ref = templateId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        templateId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the subscription template.
+     * </pre>
+     *
+     * <code>string template_id = 9;</code>
+     * @return The bytes for templateId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTemplateIdBytes() {
+      java.lang.Object ref = templateId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        templateId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -867,6 +940,9 @@ public final class LockOuterClass {
       if (state_ != yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.State.STATE_UNSPECIFIED.getNumber()) {
         output.writeEnum(8, state_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, templateId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -904,6 +980,9 @@ public final class LockOuterClass {
       if (state_ != yandex.cloud.api.marketplace.licensemanager.v1.LockOuterClass.Lock.State.STATE_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(8, state_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(templateId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, templateId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -947,6 +1026,8 @@ public final class LockOuterClass {
             .equals(other.getUpdatedAt())) return false;
       }
       if (state_ != other.state_) return false;
+      if (!getTemplateId()
+          .equals(other.getTemplateId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -982,6 +1063,8 @@ public final class LockOuterClass {
       }
       hash = (37 * hash) + STATE_FIELD_NUMBER;
       hash = (53 * hash) + state_;
+      hash = (37 * hash) + TEMPLATE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTemplateId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1147,6 +1230,8 @@ public final class LockOuterClass {
         }
         state_ = 0;
 
+        templateId_ = "";
+
         return this;
       }
 
@@ -1197,6 +1282,7 @@ public final class LockOuterClass {
           result.updatedAt_ = updatedAtBuilder_.build();
         }
         result.state_ = state_;
+        result.templateId_ = templateId_;
         onBuilt();
         return result;
       }
@@ -1271,6 +1357,10 @@ public final class LockOuterClass {
         }
         if (other.state_ != 0) {
           setStateValue(other.getStateValue());
+        }
+        if (!other.getTemplateId().isEmpty()) {
+          templateId_ = other.templateId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2282,6 +2372,102 @@ public final class LockOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object templateId_ = "";
+      /**
+       * <pre>
+       * ID of the subscription template.
+       * </pre>
+       *
+       * <code>string template_id = 9;</code>
+       * @return The templateId.
+       */
+      public java.lang.String getTemplateId() {
+        java.lang.Object ref = templateId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          templateId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the subscription template.
+       * </pre>
+       *
+       * <code>string template_id = 9;</code>
+       * @return The bytes for templateId.
+       */
+      public com.google.protobuf.ByteString
+          getTemplateIdBytes() {
+        java.lang.Object ref = templateId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          templateId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the subscription template.
+       * </pre>
+       *
+       * <code>string template_id = 9;</code>
+       * @param value The templateId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTemplateId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        templateId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the subscription template.
+       * </pre>
+       *
+       * <code>string template_id = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTemplateId() {
+        
+        templateId_ = getDefaultInstance().getTemplateId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the subscription template.
+       * </pre>
+       *
+       * <code>string template_id = 9;</code>
+       * @param value The bytes for templateId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTemplateIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        templateId_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2352,7 +2538,7 @@ public final class LockOuterClass {
       "\n5yandex/cloud/marketplace/licensemanage" +
       "r/v1/lock.proto\022*yandex.cloud.marketplac" +
       "e.licensemanager.v1\032\037google/protobuf/tim" +
-      "estamp.proto\"\210\003\n\004Lock\022\n\n\002id\030\001 \001(\t\022\023\n\013ins" +
+      "estamp.proto\"\235\003\n\004Lock\022\n\n\002id\030\001 \001(\t\022\023\n\013ins" +
       "tance_id\030\002 \001(\t\022\023\n\013resource_id\030\003 \001(\t\022.\n\ns" +
       "tart_time\030\004 \001(\0132\032.google.protobuf.Timest" +
       "amp\022,\n\010end_time\030\005 \001(\0132\032.google.protobuf." +
@@ -2360,13 +2546,13 @@ public final class LockOuterClass {
       "rotobuf.Timestamp\022.\n\nupdated_at\030\007 \001(\0132\032." +
       "google.protobuf.Timestamp\022E\n\005state\030\010 \001(\016" +
       "26.yandex.cloud.marketplace.licensemanag" +
-      "er.v1.Lock.State\"E\n\005State\022\025\n\021STATE_UNSPE" +
-      "CIFIED\020\000\022\014\n\010UNLOCKED\020\001\022\n\n\006LOCKED\020\002\022\013\n\007DE" +
-      "LETED\020\003B\217\001\n.yandex.cloud.api.marketplace" +
-      ".licensemanager.v1Z]github.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/marketplace" +
-      "/licensemanager/v1;licensemanagerb\006proto" +
-      "3"
+      "er.v1.Lock.State\022\023\n\013template_id\030\t \001(\t\"E\n" +
+      "\005State\022\025\n\021STATE_UNSPECIFIED\020\000\022\014\n\010UNLOCKE" +
+      "D\020\001\022\n\n\006LOCKED\020\002\022\013\n\007DELETED\020\003B\217\001\n.yandex." +
+      "cloud.api.marketplace.licensemanager.v1Z" +
+      "]github.com/yandex-cloud/go-genproto/yan" +
+      "dex/cloud/marketplace/licensemanager/v1;" +
+      "licensemanagerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2378,7 +2564,7 @@ public final class LockOuterClass {
     internal_static_yandex_cloud_marketplace_licensemanager_v1_Lock_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_marketplace_licensemanager_v1_Lock_descriptor,
-        new java.lang.String[] { "Id", "InstanceId", "ResourceId", "StartTime", "EndTime", "CreatedAt", "UpdatedAt", "State", });
+        new java.lang.String[] { "Id", "InstanceId", "ResourceId", "StartTime", "EndTime", "CreatedAt", "UpdatedAt", "State", "TemplateId", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

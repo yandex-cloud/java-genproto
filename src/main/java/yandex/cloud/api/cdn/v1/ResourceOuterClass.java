@@ -349,6 +349,143 @@ public final class ResourceOuterClass {
 
   /**
    * <pre>
+   * SecureKeyURLType defines type of the URL signing.
+   * </pre>
+   *
+   * Protobuf enum {@code yandex.cloud.cdn.v1.SecureKeyURLType}
+   */
+  public enum SecureKeyURLType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>SECURE_KEY_URL_TYPE_UNSPECIFIED = 0;</code>
+     */
+    SECURE_KEY_URL_TYPE_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * Use scpecific IP address in URL signing. URL will be availible only for this IP.
+     * </pre>
+     *
+     * <code>ENABLE_IP_SIGNING = 1;</code>
+     */
+    ENABLE_IP_SIGNING(1),
+    /**
+     * <pre>
+     * Sign URL without using IP address. URL will be available for all IP addresses.
+     * </pre>
+     *
+     * <code>DISABLE_IP_SIGNING = 2;</code>
+     */
+    DISABLE_IP_SIGNING(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>SECURE_KEY_URL_TYPE_UNSPECIFIED = 0;</code>
+     */
+    public static final int SECURE_KEY_URL_TYPE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * Use scpecific IP address in URL signing. URL will be availible only for this IP.
+     * </pre>
+     *
+     * <code>ENABLE_IP_SIGNING = 1;</code>
+     */
+    public static final int ENABLE_IP_SIGNING_VALUE = 1;
+    /**
+     * <pre>
+     * Sign URL without using IP address. URL will be available for all IP addresses.
+     * </pre>
+     *
+     * <code>DISABLE_IP_SIGNING = 2;</code>
+     */
+    public static final int DISABLE_IP_SIGNING_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static SecureKeyURLType valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static SecureKeyURLType forNumber(int value) {
+      switch (value) {
+        case 0: return SECURE_KEY_URL_TYPE_UNSPECIFIED;
+        case 1: return ENABLE_IP_SIGNING;
+        case 2: return DISABLE_IP_SIGNING;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<SecureKeyURLType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        SecureKeyURLType> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<SecureKeyURLType>() {
+            public SecureKeyURLType findValueByNumber(int number) {
+              return SecureKeyURLType.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.cdn.v1.ResourceOuterClass.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final SecureKeyURLType[] VALUES = values();
+
+    public static SecureKeyURLType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private SecureKeyURLType(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.cdn.v1.SecureKeyURLType)
+  }
+
+  /**
+   * <pre>
    * A certificate type parameters.
    * </pre>
    *
@@ -483,7 +620,7 @@ public final class ResourceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return yandex.cloud.api.cdn.v1.ResourceOuterClass.getDescriptor().getEnumTypes().get(2);
+      return yandex.cloud.api.cdn.v1.ResourceOuterClass.getDescriptor().getEnumTypes().get(3);
     }
 
     private static final SSLCertificateType[] VALUES = values();
@@ -628,7 +765,7 @@ public final class ResourceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return yandex.cloud.api.cdn.v1.ResourceOuterClass.getDescriptor().getEnumTypes().get(3);
+      return yandex.cloud.api.cdn.v1.ResourceOuterClass.getDescriptor().getEnumTypes().get(4);
     }
 
     private static final SSLCertificateStatus[] VALUES = values();
@@ -5167,6 +5304,33 @@ public final class ResourceOuterClass {
      * <code>.yandex.cloud.cdn.v1.ResourceOptions.RewriteOption rewrite = 19;</code>
      */
     yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.RewriteOptionOrBuilder getRewriteOrBuilder();
+
+    /**
+     * <pre>
+     * Secure token to protect contect and limit access by IP addresses and time limits
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.SecureKeyOption secure_key = 20;</code>
+     * @return Whether the secureKey field is set.
+     */
+    boolean hasSecureKey();
+    /**
+     * <pre>
+     * Secure token to protect contect and limit access by IP addresses and time limits
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.SecureKeyOption secure_key = 20;</code>
+     * @return The secureKey.
+     */
+    yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption getSecureKey();
+    /**
+     * <pre>
+     * Secure token to protect contect and limit access by IP addresses and time limits
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.SecureKeyOption secure_key = 20;</code>
+     */
+    yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOptionOrBuilder getSecureKeyOrBuilder();
   }
   /**
    * <pre>
@@ -5460,6 +5624,19 @@ public final class ResourceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(rewrite_);
                 rewrite_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 162: {
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption.Builder subBuilder = null;
+              if (secureKey_ != null) {
+                subBuilder = secureKey_.toBuilder();
+              }
+              secureKey_ = input.readMessage(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(secureKey_);
+                secureKey_ = subBuilder.buildPartial();
               }
 
               break;
@@ -19023,6 +19200,849 @@ public final class ResourceOuterClass {
 
     }
 
+    public interface SecureKeyOptionOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:yandex.cloud.cdn.v1.ResourceOptions.SecureKeyOption)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * True - the option is enabled and its [flag] is applied to the resource.
+       * False - the option is disabled and its default value of the [flag] is used for the resource.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      boolean getEnabled();
+
+      /**
+       * <pre>
+       * The key for the URL signing.
+       * </pre>
+       *
+       * <code>string key = 2;</code>
+       * @return The key.
+       */
+      java.lang.String getKey();
+      /**
+       * <pre>
+       * The key for the URL signing.
+       * </pre>
+       *
+       * <code>string key = 2;</code>
+       * @return The bytes for key.
+       */
+      com.google.protobuf.ByteString
+          getKeyBytes();
+
+      /**
+       * <pre>
+       * The type of the URL signing. The URL could be available for all IP addresses or for the only one IP.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.SecureKeyURLType type = 3;</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      int getTypeValue();
+      /**
+       * <pre>
+       * The type of the URL signing. The URL could be available for all IP addresses or for the only one IP.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.SecureKeyURLType type = 3;</code>
+       * @return The type.
+       */
+      yandex.cloud.api.cdn.v1.ResourceOuterClass.SecureKeyURLType getType();
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.SecureKeyOption}
+     */
+    public static final class SecureKeyOption extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:yandex.cloud.cdn.v1.ResourceOptions.SecureKeyOption)
+        SecureKeyOptionOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use SecureKeyOption.newBuilder() to construct.
+      private SecureKeyOption(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private SecureKeyOption() {
+        key_ = "";
+        type_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new SecureKeyOption();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private SecureKeyOption(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                enabled_ = input.readBool();
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                key_ = s;
+                break;
+              }
+              case 24: {
+                int rawValue = input.readEnum();
+
+                type_ = rawValue;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_SecureKeyOption_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_SecureKeyOption_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption.class, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption.Builder.class);
+      }
+
+      public static final int ENABLED_FIELD_NUMBER = 1;
+      private boolean enabled_;
+      /**
+       * <pre>
+       * True - the option is enabled and its [flag] is applied to the resource.
+       * False - the option is disabled and its default value of the [flag] is used for the resource.
+       * </pre>
+       *
+       * <code>bool enabled = 1;</code>
+       * @return The enabled.
+       */
+      @java.lang.Override
+      public boolean getEnabled() {
+        return enabled_;
+      }
+
+      public static final int KEY_FIELD_NUMBER = 2;
+      private volatile java.lang.Object key_;
+      /**
+       * <pre>
+       * The key for the URL signing.
+       * </pre>
+       *
+       * <code>string key = 2;</code>
+       * @return The key.
+       */
+      @java.lang.Override
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          key_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * The key for the URL signing.
+       * </pre>
+       *
+       * <code>string key = 2;</code>
+       * @return The bytes for key.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int TYPE_FIELD_NUMBER = 3;
+      private int type_;
+      /**
+       * <pre>
+       * The type of the URL signing. The URL could be available for all IP addresses or for the only one IP.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.SecureKeyURLType type = 3;</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * The type of the URL signing. The URL could be available for all IP addresses or for the only one IP.
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.SecureKeyURLType type = 3;</code>
+       * @return The type.
+       */
+      @java.lang.Override public yandex.cloud.api.cdn.v1.ResourceOuterClass.SecureKeyURLType getType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.cdn.v1.ResourceOuterClass.SecureKeyURLType result = yandex.cloud.api.cdn.v1.ResourceOuterClass.SecureKeyURLType.valueOf(type_);
+        return result == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.SecureKeyURLType.UNRECOGNIZED : result;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (enabled_ != false) {
+          output.writeBool(1, enabled_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, key_);
+        }
+        if (type_ != yandex.cloud.api.cdn.v1.ResourceOuterClass.SecureKeyURLType.SECURE_KEY_URL_TYPE_UNSPECIFIED.getNumber()) {
+          output.writeEnum(3, type_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (enabled_ != false) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, enabled_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(key_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, key_);
+        }
+        if (type_ != yandex.cloud.api.cdn.v1.ResourceOuterClass.SecureKeyURLType.SECURE_KEY_URL_TYPE_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(3, type_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption)) {
+          return super.equals(obj);
+        }
+        yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption other = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption) obj;
+
+        if (getEnabled()
+            != other.getEnabled()) return false;
+        if (!getKey()
+            .equals(other.getKey())) return false;
+        if (type_ != other.type_) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getEnabled());
+        hash = (37 * hash) + KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getKey().hashCode();
+        hash = (37 * hash) + TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + type_;
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.cdn.v1.ResourceOptions.SecureKeyOption}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:yandex.cloud.cdn.v1.ResourceOptions.SecureKeyOption)
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOptionOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_SecureKeyOption_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_SecureKeyOption_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption.class, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption.Builder.class);
+        }
+
+        // Construct using yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          enabled_ = false;
+
+          key_ = "";
+
+          type_ = 0;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.internal_static_yandex_cloud_cdn_v1_ResourceOptions_SecureKeyOption_descriptor;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption getDefaultInstanceForType() {
+          return yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption build() {
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption buildPartial() {
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption result = new yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption(this);
+          result.enabled_ = enabled_;
+          result.key_ = key_;
+          result.type_ = type_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption) {
+            return mergeFrom((yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption other) {
+          if (other == yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption.getDefaultInstance()) return this;
+          if (other.getEnabled() != false) {
+            setEnabled(other.getEnabled());
+          }
+          if (!other.getKey().isEmpty()) {
+            key_ = other.key_;
+            onChanged();
+          }
+          if (other.type_ != 0) {
+            setTypeValue(other.getTypeValue());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private boolean enabled_ ;
+        /**
+         * <pre>
+         * True - the option is enabled and its [flag] is applied to the resource.
+         * False - the option is disabled and its default value of the [flag] is used for the resource.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @return The enabled.
+         */
+        @java.lang.Override
+        public boolean getEnabled() {
+          return enabled_;
+        }
+        /**
+         * <pre>
+         * True - the option is enabled and its [flag] is applied to the resource.
+         * False - the option is disabled and its default value of the [flag] is used for the resource.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @param value The enabled to set.
+         * @return This builder for chaining.
+         */
+        public Builder setEnabled(boolean value) {
+          
+          enabled_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * True - the option is enabled and its [flag] is applied to the resource.
+         * False - the option is disabled and its default value of the [flag] is used for the resource.
+         * </pre>
+         *
+         * <code>bool enabled = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearEnabled() {
+          
+          enabled_ = false;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object key_ = "";
+        /**
+         * <pre>
+         * The key for the URL signing.
+         * </pre>
+         *
+         * <code>string key = 2;</code>
+         * @return The key.
+         */
+        public java.lang.String getKey() {
+          java.lang.Object ref = key_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            key_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * The key for the URL signing.
+         * </pre>
+         *
+         * <code>string key = 2;</code>
+         * @return The bytes for key.
+         */
+        public com.google.protobuf.ByteString
+            getKeyBytes() {
+          java.lang.Object ref = key_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            key_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * The key for the URL signing.
+         * </pre>
+         *
+         * <code>string key = 2;</code>
+         * @param value The key to set.
+         * @return This builder for chaining.
+         */
+        public Builder setKey(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          key_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The key for the URL signing.
+         * </pre>
+         *
+         * <code>string key = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearKey() {
+          
+          key_ = getDefaultInstance().getKey();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The key for the URL signing.
+         * </pre>
+         *
+         * <code>string key = 2;</code>
+         * @param value The bytes for key to set.
+         * @return This builder for chaining.
+         */
+        public Builder setKeyBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          key_ = value;
+          onChanged();
+          return this;
+        }
+
+        private int type_ = 0;
+        /**
+         * <pre>
+         * The type of the URL signing. The URL could be available for all IP addresses or for the only one IP.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cdn.v1.SecureKeyURLType type = 3;</code>
+         * @return The enum numeric value on the wire for type.
+         */
+        @java.lang.Override public int getTypeValue() {
+          return type_;
+        }
+        /**
+         * <pre>
+         * The type of the URL signing. The URL could be available for all IP addresses or for the only one IP.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cdn.v1.SecureKeyURLType type = 3;</code>
+         * @param value The enum numeric value on the wire for type to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTypeValue(int value) {
+          
+          type_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The type of the URL signing. The URL could be available for all IP addresses or for the only one IP.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cdn.v1.SecureKeyURLType type = 3;</code>
+         * @return The type.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.cdn.v1.ResourceOuterClass.SecureKeyURLType getType() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.SecureKeyURLType result = yandex.cloud.api.cdn.v1.ResourceOuterClass.SecureKeyURLType.valueOf(type_);
+          return result == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.SecureKeyURLType.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * The type of the URL signing. The URL could be available for all IP addresses or for the only one IP.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cdn.v1.SecureKeyURLType type = 3;</code>
+         * @param value The type to set.
+         * @return This builder for chaining.
+         */
+        public Builder setType(yandex.cloud.api.cdn.v1.ResourceOuterClass.SecureKeyURLType value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          type_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * The type of the URL signing. The URL could be available for all IP addresses or for the only one IP.
+         * </pre>
+         *
+         * <code>.yandex.cloud.cdn.v1.SecureKeyURLType type = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearType() {
+          
+          type_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:yandex.cloud.cdn.v1.ResourceOptions.SecureKeyOption)
+      }
+
+      // @@protoc_insertion_point(class_scope:yandex.cloud.cdn.v1.ResourceOptions.SecureKeyOption)
+      private static final yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption();
+      }
+
+      public static yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<SecureKeyOption>
+          PARSER = new com.google.protobuf.AbstractParser<SecureKeyOption>() {
+        @java.lang.Override
+        public SecureKeyOption parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new SecureKeyOption(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<SecureKeyOption> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<SecureKeyOption> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
     public static final int DISABLE_CACHE_FIELD_NUMBER = 1;
     private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.BoolOption disableCache_;
     /**
@@ -19799,6 +20819,44 @@ public final class ResourceOuterClass {
       return getRewrite();
     }
 
+    public static final int SECURE_KEY_FIELD_NUMBER = 20;
+    private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption secureKey_;
+    /**
+     * <pre>
+     * Secure token to protect contect and limit access by IP addresses and time limits
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.SecureKeyOption secure_key = 20;</code>
+     * @return Whether the secureKey field is set.
+     */
+    @java.lang.Override
+    public boolean hasSecureKey() {
+      return secureKey_ != null;
+    }
+    /**
+     * <pre>
+     * Secure token to protect contect and limit access by IP addresses and time limits
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.SecureKeyOption secure_key = 20;</code>
+     * @return The secureKey.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption getSecureKey() {
+      return secureKey_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption.getDefaultInstance() : secureKey_;
+    }
+    /**
+     * <pre>
+     * Secure token to protect contect and limit access by IP addresses and time limits
+     * </pre>
+     *
+     * <code>.yandex.cloud.cdn.v1.ResourceOptions.SecureKeyOption secure_key = 20;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOptionOrBuilder getSecureKeyOrBuilder() {
+      return getSecureKey();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -19869,6 +20927,9 @@ public final class ResourceOuterClass {
       }
       if (rewrite_ != null) {
         output.writeMessage(19, getRewrite());
+      }
+      if (secureKey_ != null) {
+        output.writeMessage(20, getSecureKey());
       }
       unknownFields.writeTo(output);
     }
@@ -19954,6 +21015,10 @@ public final class ResourceOuterClass {
       if (rewrite_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(19, getRewrite());
+      }
+      if (secureKey_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(20, getSecureKey());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -20065,6 +21130,11 @@ public final class ResourceOuterClass {
         if (!getRewrite()
             .equals(other.getRewrite())) return false;
       }
+      if (hasSecureKey() != other.hasSecureKey()) return false;
+      if (hasSecureKey()) {
+        if (!getSecureKey()
+            .equals(other.getSecureKey())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -20151,6 +21221,10 @@ public final class ResourceOuterClass {
       if (hasRewrite()) {
         hash = (37 * hash) + REWRITE_FIELD_NUMBER;
         hash = (53 * hash) + getRewrite().hashCode();
+      }
+      if (hasSecureKey()) {
+        hash = (37 * hash) + SECURE_KEY_FIELD_NUMBER;
+        hash = (53 * hash) + getSecureKey().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -20403,6 +21477,12 @@ public final class ResourceOuterClass {
           rewrite_ = null;
           rewriteBuilder_ = null;
         }
+        if (secureKeyBuilder_ == null) {
+          secureKey_ = null;
+        } else {
+          secureKey_ = null;
+          secureKeyBuilder_ = null;
+        }
         return this;
       }
 
@@ -20524,6 +21604,11 @@ public final class ResourceOuterClass {
         } else {
           result.rewrite_ = rewriteBuilder_.build();
         }
+        if (secureKeyBuilder_ == null) {
+          result.secureKey_ = secureKey_;
+        } else {
+          result.secureKey_ = secureKeyBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -20628,6 +21713,9 @@ public final class ResourceOuterClass {
         }
         if (other.hasRewrite()) {
           mergeRewrite(other.getRewrite());
+        }
+        if (other.hasSecureKey()) {
+          mergeSecureKey(other.getSecureKey());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -23763,6 +24851,161 @@ public final class ResourceOuterClass {
           rewrite_ = null;
         }
         return rewriteBuilder_;
+      }
+
+      private yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption secureKey_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOptionOrBuilder> secureKeyBuilder_;
+      /**
+       * <pre>
+       * Secure token to protect contect and limit access by IP addresses and time limits
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.SecureKeyOption secure_key = 20;</code>
+       * @return Whether the secureKey field is set.
+       */
+      public boolean hasSecureKey() {
+        return secureKeyBuilder_ != null || secureKey_ != null;
+      }
+      /**
+       * <pre>
+       * Secure token to protect contect and limit access by IP addresses and time limits
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.SecureKeyOption secure_key = 20;</code>
+       * @return The secureKey.
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption getSecureKey() {
+        if (secureKeyBuilder_ == null) {
+          return secureKey_ == null ? yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption.getDefaultInstance() : secureKey_;
+        } else {
+          return secureKeyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Secure token to protect contect and limit access by IP addresses and time limits
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.SecureKeyOption secure_key = 20;</code>
+       */
+      public Builder setSecureKey(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption value) {
+        if (secureKeyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          secureKey_ = value;
+          onChanged();
+        } else {
+          secureKeyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Secure token to protect contect and limit access by IP addresses and time limits
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.SecureKeyOption secure_key = 20;</code>
+       */
+      public Builder setSecureKey(
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption.Builder builderForValue) {
+        if (secureKeyBuilder_ == null) {
+          secureKey_ = builderForValue.build();
+          onChanged();
+        } else {
+          secureKeyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Secure token to protect contect and limit access by IP addresses and time limits
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.SecureKeyOption secure_key = 20;</code>
+       */
+      public Builder mergeSecureKey(yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption value) {
+        if (secureKeyBuilder_ == null) {
+          if (secureKey_ != null) {
+            secureKey_ =
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption.newBuilder(secureKey_).mergeFrom(value).buildPartial();
+          } else {
+            secureKey_ = value;
+          }
+          onChanged();
+        } else {
+          secureKeyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Secure token to protect contect and limit access by IP addresses and time limits
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.SecureKeyOption secure_key = 20;</code>
+       */
+      public Builder clearSecureKey() {
+        if (secureKeyBuilder_ == null) {
+          secureKey_ = null;
+          onChanged();
+        } else {
+          secureKey_ = null;
+          secureKeyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Secure token to protect contect and limit access by IP addresses and time limits
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.SecureKeyOption secure_key = 20;</code>
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption.Builder getSecureKeyBuilder() {
+        
+        onChanged();
+        return getSecureKeyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Secure token to protect contect and limit access by IP addresses and time limits
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.SecureKeyOption secure_key = 20;</code>
+       */
+      public yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOptionOrBuilder getSecureKeyOrBuilder() {
+        if (secureKeyBuilder_ != null) {
+          return secureKeyBuilder_.getMessageOrBuilder();
+        } else {
+          return secureKey_ == null ?
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption.getDefaultInstance() : secureKey_;
+        }
+      }
+      /**
+       * <pre>
+       * Secure token to protect contect and limit access by IP addresses and time limits
+       * </pre>
+       *
+       * <code>.yandex.cloud.cdn.v1.ResourceOptions.SecureKeyOption secure_key = 20;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOptionOrBuilder> 
+          getSecureKeyFieldBuilder() {
+        if (secureKeyBuilder_ == null) {
+          secureKeyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOption.Builder, yandex.cloud.api.cdn.v1.ResourceOuterClass.ResourceOptions.SecureKeyOptionOrBuilder>(
+                  getSecureKey(),
+                  getParentForChildren(),
+                  isClean());
+          secureKey_ = null;
+        }
+        return secureKeyBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -27143,6 +28386,11 @@ public final class ResourceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_cdn_v1_ResourceOptions_RewriteOption_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_cdn_v1_ResourceOptions_SecureKeyOption_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_cdn_v1_ResourceOptions_SecureKeyOption_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_cdn_v1_SSLTargetCertificate_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -27187,7 +28435,7 @@ public final class ResourceOuterClass {
       "(\0132#.yandex.cloud.cdn.v1.SSLCertificate\022" +
       "9\n\006labels\030\r \003(\0132).yandex.cloud.cdn.v1.Re" +
       "source.LabelsEntry\032-\n\013LabelsEntry\022\013\n\003key" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\357\034\n\017ResourceOp" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\237\036\n\017ResourceOp" +
       "tions\022F\n\rdisable_cache\030\001 \001(\0132/.yandex.cl" +
       "oud.cdn.v1.ResourceOptions.BoolOption\022S\n" +
       "\023edge_cache_settings\030\002 \001(\01326.yandex.clou" +
@@ -27225,78 +28473,85 @@ public final class ResourceOuterClass {
       "ignore_cookie\030\022 \001(\0132/.yandex.cloud.cdn.v" +
       "1.ResourceOptions.BoolOption\022C\n\007rewrite\030" +
       "\023 \001(\01322.yandex.cloud.cdn.v1.ResourceOpti" +
-      "ons.RewriteOption\032,\n\nBoolOption\022\017\n\007enabl" +
-      "ed\030\001 \001(\010\022\r\n\005value\030\002 \001(\010\032.\n\014StringOption\022" +
-      "\017\n\007enabled\030\001 \001(\010\022\r\n\005value\030\002 \001(\t\032-\n\013Int64" +
-      "Option\022\017\n\007enabled\030\001 \001(\010\022\r\n\005value\030\002 \001(\003\0323" +
-      "\n\021StringsListOption\022\017\n\007enabled\030\001 \001(\010\022\r\n\005" +
-      "value\030\002 \003(\t\032\242\001\n\020StringsMapOption\022\017\n\007enab" +
-      "led\030\001 \001(\010\022O\n\005value\030\002 \003(\0132@.yandex.cloud." +
-      "cdn.v1.ResourceOptions.StringsMapOption." +
-      "ValueEntry\032,\n\nValueEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001\032\265\001\n\014CachingTimes\022\024\n\014sim" +
-      "ple_value\030\001 \001(\003\022Z\n\rcustom_values\030\002 \003(\0132C" +
-      ".yandex.cloud.cdn.v1.ResourceOptions.Cac" +
-      "hingTimes.CustomValuesEntry\0323\n\021CustomVal" +
-      "uesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\003:\0028\001" +
-      "\032\223\001\n\021EdgeCacheSettings\022\017\n\007enabled\030\001 \001(\010\022" +
-      "B\n\005value\030\002 \001(\01321.yandex.cloud.cdn.v1.Res" +
-      "ourceOptions.CachingTimesH\000\022\027\n\rdefault_v" +
-      "alue\030\003 \001(\003H\000B\020\n\016values_variant\032\251\003\n\027Strin" +
-      "gVariableMapOption\022\017\n\007enabled\030\001 \001(\010\022V\n\005v" +
-      "alue\030\002 \003(\0132G.yandex.cloud.cdn.v1.Resourc" +
-      "eOptions.StringVariableMapOption.ValueEn" +
-      "try\032\254\001\n\013OneofString\022B\n\005value\030\001 \001(\01321.yan" +
-      "dex.cloud.cdn.v1.ResourceOptions.StringO" +
-      "ptionH\000\022H\n\006values\030\002 \001(\01326.yandex.cloud.c" +
-      "dn.v1.ResourceOptions.StringsListOptionH" +
-      "\000B\017\n\rstring_option\032v\n\nValueEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022W\n\005value\030\002 \001(\0132H.yandex.cloud.cdn." +
-      "v1.ResourceOptions.StringVariableMapOpti" +
-      "on.OneofString:\0028\001\032\260\002\n\022QueryParamsOption" +
-      "s\022N\n\023ignore_query_string\030\001 \001(\0132/.yandex." +
-      "cloud.cdn.v1.ResourceOptions.BoolOptionH" +
-      "\000\022X\n\026query_params_whitelist\030\002 \001(\01326.yand" +
-      "ex.cloud.cdn.v1.ResourceOptions.StringsL" +
-      "istOptionH\000\022X\n\026query_params_blacklist\030\003 " +
-      "\001(\01326.yandex.cloud.cdn.v1.ResourceOption" +
-      "s.StringsListOptionH\000B\026\n\024query_params_va" +
-      "riant\032\313\001\n\017RedirectOptions\022Q\n\026redirect_ht" +
-      "tp_to_https\030\001 \001(\0132/.yandex.cloud.cdn.v1." +
-      "ResourceOptions.BoolOptionH\000\022Q\n\026redirect" +
-      "_https_to_http\030\002 \001(\0132/.yandex.cloud.cdn." +
-      "v1.ResourceOptions.BoolOptionH\000B\022\n\020redir" +
-      "ect_variant\032\260\001\n\013HostOptions\022A\n\004host\030\001 \001(" +
-      "\01321.yandex.cloud.cdn.v1.ResourceOptions." +
-      "StringOptionH\000\022N\n\023forward_host_header\030\002 " +
-      "\001(\0132/.yandex.cloud.cdn.v1.ResourceOption" +
-      "s.BoolOptionH\000B\016\n\014host_variant\032\222\002\n\022Compr" +
-      "essionOptions\022K\n\020fetch_compressed\030\001 \001(\0132" +
-      "/.yandex.cloud.cdn.v1.ResourceOptions.Bo" +
-      "olOptionH\000\022B\n\007gzip_on\030\002 \001(\0132/.yandex.clo" +
-      "ud.cdn.v1.ResourceOptions.BoolOptionH\000\022T" +
-      "\n\022brotli_compression\030\003 \001(\01326.yandex.clou" +
-      "d.cdn.v1.ResourceOptions.StringsListOpti" +
-      "onH\000B\025\n\023compression_variant\032^\n\rRewriteOp" +
-      "tion\022\017\n\007enabled\030\001 \001(\010\022\014\n\004body\030\002 \001(\t\022.\n\004f" +
-      "lag\030\003 \001(\0162 .yandex.cloud.cdn.v1.RewriteF" +
-      "lag\"\204\001\n\024SSLTargetCertificate\0225\n\004type\030\001 \001" +
-      "(\0162\'.yandex.cloud.cdn.v1.SSLCertificateT" +
-      "ype\0225\n\004data\030\002 \001(\0132\'.yandex.cloud.cdn.v1." +
-      "SSLCertificateData\"\271\001\n\016SSLCertificate\0225\n" +
-      "\004type\030\001 \001(\0162\'.yandex.cloud.cdn.v1.SSLCer" +
-      "tificateType\0229\n\006status\030\002 \001(\0162).yandex.cl" +
-      "oud.cdn.v1.SSLCertificateStatus\0225\n\004data\030" +
-      "\003 \001(\0132\'.yandex.cloud.cdn.v1.SSLCertifica" +
-      "teData\"m\n\022SSLCertificateData\0227\n\002cm\030\001 \001(\013" +
-      "2).yandex.cloud.cdn.v1.SSLCertificateCMD" +
-      "ataH\000B\036\n\034ssl_certificate_data_variant\"\"\n" +
-      "\024SSLCertificateCMData\022\n\n\002id\030\001 \001(\t*Q\n\016Ori" +
-      "ginProtocol\022\037\n\033ORIGIN_PROTOCOL_UNSPECIFI" +
-      "ED\020\000\022\010\n\004HTTP\020\001\022\t\n\005HTTPS\020\002\022\t\n\005MATCH\020\003*]\n\013" +
-      "RewriteFlag\022\034\n\030REWRITE_FLAG_UNSPECIFIED\020" +
-      "\000\022\010\n\004LAST\020\001\022\t\n\005BREAK\020\002\022\014\n\010REDIRECT\020\003\022\r\n\t" +
-      "PERMANENT\020\004*h\n\022SSLCertificateType\022$\n SSL" +
+      "ons.RewriteOption\022H\n\nsecure_key\030\024 \001(\01324." +
+      "yandex.cloud.cdn.v1.ResourceOptions.Secu" +
+      "reKeyOption\032,\n\nBoolOption\022\017\n\007enabled\030\001 \001" +
+      "(\010\022\r\n\005value\030\002 \001(\010\032.\n\014StringOption\022\017\n\007ena" +
+      "bled\030\001 \001(\010\022\r\n\005value\030\002 \001(\t\032-\n\013Int64Option" +
+      "\022\017\n\007enabled\030\001 \001(\010\022\r\n\005value\030\002 \001(\003\0323\n\021Stri" +
+      "ngsListOption\022\017\n\007enabled\030\001 \001(\010\022\r\n\005value\030" +
+      "\002 \003(\t\032\242\001\n\020StringsMapOption\022\017\n\007enabled\030\001 " +
+      "\001(\010\022O\n\005value\030\002 \003(\0132@.yandex.cloud.cdn.v1" +
+      ".ResourceOptions.StringsMapOption.ValueE" +
+      "ntry\032,\n\nValueEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\032\265\001\n\014CachingTimes\022\024\n\014simple_va" +
+      "lue\030\001 \001(\003\022Z\n\rcustom_values\030\002 \003(\0132C.yande" +
+      "x.cloud.cdn.v1.ResourceOptions.CachingTi" +
+      "mes.CustomValuesEntry\0323\n\021CustomValuesEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\003:\0028\001\032\223\001\n\021E" +
+      "dgeCacheSettings\022\017\n\007enabled\030\001 \001(\010\022B\n\005val" +
+      "ue\030\002 \001(\01321.yandex.cloud.cdn.v1.ResourceO" +
+      "ptions.CachingTimesH\000\022\027\n\rdefault_value\030\003" +
+      " \001(\003H\000B\020\n\016values_variant\032\251\003\n\027StringVaria" +
+      "bleMapOption\022\017\n\007enabled\030\001 \001(\010\022V\n\005value\030\002" +
+      " \003(\0132G.yandex.cloud.cdn.v1.ResourceOptio" +
+      "ns.StringVariableMapOption.ValueEntry\032\254\001" +
+      "\n\013OneofString\022B\n\005value\030\001 \001(\01321.yandex.cl" +
+      "oud.cdn.v1.ResourceOptions.StringOptionH" +
+      "\000\022H\n\006values\030\002 \001(\01326.yandex.cloud.cdn.v1." +
+      "ResourceOptions.StringsListOptionH\000B\017\n\rs" +
+      "tring_option\032v\n\nValueEntry\022\013\n\003key\030\001 \001(\t\022" +
+      "W\n\005value\030\002 \001(\0132H.yandex.cloud.cdn.v1.Res" +
+      "ourceOptions.StringVariableMapOption.One" +
+      "ofString:\0028\001\032\260\002\n\022QueryParamsOptions\022N\n\023i" +
+      "gnore_query_string\030\001 \001(\0132/.yandex.cloud." +
+      "cdn.v1.ResourceOptions.BoolOptionH\000\022X\n\026q" +
+      "uery_params_whitelist\030\002 \001(\01326.yandex.clo" +
+      "ud.cdn.v1.ResourceOptions.StringsListOpt" +
+      "ionH\000\022X\n\026query_params_blacklist\030\003 \001(\01326." +
+      "yandex.cloud.cdn.v1.ResourceOptions.Stri" +
+      "ngsListOptionH\000B\026\n\024query_params_variant\032" +
+      "\313\001\n\017RedirectOptions\022Q\n\026redirect_http_to_" +
+      "https\030\001 \001(\0132/.yandex.cloud.cdn.v1.Resour" +
+      "ceOptions.BoolOptionH\000\022Q\n\026redirect_https" +
+      "_to_http\030\002 \001(\0132/.yandex.cloud.cdn.v1.Res" +
+      "ourceOptions.BoolOptionH\000B\022\n\020redirect_va" +
+      "riant\032\260\001\n\013HostOptions\022A\n\004host\030\001 \001(\01321.ya" +
+      "ndex.cloud.cdn.v1.ResourceOptions.String" +
+      "OptionH\000\022N\n\023forward_host_header\030\002 \001(\0132/." +
+      "yandex.cloud.cdn.v1.ResourceOptions.Bool" +
+      "OptionH\000B\016\n\014host_variant\032\222\002\n\022Compression" +
+      "Options\022K\n\020fetch_compressed\030\001 \001(\0132/.yand" +
+      "ex.cloud.cdn.v1.ResourceOptions.BoolOpti" +
+      "onH\000\022B\n\007gzip_on\030\002 \001(\0132/.yandex.cloud.cdn" +
+      ".v1.ResourceOptions.BoolOptionH\000\022T\n\022brot" +
+      "li_compression\030\003 \001(\01326.yandex.cloud.cdn." +
+      "v1.ResourceOptions.StringsListOptionH\000B\025" +
+      "\n\023compression_variant\032^\n\rRewriteOption\022\017" +
+      "\n\007enabled\030\001 \001(\010\022\014\n\004body\030\002 \001(\t\022.\n\004flag\030\003 " +
+      "\001(\0162 .yandex.cloud.cdn.v1.RewriteFlag\032d\n" +
+      "\017SecureKeyOption\022\017\n\007enabled\030\001 \001(\010\022\013\n\003key" +
+      "\030\002 \001(\t\0223\n\004type\030\003 \001(\0162%.yandex.cloud.cdn." +
+      "v1.SecureKeyURLType\"\204\001\n\024SSLTargetCertifi" +
+      "cate\0225\n\004type\030\001 \001(\0162\'.yandex.cloud.cdn.v1" +
+      ".SSLCertificateType\0225\n\004data\030\002 \001(\0132\'.yand" +
+      "ex.cloud.cdn.v1.SSLCertificateData\"\271\001\n\016S" +
+      "SLCertificate\0225\n\004type\030\001 \001(\0162\'.yandex.clo" +
+      "ud.cdn.v1.SSLCertificateType\0229\n\006status\030\002" +
+      " \001(\0162).yandex.cloud.cdn.v1.SSLCertificat" +
+      "eStatus\0225\n\004data\030\003 \001(\0132\'.yandex.cloud.cdn" +
+      ".v1.SSLCertificateData\"m\n\022SSLCertificate" +
+      "Data\0227\n\002cm\030\001 \001(\0132).yandex.cloud.cdn.v1.S" +
+      "SLCertificateCMDataH\000B\036\n\034ssl_certificate" +
+      "_data_variant\"\"\n\024SSLCertificateCMData\022\n\n" +
+      "\002id\030\001 \001(\t*Q\n\016OriginProtocol\022\037\n\033ORIGIN_PR" +
+      "OTOCOL_UNSPECIFIED\020\000\022\010\n\004HTTP\020\001\022\t\n\005HTTPS\020" +
+      "\002\022\t\n\005MATCH\020\003*]\n\013RewriteFlag\022\034\n\030REWRITE_F" +
+      "LAG_UNSPECIFIED\020\000\022\010\n\004LAST\020\001\022\t\n\005BREAK\020\002\022\014" +
+      "\n\010REDIRECT\020\003\022\r\n\tPERMANENT\020\004*f\n\020SecureKey" +
+      "URLType\022#\n\037SECURE_KEY_URL_TYPE_UNSPECIFI" +
+      "ED\020\000\022\025\n\021ENABLE_IP_SIGNING\020\001\022\026\n\022DISABLE_I" +
+      "P_SIGNING\020\002*h\n\022SSLCertificateType\022$\n SSL" +
       "_CERTIFICATE_TYPE_UNSPECIFIED\020\000\022\014\n\010DONT_" +
       "USE\020\001\022\026\n\022LETS_ENCRYPT_GCORE\020\002\022\006\n\002CM\020\003*W\n" +
       "\024SSLCertificateStatus\022&\n\"SSL_CERTIFICATE" +
@@ -27333,7 +28588,7 @@ public final class ResourceOuterClass {
     internal_static_yandex_cloud_cdn_v1_ResourceOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cdn_v1_ResourceOptions_descriptor,
-        new java.lang.String[] { "DisableCache", "EdgeCacheSettings", "BrowserCacheSettings", "CacheHttpHeaders", "QueryParamsOptions", "Slice", "CompressionOptions", "RedirectOptions", "HostOptions", "StaticHeaders", "Cors", "Stale", "AllowedHttpMethods", "ProxyCacheMethodsSet", "DisableProxyForceRanges", "StaticRequestHeaders", "CustomServerName", "IgnoreCookie", "Rewrite", });
+        new java.lang.String[] { "DisableCache", "EdgeCacheSettings", "BrowserCacheSettings", "CacheHttpHeaders", "QueryParamsOptions", "Slice", "CompressionOptions", "RedirectOptions", "HostOptions", "StaticHeaders", "Cors", "Stale", "AllowedHttpMethods", "ProxyCacheMethodsSet", "DisableProxyForceRanges", "StaticRequestHeaders", "CustomServerName", "IgnoreCookie", "Rewrite", "SecureKey", });
     internal_static_yandex_cloud_cdn_v1_ResourceOptions_BoolOption_descriptor =
       internal_static_yandex_cloud_cdn_v1_ResourceOptions_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_cdn_v1_ResourceOptions_BoolOption_fieldAccessorTable = new
@@ -27436,6 +28691,12 @@ public final class ResourceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_cdn_v1_ResourceOptions_RewriteOption_descriptor,
         new java.lang.String[] { "Enabled", "Body", "Flag", });
+    internal_static_yandex_cloud_cdn_v1_ResourceOptions_SecureKeyOption_descriptor =
+      internal_static_yandex_cloud_cdn_v1_ResourceOptions_descriptor.getNestedTypes().get(13);
+    internal_static_yandex_cloud_cdn_v1_ResourceOptions_SecureKeyOption_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_cdn_v1_ResourceOptions_SecureKeyOption_descriptor,
+        new java.lang.String[] { "Enabled", "Key", "Type", });
     internal_static_yandex_cloud_cdn_v1_SSLTargetCertificate_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_cdn_v1_SSLTargetCertificate_fieldAccessorTable = new
