@@ -204,6 +204,37 @@ public final class ProjectJobServiceGrpc {
     return getReadLogsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesRequest,
+      yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesResponse> getDownloadJobFilesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DownloadJobFiles",
+      requestType = yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesRequest.class,
+      responseType = yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesRequest,
+      yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesResponse> getDownloadJobFilesMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesRequest, yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesResponse> getDownloadJobFilesMethod;
+    if ((getDownloadJobFilesMethod = ProjectJobServiceGrpc.getDownloadJobFilesMethod) == null) {
+      synchronized (ProjectJobServiceGrpc.class) {
+        if ((getDownloadJobFilesMethod = ProjectJobServiceGrpc.getDownloadJobFilesMethod) == null) {
+          ProjectJobServiceGrpc.getDownloadJobFilesMethod = getDownloadJobFilesMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesRequest, yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DownloadJobFiles"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ProjectJobServiceMethodDescriptorSupplier("DownloadJobFiles"))
+              .build();
+        }
+      }
+    }
+    return getDownloadJobFilesMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.jobs.DSPJS.ListProjectJobRequest,
       yandex.cloud.api.datasphere.v2.jobs.DSPJS.ListProjectJobResponse> getListMethod;
 
@@ -411,6 +442,16 @@ public final class ProjectJobServiceGrpc {
 
     /**
      * <pre>
+     * Returns download urls for job files.
+     * </pre>
+     */
+    public void downloadJobFiles(yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDownloadJobFilesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists jobs.
      * </pre>
      */
@@ -483,6 +524,13 @@ public final class ProjectJobServiceGrpc {
                 yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsRequest,
                 yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsResponse>(
                   this, METHODID_READ_LOGS)))
+          .addMethod(
+            getDownloadJobFilesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesRequest,
+                yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesResponse>(
+                  this, METHODID_DOWNLOAD_JOB_FILES)))
           .addMethod(
             getListMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -590,6 +638,17 @@ public final class ProjectJobServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getReadLogsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns download urls for job files.
+     * </pre>
+     */
+    public void downloadJobFiles(yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDownloadJobFilesMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -708,6 +767,16 @@ public final class ProjectJobServiceGrpc {
 
     /**
      * <pre>
+     * Returns download urls for job files.
+     * </pre>
+     */
+    public yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesResponse downloadJobFiles(yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDownloadJobFilesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Lists jobs.
      * </pre>
      */
@@ -800,6 +869,17 @@ public final class ProjectJobServiceGrpc {
 
     /**
      * <pre>
+     * Returns download urls for job files.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesResponse> downloadJobFiles(
+        yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDownloadJobFilesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists jobs.
      * </pre>
      */
@@ -838,9 +918,10 @@ public final class ProjectJobServiceGrpc {
   private static final int METHODID_FINALIZE = 3;
   private static final int METHODID_READ_STD_LOGS = 4;
   private static final int METHODID_READ_LOGS = 5;
-  private static final int METHODID_LIST = 6;
-  private static final int METHODID_GET = 7;
-  private static final int METHODID_DELETE = 8;
+  private static final int METHODID_DOWNLOAD_JOB_FILES = 6;
+  private static final int METHODID_LIST = 7;
+  private static final int METHODID_GET = 8;
+  private static final int METHODID_DELETE = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -882,6 +963,10 @@ public final class ProjectJobServiceGrpc {
         case METHODID_READ_LOGS:
           serviceImpl.readLogs((yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.jobs.DSPJS.ReadProjectJobLogsResponse>) responseObserver);
+          break;
+        case METHODID_DOWNLOAD_JOB_FILES:
+          serviceImpl.downloadJobFiles((yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.datasphere.v2.jobs.DSPJS.DownloadProjectJobFilesResponse>) responseObserver);
           break;
         case METHODID_LIST:
           serviceImpl.list((yandex.cloud.api.datasphere.v2.jobs.DSPJS.ListProjectJobRequest) request,
@@ -962,6 +1047,7 @@ public final class ProjectJobServiceGrpc {
               .addMethod(getFinalizeMethod())
               .addMethod(getReadStdLogsMethod())
               .addMethod(getReadLogsMethod())
+              .addMethod(getDownloadJobFilesMethod())
               .addMethod(getListMethod())
               .addMethod(getGetMethod())
               .addMethod(getDeleteMethod())

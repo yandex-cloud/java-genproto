@@ -6080,12 +6080,14 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Allows to manage topics via AdminAPI
+     * Deprecated. Feature enabled permanently.
      * </pre>
      *
-     * <code>bool unmanaged_topics = 7;</code>
+     * <code>bool unmanaged_topics = 7 [deprecated = true];</code>
+     * @deprecated
      * @return The unmanagedTopics.
      */
-    boolean getUnmanagedTopics();
+    @java.lang.Deprecated boolean getUnmanagedTopics();
 
     /**
      * <pre>
@@ -8961,13 +8963,15 @@ public final class ClusterOuterClass {
     /**
      * <pre>
      * Allows to manage topics via AdminAPI
+     * Deprecated. Feature enabled permanently.
      * </pre>
      *
-     * <code>bool unmanaged_topics = 7;</code>
+     * <code>bool unmanaged_topics = 7 [deprecated = true];</code>
+     * @deprecated
      * @return The unmanagedTopics.
      */
     @java.lang.Override
-    public boolean getUnmanagedTopics() {
+    @java.lang.Deprecated public boolean getUnmanagedTopics() {
       return unmanagedTopics_;
     }
 
@@ -10361,25 +10365,29 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Allows to manage topics via AdminAPI
+       * Deprecated. Feature enabled permanently.
        * </pre>
        *
-       * <code>bool unmanaged_topics = 7;</code>
+       * <code>bool unmanaged_topics = 7 [deprecated = true];</code>
+       * @deprecated
        * @return The unmanagedTopics.
        */
       @java.lang.Override
-      public boolean getUnmanagedTopics() {
+      @java.lang.Deprecated public boolean getUnmanagedTopics() {
         return unmanagedTopics_;
       }
       /**
        * <pre>
        * Allows to manage topics via AdminAPI
+       * Deprecated. Feature enabled permanently.
        * </pre>
        *
-       * <code>bool unmanaged_topics = 7;</code>
+       * <code>bool unmanaged_topics = 7 [deprecated = true];</code>
+       * @deprecated
        * @param value The unmanagedTopics to set.
        * @return This builder for chaining.
        */
-      public Builder setUnmanagedTopics(boolean value) {
+      @java.lang.Deprecated public Builder setUnmanagedTopics(boolean value) {
         
         unmanagedTopics_ = value;
         onChanged();
@@ -10388,12 +10396,14 @@ public final class ClusterOuterClass {
       /**
        * <pre>
        * Allows to manage topics via AdminAPI
+       * Deprecated. Feature enabled permanently.
        * </pre>
        *
-       * <code>bool unmanaged_topics = 7;</code>
+       * <code>bool unmanaged_topics = 7 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearUnmanagedTopics() {
+      @java.lang.Deprecated public Builder clearUnmanagedTopics() {
         
         unmanagedTopics_ = false;
         onChanged();
@@ -26167,103 +26177,103 @@ public final class ClusterOuterClass {
       "\n\005ERROR\020\003\022\014\n\010UPDATING\020\004\022\014\n\010STOPPING\020\005\022\013\n" +
       "\007STOPPED\020\006\022\014\n\010STARTING\020\007\"=\n\nMonitoring\022\014" +
       "\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004lin" +
-      "k\030\003 \001(\t\"\225\006\n\nConfigSpec\022\017\n\007version\030\001 \001(\t\022" +
+      "k\030\003 \001(\t\"\231\006\n\nConfigSpec\022\017\n\007version\030\001 \001(\t\022" +
       ":\n\005kafka\030\002 \001(\0132+.yandex.cloud.mdb.kafka." +
       "v1.ConfigSpec.Kafka\022B\n\tzookeeper\030\003 \001(\0132/" +
       ".yandex.cloud.mdb.kafka.v1.ConfigSpec.Zo" +
       "okeeper\022\017\n\007zone_id\030\004 \003(\t\0222\n\rbrokers_coun" +
       "t\030\005 \001(\0132\033.google.protobuf.Int64Value\022\030\n\020" +
-      "assign_public_ip\030\006 \001(\010\022\030\n\020unmanaged_topi" +
-      "cs\030\007 \001(\010\022\027\n\017schema_registry\030\010 \001(\010\0221\n\006acc" +
-      "ess\030\t \001(\0132!.yandex.cloud.mdb.kafka.v1.Ac" +
-      "cess\022L\n\017rest_api_config\030\n \001(\01323.yandex.c" +
-      "loud.mdb.kafka.v1.ConfigSpec.RestAPIConf" +
-      "ig\032\372\001\n\005Kafka\0227\n\tresources\030\001 \001(\0132$.yandex" +
-      ".cloud.mdb.kafka.v1.Resources\022V\n\020kafka_c" +
-      "onfig_2_8\030\004 \001(\0132).yandex.cloud.mdb.kafka" +
-      ".v1.KafkaConfig2_8H\000R\017kafkaConfig_2_8\022P\n" +
-      "\016kafka_config_3\030\005 \001(\0132\'.yandex.cloud.mdb" +
-      ".kafka.v1.KafkaConfig3H\000R\rkafkaConfig_3B" +
-      "\016\n\014kafka_config\032D\n\tZookeeper\0227\n\tresource" +
-      "s\030\001 \001(\0132$.yandex.cloud.mdb.kafka.v1.Reso" +
-      "urces\032 \n\rRestAPIConfig\022\017\n\007enabled\030\001 \001(\010\"" +
-      "P\n\tResources\022\032\n\022resource_preset_id\030\001 \001(\t" +
-      "\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030\003 \001(" +
-      "\t\"\300\t\n\016KafkaConfig2_8\022D\n\020compression_type" +
-      "\030\001 \001(\0162*.yandex.cloud.mdb.kafka.v1.Compr" +
-      "essionType\022@\n\033log_flush_interval_message" +
-      "s\030\002 \001(\0132\033.google.protobuf.Int64Value\022:\n\025" +
-      "log_flush_interval_ms\030\003 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\022D\n\037log_flush_scheduler_" +
-      "interval_ms\030\004 \001(\0132\033.google.protobuf.Int6" +
-      "4Value\0228\n\023log_retention_bytes\030\005 \001(\0132\033.go" +
-      "ogle.protobuf.Int64Value\0228\n\023log_retentio" +
-      "n_hours\030\006 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022:\n\025log_retention_minutes\030\007 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\0225\n\020log_retention_" +
-      "ms\030\010 \001(\0132\033.google.protobuf.Int64Value\0226\n" +
-      "\021log_segment_bytes\030\t \001(\0132\033.google.protob" +
-      "uf.Int64Value\0223\n\017log_preallocate\030\n \001(\0132\032" +
-      ".google.protobuf.BoolValue\022=\n\030socket_sen" +
-      "d_buffer_bytes\030\013 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022@\n\033socket_receive_buffer_bytes" +
-      "\030\014 \001(\0132\033.google.protobuf.Int64Value\022=\n\031a" +
-      "uto_create_topics_enable\030\r \001(\0132\032.google." +
-      "protobuf.BoolValue\0223\n\016num_partitions\030\016 \001" +
-      "(\0132\033.google.protobuf.Int64Value\022?\n\032defau" +
-      "lt_replication_factor\030\017 \001(\0132\033.google.pro" +
-      "tobuf.Int64Value\0226\n\021message_max_bytes\030\020 " +
-      "\001(\0132\033.google.protobuf.Int64Value\022<\n\027repl" +
-      "ica_fetch_max_bytes\030\021 \001(\0132\033.google.proto" +
-      "buf.Int64Value\022\031\n\021ssl_cipher_suites\030\022 \003(" +
-      "\t\022>\n\031offsets_retention_minutes\030\023 \001(\0132\033.g" +
-      "oogle.protobuf.Int64Value\022I\n\027sasl_enable" +
-      "d_mechanisms\030\024 \003(\0162(.yandex.cloud.mdb.ka" +
-      "fka.v1.SaslMechanism\"\276\t\n\014KafkaConfig3\022D\n" +
-      "\020compression_type\030\001 \001(\0162*.yandex.cloud.m" +
-      "db.kafka.v1.CompressionType\022@\n\033log_flush" +
-      "_interval_messages\030\002 \001(\0132\033.google.protob" +
-      "uf.Int64Value\022:\n\025log_flush_interval_ms\030\003" +
-      " \001(\0132\033.google.protobuf.Int64Value\022D\n\037log" +
-      "_flush_scheduler_interval_ms\030\004 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\0228\n\023log_retention" +
-      "_bytes\030\005 \001(\0132\033.google.protobuf.Int64Valu" +
-      "e\0228\n\023log_retention_hours\030\006 \001(\0132\033.google." +
-      "protobuf.Int64Value\022:\n\025log_retention_min" +
-      "utes\030\007 \001(\0132\033.google.protobuf.Int64Value\022" +
-      "5\n\020log_retention_ms\030\010 \001(\0132\033.google.proto" +
-      "buf.Int64Value\0226\n\021log_segment_bytes\030\t \001(" +
-      "\0132\033.google.protobuf.Int64Value\0223\n\017log_pr" +
-      "eallocate\030\n \001(\0132\032.google.protobuf.BoolVa" +
-      "lue\022=\n\030socket_send_buffer_bytes\030\013 \001(\0132\033." +
-      "google.protobuf.Int64Value\022@\n\033socket_rec" +
-      "eive_buffer_bytes\030\014 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022=\n\031auto_create_topics_enabl" +
-      "e\030\r \001(\0132\032.google.protobuf.BoolValue\0223\n\016n" +
-      "um_partitions\030\016 \001(\0132\033.google.protobuf.In" +
-      "t64Value\022?\n\032default_replication_factor\030\017" +
-      " \001(\0132\033.google.protobuf.Int64Value\0226\n\021mes" +
-      "sage_max_bytes\030\020 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\022<\n\027replica_fetch_max_bytes\030\021 \001" +
-      "(\0132\033.google.protobuf.Int64Value\022\031\n\021ssl_c" +
-      "ipher_suites\030\022 \003(\t\022>\n\031offsets_retention_" +
-      "minutes\030\023 \001(\0132\033.google.protobuf.Int64Val" +
-      "ue\022I\n\027sasl_enabled_mechanisms\030\024 \003(\0162(.ya" +
-      "ndex.cloud.mdb.kafka.v1.SaslMechanism\"\375\002" +
-      "\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t" +
-      "\022\017\n\007zone_id\030\003 \001(\t\0222\n\004role\030\004 \001(\0162$.yandex" +
-      ".cloud.mdb.kafka.v1.Host.Role\0227\n\tresourc" +
-      "es\030\005 \001(\0132$.yandex.cloud.mdb.kafka.v1.Res" +
-      "ources\0226\n\006health\030\006 \001(\0162&.yandex.cloud.md" +
-      "b.kafka.v1.Host.Health\022\021\n\tsubnet_id\030\010 \001(" +
-      "\t\022\030\n\020assign_public_ip\030\t \001(\010\"6\n\004Role\022\024\n\020R" +
-      "OLE_UNSPECIFIED\020\000\022\t\n\005KAFKA\020\001\022\r\n\tZOOKEEPE" +
-      "R\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020\001\022\010\n" +
-      "\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\037\n\006Access\022\025\n\rdata_" +
-      "transfer\030\001 \001(\010Bd\n\035yandex.cloud.api.mdb.k" +
-      "afka.v1ZCgithub.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/mdb/kafka/v1;kafkab\006pr" +
-      "oto3"
+      "assign_public_ip\030\006 \001(\010\022\034\n\020unmanaged_topi" +
+      "cs\030\007 \001(\010B\002\030\001\022\027\n\017schema_registry\030\010 \001(\010\0221\n" +
+      "\006access\030\t \001(\0132!.yandex.cloud.mdb.kafka.v" +
+      "1.Access\022L\n\017rest_api_config\030\n \001(\01323.yand" +
+      "ex.cloud.mdb.kafka.v1.ConfigSpec.RestAPI" +
+      "Config\032\372\001\n\005Kafka\0227\n\tresources\030\001 \001(\0132$.ya" +
+      "ndex.cloud.mdb.kafka.v1.Resources\022V\n\020kaf" +
+      "ka_config_2_8\030\004 \001(\0132).yandex.cloud.mdb.k" +
+      "afka.v1.KafkaConfig2_8H\000R\017kafkaConfig_2_" +
+      "8\022P\n\016kafka_config_3\030\005 \001(\0132\'.yandex.cloud" +
+      ".mdb.kafka.v1.KafkaConfig3H\000R\rkafkaConfi" +
+      "g_3B\016\n\014kafka_config\032D\n\tZookeeper\0227\n\treso" +
+      "urces\030\001 \001(\0132$.yandex.cloud.mdb.kafka.v1." +
+      "Resources\032 \n\rRestAPIConfig\022\017\n\007enabled\030\001 " +
+      "\001(\010\"P\n\tResources\022\032\n\022resource_preset_id\030\001" +
+      " \001(\t\022\021\n\tdisk_size\030\002 \001(\003\022\024\n\014disk_type_id\030" +
+      "\003 \001(\t\"\300\t\n\016KafkaConfig2_8\022D\n\020compression_" +
+      "type\030\001 \001(\0162*.yandex.cloud.mdb.kafka.v1.C" +
+      "ompressionType\022@\n\033log_flush_interval_mes" +
+      "sages\030\002 \001(\0132\033.google.protobuf.Int64Value" +
+      "\022:\n\025log_flush_interval_ms\030\003 \001(\0132\033.google" +
+      ".protobuf.Int64Value\022D\n\037log_flush_schedu" +
+      "ler_interval_ms\030\004 \001(\0132\033.google.protobuf." +
+      "Int64Value\0228\n\023log_retention_bytes\030\005 \001(\0132" +
+      "\033.google.protobuf.Int64Value\0228\n\023log_rete" +
+      "ntion_hours\030\006 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\022:\n\025log_retention_minutes\030\007 \001(\0132\033." +
+      "google.protobuf.Int64Value\0225\n\020log_retent" +
+      "ion_ms\030\010 \001(\0132\033.google.protobuf.Int64Valu" +
+      "e\0226\n\021log_segment_bytes\030\t \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\0223\n\017log_preallocate\030\n \001" +
+      "(\0132\032.google.protobuf.BoolValue\022=\n\030socket" +
+      "_send_buffer_bytes\030\013 \001(\0132\033.google.protob" +
+      "uf.Int64Value\022@\n\033socket_receive_buffer_b" +
+      "ytes\030\014 \001(\0132\033.google.protobuf.Int64Value\022" +
+      "=\n\031auto_create_topics_enable\030\r \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\0223\n\016num_partitions" +
+      "\030\016 \001(\0132\033.google.protobuf.Int64Value\022?\n\032d" +
+      "efault_replication_factor\030\017 \001(\0132\033.google" +
+      ".protobuf.Int64Value\0226\n\021message_max_byte" +
+      "s\030\020 \001(\0132\033.google.protobuf.Int64Value\022<\n\027" +
+      "replica_fetch_max_bytes\030\021 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\022\031\n\021ssl_cipher_suites\030" +
+      "\022 \003(\t\022>\n\031offsets_retention_minutes\030\023 \001(\013" +
+      "2\033.google.protobuf.Int64Value\022I\n\027sasl_en" +
+      "abled_mechanisms\030\024 \003(\0162(.yandex.cloud.md" +
+      "b.kafka.v1.SaslMechanism\"\276\t\n\014KafkaConfig" +
+      "3\022D\n\020compression_type\030\001 \001(\0162*.yandex.clo" +
+      "ud.mdb.kafka.v1.CompressionType\022@\n\033log_f" +
+      "lush_interval_messages\030\002 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022:\n\025log_flush_interval_" +
+      "ms\030\003 \001(\0132\033.google.protobuf.Int64Value\022D\n" +
+      "\037log_flush_scheduler_interval_ms\030\004 \001(\0132\033" +
+      ".google.protobuf.Int64Value\0228\n\023log_reten" +
+      "tion_bytes\030\005 \001(\0132\033.google.protobuf.Int64" +
+      "Value\0228\n\023log_retention_hours\030\006 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\022:\n\025log_retention" +
+      "_minutes\030\007 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\0225\n\020log_retention_ms\030\010 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\0226\n\021log_segment_bytes\030" +
+      "\t \001(\0132\033.google.protobuf.Int64Value\0223\n\017lo" +
+      "g_preallocate\030\n \001(\0132\032.google.protobuf.Bo" +
+      "olValue\022=\n\030socket_send_buffer_bytes\030\013 \001(" +
+      "\0132\033.google.protobuf.Int64Value\022@\n\033socket" +
+      "_receive_buffer_bytes\030\014 \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\022=\n\031auto_create_topics_e" +
+      "nable\030\r \001(\0132\032.google.protobuf.BoolValue\022" +
+      "3\n\016num_partitions\030\016 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022?\n\032default_replication_fact" +
+      "or\030\017 \001(\0132\033.google.protobuf.Int64Value\0226\n" +
+      "\021message_max_bytes\030\020 \001(\0132\033.google.protob" +
+      "uf.Int64Value\022<\n\027replica_fetch_max_bytes" +
+      "\030\021 \001(\0132\033.google.protobuf.Int64Value\022\031\n\021s" +
+      "sl_cipher_suites\030\022 \003(\t\022>\n\031offsets_retent" +
+      "ion_minutes\030\023 \001(\0132\033.google.protobuf.Int6" +
+      "4Value\022I\n\027sasl_enabled_mechanisms\030\024 \003(\0162" +
+      "(.yandex.cloud.mdb.kafka.v1.SaslMechanis" +
+      "m\"\375\002\n\004Host\022\014\n\004name\030\001 \001(\t\022\022\n\ncluster_id\030\002" +
+      " \001(\t\022\017\n\007zone_id\030\003 \001(\t\0222\n\004role\030\004 \001(\0162$.ya" +
+      "ndex.cloud.mdb.kafka.v1.Host.Role\0227\n\tres" +
+      "ources\030\005 \001(\0132$.yandex.cloud.mdb.kafka.v1" +
+      ".Resources\0226\n\006health\030\006 \001(\0162&.yandex.clou" +
+      "d.mdb.kafka.v1.Host.Health\022\021\n\tsubnet_id\030" +
+      "\010 \001(\t\022\030\n\020assign_public_ip\030\t \001(\010\"6\n\004Role\022" +
+      "\024\n\020ROLE_UNSPECIFIED\020\000\022\t\n\005KAFKA\020\001\022\r\n\tZOOK" +
+      "EEPER\020\002\"8\n\006Health\022\013\n\007UNKNOWN\020\000\022\t\n\005ALIVE\020" +
+      "\001\022\010\n\004DEAD\020\002\022\014\n\010DEGRADED\020\003\"\037\n\006Access\022\025\n\rd" +
+      "ata_transfer\030\001 \001(\010Bd\n\035yandex.cloud.api.m" +
+      "db.kafka.v1ZCgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/mdb/kafka/v1;kafka" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
