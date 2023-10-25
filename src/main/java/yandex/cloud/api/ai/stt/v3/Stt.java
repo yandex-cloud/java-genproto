@@ -11749,6 +11749,700 @@ public final class Stt {
 
   }
 
+  public interface SpeakerLabelingOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.SpeakerLabelingOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Specifies the execution of speaker labeling. Default is SPEAKER_LABELING_DISABLED.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerLabelingOptions.SpeakerLabeling speaker_labeling = 1;</code>
+     * @return The enum numeric value on the wire for speakerLabeling.
+     */
+    int getSpeakerLabelingValue();
+    /**
+     * <pre>
+     * Specifies the execution of speaker labeling. Default is SPEAKER_LABELING_DISABLED.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerLabelingOptions.SpeakerLabeling speaker_labeling = 1;</code>
+     * @return The speakerLabeling.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.SpeakerLabeling getSpeakerLabeling();
+  }
+  /**
+   * Protobuf type {@code speechkit.stt.v3.SpeakerLabelingOptions}
+   */
+  public static final class SpeakerLabelingOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.stt.v3.SpeakerLabelingOptions)
+      SpeakerLabelingOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SpeakerLabelingOptions.newBuilder() to construct.
+    private SpeakerLabelingOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SpeakerLabelingOptions() {
+      speakerLabeling_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SpeakerLabelingOptions();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SpeakerLabelingOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              speakerLabeling_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SpeakerLabelingOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SpeakerLabelingOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.class, yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code speechkit.stt.v3.SpeakerLabelingOptions.SpeakerLabeling}
+     */
+    public enum SpeakerLabeling
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>SPEAKER_LABELING_UNSPECIFIED = 0;</code>
+       */
+      SPEAKER_LABELING_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Enable speaker labeling
+       * </pre>
+       *
+       * <code>SPEAKER_LABELING_ENABLED = 1;</code>
+       */
+      SPEAKER_LABELING_ENABLED(1),
+      /**
+       * <pre>
+       * Disable speaker labeling
+       * </pre>
+       *
+       * <code>SPEAKER_LABELING_DISABLED = 2;</code>
+       */
+      SPEAKER_LABELING_DISABLED(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>SPEAKER_LABELING_UNSPECIFIED = 0;</code>
+       */
+      public static final int SPEAKER_LABELING_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Enable speaker labeling
+       * </pre>
+       *
+       * <code>SPEAKER_LABELING_ENABLED = 1;</code>
+       */
+      public static final int SPEAKER_LABELING_ENABLED_VALUE = 1;
+      /**
+       * <pre>
+       * Disable speaker labeling
+       * </pre>
+       *
+       * <code>SPEAKER_LABELING_DISABLED = 2;</code>
+       */
+      public static final int SPEAKER_LABELING_DISABLED_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static SpeakerLabeling valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static SpeakerLabeling forNumber(int value) {
+        switch (value) {
+          case 0: return SPEAKER_LABELING_UNSPECIFIED;
+          case 1: return SPEAKER_LABELING_ENABLED;
+          case 2: return SPEAKER_LABELING_DISABLED;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<SpeakerLabeling>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          SpeakerLabeling> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<SpeakerLabeling>() {
+              public SpeakerLabeling findValueByNumber(int number) {
+                return SpeakerLabeling.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final SpeakerLabeling[] VALUES = values();
+
+      public static SpeakerLabeling valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private SpeakerLabeling(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:speechkit.stt.v3.SpeakerLabelingOptions.SpeakerLabeling)
+    }
+
+    public static final int SPEAKER_LABELING_FIELD_NUMBER = 1;
+    private int speakerLabeling_;
+    /**
+     * <pre>
+     * Specifies the execution of speaker labeling. Default is SPEAKER_LABELING_DISABLED.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerLabelingOptions.SpeakerLabeling speaker_labeling = 1;</code>
+     * @return The enum numeric value on the wire for speakerLabeling.
+     */
+    @java.lang.Override public int getSpeakerLabelingValue() {
+      return speakerLabeling_;
+    }
+    /**
+     * <pre>
+     * Specifies the execution of speaker labeling. Default is SPEAKER_LABELING_DISABLED.
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerLabelingOptions.SpeakerLabeling speaker_labeling = 1;</code>
+     * @return The speakerLabeling.
+     */
+    @java.lang.Override public yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.SpeakerLabeling getSpeakerLabeling() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.SpeakerLabeling result = yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.SpeakerLabeling.valueOf(speakerLabeling_);
+      return result == null ? yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.SpeakerLabeling.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (speakerLabeling_ != yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.SpeakerLabeling.SPEAKER_LABELING_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, speakerLabeling_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (speakerLabeling_ != yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.SpeakerLabeling.SPEAKER_LABELING_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, speakerLabeling_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions other = (yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions) obj;
+
+      if (speakerLabeling_ != other.speakerLabeling_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SPEAKER_LABELING_FIELD_NUMBER;
+      hash = (53 * hash) + speakerLabeling_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code speechkit.stt.v3.SpeakerLabelingOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.stt.v3.SpeakerLabelingOptions)
+        yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SpeakerLabelingOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SpeakerLabelingOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.class, yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        speakerLabeling_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.internal_static_speechkit_stt_v3_SpeakerLabelingOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions build() {
+        yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions buildPartial() {
+        yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions result = new yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions(this);
+        result.speakerLabeling_ = speakerLabeling_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions) {
+          return mergeFrom((yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions other) {
+        if (other == yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.getDefaultInstance()) return this;
+        if (other.speakerLabeling_ != 0) {
+          setSpeakerLabelingValue(other.getSpeakerLabelingValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int speakerLabeling_ = 0;
+      /**
+       * <pre>
+       * Specifies the execution of speaker labeling. Default is SPEAKER_LABELING_DISABLED.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions.SpeakerLabeling speaker_labeling = 1;</code>
+       * @return The enum numeric value on the wire for speakerLabeling.
+       */
+      @java.lang.Override public int getSpeakerLabelingValue() {
+        return speakerLabeling_;
+      }
+      /**
+       * <pre>
+       * Specifies the execution of speaker labeling. Default is SPEAKER_LABELING_DISABLED.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions.SpeakerLabeling speaker_labeling = 1;</code>
+       * @param value The enum numeric value on the wire for speakerLabeling to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpeakerLabelingValue(int value) {
+        
+        speakerLabeling_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the execution of speaker labeling. Default is SPEAKER_LABELING_DISABLED.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions.SpeakerLabeling speaker_labeling = 1;</code>
+       * @return The speakerLabeling.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.SpeakerLabeling getSpeakerLabeling() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.SpeakerLabeling result = yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.SpeakerLabeling.valueOf(speakerLabeling_);
+        return result == null ? yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.SpeakerLabeling.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Specifies the execution of speaker labeling. Default is SPEAKER_LABELING_DISABLED.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions.SpeakerLabeling speaker_labeling = 1;</code>
+       * @param value The speakerLabeling to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSpeakerLabeling(yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.SpeakerLabeling value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        speakerLabeling_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Specifies the execution of speaker labeling. Default is SPEAKER_LABELING_DISABLED.
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions.SpeakerLabeling speaker_labeling = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSpeakerLabeling() {
+        
+        speakerLabeling_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.stt.v3.SpeakerLabelingOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.stt.v3.SpeakerLabelingOptions)
+    private static final yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions();
+    }
+
+    public static yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SpeakerLabelingOptions>
+        PARSER = new com.google.protobuf.AbstractParser<SpeakerLabelingOptions>() {
+      @java.lang.Override
+      public SpeakerLabelingOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SpeakerLabelingOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SpeakerLabelingOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SpeakerLabelingOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface StreamingOptionsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:speechkit.stt.v3.StreamingOptions)
       com.google.protobuf.MessageOrBuilder {
@@ -11860,6 +12554,33 @@ public final class Stt {
      * <code>.speechkit.stt.v3.SpeechAnalysisOptions speech_analysis = 4;</code>
      */
     yandex.cloud.api.ai.stt.v3.Stt.SpeechAnalysisOptionsOrBuilder getSpeechAnalysisOrBuilder();
+
+    /**
+     * <pre>
+     * Configuration for speaker labeling
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 5;</code>
+     * @return Whether the speakerLabeling field is set.
+     */
+    boolean hasSpeakerLabeling();
+    /**
+     * <pre>
+     * Configuration for speaker labeling
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 5;</code>
+     * @return The speakerLabeling.
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions getSpeakerLabeling();
+    /**
+     * <pre>
+     * Configuration for speaker labeling
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 5;</code>
+     */
+    yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptionsOrBuilder getSpeakerLabelingOrBuilder();
   }
   /**
    * Protobuf type {@code speechkit.stt.v3.StreamingOptions}
@@ -11954,6 +12675,19 @@ public final class Stt {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(speechAnalysis_);
                 speechAnalysis_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.Builder subBuilder = null;
+              if (speakerLabeling_ != null) {
+                subBuilder = speakerLabeling_.toBuilder();
+              }
+              speakerLabeling_ = input.readMessage(yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(speakerLabeling_);
+                speakerLabeling_ = subBuilder.buildPartial();
               }
 
               break;
@@ -12142,6 +12876,44 @@ public final class Stt {
       return getSpeechAnalysis();
     }
 
+    public static final int SPEAKER_LABELING_FIELD_NUMBER = 5;
+    private yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions speakerLabeling_;
+    /**
+     * <pre>
+     * Configuration for speaker labeling
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 5;</code>
+     * @return Whether the speakerLabeling field is set.
+     */
+    @java.lang.Override
+    public boolean hasSpeakerLabeling() {
+      return speakerLabeling_ != null;
+    }
+    /**
+     * <pre>
+     * Configuration for speaker labeling
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 5;</code>
+     * @return The speakerLabeling.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions getSpeakerLabeling() {
+      return speakerLabeling_ == null ? yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.getDefaultInstance() : speakerLabeling_;
+    }
+    /**
+     * <pre>
+     * Configuration for speaker labeling
+     * </pre>
+     *
+     * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptionsOrBuilder getSpeakerLabelingOrBuilder() {
+      return getSpeakerLabeling();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12168,6 +12940,9 @@ public final class Stt {
       if (speechAnalysis_ != null) {
         output.writeMessage(4, getSpeechAnalysis());
       }
+      if (speakerLabeling_ != null) {
+        output.writeMessage(5, getSpeakerLabeling());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -12192,6 +12967,10 @@ public final class Stt {
       if (speechAnalysis_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getSpeechAnalysis());
+      }
+      if (speakerLabeling_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getSpeakerLabeling());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12228,6 +13007,11 @@ public final class Stt {
         if (!getSpeechAnalysis()
             .equals(other.getSpeechAnalysis())) return false;
       }
+      if (hasSpeakerLabeling() != other.hasSpeakerLabeling()) return false;
+      if (hasSpeakerLabeling()) {
+        if (!getSpeakerLabeling()
+            .equals(other.getSpeakerLabeling())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -12254,6 +13038,10 @@ public final class Stt {
       if (hasSpeechAnalysis()) {
         hash = (37 * hash) + SPEECH_ANALYSIS_FIELD_NUMBER;
         hash = (53 * hash) + getSpeechAnalysis().hashCode();
+      }
+      if (hasSpeakerLabeling()) {
+        hash = (37 * hash) + SPEAKER_LABELING_FIELD_NUMBER;
+        hash = (53 * hash) + getSpeakerLabeling().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -12412,6 +13200,12 @@ public final class Stt {
           speechAnalysis_ = null;
           speechAnalysisBuilder_ = null;
         }
+        if (speakerLabelingBuilder_ == null) {
+          speakerLabeling_ = null;
+        } else {
+          speakerLabeling_ = null;
+          speakerLabelingBuilder_ = null;
+        }
         return this;
       }
 
@@ -12457,6 +13251,11 @@ public final class Stt {
           result.speechAnalysis_ = speechAnalysis_;
         } else {
           result.speechAnalysis_ = speechAnalysisBuilder_.build();
+        }
+        if (speakerLabelingBuilder_ == null) {
+          result.speakerLabeling_ = speakerLabeling_;
+        } else {
+          result.speakerLabeling_ = speakerLabelingBuilder_.build();
         }
         onBuilt();
         return result;
@@ -12517,6 +13316,9 @@ public final class Stt {
         }
         if (other.hasSpeechAnalysis()) {
           mergeSpeechAnalysis(other.getSpeechAnalysis());
+        }
+        if (other.hasSpeakerLabeling()) {
+          mergeSpeakerLabeling(other.getSpeakerLabeling());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -13165,6 +13967,161 @@ public final class Stt {
           speechAnalysis_ = null;
         }
         return speechAnalysisBuilder_;
+      }
+
+      private yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions speakerLabeling_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions, yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptionsOrBuilder> speakerLabelingBuilder_;
+      /**
+       * <pre>
+       * Configuration for speaker labeling
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 5;</code>
+       * @return Whether the speakerLabeling field is set.
+       */
+      public boolean hasSpeakerLabeling() {
+        return speakerLabelingBuilder_ != null || speakerLabeling_ != null;
+      }
+      /**
+       * <pre>
+       * Configuration for speaker labeling
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 5;</code>
+       * @return The speakerLabeling.
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions getSpeakerLabeling() {
+        if (speakerLabelingBuilder_ == null) {
+          return speakerLabeling_ == null ? yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.getDefaultInstance() : speakerLabeling_;
+        } else {
+          return speakerLabelingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for speaker labeling
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 5;</code>
+       */
+      public Builder setSpeakerLabeling(yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions value) {
+        if (speakerLabelingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          speakerLabeling_ = value;
+          onChanged();
+        } else {
+          speakerLabelingBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for speaker labeling
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 5;</code>
+       */
+      public Builder setSpeakerLabeling(
+          yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.Builder builderForValue) {
+        if (speakerLabelingBuilder_ == null) {
+          speakerLabeling_ = builderForValue.build();
+          onChanged();
+        } else {
+          speakerLabelingBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for speaker labeling
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 5;</code>
+       */
+      public Builder mergeSpeakerLabeling(yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions value) {
+        if (speakerLabelingBuilder_ == null) {
+          if (speakerLabeling_ != null) {
+            speakerLabeling_ =
+              yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.newBuilder(speakerLabeling_).mergeFrom(value).buildPartial();
+          } else {
+            speakerLabeling_ = value;
+          }
+          onChanged();
+        } else {
+          speakerLabelingBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for speaker labeling
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 5;</code>
+       */
+      public Builder clearSpeakerLabeling() {
+        if (speakerLabelingBuilder_ == null) {
+          speakerLabeling_ = null;
+          onChanged();
+        } else {
+          speakerLabeling_ = null;
+          speakerLabelingBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Configuration for speaker labeling
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 5;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.Builder getSpeakerLabelingBuilder() {
+        
+        onChanged();
+        return getSpeakerLabelingFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Configuration for speaker labeling
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 5;</code>
+       */
+      public yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptionsOrBuilder getSpeakerLabelingOrBuilder() {
+        if (speakerLabelingBuilder_ != null) {
+          return speakerLabelingBuilder_.getMessageOrBuilder();
+        } else {
+          return speakerLabeling_ == null ?
+              yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.getDefaultInstance() : speakerLabeling_;
+        }
+      }
+      /**
+       * <pre>
+       * Configuration for speaker labeling
+       * </pre>
+       *
+       * <code>.speechkit.stt.v3.SpeakerLabelingOptions speaker_labeling = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions, yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptionsOrBuilder> 
+          getSpeakerLabelingFieldBuilder() {
+        if (speakerLabelingBuilder_ == null) {
+          speakerLabelingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions, yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptions.Builder, yandex.cloud.api.ai.stt.v3.Stt.SpeakerLabelingOptionsOrBuilder>(
+                  getSpeakerLabeling(),
+                  getParentForChildren(),
+                  isClean());
+          speakerLabeling_ = null;
+        }
+        return speakerLabelingBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -43206,6 +44163,11 @@ public final class Stt {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_speechkit_stt_v3_RecognitionModelOptions_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_stt_v3_SpeakerLabelingOptions_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_stt_v3_SpeakerLabelingOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_speechkit_stt_v3_StreamingOptions_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -43409,131 +44371,138 @@ public final class Stt {
       "nitionModelOptions.AudioProcessingType\"Z" +
       "\n\023AudioProcessingType\022%\n!AUDIO_PROCESSIN" +
       "G_TYPE_UNSPECIFIED\020\000\022\r\n\tREAL_TIME\020\001\022\r\n\tF" +
-      "ULL_DATA\020\002\"\252\002\n\020StreamingOptions\022D\n\021recog" +
-      "nition_model\030\001 \001(\0132).speechkit.stt.v3.Re" +
-      "cognitionModelOptions\022>\n\016eou_classifier\030" +
-      "\002 \001(\0132&.speechkit.stt.v3.EouClassifierOp" +
-      "tions\022N\n\026recognition_classifier\030\003 \001(\0132.." +
-      "speechkit.stt.v3.RecognitionClassifierOp" +
-      "tions\022@\n\017speech_analysis\030\004 \001(\0132\'.speechk" +
-      "it.stt.v3.SpeechAnalysisOptions\"\032\n\nAudio" +
-      "Chunk\022\014\n\004data\030\001 \001(\014\"#\n\014SilenceChunk\022\023\n\013d" +
-      "uration_ms\030\001 \001(\003\"\005\n\003Eou\"\350\001\n\020StreamingReq" +
-      "uest\022=\n\017session_options\030\001 \001(\0132\".speechki" +
-      "t.stt.v3.StreamingOptionsH\000\022-\n\005chunk\030\002 \001" +
-      "(\0132\034.speechkit.stt.v3.AudioChunkH\000\0227\n\rsi" +
-      "lence_chunk\030\003 \001(\0132\036.speechkit.stt.v3.Sil" +
-      "enceChunkH\000\022$\n\003eou\030\004 \001(\0132\025.speechkit.stt" +
-      ".v3.EouH\000B\007\n\005Event\"\237\002\n\024RecognizeFileRequ" +
-      "est\022\021\n\007content\030\001 \001(\014H\000\022\r\n\003uri\030\002 \001(\tH\000\022D\n" +
-      "\021recognition_model\030\003 \001(\0132).speechkit.stt" +
-      ".v3.RecognitionModelOptions\022N\n\026recogniti" +
-      "on_classifier\030\004 \001(\0132..speechkit.stt.v3.R" +
-      "ecognitionClassifierOptions\022@\n\017speech_an" +
-      "alysis\030\005 \001(\0132\'.speechkit.stt.v3.SpeechAn" +
-      "alysisOptionsB\r\n\013AudioSource\"@\n\004Word\022\014\n\004" +
-      "text\030\001 \001(\t\022\025\n\rstart_time_ms\030\002 \001(\003\022\023\n\013end" +
-      "_time_ms\030\003 \001(\003\"@\n\022LanguageEstimation\022\025\n\r" +
-      "language_code\030\001 \001(\t\022\023\n\013probability\030\002 \001(\001" +
-      "\"\273\001\n\013Alternative\022%\n\005words\030\001 \003(\0132\026.speech" +
-      "kit.stt.v3.Word\022\014\n\004text\030\002 \001(\t\022\025\n\rstart_t" +
-      "ime_ms\030\003 \001(\003\022\023\n\013end_time_ms\030\004 \001(\003\022\022\n\ncon" +
-      "fidence\030\005 \001(\001\0227\n\tlanguages\030\006 \003(\0132$.speec" +
-      "hkit.stt.v3.LanguageEstimation\"\034\n\tEouUpd" +
-      "ate\022\017\n\007time_ms\030\002 \001(\003\"a\n\021AlternativeUpdat" +
-      "e\0223\n\014alternatives\030\001 \003(\0132\035.speechkit.stt." +
-      "v3.Alternative\022\027\n\013channel_tag\030\002 \001(\tB\002\030\001\"" +
-      "\231\001\n\014AudioCursors\022\030\n\020received_data_ms\030\001 \001" +
-      "(\003\022\025\n\rreset_time_ms\030\002 \001(\003\022\027\n\017partial_tim" +
-      "e_ms\030\003 \001(\003\022\025\n\rfinal_time_ms\030\004 \001(\003\022\023\n\013fin" +
-      "al_index\030\005 \001(\003\022\023\n\013eou_time_ms\030\006 \001(\003\"n\n\017F" +
-      "inalRefinement\022\023\n\013final_index\030\001 \001(\003\022>\n\017n" +
-      "ormalized_text\030\002 \001(\0132#.speechkit.stt.v3." +
-      "AlternativeUpdateH\000B\006\n\004Type\"L\n\nStatusCod" +
-      "e\022-\n\tcode_type\030\001 \001(\0162\032.speechkit.stt.v3." +
-      "CodeType\022\017\n\007message\030\002 \001(\t\"4\n\013SessionUuid" +
-      "\022\014\n\004uuid\030\001 \001(\t\022\027\n\017user_request_id\030\002 \001(\t\"" +
-      "K\n\017PhraseHighlight\022\014\n\004text\030\001 \001(\t\022\025\n\rstar" +
-      "t_time_ms\030\002 \001(\003\022\023\n\013end_time_ms\030\003 \001(\003\"?\n\032" +
-      "RecognitionClassifierLabel\022\r\n\005label\030\001 \001(" +
-      "\t\022\022\n\nconfidence\030\002 \001(\001\"\246\001\n\033RecognitionCla" +
-      "ssifierResult\022\022\n\nclassifier\030\001 \001(\t\0225\n\nhig" +
-      "hlights\030\002 \003(\0132!.speechkit.stt.v3.PhraseH" +
-      "ighlight\022<\n\006labels\030\003 \003(\0132,.speechkit.stt" +
-      ".v3.RecognitionClassifierLabel\"\261\002\n\033Recog" +
-      "nitionClassifierUpdate\022M\n\013window_type\030\001 " +
-      "\001(\01628.speechkit.stt.v3.RecognitionClassi" +
-      "fierUpdate.WindowType\022\025\n\rstart_time_ms\030\002" +
-      " \001(\003\022\023\n\013end_time_ms\030\003 \001(\003\022H\n\021classifier_" +
-      "result\030\004 \001(\0132-.speechkit.stt.v3.Recognit" +
-      "ionClassifierResult\"M\n\nWindowType\022\033\n\027WIN" +
-      "DOW_TYPE_UNSPECIFIED\020\000\022\022\n\016LAST_UTTERANCE" +
-      "\020\001\022\016\n\nLAST_FINAL\020\002\"\273\001\n\025DescriptiveStatis" +
-      "tics\022\013\n\003min\030\001 \001(\001\022\013\n\003max\030\002 \001(\001\022\014\n\004mean\030\003" +
-      " \001(\001\022\013\n\003std\030\004 \001(\001\022C\n\tquantiles\030\005 \003(\01320.s" +
-      "peechkit.stt.v3.DescriptiveStatistics.Qu" +
-      "antile\032(\n\010Quantile\022\r\n\005level\030\001 \001(\001\022\r\n\005val" +
-      "ue\030\002 \001(\001\"D\n\026AudioSegmentBoundaries\022\025\n\rst" +
-      "art_time_ms\030\001 \001(\003\022\023\n\013end_time_ms\030\002 \001(\003\"\203" +
-      "\006\n\017SpeakerAnalysis\022\023\n\013speaker_tag\030\001 \001(\t\022" +
-      "A\n\013window_type\030\002 \001(\0162,.speechkit.stt.v3." +
-      "SpeakerAnalysis.WindowType\022C\n\021speech_bou" +
-      "ndaries\030\003 \001(\0132(.speechkit.stt.v3.AudioSe" +
-      "gmentBoundaries\022\027\n\017total_speech_ms\030\004 \001(\003" +
-      "\022\024\n\014speech_ratio\030\005 \001(\001\022\030\n\020total_silence_" +
-      "ms\030\006 \001(\003\022\025\n\rsilence_ratio\030\007 \001(\001\022\023\n\013words" +
-      "_count\030\010 \001(\003\022\025\n\rletters_count\030\t \001(\003\022A\n\020w" +
-      "ords_per_second\030\n \001(\0132\'.speechkit.stt.v3" +
-      ".DescriptiveStatistics\022C\n\022letters_per_se" +
-      "cond\030\013 \001(\0132\'.speechkit.stt.v3.Descriptiv" +
-      "eStatistics\022D\n\023words_per_utterance\030\014 \001(\013" +
-      "2\'.speechkit.stt.v3.DescriptiveStatistic" +
-      "s\022F\n\025letters_per_utterance\030\r \001(\0132\'.speec" +
-      "hkit.stt.v3.DescriptiveStatistics\022\027\n\017utt" +
-      "erance_count\030\016 \001(\003\022N\n\035utterance_duration" +
-      "_estimation\030\017 \001(\0132\'.speechkit.stt.v3.Des" +
-      "criptiveStatistics\"H\n\nWindowType\022\033\n\027WIND" +
-      "OW_TYPE_UNSPECIFIED\020\000\022\t\n\005TOTAL\020\001\022\022\n\016LAST" +
-      "_UTTERANCE\020\002\"\307\005\n\024ConversationAnalysis\022I\n" +
-      "\027conversation_boundaries\030\001 \001(\0132(.speechk" +
-      "it.stt.v3.AudioSegmentBoundaries\022.\n&tota" +
-      "l_simultaneous_silence_duration_ms\030\002 \001(\003" +
-      "\022(\n total_simultaneous_silence_ratio\030\003 \001" +
-      "(\001\022Y\n(simultaneous_silence_duration_esti" +
-      "mation\030\004 \001(\0132\'.speechkit.stt.v3.Descript" +
-      "iveStatistics\022-\n%total_simultaneous_spee" +
-      "ch_duration_ms\030\005 \001(\003\022\'\n\037total_simultaneo" +
-      "us_speech_ratio\030\006 \001(\001\022X\n\'simultaneous_sp" +
-      "eech_duration_estimation\030\007 \001(\0132\'.speechk" +
-      "it.stt.v3.DescriptiveStatistics\022W\n\022speak" +
-      "er_interrupts\030\010 \003(\0132;.speechkit.stt.v3.C" +
-      "onversationAnalysis.InterruptsEvaluation" +
-      "\032\243\001\n\024InterruptsEvaluation\022\023\n\013speaker_tag" +
-      "\030\001 \001(\t\022\030\n\020interrupts_count\030\002 \001(\003\022\036\n\026inte" +
-      "rrupts_duration_ms\030\003 \001(\003\022<\n\ninterrupts\030\004" +
-      " \003(\0132(.speechkit.stt.v3.AudioSegmentBoun" +
-      "daries\"\245\005\n\021StreamingResponse\0223\n\014session_" +
-      "uuid\030\001 \001(\0132\035.speechkit.stt.v3.SessionUui" +
-      "d\0225\n\raudio_cursors\030\002 \001(\0132\036.speechkit.stt" +
-      ".v3.AudioCursors\022\035\n\025response_wall_time_m" +
-      "s\030\003 \001(\003\0226\n\007partial\030\004 \001(\0132#.speechkit.stt" +
-      ".v3.AlternativeUpdateH\000\0224\n\005final\030\005 \001(\0132#" +
-      ".speechkit.stt.v3.AlternativeUpdateH\000\0221\n" +
-      "\neou_update\030\006 \001(\0132\033.speechkit.stt.v3.Eou" +
-      "UpdateH\000\022=\n\020final_refinement\030\007 \001(\0132!.spe" +
-      "echkit.stt.v3.FinalRefinementH\000\0223\n\013statu" +
-      "s_code\030\010 \001(\0132\034.speechkit.stt.v3.StatusCo" +
-      "deH\000\022J\n\021classifier_update\030\n \001(\0132-.speech" +
-      "kit.stt.v3.RecognitionClassifierUpdateH\000" +
-      "\022=\n\020speaker_analysis\030\013 \001(\0132!.speechkit.s" +
-      "tt.v3.SpeakerAnalysisH\000\022G\n\025conversation_" +
-      "analysis\030\014 \001(\0132&.speechkit.stt.v3.Conver" +
-      "sationAnalysisH\000\022\023\n\013channel_tag\030\t \001(\tB\007\n" +
-      "\005Event*K\n\010CodeType\022\031\n\025CODE_TYPE_UNSPECIF" +
-      "IED\020\000\022\013\n\007WORKING\020\001\022\013\n\007WARNING\020\002\022\n\n\006CLOSE" +
-      "D\020\003B\\\n\032yandex.cloud.api.ai.stt.v3Z>githu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/ai/stt/v3;sttb\006proto3"
+      "ULL_DATA\020\002\"\336\001\n\026SpeakerLabelingOptions\022R\n" +
+      "\020speaker_labeling\030\001 \001(\01628.speechkit.stt." +
+      "v3.SpeakerLabelingOptions.SpeakerLabelin" +
+      "g\"p\n\017SpeakerLabeling\022 \n\034SPEAKER_LABELING" +
+      "_UNSPECIFIED\020\000\022\034\n\030SPEAKER_LABELING_ENABL" +
+      "ED\020\001\022\035\n\031SPEAKER_LABELING_DISABLED\020\002\"\356\002\n\020" +
+      "StreamingOptions\022D\n\021recognition_model\030\001 " +
+      "\001(\0132).speechkit.stt.v3.RecognitionModelO" +
+      "ptions\022>\n\016eou_classifier\030\002 \001(\0132&.speechk" +
+      "it.stt.v3.EouClassifierOptions\022N\n\026recogn" +
+      "ition_classifier\030\003 \001(\0132..speechkit.stt.v" +
+      "3.RecognitionClassifierOptions\022@\n\017speech" +
+      "_analysis\030\004 \001(\0132\'.speechkit.stt.v3.Speec" +
+      "hAnalysisOptions\022B\n\020speaker_labeling\030\005 \001" +
+      "(\0132(.speechkit.stt.v3.SpeakerLabelingOpt" +
+      "ions\"\032\n\nAudioChunk\022\014\n\004data\030\001 \001(\014\"#\n\014Sile" +
+      "nceChunk\022\023\n\013duration_ms\030\001 \001(\003\"\005\n\003Eou\"\350\001\n" +
+      "\020StreamingRequest\022=\n\017session_options\030\001 \001" +
+      "(\0132\".speechkit.stt.v3.StreamingOptionsH\000" +
+      "\022-\n\005chunk\030\002 \001(\0132\034.speechkit.stt.v3.Audio" +
+      "ChunkH\000\0227\n\rsilence_chunk\030\003 \001(\0132\036.speechk" +
+      "it.stt.v3.SilenceChunkH\000\022$\n\003eou\030\004 \001(\0132\025." +
+      "speechkit.stt.v3.EouH\000B\007\n\005Event\"\237\002\n\024Reco" +
+      "gnizeFileRequest\022\021\n\007content\030\001 \001(\014H\000\022\r\n\003u" +
+      "ri\030\002 \001(\tH\000\022D\n\021recognition_model\030\003 \001(\0132)." +
+      "speechkit.stt.v3.RecognitionModelOptions" +
+      "\022N\n\026recognition_classifier\030\004 \001(\0132..speec" +
+      "hkit.stt.v3.RecognitionClassifierOptions" +
+      "\022@\n\017speech_analysis\030\005 \001(\0132\'.speechkit.st" +
+      "t.v3.SpeechAnalysisOptionsB\r\n\013AudioSourc" +
+      "e\"@\n\004Word\022\014\n\004text\030\001 \001(\t\022\025\n\rstart_time_ms" +
+      "\030\002 \001(\003\022\023\n\013end_time_ms\030\003 \001(\003\"@\n\022LanguageE" +
+      "stimation\022\025\n\rlanguage_code\030\001 \001(\t\022\023\n\013prob" +
+      "ability\030\002 \001(\001\"\273\001\n\013Alternative\022%\n\005words\030\001" +
+      " \003(\0132\026.speechkit.stt.v3.Word\022\014\n\004text\030\002 \001" +
+      "(\t\022\025\n\rstart_time_ms\030\003 \001(\003\022\023\n\013end_time_ms" +
+      "\030\004 \001(\003\022\022\n\nconfidence\030\005 \001(\001\0227\n\tlanguages\030" +
+      "\006 \003(\0132$.speechkit.stt.v3.LanguageEstimat" +
+      "ion\"\034\n\tEouUpdate\022\017\n\007time_ms\030\002 \001(\003\"a\n\021Alt" +
+      "ernativeUpdate\0223\n\014alternatives\030\001 \003(\0132\035.s" +
+      "peechkit.stt.v3.Alternative\022\027\n\013channel_t" +
+      "ag\030\002 \001(\tB\002\030\001\"\231\001\n\014AudioCursors\022\030\n\020receive" +
+      "d_data_ms\030\001 \001(\003\022\025\n\rreset_time_ms\030\002 \001(\003\022\027" +
+      "\n\017partial_time_ms\030\003 \001(\003\022\025\n\rfinal_time_ms" +
+      "\030\004 \001(\003\022\023\n\013final_index\030\005 \001(\003\022\023\n\013eou_time_" +
+      "ms\030\006 \001(\003\"n\n\017FinalRefinement\022\023\n\013final_ind" +
+      "ex\030\001 \001(\003\022>\n\017normalized_text\030\002 \001(\0132#.spee" +
+      "chkit.stt.v3.AlternativeUpdateH\000B\006\n\004Type" +
+      "\"L\n\nStatusCode\022-\n\tcode_type\030\001 \001(\0162\032.spee" +
+      "chkit.stt.v3.CodeType\022\017\n\007message\030\002 \001(\t\"4" +
+      "\n\013SessionUuid\022\014\n\004uuid\030\001 \001(\t\022\027\n\017user_requ" +
+      "est_id\030\002 \001(\t\"K\n\017PhraseHighlight\022\014\n\004text\030" +
+      "\001 \001(\t\022\025\n\rstart_time_ms\030\002 \001(\003\022\023\n\013end_time" +
+      "_ms\030\003 \001(\003\"?\n\032RecognitionClassifierLabel\022" +
+      "\r\n\005label\030\001 \001(\t\022\022\n\nconfidence\030\002 \001(\001\"\246\001\n\033R" +
+      "ecognitionClassifierResult\022\022\n\nclassifier" +
+      "\030\001 \001(\t\0225\n\nhighlights\030\002 \003(\0132!.speechkit.s" +
+      "tt.v3.PhraseHighlight\022<\n\006labels\030\003 \003(\0132,." +
+      "speechkit.stt.v3.RecognitionClassifierLa" +
+      "bel\"\261\002\n\033RecognitionClassifierUpdate\022M\n\013w" +
+      "indow_type\030\001 \001(\01628.speechkit.stt.v3.Reco" +
+      "gnitionClassifierUpdate.WindowType\022\025\n\rst" +
+      "art_time_ms\030\002 \001(\003\022\023\n\013end_time_ms\030\003 \001(\003\022H" +
+      "\n\021classifier_result\030\004 \001(\0132-.speechkit.st" +
+      "t.v3.RecognitionClassifierResult\"M\n\nWind" +
+      "owType\022\033\n\027WINDOW_TYPE_UNSPECIFIED\020\000\022\022\n\016L" +
+      "AST_UTTERANCE\020\001\022\016\n\nLAST_FINAL\020\002\"\273\001\n\025Desc" +
+      "riptiveStatistics\022\013\n\003min\030\001 \001(\001\022\013\n\003max\030\002 " +
+      "\001(\001\022\014\n\004mean\030\003 \001(\001\022\013\n\003std\030\004 \001(\001\022C\n\tquanti" +
+      "les\030\005 \003(\01320.speechkit.stt.v3.Descriptive" +
+      "Statistics.Quantile\032(\n\010Quantile\022\r\n\005level" +
+      "\030\001 \001(\001\022\r\n\005value\030\002 \001(\001\"D\n\026AudioSegmentBou" +
+      "ndaries\022\025\n\rstart_time_ms\030\001 \001(\003\022\023\n\013end_ti" +
+      "me_ms\030\002 \001(\003\"\203\006\n\017SpeakerAnalysis\022\023\n\013speak" +
+      "er_tag\030\001 \001(\t\022A\n\013window_type\030\002 \001(\0162,.spee" +
+      "chkit.stt.v3.SpeakerAnalysis.WindowType\022" +
+      "C\n\021speech_boundaries\030\003 \001(\0132(.speechkit.s" +
+      "tt.v3.AudioSegmentBoundaries\022\027\n\017total_sp" +
+      "eech_ms\030\004 \001(\003\022\024\n\014speech_ratio\030\005 \001(\001\022\030\n\020t" +
+      "otal_silence_ms\030\006 \001(\003\022\025\n\rsilence_ratio\030\007" +
+      " \001(\001\022\023\n\013words_count\030\010 \001(\003\022\025\n\rletters_cou" +
+      "nt\030\t \001(\003\022A\n\020words_per_second\030\n \001(\0132\'.spe" +
+      "echkit.stt.v3.DescriptiveStatistics\022C\n\022l" +
+      "etters_per_second\030\013 \001(\0132\'.speechkit.stt." +
+      "v3.DescriptiveStatistics\022D\n\023words_per_ut" +
+      "terance\030\014 \001(\0132\'.speechkit.stt.v3.Descrip" +
+      "tiveStatistics\022F\n\025letters_per_utterance\030" +
+      "\r \001(\0132\'.speechkit.stt.v3.DescriptiveStat" +
+      "istics\022\027\n\017utterance_count\030\016 \001(\003\022N\n\035utter" +
+      "ance_duration_estimation\030\017 \001(\0132\'.speechk" +
+      "it.stt.v3.DescriptiveStatistics\"H\n\nWindo" +
+      "wType\022\033\n\027WINDOW_TYPE_UNSPECIFIED\020\000\022\t\n\005TO" +
+      "TAL\020\001\022\022\n\016LAST_UTTERANCE\020\002\"\307\005\n\024Conversati" +
+      "onAnalysis\022I\n\027conversation_boundaries\030\001 " +
+      "\001(\0132(.speechkit.stt.v3.AudioSegmentBound" +
+      "aries\022.\n&total_simultaneous_silence_dura" +
+      "tion_ms\030\002 \001(\003\022(\n total_simultaneous_sile" +
+      "nce_ratio\030\003 \001(\001\022Y\n(simultaneous_silence_" +
+      "duration_estimation\030\004 \001(\0132\'.speechkit.st" +
+      "t.v3.DescriptiveStatistics\022-\n%total_simu" +
+      "ltaneous_speech_duration_ms\030\005 \001(\003\022\'\n\037tot" +
+      "al_simultaneous_speech_ratio\030\006 \001(\001\022X\n\'si" +
+      "multaneous_speech_duration_estimation\030\007 " +
+      "\001(\0132\'.speechkit.stt.v3.DescriptiveStatis" +
+      "tics\022W\n\022speaker_interrupts\030\010 \003(\0132;.speec" +
+      "hkit.stt.v3.ConversationAnalysis.Interru" +
+      "ptsEvaluation\032\243\001\n\024InterruptsEvaluation\022\023" +
+      "\n\013speaker_tag\030\001 \001(\t\022\030\n\020interrupts_count\030" +
+      "\002 \001(\003\022\036\n\026interrupts_duration_ms\030\003 \001(\003\022<\n" +
+      "\ninterrupts\030\004 \003(\0132(.speechkit.stt.v3.Aud" +
+      "ioSegmentBoundaries\"\245\005\n\021StreamingRespons" +
+      "e\0223\n\014session_uuid\030\001 \001(\0132\035.speechkit.stt." +
+      "v3.SessionUuid\0225\n\raudio_cursors\030\002 \001(\0132\036." +
+      "speechkit.stt.v3.AudioCursors\022\035\n\025respons" +
+      "e_wall_time_ms\030\003 \001(\003\0226\n\007partial\030\004 \001(\0132#." +
+      "speechkit.stt.v3.AlternativeUpdateH\000\0224\n\005" +
+      "final\030\005 \001(\0132#.speechkit.stt.v3.Alternati" +
+      "veUpdateH\000\0221\n\neou_update\030\006 \001(\0132\033.speechk" +
+      "it.stt.v3.EouUpdateH\000\022=\n\020final_refinemen" +
+      "t\030\007 \001(\0132!.speechkit.stt.v3.FinalRefineme" +
+      "ntH\000\0223\n\013status_code\030\010 \001(\0132\034.speechkit.st" +
+      "t.v3.StatusCodeH\000\022J\n\021classifier_update\030\n" +
+      " \001(\0132-.speechkit.stt.v3.RecognitionClass" +
+      "ifierUpdateH\000\022=\n\020speaker_analysis\030\013 \001(\0132" +
+      "!.speechkit.stt.v3.SpeakerAnalysisH\000\022G\n\025" +
+      "conversation_analysis\030\014 \001(\0132&.speechkit." +
+      "stt.v3.ConversationAnalysisH\000\022\023\n\013channel" +
+      "_tag\030\t \001(\tB\007\n\005Event*K\n\010CodeType\022\031\n\025CODE_" +
+      "TYPE_UNSPECIFIED\020\000\022\013\n\007WORKING\020\001\022\013\n\007WARNI" +
+      "NG\020\002\022\n\n\006CLOSED\020\003B\\\n\032yandex.cloud.api.ai." +
+      "stt.v3Z>github.com/yandex-cloud/go-genpr" +
+      "oto/yandex/cloud/ai/stt/v3;sttb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -43611,122 +44580,128 @@ public final class Stt {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_RecognitionModelOptions_descriptor,
         new java.lang.String[] { "Model", "AudioFormat", "TextNormalization", "LanguageRestriction", "AudioProcessingType", });
-    internal_static_speechkit_stt_v3_StreamingOptions_descriptor =
+    internal_static_speechkit_stt_v3_SpeakerLabelingOptions_descriptor =
       getDescriptor().getMessageTypes().get(12);
+    internal_static_speechkit_stt_v3_SpeakerLabelingOptions_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_stt_v3_SpeakerLabelingOptions_descriptor,
+        new java.lang.String[] { "SpeakerLabeling", });
+    internal_static_speechkit_stt_v3_StreamingOptions_descriptor =
+      getDescriptor().getMessageTypes().get(13);
     internal_static_speechkit_stt_v3_StreamingOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_StreamingOptions_descriptor,
-        new java.lang.String[] { "RecognitionModel", "EouClassifier", "RecognitionClassifier", "SpeechAnalysis", });
+        new java.lang.String[] { "RecognitionModel", "EouClassifier", "RecognitionClassifier", "SpeechAnalysis", "SpeakerLabeling", });
     internal_static_speechkit_stt_v3_AudioChunk_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_speechkit_stt_v3_AudioChunk_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_AudioChunk_descriptor,
         new java.lang.String[] { "Data", });
     internal_static_speechkit_stt_v3_SilenceChunk_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_speechkit_stt_v3_SilenceChunk_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_SilenceChunk_descriptor,
         new java.lang.String[] { "DurationMs", });
     internal_static_speechkit_stt_v3_Eou_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_speechkit_stt_v3_Eou_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_Eou_descriptor,
         new java.lang.String[] { });
     internal_static_speechkit_stt_v3_StreamingRequest_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_speechkit_stt_v3_StreamingRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_StreamingRequest_descriptor,
         new java.lang.String[] { "SessionOptions", "Chunk", "SilenceChunk", "Eou", "Event", });
     internal_static_speechkit_stt_v3_RecognizeFileRequest_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_speechkit_stt_v3_RecognizeFileRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_RecognizeFileRequest_descriptor,
         new java.lang.String[] { "Content", "Uri", "RecognitionModel", "RecognitionClassifier", "SpeechAnalysis", "AudioSource", });
     internal_static_speechkit_stt_v3_Word_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_speechkit_stt_v3_Word_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_Word_descriptor,
         new java.lang.String[] { "Text", "StartTimeMs", "EndTimeMs", });
     internal_static_speechkit_stt_v3_LanguageEstimation_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_speechkit_stt_v3_LanguageEstimation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_LanguageEstimation_descriptor,
         new java.lang.String[] { "LanguageCode", "Probability", });
     internal_static_speechkit_stt_v3_Alternative_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_speechkit_stt_v3_Alternative_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_Alternative_descriptor,
         new java.lang.String[] { "Words", "Text", "StartTimeMs", "EndTimeMs", "Confidence", "Languages", });
     internal_static_speechkit_stt_v3_EouUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_speechkit_stt_v3_EouUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_EouUpdate_descriptor,
         new java.lang.String[] { "TimeMs", });
     internal_static_speechkit_stt_v3_AlternativeUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_speechkit_stt_v3_AlternativeUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_AlternativeUpdate_descriptor,
         new java.lang.String[] { "Alternatives", "ChannelTag", });
     internal_static_speechkit_stt_v3_AudioCursors_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_speechkit_stt_v3_AudioCursors_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_AudioCursors_descriptor,
         new java.lang.String[] { "ReceivedDataMs", "ResetTimeMs", "PartialTimeMs", "FinalTimeMs", "FinalIndex", "EouTimeMs", });
     internal_static_speechkit_stt_v3_FinalRefinement_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_speechkit_stt_v3_FinalRefinement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_FinalRefinement_descriptor,
         new java.lang.String[] { "FinalIndex", "NormalizedText", "Type", });
     internal_static_speechkit_stt_v3_StatusCode_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_speechkit_stt_v3_StatusCode_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_StatusCode_descriptor,
         new java.lang.String[] { "CodeType", "Message", });
     internal_static_speechkit_stt_v3_SessionUuid_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_speechkit_stt_v3_SessionUuid_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_SessionUuid_descriptor,
         new java.lang.String[] { "Uuid", "UserRequestId", });
     internal_static_speechkit_stt_v3_PhraseHighlight_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_speechkit_stt_v3_PhraseHighlight_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_PhraseHighlight_descriptor,
         new java.lang.String[] { "Text", "StartTimeMs", "EndTimeMs", });
     internal_static_speechkit_stt_v3_RecognitionClassifierLabel_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_speechkit_stt_v3_RecognitionClassifierLabel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_RecognitionClassifierLabel_descriptor,
         new java.lang.String[] { "Label", "Confidence", });
     internal_static_speechkit_stt_v3_RecognitionClassifierResult_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_speechkit_stt_v3_RecognitionClassifierResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_RecognitionClassifierResult_descriptor,
         new java.lang.String[] { "Classifier", "Highlights", "Labels", });
     internal_static_speechkit_stt_v3_RecognitionClassifierUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_speechkit_stt_v3_RecognitionClassifierUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_RecognitionClassifierUpdate_descriptor,
         new java.lang.String[] { "WindowType", "StartTimeMs", "EndTimeMs", "ClassifierResult", });
     internal_static_speechkit_stt_v3_DescriptiveStatistics_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_speechkit_stt_v3_DescriptiveStatistics_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_DescriptiveStatistics_descriptor,
@@ -43738,19 +44713,19 @@ public final class Stt {
         internal_static_speechkit_stt_v3_DescriptiveStatistics_Quantile_descriptor,
         new java.lang.String[] { "Level", "Value", });
     internal_static_speechkit_stt_v3_AudioSegmentBoundaries_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_speechkit_stt_v3_AudioSegmentBoundaries_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_AudioSegmentBoundaries_descriptor,
         new java.lang.String[] { "StartTimeMs", "EndTimeMs", });
     internal_static_speechkit_stt_v3_SpeakerAnalysis_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_speechkit_stt_v3_SpeakerAnalysis_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_SpeakerAnalysis_descriptor,
         new java.lang.String[] { "SpeakerTag", "WindowType", "SpeechBoundaries", "TotalSpeechMs", "SpeechRatio", "TotalSilenceMs", "SilenceRatio", "WordsCount", "LettersCount", "WordsPerSecond", "LettersPerSecond", "WordsPerUtterance", "LettersPerUtterance", "UtteranceCount", "UtteranceDurationEstimation", });
     internal_static_speechkit_stt_v3_ConversationAnalysis_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_speechkit_stt_v3_ConversationAnalysis_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_ConversationAnalysis_descriptor,
@@ -43762,7 +44737,7 @@ public final class Stt {
         internal_static_speechkit_stt_v3_ConversationAnalysis_InterruptsEvaluation_descriptor,
         new java.lang.String[] { "SpeakerTag", "InterruptsCount2", "InterruptsDurationMs", "Interrupts4", });
     internal_static_speechkit_stt_v3_StreamingResponse_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_speechkit_stt_v3_StreamingResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_stt_v3_StreamingResponse_descriptor,
