@@ -14066,6 +14066,2127 @@ public final class HostGroupServiceOuterClass {
 
   }
 
+  public interface UpdateHostGroupHostRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.UpdateHostGroupHostRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the host group to update.
+     * </pre>
+     *
+     * <code>string host_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The hostGroupId.
+     */
+    java.lang.String getHostGroupId();
+    /**
+     * <pre>
+     * ID of the host group to update.
+     * </pre>
+     *
+     * <code>string host_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for hostGroupId.
+     */
+    com.google.protobuf.ByteString
+        getHostGroupIdBytes();
+
+    /**
+     * <pre>
+     * ID of the host to update.
+     * </pre>
+     *
+     * <code>string host_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The hostId.
+     */
+    java.lang.String getHostId();
+    /**
+     * <pre>
+     * ID of the host to update.
+     * </pre>
+     *
+     * <code>string host_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for hostId.
+     */
+    com.google.protobuf.ByteString
+        getHostIdBytes();
+
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Host are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return Whether the updateMask field is set.
+     */
+    boolean hasUpdateMask();
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Host are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return The updateMask.
+     */
+    com.google.protobuf.FieldMask getUpdateMask();
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Host are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     */
+    com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
+
+    /**
+     * <pre>
+     * The date and time when this host will be automatically freed of instances.
+     * Timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deadline_at = 4;</code>
+     * @return Whether the deadlineAt field is set.
+     */
+    boolean hasDeadlineAt();
+    /**
+     * <pre>
+     * The date and time when this host will be automatically freed of instances.
+     * Timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deadline_at = 4;</code>
+     * @return The deadlineAt.
+     */
+    com.google.protobuf.Timestamp getDeadlineAt();
+    /**
+     * <pre>
+     * The date and time when this host will be automatically freed of instances.
+     * Timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deadline_at = 4;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDeadlineAtOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.UpdateHostGroupHostRequest}
+   */
+  public static final class UpdateHostGroupHostRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.UpdateHostGroupHostRequest)
+      UpdateHostGroupHostRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateHostGroupHostRequest.newBuilder() to construct.
+    private UpdateHostGroupHostRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateHostGroupHostRequest() {
+      hostGroupId_ = "";
+      hostId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateHostGroupHostRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateHostGroupHostRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              hostGroupId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              hostId_ = s;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.FieldMask.Builder subBuilder = null;
+              if (updateMask_ != null) {
+                subBuilder = updateMask_.toBuilder();
+              }
+              updateMask_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(updateMask_);
+                updateMask_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (deadlineAt_ != null) {
+                subBuilder = deadlineAt_.toBuilder();
+              }
+              deadlineAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(deadlineAt_);
+                deadlineAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_UpdateHostGroupHostRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_UpdateHostGroupHostRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest.class, yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest.Builder.class);
+    }
+
+    public static final int HOST_GROUP_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object hostGroupId_;
+    /**
+     * <pre>
+     * ID of the host group to update.
+     * </pre>
+     *
+     * <code>string host_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The hostGroupId.
+     */
+    @java.lang.Override
+    public java.lang.String getHostGroupId() {
+      java.lang.Object ref = hostGroupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hostGroupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the host group to update.
+     * </pre>
+     *
+     * <code>string host_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for hostGroupId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHostGroupIdBytes() {
+      java.lang.Object ref = hostGroupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hostGroupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HOST_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object hostId_;
+    /**
+     * <pre>
+     * ID of the host to update.
+     * </pre>
+     *
+     * <code>string host_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The hostId.
+     */
+    @java.lang.Override
+    public java.lang.String getHostId() {
+      java.lang.Object ref = hostId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hostId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the host to update.
+     * </pre>
+     *
+     * <code>string host_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for hostId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHostIdBytes() {
+      java.lang.Object ref = hostId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hostId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UPDATE_MASK_FIELD_NUMBER = 3;
+    private com.google.protobuf.FieldMask updateMask_;
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Host are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return Whether the updateMask field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdateMask() {
+      return updateMask_ != null;
+    }
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Host are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     * @return The updateMask.
+     */
+    @java.lang.Override
+    public com.google.protobuf.FieldMask getUpdateMask() {
+      return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+    }
+    /**
+     * <pre>
+     * Field mask that specifies which fields of the Host are going to be updated.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+      return getUpdateMask();
+    }
+
+    public static final int DEADLINE_AT_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp deadlineAt_;
+    /**
+     * <pre>
+     * The date and time when this host will be automatically freed of instances.
+     * Timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deadline_at = 4;</code>
+     * @return Whether the deadlineAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeadlineAt() {
+      return deadlineAt_ != null;
+    }
+    /**
+     * <pre>
+     * The date and time when this host will be automatically freed of instances.
+     * Timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deadline_at = 4;</code>
+     * @return The deadlineAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getDeadlineAt() {
+      return deadlineAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deadlineAt_;
+    }
+    /**
+     * <pre>
+     * The date and time when this host will be automatically freed of instances.
+     * Timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp deadline_at = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getDeadlineAtOrBuilder() {
+      return getDeadlineAt();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostGroupId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hostGroupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, hostId_);
+      }
+      if (updateMask_ != null) {
+        output.writeMessage(3, getUpdateMask());
+      }
+      if (deadlineAt_ != null) {
+        output.writeMessage(4, getDeadlineAt());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostGroupId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hostGroupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, hostId_);
+      }
+      if (updateMask_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getUpdateMask());
+      }
+      if (deadlineAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getDeadlineAt());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest other = (yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest) obj;
+
+      if (!getHostGroupId()
+          .equals(other.getHostGroupId())) return false;
+      if (!getHostId()
+          .equals(other.getHostId())) return false;
+      if (hasUpdateMask() != other.hasUpdateMask()) return false;
+      if (hasUpdateMask()) {
+        if (!getUpdateMask()
+            .equals(other.getUpdateMask())) return false;
+      }
+      if (hasDeadlineAt() != other.hasDeadlineAt()) return false;
+      if (hasDeadlineAt()) {
+        if (!getDeadlineAt()
+            .equals(other.getDeadlineAt())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HOST_GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getHostGroupId().hashCode();
+      hash = (37 * hash) + HOST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getHostId().hashCode();
+      if (hasUpdateMask()) {
+        hash = (37 * hash) + UPDATE_MASK_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdateMask().hashCode();
+      }
+      if (hasDeadlineAt()) {
+        hash = (37 * hash) + DEADLINE_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getDeadlineAt().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.UpdateHostGroupHostRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.UpdateHostGroupHostRequest)
+        yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_UpdateHostGroupHostRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_UpdateHostGroupHostRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest.class, yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        hostGroupId_ = "";
+
+        hostId_ = "";
+
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+        if (deadlineAtBuilder_ == null) {
+          deadlineAt_ = null;
+        } else {
+          deadlineAt_ = null;
+          deadlineAtBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_UpdateHostGroupHostRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest build() {
+        yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest buildPartial() {
+        yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest result = new yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest(this);
+        result.hostGroupId_ = hostGroupId_;
+        result.hostId_ = hostId_;
+        if (updateMaskBuilder_ == null) {
+          result.updateMask_ = updateMask_;
+        } else {
+          result.updateMask_ = updateMaskBuilder_.build();
+        }
+        if (deadlineAtBuilder_ == null) {
+          result.deadlineAt_ = deadlineAt_;
+        } else {
+          result.deadlineAt_ = deadlineAtBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest) {
+          return mergeFrom((yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest other) {
+        if (other == yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest.getDefaultInstance()) return this;
+        if (!other.getHostGroupId().isEmpty()) {
+          hostGroupId_ = other.hostGroupId_;
+          onChanged();
+        }
+        if (!other.getHostId().isEmpty()) {
+          hostId_ = other.hostId_;
+          onChanged();
+        }
+        if (other.hasUpdateMask()) {
+          mergeUpdateMask(other.getUpdateMask());
+        }
+        if (other.hasDeadlineAt()) {
+          mergeDeadlineAt(other.getDeadlineAt());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object hostGroupId_ = "";
+      /**
+       * <pre>
+       * ID of the host group to update.
+       * </pre>
+       *
+       * <code>string host_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The hostGroupId.
+       */
+      public java.lang.String getHostGroupId() {
+        java.lang.Object ref = hostGroupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hostGroupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the host group to update.
+       * </pre>
+       *
+       * <code>string host_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for hostGroupId.
+       */
+      public com.google.protobuf.ByteString
+          getHostGroupIdBytes() {
+        java.lang.Object ref = hostGroupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hostGroupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the host group to update.
+       * </pre>
+       *
+       * <code>string host_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The hostGroupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        hostGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the host group to update.
+       * </pre>
+       *
+       * <code>string host_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHostGroupId() {
+        
+        hostGroupId_ = getDefaultInstance().getHostGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the host group to update.
+       * </pre>
+       *
+       * <code>string host_group_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for hostGroupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        hostGroupId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object hostId_ = "";
+      /**
+       * <pre>
+       * ID of the host to update.
+       * </pre>
+       *
+       * <code>string host_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The hostId.
+       */
+      public java.lang.String getHostId() {
+        java.lang.Object ref = hostId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hostId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the host to update.
+       * </pre>
+       *
+       * <code>string host_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for hostId.
+       */
+      public com.google.protobuf.ByteString
+          getHostIdBytes() {
+        java.lang.Object ref = hostId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hostId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the host to update.
+       * </pre>
+       *
+       * <code>string host_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The hostId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        hostId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the host to update.
+       * </pre>
+       *
+       * <code>string host_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHostId() {
+        
+        hostId_ = getDefaultInstance().getHostId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the host to update.
+       * </pre>
+       *
+       * <code>string host_id = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for hostId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        hostId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.FieldMask updateMask_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> updateMaskBuilder_;
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Host are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       * @return Whether the updateMask field is set.
+       */
+      public boolean hasUpdateMask() {
+        return updateMaskBuilder_ != null || updateMask_ != null;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Host are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       * @return The updateMask.
+       */
+      public com.google.protobuf.FieldMask getUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          return updateMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        } else {
+          return updateMaskBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Host are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updateMask_ = value;
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Host are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public Builder setUpdateMask(
+          com.google.protobuf.FieldMask.Builder builderForValue) {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = builderForValue.build();
+          onChanged();
+        } else {
+          updateMaskBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Host are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
+        if (updateMaskBuilder_ == null) {
+          if (updateMask_ != null) {
+            updateMask_ =
+              com.google.protobuf.FieldMask.newBuilder(updateMask_).mergeFrom(value).buildPartial();
+          } else {
+            updateMask_ = value;
+          }
+          onChanged();
+        } else {
+          updateMaskBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Host are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public Builder clearUpdateMask() {
+        if (updateMaskBuilder_ == null) {
+          updateMask_ = null;
+          onChanged();
+        } else {
+          updateMask_ = null;
+          updateMaskBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Host are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
+        
+        onChanged();
+        return getUpdateMaskFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Host are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
+        if (updateMaskBuilder_ != null) {
+          return updateMaskBuilder_.getMessageOrBuilder();
+        } else {
+          return updateMask_ == null ?
+              com.google.protobuf.FieldMask.getDefaultInstance() : updateMask_;
+        }
+      }
+      /**
+       * <pre>
+       * Field mask that specifies which fields of the Host are going to be updated.
+       * </pre>
+       *
+       * <code>.google.protobuf.FieldMask update_mask = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+          getUpdateMaskFieldBuilder() {
+        if (updateMaskBuilder_ == null) {
+          updateMaskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                  getUpdateMask(),
+                  getParentForChildren(),
+                  isClean());
+          updateMask_ = null;
+        }
+        return updateMaskBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp deadlineAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> deadlineAtBuilder_;
+      /**
+       * <pre>
+       * The date and time when this host will be automatically freed of instances.
+       * Timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deadline_at = 4;</code>
+       * @return Whether the deadlineAt field is set.
+       */
+      public boolean hasDeadlineAt() {
+        return deadlineAtBuilder_ != null || deadlineAt_ != null;
+      }
+      /**
+       * <pre>
+       * The date and time when this host will be automatically freed of instances.
+       * Timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deadline_at = 4;</code>
+       * @return The deadlineAt.
+       */
+      public com.google.protobuf.Timestamp getDeadlineAt() {
+        if (deadlineAtBuilder_ == null) {
+          return deadlineAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : deadlineAt_;
+        } else {
+          return deadlineAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The date and time when this host will be automatically freed of instances.
+       * Timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deadline_at = 4;</code>
+       */
+      public Builder setDeadlineAt(com.google.protobuf.Timestamp value) {
+        if (deadlineAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          deadlineAt_ = value;
+          onChanged();
+        } else {
+          deadlineAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The date and time when this host will be automatically freed of instances.
+       * Timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deadline_at = 4;</code>
+       */
+      public Builder setDeadlineAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (deadlineAtBuilder_ == null) {
+          deadlineAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          deadlineAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The date and time when this host will be automatically freed of instances.
+       * Timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deadline_at = 4;</code>
+       */
+      public Builder mergeDeadlineAt(com.google.protobuf.Timestamp value) {
+        if (deadlineAtBuilder_ == null) {
+          if (deadlineAt_ != null) {
+            deadlineAt_ =
+              com.google.protobuf.Timestamp.newBuilder(deadlineAt_).mergeFrom(value).buildPartial();
+          } else {
+            deadlineAt_ = value;
+          }
+          onChanged();
+        } else {
+          deadlineAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The date and time when this host will be automatically freed of instances.
+       * Timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deadline_at = 4;</code>
+       */
+      public Builder clearDeadlineAt() {
+        if (deadlineAtBuilder_ == null) {
+          deadlineAt_ = null;
+          onChanged();
+        } else {
+          deadlineAt_ = null;
+          deadlineAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The date and time when this host will be automatically freed of instances.
+       * Timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deadline_at = 4;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDeadlineAtBuilder() {
+        
+        onChanged();
+        return getDeadlineAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The date and time when this host will be automatically freed of instances.
+       * Timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deadline_at = 4;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDeadlineAtOrBuilder() {
+        if (deadlineAtBuilder_ != null) {
+          return deadlineAtBuilder_.getMessageOrBuilder();
+        } else {
+          return deadlineAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : deadlineAt_;
+        }
+      }
+      /**
+       * <pre>
+       * The date and time when this host will be automatically freed of instances.
+       * Timestamp in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp deadline_at = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDeadlineAtFieldBuilder() {
+        if (deadlineAtBuilder_ == null) {
+          deadlineAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDeadlineAt(),
+                  getParentForChildren(),
+                  isClean());
+          deadlineAt_ = null;
+        }
+        return deadlineAtBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.UpdateHostGroupHostRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.UpdateHostGroupHostRequest)
+    private static final yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest();
+    }
+
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateHostGroupHostRequest>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateHostGroupHostRequest>() {
+      @java.lang.Override
+      public UpdateHostGroupHostRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateHostGroupHostRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateHostGroupHostRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateHostGroupHostRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpdateHostGroupHostMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.UpdateHostGroupHostMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the host group that is being updated.
+     * </pre>
+     *
+     * <code>string host_group_id = 1;</code>
+     * @return The hostGroupId.
+     */
+    java.lang.String getHostGroupId();
+    /**
+     * <pre>
+     * ID of the host group that is being updated.
+     * </pre>
+     *
+     * <code>string host_group_id = 1;</code>
+     * @return The bytes for hostGroupId.
+     */
+    com.google.protobuf.ByteString
+        getHostGroupIdBytes();
+
+    /**
+     * <pre>
+     * ID of the host that is being updated.
+     * </pre>
+     *
+     * <code>string host_id = 2;</code>
+     * @return The hostId.
+     */
+    java.lang.String getHostId();
+    /**
+     * <pre>
+     * ID of the host that is being updated.
+     * </pre>
+     *
+     * <code>string host_id = 2;</code>
+     * @return The bytes for hostId.
+     */
+    com.google.protobuf.ByteString
+        getHostIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.UpdateHostGroupHostMetadata}
+   */
+  public static final class UpdateHostGroupHostMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.UpdateHostGroupHostMetadata)
+      UpdateHostGroupHostMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpdateHostGroupHostMetadata.newBuilder() to construct.
+    private UpdateHostGroupHostMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpdateHostGroupHostMetadata() {
+      hostGroupId_ = "";
+      hostId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateHostGroupHostMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpdateHostGroupHostMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              hostGroupId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              hostId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_UpdateHostGroupHostMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_UpdateHostGroupHostMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata.class, yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata.Builder.class);
+    }
+
+    public static final int HOST_GROUP_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object hostGroupId_;
+    /**
+     * <pre>
+     * ID of the host group that is being updated.
+     * </pre>
+     *
+     * <code>string host_group_id = 1;</code>
+     * @return The hostGroupId.
+     */
+    @java.lang.Override
+    public java.lang.String getHostGroupId() {
+      java.lang.Object ref = hostGroupId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hostGroupId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the host group that is being updated.
+     * </pre>
+     *
+     * <code>string host_group_id = 1;</code>
+     * @return The bytes for hostGroupId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHostGroupIdBytes() {
+      java.lang.Object ref = hostGroupId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hostGroupId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int HOST_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object hostId_;
+    /**
+     * <pre>
+     * ID of the host that is being updated.
+     * </pre>
+     *
+     * <code>string host_id = 2;</code>
+     * @return The hostId.
+     */
+    @java.lang.Override
+    public java.lang.String getHostId() {
+      java.lang.Object ref = hostId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hostId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the host that is being updated.
+     * </pre>
+     *
+     * <code>string host_id = 2;</code>
+     * @return The bytes for hostId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getHostIdBytes() {
+      java.lang.Object ref = hostId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hostId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostGroupId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, hostGroupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, hostId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostGroupId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, hostGroupId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(hostId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, hostId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata other = (yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata) obj;
+
+      if (!getHostGroupId()
+          .equals(other.getHostGroupId())) return false;
+      if (!getHostId()
+          .equals(other.getHostId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + HOST_GROUP_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getHostGroupId().hashCode();
+      hash = (37 * hash) + HOST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getHostId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.UpdateHostGroupHostMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.UpdateHostGroupHostMetadata)
+        yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_UpdateHostGroupHostMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_UpdateHostGroupHostMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata.class, yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        hostGroupId_ = "";
+
+        hostId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.internal_static_yandex_cloud_compute_v1_UpdateHostGroupHostMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata build() {
+        yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata buildPartial() {
+        yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata result = new yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata(this);
+        result.hostGroupId_ = hostGroupId_;
+        result.hostId_ = hostId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata) {
+          return mergeFrom((yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata other) {
+        if (other == yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata.getDefaultInstance()) return this;
+        if (!other.getHostGroupId().isEmpty()) {
+          hostGroupId_ = other.hostGroupId_;
+          onChanged();
+        }
+        if (!other.getHostId().isEmpty()) {
+          hostId_ = other.hostId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object hostGroupId_ = "";
+      /**
+       * <pre>
+       * ID of the host group that is being updated.
+       * </pre>
+       *
+       * <code>string host_group_id = 1;</code>
+       * @return The hostGroupId.
+       */
+      public java.lang.String getHostGroupId() {
+        java.lang.Object ref = hostGroupId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hostGroupId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the host group that is being updated.
+       * </pre>
+       *
+       * <code>string host_group_id = 1;</code>
+       * @return The bytes for hostGroupId.
+       */
+      public com.google.protobuf.ByteString
+          getHostGroupIdBytes() {
+        java.lang.Object ref = hostGroupId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hostGroupId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the host group that is being updated.
+       * </pre>
+       *
+       * <code>string host_group_id = 1;</code>
+       * @param value The hostGroupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostGroupId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        hostGroupId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the host group that is being updated.
+       * </pre>
+       *
+       * <code>string host_group_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHostGroupId() {
+        
+        hostGroupId_ = getDefaultInstance().getHostGroupId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the host group that is being updated.
+       * </pre>
+       *
+       * <code>string host_group_id = 1;</code>
+       * @param value The bytes for hostGroupId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostGroupIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        hostGroupId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object hostId_ = "";
+      /**
+       * <pre>
+       * ID of the host that is being updated.
+       * </pre>
+       *
+       * <code>string host_id = 2;</code>
+       * @return The hostId.
+       */
+      public java.lang.String getHostId() {
+        java.lang.Object ref = hostId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hostId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the host that is being updated.
+       * </pre>
+       *
+       * <code>string host_id = 2;</code>
+       * @return The bytes for hostId.
+       */
+      public com.google.protobuf.ByteString
+          getHostIdBytes() {
+        java.lang.Object ref = hostId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hostId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the host that is being updated.
+       * </pre>
+       *
+       * <code>string host_id = 2;</code>
+       * @param value The hostId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        hostId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the host that is being updated.
+       * </pre>
+       *
+       * <code>string host_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearHostId() {
+        
+        hostId_ = getDefaultInstance().getHostId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the host that is being updated.
+       * </pre>
+       *
+       * <code>string host_id = 2;</code>
+       * @param value The bytes for hostId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setHostIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        hostId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.UpdateHostGroupHostMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.UpdateHostGroupHostMetadata)
+    private static final yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata();
+    }
+
+    public static yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpdateHostGroupHostMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<UpdateHostGroupHostMetadata>() {
+      @java.lang.Override
+      public UpdateHostGroupHostMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpdateHostGroupHostMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpdateHostGroupHostMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpdateHostGroupHostMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.HostGroupServiceOuterClass.UpdateHostGroupHostMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface ListHostGroupOperationsRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.ListHostGroupOperationsRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -16169,6 +18290,16 @@ public final class HostGroupServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_compute_v1_ListHostGroupHostsResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_UpdateHostGroupHostRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_UpdateHostGroupHostRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_UpdateHostGroupHostMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_UpdateHostGroupHostMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_compute_v1_ListHostGroupOperationsRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -16190,133 +18321,147 @@ public final class HostGroupServiceOuterClass {
       "\n0yandex/cloud/compute/v1/host_group_ser" +
       "vice.proto\022\027yandex.cloud.compute.v1\032\034goo" +
       "gle/api/annotations.proto\032 google/protob" +
-      "uf/field_mask.proto\032 yandex/cloud/access" +
-      "/access.proto\032 yandex/cloud/api/operatio" +
-      "n.proto\032&yandex/cloud/compute/v1/instanc" +
-      "e.proto\032(yandex/cloud/compute/v1/host_gr" +
-      "oup.proto\032&yandex/cloud/operation/operat" +
-      "ion.proto\032\035yandex/cloud/validation.proto" +
-      "\":\n\023GetHostGroupRequest\022#\n\rhost_group_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\257\001\n\025ListHostGroupsR" +
+      "uf/field_mask.proto\032\037google/protobuf/tim" +
+      "estamp.proto\032 yandex/cloud/access/access" +
+      ".proto\032 yandex/cloud/api/operation.proto" +
+      "\032&yandex/cloud/compute/v1/instance.proto" +
+      "\032(yandex/cloud/compute/v1/host_group.pro" +
+      "to\032&yandex/cloud/operation/operation.pro" +
+      "to\032\035yandex/cloud/validation.proto\":\n\023Get" +
+      "HostGroupRequest\022#\n\rhost_group_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\"\257\001\n\025ListHostGroupsRequest\022" +
+      "\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage" +
+      "_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 " +
+      "\001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=10" +
+      "00\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=100\"j\n\026ListH" +
+      "ostGroupsResponse\0227\n\013host_groups\030\001 \003(\0132\"" +
+      ".yandex.cloud.compute.v1.HostGroup\022\027\n\017ne" +
+      "xt_page_token\030\002 \001(\t\"\225\004\n\026CreateHostGroupR" +
       "equest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_t" +
-      "oken\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212" +
-      "\3101\006<=1000\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=100\"j" +
-      "\n\026ListHostGroupsResponse\0227\n\013host_groups\030" +
-      "\001 \003(\0132\".yandex.cloud.compute.v1.HostGrou" +
-      "p\022\027\n\017next_page_token\030\002 \001(\t\"\225\004\n\026CreateHos" +
-      "tGroupRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-" +
-      "9]{0,61}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB" +
-      "\t\212\3101\005<=256\022\224\001\n\006labels\030\004 \003(\0132;.yandex.clo" +
-      "ud.compute.v1.CreateHostGroupRequest.Lab" +
-      "elsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9" +
-      "a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]" +
-      "*\022\035\n\007zone_id\030\005 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\007type" +
-      "_id\030\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022F\n\022maintenance_p" +
-      "olicy\030\007 \001(\0162*.yandex.cloud.compute.v1.Ma" +
-      "intenancePolicy\022:\n\014scale_policy\030\010 \001(\0132$." +
-      "yandex.cloud.compute.v1.ScalePolicy\032-\n\013L" +
-      "abelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\002" +
-      "8\001\"0\n\027CreateHostGroupMetadata\022\025\n\rhost_gr" +
-      "oup_id\030\001 \001(\t\"\214\004\n\026UpdateHostGroupRequest\022" +
-      "#\n\rhost_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013" +
-      "update_mask\030\002 \001(\0132\032.google.protobuf.Fiel" +
-      "dMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9" +
-      "]{0,61}[a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t" +
-      "\212\3101\005<=256\022\224\001\n\006labels\030\005 \003(\0132;.yandex.clou" +
-      "d.compute.v1.UpdateHostGroupRequest.Labe" +
-      "lsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a" +
-      "-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*" +
-      "\022F\n\022maintenance_policy\030\006 \001(\0162*.yandex.cl" +
-      "oud.compute.v1.MaintenancePolicy\022:\n\014scal" +
-      "e_policy\030\007 \001(\0132$.yandex.cloud.compute.v1" +
-      ".ScalePolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001\"0\n\027UpdateHostGroupMe" +
-      "tadata\022\025\n\rhost_group_id\030\001 \001(\t\"=\n\026DeleteH" +
-      "ostGroupRequest\022#\n\rhost_group_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\"0\n\027DeleteHostGroupMetadata\022" +
-      "\025\n\rhost_group_id\030\001 \001(\t\"\236\001\n\035ListHostGroup" +
-      "InstancesRequest\022#\n\rhost_group_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=" +
-      "1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006f" +
-      "ilter\030\004 \001(\tB\n\212\3101\006<=1000\"o\n\036ListHostGroup" +
-      "InstancesResponse\0224\n\tinstances\030\001 \003(\0132!.y" +
-      "andex.cloud.compute.v1.Instance\022\027\n\017next_" +
-      "page_token\030\002 \001(\t\"~\n\031ListHostGroupHostsRe" +
-      "quest\022#\n\rhost_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npag" +
-      "e_token\030\003 \001(\tB\t\212\3101\005<=100\"c\n\032ListHostGrou" +
-      "pHostsResponse\022,\n\005hosts\030\001 \003(\0132\035.yandex.c" +
-      "loud.compute.v1.Host\022\027\n\017next_page_token\030" +
-      "\002 \001(\t\"\203\001\n\036ListHostGroupOperationsRequest" +
-      "\022#\n\rhost_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n" +
-      "\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_tok" +
-      "en\030\003 \001(\tB\t\212\3101\005<=100\"q\n\037ListHostGroupOper" +
-      "ationsResponse\0225\n\noperations\030\001 \003(\0132!.yan" +
-      "dex.cloud.operation.Operation\022\027\n\017next_pa" +
-      "ge_token\030\002 \001(\t2\255\020\n\020HostGroupService\022\207\001\n\003" +
-      "Get\022,.yandex.cloud.compute.v1.GetHostGro" +
-      "upRequest\032\".yandex.cloud.compute.v1.Host" +
-      "Group\".\202\323\344\223\002(\022&/compute/v1/hostGroups/{h" +
-      "ost_group_id}\022\207\001\n\004List\022..yandex.cloud.co" +
-      "mpute.v1.ListHostGroupsRequest\032/.yandex." +
-      "cloud.compute.v1.ListHostGroupsResponse\"" +
-      "\036\202\323\344\223\002\030\022\026/compute/v1/hostGroups\022\247\001\n\006Crea" +
-      "te\022/.yandex.cloud.compute.v1.CreateHostG" +
-      "roupRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"I\202\323\344\223\002\033\"\026/compute/v1/hostGroups:\001" +
-      "*\262\322*$\n\027CreateHostGroupMetadata\022\tHostGrou" +
-      "p\022\267\001\n\006Update\022/.yandex.cloud.compute.v1.U" +
-      "pdateHostGroupRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"Y\202\323\344\223\002+2&/compute/v1/ho" +
-      "stGroups/{host_group_id}:\001*\262\322*$\n\027UpdateH" +
-      "ostGroupMetadata\022\tHostGroup\022\300\001\n\006Delete\022/" +
-      ".yandex.cloud.compute.v1.DeleteHostGroup" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"b\202\323\344\223\002(*&/compute/v1/hostGroups/{host" +
-      "_group_id}\262\322*0\n\027DeleteHostGroupMetadata\022" +
-      "\025google.protobuf.Empty\022\276\001\n\016ListOperation" +
-      "s\0227.yandex.cloud.compute.v1.ListHostGrou" +
-      "pOperationsRequest\0328.yandex.cloud.comput" +
-      "e.v1.ListHostGroupOperationsResponse\"9\202\323" +
-      "\344\223\0023\0221/compute/v1/hostGroups/{host_group" +
-      "_id}/operations\022\272\001\n\rListInstances\0226.yand" +
-      "ex.cloud.compute.v1.ListHostGroupInstanc" +
-      "esRequest\0327.yandex.cloud.compute.v1.List" +
-      "HostGroupInstancesResponse\"8\202\323\344\223\0022\0220/com" +
-      "pute/v1/hostGroups/{host_group_id}/insta" +
-      "nces\022\252\001\n\tListHosts\0222.yandex.cloud.comput" +
-      "e.v1.ListHostGroupHostsRequest\0323.yandex." +
-      "cloud.compute.v1.ListHostGroupHostsRespo" +
-      "nse\"4\202\323\344\223\002.\022,/compute/v1/hostGroups/{hos" +
-      "t_group_id}/hosts\022\266\001\n\022ListAccessBindings" +
-      "\022..yandex.cloud.access.ListAccessBinding" +
-      "sRequest\032/.yandex.cloud.access.ListAcces" +
-      "sBindingsResponse\"?\202\323\344\223\0029\0227/compute/v1/h" +
-      "ostGroups/{resource_id}:listAccessBindin" +
-      "gs\022\365\001\n\021SetAccessBindings\022-.yandex.cloud." +
-      "access.SetAccessBindingsRequest\032!.yandex" +
-      ".cloud.operation.Operation\"\215\001\202\323\344\223\002;\"6/co" +
-      "mpute/v1/hostGroups/{resource_id}:setAcc" +
-      "essBindings:\001*\262\322*H\n access.SetAccessBind" +
-      "ingsMetadata\022$access.AccessBindingsOpera" +
-      "tionResult\022\201\002\n\024UpdateAccessBindings\0220.ya" +
-      "ndex.cloud.access.UpdateAccessBindingsRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"\223\001\202\323\344\223\002>\"9/compute/v1/hostGroups/{resou" +
-      "rce_id}:updateAccessBindings:\001*\262\322*K\n#acc" +
-      "ess.UpdateAccessBindingsMetadata\022$access" +
-      ".AccessBindingsOperationResultBb\n\033yandex" +
-      ".cloud.api.compute.v1ZCgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/compute/" +
-      "v1;computeb\006proto3"
+      "2\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61" +
+      "}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=" +
+      "256\022\224\001\n\006labels\030\004 \003(\0132;.yandex.cloud.comp" +
+      "ute.v1.CreateHostGroupRequest.LabelsEntr" +
+      "yBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\310" +
+      "1\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\035\n\007zo" +
+      "ne_id\030\005 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\007type_id\030\006 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022F\n\022maintenance_policy\030\007" +
+      " \001(\0162*.yandex.cloud.compute.v1.Maintenan" +
+      "cePolicy\022:\n\014scale_policy\030\010 \001(\0132$.yandex." +
+      "cloud.compute.v1.ScalePolicy\032-\n\013LabelsEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"0\n\027C" +
+      "reateHostGroupMetadata\022\025\n\rhost_group_id\030" +
+      "\001 \001(\t\"\214\004\n\026UpdateHostGroupRequest\022#\n\rhost" +
+      "_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_" +
+      "mask\030\002 \001(\0132\032.google.protobuf.FieldMask\0222" +
+      "\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}" +
+      "[a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=2" +
+      "56\022\224\001\n\006labels\030\005 \003(\0132;.yandex.cloud.compu" +
+      "te.v1.UpdateHostGroupRequest.LabelsEntry" +
+      "BG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101" +
+      "\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022F\n\022mai" +
+      "ntenance_policy\030\006 \001(\0162*.yandex.cloud.com" +
+      "pute.v1.MaintenancePolicy\022:\n\014scale_polic" +
+      "y\030\007 \001(\0132$.yandex.cloud.compute.v1.ScaleP" +
+      "olicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
+      "ue\030\002 \001(\t:\0028\001\"0\n\027UpdateHostGroupMetadata\022" +
+      "\025\n\rhost_group_id\030\001 \001(\t\"=\n\026DeleteHostGrou" +
+      "pRequest\022#\n\rhost_group_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
+      "\004<=50\"0\n\027DeleteHostGroupMetadata\022\025\n\rhost" +
+      "_group_id\030\001 \001(\t\"\236\001\n\035ListHostGroupInstanc" +
+      "esRequest\022#\n\rhost_group_id\030\001 \001(\tB\014\350\3071\001\212\310" +
+      "1\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n" +
+      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004" +
+      " \001(\tB\n\212\3101\006<=1000\"o\n\036ListHostGroupInstanc" +
+      "esResponse\0224\n\tinstances\030\001 \003(\0132!.yandex.c" +
+      "loud.compute.v1.Instance\022\027\n\017next_page_to" +
+      "ken\030\002 \001(\t\"~\n\031ListHostGroupHostsRequest\022#" +
+      "\n\rhost_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tp" +
+      "age_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token" +
+      "\030\003 \001(\tB\t\212\3101\005<=100\"c\n\032ListHostGroupHostsR" +
+      "esponse\022,\n\005hosts\030\001 \003(\0132\035.yandex.cloud.co" +
+      "mpute.v1.Host\022\027\n\017next_page_token\030\002 \001(\t\"\302" +
+      "\001\n\032UpdateHostGroupHostRequest\022#\n\rhost_gr" +
+      "oup_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\007host_id\030\002 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\003 \001(\0132\032" +
+      ".google.protobuf.FieldMask\022/\n\013deadline_a" +
+      "t\030\004 \001(\0132\032.google.protobuf.Timestamp\"E\n\033U" +
+      "pdateHostGroupHostMetadata\022\025\n\rhost_group" +
+      "_id\030\001 \001(\t\022\017\n\007host_id\030\002 \001(\t\"\203\001\n\036ListHostG" +
+      "roupOperationsRequest\022#\n\rhost_group_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
+      "\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
+      "\"q\n\037ListHostGroupOperationsResponse\0225\n\no" +
+      "perations\030\001 \003(\0132!.yandex.cloud.operation" +
+      ".Operation\022\027\n\017next_page_token\030\002 \001(\t2\376\021\n\020" +
+      "HostGroupService\022\207\001\n\003Get\022,.yandex.cloud." +
+      "compute.v1.GetHostGroupRequest\032\".yandex." +
+      "cloud.compute.v1.HostGroup\".\202\323\344\223\002(\022&/com" +
+      "pute/v1/hostGroups/{host_group_id}\022\207\001\n\004L" +
+      "ist\022..yandex.cloud.compute.v1.ListHostGr" +
+      "oupsRequest\032/.yandex.cloud.compute.v1.Li" +
+      "stHostGroupsResponse\"\036\202\323\344\223\002\030\022\026/compute/v" +
+      "1/hostGroups\022\247\001\n\006Create\022/.yandex.cloud.c" +
+      "ompute.v1.CreateHostGroupRequest\032!.yande" +
+      "x.cloud.operation.Operation\"I\202\323\344\223\002\033\"\026/co" +
+      "mpute/v1/hostGroups:\001*\262\322*$\n\027CreateHostGr" +
+      "oupMetadata\022\tHostGroup\022\267\001\n\006Update\022/.yand" +
+      "ex.cloud.compute.v1.UpdateHostGroupReque" +
+      "st\032!.yandex.cloud.operation.Operation\"Y\202" +
+      "\323\344\223\002+2&/compute/v1/hostGroups/{host_grou" +
+      "p_id}:\001*\262\322*$\n\027UpdateHostGroupMetadata\022\tH" +
+      "ostGroup\022\300\001\n\006Delete\022/.yandex.cloud.compu" +
+      "te.v1.DeleteHostGroupRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"b\202\323\344\223\002(*&/comput" +
+      "e/v1/hostGroups/{host_group_id}\262\322*0\n\027Del" +
+      "eteHostGroupMetadata\022\025google.protobuf.Em" +
+      "pty\022\276\001\n\016ListOperations\0227.yandex.cloud.co" +
+      "mpute.v1.ListHostGroupOperationsRequest\032" +
+      "8.yandex.cloud.compute.v1.ListHostGroupO" +
+      "perationsResponse\"9\202\323\344\223\0023\0221/compute/v1/h" +
+      "ostGroups/{host_group_id}/operations\022\272\001\n" +
+      "\rListInstances\0226.yandex.cloud.compute.v1" +
+      ".ListHostGroupInstancesRequest\0327.yandex." +
+      "cloud.compute.v1.ListHostGroupInstancesR" +
+      "esponse\"8\202\323\344\223\0022\0220/compute/v1/hostGroups/" +
+      "{host_group_id}/instances\022\252\001\n\tListHosts\022" +
+      "2.yandex.cloud.compute.v1.ListHostGroupH" +
+      "ostsRequest\0323.yandex.cloud.compute.v1.Li" +
+      "stHostGroupHostsResponse\"4\202\323\344\223\002.\022,/compu" +
+      "te/v1/hostGroups/{host_group_id}/hosts\022\316" +
+      "\001\n\nUpdateHost\0223.yandex.cloud.compute.v1." +
+      "UpdateHostGroupHostRequest\032!.yandex.clou" +
+      "d.operation.Operation\"h\202\323\344\223\002;26/compute/" +
+      "v1/hostGroups/{host_group_id}/hosts/{hos" +
+      "t_id}:\001*\262\322*#\n\033UpdateHostGroupHostMetadat" +
+      "a\022\004Host\022\266\001\n\022ListAccessBindings\022..yandex." +
+      "cloud.access.ListAccessBindingsRequest\032/" +
+      ".yandex.cloud.access.ListAccessBindingsR" +
+      "esponse\"?\202\323\344\223\0029\0227/compute/v1/hostGroups/" +
+      "{resource_id}:listAccessBindings\022\365\001\n\021Set" +
+      "AccessBindings\022-.yandex.cloud.access.Set" +
+      "AccessBindingsRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"\215\001\202\323\344\223\002;\"6/compute/v1/h" +
+      "ostGroups/{resource_id}:setAccessBinding" +
+      "s:\001*\262\322*H\n access.SetAccessBindingsMetada" +
+      "ta\022$access.AccessBindingsOperationResult" +
+      "\022\201\002\n\024UpdateAccessBindings\0220.yandex.cloud" +
+      ".access.UpdateAccessBindingsRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"\223\001\202\323\344\223\002>\"" +
+      "9/compute/v1/hostGroups/{resource_id}:up" +
+      "dateAccessBindings:\001*\262\322*K\n#access.Update" +
+      "AccessBindingsMetadata\022$access.AccessBin" +
+      "dingsOperationResultBb\n\033yandex.cloud.api" +
+      ".compute.v1ZCgithub.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/compute/v1;compute" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.compute.v1.InstanceOuterClass.getDescriptor(),
@@ -16414,14 +18559,26 @@ public final class HostGroupServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_ListHostGroupHostsResponse_descriptor,
         new java.lang.String[] { "Hosts", "NextPageToken", });
-    internal_static_yandex_cloud_compute_v1_ListHostGroupOperationsRequest_descriptor =
+    internal_static_yandex_cloud_compute_v1_UpdateHostGroupHostRequest_descriptor =
       getDescriptor().getMessageTypes().get(13);
+    internal_static_yandex_cloud_compute_v1_UpdateHostGroupHostRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_UpdateHostGroupHostRequest_descriptor,
+        new java.lang.String[] { "HostGroupId", "HostId", "UpdateMask", "DeadlineAt", });
+    internal_static_yandex_cloud_compute_v1_UpdateHostGroupHostMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_yandex_cloud_compute_v1_UpdateHostGroupHostMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_UpdateHostGroupHostMetadata_descriptor,
+        new java.lang.String[] { "HostGroupId", "HostId", });
+    internal_static_yandex_cloud_compute_v1_ListHostGroupOperationsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_compute_v1_ListHostGroupOperationsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_ListHostGroupOperationsRequest_descriptor,
         new java.lang.String[] { "HostGroupId", "PageSize", "PageToken", });
     internal_static_yandex_cloud_compute_v1_ListHostGroupOperationsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_compute_v1_ListHostGroupOperationsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_ListHostGroupOperationsResponse_descriptor,
@@ -16440,6 +18597,7 @@ public final class HostGroupServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.compute.v1.InstanceOuterClass.getDescriptor();

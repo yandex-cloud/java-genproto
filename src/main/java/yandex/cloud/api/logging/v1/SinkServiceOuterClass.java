@@ -3017,7 +3017,7 @@ public final class SinkServiceOuterClass {
      * Logs will be written to the sink on behalf of this service account
      * </pre>
      *
-     * <code>string service_account_id = 5 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string service_account_id = 5 [(.yandex.cloud.length) = "&lt;=64"];</code>
      * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
@@ -3026,7 +3026,7 @@ public final class SinkServiceOuterClass {
      * Logs will be written to the sink on behalf of this service account
      * </pre>
      *
-     * <code>string service_account_id = 5 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string service_account_id = 5 [(.yandex.cloud.length) = "&lt;=64"];</code>
      * @return The bytes for serviceAccountId.
      */
     com.google.protobuf.ByteString
@@ -3534,7 +3534,7 @@ public final class SinkServiceOuterClass {
      * Logs will be written to the sink on behalf of this service account
      * </pre>
      *
-     * <code>string service_account_id = 5 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string service_account_id = 5 [(.yandex.cloud.length) = "&lt;=64"];</code>
      * @return The serviceAccountId.
      */
     @java.lang.Override
@@ -3555,7 +3555,7 @@ public final class SinkServiceOuterClass {
      * Logs will be written to the sink on behalf of this service account
      * </pre>
      *
-     * <code>string service_account_id = 5 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string service_account_id = 5 [(.yandex.cloud.length) = "&lt;=64"];</code>
      * @return The bytes for serviceAccountId.
      */
     @java.lang.Override
@@ -4610,7 +4610,7 @@ public final class SinkServiceOuterClass {
        * Logs will be written to the sink on behalf of this service account
        * </pre>
        *
-       * <code>string service_account_id = 5 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string service_account_id = 5 [(.yandex.cloud.length) = "&lt;=64"];</code>
        * @return The serviceAccountId.
        */
       public java.lang.String getServiceAccountId() {
@@ -4630,7 +4630,7 @@ public final class SinkServiceOuterClass {
        * Logs will be written to the sink on behalf of this service account
        * </pre>
        *
-       * <code>string service_account_id = 5 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string service_account_id = 5 [(.yandex.cloud.length) = "&lt;=64"];</code>
        * @return The bytes for serviceAccountId.
        */
       public com.google.protobuf.ByteString
@@ -4651,7 +4651,7 @@ public final class SinkServiceOuterClass {
        * Logs will be written to the sink on behalf of this service account
        * </pre>
        *
-       * <code>string service_account_id = 5 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string service_account_id = 5 [(.yandex.cloud.length) = "&lt;=64"];</code>
        * @param value The serviceAccountId to set.
        * @return This builder for chaining.
        */
@@ -4670,7 +4670,7 @@ public final class SinkServiceOuterClass {
        * Logs will be written to the sink on behalf of this service account
        * </pre>
        *
-       * <code>string service_account_id = 5 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string service_account_id = 5 [(.yandex.cloud.length) = "&lt;=64"];</code>
        * @return This builder for chaining.
        */
       public Builder clearServiceAccountId() {
@@ -4684,7 +4684,7 @@ public final class SinkServiceOuterClass {
        * Logs will be written to the sink on behalf of this service account
        * </pre>
        *
-       * <code>string service_account_id = 5 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string service_account_id = 5 [(.yandex.cloud.length) = "&lt;=64"];</code>
        * @param value The bytes for serviceAccountId to set.
        * @return This builder for chaining.
        */
@@ -5864,7 +5864,7 @@ public final class SinkServiceOuterClass {
      * new service account to use for logs writing to the sink.
      * </pre>
      *
-     * <code>string service_account_id = 6 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string service_account_id = 6 [(.yandex.cloud.length) = "&lt;=64"];</code>
      * @return The serviceAccountId.
      */
     java.lang.String getServiceAccountId();
@@ -5873,7 +5873,7 @@ public final class SinkServiceOuterClass {
      * new service account to use for logs writing to the sink.
      * </pre>
      *
-     * <code>string service_account_id = 6 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string service_account_id = 6 [(.yandex.cloud.length) = "&lt;=64"];</code>
      * @return The bytes for serviceAccountId.
      */
     com.google.protobuf.ByteString
@@ -6432,7 +6432,7 @@ public final class SinkServiceOuterClass {
      * new service account to use for logs writing to the sink.
      * </pre>
      *
-     * <code>string service_account_id = 6 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string service_account_id = 6 [(.yandex.cloud.length) = "&lt;=64"];</code>
      * @return The serviceAccountId.
      */
     @java.lang.Override
@@ -6453,7 +6453,7 @@ public final class SinkServiceOuterClass {
      * new service account to use for logs writing to the sink.
      * </pre>
      *
-     * <code>string service_account_id = 6 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+     * <code>string service_account_id = 6 [(.yandex.cloud.length) = "&lt;=64"];</code>
      * @return The bytes for serviceAccountId.
      */
     @java.lang.Override
@@ -7693,7 +7693,7 @@ public final class SinkServiceOuterClass {
        * new service account to use for logs writing to the sink.
        * </pre>
        *
-       * <code>string service_account_id = 6 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string service_account_id = 6 [(.yandex.cloud.length) = "&lt;=64"];</code>
        * @return The serviceAccountId.
        */
       public java.lang.String getServiceAccountId() {
@@ -7713,7 +7713,7 @@ public final class SinkServiceOuterClass {
        * new service account to use for logs writing to the sink.
        * </pre>
        *
-       * <code>string service_account_id = 6 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string service_account_id = 6 [(.yandex.cloud.length) = "&lt;=64"];</code>
        * @return The bytes for serviceAccountId.
        */
       public com.google.protobuf.ByteString
@@ -7734,7 +7734,7 @@ public final class SinkServiceOuterClass {
        * new service account to use for logs writing to the sink.
        * </pre>
        *
-       * <code>string service_account_id = 6 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string service_account_id = 6 [(.yandex.cloud.length) = "&lt;=64"];</code>
        * @param value The serviceAccountId to set.
        * @return This builder for chaining.
        */
@@ -7753,7 +7753,7 @@ public final class SinkServiceOuterClass {
        * new service account to use for logs writing to the sink.
        * </pre>
        *
-       * <code>string service_account_id = 6 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string service_account_id = 6 [(.yandex.cloud.length) = "&lt;=64"];</code>
        * @return This builder for chaining.
        */
       public Builder clearServiceAccountId() {
@@ -7767,7 +7767,7 @@ public final class SinkServiceOuterClass {
        * new service account to use for logs writing to the sink.
        * </pre>
        *
-       * <code>string service_account_id = 6 [(.yandex.cloud.pattern) = "[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
+       * <code>string service_account_id = 6 [(.yandex.cloud.length) = "&lt;=64"];</code>
        * @param value The bytes for serviceAccountId to set.
        * @return This builder for chaining.
        */
@@ -12361,85 +12361,84 @@ public final class SinkServiceOuterClass {
       "oken\030\004 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\005 \001(\tB\n\212" +
       "\3101\006<=1000\"Z\n\021ListSinksResponse\022,\n\005sinks\030" +
       "\001 \003(\0132\035.yandex.cloud.logging.v1.Sink\022\027\n\017" +
-      "next_page_token\030\002 \001(\t\"\354\003\n\021CreateSinkRequ" +
+      "next_page_token\030\002 \001(\t\"\324\003\n\021CreateSinkRequ" +
       "est\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\022/\n\004" +
       "name\030\002 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-" +
       "z0-9]\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=256\022\207\001" +
       "\n\006labels\030\004 \003(\01326.yandex.cloud.logging.v1" +
       ".CreateSinkRequest.LabelsEntryB?\202\3101\004<=64" +
       "\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[" +
-      "a-z][-_0-9a-z]*\022<\n\022service_account_id\030\005 " +
-      "\001(\tB \362\3071\034[a-z][-a-z0-9]{1,61}[a-z0-9]\0220\n" +
-      "\003yds\030\006 \001(\0132!.yandex.cloud.logging.v1.Sin" +
-      "k.YdsH\000\022.\n\002s3\030\007 \001(\0132 .yandex.cloud.loggi" +
-      "ng.v1.Sink.S3H\000\032-\n\013LabelsEntry\022\013\n\003key\030\001 " +
-      "\001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014\n\004sink\022\004\300\3011\001\"%\n\022" +
-      "CreateSinkMetadata\022\017\n\007sink_id\030\001 \001(\t\"\233\004\n\021" +
-      "UpdateSinkRequest\022\035\n\007sink_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=64\022/\n\013update_mask\030\002 \001(\0132\032.google.p" +
-      "rotobuf.FieldMask\022/\n\004name\030\003 \001(\tB!\362\3071\035|[a" +
-      "-z][-a-z0-9]{1,61}[a-z0-9]\022\036\n\013descriptio" +
-      "n\030\004 \001(\tB\t\212\3101\005<=256\022\207\001\n\006labels\030\005 \003(\01326.ya" +
-      "ndex.cloud.logging.v1.UpdateSinkRequest." +
-      "LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a" +
-      "-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022<\n\022" +
-      "service_account_id\030\006 \001(\tB \362\3071\034[a-z][-a-z" +
-      "0-9]{1,61}[a-z0-9]\0220\n\003yds\030\007 \001(\0132!.yandex" +
-      ".cloud.logging.v1.Sink.YdsH\000\022.\n\002s3\030\010 \001(\013" +
-      "2 .yandex.cloud.logging.v1.Sink.S3H\000\032-\n\013" +
-      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001B\014\n\004sink\022\004\300\3011\001\"%\n\022UpdateSinkMetadata\022" +
-      "\017\n\007sink_id\030\001 \001(\t\"2\n\021DeleteSinkRequest\022\035\n" +
-      "\007sink_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\"%\n\022DeleteSi" +
-      "nkMetadata\022\017\n\007sink_id\030\001 \001(\t\"\224\001\n\031ListSink" +
-      "OperationsRequest\022\035\n\007sink_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=64\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022" +
-      "\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter" +
-      "\030\004 \001(\tB\n\212\3101\006<=1000\"l\n\032ListSinkOperations" +
-      "Response\0225\n\noperations\030\001 \003(\0132!.yandex.cl" +
-      "oud.operation.Operation\022\027\n\017next_page_tok" +
-      "en\030\002 \001(\t2\221\014\n\013SinkService\022r\n\003Get\022\'.yandex" +
-      ".cloud.logging.v1.GetSinkRequest\032\035.yande" +
-      "x.cloud.logging.v1.Sink\"#\202\323\344\223\002\035\022\033/loggin" +
-      "g/v1/sinks/{sink_id}\022x\n\004List\022).yandex.cl" +
-      "oud.logging.v1.ListSinksRequest\032*.yandex" +
-      ".cloud.logging.v1.ListSinksResponse\"\031\202\323\344" +
-      "\223\002\023\022\021/logging/v1/sinks\022\223\001\n\006Create\022*.yand" +
-      "ex.cloud.logging.v1.CreateSinkRequest\032!." +
-      "yandex.cloud.operation.Operation\":\202\323\344\223\002\026" +
-      "\"\021/logging/v1/sinks:\001*\262\322*\032\n\022CreateSinkMe" +
-      "tadata\022\004Sink\022\235\001\n\006Update\022*.yandex.cloud.l" +
-      "ogging.v1.UpdateSinkRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"D\202\323\344\223\002 2\033/logging" +
-      "/v1/sinks/{sink_id}:\001*\262\322*\032\n\022UpdateSinkMe" +
-      "tadata\022\004Sink\022\253\001\n\006Delete\022*.yandex.cloud.l" +
-      "ogging.v1.DeleteSinkRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"R\202\323\344\223\002\035*\033/logging" +
-      "/v1/sinks/{sink_id}\262\322*+\n\022DeleteSinkMetad" +
-      "ata\022\025google.protobuf.Empty\022\251\001\n\016ListOpera" +
-      "tions\0222.yandex.cloud.logging.v1.ListSink" +
-      "OperationsRequest\0323.yandex.cloud.logging" +
-      ".v1.ListSinkOperationsResponse\".\202\323\344\223\002(\022&" +
-      "/logging/v1/sinks/{sink_id}/operations\022\261" +
-      "\001\n\022ListAccessBindings\022..yandex.cloud.acc" +
-      "ess.ListAccessBindingsRequest\032/.yandex.c" +
-      "loud.access.ListAccessBindingsResponse\":" +
-      "\202\323\344\223\0024\0222/logging/v1/sinks/{resource_id}:" +
-      "listAccessBindings\022\340\001\n\021SetAccessBindings" +
-      "\022-.yandex.cloud.access.SetAccessBindings" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"y\202\323\344\223\0026\"1/logging/v1/sinks/{resource_" +
-      "id}:setAccessBindings:\001*\262\322*9\n access.Set" +
-      "AccessBindingsMetadata\022\025google.protobuf." +
-      "Empty\022\354\001\n\024UpdateAccessBindings\0220.yandex." +
-      "cloud.access.UpdateAccessBindingsRequest" +
-      "\032!.yandex.cloud.operation.Operation\"\177\202\323\344" +
-      "\223\002924/logging/v1/sinks/{resource_id}:upd" +
-      "ateAccessBindings:\001*\262\322*<\n#access.UpdateA" +
-      "ccessBindingsMetadata\022\025google.protobuf.E" +
-      "mptyBb\n\033yandex.cloud.api.logging.v1ZCgit" +
-      "hub.com/yandex-cloud/go-genproto/yandex/" +
-      "cloud/logging/v1;loggingb\006proto3"
+      "a-z][-_0-9a-z]*\022$\n\022service_account_id\030\005 " +
+      "\001(\tB\010\212\3101\004<=64\0220\n\003yds\030\006 \001(\0132!.yandex.clou" +
+      "d.logging.v1.Sink.YdsH\000\022.\n\002s3\030\007 \001(\0132 .ya" +
+      "ndex.cloud.logging.v1.Sink.S3H\000\032-\n\013Label" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014" +
+      "\n\004sink\022\004\300\3011\001\"%\n\022CreateSinkMetadata\022\017\n\007si" +
+      "nk_id\030\001 \001(\t\"\203\004\n\021UpdateSinkRequest\022\035\n\007sin" +
+      "k_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\022/\n\013update_mask\030" +
+      "\002 \001(\0132\032.google.protobuf.FieldMask\022/\n\004nam" +
+      "e\030\003 \001(\tB!\362\3071\035|[a-z][-a-z0-9]{1,61}[a-z0-" +
+      "9]\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256\022\207\001\n\006l" +
+      "abels\030\005 \003(\01326.yandex.cloud.logging.v1.Up" +
+      "dateSinkRequest.LabelsEntryB?\202\3101\004<=64\212\3101" +
+      "\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z" +
+      "][-_0-9a-z]*\022$\n\022service_account_id\030\006 \001(\t" +
+      "B\010\212\3101\004<=64\0220\n\003yds\030\007 \001(\0132!.yandex.cloud.l" +
+      "ogging.v1.Sink.YdsH\000\022.\n\002s3\030\010 \001(\0132 .yande" +
+      "x.cloud.logging.v1.Sink.S3H\000\032-\n\013LabelsEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\014\n\004s" +
+      "ink\022\004\300\3011\001\"%\n\022UpdateSinkMetadata\022\017\n\007sink_" +
+      "id\030\001 \001(\t\"2\n\021DeleteSinkRequest\022\035\n\007sink_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64\"%\n\022DeleteSinkMetada" +
+      "ta\022\017\n\007sink_id\030\001 \001(\t\"\224\001\n\031ListSinkOperatio" +
+      "nsRequest\022\035\n\007sink_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=64" +
+      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_" +
+      "token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n" +
+      "\212\3101\006<=1000\"l\n\032ListSinkOperationsResponse" +
+      "\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.oper" +
+      "ation.Operation\022\027\n\017next_page_token\030\002 \001(\t" +
+      "2\221\014\n\013SinkService\022r\n\003Get\022\'.yandex.cloud.l" +
+      "ogging.v1.GetSinkRequest\032\035.yandex.cloud." +
+      "logging.v1.Sink\"#\202\323\344\223\002\035\022\033/logging/v1/sin" +
+      "ks/{sink_id}\022x\n\004List\022).yandex.cloud.logg" +
+      "ing.v1.ListSinksRequest\032*.yandex.cloud.l" +
+      "ogging.v1.ListSinksResponse\"\031\202\323\344\223\002\023\022\021/lo" +
+      "gging/v1/sinks\022\223\001\n\006Create\022*.yandex.cloud" +
+      ".logging.v1.CreateSinkRequest\032!.yandex.c" +
+      "loud.operation.Operation\":\202\323\344\223\002\026\"\021/loggi" +
+      "ng/v1/sinks:\001*\262\322*\032\n\022CreateSinkMetadata\022\004" +
+      "Sink\022\235\001\n\006Update\022*.yandex.cloud.logging.v" +
+      "1.UpdateSinkRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"D\202\323\344\223\002 2\033/logging/v1/sink" +
+      "s/{sink_id}:\001*\262\322*\032\n\022UpdateSinkMetadata\022\004" +
+      "Sink\022\253\001\n\006Delete\022*.yandex.cloud.logging.v" +
+      "1.DeleteSinkRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"R\202\323\344\223\002\035*\033/logging/v1/sink" +
+      "s/{sink_id}\262\322*+\n\022DeleteSinkMetadata\022\025goo" +
+      "gle.protobuf.Empty\022\251\001\n\016ListOperations\0222." +
+      "yandex.cloud.logging.v1.ListSinkOperatio" +
+      "nsRequest\0323.yandex.cloud.logging.v1.List" +
+      "SinkOperationsResponse\".\202\323\344\223\002(\022&/logging" +
+      "/v1/sinks/{sink_id}/operations\022\261\001\n\022ListA" +
+      "ccessBindings\022..yandex.cloud.access.List" +
+      "AccessBindingsRequest\032/.yandex.cloud.acc" +
+      "ess.ListAccessBindingsResponse\":\202\323\344\223\0024\0222" +
+      "/logging/v1/sinks/{resource_id}:listAcce" +
+      "ssBindings\022\340\001\n\021SetAccessBindings\022-.yande" +
+      "x.cloud.access.SetAccessBindingsRequest\032" +
+      "!.yandex.cloud.operation.Operation\"y\202\323\344\223" +
+      "\0026\"1/logging/v1/sinks/{resource_id}:setA" +
+      "ccessBindings:\001*\262\322*9\n access.SetAccessBi" +
+      "ndingsMetadata\022\025google.protobuf.Empty\022\354\001" +
+      "\n\024UpdateAccessBindings\0220.yandex.cloud.ac" +
+      "cess.UpdateAccessBindingsRequest\032!.yande" +
+      "x.cloud.operation.Operation\"\177\202\323\344\223\002924/lo" +
+      "gging/v1/sinks/{resource_id}:updateAcces" +
+      "sBindings:\001*\262\322*<\n#access.UpdateAccessBin" +
+      "dingsMetadata\022\025google.protobuf.EmptyBb\n\033" +
+      "yandex.cloud.api.logging.v1ZCgithub.com/" +
+      "yandex-cloud/go-genproto/yandex/cloud/lo" +
+      "gging/v1;loggingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -792,6 +792,26 @@ public final class ChartWidgetOuterClass {
          * @return The hidden.
          */
         boolean getHidden();
+
+        /**
+         * <pre>
+         * Name of the query.
+         * </pre>
+         *
+         * <code>string name = 4;</code>
+         * @return The name.
+         */
+        java.lang.String getName();
+        /**
+         * <pre>
+         * Name of the query.
+         * </pre>
+         *
+         * <code>string name = 4;</code>
+         * @return The bytes for name.
+         */
+        com.google.protobuf.ByteString
+            getNameBytes();
       }
       /**
        * <pre>
@@ -811,6 +831,7 @@ public final class ChartWidgetOuterClass {
         }
         private Target() {
           query_ = "";
+          name_ = "";
         }
 
         @java.lang.Override
@@ -857,6 +878,12 @@ public final class ChartWidgetOuterClass {
                 case 24: {
 
                   hidden_ = input.readBool();
+                  break;
+                }
+                case 34: {
+                  java.lang.String s = input.readStringRequireUtf8();
+
+                  name_ = s;
                   break;
                 }
                 default: {
@@ -967,6 +994,52 @@ public final class ChartWidgetOuterClass {
           return hidden_;
         }
 
+        public static final int NAME_FIELD_NUMBER = 4;
+        private volatile java.lang.Object name_;
+        /**
+         * <pre>
+         * Name of the query.
+         * </pre>
+         *
+         * <code>string name = 4;</code>
+         * @return The name.
+         */
+        @java.lang.Override
+        public java.lang.String getName() {
+          java.lang.Object ref = name_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            name_ = s;
+            return s;
+          }
+        }
+        /**
+         * <pre>
+         * Name of the query.
+         * </pre>
+         *
+         * <code>string name = 4;</code>
+         * @return The bytes for name.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getNameBytes() {
+          java.lang.Object ref = name_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            name_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
         private byte memoizedIsInitialized = -1;
         @java.lang.Override
         public final boolean isInitialized() {
@@ -990,6 +1063,9 @@ public final class ChartWidgetOuterClass {
           if (hidden_ != false) {
             output.writeBool(3, hidden_);
           }
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
+          }
           unknownFields.writeTo(output);
         }
 
@@ -1009,6 +1085,9 @@ public final class ChartWidgetOuterClass {
           if (hidden_ != false) {
             size += com.google.protobuf.CodedOutputStream
               .computeBoolSize(3, hidden_);
+          }
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
           }
           size += unknownFields.getSerializedSize();
           memoizedSize = size;
@@ -1031,6 +1110,8 @@ public final class ChartWidgetOuterClass {
               != other.getTextMode()) return false;
           if (getHidden()
               != other.getHidden()) return false;
+          if (!getName()
+              .equals(other.getName())) return false;
           if (!unknownFields.equals(other.unknownFields)) return false;
           return true;
         }
@@ -1050,6 +1131,8 @@ public final class ChartWidgetOuterClass {
           hash = (37 * hash) + HIDDEN_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
               getHidden());
+          hash = (37 * hash) + NAME_FIELD_NUMBER;
+          hash = (53 * hash) + getName().hashCode();
           hash = (29 * hash) + unknownFields.hashCode();
           memoizedHashCode = hash;
           return hash;
@@ -1193,6 +1276,8 @@ public final class ChartWidgetOuterClass {
 
             hidden_ = false;
 
+            name_ = "";
+
             return this;
           }
 
@@ -1222,6 +1307,7 @@ public final class ChartWidgetOuterClass {
             result.query_ = query_;
             result.textMode_ = textMode_;
             result.hidden_ = hidden_;
+            result.name_ = name_;
             onBuilt();
             return result;
           }
@@ -1279,6 +1365,10 @@ public final class ChartWidgetOuterClass {
             }
             if (other.getHidden() != false) {
               setHidden(other.getHidden());
+            }
+            if (!other.getName().isEmpty()) {
+              name_ = other.name_;
+              onChanged();
             }
             this.mergeUnknownFields(other.unknownFields);
             onChanged();
@@ -1487,6 +1577,102 @@ public final class ChartWidgetOuterClass {
           public Builder clearHidden() {
             
             hidden_ = false;
+            onChanged();
+            return this;
+          }
+
+          private java.lang.Object name_ = "";
+          /**
+           * <pre>
+           * Name of the query.
+           * </pre>
+           *
+           * <code>string name = 4;</code>
+           * @return The name.
+           */
+          public java.lang.String getName() {
+            java.lang.Object ref = name_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              name_ = s;
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <pre>
+           * Name of the query.
+           * </pre>
+           *
+           * <code>string name = 4;</code>
+           * @return The bytes for name.
+           */
+          public com.google.protobuf.ByteString
+              getNameBytes() {
+            java.lang.Object ref = name_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              name_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <pre>
+           * Name of the query.
+           * </pre>
+           *
+           * <code>string name = 4;</code>
+           * @param value The name to set.
+           * @return This builder for chaining.
+           */
+          public Builder setName(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  
+            name_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Name of the query.
+           * </pre>
+           *
+           * <code>string name = 4;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearName() {
+            
+            name_ = getDefaultInstance().getName();
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * Name of the query.
+           * </pre>
+           *
+           * <code>string name = 4;</code>
+           * @param value The bytes for name to set.
+           * @return This builder for chaining.
+           */
+          public Builder setNameBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+            
+            name_ = value;
             onChanged();
             return this;
           }
@@ -18201,7 +18387,7 @@ public final class ChartWidgetOuterClass {
       "gle/protobuf/wrappers.proto\032-yandex/clou" +
       "d/monitoring/v3/downsampling.proto\032,yand" +
       "ex/cloud/monitoring/v3/unit_format.proto" +
-      "\"\323 \n\013ChartWidget\022\n\n\002id\030\001 \001(\t\022@\n\007queries\030" +
+      "\"\341 \n\013ChartWidget\022\n\n\002id\030\001 \001(\t\022@\n\007queries\030" +
       "\002 \001(\0132/.yandex.cloud.monitoring.v3.Chart" +
       "Widget.Queries\022]\n\026visualization_settings" +
       "\030\003 \001(\0132=.yandex.cloud.monitoring.v3.Char" +
@@ -18213,102 +18399,102 @@ public final class ChartWidgetOuterClass {
       "gs\022\023\n\013description\030\006 \001(\t\022\r\n\005title\030\007 \001(\t\022\026" +
       "\n\016display_legend\030\010 \001(\010\022F\n\006freeze\030\t \001(\01626" +
       ".yandex.cloud.monitoring.v3.ChartWidget." +
-      "FreezeDuration\032\316\001\n\007Queries\022G\n\007targets\030\001 " +
+      "FreezeDuration\032\334\001\n\007Queries\022G\n\007targets\030\001 " +
       "\003(\01326.yandex.cloud.monitoring.v3.ChartWi" +
       "dget.Queries.Target\022>\n\014downsampling\030\002 \001(" +
       "\0132(.yandex.cloud.monitoring.v3.Downsampl" +
-      "ing\032:\n\006Target\022\r\n\005query\030\001 \001(\t\022\021\n\ttext_mod" +
-      "e\030\002 \001(\010\022\016\n\006hidden\030\003 \001(\010\032\276\023\n\025Visualizatio" +
-      "nSettings\022]\n\004type\030\001 \001(\0162O.yandex.cloud.m" +
-      "onitoring.v3.ChartWidget.VisualizationSe" +
-      "ttings.VisualizationType\022\021\n\tnormalize\030\002 " +
-      "\001(\010\022^\n\013interpolate\030\003 \001(\0162I.yandex.cloud." +
-      "monitoring.v3.ChartWidget.VisualizationS" +
-      "ettings.Interpolate\022d\n\013aggregation\030\004 \001(\016" +
-      "2O.yandex.cloud.monitoring.v3.ChartWidge" +
-      "t.VisualizationSettings.SeriesAggregatio" +
-      "n\022p\n\025color_scheme_settings\030\005 \001(\0132Q.yande" +
-      "x.cloud.monitoring.v3.ChartWidget.Visual" +
-      "izationSettings.ColorSchemeSettings\022g\n\020h" +
-      "eatmap_settings\030\006 \001(\0132M.yandex.cloud.mon" +
-      "itoring.v3.ChartWidget.VisualizationSett" +
-      "ings.HeatmapSettings\022c\n\016yaxis_settings\030\007" +
-      " \001(\0132K.yandex.cloud.monitoring.v3.ChartW" +
-      "idget.VisualizationSettings.YaxisSetting" +
-      "s\022\r\n\005title\030\010 \001(\t\022\023\n\013show_labels\030\t \001(\010\032\254\004" +
-      "\n\023ColorSchemeSettings\022{\n\tautomatic\030\001 \001(\013" +
-      "2f.yandex.cloud.monitoring.v3.ChartWidge" +
-      "t.VisualizationSettings.ColorSchemeSetti" +
-      "ngs.AutomaticColorSchemeH\000\022y\n\010standard\030\002" +
-      " \001(\0132e.yandex.cloud.monitoring.v3.ChartW" +
-      "idget.VisualizationSettings.ColorSchemeS" +
-      "ettings.StandardColorSchemeH\000\022y\n\010gradien" +
-      "t\030\003 \001(\0132e.yandex.cloud.monitoring.v3.Cha" +
-      "rtWidget.VisualizationSettings.ColorSche" +
-      "meSettings.GradientColorSchemeH\000\032\026\n\024Auto" +
-      "maticColorScheme\032\025\n\023StandardColorScheme\032" +
-      "i\n\023GradientColorScheme\022\023\n\013green_value\030\002 " +
-      "\001(\t\022\024\n\014yellow_value\030\003 \001(\t\022\021\n\tred_value\030\004" +
-      " \001(\t\022\024\n\014violet_value\030\005 \001(\tB\010\n\006scheme\032e\n\017" +
-      "HeatmapSettings\022\023\n\013green_value\030\002 \001(\t\022\024\n\014" +
-      "yellow_value\030\003 \001(\t\022\021\n\tred_value\030\004 \001(\t\022\024\n" +
-      "\014violet_value\030\005 \001(\t\032\364\001\n\005Yaxis\022U\n\004type\030\001 " +
-      "\001(\0162G.yandex.cloud.monitoring.v3.ChartWi" +
-      "dget.VisualizationSettings.YaxisType\022\r\n\005" +
-      "title\030\002 \001(\t\022\013\n\003min\030\003 \001(\t\022\013\n\003max\030\004 \001(\t\022;\n" +
-      "\013unit_format\030\005 \001(\0162&.yandex.cloud.monito" +
-      "ring.v3.UnitFormat\022.\n\tprecision\030\006 \001(\0132\033." +
-      "google.protobuf.Int64Value\032\266\001\n\rYaxisSett" +
-      "ings\022Q\n\004left\030\001 \001(\0132C.yandex.cloud.monito" +
-      "ring.v3.ChartWidget.VisualizationSetting" +
-      "s.Yaxis\022R\n\005right\030\002 \001(\0132C.yandex.cloud.mo" +
-      "nitoring.v3.ChartWidget.VisualizationSet" +
-      "tings.Yaxis\"\256\002\n\021VisualizationType\022\"\n\036VIS" +
-      "UALIZATION_TYPE_UNSPECIFIED\020\000\022\033\n\027VISUALI" +
-      "ZATION_TYPE_LINE\020\001\022\034\n\030VISUALIZATION_TYPE" +
-      "_STACK\020\002\022\035\n\031VISUALIZATION_TYPE_COLUMN\020\003\022" +
-      "\035\n\031VISUALIZATION_TYPE_POINTS\020\004\022\032\n\026VISUAL" +
-      "IZATION_TYPE_PIE\020\005\022\033\n\027VISUALIZATION_TYPE" +
-      "_BARS\020\006\022#\n\037VISUALIZATION_TYPE_DISTRIBUTI" +
-      "ON\020\007\022\036\n\032VISUALIZATION_TYPE_HEATMAP\020\010\"o\n\013" +
-      "Interpolate\022\033\n\027INTERPOLATE_UNSPECIFIED\020\000" +
-      "\022\026\n\022INTERPOLATE_LINEAR\020\001\022\024\n\020INTERPOLATE_" +
-      "LEFT\020\002\022\025\n\021INTERPOLATE_RIGHT\020\003\"Z\n\tYaxisTy" +
-      "pe\022\032\n\026YAXIS_TYPE_UNSPECIFIED\020\000\022\025\n\021YAXIS_" +
-      "TYPE_LINEAR\020\001\022\032\n\026YAXIS_TYPE_LOGARITHMIC\020" +
-      "\002\"\304\001\n\021SeriesAggregation\022\"\n\036SERIES_AGGREG" +
-      "ATION_UNSPECIFIED\020\000\022\032\n\026SERIES_AGGREGATIO" +
-      "N_AVG\020\001\022\032\n\026SERIES_AGGREGATION_MIN\020\002\022\032\n\026S" +
-      "ERIES_AGGREGATION_MAX\020\003\022\033\n\027SERIES_AGGREG" +
-      "ATION_LAST\020\004\022\032\n\026SERIES_AGGREGATION_SUM\020\005" +
-      "\032\200\006\n\017SeriesOverrides\022\016\n\004name\030\001 \001(\tH\000\022\026\n\014" +
-      "target_index\030\002 \001(\tH\000\022`\n\010settings\030\003 \001(\0132N" +
+      "ing\032H\n\006Target\022\r\n\005query\030\001 \001(\t\022\021\n\ttext_mod" +
+      "e\030\002 \001(\010\022\016\n\006hidden\030\003 \001(\010\022\014\n\004name\030\004 \001(\t\032\276\023" +
+      "\n\025VisualizationSettings\022]\n\004type\030\001 \001(\0162O." +
+      "yandex.cloud.monitoring.v3.ChartWidget.V" +
+      "isualizationSettings.VisualizationType\022\021" +
+      "\n\tnormalize\030\002 \001(\010\022^\n\013interpolate\030\003 \001(\0162I" +
       ".yandex.cloud.monitoring.v3.ChartWidget." +
-      "SeriesOverrides.SeriesOverrideSettings\032\232" +
-      "\002\n\026SeriesOverrideSettings\022\014\n\004name\030\001 \001(\t\022" +
-      "\r\n\005color\030\002 \001(\t\022]\n\004type\030\003 \001(\0162O.yandex.cl" +
-      "oud.monitoring.v3.ChartWidget.SeriesOver" +
-      "rides.SeriesVisualizationType\022\022\n\nstack_n" +
-      "ame\030\004 \001(\t\022\021\n\tgrow_down\030\005 \001(\010\022]\n\016yaxis_po" +
-      "sition\030\006 \001(\0162E.yandex.cloud.monitoring.v" +
-      "3.ChartWidget.SeriesOverrides.YaxisPosit" +
-      "ion\"b\n\rYaxisPosition\022\036\n\032YAXIS_POSITION_U" +
-      "NSPECIFIED\020\000\022\027\n\023YAXIS_POSITION_LEFT\020\001\022\030\n" +
-      "\024YAXIS_POSITION_RIGHT\020\002\"\331\001\n\027SeriesVisual" +
-      "izationType\022)\n%SERIES_VISUALIZATION_TYPE" +
-      "_UNSPECIFIED\020\000\022\"\n\036SERIES_VISUALIZATION_T" +
-      "YPE_LINE\020\001\022#\n\037SERIES_VISUALIZATION_TYPE_" +
-      "STACK\020\002\022$\n SERIES_VISUALIZATION_TYPE_COL" +
-      "UMN\020\003\022$\n SERIES_VISUALIZATION_TYPE_POINT" +
-      "S\020\004B\006\n\004type\0325\n\022NameHidingSettings\022\020\n\010pos" +
-      "itive\030\001 \001(\010\022\r\n\005names\030\002 \003(\t\"\231\001\n\016FreezeDur" +
-      "ation\022\037\n\033FREEZE_DURATION_UNSPECIFIED\020\000\022\030" +
-      "\n\024FREEZE_DURATION_HOUR\020\001\022\027\n\023FREEZE_DURAT" +
-      "ION_DAY\020\002\022\030\n\024FREEZE_DURATION_WEEK\020\003\022\031\n\025F" +
-      "REEZE_DURATION_MONTH\020\004Bk\n\036yandex.cloud.a" +
-      "pi.monitoring.v3ZIgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/monitoring/v3" +
-      ";monitoringb\006proto3"
+      "VisualizationSettings.Interpolate\022d\n\013agg" +
+      "regation\030\004 \001(\0162O.yandex.cloud.monitoring" +
+      ".v3.ChartWidget.VisualizationSettings.Se" +
+      "riesAggregation\022p\n\025color_scheme_settings" +
+      "\030\005 \001(\0132Q.yandex.cloud.monitoring.v3.Char" +
+      "tWidget.VisualizationSettings.ColorSchem" +
+      "eSettings\022g\n\020heatmap_settings\030\006 \001(\0132M.ya" +
+      "ndex.cloud.monitoring.v3.ChartWidget.Vis" +
+      "ualizationSettings.HeatmapSettings\022c\n\016ya" +
+      "xis_settings\030\007 \001(\0132K.yandex.cloud.monito" +
+      "ring.v3.ChartWidget.VisualizationSetting" +
+      "s.YaxisSettings\022\r\n\005title\030\010 \001(\t\022\023\n\013show_l" +
+      "abels\030\t \001(\010\032\254\004\n\023ColorSchemeSettings\022{\n\ta" +
+      "utomatic\030\001 \001(\0132f.yandex.cloud.monitoring" +
+      ".v3.ChartWidget.VisualizationSettings.Co" +
+      "lorSchemeSettings.AutomaticColorSchemeH\000" +
+      "\022y\n\010standard\030\002 \001(\0132e.yandex.cloud.monito" +
+      "ring.v3.ChartWidget.VisualizationSetting" +
+      "s.ColorSchemeSettings.StandardColorSchem" +
+      "eH\000\022y\n\010gradient\030\003 \001(\0132e.yandex.cloud.mon" +
+      "itoring.v3.ChartWidget.VisualizationSett" +
+      "ings.ColorSchemeSettings.GradientColorSc" +
+      "hemeH\000\032\026\n\024AutomaticColorScheme\032\025\n\023Standa" +
+      "rdColorScheme\032i\n\023GradientColorScheme\022\023\n\013" +
+      "green_value\030\002 \001(\t\022\024\n\014yellow_value\030\003 \001(\t\022" +
+      "\021\n\tred_value\030\004 \001(\t\022\024\n\014violet_value\030\005 \001(\t" +
+      "B\010\n\006scheme\032e\n\017HeatmapSettings\022\023\n\013green_v" +
+      "alue\030\002 \001(\t\022\024\n\014yellow_value\030\003 \001(\t\022\021\n\tred_" +
+      "value\030\004 \001(\t\022\024\n\014violet_value\030\005 \001(\t\032\364\001\n\005Ya" +
+      "xis\022U\n\004type\030\001 \001(\0162G.yandex.cloud.monitor" +
+      "ing.v3.ChartWidget.VisualizationSettings" +
+      ".YaxisType\022\r\n\005title\030\002 \001(\t\022\013\n\003min\030\003 \001(\t\022\013" +
+      "\n\003max\030\004 \001(\t\022;\n\013unit_format\030\005 \001(\0162&.yande" +
+      "x.cloud.monitoring.v3.UnitFormat\022.\n\tprec" +
+      "ision\030\006 \001(\0132\033.google.protobuf.Int64Value" +
+      "\032\266\001\n\rYaxisSettings\022Q\n\004left\030\001 \001(\0132C.yande" +
+      "x.cloud.monitoring.v3.ChartWidget.Visual" +
+      "izationSettings.Yaxis\022R\n\005right\030\002 \001(\0132C.y" +
+      "andex.cloud.monitoring.v3.ChartWidget.Vi" +
+      "sualizationSettings.Yaxis\"\256\002\n\021Visualizat" +
+      "ionType\022\"\n\036VISUALIZATION_TYPE_UNSPECIFIE" +
+      "D\020\000\022\033\n\027VISUALIZATION_TYPE_LINE\020\001\022\034\n\030VISU" +
+      "ALIZATION_TYPE_STACK\020\002\022\035\n\031VISUALIZATION_" +
+      "TYPE_COLUMN\020\003\022\035\n\031VISUALIZATION_TYPE_POIN" +
+      "TS\020\004\022\032\n\026VISUALIZATION_TYPE_PIE\020\005\022\033\n\027VISU" +
+      "ALIZATION_TYPE_BARS\020\006\022#\n\037VISUALIZATION_T" +
+      "YPE_DISTRIBUTION\020\007\022\036\n\032VISUALIZATION_TYPE" +
+      "_HEATMAP\020\010\"o\n\013Interpolate\022\033\n\027INTERPOLATE" +
+      "_UNSPECIFIED\020\000\022\026\n\022INTERPOLATE_LINEAR\020\001\022\024" +
+      "\n\020INTERPOLATE_LEFT\020\002\022\025\n\021INTERPOLATE_RIGH" +
+      "T\020\003\"Z\n\tYaxisType\022\032\n\026YAXIS_TYPE_UNSPECIFI" +
+      "ED\020\000\022\025\n\021YAXIS_TYPE_LINEAR\020\001\022\032\n\026YAXIS_TYP" +
+      "E_LOGARITHMIC\020\002\"\304\001\n\021SeriesAggregation\022\"\n" +
+      "\036SERIES_AGGREGATION_UNSPECIFIED\020\000\022\032\n\026SER" +
+      "IES_AGGREGATION_AVG\020\001\022\032\n\026SERIES_AGGREGAT" +
+      "ION_MIN\020\002\022\032\n\026SERIES_AGGREGATION_MAX\020\003\022\033\n" +
+      "\027SERIES_AGGREGATION_LAST\020\004\022\032\n\026SERIES_AGG" +
+      "REGATION_SUM\020\005\032\200\006\n\017SeriesOverrides\022\016\n\004na" +
+      "me\030\001 \001(\tH\000\022\026\n\014target_index\030\002 \001(\tH\000\022`\n\010se" +
+      "ttings\030\003 \001(\0132N.yandex.cloud.monitoring.v" +
+      "3.ChartWidget.SeriesOverrides.SeriesOver" +
+      "rideSettings\032\232\002\n\026SeriesOverrideSettings\022" +
+      "\014\n\004name\030\001 \001(\t\022\r\n\005color\030\002 \001(\t\022]\n\004type\030\003 \001" +
+      "(\0162O.yandex.cloud.monitoring.v3.ChartWid" +
+      "get.SeriesOverrides.SeriesVisualizationT" +
+      "ype\022\022\n\nstack_name\030\004 \001(\t\022\021\n\tgrow_down\030\005 \001" +
+      "(\010\022]\n\016yaxis_position\030\006 \001(\0162E.yandex.clou" +
+      "d.monitoring.v3.ChartWidget.SeriesOverri" +
+      "des.YaxisPosition\"b\n\rYaxisPosition\022\036\n\032YA" +
+      "XIS_POSITION_UNSPECIFIED\020\000\022\027\n\023YAXIS_POSI" +
+      "TION_LEFT\020\001\022\030\n\024YAXIS_POSITION_RIGHT\020\002\"\331\001" +
+      "\n\027SeriesVisualizationType\022)\n%SERIES_VISU" +
+      "ALIZATION_TYPE_UNSPECIFIED\020\000\022\"\n\036SERIES_V" +
+      "ISUALIZATION_TYPE_LINE\020\001\022#\n\037SERIES_VISUA" +
+      "LIZATION_TYPE_STACK\020\002\022$\n SERIES_VISUALIZ" +
+      "ATION_TYPE_COLUMN\020\003\022$\n SERIES_VISUALIZAT" +
+      "ION_TYPE_POINTS\020\004B\006\n\004type\0325\n\022NameHidingS" +
+      "ettings\022\020\n\010positive\030\001 \001(\010\022\r\n\005names\030\002 \003(\t" +
+      "\"\231\001\n\016FreezeDuration\022\037\n\033FREEZE_DURATION_U" +
+      "NSPECIFIED\020\000\022\030\n\024FREEZE_DURATION_HOUR\020\001\022\027" +
+      "\n\023FREEZE_DURATION_DAY\020\002\022\030\n\024FREEZE_DURATI" +
+      "ON_WEEK\020\003\022\031\n\025FREEZE_DURATION_MONTH\020\004Bk\n\036" +
+      "yandex.cloud.api.monitoring.v3ZIgithub.c" +
+      "om/yandex-cloud/go-genproto/yandex/cloud" +
+      "/monitoring/v3;monitoringb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18334,7 +18520,7 @@ public final class ChartWidgetOuterClass {
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_Queries_Target_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_monitoring_v3_ChartWidget_Queries_Target_descriptor,
-        new java.lang.String[] { "Query", "TextMode", "Hidden", });
+        new java.lang.String[] { "Query", "TextMode", "Hidden", "Name", });
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_descriptor =
       internal_static_yandex_cloud_monitoring_v3_ChartWidget_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_monitoring_v3_ChartWidget_VisualizationSettings_fieldAccessorTable = new

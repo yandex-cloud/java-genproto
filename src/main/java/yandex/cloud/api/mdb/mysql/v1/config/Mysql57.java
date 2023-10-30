@@ -2525,6 +2525,66 @@ public final class Mysql57 {
      * <code>.google.protobuf.BoolValue query_response_time_stats = 85;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getQueryResponseTimeStatsOrBuilder();
+
+    /**
+     * <pre>
+     * Enables or disables collection of statistics
+     * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/5.7/diagnostics/user_stats.html#userstat).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue userstat = 86;</code>
+     * @return Whether the userstat field is set.
+     */
+    boolean hasUserstat();
+    /**
+     * <pre>
+     * Enables or disables collection of statistics
+     * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/5.7/diagnostics/user_stats.html#userstat).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue userstat = 86;</code>
+     * @return The userstat.
+     */
+    com.google.protobuf.BoolValue getUserstat();
+    /**
+     * <pre>
+     * Enables or disables collection of statistics
+     * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/5.7/diagnostics/user_stats.html#userstat).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue userstat = 86;</code>
+     */
+    com.google.protobuf.BoolValueOrBuilder getUserstatOrBuilder();
+
+    /**
+     * <pre>
+     * The execution timeout for SELECT statements, in milliseconds. If the value is 0, timeouts are not enabled.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_execution_time)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_execution_time = 87 [(.yandex.cloud.value) = "0-4294967295"];</code>
+     * @return Whether the maxExecutionTime field is set.
+     */
+    boolean hasMaxExecutionTime();
+    /**
+     * <pre>
+     * The execution timeout for SELECT statements, in milliseconds. If the value is 0, timeouts are not enabled.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_execution_time)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_execution_time = 87 [(.yandex.cloud.value) = "0-4294967295"];</code>
+     * @return The maxExecutionTime.
+     */
+    com.google.protobuf.Int64Value getMaxExecutionTime();
+    /**
+     * <pre>
+     * The execution timeout for SELECT statements, in milliseconds. If the value is 0, timeouts are not enabled.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_execution_time)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_execution_time = 87 [(.yandex.cloud.value) = "0-4294967295"];</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getMaxExecutionTimeOrBuilder();
   }
   /**
    * <pre>
@@ -3639,6 +3699,32 @@ public final class Mysql57 {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(queryResponseTimeStats_);
                 queryResponseTimeStats_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 690: {
+              com.google.protobuf.BoolValue.Builder subBuilder = null;
+              if (userstat_ != null) {
+                subBuilder = userstat_.toBuilder();
+              }
+              userstat_ = input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(userstat_);
+                userstat_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 698: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (maxExecutionTime_ != null) {
+                subBuilder = maxExecutionTime_.toBuilder();
+              }
+              maxExecutionTime_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maxExecutionTime_);
+                maxExecutionTime_ = subBuilder.buildPartial();
               }
 
               break;
@@ -8488,6 +8574,88 @@ public final class Mysql57 {
       return getQueryResponseTimeStats();
     }
 
+    public static final int USERSTAT_FIELD_NUMBER = 86;
+    private com.google.protobuf.BoolValue userstat_;
+    /**
+     * <pre>
+     * Enables or disables collection of statistics
+     * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/5.7/diagnostics/user_stats.html#userstat).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue userstat = 86;</code>
+     * @return Whether the userstat field is set.
+     */
+    @java.lang.Override
+    public boolean hasUserstat() {
+      return userstat_ != null;
+    }
+    /**
+     * <pre>
+     * Enables or disables collection of statistics
+     * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/5.7/diagnostics/user_stats.html#userstat).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue userstat = 86;</code>
+     * @return The userstat.
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValue getUserstat() {
+      return userstat_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : userstat_;
+    }
+    /**
+     * <pre>
+     * Enables or disables collection of statistics
+     * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/5.7/diagnostics/user_stats.html#userstat).
+     * </pre>
+     *
+     * <code>.google.protobuf.BoolValue userstat = 86;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.BoolValueOrBuilder getUserstatOrBuilder() {
+      return getUserstat();
+    }
+
+    public static final int MAX_EXECUTION_TIME_FIELD_NUMBER = 87;
+    private com.google.protobuf.Int64Value maxExecutionTime_;
+    /**
+     * <pre>
+     * The execution timeout for SELECT statements, in milliseconds. If the value is 0, timeouts are not enabled.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_execution_time)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_execution_time = 87 [(.yandex.cloud.value) = "0-4294967295"];</code>
+     * @return Whether the maxExecutionTime field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaxExecutionTime() {
+      return maxExecutionTime_ != null;
+    }
+    /**
+     * <pre>
+     * The execution timeout for SELECT statements, in milliseconds. If the value is 0, timeouts are not enabled.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_execution_time)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_execution_time = 87 [(.yandex.cloud.value) = "0-4294967295"];</code>
+     * @return The maxExecutionTime.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64Value getMaxExecutionTime() {
+      return maxExecutionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxExecutionTime_;
+    }
+    /**
+     * <pre>
+     * The execution timeout for SELECT statements, in milliseconds. If the value is 0, timeouts are not enabled.
+     * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_execution_time)
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value max_execution_time = 87 [(.yandex.cloud.value) = "0-4294967295"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.Int64ValueOrBuilder getMaxExecutionTimeOrBuilder() {
+      return getMaxExecutionTime();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8765,6 +8933,12 @@ public final class Mysql57 {
       }
       if (queryResponseTimeStats_ != null) {
         output.writeMessage(85, getQueryResponseTimeStats());
+      }
+      if (userstat_ != null) {
+        output.writeMessage(86, getUserstat());
+      }
+      if (maxExecutionTime_ != null) {
+        output.writeMessage(87, getMaxExecutionTime());
       }
       unknownFields.writeTo(output);
     }
@@ -9126,6 +9300,14 @@ public final class Mysql57 {
       if (queryResponseTimeStats_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(85, getQueryResponseTimeStats());
+      }
+      if (userstat_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(86, getUserstat());
+      }
+      if (maxExecutionTime_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(87, getMaxExecutionTime());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9523,6 +9705,16 @@ public final class Mysql57 {
         if (!getQueryResponseTimeStats()
             .equals(other.getQueryResponseTimeStats())) return false;
       }
+      if (hasUserstat() != other.hasUserstat()) return false;
+      if (hasUserstat()) {
+        if (!getUserstat()
+            .equals(other.getUserstat())) return false;
+      }
+      if (hasMaxExecutionTime() != other.hasMaxExecutionTime()) return false;
+      if (hasMaxExecutionTime()) {
+        if (!getMaxExecutionTime()
+            .equals(other.getMaxExecutionTime())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -9853,6 +10045,14 @@ public final class Mysql57 {
       if (hasQueryResponseTimeStats()) {
         hash = (37 * hash) + QUERY_RESPONSE_TIME_STATS_FIELD_NUMBER;
         hash = (53 * hash) + getQueryResponseTimeStats().hashCode();
+      }
+      if (hasUserstat()) {
+        hash = (37 * hash) + USERSTAT_FIELD_NUMBER;
+        hash = (53 * hash) + getUserstat().hashCode();
+      }
+      if (hasMaxExecutionTime()) {
+        hash = (37 * hash) + MAX_EXECUTION_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getMaxExecutionTime().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -10453,6 +10653,18 @@ public final class Mysql57 {
           queryResponseTimeStats_ = null;
           queryResponseTimeStatsBuilder_ = null;
         }
+        if (userstatBuilder_ == null) {
+          userstat_ = null;
+        } else {
+          userstat_ = null;
+          userstatBuilder_ = null;
+        }
+        if (maxExecutionTimeBuilder_ == null) {
+          maxExecutionTime_ = null;
+        } else {
+          maxExecutionTime_ = null;
+          maxExecutionTimeBuilder_ = null;
+        }
         return this;
       }
 
@@ -10865,6 +11077,16 @@ public final class Mysql57 {
         } else {
           result.queryResponseTimeStats_ = queryResponseTimeStatsBuilder_.build();
         }
+        if (userstatBuilder_ == null) {
+          result.userstat_ = userstat_;
+        } else {
+          result.userstat_ = userstatBuilder_.build();
+        }
+        if (maxExecutionTimeBuilder_ == null) {
+          result.maxExecutionTime_ = maxExecutionTime_;
+        } else {
+          result.maxExecutionTime_ = maxExecutionTimeBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -11185,6 +11407,12 @@ public final class Mysql57 {
         }
         if (other.hasQueryResponseTimeStats()) {
           mergeQueryResponseTimeStats(other.getQueryResponseTimeStats());
+        }
+        if (other.hasUserstat()) {
+          mergeUserstat(other.getUserstat());
+        }
+        if (other.hasMaxExecutionTime()) {
+          mergeMaxExecutionTime(other.getMaxExecutionTime());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -24452,6 +24680,334 @@ public final class Mysql57 {
         }
         return queryResponseTimeStatsBuilder_;
       }
+
+      private com.google.protobuf.BoolValue userstat_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> userstatBuilder_;
+      /**
+       * <pre>
+       * Enables or disables collection of statistics
+       * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/5.7/diagnostics/user_stats.html#userstat).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue userstat = 86;</code>
+       * @return Whether the userstat field is set.
+       */
+      public boolean hasUserstat() {
+        return userstatBuilder_ != null || userstat_ != null;
+      }
+      /**
+       * <pre>
+       * Enables or disables collection of statistics
+       * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/5.7/diagnostics/user_stats.html#userstat).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue userstat = 86;</code>
+       * @return The userstat.
+       */
+      public com.google.protobuf.BoolValue getUserstat() {
+        if (userstatBuilder_ == null) {
+          return userstat_ == null ? com.google.protobuf.BoolValue.getDefaultInstance() : userstat_;
+        } else {
+          return userstatBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Enables or disables collection of statistics
+       * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/5.7/diagnostics/user_stats.html#userstat).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue userstat = 86;</code>
+       */
+      public Builder setUserstat(com.google.protobuf.BoolValue value) {
+        if (userstatBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          userstat_ = value;
+          onChanged();
+        } else {
+          userstatBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables collection of statistics
+       * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/5.7/diagnostics/user_stats.html#userstat).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue userstat = 86;</code>
+       */
+      public Builder setUserstat(
+          com.google.protobuf.BoolValue.Builder builderForValue) {
+        if (userstatBuilder_ == null) {
+          userstat_ = builderForValue.build();
+          onChanged();
+        } else {
+          userstatBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables collection of statistics
+       * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/5.7/diagnostics/user_stats.html#userstat).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue userstat = 86;</code>
+       */
+      public Builder mergeUserstat(com.google.protobuf.BoolValue value) {
+        if (userstatBuilder_ == null) {
+          if (userstat_ != null) {
+            userstat_ =
+              com.google.protobuf.BoolValue.newBuilder(userstat_).mergeFrom(value).buildPartial();
+          } else {
+            userstat_ = value;
+          }
+          onChanged();
+        } else {
+          userstatBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables collection of statistics
+       * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/5.7/diagnostics/user_stats.html#userstat).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue userstat = 86;</code>
+       */
+      public Builder clearUserstat() {
+        if (userstatBuilder_ == null) {
+          userstat_ = null;
+          onChanged();
+        } else {
+          userstat_ = null;
+          userstatBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Enables or disables collection of statistics
+       * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/5.7/diagnostics/user_stats.html#userstat).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue userstat = 86;</code>
+       */
+      public com.google.protobuf.BoolValue.Builder getUserstatBuilder() {
+        
+        onChanged();
+        return getUserstatFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Enables or disables collection of statistics
+       * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/5.7/diagnostics/user_stats.html#userstat).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue userstat = 86;</code>
+       */
+      public com.google.protobuf.BoolValueOrBuilder getUserstatOrBuilder() {
+        if (userstatBuilder_ != null) {
+          return userstatBuilder_.getMessageOrBuilder();
+        } else {
+          return userstat_ == null ?
+              com.google.protobuf.BoolValue.getDefaultInstance() : userstat_;
+        }
+      }
+      /**
+       * <pre>
+       * Enables or disables collection of statistics
+       * For details, see [Percona documentation for the variable](https://docs.percona.com/percona-server/5.7/diagnostics/user_stats.html#userstat).
+       * </pre>
+       *
+       * <code>.google.protobuf.BoolValue userstat = 86;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder> 
+          getUserstatFieldBuilder() {
+        if (userstatBuilder_ == null) {
+          userstatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BoolValue, com.google.protobuf.BoolValue.Builder, com.google.protobuf.BoolValueOrBuilder>(
+                  getUserstat(),
+                  getParentForChildren(),
+                  isClean());
+          userstat_ = null;
+        }
+        return userstatBuilder_;
+      }
+
+      private com.google.protobuf.Int64Value maxExecutionTime_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> maxExecutionTimeBuilder_;
+      /**
+       * <pre>
+       * The execution timeout for SELECT statements, in milliseconds. If the value is 0, timeouts are not enabled.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_execution_time)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_execution_time = 87 [(.yandex.cloud.value) = "0-4294967295"];</code>
+       * @return Whether the maxExecutionTime field is set.
+       */
+      public boolean hasMaxExecutionTime() {
+        return maxExecutionTimeBuilder_ != null || maxExecutionTime_ != null;
+      }
+      /**
+       * <pre>
+       * The execution timeout for SELECT statements, in milliseconds. If the value is 0, timeouts are not enabled.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_execution_time)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_execution_time = 87 [(.yandex.cloud.value) = "0-4294967295"];</code>
+       * @return The maxExecutionTime.
+       */
+      public com.google.protobuf.Int64Value getMaxExecutionTime() {
+        if (maxExecutionTimeBuilder_ == null) {
+          return maxExecutionTime_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : maxExecutionTime_;
+        } else {
+          return maxExecutionTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The execution timeout for SELECT statements, in milliseconds. If the value is 0, timeouts are not enabled.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_execution_time)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_execution_time = 87 [(.yandex.cloud.value) = "0-4294967295"];</code>
+       */
+      public Builder setMaxExecutionTime(com.google.protobuf.Int64Value value) {
+        if (maxExecutionTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maxExecutionTime_ = value;
+          onChanged();
+        } else {
+          maxExecutionTimeBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The execution timeout for SELECT statements, in milliseconds. If the value is 0, timeouts are not enabled.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_execution_time)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_execution_time = 87 [(.yandex.cloud.value) = "0-4294967295"];</code>
+       */
+      public Builder setMaxExecutionTime(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (maxExecutionTimeBuilder_ == null) {
+          maxExecutionTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          maxExecutionTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The execution timeout for SELECT statements, in milliseconds. If the value is 0, timeouts are not enabled.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_execution_time)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_execution_time = 87 [(.yandex.cloud.value) = "0-4294967295"];</code>
+       */
+      public Builder mergeMaxExecutionTime(com.google.protobuf.Int64Value value) {
+        if (maxExecutionTimeBuilder_ == null) {
+          if (maxExecutionTime_ != null) {
+            maxExecutionTime_ =
+              com.google.protobuf.Int64Value.newBuilder(maxExecutionTime_).mergeFrom(value).buildPartial();
+          } else {
+            maxExecutionTime_ = value;
+          }
+          onChanged();
+        } else {
+          maxExecutionTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The execution timeout for SELECT statements, in milliseconds. If the value is 0, timeouts are not enabled.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_execution_time)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_execution_time = 87 [(.yandex.cloud.value) = "0-4294967295"];</code>
+       */
+      public Builder clearMaxExecutionTime() {
+        if (maxExecutionTimeBuilder_ == null) {
+          maxExecutionTime_ = null;
+          onChanged();
+        } else {
+          maxExecutionTime_ = null;
+          maxExecutionTimeBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The execution timeout for SELECT statements, in milliseconds. If the value is 0, timeouts are not enabled.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_execution_time)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_execution_time = 87 [(.yandex.cloud.value) = "0-4294967295"];</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getMaxExecutionTimeBuilder() {
+        
+        onChanged();
+        return getMaxExecutionTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The execution timeout for SELECT statements, in milliseconds. If the value is 0, timeouts are not enabled.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_execution_time)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_execution_time = 87 [(.yandex.cloud.value) = "0-4294967295"];</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getMaxExecutionTimeOrBuilder() {
+        if (maxExecutionTimeBuilder_ != null) {
+          return maxExecutionTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return maxExecutionTime_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : maxExecutionTime_;
+        }
+      }
+      /**
+       * <pre>
+       * The execution timeout for SELECT statements, in milliseconds. If the value is 0, timeouts are not enabled.
+       * For details, see [MySQL documentation for the variable](https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_max_execution_time)
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value max_execution_time = 87 [(.yandex.cloud.value) = "0-4294967295"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getMaxExecutionTimeFieldBuilder() {
+        if (maxExecutionTimeBuilder_ == null) {
+          maxExecutionTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getMaxExecutionTime(),
+                  getParentForChildren(),
+                  isClean());
+          maxExecutionTime_ = null;
+        }
+        return maxExecutionTimeBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -25749,7 +26305,7 @@ public final class Mysql57 {
       "\n/yandex/cloud/mdb/mysql/v1/config/mysql" +
       "5_7.proto\022 yandex.cloud.mdb.mysql.v1.con" +
       "fig\032\036google/protobuf/wrappers.proto\032\035yan" +
-      "dex/cloud/validation.proto\"\300;\n\016MysqlConf" +
+      "dex/cloud/validation.proto\"\271<\n\016MysqlConf" +
       "ig5_7\022K\n\027innodb_buffer_pool_size\030\001 \001(\0132\033" +
       ".google.protobuf.Int64ValueB\r\372\3071\t>=52428" +
       "80\022B\n\017max_connections\030\002 \001(\0132\033.google.pro" +
@@ -25903,53 +26459,56 @@ public final class Mysql57 {
       "r_search_depth\030T \001(\0132\033.google.protobuf.I" +
       "nt64ValueB\010\372\3071\0040-62\022=\n\031query_response_ti" +
       "me_stats\030U \001(\0132\032.google.protobuf.BoolVal" +
-      "ue\"\231\005\n\007SQLMode\022\027\n\023SQLMODE_UNSPECIFIED\020\000\022" +
-      "\027\n\023ALLOW_INVALID_DATES\020\001\022\017\n\013ANSI_QUOTES\020" +
-      "\002\022\036\n\032ERROR_FOR_DIVISION_BY_ZERO\020\003\022\027\n\023HIG" +
-      "H_NOT_PRECEDENCE\020\004\022\020\n\014IGNORE_SPACE\020\005\022\031\n\025" +
-      "NO_AUTO_VALUE_ON_ZERO\020\006\022\030\n\024NO_BACKSLASH_" +
-      "ESCAPES\020\007\022\032\n\026NO_ENGINE_SUBSTITUTION\020\010\022\033\n" +
-      "\027NO_UNSIGNED_SUBTRACTION\020\t\022\020\n\014NO_ZERO_DA" +
-      "TE\020\n\022\023\n\017NO_ZERO_IN_DATE\020\013\022\024\n\020NO_FIELD_OP" +
-      "TIONS\020\014\022\022\n\016NO_KEY_OPTIONS\020\r\022\024\n\020NO_TABLE_" +
-      "OPTIONS\020\016\022\026\n\022ONLY_FULL_GROUP_BY\020\017\022\033\n\027PAD" +
-      "_CHAR_TO_FULL_LENGTH\020\020\022\023\n\017PIPES_AS_CONCA" +
-      "T\020\021\022\021\n\rREAL_AS_FLOAT\020\022\022\025\n\021STRICT_ALL_TAB" +
-      "LES\020\023\022\027\n\023STRICT_TRANS_TABLES\020\024\022\010\n\004ANSI\020\025" +
-      "\022\017\n\013TRADITIONAL\020\026\022\007\n\003DB2\020\027\022\t\n\005MAXDB\020\030\022\t\n" +
-      "\005MSSQL\020\031\022\014\n\010MYSQL323\020\032\022\013\n\007MYSQL40\020\033\022\n\n\006O" +
-      "RACLE\020\034\022\016\n\nPOSTGRESQL\020\035\022\027\n\023NO_AUTO_CREAT" +
-      "E_USER\020\036\022\024\n\020NO_DIR_IN_CREATE\020\037\"x\n\nAuthPl" +
-      "ugin\022\033\n\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYS" +
-      "QL_NATIVE_PASSWORD\020\001\022\035\n\025CACHING_SHA2_PAS" +
-      "SWORD\020\002\032\002\010\001\022\023\n\017SHA256_PASSWORD\020\003\"x\n\024Tran" +
-      "sactionIsolation\022%\n!TRANSACTION_ISOLATIO" +
-      "N_UNSPECIFIED\020\000\022\022\n\016READ_COMMITTED\020\001\022\023\n\017R" +
-      "EPEATABLE_READ\020\002\022\020\n\014SERIALIZABLE\020\003\"U\n\016Bi" +
-      "nlogRowImage\022 \n\034BINLOG_ROW_IMAGE_UNSPECI" +
-      "FIED\020\000\022\010\n\004FULL\020\001\022\013\n\007MINIMAL\020\002\022\n\n\006NOBLOB\020" +
-      "\003\"Y\n\021SlaveParallelType\022#\n\037SLAVE_PARALLEL" +
-      "_TYPE_UNSPECIFIED\020\000\022\014\n\010DATABASE\020\001\022\021\n\rLOG" +
-      "ICAL_CLOCK\020\002\"M\n\017LogSlowRateType\022\"\n\036LOG_S" +
-      "LOW_RATE_TYPE_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001" +
-      "\022\t\n\005QUERY\020\002\"\241\001\n\021LogSlowFilterType\022$\n LOG" +
-      "_SLOW_FILTER_TYPE_UNSPECIFIED\020\000\022\r\n\tFULL_" +
-      "SCAN\020\001\022\r\n\tFULL_JOIN\020\002\022\r\n\tTMP_TABLE\020\003\022\025\n\021" +
-      "TMP_TABLE_ON_DISK\020\004\022\014\n\010FILESORT\020\005\022\024\n\020FIL" +
-      "ESORT_ON_DISK\020\006\"\223\001\n#BinlogTransactionDep" +
-      "endencyTracking\0226\n2BINLOG_TRANSACTION_DE" +
-      "PENDENCY_TRACKING_UNSPECIFIED\020\000\022\020\n\014COMMI" +
-      "T_ORDER\020\001\022\014\n\010WRITESET\020\002\022\024\n\020WRITESET_SESS" +
-      "ION\020\003\"\360\001\n\021MysqlConfigSet5_7\022J\n\020effective" +
-      "_config\030\001 \001(\01320.yandex.cloud.mdb.mysql.v" +
-      "1.config.MysqlConfig5_7\022E\n\013user_config\030\002" +
-      " \001(\01320.yandex.cloud.mdb.mysql.v1.config." +
-      "MysqlConfig5_7\022H\n\016default_config\030\003 \001(\01320" +
-      ".yandex.cloud.mdb.mysql.v1.config.MysqlC" +
-      "onfig5_7Br\n$yandex.cloud.api.mdb.mysql.v" +
-      "1.configZJgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/mdb/mysql/v1/config;m" +
-      "ysqlb\006proto3"
+      "ue\022,\n\010userstat\030V \001(\0132\032.google.protobuf.B" +
+      "oolValue\022I\n\022max_execution_time\030W \001(\0132\033.g" +
+      "oogle.protobuf.Int64ValueB\020\372\3071\0140-4294967" +
+      "295\"\231\005\n\007SQLMode\022\027\n\023SQLMODE_UNSPECIFIED\020\000" +
+      "\022\027\n\023ALLOW_INVALID_DATES\020\001\022\017\n\013ANSI_QUOTES" +
+      "\020\002\022\036\n\032ERROR_FOR_DIVISION_BY_ZERO\020\003\022\027\n\023HI" +
+      "GH_NOT_PRECEDENCE\020\004\022\020\n\014IGNORE_SPACE\020\005\022\031\n" +
+      "\025NO_AUTO_VALUE_ON_ZERO\020\006\022\030\n\024NO_BACKSLASH" +
+      "_ESCAPES\020\007\022\032\n\026NO_ENGINE_SUBSTITUTION\020\010\022\033" +
+      "\n\027NO_UNSIGNED_SUBTRACTION\020\t\022\020\n\014NO_ZERO_D" +
+      "ATE\020\n\022\023\n\017NO_ZERO_IN_DATE\020\013\022\024\n\020NO_FIELD_O" +
+      "PTIONS\020\014\022\022\n\016NO_KEY_OPTIONS\020\r\022\024\n\020NO_TABLE" +
+      "_OPTIONS\020\016\022\026\n\022ONLY_FULL_GROUP_BY\020\017\022\033\n\027PA" +
+      "D_CHAR_TO_FULL_LENGTH\020\020\022\023\n\017PIPES_AS_CONC" +
+      "AT\020\021\022\021\n\rREAL_AS_FLOAT\020\022\022\025\n\021STRICT_ALL_TA" +
+      "BLES\020\023\022\027\n\023STRICT_TRANS_TABLES\020\024\022\010\n\004ANSI\020" +
+      "\025\022\017\n\013TRADITIONAL\020\026\022\007\n\003DB2\020\027\022\t\n\005MAXDB\020\030\022\t" +
+      "\n\005MSSQL\020\031\022\014\n\010MYSQL323\020\032\022\013\n\007MYSQL40\020\033\022\n\n\006" +
+      "ORACLE\020\034\022\016\n\nPOSTGRESQL\020\035\022\027\n\023NO_AUTO_CREA" +
+      "TE_USER\020\036\022\024\n\020NO_DIR_IN_CREATE\020\037\"x\n\nAuthP" +
+      "lugin\022\033\n\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MY" +
+      "SQL_NATIVE_PASSWORD\020\001\022\035\n\025CACHING_SHA2_PA" +
+      "SSWORD\020\002\032\002\010\001\022\023\n\017SHA256_PASSWORD\020\003\"x\n\024Tra" +
+      "nsactionIsolation\022%\n!TRANSACTION_ISOLATI" +
+      "ON_UNSPECIFIED\020\000\022\022\n\016READ_COMMITTED\020\001\022\023\n\017" +
+      "REPEATABLE_READ\020\002\022\020\n\014SERIALIZABLE\020\003\"U\n\016B" +
+      "inlogRowImage\022 \n\034BINLOG_ROW_IMAGE_UNSPEC" +
+      "IFIED\020\000\022\010\n\004FULL\020\001\022\013\n\007MINIMAL\020\002\022\n\n\006NOBLOB" +
+      "\020\003\"Y\n\021SlaveParallelType\022#\n\037SLAVE_PARALLE" +
+      "L_TYPE_UNSPECIFIED\020\000\022\014\n\010DATABASE\020\001\022\021\n\rLO" +
+      "GICAL_CLOCK\020\002\"M\n\017LogSlowRateType\022\"\n\036LOG_" +
+      "SLOW_RATE_TYPE_UNSPECIFIED\020\000\022\013\n\007SESSION\020" +
+      "\001\022\t\n\005QUERY\020\002\"\241\001\n\021LogSlowFilterType\022$\n LO" +
+      "G_SLOW_FILTER_TYPE_UNSPECIFIED\020\000\022\r\n\tFULL" +
+      "_SCAN\020\001\022\r\n\tFULL_JOIN\020\002\022\r\n\tTMP_TABLE\020\003\022\025\n" +
+      "\021TMP_TABLE_ON_DISK\020\004\022\014\n\010FILESORT\020\005\022\024\n\020FI" +
+      "LESORT_ON_DISK\020\006\"\223\001\n#BinlogTransactionDe" +
+      "pendencyTracking\0226\n2BINLOG_TRANSACTION_D" +
+      "EPENDENCY_TRACKING_UNSPECIFIED\020\000\022\020\n\014COMM" +
+      "IT_ORDER\020\001\022\014\n\010WRITESET\020\002\022\024\n\020WRITESET_SES" +
+      "SION\020\003\"\360\001\n\021MysqlConfigSet5_7\022J\n\020effectiv" +
+      "e_config\030\001 \001(\01320.yandex.cloud.mdb.mysql." +
+      "v1.config.MysqlConfig5_7\022E\n\013user_config\030" +
+      "\002 \001(\01320.yandex.cloud.mdb.mysql.v1.config" +
+      ".MysqlConfig5_7\022H\n\016default_config\030\003 \001(\0132" +
+      "0.yandex.cloud.mdb.mysql.v1.config.Mysql" +
+      "Config5_7Br\n$yandex.cloud.api.mdb.mysql." +
+      "v1.configZJgithub.com/yandex-cloud/go-ge" +
+      "nproto/yandex/cloud/mdb/mysql/v1/config;" +
+      "mysqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -25962,7 +26521,7 @@ public final class Mysql57 {
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig5_7_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfig5_7_descriptor,
-        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", "MdbPreserveBinlogBytes", "InteractiveTimeout", "WaitTimeout", "MdbOfflineModeEnableLag", "MdbOfflineModeDisableLag", "RangeOptimizerMaxMemSize", "SlowQueryLog", "SlowQueryLogAlwaysWriteTime", "LogSlowRateType", "LogSlowRateLimit", "LogSlowSpStatements", "LogSlowFilter", "MdbPriorityChoiceMaxLag", "InnodbPageSize", "InnodbOnlineAlterLogMaxSize", "InnodbFtMinTokenSize", "InnodbFtMaxTokenSize", "LowerCaseTableNames", "ShowCompatibility56", "MaxSpRecursionDepth", "InnodbCompressionLevel", "BinlogTransactionDependencyTracking", "Autocommit", "InnodbStatusOutput", "InnodbStrictMode", "InnodbPrintLockWaitTimeoutInfo", "LogErrorVerbosity", "MaxDigestLength", "QueryCacheLimit", "QueryCacheSize", "QueryCacheType", "LockWaitTimeout", "MaxPreparedStmtCount", "OptimizerSwitch", "OptimizerSearchDepth", "QueryResponseTimeStats", });
+        new java.lang.String[] { "InnodbBufferPoolSize", "MaxConnections", "LongQueryTime", "GeneralLog", "AuditLog", "SqlMode", "MaxAllowedPacket", "DefaultAuthenticationPlugin", "InnodbFlushLogAtTrxCommit", "InnodbLockWaitTimeout", "TransactionIsolation", "InnodbPrintAllDeadlocks", "NetReadTimeout", "NetWriteTimeout", "GroupConcatMaxLen", "TmpTableSize", "MaxHeapTableSize", "DefaultTimeZone", "CharacterSetServer", "CollationServer", "InnodbAdaptiveHashIndex", "InnodbNumaInterleave", "InnodbLogBufferSize", "InnodbLogFileSize", "InnodbIoCapacity", "InnodbIoCapacityMax", "InnodbReadIoThreads", "InnodbWriteIoThreads", "InnodbPurgeThreads", "InnodbThreadConcurrency", "InnodbTempDataFileMaxSize", "ThreadCacheSize", "ThreadStack", "JoinBufferSize", "SortBufferSize", "TableDefinitionCache", "TableOpenCache", "TableOpenCacheInstances", "ExplicitDefaultsForTimestamp", "AutoIncrementIncrement", "AutoIncrementOffset", "SyncBinlog", "BinlogCacheSize", "BinlogGroupCommitSyncDelay", "BinlogRowImage", "BinlogRowsQueryLogEvents", "RplSemiSyncMasterWaitForSlaveCount", "SlaveParallelType", "SlaveParallelWorkers", "MdbPreserveBinlogBytes", "InteractiveTimeout", "WaitTimeout", "MdbOfflineModeEnableLag", "MdbOfflineModeDisableLag", "RangeOptimizerMaxMemSize", "SlowQueryLog", "SlowQueryLogAlwaysWriteTime", "LogSlowRateType", "LogSlowRateLimit", "LogSlowSpStatements", "LogSlowFilter", "MdbPriorityChoiceMaxLag", "InnodbPageSize", "InnodbOnlineAlterLogMaxSize", "InnodbFtMinTokenSize", "InnodbFtMaxTokenSize", "LowerCaseTableNames", "ShowCompatibility56", "MaxSpRecursionDepth", "InnodbCompressionLevel", "BinlogTransactionDependencyTracking", "Autocommit", "InnodbStatusOutput", "InnodbStrictMode", "InnodbPrintLockWaitTimeoutInfo", "LogErrorVerbosity", "MaxDigestLength", "QueryCacheLimit", "QueryCacheSize", "QueryCacheType", "LockWaitTimeout", "MaxPreparedStmtCount", "OptimizerSwitch", "OptimizerSearchDepth", "QueryResponseTimeStats", "Userstat", "MaxExecutionTime", });
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet5_7_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_mysql_v1_config_MysqlConfigSet5_7_fieldAccessorTable = new

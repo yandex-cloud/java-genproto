@@ -48644,7 +48644,7 @@ public final class ClusterServiceOuterClass {
 
     /**
      * <pre>
-     * Roles of the host group.
+     * Opensearch roles applicable to the node group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.opensearch.v1.OpenSearch.GroupRole roles = 3;</code>
@@ -48653,7 +48653,7 @@ public final class ClusterServiceOuterClass {
     java.util.List<yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.OpenSearch.GroupRole> getRolesList();
     /**
      * <pre>
-     * Roles of the host group.
+     * Opensearch roles applicable to the node group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.opensearch.v1.OpenSearch.GroupRole roles = 3;</code>
@@ -48662,7 +48662,7 @@ public final class ClusterServiceOuterClass {
     int getRolesCount();
     /**
      * <pre>
-     * Roles of the host group.
+     * Opensearch roles applicable to the node group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.opensearch.v1.OpenSearch.GroupRole roles = 3;</code>
@@ -48672,7 +48672,7 @@ public final class ClusterServiceOuterClass {
     yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.OpenSearch.GroupRole getRoles(int index);
     /**
      * <pre>
-     * Roles of the host group.
+     * Opensearch roles applicable to the node group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.opensearch.v1.OpenSearch.GroupRole roles = 3;</code>
@@ -48682,7 +48682,7 @@ public final class ClusterServiceOuterClass {
     getRolesValueList();
     /**
      * <pre>
-     * Roles of the host group.
+     * Opensearch roles applicable to the node group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.opensearch.v1.OpenSearch.GroupRole roles = 3;</code>
@@ -48690,6 +48690,98 @@ public final class ClusterServiceOuterClass {
      * @return The enum numeric value on the wire of roles at the given index.
      */
     int getRolesValue(int index);
+
+    /**
+     * <pre>
+     * IDs of the availability zones for hosts
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 4;</code>
+     * @return A list containing the zoneIds.
+     */
+    java.util.List<java.lang.String>
+        getZoneIdsList();
+    /**
+     * <pre>
+     * IDs of the availability zones for hosts
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 4;</code>
+     * @return The count of zoneIds.
+     */
+    int getZoneIdsCount();
+    /**
+     * <pre>
+     * IDs of the availability zones for hosts
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 4;</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    java.lang.String getZoneIds(int index);
+    /**
+     * <pre>
+     * IDs of the availability zones for hosts
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getZoneIdsBytes(int index);
+
+    /**
+     * <pre>
+     * IDs of the subnets for hosts
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 5;</code>
+     * @return A list containing the subnetIds.
+     */
+    java.util.List<java.lang.String>
+        getSubnetIdsList();
+    /**
+     * <pre>
+     * IDs of the subnets for hosts
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 5;</code>
+     * @return The count of subnetIds.
+     */
+    int getSubnetIdsCount();
+    /**
+     * <pre>
+     * IDs of the subnets for hosts
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 5;</code>
+     * @param index The index of the element to return.
+     * @return The subnetIds at the given index.
+     */
+    java.lang.String getSubnetIds(int index);
+    /**
+     * <pre>
+     * IDs of the subnets for hosts
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the subnetIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdsBytes(int index);
+
+    /**
+     * <pre>
+     * Whether the hosts should get a public IP address.
+     * </pre>
+     *
+     * <code>bool assign_public_ip = 6;</code>
+     * @return The assignPublicIp.
+     */
+    boolean getAssignPublicIp();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.OpenSearchNodeGroupUpdateSpec}
@@ -48705,6 +48797,8 @@ public final class ClusterServiceOuterClass {
     }
     private OpenSearchNodeGroupUpdateSpec() {
       roles_ = java.util.Collections.emptyList();
+      zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -48779,6 +48873,29 @@ public final class ClusterServiceOuterClass {
               input.popLimit(oldLimit);
               break;
             }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                zoneIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              zoneIds_.add(s);
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                subnetIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              subnetIds_.add(s);
+              break;
+            }
+            case 48: {
+
+              assignPublicIp_ = input.readBool();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -48796,6 +48913,12 @@ public final class ClusterServiceOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           roles_ = java.util.Collections.unmodifiableList(roles_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          subnetIds_ = subnetIds_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -48881,7 +49004,7 @@ public final class ClusterServiceOuterClass {
             };
     /**
      * <pre>
-     * Roles of the host group.
+     * Opensearch roles applicable to the node group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.opensearch.v1.OpenSearch.GroupRole roles = 3;</code>
@@ -48894,7 +49017,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Roles of the host group.
+     * Opensearch roles applicable to the node group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.opensearch.v1.OpenSearch.GroupRole roles = 3;</code>
@@ -48906,7 +49029,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Roles of the host group.
+     * Opensearch roles applicable to the node group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.opensearch.v1.OpenSearch.GroupRole roles = 3;</code>
@@ -48919,7 +49042,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Roles of the host group.
+     * Opensearch roles applicable to the node group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.opensearch.v1.OpenSearch.GroupRole roles = 3;</code>
@@ -48932,7 +49055,7 @@ public final class ClusterServiceOuterClass {
     }
     /**
      * <pre>
-     * Roles of the host group.
+     * Opensearch roles applicable to the node group.
      * </pre>
      *
      * <code>repeated .yandex.cloud.mdb.opensearch.v1.OpenSearch.GroupRole roles = 3;</code>
@@ -48944,6 +49067,123 @@ public final class ClusterServiceOuterClass {
       return roles_.get(index);
     }
     private int rolesMemoizedSerializedSize;
+
+    public static final int ZONE_IDS_FIELD_NUMBER = 4;
+    private com.google.protobuf.LazyStringList zoneIds_;
+    /**
+     * <pre>
+     * IDs of the availability zones for hosts
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 4;</code>
+     * @return A list containing the zoneIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getZoneIdsList() {
+      return zoneIds_;
+    }
+    /**
+     * <pre>
+     * IDs of the availability zones for hosts
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 4;</code>
+     * @return The count of zoneIds.
+     */
+    public int getZoneIdsCount() {
+      return zoneIds_.size();
+    }
+    /**
+     * <pre>
+     * IDs of the availability zones for hosts
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 4;</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    public java.lang.String getZoneIds(int index) {
+      return zoneIds_.get(index);
+    }
+    /**
+     * <pre>
+     * IDs of the availability zones for hosts
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getZoneIdsBytes(int index) {
+      return zoneIds_.getByteString(index);
+    }
+
+    public static final int SUBNET_IDS_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList subnetIds_;
+    /**
+     * <pre>
+     * IDs of the subnets for hosts
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 5;</code>
+     * @return A list containing the subnetIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSubnetIdsList() {
+      return subnetIds_;
+    }
+    /**
+     * <pre>
+     * IDs of the subnets for hosts
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 5;</code>
+     * @return The count of subnetIds.
+     */
+    public int getSubnetIdsCount() {
+      return subnetIds_.size();
+    }
+    /**
+     * <pre>
+     * IDs of the subnets for hosts
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 5;</code>
+     * @param index The index of the element to return.
+     * @return The subnetIds at the given index.
+     */
+    public java.lang.String getSubnetIds(int index) {
+      return subnetIds_.get(index);
+    }
+    /**
+     * <pre>
+     * IDs of the subnets for hosts
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the subnetIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSubnetIdsBytes(int index) {
+      return subnetIds_.getByteString(index);
+    }
+
+    public static final int ASSIGN_PUBLIC_IP_FIELD_NUMBER = 6;
+    private boolean assignPublicIp_;
+    /**
+     * <pre>
+     * Whether the hosts should get a public IP address.
+     * </pre>
+     *
+     * <code>bool assign_public_ip = 6;</code>
+     * @return The assignPublicIp.
+     */
+    @java.lang.Override
+    public boolean getAssignPublicIp() {
+      return assignPublicIp_;
+    }
 
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
@@ -48972,6 +49212,15 @@ public final class ClusterServiceOuterClass {
       }
       for (int i = 0; i < roles_.size(); i++) {
         output.writeEnumNoTag(roles_.get(i));
+      }
+      for (int i = 0; i < zoneIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, zoneIds_.getRaw(i));
+      }
+      for (int i = 0; i < subnetIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, subnetIds_.getRaw(i));
+      }
+      if (assignPublicIp_ != false) {
+        output.writeBool(6, assignPublicIp_);
       }
       unknownFields.writeTo(output);
     }
@@ -49002,6 +49251,26 @@ public final class ClusterServiceOuterClass {
             .computeUInt32SizeNoTag(dataSize);
         }rolesMemoizedSerializedSize = dataSize;
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < zoneIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(zoneIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getZoneIdsList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < subnetIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(subnetIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSubnetIdsList().size();
+      }
+      if (assignPublicIp_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, assignPublicIp_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -49025,6 +49294,12 @@ public final class ClusterServiceOuterClass {
       if (getHostsCount()
           != other.getHostsCount()) return false;
       if (!roles_.equals(other.roles_)) return false;
+      if (!getZoneIdsList()
+          .equals(other.getZoneIdsList())) return false;
+      if (!getSubnetIdsList()
+          .equals(other.getSubnetIdsList())) return false;
+      if (getAssignPublicIp()
+          != other.getAssignPublicIp()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -49047,6 +49322,17 @@ public final class ClusterServiceOuterClass {
         hash = (37 * hash) + ROLES_FIELD_NUMBER;
         hash = (53 * hash) + roles_.hashCode();
       }
+      if (getZoneIdsCount() > 0) {
+        hash = (37 * hash) + ZONE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getZoneIdsList().hashCode();
+      }
+      if (getSubnetIdsCount() > 0) {
+        hash = (37 * hash) + SUBNET_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSubnetIdsList().hashCode();
+      }
+      hash = (37 * hash) + ASSIGN_PUBLIC_IP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAssignPublicIp());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -49190,6 +49476,12 @@ public final class ClusterServiceOuterClass {
 
         roles_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        assignPublicIp_ = false;
+
         return this;
       }
 
@@ -49228,6 +49520,17 @@ public final class ClusterServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.roles_ = roles_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.zoneIds_ = zoneIds_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          subnetIds_ = subnetIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.subnetIds_ = subnetIds_;
+        result.assignPublicIp_ = assignPublicIp_;
         onBuilt();
         return result;
       }
@@ -49291,6 +49594,29 @@ public final class ClusterServiceOuterClass {
             roles_.addAll(other.roles_);
           }
           onChanged();
+        }
+        if (!other.zoneIds_.isEmpty()) {
+          if (zoneIds_.isEmpty()) {
+            zoneIds_ = other.zoneIds_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureZoneIdsIsMutable();
+            zoneIds_.addAll(other.zoneIds_);
+          }
+          onChanged();
+        }
+        if (!other.subnetIds_.isEmpty()) {
+          if (subnetIds_.isEmpty()) {
+            subnetIds_ = other.subnetIds_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureSubnetIdsIsMutable();
+            subnetIds_.addAll(other.subnetIds_);
+          }
+          onChanged();
+        }
+        if (other.getAssignPublicIp() != false) {
+          setAssignPublicIp(other.getAssignPublicIp());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -49530,7 +49856,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Roles of the host group.
+       * Opensearch roles applicable to the node group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.opensearch.v1.OpenSearch.GroupRole roles = 3;</code>
@@ -49542,7 +49868,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Roles of the host group.
+       * Opensearch roles applicable to the node group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.opensearch.v1.OpenSearch.GroupRole roles = 3;</code>
@@ -49553,7 +49879,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Roles of the host group.
+       * Opensearch roles applicable to the node group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.opensearch.v1.OpenSearch.GroupRole roles = 3;</code>
@@ -49565,7 +49891,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Roles of the host group.
+       * Opensearch roles applicable to the node group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.opensearch.v1.OpenSearch.GroupRole roles = 3;</code>
@@ -49585,7 +49911,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Roles of the host group.
+       * Opensearch roles applicable to the node group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.opensearch.v1.OpenSearch.GroupRole roles = 3;</code>
@@ -49603,7 +49929,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Roles of the host group.
+       * Opensearch roles applicable to the node group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.opensearch.v1.OpenSearch.GroupRole roles = 3;</code>
@@ -49621,7 +49947,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Roles of the host group.
+       * Opensearch roles applicable to the node group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.opensearch.v1.OpenSearch.GroupRole roles = 3;</code>
@@ -49635,7 +49961,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Roles of the host group.
+       * Opensearch roles applicable to the node group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.opensearch.v1.OpenSearch.GroupRole roles = 3;</code>
@@ -49647,7 +49973,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Roles of the host group.
+       * Opensearch roles applicable to the node group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.opensearch.v1.OpenSearch.GroupRole roles = 3;</code>
@@ -49659,7 +49985,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Roles of the host group.
+       * Opensearch roles applicable to the node group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.opensearch.v1.OpenSearch.GroupRole roles = 3;</code>
@@ -49676,7 +50002,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Roles of the host group.
+       * Opensearch roles applicable to the node group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.opensearch.v1.OpenSearch.GroupRole roles = 3;</code>
@@ -49691,7 +50017,7 @@ public final class ClusterServiceOuterClass {
       }
       /**
        * <pre>
-       * Roles of the host group.
+       * Opensearch roles applicable to the node group.
        * </pre>
        *
        * <code>repeated .yandex.cloud.mdb.opensearch.v1.OpenSearch.GroupRole roles = 3;</code>
@@ -49704,6 +50030,341 @@ public final class ClusterServiceOuterClass {
         for (int value : values) {
           roles_.add(value);
         }
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureZoneIdsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          zoneIds_ = new com.google.protobuf.LazyStringArrayList(zoneIds_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * IDs of the availability zones for hosts
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 4;</code>
+       * @return A list containing the zoneIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getZoneIdsList() {
+        return zoneIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * IDs of the availability zones for hosts
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 4;</code>
+       * @return The count of zoneIds.
+       */
+      public int getZoneIdsCount() {
+        return zoneIds_.size();
+      }
+      /**
+       * <pre>
+       * IDs of the availability zones for hosts
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 4;</code>
+       * @param index The index of the element to return.
+       * @return The zoneIds at the given index.
+       */
+      public java.lang.String getZoneIds(int index) {
+        return zoneIds_.get(index);
+      }
+      /**
+       * <pre>
+       * IDs of the availability zones for hosts
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the zoneIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getZoneIdsBytes(int index) {
+        return zoneIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * IDs of the availability zones for hosts
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The zoneIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of the availability zones for hosts
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 4;</code>
+       * @param value The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of the availability zones for hosts
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 4;</code>
+       * @param values The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllZoneIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureZoneIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, zoneIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of the availability zones for hosts
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZoneIds() {
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of the availability zones for hosts
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 4;</code>
+       * @param value The bytes of the zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSubnetIdsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          subnetIds_ = new com.google.protobuf.LazyStringArrayList(subnetIds_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <pre>
+       * IDs of the subnets for hosts
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 5;</code>
+       * @return A list containing the subnetIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSubnetIdsList() {
+        return subnetIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * IDs of the subnets for hosts
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 5;</code>
+       * @return The count of subnetIds.
+       */
+      public int getSubnetIdsCount() {
+        return subnetIds_.size();
+      }
+      /**
+       * <pre>
+       * IDs of the subnets for hosts
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 5;</code>
+       * @param index The index of the element to return.
+       * @return The subnetIds at the given index.
+       */
+      public java.lang.String getSubnetIds(int index) {
+        return subnetIds_.get(index);
+      }
+      /**
+       * <pre>
+       * IDs of the subnets for hosts
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 5;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the subnetIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdsBytes(int index) {
+        return subnetIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * IDs of the subnets for hosts
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 5;</code>
+       * @param index The index to set the value at.
+       * @param value The subnetIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSubnetIdsIsMutable();
+        subnetIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of the subnets for hosts
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 5;</code>
+       * @param value The subnetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSubnetIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSubnetIdsIsMutable();
+        subnetIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of the subnets for hosts
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 5;</code>
+       * @param values The subnetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSubnetIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSubnetIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, subnetIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of the subnets for hosts
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubnetIds() {
+        subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of the subnets for hosts
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 5;</code>
+       * @param value The bytes of the subnetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSubnetIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSubnetIdsIsMutable();
+        subnetIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private boolean assignPublicIp_ ;
+      /**
+       * <pre>
+       * Whether the hosts should get a public IP address.
+       * </pre>
+       *
+       * <code>bool assign_public_ip = 6;</code>
+       * @return The assignPublicIp.
+       */
+      @java.lang.Override
+      public boolean getAssignPublicIp() {
+        return assignPublicIp_;
+      }
+      /**
+       * <pre>
+       * Whether the hosts should get a public IP address.
+       * </pre>
+       *
+       * <code>bool assign_public_ip = 6;</code>
+       * @param value The assignPublicIp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssignPublicIp(boolean value) {
+        
+        assignPublicIp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether the hosts should get a public IP address.
+       * </pre>
+       *
+       * <code>bool assign_public_ip = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssignPublicIp() {
+        
+        assignPublicIp_ = false;
         onChanged();
         return this;
       }
@@ -52791,6 +53452,98 @@ public final class ClusterServiceOuterClass {
      * @return The hostsCount.
      */
     long getHostsCount();
+
+    /**
+     * <pre>
+     * IDs of the availability zones for hosts
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 3;</code>
+     * @return A list containing the zoneIds.
+     */
+    java.util.List<java.lang.String>
+        getZoneIdsList();
+    /**
+     * <pre>
+     * IDs of the availability zones for hosts
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 3;</code>
+     * @return The count of zoneIds.
+     */
+    int getZoneIdsCount();
+    /**
+     * <pre>
+     * IDs of the availability zones for hosts
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 3;</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    java.lang.String getZoneIds(int index);
+    /**
+     * <pre>
+     * IDs of the availability zones for hosts
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getZoneIdsBytes(int index);
+
+    /**
+     * <pre>
+     * IDs of the subnets for hosts
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 4;</code>
+     * @return A list containing the subnetIds.
+     */
+    java.util.List<java.lang.String>
+        getSubnetIdsList();
+    /**
+     * <pre>
+     * IDs of the subnets for hosts
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 4;</code>
+     * @return The count of subnetIds.
+     */
+    int getSubnetIdsCount();
+    /**
+     * <pre>
+     * IDs of the subnets for hosts
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 4;</code>
+     * @param index The index of the element to return.
+     * @return The subnetIds at the given index.
+     */
+    java.lang.String getSubnetIds(int index);
+    /**
+     * <pre>
+     * IDs of the subnets for hosts
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the subnetIds at the given index.
+     */
+    com.google.protobuf.ByteString
+        getSubnetIdsBytes(int index);
+
+    /**
+     * <pre>
+     * Whether the hosts should get a public IP address.
+     * </pre>
+     *
+     * <code>bool assign_public_ip = 5;</code>
+     * @return The assignPublicIp.
+     */
+    boolean getAssignPublicIp();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.opensearch.v1.DashboardsNodeGroupUpdateSpec}
@@ -52805,6 +53558,8 @@ public final class ClusterServiceOuterClass {
       super(builder);
     }
     private DashboardsNodeGroupUpdateSpec() {
+      zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -52827,6 +53582,7 @@ public final class ClusterServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -52855,6 +53611,29 @@ public final class ClusterServiceOuterClass {
               hostsCount_ = input.readInt64();
               break;
             }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                zoneIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              zoneIds_.add(s);
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                subnetIds_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              subnetIds_.add(s);
+              break;
+            }
+            case 40: {
+
+              assignPublicIp_ = input.readBool();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -52870,6 +53649,12 @@ public final class ClusterServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          subnetIds_ = subnetIds_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -52940,6 +53725,123 @@ public final class ClusterServiceOuterClass {
       return hostsCount_;
     }
 
+    public static final int ZONE_IDS_FIELD_NUMBER = 3;
+    private com.google.protobuf.LazyStringList zoneIds_;
+    /**
+     * <pre>
+     * IDs of the availability zones for hosts
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 3;</code>
+     * @return A list containing the zoneIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getZoneIdsList() {
+      return zoneIds_;
+    }
+    /**
+     * <pre>
+     * IDs of the availability zones for hosts
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 3;</code>
+     * @return The count of zoneIds.
+     */
+    public int getZoneIdsCount() {
+      return zoneIds_.size();
+    }
+    /**
+     * <pre>
+     * IDs of the availability zones for hosts
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 3;</code>
+     * @param index The index of the element to return.
+     * @return The zoneIds at the given index.
+     */
+    public java.lang.String getZoneIds(int index) {
+      return zoneIds_.get(index);
+    }
+    /**
+     * <pre>
+     * IDs of the availability zones for hosts
+     * </pre>
+     *
+     * <code>repeated string zone_ids = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the zoneIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getZoneIdsBytes(int index) {
+      return zoneIds_.getByteString(index);
+    }
+
+    public static final int SUBNET_IDS_FIELD_NUMBER = 4;
+    private com.google.protobuf.LazyStringList subnetIds_;
+    /**
+     * <pre>
+     * IDs of the subnets for hosts
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 4;</code>
+     * @return A list containing the subnetIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getSubnetIdsList() {
+      return subnetIds_;
+    }
+    /**
+     * <pre>
+     * IDs of the subnets for hosts
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 4;</code>
+     * @return The count of subnetIds.
+     */
+    public int getSubnetIdsCount() {
+      return subnetIds_.size();
+    }
+    /**
+     * <pre>
+     * IDs of the subnets for hosts
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 4;</code>
+     * @param index The index of the element to return.
+     * @return The subnetIds at the given index.
+     */
+    public java.lang.String getSubnetIds(int index) {
+      return subnetIds_.get(index);
+    }
+    /**
+     * <pre>
+     * IDs of the subnets for hosts
+     * </pre>
+     *
+     * <code>repeated string subnet_ids = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the subnetIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getSubnetIdsBytes(int index) {
+      return subnetIds_.getByteString(index);
+    }
+
+    public static final int ASSIGN_PUBLIC_IP_FIELD_NUMBER = 5;
+    private boolean assignPublicIp_;
+    /**
+     * <pre>
+     * Whether the hosts should get a public IP address.
+     * </pre>
+     *
+     * <code>bool assign_public_ip = 5;</code>
+     * @return The assignPublicIp.
+     */
+    @java.lang.Override
+    public boolean getAssignPublicIp() {
+      return assignPublicIp_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -52960,6 +53862,15 @@ public final class ClusterServiceOuterClass {
       if (hostsCount_ != 0L) {
         output.writeInt64(2, hostsCount_);
       }
+      for (int i = 0; i < zoneIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, zoneIds_.getRaw(i));
+      }
+      for (int i = 0; i < subnetIds_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, subnetIds_.getRaw(i));
+      }
+      if (assignPublicIp_ != false) {
+        output.writeBool(5, assignPublicIp_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -52976,6 +53887,26 @@ public final class ClusterServiceOuterClass {
       if (hostsCount_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, hostsCount_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < zoneIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(zoneIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getZoneIdsList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < subnetIds_.size(); i++) {
+          dataSize += computeStringSizeNoTag(subnetIds_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getSubnetIdsList().size();
+      }
+      if (assignPublicIp_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, assignPublicIp_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -52999,6 +53930,12 @@ public final class ClusterServiceOuterClass {
       }
       if (getHostsCount()
           != other.getHostsCount()) return false;
+      if (!getZoneIdsList()
+          .equals(other.getZoneIdsList())) return false;
+      if (!getSubnetIdsList()
+          .equals(other.getSubnetIdsList())) return false;
+      if (getAssignPublicIp()
+          != other.getAssignPublicIp()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -53017,6 +53954,17 @@ public final class ClusterServiceOuterClass {
       hash = (37 * hash) + HOSTS_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getHostsCount());
+      if (getZoneIdsCount() > 0) {
+        hash = (37 * hash) + ZONE_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getZoneIdsList().hashCode();
+      }
+      if (getSubnetIdsCount() > 0) {
+        hash = (37 * hash) + SUBNET_IDS_FIELD_NUMBER;
+        hash = (53 * hash) + getSubnetIdsList().hashCode();
+      }
+      hash = (37 * hash) + ASSIGN_PUBLIC_IP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getAssignPublicIp());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -53158,6 +54106,12 @@ public final class ClusterServiceOuterClass {
         }
         hostsCount_ = 0L;
 
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        assignPublicIp_ = false;
+
         return this;
       }
 
@@ -53184,12 +54138,24 @@ public final class ClusterServiceOuterClass {
       @java.lang.Override
       public yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DashboardsNodeGroupUpdateSpec buildPartial() {
         yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DashboardsNodeGroupUpdateSpec result = new yandex.cloud.api.mdb.opensearch.v1.ClusterServiceOuterClass.DashboardsNodeGroupUpdateSpec(this);
+        int from_bitField0_ = bitField0_;
         if (resourcesBuilder_ == null) {
           result.resources_ = resources_;
         } else {
           result.resources_ = resourcesBuilder_.build();
         }
         result.hostsCount_ = hostsCount_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = zoneIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.zoneIds_ = zoneIds_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          subnetIds_ = subnetIds_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.subnetIds_ = subnetIds_;
+        result.assignPublicIp_ = assignPublicIp_;
         onBuilt();
         return result;
       }
@@ -53244,6 +54210,29 @@ public final class ClusterServiceOuterClass {
         if (other.getHostsCount() != 0L) {
           setHostsCount(other.getHostsCount());
         }
+        if (!other.zoneIds_.isEmpty()) {
+          if (zoneIds_.isEmpty()) {
+            zoneIds_ = other.zoneIds_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureZoneIdsIsMutable();
+            zoneIds_.addAll(other.zoneIds_);
+          }
+          onChanged();
+        }
+        if (!other.subnetIds_.isEmpty()) {
+          if (subnetIds_.isEmpty()) {
+            subnetIds_ = other.subnetIds_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureSubnetIdsIsMutable();
+            subnetIds_.addAll(other.subnetIds_);
+          }
+          onChanged();
+        }
+        if (other.getAssignPublicIp() != false) {
+          setAssignPublicIp(other.getAssignPublicIp());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -53272,6 +54261,7 @@ public final class ClusterServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private yandex.cloud.api.mdb.opensearch.v1.ClusterOuterClass.Resources resources_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -53467,6 +54457,341 @@ public final class ClusterServiceOuterClass {
       public Builder clearHostsCount() {
         
         hostsCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureZoneIdsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          zoneIds_ = new com.google.protobuf.LazyStringArrayList(zoneIds_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * IDs of the availability zones for hosts
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 3;</code>
+       * @return A list containing the zoneIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getZoneIdsList() {
+        return zoneIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * IDs of the availability zones for hosts
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 3;</code>
+       * @return The count of zoneIds.
+       */
+      public int getZoneIdsCount() {
+        return zoneIds_.size();
+      }
+      /**
+       * <pre>
+       * IDs of the availability zones for hosts
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 3;</code>
+       * @param index The index of the element to return.
+       * @return The zoneIds at the given index.
+       */
+      public java.lang.String getZoneIds(int index) {
+        return zoneIds_.get(index);
+      }
+      /**
+       * <pre>
+       * IDs of the availability zones for hosts
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the zoneIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getZoneIdsBytes(int index) {
+        return zoneIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * IDs of the availability zones for hosts
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The zoneIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZoneIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of the availability zones for hosts
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 3;</code>
+       * @param value The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of the availability zones for hosts
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 3;</code>
+       * @param values The zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllZoneIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureZoneIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, zoneIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of the availability zones for hosts
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZoneIds() {
+        zoneIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of the availability zones for hosts
+       * </pre>
+       *
+       * <code>repeated string zone_ids = 3;</code>
+       * @param value The bytes of the zoneIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addZoneIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureZoneIdsIsMutable();
+        zoneIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureSubnetIdsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          subnetIds_ = new com.google.protobuf.LazyStringArrayList(subnetIds_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * IDs of the subnets for hosts
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 4;</code>
+       * @return A list containing the subnetIds.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getSubnetIdsList() {
+        return subnetIds_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * IDs of the subnets for hosts
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 4;</code>
+       * @return The count of subnetIds.
+       */
+      public int getSubnetIdsCount() {
+        return subnetIds_.size();
+      }
+      /**
+       * <pre>
+       * IDs of the subnets for hosts
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 4;</code>
+       * @param index The index of the element to return.
+       * @return The subnetIds at the given index.
+       */
+      public java.lang.String getSubnetIds(int index) {
+        return subnetIds_.get(index);
+      }
+      /**
+       * <pre>
+       * IDs of the subnets for hosts
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the subnetIds at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getSubnetIdsBytes(int index) {
+        return subnetIds_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * IDs of the subnets for hosts
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The subnetIds to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetIds(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSubnetIdsIsMutable();
+        subnetIds_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of the subnets for hosts
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 4;</code>
+       * @param value The subnetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSubnetIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureSubnetIdsIsMutable();
+        subnetIds_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of the subnets for hosts
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 4;</code>
+       * @param values The subnetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllSubnetIds(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureSubnetIdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, subnetIds_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of the subnets for hosts
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubnetIds() {
+        subnetIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * IDs of the subnets for hosts
+       * </pre>
+       *
+       * <code>repeated string subnet_ids = 4;</code>
+       * @param value The bytes of the subnetIds to add.
+       * @return This builder for chaining.
+       */
+      public Builder addSubnetIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureSubnetIdsIsMutable();
+        subnetIds_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private boolean assignPublicIp_ ;
+      /**
+       * <pre>
+       * Whether the hosts should get a public IP address.
+       * </pre>
+       *
+       * <code>bool assign_public_ip = 5;</code>
+       * @return The assignPublicIp.
+       */
+      @java.lang.Override
+      public boolean getAssignPublicIp() {
+        return assignPublicIp_;
+      }
+      /**
+       * <pre>
+       * Whether the hosts should get a public IP address.
+       * </pre>
+       *
+       * <code>bool assign_public_ip = 5;</code>
+       * @param value The assignPublicIp to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAssignPublicIp(boolean value) {
+        
+        assignPublicIp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Whether the hosts should get a public IP address.
+       * </pre>
+       *
+       * <code>bool assign_public_ip = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAssignPublicIp() {
+        
+        assignPublicIp_ = false;
         onChanged();
         return this;
       }
@@ -59344,172 +60669,175 @@ public final class ClusterServiceOuterClass {
       "k\030\003 \001(\0132\032.google.protobuf.FieldMask\022V\n\017n" +
       "ode_group_spec\030\004 \001(\0132=.yandex.cloud.mdb." +
       "opensearch.v1.OpenSearchNodeGroupUpdateS" +
-      "pec\"\267\001\n\035OpenSearchNodeGroupUpdateSpec\022<\n" +
+      "pec\"\367\001\n\035OpenSearchNodeGroupUpdateSpec\022<\n" +
       "\tresources\030\001 \001(\0132).yandex.cloud.mdb.open" +
       "search.v1.Resources\022\023\n\013hosts_count\030\002 \001(\003" +
       "\022C\n\005roles\030\003 \003(\01624.yandex.cloud.mdb.opens" +
-      "earch.v1.OpenSearch.GroupRole\"\232\001\n\035AddOpe" +
-      "nSearchNodeGroupRequest\022 \n\ncluster_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022W\n\017node_group_spec\030\002 \001" +
-      "(\0132>.yandex.cloud.mdb.opensearch.v1.Open" +
-      "SearchCreateSpec.NodeGroup\"r\n DeleteDash" +
-      "boardsNodeGroupRequest\022 \n\ncluster_id\030\001 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004" +
-      "<=63\362\3071\016[a-zA-Z0-9_-]*\"\373\001\n UpdateDashboa" +
-      "rdsNodeGroupRequest\022 \n\ncluster_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=6" +
-      "3\362\3071\016[a-zA-Z0-9_-]*\022/\n\013update_mask\030\003 \001(\013" +
-      "2\032.google.protobuf.FieldMask\022V\n\017node_gro" +
-      "up_spec\030\004 \001(\0132=.yandex.cloud.mdb.opensea" +
-      "rch.v1.DashboardsNodeGroupUpdateSpec\"r\n\035" +
-      "DashboardsNodeGroupUpdateSpec\022<\n\tresourc" +
-      "es\030\001 \001(\0132).yandex.cloud.mdb.opensearch.v" +
-      "1.Resources\022\023\n\013hosts_count\030\002 \001(\003\"\232\001\n\035Add" +
-      "DashboardsNodeGroupRequest\022 \n\ncluster_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022W\n\017node_group_spec\030" +
-      "\002 \001(\0132>.yandex.cloud.mdb.opensearch.v1.D" +
-      "ashboardsCreateSpec.NodeGroup\"8\n\024AddNode" +
-      "GroupMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\014\n\004nam" +
-      "e\030\002 \001(\t\";\n\027UpdateNodeGroupMetadata\022\022\n\ncl" +
-      "uster_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\";\n\027DeleteNo" +
-      "deGroupMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\014\n\004n" +
-      "ame\030\002 \001(\t\":\n\026GetAuthSettingsRequest\022 \n\nc" +
-      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"}\n\031UpdateA" +
-      "uthSettingsRequest\022 \n\ncluster_id\030\001 \001(\tB\014" +
-      "\350\3071\001\212\3101\004<=50\022>\n\010settings\030\002 \001(\0132,.yandex." +
-      "cloud.mdb.opensearch.v1.AuthSettings\"0\n\032" +
-      "UpdateAuthSettingsMetadata\022\022\n\ncluster_id" +
-      "\030\001 \001(\t2\322\'\n\016ClusterService\022\227\001\n\003Get\0221.yand" +
-      "ex.cloud.mdb.opensearch.v1.GetClusterReq" +
-      "uest\032\'.yandex.cloud.mdb.opensearch.v1.Cl" +
-      "uster\"4\202\323\344\223\002.\022,/managed-opensearch/v1/cl" +
-      "usters/{cluster_id}\022\232\001\n\004List\0223.yandex.cl" +
-      "oud.mdb.opensearch.v1.ListClustersReques" +
-      "t\0324.yandex.cloud.mdb.opensearch.v1.ListC" +
-      "lustersResponse\"\'\202\323\344\223\002!\022\037/managed-opense" +
-      "arch/v1/clusters\022\261\001\n\006Create\0224.yandex.clo" +
-      "ud.mdb.opensearch.v1.CreateClusterReques" +
-      "t\032!.yandex.cloud.operation.Operation\"N\202\323" +
-      "\344\223\002$\"\037/managed-opensearch/v1/clusters:\001*" +
-      "\262\322* \n\025CreateClusterMetadata\022\007Cluster\022\276\001\n" +
-      "\006Update\0224.yandex.cloud.mdb.opensearch.v1" +
-      ".UpdateClusterRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"[\202\323\344\223\00212,/managed-opens" +
-      "earch/v1/clusters/{cluster_id}:\001*\262\322* \n\025U" +
-      "pdateClusterMetadata\022\007Cluster\022\311\001\n\006Delete" +
-      "\0224.yandex.cloud.mdb.opensearch.v1.Delete" +
+      "earch.v1.OpenSearch.GroupRole\022\020\n\010zone_id" +
+      "s\030\004 \003(\t\022\022\n\nsubnet_ids\030\005 \003(\t\022\030\n\020assign_pu" +
+      "blic_ip\030\006 \001(\010\"\232\001\n\035AddOpenSearchNodeGroup" +
+      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\022W\n\017node_group_spec\030\002 \001(\0132>.yandex.clou" +
+      "d.mdb.opensearch.v1.OpenSearchCreateSpec" +
+      ".NodeGroup\"r\n DeleteDashboardsNodeGroupR" +
+      "equest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
+      "\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0" +
+      "-9_-]*\"\373\001\n UpdateDashboardsNodeGroupRequ" +
+      "est\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022,\n" +
+      "\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_" +
+      "-]*\022/\n\013update_mask\030\003 \001(\0132\032.google.protob" +
+      "uf.FieldMask\022V\n\017node_group_spec\030\004 \001(\0132=." +
+      "yandex.cloud.mdb.opensearch.v1.Dashboard" +
+      "sNodeGroupUpdateSpec\"\262\001\n\035DashboardsNodeG" +
+      "roupUpdateSpec\022<\n\tresources\030\001 \001(\0132).yand" +
+      "ex.cloud.mdb.opensearch.v1.Resources\022\023\n\013" +
+      "hosts_count\030\002 \001(\003\022\020\n\010zone_ids\030\003 \003(\t\022\022\n\ns" +
+      "ubnet_ids\030\004 \003(\t\022\030\n\020assign_public_ip\030\005 \001(" +
+      "\010\"\232\001\n\035AddDashboardsNodeGroupRequest\022 \n\nc" +
+      "luster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022W\n\017node_gr" +
+      "oup_spec\030\002 \001(\0132>.yandex.cloud.mdb.opense" +
+      "arch.v1.DashboardsCreateSpec.NodeGroup\"8" +
+      "\n\024AddNodeGroupMetadata\022\022\n\ncluster_id\030\001 \001" +
+      "(\t\022\014\n\004name\030\002 \001(\t\";\n\027UpdateNodeGroupMetad" +
+      "ata\022\022\n\ncluster_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\";\n" +
+      "\027DeleteNodeGroupMetadata\022\022\n\ncluster_id\030\001" +
+      " \001(\t\022\014\n\004name\030\002 \001(\t\":\n\026GetAuthSettingsReq" +
+      "uest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"}" +
+      "\n\031UpdateAuthSettingsRequest\022 \n\ncluster_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022>\n\010settings\030\002 \001(\0132" +
+      ",.yandex.cloud.mdb.opensearch.v1.AuthSet" +
+      "tings\"0\n\032UpdateAuthSettingsMetadata\022\022\n\nc" +
+      "luster_id\030\001 \001(\t2\322\'\n\016ClusterService\022\227\001\n\003G" +
+      "et\0221.yandex.cloud.mdb.opensearch.v1.GetC" +
+      "lusterRequest\032\'.yandex.cloud.mdb.opensea" +
+      "rch.v1.Cluster\"4\202\323\344\223\002.\022,/managed-opensea" +
+      "rch/v1/clusters/{cluster_id}\022\232\001\n\004List\0223." +
+      "yandex.cloud.mdb.opensearch.v1.ListClust" +
+      "ersRequest\0324.yandex.cloud.mdb.opensearch" +
+      ".v1.ListClustersResponse\"\'\202\323\344\223\002!\022\037/manag" +
+      "ed-opensearch/v1/clusters\022\261\001\n\006Create\0224.y" +
+      "andex.cloud.mdb.opensearch.v1.CreateClus" +
+      "terRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"N\202\323\344\223\002$\"\037/managed-opensearch/v1/cl" +
+      "usters:\001*\262\322* \n\025CreateClusterMetadata\022\007Cl" +
+      "uster\022\276\001\n\006Update\0224.yandex.cloud.mdb.open" +
+      "search.v1.UpdateClusterRequest\032!.yandex." +
+      "cloud.operation.Operation\"[\202\323\344\223\00212,/mana" +
+      "ged-opensearch/v1/clusters/{cluster_id}:" +
+      "\001*\262\322* \n\025UpdateClusterMetadata\022\007Cluster\022\311" +
+      "\001\n\006Delete\0224.yandex.cloud.mdb.opensearch." +
+      "v1.DeleteClusterRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"f\202\323\344\223\002.*,/managed-ope" +
+      "nsearch/v1/clusters/{cluster_id}\262\322*.\n\025De" +
+      "leteClusterMetadata\022\025google.protobuf.Emp" +
+      "ty\022\302\001\n\006Backup\0224.yandex.cloud.mdb.opensea" +
+      "rch.v1.BackupClusterRequest\032!.yandex.clo" +
+      "ud.operation.Operation\"_\202\323\344\223\0025\"3/managed" +
+      "-opensearch/v1/clusters/{cluster_id}:bac" +
+      "kup\262\322* \n\025BackupClusterMetadata\022\007Cluster\022" +
+      "\274\001\n\007Restore\0225.yandex.cloud.mdb.opensearc" +
+      "h.v1.RestoreClusterRequest\032!.yandex.clou" +
+      "d.operation.Operation\"W\202\323\344\223\002,\"\'/managed-" +
+      "opensearch/v1/clusters:restore:\001*\262\322*!\n\026R" +
+      "estoreClusterMetadata\022\007Cluster\022\363\001\n\025Resch" +
+      "eduleMaintenance\022<.yandex.cloud.mdb.open" +
+      "search.v1.RescheduleMaintenanceRequest\032!" +
+      ".yandex.cloud.operation.Operation\"y\202\323\344\223\002" +
+      "G\"B/managed-opensearch/v1/clusters/{clus" +
+      "ter_id}:rescheduleMaintenance:\001*\262\322*(\n\035Re" +
+      "scheduleMaintenanceMetadata\022\007Cluster\022\302\001\n" +
+      "\013ListBackups\0229.yandex.cloud.mdb.opensear" +
+      "ch.v1.ListClusterBackupsRequest\032:.yandex" +
+      ".cloud.mdb.opensearch.v1.ListClusterBack" +
+      "upsResponse\"<\202\323\344\223\0026\0224/managed-opensearch" +
+      "/v1/clusters/{cluster_id}/backups\022\275\001\n\004Mo" +
+      "ve\0222.yandex.cloud.mdb.opensearch.v1.Move" +
       "ClusterRequest\032!.yandex.cloud.operation." +
-      "Operation\"f\202\323\344\223\002.*,/managed-opensearch/v" +
-      "1/clusters/{cluster_id}\262\322*.\n\025DeleteClust" +
-      "erMetadata\022\025google.protobuf.Empty\022\302\001\n\006Ba" +
-      "ckup\0224.yandex.cloud.mdb.opensearch.v1.Ba" +
-      "ckupClusterRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"_\202\323\344\223\0025\"3/managed-opensear" +
-      "ch/v1/clusters/{cluster_id}:backup\262\322* \n\025" +
-      "BackupClusterMetadata\022\007Cluster\022\274\001\n\007Resto" +
-      "re\0225.yandex.cloud.mdb.opensearch.v1.Rest" +
-      "oreClusterRequest\032!.yandex.cloud.operati" +
-      "on.Operation\"W\202\323\344\223\002,\"\'/managed-opensearc" +
-      "h/v1/clusters:restore:\001*\262\322*!\n\026RestoreClu" +
-      "sterMetadata\022\007Cluster\022\363\001\n\025RescheduleMain" +
-      "tenance\022<.yandex.cloud.mdb.opensearch.v1" +
-      ".RescheduleMaintenanceRequest\032!.yandex.c" +
-      "loud.operation.Operation\"y\202\323\344\223\002G\"B/manag" +
-      "ed-opensearch/v1/clusters/{cluster_id}:r" +
-      "escheduleMaintenance:\001*\262\322*(\n\035RescheduleM" +
-      "aintenanceMetadata\022\007Cluster\022\302\001\n\013ListBack" +
-      "ups\0229.yandex.cloud.mdb.opensearch.v1.Lis" +
-      "tClusterBackupsRequest\032:.yandex.cloud.md" +
-      "b.opensearch.v1.ListClusterBackupsRespon" +
-      "se\"<\202\323\344\223\0026\0224/managed-opensearch/v1/clust" +
-      "ers/{cluster_id}/backups\022\275\001\n\004Move\0222.yand" +
-      "ex.cloud.mdb.opensearch.v1.MoveClusterRe" +
-      "quest\032!.yandex.cloud.operation.Operation" +
-      "\"^\202\323\344\223\0026\"1/managed-opensearch/v1/cluster" +
-      "s/{cluster_id}:move:\001*\262\322*\036\n\023MoveClusterM" +
-      "etadata\022\007Cluster\022\276\001\n\005Start\0223.yandex.clou" +
-      "d.mdb.opensearch.v1.StartClusterRequest\032" +
-      "!.yandex.cloud.operation.Operation\"]\202\323\344\223" +
-      "\0024\"2/managed-opensearch/v1/clusters/{clu" +
-      "ster_id}:start\262\322*\037\n\024StartClusterMetadata" +
-      "\022\007Cluster\022\272\001\n\004Stop\0222.yandex.cloud.mdb.op" +
-      "ensearch.v1.StopClusterRequest\032!.yandex." +
-      "cloud.operation.Operation\"[\202\323\344\223\0023\"1/mana" +
-      "ged-opensearch/v1/clusters/{cluster_id}:" +
-      "stop\262\322*\036\n\023StopClusterMetadata\022\007Cluster\022\266" +
-      "\001\n\010ListLogs\0226.yandex.cloud.mdb.opensearc" +
-      "h.v1.ListClusterLogsRequest\0327.yandex.clo" +
-      "ud.mdb.opensearch.v1.ListClusterLogsResp" +
-      "onse\"9\202\323\344\223\0023\0221/managed-opensearch/v1/clu" +
-      "sters/{cluster_id}:logs\022\273\001\n\nStreamLogs\0228" +
-      ".yandex.cloud.mdb.opensearch.v1.StreamCl" +
-      "usterLogsRequest\032/.yandex.cloud.mdb.open" +
-      "search.v1.StreamLogRecord\"@\202\323\344\223\002:\0228/mana" +
-      "ged-opensearch/v1/clusters/{cluster_id}:" +
-      "stream_logs0\001\022\316\001\n\016ListOperations\022<.yande" +
-      "x.cloud.mdb.opensearch.v1.ListClusterOpe" +
-      "rationsRequest\032=.yandex.cloud.mdb.opense" +
-      "arch.v1.ListClusterOperationsResponse\"?\202" +
-      "\323\344\223\0029\0227/managed-opensearch/v1/clusters/{" +
-      "cluster_id}/operations\022\272\001\n\tListHosts\0227.y" +
+      "Operation\"^\202\323\344\223\0026\"1/managed-opensearch/v" +
+      "1/clusters/{cluster_id}:move:\001*\262\322*\036\n\023Mov" +
+      "eClusterMetadata\022\007Cluster\022\276\001\n\005Start\0223.ya" +
+      "ndex.cloud.mdb.opensearch.v1.StartCluste" +
+      "rRequest\032!.yandex.cloud.operation.Operat" +
+      "ion\"]\202\323\344\223\0024\"2/managed-opensearch/v1/clus" +
+      "ters/{cluster_id}:start\262\322*\037\n\024StartCluste" +
+      "rMetadata\022\007Cluster\022\272\001\n\004Stop\0222.yandex.clo" +
+      "ud.mdb.opensearch.v1.StopClusterRequest\032" +
+      "!.yandex.cloud.operation.Operation\"[\202\323\344\223" +
+      "\0023\"1/managed-opensearch/v1/clusters/{clu" +
+      "ster_id}:stop\262\322*\036\n\023StopClusterMetadata\022\007" +
+      "Cluster\022\266\001\n\010ListLogs\0226.yandex.cloud.mdb." +
+      "opensearch.v1.ListClusterLogsRequest\0327.y" +
       "andex.cloud.mdb.opensearch.v1.ListCluste" +
-      "rHostsRequest\0328.yandex.cloud.mdb.opensea" +
-      "rch.v1.ListClusterHostsResponse\":\202\323\344\223\0024\022" +
-      "2/managed-opensearch/v1/clusters/{cluste" +
-      "r_id}/hosts\022\373\001\n\026AddOpenSearchNodeGroup\022=" +
-      ".yandex.cloud.mdb.opensearch.v1.AddOpenS" +
-      "earchNodeGroupRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"\177\202\323\344\223\002H\"C/managed-opens" +
-      "earch/v1/clusters/{cluster_id}/opensearc" +
-      "h/node_groups:\001*\262\322*-\n\024AddNodeGroupMetada" +
-      "ta\022\025google.protobuf.Empty\022\211\002\n\031DeleteOpen" +
-      "SearchNodeGroup\022@.yandex.cloud.mdb.opens" +
-      "earch.v1.DeleteOpenSearchNodeGroupReques" +
-      "t\032!.yandex.cloud.operation.Operation\"\206\001\202" +
-      "\323\344\223\002L*J/managed-opensearch/v1/clusters/{" +
-      "cluster_id}/opensearch/node_groups/{name" +
-      "}\262\322*0\n\027DeleteNodeGroupMetadata\022\025google.p" +
-      "rotobuf.Empty\022\214\002\n\031UpdateOpenSearchNodeGr" +
-      "oup\022@.yandex.cloud.mdb.opensearch.v1.Upd" +
-      "ateOpenSearchNodeGroupRequest\032!.yandex.c" +
-      "loud.operation.Operation\"\211\001\202\323\344\223\002O2J/mana" +
+      "rLogsResponse\"9\202\323\344\223\0023\0221/managed-opensear" +
+      "ch/v1/clusters/{cluster_id}:logs\022\273\001\n\nStr" +
+      "eamLogs\0228.yandex.cloud.mdb.opensearch.v1" +
+      ".StreamClusterLogsRequest\032/.yandex.cloud" +
+      ".mdb.opensearch.v1.StreamLogRecord\"@\202\323\344\223" +
+      "\002:\0228/managed-opensearch/v1/clusters/{clu" +
+      "ster_id}:stream_logs0\001\022\316\001\n\016ListOperation" +
+      "s\022<.yandex.cloud.mdb.opensearch.v1.ListC" +
+      "lusterOperationsRequest\032=.yandex.cloud.m" +
+      "db.opensearch.v1.ListClusterOperationsRe" +
+      "sponse\"?\202\323\344\223\0029\0227/managed-opensearch/v1/c" +
+      "lusters/{cluster_id}/operations\022\272\001\n\tList" +
+      "Hosts\0227.yandex.cloud.mdb.opensearch.v1.L" +
+      "istClusterHostsRequest\0328.yandex.cloud.md" +
+      "b.opensearch.v1.ListClusterHostsResponse" +
+      "\":\202\323\344\223\0024\0222/managed-opensearch/v1/cluster" +
+      "s/{cluster_id}/hosts\022\373\001\n\026AddOpenSearchNo" +
+      "deGroup\022=.yandex.cloud.mdb.opensearch.v1" +
+      ".AddOpenSearchNodeGroupRequest\032!.yandex." +
+      "cloud.operation.Operation\"\177\202\323\344\223\002H\"C/mana" +
       "ged-opensearch/v1/clusters/{cluster_id}/" +
-      "opensearch/node_groups/{name}:\001*\262\322*0\n\027Up" +
-      "dateNodeGroupMetadata\022\025google.protobuf.E" +
-      "mpty\022\373\001\n\026AddDashboardsNodeGroup\022=.yandex" +
-      ".cloud.mdb.opensearch.v1.AddDashboardsNo" +
-      "deGroupRequest\032!.yandex.cloud.operation." +
-      "Operation\"\177\202\323\344\223\002H\"C/managed-opensearch/v" +
-      "1/clusters/{cluster_id}/dashboards/node_" +
-      "groups:\001*\262\322*-\n\024AddNodeGroupMetadata\022\025goo" +
-      "gle.protobuf.Empty\022\211\002\n\031DeleteDashboardsN" +
-      "odeGroup\022@.yandex.cloud.mdb.opensearch.v" +
-      "1.DeleteDashboardsNodeGroupRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"\206\001\202\323\344\223\002L*J" +
-      "/managed-opensearch/v1/clusters/{cluster" +
-      "_id}/dashboards/node_groups/{name}\262\322*0\n\027" +
-      "DeleteNodeGroupMetadata\022\025google.protobuf" +
-      ".Empty\022\214\002\n\031UpdateDashboardsNodeGroup\022@.y" +
-      "andex.cloud.mdb.opensearch.v1.UpdateDash" +
-      "boardsNodeGroupRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"\211\001\202\323\344\223\002O2J/managed-ope" +
+      "opensearch/node_groups:\001*\262\322*-\n\024AddNodeGr" +
+      "oupMetadata\022\025google.protobuf.Empty\022\211\002\n\031D" +
+      "eleteOpenSearchNodeGroup\022@.yandex.cloud." +
+      "mdb.opensearch.v1.DeleteOpenSearchNodeGr" +
+      "oupRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"\206\001\202\323\344\223\002L*J/managed-opensearch/v1/c" +
+      "lusters/{cluster_id}/opensearch/node_gro" +
+      "ups/{name}\262\322*0\n\027DeleteNodeGroupMetadata\022" +
+      "\025google.protobuf.Empty\022\214\002\n\031UpdateOpenSea" +
+      "rchNodeGroup\022@.yandex.cloud.mdb.opensear" +
+      "ch.v1.UpdateOpenSearchNodeGroupRequest\032!" +
+      ".yandex.cloud.operation.Operation\"\211\001\202\323\344\223" +
+      "\002O2J/managed-opensearch/v1/clusters/{clu" +
+      "ster_id}/opensearch/node_groups/{name}:\001" +
+      "*\262\322*0\n\027UpdateNodeGroupMetadata\022\025google.p" +
+      "rotobuf.Empty\022\373\001\n\026AddDashboardsNodeGroup" +
+      "\022=.yandex.cloud.mdb.opensearch.v1.AddDas" +
+      "hboardsNodeGroupRequest\032!.yandex.cloud.o" +
+      "peration.Operation\"\177\202\323\344\223\002H\"C/managed-ope" +
       "nsearch/v1/clusters/{cluster_id}/dashboa" +
-      "rds/node_groups/{name}:\001*\262\322*0\n\027UpdateNod" +
-      "eGroupMetadata\022\025google.protobuf.Empty\022\262\001" +
-      "\n\017GetAuthSettings\0226.yandex.cloud.mdb.ope" +
-      "nsearch.v1.GetAuthSettingsRequest\032,.yand" +
-      "ex.cloud.mdb.opensearch.v1.AuthSettings\"" +
-      "9\202\323\344\223\0023\0221/managed-opensearch/v1/clusters" +
-      "/{cluster_id}/auth\022\336\001\n\022UpdateAuthSetting" +
-      "s\0229.yandex.cloud.mdb.opensearch.v1.Updat" +
-      "eAuthSettingsRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"j\202\323\344\223\0026\0321/managed-opense" +
-      "arch/v1/clusters/{cluster_id}/auth:\001*\262\322*" +
-      "*\n\032UpdateAuthSettingsMetadata\022\014AuthSetti" +
-      "ngsBs\n\"yandex.cloud.api.mdb.opensearch.v" +
-      "1ZMgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/mdb/opensearch/v1;opensearch" +
-      "b\006proto3"
+      "rds/node_groups:\001*\262\322*-\n\024AddNodeGroupMeta" +
+      "data\022\025google.protobuf.Empty\022\211\002\n\031DeleteDa" +
+      "shboardsNodeGroup\022@.yandex.cloud.mdb.ope" +
+      "nsearch.v1.DeleteDashboardsNodeGroupRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"\206" +
+      "\001\202\323\344\223\002L*J/managed-opensearch/v1/clusters" +
+      "/{cluster_id}/dashboards/node_groups/{na" +
+      "me}\262\322*0\n\027DeleteNodeGroupMetadata\022\025google" +
+      ".protobuf.Empty\022\214\002\n\031UpdateDashboardsNode" +
+      "Group\022@.yandex.cloud.mdb.opensearch.v1.U" +
+      "pdateDashboardsNodeGroupRequest\032!.yandex" +
+      ".cloud.operation.Operation\"\211\001\202\323\344\223\002O2J/ma" +
+      "naged-opensearch/v1/clusters/{cluster_id" +
+      "}/dashboards/node_groups/{name}:\001*\262\322*0\n\027" +
+      "UpdateNodeGroupMetadata\022\025google.protobuf" +
+      ".Empty\022\262\001\n\017GetAuthSettings\0226.yandex.clou" +
+      "d.mdb.opensearch.v1.GetAuthSettingsReque" +
+      "st\032,.yandex.cloud.mdb.opensearch.v1.Auth" +
+      "Settings\"9\202\323\344\223\0023\0221/managed-opensearch/v1" +
+      "/clusters/{cluster_id}/auth\022\336\001\n\022UpdateAu" +
+      "thSettings\0229.yandex.cloud.mdb.opensearch" +
+      ".v1.UpdateAuthSettingsRequest\032!.yandex.c" +
+      "loud.operation.Operation\"j\202\323\344\223\0026\0321/manag" +
+      "ed-opensearch/v1/clusters/{cluster_id}/a" +
+      "uth:\001*\262\322**\n\032UpdateAuthSettingsMetadata\022\014" +
+      "AuthSettingsBs\n\"yandex.cloud.api.mdb.ope" +
+      "nsearch.v1ZMgithub.com/yandex-cloud/go-g" +
+      "enproto/yandex/cloud/mdb/opensearch/v1;o" +
+      "pensearchb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -59807,7 +61135,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_opensearch_v1_OpenSearchNodeGroupUpdateSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_OpenSearchNodeGroupUpdateSpec_descriptor,
-        new java.lang.String[] { "Resources", "HostsCount", "Roles", });
+        new java.lang.String[] { "Resources", "HostsCount", "Roles", "ZoneIds", "SubnetIds", "AssignPublicIp", });
     internal_static_yandex_cloud_mdb_opensearch_v1_AddOpenSearchNodeGroupRequest_descriptor =
       getDescriptor().getMessageTypes().get(41);
     internal_static_yandex_cloud_mdb_opensearch_v1_AddOpenSearchNodeGroupRequest_fieldAccessorTable = new
@@ -59831,7 +61159,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_opensearch_v1_DashboardsNodeGroupUpdateSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_opensearch_v1_DashboardsNodeGroupUpdateSpec_descriptor,
-        new java.lang.String[] { "Resources", "HostsCount", });
+        new java.lang.String[] { "Resources", "HostsCount", "ZoneIds", "SubnetIds", "AssignPublicIp", });
     internal_static_yandex_cloud_mdb_opensearch_v1_AddDashboardsNodeGroupRequest_descriptor =
       getDescriptor().getMessageTypes().get(45);
     internal_static_yandex_cloud_mdb_opensearch_v1_AddDashboardsNodeGroupRequest_fieldAccessorTable = new
