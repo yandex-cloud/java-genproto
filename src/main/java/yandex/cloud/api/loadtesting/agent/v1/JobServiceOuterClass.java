@@ -7039,8 +7039,9 @@ public final class JobServiceOuterClass {
        */
       PREPARING(3),
       /**
-       * <code>NOT_FOUND = 4;</code>
+       * <code>NOT_FOUND = 4 [deprecated = true];</code>
        */
+      @java.lang.Deprecated
       NOT_FOUND(4),
       /**
        * <code>RUNNING = 5;</code>
@@ -7090,9 +7091,9 @@ public final class JobServiceOuterClass {
        */
       public static final int PREPARING_VALUE = 3;
       /**
-       * <code>NOT_FOUND = 4;</code>
+       * <code>NOT_FOUND = 4 [deprecated = true];</code>
        */
-      public static final int NOT_FOUND_VALUE = 4;
+      @java.lang.Deprecated public static final int NOT_FOUND_VALUE = 4;
       /**
        * <code>RUNNING = 5;</code>
        */
@@ -9884,45 +9885,45 @@ public final class JobServiceOuterClass {
       "nsientFile\022\016\n\006job_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t" +
       "\"W\n\rGetJobRequest\022\033\n\023compute_instance_id" +
       "\030\001 \001(\t\022\031\n\021agent_instance_id\030\002 \001(\t\022\016\n\006job" +
-      "_id\030\003 \001(\t\"\351\002\n\025ClaimJobStatusRequest\022\016\n\006j" +
+      "_id\030\003 \001(\t\"\355\002\n\025ClaimJobStatusRequest\022\016\n\006j" +
       "ob_id\030\001 \001(\t\022R\n\006status\030\002 \001(\0162B.yandex.clo" +
       "ud.loadtesting.agent.v1.ClaimJobStatusRe" +
-      "quest.JobStatus\022\r\n\005error\030\003 \001(\t\"\334\001\n\tJobSt" +
+      "quest.JobStatus\022\r\n\005error\030\003 \001(\t\"\340\001\n\tJobSt" +
       "atus\022\032\n\026JOB_STATUS_UNSPECIFIED\020\000\022\020\n\014POST" +
       "_PROCESS\020\001\022\r\n\tINITIATED\020\002\022\r\n\tPREPARING\020\003" +
-      "\022\r\n\tNOT_FOUND\020\004\022\013\n\007RUNNING\020\005\022\r\n\tFINISHIN" +
-      "G\020\006\022\014\n\010FINISHED\020\007\022\013\n\007STOPPED\020\010\022\n\n\006FAILED" +
-      "\020\t\022\017\n\013AUTOSTOPPED\020\n\022 \n\034WAITING_FOR_A_COM" +
-      "MAND_TO_RUN\020\013\"&\n\026ClaimJobStatusResponse\022" +
-      "\014\n\004code\030\001 \001(\003\"\"\n\020JobSignalRequest\022\016\n\006job" +
-      "_id\030\001 \001(\t\"\311\001\n\021JobSignalResponse\022K\n\006signa" +
-      "l\030\001 \001(\0162;.yandex.cloud.loadtesting.agent" +
-      ".v1.JobSignalResponse.Signal\022\025\n\rwait_dur" +
-      "ation\030\002 \001(\001\022\016\n\006run_in\030\003 \001(\001\"@\n\006Signal\022\026\n" +
-      "\022SIGNAL_UNSPECIFIED\020\000\022\010\n\004STOP\020\001\022\010\n\004WAIT\020" +
-      "\002\022\n\n\006RUN_IN\020\0032\373\005\n\nJobService\022\276\001\n\013ClaimSt" +
-      "atus\0228.yandex.cloud.loadtesting.agent.v1" +
-      ".ClaimJobStatusRequest\0329.yandex.cloud.lo" +
-      "adtesting.agent.v1.ClaimJobStatusRespons" +
-      "e\":\202\323\344\223\0024\"//loadtesting/agent/v1/jobs/{j" +
-      "ob_id}/claimStatus:\001*\022\307\001\n\003Get\0220.yandex.c" +
-      "loud.loadtesting.agent.v1.GetJobRequest\032" +
-      "&.yandex.cloud.loadtesting.agent.v1.Job\"" +
-      "f\202\323\344\223\002`\0227/loadtesting/agent/v1/agents/{a" +
-      "gent_instance_id}/getJobZ%\022#/loadtesting" +
-      "/agent/v1/jobs/{job_id}\022\255\001\n\tGetSignal\0223." +
-      "yandex.cloud.loadtesting.agent.v1.JobSig" +
-      "nalRequest\0324.yandex.cloud.loadtesting.ag" +
-      "ent.v1.JobSignalResponse\"5\202\323\344\223\002/\022-/loadt" +
-      "esting/agent/v1/jobs/{job_id}/getSignal\022" +
-      "\261\001\n\020GetTransientFile\0226.yandex.cloud.load" +
-      "testing.agent.v1.GetJobTransientFile\032\'.y" +
-      "andex.cloud.loadtesting.agent.v1.File\"<\202" +
-      "\323\344\223\0026\0224/loadtesting/agent/v1/jobs/{job_i" +
-      "d}/getTransientFileBt\n%yandex.cloud.api." +
-      "loadtesting.agent.v1ZKgithub.com/yandex-" +
-      "cloud/go-genproto/yandex/cloud/loadtesti" +
-      "ng/agent/v1;agentb\006proto3"
+      "\022\021\n\tNOT_FOUND\020\004\032\002\010\001\022\013\n\007RUNNING\020\005\022\r\n\tFINI" +
+      "SHING\020\006\022\014\n\010FINISHED\020\007\022\013\n\007STOPPED\020\010\022\n\n\006FA" +
+      "ILED\020\t\022\017\n\013AUTOSTOPPED\020\n\022 \n\034WAITING_FOR_A" +
+      "_COMMAND_TO_RUN\020\013\"&\n\026ClaimJobStatusRespo" +
+      "nse\022\014\n\004code\030\001 \001(\003\"\"\n\020JobSignalRequest\022\016\n" +
+      "\006job_id\030\001 \001(\t\"\311\001\n\021JobSignalResponse\022K\n\006s" +
+      "ignal\030\001 \001(\0162;.yandex.cloud.loadtesting.a" +
+      "gent.v1.JobSignalResponse.Signal\022\025\n\rwait" +
+      "_duration\030\002 \001(\001\022\016\n\006run_in\030\003 \001(\001\"@\n\006Signa" +
+      "l\022\026\n\022SIGNAL_UNSPECIFIED\020\000\022\010\n\004STOP\020\001\022\010\n\004W" +
+      "AIT\020\002\022\n\n\006RUN_IN\020\0032\373\005\n\nJobService\022\276\001\n\013Cla" +
+      "imStatus\0228.yandex.cloud.loadtesting.agen" +
+      "t.v1.ClaimJobStatusRequest\0329.yandex.clou" +
+      "d.loadtesting.agent.v1.ClaimJobStatusRes" +
+      "ponse\":\202\323\344\223\0024\"//loadtesting/agent/v1/job" +
+      "s/{job_id}/claimStatus:\001*\022\307\001\n\003Get\0220.yand" +
+      "ex.cloud.loadtesting.agent.v1.GetJobRequ" +
+      "est\032&.yandex.cloud.loadtesting.agent.v1." +
+      "Job\"f\202\323\344\223\002`\0227/loadtesting/agent/v1/agent" +
+      "s/{agent_instance_id}/getJobZ%\022#/loadtes" +
+      "ting/agent/v1/jobs/{job_id}\022\255\001\n\tGetSigna" +
+      "l\0223.yandex.cloud.loadtesting.agent.v1.Jo" +
+      "bSignalRequest\0324.yandex.cloud.loadtestin" +
+      "g.agent.v1.JobSignalResponse\"5\202\323\344\223\002/\022-/l" +
+      "oadtesting/agent/v1/jobs/{job_id}/getSig" +
+      "nal\022\261\001\n\020GetTransientFile\0226.yandex.cloud." +
+      "loadtesting.agent.v1.GetJobTransientFile" +
+      "\032\'.yandex.cloud.loadtesting.agent.v1.Fil" +
+      "e\"<\202\323\344\223\0026\0224/loadtesting/agent/v1/jobs/{j" +
+      "ob_id}/getTransientFileBt\n%yandex.cloud." +
+      "api.loadtesting.agent.v1ZKgithub.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/loadt" +
+      "esting/agent/v1;agentb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

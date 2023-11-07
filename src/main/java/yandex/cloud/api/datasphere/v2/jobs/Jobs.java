@@ -10242,6 +10242,87 @@ public final class Jobs {
      * <code>.yandex.cloud.datasphere.v2.jobs.JobParameters job_parameters = 10;</code>
      */
     yandex.cloud.api.datasphere.v2.jobs.Jobs.JobParametersOrBuilder getJobParametersOrBuilder();
+
+    /**
+     * <pre>
+     * Job data expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_expires_at = 11;</code>
+     * @return Whether the dataExpiresAt field is set.
+     */
+    boolean hasDataExpiresAt();
+    /**
+     * <pre>
+     * Job data expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_expires_at = 11;</code>
+     * @return The dataExpiresAt.
+     */
+    com.google.protobuf.Timestamp getDataExpiresAt();
+    /**
+     * <pre>
+     * Job data expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_expires_at = 11;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getDataExpiresAtOrBuilder();
+
+    /**
+     * <pre>
+     * Marks if the job data has been cleared.
+     * </pre>
+     *
+     * <code>bool data_cleared = 12;</code>
+     * @return The dataCleared.
+     */
+    boolean getDataCleared();
+
+    /**
+     * <pre>
+     * Output files of the job.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+     */
+    java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.File> 
+        getOutputFilesList();
+    /**
+     * <pre>
+     * Output files of the job.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+     */
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.File getOutputFiles(int index);
+    /**
+     * <pre>
+     * Output files of the job.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+     */
+    int getOutputFilesCount();
+    /**
+     * <pre>
+     * Output files of the job.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.datasphere.v2.jobs.Jobs.FileOrBuilder> 
+        getOutputFilesOrBuilderList();
+    /**
+     * <pre>
+     * Output files of the job.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+     */
+    yandex.cloud.api.datasphere.v2.jobs.Jobs.FileOrBuilder getOutputFilesOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -10267,6 +10348,7 @@ public final class Jobs {
       config_ = "";
       createdById_ = "";
       projectId_ = "";
+      outputFiles_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -10289,6 +10371,7 @@ public final class Jobs {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -10380,6 +10463,33 @@ public final class Jobs {
 
               break;
             }
+            case 90: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (dataExpiresAt_ != null) {
+                subBuilder = dataExpiresAt_.toBuilder();
+              }
+              dataExpiresAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dataExpiresAt_);
+                dataExpiresAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 96: {
+
+              dataCleared_ = input.readBool();
+              break;
+            }
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                outputFiles_ = new java.util.ArrayList<yandex.cloud.api.datasphere.v2.jobs.Jobs.File>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              outputFiles_.add(
+                  input.readMessage(yandex.cloud.api.datasphere.v2.jobs.Jobs.File.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -10395,6 +10505,9 @@ public final class Jobs {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          outputFiles_ = java.util.Collections.unmodifiableList(outputFiles_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -10817,6 +10930,119 @@ public final class Jobs {
       return getJobParameters();
     }
 
+    public static final int DATA_EXPIRES_AT_FIELD_NUMBER = 11;
+    private com.google.protobuf.Timestamp dataExpiresAt_;
+    /**
+     * <pre>
+     * Job data expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_expires_at = 11;</code>
+     * @return Whether the dataExpiresAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasDataExpiresAt() {
+      return dataExpiresAt_ != null;
+    }
+    /**
+     * <pre>
+     * Job data expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_expires_at = 11;</code>
+     * @return The dataExpiresAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getDataExpiresAt() {
+      return dataExpiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dataExpiresAt_;
+    }
+    /**
+     * <pre>
+     * Job data expiration timestamp.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp data_expires_at = 11;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getDataExpiresAtOrBuilder() {
+      return getDataExpiresAt();
+    }
+
+    public static final int DATA_CLEARED_FIELD_NUMBER = 12;
+    private boolean dataCleared_;
+    /**
+     * <pre>
+     * Marks if the job data has been cleared.
+     * </pre>
+     *
+     * <code>bool data_cleared = 12;</code>
+     * @return The dataCleared.
+     */
+    @java.lang.Override
+    public boolean getDataCleared() {
+      return dataCleared_;
+    }
+
+    public static final int OUTPUT_FILES_FIELD_NUMBER = 13;
+    private java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.File> outputFiles_;
+    /**
+     * <pre>
+     * Output files of the job.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.File> getOutputFilesList() {
+      return outputFiles_;
+    }
+    /**
+     * <pre>
+     * Output files of the job.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.datasphere.v2.jobs.Jobs.FileOrBuilder> 
+        getOutputFilesOrBuilderList() {
+      return outputFiles_;
+    }
+    /**
+     * <pre>
+     * Output files of the job.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+     */
+    @java.lang.Override
+    public int getOutputFilesCount() {
+      return outputFiles_.size();
+    }
+    /**
+     * <pre>
+     * Output files of the job.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.File getOutputFiles(int index) {
+      return outputFiles_.get(index);
+    }
+    /**
+     * <pre>
+     * Output files of the job.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.jobs.Jobs.FileOrBuilder getOutputFilesOrBuilder(
+        int index) {
+      return outputFiles_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -10861,6 +11087,15 @@ public final class Jobs {
       if (jobParameters_ != null) {
         output.writeMessage(10, getJobParameters());
       }
+      if (dataExpiresAt_ != null) {
+        output.writeMessage(11, getDataExpiresAt());
+      }
+      if (dataCleared_ != false) {
+        output.writeBool(12, dataCleared_);
+      }
+      for (int i = 0; i < outputFiles_.size(); i++) {
+        output.writeMessage(13, outputFiles_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -10903,6 +11138,18 @@ public final class Jobs {
       if (jobParameters_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getJobParameters());
+      }
+      if (dataExpiresAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getDataExpiresAt());
+      }
+      if (dataCleared_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(12, dataCleared_);
+      }
+      for (int i = 0; i < outputFiles_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, outputFiles_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10947,6 +11194,15 @@ public final class Jobs {
         if (!getJobParameters()
             .equals(other.getJobParameters())) return false;
       }
+      if (hasDataExpiresAt() != other.hasDataExpiresAt()) return false;
+      if (hasDataExpiresAt()) {
+        if (!getDataExpiresAt()
+            .equals(other.getDataExpiresAt())) return false;
+      }
+      if (getDataCleared()
+          != other.getDataCleared()) return false;
+      if (!getOutputFilesList()
+          .equals(other.getOutputFilesList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -10983,6 +11239,17 @@ public final class Jobs {
       if (hasJobParameters()) {
         hash = (37 * hash) + JOB_PARAMETERS_FIELD_NUMBER;
         hash = (53 * hash) + getJobParameters().hashCode();
+      }
+      if (hasDataExpiresAt()) {
+        hash = (37 * hash) + DATA_EXPIRES_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getDataExpiresAt().hashCode();
+      }
+      hash = (37 * hash) + DATA_CLEARED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDataCleared());
+      if (getOutputFilesCount() > 0) {
+        hash = (37 * hash) + OUTPUT_FILES_FIELD_NUMBER;
+        hash = (53 * hash) + getOutputFilesList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -11116,6 +11383,7 @@ public final class Jobs {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getOutputFilesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -11153,6 +11421,20 @@ public final class Jobs {
           jobParameters_ = null;
           jobParametersBuilder_ = null;
         }
+        if (dataExpiresAtBuilder_ == null) {
+          dataExpiresAt_ = null;
+        } else {
+          dataExpiresAt_ = null;
+          dataExpiresAtBuilder_ = null;
+        }
+        dataCleared_ = false;
+
+        if (outputFilesBuilder_ == null) {
+          outputFiles_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          outputFilesBuilder_.clear();
+        }
         return this;
       }
 
@@ -11179,6 +11461,7 @@ public final class Jobs {
       @java.lang.Override
       public yandex.cloud.api.datasphere.v2.jobs.Jobs.Job buildPartial() {
         yandex.cloud.api.datasphere.v2.jobs.Jobs.Job result = new yandex.cloud.api.datasphere.v2.jobs.Jobs.Job(this);
+        int from_bitField0_ = bitField0_;
         result.id_ = id_;
         result.name_ = name_;
         result.desc_ = desc_;
@@ -11200,6 +11483,21 @@ public final class Jobs {
           result.jobParameters_ = jobParameters_;
         } else {
           result.jobParameters_ = jobParametersBuilder_.build();
+        }
+        if (dataExpiresAtBuilder_ == null) {
+          result.dataExpiresAt_ = dataExpiresAt_;
+        } else {
+          result.dataExpiresAt_ = dataExpiresAtBuilder_.build();
+        }
+        result.dataCleared_ = dataCleared_;
+        if (outputFilesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            outputFiles_ = java.util.Collections.unmodifiableList(outputFiles_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.outputFiles_ = outputFiles_;
+        } else {
+          result.outputFiles_ = outputFilesBuilder_.build();
         }
         onBuilt();
         return result;
@@ -11285,6 +11583,38 @@ public final class Jobs {
         if (other.hasJobParameters()) {
           mergeJobParameters(other.getJobParameters());
         }
+        if (other.hasDataExpiresAt()) {
+          mergeDataExpiresAt(other.getDataExpiresAt());
+        }
+        if (other.getDataCleared() != false) {
+          setDataCleared(other.getDataCleared());
+        }
+        if (outputFilesBuilder_ == null) {
+          if (!other.outputFiles_.isEmpty()) {
+            if (outputFiles_.isEmpty()) {
+              outputFiles_ = other.outputFiles_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureOutputFilesIsMutable();
+              outputFiles_.addAll(other.outputFiles_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.outputFiles_.isEmpty()) {
+            if (outputFilesBuilder_.isEmpty()) {
+              outputFilesBuilder_.dispose();
+              outputFilesBuilder_ = null;
+              outputFiles_ = other.outputFiles_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              outputFilesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOutputFilesFieldBuilder() : null;
+            } else {
+              outputFilesBuilder_.addAllMessages(other.outputFiles_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -11313,6 +11643,7 @@ public final class Jobs {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -12392,6 +12723,516 @@ public final class Jobs {
         }
         return jobParametersBuilder_;
       }
+
+      private com.google.protobuf.Timestamp dataExpiresAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> dataExpiresAtBuilder_;
+      /**
+       * <pre>
+       * Job data expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_expires_at = 11;</code>
+       * @return Whether the dataExpiresAt field is set.
+       */
+      public boolean hasDataExpiresAt() {
+        return dataExpiresAtBuilder_ != null || dataExpiresAt_ != null;
+      }
+      /**
+       * <pre>
+       * Job data expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_expires_at = 11;</code>
+       * @return The dataExpiresAt.
+       */
+      public com.google.protobuf.Timestamp getDataExpiresAt() {
+        if (dataExpiresAtBuilder_ == null) {
+          return dataExpiresAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : dataExpiresAt_;
+        } else {
+          return dataExpiresAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Job data expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_expires_at = 11;</code>
+       */
+      public Builder setDataExpiresAt(com.google.protobuf.Timestamp value) {
+        if (dataExpiresAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dataExpiresAt_ = value;
+          onChanged();
+        } else {
+          dataExpiresAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Job data expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_expires_at = 11;</code>
+       */
+      public Builder setDataExpiresAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (dataExpiresAtBuilder_ == null) {
+          dataExpiresAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          dataExpiresAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Job data expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_expires_at = 11;</code>
+       */
+      public Builder mergeDataExpiresAt(com.google.protobuf.Timestamp value) {
+        if (dataExpiresAtBuilder_ == null) {
+          if (dataExpiresAt_ != null) {
+            dataExpiresAt_ =
+              com.google.protobuf.Timestamp.newBuilder(dataExpiresAt_).mergeFrom(value).buildPartial();
+          } else {
+            dataExpiresAt_ = value;
+          }
+          onChanged();
+        } else {
+          dataExpiresAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Job data expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_expires_at = 11;</code>
+       */
+      public Builder clearDataExpiresAt() {
+        if (dataExpiresAtBuilder_ == null) {
+          dataExpiresAt_ = null;
+          onChanged();
+        } else {
+          dataExpiresAt_ = null;
+          dataExpiresAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Job data expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_expires_at = 11;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getDataExpiresAtBuilder() {
+        
+        onChanged();
+        return getDataExpiresAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Job data expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_expires_at = 11;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getDataExpiresAtOrBuilder() {
+        if (dataExpiresAtBuilder_ != null) {
+          return dataExpiresAtBuilder_.getMessageOrBuilder();
+        } else {
+          return dataExpiresAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : dataExpiresAt_;
+        }
+      }
+      /**
+       * <pre>
+       * Job data expiration timestamp.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp data_expires_at = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getDataExpiresAtFieldBuilder() {
+        if (dataExpiresAtBuilder_ == null) {
+          dataExpiresAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getDataExpiresAt(),
+                  getParentForChildren(),
+                  isClean());
+          dataExpiresAt_ = null;
+        }
+        return dataExpiresAtBuilder_;
+      }
+
+      private boolean dataCleared_ ;
+      /**
+       * <pre>
+       * Marks if the job data has been cleared.
+       * </pre>
+       *
+       * <code>bool data_cleared = 12;</code>
+       * @return The dataCleared.
+       */
+      @java.lang.Override
+      public boolean getDataCleared() {
+        return dataCleared_;
+      }
+      /**
+       * <pre>
+       * Marks if the job data has been cleared.
+       * </pre>
+       *
+       * <code>bool data_cleared = 12;</code>
+       * @param value The dataCleared to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDataCleared(boolean value) {
+        
+        dataCleared_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Marks if the job data has been cleared.
+       * </pre>
+       *
+       * <code>bool data_cleared = 12;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDataCleared() {
+        
+        dataCleared_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.File> outputFiles_ =
+        java.util.Collections.emptyList();
+      private void ensureOutputFilesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          outputFiles_ = new java.util.ArrayList<yandex.cloud.api.datasphere.v2.jobs.Jobs.File>(outputFiles_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.File, yandex.cloud.api.datasphere.v2.jobs.Jobs.File.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.FileOrBuilder> outputFilesBuilder_;
+
+      /**
+       * <pre>
+       * Output files of the job.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+       */
+      public java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.File> getOutputFilesList() {
+        if (outputFilesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(outputFiles_);
+        } else {
+          return outputFilesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Output files of the job.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+       */
+      public int getOutputFilesCount() {
+        if (outputFilesBuilder_ == null) {
+          return outputFiles_.size();
+        } else {
+          return outputFilesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Output files of the job.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.File getOutputFiles(int index) {
+        if (outputFilesBuilder_ == null) {
+          return outputFiles_.get(index);
+        } else {
+          return outputFilesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Output files of the job.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+       */
+      public Builder setOutputFiles(
+          int index, yandex.cloud.api.datasphere.v2.jobs.Jobs.File value) {
+        if (outputFilesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOutputFilesIsMutable();
+          outputFiles_.set(index, value);
+          onChanged();
+        } else {
+          outputFilesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Output files of the job.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+       */
+      public Builder setOutputFiles(
+          int index, yandex.cloud.api.datasphere.v2.jobs.Jobs.File.Builder builderForValue) {
+        if (outputFilesBuilder_ == null) {
+          ensureOutputFilesIsMutable();
+          outputFiles_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          outputFilesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Output files of the job.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+       */
+      public Builder addOutputFiles(yandex.cloud.api.datasphere.v2.jobs.Jobs.File value) {
+        if (outputFilesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOutputFilesIsMutable();
+          outputFiles_.add(value);
+          onChanged();
+        } else {
+          outputFilesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Output files of the job.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+       */
+      public Builder addOutputFiles(
+          int index, yandex.cloud.api.datasphere.v2.jobs.Jobs.File value) {
+        if (outputFilesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOutputFilesIsMutable();
+          outputFiles_.add(index, value);
+          onChanged();
+        } else {
+          outputFilesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Output files of the job.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+       */
+      public Builder addOutputFiles(
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.File.Builder builderForValue) {
+        if (outputFilesBuilder_ == null) {
+          ensureOutputFilesIsMutable();
+          outputFiles_.add(builderForValue.build());
+          onChanged();
+        } else {
+          outputFilesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Output files of the job.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+       */
+      public Builder addOutputFiles(
+          int index, yandex.cloud.api.datasphere.v2.jobs.Jobs.File.Builder builderForValue) {
+        if (outputFilesBuilder_ == null) {
+          ensureOutputFilesIsMutable();
+          outputFiles_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          outputFilesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Output files of the job.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+       */
+      public Builder addAllOutputFiles(
+          java.lang.Iterable<? extends yandex.cloud.api.datasphere.v2.jobs.Jobs.File> values) {
+        if (outputFilesBuilder_ == null) {
+          ensureOutputFilesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, outputFiles_);
+          onChanged();
+        } else {
+          outputFilesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Output files of the job.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+       */
+      public Builder clearOutputFiles() {
+        if (outputFilesBuilder_ == null) {
+          outputFiles_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          outputFilesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Output files of the job.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+       */
+      public Builder removeOutputFiles(int index) {
+        if (outputFilesBuilder_ == null) {
+          ensureOutputFilesIsMutable();
+          outputFiles_.remove(index);
+          onChanged();
+        } else {
+          outputFilesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Output files of the job.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.File.Builder getOutputFilesBuilder(
+          int index) {
+        return getOutputFilesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Output files of the job.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.FileOrBuilder getOutputFilesOrBuilder(
+          int index) {
+        if (outputFilesBuilder_ == null) {
+          return outputFiles_.get(index);  } else {
+          return outputFilesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Output files of the job.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.datasphere.v2.jobs.Jobs.FileOrBuilder> 
+           getOutputFilesOrBuilderList() {
+        if (outputFilesBuilder_ != null) {
+          return outputFilesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(outputFiles_);
+        }
+      }
+      /**
+       * <pre>
+       * Output files of the job.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.File.Builder addOutputFilesBuilder() {
+        return getOutputFilesFieldBuilder().addBuilder(
+            yandex.cloud.api.datasphere.v2.jobs.Jobs.File.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Output files of the job.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+       */
+      public yandex.cloud.api.datasphere.v2.jobs.Jobs.File.Builder addOutputFilesBuilder(
+          int index) {
+        return getOutputFilesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.datasphere.v2.jobs.Jobs.File.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Output files of the job.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.datasphere.v2.jobs.File output_files = 13;</code>
+       */
+      public java.util.List<yandex.cloud.api.datasphere.v2.jobs.Jobs.File.Builder> 
+           getOutputFilesBuilderList() {
+        return getOutputFilesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.datasphere.v2.jobs.Jobs.File, yandex.cloud.api.datasphere.v2.jobs.Jobs.File.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.FileOrBuilder> 
+          getOutputFilesFieldBuilder() {
+        if (outputFilesBuilder_ == null) {
+          outputFilesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.datasphere.v2.jobs.Jobs.File, yandex.cloud.api.datasphere.v2.jobs.Jobs.File.Builder, yandex.cloud.api.datasphere.v2.jobs.Jobs.FileOrBuilder>(
+                  outputFiles_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          outputFiles_ = null;
+        }
+        return outputFilesBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -13050,7 +13891,7 @@ public final class Jobs {
       "_ds_secret_name\030\004 \001(\tH\000B\n\n\010password\"]\n\tP" +
       "ythonEnv\022\022\n\nconda_yaml\030\001 \001(\t\022<\n\rlocal_mo" +
       "dules\030\002 \003(\0132%.yandex.cloud.datasphere.v2" +
-      ".jobs.File\"\315\002\n\003Job\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002" +
+      ".jobs.File\"\325\003\n\003Job\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002" +
       " \001(\t\022\014\n\004desc\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032" +
       ".google.protobuf.Timestamp\022/\n\013finished_a" +
       "t\030\005 \001(\0132\032.google.protobuf.Timestamp\022:\n\006s" +
@@ -13058,15 +13899,18 @@ public final class Jobs {
       ".jobs.JobStatus\022\016\n\006config\030\007 \001(\t\022\025\n\rcreat" +
       "ed_by_id\030\010 \001(\t\022\022\n\nproject_id\030\t \001(\t\022F\n\016jo" +
       "b_parameters\030\n \001(\0132..yandex.cloud.datasp" +
-      "here.v2.jobs.JobParameters\" \n\tJobResult\022" +
-      "\023\n\013return_code\030\001 \001(\003*\201\001\n\tJobStatus\022\032\n\026JO" +
-      "B_STATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\r\n\t" +
-      "EXECUTING\020\002\022\024\n\020UPLOADING_OUTPUT\020\003\022\013\n\007SUC" +
-      "CESS\020\004\022\t\n\005ERROR\020\005\022\r\n\tCANCELLED\020\006B{\n#yand" +
-      "ex.cloud.api.datasphere.v2.jobsB\004JobsZNg" +
-      "ithub.com/yandex-cloud/go-genproto/yande" +
-      "x/cloud/datasphere/v2/jobs;datasphereb\006p" +
-      "roto3"
+      "here.v2.jobs.JobParameters\0223\n\017data_expir" +
+      "es_at\030\013 \001(\0132\032.google.protobuf.Timestamp\022" +
+      "\024\n\014data_cleared\030\014 \001(\010\022;\n\014output_files\030\r " +
+      "\003(\0132%.yandex.cloud.datasphere.v2.jobs.Fi" +
+      "le\" \n\tJobResult\022\023\n\013return_code\030\001 \001(\003*\201\001\n" +
+      "\tJobStatus\022\032\n\026JOB_STATUS_UNSPECIFIED\020\000\022\014" +
+      "\n\010CREATING\020\001\022\r\n\tEXECUTING\020\002\022\024\n\020UPLOADING" +
+      "_OUTPUT\020\003\022\013\n\007SUCCESS\020\004\022\t\n\005ERROR\020\005\022\r\n\tCAN" +
+      "CELLED\020\006B{\n#yandex.cloud.api.datasphere." +
+      "v2.jobsB\004JobsZNgithub.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/datasphere/v2/jo" +
+      "bs;datasphereb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13132,7 +13976,7 @@ public final class Jobs {
     internal_static_yandex_cloud_datasphere_v2_jobs_Job_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_Job_descriptor,
-        new java.lang.String[] { "Id", "Name", "Desc", "CreatedAt", "FinishedAt", "Status", "Config", "CreatedById", "ProjectId", "JobParameters", });
+        new java.lang.String[] { "Id", "Name", "Desc", "CreatedAt", "FinishedAt", "Status", "Config", "CreatedById", "ProjectId", "JobParameters", "DataExpiresAt", "DataCleared", "OutputFiles", });
     internal_static_yandex_cloud_datasphere_v2_jobs_JobResult_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_datasphere_v2_jobs_JobResult_fieldAccessorTable = new

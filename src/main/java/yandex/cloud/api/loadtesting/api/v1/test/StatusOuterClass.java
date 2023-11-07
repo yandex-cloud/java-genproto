@@ -75,6 +75,10 @@ public final class StatusOuterClass {
      * <code>DELETING = 13;</code>
      */
     DELETING(13),
+    /**
+     * <code>LOST = 14;</code>
+     */
+    LOST(14),
     UNRECOGNIZED(-1),
     ;
 
@@ -134,6 +138,10 @@ public final class StatusOuterClass {
      * <code>DELETING = 13;</code>
      */
     public static final int DELETING_VALUE = 13;
+    /**
+     * <code>LOST = 14;</code>
+     */
+    public static final int LOST_VALUE = 14;
 
 
     public final int getNumber() {
@@ -174,6 +182,7 @@ public final class StatusOuterClass {
         case 11: return AUTOSTOPPED;
         case 12: return WAITING;
         case 13: return DELETING;
+        case 14: return LOST;
         default: return null;
       }
     }
@@ -241,15 +250,16 @@ public final class StatusOuterClass {
     java.lang.String[] descriptorData = {
       "\n1yandex/cloud/loadtesting/api/v1/test/s" +
       "tatus.proto\022$yandex.cloud.loadtesting.ap" +
-      "i.v1.test*\331\001\n\006Status\022\026\n\022STATUS_UNSPECIFI" +
+      "i.v1.test*\343\001\n\006Status\022\026\n\022STATUS_UNSPECIFI" +
       "ED\020\000\022\013\n\007CREATED\020\001\022\r\n\tINITIATED\020\002\022\r\n\tPREP" +
       "ARING\020\003\022\013\n\007RUNNING\020\004\022\r\n\tFINISHING\020\005\022\010\n\004D" +
       "ONE\020\006\022\023\n\017POST_PROCESSING\020\007\022\n\n\006FAILED\020\010\022\014" +
       "\n\010STOPPING\020\t\022\013\n\007STOPPED\020\n\022\017\n\013AUTOSTOPPED" +
-      "\020\013\022\013\n\007WAITING\020\014\022\014\n\010DELETING\020\rBy\n(yandex." +
-      "cloud.api.loadtesting.api.v1.testZMgithu" +
-      "b.com/yandex-cloud/go-genproto/yandex/cl" +
-      "oud/loadtesting/api/v1/test;testb\006proto3"
+      "\020\013\022\013\n\007WAITING\020\014\022\014\n\010DELETING\020\r\022\010\n\004LOST\020\016B" +
+      "y\n(yandex.cloud.api.loadtesting.api.v1.t" +
+      "estZMgithub.com/yandex-cloud/go-genproto" +
+      "/yandex/cloud/loadtesting/api/v1/test;te" +
+      "stb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

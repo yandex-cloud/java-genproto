@@ -587,6 +587,72 @@ public final class ProjectOuterClass {
        * @return The staleExecTimeoutMode.
        */
       yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.StaleExecutionTimeoutMode getStaleExecTimeoutMode();
+
+      /**
+       * <pre>
+       * VM allocation mode.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.Project.Settings.IdeExecutionMode ide_execution_mode = 10;</code>
+       * @return The enum numeric value on the wire for ideExecutionMode.
+       */
+      int getIdeExecutionModeValue();
+      /**
+       * <pre>
+       * VM allocation mode.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.Project.Settings.IdeExecutionMode ide_execution_mode = 10;</code>
+       * @return The ideExecutionMode.
+       */
+      yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode getIdeExecutionMode();
+
+      /**
+       * <pre>
+       * Timeout for VM deallocation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration vm_inactivity_timeout = 11;</code>
+       * @return Whether the vmInactivityTimeout field is set.
+       */
+      boolean hasVmInactivityTimeout();
+      /**
+       * <pre>
+       * Timeout for VM deallocation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration vm_inactivity_timeout = 11;</code>
+       * @return The vmInactivityTimeout.
+       */
+      com.google.protobuf.Duration getVmInactivityTimeout();
+      /**
+       * <pre>
+       * Timeout for VM deallocation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration vm_inactivity_timeout = 11;</code>
+       */
+      com.google.protobuf.DurationOrBuilder getVmInactivityTimeoutOrBuilder();
+
+      /**
+       * <pre>
+       * Default VM configuration for DEDICATED mode.
+       * </pre>
+       *
+       * <code>string default_dedicated_spec = 12;</code>
+       * @return The defaultDedicatedSpec.
+       */
+      java.lang.String getDefaultDedicatedSpec();
+      /**
+       * <pre>
+       * Default VM configuration for DEDICATED mode.
+       * </pre>
+       *
+       * <code>string default_dedicated_spec = 12;</code>
+       * @return The bytes for defaultDedicatedSpec.
+       */
+      com.google.protobuf.ByteString
+          getDefaultDedicatedSpecBytes();
     }
     /**
      * Protobuf type {@code yandex.cloud.datasphere.v2.Project.Settings}
@@ -609,6 +675,8 @@ public final class ProjectOuterClass {
         ide_ = 0;
         defaultFolderId_ = "";
         staleExecTimeoutMode_ = 0;
+        ideExecutionMode_ = 0;
+        defaultDedicatedSpec_ = "";
       }
 
       @java.lang.Override
@@ -696,6 +764,31 @@ public final class ProjectOuterClass {
                 int rawValue = input.readEnum();
 
                 staleExecTimeoutMode_ = rawValue;
+                break;
+              }
+              case 80: {
+                int rawValue = input.readEnum();
+
+                ideExecutionMode_ = rawValue;
+                break;
+              }
+              case 90: {
+                com.google.protobuf.Duration.Builder subBuilder = null;
+                if (vmInactivityTimeout_ != null) {
+                  subBuilder = vmInactivityTimeout_.toBuilder();
+                }
+                vmInactivityTimeout_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(vmInactivityTimeout_);
+                  vmInactivityTimeout_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 98: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                defaultDedicatedSpec_ = s;
                 break;
               }
               default: {
@@ -1134,6 +1227,141 @@ public final class ProjectOuterClass {
         // @@protoc_insertion_point(enum_scope:yandex.cloud.datasphere.v2.Project.Settings.StaleExecutionTimeoutMode)
       }
 
+      /**
+       * Protobuf enum {@code yandex.cloud.datasphere.v2.Project.Settings.IdeExecutionMode}
+       */
+      public enum IdeExecutionMode
+          implements com.google.protobuf.ProtocolMessageEnum {
+        /**
+         * <code>IDE_EXECUTION_MODE_UNSPECIFIED = 0;</code>
+         */
+        IDE_EXECUTION_MODE_UNSPECIFIED(0),
+        /**
+         * <pre>
+         * VM is allocated for specific execution and deallocated after the execution ends.
+         * </pre>
+         *
+         * <code>SERVERLESS = 1;</code>
+         */
+        SERVERLESS(1),
+        /**
+         * <pre>
+         * VM is allocated at the first execution and stays allocated until manually deallocated.
+         * Or until timeout exceeded.
+         * </pre>
+         *
+         * <code>DEDICATED = 2;</code>
+         */
+        DEDICATED(2),
+        UNRECOGNIZED(-1),
+        ;
+
+        /**
+         * <code>IDE_EXECUTION_MODE_UNSPECIFIED = 0;</code>
+         */
+        public static final int IDE_EXECUTION_MODE_UNSPECIFIED_VALUE = 0;
+        /**
+         * <pre>
+         * VM is allocated for specific execution and deallocated after the execution ends.
+         * </pre>
+         *
+         * <code>SERVERLESS = 1;</code>
+         */
+        public static final int SERVERLESS_VALUE = 1;
+        /**
+         * <pre>
+         * VM is allocated at the first execution and stays allocated until manually deallocated.
+         * Or until timeout exceeded.
+         * </pre>
+         *
+         * <code>DEDICATED = 2;</code>
+         */
+        public static final int DEDICATED_VALUE = 2;
+
+
+        public final int getNumber() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalArgumentException(
+                "Can't get the number of an unknown enum value.");
+          }
+          return value;
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         * @deprecated Use {@link #forNumber(int)} instead.
+         */
+        @java.lang.Deprecated
+        public static IdeExecutionMode valueOf(int value) {
+          return forNumber(value);
+        }
+
+        /**
+         * @param value The numeric wire value of the corresponding enum entry.
+         * @return The enum associated with the given numeric wire value.
+         */
+        public static IdeExecutionMode forNumber(int value) {
+          switch (value) {
+            case 0: return IDE_EXECUTION_MODE_UNSPECIFIED;
+            case 1: return SERVERLESS;
+            case 2: return DEDICATED;
+            default: return null;
+          }
+        }
+
+        public static com.google.protobuf.Internal.EnumLiteMap<IdeExecutionMode>
+            internalGetValueMap() {
+          return internalValueMap;
+        }
+        private static final com.google.protobuf.Internal.EnumLiteMap<
+            IdeExecutionMode> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<IdeExecutionMode>() {
+                public IdeExecutionMode findValueByNumber(int number) {
+                  return IdeExecutionMode.forNumber(number);
+                }
+              };
+
+        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+            getValueDescriptor() {
+          if (this == UNRECOGNIZED) {
+            throw new java.lang.IllegalStateException(
+                "Can't get the descriptor of an unrecognized enum value.");
+          }
+          return getDescriptor().getValues().get(ordinal());
+        }
+        public final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+        public static final com.google.protobuf.Descriptors.EnumDescriptor
+            getDescriptor() {
+          return yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.getDescriptor().getEnumTypes().get(3);
+        }
+
+        private static final IdeExecutionMode[] VALUES = values();
+
+        public static IdeExecutionMode valueOf(
+            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          if (desc.getType() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "EnumValueDescriptor is not for this type.");
+          }
+          if (desc.getIndex() == -1) {
+            return UNRECOGNIZED;
+          }
+          return VALUES[desc.getIndex()];
+        }
+
+        private final int value;
+
+        private IdeExecutionMode(int value) {
+          this.value = value;
+        }
+
+        // @@protoc_insertion_point(enum_scope:yandex.cloud.datasphere.v2.Project.Settings.IdeExecutionMode)
+      }
+
       public static final int SERVICE_ACCOUNT_ID_FIELD_NUMBER = 1;
       private volatile java.lang.Object serviceAccountId_;
       /**
@@ -1467,6 +1695,117 @@ public final class ProjectOuterClass {
         return result == null ? yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.StaleExecutionTimeoutMode.UNRECOGNIZED : result;
       }
 
+      public static final int IDE_EXECUTION_MODE_FIELD_NUMBER = 10;
+      private int ideExecutionMode_;
+      /**
+       * <pre>
+       * VM allocation mode.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.Project.Settings.IdeExecutionMode ide_execution_mode = 10;</code>
+       * @return The enum numeric value on the wire for ideExecutionMode.
+       */
+      @java.lang.Override public int getIdeExecutionModeValue() {
+        return ideExecutionMode_;
+      }
+      /**
+       * <pre>
+       * VM allocation mode.
+       * </pre>
+       *
+       * <code>.yandex.cloud.datasphere.v2.Project.Settings.IdeExecutionMode ide_execution_mode = 10;</code>
+       * @return The ideExecutionMode.
+       */
+      @java.lang.Override public yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode getIdeExecutionMode() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode result = yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode.valueOf(ideExecutionMode_);
+        return result == null ? yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode.UNRECOGNIZED : result;
+      }
+
+      public static final int VM_INACTIVITY_TIMEOUT_FIELD_NUMBER = 11;
+      private com.google.protobuf.Duration vmInactivityTimeout_;
+      /**
+       * <pre>
+       * Timeout for VM deallocation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration vm_inactivity_timeout = 11;</code>
+       * @return Whether the vmInactivityTimeout field is set.
+       */
+      @java.lang.Override
+      public boolean hasVmInactivityTimeout() {
+        return vmInactivityTimeout_ != null;
+      }
+      /**
+       * <pre>
+       * Timeout for VM deallocation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration vm_inactivity_timeout = 11;</code>
+       * @return The vmInactivityTimeout.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Duration getVmInactivityTimeout() {
+        return vmInactivityTimeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : vmInactivityTimeout_;
+      }
+      /**
+       * <pre>
+       * Timeout for VM deallocation.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration vm_inactivity_timeout = 11;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.DurationOrBuilder getVmInactivityTimeoutOrBuilder() {
+        return getVmInactivityTimeout();
+      }
+
+      public static final int DEFAULT_DEDICATED_SPEC_FIELD_NUMBER = 12;
+      private volatile java.lang.Object defaultDedicatedSpec_;
+      /**
+       * <pre>
+       * Default VM configuration for DEDICATED mode.
+       * </pre>
+       *
+       * <code>string default_dedicated_spec = 12;</code>
+       * @return The defaultDedicatedSpec.
+       */
+      @java.lang.Override
+      public java.lang.String getDefaultDedicatedSpec() {
+        java.lang.Object ref = defaultDedicatedSpec_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          defaultDedicatedSpec_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * Default VM configuration for DEDICATED mode.
+       * </pre>
+       *
+       * <code>string default_dedicated_spec = 12;</code>
+       * @return The bytes for defaultDedicatedSpec.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getDefaultDedicatedSpecBytes() {
+        java.lang.Object ref = defaultDedicatedSpec_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          defaultDedicatedSpec_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -1507,6 +1846,15 @@ public final class ProjectOuterClass {
         }
         if (staleExecTimeoutMode_ != yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.StaleExecutionTimeoutMode.STALE_EXECUTION_TIMEOUT_MODE_UNSPECIFIED.getNumber()) {
           output.writeEnum(9, staleExecTimeoutMode_);
+        }
+        if (ideExecutionMode_ != yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode.IDE_EXECUTION_MODE_UNSPECIFIED.getNumber()) {
+          output.writeEnum(10, ideExecutionMode_);
+        }
+        if (vmInactivityTimeout_ != null) {
+          output.writeMessage(11, getVmInactivityTimeout());
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultDedicatedSpec_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 12, defaultDedicatedSpec_);
         }
         unknownFields.writeTo(output);
       }
@@ -1553,6 +1901,17 @@ public final class ProjectOuterClass {
           size += com.google.protobuf.CodedOutputStream
             .computeEnumSize(9, staleExecTimeoutMode_);
         }
+        if (ideExecutionMode_ != yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode.IDE_EXECUTION_MODE_UNSPECIFIED.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(10, ideExecutionMode_);
+        }
+        if (vmInactivityTimeout_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(11, getVmInactivityTimeout());
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(defaultDedicatedSpec_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, defaultDedicatedSpec_);
+        }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
@@ -1583,6 +1942,14 @@ public final class ProjectOuterClass {
         if (!getDefaultFolderId()
             .equals(other.getDefaultFolderId())) return false;
         if (staleExecTimeoutMode_ != other.staleExecTimeoutMode_) return false;
+        if (ideExecutionMode_ != other.ideExecutionMode_) return false;
+        if (hasVmInactivityTimeout() != other.hasVmInactivityTimeout()) return false;
+        if (hasVmInactivityTimeout()) {
+          if (!getVmInactivityTimeout()
+              .equals(other.getVmInactivityTimeout())) return false;
+        }
+        if (!getDefaultDedicatedSpec()
+            .equals(other.getDefaultDedicatedSpec())) return false;
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -1615,6 +1982,14 @@ public final class ProjectOuterClass {
         hash = (53 * hash) + getDefaultFolderId().hashCode();
         hash = (37 * hash) + STALE_EXEC_TIMEOUT_MODE_FIELD_NUMBER;
         hash = (53 * hash) + staleExecTimeoutMode_;
+        hash = (37 * hash) + IDE_EXECUTION_MODE_FIELD_NUMBER;
+        hash = (53 * hash) + ideExecutionMode_;
+        if (hasVmInactivityTimeout()) {
+          hash = (37 * hash) + VM_INACTIVITY_TIMEOUT_FIELD_NUMBER;
+          hash = (53 * hash) + getVmInactivityTimeout().hashCode();
+        }
+        hash = (37 * hash) + DEFAULT_DEDICATED_SPEC_FIELD_NUMBER;
+        hash = (53 * hash) + getDefaultDedicatedSpec().hashCode();
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -1766,6 +2141,16 @@ public final class ProjectOuterClass {
 
           staleExecTimeoutMode_ = 0;
 
+          ideExecutionMode_ = 0;
+
+          if (vmInactivityTimeoutBuilder_ == null) {
+            vmInactivityTimeout_ = null;
+          } else {
+            vmInactivityTimeout_ = null;
+            vmInactivityTimeoutBuilder_ = null;
+          }
+          defaultDedicatedSpec_ = "";
+
           return this;
         }
 
@@ -1806,6 +2191,13 @@ public final class ProjectOuterClass {
           result.ide_ = ide_;
           result.defaultFolderId_ = defaultFolderId_;
           result.staleExecTimeoutMode_ = staleExecTimeoutMode_;
+          result.ideExecutionMode_ = ideExecutionMode_;
+          if (vmInactivityTimeoutBuilder_ == null) {
+            result.vmInactivityTimeout_ = vmInactivityTimeout_;
+          } else {
+            result.vmInactivityTimeout_ = vmInactivityTimeoutBuilder_.build();
+          }
+          result.defaultDedicatedSpec_ = defaultDedicatedSpec_;
           onBuilt();
           return result;
         }
@@ -1891,6 +2283,16 @@ public final class ProjectOuterClass {
           }
           if (other.staleExecTimeoutMode_ != 0) {
             setStaleExecTimeoutModeValue(other.getStaleExecTimeoutModeValue());
+          }
+          if (other.ideExecutionMode_ != 0) {
+            setIdeExecutionModeValue(other.getIdeExecutionModeValue());
+          }
+          if (other.hasVmInactivityTimeout()) {
+            mergeVmInactivityTimeout(other.getVmInactivityTimeout());
+          }
+          if (!other.getDefaultDedicatedSpec().isEmpty()) {
+            defaultDedicatedSpec_ = other.defaultDedicatedSpec_;
+            onChanged();
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -2718,6 +3120,331 @@ public final class ProjectOuterClass {
         public Builder clearStaleExecTimeoutMode() {
           
           staleExecTimeoutMode_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int ideExecutionMode_ = 0;
+        /**
+         * <pre>
+         * VM allocation mode.
+         * </pre>
+         *
+         * <code>.yandex.cloud.datasphere.v2.Project.Settings.IdeExecutionMode ide_execution_mode = 10;</code>
+         * @return The enum numeric value on the wire for ideExecutionMode.
+         */
+        @java.lang.Override public int getIdeExecutionModeValue() {
+          return ideExecutionMode_;
+        }
+        /**
+         * <pre>
+         * VM allocation mode.
+         * </pre>
+         *
+         * <code>.yandex.cloud.datasphere.v2.Project.Settings.IdeExecutionMode ide_execution_mode = 10;</code>
+         * @param value The enum numeric value on the wire for ideExecutionMode to set.
+         * @return This builder for chaining.
+         */
+        public Builder setIdeExecutionModeValue(int value) {
+          
+          ideExecutionMode_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * VM allocation mode.
+         * </pre>
+         *
+         * <code>.yandex.cloud.datasphere.v2.Project.Settings.IdeExecutionMode ide_execution_mode = 10;</code>
+         * @return The ideExecutionMode.
+         */
+        @java.lang.Override
+        public yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode getIdeExecutionMode() {
+          @SuppressWarnings("deprecation")
+          yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode result = yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode.valueOf(ideExecutionMode_);
+          return result == null ? yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode.UNRECOGNIZED : result;
+        }
+        /**
+         * <pre>
+         * VM allocation mode.
+         * </pre>
+         *
+         * <code>.yandex.cloud.datasphere.v2.Project.Settings.IdeExecutionMode ide_execution_mode = 10;</code>
+         * @param value The ideExecutionMode to set.
+         * @return This builder for chaining.
+         */
+        public Builder setIdeExecutionMode(yandex.cloud.api.datasphere.v2.ProjectOuterClass.Project.Settings.IdeExecutionMode value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          ideExecutionMode_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * VM allocation mode.
+         * </pre>
+         *
+         * <code>.yandex.cloud.datasphere.v2.Project.Settings.IdeExecutionMode ide_execution_mode = 10;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearIdeExecutionMode() {
+          
+          ideExecutionMode_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.Duration vmInactivityTimeout_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> vmInactivityTimeoutBuilder_;
+        /**
+         * <pre>
+         * Timeout for VM deallocation.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration vm_inactivity_timeout = 11;</code>
+         * @return Whether the vmInactivityTimeout field is set.
+         */
+        public boolean hasVmInactivityTimeout() {
+          return vmInactivityTimeoutBuilder_ != null || vmInactivityTimeout_ != null;
+        }
+        /**
+         * <pre>
+         * Timeout for VM deallocation.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration vm_inactivity_timeout = 11;</code>
+         * @return The vmInactivityTimeout.
+         */
+        public com.google.protobuf.Duration getVmInactivityTimeout() {
+          if (vmInactivityTimeoutBuilder_ == null) {
+            return vmInactivityTimeout_ == null ? com.google.protobuf.Duration.getDefaultInstance() : vmInactivityTimeout_;
+          } else {
+            return vmInactivityTimeoutBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Timeout for VM deallocation.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration vm_inactivity_timeout = 11;</code>
+         */
+        public Builder setVmInactivityTimeout(com.google.protobuf.Duration value) {
+          if (vmInactivityTimeoutBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            vmInactivityTimeout_ = value;
+            onChanged();
+          } else {
+            vmInactivityTimeoutBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Timeout for VM deallocation.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration vm_inactivity_timeout = 11;</code>
+         */
+        public Builder setVmInactivityTimeout(
+            com.google.protobuf.Duration.Builder builderForValue) {
+          if (vmInactivityTimeoutBuilder_ == null) {
+            vmInactivityTimeout_ = builderForValue.build();
+            onChanged();
+          } else {
+            vmInactivityTimeoutBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Timeout for VM deallocation.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration vm_inactivity_timeout = 11;</code>
+         */
+        public Builder mergeVmInactivityTimeout(com.google.protobuf.Duration value) {
+          if (vmInactivityTimeoutBuilder_ == null) {
+            if (vmInactivityTimeout_ != null) {
+              vmInactivityTimeout_ =
+                com.google.protobuf.Duration.newBuilder(vmInactivityTimeout_).mergeFrom(value).buildPartial();
+            } else {
+              vmInactivityTimeout_ = value;
+            }
+            onChanged();
+          } else {
+            vmInactivityTimeoutBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Timeout for VM deallocation.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration vm_inactivity_timeout = 11;</code>
+         */
+        public Builder clearVmInactivityTimeout() {
+          if (vmInactivityTimeoutBuilder_ == null) {
+            vmInactivityTimeout_ = null;
+            onChanged();
+          } else {
+            vmInactivityTimeout_ = null;
+            vmInactivityTimeoutBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Timeout for VM deallocation.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration vm_inactivity_timeout = 11;</code>
+         */
+        public com.google.protobuf.Duration.Builder getVmInactivityTimeoutBuilder() {
+          
+          onChanged();
+          return getVmInactivityTimeoutFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Timeout for VM deallocation.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration vm_inactivity_timeout = 11;</code>
+         */
+        public com.google.protobuf.DurationOrBuilder getVmInactivityTimeoutOrBuilder() {
+          if (vmInactivityTimeoutBuilder_ != null) {
+            return vmInactivityTimeoutBuilder_.getMessageOrBuilder();
+          } else {
+            return vmInactivityTimeout_ == null ?
+                com.google.protobuf.Duration.getDefaultInstance() : vmInactivityTimeout_;
+          }
+        }
+        /**
+         * <pre>
+         * Timeout for VM deallocation.
+         * </pre>
+         *
+         * <code>.google.protobuf.Duration vm_inactivity_timeout = 11;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+            getVmInactivityTimeoutFieldBuilder() {
+          if (vmInactivityTimeoutBuilder_ == null) {
+            vmInactivityTimeoutBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                    getVmInactivityTimeout(),
+                    getParentForChildren(),
+                    isClean());
+            vmInactivityTimeout_ = null;
+          }
+          return vmInactivityTimeoutBuilder_;
+        }
+
+        private java.lang.Object defaultDedicatedSpec_ = "";
+        /**
+         * <pre>
+         * Default VM configuration for DEDICATED mode.
+         * </pre>
+         *
+         * <code>string default_dedicated_spec = 12;</code>
+         * @return The defaultDedicatedSpec.
+         */
+        public java.lang.String getDefaultDedicatedSpec() {
+          java.lang.Object ref = defaultDedicatedSpec_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            defaultDedicatedSpec_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Default VM configuration for DEDICATED mode.
+         * </pre>
+         *
+         * <code>string default_dedicated_spec = 12;</code>
+         * @return The bytes for defaultDedicatedSpec.
+         */
+        public com.google.protobuf.ByteString
+            getDefaultDedicatedSpecBytes() {
+          java.lang.Object ref = defaultDedicatedSpec_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            defaultDedicatedSpec_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * Default VM configuration for DEDICATED mode.
+         * </pre>
+         *
+         * <code>string default_dedicated_spec = 12;</code>
+         * @param value The defaultDedicatedSpec to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDefaultDedicatedSpec(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          defaultDedicatedSpec_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Default VM configuration for DEDICATED mode.
+         * </pre>
+         *
+         * <code>string default_dedicated_spec = 12;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearDefaultDedicatedSpec() {
+          
+          defaultDedicatedSpec_ = getDefaultInstance().getDefaultDedicatedSpec();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * Default VM configuration for DEDICATED mode.
+         * </pre>
+         *
+         * <code>string default_dedicated_spec = 12;</code>
+         * @param value The bytes for defaultDedicatedSpec to set.
+         * @return This builder for chaining.
+         */
+        public Builder setDefaultDedicatedSpecBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          defaultDedicatedSpec_ = value;
           onChanged();
           return this;
         }
@@ -5740,45 +6467,54 @@ public final class ProjectOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n(yandex/cloud/datasphere/v2/project.pro" +
-      "to\022\032yandex.cloud.datasphere.v2\032\037google/p" +
-      "rotobuf/timestamp.proto\032\036google/protobuf" +
-      "/wrappers.proto\"\217\t\n\007Project\022\n\n\002id\030\001 \001(\t\022" +
-      ".\n\ncreated_at\030\002 \001(\0132\032.google.protobuf.Ti" +
-      "mestamp\022\014\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001" +
-      "(\t\022?\n\006labels\030\005 \003(\0132/.yandex.cloud.datasp" +
-      "here.v2.Project.LabelsEntry\022\025\n\rcreated_b" +
-      "y_id\030\006 \001(\t\022>\n\010settings\030\007 \001(\0132,.yandex.cl" +
-      "oud.datasphere.v2.Project.Settings\022:\n\006li" +
-      "mits\030\010 \001(\0132*.yandex.cloud.datasphere.v2." +
-      "Project.Limits\022\024\n\014community_id\030\013 \001(\t\032\204\005\n" +
-      "\010Settings\022\032\n\022service_account_id\030\001 \001(\t\022\021\n" +
-      "\tsubnet_id\030\002 \001(\t\022\034\n\024data_proc_cluster_id" +
-      "\030\003 \001(\t\022L\n\013commit_mode\030\004 \001(\01627.yandex.clo" +
-      "ud.datasphere.v2.Project.Settings.Commit" +
-      "Mode\022\032\n\022security_group_ids\030\005 \003(\t\022\024\n\014earl" +
-      "y_access\030\006 \001(\010\022=\n\003ide\030\007 \001(\01620.yandex.clo" +
-      "ud.datasphere.v2.Project.Settings.Ide\022\031\n" +
-      "\021default_folder_id\030\010 \001(\t\022g\n\027stale_exec_t" +
-      "imeout_mode\030\t \001(\0162F.yandex.cloud.datasph" +
-      "ere.v2.Project.Settings.StaleExecutionTi" +
-      "meoutMode\"A\n\nCommitMode\022\033\n\027COMMIT_MODE_U" +
-      "NSPECIFIED\020\000\022\014\n\010STANDARD\020\001\022\010\n\004AUTO\020\002\"+\n\003" +
-      "Ide\022\023\n\017IDE_UNSPECIFIED\020\000\022\017\n\013JUPYTER_LAB\020" +
-      "\001\"x\n\031StaleExecutionTimeoutMode\022,\n(STALE_" +
-      "EXECUTION_TIMEOUT_MODE_UNSPECIFIED\020\000\022\014\n\010" +
-      "ONE_HOUR\020\001\022\017\n\013THREE_HOURS\020\002\022\016\n\nNO_TIMEOU" +
-      "T\020\003\032\177\n\006Limits\0227\n\022max_units_per_hour\030\001 \001(" +
-      "\0132\033.google.protobuf.Int64Value\022<\n\027max_un" +
-      "its_per_execution\030\002 \001(\0132\033.google.protobu" +
-      "f.Int64Value\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\t:\0028\001J\004\010\t\020\nBk\n\036yandex.clou" +
-      "d.api.datasphere.v2ZIgithub.com/yandex-c" +
-      "loud/go-genproto/yandex/cloud/datasphere" +
-      "/v2;datasphereb\006proto3"
+      "to\022\032yandex.cloud.datasphere.v2\032\036google/p" +
+      "rotobuf/duration.proto\032\037google/protobuf/" +
+      "timestamp.proto\032\036google/protobuf/wrapper" +
+      "s.proto\"\233\013\n\007Project\022\n\n\002id\030\001 \001(\t\022.\n\ncreat" +
+      "ed_at\030\002 \001(\0132\032.google.protobuf.Timestamp\022" +
+      "\014\n\004name\030\003 \001(\t\022\023\n\013description\030\004 \001(\t\022?\n\006la" +
+      "bels\030\005 \003(\0132/.yandex.cloud.datasphere.v2." +
+      "Project.LabelsEntry\022\025\n\rcreated_by_id\030\006 \001" +
+      "(\t\022>\n\010settings\030\007 \001(\0132,.yandex.cloud.data" +
+      "sphere.v2.Project.Settings\022:\n\006limits\030\010 \001" +
+      "(\0132*.yandex.cloud.datasphere.v2.Project." +
+      "Limits\022\024\n\014community_id\030\013 \001(\t\032\220\007\n\010Setting" +
+      "s\022\032\n\022service_account_id\030\001 \001(\t\022\021\n\tsubnet_" +
+      "id\030\002 \001(\t\022\034\n\024data_proc_cluster_id\030\003 \001(\t\022L" +
+      "\n\013commit_mode\030\004 \001(\01627.yandex.cloud.datas" +
+      "phere.v2.Project.Settings.CommitMode\022\032\n\022" +
+      "security_group_ids\030\005 \003(\t\022\024\n\014early_access" +
+      "\030\006 \001(\010\022=\n\003ide\030\007 \001(\01620.yandex.cloud.datas" +
+      "phere.v2.Project.Settings.Ide\022\031\n\021default" +
+      "_folder_id\030\010 \001(\t\022g\n\027stale_exec_timeout_m" +
+      "ode\030\t \001(\0162F.yandex.cloud.datasphere.v2.P" +
+      "roject.Settings.StaleExecutionTimeoutMod" +
+      "e\022Y\n\022ide_execution_mode\030\n \001(\0162=.yandex.c" +
+      "loud.datasphere.v2.Project.Settings.IdeE" +
+      "xecutionMode\0228\n\025vm_inactivity_timeout\030\013 " +
+      "\001(\0132\031.google.protobuf.Duration\022\036\n\026defaul" +
+      "t_dedicated_spec\030\014 \001(\t\"A\n\nCommitMode\022\033\n\027" +
+      "COMMIT_MODE_UNSPECIFIED\020\000\022\014\n\010STANDARD\020\001\022" +
+      "\010\n\004AUTO\020\002\"+\n\003Ide\022\023\n\017IDE_UNSPECIFIED\020\000\022\017\n" +
+      "\013JUPYTER_LAB\020\001\"x\n\031StaleExecutionTimeoutM" +
+      "ode\022,\n(STALE_EXECUTION_TIMEOUT_MODE_UNSP" +
+      "ECIFIED\020\000\022\014\n\010ONE_HOUR\020\001\022\017\n\013THREE_HOURS\020\002" +
+      "\022\016\n\nNO_TIMEOUT\020\003\"U\n\020IdeExecutionMode\022\"\n\036" +
+      "IDE_EXECUTION_MODE_UNSPECIFIED\020\000\022\016\n\nSERV" +
+      "ERLESS\020\001\022\r\n\tDEDICATED\020\002\032\177\n\006Limits\0227\n\022max" +
+      "_units_per_hour\030\001 \001(\0132\033.google.protobuf." +
+      "Int64Value\022<\n\027max_units_per_execution\030\002 " +
+      "\001(\0132\033.google.protobuf.Int64Value\032-\n\013Labe" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001J" +
+      "\004\010\t\020\nBk\n\036yandex.cloud.api.datasphere.v2Z" +
+      "Igithub.com/yandex-cloud/go-genproto/yan" +
+      "dex/cloud/datasphere/v2;datasphereb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
         });
@@ -5793,7 +6529,7 @@ public final class ProjectOuterClass {
     internal_static_yandex_cloud_datasphere_v2_Project_Settings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_Project_Settings_descriptor,
-        new java.lang.String[] { "ServiceAccountId", "SubnetId", "DataProcClusterId", "CommitMode", "SecurityGroupIds", "EarlyAccess", "Ide", "DefaultFolderId", "StaleExecTimeoutMode", });
+        new java.lang.String[] { "ServiceAccountId", "SubnetId", "DataProcClusterId", "CommitMode", "SecurityGroupIds", "EarlyAccess", "Ide", "DefaultFolderId", "StaleExecTimeoutMode", "IdeExecutionMode", "VmInactivityTimeout", "DefaultDedicatedSpec", });
     internal_static_yandex_cloud_datasphere_v2_Project_Limits_descriptor =
       internal_static_yandex_cloud_datasphere_v2_Project_descriptor.getNestedTypes().get(1);
     internal_static_yandex_cloud_datasphere_v2_Project_Limits_fieldAccessorTable = new
@@ -5806,6 +6542,7 @@ public final class ProjectOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_Project_LabelsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
+    com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }

@@ -276,6 +276,9 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns subscriptions locks for specified resource and folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse> responseObserver) {
@@ -401,6 +404,9 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns subscriptions locks for specified resource and folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse> responseObserver) {
@@ -481,6 +487,9 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns subscriptions locks for specified resource and folder.
+     * </pre>
      */
     public yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse list(yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -559,6 +568,9 @@ public final class LockServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns subscriptions locks for specified resource and folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksResponse> list(
         yandex.cloud.api.marketplace.licensemanager.v1.LockServiceOuterClass.ListLocksRequest request) {

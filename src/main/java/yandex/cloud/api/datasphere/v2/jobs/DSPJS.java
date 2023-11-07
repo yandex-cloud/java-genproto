@@ -257,6 +257,33 @@ public final class DSPJS {
      */
     com.google.protobuf.ByteString
         getDescBytes();
+
+    /**
+     * <pre>
+     * Job data TTL.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration data_ttl = 6;</code>
+     * @return Whether the dataTtl field is set.
+     */
+    boolean hasDataTtl();
+    /**
+     * <pre>
+     * Job data TTL.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration data_ttl = 6;</code>
+     * @return The dataTtl.
+     */
+    com.google.protobuf.Duration getDataTtl();
+    /**
+     * <pre>
+     * Job data TTL.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration data_ttl = 6;</code>
+     */
+    com.google.protobuf.DurationOrBuilder getDataTtlOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.datasphere.v2.jobs.CreateProjectJobRequest}
@@ -342,6 +369,19 @@ public final class DSPJS {
               java.lang.String s = input.readStringRequireUtf8();
 
               desc_ = s;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (dataTtl_ != null) {
+                subBuilder = dataTtl_.toBuilder();
+              }
+              dataTtl_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dataTtl_);
+                dataTtl_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -598,6 +638,44 @@ public final class DSPJS {
       }
     }
 
+    public static final int DATA_TTL_FIELD_NUMBER = 6;
+    private com.google.protobuf.Duration dataTtl_;
+    /**
+     * <pre>
+     * Job data TTL.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration data_ttl = 6;</code>
+     * @return Whether the dataTtl field is set.
+     */
+    @java.lang.Override
+    public boolean hasDataTtl() {
+      return dataTtl_ != null;
+    }
+    /**
+     * <pre>
+     * Job data TTL.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration data_ttl = 6;</code>
+     * @return The dataTtl.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDataTtl() {
+      return dataTtl_ == null ? com.google.protobuf.Duration.getDefaultInstance() : dataTtl_;
+    }
+    /**
+     * <pre>
+     * Job data TTL.
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration data_ttl = 6;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getDataTtlOrBuilder() {
+      return getDataTtl();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -627,6 +705,9 @@ public final class DSPJS {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(desc_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, desc_);
       }
+      if (dataTtl_ != null) {
+        output.writeMessage(6, getDataTtl());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -651,6 +732,10 @@ public final class DSPJS {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(desc_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, desc_);
+      }
+      if (dataTtl_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getDataTtl());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -680,6 +765,11 @@ public final class DSPJS {
           .equals(other.getName())) return false;
       if (!getDesc()
           .equals(other.getDesc())) return false;
+      if (hasDataTtl() != other.hasDataTtl()) return false;
+      if (hasDataTtl()) {
+        if (!getDataTtl()
+            .equals(other.getDataTtl())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -703,6 +793,10 @@ public final class DSPJS {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + DESC_FIELD_NUMBER;
       hash = (53 * hash) + getDesc().hashCode();
+      if (hasDataTtl()) {
+        hash = (37 * hash) + DATA_TTL_FIELD_NUMBER;
+        hash = (53 * hash) + getDataTtl().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -850,6 +944,12 @@ public final class DSPJS {
 
         desc_ = "";
 
+        if (dataTtlBuilder_ == null) {
+          dataTtl_ = null;
+        } else {
+          dataTtl_ = null;
+          dataTtlBuilder_ = null;
+        }
         return this;
       }
 
@@ -885,6 +985,11 @@ public final class DSPJS {
         result.config_ = config_;
         result.name_ = name_;
         result.desc_ = desc_;
+        if (dataTtlBuilder_ == null) {
+          result.dataTtl_ = dataTtl_;
+        } else {
+          result.dataTtl_ = dataTtlBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -951,6 +1056,9 @@ public final class DSPJS {
         if (!other.getDesc().isEmpty()) {
           desc_ = other.desc_;
           onChanged();
+        }
+        if (other.hasDataTtl()) {
+          mergeDataTtl(other.getDataTtl());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1518,6 +1626,161 @@ public final class DSPJS {
         desc_ = value;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.Duration dataTtl_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> dataTtlBuilder_;
+      /**
+       * <pre>
+       * Job data TTL.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration data_ttl = 6;</code>
+       * @return Whether the dataTtl field is set.
+       */
+      public boolean hasDataTtl() {
+        return dataTtlBuilder_ != null || dataTtl_ != null;
+      }
+      /**
+       * <pre>
+       * Job data TTL.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration data_ttl = 6;</code>
+       * @return The dataTtl.
+       */
+      public com.google.protobuf.Duration getDataTtl() {
+        if (dataTtlBuilder_ == null) {
+          return dataTtl_ == null ? com.google.protobuf.Duration.getDefaultInstance() : dataTtl_;
+        } else {
+          return dataTtlBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Job data TTL.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration data_ttl = 6;</code>
+       */
+      public Builder setDataTtl(com.google.protobuf.Duration value) {
+        if (dataTtlBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dataTtl_ = value;
+          onChanged();
+        } else {
+          dataTtlBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Job data TTL.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration data_ttl = 6;</code>
+       */
+      public Builder setDataTtl(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (dataTtlBuilder_ == null) {
+          dataTtl_ = builderForValue.build();
+          onChanged();
+        } else {
+          dataTtlBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Job data TTL.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration data_ttl = 6;</code>
+       */
+      public Builder mergeDataTtl(com.google.protobuf.Duration value) {
+        if (dataTtlBuilder_ == null) {
+          if (dataTtl_ != null) {
+            dataTtl_ =
+              com.google.protobuf.Duration.newBuilder(dataTtl_).mergeFrom(value).buildPartial();
+          } else {
+            dataTtl_ = value;
+          }
+          onChanged();
+        } else {
+          dataTtlBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Job data TTL.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration data_ttl = 6;</code>
+       */
+      public Builder clearDataTtl() {
+        if (dataTtlBuilder_ == null) {
+          dataTtl_ = null;
+          onChanged();
+        } else {
+          dataTtl_ = null;
+          dataTtlBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Job data TTL.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration data_ttl = 6;</code>
+       */
+      public com.google.protobuf.Duration.Builder getDataTtlBuilder() {
+        
+        onChanged();
+        return getDataTtlFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Job data TTL.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration data_ttl = 6;</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getDataTtlOrBuilder() {
+        if (dataTtlBuilder_ != null) {
+          return dataTtlBuilder_.getMessageOrBuilder();
+        } else {
+          return dataTtl_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : dataTtl_;
+        }
+      }
+      /**
+       * <pre>
+       * Job data TTL.
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration data_ttl = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getDataTtlFieldBuilder() {
+        if (dataTtlBuilder_ == null) {
+          dataTtlBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getDataTtl(),
+                  getParentForChildren(),
+                  isClean());
+          dataTtl_ = null;
+        }
+        return dataTtlBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -18662,105 +18925,108 @@ public final class DSPJS {
     java.lang.String[] descriptorData = {
       "\n9yandex/cloud/datasphere/v2/jobs/projec" +
       "t_job_service.proto\022\037yandex.cloud.datasp" +
-      "here.v2.jobs\032\033google/protobuf/empty.prot" +
-      "o\032\037google/protobuf/timestamp.proto\032 yand" +
-      "ex/cloud/api/operation.proto\032\035yandex/clo" +
-      "ud/validation.proto\032&yandex/cloud/operat" +
-      "ion/operation.proto\032*yandex/cloud/datasp" +
-      "here/v2/jobs/jobs.proto\"\241\001\n\027CreateProjec" +
-      "tJobRequest\022\022\n\nproject_id\030\001 \001(\t\022F\n\016job_p" +
-      "arameters\030\002 \001(\0132..yandex.cloud.dataspher" +
-      "e.v2.jobs.JobParameters\022\016\n\006config\030\003 \001(\t\022" +
-      "\014\n\004name\030\004 \001(\t\022\014\n\004desc\030\005 \001(\t\".\n\030CreatePro" +
-      "jectJobMetadata\022\022\n\nproject_id\030\001 \001(\t\"n\n\030C" +
-      "reateProjectJobResponse\022\016\n\006job_id\030\001 \001(\t\022" +
-      "B\n\014upload_files\030\002 \003(\0132,.yandex.cloud.dat" +
-      "asphere.v2.jobs.StorageFile\"*\n\030ExecutePr" +
-      "ojectJobRequest\022\016\n\006job_id\030\001 \001(\t\"\233\001\n\031Exec" +
-      "uteProjectJobResponse\022B\n\014output_files\030\001 " +
-      "\003(\0132,.yandex.cloud.datasphere.v2.jobs.St" +
-      "orageFile\022:\n\006result\030\002 \001(\0132*.yandex.cloud" +
-      ".datasphere.v2.jobs.JobResult\"N\n\031Execute" +
-      "ProjectJobMetadata\0221\n\003job\030\001 \001(\0132$.yandex" +
-      ".cloud.datasphere.v2.jobs.Job\"9\n\027CancelP" +
-      "rojectJobRequest\022\016\n\006job_id\030\001 \001(\t\022\016\n\006reas" +
-      "on\030\002 \001(\t\"+\n\031FinalizeProjectJobRequest\022\016\n" +
-      "\006job_id\030\001 \001(\t\",\n\032FinalizeProjectJobRespo" +
-      "nse\022\016\n\006job_id\030\001 \001(\t\">\n\034ReadProjectJobStd" +
-      "LogsRequest\022\016\n\006job_id\030\001 \001(\t\022\016\n\006offset\030\002 " +
-      "\001(\003\"f\n\035ReadProjectJobStdLogsResponse\0225\n\004" +
-      "logs\030\001 \003(\0132\'.yandex.cloud.datasphere.v2." +
-      "jobs.StdLog\022\016\n\006offset\030\002 \001(\003\";\n\031ReadProje" +
-      "ctJobLogsRequest\022\016\n\006job_id\030\001 \001(\t\022\016\n\006offs" +
-      "et\030\002 \001(\003\"g\n\032ReadProjectJobLogsResponse\0229" +
-      "\n\004logs\030\001 \003(\0132+.yandex.cloud.datasphere.v" +
-      "2.jobs.LogMessage\022\016\n\006offset\030\002 \001(\003\"u\n\036Dow" +
-      "nloadProjectJobFilesRequest\022\024\n\006job_id\030\001 " +
-      "\001(\tB\004\350\3071\001\022=\n\005files\030\002 \003(\0132%.yandex.cloud." +
-      "datasphere.v2.jobs.FileB\007\202\3101\003>=1\"g\n\037Down" +
-      "loadProjectJobFilesResponse\022D\n\016download_" +
-      "files\030\001 \003(\0132,.yandex.cloud.datasphere.v2" +
-      ".jobs.StorageFile\"R\n\025ListProjectJobReque" +
-      "st\022\022\n\nproject_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(" +
-      "\003\022\022\n\npage_token\030\003 \001(\t\"`\n\026ListProjectJobR" +
-      "esponse\0222\n\004jobs\030\001 \003(\0132$.yandex.cloud.dat" +
-      "asphere.v2.jobs.Job\022\022\n\npage_token\030\002 \001(\t\"" +
-      "&\n\024GetProjectJobRequest\022\016\n\006job_id\030\001 \001(\t\"" +
-      ")\n\027DeleteProjectJobRequest\022\016\n\006job_id\030\001 \001" +
-      "(\t\"*\n\030DeleteProjectJobMetadata\022\016\n\006job_id" +
-      "\030\001 \001(\t\"\205\001\n\006StdLog\022\017\n\007content\030\001 \001(\014\022:\n\004ty" +
-      "pe\030\002 \001(\0162,.yandex.cloud.datasphere.v2.jo" +
-      "bs.StdLog.Type\".\n\004Type\022\024\n\020TYPE_UNSPECIFI" +
-      "ED\020\000\022\007\n\003OUT\020\001\022\007\n\003ERR\020\002\"\270\001\n\nLogMessage\022\017\n" +
-      "\007content\030\001 \001(\014\022.\n\ncreated_at\030\002 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\022J\n\017standard_strea" +
-      "m\030\003 \001(\0162/.yandex.cloud.datasphere.v2.job" +
-      "s.StandardStreamH\000\022\023\n\tfile_path\030\004 \001(\tH\000B" +
-      "\010\n\006source*C\n\016StandardStream\022\037\n\033STANDARD_" +
-      "STREAM_UNSPECIFIED\020\000\022\007\n\003OUT\020\001\022\007\n\003ERR\020\0022\357" +
-      "\n\n\021ProjectJobService\022\237\001\n\006Create\0228.yandex" +
-      ".cloud.datasphere.v2.jobs.CreateProjectJ" +
-      "obRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"8\262\322*4\n\030CreateProjectJobMetadata\022\030Cr" +
-      "eateProjectJobResponse\022\243\001\n\007Execute\0229.yan" +
-      "dex.cloud.datasphere.v2.jobs.ExecuteProj" +
-      "ectJobRequest\032!.yandex.cloud.operation.O" +
-      "peration\":\262\322*6\n\031ExecuteProjectJobMetadat" +
-      "a\022\031ExecuteProjectJobResponse\022Z\n\006Cancel\0228" +
-      ".yandex.cloud.datasphere.v2.jobs.CancelP" +
-      "rojectJobRequest\032\026.google.protobuf.Empty" +
-      "\022\203\001\n\010Finalize\022:.yandex.cloud.datasphere." +
-      "v2.jobs.FinalizeProjectJobRequest\032;.yand" +
-      "ex.cloud.datasphere.v2.jobs.FinalizeProj" +
-      "ectJobResponse\022\223\001\n\013ReadStdLogs\022=.yandex." +
-      "cloud.datasphere.v2.jobs.ReadProjectJobS" +
-      "tdLogsRequest\032>.yandex.cloud.datasphere." +
-      "v2.jobs.ReadProjectJobStdLogsResponse\"\003\210" +
-      "\002\0010\001\022\205\001\n\010ReadLogs\022:.yandex.cloud.datasph" +
-      "ere.v2.jobs.ReadProjectJobLogsRequest\032;." +
-      "yandex.cloud.datasphere.v2.jobs.ReadProj" +
-      "ectJobLogsResponse0\001\022\225\001\n\020DownloadJobFile" +
-      "s\022?.yandex.cloud.datasphere.v2.jobs.Down" +
-      "loadProjectJobFilesRequest\032@.yandex.clou" +
-      "d.datasphere.v2.jobs.DownloadProjectJobF" +
-      "ilesResponse\022w\n\004List\0226.yandex.cloud.data" +
-      "sphere.v2.jobs.ListProjectJobRequest\0327.y" +
-      "andex.cloud.datasphere.v2.jobs.ListProje" +
-      "ctJobResponse\022b\n\003Get\0225.yandex.cloud.data" +
-      "sphere.v2.jobs.GetProjectJobRequest\032$.ya" +
-      "ndex.cloud.datasphere.v2.jobs.Job\022\234\001\n\006De" +
-      "lete\0228.yandex.cloud.datasphere.v2.jobs.D" +
-      "eleteProjectJobRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"5\262\322*1\n\030DeleteProjectJo" +
-      "bMetadata\022\025google.protobuf.EmptyB|\n#yand" +
-      "ex.cloud.api.datasphere.v2.jobsB\005DSPJSZN" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/datasphere/v2/jobs;datasphereb\006" +
-      "proto3"
+      "here.v2.jobs\032\036google/protobuf/duration.p" +
+      "roto\032\033google/protobuf/empty.proto\032\037googl" +
+      "e/protobuf/timestamp.proto\032 yandex/cloud" +
+      "/api/operation.proto\032\035yandex/cloud/valid" +
+      "ation.proto\032&yandex/cloud/operation/oper" +
+      "ation.proto\032*yandex/cloud/datasphere/v2/" +
+      "jobs/jobs.proto\"\316\001\n\027CreateProjectJobRequ" +
+      "est\022\022\n\nproject_id\030\001 \001(\t\022F\n\016job_parameter" +
+      "s\030\002 \001(\0132..yandex.cloud.datasphere.v2.job" +
+      "s.JobParameters\022\016\n\006config\030\003 \001(\t\022\014\n\004name\030" +
+      "\004 \001(\t\022\014\n\004desc\030\005 \001(\t\022+\n\010data_ttl\030\006 \001(\0132\031." +
+      "google.protobuf.Duration\".\n\030CreateProjec" +
+      "tJobMetadata\022\022\n\nproject_id\030\001 \001(\t\"n\n\030Crea" +
+      "teProjectJobResponse\022\016\n\006job_id\030\001 \001(\t\022B\n\014" +
+      "upload_files\030\002 \003(\0132,.yandex.cloud.datasp" +
+      "here.v2.jobs.StorageFile\"*\n\030ExecuteProje" +
+      "ctJobRequest\022\016\n\006job_id\030\001 \001(\t\"\233\001\n\031Execute" +
+      "ProjectJobResponse\022B\n\014output_files\030\001 \003(\013" +
+      "2,.yandex.cloud.datasphere.v2.jobs.Stora" +
+      "geFile\022:\n\006result\030\002 \001(\0132*.yandex.cloud.da" +
+      "tasphere.v2.jobs.JobResult\"N\n\031ExecutePro" +
+      "jectJobMetadata\0221\n\003job\030\001 \001(\0132$.yandex.cl" +
+      "oud.datasphere.v2.jobs.Job\"9\n\027CancelProj" +
+      "ectJobRequest\022\016\n\006job_id\030\001 \001(\t\022\016\n\006reason\030" +
+      "\002 \001(\t\"+\n\031FinalizeProjectJobRequest\022\016\n\006jo" +
+      "b_id\030\001 \001(\t\",\n\032FinalizeProjectJobResponse" +
+      "\022\016\n\006job_id\030\001 \001(\t\">\n\034ReadProjectJobStdLog" +
+      "sRequest\022\016\n\006job_id\030\001 \001(\t\022\016\n\006offset\030\002 \001(\003" +
+      "\"f\n\035ReadProjectJobStdLogsResponse\0225\n\004log" +
+      "s\030\001 \003(\0132\'.yandex.cloud.datasphere.v2.job" +
+      "s.StdLog\022\016\n\006offset\030\002 \001(\003\";\n\031ReadProjectJ" +
+      "obLogsRequest\022\016\n\006job_id\030\001 \001(\t\022\016\n\006offset\030" +
+      "\002 \001(\003\"g\n\032ReadProjectJobLogsResponse\0229\n\004l" +
+      "ogs\030\001 \003(\0132+.yandex.cloud.datasphere.v2.j" +
+      "obs.LogMessage\022\016\n\006offset\030\002 \001(\003\"u\n\036Downlo" +
+      "adProjectJobFilesRequest\022\024\n\006job_id\030\001 \001(\t" +
+      "B\004\350\3071\001\022=\n\005files\030\002 \003(\0132%.yandex.cloud.dat" +
+      "asphere.v2.jobs.FileB\007\202\3101\003>=1\"g\n\037Downloa" +
+      "dProjectJobFilesResponse\022D\n\016download_fil" +
+      "es\030\001 \003(\0132,.yandex.cloud.datasphere.v2.jo" +
+      "bs.StorageFile\"R\n\025ListProjectJobRequest\022" +
+      "\022\n\nproject_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022" +
+      "\n\npage_token\030\003 \001(\t\"`\n\026ListProjectJobResp" +
+      "onse\0222\n\004jobs\030\001 \003(\0132$.yandex.cloud.datasp" +
+      "here.v2.jobs.Job\022\022\n\npage_token\030\002 \001(\t\"&\n\024" +
+      "GetProjectJobRequest\022\016\n\006job_id\030\001 \001(\t\")\n\027" +
+      "DeleteProjectJobRequest\022\016\n\006job_id\030\001 \001(\t\"" +
+      "*\n\030DeleteProjectJobMetadata\022\016\n\006job_id\030\001 " +
+      "\001(\t\"\205\001\n\006StdLog\022\017\n\007content\030\001 \001(\014\022:\n\004type\030" +
+      "\002 \001(\0162,.yandex.cloud.datasphere.v2.jobs." +
+      "StdLog.Type\".\n\004Type\022\024\n\020TYPE_UNSPECIFIED\020" +
+      "\000\022\007\n\003OUT\020\001\022\007\n\003ERR\020\002\"\270\001\n\nLogMessage\022\017\n\007co" +
+      "ntent\030\001 \001(\014\022.\n\ncreated_at\030\002 \001(\0132\032.google" +
+      ".protobuf.Timestamp\022J\n\017standard_stream\030\003" +
+      " \001(\0162/.yandex.cloud.datasphere.v2.jobs.S" +
+      "tandardStreamH\000\022\023\n\tfile_path\030\004 \001(\tH\000B\010\n\006" +
+      "source*C\n\016StandardStream\022\037\n\033STANDARD_STR" +
+      "EAM_UNSPECIFIED\020\000\022\007\n\003OUT\020\001\022\007\n\003ERR\020\0022\357\n\n\021" +
+      "ProjectJobService\022\237\001\n\006Create\0228.yandex.cl" +
+      "oud.datasphere.v2.jobs.CreateProjectJobR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"8\262\322*4\n\030CreateProjectJobMetadata\022\030Creat" +
+      "eProjectJobResponse\022\243\001\n\007Execute\0229.yandex" +
+      ".cloud.datasphere.v2.jobs.ExecuteProject" +
+      "JobRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\":\262\322*6\n\031ExecuteProjectJobMetadata\022\031" +
+      "ExecuteProjectJobResponse\022Z\n\006Cancel\0228.ya" +
+      "ndex.cloud.datasphere.v2.jobs.CancelProj" +
+      "ectJobRequest\032\026.google.protobuf.Empty\022\203\001" +
+      "\n\010Finalize\022:.yandex.cloud.datasphere.v2." +
+      "jobs.FinalizeProjectJobRequest\032;.yandex." +
+      "cloud.datasphere.v2.jobs.FinalizeProject" +
+      "JobResponse\022\223\001\n\013ReadStdLogs\022=.yandex.clo" +
+      "ud.datasphere.v2.jobs.ReadProjectJobStdL" +
+      "ogsRequest\032>.yandex.cloud.datasphere.v2." +
+      "jobs.ReadProjectJobStdLogsResponse\"\003\210\002\0010" +
+      "\001\022\205\001\n\010ReadLogs\022:.yandex.cloud.datasphere" +
+      ".v2.jobs.ReadProjectJobLogsRequest\032;.yan" +
+      "dex.cloud.datasphere.v2.jobs.ReadProject" +
+      "JobLogsResponse0\001\022\225\001\n\020DownloadJobFiles\022?" +
+      ".yandex.cloud.datasphere.v2.jobs.Downloa" +
+      "dProjectJobFilesRequest\032@.yandex.cloud.d" +
+      "atasphere.v2.jobs.DownloadProjectJobFile" +
+      "sResponse\022w\n\004List\0226.yandex.cloud.datasph" +
+      "ere.v2.jobs.ListProjectJobRequest\0327.yand" +
+      "ex.cloud.datasphere.v2.jobs.ListProjectJ" +
+      "obResponse\022b\n\003Get\0225.yandex.cloud.datasph" +
+      "ere.v2.jobs.GetProjectJobRequest\032$.yande" +
+      "x.cloud.datasphere.v2.jobs.Job\022\234\001\n\006Delet" +
+      "e\0228.yandex.cloud.datasphere.v2.jobs.Dele" +
+      "teProjectJobRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"5\262\322*1\n\030DeleteProjectJobMe" +
+      "tadata\022\025google.protobuf.EmptyB|\n#yandex." +
+      "cloud.api.datasphere.v2.jobsB\005DSPJSZNgit" +
+      "hub.com/yandex-cloud/go-genproto/yandex/" +
+      "cloud/datasphere/v2/jobs;datasphereb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
@@ -18773,7 +19039,7 @@ public final class DSPJS {
     internal_static_yandex_cloud_datasphere_v2_jobs_CreateProjectJobRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_jobs_CreateProjectJobRequest_descriptor,
-        new java.lang.String[] { "ProjectId", "JobParameters", "Config", "Name", "Desc", });
+        new java.lang.String[] { "ProjectId", "JobParameters", "Config", "Name", "Desc", "DataTtl", });
     internal_static_yandex_cloud_datasphere_v2_jobs_CreateProjectJobMetadata_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_datasphere_v2_jobs_CreateProjectJobMetadata_fieldAccessorTable = new
@@ -18907,6 +19173,7 @@ public final class DSPJS {
     registry.add(yandex.cloud.api.Validation.size);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
