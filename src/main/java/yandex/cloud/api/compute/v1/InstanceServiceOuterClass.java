@@ -51544,6 +51544,77 @@ public final class InstanceServiceOuterClass {
      */
     yandex.cloud.api.compute.v1.InstanceServiceOuterClass.NetworkInterfaceSpecOrBuilder getNetworkInterfaceSpecsOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Boot disk placement policy configuration in target zone. Must be specified if disk has placement policy.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy boot_disk_placement = 4;</code>
+     * @return Whether the bootDiskPlacement field is set.
+     */
+    boolean hasBootDiskPlacement();
+    /**
+     * <pre>
+     * Boot disk placement policy configuration in target zone. Must be specified if disk has placement policy.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy boot_disk_placement = 4;</code>
+     * @return The bootDiskPlacement.
+     */
+    yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy getBootDiskPlacement();
+    /**
+     * <pre>
+     * Boot disk placement policy configuration in target zone. Must be specified if disk has placement policy.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy boot_disk_placement = 4;</code>
+     */
+    yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder getBootDiskPlacementOrBuilder();
+
+    /**
+     * <pre>
+     * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+     */
+    java.util.List<yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange> 
+        getSecondaryDiskPlacementsList();
+    /**
+     * <pre>
+     * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+     */
+    yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange getSecondaryDiskPlacements(int index);
+    /**
+     * <pre>
+     * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+     */
+    int getSecondaryDiskPlacementsCount();
+    /**
+     * <pre>
+     * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChangeOrBuilder> 
+        getSecondaryDiskPlacementsOrBuilderList();
+    /**
+     * <pre>
+     * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+     */
+    yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChangeOrBuilder getSecondaryDiskPlacementsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.RelocateInstanceRequest}
@@ -51561,6 +51632,7 @@ public final class InstanceServiceOuterClass {
       instanceId_ = "";
       destinationZoneId_ = "";
       networkInterfaceSpecs_ = java.util.Collections.emptyList();
+      secondaryDiskPlacements_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -51615,6 +51687,28 @@ public final class InstanceServiceOuterClass {
                   input.readMessage(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.NetworkInterfaceSpec.parser(), extensionRegistry));
               break;
             }
+            case 34: {
+              yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder subBuilder = null;
+              if (bootDiskPlacement_ != null) {
+                subBuilder = bootDiskPlacement_.toBuilder();
+              }
+              bootDiskPlacement_ = input.readMessage(yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(bootDiskPlacement_);
+                bootDiskPlacement_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                secondaryDiskPlacements_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              secondaryDiskPlacements_.add(
+                  input.readMessage(yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -51632,6 +51726,9 @@ public final class InstanceServiceOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           networkInterfaceSpecs_ = java.util.Collections.unmodifiableList(networkInterfaceSpecs_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          secondaryDiskPlacements_ = java.util.Collections.unmodifiableList(secondaryDiskPlacements_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -51816,6 +51913,104 @@ public final class InstanceServiceOuterClass {
       return networkInterfaceSpecs_.get(index);
     }
 
+    public static final int BOOT_DISK_PLACEMENT_FIELD_NUMBER = 4;
+    private yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy bootDiskPlacement_;
+    /**
+     * <pre>
+     * Boot disk placement policy configuration in target zone. Must be specified if disk has placement policy.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy boot_disk_placement = 4;</code>
+     * @return Whether the bootDiskPlacement field is set.
+     */
+    @java.lang.Override
+    public boolean hasBootDiskPlacement() {
+      return bootDiskPlacement_ != null;
+    }
+    /**
+     * <pre>
+     * Boot disk placement policy configuration in target zone. Must be specified if disk has placement policy.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy boot_disk_placement = 4;</code>
+     * @return The bootDiskPlacement.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy getBootDiskPlacement() {
+      return bootDiskPlacement_ == null ? yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.getDefaultInstance() : bootDiskPlacement_;
+    }
+    /**
+     * <pre>
+     * Boot disk placement policy configuration in target zone. Must be specified if disk has placement policy.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy boot_disk_placement = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder getBootDiskPlacementOrBuilder() {
+      return getBootDiskPlacement();
+    }
+
+    public static final int SECONDARY_DISK_PLACEMENTS_FIELD_NUMBER = 5;
+    private java.util.List<yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange> secondaryDiskPlacements_;
+    /**
+     * <pre>
+     * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange> getSecondaryDiskPlacementsList() {
+      return secondaryDiskPlacements_;
+    }
+    /**
+     * <pre>
+     * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChangeOrBuilder> 
+        getSecondaryDiskPlacementsOrBuilderList() {
+      return secondaryDiskPlacements_;
+    }
+    /**
+     * <pre>
+     * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+     */
+    @java.lang.Override
+    public int getSecondaryDiskPlacementsCount() {
+      return secondaryDiskPlacements_.size();
+    }
+    /**
+     * <pre>
+     * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange getSecondaryDiskPlacements(int index) {
+      return secondaryDiskPlacements_.get(index);
+    }
+    /**
+     * <pre>
+     * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChangeOrBuilder getSecondaryDiskPlacementsOrBuilder(
+        int index) {
+      return secondaryDiskPlacements_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -51839,6 +52034,12 @@ public final class InstanceServiceOuterClass {
       for (int i = 0; i < networkInterfaceSpecs_.size(); i++) {
         output.writeMessage(3, networkInterfaceSpecs_.get(i));
       }
+      if (bootDiskPlacement_ != null) {
+        output.writeMessage(4, getBootDiskPlacement());
+      }
+      for (int i = 0; i < secondaryDiskPlacements_.size(); i++) {
+        output.writeMessage(5, secondaryDiskPlacements_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -51857,6 +52058,14 @@ public final class InstanceServiceOuterClass {
       for (int i = 0; i < networkInterfaceSpecs_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, networkInterfaceSpecs_.get(i));
+      }
+      if (bootDiskPlacement_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getBootDiskPlacement());
+      }
+      for (int i = 0; i < secondaryDiskPlacements_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, secondaryDiskPlacements_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -51879,6 +52088,13 @@ public final class InstanceServiceOuterClass {
           .equals(other.getDestinationZoneId())) return false;
       if (!getNetworkInterfaceSpecsList()
           .equals(other.getNetworkInterfaceSpecsList())) return false;
+      if (hasBootDiskPlacement() != other.hasBootDiskPlacement()) return false;
+      if (hasBootDiskPlacement()) {
+        if (!getBootDiskPlacement()
+            .equals(other.getBootDiskPlacement())) return false;
+      }
+      if (!getSecondaryDiskPlacementsList()
+          .equals(other.getSecondaryDiskPlacementsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -51897,6 +52113,14 @@ public final class InstanceServiceOuterClass {
       if (getNetworkInterfaceSpecsCount() > 0) {
         hash = (37 * hash) + NETWORK_INTERFACE_SPECS_FIELD_NUMBER;
         hash = (53 * hash) + getNetworkInterfaceSpecsList().hashCode();
+      }
+      if (hasBootDiskPlacement()) {
+        hash = (37 * hash) + BOOT_DISK_PLACEMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getBootDiskPlacement().hashCode();
+      }
+      if (getSecondaryDiskPlacementsCount() > 0) {
+        hash = (37 * hash) + SECONDARY_DISK_PLACEMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getSecondaryDiskPlacementsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -52027,6 +52251,7 @@ public final class InstanceServiceOuterClass {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getNetworkInterfaceSpecsFieldBuilder();
+          getSecondaryDiskPlacementsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -52041,6 +52266,18 @@ public final class InstanceServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           networkInterfaceSpecsBuilder_.clear();
+        }
+        if (bootDiskPlacementBuilder_ == null) {
+          bootDiskPlacement_ = null;
+        } else {
+          bootDiskPlacement_ = null;
+          bootDiskPlacementBuilder_ = null;
+        }
+        if (secondaryDiskPlacementsBuilder_ == null) {
+          secondaryDiskPlacements_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          secondaryDiskPlacementsBuilder_.clear();
         }
         return this;
       }
@@ -52079,6 +52316,20 @@ public final class InstanceServiceOuterClass {
           result.networkInterfaceSpecs_ = networkInterfaceSpecs_;
         } else {
           result.networkInterfaceSpecs_ = networkInterfaceSpecsBuilder_.build();
+        }
+        if (bootDiskPlacementBuilder_ == null) {
+          result.bootDiskPlacement_ = bootDiskPlacement_;
+        } else {
+          result.bootDiskPlacement_ = bootDiskPlacementBuilder_.build();
+        }
+        if (secondaryDiskPlacementsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            secondaryDiskPlacements_ = java.util.Collections.unmodifiableList(secondaryDiskPlacements_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.secondaryDiskPlacements_ = secondaryDiskPlacements_;
+        } else {
+          result.secondaryDiskPlacements_ = secondaryDiskPlacementsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -52159,6 +52410,35 @@ public final class InstanceServiceOuterClass {
                    getNetworkInterfaceSpecsFieldBuilder() : null;
             } else {
               networkInterfaceSpecsBuilder_.addAllMessages(other.networkInterfaceSpecs_);
+            }
+          }
+        }
+        if (other.hasBootDiskPlacement()) {
+          mergeBootDiskPlacement(other.getBootDiskPlacement());
+        }
+        if (secondaryDiskPlacementsBuilder_ == null) {
+          if (!other.secondaryDiskPlacements_.isEmpty()) {
+            if (secondaryDiskPlacements_.isEmpty()) {
+              secondaryDiskPlacements_ = other.secondaryDiskPlacements_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureSecondaryDiskPlacementsIsMutable();
+              secondaryDiskPlacements_.addAll(other.secondaryDiskPlacements_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.secondaryDiskPlacements_.isEmpty()) {
+            if (secondaryDiskPlacementsBuilder_.isEmpty()) {
+              secondaryDiskPlacementsBuilder_.dispose();
+              secondaryDiskPlacementsBuilder_ = null;
+              secondaryDiskPlacements_ = other.secondaryDiskPlacements_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              secondaryDiskPlacementsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSecondaryDiskPlacementsFieldBuilder() : null;
+            } else {
+              secondaryDiskPlacementsBuilder_.addAllMessages(other.secondaryDiskPlacements_);
             }
           }
         }
@@ -52740,6 +53020,473 @@ public final class InstanceServiceOuterClass {
           networkInterfaceSpecs_ = null;
         }
         return networkInterfaceSpecsBuilder_;
+      }
+
+      private yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy bootDiskPlacement_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder> bootDiskPlacementBuilder_;
+      /**
+       * <pre>
+       * Boot disk placement policy configuration in target zone. Must be specified if disk has placement policy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy boot_disk_placement = 4;</code>
+       * @return Whether the bootDiskPlacement field is set.
+       */
+      public boolean hasBootDiskPlacement() {
+        return bootDiskPlacementBuilder_ != null || bootDiskPlacement_ != null;
+      }
+      /**
+       * <pre>
+       * Boot disk placement policy configuration in target zone. Must be specified if disk has placement policy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy boot_disk_placement = 4;</code>
+       * @return The bootDiskPlacement.
+       */
+      public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy getBootDiskPlacement() {
+        if (bootDiskPlacementBuilder_ == null) {
+          return bootDiskPlacement_ == null ? yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.getDefaultInstance() : bootDiskPlacement_;
+        } else {
+          return bootDiskPlacementBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Boot disk placement policy configuration in target zone. Must be specified if disk has placement policy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy boot_disk_placement = 4;</code>
+       */
+      public Builder setBootDiskPlacement(yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy value) {
+        if (bootDiskPlacementBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bootDiskPlacement_ = value;
+          onChanged();
+        } else {
+          bootDiskPlacementBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Boot disk placement policy configuration in target zone. Must be specified if disk has placement policy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy boot_disk_placement = 4;</code>
+       */
+      public Builder setBootDiskPlacement(
+          yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder builderForValue) {
+        if (bootDiskPlacementBuilder_ == null) {
+          bootDiskPlacement_ = builderForValue.build();
+          onChanged();
+        } else {
+          bootDiskPlacementBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Boot disk placement policy configuration in target zone. Must be specified if disk has placement policy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy boot_disk_placement = 4;</code>
+       */
+      public Builder mergeBootDiskPlacement(yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy value) {
+        if (bootDiskPlacementBuilder_ == null) {
+          if (bootDiskPlacement_ != null) {
+            bootDiskPlacement_ =
+              yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.newBuilder(bootDiskPlacement_).mergeFrom(value).buildPartial();
+          } else {
+            bootDiskPlacement_ = value;
+          }
+          onChanged();
+        } else {
+          bootDiskPlacementBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Boot disk placement policy configuration in target zone. Must be specified if disk has placement policy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy boot_disk_placement = 4;</code>
+       */
+      public Builder clearBootDiskPlacement() {
+        if (bootDiskPlacementBuilder_ == null) {
+          bootDiskPlacement_ = null;
+          onChanged();
+        } else {
+          bootDiskPlacement_ = null;
+          bootDiskPlacementBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Boot disk placement policy configuration in target zone. Must be specified if disk has placement policy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy boot_disk_placement = 4;</code>
+       */
+      public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder getBootDiskPlacementBuilder() {
+        
+        onChanged();
+        return getBootDiskPlacementFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Boot disk placement policy configuration in target zone. Must be specified if disk has placement policy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy boot_disk_placement = 4;</code>
+       */
+      public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder getBootDiskPlacementOrBuilder() {
+        if (bootDiskPlacementBuilder_ != null) {
+          return bootDiskPlacementBuilder_.getMessageOrBuilder();
+        } else {
+          return bootDiskPlacement_ == null ?
+              yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.getDefaultInstance() : bootDiskPlacement_;
+        }
+      }
+      /**
+       * <pre>
+       * Boot disk placement policy configuration in target zone. Must be specified if disk has placement policy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.DiskPlacementPolicy boot_disk_placement = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder> 
+          getBootDiskPlacementFieldBuilder() {
+        if (bootDiskPlacementBuilder_ == null) {
+          bootDiskPlacementBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicy.Builder, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyOrBuilder>(
+                  getBootDiskPlacement(),
+                  getParentForChildren(),
+                  isClean());
+          bootDiskPlacement_ = null;
+        }
+        return bootDiskPlacementBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange> secondaryDiskPlacements_ =
+        java.util.Collections.emptyList();
+      private void ensureSecondaryDiskPlacementsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          secondaryDiskPlacements_ = new java.util.ArrayList<yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange>(secondaryDiskPlacements_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange.Builder, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChangeOrBuilder> secondaryDiskPlacementsBuilder_;
+
+      /**
+       * <pre>
+       * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange> getSecondaryDiskPlacementsList() {
+        if (secondaryDiskPlacementsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(secondaryDiskPlacements_);
+        } else {
+          return secondaryDiskPlacementsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+       */
+      public int getSecondaryDiskPlacementsCount() {
+        if (secondaryDiskPlacementsBuilder_ == null) {
+          return secondaryDiskPlacements_.size();
+        } else {
+          return secondaryDiskPlacementsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+       */
+      public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange getSecondaryDiskPlacements(int index) {
+        if (secondaryDiskPlacementsBuilder_ == null) {
+          return secondaryDiskPlacements_.get(index);
+        } else {
+          return secondaryDiskPlacementsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+       */
+      public Builder setSecondaryDiskPlacements(
+          int index, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange value) {
+        if (secondaryDiskPlacementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSecondaryDiskPlacementsIsMutable();
+          secondaryDiskPlacements_.set(index, value);
+          onChanged();
+        } else {
+          secondaryDiskPlacementsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+       */
+      public Builder setSecondaryDiskPlacements(
+          int index, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange.Builder builderForValue) {
+        if (secondaryDiskPlacementsBuilder_ == null) {
+          ensureSecondaryDiskPlacementsIsMutable();
+          secondaryDiskPlacements_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          secondaryDiskPlacementsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+       */
+      public Builder addSecondaryDiskPlacements(yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange value) {
+        if (secondaryDiskPlacementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSecondaryDiskPlacementsIsMutable();
+          secondaryDiskPlacements_.add(value);
+          onChanged();
+        } else {
+          secondaryDiskPlacementsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+       */
+      public Builder addSecondaryDiskPlacements(
+          int index, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange value) {
+        if (secondaryDiskPlacementsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSecondaryDiskPlacementsIsMutable();
+          secondaryDiskPlacements_.add(index, value);
+          onChanged();
+        } else {
+          secondaryDiskPlacementsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+       */
+      public Builder addSecondaryDiskPlacements(
+          yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange.Builder builderForValue) {
+        if (secondaryDiskPlacementsBuilder_ == null) {
+          ensureSecondaryDiskPlacementsIsMutable();
+          secondaryDiskPlacements_.add(builderForValue.build());
+          onChanged();
+        } else {
+          secondaryDiskPlacementsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+       */
+      public Builder addSecondaryDiskPlacements(
+          int index, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange.Builder builderForValue) {
+        if (secondaryDiskPlacementsBuilder_ == null) {
+          ensureSecondaryDiskPlacementsIsMutable();
+          secondaryDiskPlacements_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          secondaryDiskPlacementsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+       */
+      public Builder addAllSecondaryDiskPlacements(
+          java.lang.Iterable<? extends yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange> values) {
+        if (secondaryDiskPlacementsBuilder_ == null) {
+          ensureSecondaryDiskPlacementsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, secondaryDiskPlacements_);
+          onChanged();
+        } else {
+          secondaryDiskPlacementsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+       */
+      public Builder clearSecondaryDiskPlacements() {
+        if (secondaryDiskPlacementsBuilder_ == null) {
+          secondaryDiskPlacements_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          secondaryDiskPlacementsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+       */
+      public Builder removeSecondaryDiskPlacements(int index) {
+        if (secondaryDiskPlacementsBuilder_ == null) {
+          ensureSecondaryDiskPlacementsIsMutable();
+          secondaryDiskPlacements_.remove(index);
+          onChanged();
+        } else {
+          secondaryDiskPlacementsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+       */
+      public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange.Builder getSecondaryDiskPlacementsBuilder(
+          int index) {
+        return getSecondaryDiskPlacementsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+       */
+      public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChangeOrBuilder getSecondaryDiskPlacementsOrBuilder(
+          int index) {
+        if (secondaryDiskPlacementsBuilder_ == null) {
+          return secondaryDiskPlacements_.get(index);  } else {
+          return secondaryDiskPlacementsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChangeOrBuilder> 
+           getSecondaryDiskPlacementsOrBuilderList() {
+        if (secondaryDiskPlacementsBuilder_ != null) {
+          return secondaryDiskPlacementsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(secondaryDiskPlacements_);
+        }
+      }
+      /**
+       * <pre>
+       * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+       */
+      public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange.Builder addSecondaryDiskPlacementsBuilder() {
+        return getSecondaryDiskPlacementsFieldBuilder().addBuilder(
+            yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+       */
+      public yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange.Builder addSecondaryDiskPlacementsBuilder(
+          int index) {
+        return getSecondaryDiskPlacementsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Secondary disk placement policy configurations in target zone. Must be specified for each disk that has placement policy.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.compute.v1.DiskPlacementPolicyChange secondary_disk_placements = 5;</code>
+       */
+      public java.util.List<yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange.Builder> 
+           getSecondaryDiskPlacementsBuilderList() {
+        return getSecondaryDiskPlacementsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange.Builder, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChangeOrBuilder> 
+          getSecondaryDiskPlacementsFieldBuilder() {
+        if (secondaryDiskPlacementsBuilder_ == null) {
+          secondaryDiskPlacementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChange.Builder, yandex.cloud.api.compute.v1.DiskOuterClass.DiskPlacementPolicyChangeOrBuilder>(
+                  secondaryDiskPlacements_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          secondaryDiskPlacements_ = null;
+        }
+        return secondaryDiskPlacementsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -56073,138 +56820,142 @@ public final class InstanceServiceOuterClass {
       "\n\025destination_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<" +
       "=50\"d\n\024MoveInstanceMetadata\022\023\n\013instance_" +
       "id\030\001 \001(\t\022\030\n\020source_folder_id\030\002 \001(\t\022\035\n\025de" +
-      "stination_folder_id\030\003 \001(\t\"\302\001\n\027RelocateIn" +
+      "stination_folder_id\030\003 \001(\t\"\344\002\n\027RelocateIn" +
       "stanceRequest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001" +
       "\212\3101\004<=50\022)\n\023destination_zone_id\030\002 \001(\tB\014\350" +
       "\3071\001\212\3101\004<=50\022Y\n\027network_interface_specs\030\003" +
       " \003(\0132-.yandex.cloud.compute.v1.NetworkIn" +
-      "terfaceSpecB\t\202\3101\0011\350\3071\001\"d\n\030RelocateInstan" +
-      "ceMetadata\022\023\n\013instance_id\030\001 \001(\t\022\026\n\016sourc" +
-      "e_zone_id\030\002 \001(\t\022\033\n\023destination_zone_id\030\003" +
-      " \001(\t\"0\n\031GuestStopInstanceMetadata\022\023\n\013ins" +
-      "tance_id\030\001 \001(\t\".\n\027PreemptInstanceMetadat" +
-      "a\022\023\n\013instance_id\030\001 \001(\t\",\n\025CrashInstanceM" +
-      "etadata\022\023\n\013instance_id\030\001 \001(\t*#\n\014Instance" +
-      "View\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\0012\230$\n\017InstanceSe" +
-      "rvice\022\202\001\n\003Get\022+.yandex.cloud.compute.v1." +
-      "GetInstanceRequest\032!.yandex.cloud.comput" +
-      "e.v1.Instance\"+\202\323\344\223\002%\022#/compute/v1/insta" +
-      "nces/{instance_id}\022\204\001\n\004List\022-.yandex.clo" +
-      "ud.compute.v1.ListInstancesRequest\032..yan" +
-      "dex.cloud.compute.v1.ListInstancesRespon" +
-      "se\"\035\202\323\344\223\002\027\022\025/compute/v1/instances\022\243\001\n\006Cr" +
-      "eate\022..yandex.cloud.compute.v1.CreateIns" +
-      "tanceRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"F\202\323\344\223\002\032\"\025/compute/v1/instances:\001" +
-      "*\262\322*\"\n\026CreateInstanceMetadata\022\010Instance\022" +
-      "\261\001\n\006Update\022..yandex.cloud.compute.v1.Upd" +
-      "ateInstanceRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"T\202\323\344\223\002(2#/compute/v1/insta" +
-      "nces/{instance_id}:\001*\262\322*\"\n\026UpdateInstanc" +
-      "eMetadata\022\010Instance\022\273\001\n\006Delete\022..yandex." +
-      "cloud.compute.v1.DeleteInstanceRequest\032!" +
-      ".yandex.cloud.operation.Operation\"^\202\323\344\223\002" +
-      "%*#/compute/v1/instances/{instance_id}\262\322" +
-      "*/\n\026DeleteInstanceMetadata\022\025google.proto" +
-      "buf.Empty\022\330\001\n\016UpdateMetadata\0226.yandex.cl" +
-      "oud.compute.v1.UpdateInstanceMetadataReq" +
-      "uest\032!.yandex.cloud.operation.Operation\"" +
-      "k\202\323\344\223\0027\"2/compute/v1/instances/{instance" +
-      "_id}/updateMetadata:\001*\262\322**\n\036UpdateInstan" +
-      "ceMetadataMetadata\022\010Instance\022\316\001\n\023GetSeri" +
-      "alPortOutput\022;.yandex.cloud.compute.v1.G" +
-      "etInstanceSerialPortOutputRequest\032<.yand" +
-      "ex.cloud.compute.v1.GetInstanceSerialPor" +
-      "tOutputResponse\"<\202\323\344\223\0026\0224/compute/v1/ins" +
-      "tances/{instance_id}:serialPortOutput\022\272\001" +
-      "\n\004Stop\022,.yandex.cloud.compute.v1.StopIns" +
-      "tanceRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"a\202\323\344\223\002*\"(/compute/v1/instances/{" +
-      "instance_id}:stop\262\322*-\n\024StopInstanceMetad" +
-      "ata\022\025google.protobuf.Empty\022\261\001\n\005Start\022-.y" +
-      "andex.cloud.compute.v1.StartInstanceRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"V" +
-      "\202\323\344\223\002+\")/compute/v1/instances/{instance_" +
-      "id}:start\262\322*!\n\025StartInstanceMetadata\022\010In" +
-      "stance\022\306\001\n\007Restart\022/.yandex.cloud.comput" +
-      "e.v1.RestartInstanceRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"g\202\323\344\223\002-\"+/compute" +
-      "/v1/instances/{instance_id}:restart\262\322*0\n" +
-      "\027RestartInstanceMetadata\022\025google.protobu" +
-      "f.Empty\022\310\001\n\nAttachDisk\0222.yandex.cloud.co" +
-      "mpute.v1.AttachInstanceDiskRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"c\202\323\344\223\0023\"./" +
-      "compute/v1/instances/{instance_id}:attac" +
-      "hDisk:\001*\262\322*&\n\032AttachInstanceDiskMetadata" +
-      "\022\010Instance\022\310\001\n\nDetachDisk\0222.yandex.cloud" +
-      ".compute.v1.DetachInstanceDiskRequest\032!." +
-      "yandex.cloud.operation.Operation\"c\202\323\344\223\0023" +
-      "\"./compute/v1/instances/{instance_id}:de" +
-      "tachDisk:\001*\262\322*&\n\032DetachInstanceDiskMetad" +
-      "ata\022\010Instance\022\340\001\n\020AttachFilesystem\0228.yan" +
-      "dex.cloud.compute.v1.AttachInstanceFiles" +
-      "ystemRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"o\202\323\344\223\0029\"4/compute/v1/instances/{" +
-      "instance_id}:attachFilesystem:\001*\262\322*,\n At" +
-      "tachInstanceFilesystemMetadata\022\010Instance" +
-      "\022\340\001\n\020DetachFilesystem\0228.yandex.cloud.com" +
-      "pute.v1.DetachInstanceFilesystemRequest\032" +
-      "!.yandex.cloud.operation.Operation\"o\202\323\344\223" +
-      "\0029\"4/compute/v1/instances/{instance_id}:" +
-      "detachFilesystem:\001*\262\322*,\n DetachInstanceF" +
-      "ilesystemMetadata\022\010Instance\022\330\001\n\016AddOneTo" +
-      "OneNat\0226.yandex.cloud.compute.v1.AddInst" +
-      "anceOneToOneNatRequest\032!.yandex.cloud.op" +
-      "eration.Operation\"k\202\323\344\223\0027\"2/compute/v1/i" +
-      "nstances/{instance_id}/addOneToOneNat:\001*" +
-      "\262\322**\n\036AddInstanceOneToOneNatMetadata\022\010In" +
-      "stance\022\344\001\n\021RemoveOneToOneNat\0229.yandex.cl" +
-      "oud.compute.v1.RemoveInstanceOneToOneNat" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"q\202\323\344\223\002:\"5/compute/v1/instances/{insta" +
-      "nce_id}/removeOneToOneNat:\001*\262\322*-\n!Remove" +
-      "InstanceOneToOneNatMetadata\022\010Instance\022\370\001" +
-      "\n\026UpdateNetworkInterface\022>.yandex.cloud." +
-      "compute.v1.UpdateInstanceNetworkInterfac" +
-      "eRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"{\202\323\344\223\002?2:/compute/v1/instances/{inst" +
-      "ance_id}/updateNetworkInterface:\001*\262\322*2\n&" +
-      "UpdateInstanceNetworkInterfaceMetadata\022\010" +
-      "Instance\022\271\001\n\016ListOperations\0226.yandex.clo" +
-      "ud.compute.v1.ListInstanceOperationsRequ" +
-      "est\0327.yandex.cloud.compute.v1.ListInstan" +
-      "ceOperationsResponse\"6\202\323\344\223\0020\022./compute/v" +
-      "1/instances/{instance_id}/operations\022\260\001\n" +
-      "\004Move\022,.yandex.cloud.compute.v1.MoveInst" +
-      "anceRequest\032!.yandex.cloud.operation.Ope" +
-      "ration\"W\202\323\344\223\002-\"(/compute/v1/instances/{i" +
-      "nstance_id}:move:\001*\262\322* \n\024MoveInstanceMet" +
-      "adata\022\010Instance\022\300\001\n\010Relocate\0220.yandex.cl" +
-      "oud.compute.v1.RelocateInstanceRequest\032!" +
-      ".yandex.cloud.operation.Operation\"_\202\323\344\223\002" +
-      "1\",/compute/v1/instances/{instance_id}:r" +
-      "elocate:\001*\262\322*$\n\030RelocateInstanceMetadata" +
-      "\022\010Instance\022\265\001\n\022ListAccessBindings\022..yand" +
-      "ex.cloud.access.ListAccessBindingsReques" +
-      "t\032/.yandex.cloud.access.ListAccessBindin" +
-      "gsResponse\">\202\323\344\223\0028\0226/compute/v1/instance" +
-      "s/{resource_id}:listAccessBindings\022\364\001\n\021S" +
-      "etAccessBindings\022-.yandex.cloud.access.S" +
-      "etAccessBindingsRequest\032!.yandex.cloud.o" +
-      "peration.Operation\"\214\001\202\323\344\223\002:\"5/compute/v1" +
-      "/instances/{resource_id}:setAccessBindin" +
-      "gs:\001*\262\322*H\n access.SetAccessBindingsMetad" +
-      "ata\022$access.AccessBindingsOperationResul" +
-      "t\022\200\002\n\024UpdateAccessBindings\0220.yandex.clou" +
-      "d.access.UpdateAccessBindingsRequest\032!.y" +
-      "andex.cloud.operation.Operation\"\222\001\202\323\344\223\002=" +
-      "\"8/compute/v1/instances/{resource_id}:up" +
-      "dateAccessBindings:\001*\262\322*K\n#access.Update" +
-      "AccessBindingsMetadata\022$access.AccessBin" +
-      "dingsOperationResultBb\n\033yandex.cloud.api" +
-      ".compute.v1ZCgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/compute/v1;compute" +
-      "b\006proto3"
+      "terfaceSpecB\t\202\3101\0011\350\3071\001\022I\n\023boot_disk_plac" +
+      "ement\030\004 \001(\0132,.yandex.cloud.compute.v1.Di" +
+      "skPlacementPolicy\022U\n\031secondary_disk_plac" +
+      "ements\030\005 \003(\01322.yandex.cloud.compute.v1.D" +
+      "iskPlacementPolicyChange\"d\n\030RelocateInst" +
+      "anceMetadata\022\023\n\013instance_id\030\001 \001(\t\022\026\n\016sou" +
+      "rce_zone_id\030\002 \001(\t\022\033\n\023destination_zone_id" +
+      "\030\003 \001(\t\"0\n\031GuestStopInstanceMetadata\022\023\n\013i" +
+      "nstance_id\030\001 \001(\t\".\n\027PreemptInstanceMetad" +
+      "ata\022\023\n\013instance_id\030\001 \001(\t\",\n\025CrashInstanc" +
+      "eMetadata\022\023\n\013instance_id\030\001 \001(\t*#\n\014Instan" +
+      "ceView\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\0012\230$\n\017Instance" +
+      "Service\022\202\001\n\003Get\022+.yandex.cloud.compute.v" +
+      "1.GetInstanceRequest\032!.yandex.cloud.comp" +
+      "ute.v1.Instance\"+\202\323\344\223\002%\022#/compute/v1/ins" +
+      "tances/{instance_id}\022\204\001\n\004List\022-.yandex.c" +
+      "loud.compute.v1.ListInstancesRequest\032..y" +
+      "andex.cloud.compute.v1.ListInstancesResp" +
+      "onse\"\035\202\323\344\223\002\027\022\025/compute/v1/instances\022\243\001\n\006" +
+      "Create\022..yandex.cloud.compute.v1.CreateI" +
+      "nstanceRequest\032!.yandex.cloud.operation." +
+      "Operation\"F\202\323\344\223\002\032\"\025/compute/v1/instances" +
+      ":\001*\262\322*\"\n\026CreateInstanceMetadata\022\010Instanc" +
+      "e\022\261\001\n\006Update\022..yandex.cloud.compute.v1.U" +
+      "pdateInstanceRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"T\202\323\344\223\002(2#/compute/v1/ins" +
+      "tances/{instance_id}:\001*\262\322*\"\n\026UpdateInsta" +
+      "nceMetadata\022\010Instance\022\273\001\n\006Delete\022..yande" +
+      "x.cloud.compute.v1.DeleteInstanceRequest" +
+      "\032!.yandex.cloud.operation.Operation\"^\202\323\344" +
+      "\223\002%*#/compute/v1/instances/{instance_id}" +
+      "\262\322*/\n\026DeleteInstanceMetadata\022\025google.pro" +
+      "tobuf.Empty\022\330\001\n\016UpdateMetadata\0226.yandex." +
+      "cloud.compute.v1.UpdateInstanceMetadataR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"k\202\323\344\223\0027\"2/compute/v1/instances/{instan" +
+      "ce_id}/updateMetadata:\001*\262\322**\n\036UpdateInst" +
+      "anceMetadataMetadata\022\010Instance\022\316\001\n\023GetSe" +
+      "rialPortOutput\022;.yandex.cloud.compute.v1" +
+      ".GetInstanceSerialPortOutputRequest\032<.ya" +
+      "ndex.cloud.compute.v1.GetInstanceSerialP" +
+      "ortOutputResponse\"<\202\323\344\223\0026\0224/compute/v1/i" +
+      "nstances/{instance_id}:serialPortOutput\022" +
+      "\272\001\n\004Stop\022,.yandex.cloud.compute.v1.StopI" +
+      "nstanceRequest\032!.yandex.cloud.operation." +
+      "Operation\"a\202\323\344\223\002*\"(/compute/v1/instances" +
+      "/{instance_id}:stop\262\322*-\n\024StopInstanceMet" +
+      "adata\022\025google.protobuf.Empty\022\261\001\n\005Start\022-" +
+      ".yandex.cloud.compute.v1.StartInstanceRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"V\202\323\344\223\002+\")/compute/v1/instances/{instanc" +
+      "e_id}:start\262\322*!\n\025StartInstanceMetadata\022\010" +
+      "Instance\022\306\001\n\007Restart\022/.yandex.cloud.comp" +
+      "ute.v1.RestartInstanceRequest\032!.yandex.c" +
+      "loud.operation.Operation\"g\202\323\344\223\002-\"+/compu" +
+      "te/v1/instances/{instance_id}:restart\262\322*" +
+      "0\n\027RestartInstanceMetadata\022\025google.proto" +
+      "buf.Empty\022\310\001\n\nAttachDisk\0222.yandex.cloud." +
+      "compute.v1.AttachInstanceDiskRequest\032!.y" +
+      "andex.cloud.operation.Operation\"c\202\323\344\223\0023\"" +
+      "./compute/v1/instances/{instance_id}:att" +
+      "achDisk:\001*\262\322*&\n\032AttachInstanceDiskMetada" +
+      "ta\022\010Instance\022\310\001\n\nDetachDisk\0222.yandex.clo" +
+      "ud.compute.v1.DetachInstanceDiskRequest\032" +
+      "!.yandex.cloud.operation.Operation\"c\202\323\344\223" +
+      "\0023\"./compute/v1/instances/{instance_id}:" +
+      "detachDisk:\001*\262\322*&\n\032DetachInstanceDiskMet" +
+      "adata\022\010Instance\022\340\001\n\020AttachFilesystem\0228.y" +
+      "andex.cloud.compute.v1.AttachInstanceFil" +
+      "esystemRequest\032!.yandex.cloud.operation." +
+      "Operation\"o\202\323\344\223\0029\"4/compute/v1/instances" +
+      "/{instance_id}:attachFilesystem:\001*\262\322*,\n " +
+      "AttachInstanceFilesystemMetadata\022\010Instan" +
+      "ce\022\340\001\n\020DetachFilesystem\0228.yandex.cloud.c" +
+      "ompute.v1.DetachInstanceFilesystemReques" +
+      "t\032!.yandex.cloud.operation.Operation\"o\202\323" +
+      "\344\223\0029\"4/compute/v1/instances/{instance_id" +
+      "}:detachFilesystem:\001*\262\322*,\n DetachInstanc" +
+      "eFilesystemMetadata\022\010Instance\022\330\001\n\016AddOne" +
+      "ToOneNat\0226.yandex.cloud.compute.v1.AddIn" +
+      "stanceOneToOneNatRequest\032!.yandex.cloud." +
+      "operation.Operation\"k\202\323\344\223\0027\"2/compute/v1" +
+      "/instances/{instance_id}/addOneToOneNat:" +
+      "\001*\262\322**\n\036AddInstanceOneToOneNatMetadata\022\010" +
+      "Instance\022\344\001\n\021RemoveOneToOneNat\0229.yandex." +
+      "cloud.compute.v1.RemoveInstanceOneToOneN" +
+      "atRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"q\202\323\344\223\002:\"5/compute/v1/instances/{ins" +
+      "tance_id}/removeOneToOneNat:\001*\262\322*-\n!Remo" +
+      "veInstanceOneToOneNatMetadata\022\010Instance\022" +
+      "\370\001\n\026UpdateNetworkInterface\022>.yandex.clou" +
+      "d.compute.v1.UpdateInstanceNetworkInterf" +
+      "aceRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"{\202\323\344\223\002?2:/compute/v1/instances/{in" +
+      "stance_id}/updateNetworkInterface:\001*\262\322*2" +
+      "\n&UpdateInstanceNetworkInterfaceMetadata" +
+      "\022\010Instance\022\271\001\n\016ListOperations\0226.yandex.c" +
+      "loud.compute.v1.ListInstanceOperationsRe" +
+      "quest\0327.yandex.cloud.compute.v1.ListInst" +
+      "anceOperationsResponse\"6\202\323\344\223\0020\022./compute" +
+      "/v1/instances/{instance_id}/operations\022\260" +
+      "\001\n\004Move\022,.yandex.cloud.compute.v1.MoveIn" +
+      "stanceRequest\032!.yandex.cloud.operation.O" +
+      "peration\"W\202\323\344\223\002-\"(/compute/v1/instances/" +
+      "{instance_id}:move:\001*\262\322* \n\024MoveInstanceM" +
+      "etadata\022\010Instance\022\300\001\n\010Relocate\0220.yandex." +
+      "cloud.compute.v1.RelocateInstanceRequest" +
+      "\032!.yandex.cloud.operation.Operation\"_\202\323\344" +
+      "\223\0021\",/compute/v1/instances/{instance_id}" +
+      ":relocate:\001*\262\322*$\n\030RelocateInstanceMetada" +
+      "ta\022\010Instance\022\265\001\n\022ListAccessBindings\022..ya" +
+      "ndex.cloud.access.ListAccessBindingsRequ" +
+      "est\032/.yandex.cloud.access.ListAccessBind" +
+      "ingsResponse\">\202\323\344\223\0028\0226/compute/v1/instan" +
+      "ces/{resource_id}:listAccessBindings\022\364\001\n" +
+      "\021SetAccessBindings\022-.yandex.cloud.access" +
+      ".SetAccessBindingsRequest\032!.yandex.cloud" +
+      ".operation.Operation\"\214\001\202\323\344\223\002:\"5/compute/" +
+      "v1/instances/{resource_id}:setAccessBind" +
+      "ings:\001*\262\322*H\n access.SetAccessBindingsMet" +
+      "adata\022$access.AccessBindingsOperationRes" +
+      "ult\022\200\002\n\024UpdateAccessBindings\0220.yandex.cl" +
+      "oud.access.UpdateAccessBindingsRequest\032!" +
+      ".yandex.cloud.operation.Operation\"\222\001\202\323\344\223" +
+      "\002=\"8/compute/v1/instances/{resource_id}:" +
+      "updateAccessBindings:\001*\262\322*K\n#access.Upda" +
+      "teAccessBindingsMetadata\022$access.AccessB" +
+      "indingsOperationResultBb\n\033yandex.cloud.a" +
+      "pi.compute.v1ZCgithub.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/compute/v1;compu" +
+      "teb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -56529,7 +57280,7 @@ public final class InstanceServiceOuterClass {
     internal_static_yandex_cloud_compute_v1_RelocateInstanceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_RelocateInstanceRequest_descriptor,
-        new java.lang.String[] { "InstanceId", "DestinationZoneId", "NetworkInterfaceSpecs", });
+        new java.lang.String[] { "InstanceId", "DestinationZoneId", "NetworkInterfaceSpecs", "BootDiskPlacement", "SecondaryDiskPlacements", });
     internal_static_yandex_cloud_compute_v1_RelocateInstanceMetadata_descriptor =
       getDescriptor().getMessageTypes().get(46);
     internal_static_yandex_cloud_compute_v1_RelocateInstanceMetadata_fieldAccessorTable = new
