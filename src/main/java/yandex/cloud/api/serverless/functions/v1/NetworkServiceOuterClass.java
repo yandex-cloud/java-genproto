@@ -10361,64 +10361,71 @@ public final class NetworkServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n:yandex/cloud/serverless/functions/v1/n" +
       "etwork_service.proto\022$yandex.cloud.serve" +
-      "rless.functions.v1\032\037google/protobuf/time" +
-      "stamp.proto\032\035yandex/cloud/validation.pro" +
-      "to\"\260\002\n\013UsedNetwork\022\022\n\nnetwork_id\030\001 \001(\t\022\020" +
-      "\n\010cloud_id\030\002 \001(\t\022\021\n\tfolder_id\030\003 \001(\t\022H\n\006s" +
-      "tatus\030\004 \001(\01628.yandex.cloud.serverless.fu" +
-      "nctions.v1.UsedNetwork.Status\0229\n\025will_be" +
-      "_cleaned_up_at\030\005 \001(\0132\032.google.protobuf.T" +
-      "imestamp\022\031\n\021connections_count\030\006 \001(\003\"H\n\006S" +
-      "tatus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010CREATIN" +
-      "G\020\001\022\n\n\006ACTIVE\020\002\022\014\n\010OBSOLETE\020\003\"1\n\025GetUsed" +
-      "NetworkRequest\022\030\n\nnetwork_id\030\001 \001(\tB\004\350\3071\001" +
-      "\"\217\001\n\027ListUsedNetworksRequest\022\035\n\tpage_siz" +
-      "e\030\001 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\002 \001(\tB" +
-      "\t\212\3101\005<=100\022\022\n\010cloud_id\030\003 \001(\tH\000\022\023\n\tfolder" +
-      "_id\030\004 \001(\tH\000B\r\n\005scope\022\004\300\3011\001\"x\n\030ListUsedNe" +
-      "tworksResponse\022C\n\010networks\030\001 \003(\01321.yande" +
-      "x.cloud.serverless.functions.v1.UsedNetw" +
-      "ork\022\027\n\017next_page_token\030\002 \001(\t\"\263\001\n\035ListCon" +
-      "nectedResourcesRequest\022\035\n\tpage_size\030\001 \001(" +
-      "\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\002 \001(\tB\t\212\3101\005<" +
-      "=100\022\024\n\nnetwork_id\030\003 \001(\tH\000\022\022\n\010cloud_id\030\004" +
-      " \001(\tH\000\022\023\n\tfolder_id\030\005 \001(\tH\000B\025\n\rnetwork_s" +
-      "cope\022\004\300\3011\001\"\343\002\n\036ListConnectedResourcesRes" +
-      "ponse\022i\n\tresources\030\001 \003(\0132V.yandex.cloud." +
-      "serverless.functions.v1.ListConnectedRes" +
-      "ourcesResponse.ConnectedResource\022\027\n\017next" +
-      "_page_token\030\002 \001(\t\032\274\001\n\021ConnectedResource\022" +
-      "\022\n\nnetwork_id\030\001 \001(\t\022\025\n\rresource_type\030\002 \001" +
-      "(\t\022\023\n\013resource_id\030\003 \001(\t\022\030\n\020subresource_t" +
-      "ype\030\004 \001(\t\022\026\n\016subresource_id\030\005 \001(\t\022\031\n\021res" +
-      "ource_cloud_id\030\006 \001(\t\022\032\n\022resource_folder_" +
-      "id\030\007 \001(\t\"<\n TriggerUsedNetworkCleanupReq" +
-      "uest\022\030\n\nnetwork_id\030\001 \001(\tB\004\350\3071\001\"]\n!Trigge" +
-      "rUsedNetworkCleanupResponse\0228\n\024network_c" +
-      "leanup_time\030\001 \001(\0132\032.google.protobuf.Time" +
-      "stamp2\345\004\n\016NetworkService\022y\n\007GetUsed\022;.ya" +
-      "ndex.cloud.serverless.functions.v1.GetUs" +
-      "edNetworkRequest\0321.yandex.cloud.serverle" +
-      "ss.functions.v1.UsedNetwork\022\211\001\n\010ListUsed" +
-      "\022=.yandex.cloud.serverless.functions.v1." +
-      "ListUsedNetworksRequest\032>.yandex.cloud.s" +
-      "erverless.functions.v1.ListUsedNetworksR" +
-      "esponse\022\243\001\n\026ListConnectedResources\022C.yan" +
-      "dex.cloud.serverless.functions.v1.ListCo" +
-      "nnectedResourcesRequest\032D.yandex.cloud.s" +
-      "erverless.functions.v1.ListConnectedReso" +
-      "urcesResponse\022\245\001\n\022TriggerUsedCleanup\022F.y" +
-      "andex.cloud.serverless.functions.v1.Trig" +
-      "gerUsedNetworkCleanupRequest\032G.yandex.cl" +
-      "oud.serverless.functions.v1.TriggerUsedN" +
-      "etworkCleanupResponseB~\n(yandex.cloud.ap" +
-      "i.serverless.functions.v1ZRgithub.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/serv" +
-      "erless/functions/v1;functionsb\006proto3"
+      "rless.functions.v1\032\034google/api/annotatio" +
+      "ns.proto\032\037google/protobuf/timestamp.prot" +
+      "o\032\035yandex/cloud/validation.proto\"\260\002\n\013Use" +
+      "dNetwork\022\022\n\nnetwork_id\030\001 \001(\t\022\020\n\010cloud_id" +
+      "\030\002 \001(\t\022\021\n\tfolder_id\030\003 \001(\t\022H\n\006status\030\004 \001(" +
+      "\01628.yandex.cloud.serverless.functions.v1" +
+      ".UsedNetwork.Status\0229\n\025will_be_cleaned_u" +
+      "p_at\030\005 \001(\0132\032.google.protobuf.Timestamp\022\031" +
+      "\n\021connections_count\030\006 \001(\003\"H\n\006Status\022\026\n\022S" +
+      "TATUS_UNSPECIFIED\020\000\022\014\n\010CREATING\020\001\022\n\n\006ACT" +
+      "IVE\020\002\022\014\n\010OBSOLETE\020\003\"1\n\025GetUsedNetworkReq" +
+      "uest\022\030\n\nnetwork_id\030\001 \001(\tB\004\350\3071\001\"\217\001\n\027ListU" +
+      "sedNetworksRequest\022\035\n\tpage_size\030\001 \001(\003B\n\372" +
+      "\3071\006<=1000\022\035\n\npage_token\030\002 \001(\tB\t\212\3101\005<=100" +
+      "\022\022\n\010cloud_id\030\003 \001(\tH\000\022\023\n\tfolder_id\030\004 \001(\tH" +
+      "\000B\r\n\005scope\022\004\300\3011\001\"x\n\030ListUsedNetworksResp" +
+      "onse\022C\n\010networks\030\001 \003(\01321.yandex.cloud.se" +
+      "rverless.functions.v1.UsedNetwork\022\027\n\017nex" +
+      "t_page_token\030\002 \001(\t\"\263\001\n\035ListConnectedReso" +
+      "urcesRequest\022\035\n\tpage_size\030\001 \001(\003B\n\372\3071\006<=1" +
+      "000\022\035\n\npage_token\030\002 \001(\tB\t\212\3101\005<=100\022\024\n\nne" +
+      "twork_id\030\003 \001(\tH\000\022\022\n\010cloud_id\030\004 \001(\tH\000\022\023\n\t" +
+      "folder_id\030\005 \001(\tH\000B\025\n\rnetwork_scope\022\004\300\3011\001" +
+      "\"\343\002\n\036ListConnectedResourcesResponse\022i\n\tr" +
+      "esources\030\001 \003(\0132V.yandex.cloud.serverless" +
+      ".functions.v1.ListConnectedResourcesResp" +
+      "onse.ConnectedResource\022\027\n\017next_page_toke" +
+      "n\030\002 \001(\t\032\274\001\n\021ConnectedResource\022\022\n\nnetwork" +
+      "_id\030\001 \001(\t\022\025\n\rresource_type\030\002 \001(\t\022\023\n\013reso" +
+      "urce_id\030\003 \001(\t\022\030\n\020subresource_type\030\004 \001(\t\022" +
+      "\026\n\016subresource_id\030\005 \001(\t\022\031\n\021resource_clou" +
+      "d_id\030\006 \001(\t\022\032\n\022resource_folder_id\030\007 \001(\t\"<" +
+      "\n TriggerUsedNetworkCleanupRequest\022\030\n\nne" +
+      "twork_id\030\001 \001(\tB\004\350\3071\001\"]\n!TriggerUsedNetwo" +
+      "rkCleanupResponse\0228\n\024network_cleanup_tim" +
+      "e\030\001 \001(\0132\032.google.protobuf.Timestamp2\255\006\n\016" +
+      "NetworkService\022\253\001\n\007GetUsed\022;.yandex.clou" +
+      "d.serverless.functions.v1.GetUsedNetwork" +
+      "Request\0321.yandex.cloud.serverless.functi" +
+      "ons.v1.UsedNetwork\"0\202\323\344\223\002*\022(/functions/v" +
+      "1/networks/used/{network_id}\022\256\001\n\010ListUse" +
+      "d\022=.yandex.cloud.serverless.functions.v1" +
+      ".ListUsedNetworksRequest\032>.yandex.cloud." +
+      "serverless.functions.v1.ListUsedNetworks" +
+      "Response\"#\202\323\344\223\002\035\022\033/functions/v1/networks" +
+      "/used\022\317\001\n\026ListConnectedResources\022C.yande" +
+      "x.cloud.serverless.functions.v1.ListConn" +
+      "ectedResourcesRequest\032D.yandex.cloud.ser" +
+      "verless.functions.v1.ListConnectedResour" +
+      "cesResponse\"*\202\323\344\223\002$\022\"/functions/v1/netwo" +
+      "rks/connections\022\351\001\n\022TriggerUsedCleanup\022F" +
+      ".yandex.cloud.serverless.functions.v1.Tr" +
+      "iggerUsedNetworkCleanupRequest\032G.yandex." +
+      "cloud.serverless.functions.v1.TriggerUse" +
+      "dNetworkCleanupResponse\"B\202\323\344\223\002<\"7/functi" +
+      "ons/v1/networks/used/{network_id}:trigge" +
+      "rCleanup:\001*B~\n(yandex.cloud.api.serverle" +
+      "ss.functions.v1ZRgithub.com/yandex-cloud" +
+      "/go-genproto/yandex/cloud/serverless/fun" +
+      "ctions/v1;functionsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
@@ -10478,12 +10485,14 @@ public final class NetworkServiceOuterClass {
         new java.lang.String[] { "NetworkCleanupTime", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
     registry.add(yandex.cloud.api.Validation.exactlyOne);
     registry.add(yandex.cloud.api.Validation.length);
     registry.add(yandex.cloud.api.Validation.required);
     registry.add(yandex.cloud.api.Validation.value);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }

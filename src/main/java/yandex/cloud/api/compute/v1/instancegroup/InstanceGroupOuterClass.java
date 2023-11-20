@@ -674,6 +674,33 @@ public final class InstanceGroupOuterClass {
      * <code>.yandex.cloud.compute.v1.instancegroup.ApplicationLoadBalancerState application_load_balancer_state = 21;</code>
      */
     yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.ApplicationLoadBalancerStateOrBuilder getApplicationLoadBalancerStateOrBuilder();
+
+    /**
+     * <pre>
+     * AutoHealingPolicy policy of the instance group.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 22;</code>
+     * @return Whether the autoHealingPolicy field is set.
+     */
+    boolean hasAutoHealingPolicy();
+    /**
+     * <pre>
+     * AutoHealingPolicy policy of the instance group.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 22;</code>
+     * @return The autoHealingPolicy.
+     */
+    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy getAutoHealingPolicy();
+    /**
+     * <pre>
+     * AutoHealingPolicy policy of the instance group.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 22;</code>
+     */
+    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicyOrBuilder getAutoHealingPolicyOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.InstanceGroup}
@@ -930,6 +957,19 @@ public final class InstanceGroupOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(applicationLoadBalancerState_);
                 applicationLoadBalancerState_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 178: {
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.Builder subBuilder = null;
+              if (autoHealingPolicy_ != null) {
+                subBuilder = autoHealingPolicy_.toBuilder();
+              }
+              autoHealingPolicy_ = input.readMessage(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(autoHealingPolicy_);
+                autoHealingPolicy_ = subBuilder.buildPartial();
               }
 
               break;
@@ -2059,6 +2099,44 @@ public final class InstanceGroupOuterClass {
       return getApplicationLoadBalancerState();
     }
 
+    public static final int AUTO_HEALING_POLICY_FIELD_NUMBER = 22;
+    private yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy autoHealingPolicy_;
+    /**
+     * <pre>
+     * AutoHealingPolicy policy of the instance group.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 22;</code>
+     * @return Whether the autoHealingPolicy field is set.
+     */
+    @java.lang.Override
+    public boolean hasAutoHealingPolicy() {
+      return autoHealingPolicy_ != null;
+    }
+    /**
+     * <pre>
+     * AutoHealingPolicy policy of the instance group.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 22;</code>
+     * @return The autoHealingPolicy.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy getAutoHealingPolicy() {
+      return autoHealingPolicy_ == null ? yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.getDefaultInstance() : autoHealingPolicy_;
+    }
+    /**
+     * <pre>
+     * AutoHealingPolicy policy of the instance group.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 22;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicyOrBuilder getAutoHealingPolicyOrBuilder() {
+      return getAutoHealingPolicy();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2135,6 +2213,9 @@ public final class InstanceGroupOuterClass {
       }
       if (applicationLoadBalancerState_ != null) {
         output.writeMessage(21, getApplicationLoadBalancerState());
+      }
+      if (autoHealingPolicy_ != null) {
+        output.writeMessage(22, getAutoHealingPolicy());
       }
       unknownFields.writeTo(output);
     }
@@ -2226,6 +2307,10 @@ public final class InstanceGroupOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(21, getApplicationLoadBalancerState());
       }
+      if (autoHealingPolicy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(22, getAutoHealingPolicy());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2313,6 +2398,11 @@ public final class InstanceGroupOuterClass {
         if (!getApplicationLoadBalancerState()
             .equals(other.getApplicationLoadBalancerState())) return false;
       }
+      if (hasAutoHealingPolicy() != other.hasAutoHealingPolicy()) return false;
+      if (hasAutoHealingPolicy()) {
+        if (!getAutoHealingPolicy()
+            .equals(other.getAutoHealingPolicy())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2390,6 +2480,10 @@ public final class InstanceGroupOuterClass {
       if (hasApplicationLoadBalancerState()) {
         hash = (37 * hash) + APPLICATION_LOAD_BALANCER_STATE_FIELD_NUMBER;
         hash = (53 * hash) + getApplicationLoadBalancerState().hashCode();
+      }
+      if (hasAutoHealingPolicy()) {
+        hash = (37 * hash) + AUTO_HEALING_POLICY_FIELD_NUMBER;
+        hash = (53 * hash) + getAutoHealingPolicy().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2634,6 +2728,12 @@ public final class InstanceGroupOuterClass {
           applicationLoadBalancerState_ = null;
           applicationLoadBalancerStateBuilder_ = null;
         }
+        if (autoHealingPolicyBuilder_ == null) {
+          autoHealingPolicy_ = null;
+        } else {
+          autoHealingPolicy_ = null;
+          autoHealingPolicyBuilder_ = null;
+        }
         return this;
       }
 
@@ -2733,6 +2833,11 @@ public final class InstanceGroupOuterClass {
           result.applicationLoadBalancerState_ = applicationLoadBalancerState_;
         } else {
           result.applicationLoadBalancerState_ = applicationLoadBalancerStateBuilder_.build();
+        }
+        if (autoHealingPolicyBuilder_ == null) {
+          result.autoHealingPolicy_ = autoHealingPolicy_;
+        } else {
+          result.autoHealingPolicy_ = autoHealingPolicyBuilder_.build();
         }
         onBuilt();
         return result;
@@ -2868,6 +2973,9 @@ public final class InstanceGroupOuterClass {
         }
         if (other.hasApplicationLoadBalancerState()) {
           mergeApplicationLoadBalancerState(other.getApplicationLoadBalancerState());
+        }
+        if (other.hasAutoHealingPolicy()) {
+          mergeAutoHealingPolicy(other.getAutoHealingPolicy());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5655,6 +5763,161 @@ public final class InstanceGroupOuterClass {
           applicationLoadBalancerState_ = null;
         }
         return applicationLoadBalancerStateBuilder_;
+      }
+
+      private yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy autoHealingPolicy_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicyOrBuilder> autoHealingPolicyBuilder_;
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 22;</code>
+       * @return Whether the autoHealingPolicy field is set.
+       */
+      public boolean hasAutoHealingPolicy() {
+        return autoHealingPolicyBuilder_ != null || autoHealingPolicy_ != null;
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 22;</code>
+       * @return The autoHealingPolicy.
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy getAutoHealingPolicy() {
+        if (autoHealingPolicyBuilder_ == null) {
+          return autoHealingPolicy_ == null ? yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.getDefaultInstance() : autoHealingPolicy_;
+        } else {
+          return autoHealingPolicyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 22;</code>
+       */
+      public Builder setAutoHealingPolicy(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy value) {
+        if (autoHealingPolicyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          autoHealingPolicy_ = value;
+          onChanged();
+        } else {
+          autoHealingPolicyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 22;</code>
+       */
+      public Builder setAutoHealingPolicy(
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.Builder builderForValue) {
+        if (autoHealingPolicyBuilder_ == null) {
+          autoHealingPolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          autoHealingPolicyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 22;</code>
+       */
+      public Builder mergeAutoHealingPolicy(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy value) {
+        if (autoHealingPolicyBuilder_ == null) {
+          if (autoHealingPolicy_ != null) {
+            autoHealingPolicy_ =
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.newBuilder(autoHealingPolicy_).mergeFrom(value).buildPartial();
+          } else {
+            autoHealingPolicy_ = value;
+          }
+          onChanged();
+        } else {
+          autoHealingPolicyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 22;</code>
+       */
+      public Builder clearAutoHealingPolicy() {
+        if (autoHealingPolicyBuilder_ == null) {
+          autoHealingPolicy_ = null;
+          onChanged();
+        } else {
+          autoHealingPolicy_ = null;
+          autoHealingPolicyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 22;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.Builder getAutoHealingPolicyBuilder() {
+        
+        onChanged();
+        return getAutoHealingPolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 22;</code>
+       */
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicyOrBuilder getAutoHealingPolicyOrBuilder() {
+        if (autoHealingPolicyBuilder_ != null) {
+          return autoHealingPolicyBuilder_.getMessageOrBuilder();
+        } else {
+          return autoHealingPolicy_ == null ?
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.getDefaultInstance() : autoHealingPolicy_;
+        }
+      }
+      /**
+       * <pre>
+       * AutoHealingPolicy policy of the instance group.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy auto_healing_policy = 22;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicyOrBuilder> 
+          getAutoHealingPolicyFieldBuilder() {
+        if (autoHealingPolicyBuilder_ == null) {
+          autoHealingPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.Builder, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicyOrBuilder>(
+                  getAutoHealingPolicy(),
+                  getParentForChildren(),
+                  isClean());
+          autoHealingPolicy_ = null;
+        }
+        return autoHealingPolicyBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -57327,6 +57590,717 @@ public final class InstanceGroupOuterClass {
 
   }
 
+  public interface AutoHealingPolicyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Instance Groups performs [auto_healing_action] when instance becomes unhealthy.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy.AutoHealingAction auto_healing_action = 1;</code>
+     * @return The enum numeric value on the wire for autoHealingAction.
+     */
+    int getAutoHealingActionValue();
+    /**
+     * <pre>
+     * Instance Groups performs [auto_healing_action] when instance becomes unhealthy.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy.AutoHealingAction auto_healing_action = 1;</code>
+     * @return The autoHealingAction.
+     */
+    yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.AutoHealingAction getAutoHealingAction();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy}
+   */
+  public static final class AutoHealingPolicy extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy)
+      AutoHealingPolicyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AutoHealingPolicy.newBuilder() to construct.
+    private AutoHealingPolicy(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AutoHealingPolicy() {
+      autoHealingAction_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AutoHealingPolicy();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AutoHealingPolicy(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              autoHealingAction_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_AutoHealingPolicy_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_AutoHealingPolicy_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy.AutoHealingAction}
+     */
+    public enum AutoHealingAction
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>AUTO_HEALING_ACTION_UNSPECIFIED = 0;</code>
+       */
+      AUTO_HEALING_ACTION_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Re-starting an instance with restart: stopping and then starting the instance.
+       * </pre>
+       *
+       * <code>RESTART = 1;</code>
+       */
+      RESTART(1),
+      /**
+       * <pre>
+       * Re-creating an instance: deleting an instance and creating a new one.
+       * </pre>
+       *
+       * <code>RECREATE = 2;</code>
+       */
+      RECREATE(2),
+      /**
+       * <pre>
+       * No action
+       * </pre>
+       *
+       * <code>NONE = 3;</code>
+       */
+      NONE(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>AUTO_HEALING_ACTION_UNSPECIFIED = 0;</code>
+       */
+      public static final int AUTO_HEALING_ACTION_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Re-starting an instance with restart: stopping and then starting the instance.
+       * </pre>
+       *
+       * <code>RESTART = 1;</code>
+       */
+      public static final int RESTART_VALUE = 1;
+      /**
+       * <pre>
+       * Re-creating an instance: deleting an instance and creating a new one.
+       * </pre>
+       *
+       * <code>RECREATE = 2;</code>
+       */
+      public static final int RECREATE_VALUE = 2;
+      /**
+       * <pre>
+       * No action
+       * </pre>
+       *
+       * <code>NONE = 3;</code>
+       */
+      public static final int NONE_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static AutoHealingAction valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static AutoHealingAction forNumber(int value) {
+        switch (value) {
+          case 0: return AUTO_HEALING_ACTION_UNSPECIFIED;
+          case 1: return RESTART;
+          case 2: return RECREATE;
+          case 3: return NONE;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<AutoHealingAction>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          AutoHealingAction> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<AutoHealingAction>() {
+              public AutoHealingAction findValueByNumber(int number) {
+                return AutoHealingAction.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final AutoHealingAction[] VALUES = values();
+
+      public static AutoHealingAction valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private AutoHealingAction(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy.AutoHealingAction)
+    }
+
+    public static final int AUTO_HEALING_ACTION_FIELD_NUMBER = 1;
+    private int autoHealingAction_;
+    /**
+     * <pre>
+     * Instance Groups performs [auto_healing_action] when instance becomes unhealthy.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy.AutoHealingAction auto_healing_action = 1;</code>
+     * @return The enum numeric value on the wire for autoHealingAction.
+     */
+    @java.lang.Override public int getAutoHealingActionValue() {
+      return autoHealingAction_;
+    }
+    /**
+     * <pre>
+     * Instance Groups performs [auto_healing_action] when instance becomes unhealthy.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy.AutoHealingAction auto_healing_action = 1;</code>
+     * @return The autoHealingAction.
+     */
+    @java.lang.Override public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.AutoHealingAction getAutoHealingAction() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.AutoHealingAction result = yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.AutoHealingAction.valueOf(autoHealingAction_);
+      return result == null ? yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.AutoHealingAction.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (autoHealingAction_ != yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.AutoHealingAction.AUTO_HEALING_ACTION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, autoHealingAction_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (autoHealingAction_ != yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.AutoHealingAction.AUTO_HEALING_ACTION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, autoHealingAction_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy other = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy) obj;
+
+      if (autoHealingAction_ != other.autoHealingAction_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AUTO_HEALING_ACTION_FIELD_NUMBER;
+      hash = (53 * hash) + autoHealingAction_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy)
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_AutoHealingPolicy_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_AutoHealingPolicy_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.class, yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        autoHealingAction_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.internal_static_yandex_cloud_compute_v1_instancegroup_AutoHealingPolicy_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy getDefaultInstanceForType() {
+        return yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy build() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy buildPartial() {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy result = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy(this);
+        result.autoHealingAction_ = autoHealingAction_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy) {
+          return mergeFrom((yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy other) {
+        if (other == yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.getDefaultInstance()) return this;
+        if (other.autoHealingAction_ != 0) {
+          setAutoHealingActionValue(other.getAutoHealingActionValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int autoHealingAction_ = 0;
+      /**
+       * <pre>
+       * Instance Groups performs [auto_healing_action] when instance becomes unhealthy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy.AutoHealingAction auto_healing_action = 1;</code>
+       * @return The enum numeric value on the wire for autoHealingAction.
+       */
+      @java.lang.Override public int getAutoHealingActionValue() {
+        return autoHealingAction_;
+      }
+      /**
+       * <pre>
+       * Instance Groups performs [auto_healing_action] when instance becomes unhealthy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy.AutoHealingAction auto_healing_action = 1;</code>
+       * @param value The enum numeric value on the wire for autoHealingAction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAutoHealingActionValue(int value) {
+        
+        autoHealingAction_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Instance Groups performs [auto_healing_action] when instance becomes unhealthy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy.AutoHealingAction auto_healing_action = 1;</code>
+       * @return The autoHealingAction.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.AutoHealingAction getAutoHealingAction() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.AutoHealingAction result = yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.AutoHealingAction.valueOf(autoHealingAction_);
+        return result == null ? yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.AutoHealingAction.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Instance Groups performs [auto_healing_action] when instance becomes unhealthy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy.AutoHealingAction auto_healing_action = 1;</code>
+       * @param value The autoHealingAction to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAutoHealingAction(yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy.AutoHealingAction value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        autoHealingAction_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Instance Groups performs [auto_healing_action] when instance becomes unhealthy.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy.AutoHealingAction auto_healing_action = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAutoHealingAction() {
+        
+        autoHealingAction_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.compute.v1.instancegroup.AutoHealingPolicy)
+    private static final yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy();
+    }
+
+    public static yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AutoHealingPolicy>
+        PARSER = new com.google.protobuf.AbstractParser<AutoHealingPolicy>() {
+      @java.lang.Override
+      public AutoHealingPolicy parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AutoHealingPolicy(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AutoHealingPolicy> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AutoHealingPolicy> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.instancegroup.InstanceGroupOuterClass.AutoHealingPolicy getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_compute_v1_instancegroup_InstanceGroup_descriptor;
   private static final 
@@ -57562,6 +58536,11 @@ public final class InstanceGroupOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_compute_v1_instancegroup_LogRecord_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_compute_v1_instancegroup_AutoHealingPolicy_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_compute_v1_instancegroup_AutoHealingPolicy_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -57575,7 +58554,7 @@ public final class InstanceGroupOuterClass {
       "instance_group.proto\022%yandex.cloud.compu" +
       "te.v1.instancegroup\032\035yandex/cloud/valida" +
       "tion.proto\032\037google/protobuf/timestamp.pr" +
-      "oto\032\036google/protobuf/duration.proto\"\265\013\n\r" +
+      "oto\032\036google/protobuf/duration.proto\"\214\014\n\r" +
       "InstanceGroup\022\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002" +
       " \001(\t\022.\n\ncreated_at\030\003 \001(\0132\032.google.protob" +
       "uf.Timestamp\022\014\n\004name\030\004 \001(\t\022\023\n\013descriptio" +
@@ -57608,266 +58587,274 @@ public final class InstanceGroupOuterClass {
       "p.ApplicationLoadBalancerSpec\022l\n\037applica" +
       "tion_load_balancer_state\030\025 \001(\0132C.yandex." +
       "cloud.compute.v1.instancegroup.Applicati" +
-      "onLoadBalancerState\032-\n\013LabelsEntry\022\013\n\003ke" +
-      "y\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"o\n\006Status\022\026\n\022" +
-      "STATUS_UNSPECIFIED\020\000\022\014\n\010STARTING\020\001\022\n\n\006AC" +
-      "TIVE\020\002\022\014\n\010STOPPING\020\003\022\013\n\007STOPPED\020\004\022\014\n\010DEL" +
-      "ETING\020\005\022\n\n\006PAUSED\020\006\"O\n\034ApplicationLoadBa" +
-      "lancerState\022\027\n\017target_group_id\030\001 \001(\t\022\026\n\016" +
-      "status_message\030\002 \001(\t\"O\n\010Variable\022)\n\003key\030" +
-      "\001 \001(\tB\034\212\3101\0051-128\362\3071\017[a-zA-Z0-9._-]*\022\030\n\005v" +
-      "alue\030\002 \001(\tB\t\212\3101\005<=128\"D\n\021LoadBalancerSta" +
-      "te\022\027\n\017target_group_id\030\001 \001(\t\022\026\n\016status_me" +
-      "ssage\030\002 \001(\t\"\277\002\n\025ManagedInstancesState\022\023\n" +
-      "\013target_size\030\001 \001(\003\022\034\n\024running_actual_cou" +
-      "nt\030\004 \001(\003\022\036\n\026running_outdated_count\030\005 \001(\003" +
-      "\022\030\n\020processing_count\030\006 \001(\003\032\270\001\n\010Statuses\022" +
-      "\020\n\010creating\030\001 \001(\003\022\020\n\010starting\030\002 \001(\003\022\017\n\007o" +
-      "pening\030\003 \001(\003\022\017\n\007warming\030\004 \001(\003\022\017\n\007running" +
-      "\030\005 \001(\003\022\017\n\007closing\030\006 \001(\003\022\020\n\010stopping\030\007 \001(" +
-      "\003\022\020\n\010updating\030\010 \001(\003\022\020\n\010deleting\030\t \001(\003\022\016\n" +
-      "\006failed\030\n \001(\003\"\226\016\n\013ScalePolicy\022T\n\013fixed_s" +
-      "cale\030\001 \001(\0132=.yandex.cloud.compute.v1.ins" +
-      "tancegroup.ScalePolicy.FixedScaleH\000\022R\n\na" +
-      "uto_scale\030\002 \001(\0132<.yandex.cloud.compute.v" +
-      "1.instancegroup.ScalePolicy.AutoScaleH\000\022" +
-      "U\n\017test_auto_scale\030\003 \001(\0132<.yandex.cloud." +
+      "onLoadBalancerState\022U\n\023auto_healing_poli" +
+      "cy\030\026 \001(\01328.yandex.cloud.compute.v1.insta" +
+      "ncegroup.AutoHealingPolicy\032-\n\013LabelsEntr" +
+      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"o\n\006Sta" +
+      "tus\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014\n\010STARTING\020" +
+      "\001\022\n\n\006ACTIVE\020\002\022\014\n\010STOPPING\020\003\022\013\n\007STOPPED\020\004" +
+      "\022\014\n\010DELETING\020\005\022\n\n\006PAUSED\020\006\"O\n\034Applicatio" +
+      "nLoadBalancerState\022\027\n\017target_group_id\030\001 " +
+      "\001(\t\022\026\n\016status_message\030\002 \001(\t\"O\n\010Variable\022" +
+      ")\n\003key\030\001 \001(\tB\034\212\3101\0051-128\362\3071\017[a-zA-Z0-9._-" +
+      "]*\022\030\n\005value\030\002 \001(\tB\t\212\3101\005<=128\"D\n\021LoadBala" +
+      "ncerState\022\027\n\017target_group_id\030\001 \001(\t\022\026\n\016st" +
+      "atus_message\030\002 \001(\t\"\277\002\n\025ManagedInstancesS" +
+      "tate\022\023\n\013target_size\030\001 \001(\003\022\034\n\024running_act" +
+      "ual_count\030\004 \001(\003\022\036\n\026running_outdated_coun" +
+      "t\030\005 \001(\003\022\030\n\020processing_count\030\006 \001(\003\032\270\001\n\010St" +
+      "atuses\022\020\n\010creating\030\001 \001(\003\022\020\n\010starting\030\002 \001" +
+      "(\003\022\017\n\007opening\030\003 \001(\003\022\017\n\007warming\030\004 \001(\003\022\017\n\007" +
+      "running\030\005 \001(\003\022\017\n\007closing\030\006 \001(\003\022\020\n\010stoppi" +
+      "ng\030\007 \001(\003\022\020\n\010updating\030\010 \001(\003\022\020\n\010deleting\030\t" +
+      " \001(\003\022\016\n\006failed\030\n \001(\003\"\226\016\n\013ScalePolicy\022T\n\013" +
+      "fixed_scale\030\001 \001(\0132=.yandex.cloud.compute" +
+      ".v1.instancegroup.ScalePolicy.FixedScale" +
+      "H\000\022R\n\nauto_scale\030\002 \001(\0132<.yandex.cloud.co" +
+      "mpute.v1.instancegroup.ScalePolicy.AutoS" +
+      "caleH\000\022U\n\017test_auto_scale\030\003 \001(\0132<.yandex" +
+      ".cloud.compute.v1.instancegroup.ScalePol" +
+      "icy.AutoScale\032\247\005\n\tAutoScale\022 \n\rmin_zone_" +
+      "size\030\001 \001(\003B\t\372\3071\0050-100\022\033\n\010max_size\030\002 \001(\003B" +
+      "\t\372\3071\0050-100\022C\n\024measurement_duration\030\003 \001(\013" +
+      "2\031.google.protobuf.DurationB\n\372\3071\0061m-10m\022" +
+      "=\n\017warmup_duration\030\004 \001(\0132\031.google.protob" +
+      "uf.DurationB\t\372\3071\005<=10m\022E\n\026stabilization_" +
+      "duration\030\005 \001(\0132\031.google.protobuf.Duratio" +
+      "nB\n\372\3071\0061m-30m\022\035\n\014initial_size\030\006 \001(\003B\007\372\3071" +
+      "\003>=1\022c\n\024cpu_utilization_rule\030\007 \001(\0132E.yan" +
+      "dex.cloud.compute.v1.instancegroup.Scale" +
+      "Policy.CpuUtilizationRule\022\\\n\014custom_rule" +
+      "s\030\010 \003(\0132=.yandex.cloud.compute.v1.instan" +
+      "cegroup.ScalePolicy.CustomRuleB\007\202\3101\003<=3\022" +
+      "c\n\017auto_scale_type\030\t \001(\0162J.yandex.cloud." +
       "compute.v1.instancegroup.ScalePolicy.Aut" +
-      "oScale\032\247\005\n\tAutoScale\022 \n\rmin_zone_size\030\001 " +
-      "\001(\003B\t\372\3071\0050-100\022\033\n\010max_size\030\002 \001(\003B\t\372\3071\0050-" +
-      "100\022C\n\024measurement_duration\030\003 \001(\0132\031.goog" +
-      "le.protobuf.DurationB\n\372\3071\0061m-10m\022=\n\017warm" +
-      "up_duration\030\004 \001(\0132\031.google.protobuf.Dura" +
-      "tionB\t\372\3071\005<=10m\022E\n\026stabilization_duratio" +
-      "n\030\005 \001(\0132\031.google.protobuf.DurationB\n\372\3071\006" +
-      "1m-30m\022\035\n\014initial_size\030\006 \001(\003B\007\372\3071\003>=1\022c\n" +
-      "\024cpu_utilization_rule\030\007 \001(\0132E.yandex.clo" +
-      "ud.compute.v1.instancegroup.ScalePolicy." +
-      "CpuUtilizationRule\022\\\n\014custom_rules\030\010 \003(\013" +
-      "2=.yandex.cloud.compute.v1.instancegroup" +
-      ".ScalePolicy.CustomRuleB\007\202\3101\003<=3\022c\n\017auto" +
-      "_scale_type\030\t \001(\0162J.yandex.cloud.compute" +
-      ".v1.instancegroup.ScalePolicy.AutoScale." +
-      "AutoScaleType\"I\n\rAutoScaleType\022\037\n\033AUTO_S" +
-      "CALE_TYPE_UNSPECIFIED\020\000\022\t\n\005ZONAL\020\001\022\014\n\010RE" +
-      "GIONAL\020\002\032<\n\022CpuUtilizationRule\022&\n\022utiliz" +
-      "ation_target\030\001 \001(\001B\n\372\3071\00610-100\032\342\005\n\nCusto" +
-      "mRule\022_\n\trule_type\030\001 \001(\0162F.yandex.cloud." +
-      "compute.v1.instancegroup.ScalePolicy.Cus" +
-      "tomRule.RuleTypeB\004\350\3071\001\022c\n\013metric_type\030\002 " +
-      "\001(\0162H.yandex.cloud.compute.v1.instancegr" +
-      "oup.ScalePolicy.CustomRule.MetricTypeB\004\350" +
-      "\3071\001\022O\n\013metric_name\030\003 \001(\tB:\350\3071\001\362\30712[a-zA-" +
-      "Z0-9./@_][ 0-9a-zA-Z./@_,:;()\\[\\]<>-]{0," +
-      "198}\022\263\001\n\006labels\030\005 \003(\0132I.yandex.cloud.com" +
-      "pute.v1.instancegroup.ScalePolicy.Custom" +
-      "Rule.LabelsEntryBX\362\30712[a-zA-Z0-9./@_][ 0" +
-      "-9a-zA-Z./@_,:;()\\[\\]<>-]{0,198}\262\3101\036\022\034^[" +
-      "a-zA-Z][0-9a-zA-Z_]{0,31}$\022\026\n\006target\030\004 \001" +
-      "(\001B\006\372\3071\002>0\022\033\n\tfolder_id\030\006 \001(\tB\010\212\3101\004<=50\022" +
-      "\032\n\007service\030\007 \001(\tB\t\212\3101\005<=200\032-\n\013LabelsEnt" +
-      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"D\n\010Ru" +
-      "leType\022\031\n\025RULE_TYPE_UNSPECIFIED\020\000\022\017\n\013UTI" +
-      "LIZATION\020\001\022\014\n\010WORKLOAD\020\002\"A\n\nMetricType\022\033" +
-      "\n\027METRIC_TYPE_UNSPECIFIED\020\000\022\t\n\005GAUGE\020\001\022\013" +
-      "\n\007COUNTER\020\002\032%\n\nFixedScale\022\027\n\004size\030\001 \001(\003B" +
-      "\t\372\3071\0051-100B\022\n\nscale_type\022\004\300\3011\001\"\246\004\n\014Deplo" +
-      "yPolicy\022\"\n\017max_unavailable\030\001 \001(\003B\t\372\3071\0050-" +
-      "100\022\037\n\014max_deleting\030\002 \001(\003B\t\372\3071\0050-100\022\037\n\014" +
-      "max_creating\030\003 \001(\003B\t\372\3071\0050-100\022 \n\rmax_exp" +
-      "ansion\030\006 \001(\003B\t\372\3071\0050-100\022>\n\020startup_durat" +
-      "ion\030\007 \001(\0132\031.google.protobuf.DurationB\t\372\307" +
-      "1\0050m-1h\022N\n\010strategy\030\010 \001(\0162<.yandex.cloud" +
-      ".compute.v1.instancegroup.DeployPolicy.S" +
-      "trategy\022Y\n\016minimal_action\030\016 \001(\0162A.yandex" +
-      ".cloud.compute.v1.instancegroup.DeployPo" +
-      "licy.MinimalAction\"F\n\010Strategy\022\030\n\024STRATE" +
-      "GY_UNSPECIFIED\020\000\022\r\n\tPROACTIVE\020\001\022\021\n\rOPPOR" +
-      "TUNISTIC\020\002\"[\n\rMinimalAction\022\036\n\032MINIMAL_A" +
-      "CTION_UNSPECIFIED\020\000\022\017\n\013LIVE_UPDATE\020\001\022\013\n\007" +
-      "RESTART\020\002\022\014\n\010RECREATE\020\003\"\261\001\n\020AllocationPo" +
-      "licy\022T\n\005zones\030\001 \003(\0132<.yandex.cloud.compu" +
-      "te.v1.instancegroup.AllocationPolicy.Zon" +
-      "eB\007\202\3101\003>=1\032G\n\004Zone\022\025\n\007zone_id\030\001 \001(\tB\004\350\3071" +
-      "\001\022(\n\022instance_tags_pool\030\002 \003(\tB\014\220\3101\001\212\3101\0043" +
-      "-50\"\336\t\n\020InstanceTemplate\022\036\n\013description\030" +
-      "\001 \001(\tB\t\212\3101\005<=256\022\212\001\n\006labels\030\002 \003(\0132C.yand" +
-      "ex.cloud.compute.v1.instancegroup.Instan" +
-      "ceTemplate.LabelsEntryB5\202\3101\004<=64\212\3101\005<=12" +
-      "8\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\031\n" +
-      "\013platform_id\030\003 \001(\tB\004\350\3071\001\022R\n\016resources_sp" +
-      "ec\030\004 \001(\01324.yandex.cloud.compute.v1.insta" +
-      "ncegroup.ResourcesSpecB\004\350\3071\001\022\216\001\n\010metadat" +
-      "a\030\005 \003(\0132E.yandex.cloud.compute.v1.instan" +
-      "cegroup.InstanceTemplate.MetadataEntryB5" +
-      "\202\3101\005<=128\212\3101\010<=262144\262\3101\006\032\0041-63\262\3101\022\022\020[a-" +
-      "z][-_0-9a-z]*\022U\n\016boot_disk_spec\030\006 \001(\01327." +
-      "yandex.cloud.compute.v1.instancegroup.At" +
-      "tachedDiskSpecB\004\350\3071\001\022^\n\024secondary_disk_s" +
-      "pecs\030\007 \003(\01327.yandex.cloud.compute.v1.ins" +
-      "tancegroup.AttachedDiskSpecB\007\202\3101\003<=3\022c\n\027" +
-      "network_interface_specs\030\010 \003(\0132;.yandex.c" +
-      "loud.compute.v1.instancegroup.NetworkInt" +
-      "erfaceSpecB\005\202\3101\0011\022R\n\021scheduling_policy\030\t" +
+      "oScale.AutoScaleType\"I\n\rAutoScaleType\022\037\n" +
+      "\033AUTO_SCALE_TYPE_UNSPECIFIED\020\000\022\t\n\005ZONAL\020" +
+      "\001\022\014\n\010REGIONAL\020\002\032<\n\022CpuUtilizationRule\022&\n" +
+      "\022utilization_target\030\001 \001(\001B\n\372\3071\00610-100\032\342\005" +
+      "\n\nCustomRule\022_\n\trule_type\030\001 \001(\0162F.yandex" +
+      ".cloud.compute.v1.instancegroup.ScalePol" +
+      "icy.CustomRule.RuleTypeB\004\350\3071\001\022c\n\013metric_" +
+      "type\030\002 \001(\0162H.yandex.cloud.compute.v1.ins" +
+      "tancegroup.ScalePolicy.CustomRule.Metric" +
+      "TypeB\004\350\3071\001\022O\n\013metric_name\030\003 \001(\tB:\350\3071\001\362\3071" +
+      "2[a-zA-Z0-9./@_][ 0-9a-zA-Z./@_,:;()\\[\\]" +
+      "<>-]{0,198}\022\263\001\n\006labels\030\005 \003(\0132I.yandex.cl" +
+      "oud.compute.v1.instancegroup.ScalePolicy" +
+      ".CustomRule.LabelsEntryBX\362\30712[a-zA-Z0-9." +
+      "/@_][ 0-9a-zA-Z./@_,:;()\\[\\]<>-]{0,198}\262" +
+      "\3101\036\022\034^[a-zA-Z][0-9a-zA-Z_]{0,31}$\022\026\n\006tar" +
+      "get\030\004 \001(\001B\006\372\3071\002>0\022\033\n\tfolder_id\030\006 \001(\tB\010\212\310" +
+      "1\004<=50\022\032\n\007service\030\007 \001(\tB\t\212\3101\005<=200\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\"D\n\010RuleType\022\031\n\025RULE_TYPE_UNSPECIFIED\020\000" +
+      "\022\017\n\013UTILIZATION\020\001\022\014\n\010WORKLOAD\020\002\"A\n\nMetri" +
+      "cType\022\033\n\027METRIC_TYPE_UNSPECIFIED\020\000\022\t\n\005GA" +
+      "UGE\020\001\022\013\n\007COUNTER\020\002\032%\n\nFixedScale\022\027\n\004size" +
+      "\030\001 \001(\003B\t\372\3071\0051-100B\022\n\nscale_type\022\004\300\3011\001\"\246\004" +
+      "\n\014DeployPolicy\022\"\n\017max_unavailable\030\001 \001(\003B" +
+      "\t\372\3071\0050-100\022\037\n\014max_deleting\030\002 \001(\003B\t\372\3071\0050-" +
+      "100\022\037\n\014max_creating\030\003 \001(\003B\t\372\3071\0050-100\022 \n\r" +
+      "max_expansion\030\006 \001(\003B\t\372\3071\0050-100\022>\n\020startu" +
+      "p_duration\030\007 \001(\0132\031.google.protobuf.Durat" +
+      "ionB\t\372\3071\0050m-1h\022N\n\010strategy\030\010 \001(\0162<.yande" +
+      "x.cloud.compute.v1.instancegroup.DeployP" +
+      "olicy.Strategy\022Y\n\016minimal_action\030\016 \001(\0162A" +
+      ".yandex.cloud.compute.v1.instancegroup.D" +
+      "eployPolicy.MinimalAction\"F\n\010Strategy\022\030\n" +
+      "\024STRATEGY_UNSPECIFIED\020\000\022\r\n\tPROACTIVE\020\001\022\021" +
+      "\n\rOPPORTUNISTIC\020\002\"[\n\rMinimalAction\022\036\n\032MI" +
+      "NIMAL_ACTION_UNSPECIFIED\020\000\022\017\n\013LIVE_UPDAT" +
+      "E\020\001\022\013\n\007RESTART\020\002\022\014\n\010RECREATE\020\003\"\261\001\n\020Alloc" +
+      "ationPolicy\022T\n\005zones\030\001 \003(\0132<.yandex.clou" +
+      "d.compute.v1.instancegroup.AllocationPol" +
+      "icy.ZoneB\007\202\3101\003>=1\032G\n\004Zone\022\025\n\007zone_id\030\001 \001" +
+      "(\tB\004\350\3071\001\022(\n\022instance_tags_pool\030\002 \003(\tB\014\220\310" +
+      "1\001\212\3101\0043-50\"\336\t\n\020InstanceTemplate\022\036\n\013descr" +
+      "iption\030\001 \001(\tB\t\212\3101\005<=256\022\212\001\n\006labels\030\002 \003(\013" +
+      "2C.yandex.cloud.compute.v1.instancegroup" +
+      ".InstanceTemplate.LabelsEntryB5\202\3101\004<=64\212" +
+      "\3101\005<=128\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a" +
+      "-z]*\022\031\n\013platform_id\030\003 \001(\tB\004\350\3071\001\022R\n\016resou" +
+      "rces_spec\030\004 \001(\01324.yandex.cloud.compute.v" +
+      "1.instancegroup.ResourcesSpecB\004\350\3071\001\022\216\001\n\010" +
+      "metadata\030\005 \003(\0132E.yandex.cloud.compute.v1" +
+      ".instancegroup.InstanceTemplate.Metadata" +
+      "EntryB5\202\3101\005<=128\212\3101\010<=262144\262\3101\006\032\0041-63\262\310" +
+      "1\022\022\020[a-z][-_0-9a-z]*\022U\n\016boot_disk_spec\030\006" +
       " \001(\01327.yandex.cloud.compute.v1.instanceg" +
-      "roup.SchedulingPolicy\022\032\n\022service_account" +
-      "_id\030\n \001(\t\022P\n\020network_settings\030\013 \001(\01326.ya" +
-      "ndex.cloud.compute.v1.instancegroup.Netw" +
-      "orkSettings\022\027\n\004name\030\014 \001(\tB\t\212\3101\005<=128\022\033\n\010" +
-      "hostname\030\r \001(\tB\t\212\3101\005<=128\022P\n\020placement_p" +
-      "olicy\030\016 \001(\01326.yandex.cloud.compute.v1.in" +
-      "stancegroup.PlacementPolicy\022W\n\020filesyste" +
-      "m_specs\030\017 \003(\0132=.yandex.cloud.compute.v1." +
-      "instancegroup.AttachedFilesystemSpec\032-\n\013" +
-      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\"\217\002\n\026AttachedFilesystemSpec\022" +
-      "P\n\004mode\030\001 \001(\0162B.yandex.cloud.compute.v1." +
-      "instancegroup.AttachedFilesystemSpec.Mod" +
-      "e\022/\n\013device_name\030\002 \001(\tB\032\362\3071\026|[a-z][-_0-9" +
-      "a-z]{0,19}\0225\n\rfilesystem_id\030\003 \001(\tB\036\212\3101\005<" +
-      "=128\362\3071\021[-a-zA-Z0-9._{}]*\";\n\004Mode\022\024\n\020MOD" +
-      "E_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_W" +
-      "RITE\020\002\"\335\002\n\017PlacementPolicy\022\032\n\022placement_" +
-      "group_id\030\001 \001(\t\022d\n\023host_affinity_rules\030\002 " +
-      "\003(\0132G.yandex.cloud.compute.v1.instancegr" +
-      "oup.PlacementPolicy.HostAffinityRule\032\307\001\n" +
-      "\020HostAffinityRule\022\013\n\003key\030\001 \001(\t\022\\\n\002op\030\002 \001" +
-      "(\0162P.yandex.cloud.compute.v1.instancegro" +
-      "up.PlacementPolicy.HostAffinityRule.Oper" +
-      "ator\022\016\n\006values\030\003 \003(\t\"8\n\010Operator\022\030\n\024OPER" +
-      "ATOR_UNSPECIFIED\020\000\022\006\n\002IN\020\001\022\n\n\006NOT_IN\020\002\"\337" +
-      "\001\n\rResourcesSpec\022\"\n\006memory\030\001 \001(\003B\022\372\3071\016<=" +
-      "824633720832\022e\n\005cores\030\002 \001(\003BV\372\3071R2,4,6,8" +
-      ",10,12,14,16,18,20,22,24,26,28,30,32,34," +
-      "36,40,44,48,52,56,60,64,68,72,76,80\022(\n\rc" +
-      "ore_fraction\030\003 \001(\003B\021\372\3071\r0,5,20,50,100\022\031\n" +
-      "\004gpus\030\004 \001(\003B\013\372\3071\0070,1,2,4\"\334\004\n\020AttachedDis" +
-      "kSpec\022P\n\004mode\030\001 \001(\0162<.yandex.cloud.compu" +
-      "te.v1.instancegroup.AttachedDiskSpec.Mod" +
-      "eB\004\350\3071\001\022/\n\013device_name\030\002 \001(\tB\032\362\3071\026|[a-z]" +
-      "[-_0-9a-z]{0,19}\022Y\n\tdisk_spec\030\003 \001(\0132@.ya" +
-      "ndex.cloud.compute.v1.instancegroup.Atta" +
-      "chedDiskSpec.DiskSpecB\004\350\3071\001\022/\n\007disk_id\030\004" +
-      " \001(\tB\036\212\3101\005<=128\362\3071\021[-a-zA-Z0-9._{}]*\022\027\n\004" +
-      "name\030\007 \001(\tB\t\212\3101\005<=128\032\342\001\n\010DiskSpec\022\036\n\013de" +
-      "scription\030\001 \001(\tB\t\212\3101\005<=256\022\025\n\007type_id\030\002 " +
-      "\001(\tB\004\350\3071\001\022(\n\004size\030\003 \001(\003B\032\372\3071\0264194304-285" +
-      "87302322176\022\034\n\010image_id\030\004 \001(\tB\010\212\3101\004<=50H" +
-      "\000\022\037\n\013snapshot_id\030\005 \001(\tB\010\212\3101\004<=50H\000\022&\n\036pr" +
-      "eserve_after_instance_delete\030\006 \001(\010B\016\n\014so" +
-      "urce_oneof\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000" +
-      "\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"\222\002\n\024Netw" +
-      "orkInterfaceSpec\022\022\n\nnetwork_id\030\001 \001(\t\022\022\n\n" +
-      "subnet_ids\030\002 \003(\t\022Z\n\027primary_v4_address_s" +
-      "pec\030\003 \001(\01329.yandex.cloud.compute.v1.inst" +
-      "ancegroup.PrimaryAddressSpec\022Z\n\027primary_" +
-      "v6_address_spec\030\004 \001(\01329.yandex.cloud.com" +
-      "pute.v1.instancegroup.PrimaryAddressSpec" +
-      "\022\032\n\022security_group_ids\030\005 \003(\t\"\312\001\n\022Primary" +
-      "AddressSpec\022S\n\023one_to_one_nat_spec\030\001 \001(\013" +
-      "26.yandex.cloud.compute.v1.instancegroup" +
-      ".OneToOneNatSpec\022N\n\020dns_record_specs\030\002 \003" +
-      "(\01324.yandex.cloud.compute.v1.instancegro" +
-      "up.DnsRecordSpec\022\017\n\007address\030\003 \001(\t\"\270\001\n\017On" +
-      "eToOneNatSpec\022D\n\nip_version\030\001 \001(\01620.yand" +
-      "ex.cloud.compute.v1.instancegroup.IpVers" +
-      "ion\022\017\n\007address\030\002 \001(\t\022N\n\020dns_record_specs" +
-      "\030\003 \003(\01324.yandex.cloud.compute.v1.instanc" +
-      "egroup.DnsRecordSpec\"_\n\rDnsRecordSpec\022\022\n" +
-      "\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001(\t\022\030" +
-      "\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"\'\n" +
-      "\020SchedulingPolicy\022\023\n\013preemptible\030\001 \001(\010\"\274" +
-      "\001\n\017NetworkSettings\022I\n\004type\030\001 \001(\0162;.yande" +
-      "x.cloud.compute.v1.instancegroup.Network" +
-      "Settings.Type\"^\n\004Type\022\024\n\020TYPE_UNSPECIFIE" +
-      "D\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWARE_ACCELERATE" +
-      "D\020\002\022\030\n\024HARDWARE_ACCELERATED\020\003\"\316\001\n\020LoadBa" +
-      "lancerSpec\022Q\n\021target_group_spec\030\001 \001(\01326." +
-      "yandex.cloud.compute.v1.instancegroup.Ta" +
-      "rgetGroupSpec\022I\n\034max_opening_traffic_dur" +
-      "ation\030\002 \001(\0132\031.google.protobuf.DurationB\010" +
-      "\372\3071\004>=1s\022\034\n\024ignore_health_checks\030\004 \001(\010\"\262" +
-      "\002\n\017TargetGroupSpec\0222\n\004name\030\001 \001(\tB$\362\3071 |[" +
-      "a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descri" +
-      "ption\030\002 \001(\tB\t\212\3101\005<=256\022\233\001\n\006labels\030\003 \003(\0132" +
-      "B.yandex.cloud.compute.v1.instancegroup." +
-      "TargetGroupSpec.LabelsEntryBG\202\3101\004<=64\212\3101" +
-      "\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024" +
-      "[a-z][-_./\\@0-9a-z]*\032-\n\013LabelsEntry\022\013\n\003k" +
-      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\352\001\n\033Applicat" +
-      "ionLoadBalancerSpec\022b\n\021target_group_spec" +
-      "\030\001 \001(\0132A.yandex.cloud.compute.v1.instanc" +
-      "egroup.ApplicationTargetGroupSpecB\004\350\3071\001\022" +
-      "I\n\034max_opening_traffic_duration\030\002 \001(\0132\031." +
-      "google.protobuf.DurationB\010\372\3071\004>=1s\022\034\n\024ig" +
-      "nore_health_checks\030\003 \001(\010\"\315\001\n\032Application" +
-      "TargetGroupSpec\022\014\n\004name\030\001 \001(\t\022\023\n\013descrip" +
-      "tion\030\002 \001(\t\022]\n\006labels\030\003 \003(\0132M.yandex.clou" +
-      "d.compute.v1.instancegroup.ApplicationTa" +
-      "rgetGroupSpec.LabelsEntry\032-\n\013LabelsEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\272\001\n\020Hea" +
-      "lthChecksSpec\022[\n\022health_check_specs\030\001 \003(" +
-      "\01326.yandex.cloud.compute.v1.instancegrou" +
-      "p.HealthCheckSpecB\007\202\3101\003>=1\022I\n\034max_checki" +
-      "ng_health_duration\030\002 \001(\0132\031.google.protob" +
-      "uf.DurationB\010\372\3071\004>=1s\"\244\004\n\017HealthCheckSpe" +
-      "c\0228\n\010interval\030\001 \001(\0132\031.google.protobuf.Du" +
-      "rationB\013\372\3071\0071s-300s\0226\n\007timeout\030\002 \001(\0132\031.g" +
-      "oogle.protobuf.DurationB\n\372\3071\0061s-60s\0225\n\023u" +
-      "nhealthy_threshold\030\003 \001(\003B\030\372\3071\0240,2,3,4,5," +
-      "6,7,8,9,10\0223\n\021healthy_threshold\030\004 \001(\003B\030\372" +
-      "\3071\0240,2,3,4,5,6,7,8,9,10\022X\n\013tcp_options\030\005" +
-      " \001(\0132A.yandex.cloud.compute.v1.instanceg" +
-      "roup.HealthCheckSpec.TcpOptionsH\000\022Z\n\014htt" +
-      "p_options\030\006 \001(\0132B.yandex.cloud.compute.v" +
-      "1.instancegroup.HealthCheckSpec.HttpOpti" +
-      "onsH\000\032\'\n\nTcpOptions\022\031\n\004port\030\001 \001(\003B\013\372\3071\0071" +
-      "-65535\0326\n\013HttpOptions\022\031\n\004port\030\001 \001(\003B\013\372\3071" +
-      "\0071-65535\022\014\n\004path\030\002 \001(\tB\034\n\024health_check_o" +
-      "ptions\022\004\300\3011\001\"\327\005\n\017ManagedInstance\022\n\n\002id\030\001" +
-      " \001(\t\022M\n\006status\030\002 \001(\0162=.yandex.cloud.comp" +
-      "ute.v1.instancegroup.ManagedInstance.Sta" +
-      "tus\022\023\n\013instance_id\030\003 \001(\t\022\014\n\004fqdn\030\004 \001(\t\022\014" +
-      "\n\004name\030\005 \001(\t\022\026\n\016status_message\030\006 \001(\t\022\017\n\007" +
-      "zone_id\030\007 \001(\t\022S\n\022network_interfaces\030\010 \003(" +
-      "\01327.yandex.cloud.compute.v1.instancegrou" +
-      "p.NetworkInterface\0225\n\021status_changed_at\030" +
-      "\t \001(\0132\032.google.protobuf.Timestamp\022\024\n\014ins" +
-      "tance_tag\030\016 \001(\t\"\354\002\n\006Status\022\026\n\022STATUS_UNS" +
-      "PECIFIED\020\000\022\025\n\021CREATING_INSTANCE\020\013\022\025\n\021UPD" +
-      "ATING_INSTANCE\020\014\022\025\n\021DELETING_INSTANCE\020\r\022" +
-      "\025\n\021STARTING_INSTANCE\020\016\022\025\n\021STOPPING_INSTA" +
-      "NCE\020\017\022\035\n\031AWAITING_STARTUP_DURATION\020\020\022\023\n\017" +
-      "CHECKING_HEALTH\020\021\022\023\n\017OPENING_TRAFFIC\020\022\022\034" +
-      "\n\030AWAITING_WARMUP_DURATION\020\023\022\023\n\017CLOSING_" +
-      "TRAFFIC\020\024\022\022\n\016RUNNING_ACTUAL\020\025\022\024\n\020RUNNING" +
-      "_OUTDATED\020\026\022\013\n\007STOPPED\020\027\022\013\n\007DELETED\020\030\022\027\n" +
-      "\023PREPARING_RESOURCES\020\031\"\357\001\n\020NetworkInterf" +
-      "ace\022\r\n\005index\030\001 \001(\t\022\023\n\013mac_address\030\002 \001(\t\022" +
-      "\021\n\tsubnet_id\030\003 \001(\t\022Q\n\022primary_v4_address" +
-      "\030\004 \001(\01325.yandex.cloud.compute.v1.instanc" +
-      "egroup.PrimaryAddress\022Q\n\022primary_v6_addr" +
-      "ess\030\005 \001(\01325.yandex.cloud.compute.v1.inst" +
-      "ancegroup.PrimaryAddress\"\264\001\n\016PrimaryAddr" +
-      "ess\022\017\n\007address\030\001 \001(\t\022J\n\016one_to_one_nat\030\002" +
-      " \001(\01322.yandex.cloud.compute.v1.instanceg" +
-      "roup.OneToOneNat\022E\n\013dns_records\030\003 \003(\01320." +
-      "yandex.cloud.compute.v1.instancegroup.Dn" +
-      "sRecord\"\253\001\n\013OneToOneNat\022\017\n\007address\030\001 \001(\t" +
-      "\022D\n\nip_version\030\002 \001(\01620.yandex.cloud.comp" +
-      "ute.v1.instancegroup.IpVersion\022E\n\013dns_re" +
-      "cords\030\003 \003(\01320.yandex.cloud.compute.v1.in" +
-      "stancegroup.DnsRecord\"[\n\tDnsRecord\022\022\n\004fq" +
-      "dn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001(\t\022\030\n\003t" +
-      "tl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"K\n\tLo" +
-      "gRecord\022-\n\ttimestamp\030\001 \001(\0132\032.google.prot" +
-      "obuf.Timestamp\022\017\n\007message\030\002 \001(\t*;\n\tIpVer" +
-      "sion\022\032\n\026IP_VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4" +
-      "\020\001\022\010\n\004IPV6\020\002B\204\001\n)yandex.cloud.api.comput" +
-      "e.v1.instancegroupZWgithub.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/compute/v1/" +
-      "instancegroup;instancegroupb\006proto3"
+      "roup.AttachedDiskSpecB\004\350\3071\001\022^\n\024secondary" +
+      "_disk_specs\030\007 \003(\01327.yandex.cloud.compute" +
+      ".v1.instancegroup.AttachedDiskSpecB\007\202\3101\003" +
+      "<=3\022c\n\027network_interface_specs\030\010 \003(\0132;.y" +
+      "andex.cloud.compute.v1.instancegroup.Net" +
+      "workInterfaceSpecB\005\202\3101\0011\022R\n\021scheduling_p" +
+      "olicy\030\t \001(\01327.yandex.cloud.compute.v1.in" +
+      "stancegroup.SchedulingPolicy\022\032\n\022service_" +
+      "account_id\030\n \001(\t\022P\n\020network_settings\030\013 \001" +
+      "(\01326.yandex.cloud.compute.v1.instancegro" +
+      "up.NetworkSettings\022\027\n\004name\030\014 \001(\tB\t\212\3101\005<=" +
+      "128\022\033\n\010hostname\030\r \001(\tB\t\212\3101\005<=128\022P\n\020plac" +
+      "ement_policy\030\016 \001(\01326.yandex.cloud.comput" +
+      "e.v1.instancegroup.PlacementPolicy\022W\n\020fi" +
+      "lesystem_specs\030\017 \003(\0132=.yandex.cloud.comp" +
+      "ute.v1.instancegroup.AttachedFilesystemS" +
+      "pec\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
+      "\030\002 \001(\t:\0028\001\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001\"\217\002\n\026AttachedFilesyst" +
+      "emSpec\022P\n\004mode\030\001 \001(\0162B.yandex.cloud.comp" +
+      "ute.v1.instancegroup.AttachedFilesystemS" +
+      "pec.Mode\022/\n\013device_name\030\002 \001(\tB\032\362\3071\026|[a-z" +
+      "][-_0-9a-z]{0,19}\0225\n\rfilesystem_id\030\003 \001(\t" +
+      "B\036\212\3101\005<=128\362\3071\021[-a-zA-Z0-9._{}]*\";\n\004Mode" +
+      "\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n" +
+      "\nREAD_WRITE\020\002\"\335\002\n\017PlacementPolicy\022\032\n\022pla" +
+      "cement_group_id\030\001 \001(\t\022d\n\023host_affinity_r" +
+      "ules\030\002 \003(\0132G.yandex.cloud.compute.v1.ins" +
+      "tancegroup.PlacementPolicy.HostAffinityR" +
+      "ule\032\307\001\n\020HostAffinityRule\022\013\n\003key\030\001 \001(\t\022\\\n" +
+      "\002op\030\002 \001(\0162P.yandex.cloud.compute.v1.inst" +
+      "ancegroup.PlacementPolicy.HostAffinityRu" +
+      "le.Operator\022\016\n\006values\030\003 \003(\t\"8\n\010Operator\022" +
+      "\030\n\024OPERATOR_UNSPECIFIED\020\000\022\006\n\002IN\020\001\022\n\n\006NOT" +
+      "_IN\020\002\"\337\001\n\rResourcesSpec\022\"\n\006memory\030\001 \001(\003B" +
+      "\022\372\3071\016<=824633720832\022e\n\005cores\030\002 \001(\003BV\372\3071R" +
+      "2,4,6,8,10,12,14,16,18,20,22,24,26,28,30" +
+      ",32,34,36,40,44,48,52,56,60,64,68,72,76," +
+      "80\022(\n\rcore_fraction\030\003 \001(\003B\021\372\3071\r0,5,20,50" +
+      ",100\022\031\n\004gpus\030\004 \001(\003B\013\372\3071\0070,1,2,4\"\334\004\n\020Atta" +
+      "chedDiskSpec\022P\n\004mode\030\001 \001(\0162<.yandex.clou" +
+      "d.compute.v1.instancegroup.AttachedDiskS" +
+      "pec.ModeB\004\350\3071\001\022/\n\013device_name\030\002 \001(\tB\032\362\3071" +
+      "\026|[a-z][-_0-9a-z]{0,19}\022Y\n\tdisk_spec\030\003 \001" +
+      "(\0132@.yandex.cloud.compute.v1.instancegro" +
+      "up.AttachedDiskSpec.DiskSpecB\004\350\3071\001\022/\n\007di" +
+      "sk_id\030\004 \001(\tB\036\212\3101\005<=128\362\3071\021[-a-zA-Z0-9._{" +
+      "}]*\022\027\n\004name\030\007 \001(\tB\t\212\3101\005<=128\032\342\001\n\010DiskSpe" +
+      "c\022\036\n\013description\030\001 \001(\tB\t\212\3101\005<=256\022\025\n\007typ" +
+      "e_id\030\002 \001(\tB\004\350\3071\001\022(\n\004size\030\003 \001(\003B\032\372\3071\0264194" +
+      "304-28587302322176\022\034\n\010image_id\030\004 \001(\tB\010\212\310" +
+      "1\004<=50H\000\022\037\n\013snapshot_id\030\005 \001(\tB\010\212\3101\004<=50H" +
+      "\000\022&\n\036preserve_after_instance_delete\030\006 \001(" +
+      "\010B\016\n\014source_oneof\";\n\004Mode\022\024\n\020MODE_UNSPEC" +
+      "IFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"\222" +
+      "\002\n\024NetworkInterfaceSpec\022\022\n\nnetwork_id\030\001 " +
+      "\001(\t\022\022\n\nsubnet_ids\030\002 \003(\t\022Z\n\027primary_v4_ad" +
+      "dress_spec\030\003 \001(\01329.yandex.cloud.compute." +
+      "v1.instancegroup.PrimaryAddressSpec\022Z\n\027p" +
+      "rimary_v6_address_spec\030\004 \001(\01329.yandex.cl" +
+      "oud.compute.v1.instancegroup.PrimaryAddr" +
+      "essSpec\022\032\n\022security_group_ids\030\005 \003(\t\"\312\001\n\022" +
+      "PrimaryAddressSpec\022S\n\023one_to_one_nat_spe" +
+      "c\030\001 \001(\01326.yandex.cloud.compute.v1.instan" +
+      "cegroup.OneToOneNatSpec\022N\n\020dns_record_sp" +
+      "ecs\030\002 \003(\01324.yandex.cloud.compute.v1.inst" +
+      "ancegroup.DnsRecordSpec\022\017\n\007address\030\003 \001(\t" +
+      "\"\270\001\n\017OneToOneNatSpec\022D\n\nip_version\030\001 \001(\016" +
+      "20.yandex.cloud.compute.v1.instancegroup" +
+      ".IpVersion\022\017\n\007address\030\002 \001(\t\022N\n\020dns_recor" +
+      "d_specs\030\003 \003(\01324.yandex.cloud.compute.v1." +
+      "instancegroup.DnsRecordSpec\"_\n\rDnsRecord" +
+      "Spec\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030" +
+      "\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004" +
+      " \001(\010\"\'\n\020SchedulingPolicy\022\023\n\013preemptible\030" +
+      "\001 \001(\010\"\274\001\n\017NetworkSettings\022I\n\004type\030\001 \001(\0162" +
+      ";.yandex.cloud.compute.v1.instancegroup." +
+      "NetworkSettings.Type\"^\n\004Type\022\024\n\020TYPE_UNS" +
+      "PECIFIED\020\000\022\014\n\010STANDARD\020\001\022\030\n\024SOFTWARE_ACC" +
+      "ELERATED\020\002\022\030\n\024HARDWARE_ACCELERATED\020\003\"\316\001\n" +
+      "\020LoadBalancerSpec\022Q\n\021target_group_spec\030\001" +
+      " \001(\01326.yandex.cloud.compute.v1.instanceg" +
+      "roup.TargetGroupSpec\022I\n\034max_opening_traf" +
+      "fic_duration\030\002 \001(\0132\031.google.protobuf.Dur" +
+      "ationB\010\372\3071\004>=1s\022\034\n\024ignore_health_checks\030" +
+      "\004 \001(\010\"\262\002\n\017TargetGroupSpec\0222\n\004name\030\001 \001(\tB" +
+      "$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n" +
+      "\013description\030\002 \001(\tB\t\212\3101\005<=256\022\233\001\n\006labels" +
+      "\030\003 \003(\0132B.yandex.cloud.compute.v1.instanc" +
+      "egroup.TargetGroupSpec.LabelsEntryBG\202\3101\004" +
+      "<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\0041-6" +
+      "3\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\032-\n\013LabelsEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\352\001\n\033A" +
+      "pplicationLoadBalancerSpec\022b\n\021target_gro" +
+      "up_spec\030\001 \001(\0132A.yandex.cloud.compute.v1." +
+      "instancegroup.ApplicationTargetGroupSpec" +
+      "B\004\350\3071\001\022I\n\034max_opening_traffic_duration\030\002" +
+      " \001(\0132\031.google.protobuf.DurationB\010\372\3071\004>=1" +
+      "s\022\034\n\024ignore_health_checks\030\003 \001(\010\"\315\001\n\032Appl" +
+      "icationTargetGroupSpec\022\014\n\004name\030\001 \001(\t\022\023\n\013" +
+      "description\030\002 \001(\t\022]\n\006labels\030\003 \003(\0132M.yand" +
+      "ex.cloud.compute.v1.instancegroup.Applic" +
+      "ationTargetGroupSpec.LabelsEntry\032-\n\013Labe" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
+      "\272\001\n\020HealthChecksSpec\022[\n\022health_check_spe" +
+      "cs\030\001 \003(\01326.yandex.cloud.compute.v1.insta" +
+      "ncegroup.HealthCheckSpecB\007\202\3101\003>=1\022I\n\034max" +
+      "_checking_health_duration\030\002 \001(\0132\031.google" +
+      ".protobuf.DurationB\010\372\3071\004>=1s\"\244\004\n\017HealthC" +
+      "heckSpec\0228\n\010interval\030\001 \001(\0132\031.google.prot" +
+      "obuf.DurationB\013\372\3071\0071s-300s\0226\n\007timeout\030\002 " +
+      "\001(\0132\031.google.protobuf.DurationB\n\372\3071\0061s-6" +
+      "0s\0225\n\023unhealthy_threshold\030\003 \001(\003B\030\372\3071\0240,2" +
+      ",3,4,5,6,7,8,9,10\0223\n\021healthy_threshold\030\004" +
+      " \001(\003B\030\372\3071\0240,2,3,4,5,6,7,8,9,10\022X\n\013tcp_op" +
+      "tions\030\005 \001(\0132A.yandex.cloud.compute.v1.in" +
+      "stancegroup.HealthCheckSpec.TcpOptionsH\000" +
+      "\022Z\n\014http_options\030\006 \001(\0132B.yandex.cloud.co" +
+      "mpute.v1.instancegroup.HealthCheckSpec.H" +
+      "ttpOptionsH\000\032\'\n\nTcpOptions\022\031\n\004port\030\001 \001(\003" +
+      "B\013\372\3071\0071-65535\0326\n\013HttpOptions\022\031\n\004port\030\001 \001" +
+      "(\003B\013\372\3071\0071-65535\022\014\n\004path\030\002 \001(\tB\034\n\024health_" +
+      "check_options\022\004\300\3011\001\"\327\005\n\017ManagedInstance\022" +
+      "\n\n\002id\030\001 \001(\t\022M\n\006status\030\002 \001(\0162=.yandex.clo" +
+      "ud.compute.v1.instancegroup.ManagedInsta" +
+      "nce.Status\022\023\n\013instance_id\030\003 \001(\t\022\014\n\004fqdn\030" +
+      "\004 \001(\t\022\014\n\004name\030\005 \001(\t\022\026\n\016status_message\030\006 " +
+      "\001(\t\022\017\n\007zone_id\030\007 \001(\t\022S\n\022network_interfac" +
+      "es\030\010 \003(\01327.yandex.cloud.compute.v1.insta" +
+      "ncegroup.NetworkInterface\0225\n\021status_chan" +
+      "ged_at\030\t \001(\0132\032.google.protobuf.Timestamp" +
+      "\022\024\n\014instance_tag\030\016 \001(\t\"\354\002\n\006Status\022\026\n\022STA" +
+      "TUS_UNSPECIFIED\020\000\022\025\n\021CREATING_INSTANCE\020\013" +
+      "\022\025\n\021UPDATING_INSTANCE\020\014\022\025\n\021DELETING_INST" +
+      "ANCE\020\r\022\025\n\021STARTING_INSTANCE\020\016\022\025\n\021STOPPIN" +
+      "G_INSTANCE\020\017\022\035\n\031AWAITING_STARTUP_DURATIO" +
+      "N\020\020\022\023\n\017CHECKING_HEALTH\020\021\022\023\n\017OPENING_TRAF" +
+      "FIC\020\022\022\034\n\030AWAITING_WARMUP_DURATION\020\023\022\023\n\017C" +
+      "LOSING_TRAFFIC\020\024\022\022\n\016RUNNING_ACTUAL\020\025\022\024\n\020" +
+      "RUNNING_OUTDATED\020\026\022\013\n\007STOPPED\020\027\022\013\n\007DELET" +
+      "ED\020\030\022\027\n\023PREPARING_RESOURCES\020\031\"\357\001\n\020Networ" +
+      "kInterface\022\r\n\005index\030\001 \001(\t\022\023\n\013mac_address" +
+      "\030\002 \001(\t\022\021\n\tsubnet_id\030\003 \001(\t\022Q\n\022primary_v4_" +
+      "address\030\004 \001(\01325.yandex.cloud.compute.v1." +
+      "instancegroup.PrimaryAddress\022Q\n\022primary_" +
+      "v6_address\030\005 \001(\01325.yandex.cloud.compute." +
+      "v1.instancegroup.PrimaryAddress\"\264\001\n\016Prim" +
+      "aryAddress\022\017\n\007address\030\001 \001(\t\022J\n\016one_to_on" +
+      "e_nat\030\002 \001(\01322.yandex.cloud.compute.v1.in" +
+      "stancegroup.OneToOneNat\022E\n\013dns_records\030\003" +
+      " \003(\01320.yandex.cloud.compute.v1.instanceg" +
+      "roup.DnsRecord\"\253\001\n\013OneToOneNat\022\017\n\007addres" +
+      "s\030\001 \001(\t\022D\n\nip_version\030\002 \001(\01620.yandex.clo" +
+      "ud.compute.v1.instancegroup.IpVersion\022E\n" +
+      "\013dns_records\030\003 \003(\01320.yandex.cloud.comput" +
+      "e.v1.instancegroup.DnsRecord\"[\n\tDnsRecor" +
+      "d\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001" +
+      "(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(" +
+      "\010\"K\n\tLogRecord\022-\n\ttimestamp\030\001 \001(\0132\032.goog" +
+      "le.protobuf.Timestamp\022\017\n\007message\030\002 \001(\t\"\333" +
+      "\001\n\021AutoHealingPolicy\022g\n\023auto_healing_act" +
+      "ion\030\001 \001(\0162J.yandex.cloud.compute.v1.inst" +
+      "ancegroup.AutoHealingPolicy.AutoHealingA" +
+      "ction\"]\n\021AutoHealingAction\022#\n\037AUTO_HEALI" +
+      "NG_ACTION_UNSPECIFIED\020\000\022\013\n\007RESTART\020\001\022\014\n\010" +
+      "RECREATE\020\002\022\010\n\004NONE\020\003*;\n\tIpVersion\022\032\n\026IP_" +
+      "VERSION_UNSPECIFIED\020\000\022\010\n\004IPV4\020\001\022\010\n\004IPV6\020" +
+      "\002B\204\001\n)yandex.cloud.api.compute.v1.instan" +
+      "cegroupZWgithub.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/compute/v1/instancegro" +
+      "up;instancegroupb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -57881,7 +58868,7 @@ public final class InstanceGroupOuterClass {
     internal_static_yandex_cloud_compute_v1_instancegroup_InstanceGroup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_InstanceGroup_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "InstanceTemplate", "ScalePolicy", "DeployPolicy", "AllocationPolicy", "LoadBalancerState", "ManagedInstancesState", "LoadBalancerSpec", "HealthChecksSpec", "ServiceAccountId", "Status", "Variables", "DeletionProtection", "ApplicationLoadBalancerSpec", "ApplicationLoadBalancerState", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "Name", "Description", "Labels", "InstanceTemplate", "ScalePolicy", "DeployPolicy", "AllocationPolicy", "LoadBalancerState", "ManagedInstancesState", "LoadBalancerSpec", "HealthChecksSpec", "ServiceAccountId", "Status", "Variables", "DeletionProtection", "ApplicationLoadBalancerSpec", "ApplicationLoadBalancerState", "AutoHealingPolicy", });
     internal_static_yandex_cloud_compute_v1_instancegroup_InstanceGroup_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_instancegroup_InstanceGroup_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_instancegroup_InstanceGroup_LabelsEntry_fieldAccessorTable = new
@@ -58158,6 +59145,12 @@ public final class InstanceGroupOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_instancegroup_LogRecord_descriptor,
         new java.lang.String[] { "Timestamp", "Message", });
+    internal_static_yandex_cloud_compute_v1_instancegroup_AutoHealingPolicy_descriptor =
+      getDescriptor().getMessageTypes().get(31);
+    internal_static_yandex_cloud_compute_v1_instancegroup_AutoHealingPolicy_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_compute_v1_instancegroup_AutoHealingPolicy_descriptor,
+        new java.lang.String[] { "AutoHealingAction", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(yandex.cloud.api.Validation.exactlyOne);

@@ -33809,7 +33809,7 @@ public final class InstanceServiceOuterClass {
 
     /**
      * <pre>
-     * ID of the network interface that is being updated.
+     * ID of the instance that is being updated.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -33818,7 +33818,7 @@ public final class InstanceServiceOuterClass {
     java.lang.String getInstanceId();
     /**
      * <pre>
-     * ID of the network interface that is being updated.
+     * ID of the instance that is being updated.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -34144,7 +34144,7 @@ public final class InstanceServiceOuterClass {
     private volatile java.lang.Object instanceId_;
     /**
      * <pre>
-     * ID of the network interface that is being updated.
+     * ID of the instance that is being updated.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -34165,7 +34165,7 @@ public final class InstanceServiceOuterClass {
     }
     /**
      * <pre>
-     * ID of the network interface that is being updated.
+     * ID of the instance that is being updated.
      * </pre>
      *
      * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -34908,7 +34908,7 @@ public final class InstanceServiceOuterClass {
       private java.lang.Object instanceId_ = "";
       /**
        * <pre>
-       * ID of the network interface that is being updated.
+       * ID of the instance that is being updated.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -34928,7 +34928,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the network interface that is being updated.
+       * ID of the instance that is being updated.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -34949,7 +34949,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the network interface that is being updated.
+       * ID of the instance that is being updated.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -34968,7 +34968,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the network interface that is being updated.
+       * ID of the instance that is being updated.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
@@ -34982,7 +34982,7 @@ public final class InstanceServiceOuterClass {
       }
       /**
        * <pre>
-       * ID of the network interface that is being updated.
+       * ID of the instance that is being updated.
        * </pre>
        *
        * <code>string instance_id = 1 [(.yandex.cloud.required) = true];</code>
