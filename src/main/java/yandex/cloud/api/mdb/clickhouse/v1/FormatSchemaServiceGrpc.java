@@ -3,6 +3,9 @@ package yandex.cloud.api.mdb.clickhouse.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for managing [format schemas](https://clickhouse.com/docs/en/interfaces/formats) for input and output data.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -215,10 +218,16 @@ public final class FormatSchemaServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing [format schemas](https://clickhouse.com/docs/en/interfaces/formats) for input and output data.
+   * </pre>
    */
   public static abstract class FormatSchemaServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns detailed information about a given format schema.
+     * </pre>
      */
     public void get(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.GetFormatSchemaRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema> responseObserver) {
@@ -226,6 +235,9 @@ public final class FormatSchemaServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns a list of format schemas in a cluster.
+     * </pre>
      */
     public void list(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasResponse> responseObserver) {
@@ -233,6 +245,9 @@ public final class FormatSchemaServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds a format schema to a cluster.
+     * </pre>
      */
     public void create(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.CreateFormatSchemaRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -240,6 +255,9 @@ public final class FormatSchemaServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Changes a format schema.
+     * </pre>
      */
     public void update(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.UpdateFormatSchemaRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -247,6 +265,9 @@ public final class FormatSchemaServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a format schema from a cluster.
+     * </pre>
      */
     public void delete(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.DeleteFormatSchemaRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -295,6 +316,9 @@ public final class FormatSchemaServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing [format schemas](https://clickhouse.com/docs/en/interfaces/formats) for input and output data.
+   * </pre>
    */
   public static final class FormatSchemaServiceStub extends io.grpc.stub.AbstractAsyncStub<FormatSchemaServiceStub> {
     private FormatSchemaServiceStub(
@@ -309,6 +333,9 @@ public final class FormatSchemaServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns detailed information about a given format schema.
+     * </pre>
      */
     public void get(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.GetFormatSchemaRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema> responseObserver) {
@@ -317,6 +344,9 @@ public final class FormatSchemaServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns a list of format schemas in a cluster.
+     * </pre>
      */
     public void list(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasResponse> responseObserver) {
@@ -325,6 +355,9 @@ public final class FormatSchemaServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds a format schema to a cluster.
+     * </pre>
      */
     public void create(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.CreateFormatSchemaRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -333,6 +366,9 @@ public final class FormatSchemaServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Changes a format schema.
+     * </pre>
      */
     public void update(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.UpdateFormatSchemaRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -341,6 +377,9 @@ public final class FormatSchemaServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a format schema from a cluster.
+     * </pre>
      */
     public void delete(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.DeleteFormatSchemaRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -350,6 +389,9 @@ public final class FormatSchemaServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing [format schemas](https://clickhouse.com/docs/en/interfaces/formats) for input and output data.
+   * </pre>
    */
   public static final class FormatSchemaServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<FormatSchemaServiceBlockingStub> {
     private FormatSchemaServiceBlockingStub(
@@ -364,6 +406,9 @@ public final class FormatSchemaServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns detailed information about a given format schema.
+     * </pre>
      */
     public yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema get(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.GetFormatSchemaRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -371,6 +416,9 @@ public final class FormatSchemaServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns a list of format schemas in a cluster.
+     * </pre>
      */
     public yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasResponse list(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -378,6 +426,9 @@ public final class FormatSchemaServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds a format schema to a cluster.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.CreateFormatSchemaRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -385,6 +436,9 @@ public final class FormatSchemaServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Changes a format schema.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation update(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.UpdateFormatSchemaRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -392,6 +446,9 @@ public final class FormatSchemaServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a format schema from a cluster.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.DeleteFormatSchemaRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -400,6 +457,9 @@ public final class FormatSchemaServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing [format schemas](https://clickhouse.com/docs/en/interfaces/formats) for input and output data.
+   * </pre>
    */
   public static final class FormatSchemaServiceFutureStub extends io.grpc.stub.AbstractFutureStub<FormatSchemaServiceFutureStub> {
     private FormatSchemaServiceFutureStub(
@@ -414,6 +474,9 @@ public final class FormatSchemaServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns detailed information about a given format schema.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema> get(
         yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.GetFormatSchemaRequest request) {
@@ -422,6 +485,9 @@ public final class FormatSchemaServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns a list of format schemas in a cluster.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasResponse> list(
         yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.ListFormatSchemasRequest request) {
@@ -430,6 +496,9 @@ public final class FormatSchemaServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Adds a format schema to a cluster.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.CreateFormatSchemaRequest request) {
@@ -438,6 +507,9 @@ public final class FormatSchemaServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Changes a format schema.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> update(
         yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.UpdateFormatSchemaRequest request) {
@@ -446,6 +518,9 @@ public final class FormatSchemaServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes a format schema from a cluster.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaServiceOuterClass.DeleteFormatSchemaRequest request) {

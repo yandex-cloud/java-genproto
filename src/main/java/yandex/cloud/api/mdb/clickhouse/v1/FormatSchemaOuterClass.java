@@ -136,11 +136,19 @@ public final class FormatSchemaOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Format schema name.
+     * </pre>
+     *
      * <code>string name = 1;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Format schema name.
+     * </pre>
+     *
      * <code>string name = 1;</code>
      * @return The bytes for name.
      */
@@ -148,11 +156,19 @@ public final class FormatSchemaOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * </pre>
+     *
      * <code>string cluster_id = 2;</code>
      * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * </pre>
+     *
      * <code>string cluster_id = 2;</code>
      * @return The bytes for clusterId.
      */
@@ -160,22 +176,42 @@ public final class FormatSchemaOuterClass {
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * Schema type. Possible values are the following:
+     * * FORMAT_SCHEMA_TYPE_PROTOBUF - [Protobuf](https://protobuf.dev/) data format (including [ProtobufSingle](https://clickhouse.com/docs/en/interfaces/formats#protobufsingle)).
+     * * FORMAT_SCHEMA_TYPE_CAPNPROTO - [Cap'n Proto](https://capnproto.org/) data format.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3;</code>
      * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
+     * <pre>
+     * Schema type. Possible values are the following:
+     * * FORMAT_SCHEMA_TYPE_PROTOBUF - [Protobuf](https://protobuf.dev/) data format (including [ProtobufSingle](https://clickhouse.com/docs/en/interfaces/formats#protobufsingle)).
+     * * FORMAT_SCHEMA_TYPE_CAPNPROTO - [Cap'n Proto](https://capnproto.org/) data format.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3;</code>
      * @return The type.
      */
     yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaType getType();
 
     /**
+     * <pre>
+     * Link to the file of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4;</code>
      * @return The uri.
      */
     java.lang.String getUri();
     /**
+     * <pre>
+     * Link to the file of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4;</code>
      * @return The bytes for uri.
      */
@@ -290,6 +326,10 @@ public final class FormatSchemaOuterClass {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Format schema name.
+     * </pre>
+     *
      * <code>string name = 1;</code>
      * @return The name.
      */
@@ -307,6 +347,10 @@ public final class FormatSchemaOuterClass {
       }
     }
     /**
+     * <pre>
+     * Format schema name.
+     * </pre>
+     *
      * <code>string name = 1;</code>
      * @return The bytes for name.
      */
@@ -328,6 +372,10 @@ public final class FormatSchemaOuterClass {
     public static final int CLUSTER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object clusterId_;
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * </pre>
+     *
      * <code>string cluster_id = 2;</code>
      * @return The clusterId.
      */
@@ -345,6 +393,10 @@ public final class FormatSchemaOuterClass {
       }
     }
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * </pre>
+     *
      * <code>string cluster_id = 2;</code>
      * @return The bytes for clusterId.
      */
@@ -366,6 +418,12 @@ public final class FormatSchemaOuterClass {
     public static final int TYPE_FIELD_NUMBER = 3;
     private int type_;
     /**
+     * <pre>
+     * Schema type. Possible values are the following:
+     * * FORMAT_SCHEMA_TYPE_PROTOBUF - [Protobuf](https://protobuf.dev/) data format (including [ProtobufSingle](https://clickhouse.com/docs/en/interfaces/formats#protobufsingle)).
+     * * FORMAT_SCHEMA_TYPE_CAPNPROTO - [Cap'n Proto](https://capnproto.org/) data format.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3;</code>
      * @return The enum numeric value on the wire for type.
      */
@@ -373,6 +431,12 @@ public final class FormatSchemaOuterClass {
       return type_;
     }
     /**
+     * <pre>
+     * Schema type. Possible values are the following:
+     * * FORMAT_SCHEMA_TYPE_PROTOBUF - [Protobuf](https://protobuf.dev/) data format (including [ProtobufSingle](https://clickhouse.com/docs/en/interfaces/formats#protobufsingle)).
+     * * FORMAT_SCHEMA_TYPE_CAPNPROTO - [Cap'n Proto](https://capnproto.org/) data format.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3;</code>
      * @return The type.
      */
@@ -385,6 +449,10 @@ public final class FormatSchemaOuterClass {
     public static final int URI_FIELD_NUMBER = 4;
     private volatile java.lang.Object uri_;
     /**
+     * <pre>
+     * Link to the file of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4;</code>
      * @return The uri.
      */
@@ -402,6 +470,10 @@ public final class FormatSchemaOuterClass {
       }
     }
     /**
+     * <pre>
+     * Link to the file of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4;</code>
      * @return The bytes for uri.
      */
@@ -774,6 +846,10 @@ public final class FormatSchemaOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        * @return The name.
        */
@@ -790,6 +866,10 @@ public final class FormatSchemaOuterClass {
         }
       }
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        * @return The bytes for name.
        */
@@ -807,6 +887,10 @@ public final class FormatSchemaOuterClass {
         }
       }
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -822,6 +906,10 @@ public final class FormatSchemaOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        * @return This builder for chaining.
        */
@@ -832,6 +920,10 @@ public final class FormatSchemaOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string name = 1;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -850,6 +942,10 @@ public final class FormatSchemaOuterClass {
 
       private java.lang.Object clusterId_ = "";
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * </pre>
+       *
        * <code>string cluster_id = 2;</code>
        * @return The clusterId.
        */
@@ -866,6 +962,10 @@ public final class FormatSchemaOuterClass {
         }
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * </pre>
+       *
        * <code>string cluster_id = 2;</code>
        * @return The bytes for clusterId.
        */
@@ -883,6 +983,10 @@ public final class FormatSchemaOuterClass {
         }
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * </pre>
+       *
        * <code>string cluster_id = 2;</code>
        * @param value The clusterId to set.
        * @return This builder for chaining.
@@ -898,6 +1002,10 @@ public final class FormatSchemaOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * </pre>
+       *
        * <code>string cluster_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -908,6 +1016,10 @@ public final class FormatSchemaOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * </pre>
+       *
        * <code>string cluster_id = 2;</code>
        * @param value The bytes for clusterId to set.
        * @return This builder for chaining.
@@ -926,6 +1038,12 @@ public final class FormatSchemaOuterClass {
 
       private int type_ = 0;
       /**
+       * <pre>
+       * Schema type. Possible values are the following:
+       * * FORMAT_SCHEMA_TYPE_PROTOBUF - [Protobuf](https://protobuf.dev/) data format (including [ProtobufSingle](https://clickhouse.com/docs/en/interfaces/formats#protobufsingle)).
+       * * FORMAT_SCHEMA_TYPE_CAPNPROTO - [Cap'n Proto](https://capnproto.org/) data format.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3;</code>
        * @return The enum numeric value on the wire for type.
        */
@@ -933,6 +1051,12 @@ public final class FormatSchemaOuterClass {
         return type_;
       }
       /**
+       * <pre>
+       * Schema type. Possible values are the following:
+       * * FORMAT_SCHEMA_TYPE_PROTOBUF - [Protobuf](https://protobuf.dev/) data format (including [ProtobufSingle](https://clickhouse.com/docs/en/interfaces/formats#protobufsingle)).
+       * * FORMAT_SCHEMA_TYPE_CAPNPROTO - [Cap'n Proto](https://capnproto.org/) data format.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3;</code>
        * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
@@ -944,6 +1068,12 @@ public final class FormatSchemaOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Schema type. Possible values are the following:
+       * * FORMAT_SCHEMA_TYPE_PROTOBUF - [Protobuf](https://protobuf.dev/) data format (including [ProtobufSingle](https://clickhouse.com/docs/en/interfaces/formats#protobufsingle)).
+       * * FORMAT_SCHEMA_TYPE_CAPNPROTO - [Cap'n Proto](https://capnproto.org/) data format.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3;</code>
        * @return The type.
        */
@@ -954,6 +1084,12 @@ public final class FormatSchemaOuterClass {
         return result == null ? yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaType.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Schema type. Possible values are the following:
+       * * FORMAT_SCHEMA_TYPE_PROTOBUF - [Protobuf](https://protobuf.dev/) data format (including [ProtobufSingle](https://clickhouse.com/docs/en/interfaces/formats#protobufsingle)).
+       * * FORMAT_SCHEMA_TYPE_CAPNPROTO - [Cap'n Proto](https://capnproto.org/) data format.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3;</code>
        * @param value The type to set.
        * @return This builder for chaining.
@@ -968,6 +1104,12 @@ public final class FormatSchemaOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Schema type. Possible values are the following:
+       * * FORMAT_SCHEMA_TYPE_PROTOBUF - [Protobuf](https://protobuf.dev/) data format (including [ProtobufSingle](https://clickhouse.com/docs/en/interfaces/formats#protobufsingle)).
+       * * FORMAT_SCHEMA_TYPE_CAPNPROTO - [Cap'n Proto](https://capnproto.org/) data format.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3;</code>
        * @return This builder for chaining.
        */
@@ -980,6 +1122,10 @@ public final class FormatSchemaOuterClass {
 
       private java.lang.Object uri_ = "";
       /**
+       * <pre>
+       * Link to the file of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4;</code>
        * @return The uri.
        */
@@ -996,6 +1142,10 @@ public final class FormatSchemaOuterClass {
         }
       }
       /**
+       * <pre>
+       * Link to the file of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4;</code>
        * @return The bytes for uri.
        */
@@ -1013,6 +1163,10 @@ public final class FormatSchemaOuterClass {
         }
       }
       /**
+       * <pre>
+       * Link to the file of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4;</code>
        * @param value The uri to set.
        * @return This builder for chaining.
@@ -1028,6 +1182,10 @@ public final class FormatSchemaOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Link to the file of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4;</code>
        * @return This builder for chaining.
        */
@@ -1038,6 +1196,10 @@ public final class FormatSchemaOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Link to the file of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4;</code>
        * @param value The bytes for uri to set.
        * @return This builder for chaining.

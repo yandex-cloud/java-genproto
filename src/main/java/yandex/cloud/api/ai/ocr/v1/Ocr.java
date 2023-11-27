@@ -1630,6 +1630,50 @@ public final class Ocr {
      */
     yandex.cloud.api.ai.ocr.v1.Ocr.EntityOrBuilder getEntitiesOrBuilder(
         int index);
+
+    /**
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Table> 
+        getTablesList();
+    /**
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.Table getTables(int index);
+    /**
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+     */
+    int getTablesCount();
+    /**
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TableOrBuilder> 
+        getTablesOrBuilderList();
+    /**
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.TableOrBuilder getTablesOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Full text recognized from image.
+     * </pre>
+     *
+     * <code>string full_text = 6;</code>
+     * @return The fullText.
+     */
+    java.lang.String getFullText();
+    /**
+     * <pre>
+     * Full text recognized from image.
+     * </pre>
+     *
+     * <code>string full_text = 6;</code>
+     * @return The bytes for fullText.
+     */
+    com.google.protobuf.ByteString
+        getFullTextBytes();
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.ocr.v1.TextAnnotation}
@@ -1646,6 +1690,8 @@ public final class Ocr {
     private TextAnnotation() {
       blocks_ = java.util.Collections.emptyList();
       entities_ = java.util.Collections.emptyList();
+      tables_ = java.util.Collections.emptyList();
+      fullText_ = "";
     }
 
     @java.lang.Override
@@ -1707,6 +1753,21 @@ public final class Ocr {
                   input.readMessage(yandex.cloud.api.ai.ocr.v1.Ocr.Entity.parser(), extensionRegistry));
               break;
             }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                tables_ = new java.util.ArrayList<yandex.cloud.api.ai.ocr.v1.Ocr.Table>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              tables_.add(
+                  input.readMessage(yandex.cloud.api.ai.ocr.v1.Ocr.Table.parser(), extensionRegistry));
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              fullText_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -1727,6 +1788,9 @@ public final class Ocr {
         }
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
           entities_ = java.util.Collections.unmodifiableList(entities_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          tables_ = java.util.Collections.unmodifiableList(tables_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1895,6 +1959,92 @@ public final class Ocr {
       return entities_.get(index);
     }
 
+    public static final int TABLES_FIELD_NUMBER = 5;
+    private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Table> tables_;
+    /**
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Table> getTablesList() {
+      return tables_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TableOrBuilder> 
+        getTablesOrBuilderList() {
+      return tables_;
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+     */
+    @java.lang.Override
+    public int getTablesCount() {
+      return tables_.size();
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.Table getTables(int index) {
+      return tables_.get(index);
+    }
+    /**
+     * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.TableOrBuilder getTablesOrBuilder(
+        int index) {
+      return tables_.get(index);
+    }
+
+    public static final int FULL_TEXT_FIELD_NUMBER = 6;
+    private volatile java.lang.Object fullText_;
+    /**
+     * <pre>
+     * Full text recognized from image.
+     * </pre>
+     *
+     * <code>string full_text = 6;</code>
+     * @return The fullText.
+     */
+    @java.lang.Override
+    public java.lang.String getFullText() {
+      java.lang.Object ref = fullText_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fullText_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Full text recognized from image.
+     * </pre>
+     *
+     * <code>string full_text = 6;</code>
+     * @return The bytes for fullText.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFullTextBytes() {
+      java.lang.Object ref = fullText_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fullText_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1921,6 +2071,12 @@ public final class Ocr {
       for (int i = 0; i < entities_.size(); i++) {
         output.writeMessage(4, entities_.get(i));
       }
+      for (int i = 0; i < tables_.size(); i++) {
+        output.writeMessage(5, tables_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fullText_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, fullText_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1946,6 +2102,13 @@ public final class Ocr {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, entities_.get(i));
       }
+      for (int i = 0; i < tables_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, tables_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fullText_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, fullText_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1969,6 +2132,10 @@ public final class Ocr {
           .equals(other.getBlocksList())) return false;
       if (!getEntitiesList()
           .equals(other.getEntitiesList())) return false;
+      if (!getTablesList()
+          .equals(other.getTablesList())) return false;
+      if (!getFullText()
+          .equals(other.getFullText())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1994,6 +2161,12 @@ public final class Ocr {
         hash = (37 * hash) + ENTITIES_FIELD_NUMBER;
         hash = (53 * hash) + getEntitiesList().hashCode();
       }
+      if (getTablesCount() > 0) {
+        hash = (37 * hash) + TABLES_FIELD_NUMBER;
+        hash = (53 * hash) + getTablesList().hashCode();
+      }
+      hash = (37 * hash) + FULL_TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getFullText().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2124,6 +2297,7 @@ public final class Ocr {
                 .alwaysUseFieldBuilders) {
           getBlocksFieldBuilder();
           getEntitiesFieldBuilder();
+          getTablesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -2145,6 +2319,14 @@ public final class Ocr {
         } else {
           entitiesBuilder_.clear();
         }
+        if (tablesBuilder_ == null) {
+          tables_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          tablesBuilder_.clear();
+        }
+        fullText_ = "";
+
         return this;
       }
 
@@ -2192,6 +2374,16 @@ public final class Ocr {
         } else {
           result.entities_ = entitiesBuilder_.build();
         }
+        if (tablesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            tables_ = java.util.Collections.unmodifiableList(tables_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.tables_ = tables_;
+        } else {
+          result.tables_ = tablesBuilder_.build();
+        }
+        result.fullText_ = fullText_;
         onBuilt();
         return result;
       }
@@ -2297,6 +2489,36 @@ public final class Ocr {
               entitiesBuilder_.addAllMessages(other.entities_);
             }
           }
+        }
+        if (tablesBuilder_ == null) {
+          if (!other.tables_.isEmpty()) {
+            if (tables_.isEmpty()) {
+              tables_ = other.tables_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureTablesIsMutable();
+              tables_.addAll(other.tables_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tables_.isEmpty()) {
+            if (tablesBuilder_.isEmpty()) {
+              tablesBuilder_.dispose();
+              tablesBuilder_ = null;
+              tables_ = other.tables_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              tablesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTablesFieldBuilder() : null;
+            } else {
+              tablesBuilder_.addAllMessages(other.tables_);
+            }
+          }
+        }
+        if (!other.getFullText().isEmpty()) {
+          fullText_ = other.fullText_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3036,6 +3258,342 @@ public final class Ocr {
           entities_ = null;
         }
         return entitiesBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Table> tables_ =
+        java.util.Collections.emptyList();
+      private void ensureTablesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          tables_ = new java.util.ArrayList<yandex.cloud.api.ai.ocr.v1.Ocr.Table>(tables_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.Table, yandex.cloud.api.ai.ocr.v1.Ocr.Table.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TableOrBuilder> tablesBuilder_;
+
+      /**
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Table> getTablesList() {
+        if (tablesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tables_);
+        } else {
+          return tablesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+       */
+      public int getTablesCount() {
+        if (tablesBuilder_ == null) {
+          return tables_.size();
+        } else {
+          return tablesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Table getTables(int index) {
+        if (tablesBuilder_ == null) {
+          return tables_.get(index);
+        } else {
+          return tablesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+       */
+      public Builder setTables(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.Table value) {
+        if (tablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTablesIsMutable();
+          tables_.set(index, value);
+          onChanged();
+        } else {
+          tablesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+       */
+      public Builder setTables(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.Table.Builder builderForValue) {
+        if (tablesBuilder_ == null) {
+          ensureTablesIsMutable();
+          tables_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tablesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+       */
+      public Builder addTables(yandex.cloud.api.ai.ocr.v1.Ocr.Table value) {
+        if (tablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTablesIsMutable();
+          tables_.add(value);
+          onChanged();
+        } else {
+          tablesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+       */
+      public Builder addTables(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.Table value) {
+        if (tablesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTablesIsMutable();
+          tables_.add(index, value);
+          onChanged();
+        } else {
+          tablesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+       */
+      public Builder addTables(
+          yandex.cloud.api.ai.ocr.v1.Ocr.Table.Builder builderForValue) {
+        if (tablesBuilder_ == null) {
+          ensureTablesIsMutable();
+          tables_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tablesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+       */
+      public Builder addTables(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.Table.Builder builderForValue) {
+        if (tablesBuilder_ == null) {
+          ensureTablesIsMutable();
+          tables_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tablesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+       */
+      public Builder addAllTables(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.ocr.v1.Ocr.Table> values) {
+        if (tablesBuilder_ == null) {
+          ensureTablesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tables_);
+          onChanged();
+        } else {
+          tablesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+       */
+      public Builder clearTables() {
+        if (tablesBuilder_ == null) {
+          tables_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          tablesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+       */
+      public Builder removeTables(int index) {
+        if (tablesBuilder_ == null) {
+          ensureTablesIsMutable();
+          tables_.remove(index);
+          onChanged();
+        } else {
+          tablesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Table.Builder getTablesBuilder(
+          int index) {
+        return getTablesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TableOrBuilder getTablesOrBuilder(
+          int index) {
+        if (tablesBuilder_ == null) {
+          return tables_.get(index);  } else {
+          return tablesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TableOrBuilder> 
+           getTablesOrBuilderList() {
+        if (tablesBuilder_ != null) {
+          return tablesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tables_);
+        }
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Table.Builder addTablesBuilder() {
+        return getTablesFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.ocr.v1.Ocr.Table.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Table.Builder addTablesBuilder(
+          int index) {
+        return getTablesFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.ocr.v1.Ocr.Table.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .yandex.cloud.ai.ocr.v1.Table tables = 5;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Table.Builder> 
+           getTablesBuilderList() {
+        return getTablesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.Table, yandex.cloud.api.ai.ocr.v1.Ocr.Table.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TableOrBuilder> 
+          getTablesFieldBuilder() {
+        if (tablesBuilder_ == null) {
+          tablesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.ocr.v1.Ocr.Table, yandex.cloud.api.ai.ocr.v1.Ocr.Table.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TableOrBuilder>(
+                  tables_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tables_ = null;
+        }
+        return tablesBuilder_;
+      }
+
+      private java.lang.Object fullText_ = "";
+      /**
+       * <pre>
+       * Full text recognized from image.
+       * </pre>
+       *
+       * <code>string full_text = 6;</code>
+       * @return The fullText.
+       */
+      public java.lang.String getFullText() {
+        java.lang.Object ref = fullText_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          fullText_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Full text recognized from image.
+       * </pre>
+       *
+       * <code>string full_text = 6;</code>
+       * @return The bytes for fullText.
+       */
+      public com.google.protobuf.ByteString
+          getFullTextBytes() {
+        java.lang.Object ref = fullText_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fullText_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Full text recognized from image.
+       * </pre>
+       *
+       * <code>string full_text = 6;</code>
+       * @param value The fullText to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFullText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        fullText_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Full text recognized from image.
+       * </pre>
+       *
+       * <code>string full_text = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFullText() {
+        
+        fullText_ = getDefaultInstance().getFullText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Full text recognized from image.
+       * </pre>
+       *
+       * <code>string full_text = 6;</code>
+       * @param value The bytes for fullText to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFullTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        fullText_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3998,6 +4556,50 @@ public final class Ocr {
      */
     yandex.cloud.api.ai.ocr.v1.Ocr.Block.DetectedLanguageOrBuilder getLanguagesOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Block position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> 
+        getTextSegmentsList();
+    /**
+     * <pre>
+     * Block position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments(int index);
+    /**
+     * <pre>
+     * Block position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    int getTextSegmentsCount();
+    /**
+     * <pre>
+     * Block position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> 
+        getTextSegmentsOrBuilderList();
+    /**
+     * <pre>
+     * Block position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.ocr.v1.Block}
@@ -4014,6 +4616,7 @@ public final class Ocr {
     private Block() {
       lines_ = java.util.Collections.emptyList();
       languages_ = java.util.Collections.emptyList();
+      textSegments_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -4078,6 +4681,15 @@ public final class Ocr {
                   input.readMessage(yandex.cloud.api.ai.ocr.v1.Ocr.Block.DetectedLanguage.parser(), extensionRegistry));
               break;
             }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                textSegments_ = new java.util.ArrayList<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              textSegments_.add(
+                  input.readMessage(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4098,6 +4710,9 @@ public final class Ocr {
         }
         if (((mutable_bitField0_ & 0x00000002) != 0)) {
           languages_ = java.util.Collections.unmodifiableList(languages_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          textSegments_ = java.util.Collections.unmodifiableList(textSegments_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -4878,6 +5493,66 @@ public final class Ocr {
       return languages_.get(index);
     }
 
+    public static final int TEXT_SEGMENTS_FIELD_NUMBER = 4;
+    private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> textSegments_;
+    /**
+     * <pre>
+     * Block position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> getTextSegmentsList() {
+      return textSegments_;
+    }
+    /**
+     * <pre>
+     * Block position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> 
+        getTextSegmentsOrBuilderList() {
+      return textSegments_;
+    }
+    /**
+     * <pre>
+     * Block position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    @java.lang.Override
+    public int getTextSegmentsCount() {
+      return textSegments_.size();
+    }
+    /**
+     * <pre>
+     * Block position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments(int index) {
+      return textSegments_.get(index);
+    }
+    /**
+     * <pre>
+     * Block position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder(
+        int index) {
+      return textSegments_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4901,6 +5576,9 @@ public final class Ocr {
       for (int i = 0; i < languages_.size(); i++) {
         output.writeMessage(3, languages_.get(i));
       }
+      for (int i = 0; i < textSegments_.size(); i++) {
+        output.writeMessage(4, textSegments_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -4921,6 +5599,10 @@ public final class Ocr {
       for (int i = 0; i < languages_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, languages_.get(i));
+      }
+      for (int i = 0; i < textSegments_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, textSegments_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4946,6 +5628,8 @@ public final class Ocr {
           .equals(other.getLinesList())) return false;
       if (!getLanguagesList()
           .equals(other.getLanguagesList())) return false;
+      if (!getTextSegmentsList()
+          .equals(other.getTextSegmentsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4968,6 +5652,10 @@ public final class Ocr {
       if (getLanguagesCount() > 0) {
         hash = (37 * hash) + LANGUAGES_FIELD_NUMBER;
         hash = (53 * hash) + getLanguagesList().hashCode();
+      }
+      if (getTextSegmentsCount() > 0) {
+        hash = (37 * hash) + TEXT_SEGMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getTextSegmentsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5099,6 +5787,7 @@ public final class Ocr {
                 .alwaysUseFieldBuilders) {
           getLinesFieldBuilder();
           getLanguagesFieldBuilder();
+          getTextSegmentsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -5121,6 +5810,12 @@ public final class Ocr {
           bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           languagesBuilder_.clear();
+        }
+        if (textSegmentsBuilder_ == null) {
+          textSegments_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          textSegmentsBuilder_.clear();
         }
         return this;
       }
@@ -5171,6 +5866,15 @@ public final class Ocr {
           result.languages_ = languages_;
         } else {
           result.languages_ = languagesBuilder_.build();
+        }
+        if (textSegmentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            textSegments_ = java.util.Collections.unmodifiableList(textSegments_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.textSegments_ = textSegments_;
+        } else {
+          result.textSegments_ = textSegmentsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -5272,6 +5976,32 @@ public final class Ocr {
                    getLanguagesFieldBuilder() : null;
             } else {
               languagesBuilder_.addAllMessages(other.languages_);
+            }
+          }
+        }
+        if (textSegmentsBuilder_ == null) {
+          if (!other.textSegments_.isEmpty()) {
+            if (textSegments_.isEmpty()) {
+              textSegments_ = other.textSegments_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureTextSegmentsIsMutable();
+              textSegments_.addAll(other.textSegments_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.textSegments_.isEmpty()) {
+            if (textSegmentsBuilder_.isEmpty()) {
+              textSegmentsBuilder_.dispose();
+              textSegmentsBuilder_ = null;
+              textSegments_ = other.textSegments_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              textSegmentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTextSegmentsFieldBuilder() : null;
+            } else {
+              textSegmentsBuilder_.addAllMessages(other.textSegments_);
             }
           }
         }
@@ -6083,6 +6813,318 @@ public final class Ocr {
         }
         return languagesBuilder_;
       }
+
+      private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> textSegments_ =
+        java.util.Collections.emptyList();
+      private void ensureTextSegmentsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          textSegments_ = new java.util.ArrayList<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments>(textSegments_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> textSegmentsBuilder_;
+
+      /**
+       * <pre>
+       * Block position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> getTextSegmentsList() {
+        if (textSegmentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(textSegments_);
+        } else {
+          return textSegmentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Block position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public int getTextSegmentsCount() {
+        if (textSegmentsBuilder_ == null) {
+          return textSegments_.size();
+        } else {
+          return textSegmentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Block position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments(int index) {
+        if (textSegmentsBuilder_ == null) {
+          return textSegments_.get(index);
+        } else {
+          return textSegmentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Block position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder setTextSegments(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments value) {
+        if (textSegmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTextSegmentsIsMutable();
+          textSegments_.set(index, value);
+          onChanged();
+        } else {
+          textSegmentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Block position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder setTextSegments(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder builderForValue) {
+        if (textSegmentsBuilder_ == null) {
+          ensureTextSegmentsIsMutable();
+          textSegments_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          textSegmentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Block position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder addTextSegments(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments value) {
+        if (textSegmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTextSegmentsIsMutable();
+          textSegments_.add(value);
+          onChanged();
+        } else {
+          textSegmentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Block position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder addTextSegments(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments value) {
+        if (textSegmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTextSegmentsIsMutable();
+          textSegments_.add(index, value);
+          onChanged();
+        } else {
+          textSegmentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Block position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder addTextSegments(
+          yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder builderForValue) {
+        if (textSegmentsBuilder_ == null) {
+          ensureTextSegmentsIsMutable();
+          textSegments_.add(builderForValue.build());
+          onChanged();
+        } else {
+          textSegmentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Block position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder addTextSegments(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder builderForValue) {
+        if (textSegmentsBuilder_ == null) {
+          ensureTextSegmentsIsMutable();
+          textSegments_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          textSegmentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Block position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder addAllTextSegments(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> values) {
+        if (textSegmentsBuilder_ == null) {
+          ensureTextSegmentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, textSegments_);
+          onChanged();
+        } else {
+          textSegmentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Block position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder clearTextSegments() {
+        if (textSegmentsBuilder_ == null) {
+          textSegments_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          textSegmentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Block position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder removeTextSegments(int index) {
+        if (textSegmentsBuilder_ == null) {
+          ensureTextSegmentsIsMutable();
+          textSegments_.remove(index);
+          onChanged();
+        } else {
+          textSegmentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Block position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder getTextSegmentsBuilder(
+          int index) {
+        return getTextSegmentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Block position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder(
+          int index) {
+        if (textSegmentsBuilder_ == null) {
+          return textSegments_.get(index);  } else {
+          return textSegmentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Block position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> 
+           getTextSegmentsOrBuilderList() {
+        if (textSegmentsBuilder_ != null) {
+          return textSegmentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(textSegments_);
+        }
+      }
+      /**
+       * <pre>
+       * Block position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder addTextSegmentsBuilder() {
+        return getTextSegmentsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Block position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder addTextSegmentsBuilder(
+          int index) {
+        return getTextSegmentsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Block position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder> 
+           getTextSegmentsBuilderList() {
+        return getTextSegmentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> 
+          getTextSegmentsFieldBuilder() {
+        if (textSegmentsBuilder_ == null) {
+          textSegmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder>(
+                  textSegments_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          textSegments_ = null;
+        }
+        return textSegmentsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6189,7 +7231,7 @@ public final class Ocr {
 
     /**
      * <pre>
-     * Recognized words
+     * Recognized words.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -6198,7 +7240,7 @@ public final class Ocr {
         getWordsList();
     /**
      * <pre>
-     * Recognized words
+     * Recognized words.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -6206,7 +7248,7 @@ public final class Ocr {
     yandex.cloud.api.ai.ocr.v1.Ocr.Word getWords(int index);
     /**
      * <pre>
-     * Recognized words
+     * Recognized words.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -6214,7 +7256,7 @@ public final class Ocr {
     int getWordsCount();
     /**
      * <pre>
-     * Recognized words
+     * Recognized words.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -6223,12 +7265,56 @@ public final class Ocr {
         getWordsOrBuilderList();
     /**
      * <pre>
-     * Recognized words
+     * Recognized words.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
      */
     yandex.cloud.api.ai.ocr.v1.Ocr.WordOrBuilder getWordsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Line position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> 
+        getTextSegmentsList();
+    /**
+     * <pre>
+     * Line position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments(int index);
+    /**
+     * <pre>
+     * Line position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    int getTextSegmentsCount();
+    /**
+     * <pre>
+     * Line position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> 
+        getTextSegmentsOrBuilderList();
+    /**
+     * <pre>
+     * Line position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder(
         int index);
   }
   /**
@@ -6246,6 +7332,7 @@ public final class Ocr {
     private Line() {
       text_ = "";
       words_ = java.util.Collections.emptyList();
+      textSegments_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -6307,6 +7394,15 @@ public final class Ocr {
                   input.readMessage(yandex.cloud.api.ai.ocr.v1.Ocr.Word.parser(), extensionRegistry));
               break;
             }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                textSegments_ = new java.util.ArrayList<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              textSegments_.add(
+                  input.readMessage(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -6324,6 +7420,9 @@ public final class Ocr {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           words_ = java.util.Collections.unmodifiableList(words_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          textSegments_ = java.util.Collections.unmodifiableList(textSegments_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -6430,7 +7529,7 @@ public final class Ocr {
     private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.Word> words_;
     /**
      * <pre>
-     * Recognized words
+     * Recognized words.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -6441,7 +7540,7 @@ public final class Ocr {
     }
     /**
      * <pre>
-     * Recognized words
+     * Recognized words.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -6453,7 +7552,7 @@ public final class Ocr {
     }
     /**
      * <pre>
-     * Recognized words
+     * Recognized words.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -6464,7 +7563,7 @@ public final class Ocr {
     }
     /**
      * <pre>
-     * Recognized words
+     * Recognized words.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -6475,7 +7574,7 @@ public final class Ocr {
     }
     /**
      * <pre>
-     * Recognized words
+     * Recognized words.
      * </pre>
      *
      * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -6484,6 +7583,66 @@ public final class Ocr {
     public yandex.cloud.api.ai.ocr.v1.Ocr.WordOrBuilder getWordsOrBuilder(
         int index) {
       return words_.get(index);
+    }
+
+    public static final int TEXT_SEGMENTS_FIELD_NUMBER = 4;
+    private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> textSegments_;
+    /**
+     * <pre>
+     * Line position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> getTextSegmentsList() {
+      return textSegments_;
+    }
+    /**
+     * <pre>
+     * Line position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> 
+        getTextSegmentsOrBuilderList() {
+      return textSegments_;
+    }
+    /**
+     * <pre>
+     * Line position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    @java.lang.Override
+    public int getTextSegmentsCount() {
+      return textSegments_.size();
+    }
+    /**
+     * <pre>
+     * Line position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments(int index) {
+      return textSegments_.get(index);
+    }
+    /**
+     * <pre>
+     * Line position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder(
+        int index) {
+      return textSegments_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -6509,6 +7668,9 @@ public final class Ocr {
       for (int i = 0; i < words_.size(); i++) {
         output.writeMessage(3, words_.get(i));
       }
+      for (int i = 0; i < textSegments_.size(); i++) {
+        output.writeMessage(4, textSegments_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6528,6 +7690,10 @@ public final class Ocr {
       for (int i = 0; i < words_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, words_.get(i));
+      }
+      for (int i = 0; i < textSegments_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, textSegments_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6553,6 +7719,8 @@ public final class Ocr {
           .equals(other.getText())) return false;
       if (!getWordsList()
           .equals(other.getWordsList())) return false;
+      if (!getTextSegmentsList()
+          .equals(other.getTextSegmentsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6573,6 +7741,10 @@ public final class Ocr {
       if (getWordsCount() > 0) {
         hash = (37 * hash) + WORDS_FIELD_NUMBER;
         hash = (53 * hash) + getWordsList().hashCode();
+      }
+      if (getTextSegmentsCount() > 0) {
+        hash = (37 * hash) + TEXT_SEGMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getTextSegmentsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -6703,6 +7875,7 @@ public final class Ocr {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getWordsFieldBuilder();
+          getTextSegmentsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -6721,6 +7894,12 @@ public final class Ocr {
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           wordsBuilder_.clear();
+        }
+        if (textSegmentsBuilder_ == null) {
+          textSegments_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          textSegmentsBuilder_.clear();
         }
         return this;
       }
@@ -6763,6 +7942,15 @@ public final class Ocr {
           result.words_ = words_;
         } else {
           result.words_ = wordsBuilder_.build();
+        }
+        if (textSegmentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            textSegments_ = java.util.Collections.unmodifiableList(textSegments_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.textSegments_ = textSegments_;
+        } else {
+          result.textSegments_ = textSegmentsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -6842,6 +8030,32 @@ public final class Ocr {
                    getWordsFieldBuilder() : null;
             } else {
               wordsBuilder_.addAllMessages(other.words_);
+            }
+          }
+        }
+        if (textSegmentsBuilder_ == null) {
+          if (!other.textSegments_.isEmpty()) {
+            if (textSegments_.isEmpty()) {
+              textSegments_ = other.textSegments_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureTextSegmentsIsMutable();
+              textSegments_.addAll(other.textSegments_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.textSegments_.isEmpty()) {
+            if (textSegmentsBuilder_.isEmpty()) {
+              textSegmentsBuilder_.dispose();
+              textSegmentsBuilder_ = null;
+              textSegments_ = other.textSegments_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              textSegmentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTextSegmentsFieldBuilder() : null;
+            } else {
+              textSegmentsBuilder_.addAllMessages(other.textSegments_);
             }
           }
         }
@@ -7140,7 +8354,7 @@ public final class Ocr {
 
       /**
        * <pre>
-       * Recognized words
+       * Recognized words.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -7154,7 +8368,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized words
+       * Recognized words.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -7168,7 +8382,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized words
+       * Recognized words.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -7182,7 +8396,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized words
+       * Recognized words.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -7203,7 +8417,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized words
+       * Recognized words.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -7221,7 +8435,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized words
+       * Recognized words.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -7241,7 +8455,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized words
+       * Recognized words.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -7262,7 +8476,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized words
+       * Recognized words.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -7280,7 +8494,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized words
+       * Recognized words.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -7298,7 +8512,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized words
+       * Recognized words.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -7317,7 +8531,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized words
+       * Recognized words.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -7334,7 +8548,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized words
+       * Recognized words.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -7351,7 +8565,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized words
+       * Recognized words.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -7362,7 +8576,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized words
+       * Recognized words.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -7376,7 +8590,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized words
+       * Recognized words.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -7391,7 +8605,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized words
+       * Recognized words.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -7402,7 +8616,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized words
+       * Recognized words.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -7414,7 +8628,7 @@ public final class Ocr {
       }
       /**
        * <pre>
-       * Recognized words
+       * Recognized words.
        * </pre>
        *
        * <code>repeated .yandex.cloud.ai.ocr.v1.Word words = 3;</code>
@@ -7436,6 +8650,318 @@ public final class Ocr {
           words_ = null;
         }
         return wordsBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> textSegments_ =
+        java.util.Collections.emptyList();
+      private void ensureTextSegmentsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          textSegments_ = new java.util.ArrayList<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments>(textSegments_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> textSegmentsBuilder_;
+
+      /**
+       * <pre>
+       * Line position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> getTextSegmentsList() {
+        if (textSegmentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(textSegments_);
+        } else {
+          return textSegmentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Line position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public int getTextSegmentsCount() {
+        if (textSegmentsBuilder_ == null) {
+          return textSegments_.size();
+        } else {
+          return textSegmentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Line position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments(int index) {
+        if (textSegmentsBuilder_ == null) {
+          return textSegments_.get(index);
+        } else {
+          return textSegmentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Line position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder setTextSegments(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments value) {
+        if (textSegmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTextSegmentsIsMutable();
+          textSegments_.set(index, value);
+          onChanged();
+        } else {
+          textSegmentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Line position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder setTextSegments(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder builderForValue) {
+        if (textSegmentsBuilder_ == null) {
+          ensureTextSegmentsIsMutable();
+          textSegments_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          textSegmentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Line position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder addTextSegments(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments value) {
+        if (textSegmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTextSegmentsIsMutable();
+          textSegments_.add(value);
+          onChanged();
+        } else {
+          textSegmentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Line position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder addTextSegments(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments value) {
+        if (textSegmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTextSegmentsIsMutable();
+          textSegments_.add(index, value);
+          onChanged();
+        } else {
+          textSegmentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Line position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder addTextSegments(
+          yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder builderForValue) {
+        if (textSegmentsBuilder_ == null) {
+          ensureTextSegmentsIsMutable();
+          textSegments_.add(builderForValue.build());
+          onChanged();
+        } else {
+          textSegmentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Line position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder addTextSegments(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder builderForValue) {
+        if (textSegmentsBuilder_ == null) {
+          ensureTextSegmentsIsMutable();
+          textSegments_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          textSegmentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Line position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder addAllTextSegments(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> values) {
+        if (textSegmentsBuilder_ == null) {
+          ensureTextSegmentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, textSegments_);
+          onChanged();
+        } else {
+          textSegmentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Line position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder clearTextSegments() {
+        if (textSegmentsBuilder_ == null) {
+          textSegments_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          textSegmentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Line position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder removeTextSegments(int index) {
+        if (textSegmentsBuilder_ == null) {
+          ensureTextSegmentsIsMutable();
+          textSegments_.remove(index);
+          onChanged();
+        } else {
+          textSegmentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Line position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder getTextSegmentsBuilder(
+          int index) {
+        return getTextSegmentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Line position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder(
+          int index) {
+        if (textSegmentsBuilder_ == null) {
+          return textSegments_.get(index);  } else {
+          return textSegmentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Line position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> 
+           getTextSegmentsOrBuilderList() {
+        if (textSegmentsBuilder_ != null) {
+          return textSegmentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(textSegments_);
+        }
+      }
+      /**
+       * <pre>
+       * Line position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder addTextSegmentsBuilder() {
+        return getTextSegmentsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Line position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder addTextSegmentsBuilder(
+          int index) {
+        return getTextSegmentsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Line position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder> 
+           getTextSegmentsBuilderList() {
+        return getTextSegmentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> 
+          getTextSegmentsFieldBuilder() {
+        if (textSegmentsBuilder_ == null) {
+          textSegmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder>(
+                  textSegments_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          textSegments_ = null;
+        }
+        return textSegmentsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7550,6 +9076,50 @@ public final class Ocr {
      * @return The entityIndex.
      */
     long getEntityIndex();
+
+    /**
+     * <pre>
+     * Word position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> 
+        getTextSegmentsList();
+    /**
+     * <pre>
+     * Word position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments(int index);
+    /**
+     * <pre>
+     * Word position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    int getTextSegmentsCount();
+    /**
+     * <pre>
+     * Word position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> 
+        getTextSegmentsOrBuilderList();
+    /**
+     * <pre>
+     * Word position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.ocr.v1.Word}
@@ -7565,6 +9135,7 @@ public final class Ocr {
     }
     private Word() {
       text_ = "";
+      textSegments_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -7587,6 +9158,7 @@ public final class Ocr {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7621,6 +9193,15 @@ public final class Ocr {
               entityIndex_ = input.readInt64();
               break;
             }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                textSegments_ = new java.util.ArrayList<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              textSegments_.add(
+                  input.readMessage(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -7636,6 +9217,9 @@ public final class Ocr {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          textSegments_ = java.util.Collections.unmodifiableList(textSegments_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -7752,6 +9336,66 @@ public final class Ocr {
       return entityIndex_;
     }
 
+    public static final int TEXT_SEGMENTS_FIELD_NUMBER = 4;
+    private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> textSegments_;
+    /**
+     * <pre>
+     * Word position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> getTextSegmentsList() {
+      return textSegments_;
+    }
+    /**
+     * <pre>
+     * Word position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> 
+        getTextSegmentsOrBuilderList() {
+      return textSegments_;
+    }
+    /**
+     * <pre>
+     * Word position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    @java.lang.Override
+    public int getTextSegmentsCount() {
+      return textSegments_.size();
+    }
+    /**
+     * <pre>
+     * Word position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments(int index) {
+      return textSegments_.get(index);
+    }
+    /**
+     * <pre>
+     * Word position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder(
+        int index) {
+      return textSegments_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7775,6 +9419,9 @@ public final class Ocr {
       if (entityIndex_ != 0L) {
         output.writeInt64(3, entityIndex_);
       }
+      for (int i = 0; i < textSegments_.size(); i++) {
+        output.writeMessage(4, textSegments_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -7794,6 +9441,10 @@ public final class Ocr {
       if (entityIndex_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, entityIndex_);
+      }
+      for (int i = 0; i < textSegments_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, textSegments_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7819,6 +9470,8 @@ public final class Ocr {
           .equals(other.getText())) return false;
       if (getEntityIndex()
           != other.getEntityIndex()) return false;
+      if (!getTextSegmentsList()
+          .equals(other.getTextSegmentsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -7839,6 +9492,10 @@ public final class Ocr {
       hash = (37 * hash) + ENTITY_INDEX_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getEntityIndex());
+      if (getTextSegmentsCount() > 0) {
+        hash = (37 * hash) + TEXT_SEGMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getTextSegmentsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -7967,6 +9624,7 @@ public final class Ocr {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getTextSegmentsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -7982,6 +9640,12 @@ public final class Ocr {
 
         entityIndex_ = 0L;
 
+        if (textSegmentsBuilder_ == null) {
+          textSegments_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          textSegmentsBuilder_.clear();
+        }
         return this;
       }
 
@@ -8008,6 +9672,7 @@ public final class Ocr {
       @java.lang.Override
       public yandex.cloud.api.ai.ocr.v1.Ocr.Word buildPartial() {
         yandex.cloud.api.ai.ocr.v1.Ocr.Word result = new yandex.cloud.api.ai.ocr.v1.Ocr.Word(this);
+        int from_bitField0_ = bitField0_;
         if (boundingBoxBuilder_ == null) {
           result.boundingBox_ = boundingBox_;
         } else {
@@ -8015,6 +9680,15 @@ public final class Ocr {
         }
         result.text_ = text_;
         result.entityIndex_ = entityIndex_;
+        if (textSegmentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            textSegments_ = java.util.Collections.unmodifiableList(textSegments_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.textSegments_ = textSegments_;
+        } else {
+          result.textSegments_ = textSegmentsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -8073,6 +9747,32 @@ public final class Ocr {
         if (other.getEntityIndex() != 0L) {
           setEntityIndex(other.getEntityIndex());
         }
+        if (textSegmentsBuilder_ == null) {
+          if (!other.textSegments_.isEmpty()) {
+            if (textSegments_.isEmpty()) {
+              textSegments_ = other.textSegments_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTextSegmentsIsMutable();
+              textSegments_.addAll(other.textSegments_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.textSegments_.isEmpty()) {
+            if (textSegmentsBuilder_.isEmpty()) {
+              textSegmentsBuilder_.dispose();
+              textSegmentsBuilder_ = null;
+              textSegments_ = other.textSegments_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              textSegmentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTextSegmentsFieldBuilder() : null;
+            } else {
+              textSegmentsBuilder_.addAllMessages(other.textSegments_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -8101,6 +9801,7 @@ public final class Ocr {
         }
         return this;
       }
+      private int bitField0_;
 
       private yandex.cloud.api.ai.ocr.v1.Ocr.Polygon boundingBox_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8395,6 +10096,318 @@ public final class Ocr {
         onChanged();
         return this;
       }
+
+      private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> textSegments_ =
+        java.util.Collections.emptyList();
+      private void ensureTextSegmentsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          textSegments_ = new java.util.ArrayList<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments>(textSegments_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> textSegmentsBuilder_;
+
+      /**
+       * <pre>
+       * Word position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> getTextSegmentsList() {
+        if (textSegmentsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(textSegments_);
+        } else {
+          return textSegmentsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Word position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public int getTextSegmentsCount() {
+        if (textSegmentsBuilder_ == null) {
+          return textSegments_.size();
+        } else {
+          return textSegmentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Word position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments(int index) {
+        if (textSegmentsBuilder_ == null) {
+          return textSegments_.get(index);
+        } else {
+          return textSegmentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Word position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder setTextSegments(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments value) {
+        if (textSegmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTextSegmentsIsMutable();
+          textSegments_.set(index, value);
+          onChanged();
+        } else {
+          textSegmentsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Word position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder setTextSegments(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder builderForValue) {
+        if (textSegmentsBuilder_ == null) {
+          ensureTextSegmentsIsMutable();
+          textSegments_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          textSegmentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Word position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder addTextSegments(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments value) {
+        if (textSegmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTextSegmentsIsMutable();
+          textSegments_.add(value);
+          onChanged();
+        } else {
+          textSegmentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Word position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder addTextSegments(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments value) {
+        if (textSegmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTextSegmentsIsMutable();
+          textSegments_.add(index, value);
+          onChanged();
+        } else {
+          textSegmentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Word position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder addTextSegments(
+          yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder builderForValue) {
+        if (textSegmentsBuilder_ == null) {
+          ensureTextSegmentsIsMutable();
+          textSegments_.add(builderForValue.build());
+          onChanged();
+        } else {
+          textSegmentsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Word position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder addTextSegments(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder builderForValue) {
+        if (textSegmentsBuilder_ == null) {
+          ensureTextSegmentsIsMutable();
+          textSegments_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          textSegmentsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Word position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder addAllTextSegments(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> values) {
+        if (textSegmentsBuilder_ == null) {
+          ensureTextSegmentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, textSegments_);
+          onChanged();
+        } else {
+          textSegmentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Word position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder clearTextSegments() {
+        if (textSegmentsBuilder_ == null) {
+          textSegments_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          textSegmentsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Word position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder removeTextSegments(int index) {
+        if (textSegmentsBuilder_ == null) {
+          ensureTextSegmentsIsMutable();
+          textSegments_.remove(index);
+          onChanged();
+        } else {
+          textSegmentsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Word position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder getTextSegmentsBuilder(
+          int index) {
+        return getTextSegmentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Word position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder(
+          int index) {
+        if (textSegmentsBuilder_ == null) {
+          return textSegments_.get(index);  } else {
+          return textSegmentsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Word position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> 
+           getTextSegmentsOrBuilderList() {
+        if (textSegmentsBuilder_ != null) {
+          return textSegmentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(textSegments_);
+        }
+      }
+      /**
+       * <pre>
+       * Word position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder addTextSegmentsBuilder() {
+        return getTextSegmentsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Word position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder addTextSegmentsBuilder(
+          int index) {
+        return getTextSegmentsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Word position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder> 
+           getTextSegmentsBuilderList() {
+        return getTextSegmentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> 
+          getTextSegmentsFieldBuilder() {
+        if (textSegmentsBuilder_ == null) {
+          textSegmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder>(
+                  textSegments_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          textSegments_ = null;
+        }
+        return textSegmentsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8448,6 +10461,3713 @@ public final class Ocr {
 
   }
 
+  public interface TextSegmentsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.ocr.v1.TextSegments)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Start character position from full_text string.
+     * </pre>
+     *
+     * <code>int64 start_index = 1;</code>
+     * @return The startIndex.
+     */
+    long getStartIndex();
+
+    /**
+     * <pre>
+     * Text segment length.
+     * </pre>
+     *
+     * <code>int64 length = 2;</code>
+     * @return The length.
+     */
+    long getLength();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.ocr.v1.TextSegments}
+   */
+  public static final class TextSegments extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.ocr.v1.TextSegments)
+      TextSegmentsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TextSegments.newBuilder() to construct.
+    private TextSegments(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TextSegments() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TextSegments();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TextSegments(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              startIndex_ = input.readInt64();
+              break;
+            }
+            case 16: {
+
+              length_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_TextSegments_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_TextSegments_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.class, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder.class);
+    }
+
+    public static final int START_INDEX_FIELD_NUMBER = 1;
+    private long startIndex_;
+    /**
+     * <pre>
+     * Start character position from full_text string.
+     * </pre>
+     *
+     * <code>int64 start_index = 1;</code>
+     * @return The startIndex.
+     */
+    @java.lang.Override
+    public long getStartIndex() {
+      return startIndex_;
+    }
+
+    public static final int LENGTH_FIELD_NUMBER = 2;
+    private long length_;
+    /**
+     * <pre>
+     * Text segment length.
+     * </pre>
+     *
+     * <code>int64 length = 2;</code>
+     * @return The length.
+     */
+    @java.lang.Override
+    public long getLength() {
+      return length_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (startIndex_ != 0L) {
+        output.writeInt64(1, startIndex_);
+      }
+      if (length_ != 0L) {
+        output.writeInt64(2, length_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (startIndex_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, startIndex_);
+      }
+      if (length_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, length_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments other = (yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments) obj;
+
+      if (getStartIndex()
+          != other.getStartIndex()) return false;
+      if (getLength()
+          != other.getLength()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + START_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStartIndex());
+      hash = (37 * hash) + LENGTH_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLength());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.ocr.v1.TextSegments}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.ocr.v1.TextSegments)
+        yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_TextSegments_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_TextSegments_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.class, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        startIndex_ = 0L;
+
+        length_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_TextSegments_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments build() {
+        yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments buildPartial() {
+        yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments result = new yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments(this);
+        result.startIndex_ = startIndex_;
+        result.length_ = length_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments) {
+          return mergeFrom((yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments other) {
+        if (other == yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.getDefaultInstance()) return this;
+        if (other.getStartIndex() != 0L) {
+          setStartIndex(other.getStartIndex());
+        }
+        if (other.getLength() != 0L) {
+          setLength(other.getLength());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long startIndex_ ;
+      /**
+       * <pre>
+       * Start character position from full_text string.
+       * </pre>
+       *
+       * <code>int64 start_index = 1;</code>
+       * @return The startIndex.
+       */
+      @java.lang.Override
+      public long getStartIndex() {
+        return startIndex_;
+      }
+      /**
+       * <pre>
+       * Start character position from full_text string.
+       * </pre>
+       *
+       * <code>int64 start_index = 1;</code>
+       * @param value The startIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartIndex(long value) {
+        
+        startIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Start character position from full_text string.
+       * </pre>
+       *
+       * <code>int64 start_index = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartIndex() {
+        
+        startIndex_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long length_ ;
+      /**
+       * <pre>
+       * Text segment length.
+       * </pre>
+       *
+       * <code>int64 length = 2;</code>
+       * @return The length.
+       */
+      @java.lang.Override
+      public long getLength() {
+        return length_;
+      }
+      /**
+       * <pre>
+       * Text segment length.
+       * </pre>
+       *
+       * <code>int64 length = 2;</code>
+       * @param value The length to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLength(long value) {
+        
+        length_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Text segment length.
+       * </pre>
+       *
+       * <code>int64 length = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLength() {
+        
+        length_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.ocr.v1.TextSegments)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.ocr.v1.TextSegments)
+    private static final yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments();
+    }
+
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TextSegments>
+        PARSER = new com.google.protobuf.AbstractParser<TextSegments>() {
+      @java.lang.Override
+      public TextSegments parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TextSegments(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TextSegments> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TextSegments> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TableOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.ocr.v1.Table)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Area on the page where the table is located.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+     * @return Whether the boundingBox field is set.
+     */
+    boolean hasBoundingBox();
+    /**
+     * <pre>
+     * Area on the page where the table is located.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+     * @return The boundingBox.
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.Polygon getBoundingBox();
+    /**
+     * <pre>
+     * Area on the page where the table is located.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.PolygonOrBuilder getBoundingBoxOrBuilder();
+
+    /**
+     * <pre>
+     * Number of rows in table.
+     * </pre>
+     *
+     * <code>int64 row_count = 2;</code>
+     * @return The rowCount.
+     */
+    long getRowCount();
+
+    /**
+     * <pre>
+     * Number of columns in table.
+     * </pre>
+     *
+     * <code>int64 column_count = 3;</code>
+     * @return The columnCount.
+     */
+    long getColumnCount();
+
+    /**
+     * <pre>
+     * Table position from full_text string.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     * @return Whether the textSegments field is set.
+     */
+    boolean hasTextSegments();
+    /**
+     * <pre>
+     * Table position from full_text string.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     * @return The textSegments.
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments();
+    /**
+     * <pre>
+     * Table position from full_text string.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder();
+
+    /**
+     * <pre>
+     * Table cells.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+     */
+    java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TableCell> 
+        getCellsList();
+    /**
+     * <pre>
+     * Table cells.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.TableCell getCells(int index);
+    /**
+     * <pre>
+     * Table cells.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+     */
+    int getCellsCount();
+    /**
+     * <pre>
+     * Table cells.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TableCellOrBuilder> 
+        getCellsOrBuilderList();
+    /**
+     * <pre>
+     * Table cells.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.TableCellOrBuilder getCellsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.ocr.v1.Table}
+   */
+  public static final class Table extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.ocr.v1.Table)
+      TableOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Table.newBuilder() to construct.
+    private Table(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Table() {
+      cells_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Table();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Table(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.Builder subBuilder = null;
+              if (boundingBox_ != null) {
+                subBuilder = boundingBox_.toBuilder();
+              }
+              boundingBox_ = input.readMessage(yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(boundingBox_);
+                boundingBox_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 16: {
+
+              rowCount_ = input.readInt64();
+              break;
+            }
+            case 24: {
+
+              columnCount_ = input.readInt64();
+              break;
+            }
+            case 34: {
+              yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder subBuilder = null;
+              if (textSegments_ != null) {
+                subBuilder = textSegments_.toBuilder();
+              }
+              textSegments_ = input.readMessage(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(textSegments_);
+                textSegments_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                cells_ = new java.util.ArrayList<yandex.cloud.api.ai.ocr.v1.Ocr.TableCell>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              cells_.add(
+                  input.readMessage(yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          cells_ = java.util.Collections.unmodifiableList(cells_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_Table_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_Table_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.ocr.v1.Ocr.Table.class, yandex.cloud.api.ai.ocr.v1.Ocr.Table.Builder.class);
+    }
+
+    public static final int BOUNDING_BOX_FIELD_NUMBER = 1;
+    private yandex.cloud.api.ai.ocr.v1.Ocr.Polygon boundingBox_;
+    /**
+     * <pre>
+     * Area on the page where the table is located.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+     * @return Whether the boundingBox field is set.
+     */
+    @java.lang.Override
+    public boolean hasBoundingBox() {
+      return boundingBox_ != null;
+    }
+    /**
+     * <pre>
+     * Area on the page where the table is located.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+     * @return The boundingBox.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.Polygon getBoundingBox() {
+      return boundingBox_ == null ? yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.getDefaultInstance() : boundingBox_;
+    }
+    /**
+     * <pre>
+     * Area on the page where the table is located.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.PolygonOrBuilder getBoundingBoxOrBuilder() {
+      return getBoundingBox();
+    }
+
+    public static final int ROW_COUNT_FIELD_NUMBER = 2;
+    private long rowCount_;
+    /**
+     * <pre>
+     * Number of rows in table.
+     * </pre>
+     *
+     * <code>int64 row_count = 2;</code>
+     * @return The rowCount.
+     */
+    @java.lang.Override
+    public long getRowCount() {
+      return rowCount_;
+    }
+
+    public static final int COLUMN_COUNT_FIELD_NUMBER = 3;
+    private long columnCount_;
+    /**
+     * <pre>
+     * Number of columns in table.
+     * </pre>
+     *
+     * <code>int64 column_count = 3;</code>
+     * @return The columnCount.
+     */
+    @java.lang.Override
+    public long getColumnCount() {
+      return columnCount_;
+    }
+
+    public static final int TEXT_SEGMENTS_FIELD_NUMBER = 4;
+    private yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments textSegments_;
+    /**
+     * <pre>
+     * Table position from full_text string.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     * @return Whether the textSegments field is set.
+     */
+    @java.lang.Override
+    public boolean hasTextSegments() {
+      return textSegments_ != null;
+    }
+    /**
+     * <pre>
+     * Table position from full_text string.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     * @return The textSegments.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments() {
+      return textSegments_ == null ? yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.getDefaultInstance() : textSegments_;
+    }
+    /**
+     * <pre>
+     * Table position from full_text string.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder() {
+      return getTextSegments();
+    }
+
+    public static final int CELLS_FIELD_NUMBER = 5;
+    private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TableCell> cells_;
+    /**
+     * <pre>
+     * Table cells.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TableCell> getCellsList() {
+      return cells_;
+    }
+    /**
+     * <pre>
+     * Table cells.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TableCellOrBuilder> 
+        getCellsOrBuilderList() {
+      return cells_;
+    }
+    /**
+     * <pre>
+     * Table cells.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+     */
+    @java.lang.Override
+    public int getCellsCount() {
+      return cells_.size();
+    }
+    /**
+     * <pre>
+     * Table cells.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.TableCell getCells(int index) {
+      return cells_.get(index);
+    }
+    /**
+     * <pre>
+     * Table cells.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.TableCellOrBuilder getCellsOrBuilder(
+        int index) {
+      return cells_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (boundingBox_ != null) {
+        output.writeMessage(1, getBoundingBox());
+      }
+      if (rowCount_ != 0L) {
+        output.writeInt64(2, rowCount_);
+      }
+      if (columnCount_ != 0L) {
+        output.writeInt64(3, columnCount_);
+      }
+      if (textSegments_ != null) {
+        output.writeMessage(4, getTextSegments());
+      }
+      for (int i = 0; i < cells_.size(); i++) {
+        output.writeMessage(5, cells_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (boundingBox_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getBoundingBox());
+      }
+      if (rowCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, rowCount_);
+      }
+      if (columnCount_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, columnCount_);
+      }
+      if (textSegments_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getTextSegments());
+      }
+      for (int i = 0; i < cells_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, cells_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.ocr.v1.Ocr.Table)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.ocr.v1.Ocr.Table other = (yandex.cloud.api.ai.ocr.v1.Ocr.Table) obj;
+
+      if (hasBoundingBox() != other.hasBoundingBox()) return false;
+      if (hasBoundingBox()) {
+        if (!getBoundingBox()
+            .equals(other.getBoundingBox())) return false;
+      }
+      if (getRowCount()
+          != other.getRowCount()) return false;
+      if (getColumnCount()
+          != other.getColumnCount()) return false;
+      if (hasTextSegments() != other.hasTextSegments()) return false;
+      if (hasTextSegments()) {
+        if (!getTextSegments()
+            .equals(other.getTextSegments())) return false;
+      }
+      if (!getCellsList()
+          .equals(other.getCellsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasBoundingBox()) {
+        hash = (37 * hash) + BOUNDING_BOX_FIELD_NUMBER;
+        hash = (53 * hash) + getBoundingBox().hashCode();
+      }
+      hash = (37 * hash) + ROW_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRowCount());
+      hash = (37 * hash) + COLUMN_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getColumnCount());
+      if (hasTextSegments()) {
+        hash = (37 * hash) + TEXT_SEGMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getTextSegments().hashCode();
+      }
+      if (getCellsCount() > 0) {
+        hash = (37 * hash) + CELLS_FIELD_NUMBER;
+        hash = (53 * hash) + getCellsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Table parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Table parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Table parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Table parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Table parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Table parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Table parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Table parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Table parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Table parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Table parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Table parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.ocr.v1.Ocr.Table prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.ocr.v1.Table}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.ocr.v1.Table)
+        yandex.cloud.api.ai.ocr.v1.Ocr.TableOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_Table_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_Table_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.ocr.v1.Ocr.Table.class, yandex.cloud.api.ai.ocr.v1.Ocr.Table.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.ocr.v1.Ocr.Table.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCellsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (boundingBoxBuilder_ == null) {
+          boundingBox_ = null;
+        } else {
+          boundingBox_ = null;
+          boundingBoxBuilder_ = null;
+        }
+        rowCount_ = 0L;
+
+        columnCount_ = 0L;
+
+        if (textSegmentsBuilder_ == null) {
+          textSegments_ = null;
+        } else {
+          textSegments_ = null;
+          textSegmentsBuilder_ = null;
+        }
+        if (cellsBuilder_ == null) {
+          cells_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          cellsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_Table_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Table getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.ocr.v1.Ocr.Table.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Table build() {
+        yandex.cloud.api.ai.ocr.v1.Ocr.Table result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Table buildPartial() {
+        yandex.cloud.api.ai.ocr.v1.Ocr.Table result = new yandex.cloud.api.ai.ocr.v1.Ocr.Table(this);
+        int from_bitField0_ = bitField0_;
+        if (boundingBoxBuilder_ == null) {
+          result.boundingBox_ = boundingBox_;
+        } else {
+          result.boundingBox_ = boundingBoxBuilder_.build();
+        }
+        result.rowCount_ = rowCount_;
+        result.columnCount_ = columnCount_;
+        if (textSegmentsBuilder_ == null) {
+          result.textSegments_ = textSegments_;
+        } else {
+          result.textSegments_ = textSegmentsBuilder_.build();
+        }
+        if (cellsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            cells_ = java.util.Collections.unmodifiableList(cells_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.cells_ = cells_;
+        } else {
+          result.cells_ = cellsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.ocr.v1.Ocr.Table) {
+          return mergeFrom((yandex.cloud.api.ai.ocr.v1.Ocr.Table)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.ocr.v1.Ocr.Table other) {
+        if (other == yandex.cloud.api.ai.ocr.v1.Ocr.Table.getDefaultInstance()) return this;
+        if (other.hasBoundingBox()) {
+          mergeBoundingBox(other.getBoundingBox());
+        }
+        if (other.getRowCount() != 0L) {
+          setRowCount(other.getRowCount());
+        }
+        if (other.getColumnCount() != 0L) {
+          setColumnCount(other.getColumnCount());
+        }
+        if (other.hasTextSegments()) {
+          mergeTextSegments(other.getTextSegments());
+        }
+        if (cellsBuilder_ == null) {
+          if (!other.cells_.isEmpty()) {
+            if (cells_.isEmpty()) {
+              cells_ = other.cells_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureCellsIsMutable();
+              cells_.addAll(other.cells_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.cells_.isEmpty()) {
+            if (cellsBuilder_.isEmpty()) {
+              cellsBuilder_.dispose();
+              cellsBuilder_ = null;
+              cells_ = other.cells_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              cellsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCellsFieldBuilder() : null;
+            } else {
+              cellsBuilder_.addAllMessages(other.cells_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.ocr.v1.Ocr.Table parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.ocr.v1.Ocr.Table) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private yandex.cloud.api.ai.ocr.v1.Ocr.Polygon boundingBox_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.Polygon, yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.PolygonOrBuilder> boundingBoxBuilder_;
+      /**
+       * <pre>
+       * Area on the page where the table is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       * @return Whether the boundingBox field is set.
+       */
+      public boolean hasBoundingBox() {
+        return boundingBoxBuilder_ != null || boundingBox_ != null;
+      }
+      /**
+       * <pre>
+       * Area on the page where the table is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       * @return The boundingBox.
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Polygon getBoundingBox() {
+        if (boundingBoxBuilder_ == null) {
+          return boundingBox_ == null ? yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.getDefaultInstance() : boundingBox_;
+        } else {
+          return boundingBoxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Area on the page where the table is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       */
+      public Builder setBoundingBox(yandex.cloud.api.ai.ocr.v1.Ocr.Polygon value) {
+        if (boundingBoxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          boundingBox_ = value;
+          onChanged();
+        } else {
+          boundingBoxBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Area on the page where the table is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       */
+      public Builder setBoundingBox(
+          yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.Builder builderForValue) {
+        if (boundingBoxBuilder_ == null) {
+          boundingBox_ = builderForValue.build();
+          onChanged();
+        } else {
+          boundingBoxBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Area on the page where the table is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       */
+      public Builder mergeBoundingBox(yandex.cloud.api.ai.ocr.v1.Ocr.Polygon value) {
+        if (boundingBoxBuilder_ == null) {
+          if (boundingBox_ != null) {
+            boundingBox_ =
+              yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.newBuilder(boundingBox_).mergeFrom(value).buildPartial();
+          } else {
+            boundingBox_ = value;
+          }
+          onChanged();
+        } else {
+          boundingBoxBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Area on the page where the table is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       */
+      public Builder clearBoundingBox() {
+        if (boundingBoxBuilder_ == null) {
+          boundingBox_ = null;
+          onChanged();
+        } else {
+          boundingBox_ = null;
+          boundingBoxBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Area on the page where the table is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.Builder getBoundingBoxBuilder() {
+        
+        onChanged();
+        return getBoundingBoxFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Area on the page where the table is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.PolygonOrBuilder getBoundingBoxOrBuilder() {
+        if (boundingBoxBuilder_ != null) {
+          return boundingBoxBuilder_.getMessageOrBuilder();
+        } else {
+          return boundingBox_ == null ?
+              yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.getDefaultInstance() : boundingBox_;
+        }
+      }
+      /**
+       * <pre>
+       * Area on the page where the table is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.Polygon, yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.PolygonOrBuilder> 
+          getBoundingBoxFieldBuilder() {
+        if (boundingBoxBuilder_ == null) {
+          boundingBoxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.ocr.v1.Ocr.Polygon, yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.PolygonOrBuilder>(
+                  getBoundingBox(),
+                  getParentForChildren(),
+                  isClean());
+          boundingBox_ = null;
+        }
+        return boundingBoxBuilder_;
+      }
+
+      private long rowCount_ ;
+      /**
+       * <pre>
+       * Number of rows in table.
+       * </pre>
+       *
+       * <code>int64 row_count = 2;</code>
+       * @return The rowCount.
+       */
+      @java.lang.Override
+      public long getRowCount() {
+        return rowCount_;
+      }
+      /**
+       * <pre>
+       * Number of rows in table.
+       * </pre>
+       *
+       * <code>int64 row_count = 2;</code>
+       * @param value The rowCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRowCount(long value) {
+        
+        rowCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of rows in table.
+       * </pre>
+       *
+       * <code>int64 row_count = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRowCount() {
+        
+        rowCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long columnCount_ ;
+      /**
+       * <pre>
+       * Number of columns in table.
+       * </pre>
+       *
+       * <code>int64 column_count = 3;</code>
+       * @return The columnCount.
+       */
+      @java.lang.Override
+      public long getColumnCount() {
+        return columnCount_;
+      }
+      /**
+       * <pre>
+       * Number of columns in table.
+       * </pre>
+       *
+       * <code>int64 column_count = 3;</code>
+       * @param value The columnCount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setColumnCount(long value) {
+        
+        columnCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of columns in table.
+       * </pre>
+       *
+       * <code>int64 column_count = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearColumnCount() {
+        
+        columnCount_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments textSegments_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> textSegmentsBuilder_;
+      /**
+       * <pre>
+       * Table position from full_text string.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       * @return Whether the textSegments field is set.
+       */
+      public boolean hasTextSegments() {
+        return textSegmentsBuilder_ != null || textSegments_ != null;
+      }
+      /**
+       * <pre>
+       * Table position from full_text string.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       * @return The textSegments.
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments() {
+        if (textSegmentsBuilder_ == null) {
+          return textSegments_ == null ? yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.getDefaultInstance() : textSegments_;
+        } else {
+          return textSegmentsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Table position from full_text string.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder setTextSegments(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments value) {
+        if (textSegmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          textSegments_ = value;
+          onChanged();
+        } else {
+          textSegmentsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Table position from full_text string.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder setTextSegments(
+          yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder builderForValue) {
+        if (textSegmentsBuilder_ == null) {
+          textSegments_ = builderForValue.build();
+          onChanged();
+        } else {
+          textSegmentsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Table position from full_text string.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder mergeTextSegments(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments value) {
+        if (textSegmentsBuilder_ == null) {
+          if (textSegments_ != null) {
+            textSegments_ =
+              yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.newBuilder(textSegments_).mergeFrom(value).buildPartial();
+          } else {
+            textSegments_ = value;
+          }
+          onChanged();
+        } else {
+          textSegmentsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Table position from full_text string.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public Builder clearTextSegments() {
+        if (textSegmentsBuilder_ == null) {
+          textSegments_ = null;
+          onChanged();
+        } else {
+          textSegments_ = null;
+          textSegmentsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Table position from full_text string.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder getTextSegmentsBuilder() {
+        
+        onChanged();
+        return getTextSegmentsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Table position from full_text string.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder() {
+        if (textSegmentsBuilder_ != null) {
+          return textSegmentsBuilder_.getMessageOrBuilder();
+        } else {
+          return textSegments_ == null ?
+              yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.getDefaultInstance() : textSegments_;
+        }
+      }
+      /**
+       * <pre>
+       * Table position from full_text string.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> 
+          getTextSegmentsFieldBuilder() {
+        if (textSegmentsBuilder_ == null) {
+          textSegmentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder>(
+                  getTextSegments(),
+                  getParentForChildren(),
+                  isClean());
+          textSegments_ = null;
+        }
+        return textSegmentsBuilder_;
+      }
+
+      private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TableCell> cells_ =
+        java.util.Collections.emptyList();
+      private void ensureCellsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          cells_ = new java.util.ArrayList<yandex.cloud.api.ai.ocr.v1.Ocr.TableCell>(cells_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.TableCell, yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TableCellOrBuilder> cellsBuilder_;
+
+      /**
+       * <pre>
+       * Table cells.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TableCell> getCellsList() {
+        if (cellsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(cells_);
+        } else {
+          return cellsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Table cells.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       */
+      public int getCellsCount() {
+        if (cellsBuilder_ == null) {
+          return cells_.size();
+        } else {
+          return cellsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Table cells.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TableCell getCells(int index) {
+        if (cellsBuilder_ == null) {
+          return cells_.get(index);
+        } else {
+          return cellsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Table cells.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       */
+      public Builder setCells(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.TableCell value) {
+        if (cellsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCellsIsMutable();
+          cells_.set(index, value);
+          onChanged();
+        } else {
+          cellsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Table cells.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       */
+      public Builder setCells(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.Builder builderForValue) {
+        if (cellsBuilder_ == null) {
+          ensureCellsIsMutable();
+          cells_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          cellsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Table cells.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       */
+      public Builder addCells(yandex.cloud.api.ai.ocr.v1.Ocr.TableCell value) {
+        if (cellsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCellsIsMutable();
+          cells_.add(value);
+          onChanged();
+        } else {
+          cellsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Table cells.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       */
+      public Builder addCells(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.TableCell value) {
+        if (cellsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCellsIsMutable();
+          cells_.add(index, value);
+          onChanged();
+        } else {
+          cellsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Table cells.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       */
+      public Builder addCells(
+          yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.Builder builderForValue) {
+        if (cellsBuilder_ == null) {
+          ensureCellsIsMutable();
+          cells_.add(builderForValue.build());
+          onChanged();
+        } else {
+          cellsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Table cells.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       */
+      public Builder addCells(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.Builder builderForValue) {
+        if (cellsBuilder_ == null) {
+          ensureCellsIsMutable();
+          cells_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          cellsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Table cells.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       */
+      public Builder addAllCells(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TableCell> values) {
+        if (cellsBuilder_ == null) {
+          ensureCellsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, cells_);
+          onChanged();
+        } else {
+          cellsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Table cells.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       */
+      public Builder clearCells() {
+        if (cellsBuilder_ == null) {
+          cells_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          cellsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Table cells.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       */
+      public Builder removeCells(int index) {
+        if (cellsBuilder_ == null) {
+          ensureCellsIsMutable();
+          cells_.remove(index);
+          onChanged();
+        } else {
+          cellsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Table cells.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.Builder getCellsBuilder(
+          int index) {
+        return getCellsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Table cells.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TableCellOrBuilder getCellsOrBuilder(
+          int index) {
+        if (cellsBuilder_ == null) {
+          return cells_.get(index);  } else {
+          return cellsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Table cells.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TableCellOrBuilder> 
+           getCellsOrBuilderList() {
+        if (cellsBuilder_ != null) {
+          return cellsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(cells_);
+        }
+      }
+      /**
+       * <pre>
+       * Table cells.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.Builder addCellsBuilder() {
+        return getCellsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Table cells.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.Builder addCellsBuilder(
+          int index) {
+        return getCellsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Table cells.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.Builder> 
+           getCellsBuilderList() {
+        return getCellsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.TableCell, yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TableCellOrBuilder> 
+          getCellsFieldBuilder() {
+        if (cellsBuilder_ == null) {
+          cellsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.ai.ocr.v1.Ocr.TableCell, yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TableCellOrBuilder>(
+                  cells_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          cells_ = null;
+        }
+        return cellsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.ocr.v1.Table)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.ocr.v1.Table)
+    private static final yandex.cloud.api.ai.ocr.v1.Ocr.Table DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.ocr.v1.Ocr.Table();
+    }
+
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.Table getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Table>
+        PARSER = new com.google.protobuf.AbstractParser<Table>() {
+      @java.lang.Override
+      public Table parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Table(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Table> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Table> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.Table getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TableCellOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.ai.ocr.v1.TableCell)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Area on the page where the table cell is located.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+     * @return Whether the boundingBox field is set.
+     */
+    boolean hasBoundingBox();
+    /**
+     * <pre>
+     * Area on the page where the table cell is located.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+     * @return The boundingBox.
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.Polygon getBoundingBox();
+    /**
+     * <pre>
+     * Area on the page where the table cell is located.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.PolygonOrBuilder getBoundingBoxOrBuilder();
+
+    /**
+     * <pre>
+     * Row index.
+     * </pre>
+     *
+     * <code>int64 row_index = 2;</code>
+     * @return The rowIndex.
+     */
+    long getRowIndex();
+
+    /**
+     * <pre>
+     * Column index.
+     * </pre>
+     *
+     * <code>int64 column_index = 3;</code>
+     * @return The columnIndex.
+     */
+    long getColumnIndex();
+
+    /**
+     * <pre>
+     * Column span.
+     * </pre>
+     *
+     * <code>int64 column_span = 4;</code>
+     * @return The columnSpan.
+     */
+    long getColumnSpan();
+
+    /**
+     * <pre>
+     * Row span.
+     * </pre>
+     *
+     * <code>int64 row_span = 5;</code>
+     * @return The rowSpan.
+     */
+    long getRowSpan();
+
+    /**
+     * <pre>
+     * Text in cell.
+     * </pre>
+     *
+     * <code>string text = 6;</code>
+     * @return The text.
+     */
+    java.lang.String getText();
+    /**
+     * <pre>
+     * Text in cell.
+     * </pre>
+     *
+     * <code>string text = 6;</code>
+     * @return The bytes for text.
+     */
+    com.google.protobuf.ByteString
+        getTextBytes();
+
+    /**
+     * <pre>
+     * Table cell position from full_text string.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+     * @return Whether the textSegments field is set.
+     */
+    boolean hasTextSegments();
+    /**
+     * <pre>
+     * Table cell position from full_text string.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+     * @return The textSegments.
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments();
+    /**
+     * <pre>
+     * Table cell position from full_text string.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.ai.ocr.v1.TableCell}
+   */
+  public static final class TableCell extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.ai.ocr.v1.TableCell)
+      TableCellOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TableCell.newBuilder() to construct.
+    private TableCell(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TableCell() {
+      text_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TableCell();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TableCell(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.Builder subBuilder = null;
+              if (boundingBox_ != null) {
+                subBuilder = boundingBox_.toBuilder();
+              }
+              boundingBox_ = input.readMessage(yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(boundingBox_);
+                boundingBox_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 16: {
+
+              rowIndex_ = input.readInt64();
+              break;
+            }
+            case 24: {
+
+              columnIndex_ = input.readInt64();
+              break;
+            }
+            case 32: {
+
+              columnSpan_ = input.readInt64();
+              break;
+            }
+            case 40: {
+
+              rowSpan_ = input.readInt64();
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              text_ = s;
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder subBuilder = null;
+              if (textSegments_ != null) {
+                subBuilder = textSegments_.toBuilder();
+              }
+              textSegments_ = input.readMessage(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(textSegments_);
+                textSegments_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_TableCell_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_TableCell_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.class, yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.Builder.class);
+    }
+
+    public static final int BOUNDING_BOX_FIELD_NUMBER = 1;
+    private yandex.cloud.api.ai.ocr.v1.Ocr.Polygon boundingBox_;
+    /**
+     * <pre>
+     * Area on the page where the table cell is located.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+     * @return Whether the boundingBox field is set.
+     */
+    @java.lang.Override
+    public boolean hasBoundingBox() {
+      return boundingBox_ != null;
+    }
+    /**
+     * <pre>
+     * Area on the page where the table cell is located.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+     * @return The boundingBox.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.Polygon getBoundingBox() {
+      return boundingBox_ == null ? yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.getDefaultInstance() : boundingBox_;
+    }
+    /**
+     * <pre>
+     * Area on the page where the table cell is located.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.PolygonOrBuilder getBoundingBoxOrBuilder() {
+      return getBoundingBox();
+    }
+
+    public static final int ROW_INDEX_FIELD_NUMBER = 2;
+    private long rowIndex_;
+    /**
+     * <pre>
+     * Row index.
+     * </pre>
+     *
+     * <code>int64 row_index = 2;</code>
+     * @return The rowIndex.
+     */
+    @java.lang.Override
+    public long getRowIndex() {
+      return rowIndex_;
+    }
+
+    public static final int COLUMN_INDEX_FIELD_NUMBER = 3;
+    private long columnIndex_;
+    /**
+     * <pre>
+     * Column index.
+     * </pre>
+     *
+     * <code>int64 column_index = 3;</code>
+     * @return The columnIndex.
+     */
+    @java.lang.Override
+    public long getColumnIndex() {
+      return columnIndex_;
+    }
+
+    public static final int COLUMN_SPAN_FIELD_NUMBER = 4;
+    private long columnSpan_;
+    /**
+     * <pre>
+     * Column span.
+     * </pre>
+     *
+     * <code>int64 column_span = 4;</code>
+     * @return The columnSpan.
+     */
+    @java.lang.Override
+    public long getColumnSpan() {
+      return columnSpan_;
+    }
+
+    public static final int ROW_SPAN_FIELD_NUMBER = 5;
+    private long rowSpan_;
+    /**
+     * <pre>
+     * Row span.
+     * </pre>
+     *
+     * <code>int64 row_span = 5;</code>
+     * @return The rowSpan.
+     */
+    @java.lang.Override
+    public long getRowSpan() {
+      return rowSpan_;
+    }
+
+    public static final int TEXT_FIELD_NUMBER = 6;
+    private volatile java.lang.Object text_;
+    /**
+     * <pre>
+     * Text in cell.
+     * </pre>
+     *
+     * <code>string text = 6;</code>
+     * @return The text.
+     */
+    @java.lang.Override
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        text_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Text in cell.
+     * </pre>
+     *
+     * <code>string text = 6;</code>
+     * @return The bytes for text.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TEXT_SEGMENTS_FIELD_NUMBER = 7;
+    private yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments textSegments_;
+    /**
+     * <pre>
+     * Table cell position from full_text string.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+     * @return Whether the textSegments field is set.
+     */
+    @java.lang.Override
+    public boolean hasTextSegments() {
+      return textSegments_ != null;
+    }
+    /**
+     * <pre>
+     * Table cell position from full_text string.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+     * @return The textSegments.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments() {
+      return textSegments_ == null ? yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.getDefaultInstance() : textSegments_;
+    }
+    /**
+     * <pre>
+     * Table cell position from full_text string.
+     * </pre>
+     *
+     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder() {
+      return getTextSegments();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (boundingBox_ != null) {
+        output.writeMessage(1, getBoundingBox());
+      }
+      if (rowIndex_ != 0L) {
+        output.writeInt64(2, rowIndex_);
+      }
+      if (columnIndex_ != 0L) {
+        output.writeInt64(3, columnIndex_);
+      }
+      if (columnSpan_ != 0L) {
+        output.writeInt64(4, columnSpan_);
+      }
+      if (rowSpan_ != 0L) {
+        output.writeInt64(5, rowSpan_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, text_);
+      }
+      if (textSegments_ != null) {
+        output.writeMessage(7, getTextSegments());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (boundingBox_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getBoundingBox());
+      }
+      if (rowIndex_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, rowIndex_);
+      }
+      if (columnIndex_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, columnIndex_);
+      }
+      if (columnSpan_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, columnSpan_);
+      }
+      if (rowSpan_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, rowSpan_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, text_);
+      }
+      if (textSegments_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getTextSegments());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.ocr.v1.Ocr.TableCell)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.ocr.v1.Ocr.TableCell other = (yandex.cloud.api.ai.ocr.v1.Ocr.TableCell) obj;
+
+      if (hasBoundingBox() != other.hasBoundingBox()) return false;
+      if (hasBoundingBox()) {
+        if (!getBoundingBox()
+            .equals(other.getBoundingBox())) return false;
+      }
+      if (getRowIndex()
+          != other.getRowIndex()) return false;
+      if (getColumnIndex()
+          != other.getColumnIndex()) return false;
+      if (getColumnSpan()
+          != other.getColumnSpan()) return false;
+      if (getRowSpan()
+          != other.getRowSpan()) return false;
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (hasTextSegments() != other.hasTextSegments()) return false;
+      if (hasTextSegments()) {
+        if (!getTextSegments()
+            .equals(other.getTextSegments())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasBoundingBox()) {
+        hash = (37 * hash) + BOUNDING_BOX_FIELD_NUMBER;
+        hash = (53 * hash) + getBoundingBox().hashCode();
+      }
+      hash = (37 * hash) + ROW_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRowIndex());
+      hash = (37 * hash) + COLUMN_INDEX_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getColumnIndex());
+      hash = (37 * hash) + COLUMN_SPAN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getColumnSpan());
+      hash = (37 * hash) + ROW_SPAN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getRowSpan());
+      hash = (37 * hash) + TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getText().hashCode();
+      if (hasTextSegments()) {
+        hash = (37 * hash) + TEXT_SEGMENTS_FIELD_NUMBER;
+        hash = (53 * hash) + getTextSegments().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TableCell parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TableCell parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TableCell parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TableCell parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TableCell parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TableCell parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TableCell parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TableCell parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TableCell parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TableCell parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TableCell parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TableCell parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.ocr.v1.Ocr.TableCell prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.ai.ocr.v1.TableCell}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.ai.ocr.v1.TableCell)
+        yandex.cloud.api.ai.ocr.v1.Ocr.TableCellOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_TableCell_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_TableCell_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.class, yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (boundingBoxBuilder_ == null) {
+          boundingBox_ = null;
+        } else {
+          boundingBox_ = null;
+          boundingBoxBuilder_ = null;
+        }
+        rowIndex_ = 0L;
+
+        columnIndex_ = 0L;
+
+        columnSpan_ = 0L;
+
+        rowSpan_ = 0L;
+
+        text_ = "";
+
+        if (textSegmentsBuilder_ == null) {
+          textSegments_ = null;
+        } else {
+          textSegments_ = null;
+          textSegmentsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.ocr.v1.Ocr.internal_static_yandex_cloud_ai_ocr_v1_TableCell_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TableCell getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TableCell build() {
+        yandex.cloud.api.ai.ocr.v1.Ocr.TableCell result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TableCell buildPartial() {
+        yandex.cloud.api.ai.ocr.v1.Ocr.TableCell result = new yandex.cloud.api.ai.ocr.v1.Ocr.TableCell(this);
+        if (boundingBoxBuilder_ == null) {
+          result.boundingBox_ = boundingBox_;
+        } else {
+          result.boundingBox_ = boundingBoxBuilder_.build();
+        }
+        result.rowIndex_ = rowIndex_;
+        result.columnIndex_ = columnIndex_;
+        result.columnSpan_ = columnSpan_;
+        result.rowSpan_ = rowSpan_;
+        result.text_ = text_;
+        if (textSegmentsBuilder_ == null) {
+          result.textSegments_ = textSegments_;
+        } else {
+          result.textSegments_ = textSegmentsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.ocr.v1.Ocr.TableCell) {
+          return mergeFrom((yandex.cloud.api.ai.ocr.v1.Ocr.TableCell)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.ocr.v1.Ocr.TableCell other) {
+        if (other == yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.getDefaultInstance()) return this;
+        if (other.hasBoundingBox()) {
+          mergeBoundingBox(other.getBoundingBox());
+        }
+        if (other.getRowIndex() != 0L) {
+          setRowIndex(other.getRowIndex());
+        }
+        if (other.getColumnIndex() != 0L) {
+          setColumnIndex(other.getColumnIndex());
+        }
+        if (other.getColumnSpan() != 0L) {
+          setColumnSpan(other.getColumnSpan());
+        }
+        if (other.getRowSpan() != 0L) {
+          setRowSpan(other.getRowSpan());
+        }
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
+          onChanged();
+        }
+        if (other.hasTextSegments()) {
+          mergeTextSegments(other.getTextSegments());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.ocr.v1.Ocr.TableCell parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.ocr.v1.Ocr.TableCell) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private yandex.cloud.api.ai.ocr.v1.Ocr.Polygon boundingBox_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.Polygon, yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.PolygonOrBuilder> boundingBoxBuilder_;
+      /**
+       * <pre>
+       * Area on the page where the table cell is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       * @return Whether the boundingBox field is set.
+       */
+      public boolean hasBoundingBox() {
+        return boundingBoxBuilder_ != null || boundingBox_ != null;
+      }
+      /**
+       * <pre>
+       * Area on the page where the table cell is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       * @return The boundingBox.
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Polygon getBoundingBox() {
+        if (boundingBoxBuilder_ == null) {
+          return boundingBox_ == null ? yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.getDefaultInstance() : boundingBox_;
+        } else {
+          return boundingBoxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Area on the page where the table cell is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       */
+      public Builder setBoundingBox(yandex.cloud.api.ai.ocr.v1.Ocr.Polygon value) {
+        if (boundingBoxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          boundingBox_ = value;
+          onChanged();
+        } else {
+          boundingBoxBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Area on the page where the table cell is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       */
+      public Builder setBoundingBox(
+          yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.Builder builderForValue) {
+        if (boundingBoxBuilder_ == null) {
+          boundingBox_ = builderForValue.build();
+          onChanged();
+        } else {
+          boundingBoxBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Area on the page where the table cell is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       */
+      public Builder mergeBoundingBox(yandex.cloud.api.ai.ocr.v1.Ocr.Polygon value) {
+        if (boundingBoxBuilder_ == null) {
+          if (boundingBox_ != null) {
+            boundingBox_ =
+              yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.newBuilder(boundingBox_).mergeFrom(value).buildPartial();
+          } else {
+            boundingBox_ = value;
+          }
+          onChanged();
+        } else {
+          boundingBoxBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Area on the page where the table cell is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       */
+      public Builder clearBoundingBox() {
+        if (boundingBoxBuilder_ == null) {
+          boundingBox_ = null;
+          onChanged();
+        } else {
+          boundingBox_ = null;
+          boundingBoxBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Area on the page where the table cell is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.Builder getBoundingBoxBuilder() {
+        
+        onChanged();
+        return getBoundingBoxFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Area on the page where the table cell is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.PolygonOrBuilder getBoundingBoxOrBuilder() {
+        if (boundingBoxBuilder_ != null) {
+          return boundingBoxBuilder_.getMessageOrBuilder();
+        } else {
+          return boundingBox_ == null ?
+              yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.getDefaultInstance() : boundingBox_;
+        }
+      }
+      /**
+       * <pre>
+       * Area on the page where the table cell is located.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.Polygon bounding_box = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.Polygon, yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.PolygonOrBuilder> 
+          getBoundingBoxFieldBuilder() {
+        if (boundingBoxBuilder_ == null) {
+          boundingBoxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.ocr.v1.Ocr.Polygon, yandex.cloud.api.ai.ocr.v1.Ocr.Polygon.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.PolygonOrBuilder>(
+                  getBoundingBox(),
+                  getParentForChildren(),
+                  isClean());
+          boundingBox_ = null;
+        }
+        return boundingBoxBuilder_;
+      }
+
+      private long rowIndex_ ;
+      /**
+       * <pre>
+       * Row index.
+       * </pre>
+       *
+       * <code>int64 row_index = 2;</code>
+       * @return The rowIndex.
+       */
+      @java.lang.Override
+      public long getRowIndex() {
+        return rowIndex_;
+      }
+      /**
+       * <pre>
+       * Row index.
+       * </pre>
+       *
+       * <code>int64 row_index = 2;</code>
+       * @param value The rowIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRowIndex(long value) {
+        
+        rowIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Row index.
+       * </pre>
+       *
+       * <code>int64 row_index = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRowIndex() {
+        
+        rowIndex_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long columnIndex_ ;
+      /**
+       * <pre>
+       * Column index.
+       * </pre>
+       *
+       * <code>int64 column_index = 3;</code>
+       * @return The columnIndex.
+       */
+      @java.lang.Override
+      public long getColumnIndex() {
+        return columnIndex_;
+      }
+      /**
+       * <pre>
+       * Column index.
+       * </pre>
+       *
+       * <code>int64 column_index = 3;</code>
+       * @param value The columnIndex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setColumnIndex(long value) {
+        
+        columnIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Column index.
+       * </pre>
+       *
+       * <code>int64 column_index = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearColumnIndex() {
+        
+        columnIndex_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long columnSpan_ ;
+      /**
+       * <pre>
+       * Column span.
+       * </pre>
+       *
+       * <code>int64 column_span = 4;</code>
+       * @return The columnSpan.
+       */
+      @java.lang.Override
+      public long getColumnSpan() {
+        return columnSpan_;
+      }
+      /**
+       * <pre>
+       * Column span.
+       * </pre>
+       *
+       * <code>int64 column_span = 4;</code>
+       * @param value The columnSpan to set.
+       * @return This builder for chaining.
+       */
+      public Builder setColumnSpan(long value) {
+        
+        columnSpan_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Column span.
+       * </pre>
+       *
+       * <code>int64 column_span = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearColumnSpan() {
+        
+        columnSpan_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long rowSpan_ ;
+      /**
+       * <pre>
+       * Row span.
+       * </pre>
+       *
+       * <code>int64 row_span = 5;</code>
+       * @return The rowSpan.
+       */
+      @java.lang.Override
+      public long getRowSpan() {
+        return rowSpan_;
+      }
+      /**
+       * <pre>
+       * Row span.
+       * </pre>
+       *
+       * <code>int64 row_span = 5;</code>
+       * @param value The rowSpan to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRowSpan(long value) {
+        
+        rowSpan_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Row span.
+       * </pre>
+       *
+       * <code>int64 row_span = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRowSpan() {
+        
+        rowSpan_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object text_ = "";
+      /**
+       * <pre>
+       * Text in cell.
+       * </pre>
+       *
+       * <code>string text = 6;</code>
+       * @return The text.
+       */
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          text_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Text in cell.
+       * </pre>
+       *
+       * <code>string text = 6;</code>
+       * @return The bytes for text.
+       */
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Text in cell.
+       * </pre>
+       *
+       * <code>string text = 6;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Text in cell.
+       * </pre>
+       *
+       * <code>string text = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearText() {
+        
+        text_ = getDefaultInstance().getText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Text in cell.
+       * </pre>
+       *
+       * <code>string text = 6;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        text_ = value;
+        onChanged();
+        return this;
+      }
+
+      private yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments textSegments_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> textSegmentsBuilder_;
+      /**
+       * <pre>
+       * Table cell position from full_text string.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       * @return Whether the textSegments field is set.
+       */
+      public boolean hasTextSegments() {
+        return textSegmentsBuilder_ != null || textSegments_ != null;
+      }
+      /**
+       * <pre>
+       * Table cell position from full_text string.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       * @return The textSegments.
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments() {
+        if (textSegmentsBuilder_ == null) {
+          return textSegments_ == null ? yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.getDefaultInstance() : textSegments_;
+        } else {
+          return textSegmentsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Table cell position from full_text string.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       */
+      public Builder setTextSegments(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments value) {
+        if (textSegmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          textSegments_ = value;
+          onChanged();
+        } else {
+          textSegmentsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Table cell position from full_text string.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       */
+      public Builder setTextSegments(
+          yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder builderForValue) {
+        if (textSegmentsBuilder_ == null) {
+          textSegments_ = builderForValue.build();
+          onChanged();
+        } else {
+          textSegmentsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Table cell position from full_text string.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       */
+      public Builder mergeTextSegments(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments value) {
+        if (textSegmentsBuilder_ == null) {
+          if (textSegments_ != null) {
+            textSegments_ =
+              yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.newBuilder(textSegments_).mergeFrom(value).buildPartial();
+          } else {
+            textSegments_ = value;
+          }
+          onChanged();
+        } else {
+          textSegmentsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Table cell position from full_text string.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       */
+      public Builder clearTextSegments() {
+        if (textSegmentsBuilder_ == null) {
+          textSegments_ = null;
+          onChanged();
+        } else {
+          textSegments_ = null;
+          textSegmentsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Table cell position from full_text string.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder getTextSegmentsBuilder() {
+        
+        onChanged();
+        return getTextSegmentsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Table cell position from full_text string.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder() {
+        if (textSegmentsBuilder_ != null) {
+          return textSegmentsBuilder_.getMessageOrBuilder();
+        } else {
+          return textSegments_ == null ?
+              yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.getDefaultInstance() : textSegments_;
+        }
+      }
+      /**
+       * <pre>
+       * Table cell position from full_text string.
+       * </pre>
+       *
+       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> 
+          getTextSegmentsFieldBuilder() {
+        if (textSegmentsBuilder_ == null) {
+          textSegmentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder>(
+                  getTextSegments(),
+                  getParentForChildren(),
+                  isClean());
+          textSegments_ = null;
+        }
+        return textSegmentsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.ai.ocr.v1.TableCell)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.ai.ocr.v1.TableCell)
+    private static final yandex.cloud.api.ai.ocr.v1.Ocr.TableCell DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.ocr.v1.Ocr.TableCell();
+    }
+
+    public static yandex.cloud.api.ai.ocr.v1.Ocr.TableCell getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TableCell>
+        PARSER = new com.google.protobuf.AbstractParser<TableCell>() {
+      @java.lang.Override
+      public TableCell parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TableCell(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TableCell> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TableCell> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.TableCell getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_ai_ocr_v1_Polygon_descriptor;
   private static final 
@@ -8488,6 +14208,21 @@ public final class Ocr {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_ai_ocr_v1_Word_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_ocr_v1_TextSegments_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_ocr_v1_TextSegments_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_ocr_v1_Table_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_ocr_v1_Table_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_ai_ocr_v1_TableCell_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_ai_ocr_v1_TableCell_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -8500,25 +14235,44 @@ public final class Ocr {
       "\n yandex/cloud/ai/ocr/v1/ocr.proto\022\026yand" +
       "ex.cloud.ai.ocr.v1\";\n\007Polygon\0220\n\010vertice" +
       "s\030\001 \003(\0132\036.yandex.cloud.ai.ocr.v1.Vertex\"" +
-      "\036\n\006Vertex\022\t\n\001x\030\001 \001(\003\022\t\n\001y\030\002 \001(\003\"\220\001\n\016Text" +
+      "\036\n\006Vertex\022\t\n\001x\030\001 \001(\003\022\t\n\001y\030\002 \001(\003\"\322\001\n\016Text" +
       "Annotation\022\r\n\005width\030\001 \001(\003\022\016\n\006height\030\002 \001(" +
       "\003\022-\n\006blocks\030\003 \003(\0132\035.yandex.cloud.ai.ocr." +
       "v1.Block\0220\n\010entities\030\004 \003(\0132\036.yandex.clou" +
-      "d.ai.ocr.v1.Entity\"$\n\006Entity\022\014\n\004name\030\001 \001" +
-      "(\t\022\014\n\004text\030\002 \001(\t\"\331\001\n\005Block\0225\n\014bounding_b" +
-      "ox\030\001 \001(\0132\037.yandex.cloud.ai.ocr.v1.Polygo" +
-      "n\022+\n\005lines\030\002 \003(\0132\034.yandex.cloud.ai.ocr.v" +
-      "1.Line\022A\n\tlanguages\030\003 \003(\0132..yandex.cloud" +
-      ".ai.ocr.v1.Block.DetectedLanguage\032)\n\020Det" +
-      "ectedLanguage\022\025\n\rlanguage_code\030\001 \001(\t\"x\n\004" +
-      "Line\0225\n\014bounding_box\030\001 \001(\0132\037.yandex.clou" +
-      "d.ai.ocr.v1.Polygon\022\014\n\004text\030\002 \001(\t\022+\n\005wor" +
-      "ds\030\003 \003(\0132\034.yandex.cloud.ai.ocr.v1.Word\"a" +
-      "\n\004Word\0225\n\014bounding_box\030\001 \001(\0132\037.yandex.cl" +
-      "oud.ai.ocr.v1.Polygon\022\014\n\004text\030\002 \001(\t\022\024\n\014e" +
-      "ntity_index\030\003 \001(\003B\\\n\032yandex.cloud.api.ai" +
-      ".ocr.v1Z>github.com/yandex-cloud/go-genp" +
-      "roto/yandex/cloud/ai/ocr/v1;ocrb\006proto3"
+      "d.ai.ocr.v1.Entity\022-\n\006tables\030\005 \003(\0132\035.yan" +
+      "dex.cloud.ai.ocr.v1.Table\022\021\n\tfull_text\030\006" +
+      " \001(\t\"$\n\006Entity\022\014\n\004name\030\001 \001(\t\022\014\n\004text\030\002 \001" +
+      "(\t\"\226\002\n\005Block\0225\n\014bounding_box\030\001 \001(\0132\037.yan" +
+      "dex.cloud.ai.ocr.v1.Polygon\022+\n\005lines\030\002 \003" +
+      "(\0132\034.yandex.cloud.ai.ocr.v1.Line\022A\n\tlang" +
+      "uages\030\003 \003(\0132..yandex.cloud.ai.ocr.v1.Blo" +
+      "ck.DetectedLanguage\022;\n\rtext_segments\030\004 \003" +
+      "(\0132$.yandex.cloud.ai.ocr.v1.TextSegments" +
+      "\032)\n\020DetectedLanguage\022\025\n\rlanguage_code\030\001 " +
+      "\001(\t\"\265\001\n\004Line\0225\n\014bounding_box\030\001 \001(\0132\037.yan" +
+      "dex.cloud.ai.ocr.v1.Polygon\022\014\n\004text\030\002 \001(" +
+      "\t\022+\n\005words\030\003 \003(\0132\034.yandex.cloud.ai.ocr.v" +
+      "1.Word\022;\n\rtext_segments\030\004 \003(\0132$.yandex.c" +
+      "loud.ai.ocr.v1.TextSegments\"\236\001\n\004Word\0225\n\014" +
+      "bounding_box\030\001 \001(\0132\037.yandex.cloud.ai.ocr" +
+      ".v1.Polygon\022\014\n\004text\030\002 \001(\t\022\024\n\014entity_inde" +
+      "x\030\003 \001(\003\022;\n\rtext_segments\030\004 \003(\0132$.yandex." +
+      "cloud.ai.ocr.v1.TextSegments\"3\n\014TextSegm" +
+      "ents\022\023\n\013start_index\030\001 \001(\003\022\016\n\006length\030\002 \001(" +
+      "\003\"\326\001\n\005Table\0225\n\014bounding_box\030\001 \001(\0132\037.yand" +
+      "ex.cloud.ai.ocr.v1.Polygon\022\021\n\trow_count\030" +
+      "\002 \001(\003\022\024\n\014column_count\030\003 \001(\003\022;\n\rtext_segm" +
+      "ents\030\004 \001(\0132$.yandex.cloud.ai.ocr.v1.Text" +
+      "Segments\0220\n\005cells\030\005 \003(\0132!.yandex.cloud.a" +
+      "i.ocr.v1.TableCell\"\335\001\n\tTableCell\0225\n\014boun" +
+      "ding_box\030\001 \001(\0132\037.yandex.cloud.ai.ocr.v1." +
+      "Polygon\022\021\n\trow_index\030\002 \001(\003\022\024\n\014column_ind" +
+      "ex\030\003 \001(\003\022\023\n\013column_span\030\004 \001(\003\022\020\n\010row_spa" +
+      "n\030\005 \001(\003\022\014\n\004text\030\006 \001(\t\022;\n\rtext_segments\030\007" +
+      " \001(\0132$.yandex.cloud.ai.ocr.v1.TextSegmen" +
+      "tsB\\\n\032yandex.cloud.api.ai.ocr.v1Z>github" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/ai/ocr/v1;ocrb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -8541,7 +14295,7 @@ public final class Ocr {
     internal_static_yandex_cloud_ai_ocr_v1_TextAnnotation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_ocr_v1_TextAnnotation_descriptor,
-        new java.lang.String[] { "Width", "Height", "Blocks", "Entities", });
+        new java.lang.String[] { "Width", "Height", "Blocks", "Entities", "Tables", "FullText", });
     internal_static_yandex_cloud_ai_ocr_v1_Entity_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_ai_ocr_v1_Entity_fieldAccessorTable = new
@@ -8553,7 +14307,7 @@ public final class Ocr {
     internal_static_yandex_cloud_ai_ocr_v1_Block_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_ocr_v1_Block_descriptor,
-        new java.lang.String[] { "BoundingBox", "Lines", "Languages", });
+        new java.lang.String[] { "BoundingBox", "Lines", "Languages", "TextSegments", });
     internal_static_yandex_cloud_ai_ocr_v1_Block_DetectedLanguage_descriptor =
       internal_static_yandex_cloud_ai_ocr_v1_Block_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_ai_ocr_v1_Block_DetectedLanguage_fieldAccessorTable = new
@@ -8565,13 +14319,31 @@ public final class Ocr {
     internal_static_yandex_cloud_ai_ocr_v1_Line_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_ocr_v1_Line_descriptor,
-        new java.lang.String[] { "BoundingBox", "Text", "Words", });
+        new java.lang.String[] { "BoundingBox", "Text", "Words", "TextSegments", });
     internal_static_yandex_cloud_ai_ocr_v1_Word_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_ai_ocr_v1_Word_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_ocr_v1_Word_descriptor,
-        new java.lang.String[] { "BoundingBox", "Text", "EntityIndex", });
+        new java.lang.String[] { "BoundingBox", "Text", "EntityIndex", "TextSegments", });
+    internal_static_yandex_cloud_ai_ocr_v1_TextSegments_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_yandex_cloud_ai_ocr_v1_TextSegments_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_ocr_v1_TextSegments_descriptor,
+        new java.lang.String[] { "StartIndex", "Length", });
+    internal_static_yandex_cloud_ai_ocr_v1_Table_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_ai_ocr_v1_Table_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_ocr_v1_Table_descriptor,
+        new java.lang.String[] { "BoundingBox", "RowCount", "ColumnCount", "TextSegments", "Cells", });
+    internal_static_yandex_cloud_ai_ocr_v1_TableCell_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_yandex_cloud_ai_ocr_v1_TableCell_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_ai_ocr_v1_TableCell_descriptor,
+        new java.lang.String[] { "BoundingBox", "RowIndex", "ColumnIndex", "ColumnSpan", "RowSpan", "Text", "TextSegments", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

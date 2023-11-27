@@ -19,11 +19,21 @@ public final class FormatSchemaServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for clusterId.
      */
@@ -31,11 +41,21 @@ public final class FormatSchemaServiceOuterClass {
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * Format schema name.
+     * To get a format schema name, use the [FormatSchemaService.List] method.
+     * </pre>
+     *
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The formatSchemaName.
      */
     java.lang.String getFormatSchemaName();
     /**
+     * <pre>
+     * Format schema name.
+     * To get a format schema name, use the [FormatSchemaService.List] method.
+     * </pre>
+     *
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for formatSchemaName.
      */
@@ -136,6 +156,11 @@ public final class FormatSchemaServiceOuterClass {
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The clusterId.
      */
@@ -153,6 +178,11 @@ public final class FormatSchemaServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for clusterId.
      */
@@ -174,6 +204,11 @@ public final class FormatSchemaServiceOuterClass {
     public static final int FORMAT_SCHEMA_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object formatSchemaName_;
     /**
+     * <pre>
+     * Format schema name.
+     * To get a format schema name, use the [FormatSchemaService.List] method.
+     * </pre>
+     *
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The formatSchemaName.
      */
@@ -191,6 +226,11 @@ public final class FormatSchemaServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Format schema name.
+     * To get a format schema name, use the [FormatSchemaService.List] method.
+     * </pre>
+     *
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for formatSchemaName.
      */
@@ -530,6 +570,11 @@ public final class FormatSchemaServiceOuterClass {
 
       private java.lang.Object clusterId_ = "";
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The clusterId.
        */
@@ -546,6 +591,11 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for clusterId.
        */
@@ -563,6 +613,11 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The clusterId to set.
        * @return This builder for chaining.
@@ -578,6 +633,11 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -588,6 +648,11 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for clusterId to set.
        * @return This builder for chaining.
@@ -606,6 +671,11 @@ public final class FormatSchemaServiceOuterClass {
 
       private java.lang.Object formatSchemaName_ = "";
       /**
+       * <pre>
+       * Format schema name.
+       * To get a format schema name, use the [FormatSchemaService.List] method.
+       * </pre>
+       *
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The formatSchemaName.
        */
@@ -622,6 +692,11 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Format schema name.
+       * To get a format schema name, use the [FormatSchemaService.List] method.
+       * </pre>
+       *
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The bytes for formatSchemaName.
        */
@@ -639,6 +714,11 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Format schema name.
+       * To get a format schema name, use the [FormatSchemaService.List] method.
+       * </pre>
+       *
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The formatSchemaName to set.
        * @return This builder for chaining.
@@ -654,6 +734,11 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Format schema name.
+       * To get a format schema name, use the [FormatSchemaService.List] method.
+       * </pre>
+       *
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return This builder for chaining.
        */
@@ -664,6 +749,11 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Format schema name.
+       * To get a format schema name, use the [FormatSchemaService.List] method.
+       * </pre>
+       *
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The bytes for formatSchemaName to set.
        * @return This builder for chaining.
@@ -737,11 +827,21 @@ public final class FormatSchemaServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for clusterId.
      */
@@ -749,17 +849,29 @@ public final class FormatSchemaServiceOuterClass {
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of the results is larger than [page_size], the service returns [ListFormatSchemasResponse.next_page_token]. You can use it to get the next page of the results in subsequent requests of a format schema list.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the [ListFormatSchemasResponse.next_page_token] returned by the previous format schema list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the [ListFormatSchemasResponse.next_page_token] returned by the previous format schema list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
@@ -865,6 +977,11 @@ public final class FormatSchemaServiceOuterClass {
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The clusterId.
      */
@@ -882,6 +999,11 @@ public final class FormatSchemaServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for clusterId.
      */
@@ -903,6 +1025,10 @@ public final class FormatSchemaServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of the results is larger than [page_size], the service returns [ListFormatSchemasResponse.next_page_token]. You can use it to get the next page of the results in subsequent requests of a format schema list.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
@@ -914,6 +1040,10 @@ public final class FormatSchemaServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the [ListFormatSchemasResponse.next_page_token] returned by the previous format schema list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
@@ -931,6 +1061,10 @@ public final class FormatSchemaServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set [page_token] to the [ListFormatSchemasResponse.next_page_token] returned by the previous format schema list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
@@ -1288,6 +1422,11 @@ public final class FormatSchemaServiceOuterClass {
 
       private java.lang.Object clusterId_ = "";
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The clusterId.
        */
@@ -1304,6 +1443,11 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for clusterId.
        */
@@ -1321,6 +1465,11 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The clusterId to set.
        * @return This builder for chaining.
@@ -1336,6 +1485,11 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -1346,6 +1500,11 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for clusterId to set.
        * @return This builder for chaining.
@@ -1364,6 +1523,10 @@ public final class FormatSchemaServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of the results is larger than [page_size], the service returns [ListFormatSchemasResponse.next_page_token]. You can use it to get the next page of the results in subsequent requests of a format schema list.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return The pageSize.
        */
@@ -1372,6 +1535,10 @@ public final class FormatSchemaServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of the results is larger than [page_size], the service returns [ListFormatSchemasResponse.next_page_token]. You can use it to get the next page of the results in subsequent requests of a format schema list.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -1383,6 +1550,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of the results is larger than [page_size], the service returns [ListFormatSchemasResponse.next_page_token]. You can use it to get the next page of the results in subsequent requests of a format schema list.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
@@ -1395,6 +1566,10 @@ public final class FormatSchemaServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the [ListFormatSchemasResponse.next_page_token] returned by the previous format schema list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The pageToken.
        */
@@ -1411,6 +1586,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the [ListFormatSchemasResponse.next_page_token] returned by the previous format schema list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The bytes for pageToken.
        */
@@ -1428,6 +1607,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the [ListFormatSchemasResponse.next_page_token] returned by the previous format schema list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -1443,6 +1626,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the [ListFormatSchemasResponse.next_page_token] returned by the previous format schema list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
@@ -1453,6 +1640,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set [page_token] to the [ListFormatSchemasResponse.next_page_token] returned by the previous format schema list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -1526,35 +1717,63 @@ public final class FormatSchemaServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of format schemas.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
      */
     java.util.List<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema> 
         getFormatSchemasList();
     /**
+     * <pre>
+     * List of format schemas.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
      */
     yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema getFormatSchemas(int index);
     /**
+     * <pre>
+     * List of format schemas.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
      */
     int getFormatSchemasCount();
     /**
+     * <pre>
+     * List of format schemas.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaOrBuilder> 
         getFormatSchemasOrBuilderList();
     /**
+     * <pre>
+     * List of format schemas.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
      */
     yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaOrBuilder getFormatSchemasOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * This token allows you to get the next page of results when requesting the format schema list. If the number of the results is larger than [ListFormatSchemasRequest.page_size], use the [next_page_token] as the value for the [ListFormatSchemasRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * This token allows you to get the next page of results when requesting the format schema list. If the number of the results is larger than [ListFormatSchemasRequest.page_size], use the [next_page_token] as the value for the [ListFormatSchemasRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -1662,6 +1881,10 @@ public final class FormatSchemaServiceOuterClass {
     public static final int FORMAT_SCHEMAS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema> formatSchemas_;
     /**
+     * <pre>
+     * List of format schemas.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
      */
     @java.lang.Override
@@ -1669,6 +1892,10 @@ public final class FormatSchemaServiceOuterClass {
       return formatSchemas_;
     }
     /**
+     * <pre>
+     * List of format schemas.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
      */
     @java.lang.Override
@@ -1677,6 +1904,10 @@ public final class FormatSchemaServiceOuterClass {
       return formatSchemas_;
     }
     /**
+     * <pre>
+     * List of format schemas.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
      */
     @java.lang.Override
@@ -1684,6 +1915,10 @@ public final class FormatSchemaServiceOuterClass {
       return formatSchemas_.size();
     }
     /**
+     * <pre>
+     * List of format schemas.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
      */
     @java.lang.Override
@@ -1691,6 +1926,10 @@ public final class FormatSchemaServiceOuterClass {
       return formatSchemas_.get(index);
     }
     /**
+     * <pre>
+     * List of format schemas.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
      */
     @java.lang.Override
@@ -1702,6 +1941,10 @@ public final class FormatSchemaServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * This token allows you to get the next page of results when requesting the format schema list. If the number of the results is larger than [ListFormatSchemasRequest.page_size], use the [next_page_token] as the value for the [ListFormatSchemasRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The nextPageToken.
      */
@@ -1719,6 +1962,10 @@ public final class FormatSchemaServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * This token allows you to get the next page of results when requesting the format schema list. If the number of the results is larger than [ListFormatSchemasRequest.page_size], use the [next_page_token] as the value for the [ListFormatSchemasRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2;</code>
      * @return The bytes for nextPageToken.
      */
@@ -2109,6 +2356,10 @@ public final class FormatSchemaServiceOuterClass {
           yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema, yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema.Builder, yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaOrBuilder> formatSchemasBuilder_;
 
       /**
+       * <pre>
+       * List of format schemas.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
        */
       public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema> getFormatSchemasList() {
@@ -2119,6 +2370,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of format schemas.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
        */
       public int getFormatSchemasCount() {
@@ -2129,6 +2384,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of format schemas.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
        */
       public yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema getFormatSchemas(int index) {
@@ -2139,6 +2398,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of format schemas.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
        */
       public Builder setFormatSchemas(
@@ -2156,6 +2419,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of format schemas.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
        */
       public Builder setFormatSchemas(
@@ -2170,6 +2437,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of format schemas.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
        */
       public Builder addFormatSchemas(yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema value) {
@@ -2186,6 +2457,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of format schemas.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
        */
       public Builder addFormatSchemas(
@@ -2203,6 +2478,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of format schemas.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
        */
       public Builder addFormatSchemas(
@@ -2217,6 +2496,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of format schemas.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
        */
       public Builder addFormatSchemas(
@@ -2231,6 +2514,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of format schemas.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
        */
       public Builder addAllFormatSchemas(
@@ -2246,6 +2533,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of format schemas.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
        */
       public Builder clearFormatSchemas() {
@@ -2259,6 +2550,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of format schemas.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
        */
       public Builder removeFormatSchemas(int index) {
@@ -2272,6 +2567,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of format schemas.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
        */
       public yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema.Builder getFormatSchemasBuilder(
@@ -2279,6 +2578,10 @@ public final class FormatSchemaServiceOuterClass {
         return getFormatSchemasFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of format schemas.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
        */
       public yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaOrBuilder getFormatSchemasOrBuilder(
@@ -2289,6 +2592,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of format schemas.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaOrBuilder> 
@@ -2300,6 +2607,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of format schemas.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
        */
       public yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema.Builder addFormatSchemasBuilder() {
@@ -2307,6 +2618,10 @@ public final class FormatSchemaServiceOuterClass {
             yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of format schemas.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
        */
       public yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema.Builder addFormatSchemasBuilder(
@@ -2315,6 +2630,10 @@ public final class FormatSchemaServiceOuterClass {
             index, yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of format schemas.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.mdb.clickhouse.v1.FormatSchema format_schemas = 1;</code>
        */
       public java.util.List<yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchema.Builder> 
@@ -2338,6 +2657,10 @@ public final class FormatSchemaServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * This token allows you to get the next page of results when requesting the format schema list. If the number of the results is larger than [ListFormatSchemasRequest.page_size], use the [next_page_token] as the value for the [ListFormatSchemasRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The nextPageToken.
        */
@@ -2354,6 +2677,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * This token allows you to get the next page of results when requesting the format schema list. If the number of the results is larger than [ListFormatSchemasRequest.page_size], use the [next_page_token] as the value for the [ListFormatSchemasRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return The bytes for nextPageToken.
        */
@@ -2371,6 +2698,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * This token allows you to get the next page of results when requesting the format schema list. If the number of the results is larger than [ListFormatSchemasRequest.page_size], use the [next_page_token] as the value for the [ListFormatSchemasRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -2386,6 +2717,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * This token allows you to get the next page of results when requesting the format schema list. If the number of the results is larger than [ListFormatSchemasRequest.page_size], use the [next_page_token] as the value for the [ListFormatSchemasRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @return This builder for chaining.
        */
@@ -2396,6 +2731,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * This token allows you to get the next page of results when requesting the format schema list. If the number of the results is larger than [ListFormatSchemasRequest.page_size], use the [next_page_token] as the value for the [ListFormatSchemasRequest.page_token] parameter in the next request. Each subsequent request will have its own [next_page_token] to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2;</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.
@@ -2469,11 +2808,21 @@ public final class FormatSchemaServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for clusterId.
      */
@@ -2481,11 +2830,19 @@ public final class FormatSchemaServiceOuterClass {
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * Format schema name.
+     * </pre>
+     *
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The formatSchemaName.
      */
     java.lang.String getFormatSchemaName();
     /**
+     * <pre>
+     * Format schema name.
+     * </pre>
+     *
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for formatSchemaName.
      */
@@ -2493,22 +2850,42 @@ public final class FormatSchemaServiceOuterClass {
         getFormatSchemaNameBytes();
 
     /**
+     * <pre>
+     * Schema type. Possible values are the following:
+     * * FORMAT_SCHEMA_TYPE_PROTOBUF - [Protobuf](https://protobuf.dev/) data format (including [ProtobufSingle](https://clickhouse.com/docs/en/interfaces/formats#protobufsingle)).
+     * * FORMAT_SCHEMA_TYPE_CAPNPROTO - [Cap'n Proto](https://capnproto.org/) data format.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3 [(.yandex.cloud.required) = true];</code>
      * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
     /**
+     * <pre>
+     * Schema type. Possible values are the following:
+     * * FORMAT_SCHEMA_TYPE_PROTOBUF - [Protobuf](https://protobuf.dev/) data format (including [ProtobufSingle](https://clickhouse.com/docs/en/interfaces/formats#protobufsingle)).
+     * * FORMAT_SCHEMA_TYPE_CAPNPROTO - [Cap'n Proto](https://capnproto.org/) data format.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3 [(.yandex.cloud.required) = true];</code>
      * @return The type.
      */
     yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaType getType();
 
     /**
+     * <pre>
+     * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
      * @return The uri.
      */
     java.lang.String getUri();
     /**
+     * <pre>
+     * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for uri.
      */
@@ -2623,6 +3000,11 @@ public final class FormatSchemaServiceOuterClass {
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The clusterId.
      */
@@ -2640,6 +3022,11 @@ public final class FormatSchemaServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for clusterId.
      */
@@ -2661,6 +3048,10 @@ public final class FormatSchemaServiceOuterClass {
     public static final int FORMAT_SCHEMA_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object formatSchemaName_;
     /**
+     * <pre>
+     * Format schema name.
+     * </pre>
+     *
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The formatSchemaName.
      */
@@ -2678,6 +3069,10 @@ public final class FormatSchemaServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Format schema name.
+     * </pre>
+     *
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for formatSchemaName.
      */
@@ -2699,6 +3094,12 @@ public final class FormatSchemaServiceOuterClass {
     public static final int TYPE_FIELD_NUMBER = 3;
     private int type_;
     /**
+     * <pre>
+     * Schema type. Possible values are the following:
+     * * FORMAT_SCHEMA_TYPE_PROTOBUF - [Protobuf](https://protobuf.dev/) data format (including [ProtobufSingle](https://clickhouse.com/docs/en/interfaces/formats#protobufsingle)).
+     * * FORMAT_SCHEMA_TYPE_CAPNPROTO - [Cap'n Proto](https://capnproto.org/) data format.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3 [(.yandex.cloud.required) = true];</code>
      * @return The enum numeric value on the wire for type.
      */
@@ -2706,6 +3107,12 @@ public final class FormatSchemaServiceOuterClass {
       return type_;
     }
     /**
+     * <pre>
+     * Schema type. Possible values are the following:
+     * * FORMAT_SCHEMA_TYPE_PROTOBUF - [Protobuf](https://protobuf.dev/) data format (including [ProtobufSingle](https://clickhouse.com/docs/en/interfaces/formats#protobufsingle)).
+     * * FORMAT_SCHEMA_TYPE_CAPNPROTO - [Cap'n Proto](https://capnproto.org/) data format.
+     * </pre>
+     *
      * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3 [(.yandex.cloud.required) = true];</code>
      * @return The type.
      */
@@ -2718,6 +3125,10 @@ public final class FormatSchemaServiceOuterClass {
     public static final int URI_FIELD_NUMBER = 4;
     private volatile java.lang.Object uri_;
     /**
+     * <pre>
+     * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
      * @return The uri.
      */
@@ -2735,6 +3146,10 @@ public final class FormatSchemaServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for uri.
      */
@@ -3107,6 +3522,11 @@ public final class FormatSchemaServiceOuterClass {
 
       private java.lang.Object clusterId_ = "";
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The clusterId.
        */
@@ -3123,6 +3543,11 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for clusterId.
        */
@@ -3140,6 +3565,11 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The clusterId to set.
        * @return This builder for chaining.
@@ -3155,6 +3585,11 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -3165,6 +3600,11 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for clusterId to set.
        * @return This builder for chaining.
@@ -3183,6 +3623,10 @@ public final class FormatSchemaServiceOuterClass {
 
       private java.lang.Object formatSchemaName_ = "";
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The formatSchemaName.
        */
@@ -3199,6 +3643,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The bytes for formatSchemaName.
        */
@@ -3216,6 +3664,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The formatSchemaName to set.
        * @return This builder for chaining.
@@ -3231,6 +3683,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return This builder for chaining.
        */
@@ -3241,6 +3697,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The bytes for formatSchemaName to set.
        * @return This builder for chaining.
@@ -3259,6 +3719,12 @@ public final class FormatSchemaServiceOuterClass {
 
       private int type_ = 0;
       /**
+       * <pre>
+       * Schema type. Possible values are the following:
+       * * FORMAT_SCHEMA_TYPE_PROTOBUF - [Protobuf](https://protobuf.dev/) data format (including [ProtobufSingle](https://clickhouse.com/docs/en/interfaces/formats#protobufsingle)).
+       * * FORMAT_SCHEMA_TYPE_CAPNPROTO - [Cap'n Proto](https://capnproto.org/) data format.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3 [(.yandex.cloud.required) = true];</code>
        * @return The enum numeric value on the wire for type.
        */
@@ -3266,6 +3732,12 @@ public final class FormatSchemaServiceOuterClass {
         return type_;
       }
       /**
+       * <pre>
+       * Schema type. Possible values are the following:
+       * * FORMAT_SCHEMA_TYPE_PROTOBUF - [Protobuf](https://protobuf.dev/) data format (including [ProtobufSingle](https://clickhouse.com/docs/en/interfaces/formats#protobufsingle)).
+       * * FORMAT_SCHEMA_TYPE_CAPNPROTO - [Cap'n Proto](https://capnproto.org/) data format.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3 [(.yandex.cloud.required) = true];</code>
        * @param value The enum numeric value on the wire for type to set.
        * @return This builder for chaining.
@@ -3277,6 +3749,12 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Schema type. Possible values are the following:
+       * * FORMAT_SCHEMA_TYPE_PROTOBUF - [Protobuf](https://protobuf.dev/) data format (including [ProtobufSingle](https://clickhouse.com/docs/en/interfaces/formats#protobufsingle)).
+       * * FORMAT_SCHEMA_TYPE_CAPNPROTO - [Cap'n Proto](https://capnproto.org/) data format.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3 [(.yandex.cloud.required) = true];</code>
        * @return The type.
        */
@@ -3287,6 +3765,12 @@ public final class FormatSchemaServiceOuterClass {
         return result == null ? yandex.cloud.api.mdb.clickhouse.v1.FormatSchemaOuterClass.FormatSchemaType.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Schema type. Possible values are the following:
+       * * FORMAT_SCHEMA_TYPE_PROTOBUF - [Protobuf](https://protobuf.dev/) data format (including [ProtobufSingle](https://clickhouse.com/docs/en/interfaces/formats#protobufsingle)).
+       * * FORMAT_SCHEMA_TYPE_CAPNPROTO - [Cap'n Proto](https://capnproto.org/) data format.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3 [(.yandex.cloud.required) = true];</code>
        * @param value The type to set.
        * @return This builder for chaining.
@@ -3301,6 +3785,12 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Schema type. Possible values are the following:
+       * * FORMAT_SCHEMA_TYPE_PROTOBUF - [Protobuf](https://protobuf.dev/) data format (including [ProtobufSingle](https://clickhouse.com/docs/en/interfaces/formats#protobufsingle)).
+       * * FORMAT_SCHEMA_TYPE_CAPNPROTO - [Cap'n Proto](https://capnproto.org/) data format.
+       * </pre>
+       *
        * <code>.yandex.cloud.mdb.clickhouse.v1.FormatSchemaType type = 3 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -3313,6 +3803,10 @@ public final class FormatSchemaServiceOuterClass {
 
       private java.lang.Object uri_ = "";
       /**
+       * <pre>
+       * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
        * @return The uri.
        */
@@ -3329,6 +3823,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for uri.
        */
@@ -3346,6 +3844,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
        * @param value The uri to set.
        * @return This builder for chaining.
@@ -3361,6 +3863,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -3371,6 +3877,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for uri to set.
        * @return This builder for chaining.
@@ -3444,11 +3954,19 @@ public final class FormatSchemaServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      * @return The bytes for clusterId.
      */
@@ -3456,11 +3974,19 @@ public final class FormatSchemaServiceOuterClass {
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * Format schema name.
+     * </pre>
+     *
      * <code>string format_schema_name = 2;</code>
      * @return The formatSchemaName.
      */
     java.lang.String getFormatSchemaName();
     /**
+     * <pre>
+     * Format schema name.
+     * </pre>
+     *
      * <code>string format_schema_name = 2;</code>
      * @return The bytes for formatSchemaName.
      */
@@ -3561,6 +4087,10 @@ public final class FormatSchemaServiceOuterClass {
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      * @return The clusterId.
      */
@@ -3578,6 +4108,10 @@ public final class FormatSchemaServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      * @return The bytes for clusterId.
      */
@@ -3599,6 +4133,10 @@ public final class FormatSchemaServiceOuterClass {
     public static final int FORMAT_SCHEMA_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object formatSchemaName_;
     /**
+     * <pre>
+     * Format schema name.
+     * </pre>
+     *
      * <code>string format_schema_name = 2;</code>
      * @return The formatSchemaName.
      */
@@ -3616,6 +4154,10 @@ public final class FormatSchemaServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Format schema name.
+     * </pre>
+     *
      * <code>string format_schema_name = 2;</code>
      * @return The bytes for formatSchemaName.
      */
@@ -3955,6 +4497,10 @@ public final class FormatSchemaServiceOuterClass {
 
       private java.lang.Object clusterId_ = "";
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        * @return The clusterId.
        */
@@ -3971,6 +4517,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        * @return The bytes for clusterId.
        */
@@ -3988,6 +4538,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        * @param value The clusterId to set.
        * @return This builder for chaining.
@@ -4003,6 +4557,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -4013,6 +4571,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        * @param value The bytes for clusterId to set.
        * @return This builder for chaining.
@@ -4031,6 +4593,10 @@ public final class FormatSchemaServiceOuterClass {
 
       private java.lang.Object formatSchemaName_ = "";
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string format_schema_name = 2;</code>
        * @return The formatSchemaName.
        */
@@ -4047,6 +4613,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string format_schema_name = 2;</code>
        * @return The bytes for formatSchemaName.
        */
@@ -4064,6 +4634,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string format_schema_name = 2;</code>
        * @param value The formatSchemaName to set.
        * @return This builder for chaining.
@@ -4079,6 +4653,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string format_schema_name = 2;</code>
        * @return This builder for chaining.
        */
@@ -4089,6 +4667,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string format_schema_name = 2;</code>
        * @param value The bytes for formatSchemaName to set.
        * @return This builder for chaining.
@@ -4162,11 +4744,21 @@ public final class FormatSchemaServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for clusterId.
      */
@@ -4174,11 +4766,21 @@ public final class FormatSchemaServiceOuterClass {
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * Format schema name.
+     * To get a format schema name, use the [FormatSchemaService.List] method.
+     * </pre>
+     *
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The formatSchemaName.
      */
     java.lang.String getFormatSchemaName();
     /**
+     * <pre>
+     * Format schema name.
+     * To get a format schema name, use the [FormatSchemaService.List] method.
+     * </pre>
+     *
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for formatSchemaName.
      */
@@ -4201,11 +4803,19 @@ public final class FormatSchemaServiceOuterClass {
     com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder();
 
     /**
+     * <pre>
+     * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4;</code>
      * @return The uri.
      */
     java.lang.String getUri();
     /**
+     * <pre>
+     * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4;</code>
      * @return The bytes for uri.
      */
@@ -4326,6 +4936,11 @@ public final class FormatSchemaServiceOuterClass {
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The clusterId.
      */
@@ -4343,6 +4958,11 @@ public final class FormatSchemaServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for clusterId.
      */
@@ -4364,6 +4984,11 @@ public final class FormatSchemaServiceOuterClass {
     public static final int FORMAT_SCHEMA_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object formatSchemaName_;
     /**
+     * <pre>
+     * Format schema name.
+     * To get a format schema name, use the [FormatSchemaService.List] method.
+     * </pre>
+     *
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The formatSchemaName.
      */
@@ -4381,6 +5006,11 @@ public final class FormatSchemaServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Format schema name.
+     * To get a format schema name, use the [FormatSchemaService.List] method.
+     * </pre>
+     *
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for formatSchemaName.
      */
@@ -4428,6 +5058,10 @@ public final class FormatSchemaServiceOuterClass {
     public static final int URI_FIELD_NUMBER = 4;
     private volatile java.lang.Object uri_;
     /**
+     * <pre>
+     * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4;</code>
      * @return The uri.
      */
@@ -4445,6 +5079,10 @@ public final class FormatSchemaServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+     * </pre>
+     *
      * <code>string uri = 4;</code>
      * @return The bytes for uri.
      */
@@ -4831,6 +5469,11 @@ public final class FormatSchemaServiceOuterClass {
 
       private java.lang.Object clusterId_ = "";
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The clusterId.
        */
@@ -4847,6 +5490,11 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for clusterId.
        */
@@ -4864,6 +5512,11 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The clusterId to set.
        * @return This builder for chaining.
@@ -4879,6 +5532,11 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -4889,6 +5547,11 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for clusterId to set.
        * @return This builder for chaining.
@@ -4907,6 +5570,11 @@ public final class FormatSchemaServiceOuterClass {
 
       private java.lang.Object formatSchemaName_ = "";
       /**
+       * <pre>
+       * Format schema name.
+       * To get a format schema name, use the [FormatSchemaService.List] method.
+       * </pre>
+       *
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The formatSchemaName.
        */
@@ -4923,6 +5591,11 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Format schema name.
+       * To get a format schema name, use the [FormatSchemaService.List] method.
+       * </pre>
+       *
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The bytes for formatSchemaName.
        */
@@ -4940,6 +5613,11 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Format schema name.
+       * To get a format schema name, use the [FormatSchemaService.List] method.
+       * </pre>
+       *
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The formatSchemaName to set.
        * @return This builder for chaining.
@@ -4955,6 +5633,11 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Format schema name.
+       * To get a format schema name, use the [FormatSchemaService.List] method.
+       * </pre>
+       *
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return This builder for chaining.
        */
@@ -4965,6 +5648,11 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Format schema name.
+       * To get a format schema name, use the [FormatSchemaService.List] method.
+       * </pre>
+       *
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The bytes for formatSchemaName to set.
        * @return This builder for chaining.
@@ -5102,6 +5790,10 @@ public final class FormatSchemaServiceOuterClass {
 
       private java.lang.Object uri_ = "";
       /**
+       * <pre>
+       * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4;</code>
        * @return The uri.
        */
@@ -5118,6 +5810,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4;</code>
        * @return The bytes for uri.
        */
@@ -5135,6 +5831,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4;</code>
        * @param value The uri to set.
        * @return This builder for chaining.
@@ -5150,6 +5850,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4;</code>
        * @return This builder for chaining.
        */
@@ -5160,6 +5864,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * [Link to the file](https://cloud.yandex.com/en/docs/managed-clickhouse/operations/s3-access#get-link-to-object) of a format schema in Yandex Object Storage. Managed Service for ClickHouse works only with format schemas imported to Object Storage.
+       * </pre>
+       *
        * <code>string uri = 4;</code>
        * @param value The bytes for uri to set.
        * @return This builder for chaining.
@@ -5233,11 +5941,19 @@ public final class FormatSchemaServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      * @return The bytes for clusterId.
      */
@@ -5245,11 +5961,19 @@ public final class FormatSchemaServiceOuterClass {
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * Format schema name.
+     * </pre>
+     *
      * <code>string format_schema_name = 2;</code>
      * @return The formatSchemaName.
      */
     java.lang.String getFormatSchemaName();
     /**
+     * <pre>
+     * Format schema name.
+     * </pre>
+     *
      * <code>string format_schema_name = 2;</code>
      * @return The bytes for formatSchemaName.
      */
@@ -5350,6 +6074,10 @@ public final class FormatSchemaServiceOuterClass {
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      * @return The clusterId.
      */
@@ -5367,6 +6095,10 @@ public final class FormatSchemaServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      * @return The bytes for clusterId.
      */
@@ -5388,6 +6120,10 @@ public final class FormatSchemaServiceOuterClass {
     public static final int FORMAT_SCHEMA_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object formatSchemaName_;
     /**
+     * <pre>
+     * Format schema name.
+     * </pre>
+     *
      * <code>string format_schema_name = 2;</code>
      * @return The formatSchemaName.
      */
@@ -5405,6 +6141,10 @@ public final class FormatSchemaServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Format schema name.
+     * </pre>
+     *
      * <code>string format_schema_name = 2;</code>
      * @return The bytes for formatSchemaName.
      */
@@ -5744,6 +6484,10 @@ public final class FormatSchemaServiceOuterClass {
 
       private java.lang.Object clusterId_ = "";
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        * @return The clusterId.
        */
@@ -5760,6 +6504,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        * @return The bytes for clusterId.
        */
@@ -5777,6 +6525,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        * @param value The clusterId to set.
        * @return This builder for chaining.
@@ -5792,6 +6544,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -5802,6 +6558,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        * @param value The bytes for clusterId to set.
        * @return This builder for chaining.
@@ -5820,6 +6580,10 @@ public final class FormatSchemaServiceOuterClass {
 
       private java.lang.Object formatSchemaName_ = "";
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string format_schema_name = 2;</code>
        * @return The formatSchemaName.
        */
@@ -5836,6 +6600,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string format_schema_name = 2;</code>
        * @return The bytes for formatSchemaName.
        */
@@ -5853,6 +6621,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string format_schema_name = 2;</code>
        * @param value The formatSchemaName to set.
        * @return This builder for chaining.
@@ -5868,6 +6640,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string format_schema_name = 2;</code>
        * @return This builder for chaining.
        */
@@ -5878,6 +6654,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string format_schema_name = 2;</code>
        * @param value The bytes for formatSchemaName to set.
        * @return This builder for chaining.
@@ -5951,11 +6731,21 @@ public final class FormatSchemaServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for clusterId.
      */
@@ -5963,11 +6753,21 @@ public final class FormatSchemaServiceOuterClass {
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * Format schema name.
+     * To get a format schema name, use the [FormatSchemaService.List] method.
+     * </pre>
+     *
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The formatSchemaName.
      */
     java.lang.String getFormatSchemaName();
     /**
+     * <pre>
+     * Format schema name.
+     * To get a format schema name, use the [FormatSchemaService.List] method.
+     * </pre>
+     *
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for formatSchemaName.
      */
@@ -6068,6 +6868,11 @@ public final class FormatSchemaServiceOuterClass {
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The clusterId.
      */
@@ -6085,6 +6890,11 @@ public final class FormatSchemaServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+     * </pre>
+     *
      * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for clusterId.
      */
@@ -6106,6 +6916,11 @@ public final class FormatSchemaServiceOuterClass {
     public static final int FORMAT_SCHEMA_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object formatSchemaName_;
     /**
+     * <pre>
+     * Format schema name.
+     * To get a format schema name, use the [FormatSchemaService.List] method.
+     * </pre>
+     *
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The formatSchemaName.
      */
@@ -6123,6 +6938,11 @@ public final class FormatSchemaServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Format schema name.
+     * To get a format schema name, use the [FormatSchemaService.List] method.
+     * </pre>
+     *
      * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for formatSchemaName.
      */
@@ -6462,6 +7282,11 @@ public final class FormatSchemaServiceOuterClass {
 
       private java.lang.Object clusterId_ = "";
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The clusterId.
        */
@@ -6478,6 +7303,11 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for clusterId.
        */
@@ -6495,6 +7325,11 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The clusterId to set.
        * @return This builder for chaining.
@@ -6510,6 +7345,11 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -6520,6 +7360,11 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * To get a ClickHouse cluster ID, use the [ClusterService.List] method.
+       * </pre>
+       *
        * <code>string cluster_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for clusterId to set.
        * @return This builder for chaining.
@@ -6538,6 +7383,11 @@ public final class FormatSchemaServiceOuterClass {
 
       private java.lang.Object formatSchemaName_ = "";
       /**
+       * <pre>
+       * Format schema name.
+       * To get a format schema name, use the [FormatSchemaService.List] method.
+       * </pre>
+       *
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The formatSchemaName.
        */
@@ -6554,6 +7404,11 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Format schema name.
+       * To get a format schema name, use the [FormatSchemaService.List] method.
+       * </pre>
+       *
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The bytes for formatSchemaName.
        */
@@ -6571,6 +7426,11 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Format schema name.
+       * To get a format schema name, use the [FormatSchemaService.List] method.
+       * </pre>
+       *
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The formatSchemaName to set.
        * @return This builder for chaining.
@@ -6586,6 +7446,11 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Format schema name.
+       * To get a format schema name, use the [FormatSchemaService.List] method.
+       * </pre>
+       *
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return This builder for chaining.
        */
@@ -6596,6 +7461,11 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Format schema name.
+       * To get a format schema name, use the [FormatSchemaService.List] method.
+       * </pre>
+       *
        * <code>string format_schema_name = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The bytes for formatSchemaName to set.
        * @return This builder for chaining.
@@ -6669,11 +7539,19 @@ public final class FormatSchemaServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      * @return The clusterId.
      */
     java.lang.String getClusterId();
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      * @return The bytes for clusterId.
      */
@@ -6681,11 +7559,19 @@ public final class FormatSchemaServiceOuterClass {
         getClusterIdBytes();
 
     /**
+     * <pre>
+     * Format schema name.
+     * </pre>
+     *
      * <code>string format_schema_name = 2;</code>
      * @return The formatSchemaName.
      */
     java.lang.String getFormatSchemaName();
     /**
+     * <pre>
+     * Format schema name.
+     * </pre>
+     *
      * <code>string format_schema_name = 2;</code>
      * @return The bytes for formatSchemaName.
      */
@@ -6786,6 +7672,10 @@ public final class FormatSchemaServiceOuterClass {
     public static final int CLUSTER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object clusterId_;
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      * @return The clusterId.
      */
@@ -6803,6 +7693,10 @@ public final class FormatSchemaServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ClickHouse cluster ID.
+     * </pre>
+     *
      * <code>string cluster_id = 1;</code>
      * @return The bytes for clusterId.
      */
@@ -6824,6 +7718,10 @@ public final class FormatSchemaServiceOuterClass {
     public static final int FORMAT_SCHEMA_NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object formatSchemaName_;
     /**
+     * <pre>
+     * Format schema name.
+     * </pre>
+     *
      * <code>string format_schema_name = 2;</code>
      * @return The formatSchemaName.
      */
@@ -6841,6 +7739,10 @@ public final class FormatSchemaServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Format schema name.
+     * </pre>
+     *
      * <code>string format_schema_name = 2;</code>
      * @return The bytes for formatSchemaName.
      */
@@ -7180,6 +8082,10 @@ public final class FormatSchemaServiceOuterClass {
 
       private java.lang.Object clusterId_ = "";
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        * @return The clusterId.
        */
@@ -7196,6 +8102,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        * @return The bytes for clusterId.
        */
@@ -7213,6 +8123,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        * @param value The clusterId to set.
        * @return This builder for chaining.
@@ -7228,6 +8142,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -7238,6 +8156,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ClickHouse cluster ID.
+       * </pre>
+       *
        * <code>string cluster_id = 1;</code>
        * @param value The bytes for clusterId to set.
        * @return This builder for chaining.
@@ -7256,6 +8178,10 @@ public final class FormatSchemaServiceOuterClass {
 
       private java.lang.Object formatSchemaName_ = "";
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string format_schema_name = 2;</code>
        * @return The formatSchemaName.
        */
@@ -7272,6 +8198,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string format_schema_name = 2;</code>
        * @return The bytes for formatSchemaName.
        */
@@ -7289,6 +8219,10 @@ public final class FormatSchemaServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string format_schema_name = 2;</code>
        * @param value The formatSchemaName to set.
        * @return This builder for chaining.
@@ -7304,6 +8238,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string format_schema_name = 2;</code>
        * @return This builder for chaining.
        */
@@ -7314,6 +8252,10 @@ public final class FormatSchemaServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Format schema name.
+       * </pre>
+       *
        * <code>string format_schema_name = 2;</code>
        * @param value The bytes for formatSchemaName to set.
        * @return This builder for chaining.

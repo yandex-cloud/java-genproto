@@ -8743,6 +8743,808 @@ public final class Tts {
 
   }
 
+  public interface DurationHintOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.tts.v3.DurationHint)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Type of duration constraint.
+     * </pre>
+     *
+     * <code>.speechkit.tts.v3.DurationHint.DurationHintPolicy policy = 1;</code>
+     * @return The enum numeric value on the wire for policy.
+     */
+    int getPolicyValue();
+    /**
+     * <pre>
+     * Type of duration constraint.
+     * </pre>
+     *
+     * <code>.speechkit.tts.v3.DurationHint.DurationHintPolicy policy = 1;</code>
+     * @return The policy.
+     */
+    yandex.cloud.api.ai.tts.v3.Tts.DurationHint.DurationHintPolicy getPolicy();
+
+    /**
+     * <pre>
+     * Constraint on audio duration in milliseconds.
+     * </pre>
+     *
+     * <code>int64 duration_ms = 2;</code>
+     * @return The durationMs.
+     */
+    long getDurationMs();
+  }
+  /**
+   * Protobuf type {@code speechkit.tts.v3.DurationHint}
+   */
+  public static final class DurationHint extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.tts.v3.DurationHint)
+      DurationHintOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DurationHint.newBuilder() to construct.
+    private DurationHint(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DurationHint() {
+      policy_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DurationHint();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DurationHint(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+
+              policy_ = rawValue;
+              break;
+            }
+            case 16: {
+
+              durationMs_ = input.readInt64();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.tts.v3.Tts.internal_static_speechkit_tts_v3_DurationHint_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.tts.v3.Tts.internal_static_speechkit_tts_v3_DurationHint_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.tts.v3.Tts.DurationHint.class, yandex.cloud.api.ai.tts.v3.Tts.DurationHint.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code speechkit.tts.v3.DurationHint.DurationHintPolicy}
+     */
+    public enum DurationHintPolicy
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>DURATION_HINT_POLICY_UNSPECIFIED = 0;</code>
+       */
+      DURATION_HINT_POLICY_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Limit audio duration to exact value.
+       * </pre>
+       *
+       * <code>EXACT_DURATION = 1;</code>
+       */
+      EXACT_DURATION(1),
+      /**
+       * <pre>
+       * Limit the minimum audio duration.
+       * </pre>
+       *
+       * <code>MIN_DURATION = 2;</code>
+       */
+      MIN_DURATION(2),
+      /**
+       * <pre>
+       * Limit the maximum audio duration.
+       * </pre>
+       *
+       * <code>MAX_DURATION = 3;</code>
+       */
+      MAX_DURATION(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>DURATION_HINT_POLICY_UNSPECIFIED = 0;</code>
+       */
+      public static final int DURATION_HINT_POLICY_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Limit audio duration to exact value.
+       * </pre>
+       *
+       * <code>EXACT_DURATION = 1;</code>
+       */
+      public static final int EXACT_DURATION_VALUE = 1;
+      /**
+       * <pre>
+       * Limit the minimum audio duration.
+       * </pre>
+       *
+       * <code>MIN_DURATION = 2;</code>
+       */
+      public static final int MIN_DURATION_VALUE = 2;
+      /**
+       * <pre>
+       * Limit the maximum audio duration.
+       * </pre>
+       *
+       * <code>MAX_DURATION = 3;</code>
+       */
+      public static final int MAX_DURATION_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static DurationHintPolicy valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static DurationHintPolicy forNumber(int value) {
+        switch (value) {
+          case 0: return DURATION_HINT_POLICY_UNSPECIFIED;
+          case 1: return EXACT_DURATION;
+          case 2: return MIN_DURATION;
+          case 3: return MAX_DURATION;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<DurationHintPolicy>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          DurationHintPolicy> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<DurationHintPolicy>() {
+              public DurationHintPolicy findValueByNumber(int number) {
+                return DurationHintPolicy.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tts.v3.Tts.DurationHint.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final DurationHintPolicy[] VALUES = values();
+
+      public static DurationHintPolicy valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private DurationHintPolicy(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:speechkit.tts.v3.DurationHint.DurationHintPolicy)
+    }
+
+    public static final int POLICY_FIELD_NUMBER = 1;
+    private int policy_;
+    /**
+     * <pre>
+     * Type of duration constraint.
+     * </pre>
+     *
+     * <code>.speechkit.tts.v3.DurationHint.DurationHintPolicy policy = 1;</code>
+     * @return The enum numeric value on the wire for policy.
+     */
+    @java.lang.Override public int getPolicyValue() {
+      return policy_;
+    }
+    /**
+     * <pre>
+     * Type of duration constraint.
+     * </pre>
+     *
+     * <code>.speechkit.tts.v3.DurationHint.DurationHintPolicy policy = 1;</code>
+     * @return The policy.
+     */
+    @java.lang.Override public yandex.cloud.api.ai.tts.v3.Tts.DurationHint.DurationHintPolicy getPolicy() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.ai.tts.v3.Tts.DurationHint.DurationHintPolicy result = yandex.cloud.api.ai.tts.v3.Tts.DurationHint.DurationHintPolicy.valueOf(policy_);
+      return result == null ? yandex.cloud.api.ai.tts.v3.Tts.DurationHint.DurationHintPolicy.UNRECOGNIZED : result;
+    }
+
+    public static final int DURATION_MS_FIELD_NUMBER = 2;
+    private long durationMs_;
+    /**
+     * <pre>
+     * Constraint on audio duration in milliseconds.
+     * </pre>
+     *
+     * <code>int64 duration_ms = 2;</code>
+     * @return The durationMs.
+     */
+    @java.lang.Override
+    public long getDurationMs() {
+      return durationMs_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (policy_ != yandex.cloud.api.ai.tts.v3.Tts.DurationHint.DurationHintPolicy.DURATION_HINT_POLICY_UNSPECIFIED.getNumber()) {
+        output.writeEnum(1, policy_);
+      }
+      if (durationMs_ != 0L) {
+        output.writeInt64(2, durationMs_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (policy_ != yandex.cloud.api.ai.tts.v3.Tts.DurationHint.DurationHintPolicy.DURATION_HINT_POLICY_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, policy_);
+      }
+      if (durationMs_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, durationMs_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.tts.v3.Tts.DurationHint)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.tts.v3.Tts.DurationHint other = (yandex.cloud.api.ai.tts.v3.Tts.DurationHint) obj;
+
+      if (policy_ != other.policy_) return false;
+      if (getDurationMs()
+          != other.getDurationMs()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + POLICY_FIELD_NUMBER;
+      hash = (53 * hash) + policy_;
+      hash = (37 * hash) + DURATION_MS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getDurationMs());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.tts.v3.Tts.DurationHint parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tts.v3.Tts.DurationHint parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tts.v3.Tts.DurationHint parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tts.v3.Tts.DurationHint parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tts.v3.Tts.DurationHint parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tts.v3.Tts.DurationHint parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tts.v3.Tts.DurationHint parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tts.v3.Tts.DurationHint parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tts.v3.Tts.DurationHint parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tts.v3.Tts.DurationHint parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tts.v3.Tts.DurationHint parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tts.v3.Tts.DurationHint parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.tts.v3.Tts.DurationHint prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code speechkit.tts.v3.DurationHint}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.tts.v3.DurationHint)
+        yandex.cloud.api.ai.tts.v3.Tts.DurationHintOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tts.v3.Tts.internal_static_speechkit_tts_v3_DurationHint_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.tts.v3.Tts.internal_static_speechkit_tts_v3_DurationHint_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.tts.v3.Tts.DurationHint.class, yandex.cloud.api.ai.tts.v3.Tts.DurationHint.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.tts.v3.Tts.DurationHint.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        policy_ = 0;
+
+        durationMs_ = 0L;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.tts.v3.Tts.internal_static_speechkit_tts_v3_DurationHint_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tts.v3.Tts.DurationHint getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.tts.v3.Tts.DurationHint.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tts.v3.Tts.DurationHint build() {
+        yandex.cloud.api.ai.tts.v3.Tts.DurationHint result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tts.v3.Tts.DurationHint buildPartial() {
+        yandex.cloud.api.ai.tts.v3.Tts.DurationHint result = new yandex.cloud.api.ai.tts.v3.Tts.DurationHint(this);
+        result.policy_ = policy_;
+        result.durationMs_ = durationMs_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.tts.v3.Tts.DurationHint) {
+          return mergeFrom((yandex.cloud.api.ai.tts.v3.Tts.DurationHint)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.tts.v3.Tts.DurationHint other) {
+        if (other == yandex.cloud.api.ai.tts.v3.Tts.DurationHint.getDefaultInstance()) return this;
+        if (other.policy_ != 0) {
+          setPolicyValue(other.getPolicyValue());
+        }
+        if (other.getDurationMs() != 0L) {
+          setDurationMs(other.getDurationMs());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.tts.v3.Tts.DurationHint parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.tts.v3.Tts.DurationHint) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int policy_ = 0;
+      /**
+       * <pre>
+       * Type of duration constraint.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.DurationHint.DurationHintPolicy policy = 1;</code>
+       * @return The enum numeric value on the wire for policy.
+       */
+      @java.lang.Override public int getPolicyValue() {
+        return policy_;
+      }
+      /**
+       * <pre>
+       * Type of duration constraint.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.DurationHint.DurationHintPolicy policy = 1;</code>
+       * @param value The enum numeric value on the wire for policy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPolicyValue(int value) {
+        
+        policy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of duration constraint.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.DurationHint.DurationHintPolicy policy = 1;</code>
+       * @return The policy.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tts.v3.Tts.DurationHint.DurationHintPolicy getPolicy() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.ai.tts.v3.Tts.DurationHint.DurationHintPolicy result = yandex.cloud.api.ai.tts.v3.Tts.DurationHint.DurationHintPolicy.valueOf(policy_);
+        return result == null ? yandex.cloud.api.ai.tts.v3.Tts.DurationHint.DurationHintPolicy.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Type of duration constraint.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.DurationHint.DurationHintPolicy policy = 1;</code>
+       * @param value The policy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPolicy(yandex.cloud.api.ai.tts.v3.Tts.DurationHint.DurationHintPolicy value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        policy_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Type of duration constraint.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.DurationHint.DurationHintPolicy policy = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPolicy() {
+        
+        policy_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long durationMs_ ;
+      /**
+       * <pre>
+       * Constraint on audio duration in milliseconds.
+       * </pre>
+       *
+       * <code>int64 duration_ms = 2;</code>
+       * @return The durationMs.
+       */
+      @java.lang.Override
+      public long getDurationMs() {
+        return durationMs_;
+      }
+      /**
+       * <pre>
+       * Constraint on audio duration in milliseconds.
+       * </pre>
+       *
+       * <code>int64 duration_ms = 2;</code>
+       * @param value The durationMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDurationMs(long value) {
+        
+        durationMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Constraint on audio duration in milliseconds.
+       * </pre>
+       *
+       * <code>int64 duration_ms = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDurationMs() {
+        
+        durationMs_ = 0L;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.tts.v3.DurationHint)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.tts.v3.DurationHint)
+    private static final yandex.cloud.api.ai.tts.v3.Tts.DurationHint DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.tts.v3.Tts.DurationHint();
+    }
+
+    public static yandex.cloud.api.ai.tts.v3.Tts.DurationHint getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DurationHint>
+        PARSER = new com.google.protobuf.AbstractParser<DurationHint>() {
+      @java.lang.Override
+      public DurationHint parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DurationHint(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DurationHint> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DurationHint> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.tts.v3.Tts.DurationHint getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface HintsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:speechkit.tts.v3.Hints)
       com.google.protobuf.MessageOrBuilder {
@@ -8893,6 +9695,33 @@ public final class Tts {
      */
     double getPitchShift();
 
+    /**
+     * <pre>
+     * Hint to limit both minimum and maximum audio duration.
+     * </pre>
+     *
+     * <code>.speechkit.tts.v3.DurationHint duration = 7;</code>
+     * @return Whether the duration field is set.
+     */
+    boolean hasDuration();
+    /**
+     * <pre>
+     * Hint to limit both minimum and maximum audio duration.
+     * </pre>
+     *
+     * <code>.speechkit.tts.v3.DurationHint duration = 7;</code>
+     * @return The duration.
+     */
+    yandex.cloud.api.ai.tts.v3.Tts.DurationHint getDuration();
+    /**
+     * <pre>
+     * Hint to limit both minimum and maximum audio duration.
+     * </pre>
+     *
+     * <code>.speechkit.tts.v3.DurationHint duration = 7;</code>
+     */
+    yandex.cloud.api.ai.tts.v3.Tts.DurationHintOrBuilder getDurationOrBuilder();
+
     public yandex.cloud.api.ai.tts.v3.Tts.Hints.HintCase getHintCase();
   }
   /**
@@ -8981,6 +9810,20 @@ public final class Tts {
               hintCase_ = 6;
               break;
             }
+            case 58: {
+              yandex.cloud.api.ai.tts.v3.Tts.DurationHint.Builder subBuilder = null;
+              if (hintCase_ == 7) {
+                subBuilder = ((yandex.cloud.api.ai.tts.v3.Tts.DurationHint) hint_).toBuilder();
+              }
+              hint_ =
+                  input.readMessage(yandex.cloud.api.ai.tts.v3.Tts.DurationHint.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.ai.tts.v3.Tts.DurationHint) hint_);
+                hint_ = subBuilder.buildPartial();
+              }
+              hintCase_ = 7;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -9024,6 +9867,7 @@ public final class Tts {
       VOLUME(4),
       ROLE(5),
       PITCH_SHIFT(6),
+      DURATION(7),
       HINT_NOT_SET(0);
       private final int value;
       private HintCase(int value) {
@@ -9047,6 +9891,7 @@ public final class Tts {
           case 4: return VOLUME;
           case 5: return ROLE;
           case 6: return PITCH_SHIFT;
+          case 7: return DURATION;
           case 0: return HINT_NOT_SET;
           default: return null;
         }
@@ -9324,6 +10169,49 @@ public final class Tts {
       return 0D;
     }
 
+    public static final int DURATION_FIELD_NUMBER = 7;
+    /**
+     * <pre>
+     * Hint to limit both minimum and maximum audio duration.
+     * </pre>
+     *
+     * <code>.speechkit.tts.v3.DurationHint duration = 7;</code>
+     * @return Whether the duration field is set.
+     */
+    @java.lang.Override
+    public boolean hasDuration() {
+      return hintCase_ == 7;
+    }
+    /**
+     * <pre>
+     * Hint to limit both minimum and maximum audio duration.
+     * </pre>
+     *
+     * <code>.speechkit.tts.v3.DurationHint duration = 7;</code>
+     * @return The duration.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tts.v3.Tts.DurationHint getDuration() {
+      if (hintCase_ == 7) {
+         return (yandex.cloud.api.ai.tts.v3.Tts.DurationHint) hint_;
+      }
+      return yandex.cloud.api.ai.tts.v3.Tts.DurationHint.getDefaultInstance();
+    }
+    /**
+     * <pre>
+     * Hint to limit both minimum and maximum audio duration.
+     * </pre>
+     *
+     * <code>.speechkit.tts.v3.DurationHint duration = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tts.v3.Tts.DurationHintOrBuilder getDurationOrBuilder() {
+      if (hintCase_ == 7) {
+         return (yandex.cloud.api.ai.tts.v3.Tts.DurationHint) hint_;
+      }
+      return yandex.cloud.api.ai.tts.v3.Tts.DurationHint.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9359,6 +10247,9 @@ public final class Tts {
         output.writeDouble(
             6, (double)((java.lang.Double) hint_));
       }
+      if (hintCase_ == 7) {
+        output.writeMessage(7, (yandex.cloud.api.ai.tts.v3.Tts.DurationHint) hint_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -9392,6 +10283,10 @@ public final class Tts {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(
               6, (double)((java.lang.Double) hint_));
+      }
+      if (hintCase_ == 7) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, (yandex.cloud.api.ai.tts.v3.Tts.DurationHint) hint_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9437,6 +10332,10 @@ public final class Tts {
               != java.lang.Double.doubleToLongBits(
                   other.getPitchShift())) return false;
           break;
+        case 7:
+          if (!getDuration()
+              .equals(other.getDuration())) return false;
+          break;
         case 0:
         default:
       }
@@ -9478,6 +10377,10 @@ public final class Tts {
           hash = (37 * hash) + PITCH_SHIFT_FIELD_NUMBER;
           hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
               java.lang.Double.doubleToLongBits(getPitchShift()));
+          break;
+        case 7:
+          hash = (37 * hash) + DURATION_FIELD_NUMBER;
+          hash = (53 * hash) + getDuration().hashCode();
           break;
         case 0:
         default:
@@ -9665,6 +10568,13 @@ public final class Tts {
         if (hintCase_ == 6) {
           result.hint_ = hint_;
         }
+        if (hintCase_ == 7) {
+          if (durationBuilder_ == null) {
+            result.hint_ = hint_;
+          } else {
+            result.hint_ = durationBuilder_.build();
+          }
+        }
         result.hintCase_ = hintCase_;
         onBuilt();
         return result;
@@ -9741,6 +10651,10 @@ public final class Tts {
           }
           case PITCH_SHIFT: {
             setPitchShift(other.getPitchShift());
+            break;
+          }
+          case DURATION: {
+            mergeDuration(other.getDuration());
             break;
           }
           case HINT_NOT_SET: {
@@ -10387,6 +11301,183 @@ public final class Tts {
           onChanged();
         }
         return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tts.v3.Tts.DurationHint, yandex.cloud.api.ai.tts.v3.Tts.DurationHint.Builder, yandex.cloud.api.ai.tts.v3.Tts.DurationHintOrBuilder> durationBuilder_;
+      /**
+       * <pre>
+       * Hint to limit both minimum and maximum audio duration.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.DurationHint duration = 7;</code>
+       * @return Whether the duration field is set.
+       */
+      @java.lang.Override
+      public boolean hasDuration() {
+        return hintCase_ == 7;
+      }
+      /**
+       * <pre>
+       * Hint to limit both minimum and maximum audio duration.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.DurationHint duration = 7;</code>
+       * @return The duration.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tts.v3.Tts.DurationHint getDuration() {
+        if (durationBuilder_ == null) {
+          if (hintCase_ == 7) {
+            return (yandex.cloud.api.ai.tts.v3.Tts.DurationHint) hint_;
+          }
+          return yandex.cloud.api.ai.tts.v3.Tts.DurationHint.getDefaultInstance();
+        } else {
+          if (hintCase_ == 7) {
+            return durationBuilder_.getMessage();
+          }
+          return yandex.cloud.api.ai.tts.v3.Tts.DurationHint.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Hint to limit both minimum and maximum audio duration.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.DurationHint duration = 7;</code>
+       */
+      public Builder setDuration(yandex.cloud.api.ai.tts.v3.Tts.DurationHint value) {
+        if (durationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          hint_ = value;
+          onChanged();
+        } else {
+          durationBuilder_.setMessage(value);
+        }
+        hintCase_ = 7;
+        return this;
+      }
+      /**
+       * <pre>
+       * Hint to limit both minimum and maximum audio duration.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.DurationHint duration = 7;</code>
+       */
+      public Builder setDuration(
+          yandex.cloud.api.ai.tts.v3.Tts.DurationHint.Builder builderForValue) {
+        if (durationBuilder_ == null) {
+          hint_ = builderForValue.build();
+          onChanged();
+        } else {
+          durationBuilder_.setMessage(builderForValue.build());
+        }
+        hintCase_ = 7;
+        return this;
+      }
+      /**
+       * <pre>
+       * Hint to limit both minimum and maximum audio duration.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.DurationHint duration = 7;</code>
+       */
+      public Builder mergeDuration(yandex.cloud.api.ai.tts.v3.Tts.DurationHint value) {
+        if (durationBuilder_ == null) {
+          if (hintCase_ == 7 &&
+              hint_ != yandex.cloud.api.ai.tts.v3.Tts.DurationHint.getDefaultInstance()) {
+            hint_ = yandex.cloud.api.ai.tts.v3.Tts.DurationHint.newBuilder((yandex.cloud.api.ai.tts.v3.Tts.DurationHint) hint_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            hint_ = value;
+          }
+          onChanged();
+        } else {
+          if (hintCase_ == 7) {
+            durationBuilder_.mergeFrom(value);
+          }
+          durationBuilder_.setMessage(value);
+        }
+        hintCase_ = 7;
+        return this;
+      }
+      /**
+       * <pre>
+       * Hint to limit both minimum and maximum audio duration.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.DurationHint duration = 7;</code>
+       */
+      public Builder clearDuration() {
+        if (durationBuilder_ == null) {
+          if (hintCase_ == 7) {
+            hintCase_ = 0;
+            hint_ = null;
+            onChanged();
+          }
+        } else {
+          if (hintCase_ == 7) {
+            hintCase_ = 0;
+            hint_ = null;
+          }
+          durationBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Hint to limit both minimum and maximum audio duration.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.DurationHint duration = 7;</code>
+       */
+      public yandex.cloud.api.ai.tts.v3.Tts.DurationHint.Builder getDurationBuilder() {
+        return getDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Hint to limit both minimum and maximum audio duration.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.DurationHint duration = 7;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.ai.tts.v3.Tts.DurationHintOrBuilder getDurationOrBuilder() {
+        if ((hintCase_ == 7) && (durationBuilder_ != null)) {
+          return durationBuilder_.getMessageOrBuilder();
+        } else {
+          if (hintCase_ == 7) {
+            return (yandex.cloud.api.ai.tts.v3.Tts.DurationHint) hint_;
+          }
+          return yandex.cloud.api.ai.tts.v3.Tts.DurationHint.getDefaultInstance();
+        }
+      }
+      /**
+       * <pre>
+       * Hint to limit both minimum and maximum audio duration.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.DurationHint duration = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tts.v3.Tts.DurationHint, yandex.cloud.api.ai.tts.v3.Tts.DurationHint.Builder, yandex.cloud.api.ai.tts.v3.Tts.DurationHintOrBuilder> 
+          getDurationFieldBuilder() {
+        if (durationBuilder_ == null) {
+          if (!(hintCase_ == 7)) {
+            hint_ = yandex.cloud.api.ai.tts.v3.Tts.DurationHint.getDefaultInstance();
+          }
+          durationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tts.v3.Tts.DurationHint, yandex.cloud.api.ai.tts.v3.Tts.DurationHint.Builder, yandex.cloud.api.ai.tts.v3.Tts.DurationHintOrBuilder>(
+                  (yandex.cloud.api.ai.tts.v3.Tts.DurationHint) hint_,
+                  getParentForChildren(),
+                  isClean());
+          hint_ = null;
+        }
+        hintCase_ = 7;
+        onChanged();;
+        return durationBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12836,6 +13927,11 @@ public final class Tts {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_speechkit_tts_v3_TextTemplate_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_tts_v3_DurationHint_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_tts_v3_DurationHint_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_speechkit_tts_v3_Hints_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -12884,25 +13980,32 @@ public final class Tts {
       "riable\"\032\n\nAudioChunk\022\014\n\004data\030\001 \001(\014\"X\n\014Te" +
       "xtTemplate\022\025\n\rtext_template\030\001 \001(\t\0221\n\tvar" +
       "iables\030\002 \003(\0132\036.speechkit.tts.v3.TextVari" +
-      "able\"\245\001\n\005Hints\022\017\n\005voice\030\001 \001(\tH\000\0229\n\016audio" +
-      "_template\030\002 \001(\0132\037.speechkit.tts.v3.Audio" +
-      "TemplateH\000\022\017\n\005speed\030\003 \001(\001H\000\022\020\n\006volume\030\004 " +
-      "\001(\001H\000\022\016\n\004role\030\005 \001(\tH\000\022\025\n\013pitch_shift\030\006 \001" +
-      "(\001H\000B\006\n\004Hint\"\314\003\n\031UtteranceSynthesisReque" +
-      "st\022\r\n\005model\030\001 \001(\t\022\016\n\004text\030\002 \001(\tH\000\0227\n\rtex" +
-      "t_template\030\003 \001(\0132\036.speechkit.tts.v3.Text" +
-      "TemplateH\000\022&\n\005hints\030\004 \003(\0132\027.speechkit.tt" +
-      "s.v3.Hints\022?\n\021output_audio_spec\030\005 \001(\0132$." +
-      "speechkit.tts.v3.AudioFormatOptions\022j\n\033l" +
-      "oudness_normalization_type\030\006 \001(\0162E.speec" +
-      "hkit.tts.v3.UtteranceSynthesisRequest.Lo" +
-      "udnessNormalizationType\022\023\n\013unsafe_mode\030\007" +
-      " \001(\010\"`\n\031LoudnessNormalizationType\022+\n\'LOU" +
-      "DNESS_NORMALIZATION_TYPE_UNSPECIFIED\020\000\022\014" +
-      "\n\010MAX_PEAK\020\001\022\010\n\004LUFS\020\002B\013\n\tUtteranceB\\\n\032y" +
-      "andex.cloud.api.ai.tts.v3Z>github.com/ya" +
-      "ndex-cloud/go-genproto/yandex/cloud/ai/t" +
-      "ts/v3;ttsb\006proto3"
+      "able\"\332\001\n\014DurationHint\022A\n\006policy\030\001 \001(\01621." +
+      "speechkit.tts.v3.DurationHint.DurationHi" +
+      "ntPolicy\022\023\n\013duration_ms\030\002 \001(\003\"r\n\022Duratio" +
+      "nHintPolicy\022$\n DURATION_HINT_POLICY_UNSP" +
+      "ECIFIED\020\000\022\022\n\016EXACT_DURATION\020\001\022\020\n\014MIN_DUR" +
+      "ATION\020\002\022\020\n\014MAX_DURATION\020\003\"\331\001\n\005Hints\022\017\n\005v" +
+      "oice\030\001 \001(\tH\000\0229\n\016audio_template\030\002 \001(\0132\037.s" +
+      "peechkit.tts.v3.AudioTemplateH\000\022\017\n\005speed" +
+      "\030\003 \001(\001H\000\022\020\n\006volume\030\004 \001(\001H\000\022\016\n\004role\030\005 \001(\t" +
+      "H\000\022\025\n\013pitch_shift\030\006 \001(\001H\000\0222\n\010duration\030\007 " +
+      "\001(\0132\036.speechkit.tts.v3.DurationHintH\000B\006\n" +
+      "\004Hint\"\314\003\n\031UtteranceSynthesisRequest\022\r\n\005m" +
+      "odel\030\001 \001(\t\022\016\n\004text\030\002 \001(\tH\000\0227\n\rtext_templ" +
+      "ate\030\003 \001(\0132\036.speechkit.tts.v3.TextTemplat" +
+      "eH\000\022&\n\005hints\030\004 \003(\0132\027.speechkit.tts.v3.Hi" +
+      "nts\022?\n\021output_audio_spec\030\005 \001(\0132$.speechk" +
+      "it.tts.v3.AudioFormatOptions\022j\n\033loudness" +
+      "_normalization_type\030\006 \001(\0162E.speechkit.tt" +
+      "s.v3.UtteranceSynthesisRequest.LoudnessN" +
+      "ormalizationType\022\023\n\013unsafe_mode\030\007 \001(\010\"`\n" +
+      "\031LoudnessNormalizationType\022+\n\'LOUDNESS_N" +
+      "ORMALIZATION_TYPE_UNSPECIFIED\020\000\022\014\n\010MAX_P" +
+      "EAK\020\001\022\010\n\004LUFS\020\002B\013\n\tUtteranceB\\\n\032yandex.c" +
+      "loud.api.ai.tts.v3Z>github.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/ai/tts/v3;t" +
+      "tsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12968,14 +14071,20 @@ public final class Tts {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_tts_v3_TextTemplate_descriptor,
         new java.lang.String[] { "TextTemplate", "Variables", });
-    internal_static_speechkit_tts_v3_Hints_descriptor =
+    internal_static_speechkit_tts_v3_DurationHint_descriptor =
       getDescriptor().getMessageTypes().get(10);
+    internal_static_speechkit_tts_v3_DurationHint_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_tts_v3_DurationHint_descriptor,
+        new java.lang.String[] { "Policy", "DurationMs", });
+    internal_static_speechkit_tts_v3_Hints_descriptor =
+      getDescriptor().getMessageTypes().get(11);
     internal_static_speechkit_tts_v3_Hints_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_tts_v3_Hints_descriptor,
-        new java.lang.String[] { "Voice", "AudioTemplate", "Speed", "Volume", "Role", "PitchShift", "Hint", });
+        new java.lang.String[] { "Voice", "AudioTemplate", "Speed", "Volume", "Role", "PitchShift", "Duration", "Hint", });
     internal_static_speechkit_tts_v3_UtteranceSynthesisRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_speechkit_tts_v3_UtteranceSynthesisRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_tts_v3_UtteranceSynthesisRequest_descriptor,

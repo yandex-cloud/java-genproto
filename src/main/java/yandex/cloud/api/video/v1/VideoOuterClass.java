@@ -90,6 +90,32 @@ public final class VideoOuterClass {
     yandex.cloud.api.video.v1.VideoOuterClass.Video.VideoStatus getStatus();
 
     /**
+     * <code>.google.protobuf.Duration duration = 8;</code>
+     * @return Whether the duration field is set.
+     */
+    boolean hasDuration();
+    /**
+     * <code>.google.protobuf.Duration duration = 8;</code>
+     * @return The duration.
+     */
+    com.google.protobuf.Duration getDuration();
+    /**
+     * <code>.google.protobuf.Duration duration = 8;</code>
+     */
+    com.google.protobuf.DurationOrBuilder getDurationOrBuilder();
+
+    /**
+     * <code>.yandex.cloud.video.v1.Video.VisibilityStatus visibility_status = 9;</code>
+     * @return The enum numeric value on the wire for visibilityStatus.
+     */
+    int getVisibilityStatusValue();
+    /**
+     * <code>.yandex.cloud.video.v1.Video.VisibilityStatus visibility_status = 9;</code>
+     * @return The visibilityStatus.
+     */
+    yandex.cloud.api.video.v1.VideoOuterClass.Video.VisibilityStatus getVisibilityStatus();
+
+    /**
      * <code>.yandex.cloud.video.v1.VideoTUSDSource tusd = 1000;</code>
      * @return Whether the tusd field is set.
      */
@@ -172,6 +198,7 @@ public final class VideoOuterClass {
       description_ = "";
       thumbnailId_ = "";
       status_ = 0;
+      visibilityStatus_ = 0;
     }
 
     @java.lang.Override
@@ -238,6 +265,25 @@ public final class VideoOuterClass {
               int rawValue = input.readEnum();
 
               status_ = rawValue;
+              break;
+            }
+            case 66: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (duration_ != null) {
+                subBuilder = duration_.toBuilder();
+              }
+              duration_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(duration_);
+                duration_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 72: {
+              int rawValue = input.readEnum();
+
+              visibilityStatus_ = rawValue;
               break;
             }
             case 802: {
@@ -348,10 +394,6 @@ public final class VideoOuterClass {
        */
       READY(5),
       /**
-       * <code>PUBLISHED = 6;</code>
-       */
-      PUBLISHED(6),
-      /**
        * <code>ERROR = 7;</code>
        */
       ERROR(7),
@@ -374,10 +416,6 @@ public final class VideoOuterClass {
        * <code>READY = 5;</code>
        */
       public static final int READY_VALUE = 5;
-      /**
-       * <code>PUBLISHED = 6;</code>
-       */
-      public static final int PUBLISHED_VALUE = 6;
       /**
        * <code>ERROR = 7;</code>
        */
@@ -412,7 +450,6 @@ public final class VideoOuterClass {
           case 1: return WAIT_UPLOADING;
           case 4: return PROCESSING;
           case 5: return READY;
-          case 6: return PUBLISHED;
           case 7: return ERROR;
           default: return null;
         }
@@ -468,6 +505,123 @@ public final class VideoOuterClass {
       }
 
       // @@protoc_insertion_point(enum_scope:yandex.cloud.video.v1.Video.VideoStatus)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.video.v1.Video.VisibilityStatus}
+     */
+    public enum VisibilityStatus
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>VISIBILITY_STATUS_UNSPECIFIED = 0;</code>
+       */
+      VISIBILITY_STATUS_UNSPECIFIED(0),
+      /**
+       * <code>PUBLISHED = 1;</code>
+       */
+      PUBLISHED(1),
+      /**
+       * <code>UNPUBLISHED = 2;</code>
+       */
+      UNPUBLISHED(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>VISIBILITY_STATUS_UNSPECIFIED = 0;</code>
+       */
+      public static final int VISIBILITY_STATUS_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>PUBLISHED = 1;</code>
+       */
+      public static final int PUBLISHED_VALUE = 1;
+      /**
+       * <code>UNPUBLISHED = 2;</code>
+       */
+      public static final int UNPUBLISHED_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static VisibilityStatus valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static VisibilityStatus forNumber(int value) {
+        switch (value) {
+          case 0: return VISIBILITY_STATUS_UNSPECIFIED;
+          case 1: return PUBLISHED;
+          case 2: return UNPUBLISHED;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<VisibilityStatus>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          VisibilityStatus> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<VisibilityStatus>() {
+              public VisibilityStatus findValueByNumber(int number) {
+                return VisibilityStatus.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.VideoOuterClass.Video.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final VisibilityStatus[] VALUES = values();
+
+      public static VisibilityStatus valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private VisibilityStatus(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.video.v1.Video.VisibilityStatus)
     }
 
     private int sourceCase_ = 0;
@@ -757,6 +911,51 @@ public final class VideoOuterClass {
       return result == null ? yandex.cloud.api.video.v1.VideoOuterClass.Video.VideoStatus.UNRECOGNIZED : result;
     }
 
+    public static final int DURATION_FIELD_NUMBER = 8;
+    private com.google.protobuf.Duration duration_;
+    /**
+     * <code>.google.protobuf.Duration duration = 8;</code>
+     * @return Whether the duration field is set.
+     */
+    @java.lang.Override
+    public boolean hasDuration() {
+      return duration_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Duration duration = 8;</code>
+     * @return The duration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getDuration() {
+      return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+    }
+    /**
+     * <code>.google.protobuf.Duration duration = 8;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+      return getDuration();
+    }
+
+    public static final int VISIBILITY_STATUS_FIELD_NUMBER = 9;
+    private int visibilityStatus_;
+    /**
+     * <code>.yandex.cloud.video.v1.Video.VisibilityStatus visibility_status = 9;</code>
+     * @return The enum numeric value on the wire for visibilityStatus.
+     */
+    @java.lang.Override public int getVisibilityStatusValue() {
+      return visibilityStatus_;
+    }
+    /**
+     * <code>.yandex.cloud.video.v1.Video.VisibilityStatus visibility_status = 9;</code>
+     * @return The visibilityStatus.
+     */
+    @java.lang.Override public yandex.cloud.api.video.v1.VideoOuterClass.Video.VisibilityStatus getVisibilityStatus() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.video.v1.VideoOuterClass.Video.VisibilityStatus result = yandex.cloud.api.video.v1.VideoOuterClass.Video.VisibilityStatus.valueOf(visibilityStatus_);
+      return result == null ? yandex.cloud.api.video.v1.VideoOuterClass.Video.VisibilityStatus.UNRECOGNIZED : result;
+    }
+
     public static final int TUSD_FIELD_NUMBER = 1000;
     /**
      * <code>.yandex.cloud.video.v1.VideoTUSDSource tusd = 1000;</code>
@@ -903,6 +1102,12 @@ public final class VideoOuterClass {
       if (status_ != yandex.cloud.api.video.v1.VideoOuterClass.Video.VideoStatus.VIDEO_STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(6, status_);
       }
+      if (duration_ != null) {
+        output.writeMessage(8, getDuration());
+      }
+      if (visibilityStatus_ != yandex.cloud.api.video.v1.VideoOuterClass.Video.VisibilityStatus.VISIBILITY_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(9, visibilityStatus_);
+      }
       if (createdAt_ != null) {
         output.writeMessage(100, getCreatedAt());
       }
@@ -942,6 +1147,14 @@ public final class VideoOuterClass {
       if (status_ != yandex.cloud.api.video.v1.VideoOuterClass.Video.VideoStatus.VIDEO_STATUS_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, status_);
+      }
+      if (duration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, getDuration());
+      }
+      if (visibilityStatus_ != yandex.cloud.api.video.v1.VideoOuterClass.Video.VisibilityStatus.VISIBILITY_STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(9, visibilityStatus_);
       }
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -985,6 +1198,12 @@ public final class VideoOuterClass {
       if (!getThumbnailId()
           .equals(other.getThumbnailId())) return false;
       if (status_ != other.status_) return false;
+      if (hasDuration() != other.hasDuration()) return false;
+      if (hasDuration()) {
+        if (!getDuration()
+            .equals(other.getDuration())) return false;
+      }
+      if (visibilityStatus_ != other.visibilityStatus_) return false;
       if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
         if (!getCreatedAt()
@@ -1036,6 +1255,12 @@ public final class VideoOuterClass {
       hash = (53 * hash) + getThumbnailId().hashCode();
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      if (hasDuration()) {
+        hash = (37 * hash) + DURATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDuration().hashCode();
+      }
+      hash = (37 * hash) + VISIBILITY_STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + visibilityStatus_;
       if (hasCreatedAt()) {
         hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getCreatedAt().hashCode();
@@ -1205,6 +1430,14 @@ public final class VideoOuterClass {
 
         status_ = 0;
 
+        if (durationBuilder_ == null) {
+          duration_ = null;
+        } else {
+          duration_ = null;
+          durationBuilder_ = null;
+        }
+        visibilityStatus_ = 0;
+
         if (createdAtBuilder_ == null) {
           createdAt_ = null;
         } else {
@@ -1253,6 +1486,12 @@ public final class VideoOuterClass {
         result.description_ = description_;
         result.thumbnailId_ = thumbnailId_;
         result.status_ = status_;
+        if (durationBuilder_ == null) {
+          result.duration_ = duration_;
+        } else {
+          result.duration_ = durationBuilder_.build();
+        }
+        result.visibilityStatus_ = visibilityStatus_;
         if (sourceCase_ == 1000) {
           if (tusdBuilder_ == null) {
             result.source_ = source_;
@@ -1349,6 +1588,12 @@ public final class VideoOuterClass {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (other.hasDuration()) {
+          mergeDuration(other.getDuration());
+        }
+        if (other.visibilityStatus_ != 0) {
+          setVisibilityStatusValue(other.getVisibilityStatusValue());
         }
         if (other.hasCreatedAt()) {
           mergeCreatedAt(other.getCreatedAt());
@@ -1863,6 +2108,179 @@ public final class VideoOuterClass {
       public Builder clearStatus() {
         
         status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration duration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> durationBuilder_;
+      /**
+       * <code>.google.protobuf.Duration duration = 8;</code>
+       * @return Whether the duration field is set.
+       */
+      public boolean hasDuration() {
+        return durationBuilder_ != null || duration_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 8;</code>
+       * @return The duration.
+       */
+      public com.google.protobuf.Duration getDuration() {
+        if (durationBuilder_ == null) {
+          return duration_ == null ? com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        } else {
+          return durationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 8;</code>
+       */
+      public Builder setDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          duration_ = value;
+          onChanged();
+        } else {
+          durationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 8;</code>
+       */
+      public Builder setDuration(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (durationBuilder_ == null) {
+          duration_ = builderForValue.build();
+          onChanged();
+        } else {
+          durationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 8;</code>
+       */
+      public Builder mergeDuration(com.google.protobuf.Duration value) {
+        if (durationBuilder_ == null) {
+          if (duration_ != null) {
+            duration_ =
+              com.google.protobuf.Duration.newBuilder(duration_).mergeFrom(value).buildPartial();
+          } else {
+            duration_ = value;
+          }
+          onChanged();
+        } else {
+          durationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 8;</code>
+       */
+      public Builder clearDuration() {
+        if (durationBuilder_ == null) {
+          duration_ = null;
+          onChanged();
+        } else {
+          duration_ = null;
+          durationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 8;</code>
+       */
+      public com.google.protobuf.Duration.Builder getDurationBuilder() {
+        
+        onChanged();
+        return getDurationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 8;</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getDurationOrBuilder() {
+        if (durationBuilder_ != null) {
+          return durationBuilder_.getMessageOrBuilder();
+        } else {
+          return duration_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : duration_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Duration duration = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getDurationFieldBuilder() {
+        if (durationBuilder_ == null) {
+          durationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getDuration(),
+                  getParentForChildren(),
+                  isClean());
+          duration_ = null;
+        }
+        return durationBuilder_;
+      }
+
+      private int visibilityStatus_ = 0;
+      /**
+       * <code>.yandex.cloud.video.v1.Video.VisibilityStatus visibility_status = 9;</code>
+       * @return The enum numeric value on the wire for visibilityStatus.
+       */
+      @java.lang.Override public int getVisibilityStatusValue() {
+        return visibilityStatus_;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.Video.VisibilityStatus visibility_status = 9;</code>
+       * @param value The enum numeric value on the wire for visibilityStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVisibilityStatusValue(int value) {
+        
+        visibilityStatus_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.Video.VisibilityStatus visibility_status = 9;</code>
+       * @return The visibilityStatus.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoOuterClass.Video.VisibilityStatus getVisibilityStatus() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.video.v1.VideoOuterClass.Video.VisibilityStatus result = yandex.cloud.api.video.v1.VideoOuterClass.Video.VisibilityStatus.valueOf(visibilityStatus_);
+        return result == null ? yandex.cloud.api.video.v1.VideoOuterClass.Video.VisibilityStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.Video.VisibilityStatus visibility_status = 9;</code>
+       * @param value The visibilityStatus to set.
+       * @return This builder for chaining.
+       */
+      public Builder setVisibilityStatus(yandex.cloud.api.video.v1.VideoOuterClass.Video.VisibilityStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        visibilityStatus_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.Video.VisibilityStatus visibility_status = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearVisibilityStatus() {
+        
+        visibilityStatus_ = 0;
         onChanged();
         return this;
       }
@@ -3451,36 +3869,43 @@ public final class VideoOuterClass {
     java.lang.String[] descriptorData = {
       "\n!yandex/cloud/video/v1/video.proto\022\025yan" +
       "dex.cloud.video.v1\032\037google/protobuf/time" +
-      "stamp.proto\"\217\004\n\005Video\022\n\n\002id\030\001 \001(\t\022\022\n\ncha" +
-      "nnel_id\030\002 \001(\t\022\r\n\005title\030\003 \001(\t\022\023\n\013descript" +
-      "ion\030\004 \001(\t\022\024\n\014thumbnail_id\030\005 \001(\t\0228\n\006statu" +
-      "s\030\006 \001(\0162(.yandex.cloud.video.v1.Video.Vi" +
-      "deoStatus\0227\n\004tusd\030\350\007 \001(\0132&.yandex.cloud." +
-      "video.v1.VideoTUSDSourceH\000\022H\n\rpublic_acc" +
-      "ess\030\320\017 \001(\0132..yandex.cloud.video.v1.Video" +
-      "PublicAccessRightsH\001\022.\n\ncreated_at\030d \001(\013" +
-      "2\032.google.protobuf.Timestamp\022.\n\nupdated_" +
-      "at\030e \001(\0132\032.google.protobuf.Timestamp\"t\n\013" +
-      "VideoStatus\022\034\n\030VIDEO_STATUS_UNSPECIFIED\020" +
-      "\000\022\022\n\016WAIT_UPLOADING\020\001\022\016\n\nPROCESSING\020\004\022\t\n" +
-      "\005READY\020\005\022\r\n\tPUBLISHED\020\006\022\t\n\005ERROR\020\007B\010\n\006so" +
-      "urceB\017\n\raccess_rights\"\036\n\017VideoTUSDSource" +
-      "\022\013\n\003url\030\001 \001(\t\"\031\n\027VideoPublicAccessRights" +
-      "B\\\n\031yandex.cloud.api.video.v1Z?github.co" +
-      "m/yandex-cloud/go-genproto/yandex/cloud/" +
-      "video/v1;videob\006proto3"
+      "stamp.proto\032\036google/protobuf/duration.pr" +
+      "oto\"\316\005\n\005Video\022\n\n\002id\030\001 \001(\t\022\022\n\nchannel_id\030" +
+      "\002 \001(\t\022\r\n\005title\030\003 \001(\t\022\023\n\013description\030\004 \001(" +
+      "\t\022\024\n\014thumbnail_id\030\005 \001(\t\0228\n\006status\030\006 \001(\0162" +
+      "(.yandex.cloud.video.v1.Video.VideoStatu" +
+      "s\022+\n\010duration\030\010 \001(\0132\031.google.protobuf.Du" +
+      "ration\022H\n\021visibility_status\030\t \001(\0162-.yand" +
+      "ex.cloud.video.v1.Video.VisibilityStatus" +
+      "\0227\n\004tusd\030\350\007 \001(\0132&.yandex.cloud.video.v1." +
+      "VideoTUSDSourceH\000\022H\n\rpublic_access\030\320\017 \001(" +
+      "\0132..yandex.cloud.video.v1.VideoPublicAcc" +
+      "essRightsH\001\022.\n\ncreated_at\030d \001(\0132\032.google" +
+      ".protobuf.Timestamp\022.\n\nupdated_at\030e \001(\0132" +
+      "\032.google.protobuf.Timestamp\"e\n\013VideoStat" +
+      "us\022\034\n\030VIDEO_STATUS_UNSPECIFIED\020\000\022\022\n\016WAIT" +
+      "_UPLOADING\020\001\022\016\n\nPROCESSING\020\004\022\t\n\005READY\020\005\022" +
+      "\t\n\005ERROR\020\007\"U\n\020VisibilityStatus\022!\n\035VISIBI" +
+      "LITY_STATUS_UNSPECIFIED\020\000\022\r\n\tPUBLISHED\020\001" +
+      "\022\017\n\013UNPUBLISHED\020\002B\010\n\006sourceB\017\n\raccess_ri" +
+      "ghts\"\036\n\017VideoTUSDSource\022\013\n\003url\030\001 \001(\t\"\031\n\027" +
+      "VideoPublicAccessRightsB\\\n\031yandex.cloud." +
+      "api.video.v1Z?github.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/video/v1;videob\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          com.google.protobuf.DurationProto.getDescriptor(),
         });
     internal_static_yandex_cloud_video_v1_Video_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_yandex_cloud_video_v1_Video_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_Video_descriptor,
-        new java.lang.String[] { "Id", "ChannelId", "Title", "Description", "ThumbnailId", "Status", "Tusd", "PublicAccess", "CreatedAt", "UpdatedAt", "Source", "AccessRights", });
+        new java.lang.String[] { "Id", "ChannelId", "Title", "Description", "ThumbnailId", "Status", "Duration", "VisibilityStatus", "Tusd", "PublicAccess", "CreatedAt", "UpdatedAt", "Source", "AccessRights", });
     internal_static_yandex_cloud_video_v1_VideoTUSDSource_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_video_v1_VideoTUSDSource_fieldAccessorTable = new
@@ -3494,6 +3919,7 @@ public final class VideoOuterClass {
         internal_static_yandex_cloud_video_v1_VideoPublicAccessRights_descriptor,
         new java.lang.String[] { });
     com.google.protobuf.TimestampProto.getDescriptor();
+    com.google.protobuf.DurationProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

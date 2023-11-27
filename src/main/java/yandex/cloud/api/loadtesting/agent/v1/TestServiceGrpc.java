@@ -46,37 +46,6 @@ public final class TestServiceGrpc {
     return getGetMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.agent.v1.TestServiceOuterClass.CreateTestRequest,
-      yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "Create",
-      requestType = yandex.cloud.api.loadtesting.agent.v1.TestServiceOuterClass.CreateTestRequest.class,
-      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.agent.v1.TestServiceOuterClass.CreateTestRequest,
-      yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod() {
-    io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.agent.v1.TestServiceOuterClass.CreateTestRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getCreateMethod;
-    if ((getCreateMethod = TestServiceGrpc.getCreateMethod) == null) {
-      synchronized (TestServiceGrpc.class) {
-        if ((getCreateMethod = TestServiceGrpc.getCreateMethod) == null) {
-          TestServiceGrpc.getCreateMethod = getCreateMethod =
-              io.grpc.MethodDescriptor.<yandex.cloud.api.loadtesting.agent.v1.TestServiceOuterClass.CreateTestRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Create"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.loadtesting.agent.v1.TestServiceOuterClass.CreateTestRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
-              .setSchemaDescriptor(new TestServiceMethodDescriptorSupplier("Create"))
-              .build();
-        }
-      }
-    }
-    return getCreateMethod;
-  }
-
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.agent.v1.TestServiceOuterClass.UpdateTestRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getUpdateMethod;
 
@@ -168,16 +137,6 @@ public final class TestServiceGrpc {
 
     /**
      * <pre>
-     * Creates test for the specified folder.
-     * </pre>
-     */
-    public void create(yandex.cloud.api.loadtesting.agent.v1.TestServiceOuterClass.CreateTestRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
      * Updates the specified test.
      * </pre>
      */
@@ -195,13 +154,6 @@ public final class TestServiceGrpc {
                 yandex.cloud.api.loadtesting.agent.v1.TestServiceOuterClass.GetTestRequest,
                 yandex.cloud.api.loadtesting.agent.v1.TestOuterClass.Test>(
                   this, METHODID_GET)))
-          .addMethod(
-            getCreateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                yandex.cloud.api.loadtesting.agent.v1.TestServiceOuterClass.CreateTestRequest,
-                yandex.cloud.api.operation.OperationOuterClass.Operation>(
-                  this, METHODID_CREATE)))
           .addMethod(
             getUpdateMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -236,17 +188,6 @@ public final class TestServiceGrpc {
         io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.agent.v1.TestOuterClass.Test> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Creates test for the specified folder.
-     * </pre>
-     */
-    public void create(yandex.cloud.api.loadtesting.agent.v1.TestServiceOuterClass.CreateTestRequest request,
-        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -287,16 +228,6 @@ public final class TestServiceGrpc {
 
     /**
      * <pre>
-     * Creates test for the specified folder.
-     * </pre>
-     */
-    public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.loadtesting.agent.v1.TestServiceOuterClass.CreateTestRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getCreateMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
      * Updates the specified test.
      * </pre>
      */
@@ -333,17 +264,6 @@ public final class TestServiceGrpc {
 
     /**
      * <pre>
-     * Creates test for the specified folder.
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
-        yandex.cloud.api.loadtesting.agent.v1.TestServiceOuterClass.CreateTestRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getCreateMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
      * Updates the specified test.
      * </pre>
      */
@@ -355,8 +275,7 @@ public final class TestServiceGrpc {
   }
 
   private static final int METHODID_GET = 0;
-  private static final int METHODID_CREATE = 1;
-  private static final int METHODID_UPDATE = 2;
+  private static final int METHODID_UPDATE = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -378,10 +297,6 @@ public final class TestServiceGrpc {
         case METHODID_GET:
           serviceImpl.get((yandex.cloud.api.loadtesting.agent.v1.TestServiceOuterClass.GetTestRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.agent.v1.TestOuterClass.Test>) responseObserver);
-          break;
-        case METHODID_CREATE:
-          serviceImpl.create((yandex.cloud.api.loadtesting.agent.v1.TestServiceOuterClass.CreateTestRequest) request,
-              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_UPDATE:
           serviceImpl.update((yandex.cloud.api.loadtesting.agent.v1.TestServiceOuterClass.UpdateTestRequest) request,
@@ -449,7 +364,6 @@ public final class TestServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new TestServiceFileDescriptorSupplier())
               .addMethod(getGetMethod())
-              .addMethod(getCreateMethod())
               .addMethod(getUpdateMethod())
               .build();
         }
