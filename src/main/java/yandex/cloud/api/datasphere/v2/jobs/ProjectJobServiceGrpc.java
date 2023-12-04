@@ -4,7 +4,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * A set of methods for managing Project Jobs.
+ * A set of methods for managing Project Jobs. Do not use these methods manually.
+ * For working with DataSphere Jobs, install DataSphere CLI via `pip install datasphere`.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -374,7 +375,8 @@ public final class ProjectJobServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Project Jobs.
+   * A set of methods for managing Project Jobs. Do not use these methods manually.
+   * For working with DataSphere Jobs, install DataSphere CLI via `pip install datasphere`.
    * </pre>
    */
   public static abstract class ProjectJobServiceImplBase implements io.grpc.BindableService {
@@ -558,7 +560,8 @@ public final class ProjectJobServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Project Jobs.
+   * A set of methods for managing Project Jobs. Do not use these methods manually.
+   * For working with DataSphere Jobs, install DataSphere CLI via `pip install datasphere`.
    * </pre>
    */
   public static final class ProjectJobServiceStub extends io.grpc.stub.AbstractAsyncStub<ProjectJobServiceStub> {
@@ -687,7 +690,8 @@ public final class ProjectJobServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Project Jobs.
+   * A set of methods for managing Project Jobs. Do not use these methods manually.
+   * For working with DataSphere Jobs, install DataSphere CLI via `pip install datasphere`.
    * </pre>
    */
   public static final class ProjectJobServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ProjectJobServiceBlockingStub> {
@@ -808,7 +812,8 @@ public final class ProjectJobServiceGrpc {
 
   /**
    * <pre>
-   * A set of methods for managing Project Jobs.
+   * A set of methods for managing Project Jobs. Do not use these methods manually.
+   * For working with DataSphere Jobs, install DataSphere CLI via `pip install datasphere`.
    * </pre>
    */
   public static final class ProjectJobServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ProjectJobServiceFutureStub> {

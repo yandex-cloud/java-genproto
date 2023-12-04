@@ -19,16 +19,28 @@ public final class FilePointerOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Reference to a file in Object Storage.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.ObjectStorage object_storage = 1;</code>
      * @return Whether the objectStorage field is set.
      */
     boolean hasObjectStorage();
     /**
+     * <pre>
+     * Reference to a file in Object Storage.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.ObjectStorage object_storage = 1;</code>
      * @return The objectStorage.
      */
     yandex.cloud.api.loadtesting.api.v1.test.ObjectStorageOuterClass.ObjectStorage getObjectStorage();
     /**
+     * <pre>
+     * Reference to a file in Object Storage.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.ObjectStorage object_storage = 1;</code>
      */
     yandex.cloud.api.loadtesting.api.v1.test.ObjectStorageOuterClass.ObjectStorageOrBuilder getObjectStorageOrBuilder();
@@ -36,6 +48,10 @@ public final class FilePointerOuterClass {
     public yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer.FilePointerCase getFilePointerCase();
   }
   /**
+   * <pre>
+   * Variant-like structure for referencing files in different sources.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.loadtesting.api.v1.test.FilePointer}
    */
   public static final class FilePointer extends
@@ -167,6 +183,10 @@ public final class FilePointerOuterClass {
 
     public static final int OBJECT_STORAGE_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * Reference to a file in Object Storage.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.ObjectStorage object_storage = 1;</code>
      * @return Whether the objectStorage field is set.
      */
@@ -175,6 +195,10 @@ public final class FilePointerOuterClass {
       return filePointerCase_ == 1;
     }
     /**
+     * <pre>
+     * Reference to a file in Object Storage.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.ObjectStorage object_storage = 1;</code>
      * @return The objectStorage.
      */
@@ -186,6 +210,10 @@ public final class FilePointerOuterClass {
       return yandex.cloud.api.loadtesting.api.v1.test.ObjectStorageOuterClass.ObjectStorage.getDefaultInstance();
     }
     /**
+     * <pre>
+     * Reference to a file in Object Storage.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.ObjectStorage object_storage = 1;</code>
      */
     @java.lang.Override
@@ -365,6 +393,10 @@ public final class FilePointerOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Variant-like structure for referencing files in different sources.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.loadtesting.api.v1.test.FilePointer}
      */
     public static final class Builder extends
@@ -542,6 +574,10 @@ public final class FilePointerOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.loadtesting.api.v1.test.ObjectStorageOuterClass.ObjectStorage, yandex.cloud.api.loadtesting.api.v1.test.ObjectStorageOuterClass.ObjectStorage.Builder, yandex.cloud.api.loadtesting.api.v1.test.ObjectStorageOuterClass.ObjectStorageOrBuilder> objectStorageBuilder_;
       /**
+       * <pre>
+       * Reference to a file in Object Storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.ObjectStorage object_storage = 1;</code>
        * @return Whether the objectStorage field is set.
        */
@@ -550,6 +586,10 @@ public final class FilePointerOuterClass {
         return filePointerCase_ == 1;
       }
       /**
+       * <pre>
+       * Reference to a file in Object Storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.ObjectStorage object_storage = 1;</code>
        * @return The objectStorage.
        */
@@ -568,6 +608,10 @@ public final class FilePointerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Reference to a file in Object Storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.ObjectStorage object_storage = 1;</code>
        */
       public Builder setObjectStorage(yandex.cloud.api.loadtesting.api.v1.test.ObjectStorageOuterClass.ObjectStorage value) {
@@ -584,6 +628,10 @@ public final class FilePointerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Reference to a file in Object Storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.ObjectStorage object_storage = 1;</code>
        */
       public Builder setObjectStorage(
@@ -598,6 +646,10 @@ public final class FilePointerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Reference to a file in Object Storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.ObjectStorage object_storage = 1;</code>
        */
       public Builder mergeObjectStorage(yandex.cloud.api.loadtesting.api.v1.test.ObjectStorageOuterClass.ObjectStorage value) {
@@ -620,6 +672,10 @@ public final class FilePointerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Reference to a file in Object Storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.ObjectStorage object_storage = 1;</code>
        */
       public Builder clearObjectStorage() {
@@ -639,12 +695,20 @@ public final class FilePointerOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Reference to a file in Object Storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.ObjectStorage object_storage = 1;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.test.ObjectStorageOuterClass.ObjectStorage.Builder getObjectStorageBuilder() {
         return getObjectStorageFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Reference to a file in Object Storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.ObjectStorage object_storage = 1;</code>
        */
       @java.lang.Override
@@ -659,6 +723,10 @@ public final class FilePointerOuterClass {
         }
       }
       /**
+       * <pre>
+       * Reference to a file in Object Storage.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.ObjectStorage object_storage = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

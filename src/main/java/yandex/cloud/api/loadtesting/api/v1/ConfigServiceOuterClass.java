@@ -19,11 +19,19 @@ public final class ConfigServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to create a config in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to create a config in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -31,16 +39,28 @@ public final class ConfigServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Config content provided as a string in YAML format.
+     * </pre>
+     *
      * <code>string yaml_string = 2;</code>
      * @return Whether the yamlString field is set.
      */
     boolean hasYamlString();
     /**
+     * <pre>
+     * Config content provided as a string in YAML format.
+     * </pre>
+     *
      * <code>string yaml_string = 2;</code>
      * @return The yamlString.
      */
     java.lang.String getYamlString();
     /**
+     * <pre>
+     * Config content provided as a string in YAML format.
+     * </pre>
+     *
      * <code>string yaml_string = 2;</code>
      * @return The bytes for yamlString.
      */
@@ -181,6 +201,10 @@ public final class ConfigServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to create a config in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
@@ -198,6 +222,10 @@ public final class ConfigServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to create a config in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -218,6 +246,10 @@ public final class ConfigServiceOuterClass {
 
     public static final int YAML_STRING_FIELD_NUMBER = 2;
     /**
+     * <pre>
+     * Config content provided as a string in YAML format.
+     * </pre>
+     *
      * <code>string yaml_string = 2;</code>
      * @return Whether the yamlString field is set.
      */
@@ -225,6 +257,10 @@ public final class ConfigServiceOuterClass {
       return configCase_ == 2;
     }
     /**
+     * <pre>
+     * Config content provided as a string in YAML format.
+     * </pre>
+     *
      * <code>string yaml_string = 2;</code>
      * @return The yamlString.
      */
@@ -246,6 +282,10 @@ public final class ConfigServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Config content provided as a string in YAML format.
+     * </pre>
+     *
      * <code>string yaml_string = 2;</code>
      * @return The bytes for yamlString.
      */
@@ -627,6 +667,10 @@ public final class ConfigServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to create a config in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The folderId.
        */
@@ -643,6 +687,10 @@ public final class ConfigServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create a config in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for folderId.
        */
@@ -660,6 +708,10 @@ public final class ConfigServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create a config in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -675,6 +727,10 @@ public final class ConfigServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create a config in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -685,6 +741,10 @@ public final class ConfigServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create a config in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -702,6 +762,10 @@ public final class ConfigServiceOuterClass {
       }
 
       /**
+       * <pre>
+       * Config content provided as a string in YAML format.
+       * </pre>
+       *
        * <code>string yaml_string = 2;</code>
        * @return Whether the yamlString field is set.
        */
@@ -710,6 +774,10 @@ public final class ConfigServiceOuterClass {
         return configCase_ == 2;
       }
       /**
+       * <pre>
+       * Config content provided as a string in YAML format.
+       * </pre>
+       *
        * <code>string yaml_string = 2;</code>
        * @return The yamlString.
        */
@@ -732,6 +800,10 @@ public final class ConfigServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Config content provided as a string in YAML format.
+       * </pre>
+       *
        * <code>string yaml_string = 2;</code>
        * @return The bytes for yamlString.
        */
@@ -755,6 +827,10 @@ public final class ConfigServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Config content provided as a string in YAML format.
+       * </pre>
+       *
        * <code>string yaml_string = 2;</code>
        * @param value The yamlString to set.
        * @return This builder for chaining.
@@ -770,6 +846,10 @@ public final class ConfigServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Config content provided as a string in YAML format.
+       * </pre>
+       *
        * <code>string yaml_string = 2;</code>
        * @return This builder for chaining.
        */
@@ -782,6 +862,10 @@ public final class ConfigServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Config content provided as a string in YAML format.
+       * </pre>
+       *
        * <code>string yaml_string = 2;</code>
        * @param value The bytes for yamlString to set.
        * @return This builder for chaining.
@@ -855,11 +939,19 @@ public final class ConfigServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the config that is being created.
+     * </pre>
+     *
      * <code>string config_id = 1;</code>
      * @return The configId.
      */
     java.lang.String getConfigId();
     /**
+     * <pre>
+     * ID of the config that is being created.
+     * </pre>
+     *
      * <code>string config_id = 1;</code>
      * @return The bytes for configId.
      */
@@ -953,6 +1045,10 @@ public final class ConfigServiceOuterClass {
     public static final int CONFIG_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object configId_;
     /**
+     * <pre>
+     * ID of the config that is being created.
+     * </pre>
+     *
      * <code>string config_id = 1;</code>
      * @return The configId.
      */
@@ -970,6 +1066,10 @@ public final class ConfigServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the config that is being created.
+     * </pre>
+     *
      * <code>string config_id = 1;</code>
      * @return The bytes for configId.
      */
@@ -1292,6 +1392,10 @@ public final class ConfigServiceOuterClass {
 
       private java.lang.Object configId_ = "";
       /**
+       * <pre>
+       * ID of the config that is being created.
+       * </pre>
+       *
        * <code>string config_id = 1;</code>
        * @return The configId.
        */
@@ -1308,6 +1412,10 @@ public final class ConfigServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the config that is being created.
+       * </pre>
+       *
        * <code>string config_id = 1;</code>
        * @return The bytes for configId.
        */
@@ -1325,6 +1433,10 @@ public final class ConfigServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the config that is being created.
+       * </pre>
+       *
        * <code>string config_id = 1;</code>
        * @param value The configId to set.
        * @return This builder for chaining.
@@ -1340,6 +1452,10 @@ public final class ConfigServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the config that is being created.
+       * </pre>
+       *
        * <code>string config_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1350,6 +1466,10 @@ public final class ConfigServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the config that is being created.
+       * </pre>
+       *
        * <code>string config_id = 1;</code>
        * @param value The bytes for configId to set.
        * @return This builder for chaining.
@@ -1418,6 +1538,2633 @@ public final class ConfigServiceOuterClass {
 
   }
 
+  public interface GetConfigRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.loadtesting.api.v1.GetConfigRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the config to return.
+     * </pre>
+     *
+     * <code>string config_id = 1;</code>
+     * @return The configId.
+     */
+    java.lang.String getConfigId();
+    /**
+     * <pre>
+     * ID of the config to return.
+     * </pre>
+     *
+     * <code>string config_id = 1;</code>
+     * @return The bytes for configId.
+     */
+    com.google.protobuf.ByteString
+        getConfigIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.loadtesting.api.v1.GetConfigRequest}
+   */
+  public static final class GetConfigRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.loadtesting.api.v1.GetConfigRequest)
+      GetConfigRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetConfigRequest.newBuilder() to construct.
+    private GetConfigRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetConfigRequest() {
+      configId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetConfigRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetConfigRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              configId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_GetConfigRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_GetConfigRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest.class, yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest.Builder.class);
+    }
+
+    public static final int CONFIG_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object configId_;
+    /**
+     * <pre>
+     * ID of the config to return.
+     * </pre>
+     *
+     * <code>string config_id = 1;</code>
+     * @return The configId.
+     */
+    @java.lang.Override
+    public java.lang.String getConfigId() {
+      java.lang.Object ref = configId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        configId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the config to return.
+     * </pre>
+     *
+     * <code>string config_id = 1;</code>
+     * @return The bytes for configId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getConfigIdBytes() {
+      java.lang.Object ref = configId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        configId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, configId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(configId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, configId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest other = (yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest) obj;
+
+      if (!getConfigId()
+          .equals(other.getConfigId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONFIG_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getConfigId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.loadtesting.api.v1.GetConfigRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.loadtesting.api.v1.GetConfigRequest)
+        yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_GetConfigRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_GetConfigRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest.class, yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        configId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_GetConfigRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest build() {
+        yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest buildPartial() {
+        yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest result = new yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest(this);
+        result.configId_ = configId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest) {
+          return mergeFrom((yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest other) {
+        if (other == yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest.getDefaultInstance()) return this;
+        if (!other.getConfigId().isEmpty()) {
+          configId_ = other.configId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object configId_ = "";
+      /**
+       * <pre>
+       * ID of the config to return.
+       * </pre>
+       *
+       * <code>string config_id = 1;</code>
+       * @return The configId.
+       */
+      public java.lang.String getConfigId() {
+        java.lang.Object ref = configId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          configId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the config to return.
+       * </pre>
+       *
+       * <code>string config_id = 1;</code>
+       * @return The bytes for configId.
+       */
+      public com.google.protobuf.ByteString
+          getConfigIdBytes() {
+        java.lang.Object ref = configId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          configId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the config to return.
+       * </pre>
+       *
+       * <code>string config_id = 1;</code>
+       * @param value The configId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        configId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the config to return.
+       * </pre>
+       *
+       * <code>string config_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearConfigId() {
+        
+        configId_ = getDefaultInstance().getConfigId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the config to return.
+       * </pre>
+       *
+       * <code>string config_id = 1;</code>
+       * @param value The bytes for configId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setConfigIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        configId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.loadtesting.api.v1.GetConfigRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.loadtesting.api.v1.GetConfigRequest)
+    private static final yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest();
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetConfigRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetConfigRequest>() {
+      @java.lang.Override
+      public GetConfigRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetConfigRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetConfigRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetConfigRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListConfigsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.loadtesting.api.v1.ListConfigsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the folder to list configs in.
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * ID of the folder to list configs in.
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListConfigsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListConfigsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3;</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListConfigsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.loadtesting.api.v1.ListConfigsRequest}
+   */
+  public static final class ListConfigsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.loadtesting.api.v1.ListConfigsRequest)
+      ListConfigsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListConfigsRequest.newBuilder() to construct.
+    private ListConfigsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListConfigsRequest() {
+      folderId_ = "";
+      pageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListConfigsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListConfigsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
+              break;
+            }
+            case 16: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest.class, yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest.Builder.class);
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * ID of the folder to list configs in.
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The folderId.
+     */
+    @java.lang.Override
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the folder to list configs in.
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The bytes for folderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListConfigsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListConfigsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3;</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListConfigsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest other = (yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest) obj;
+
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.loadtesting.api.v1.ListConfigsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.loadtesting.api.v1.ListConfigsRequest)
+        yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest.class, yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        folderId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest build() {
+        yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest buildPartial() {
+        yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest result = new yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest(this);
+        result.folderId_ = folderId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest) {
+          return mergeFrom((yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest other) {
+        if (other == yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest.getDefaultInstance()) return this;
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * ID of the folder to list configs in.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @return The folderId.
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder to list configs in.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @return The bytes for folderId.
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder to list configs in.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder to list configs in.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder to list configs in.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListConfigsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2;</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListConfigsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2;</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListConfigsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListConfigsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3;</code>
+       * @return The pageToken.
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListConfigsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3;</code>
+       * @return The bytes for pageToken.
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListConfigsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3;</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListConfigsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListConfigsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3;</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.loadtesting.api.v1.ListConfigsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.loadtesting.api.v1.ListConfigsRequest)
+    private static final yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest();
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListConfigsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListConfigsRequest>() {
+      @java.lang.Override
+      public ListConfigsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListConfigsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListConfigsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListConfigsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListConfigsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.loadtesting.api.v1.ListConfigsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of configs in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config> 
+        getConfigsList();
+    /**
+     * <pre>
+     * List of configs in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+     */
+    yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config getConfigs(int index);
+    /**
+     * <pre>
+     * List of configs in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+     */
+    int getConfigsCount();
+    /**
+     * <pre>
+     * List of configs in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.ConfigOrBuilder> 
+        getConfigsOrBuilderList();
+    /**
+     * <pre>
+     * List of configs in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+     */
+    yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.ConfigOrBuilder getConfigsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListConfigsRequest.page_size], use `next_page_token` as the value
+     * for the [ListConfigsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListConfigsRequest.page_size], use `next_page_token` as the value
+     * for the [ListConfigsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.loadtesting.api.v1.ListConfigsResponse}
+   */
+  public static final class ListConfigsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.loadtesting.api.v1.ListConfigsResponse)
+      ListConfigsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListConfigsResponse.newBuilder() to construct.
+    private ListConfigsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListConfigsResponse() {
+      configs_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListConfigsResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListConfigsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                configs_ = new java.util.ArrayList<yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              configs_.add(
+                  input.readMessage(yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          configs_ = java.util.Collections.unmodifiableList(configs_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse.class, yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse.Builder.class);
+    }
+
+    public static final int CONFIGS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config> configs_;
+    /**
+     * <pre>
+     * List of configs in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config> getConfigsList() {
+      return configs_;
+    }
+    /**
+     * <pre>
+     * List of configs in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.ConfigOrBuilder> 
+        getConfigsOrBuilderList() {
+      return configs_;
+    }
+    /**
+     * <pre>
+     * List of configs in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+     */
+    @java.lang.Override
+    public int getConfigsCount() {
+      return configs_.size();
+    }
+    /**
+     * <pre>
+     * List of configs in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config getConfigs(int index) {
+      return configs_.get(index);
+    }
+    /**
+     * <pre>
+     * List of configs in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.ConfigOrBuilder getConfigsOrBuilder(
+        int index) {
+      return configs_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListConfigsRequest.page_size], use `next_page_token` as the value
+     * for the [ListConfigsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListConfigsRequest.page_size], use `next_page_token` as the value
+     * for the [ListConfigsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < configs_.size(); i++) {
+        output.writeMessage(1, configs_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < configs_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, configs_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse other = (yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse) obj;
+
+      if (!getConfigsList()
+          .equals(other.getConfigsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getConfigsCount() > 0) {
+        hash = (37 * hash) + CONFIGS_FIELD_NUMBER;
+        hash = (53 * hash) + getConfigsList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.loadtesting.api.v1.ListConfigsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.loadtesting.api.v1.ListConfigsResponse)
+        yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse.class, yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getConfigsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (configsBuilder_ == null) {
+          configs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          configsBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse build() {
+        yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse buildPartial() {
+        yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse result = new yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (configsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            configs_ = java.util.Collections.unmodifiableList(configs_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.configs_ = configs_;
+        } else {
+          result.configs_ = configsBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse) {
+          return mergeFrom((yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse other) {
+        if (other == yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse.getDefaultInstance()) return this;
+        if (configsBuilder_ == null) {
+          if (!other.configs_.isEmpty()) {
+            if (configs_.isEmpty()) {
+              configs_ = other.configs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureConfigsIsMutable();
+              configs_.addAll(other.configs_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.configs_.isEmpty()) {
+            if (configsBuilder_.isEmpty()) {
+              configsBuilder_.dispose();
+              configsBuilder_ = null;
+              configs_ = other.configs_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              configsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getConfigsFieldBuilder() : null;
+            } else {
+              configsBuilder_.addAllMessages(other.configs_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config> configs_ =
+        java.util.Collections.emptyList();
+      private void ensureConfigsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          configs_ = new java.util.ArrayList<yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config>(configs_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config, yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config.Builder, yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.ConfigOrBuilder> configsBuilder_;
+
+      /**
+       * <pre>
+       * List of configs in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config> getConfigsList() {
+        if (configsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(configs_);
+        } else {
+          return configsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of configs in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+       */
+      public int getConfigsCount() {
+        if (configsBuilder_ == null) {
+          return configs_.size();
+        } else {
+          return configsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of configs in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config getConfigs(int index) {
+        if (configsBuilder_ == null) {
+          return configs_.get(index);
+        } else {
+          return configsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of configs in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+       */
+      public Builder setConfigs(
+          int index, yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config value) {
+        if (configsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConfigsIsMutable();
+          configs_.set(index, value);
+          onChanged();
+        } else {
+          configsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of configs in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+       */
+      public Builder setConfigs(
+          int index, yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config.Builder builderForValue) {
+        if (configsBuilder_ == null) {
+          ensureConfigsIsMutable();
+          configs_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          configsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of configs in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+       */
+      public Builder addConfigs(yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config value) {
+        if (configsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConfigsIsMutable();
+          configs_.add(value);
+          onChanged();
+        } else {
+          configsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of configs in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+       */
+      public Builder addConfigs(
+          int index, yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config value) {
+        if (configsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConfigsIsMutable();
+          configs_.add(index, value);
+          onChanged();
+        } else {
+          configsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of configs in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+       */
+      public Builder addConfigs(
+          yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config.Builder builderForValue) {
+        if (configsBuilder_ == null) {
+          ensureConfigsIsMutable();
+          configs_.add(builderForValue.build());
+          onChanged();
+        } else {
+          configsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of configs in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+       */
+      public Builder addConfigs(
+          int index, yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config.Builder builderForValue) {
+        if (configsBuilder_ == null) {
+          ensureConfigsIsMutable();
+          configs_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          configsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of configs in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+       */
+      public Builder addAllConfigs(
+          java.lang.Iterable<? extends yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config> values) {
+        if (configsBuilder_ == null) {
+          ensureConfigsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, configs_);
+          onChanged();
+        } else {
+          configsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of configs in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+       */
+      public Builder clearConfigs() {
+        if (configsBuilder_ == null) {
+          configs_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          configsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of configs in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+       */
+      public Builder removeConfigs(int index) {
+        if (configsBuilder_ == null) {
+          ensureConfigsIsMutable();
+          configs_.remove(index);
+          onChanged();
+        } else {
+          configsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of configs in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config.Builder getConfigsBuilder(
+          int index) {
+        return getConfigsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of configs in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.ConfigOrBuilder getConfigsOrBuilder(
+          int index) {
+        if (configsBuilder_ == null) {
+          return configs_.get(index);  } else {
+          return configsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of configs in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.ConfigOrBuilder> 
+           getConfigsOrBuilderList() {
+        if (configsBuilder_ != null) {
+          return configsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(configs_);
+        }
+      }
+      /**
+       * <pre>
+       * List of configs in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config.Builder addConfigsBuilder() {
+        return getConfigsFieldBuilder().addBuilder(
+            yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of configs in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config.Builder addConfigsBuilder(
+          int index) {
+        return getConfigsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of configs in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.config.Config configs = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config.Builder> 
+           getConfigsBuilderList() {
+        return getConfigsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config, yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config.Builder, yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.ConfigOrBuilder> 
+          getConfigsFieldBuilder() {
+        if (configsBuilder_ == null) {
+          configsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config, yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config.Builder, yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.ConfigOrBuilder>(
+                  configs_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          configs_ = null;
+        }
+        return configsBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListConfigsRequest.page_size], use `next_page_token` as the value
+       * for the [ListConfigsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListConfigsRequest.page_size], use `next_page_token` as the value
+       * for the [ListConfigsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListConfigsRequest.page_size], use `next_page_token` as the value
+       * for the [ListConfigsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListConfigsRequest.page_size], use `next_page_token` as the value
+       * for the [ListConfigsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListConfigsRequest.page_size], use `next_page_token` as the value
+       * for the [ListConfigsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.loadtesting.api.v1.ListConfigsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.loadtesting.api.v1.ListConfigsResponse)
+    private static final yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse();
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListConfigsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListConfigsResponse>() {
+      @java.lang.Override
+      public ListConfigsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListConfigsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListConfigsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListConfigsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_loadtesting_api_v1_CreateConfigRequest_descriptor;
   private static final 
@@ -1428,6 +4175,21 @@ public final class ConfigServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_loadtesting_api_v1_CreateConfigMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_loadtesting_api_v1_GetConfigRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_loadtesting_api_v1_GetConfigRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1442,19 +4204,33 @@ public final class ConfigServiceOuterClass {
       ".api.v1\032\034google/api/annotations.proto\032&y" +
       "andex/cloud/operation/operation.proto\032 y" +
       "andex/cloud/api/operation.proto\032\035yandex/" +
-      "cloud/validation.proto\"W\n\023CreateConfigRe" +
-      "quest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\025" +
-      "\n\013yaml_string\030\002 \001(\tH\000B\010\n\006config\")\n\024Creat" +
-      "eConfigMetadata\022\021\n\tconfig_id\030\001 \001(\t2\304\001\n\rC" +
-      "onfigService\022\262\001\n\006Create\0224.yandex.cloud.l" +
-      "oadtesting.api.v1.CreateConfigRequest\032!." +
-      "yandex.cloud.operation.Operation\"O\202\323\344\223\002 " +
-      "\"\033/loadtesting/api/v1/configs:\001*\262\322*%\n\024Cr" +
-      "eateConfigMetadata\022\rconfig.ConfigBv\n#yan" +
-      "dex.cloud.api.loadtesting.api.v1ZOgithub" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/loadtesting/api/v1;loadtestingb\006proto" +
-      "3"
+      "cloud/validation.proto\0323yandex/cloud/loa" +
+      "dtesting/api/v1/config/config.proto\"W\n\023C" +
+      "reateConfigRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350" +
+      "\3071\001\212\3101\004<=50\022\025\n\013yaml_string\030\002 \001(\tH\000B\010\n\006co" +
+      "nfig\")\n\024CreateConfigMetadata\022\021\n\tconfig_i" +
+      "d\030\001 \001(\t\"%\n\020GetConfigRequest\022\021\n\tconfig_id" +
+      "\030\001 \001(\t\"N\n\022ListConfigsRequest\022\021\n\tfolder_i" +
+      "d\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\003\022\022\n\npage_token" +
+      "\030\003 \001(\t\"o\n\023ListConfigsResponse\022?\n\007configs" +
+      "\030\001 \003(\0132..yandex.cloud.loadtesting.api.v1" +
+      ".config.Config\022\027\n\017next_page_token\030\002 \001(\t2" +
+      "\371\003\n\rConfigService\022\262\001\n\006Create\0224.yandex.cl" +
+      "oud.loadtesting.api.v1.CreateConfigReque" +
+      "st\032!.yandex.cloud.operation.Operation\"O\202" +
+      "\323\344\223\002 \"\033/loadtesting/api/v1/configs:\001*\262\322*" +
+      "%\n\024CreateConfigMetadata\022\rconfig.Config\022\231" +
+      "\001\n\003Get\0221.yandex.cloud.loadtesting.api.v1" +
+      ".GetConfigRequest\032..yandex.cloud.loadtes" +
+      "ting.api.v1.config.Config\"/\202\323\344\223\002)\022\'/load" +
+      "testing/api/v1/configs/{config_id}\022\226\001\n\004L" +
+      "ist\0223.yandex.cloud.loadtesting.api.v1.Li" +
+      "stConfigsRequest\0324.yandex.cloud.loadtest" +
+      "ing.api.v1.ListConfigsResponse\"#\202\323\344\223\002\035\022\033" +
+      "/loadtesting/api/v1/configsBv\n#yandex.cl" +
+      "oud.api.loadtesting.api.v1ZOgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/loa" +
+      "dtesting/api/v1;loadtestingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1463,6 +4239,7 @@ public final class ConfigServiceOuterClass {
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
+          yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.getDescriptor(),
         });
     internal_static_yandex_cloud_loadtesting_api_v1_CreateConfigRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1476,6 +4253,24 @@ public final class ConfigServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_api_v1_CreateConfigMetadata_descriptor,
         new java.lang.String[] { "ConfigId", });
+    internal_static_yandex_cloud_loadtesting_api_v1_GetConfigRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_yandex_cloud_loadtesting_api_v1_GetConfigRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_loadtesting_api_v1_GetConfigRequest_descriptor,
+        new java.lang.String[] { "ConfigId", });
+    internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsRequest_descriptor,
+        new java.lang.String[] { "FolderId", "PageSize", "PageToken", });
+    internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_loadtesting_api_v1_ListConfigsResponse_descriptor,
+        new java.lang.String[] { "Configs", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -1488,6 +4283,7 @@ public final class ConfigServiceOuterClass {
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
+    yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

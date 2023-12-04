@@ -5021,6 +5021,53 @@ public final class Tts {
      * <code>.speechkit.tts.v3.AudioChunk audio_chunk = 1;</code>
      */
     yandex.cloud.api.ai.tts.v3.Tts.AudioChunkOrBuilder getAudioChunkOrBuilder();
+
+    /**
+     * <pre>
+     * Part of synthesized text.
+     * </pre>
+     *
+     * <code>.speechkit.tts.v3.TextChunk text_chunk = 2;</code>
+     * @return Whether the textChunk field is set.
+     */
+    boolean hasTextChunk();
+    /**
+     * <pre>
+     * Part of synthesized text.
+     * </pre>
+     *
+     * <code>.speechkit.tts.v3.TextChunk text_chunk = 2;</code>
+     * @return The textChunk.
+     */
+    yandex.cloud.api.ai.tts.v3.Tts.TextChunk getTextChunk();
+    /**
+     * <pre>
+     * Part of synthesized text.
+     * </pre>
+     *
+     * <code>.speechkit.tts.v3.TextChunk text_chunk = 2;</code>
+     */
+    yandex.cloud.api.ai.tts.v3.Tts.TextChunkOrBuilder getTextChunkOrBuilder();
+
+    /**
+     * <pre>
+     * Start time of the audio chunk in milliseconds.
+     * </pre>
+     *
+     * <code>int64 start_ms = 3;</code>
+     * @return The startMs.
+     */
+    long getStartMs();
+
+    /**
+     * <pre>
+     * Length of the audio chunk in milliseconds.
+     * </pre>
+     *
+     * <code>int64 length_ms = 4;</code>
+     * @return The lengthMs.
+     */
+    long getLengthMs();
   }
   /**
    * Protobuf type {@code speechkit.tts.v3.UtteranceSynthesisResponse}
@@ -5078,6 +5125,29 @@ public final class Tts {
                 audioChunk_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 18: {
+              yandex.cloud.api.ai.tts.v3.Tts.TextChunk.Builder subBuilder = null;
+              if (textChunk_ != null) {
+                subBuilder = textChunk_.toBuilder();
+              }
+              textChunk_ = input.readMessage(yandex.cloud.api.ai.tts.v3.Tts.TextChunk.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(textChunk_);
+                textChunk_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 24: {
+
+              startMs_ = input.readInt64();
+              break;
+            }
+            case 32: {
+
+              lengthMs_ = input.readInt64();
               break;
             }
             default: {
@@ -5150,6 +5220,74 @@ public final class Tts {
       return getAudioChunk();
     }
 
+    public static final int TEXT_CHUNK_FIELD_NUMBER = 2;
+    private yandex.cloud.api.ai.tts.v3.Tts.TextChunk textChunk_;
+    /**
+     * <pre>
+     * Part of synthesized text.
+     * </pre>
+     *
+     * <code>.speechkit.tts.v3.TextChunk text_chunk = 2;</code>
+     * @return Whether the textChunk field is set.
+     */
+    @java.lang.Override
+    public boolean hasTextChunk() {
+      return textChunk_ != null;
+    }
+    /**
+     * <pre>
+     * Part of synthesized text.
+     * </pre>
+     *
+     * <code>.speechkit.tts.v3.TextChunk text_chunk = 2;</code>
+     * @return The textChunk.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tts.v3.Tts.TextChunk getTextChunk() {
+      return textChunk_ == null ? yandex.cloud.api.ai.tts.v3.Tts.TextChunk.getDefaultInstance() : textChunk_;
+    }
+    /**
+     * <pre>
+     * Part of synthesized text.
+     * </pre>
+     *
+     * <code>.speechkit.tts.v3.TextChunk text_chunk = 2;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.tts.v3.Tts.TextChunkOrBuilder getTextChunkOrBuilder() {
+      return getTextChunk();
+    }
+
+    public static final int START_MS_FIELD_NUMBER = 3;
+    private long startMs_;
+    /**
+     * <pre>
+     * Start time of the audio chunk in milliseconds.
+     * </pre>
+     *
+     * <code>int64 start_ms = 3;</code>
+     * @return The startMs.
+     */
+    @java.lang.Override
+    public long getStartMs() {
+      return startMs_;
+    }
+
+    public static final int LENGTH_MS_FIELD_NUMBER = 4;
+    private long lengthMs_;
+    /**
+     * <pre>
+     * Length of the audio chunk in milliseconds.
+     * </pre>
+     *
+     * <code>int64 length_ms = 4;</code>
+     * @return The lengthMs.
+     */
+    @java.lang.Override
+    public long getLengthMs() {
+      return lengthMs_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5167,6 +5305,15 @@ public final class Tts {
       if (audioChunk_ != null) {
         output.writeMessage(1, getAudioChunk());
       }
+      if (textChunk_ != null) {
+        output.writeMessage(2, getTextChunk());
+      }
+      if (startMs_ != 0L) {
+        output.writeInt64(3, startMs_);
+      }
+      if (lengthMs_ != 0L) {
+        output.writeInt64(4, lengthMs_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5179,6 +5326,18 @@ public final class Tts {
       if (audioChunk_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getAudioChunk());
+      }
+      if (textChunk_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getTextChunk());
+      }
+      if (startMs_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, startMs_);
+      }
+      if (lengthMs_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(4, lengthMs_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5200,6 +5359,15 @@ public final class Tts {
         if (!getAudioChunk()
             .equals(other.getAudioChunk())) return false;
       }
+      if (hasTextChunk() != other.hasTextChunk()) return false;
+      if (hasTextChunk()) {
+        if (!getTextChunk()
+            .equals(other.getTextChunk())) return false;
+      }
+      if (getStartMs()
+          != other.getStartMs()) return false;
+      if (getLengthMs()
+          != other.getLengthMs()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5215,6 +5383,16 @@ public final class Tts {
         hash = (37 * hash) + AUDIO_CHUNK_FIELD_NUMBER;
         hash = (53 * hash) + getAudioChunk().hashCode();
       }
+      if (hasTextChunk()) {
+        hash = (37 * hash) + TEXT_CHUNK_FIELD_NUMBER;
+        hash = (53 * hash) + getTextChunk().hashCode();
+      }
+      hash = (37 * hash) + START_MS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStartMs());
+      hash = (37 * hash) + LENGTH_MS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getLengthMs());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5354,6 +5532,16 @@ public final class Tts {
           audioChunk_ = null;
           audioChunkBuilder_ = null;
         }
+        if (textChunkBuilder_ == null) {
+          textChunk_ = null;
+        } else {
+          textChunk_ = null;
+          textChunkBuilder_ = null;
+        }
+        startMs_ = 0L;
+
+        lengthMs_ = 0L;
+
         return this;
       }
 
@@ -5385,6 +5573,13 @@ public final class Tts {
         } else {
           result.audioChunk_ = audioChunkBuilder_.build();
         }
+        if (textChunkBuilder_ == null) {
+          result.textChunk_ = textChunk_;
+        } else {
+          result.textChunk_ = textChunkBuilder_.build();
+        }
+        result.startMs_ = startMs_;
+        result.lengthMs_ = lengthMs_;
         onBuilt();
         return result;
       }
@@ -5435,6 +5630,15 @@ public final class Tts {
         if (other == yandex.cloud.api.ai.tts.v3.Tts.UtteranceSynthesisResponse.getDefaultInstance()) return this;
         if (other.hasAudioChunk()) {
           mergeAudioChunk(other.getAudioChunk());
+        }
+        if (other.hasTextChunk()) {
+          mergeTextChunk(other.getTextChunk());
+        }
+        if (other.getStartMs() != 0L) {
+          setStartMs(other.getStartMs());
+        }
+        if (other.getLengthMs() != 0L) {
+          setLengthMs(other.getLengthMs());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5618,6 +5822,247 @@ public final class Tts {
           audioChunk_ = null;
         }
         return audioChunkBuilder_;
+      }
+
+      private yandex.cloud.api.ai.tts.v3.Tts.TextChunk textChunk_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tts.v3.Tts.TextChunk, yandex.cloud.api.ai.tts.v3.Tts.TextChunk.Builder, yandex.cloud.api.ai.tts.v3.Tts.TextChunkOrBuilder> textChunkBuilder_;
+      /**
+       * <pre>
+       * Part of synthesized text.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.TextChunk text_chunk = 2;</code>
+       * @return Whether the textChunk field is set.
+       */
+      public boolean hasTextChunk() {
+        return textChunkBuilder_ != null || textChunk_ != null;
+      }
+      /**
+       * <pre>
+       * Part of synthesized text.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.TextChunk text_chunk = 2;</code>
+       * @return The textChunk.
+       */
+      public yandex.cloud.api.ai.tts.v3.Tts.TextChunk getTextChunk() {
+        if (textChunkBuilder_ == null) {
+          return textChunk_ == null ? yandex.cloud.api.ai.tts.v3.Tts.TextChunk.getDefaultInstance() : textChunk_;
+        } else {
+          return textChunkBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Part of synthesized text.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.TextChunk text_chunk = 2;</code>
+       */
+      public Builder setTextChunk(yandex.cloud.api.ai.tts.v3.Tts.TextChunk value) {
+        if (textChunkBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          textChunk_ = value;
+          onChanged();
+        } else {
+          textChunkBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Part of synthesized text.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.TextChunk text_chunk = 2;</code>
+       */
+      public Builder setTextChunk(
+          yandex.cloud.api.ai.tts.v3.Tts.TextChunk.Builder builderForValue) {
+        if (textChunkBuilder_ == null) {
+          textChunk_ = builderForValue.build();
+          onChanged();
+        } else {
+          textChunkBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Part of synthesized text.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.TextChunk text_chunk = 2;</code>
+       */
+      public Builder mergeTextChunk(yandex.cloud.api.ai.tts.v3.Tts.TextChunk value) {
+        if (textChunkBuilder_ == null) {
+          if (textChunk_ != null) {
+            textChunk_ =
+              yandex.cloud.api.ai.tts.v3.Tts.TextChunk.newBuilder(textChunk_).mergeFrom(value).buildPartial();
+          } else {
+            textChunk_ = value;
+          }
+          onChanged();
+        } else {
+          textChunkBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Part of synthesized text.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.TextChunk text_chunk = 2;</code>
+       */
+      public Builder clearTextChunk() {
+        if (textChunkBuilder_ == null) {
+          textChunk_ = null;
+          onChanged();
+        } else {
+          textChunk_ = null;
+          textChunkBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Part of synthesized text.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.TextChunk text_chunk = 2;</code>
+       */
+      public yandex.cloud.api.ai.tts.v3.Tts.TextChunk.Builder getTextChunkBuilder() {
+        
+        onChanged();
+        return getTextChunkFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Part of synthesized text.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.TextChunk text_chunk = 2;</code>
+       */
+      public yandex.cloud.api.ai.tts.v3.Tts.TextChunkOrBuilder getTextChunkOrBuilder() {
+        if (textChunkBuilder_ != null) {
+          return textChunkBuilder_.getMessageOrBuilder();
+        } else {
+          return textChunk_ == null ?
+              yandex.cloud.api.ai.tts.v3.Tts.TextChunk.getDefaultInstance() : textChunk_;
+        }
+      }
+      /**
+       * <pre>
+       * Part of synthesized text.
+       * </pre>
+       *
+       * <code>.speechkit.tts.v3.TextChunk text_chunk = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.ai.tts.v3.Tts.TextChunk, yandex.cloud.api.ai.tts.v3.Tts.TextChunk.Builder, yandex.cloud.api.ai.tts.v3.Tts.TextChunkOrBuilder> 
+          getTextChunkFieldBuilder() {
+        if (textChunkBuilder_ == null) {
+          textChunkBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.ai.tts.v3.Tts.TextChunk, yandex.cloud.api.ai.tts.v3.Tts.TextChunk.Builder, yandex.cloud.api.ai.tts.v3.Tts.TextChunkOrBuilder>(
+                  getTextChunk(),
+                  getParentForChildren(),
+                  isClean());
+          textChunk_ = null;
+        }
+        return textChunkBuilder_;
+      }
+
+      private long startMs_ ;
+      /**
+       * <pre>
+       * Start time of the audio chunk in milliseconds.
+       * </pre>
+       *
+       * <code>int64 start_ms = 3;</code>
+       * @return The startMs.
+       */
+      @java.lang.Override
+      public long getStartMs() {
+        return startMs_;
+      }
+      /**
+       * <pre>
+       * Start time of the audio chunk in milliseconds.
+       * </pre>
+       *
+       * <code>int64 start_ms = 3;</code>
+       * @param value The startMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartMs(long value) {
+        
+        startMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Start time of the audio chunk in milliseconds.
+       * </pre>
+       *
+       * <code>int64 start_ms = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartMs() {
+        
+        startMs_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long lengthMs_ ;
+      /**
+       * <pre>
+       * Length of the audio chunk in milliseconds.
+       * </pre>
+       *
+       * <code>int64 length_ms = 4;</code>
+       * @return The lengthMs.
+       */
+      @java.lang.Override
+      public long getLengthMs() {
+        return lengthMs_;
+      }
+      /**
+       * <pre>
+       * Length of the audio chunk in milliseconds.
+       * </pre>
+       *
+       * <code>int64 length_ms = 4;</code>
+       * @param value The lengthMs to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLengthMs(long value) {
+        
+        lengthMs_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Length of the audio chunk in milliseconds.
+       * </pre>
+       *
+       * <code>int64 length_ms = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLengthMs() {
+        
+        lengthMs_ = 0L;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -7610,6 +8055,610 @@ public final class Tts {
 
     @java.lang.Override
     public yandex.cloud.api.ai.tts.v3.Tts.AudioChunk getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface TextChunkOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:speechkit.tts.v3.TextChunk)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Synthesized text.
+     * </pre>
+     *
+     * <code>string text = 1;</code>
+     * @return The text.
+     */
+    java.lang.String getText();
+    /**
+     * <pre>
+     * Synthesized text.
+     * </pre>
+     *
+     * <code>string text = 1;</code>
+     * @return The bytes for text.
+     */
+    com.google.protobuf.ByteString
+        getTextBytes();
+  }
+  /**
+   * Protobuf type {@code speechkit.tts.v3.TextChunk}
+   */
+  public static final class TextChunk extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:speechkit.tts.v3.TextChunk)
+      TextChunkOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use TextChunk.newBuilder() to construct.
+    private TextChunk(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private TextChunk() {
+      text_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new TextChunk();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private TextChunk(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              text_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.ai.tts.v3.Tts.internal_static_speechkit_tts_v3_TextChunk_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.ai.tts.v3.Tts.internal_static_speechkit_tts_v3_TextChunk_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.ai.tts.v3.Tts.TextChunk.class, yandex.cloud.api.ai.tts.v3.Tts.TextChunk.Builder.class);
+    }
+
+    public static final int TEXT_FIELD_NUMBER = 1;
+    private volatile java.lang.Object text_;
+    /**
+     * <pre>
+     * Synthesized text.
+     * </pre>
+     *
+     * <code>string text = 1;</code>
+     * @return The text.
+     */
+    @java.lang.Override
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        text_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Synthesized text.
+     * </pre>
+     *
+     * <code>string text = 1;</code>
+     * @return The bytes for text.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, text_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, text_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.ai.tts.v3.Tts.TextChunk)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.ai.tts.v3.Tts.TextChunk other = (yandex.cloud.api.ai.tts.v3.Tts.TextChunk) obj;
+
+      if (!getText()
+          .equals(other.getText())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getText().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.ai.tts.v3.Tts.TextChunk parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tts.v3.Tts.TextChunk parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tts.v3.Tts.TextChunk parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tts.v3.Tts.TextChunk parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tts.v3.Tts.TextChunk parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.ai.tts.v3.Tts.TextChunk parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tts.v3.Tts.TextChunk parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tts.v3.Tts.TextChunk parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tts.v3.Tts.TextChunk parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tts.v3.Tts.TextChunk parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.ai.tts.v3.Tts.TextChunk parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.ai.tts.v3.Tts.TextChunk parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.ai.tts.v3.Tts.TextChunk prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code speechkit.tts.v3.TextChunk}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:speechkit.tts.v3.TextChunk)
+        yandex.cloud.api.ai.tts.v3.Tts.TextChunkOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.ai.tts.v3.Tts.internal_static_speechkit_tts_v3_TextChunk_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.ai.tts.v3.Tts.internal_static_speechkit_tts_v3_TextChunk_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.ai.tts.v3.Tts.TextChunk.class, yandex.cloud.api.ai.tts.v3.Tts.TextChunk.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.ai.tts.v3.Tts.TextChunk.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        text_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.ai.tts.v3.Tts.internal_static_speechkit_tts_v3_TextChunk_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tts.v3.Tts.TextChunk getDefaultInstanceForType() {
+        return yandex.cloud.api.ai.tts.v3.Tts.TextChunk.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tts.v3.Tts.TextChunk build() {
+        yandex.cloud.api.ai.tts.v3.Tts.TextChunk result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.ai.tts.v3.Tts.TextChunk buildPartial() {
+        yandex.cloud.api.ai.tts.v3.Tts.TextChunk result = new yandex.cloud.api.ai.tts.v3.Tts.TextChunk(this);
+        result.text_ = text_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.ai.tts.v3.Tts.TextChunk) {
+          return mergeFrom((yandex.cloud.api.ai.tts.v3.Tts.TextChunk)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.ai.tts.v3.Tts.TextChunk other) {
+        if (other == yandex.cloud.api.ai.tts.v3.Tts.TextChunk.getDefaultInstance()) return this;
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.ai.tts.v3.Tts.TextChunk parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.ai.tts.v3.Tts.TextChunk) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object text_ = "";
+      /**
+       * <pre>
+       * Synthesized text.
+       * </pre>
+       *
+       * <code>string text = 1;</code>
+       * @return The text.
+       */
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          text_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Synthesized text.
+       * </pre>
+       *
+       * <code>string text = 1;</code>
+       * @return The bytes for text.
+       */
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Synthesized text.
+       * </pre>
+       *
+       * <code>string text = 1;</code>
+       * @param value The text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Synthesized text.
+       * </pre>
+       *
+       * <code>string text = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearText() {
+        
+        text_ = getDefaultInstance().getText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Synthesized text.
+       * </pre>
+       *
+       * <code>string text = 1;</code>
+       * @param value The bytes for text to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:speechkit.tts.v3.TextChunk)
+    }
+
+    // @@protoc_insertion_point(class_scope:speechkit.tts.v3.TextChunk)
+    private static final yandex.cloud.api.ai.tts.v3.Tts.TextChunk DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.ai.tts.v3.Tts.TextChunk();
+    }
+
+    public static yandex.cloud.api.ai.tts.v3.Tts.TextChunk getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<TextChunk>
+        PARSER = new com.google.protobuf.AbstractParser<TextChunk>() {
+      @java.lang.Override
+      public TextChunk parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new TextChunk(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<TextChunk> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<TextChunk> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.ai.tts.v3.Tts.TextChunk getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -13922,6 +14971,11 @@ public final class Tts {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_speechkit_tts_v3_AudioChunk_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_speechkit_tts_v3_TextChunk_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_speechkit_tts_v3_TextChunk_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_speechkit_tts_v3_TextTemplate_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -13970,42 +15024,45 @@ public final class Tts {
       "extVariable\022\025\n\rvariable_name\030\001 \001(\t\022\026\n\016va" +
       "riable_value\030\002 \001(\t\"]\n\rAudioVariable\022\025\n\rv" +
       "ariable_name\030\001 \001(\t\022\031\n\021variable_start_ms\030" +
-      "\002 \001(\003\022\032\n\022variable_length_ms\030\003 \001(\003\"O\n\032Utt" +
-      "eranceSynthesisResponse\0221\n\013audio_chunk\030\001" +
-      " \001(\0132\034.speechkit.tts.v3.AudioChunk\"\251\001\n\rA" +
-      "udioTemplate\022-\n\005audio\030\001 \001(\0132\036.speechkit." +
-      "tts.v3.AudioContent\0225\n\rtext_template\030\002 \001" +
-      "(\0132\036.speechkit.tts.v3.TextTemplate\0222\n\tva" +
-      "riables\030\003 \003(\0132\037.speechkit.tts.v3.AudioVa" +
-      "riable\"\032\n\nAudioChunk\022\014\n\004data\030\001 \001(\014\"X\n\014Te" +
-      "xtTemplate\022\025\n\rtext_template\030\001 \001(\t\0221\n\tvar" +
-      "iables\030\002 \003(\0132\036.speechkit.tts.v3.TextVari" +
-      "able\"\332\001\n\014DurationHint\022A\n\006policy\030\001 \001(\01621." +
-      "speechkit.tts.v3.DurationHint.DurationHi" +
-      "ntPolicy\022\023\n\013duration_ms\030\002 \001(\003\"r\n\022Duratio" +
-      "nHintPolicy\022$\n DURATION_HINT_POLICY_UNSP" +
-      "ECIFIED\020\000\022\022\n\016EXACT_DURATION\020\001\022\020\n\014MIN_DUR" +
-      "ATION\020\002\022\020\n\014MAX_DURATION\020\003\"\331\001\n\005Hints\022\017\n\005v" +
-      "oice\030\001 \001(\tH\000\0229\n\016audio_template\030\002 \001(\0132\037.s" +
-      "peechkit.tts.v3.AudioTemplateH\000\022\017\n\005speed" +
-      "\030\003 \001(\001H\000\022\020\n\006volume\030\004 \001(\001H\000\022\016\n\004role\030\005 \001(\t" +
-      "H\000\022\025\n\013pitch_shift\030\006 \001(\001H\000\0222\n\010duration\030\007 " +
-      "\001(\0132\036.speechkit.tts.v3.DurationHintH\000B\006\n" +
-      "\004Hint\"\314\003\n\031UtteranceSynthesisRequest\022\r\n\005m" +
-      "odel\030\001 \001(\t\022\016\n\004text\030\002 \001(\tH\000\0227\n\rtext_templ" +
-      "ate\030\003 \001(\0132\036.speechkit.tts.v3.TextTemplat" +
-      "eH\000\022&\n\005hints\030\004 \003(\0132\027.speechkit.tts.v3.Hi" +
-      "nts\022?\n\021output_audio_spec\030\005 \001(\0132$.speechk" +
-      "it.tts.v3.AudioFormatOptions\022j\n\033loudness" +
-      "_normalization_type\030\006 \001(\0162E.speechkit.tt" +
-      "s.v3.UtteranceSynthesisRequest.LoudnessN" +
-      "ormalizationType\022\023\n\013unsafe_mode\030\007 \001(\010\"`\n" +
-      "\031LoudnessNormalizationType\022+\n\'LOUDNESS_N" +
-      "ORMALIZATION_TYPE_UNSPECIFIED\020\000\022\014\n\010MAX_P" +
-      "EAK\020\001\022\010\n\004LUFS\020\002B\013\n\tUtteranceB\\\n\032yandex.c" +
-      "loud.api.ai.tts.v3Z>github.com/yandex-cl" +
-      "oud/go-genproto/yandex/cloud/ai/tts/v3;t" +
-      "tsb\006proto3"
+      "\002 \001(\003\022\032\n\022variable_length_ms\030\003 \001(\003\"\245\001\n\032Ut" +
+      "teranceSynthesisResponse\0221\n\013audio_chunk\030" +
+      "\001 \001(\0132\034.speechkit.tts.v3.AudioChunk\022/\n\nt" +
+      "ext_chunk\030\002 \001(\0132\033.speechkit.tts.v3.TextC" +
+      "hunk\022\020\n\010start_ms\030\003 \001(\003\022\021\n\tlength_ms\030\004 \001(" +
+      "\003\"\251\001\n\rAudioTemplate\022-\n\005audio\030\001 \001(\0132\036.spe" +
+      "echkit.tts.v3.AudioContent\0225\n\rtext_templ" +
+      "ate\030\002 \001(\0132\036.speechkit.tts.v3.TextTemplat" +
+      "e\0222\n\tvariables\030\003 \003(\0132\037.speechkit.tts.v3." +
+      "AudioVariable\"\032\n\nAudioChunk\022\014\n\004data\030\001 \001(" +
+      "\014\"\031\n\tTextChunk\022\014\n\004text\030\001 \001(\t\"X\n\014TextTemp" +
+      "late\022\025\n\rtext_template\030\001 \001(\t\0221\n\tvariables" +
+      "\030\002 \003(\0132\036.speechkit.tts.v3.TextVariable\"\332" +
+      "\001\n\014DurationHint\022A\n\006policy\030\001 \001(\01621.speech" +
+      "kit.tts.v3.DurationHint.DurationHintPoli" +
+      "cy\022\023\n\013duration_ms\030\002 \001(\003\"r\n\022DurationHintP" +
+      "olicy\022$\n DURATION_HINT_POLICY_UNSPECIFIE" +
+      "D\020\000\022\022\n\016EXACT_DURATION\020\001\022\020\n\014MIN_DURATION\020" +
+      "\002\022\020\n\014MAX_DURATION\020\003\"\331\001\n\005Hints\022\017\n\005voice\030\001" +
+      " \001(\tH\000\0229\n\016audio_template\030\002 \001(\0132\037.speechk" +
+      "it.tts.v3.AudioTemplateH\000\022\017\n\005speed\030\003 \001(\001" +
+      "H\000\022\020\n\006volume\030\004 \001(\001H\000\022\016\n\004role\030\005 \001(\tH\000\022\025\n\013" +
+      "pitch_shift\030\006 \001(\001H\000\0222\n\010duration\030\007 \001(\0132\036." +
+      "speechkit.tts.v3.DurationHintH\000B\006\n\004Hint\"" +
+      "\314\003\n\031UtteranceSynthesisRequest\022\r\n\005model\030\001" +
+      " \001(\t\022\016\n\004text\030\002 \001(\tH\000\0227\n\rtext_template\030\003 " +
+      "\001(\0132\036.speechkit.tts.v3.TextTemplateH\000\022&\n" +
+      "\005hints\030\004 \003(\0132\027.speechkit.tts.v3.Hints\022?\n" +
+      "\021output_audio_spec\030\005 \001(\0132$.speechkit.tts" +
+      ".v3.AudioFormatOptions\022j\n\033loudness_norma" +
+      "lization_type\030\006 \001(\0162E.speechkit.tts.v3.U" +
+      "tteranceSynthesisRequest.LoudnessNormali" +
+      "zationType\022\023\n\013unsafe_mode\030\007 \001(\010\"`\n\031Loudn" +
+      "essNormalizationType\022+\n\'LOUDNESS_NORMALI" +
+      "ZATION_TYPE_UNSPECIFIED\020\000\022\014\n\010MAX_PEAK\020\001\022" +
+      "\010\n\004LUFS\020\002B\013\n\tUtteranceB\\\n\032yandex.cloud.a" +
+      "pi.ai.tts.v3Z>github.com/yandex-cloud/go" +
+      "-genproto/yandex/cloud/ai/tts/v3;ttsb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14052,7 +15109,7 @@ public final class Tts {
     internal_static_speechkit_tts_v3_UtteranceSynthesisResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_tts_v3_UtteranceSynthesisResponse_descriptor,
-        new java.lang.String[] { "AudioChunk", });
+        new java.lang.String[] { "AudioChunk", "TextChunk", "StartMs", "LengthMs", });
     internal_static_speechkit_tts_v3_AudioTemplate_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_speechkit_tts_v3_AudioTemplate_fieldAccessorTable = new
@@ -14065,26 +15122,32 @@ public final class Tts {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_tts_v3_AudioChunk_descriptor,
         new java.lang.String[] { "Data", });
-    internal_static_speechkit_tts_v3_TextTemplate_descriptor =
+    internal_static_speechkit_tts_v3_TextChunk_descriptor =
       getDescriptor().getMessageTypes().get(9);
+    internal_static_speechkit_tts_v3_TextChunk_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_speechkit_tts_v3_TextChunk_descriptor,
+        new java.lang.String[] { "Text", });
+    internal_static_speechkit_tts_v3_TextTemplate_descriptor =
+      getDescriptor().getMessageTypes().get(10);
     internal_static_speechkit_tts_v3_TextTemplate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_tts_v3_TextTemplate_descriptor,
         new java.lang.String[] { "TextTemplate", "Variables", });
     internal_static_speechkit_tts_v3_DurationHint_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_speechkit_tts_v3_DurationHint_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_tts_v3_DurationHint_descriptor,
         new java.lang.String[] { "Policy", "DurationMs", });
     internal_static_speechkit_tts_v3_Hints_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_speechkit_tts_v3_Hints_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_tts_v3_Hints_descriptor,
         new java.lang.String[] { "Voice", "AudioTemplate", "Speed", "Volume", "Role", "PitchShift", "Duration", "Hint", });
     internal_static_speechkit_tts_v3_UtteranceSynthesisRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_speechkit_tts_v3_UtteranceSynthesisRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_speechkit_tts_v3_UtteranceSynthesisRequest_descriptor,

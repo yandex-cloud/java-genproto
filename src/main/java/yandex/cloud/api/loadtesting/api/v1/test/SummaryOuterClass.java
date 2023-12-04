@@ -19,37 +19,65 @@ public final class SummaryOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Status of the test.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.Status status = 1;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
+     * <pre>
+     * Status of the test.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.Status status = 1;</code>
      * @return The status.
      */
     yandex.cloud.api.loadtesting.api.v1.test.StatusOuterClass.Status getStatus();
 
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 2;</code>
      * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 2;</code>
      * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 2;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
+     * <pre>
+     * UA or SA that created the test.
+     * </pre>
+     *
      * <code>string created_by = 3;</code>
      * @return The createdBy.
      */
     java.lang.String getCreatedBy();
     /**
+     * <pre>
+     * UA or SA that created the test.
+     * </pre>
+     *
      * <code>string created_by = 3;</code>
      * @return The bytes for createdBy.
      */
@@ -57,47 +85,89 @@ public final class SummaryOuterClass {
         getCreatedByBytes();
 
     /**
+     * <pre>
+     * Test start timestamp.
+     * Empty if the test has not been started yet.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
      * @return Whether the startedAt field is set.
      */
     boolean hasStartedAt();
     /**
+     * <pre>
+     * Test start timestamp.
+     * Empty if the test has not been started yet.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
      * @return The startedAt.
      */
     com.google.protobuf.Timestamp getStartedAt();
     /**
+     * <pre>
+     * Test start timestamp.
+     * Empty if the test has not been started yet.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
      */
     com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder();
 
     /**
+     * <pre>
+     * Test finish timestamp.
+     * Empty if the test has not been finished yet.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
      * @return Whether the finishedAt field is set.
      */
     boolean hasFinishedAt();
     /**
+     * <pre>
+     * Test finish timestamp.
+     * Empty if the test has not been finished yet.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
      * @return The finishedAt.
      */
     com.google.protobuf.Timestamp getFinishedAt();
     /**
+     * <pre>
+     * Test finish timestamp.
+     * Empty if the test has not been finished yet.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
      */
     com.google.protobuf.TimestampOrBuilder getFinishedAtOrBuilder();
 
     /**
+     * <pre>
+     * Indicates whether the test is finished.
+     * </pre>
+     *
      * <code>bool is_finished = 6;</code>
      * @return The isFinished.
      */
     boolean getIsFinished();
 
     /**
+     * <pre>
+     * Error message.
+     * </pre>
+     *
      * <code>string error = 7;</code>
      * @return The error.
      */
     java.lang.String getError();
     /**
+     * <pre>
+     * Error message.
+     * </pre>
+     *
      * <code>string error = 7;</code>
      * @return The bytes for error.
      */
@@ -105,16 +175,37 @@ public final class SummaryOuterClass {
         getErrorBytes();
 
     /**
+     * <pre>
+     * Detected imbalance point.
+     * Contains information about a state at the moment it has been
+     * [auto-stopped](/docs/load-testing/concepts/auto-stop).
+     * Empty if no auto-stop occured.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.ImbalancePoint imbalance_point = 8;</code>
      * @return Whether the imbalancePoint field is set.
      */
     boolean hasImbalancePoint();
     /**
+     * <pre>
+     * Detected imbalance point.
+     * Contains information about a state at the moment it has been
+     * [auto-stopped](/docs/load-testing/concepts/auto-stop).
+     * Empty if no auto-stop occured.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.ImbalancePoint imbalance_point = 8;</code>
      * @return The imbalancePoint.
      */
     yandex.cloud.api.loadtesting.api.v1.test.ImbalancePointOuterClass.ImbalancePoint getImbalancePoint();
     /**
+     * <pre>
+     * Detected imbalance point.
+     * Contains information about a state at the moment it has been
+     * [auto-stopped](/docs/load-testing/concepts/auto-stop).
+     * Empty if no auto-stop occured.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.ImbalancePoint imbalance_point = 8;</code>
      */
     yandex.cloud.api.loadtesting.api.v1.test.ImbalancePointOuterClass.ImbalancePointOrBuilder getImbalancePointOrBuilder();
@@ -281,6 +372,10 @@ public final class SummaryOuterClass {
     public static final int STATUS_FIELD_NUMBER = 1;
     private int status_;
     /**
+     * <pre>
+     * Status of the test.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.Status status = 1;</code>
      * @return The enum numeric value on the wire for status.
      */
@@ -288,6 +383,10 @@ public final class SummaryOuterClass {
       return status_;
     }
     /**
+     * <pre>
+     * Status of the test.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.Status status = 1;</code>
      * @return The status.
      */
@@ -300,6 +399,10 @@ public final class SummaryOuterClass {
     public static final int CREATED_AT_FIELD_NUMBER = 2;
     private com.google.protobuf.Timestamp createdAt_;
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 2;</code>
      * @return Whether the createdAt field is set.
      */
@@ -308,6 +411,10 @@ public final class SummaryOuterClass {
       return createdAt_ != null;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 2;</code>
      * @return The createdAt.
      */
@@ -316,6 +423,10 @@ public final class SummaryOuterClass {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
+     * <pre>
+     * Creation timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp created_at = 2;</code>
      */
     @java.lang.Override
@@ -326,6 +437,10 @@ public final class SummaryOuterClass {
     public static final int CREATED_BY_FIELD_NUMBER = 3;
     private volatile java.lang.Object createdBy_;
     /**
+     * <pre>
+     * UA or SA that created the test.
+     * </pre>
+     *
      * <code>string created_by = 3;</code>
      * @return The createdBy.
      */
@@ -343,6 +458,10 @@ public final class SummaryOuterClass {
       }
     }
     /**
+     * <pre>
+     * UA or SA that created the test.
+     * </pre>
+     *
      * <code>string created_by = 3;</code>
      * @return The bytes for createdBy.
      */
@@ -364,6 +483,11 @@ public final class SummaryOuterClass {
     public static final int STARTED_AT_FIELD_NUMBER = 4;
     private com.google.protobuf.Timestamp startedAt_;
     /**
+     * <pre>
+     * Test start timestamp.
+     * Empty if the test has not been started yet.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
      * @return Whether the startedAt field is set.
      */
@@ -372,6 +496,11 @@ public final class SummaryOuterClass {
       return startedAt_ != null;
     }
     /**
+     * <pre>
+     * Test start timestamp.
+     * Empty if the test has not been started yet.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
      * @return The startedAt.
      */
@@ -380,6 +509,11 @@ public final class SummaryOuterClass {
       return startedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
     }
     /**
+     * <pre>
+     * Test start timestamp.
+     * Empty if the test has not been started yet.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp started_at = 4;</code>
      */
     @java.lang.Override
@@ -390,6 +524,11 @@ public final class SummaryOuterClass {
     public static final int FINISHED_AT_FIELD_NUMBER = 5;
     private com.google.protobuf.Timestamp finishedAt_;
     /**
+     * <pre>
+     * Test finish timestamp.
+     * Empty if the test has not been finished yet.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
      * @return Whether the finishedAt field is set.
      */
@@ -398,6 +537,11 @@ public final class SummaryOuterClass {
       return finishedAt_ != null;
     }
     /**
+     * <pre>
+     * Test finish timestamp.
+     * Empty if the test has not been finished yet.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
      * @return The finishedAt.
      */
@@ -406,6 +550,11 @@ public final class SummaryOuterClass {
       return finishedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : finishedAt_;
     }
     /**
+     * <pre>
+     * Test finish timestamp.
+     * Empty if the test has not been finished yet.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp finished_at = 5;</code>
      */
     @java.lang.Override
@@ -416,6 +565,10 @@ public final class SummaryOuterClass {
     public static final int IS_FINISHED_FIELD_NUMBER = 6;
     private boolean isFinished_;
     /**
+     * <pre>
+     * Indicates whether the test is finished.
+     * </pre>
+     *
      * <code>bool is_finished = 6;</code>
      * @return The isFinished.
      */
@@ -427,6 +580,10 @@ public final class SummaryOuterClass {
     public static final int ERROR_FIELD_NUMBER = 7;
     private volatile java.lang.Object error_;
     /**
+     * <pre>
+     * Error message.
+     * </pre>
+     *
      * <code>string error = 7;</code>
      * @return The error.
      */
@@ -444,6 +601,10 @@ public final class SummaryOuterClass {
       }
     }
     /**
+     * <pre>
+     * Error message.
+     * </pre>
+     *
      * <code>string error = 7;</code>
      * @return The bytes for error.
      */
@@ -465,6 +626,13 @@ public final class SummaryOuterClass {
     public static final int IMBALANCE_POINT_FIELD_NUMBER = 8;
     private yandex.cloud.api.loadtesting.api.v1.test.ImbalancePointOuterClass.ImbalancePoint imbalancePoint_;
     /**
+     * <pre>
+     * Detected imbalance point.
+     * Contains information about a state at the moment it has been
+     * [auto-stopped](/docs/load-testing/concepts/auto-stop).
+     * Empty if no auto-stop occured.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.ImbalancePoint imbalance_point = 8;</code>
      * @return Whether the imbalancePoint field is set.
      */
@@ -473,6 +641,13 @@ public final class SummaryOuterClass {
       return imbalancePoint_ != null;
     }
     /**
+     * <pre>
+     * Detected imbalance point.
+     * Contains information about a state at the moment it has been
+     * [auto-stopped](/docs/load-testing/concepts/auto-stop).
+     * Empty if no auto-stop occured.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.ImbalancePoint imbalance_point = 8;</code>
      * @return The imbalancePoint.
      */
@@ -481,6 +656,13 @@ public final class SummaryOuterClass {
       return imbalancePoint_ == null ? yandex.cloud.api.loadtesting.api.v1.test.ImbalancePointOuterClass.ImbalancePoint.getDefaultInstance() : imbalancePoint_;
     }
     /**
+     * <pre>
+     * Detected imbalance point.
+     * Contains information about a state at the moment it has been
+     * [auto-stopped](/docs/load-testing/concepts/auto-stop).
+     * Empty if no auto-stop occured.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.ImbalancePoint imbalance_point = 8;</code>
      */
     @java.lang.Override
@@ -967,6 +1149,10 @@ public final class SummaryOuterClass {
 
       private int status_ = 0;
       /**
+       * <pre>
+       * Status of the test.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Status status = 1;</code>
        * @return The enum numeric value on the wire for status.
        */
@@ -974,6 +1160,10 @@ public final class SummaryOuterClass {
         return status_;
       }
       /**
+       * <pre>
+       * Status of the test.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Status status = 1;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
@@ -985,6 +1175,10 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of the test.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Status status = 1;</code>
        * @return The status.
        */
@@ -995,6 +1189,10 @@ public final class SummaryOuterClass {
         return result == null ? yandex.cloud.api.loadtesting.api.v1.test.StatusOuterClass.Status.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Status of the test.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Status status = 1;</code>
        * @param value The status to set.
        * @return This builder for chaining.
@@ -1009,6 +1207,10 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of the test.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Status status = 1;</code>
        * @return This builder for chaining.
        */
@@ -1023,6 +1225,10 @@ public final class SummaryOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 2;</code>
        * @return Whether the createdAt field is set.
        */
@@ -1030,6 +1236,10 @@ public final class SummaryOuterClass {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 2;</code>
        * @return The createdAt.
        */
@@ -1041,6 +1251,10 @@ public final class SummaryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 2;</code>
        */
       public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1057,6 +1271,10 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 2;</code>
        */
       public Builder setCreatedAt(
@@ -1071,6 +1289,10 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 2;</code>
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
@@ -1089,6 +1311,10 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 2;</code>
        */
       public Builder clearCreatedAt() {
@@ -1103,6 +1329,10 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 2;</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
@@ -1111,6 +1341,10 @@ public final class SummaryOuterClass {
         return getCreatedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 2;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
@@ -1122,6 +1356,10 @@ public final class SummaryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Creation timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp created_at = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1140,6 +1378,10 @@ public final class SummaryOuterClass {
 
       private java.lang.Object createdBy_ = "";
       /**
+       * <pre>
+       * UA or SA that created the test.
+       * </pre>
+       *
        * <code>string created_by = 3;</code>
        * @return The createdBy.
        */
@@ -1156,6 +1398,10 @@ public final class SummaryOuterClass {
         }
       }
       /**
+       * <pre>
+       * UA or SA that created the test.
+       * </pre>
+       *
        * <code>string created_by = 3;</code>
        * @return The bytes for createdBy.
        */
@@ -1173,6 +1419,10 @@ public final class SummaryOuterClass {
         }
       }
       /**
+       * <pre>
+       * UA or SA that created the test.
+       * </pre>
+       *
        * <code>string created_by = 3;</code>
        * @param value The createdBy to set.
        * @return This builder for chaining.
@@ -1188,6 +1438,10 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * UA or SA that created the test.
+       * </pre>
+       *
        * <code>string created_by = 3;</code>
        * @return This builder for chaining.
        */
@@ -1198,6 +1452,10 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * UA or SA that created the test.
+       * </pre>
+       *
        * <code>string created_by = 3;</code>
        * @param value The bytes for createdBy to set.
        * @return This builder for chaining.
@@ -1218,6 +1476,11 @@ public final class SummaryOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startedAtBuilder_;
       /**
+       * <pre>
+       * Test start timestamp.
+       * Empty if the test has not been started yet.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
        * @return Whether the startedAt field is set.
        */
@@ -1225,6 +1488,11 @@ public final class SummaryOuterClass {
         return startedAtBuilder_ != null || startedAt_ != null;
       }
       /**
+       * <pre>
+       * Test start timestamp.
+       * Empty if the test has not been started yet.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
        * @return The startedAt.
        */
@@ -1236,6 +1504,11 @@ public final class SummaryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Test start timestamp.
+       * Empty if the test has not been started yet.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
        */
       public Builder setStartedAt(com.google.protobuf.Timestamp value) {
@@ -1252,6 +1525,11 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test start timestamp.
+       * Empty if the test has not been started yet.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
        */
       public Builder setStartedAt(
@@ -1266,6 +1544,11 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test start timestamp.
+       * Empty if the test has not been started yet.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
        */
       public Builder mergeStartedAt(com.google.protobuf.Timestamp value) {
@@ -1284,6 +1567,11 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test start timestamp.
+       * Empty if the test has not been started yet.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
        */
       public Builder clearStartedAt() {
@@ -1298,6 +1586,11 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test start timestamp.
+       * Empty if the test has not been started yet.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
        */
       public com.google.protobuf.Timestamp.Builder getStartedAtBuilder() {
@@ -1306,6 +1599,11 @@ public final class SummaryOuterClass {
         return getStartedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Test start timestamp.
+       * Empty if the test has not been started yet.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder() {
@@ -1317,6 +1615,11 @@ public final class SummaryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Test start timestamp.
+       * Empty if the test has not been started yet.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp started_at = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1337,6 +1640,11 @@ public final class SummaryOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> finishedAtBuilder_;
       /**
+       * <pre>
+       * Test finish timestamp.
+       * Empty if the test has not been finished yet.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
        * @return Whether the finishedAt field is set.
        */
@@ -1344,6 +1652,11 @@ public final class SummaryOuterClass {
         return finishedAtBuilder_ != null || finishedAt_ != null;
       }
       /**
+       * <pre>
+       * Test finish timestamp.
+       * Empty if the test has not been finished yet.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
        * @return The finishedAt.
        */
@@ -1355,6 +1668,11 @@ public final class SummaryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Test finish timestamp.
+       * Empty if the test has not been finished yet.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
        */
       public Builder setFinishedAt(com.google.protobuf.Timestamp value) {
@@ -1371,6 +1689,11 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test finish timestamp.
+       * Empty if the test has not been finished yet.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
        */
       public Builder setFinishedAt(
@@ -1385,6 +1708,11 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test finish timestamp.
+       * Empty if the test has not been finished yet.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
        */
       public Builder mergeFinishedAt(com.google.protobuf.Timestamp value) {
@@ -1403,6 +1731,11 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test finish timestamp.
+       * Empty if the test has not been finished yet.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
        */
       public Builder clearFinishedAt() {
@@ -1417,6 +1750,11 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test finish timestamp.
+       * Empty if the test has not been finished yet.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
        */
       public com.google.protobuf.Timestamp.Builder getFinishedAtBuilder() {
@@ -1425,6 +1763,11 @@ public final class SummaryOuterClass {
         return getFinishedAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Test finish timestamp.
+       * Empty if the test has not been finished yet.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getFinishedAtOrBuilder() {
@@ -1436,6 +1779,11 @@ public final class SummaryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Test finish timestamp.
+       * Empty if the test has not been finished yet.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp finished_at = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1454,6 +1802,10 @@ public final class SummaryOuterClass {
 
       private boolean isFinished_ ;
       /**
+       * <pre>
+       * Indicates whether the test is finished.
+       * </pre>
+       *
        * <code>bool is_finished = 6;</code>
        * @return The isFinished.
        */
@@ -1462,6 +1814,10 @@ public final class SummaryOuterClass {
         return isFinished_;
       }
       /**
+       * <pre>
+       * Indicates whether the test is finished.
+       * </pre>
+       *
        * <code>bool is_finished = 6;</code>
        * @param value The isFinished to set.
        * @return This builder for chaining.
@@ -1473,6 +1829,10 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Indicates whether the test is finished.
+       * </pre>
+       *
        * <code>bool is_finished = 6;</code>
        * @return This builder for chaining.
        */
@@ -1485,6 +1845,10 @@ public final class SummaryOuterClass {
 
       private java.lang.Object error_ = "";
       /**
+       * <pre>
+       * Error message.
+       * </pre>
+       *
        * <code>string error = 7;</code>
        * @return The error.
        */
@@ -1501,6 +1865,10 @@ public final class SummaryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Error message.
+       * </pre>
+       *
        * <code>string error = 7;</code>
        * @return The bytes for error.
        */
@@ -1518,6 +1886,10 @@ public final class SummaryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Error message.
+       * </pre>
+       *
        * <code>string error = 7;</code>
        * @param value The error to set.
        * @return This builder for chaining.
@@ -1533,6 +1905,10 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Error message.
+       * </pre>
+       *
        * <code>string error = 7;</code>
        * @return This builder for chaining.
        */
@@ -1543,6 +1919,10 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Error message.
+       * </pre>
+       *
        * <code>string error = 7;</code>
        * @param value The bytes for error to set.
        * @return This builder for chaining.
@@ -1563,6 +1943,13 @@ public final class SummaryOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.loadtesting.api.v1.test.ImbalancePointOuterClass.ImbalancePoint, yandex.cloud.api.loadtesting.api.v1.test.ImbalancePointOuterClass.ImbalancePoint.Builder, yandex.cloud.api.loadtesting.api.v1.test.ImbalancePointOuterClass.ImbalancePointOrBuilder> imbalancePointBuilder_;
       /**
+       * <pre>
+       * Detected imbalance point.
+       * Contains information about a state at the moment it has been
+       * [auto-stopped](/docs/load-testing/concepts/auto-stop).
+       * Empty if no auto-stop occured.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.ImbalancePoint imbalance_point = 8;</code>
        * @return Whether the imbalancePoint field is set.
        */
@@ -1570,6 +1957,13 @@ public final class SummaryOuterClass {
         return imbalancePointBuilder_ != null || imbalancePoint_ != null;
       }
       /**
+       * <pre>
+       * Detected imbalance point.
+       * Contains information about a state at the moment it has been
+       * [auto-stopped](/docs/load-testing/concepts/auto-stop).
+       * Empty if no auto-stop occured.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.ImbalancePoint imbalance_point = 8;</code>
        * @return The imbalancePoint.
        */
@@ -1581,6 +1975,13 @@ public final class SummaryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Detected imbalance point.
+       * Contains information about a state at the moment it has been
+       * [auto-stopped](/docs/load-testing/concepts/auto-stop).
+       * Empty if no auto-stop occured.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.ImbalancePoint imbalance_point = 8;</code>
        */
       public Builder setImbalancePoint(yandex.cloud.api.loadtesting.api.v1.test.ImbalancePointOuterClass.ImbalancePoint value) {
@@ -1597,6 +1998,13 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Detected imbalance point.
+       * Contains information about a state at the moment it has been
+       * [auto-stopped](/docs/load-testing/concepts/auto-stop).
+       * Empty if no auto-stop occured.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.ImbalancePoint imbalance_point = 8;</code>
        */
       public Builder setImbalancePoint(
@@ -1611,6 +2019,13 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Detected imbalance point.
+       * Contains information about a state at the moment it has been
+       * [auto-stopped](/docs/load-testing/concepts/auto-stop).
+       * Empty if no auto-stop occured.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.ImbalancePoint imbalance_point = 8;</code>
        */
       public Builder mergeImbalancePoint(yandex.cloud.api.loadtesting.api.v1.test.ImbalancePointOuterClass.ImbalancePoint value) {
@@ -1629,6 +2044,13 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Detected imbalance point.
+       * Contains information about a state at the moment it has been
+       * [auto-stopped](/docs/load-testing/concepts/auto-stop).
+       * Empty if no auto-stop occured.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.ImbalancePoint imbalance_point = 8;</code>
        */
       public Builder clearImbalancePoint() {
@@ -1643,6 +2065,13 @@ public final class SummaryOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Detected imbalance point.
+       * Contains information about a state at the moment it has been
+       * [auto-stopped](/docs/load-testing/concepts/auto-stop).
+       * Empty if no auto-stop occured.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.ImbalancePoint imbalance_point = 8;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.test.ImbalancePointOuterClass.ImbalancePoint.Builder getImbalancePointBuilder() {
@@ -1651,6 +2080,13 @@ public final class SummaryOuterClass {
         return getImbalancePointFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Detected imbalance point.
+       * Contains information about a state at the moment it has been
+       * [auto-stopped](/docs/load-testing/concepts/auto-stop).
+       * Empty if no auto-stop occured.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.ImbalancePoint imbalance_point = 8;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.test.ImbalancePointOuterClass.ImbalancePointOrBuilder getImbalancePointOrBuilder() {
@@ -1662,6 +2098,13 @@ public final class SummaryOuterClass {
         }
       }
       /**
+       * <pre>
+       * Detected imbalance point.
+       * Contains information about a state at the moment it has been
+       * [auto-stopped](/docs/load-testing/concepts/auto-stop).
+       * Empty if no auto-stop occured.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.ImbalancePoint imbalance_point = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

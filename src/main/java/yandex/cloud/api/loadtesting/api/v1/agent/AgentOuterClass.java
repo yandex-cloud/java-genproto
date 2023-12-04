@@ -19,11 +19,19 @@ public final class AgentOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the agent. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the agent. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -31,11 +39,19 @@ public final class AgentOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * ID of the folder that the agent belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder that the agent belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The bytes for folderId.
      */
@@ -43,11 +59,19 @@ public final class AgentOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Name of the agent.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the agent.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -55,11 +79,19 @@ public final class AgentOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the agent.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the agent.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -67,11 +99,21 @@ public final class AgentOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * ID of the compute instance managed by the agent.
+     * Empty if there is no such instance (i.e. the case of external agent).
+     * </pre>
+     *
      * <code>string compute_instance_id = 5;</code>
      * @return The computeInstanceId.
      */
     java.lang.String getComputeInstanceId();
     /**
+     * <pre>
+     * ID of the compute instance managed by the agent.
+     * Empty if there is no such instance (i.e. the case of external agent).
+     * </pre>
+     *
      * <code>string compute_instance_id = 5;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -79,34 +121,58 @@ public final class AgentOuterClass {
         getComputeInstanceIdBytes();
 
     /**
+     * <pre>
+     * Status of the agent.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.agent.Status status = 7;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
+     * <pre>
+     * Status of the agent.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.agent.Status status = 7;</code>
      * @return The status.
      */
     yandex.cloud.api.loadtesting.api.v1.agent.StatusOuterClass.Status getStatus();
 
     /**
+     * <pre>
+     * List of errors reported by the agent.
+     * </pre>
+     *
      * <code>repeated string errors = 8;</code>
      * @return A list containing the errors.
      */
     java.util.List<java.lang.String>
         getErrorsList();
     /**
+     * <pre>
+     * List of errors reported by the agent.
+     * </pre>
+     *
      * <code>repeated string errors = 8;</code>
      * @return The count of errors.
      */
     int getErrorsCount();
     /**
+     * <pre>
+     * List of errors reported by the agent.
+     * </pre>
+     *
      * <code>repeated string errors = 8;</code>
      * @param index The index of the element to return.
      * @return The errors at the given index.
      */
     java.lang.String getErrors(int index);
     /**
+     * <pre>
+     * List of errors reported by the agent.
+     * </pre>
+     *
      * <code>repeated string errors = 8;</code>
      * @param index The index of the value to return.
      * @return The bytes of the errors at the given index.
@@ -115,11 +181,19 @@ public final class AgentOuterClass {
         getErrorsBytes(int index);
 
     /**
+     * <pre>
+     * ID of the test that is currently being executed by the agent.
+     * </pre>
+     *
      * <code>string current_job_id = 9;</code>
      * @return The currentJobId.
      */
     java.lang.String getCurrentJobId();
     /**
+     * <pre>
+     * ID of the test that is currently being executed by the agent.
+     * </pre>
+     *
      * <code>string current_job_id = 9;</code>
      * @return The bytes for currentJobId.
      */
@@ -127,11 +201,19 @@ public final class AgentOuterClass {
         getCurrentJobIdBytes();
 
     /**
+     * <pre>
+     * Version of the agent.
+     * </pre>
+     *
      * <code>string agent_version_id = 10;</code>
      * @return The agentVersionId.
      */
     java.lang.String getAgentVersionId();
     /**
+     * <pre>
+     * Version of the agent.
+     * </pre>
+     *
      * <code>string agent_version_id = 10;</code>
      * @return The bytes for agentVersionId.
      */
@@ -139,6 +221,10 @@ public final class AgentOuterClass {
         getAgentVersionIdBytes();
   }
   /**
+   * <pre>
+   * Load testing agent on which tests are executed.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.loadtesting.api.v1.agent.Agent}
    */
   public static final class Agent extends
@@ -288,6 +374,10 @@ public final class AgentOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the agent. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -305,6 +395,10 @@ public final class AgentOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the agent. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -326,6 +420,10 @@ public final class AgentOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder that the agent belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The folderId.
      */
@@ -343,6 +441,10 @@ public final class AgentOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder that the agent belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 2;</code>
      * @return The bytes for folderId.
      */
@@ -364,6 +466,10 @@ public final class AgentOuterClass {
     public static final int NAME_FIELD_NUMBER = 3;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the agent.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The name.
      */
@@ -381,6 +487,10 @@ public final class AgentOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the agent.
+     * </pre>
+     *
      * <code>string name = 3;</code>
      * @return The bytes for name.
      */
@@ -402,6 +512,10 @@ public final class AgentOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the agent.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The description.
      */
@@ -419,6 +533,10 @@ public final class AgentOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the agent.
+     * </pre>
+     *
      * <code>string description = 4;</code>
      * @return The bytes for description.
      */
@@ -440,6 +558,11 @@ public final class AgentOuterClass {
     public static final int COMPUTE_INSTANCE_ID_FIELD_NUMBER = 5;
     private volatile java.lang.Object computeInstanceId_;
     /**
+     * <pre>
+     * ID of the compute instance managed by the agent.
+     * Empty if there is no such instance (i.e. the case of external agent).
+     * </pre>
+     *
      * <code>string compute_instance_id = 5;</code>
      * @return The computeInstanceId.
      */
@@ -457,6 +580,11 @@ public final class AgentOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the compute instance managed by the agent.
+     * Empty if there is no such instance (i.e. the case of external agent).
+     * </pre>
+     *
      * <code>string compute_instance_id = 5;</code>
      * @return The bytes for computeInstanceId.
      */
@@ -478,6 +606,10 @@ public final class AgentOuterClass {
     public static final int STATUS_FIELD_NUMBER = 7;
     private int status_;
     /**
+     * <pre>
+     * Status of the agent.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.agent.Status status = 7;</code>
      * @return The enum numeric value on the wire for status.
      */
@@ -485,6 +617,10 @@ public final class AgentOuterClass {
       return status_;
     }
     /**
+     * <pre>
+     * Status of the agent.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.agent.Status status = 7;</code>
      * @return The status.
      */
@@ -497,6 +633,10 @@ public final class AgentOuterClass {
     public static final int ERRORS_FIELD_NUMBER = 8;
     private com.google.protobuf.LazyStringList errors_;
     /**
+     * <pre>
+     * List of errors reported by the agent.
+     * </pre>
+     *
      * <code>repeated string errors = 8;</code>
      * @return A list containing the errors.
      */
@@ -505,6 +645,10 @@ public final class AgentOuterClass {
       return errors_;
     }
     /**
+     * <pre>
+     * List of errors reported by the agent.
+     * </pre>
+     *
      * <code>repeated string errors = 8;</code>
      * @return The count of errors.
      */
@@ -512,6 +656,10 @@ public final class AgentOuterClass {
       return errors_.size();
     }
     /**
+     * <pre>
+     * List of errors reported by the agent.
+     * </pre>
+     *
      * <code>repeated string errors = 8;</code>
      * @param index The index of the element to return.
      * @return The errors at the given index.
@@ -520,6 +668,10 @@ public final class AgentOuterClass {
       return errors_.get(index);
     }
     /**
+     * <pre>
+     * List of errors reported by the agent.
+     * </pre>
+     *
      * <code>repeated string errors = 8;</code>
      * @param index The index of the value to return.
      * @return The bytes of the errors at the given index.
@@ -532,6 +684,10 @@ public final class AgentOuterClass {
     public static final int CURRENT_JOB_ID_FIELD_NUMBER = 9;
     private volatile java.lang.Object currentJobId_;
     /**
+     * <pre>
+     * ID of the test that is currently being executed by the agent.
+     * </pre>
+     *
      * <code>string current_job_id = 9;</code>
      * @return The currentJobId.
      */
@@ -549,6 +705,10 @@ public final class AgentOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the test that is currently being executed by the agent.
+     * </pre>
+     *
      * <code>string current_job_id = 9;</code>
      * @return The bytes for currentJobId.
      */
@@ -570,6 +730,10 @@ public final class AgentOuterClass {
     public static final int AGENT_VERSION_ID_FIELD_NUMBER = 10;
     private volatile java.lang.Object agentVersionId_;
     /**
+     * <pre>
+     * Version of the agent.
+     * </pre>
+     *
      * <code>string agent_version_id = 10;</code>
      * @return The agentVersionId.
      */
@@ -587,6 +751,10 @@ public final class AgentOuterClass {
       }
     }
     /**
+     * <pre>
+     * Version of the agent.
+     * </pre>
+     *
      * <code>string agent_version_id = 10;</code>
      * @return The bytes for agentVersionId.
      */
@@ -847,6 +1015,10 @@ public final class AgentOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Load testing agent on which tests are executed.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.loadtesting.api.v1.agent.Agent}
      */
     public static final class Builder extends
@@ -1063,6 +1235,10 @@ public final class AgentOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the agent. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -1079,6 +1255,10 @@ public final class AgentOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the agent. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -1096,6 +1276,10 @@ public final class AgentOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the agent. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -1111,6 +1295,10 @@ public final class AgentOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the agent. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1121,6 +1309,10 @@ public final class AgentOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the agent. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -1139,6 +1331,10 @@ public final class AgentOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder that the agent belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @return The folderId.
        */
@@ -1155,6 +1351,10 @@ public final class AgentOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the agent belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @return The bytes for folderId.
        */
@@ -1172,6 +1372,10 @@ public final class AgentOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the agent belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -1187,6 +1391,10 @@ public final class AgentOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the agent belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -1197,6 +1405,10 @@ public final class AgentOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the agent belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 2;</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -1215,6 +1427,10 @@ public final class AgentOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the agent.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The name.
        */
@@ -1231,6 +1447,10 @@ public final class AgentOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the agent.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return The bytes for name.
        */
@@ -1248,6 +1468,10 @@ public final class AgentOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the agent.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -1263,6 +1487,10 @@ public final class AgentOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the agent.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @return This builder for chaining.
        */
@@ -1273,6 +1501,10 @@ public final class AgentOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the agent.
+       * </pre>
+       *
        * <code>string name = 3;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -1291,6 +1523,10 @@ public final class AgentOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the agent.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The description.
        */
@@ -1307,6 +1543,10 @@ public final class AgentOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the agent.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return The bytes for description.
        */
@@ -1324,6 +1564,10 @@ public final class AgentOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the agent.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -1339,6 +1583,10 @@ public final class AgentOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the agent.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @return This builder for chaining.
        */
@@ -1349,6 +1597,10 @@ public final class AgentOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the agent.
+       * </pre>
+       *
        * <code>string description = 4;</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -1367,6 +1619,11 @@ public final class AgentOuterClass {
 
       private java.lang.Object computeInstanceId_ = "";
       /**
+       * <pre>
+       * ID of the compute instance managed by the agent.
+       * Empty if there is no such instance (i.e. the case of external agent).
+       * </pre>
+       *
        * <code>string compute_instance_id = 5;</code>
        * @return The computeInstanceId.
        */
@@ -1383,6 +1640,11 @@ public final class AgentOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the compute instance managed by the agent.
+       * Empty if there is no such instance (i.e. the case of external agent).
+       * </pre>
+       *
        * <code>string compute_instance_id = 5;</code>
        * @return The bytes for computeInstanceId.
        */
@@ -1400,6 +1662,11 @@ public final class AgentOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the compute instance managed by the agent.
+       * Empty if there is no such instance (i.e. the case of external agent).
+       * </pre>
+       *
        * <code>string compute_instance_id = 5;</code>
        * @param value The computeInstanceId to set.
        * @return This builder for chaining.
@@ -1415,6 +1682,11 @@ public final class AgentOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the compute instance managed by the agent.
+       * Empty if there is no such instance (i.e. the case of external agent).
+       * </pre>
+       *
        * <code>string compute_instance_id = 5;</code>
        * @return This builder for chaining.
        */
@@ -1425,6 +1697,11 @@ public final class AgentOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the compute instance managed by the agent.
+       * Empty if there is no such instance (i.e. the case of external agent).
+       * </pre>
+       *
        * <code>string compute_instance_id = 5;</code>
        * @param value The bytes for computeInstanceId to set.
        * @return This builder for chaining.
@@ -1443,6 +1720,10 @@ public final class AgentOuterClass {
 
       private int status_ = 0;
       /**
+       * <pre>
+       * Status of the agent.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.agent.Status status = 7;</code>
        * @return The enum numeric value on the wire for status.
        */
@@ -1450,6 +1731,10 @@ public final class AgentOuterClass {
         return status_;
       }
       /**
+       * <pre>
+       * Status of the agent.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.agent.Status status = 7;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
@@ -1461,6 +1746,10 @@ public final class AgentOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of the agent.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.agent.Status status = 7;</code>
        * @return The status.
        */
@@ -1471,6 +1760,10 @@ public final class AgentOuterClass {
         return result == null ? yandex.cloud.api.loadtesting.api.v1.agent.StatusOuterClass.Status.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Status of the agent.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.agent.Status status = 7;</code>
        * @param value The status to set.
        * @return This builder for chaining.
@@ -1485,6 +1778,10 @@ public final class AgentOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of the agent.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.agent.Status status = 7;</code>
        * @return This builder for chaining.
        */
@@ -1503,6 +1800,10 @@ public final class AgentOuterClass {
          }
       }
       /**
+       * <pre>
+       * List of errors reported by the agent.
+       * </pre>
+       *
        * <code>repeated string errors = 8;</code>
        * @return A list containing the errors.
        */
@@ -1511,6 +1812,10 @@ public final class AgentOuterClass {
         return errors_.getUnmodifiableView();
       }
       /**
+       * <pre>
+       * List of errors reported by the agent.
+       * </pre>
+       *
        * <code>repeated string errors = 8;</code>
        * @return The count of errors.
        */
@@ -1518,6 +1823,10 @@ public final class AgentOuterClass {
         return errors_.size();
       }
       /**
+       * <pre>
+       * List of errors reported by the agent.
+       * </pre>
+       *
        * <code>repeated string errors = 8;</code>
        * @param index The index of the element to return.
        * @return The errors at the given index.
@@ -1526,6 +1835,10 @@ public final class AgentOuterClass {
         return errors_.get(index);
       }
       /**
+       * <pre>
+       * List of errors reported by the agent.
+       * </pre>
+       *
        * <code>repeated string errors = 8;</code>
        * @param index The index of the value to return.
        * @return The bytes of the errors at the given index.
@@ -1535,6 +1848,10 @@ public final class AgentOuterClass {
         return errors_.getByteString(index);
       }
       /**
+       * <pre>
+       * List of errors reported by the agent.
+       * </pre>
+       *
        * <code>repeated string errors = 8;</code>
        * @param index The index to set the value at.
        * @param value The errors to set.
@@ -1551,6 +1868,10 @@ public final class AgentOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of errors reported by the agent.
+       * </pre>
+       *
        * <code>repeated string errors = 8;</code>
        * @param value The errors to add.
        * @return This builder for chaining.
@@ -1566,6 +1887,10 @@ public final class AgentOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of errors reported by the agent.
+       * </pre>
+       *
        * <code>repeated string errors = 8;</code>
        * @param values The errors to add.
        * @return This builder for chaining.
@@ -1579,6 +1904,10 @@ public final class AgentOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of errors reported by the agent.
+       * </pre>
+       *
        * <code>repeated string errors = 8;</code>
        * @return This builder for chaining.
        */
@@ -1589,6 +1918,10 @@ public final class AgentOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of errors reported by the agent.
+       * </pre>
+       *
        * <code>repeated string errors = 8;</code>
        * @param value The bytes of the errors to add.
        * @return This builder for chaining.
@@ -1607,6 +1940,10 @@ public final class AgentOuterClass {
 
       private java.lang.Object currentJobId_ = "";
       /**
+       * <pre>
+       * ID of the test that is currently being executed by the agent.
+       * </pre>
+       *
        * <code>string current_job_id = 9;</code>
        * @return The currentJobId.
        */
@@ -1623,6 +1960,10 @@ public final class AgentOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the test that is currently being executed by the agent.
+       * </pre>
+       *
        * <code>string current_job_id = 9;</code>
        * @return The bytes for currentJobId.
        */
@@ -1640,6 +1981,10 @@ public final class AgentOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the test that is currently being executed by the agent.
+       * </pre>
+       *
        * <code>string current_job_id = 9;</code>
        * @param value The currentJobId to set.
        * @return This builder for chaining.
@@ -1655,6 +2000,10 @@ public final class AgentOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the test that is currently being executed by the agent.
+       * </pre>
+       *
        * <code>string current_job_id = 9;</code>
        * @return This builder for chaining.
        */
@@ -1665,6 +2014,10 @@ public final class AgentOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the test that is currently being executed by the agent.
+       * </pre>
+       *
        * <code>string current_job_id = 9;</code>
        * @param value The bytes for currentJobId to set.
        * @return This builder for chaining.
@@ -1683,6 +2036,10 @@ public final class AgentOuterClass {
 
       private java.lang.Object agentVersionId_ = "";
       /**
+       * <pre>
+       * Version of the agent.
+       * </pre>
+       *
        * <code>string agent_version_id = 10;</code>
        * @return The agentVersionId.
        */
@@ -1699,6 +2056,10 @@ public final class AgentOuterClass {
         }
       }
       /**
+       * <pre>
+       * Version of the agent.
+       * </pre>
+       *
        * <code>string agent_version_id = 10;</code>
        * @return The bytes for agentVersionId.
        */
@@ -1716,6 +2077,10 @@ public final class AgentOuterClass {
         }
       }
       /**
+       * <pre>
+       * Version of the agent.
+       * </pre>
+       *
        * <code>string agent_version_id = 10;</code>
        * @param value The agentVersionId to set.
        * @return This builder for chaining.
@@ -1731,6 +2096,10 @@ public final class AgentOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version of the agent.
+       * </pre>
+       *
        * <code>string agent_version_id = 10;</code>
        * @return This builder for chaining.
        */
@@ -1741,6 +2110,10 @@ public final class AgentOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version of the agent.
+       * </pre>
+       *
        * <code>string agent_version_id = 10;</code>
        * @param value The bytes for agentVersionId to set.
        * @return This builder for chaining.

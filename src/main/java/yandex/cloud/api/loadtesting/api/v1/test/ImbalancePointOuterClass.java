@@ -19,27 +19,47 @@ public final class ImbalancePointOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Imbalance moment timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp at = 1;</code>
      * @return Whether the at field is set.
      */
     boolean hasAt();
     /**
+     * <pre>
+     * Imbalance moment timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp at = 1;</code>
      * @return The at.
      */
     com.google.protobuf.Timestamp getAt();
     /**
+     * <pre>
+     * Imbalance moment timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp at = 1;</code>
      */
     com.google.protobuf.TimestampOrBuilder getAtOrBuilder();
 
     /**
+     * <pre>
+     * Imbalance moment RPS.
+     * </pre>
+     *
      * <code>int64 rps = 2;</code>
      * @return The rps.
      */
     long getRps();
   }
   /**
+   * <pre>
+   * Test imbalance point.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.loadtesting.api.v1.test.ImbalancePoint}
    */
   public static final class ImbalancePoint extends
@@ -137,6 +157,10 @@ public final class ImbalancePointOuterClass {
     public static final int AT_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp at_;
     /**
+     * <pre>
+     * Imbalance moment timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp at = 1;</code>
      * @return Whether the at field is set.
      */
@@ -145,6 +169,10 @@ public final class ImbalancePointOuterClass {
       return at_ != null;
     }
     /**
+     * <pre>
+     * Imbalance moment timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp at = 1;</code>
      * @return The at.
      */
@@ -153,6 +181,10 @@ public final class ImbalancePointOuterClass {
       return at_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : at_;
     }
     /**
+     * <pre>
+     * Imbalance moment timestamp.
+     * </pre>
+     *
      * <code>.google.protobuf.Timestamp at = 1;</code>
      */
     @java.lang.Override
@@ -163,6 +195,10 @@ public final class ImbalancePointOuterClass {
     public static final int RPS_FIELD_NUMBER = 2;
     private long rps_;
     /**
+     * <pre>
+     * Imbalance moment RPS.
+     * </pre>
+     *
      * <code>int64 rps = 2;</code>
      * @return The rps.
      */
@@ -344,6 +380,10 @@ public final class ImbalancePointOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Test imbalance point.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.loadtesting.api.v1.test.ImbalancePoint}
      */
     public static final class Builder extends
@@ -508,6 +548,10 @@ public final class ImbalancePointOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> atBuilder_;
       /**
+       * <pre>
+       * Imbalance moment timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp at = 1;</code>
        * @return Whether the at field is set.
        */
@@ -515,6 +559,10 @@ public final class ImbalancePointOuterClass {
         return atBuilder_ != null || at_ != null;
       }
       /**
+       * <pre>
+       * Imbalance moment timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp at = 1;</code>
        * @return The at.
        */
@@ -526,6 +574,10 @@ public final class ImbalancePointOuterClass {
         }
       }
       /**
+       * <pre>
+       * Imbalance moment timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp at = 1;</code>
        */
       public Builder setAt(com.google.protobuf.Timestamp value) {
@@ -542,6 +594,10 @@ public final class ImbalancePointOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Imbalance moment timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp at = 1;</code>
        */
       public Builder setAt(
@@ -556,6 +612,10 @@ public final class ImbalancePointOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Imbalance moment timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp at = 1;</code>
        */
       public Builder mergeAt(com.google.protobuf.Timestamp value) {
@@ -574,6 +634,10 @@ public final class ImbalancePointOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Imbalance moment timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp at = 1;</code>
        */
       public Builder clearAt() {
@@ -588,6 +652,10 @@ public final class ImbalancePointOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Imbalance moment timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp at = 1;</code>
        */
       public com.google.protobuf.Timestamp.Builder getAtBuilder() {
@@ -596,6 +664,10 @@ public final class ImbalancePointOuterClass {
         return getAtFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Imbalance moment timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp at = 1;</code>
        */
       public com.google.protobuf.TimestampOrBuilder getAtOrBuilder() {
@@ -607,6 +679,10 @@ public final class ImbalancePointOuterClass {
         }
       }
       /**
+       * <pre>
+       * Imbalance moment timestamp.
+       * </pre>
+       *
        * <code>.google.protobuf.Timestamp at = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -625,6 +701,10 @@ public final class ImbalancePointOuterClass {
 
       private long rps_ ;
       /**
+       * <pre>
+       * Imbalance moment RPS.
+       * </pre>
+       *
        * <code>int64 rps = 2;</code>
        * @return The rps.
        */
@@ -633,6 +713,10 @@ public final class ImbalancePointOuterClass {
         return rps_;
       }
       /**
+       * <pre>
+       * Imbalance moment RPS.
+       * </pre>
+       *
        * <code>int64 rps = 2;</code>
        * @param value The rps to set.
        * @return This builder for chaining.
@@ -644,6 +728,10 @@ public final class ImbalancePointOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Imbalance moment RPS.
+       * </pre>
+       *
        * <code>int64 rps = 2;</code>
        * @return This builder for chaining.
        */

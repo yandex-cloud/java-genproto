@@ -19,11 +19,19 @@ public final class TestServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to create a test in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to create a test in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -31,40 +39,77 @@ public final class TestServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Test configuration associated with agents on which they will be executed.
+     * In case of multiple configurations, a multitest will be created.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
      */
     java.util.List<yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration> 
         getConfigurationsList();
     /**
+     * <pre>
+     * Test configuration associated with agents on which they will be executed.
+     * In case of multiple configurations, a multitest will be created.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
      */
     yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration getConfigurations(int index);
     /**
+     * <pre>
+     * Test configuration associated with agents on which they will be executed.
+     * In case of multiple configurations, a multitest will be created.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
      */
     int getConfigurationsCount();
     /**
+     * <pre>
+     * Test configuration associated with agents on which they will be executed.
+     * In case of multiple configurations, a multitest will be created.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
      */
     java.util.List<? extends yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfigurationOrBuilder> 
         getConfigurationsOrBuilderList();
     /**
+     * <pre>
+     * Test configuration associated with agents on which they will be executed.
+     * In case of multiple configurations, a multitest will be created.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
      */
     yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfigurationOrBuilder getConfigurationsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Test details. Name, tags etc.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.Details test_details = 3;</code>
      * @return Whether the testDetails field is set.
      */
     boolean hasTestDetails();
     /**
+     * <pre>
+     * Test details. Name, tags etc.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.Details test_details = 3;</code>
      * @return The testDetails.
      */
     yandex.cloud.api.loadtesting.api.v1.test.DetailsOuterClass.Details getTestDetails();
     /**
+     * <pre>
+     * Test details. Name, tags etc.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.Details test_details = 3;</code>
      */
     yandex.cloud.api.loadtesting.api.v1.test.DetailsOuterClass.DetailsOrBuilder getTestDetailsOrBuilder();
@@ -183,6 +228,10 @@ public final class TestServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to create a test in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
@@ -200,6 +249,10 @@ public final class TestServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to create a test in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -221,6 +274,11 @@ public final class TestServiceOuterClass {
     public static final int CONFIGURATIONS_FIELD_NUMBER = 2;
     private java.util.List<yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration> configurations_;
     /**
+     * <pre>
+     * Test configuration associated with agents on which they will be executed.
+     * In case of multiple configurations, a multitest will be created.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
      */
     @java.lang.Override
@@ -228,6 +286,11 @@ public final class TestServiceOuterClass {
       return configurations_;
     }
     /**
+     * <pre>
+     * Test configuration associated with agents on which they will be executed.
+     * In case of multiple configurations, a multitest will be created.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
      */
     @java.lang.Override
@@ -236,6 +299,11 @@ public final class TestServiceOuterClass {
       return configurations_;
     }
     /**
+     * <pre>
+     * Test configuration associated with agents on which they will be executed.
+     * In case of multiple configurations, a multitest will be created.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
      */
     @java.lang.Override
@@ -243,6 +311,11 @@ public final class TestServiceOuterClass {
       return configurations_.size();
     }
     /**
+     * <pre>
+     * Test configuration associated with agents on which they will be executed.
+     * In case of multiple configurations, a multitest will be created.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
      */
     @java.lang.Override
@@ -250,6 +323,11 @@ public final class TestServiceOuterClass {
       return configurations_.get(index);
     }
     /**
+     * <pre>
+     * Test configuration associated with agents on which they will be executed.
+     * In case of multiple configurations, a multitest will be created.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
      */
     @java.lang.Override
@@ -261,6 +339,10 @@ public final class TestServiceOuterClass {
     public static final int TEST_DETAILS_FIELD_NUMBER = 3;
     private yandex.cloud.api.loadtesting.api.v1.test.DetailsOuterClass.Details testDetails_;
     /**
+     * <pre>
+     * Test details. Name, tags etc.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.Details test_details = 3;</code>
      * @return Whether the testDetails field is set.
      */
@@ -269,6 +351,10 @@ public final class TestServiceOuterClass {
       return testDetails_ != null;
     }
     /**
+     * <pre>
+     * Test details. Name, tags etc.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.Details test_details = 3;</code>
      * @return The testDetails.
      */
@@ -277,6 +363,10 @@ public final class TestServiceOuterClass {
       return testDetails_ == null ? yandex.cloud.api.loadtesting.api.v1.test.DetailsOuterClass.Details.getDefaultInstance() : testDetails_;
     }
     /**
+     * <pre>
+     * Test details. Name, tags etc.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.Details test_details = 3;</code>
      */
     @java.lang.Override
@@ -675,6 +765,10 @@ public final class TestServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to create a test in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The folderId.
        */
@@ -691,6 +785,10 @@ public final class TestServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create a test in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for folderId.
        */
@@ -708,6 +806,10 @@ public final class TestServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create a test in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -723,6 +825,10 @@ public final class TestServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create a test in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -733,6 +839,10 @@ public final class TestServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create a test in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -762,6 +872,11 @@ public final class TestServiceOuterClass {
           yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration, yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration.Builder, yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfigurationOrBuilder> configurationsBuilder_;
 
       /**
+       * <pre>
+       * Test configuration associated with agents on which they will be executed.
+       * In case of multiple configurations, a multitest will be created.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public java.util.List<yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration> getConfigurationsList() {
@@ -772,6 +887,11 @@ public final class TestServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Test configuration associated with agents on which they will be executed.
+       * In case of multiple configurations, a multitest will be created.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public int getConfigurationsCount() {
@@ -782,6 +902,11 @@ public final class TestServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Test configuration associated with agents on which they will be executed.
+       * In case of multiple configurations, a multitest will be created.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration getConfigurations(int index) {
@@ -792,6 +917,11 @@ public final class TestServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Test configuration associated with agents on which they will be executed.
+       * In case of multiple configurations, a multitest will be created.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public Builder setConfigurations(
@@ -809,6 +939,11 @@ public final class TestServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test configuration associated with agents on which they will be executed.
+       * In case of multiple configurations, a multitest will be created.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public Builder setConfigurations(
@@ -823,6 +958,11 @@ public final class TestServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test configuration associated with agents on which they will be executed.
+       * In case of multiple configurations, a multitest will be created.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public Builder addConfigurations(yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration value) {
@@ -839,6 +979,11 @@ public final class TestServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test configuration associated with agents on which they will be executed.
+       * In case of multiple configurations, a multitest will be created.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public Builder addConfigurations(
@@ -856,6 +1001,11 @@ public final class TestServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test configuration associated with agents on which they will be executed.
+       * In case of multiple configurations, a multitest will be created.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public Builder addConfigurations(
@@ -870,6 +1020,11 @@ public final class TestServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test configuration associated with agents on which they will be executed.
+       * In case of multiple configurations, a multitest will be created.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public Builder addConfigurations(
@@ -884,6 +1039,11 @@ public final class TestServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test configuration associated with agents on which they will be executed.
+       * In case of multiple configurations, a multitest will be created.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public Builder addAllConfigurations(
@@ -899,6 +1059,11 @@ public final class TestServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test configuration associated with agents on which they will be executed.
+       * In case of multiple configurations, a multitest will be created.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public Builder clearConfigurations() {
@@ -912,6 +1077,11 @@ public final class TestServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test configuration associated with agents on which they will be executed.
+       * In case of multiple configurations, a multitest will be created.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public Builder removeConfigurations(int index) {
@@ -925,6 +1095,11 @@ public final class TestServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test configuration associated with agents on which they will be executed.
+       * In case of multiple configurations, a multitest will be created.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration.Builder getConfigurationsBuilder(
@@ -932,6 +1107,11 @@ public final class TestServiceOuterClass {
         return getConfigurationsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Test configuration associated with agents on which they will be executed.
+       * In case of multiple configurations, a multitest will be created.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfigurationOrBuilder getConfigurationsOrBuilder(
@@ -942,6 +1122,11 @@ public final class TestServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Test configuration associated with agents on which they will be executed.
+       * In case of multiple configurations, a multitest will be created.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public java.util.List<? extends yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfigurationOrBuilder> 
@@ -953,6 +1138,11 @@ public final class TestServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Test configuration associated with agents on which they will be executed.
+       * In case of multiple configurations, a multitest will be created.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration.Builder addConfigurationsBuilder() {
@@ -960,6 +1150,11 @@ public final class TestServiceOuterClass {
             yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Test configuration associated with agents on which they will be executed.
+       * In case of multiple configurations, a multitest will be created.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration.Builder addConfigurationsBuilder(
@@ -968,6 +1163,11 @@ public final class TestServiceOuterClass {
             index, yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Test configuration associated with agents on which they will be executed.
+       * In case of multiple configurations, a multitest will be created.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public java.util.List<yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration.Builder> 
@@ -993,6 +1193,10 @@ public final class TestServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.loadtesting.api.v1.test.DetailsOuterClass.Details, yandex.cloud.api.loadtesting.api.v1.test.DetailsOuterClass.Details.Builder, yandex.cloud.api.loadtesting.api.v1.test.DetailsOuterClass.DetailsOrBuilder> testDetailsBuilder_;
       /**
+       * <pre>
+       * Test details. Name, tags etc.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Details test_details = 3;</code>
        * @return Whether the testDetails field is set.
        */
@@ -1000,6 +1204,10 @@ public final class TestServiceOuterClass {
         return testDetailsBuilder_ != null || testDetails_ != null;
       }
       /**
+       * <pre>
+       * Test details. Name, tags etc.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Details test_details = 3;</code>
        * @return The testDetails.
        */
@@ -1011,6 +1219,10 @@ public final class TestServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Test details. Name, tags etc.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Details test_details = 3;</code>
        */
       public Builder setTestDetails(yandex.cloud.api.loadtesting.api.v1.test.DetailsOuterClass.Details value) {
@@ -1027,6 +1239,10 @@ public final class TestServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test details. Name, tags etc.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Details test_details = 3;</code>
        */
       public Builder setTestDetails(
@@ -1041,6 +1257,10 @@ public final class TestServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test details. Name, tags etc.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Details test_details = 3;</code>
        */
       public Builder mergeTestDetails(yandex.cloud.api.loadtesting.api.v1.test.DetailsOuterClass.Details value) {
@@ -1059,6 +1279,10 @@ public final class TestServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test details. Name, tags etc.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Details test_details = 3;</code>
        */
       public Builder clearTestDetails() {
@@ -1073,6 +1297,10 @@ public final class TestServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test details. Name, tags etc.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Details test_details = 3;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.test.DetailsOuterClass.Details.Builder getTestDetailsBuilder() {
@@ -1081,6 +1309,10 @@ public final class TestServiceOuterClass {
         return getTestDetailsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Test details. Name, tags etc.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Details test_details = 3;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.test.DetailsOuterClass.DetailsOrBuilder getTestDetailsOrBuilder() {
@@ -1092,6 +1324,10 @@ public final class TestServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Test details. Name, tags etc.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Details test_details = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1165,11 +1401,19 @@ public final class TestServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the test that is being created.
+     * </pre>
+     *
      * <code>string test_id = 1;</code>
      * @return The testId.
      */
     java.lang.String getTestId();
     /**
+     * <pre>
+     * ID of the test that is being created.
+     * </pre>
+     *
      * <code>string test_id = 1;</code>
      * @return The bytes for testId.
      */
@@ -1263,6 +1507,10 @@ public final class TestServiceOuterClass {
     public static final int TEST_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object testId_;
     /**
+     * <pre>
+     * ID of the test that is being created.
+     * </pre>
+     *
      * <code>string test_id = 1;</code>
      * @return The testId.
      */
@@ -1280,6 +1528,10 @@ public final class TestServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the test that is being created.
+     * </pre>
+     *
      * <code>string test_id = 1;</code>
      * @return The bytes for testId.
      */
@@ -1602,6 +1854,10 @@ public final class TestServiceOuterClass {
 
       private java.lang.Object testId_ = "";
       /**
+       * <pre>
+       * ID of the test that is being created.
+       * </pre>
+       *
        * <code>string test_id = 1;</code>
        * @return The testId.
        */
@@ -1618,6 +1874,10 @@ public final class TestServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the test that is being created.
+       * </pre>
+       *
        * <code>string test_id = 1;</code>
        * @return The bytes for testId.
        */
@@ -1635,6 +1895,10 @@ public final class TestServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the test that is being created.
+       * </pre>
+       *
        * <code>string test_id = 1;</code>
        * @param value The testId to set.
        * @return This builder for chaining.
@@ -1650,6 +1914,10 @@ public final class TestServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the test that is being created.
+       * </pre>
+       *
        * <code>string test_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1660,6 +1928,10 @@ public final class TestServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the test that is being created.
+       * </pre>
+       *
        * <code>string test_id = 1;</code>
        * @param value The bytes for testId to set.
        * @return This builder for chaining.
@@ -1733,11 +2005,19 @@ public final class TestServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the test to return.
+     * </pre>
+     *
      * <code>string test_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The testId.
      */
     java.lang.String getTestId();
     /**
+     * <pre>
+     * ID of the test to return.
+     * </pre>
+     *
      * <code>string test_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for testId.
      */
@@ -1831,6 +2111,10 @@ public final class TestServiceOuterClass {
     public static final int TEST_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object testId_;
     /**
+     * <pre>
+     * ID of the test to return.
+     * </pre>
+     *
      * <code>string test_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The testId.
      */
@@ -1848,6 +2132,10 @@ public final class TestServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the test to return.
+     * </pre>
+     *
      * <code>string test_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for testId.
      */
@@ -2170,6 +2458,10 @@ public final class TestServiceOuterClass {
 
       private java.lang.Object testId_ = "";
       /**
+       * <pre>
+       * ID of the test to return.
+       * </pre>
+       *
        * <code>string test_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The testId.
        */
@@ -2186,6 +2478,10 @@ public final class TestServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the test to return.
+       * </pre>
+       *
        * <code>string test_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for testId.
        */
@@ -2203,6 +2499,10 @@ public final class TestServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the test to return.
+       * </pre>
+       *
        * <code>string test_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The testId to set.
        * @return This builder for chaining.
@@ -2218,6 +2518,10 @@ public final class TestServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the test to return.
+       * </pre>
+       *
        * <code>string test_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -2228,6 +2532,10 @@ public final class TestServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the test to return.
+       * </pre>
+       *
        * <code>string test_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for testId to set.
        * @return This builder for chaining.
@@ -2296,6 +2604,4856 @@ public final class TestServiceOuterClass {
 
   }
 
+  public interface StopTestRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.loadtesting.api.v1.StopTestRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the test to stop.
+     * </pre>
+     *
+     * <code>string test_id = 1;</code>
+     * @return The testId.
+     */
+    java.lang.String getTestId();
+    /**
+     * <pre>
+     * ID of the test to stop.
+     * </pre>
+     *
+     * <code>string test_id = 1;</code>
+     * @return The bytes for testId.
+     */
+    com.google.protobuf.ByteString
+        getTestIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.loadtesting.api.v1.StopTestRequest}
+   */
+  public static final class StopTestRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.loadtesting.api.v1.StopTestRequest)
+      StopTestRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StopTestRequest.newBuilder() to construct.
+    private StopTestRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StopTestRequest() {
+      testId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StopTestRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StopTestRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              testId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_StopTestRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_StopTestRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest.class, yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest.Builder.class);
+    }
+
+    public static final int TEST_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object testId_;
+    /**
+     * <pre>
+     * ID of the test to stop.
+     * </pre>
+     *
+     * <code>string test_id = 1;</code>
+     * @return The testId.
+     */
+    @java.lang.Override
+    public java.lang.String getTestId() {
+      java.lang.Object ref = testId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        testId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the test to stop.
+     * </pre>
+     *
+     * <code>string test_id = 1;</code>
+     * @return The bytes for testId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTestIdBytes() {
+      java.lang.Object ref = testId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        testId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(testId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, testId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(testId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, testId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest other = (yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest) obj;
+
+      if (!getTestId()
+          .equals(other.getTestId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TEST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTestId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.loadtesting.api.v1.StopTestRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.loadtesting.api.v1.StopTestRequest)
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_StopTestRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_StopTestRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest.class, yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        testId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_StopTestRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest build() {
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest buildPartial() {
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest result = new yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest(this);
+        result.testId_ = testId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest) {
+          return mergeFrom((yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest other) {
+        if (other == yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest.getDefaultInstance()) return this;
+        if (!other.getTestId().isEmpty()) {
+          testId_ = other.testId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object testId_ = "";
+      /**
+       * <pre>
+       * ID of the test to stop.
+       * </pre>
+       *
+       * <code>string test_id = 1;</code>
+       * @return The testId.
+       */
+      public java.lang.String getTestId() {
+        java.lang.Object ref = testId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          testId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the test to stop.
+       * </pre>
+       *
+       * <code>string test_id = 1;</code>
+       * @return The bytes for testId.
+       */
+      public com.google.protobuf.ByteString
+          getTestIdBytes() {
+        java.lang.Object ref = testId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          testId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the test to stop.
+       * </pre>
+       *
+       * <code>string test_id = 1;</code>
+       * @param value The testId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTestId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        testId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the test to stop.
+       * </pre>
+       *
+       * <code>string test_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTestId() {
+        
+        testId_ = getDefaultInstance().getTestId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the test to stop.
+       * </pre>
+       *
+       * <code>string test_id = 1;</code>
+       * @param value The bytes for testId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTestIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        testId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.loadtesting.api.v1.StopTestRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.loadtesting.api.v1.StopTestRequest)
+    private static final yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest();
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StopTestRequest>
+        PARSER = new com.google.protobuf.AbstractParser<StopTestRequest>() {
+      @java.lang.Override
+      public StopTestRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StopTestRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StopTestRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StopTestRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StopTestMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.loadtesting.api.v1.StopTestMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the test that is being stopped.
+     * </pre>
+     *
+     * <code>string test_id = 1;</code>
+     * @return The testId.
+     */
+    java.lang.String getTestId();
+    /**
+     * <pre>
+     * ID of the test that is being stopped.
+     * </pre>
+     *
+     * <code>string test_id = 1;</code>
+     * @return The bytes for testId.
+     */
+    com.google.protobuf.ByteString
+        getTestIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.loadtesting.api.v1.StopTestMetadata}
+   */
+  public static final class StopTestMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.loadtesting.api.v1.StopTestMetadata)
+      StopTestMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StopTestMetadata.newBuilder() to construct.
+    private StopTestMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StopTestMetadata() {
+      testId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StopTestMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StopTestMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              testId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_StopTestMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_StopTestMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata.class, yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata.Builder.class);
+    }
+
+    public static final int TEST_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object testId_;
+    /**
+     * <pre>
+     * ID of the test that is being stopped.
+     * </pre>
+     *
+     * <code>string test_id = 1;</code>
+     * @return The testId.
+     */
+    @java.lang.Override
+    public java.lang.String getTestId() {
+      java.lang.Object ref = testId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        testId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the test that is being stopped.
+     * </pre>
+     *
+     * <code>string test_id = 1;</code>
+     * @return The bytes for testId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTestIdBytes() {
+      java.lang.Object ref = testId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        testId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(testId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, testId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(testId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, testId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata other = (yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata) obj;
+
+      if (!getTestId()
+          .equals(other.getTestId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TEST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTestId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.loadtesting.api.v1.StopTestMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.loadtesting.api.v1.StopTestMetadata)
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_StopTestMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_StopTestMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata.class, yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        testId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_StopTestMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata build() {
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata buildPartial() {
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata result = new yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata(this);
+        result.testId_ = testId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata) {
+          return mergeFrom((yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata other) {
+        if (other == yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata.getDefaultInstance()) return this;
+        if (!other.getTestId().isEmpty()) {
+          testId_ = other.testId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object testId_ = "";
+      /**
+       * <pre>
+       * ID of the test that is being stopped.
+       * </pre>
+       *
+       * <code>string test_id = 1;</code>
+       * @return The testId.
+       */
+      public java.lang.String getTestId() {
+        java.lang.Object ref = testId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          testId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the test that is being stopped.
+       * </pre>
+       *
+       * <code>string test_id = 1;</code>
+       * @return The bytes for testId.
+       */
+      public com.google.protobuf.ByteString
+          getTestIdBytes() {
+        java.lang.Object ref = testId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          testId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the test that is being stopped.
+       * </pre>
+       *
+       * <code>string test_id = 1;</code>
+       * @param value The testId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTestId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        testId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the test that is being stopped.
+       * </pre>
+       *
+       * <code>string test_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTestId() {
+        
+        testId_ = getDefaultInstance().getTestId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the test that is being stopped.
+       * </pre>
+       *
+       * <code>string test_id = 1;</code>
+       * @param value The bytes for testId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTestIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        testId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.loadtesting.api.v1.StopTestMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.loadtesting.api.v1.StopTestMetadata)
+    private static final yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata();
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StopTestMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<StopTestMetadata>() {
+      @java.lang.Override
+      public StopTestMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StopTestMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StopTestMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StopTestMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteTestRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.loadtesting.api.v1.DeleteTestRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the test to delete.
+     * </pre>
+     *
+     * <code>string test_id = 1;</code>
+     * @return The testId.
+     */
+    java.lang.String getTestId();
+    /**
+     * <pre>
+     * ID of the test to delete.
+     * </pre>
+     *
+     * <code>string test_id = 1;</code>
+     * @return The bytes for testId.
+     */
+    com.google.protobuf.ByteString
+        getTestIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.loadtesting.api.v1.DeleteTestRequest}
+   */
+  public static final class DeleteTestRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.loadtesting.api.v1.DeleteTestRequest)
+      DeleteTestRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteTestRequest.newBuilder() to construct.
+    private DeleteTestRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteTestRequest() {
+      testId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteTestRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteTestRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              testId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_DeleteTestRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_DeleteTestRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest.class, yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest.Builder.class);
+    }
+
+    public static final int TEST_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object testId_;
+    /**
+     * <pre>
+     * ID of the test to delete.
+     * </pre>
+     *
+     * <code>string test_id = 1;</code>
+     * @return The testId.
+     */
+    @java.lang.Override
+    public java.lang.String getTestId() {
+      java.lang.Object ref = testId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        testId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the test to delete.
+     * </pre>
+     *
+     * <code>string test_id = 1;</code>
+     * @return The bytes for testId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTestIdBytes() {
+      java.lang.Object ref = testId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        testId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(testId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, testId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(testId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, testId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest other = (yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest) obj;
+
+      if (!getTestId()
+          .equals(other.getTestId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TEST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTestId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.loadtesting.api.v1.DeleteTestRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.loadtesting.api.v1.DeleteTestRequest)
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_DeleteTestRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_DeleteTestRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest.class, yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        testId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_DeleteTestRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest build() {
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest buildPartial() {
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest result = new yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest(this);
+        result.testId_ = testId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest) {
+          return mergeFrom((yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest other) {
+        if (other == yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest.getDefaultInstance()) return this;
+        if (!other.getTestId().isEmpty()) {
+          testId_ = other.testId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object testId_ = "";
+      /**
+       * <pre>
+       * ID of the test to delete.
+       * </pre>
+       *
+       * <code>string test_id = 1;</code>
+       * @return The testId.
+       */
+      public java.lang.String getTestId() {
+        java.lang.Object ref = testId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          testId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the test to delete.
+       * </pre>
+       *
+       * <code>string test_id = 1;</code>
+       * @return The bytes for testId.
+       */
+      public com.google.protobuf.ByteString
+          getTestIdBytes() {
+        java.lang.Object ref = testId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          testId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the test to delete.
+       * </pre>
+       *
+       * <code>string test_id = 1;</code>
+       * @param value The testId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTestId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        testId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the test to delete.
+       * </pre>
+       *
+       * <code>string test_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTestId() {
+        
+        testId_ = getDefaultInstance().getTestId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the test to delete.
+       * </pre>
+       *
+       * <code>string test_id = 1;</code>
+       * @param value The bytes for testId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTestIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        testId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.loadtesting.api.v1.DeleteTestRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.loadtesting.api.v1.DeleteTestRequest)
+    private static final yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest();
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteTestRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteTestRequest>() {
+      @java.lang.Override
+      public DeleteTestRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteTestRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteTestRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteTestRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DeleteTestMetadataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.loadtesting.api.v1.DeleteTestMetadata)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the test that is being deleted.
+     * </pre>
+     *
+     * <code>string test_id = 1;</code>
+     * @return The testId.
+     */
+    java.lang.String getTestId();
+    /**
+     * <pre>
+     * ID of the test that is being deleted.
+     * </pre>
+     *
+     * <code>string test_id = 1;</code>
+     * @return The bytes for testId.
+     */
+    com.google.protobuf.ByteString
+        getTestIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.loadtesting.api.v1.DeleteTestMetadata}
+   */
+  public static final class DeleteTestMetadata extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.loadtesting.api.v1.DeleteTestMetadata)
+      DeleteTestMetadataOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeleteTestMetadata.newBuilder() to construct.
+    private DeleteTestMetadata(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeleteTestMetadata() {
+      testId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteTestMetadata();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeleteTestMetadata(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              testId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_DeleteTestMetadata_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_DeleteTestMetadata_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata.class, yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata.Builder.class);
+    }
+
+    public static final int TEST_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object testId_;
+    /**
+     * <pre>
+     * ID of the test that is being deleted.
+     * </pre>
+     *
+     * <code>string test_id = 1;</code>
+     * @return The testId.
+     */
+    @java.lang.Override
+    public java.lang.String getTestId() {
+      java.lang.Object ref = testId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        testId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the test that is being deleted.
+     * </pre>
+     *
+     * <code>string test_id = 1;</code>
+     * @return The bytes for testId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTestIdBytes() {
+      java.lang.Object ref = testId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        testId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(testId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, testId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(testId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, testId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata other = (yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata) obj;
+
+      if (!getTestId()
+          .equals(other.getTestId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TEST_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTestId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.loadtesting.api.v1.DeleteTestMetadata}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.loadtesting.api.v1.DeleteTestMetadata)
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_DeleteTestMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_DeleteTestMetadata_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata.class, yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        testId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_DeleteTestMetadata_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata getDefaultInstanceForType() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata build() {
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata buildPartial() {
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata result = new yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata(this);
+        result.testId_ = testId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata) {
+          return mergeFrom((yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata other) {
+        if (other == yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata.getDefaultInstance()) return this;
+        if (!other.getTestId().isEmpty()) {
+          testId_ = other.testId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object testId_ = "";
+      /**
+       * <pre>
+       * ID of the test that is being deleted.
+       * </pre>
+       *
+       * <code>string test_id = 1;</code>
+       * @return The testId.
+       */
+      public java.lang.String getTestId() {
+        java.lang.Object ref = testId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          testId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the test that is being deleted.
+       * </pre>
+       *
+       * <code>string test_id = 1;</code>
+       * @return The bytes for testId.
+       */
+      public com.google.protobuf.ByteString
+          getTestIdBytes() {
+        java.lang.Object ref = testId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          testId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the test that is being deleted.
+       * </pre>
+       *
+       * <code>string test_id = 1;</code>
+       * @param value The testId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTestId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        testId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the test that is being deleted.
+       * </pre>
+       *
+       * <code>string test_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTestId() {
+        
+        testId_ = getDefaultInstance().getTestId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the test that is being deleted.
+       * </pre>
+       *
+       * <code>string test_id = 1;</code>
+       * @param value The bytes for testId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTestIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        testId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.loadtesting.api.v1.DeleteTestMetadata)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.loadtesting.api.v1.DeleteTestMetadata)
+    private static final yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata();
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeleteTestMetadata>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteTestMetadata>() {
+      @java.lang.Override
+      public DeleteTestMetadata parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeleteTestMetadata(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeleteTestMetadata> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeleteTestMetadata> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestMetadata getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListTestsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.loadtesting.api.v1.ListTestsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * ID of the folder to list tests in.
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * ID of the folder to list tests in.
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListTestsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
+     */
+    long getPageSize();
+
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListTestsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3;</code>
+     * @return The pageToken.
+     */
+    java.lang.String getPageToken();
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListTestsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
+     */
+    com.google.protobuf.ByteString
+        getPageTokenBytes();
+
+    /**
+     * <pre>
+     * A filter expression that filters tests listed in the response.
+     * The filter expression may contain multiple field expressions joined by `AND`.
+     * The field expression must specify:
+     * 1. The field name.
+     * 2. An operator:
+     *    - `=`, `!=`, `&lt;`, `&lt;=`, `&gt;`, `&gt;=`, `CONTAINS`, `:` for single values.
+     *    - `IN` or `NOT IN` for lists of values.
+     * 3. The value. String values must be encosed in `"`, boolean values are {`true`, `false`}, timestamp values in ISO-8601.
+     * Currently supported fields:
+     * - `id` [yandex.cloud.loadtesting.api.v1.test.Test.id]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`
+     * - `details.name` [yandex.cloud.loadtesting.api.v1.test.Details.name]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`, `CONTAINS`
+     * - `details.tags.&lt;TAG_NAME&gt;` [yandex.cloud.loadtesting.api.v1.test.Details.tags]
+     *   - operators: `:`
+     * - `summary.status` [yandex.cloud.loadtesting.api.v1.test.Summary.status]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`
+     * - `summary.is_finished` [yandex.cloud.loadtesting.api.v1.test.Summary.is_finished]
+     *   - operators: `=`
+     * - `summary.created_at` [yandex.cloud.loadtesting.api.v1.test.Summary.created_at]
+     *   - operators: `&lt;`, `&lt;=`, `&gt;`, `&gt;=`
+     * - `summary.created_by` [yandex.cloud.loadtesting.api.v1.test.Summary.created_by]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`
+     * Examples: 
+     * - `summary.status IN ("DONE", "ERROR") AND details.tags.author:"yandex"`
+     * - `summary.is_finished = true AND details.name CONTAINS "nightly-test"`
+     * </pre>
+     *
+     * <code>string filter = 4;</code>
+     * @return The filter.
+     */
+    java.lang.String getFilter();
+    /**
+     * <pre>
+     * A filter expression that filters tests listed in the response.
+     * The filter expression may contain multiple field expressions joined by `AND`.
+     * The field expression must specify:
+     * 1. The field name.
+     * 2. An operator:
+     *    - `=`, `!=`, `&lt;`, `&lt;=`, `&gt;`, `&gt;=`, `CONTAINS`, `:` for single values.
+     *    - `IN` or `NOT IN` for lists of values.
+     * 3. The value. String values must be encosed in `"`, boolean values are {`true`, `false`}, timestamp values in ISO-8601.
+     * Currently supported fields:
+     * - `id` [yandex.cloud.loadtesting.api.v1.test.Test.id]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`
+     * - `details.name` [yandex.cloud.loadtesting.api.v1.test.Details.name]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`, `CONTAINS`
+     * - `details.tags.&lt;TAG_NAME&gt;` [yandex.cloud.loadtesting.api.v1.test.Details.tags]
+     *   - operators: `:`
+     * - `summary.status` [yandex.cloud.loadtesting.api.v1.test.Summary.status]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`
+     * - `summary.is_finished` [yandex.cloud.loadtesting.api.v1.test.Summary.is_finished]
+     *   - operators: `=`
+     * - `summary.created_at` [yandex.cloud.loadtesting.api.v1.test.Summary.created_at]
+     *   - operators: `&lt;`, `&lt;=`, `&gt;`, `&gt;=`
+     * - `summary.created_by` [yandex.cloud.loadtesting.api.v1.test.Summary.created_by]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`
+     * Examples: 
+     * - `summary.status IN ("DONE", "ERROR") AND details.tags.author:"yandex"`
+     * - `summary.is_finished = true AND details.name CONTAINS "nightly-test"`
+     * </pre>
+     *
+     * <code>string filter = 4;</code>
+     * @return The bytes for filter.
+     */
+    com.google.protobuf.ByteString
+        getFilterBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.loadtesting.api.v1.ListTestsRequest}
+   */
+  public static final class ListTestsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.loadtesting.api.v1.ListTestsRequest)
+      ListTestsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListTestsRequest.newBuilder() to construct.
+    private ListTestsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListTestsRequest() {
+      folderId_ = "";
+      pageToken_ = "";
+      filter_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListTestsRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListTestsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
+              break;
+            }
+            case 16: {
+
+              pageSize_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              pageToken_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              filter_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_ListTestsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_ListTestsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest.class, yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest.Builder.class);
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * ID of the folder to list tests in.
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The folderId.
+     */
+    @java.lang.Override
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the folder to list tests in.
+     * </pre>
+     *
+     * <code>string folder_id = 1;</code>
+     * @return The bytes for folderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PAGE_SIZE_FIELD_NUMBER = 2;
+    private long pageSize_;
+    /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListTestsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
+     * <code>int64 page_size = 2;</code>
+     * @return The pageSize.
+     */
+    @java.lang.Override
+    public long getPageSize() {
+      return pageSize_;
+    }
+
+    public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
+    private volatile java.lang.Object pageToken_;
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListTestsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3;</code>
+     * @return The pageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getPageToken() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        pageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListTestsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
+     * <code>string page_token = 3;</code>
+     * @return The bytes for pageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPageTokenBytes() {
+      java.lang.Object ref = pageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        pageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FILTER_FIELD_NUMBER = 4;
+    private volatile java.lang.Object filter_;
+    /**
+     * <pre>
+     * A filter expression that filters tests listed in the response.
+     * The filter expression may contain multiple field expressions joined by `AND`.
+     * The field expression must specify:
+     * 1. The field name.
+     * 2. An operator:
+     *    - `=`, `!=`, `&lt;`, `&lt;=`, `&gt;`, `&gt;=`, `CONTAINS`, `:` for single values.
+     *    - `IN` or `NOT IN` for lists of values.
+     * 3. The value. String values must be encosed in `"`, boolean values are {`true`, `false`}, timestamp values in ISO-8601.
+     * Currently supported fields:
+     * - `id` [yandex.cloud.loadtesting.api.v1.test.Test.id]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`
+     * - `details.name` [yandex.cloud.loadtesting.api.v1.test.Details.name]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`, `CONTAINS`
+     * - `details.tags.&lt;TAG_NAME&gt;` [yandex.cloud.loadtesting.api.v1.test.Details.tags]
+     *   - operators: `:`
+     * - `summary.status` [yandex.cloud.loadtesting.api.v1.test.Summary.status]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`
+     * - `summary.is_finished` [yandex.cloud.loadtesting.api.v1.test.Summary.is_finished]
+     *   - operators: `=`
+     * - `summary.created_at` [yandex.cloud.loadtesting.api.v1.test.Summary.created_at]
+     *   - operators: `&lt;`, `&lt;=`, `&gt;`, `&gt;=`
+     * - `summary.created_by` [yandex.cloud.loadtesting.api.v1.test.Summary.created_by]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`
+     * Examples: 
+     * - `summary.status IN ("DONE", "ERROR") AND details.tags.author:"yandex"`
+     * - `summary.is_finished = true AND details.name CONTAINS "nightly-test"`
+     * </pre>
+     *
+     * <code>string filter = 4;</code>
+     * @return The filter.
+     */
+    @java.lang.Override
+    public java.lang.String getFilter() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        filter_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * A filter expression that filters tests listed in the response.
+     * The filter expression may contain multiple field expressions joined by `AND`.
+     * The field expression must specify:
+     * 1. The field name.
+     * 2. An operator:
+     *    - `=`, `!=`, `&lt;`, `&lt;=`, `&gt;`, `&gt;=`, `CONTAINS`, `:` for single values.
+     *    - `IN` or `NOT IN` for lists of values.
+     * 3. The value. String values must be encosed in `"`, boolean values are {`true`, `false`}, timestamp values in ISO-8601.
+     * Currently supported fields:
+     * - `id` [yandex.cloud.loadtesting.api.v1.test.Test.id]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`
+     * - `details.name` [yandex.cloud.loadtesting.api.v1.test.Details.name]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`, `CONTAINS`
+     * - `details.tags.&lt;TAG_NAME&gt;` [yandex.cloud.loadtesting.api.v1.test.Details.tags]
+     *   - operators: `:`
+     * - `summary.status` [yandex.cloud.loadtesting.api.v1.test.Summary.status]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`
+     * - `summary.is_finished` [yandex.cloud.loadtesting.api.v1.test.Summary.is_finished]
+     *   - operators: `=`
+     * - `summary.created_at` [yandex.cloud.loadtesting.api.v1.test.Summary.created_at]
+     *   - operators: `&lt;`, `&lt;=`, `&gt;`, `&gt;=`
+     * - `summary.created_by` [yandex.cloud.loadtesting.api.v1.test.Summary.created_by]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`
+     * Examples: 
+     * - `summary.status IN ("DONE", "ERROR") AND details.tags.author:"yandex"`
+     * - `summary.is_finished = true AND details.name CONTAINS "nightly-test"`
+     * </pre>
+     *
+     * <code>string filter = 4;</code>
+     * @return The bytes for filter.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFilterBytes() {
+      java.lang.Object ref = filter_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        filter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, folderId_);
+      }
+      if (pageSize_ != 0L) {
+        output.writeInt64(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, pageToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, filter_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, folderId_);
+      }
+      if (pageSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, pageSize_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, pageToken_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(filter_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, filter_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest other = (yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest) obj;
+
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (getPageSize()
+          != other.getPageSize()) return false;
+      if (!getPageToken()
+          .equals(other.getPageToken())) return false;
+      if (!getFilter()
+          .equals(other.getFilter())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
+      hash = (37 * hash) + PAGE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getPageSize());
+      hash = (37 * hash) + PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getPageToken().hashCode();
+      hash = (37 * hash) + FILTER_FIELD_NUMBER;
+      hash = (53 * hash) + getFilter().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.loadtesting.api.v1.ListTestsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.loadtesting.api.v1.ListTestsRequest)
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_ListTestsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_ListTestsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest.class, yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        folderId_ = "";
+
+        pageSize_ = 0L;
+
+        pageToken_ = "";
+
+        filter_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_ListTestsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest build() {
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest buildPartial() {
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest result = new yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest(this);
+        result.folderId_ = folderId_;
+        result.pageSize_ = pageSize_;
+        result.pageToken_ = pageToken_;
+        result.filter_ = filter_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest) {
+          return mergeFrom((yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest other) {
+        if (other == yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest.getDefaultInstance()) return this;
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
+          onChanged();
+        }
+        if (other.getPageSize() != 0L) {
+          setPageSize(other.getPageSize());
+        }
+        if (!other.getPageToken().isEmpty()) {
+          pageToken_ = other.pageToken_;
+          onChanged();
+        }
+        if (!other.getFilter().isEmpty()) {
+          filter_ = other.filter_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * ID of the folder to list tests in.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @return The folderId.
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder to list tests in.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @return The bytes for folderId.
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder to list tests in.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder to list tests in.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder to list tests in.
+       * </pre>
+       *
+       * <code>string folder_id = 1;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long pageSize_ ;
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListTestsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2;</code>
+       * @return The pageSize.
+       */
+      @java.lang.Override
+      public long getPageSize() {
+        return pageSize_;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListTestsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2;</code>
+       * @param value The pageSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageSize(long value) {
+        
+        pageSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListTestsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
+       * <code>int64 page_size = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageSize() {
+        
+        pageSize_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object pageToken_ = "";
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListTestsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3;</code>
+       * @return The pageToken.
+       */
+      public java.lang.String getPageToken() {
+        java.lang.Object ref = pageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          pageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListTestsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3;</code>
+       * @return The bytes for pageToken.
+       */
+      public com.google.protobuf.ByteString
+          getPageTokenBytes() {
+        java.lang.Object ref = pageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          pageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListTestsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3;</code>
+       * @param value The pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListTestsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPageToken() {
+        
+        pageToken_ = getDefaultInstance().getPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListTestsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
+       * <code>string page_token = 3;</code>
+       * @param value The bytes for pageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        pageToken_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object filter_ = "";
+      /**
+       * <pre>
+       * A filter expression that filters tests listed in the response.
+       * The filter expression may contain multiple field expressions joined by `AND`.
+       * The field expression must specify:
+       * 1. The field name.
+       * 2. An operator:
+       *    - `=`, `!=`, `&lt;`, `&lt;=`, `&gt;`, `&gt;=`, `CONTAINS`, `:` for single values.
+       *    - `IN` or `NOT IN` for lists of values.
+       * 3. The value. String values must be encosed in `"`, boolean values are {`true`, `false`}, timestamp values in ISO-8601.
+       * Currently supported fields:
+       * - `id` [yandex.cloud.loadtesting.api.v1.test.Test.id]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`
+       * - `details.name` [yandex.cloud.loadtesting.api.v1.test.Details.name]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`, `CONTAINS`
+       * - `details.tags.&lt;TAG_NAME&gt;` [yandex.cloud.loadtesting.api.v1.test.Details.tags]
+       *   - operators: `:`
+       * - `summary.status` [yandex.cloud.loadtesting.api.v1.test.Summary.status]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`
+       * - `summary.is_finished` [yandex.cloud.loadtesting.api.v1.test.Summary.is_finished]
+       *   - operators: `=`
+       * - `summary.created_at` [yandex.cloud.loadtesting.api.v1.test.Summary.created_at]
+       *   - operators: `&lt;`, `&lt;=`, `&gt;`, `&gt;=`
+       * - `summary.created_by` [yandex.cloud.loadtesting.api.v1.test.Summary.created_by]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`
+       * Examples: 
+       * - `summary.status IN ("DONE", "ERROR") AND details.tags.author:"yandex"`
+       * - `summary.is_finished = true AND details.name CONTAINS "nightly-test"`
+       * </pre>
+       *
+       * <code>string filter = 4;</code>
+       * @return The filter.
+       */
+      public java.lang.String getFilter() {
+        java.lang.Object ref = filter_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          filter_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters tests listed in the response.
+       * The filter expression may contain multiple field expressions joined by `AND`.
+       * The field expression must specify:
+       * 1. The field name.
+       * 2. An operator:
+       *    - `=`, `!=`, `&lt;`, `&lt;=`, `&gt;`, `&gt;=`, `CONTAINS`, `:` for single values.
+       *    - `IN` or `NOT IN` for lists of values.
+       * 3. The value. String values must be encosed in `"`, boolean values are {`true`, `false`}, timestamp values in ISO-8601.
+       * Currently supported fields:
+       * - `id` [yandex.cloud.loadtesting.api.v1.test.Test.id]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`
+       * - `details.name` [yandex.cloud.loadtesting.api.v1.test.Details.name]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`, `CONTAINS`
+       * - `details.tags.&lt;TAG_NAME&gt;` [yandex.cloud.loadtesting.api.v1.test.Details.tags]
+       *   - operators: `:`
+       * - `summary.status` [yandex.cloud.loadtesting.api.v1.test.Summary.status]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`
+       * - `summary.is_finished` [yandex.cloud.loadtesting.api.v1.test.Summary.is_finished]
+       *   - operators: `=`
+       * - `summary.created_at` [yandex.cloud.loadtesting.api.v1.test.Summary.created_at]
+       *   - operators: `&lt;`, `&lt;=`, `&gt;`, `&gt;=`
+       * - `summary.created_by` [yandex.cloud.loadtesting.api.v1.test.Summary.created_by]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`
+       * Examples: 
+       * - `summary.status IN ("DONE", "ERROR") AND details.tags.author:"yandex"`
+       * - `summary.is_finished = true AND details.name CONTAINS "nightly-test"`
+       * </pre>
+       *
+       * <code>string filter = 4;</code>
+       * @return The bytes for filter.
+       */
+      public com.google.protobuf.ByteString
+          getFilterBytes() {
+        java.lang.Object ref = filter_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          filter_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * A filter expression that filters tests listed in the response.
+       * The filter expression may contain multiple field expressions joined by `AND`.
+       * The field expression must specify:
+       * 1. The field name.
+       * 2. An operator:
+       *    - `=`, `!=`, `&lt;`, `&lt;=`, `&gt;`, `&gt;=`, `CONTAINS`, `:` for single values.
+       *    - `IN` or `NOT IN` for lists of values.
+       * 3. The value. String values must be encosed in `"`, boolean values are {`true`, `false`}, timestamp values in ISO-8601.
+       * Currently supported fields:
+       * - `id` [yandex.cloud.loadtesting.api.v1.test.Test.id]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`
+       * - `details.name` [yandex.cloud.loadtesting.api.v1.test.Details.name]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`, `CONTAINS`
+       * - `details.tags.&lt;TAG_NAME&gt;` [yandex.cloud.loadtesting.api.v1.test.Details.tags]
+       *   - operators: `:`
+       * - `summary.status` [yandex.cloud.loadtesting.api.v1.test.Summary.status]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`
+       * - `summary.is_finished` [yandex.cloud.loadtesting.api.v1.test.Summary.is_finished]
+       *   - operators: `=`
+       * - `summary.created_at` [yandex.cloud.loadtesting.api.v1.test.Summary.created_at]
+       *   - operators: `&lt;`, `&lt;=`, `&gt;`, `&gt;=`
+       * - `summary.created_by` [yandex.cloud.loadtesting.api.v1.test.Summary.created_by]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`
+       * Examples: 
+       * - `summary.status IN ("DONE", "ERROR") AND details.tags.author:"yandex"`
+       * - `summary.is_finished = true AND details.name CONTAINS "nightly-test"`
+       * </pre>
+       *
+       * <code>string filter = 4;</code>
+       * @param value The filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilter(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters tests listed in the response.
+       * The filter expression may contain multiple field expressions joined by `AND`.
+       * The field expression must specify:
+       * 1. The field name.
+       * 2. An operator:
+       *    - `=`, `!=`, `&lt;`, `&lt;=`, `&gt;`, `&gt;=`, `CONTAINS`, `:` for single values.
+       *    - `IN` or `NOT IN` for lists of values.
+       * 3. The value. String values must be encosed in `"`, boolean values are {`true`, `false`}, timestamp values in ISO-8601.
+       * Currently supported fields:
+       * - `id` [yandex.cloud.loadtesting.api.v1.test.Test.id]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`
+       * - `details.name` [yandex.cloud.loadtesting.api.v1.test.Details.name]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`, `CONTAINS`
+       * - `details.tags.&lt;TAG_NAME&gt;` [yandex.cloud.loadtesting.api.v1.test.Details.tags]
+       *   - operators: `:`
+       * - `summary.status` [yandex.cloud.loadtesting.api.v1.test.Summary.status]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`
+       * - `summary.is_finished` [yandex.cloud.loadtesting.api.v1.test.Summary.is_finished]
+       *   - operators: `=`
+       * - `summary.created_at` [yandex.cloud.loadtesting.api.v1.test.Summary.created_at]
+       *   - operators: `&lt;`, `&lt;=`, `&gt;`, `&gt;=`
+       * - `summary.created_by` [yandex.cloud.loadtesting.api.v1.test.Summary.created_by]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`
+       * Examples: 
+       * - `summary.status IN ("DONE", "ERROR") AND details.tags.author:"yandex"`
+       * - `summary.is_finished = true AND details.name CONTAINS "nightly-test"`
+       * </pre>
+       *
+       * <code>string filter = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFilter() {
+        
+        filter_ = getDefaultInstance().getFilter();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A filter expression that filters tests listed in the response.
+       * The filter expression may contain multiple field expressions joined by `AND`.
+       * The field expression must specify:
+       * 1. The field name.
+       * 2. An operator:
+       *    - `=`, `!=`, `&lt;`, `&lt;=`, `&gt;`, `&gt;=`, `CONTAINS`, `:` for single values.
+       *    - `IN` or `NOT IN` for lists of values.
+       * 3. The value. String values must be encosed in `"`, boolean values are {`true`, `false`}, timestamp values in ISO-8601.
+       * Currently supported fields:
+       * - `id` [yandex.cloud.loadtesting.api.v1.test.Test.id]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`
+       * - `details.name` [yandex.cloud.loadtesting.api.v1.test.Details.name]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`, `CONTAINS`
+       * - `details.tags.&lt;TAG_NAME&gt;` [yandex.cloud.loadtesting.api.v1.test.Details.tags]
+       *   - operators: `:`
+       * - `summary.status` [yandex.cloud.loadtesting.api.v1.test.Summary.status]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`
+       * - `summary.is_finished` [yandex.cloud.loadtesting.api.v1.test.Summary.is_finished]
+       *   - operators: `=`
+       * - `summary.created_at` [yandex.cloud.loadtesting.api.v1.test.Summary.created_at]
+       *   - operators: `&lt;`, `&lt;=`, `&gt;`, `&gt;=`
+       * - `summary.created_by` [yandex.cloud.loadtesting.api.v1.test.Summary.created_by]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`
+       * Examples: 
+       * - `summary.status IN ("DONE", "ERROR") AND details.tags.author:"yandex"`
+       * - `summary.is_finished = true AND details.name CONTAINS "nightly-test"`
+       * </pre>
+       *
+       * <code>string filter = 4;</code>
+       * @param value The bytes for filter to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFilterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        filter_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.loadtesting.api.v1.ListTestsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.loadtesting.api.v1.ListTestsRequest)
+    private static final yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest();
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListTestsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ListTestsRequest>() {
+      @java.lang.Override
+      public ListTestsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListTestsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListTestsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListTestsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ListTestsResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.loadtesting.api.v1.ListTestsResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * List of tests in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+     */
+    java.util.List<yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test> 
+        getTestsList();
+    /**
+     * <pre>
+     * List of tests in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+     */
+    yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test getTests(int index);
+    /**
+     * <pre>
+     * List of tests in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+     */
+    int getTestsCount();
+    /**
+     * <pre>
+     * List of tests in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.TestOrBuilder> 
+        getTestsOrBuilderList();
+    /**
+     * <pre>
+     * List of tests in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+     */
+    yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.TestOrBuilder getTestsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListTestsRequest.page_size], use `next_page_token` as the value
+     * for the [ListTestsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    java.lang.String getNextPageToken();
+    /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListTestsRequest.page_size], use `next_page_token` as the value
+     * for the [ListTestsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    com.google.protobuf.ByteString
+        getNextPageTokenBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.loadtesting.api.v1.ListTestsResponse}
+   */
+  public static final class ListTestsResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.loadtesting.api.v1.ListTestsResponse)
+      ListTestsResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ListTestsResponse.newBuilder() to construct.
+    private ListTestsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ListTestsResponse() {
+      tests_ = java.util.Collections.emptyList();
+      nextPageToken_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListTestsResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ListTestsResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                tests_ = new java.util.ArrayList<yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              tests_.add(
+                  input.readMessage(yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nextPageToken_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          tests_ = java.util.Collections.unmodifiableList(tests_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_ListTestsResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_ListTestsResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse.class, yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse.Builder.class);
+    }
+
+    public static final int TESTS_FIELD_NUMBER = 1;
+    private java.util.List<yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test> tests_;
+    /**
+     * <pre>
+     * List of tests in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test> getTestsList() {
+      return tests_;
+    }
+    /**
+     * <pre>
+     * List of tests in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.TestOrBuilder> 
+        getTestsOrBuilderList() {
+      return tests_;
+    }
+    /**
+     * <pre>
+     * List of tests in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+     */
+    @java.lang.Override
+    public int getTestsCount() {
+      return tests_.size();
+    }
+    /**
+     * <pre>
+     * List of tests in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test getTests(int index) {
+      return tests_.get(index);
+    }
+    /**
+     * <pre>
+     * List of tests in the specified folder.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.TestOrBuilder getTestsOrBuilder(
+        int index) {
+      return tests_.get(index);
+    }
+
+    public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nextPageToken_;
+    /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListTestsRequest.page_size], use `next_page_token` as the value
+     * for the [ListTestsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The nextPageToken.
+     */
+    @java.lang.Override
+    public java.lang.String getNextPageToken() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nextPageToken_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListTestsRequest.page_size], use `next_page_token` as the value
+     * for the [ListTestsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
+     * <code>string next_page_token = 2;</code>
+     * @return The bytes for nextPageToken.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNextPageTokenBytes() {
+      java.lang.Object ref = nextPageToken_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nextPageToken_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < tests_.size(); i++) {
+        output.writeMessage(1, tests_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nextPageToken_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < tests_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, tests_.get(i));
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextPageToken_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nextPageToken_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse other = (yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse) obj;
+
+      if (!getTestsList()
+          .equals(other.getTestsList())) return false;
+      if (!getNextPageToken()
+          .equals(other.getNextPageToken())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTestsCount() > 0) {
+        hash = (37 * hash) + TESTS_FIELD_NUMBER;
+        hash = (53 * hash) + getTestsList().hashCode();
+      }
+      hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
+      hash = (53 * hash) + getNextPageToken().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.loadtesting.api.v1.ListTestsResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.loadtesting.api.v1.ListTestsResponse)
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_ListTestsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_ListTestsResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse.class, yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTestsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (testsBuilder_ == null) {
+          tests_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          testsBuilder_.clear();
+        }
+        nextPageToken_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.internal_static_yandex_cloud_loadtesting_api_v1_ListTestsResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse getDefaultInstanceForType() {
+        return yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse build() {
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse buildPartial() {
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse result = new yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (testsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            tests_ = java.util.Collections.unmodifiableList(tests_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.tests_ = tests_;
+        } else {
+          result.tests_ = testsBuilder_.build();
+        }
+        result.nextPageToken_ = nextPageToken_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse) {
+          return mergeFrom((yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse other) {
+        if (other == yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse.getDefaultInstance()) return this;
+        if (testsBuilder_ == null) {
+          if (!other.tests_.isEmpty()) {
+            if (tests_.isEmpty()) {
+              tests_ = other.tests_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTestsIsMutable();
+              tests_.addAll(other.tests_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tests_.isEmpty()) {
+            if (testsBuilder_.isEmpty()) {
+              testsBuilder_.dispose();
+              testsBuilder_ = null;
+              tests_ = other.tests_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              testsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTestsFieldBuilder() : null;
+            } else {
+              testsBuilder_.addAllMessages(other.tests_);
+            }
+          }
+        }
+        if (!other.getNextPageToken().isEmpty()) {
+          nextPageToken_ = other.nextPageToken_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test> tests_ =
+        java.util.Collections.emptyList();
+      private void ensureTestsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          tests_ = new java.util.ArrayList<yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test>(tests_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test, yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test.Builder, yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.TestOrBuilder> testsBuilder_;
+
+      /**
+       * <pre>
+       * List of tests in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test> getTestsList() {
+        if (testsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tests_);
+        } else {
+          return testsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * List of tests in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+       */
+      public int getTestsCount() {
+        if (testsBuilder_ == null) {
+          return tests_.size();
+        } else {
+          return testsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * List of tests in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test getTests(int index) {
+        if (testsBuilder_ == null) {
+          return tests_.get(index);
+        } else {
+          return testsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of tests in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+       */
+      public Builder setTests(
+          int index, yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test value) {
+        if (testsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTestsIsMutable();
+          tests_.set(index, value);
+          onChanged();
+        } else {
+          testsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tests in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+       */
+      public Builder setTests(
+          int index, yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test.Builder builderForValue) {
+        if (testsBuilder_ == null) {
+          ensureTestsIsMutable();
+          tests_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          testsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tests in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+       */
+      public Builder addTests(yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test value) {
+        if (testsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTestsIsMutable();
+          tests_.add(value);
+          onChanged();
+        } else {
+          testsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tests in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+       */
+      public Builder addTests(
+          int index, yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test value) {
+        if (testsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTestsIsMutable();
+          tests_.add(index, value);
+          onChanged();
+        } else {
+          testsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tests in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+       */
+      public Builder addTests(
+          yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test.Builder builderForValue) {
+        if (testsBuilder_ == null) {
+          ensureTestsIsMutable();
+          tests_.add(builderForValue.build());
+          onChanged();
+        } else {
+          testsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tests in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+       */
+      public Builder addTests(
+          int index, yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test.Builder builderForValue) {
+        if (testsBuilder_ == null) {
+          ensureTestsIsMutable();
+          tests_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          testsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tests in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+       */
+      public Builder addAllTests(
+          java.lang.Iterable<? extends yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test> values) {
+        if (testsBuilder_ == null) {
+          ensureTestsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tests_);
+          onChanged();
+        } else {
+          testsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tests in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+       */
+      public Builder clearTests() {
+        if (testsBuilder_ == null) {
+          tests_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          testsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tests in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+       */
+      public Builder removeTests(int index) {
+        if (testsBuilder_ == null) {
+          ensureTestsIsMutable();
+          tests_.remove(index);
+          onChanged();
+        } else {
+          testsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * List of tests in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test.Builder getTestsBuilder(
+          int index) {
+        return getTestsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * List of tests in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.TestOrBuilder getTestsOrBuilder(
+          int index) {
+        if (testsBuilder_ == null) {
+          return tests_.get(index);  } else {
+          return testsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * List of tests in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+       */
+      public java.util.List<? extends yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.TestOrBuilder> 
+           getTestsOrBuilderList() {
+        if (testsBuilder_ != null) {
+          return testsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tests_);
+        }
+      }
+      /**
+       * <pre>
+       * List of tests in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test.Builder addTestsBuilder() {
+        return getTestsFieldBuilder().addBuilder(
+            yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of tests in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+       */
+      public yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test.Builder addTestsBuilder(
+          int index) {
+        return getTestsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * List of tests in the specified folder.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.loadtesting.api.v1.test.Test tests = 1;</code>
+       */
+      public java.util.List<yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test.Builder> 
+           getTestsBuilderList() {
+        return getTestsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test, yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test.Builder, yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.TestOrBuilder> 
+          getTestsFieldBuilder() {
+        if (testsBuilder_ == null) {
+          testsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test, yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test.Builder, yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.TestOrBuilder>(
+                  tests_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tests_ = null;
+        }
+        return testsBuilder_;
+      }
+
+      private java.lang.Object nextPageToken_ = "";
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTestsRequest.page_size], use `next_page_token` as the value
+       * for the [ListTestsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The nextPageToken.
+       */
+      public java.lang.String getNextPageToken() {
+        java.lang.Object ref = nextPageToken_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nextPageToken_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTestsRequest.page_size], use `next_page_token` as the value
+       * for the [ListTestsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return The bytes for nextPageToken.
+       */
+      public com.google.protobuf.ByteString
+          getNextPageTokenBytes() {
+        java.lang.Object ref = nextPageToken_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nextPageToken_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTestsRequest.page_size], use `next_page_token` as the value
+       * for the [ListTestsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageToken(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTestsRequest.page_size], use `next_page_token` as the value
+       * for the [ListTestsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNextPageToken() {
+        
+        nextPageToken_ = getDefaultInstance().getNextPageToken();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListTestsRequest.page_size], use `next_page_token` as the value
+       * for the [ListTestsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
+       * <code>string next_page_token = 2;</code>
+       * @param value The bytes for nextPageToken to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNextPageTokenBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nextPageToken_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.loadtesting.api.v1.ListTestsResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.loadtesting.api.v1.ListTestsResponse)
+    private static final yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse();
+    }
+
+    public static yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ListTestsResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ListTestsResponse>() {
+      @java.lang.Override
+      public ListTestsResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ListTestsResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ListTestsResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ListTestsResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_loadtesting_api_v1_CreateTestRequest_descriptor;
   private static final 
@@ -2311,6 +7469,36 @@ public final class TestServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_loadtesting_api_v1_GetTestRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_loadtesting_api_v1_StopTestRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_loadtesting_api_v1_StopTestRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_loadtesting_api_v1_StopTestMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_loadtesting_api_v1_StopTestMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_loadtesting_api_v1_DeleteTestRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_loadtesting_api_v1_DeleteTestRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_loadtesting_api_v1_DeleteTestMetadata_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_loadtesting_api_v1_DeleteTestMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_loadtesting_api_v1_ListTestsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_loadtesting_api_v1_ListTestsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_loadtesting_api_v1_ListTestsResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_loadtesting_api_v1_ListTestsResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2337,18 +7525,40 @@ public final class TestServiceOuterClass {
       "yandex.cloud.loadtesting.api.v1.test.Det" +
       "ails\"%\n\022CreateTestMetadata\022\017\n\007test_id\030\001 " +
       "\001(\t\"\'\n\016GetTestRequest\022\025\n\007test_id\030\001 \001(\tB\004" +
-      "\350\3071\0012\312\002\n\013TestService\022\250\001\n\006Create\0222.yandex" +
-      ".cloud.loadtesting.api.v1.CreateTestRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"G" +
-      "\202\323\344\223\002\036\"\031/loadtesting/api/v1/tests:\001*\262\322*\037" +
-      "\n\022CreateTestMetadata\022\ttest.Test\022\217\001\n\003Get\022" +
-      "/.yandex.cloud.loadtesting.api.v1.GetTes" +
-      "tRequest\032*.yandex.cloud.loadtesting.api." +
-      "v1.test.Test\"+\202\323\344\223\002%\022#/loadtesting/api/v" +
-      "1/tests/{test_id}Bv\n#yandex.cloud.api.lo" +
-      "adtesting.api.v1ZOgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/loadtesting/a" +
-      "pi/v1;loadtestingb\006proto3"
+      "\350\3071\001\"\"\n\017StopTestRequest\022\017\n\007test_id\030\001 \001(\t" +
+      "\"#\n\020StopTestMetadata\022\017\n\007test_id\030\001 \001(\t\"$\n" +
+      "\021DeleteTestRequest\022\017\n\007test_id\030\001 \001(\t\"%\n\022D" +
+      "eleteTestMetadata\022\017\n\007test_id\030\001 \001(\t\"\\\n\020Li" +
+      "stTestsRequest\022\021\n\tfolder_id\030\001 \001(\t\022\021\n\tpag" +
+      "e_size\030\002 \001(\003\022\022\n\npage_token\030\003 \001(\t\022\016\n\006filt" +
+      "er\030\004 \001(\t\"g\n\021ListTestsResponse\0229\n\005tests\030\001" +
+      " \003(\0132*.yandex.cloud.loadtesting.api.v1.t" +
+      "est.Test\022\027\n\017next_page_token\030\002 \001(\t2\317\006\n\013Te" +
+      "stService\022\250\001\n\006Create\0222.yandex.cloud.load" +
+      "testing.api.v1.CreateTestRequest\032!.yande" +
+      "x.cloud.operation.Operation\"G\202\323\344\223\002\036\"\031/lo" +
+      "adtesting/api/v1/tests:\001*\262\322*\037\n\022CreateTes" +
+      "tMetadata\022\ttest.Test\022\217\001\n\003Get\022/.yandex.cl" +
+      "oud.loadtesting.api.v1.GetTestRequest\032*." +
+      "yandex.cloud.loadtesting.api.v1.test.Tes" +
+      "t\"+\202\323\344\223\002%\022#/loadtesting/api/v1/tests/{te" +
+      "st_id}\022\261\001\n\004Stop\0220.yandex.cloud.loadtesti" +
+      "ng.api.v1.StopTestRequest\032!.yandex.cloud" +
+      ".operation.Operation\"T\202\323\344\223\002-\"(/loadtesti" +
+      "ng/api/v1/tests/{test_id}:stop:\001*\262\322*\035\n\020S" +
+      "topTestMetadata\022\ttest.Test\022\273\001\n\006Delete\0222." +
+      "yandex.cloud.loadtesting.api.v1.DeleteTe" +
+      "stRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"Z\202\323\344\223\002%*#/loadtesting/api/v1/tests/" +
+      "{test_id}\262\322*+\n\022DeleteTestMetadata\022\025googl" +
+      "e.protobuf.Empty\022\220\001\n\004List\0221.yandex.cloud" +
+      ".loadtesting.api.v1.ListTestsRequest\0322.y" +
+      "andex.cloud.loadtesting.api.v1.ListTests" +
+      "Response\"!\202\323\344\223\002\033\022\031/loadtesting/api/v1/te" +
+      "stsBv\n#yandex.cloud.api.loadtesting.api." +
+      "v1ZOgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/loadtesting/api/v1;loadtest" +
+      "ingb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2379,6 +7589,42 @@ public final class TestServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_api_v1_GetTestRequest_descriptor,
         new java.lang.String[] { "TestId", });
+    internal_static_yandex_cloud_loadtesting_api_v1_StopTestRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_loadtesting_api_v1_StopTestRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_loadtesting_api_v1_StopTestRequest_descriptor,
+        new java.lang.String[] { "TestId", });
+    internal_static_yandex_cloud_loadtesting_api_v1_StopTestMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_yandex_cloud_loadtesting_api_v1_StopTestMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_loadtesting_api_v1_StopTestMetadata_descriptor,
+        new java.lang.String[] { "TestId", });
+    internal_static_yandex_cloud_loadtesting_api_v1_DeleteTestRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_loadtesting_api_v1_DeleteTestRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_loadtesting_api_v1_DeleteTestRequest_descriptor,
+        new java.lang.String[] { "TestId", });
+    internal_static_yandex_cloud_loadtesting_api_v1_DeleteTestMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_yandex_cloud_loadtesting_api_v1_DeleteTestMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_loadtesting_api_v1_DeleteTestMetadata_descriptor,
+        new java.lang.String[] { "TestId", });
+    internal_static_yandex_cloud_loadtesting_api_v1_ListTestsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_yandex_cloud_loadtesting_api_v1_ListTestsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_loadtesting_api_v1_ListTestsRequest_descriptor,
+        new java.lang.String[] { "FolderId", "PageSize", "PageToken", "Filter", });
+    internal_static_yandex_cloud_loadtesting_api_v1_ListTestsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_loadtesting_api_v1_ListTestsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_loadtesting_api_v1_ListTestsResponse_descriptor,
+        new java.lang.String[] { "Tests", "NextPageToken", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

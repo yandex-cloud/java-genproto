@@ -19,11 +19,19 @@ public final class SingleAgentConfigurationOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the config.
+     * </pre>
+     *
      * <code>string config_id = 1;</code>
      * @return The configId.
      */
     java.lang.String getConfigId();
     /**
+     * <pre>
+     * ID of the config.
+     * </pre>
+     *
      * <code>string config_id = 1;</code>
      * @return The bytes for configId.
      */
@@ -31,25 +39,59 @@ public final class SingleAgentConfigurationOuterClass {
         getConfigIdBytes();
 
     /**
+     * <pre>
+     * Agent selection criterion.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.AgentSelector agent_selector = 2;</code>
      * @return Whether the agentSelector field is set.
      */
     boolean hasAgentSelector();
     /**
+     * <pre>
+     * Agent selection criterion.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.AgentSelector agent_selector = 2;</code>
      * @return The agentSelector.
      */
     yandex.cloud.api.loadtesting.api.v1.test.AgentSelectorOuterClass.AgentSelector getAgentSelector();
     /**
+     * <pre>
+     * Agent selection criterion.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.AgentSelector agent_selector = 2;</code>
      */
     yandex.cloud.api.loadtesting.api.v1.test.AgentSelectorOuterClass.AgentSelectorOrBuilder getAgentSelectorOrBuilder();
 
     /**
+     * <pre>
+     * Additional files to be used during test execution, represented as `rel_path:file` pairs.
+     * `rel_path` can be either a simple file name, a relative path, or absolute path. Files are
+     * downloaded by the agent to appropriate location.
+     * Use cases include:
+     * - [Test Data files](https://cloud.yandex.com/en-ru/docs/load-testing/concepts/payload).
+     * - Custom Pandora executable.
+     * - JMeter executable or ".jmx" scenario.
+     * - etc.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.test.FilePointer&gt; files = 3;</code>
      */
     int getFilesCount();
     /**
+     * <pre>
+     * Additional files to be used during test execution, represented as `rel_path:file` pairs.
+     * `rel_path` can be either a simple file name, a relative path, or absolute path. Files are
+     * downloaded by the agent to appropriate location.
+     * Use cases include:
+     * - [Test Data files](https://cloud.yandex.com/en-ru/docs/load-testing/concepts/payload).
+     * - Custom Pandora executable.
+     * - JMeter executable or ".jmx" scenario.
+     * - etc.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.test.FilePointer&gt; files = 3;</code>
      */
     boolean containsFiles(
@@ -61,11 +103,33 @@ public final class SingleAgentConfigurationOuterClass {
     java.util.Map<java.lang.String, yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer>
     getFiles();
     /**
+     * <pre>
+     * Additional files to be used during test execution, represented as `rel_path:file` pairs.
+     * `rel_path` can be either a simple file name, a relative path, or absolute path. Files are
+     * downloaded by the agent to appropriate location.
+     * Use cases include:
+     * - [Test Data files](https://cloud.yandex.com/en-ru/docs/load-testing/concepts/payload).
+     * - Custom Pandora executable.
+     * - JMeter executable or ".jmx" scenario.
+     * - etc.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.test.FilePointer&gt; files = 3;</code>
      */
     java.util.Map<java.lang.String, yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer>
     getFilesMap();
     /**
+     * <pre>
+     * Additional files to be used during test execution, represented as `rel_path:file` pairs.
+     * `rel_path` can be either a simple file name, a relative path, or absolute path. Files are
+     * downloaded by the agent to appropriate location.
+     * Use cases include:
+     * - [Test Data files](https://cloud.yandex.com/en-ru/docs/load-testing/concepts/payload).
+     * - Custom Pandora executable.
+     * - JMeter executable or ".jmx" scenario.
+     * - etc.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.test.FilePointer&gt; files = 3;</code>
      */
 
@@ -73,6 +137,17 @@ public final class SingleAgentConfigurationOuterClass {
         java.lang.String key,
         yandex.cloud.api.loadtesting.api.v1.test.FilePointerOuterClass.FilePointer defaultValue);
     /**
+     * <pre>
+     * Additional files to be used during test execution, represented as `rel_path:file` pairs.
+     * `rel_path` can be either a simple file name, a relative path, or absolute path. Files are
+     * downloaded by the agent to appropriate location.
+     * Use cases include:
+     * - [Test Data files](https://cloud.yandex.com/en-ru/docs/load-testing/concepts/payload).
+     * - Custom Pandora executable.
+     * - JMeter executable or ".jmx" scenario.
+     * - etc.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.test.FilePointer&gt; files = 3;</code>
      */
 
@@ -80,6 +155,10 @@ public final class SingleAgentConfigurationOuterClass {
         java.lang.String key);
   }
   /**
+   * <pre>
+   * Configuration of a test.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration}
    */
   public static final class SingleAgentConfiguration extends
@@ -205,6 +284,10 @@ public final class SingleAgentConfigurationOuterClass {
     public static final int CONFIG_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object configId_;
     /**
+     * <pre>
+     * ID of the config.
+     * </pre>
+     *
      * <code>string config_id = 1;</code>
      * @return The configId.
      */
@@ -222,6 +305,10 @@ public final class SingleAgentConfigurationOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the config.
+     * </pre>
+     *
      * <code>string config_id = 1;</code>
      * @return The bytes for configId.
      */
@@ -243,6 +330,10 @@ public final class SingleAgentConfigurationOuterClass {
     public static final int AGENT_SELECTOR_FIELD_NUMBER = 2;
     private yandex.cloud.api.loadtesting.api.v1.test.AgentSelectorOuterClass.AgentSelector agentSelector_;
     /**
+     * <pre>
+     * Agent selection criterion.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.AgentSelector agent_selector = 2;</code>
      * @return Whether the agentSelector field is set.
      */
@@ -251,6 +342,10 @@ public final class SingleAgentConfigurationOuterClass {
       return agentSelector_ != null;
     }
     /**
+     * <pre>
+     * Agent selection criterion.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.AgentSelector agent_selector = 2;</code>
      * @return The agentSelector.
      */
@@ -259,6 +354,10 @@ public final class SingleAgentConfigurationOuterClass {
       return agentSelector_ == null ? yandex.cloud.api.loadtesting.api.v1.test.AgentSelectorOuterClass.AgentSelector.getDefaultInstance() : agentSelector_;
     }
     /**
+     * <pre>
+     * Agent selection criterion.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.AgentSelector agent_selector = 2;</code>
      */
     @java.lang.Override
@@ -293,6 +392,17 @@ public final class SingleAgentConfigurationOuterClass {
       return internalGetFiles().getMap().size();
     }
     /**
+     * <pre>
+     * Additional files to be used during test execution, represented as `rel_path:file` pairs.
+     * `rel_path` can be either a simple file name, a relative path, or absolute path. Files are
+     * downloaded by the agent to appropriate location.
+     * Use cases include:
+     * - [Test Data files](https://cloud.yandex.com/en-ru/docs/load-testing/concepts/payload).
+     * - Custom Pandora executable.
+     * - JMeter executable or ".jmx" scenario.
+     * - etc.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.test.FilePointer&gt; files = 3;</code>
      */
 
@@ -311,6 +421,17 @@ public final class SingleAgentConfigurationOuterClass {
       return getFilesMap();
     }
     /**
+     * <pre>
+     * Additional files to be used during test execution, represented as `rel_path:file` pairs.
+     * `rel_path` can be either a simple file name, a relative path, or absolute path. Files are
+     * downloaded by the agent to appropriate location.
+     * Use cases include:
+     * - [Test Data files](https://cloud.yandex.com/en-ru/docs/load-testing/concepts/payload).
+     * - Custom Pandora executable.
+     * - JMeter executable or ".jmx" scenario.
+     * - etc.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.test.FilePointer&gt; files = 3;</code>
      */
     @java.lang.Override
@@ -319,6 +440,17 @@ public final class SingleAgentConfigurationOuterClass {
       return internalGetFiles().getMap();
     }
     /**
+     * <pre>
+     * Additional files to be used during test execution, represented as `rel_path:file` pairs.
+     * `rel_path` can be either a simple file name, a relative path, or absolute path. Files are
+     * downloaded by the agent to appropriate location.
+     * Use cases include:
+     * - [Test Data files](https://cloud.yandex.com/en-ru/docs/load-testing/concepts/payload).
+     * - Custom Pandora executable.
+     * - JMeter executable or ".jmx" scenario.
+     * - etc.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.test.FilePointer&gt; files = 3;</code>
      */
     @java.lang.Override
@@ -332,6 +464,17 @@ public final class SingleAgentConfigurationOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Additional files to be used during test execution, represented as `rel_path:file` pairs.
+     * `rel_path` can be either a simple file name, a relative path, or absolute path. Files are
+     * downloaded by the agent to appropriate location.
+     * Use cases include:
+     * - [Test Data files](https://cloud.yandex.com/en-ru/docs/load-testing/concepts/payload).
+     * - Custom Pandora executable.
+     * - JMeter executable or ".jmx" scenario.
+     * - etc.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.test.FilePointer&gt; files = 3;</code>
      */
     @java.lang.Override
@@ -540,6 +683,10 @@ public final class SingleAgentConfigurationOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Configuration of a test.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration}
      */
     public static final class Builder extends
@@ -732,6 +879,10 @@ public final class SingleAgentConfigurationOuterClass {
 
       private java.lang.Object configId_ = "";
       /**
+       * <pre>
+       * ID of the config.
+       * </pre>
+       *
        * <code>string config_id = 1;</code>
        * @return The configId.
        */
@@ -748,6 +899,10 @@ public final class SingleAgentConfigurationOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the config.
+       * </pre>
+       *
        * <code>string config_id = 1;</code>
        * @return The bytes for configId.
        */
@@ -765,6 +920,10 @@ public final class SingleAgentConfigurationOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the config.
+       * </pre>
+       *
        * <code>string config_id = 1;</code>
        * @param value The configId to set.
        * @return This builder for chaining.
@@ -780,6 +939,10 @@ public final class SingleAgentConfigurationOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the config.
+       * </pre>
+       *
        * <code>string config_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -790,6 +953,10 @@ public final class SingleAgentConfigurationOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the config.
+       * </pre>
+       *
        * <code>string config_id = 1;</code>
        * @param value The bytes for configId to set.
        * @return This builder for chaining.
@@ -810,6 +977,10 @@ public final class SingleAgentConfigurationOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.loadtesting.api.v1.test.AgentSelectorOuterClass.AgentSelector, yandex.cloud.api.loadtesting.api.v1.test.AgentSelectorOuterClass.AgentSelector.Builder, yandex.cloud.api.loadtesting.api.v1.test.AgentSelectorOuterClass.AgentSelectorOrBuilder> agentSelectorBuilder_;
       /**
+       * <pre>
+       * Agent selection criterion.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.AgentSelector agent_selector = 2;</code>
        * @return Whether the agentSelector field is set.
        */
@@ -817,6 +988,10 @@ public final class SingleAgentConfigurationOuterClass {
         return agentSelectorBuilder_ != null || agentSelector_ != null;
       }
       /**
+       * <pre>
+       * Agent selection criterion.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.AgentSelector agent_selector = 2;</code>
        * @return The agentSelector.
        */
@@ -828,6 +1003,10 @@ public final class SingleAgentConfigurationOuterClass {
         }
       }
       /**
+       * <pre>
+       * Agent selection criterion.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.AgentSelector agent_selector = 2;</code>
        */
       public Builder setAgentSelector(yandex.cloud.api.loadtesting.api.v1.test.AgentSelectorOuterClass.AgentSelector value) {
@@ -844,6 +1023,10 @@ public final class SingleAgentConfigurationOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Agent selection criterion.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.AgentSelector agent_selector = 2;</code>
        */
       public Builder setAgentSelector(
@@ -858,6 +1041,10 @@ public final class SingleAgentConfigurationOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Agent selection criterion.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.AgentSelector agent_selector = 2;</code>
        */
       public Builder mergeAgentSelector(yandex.cloud.api.loadtesting.api.v1.test.AgentSelectorOuterClass.AgentSelector value) {
@@ -876,6 +1063,10 @@ public final class SingleAgentConfigurationOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Agent selection criterion.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.AgentSelector agent_selector = 2;</code>
        */
       public Builder clearAgentSelector() {
@@ -890,6 +1081,10 @@ public final class SingleAgentConfigurationOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Agent selection criterion.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.AgentSelector agent_selector = 2;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.test.AgentSelectorOuterClass.AgentSelector.Builder getAgentSelectorBuilder() {
@@ -898,6 +1093,10 @@ public final class SingleAgentConfigurationOuterClass {
         return getAgentSelectorFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Agent selection criterion.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.AgentSelector agent_selector = 2;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.test.AgentSelectorOuterClass.AgentSelectorOrBuilder getAgentSelectorOrBuilder() {
@@ -909,6 +1108,10 @@ public final class SingleAgentConfigurationOuterClass {
         }
       }
       /**
+       * <pre>
+       * Agent selection criterion.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.AgentSelector agent_selector = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -952,6 +1155,17 @@ public final class SingleAgentConfigurationOuterClass {
         return internalGetFiles().getMap().size();
       }
       /**
+       * <pre>
+       * Additional files to be used during test execution, represented as `rel_path:file` pairs.
+       * `rel_path` can be either a simple file name, a relative path, or absolute path. Files are
+       * downloaded by the agent to appropriate location.
+       * Use cases include:
+       * - [Test Data files](https://cloud.yandex.com/en-ru/docs/load-testing/concepts/payload).
+       * - Custom Pandora executable.
+       * - JMeter executable or ".jmx" scenario.
+       * - etc.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.test.FilePointer&gt; files = 3;</code>
        */
 
@@ -970,6 +1184,17 @@ public final class SingleAgentConfigurationOuterClass {
         return getFilesMap();
       }
       /**
+       * <pre>
+       * Additional files to be used during test execution, represented as `rel_path:file` pairs.
+       * `rel_path` can be either a simple file name, a relative path, or absolute path. Files are
+       * downloaded by the agent to appropriate location.
+       * Use cases include:
+       * - [Test Data files](https://cloud.yandex.com/en-ru/docs/load-testing/concepts/payload).
+       * - Custom Pandora executable.
+       * - JMeter executable or ".jmx" scenario.
+       * - etc.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.test.FilePointer&gt; files = 3;</code>
        */
       @java.lang.Override
@@ -978,6 +1203,17 @@ public final class SingleAgentConfigurationOuterClass {
         return internalGetFiles().getMap();
       }
       /**
+       * <pre>
+       * Additional files to be used during test execution, represented as `rel_path:file` pairs.
+       * `rel_path` can be either a simple file name, a relative path, or absolute path. Files are
+       * downloaded by the agent to appropriate location.
+       * Use cases include:
+       * - [Test Data files](https://cloud.yandex.com/en-ru/docs/load-testing/concepts/payload).
+       * - Custom Pandora executable.
+       * - JMeter executable or ".jmx" scenario.
+       * - etc.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.test.FilePointer&gt; files = 3;</code>
        */
       @java.lang.Override
@@ -991,6 +1227,17 @@ public final class SingleAgentConfigurationOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Additional files to be used during test execution, represented as `rel_path:file` pairs.
+       * `rel_path` can be either a simple file name, a relative path, or absolute path. Files are
+       * downloaded by the agent to appropriate location.
+       * Use cases include:
+       * - [Test Data files](https://cloud.yandex.com/en-ru/docs/load-testing/concepts/payload).
+       * - Custom Pandora executable.
+       * - JMeter executable or ".jmx" scenario.
+       * - etc.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.test.FilePointer&gt; files = 3;</code>
        */
       @java.lang.Override
@@ -1012,6 +1259,17 @@ public final class SingleAgentConfigurationOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional files to be used during test execution, represented as `rel_path:file` pairs.
+       * `rel_path` can be either a simple file name, a relative path, or absolute path. Files are
+       * downloaded by the agent to appropriate location.
+       * Use cases include:
+       * - [Test Data files](https://cloud.yandex.com/en-ru/docs/load-testing/concepts/payload).
+       * - Custom Pandora executable.
+       * - JMeter executable or ".jmx" scenario.
+       * - etc.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.test.FilePointer&gt; files = 3;</code>
        */
 
@@ -1031,6 +1289,17 @@ public final class SingleAgentConfigurationOuterClass {
         return internalGetMutableFiles().getMutableMap();
       }
       /**
+       * <pre>
+       * Additional files to be used during test execution, represented as `rel_path:file` pairs.
+       * `rel_path` can be either a simple file name, a relative path, or absolute path. Files are
+       * downloaded by the agent to appropriate location.
+       * Use cases include:
+       * - [Test Data files](https://cloud.yandex.com/en-ru/docs/load-testing/concepts/payload).
+       * - Custom Pandora executable.
+       * - JMeter executable or ".jmx" scenario.
+       * - etc.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.test.FilePointer&gt; files = 3;</code>
        */
       public Builder putFiles(
@@ -1046,6 +1315,17 @@ public final class SingleAgentConfigurationOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Additional files to be used during test execution, represented as `rel_path:file` pairs.
+       * `rel_path` can be either a simple file name, a relative path, or absolute path. Files are
+       * downloaded by the agent to appropriate location.
+       * Use cases include:
+       * - [Test Data files](https://cloud.yandex.com/en-ru/docs/load-testing/concepts/payload).
+       * - Custom Pandora executable.
+       * - JMeter executable or ".jmx" scenario.
+       * - etc.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.test.FilePointer&gt; files = 3;</code>
        */
 

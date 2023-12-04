@@ -3081,7 +3081,7 @@ public final class UserOuterClass {
      * Name of the PostgreSQL user.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -3090,7 +3090,7 @@ public final class UserOuterClass {
      * Name of the PostgreSQL user.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -3505,7 +3505,7 @@ public final class UserOuterClass {
      * Name of the PostgreSQL user.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -3526,7 +3526,7 @@ public final class UserOuterClass {
      * Name of the PostgreSQL user.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -4408,7 +4408,7 @@ public final class UserOuterClass {
        * Name of the PostgreSQL user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -4428,7 +4428,7 @@ public final class UserOuterClass {
        * Name of the PostgreSQL user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -4449,7 +4449,7 @@ public final class UserOuterClass {
        * Name of the PostgreSQL user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -4468,7 +4468,7 @@ public final class UserOuterClass {
        * Name of the PostgreSQL user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -4482,7 +4482,7 @@ public final class UserOuterClass {
        * Name of the PostgreSQL user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -10024,59 +10024,59 @@ public final class UserOuterClass {
       "buf.BoolValue\022)\n\006grants\030\007 \003(\tB\031\212\3101\004<=63\362" +
       "\3071\r[a-zA-Z0-9_]*\0227\n\023deletion_protection\030" +
       "\010 \001(\0132\032.google.protobuf.BoolValue\"#\n\nPer" +
-      "mission\022\025\n\rdatabase_name\030\001 \001(\t\"\243\003\n\010UserS" +
-      "pec\022+\n\004name\030\001 \001(\tB\035\350\3071\001\212\3101\004<=63\362\3071\r[a-zA" +
-      "-Z0-9_]*\022\037\n\010password\030\002 \001(\tB\r\350\3071\001\212\3101\0058-12" +
-      "8\022?\n\013permissions\030\003 \003(\0132*.yandex.cloud.md" +
-      "b.postgresql.v1.Permission\0229\n\nconn_limit" +
-      "\030\004 \001(\0132\033.google.protobuf.Int64ValueB\010\372\3071" +
-      "\004>=10\022>\n\010settings\030\005 \001(\0132,.yandex.cloud.m" +
-      "db.postgresql.v1.UserSettings\022)\n\005login\030\006" +
-      " \001(\0132\032.google.protobuf.BoolValue\022)\n\006gran" +
-      "ts\030\007 \003(\tB\031\212\3101\004<=63\362\3071\r[a-zA-Z0-9_]*\0227\n\023d" +
-      "eletion_protection\030\010 \001(\0132\032.google.protob" +
-      "uf.BoolValue\"\370\013\n\014UserSettings\022h\n\035default" +
-      "_transaction_isolation\030\001 \001(\0162A.yandex.cl" +
-      "oud.mdb.postgresql.v1.UserSettings.Trans" +
-      "actionIsolation\0221\n\014lock_timeout\030\002 \001(\0132\033." +
-      "google.protobuf.Int64Value\022?\n\032log_min_du" +
-      "ration_statement\030\003 \001(\0132\033.google.protobuf" +
-      ".Int64Value\022Z\n\022synchronous_commit\030\004 \001(\0162" +
-      ">.yandex.cloud.mdb.postgresql.v1.UserSet" +
-      "tings.SynchronousCommit\0224\n\017temp_file_lim" +
-      "it\030\005 \001(\0132\033.google.protobuf.Int64Value\022P\n" +
-      "\rlog_statement\030\006 \001(\01629.yandex.cloud.mdb." +
-      "postgresql.v1.UserSettings.LogStatement\022" +
-      "K\n\tpool_mode\030\007 \001(\01628.yandex.cloud.mdb.po" +
-      "stgresql.v1.UserSettings.PoolingMode\022?\n\033" +
-      "prepared_statements_pooling\030\010 \001(\0132\032.goog" +
-      "le.protobuf.BoolValue\0224\n\017catchup_timeout" +
-      "\030\t \001(\0132\033.google.protobuf.Int64Value\0227\n\022w" +
-      "al_sender_timeout\030\n \001(\0132\033.google.protobu" +
-      "f.Int64Value\022H\n#idle_in_transaction_sess" +
-      "ion_timeout\030\013 \001(\0132\033.google.protobuf.Int6" +
-      "4Value\0226\n\021statement_timeout\030\014 \001(\0132\033.goog" +
-      "le.protobuf.Int64Value\"\326\001\n\021SynchronousCo" +
-      "mmit\022\"\n\036SYNCHRONOUS_COMMIT_UNSPECIFIED\020\000" +
-      "\022\031\n\025SYNCHRONOUS_COMMIT_ON\020\001\022\032\n\026SYNCHRONO" +
-      "US_COMMIT_OFF\020\002\022\034\n\030SYNCHRONOUS_COMMIT_LO" +
-      "CAL\020\003\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_WRITE" +
-      "\020\004\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_APPLY\020\005\"" +
-      "\212\001\n\014LogStatement\022\035\n\031LOG_STATEMENT_UNSPEC" +
-      "IFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020\001\022\025\n\021LOG_S" +
-      "TATEMENT_DDL\020\002\022\025\n\021LOG_STATEMENT_MOD\020\003\022\025\n" +
-      "\021LOG_STATEMENT_ALL\020\004\"\346\001\n\024TransactionIsol" +
-      "ation\022%\n!TRANSACTION_ISOLATION_UNSPECIFI" +
-      "ED\020\000\022*\n&TRANSACTION_ISOLATION_READ_UNCOM" +
-      "MITTED\020\001\022(\n$TRANSACTION_ISOLATION_READ_C" +
-      "OMMITTED\020\002\022)\n%TRANSACTION_ISOLATION_REPE" +
-      "ATABLE_READ\020\003\022&\n\"TRANSACTION_ISOLATION_S" +
-      "ERIALIZABLE\020\004\"X\n\013PoolingMode\022\034\n\030POOLING_" +
-      "MODE_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\017\n\013TRANS" +
-      "ACTION\020\002\022\r\n\tSTATEMENT\020\003Bs\n\"yandex.cloud." +
-      "api.mdb.postgresql.v1ZMgithub.com/yandex" +
-      "-cloud/go-genproto/yandex/cloud/mdb/post" +
-      "gresql/v1;postgresqlb\006proto3"
+      "mission\022\025\n\rdatabase_name\030\001 \001(\t\"\244\003\n\010UserS" +
+      "pec\022,\n\004name\030\001 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA" +
+      "-Z0-9_-]*\022\037\n\010password\030\002 \001(\tB\r\350\3071\001\212\3101\0058-1" +
+      "28\022?\n\013permissions\030\003 \003(\0132*.yandex.cloud.m" +
+      "db.postgresql.v1.Permission\0229\n\nconn_limi" +
+      "t\030\004 \001(\0132\033.google.protobuf.Int64ValueB\010\372\307" +
+      "1\004>=10\022>\n\010settings\030\005 \001(\0132,.yandex.cloud." +
+      "mdb.postgresql.v1.UserSettings\022)\n\005login\030" +
+      "\006 \001(\0132\032.google.protobuf.BoolValue\022)\n\006gra" +
+      "nts\030\007 \003(\tB\031\212\3101\004<=63\362\3071\r[a-zA-Z0-9_]*\0227\n\023" +
+      "deletion_protection\030\010 \001(\0132\032.google.proto" +
+      "buf.BoolValue\"\370\013\n\014UserSettings\022h\n\035defaul" +
+      "t_transaction_isolation\030\001 \001(\0162A.yandex.c" +
+      "loud.mdb.postgresql.v1.UserSettings.Tran" +
+      "sactionIsolation\0221\n\014lock_timeout\030\002 \001(\0132\033" +
+      ".google.protobuf.Int64Value\022?\n\032log_min_d" +
+      "uration_statement\030\003 \001(\0132\033.google.protobu" +
+      "f.Int64Value\022Z\n\022synchronous_commit\030\004 \001(\016" +
+      "2>.yandex.cloud.mdb.postgresql.v1.UserSe" +
+      "ttings.SynchronousCommit\0224\n\017temp_file_li" +
+      "mit\030\005 \001(\0132\033.google.protobuf.Int64Value\022P" +
+      "\n\rlog_statement\030\006 \001(\01629.yandex.cloud.mdb" +
+      ".postgresql.v1.UserSettings.LogStatement" +
+      "\022K\n\tpool_mode\030\007 \001(\01628.yandex.cloud.mdb.p" +
+      "ostgresql.v1.UserSettings.PoolingMode\022?\n" +
+      "\033prepared_statements_pooling\030\010 \001(\0132\032.goo" +
+      "gle.protobuf.BoolValue\0224\n\017catchup_timeou" +
+      "t\030\t \001(\0132\033.google.protobuf.Int64Value\0227\n\022" +
+      "wal_sender_timeout\030\n \001(\0132\033.google.protob" +
+      "uf.Int64Value\022H\n#idle_in_transaction_ses" +
+      "sion_timeout\030\013 \001(\0132\033.google.protobuf.Int" +
+      "64Value\0226\n\021statement_timeout\030\014 \001(\0132\033.goo" +
+      "gle.protobuf.Int64Value\"\326\001\n\021SynchronousC" +
+      "ommit\022\"\n\036SYNCHRONOUS_COMMIT_UNSPECIFIED\020" +
+      "\000\022\031\n\025SYNCHRONOUS_COMMIT_ON\020\001\022\032\n\026SYNCHRON" +
+      "OUS_COMMIT_OFF\020\002\022\034\n\030SYNCHRONOUS_COMMIT_L" +
+      "OCAL\020\003\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_WRIT" +
+      "E\020\004\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_APPLY\020\005" +
+      "\"\212\001\n\014LogStatement\022\035\n\031LOG_STATEMENT_UNSPE" +
+      "CIFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020\001\022\025\n\021LOG_" +
+      "STATEMENT_DDL\020\002\022\025\n\021LOG_STATEMENT_MOD\020\003\022\025" +
+      "\n\021LOG_STATEMENT_ALL\020\004\"\346\001\n\024TransactionIso" +
+      "lation\022%\n!TRANSACTION_ISOLATION_UNSPECIF" +
+      "IED\020\000\022*\n&TRANSACTION_ISOLATION_READ_UNCO" +
+      "MMITTED\020\001\022(\n$TRANSACTION_ISOLATION_READ_" +
+      "COMMITTED\020\002\022)\n%TRANSACTION_ISOLATION_REP" +
+      "EATABLE_READ\020\003\022&\n\"TRANSACTION_ISOLATION_" +
+      "SERIALIZABLE\020\004\"X\n\013PoolingMode\022\034\n\030POOLING" +
+      "_MODE_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\017\n\013TRAN" +
+      "SACTION\020\002\022\r\n\tSTATEMENT\020\003Bs\n\"yandex.cloud" +
+      ".api.mdb.postgresql.v1ZMgithub.com/yande" +
+      "x-cloud/go-genproto/yandex/cloud/mdb/pos" +
+      "tgresql/v1;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

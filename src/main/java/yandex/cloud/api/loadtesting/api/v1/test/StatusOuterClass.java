@@ -20,62 +20,124 @@ public final class StatusOuterClass {
   public enum Status
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
+     * <pre>
+     * Status is unspecified.
+     * </pre>
+     *
      * <code>STATUS_UNSPECIFIED = 0;</code>
      */
     STATUS_UNSPECIFIED(0),
     /**
+     * <pre>
+     * Test has been created, but not started by any agent.
+     * </pre>
+     *
      * <code>CREATED = 1;</code>
      */
     CREATED(1),
     /**
+     * <pre>
+     * Execution stage: initialization.
+     * </pre>
+     *
      * <code>INITIATED = 2;</code>
      */
     INITIATED(2),
     /**
+     * <pre>
+     * Execution stage: data preparation and warm-up.
+     * </pre>
+     *
      * <code>PREPARING = 3;</code>
      */
     PREPARING(3),
     /**
+     * <pre>
+     * Execution stage: load generation.
+     * </pre>
+     *
      * <code>RUNNING = 4;</code>
      */
     RUNNING(4),
     /**
+     * <pre>
+     * Execution stage: termination.
+     * </pre>
+     *
      * <code>FINISHING = 5;</code>
      */
     FINISHING(5),
     /**
+     * <pre>
+     * Test is done.
+     * </pre>
+     *
      * <code>DONE = 6;</code>
      */
     DONE(6),
     /**
+     * <pre>
+     * Execution stage: results post-processing.
+     * </pre>
+     *
      * <code>POST_PROCESSING = 7;</code>
      */
     POST_PROCESSING(7),
     /**
+     * <pre>
+     * Test has failed due to some error.
+     * </pre>
+     *
      * <code>FAILED = 8;</code>
      */
     FAILED(8),
     /**
+     * <pre>
+     * Test is being stopped.
+     * </pre>
+     *
      * <code>STOPPING = 9;</code>
      */
     STOPPING(9),
     /**
+     * <pre>
+     * Test has been stopped.
+     * </pre>
+     *
      * <code>STOPPED = 10;</code>
      */
     STOPPED(10),
     /**
+     * <pre>
+     * Test has been stopped automatically by satisfying autostop condition.
+     * </pre>
+     *
      * <code>AUTOSTOPPED = 11;</code>
      */
     AUTOSTOPPED(11),
     /**
+     * <pre>
+     * Execution stage: waiting for a trigger to start.
+     * </pre>
+     *
      * <code>WAITING = 12;</code>
      */
     WAITING(12),
     /**
+     * <pre>
+     * Test is being deleted.
+     * </pre>
+     *
      * <code>DELETING = 13;</code>
      */
     DELETING(13),
     /**
+     * <pre>
+     * Test status has not been reported in a while during execution stage.
+     * Means that either an agent is too busy to send it, got offline, or failed without
+     * reporting a final status.
+     * </pre>
+     *
      * <code>LOST = 14;</code>
      */
     LOST(14),
@@ -83,62 +145,124 @@ public final class StatusOuterClass {
     ;
 
     /**
+     * <pre>
+     * Status is unspecified.
+     * </pre>
+     *
      * <code>STATUS_UNSPECIFIED = 0;</code>
      */
     public static final int STATUS_UNSPECIFIED_VALUE = 0;
     /**
+     * <pre>
+     * Test has been created, but not started by any agent.
+     * </pre>
+     *
      * <code>CREATED = 1;</code>
      */
     public static final int CREATED_VALUE = 1;
     /**
+     * <pre>
+     * Execution stage: initialization.
+     * </pre>
+     *
      * <code>INITIATED = 2;</code>
      */
     public static final int INITIATED_VALUE = 2;
     /**
+     * <pre>
+     * Execution stage: data preparation and warm-up.
+     * </pre>
+     *
      * <code>PREPARING = 3;</code>
      */
     public static final int PREPARING_VALUE = 3;
     /**
+     * <pre>
+     * Execution stage: load generation.
+     * </pre>
+     *
      * <code>RUNNING = 4;</code>
      */
     public static final int RUNNING_VALUE = 4;
     /**
+     * <pre>
+     * Execution stage: termination.
+     * </pre>
+     *
      * <code>FINISHING = 5;</code>
      */
     public static final int FINISHING_VALUE = 5;
     /**
+     * <pre>
+     * Test is done.
+     * </pre>
+     *
      * <code>DONE = 6;</code>
      */
     public static final int DONE_VALUE = 6;
     /**
+     * <pre>
+     * Execution stage: results post-processing.
+     * </pre>
+     *
      * <code>POST_PROCESSING = 7;</code>
      */
     public static final int POST_PROCESSING_VALUE = 7;
     /**
+     * <pre>
+     * Test has failed due to some error.
+     * </pre>
+     *
      * <code>FAILED = 8;</code>
      */
     public static final int FAILED_VALUE = 8;
     /**
+     * <pre>
+     * Test is being stopped.
+     * </pre>
+     *
      * <code>STOPPING = 9;</code>
      */
     public static final int STOPPING_VALUE = 9;
     /**
+     * <pre>
+     * Test has been stopped.
+     * </pre>
+     *
      * <code>STOPPED = 10;</code>
      */
     public static final int STOPPED_VALUE = 10;
     /**
+     * <pre>
+     * Test has been stopped automatically by satisfying autostop condition.
+     * </pre>
+     *
      * <code>AUTOSTOPPED = 11;</code>
      */
     public static final int AUTOSTOPPED_VALUE = 11;
     /**
+     * <pre>
+     * Execution stage: waiting for a trigger to start.
+     * </pre>
+     *
      * <code>WAITING = 12;</code>
      */
     public static final int WAITING_VALUE = 12;
     /**
+     * <pre>
+     * Test is being deleted.
+     * </pre>
+     *
      * <code>DELETING = 13;</code>
      */
     public static final int DELETING_VALUE = 13;
     /**
+     * <pre>
+     * Test status has not been reported in a while during execution stage.
+     * Means that either an agent is too busy to send it, got offline, or failed without
+     * reporting a final status.
+     * </pre>
+     *
      * <code>LOST = 14;</code>
      */
     public static final int LOST_VALUE = 14;

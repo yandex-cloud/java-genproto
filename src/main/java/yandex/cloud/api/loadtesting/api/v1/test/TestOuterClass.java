@@ -19,11 +19,19 @@ public final class TestOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the test. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the test. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -31,65 +39,132 @@ public final class TestOuterClass {
         getIdBytes();
 
     /**
+     * <pre>
+     * Configuration of the test.
+     * A test can have multiple configurations if it can be
+     * executed on multiple agents simultaneously. For more information, see
+     * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
      */
     java.util.List<yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration> 
         getConfigurationsList();
     /**
+     * <pre>
+     * Configuration of the test.
+     * A test can have multiple configurations if it can be
+     * executed on multiple agents simultaneously. For more information, see
+     * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
      */
     yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration getConfigurations(int index);
     /**
+     * <pre>
+     * Configuration of the test.
+     * A test can have multiple configurations if it can be
+     * executed on multiple agents simultaneously. For more information, see
+     * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
      */
     int getConfigurationsCount();
     /**
+     * <pre>
+     * Configuration of the test.
+     * A test can have multiple configurations if it can be
+     * executed on multiple agents simultaneously. For more information, see
+     * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
      */
     java.util.List<? extends yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfigurationOrBuilder> 
         getConfigurationsOrBuilderList();
     /**
+     * <pre>
+     * Configuration of the test.
+     * A test can have multiple configurations if it can be
+     * executed on multiple agents simultaneously. For more information, see
+     * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
      */
     yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfigurationOrBuilder getConfigurationsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Test meta information. Name, description, etc.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.Details details = 3;</code>
      * @return Whether the details field is set.
      */
     boolean hasDetails();
     /**
+     * <pre>
+     * Test meta information. Name, description, etc.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.Details details = 3;</code>
      * @return The details.
      */
     yandex.cloud.api.loadtesting.api.v1.test.DetailsOuterClass.Details getDetails();
     /**
+     * <pre>
+     * Test meta information. Name, description, etc.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.Details details = 3;</code>
      */
     yandex.cloud.api.loadtesting.api.v1.test.DetailsOuterClass.DetailsOrBuilder getDetailsOrBuilder();
 
     /**
+     * <pre>
+     * Test execution information.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.Summary summary = 4;</code>
      * @return Whether the summary field is set.
      */
     boolean hasSummary();
     /**
+     * <pre>
+     * Test execution information.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.Summary summary = 4;</code>
      * @return The summary.
      */
     yandex.cloud.api.loadtesting.api.v1.test.SummaryOuterClass.Summary getSummary();
     /**
+     * <pre>
+     * Test execution information.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.Summary summary = 4;</code>
      */
     yandex.cloud.api.loadtesting.api.v1.test.SummaryOuterClass.SummaryOrBuilder getSummaryOrBuilder();
 
     /**
+     * <pre>
+     * ID of the folder that the test belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 5;</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder that the test belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 5;</code>
      * @return The bytes for folderId.
      */
@@ -97,6 +172,11 @@ public final class TestOuterClass {
         getFolderIdBytes();
   }
   /**
+   * <pre>
+   * Load Test.
+   * In context of the service, Test represents a single testing task/job.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.loadtesting.api.v1.test.Test}
    */
   public static final class Test extends
@@ -230,6 +310,10 @@ public final class TestOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the test. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -247,6 +331,10 @@ public final class TestOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the test. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -268,6 +356,13 @@ public final class TestOuterClass {
     public static final int CONFIGURATIONS_FIELD_NUMBER = 2;
     private java.util.List<yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration> configurations_;
     /**
+     * <pre>
+     * Configuration of the test.
+     * A test can have multiple configurations if it can be
+     * executed on multiple agents simultaneously. For more information, see
+     * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
      */
     @java.lang.Override
@@ -275,6 +370,13 @@ public final class TestOuterClass {
       return configurations_;
     }
     /**
+     * <pre>
+     * Configuration of the test.
+     * A test can have multiple configurations if it can be
+     * executed on multiple agents simultaneously. For more information, see
+     * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
      */
     @java.lang.Override
@@ -283,6 +385,13 @@ public final class TestOuterClass {
       return configurations_;
     }
     /**
+     * <pre>
+     * Configuration of the test.
+     * A test can have multiple configurations if it can be
+     * executed on multiple agents simultaneously. For more information, see
+     * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
      */
     @java.lang.Override
@@ -290,6 +399,13 @@ public final class TestOuterClass {
       return configurations_.size();
     }
     /**
+     * <pre>
+     * Configuration of the test.
+     * A test can have multiple configurations if it can be
+     * executed on multiple agents simultaneously. For more information, see
+     * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
      */
     @java.lang.Override
@@ -297,6 +413,13 @@ public final class TestOuterClass {
       return configurations_.get(index);
     }
     /**
+     * <pre>
+     * Configuration of the test.
+     * A test can have multiple configurations if it can be
+     * executed on multiple agents simultaneously. For more information, see
+     * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
      */
     @java.lang.Override
@@ -308,6 +431,10 @@ public final class TestOuterClass {
     public static final int DETAILS_FIELD_NUMBER = 3;
     private yandex.cloud.api.loadtesting.api.v1.test.DetailsOuterClass.Details details_;
     /**
+     * <pre>
+     * Test meta information. Name, description, etc.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.Details details = 3;</code>
      * @return Whether the details field is set.
      */
@@ -316,6 +443,10 @@ public final class TestOuterClass {
       return details_ != null;
     }
     /**
+     * <pre>
+     * Test meta information. Name, description, etc.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.Details details = 3;</code>
      * @return The details.
      */
@@ -324,6 +455,10 @@ public final class TestOuterClass {
       return details_ == null ? yandex.cloud.api.loadtesting.api.v1.test.DetailsOuterClass.Details.getDefaultInstance() : details_;
     }
     /**
+     * <pre>
+     * Test meta information. Name, description, etc.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.Details details = 3;</code>
      */
     @java.lang.Override
@@ -334,6 +469,10 @@ public final class TestOuterClass {
     public static final int SUMMARY_FIELD_NUMBER = 4;
     private yandex.cloud.api.loadtesting.api.v1.test.SummaryOuterClass.Summary summary_;
     /**
+     * <pre>
+     * Test execution information.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.Summary summary = 4;</code>
      * @return Whether the summary field is set.
      */
@@ -342,6 +481,10 @@ public final class TestOuterClass {
       return summary_ != null;
     }
     /**
+     * <pre>
+     * Test execution information.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.Summary summary = 4;</code>
      * @return The summary.
      */
@@ -350,6 +493,10 @@ public final class TestOuterClass {
       return summary_ == null ? yandex.cloud.api.loadtesting.api.v1.test.SummaryOuterClass.Summary.getDefaultInstance() : summary_;
     }
     /**
+     * <pre>
+     * Test execution information.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.test.Summary summary = 4;</code>
      */
     @java.lang.Override
@@ -360,6 +507,10 @@ public final class TestOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 5;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder that the test belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 5;</code>
      * @return The folderId.
      */
@@ -377,6 +528,10 @@ public final class TestOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder that the test belongs to.
+     * </pre>
+     *
      * <code>string folder_id = 5;</code>
      * @return The bytes for folderId.
      */
@@ -605,6 +760,11 @@ public final class TestOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Load Test.
+     * In context of the service, Test represents a single testing task/job.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.loadtesting.api.v1.test.Test}
      */
     public static final class Builder extends
@@ -833,6 +993,10 @@ public final class TestOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the test. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -849,6 +1013,10 @@ public final class TestOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the test. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -866,6 +1034,10 @@ public final class TestOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the test. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -881,6 +1053,10 @@ public final class TestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the test. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -891,6 +1067,10 @@ public final class TestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the test. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -920,6 +1100,13 @@ public final class TestOuterClass {
           yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration, yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration.Builder, yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfigurationOrBuilder> configurationsBuilder_;
 
       /**
+       * <pre>
+       * Configuration of the test.
+       * A test can have multiple configurations if it can be
+       * executed on multiple agents simultaneously. For more information, see
+       * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public java.util.List<yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration> getConfigurationsList() {
@@ -930,6 +1117,13 @@ public final class TestOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration of the test.
+       * A test can have multiple configurations if it can be
+       * executed on multiple agents simultaneously. For more information, see
+       * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public int getConfigurationsCount() {
@@ -940,6 +1134,13 @@ public final class TestOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration of the test.
+       * A test can have multiple configurations if it can be
+       * executed on multiple agents simultaneously. For more information, see
+       * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration getConfigurations(int index) {
@@ -950,6 +1151,13 @@ public final class TestOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration of the test.
+       * A test can have multiple configurations if it can be
+       * executed on multiple agents simultaneously. For more information, see
+       * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public Builder setConfigurations(
@@ -967,6 +1175,13 @@ public final class TestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the test.
+       * A test can have multiple configurations if it can be
+       * executed on multiple agents simultaneously. For more information, see
+       * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public Builder setConfigurations(
@@ -981,6 +1196,13 @@ public final class TestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the test.
+       * A test can have multiple configurations if it can be
+       * executed on multiple agents simultaneously. For more information, see
+       * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public Builder addConfigurations(yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration value) {
@@ -997,6 +1219,13 @@ public final class TestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the test.
+       * A test can have multiple configurations if it can be
+       * executed on multiple agents simultaneously. For more information, see
+       * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public Builder addConfigurations(
@@ -1014,6 +1243,13 @@ public final class TestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the test.
+       * A test can have multiple configurations if it can be
+       * executed on multiple agents simultaneously. For more information, see
+       * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public Builder addConfigurations(
@@ -1028,6 +1264,13 @@ public final class TestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the test.
+       * A test can have multiple configurations if it can be
+       * executed on multiple agents simultaneously. For more information, see
+       * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public Builder addConfigurations(
@@ -1042,6 +1285,13 @@ public final class TestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the test.
+       * A test can have multiple configurations if it can be
+       * executed on multiple agents simultaneously. For more information, see
+       * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public Builder addAllConfigurations(
@@ -1057,6 +1307,13 @@ public final class TestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the test.
+       * A test can have multiple configurations if it can be
+       * executed on multiple agents simultaneously. For more information, see
+       * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public Builder clearConfigurations() {
@@ -1070,6 +1327,13 @@ public final class TestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the test.
+       * A test can have multiple configurations if it can be
+       * executed on multiple agents simultaneously. For more information, see
+       * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public Builder removeConfigurations(int index) {
@@ -1083,6 +1347,13 @@ public final class TestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Configuration of the test.
+       * A test can have multiple configurations if it can be
+       * executed on multiple agents simultaneously. For more information, see
+       * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration.Builder getConfigurationsBuilder(
@@ -1090,6 +1361,13 @@ public final class TestOuterClass {
         return getConfigurationsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Configuration of the test.
+       * A test can have multiple configurations if it can be
+       * executed on multiple agents simultaneously. For more information, see
+       * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfigurationOrBuilder getConfigurationsOrBuilder(
@@ -1100,6 +1378,13 @@ public final class TestOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration of the test.
+       * A test can have multiple configurations if it can be
+       * executed on multiple agents simultaneously. For more information, see
+       * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public java.util.List<? extends yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfigurationOrBuilder> 
@@ -1111,6 +1396,13 @@ public final class TestOuterClass {
         }
       }
       /**
+       * <pre>
+       * Configuration of the test.
+       * A test can have multiple configurations if it can be
+       * executed on multiple agents simultaneously. For more information, see
+       * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration.Builder addConfigurationsBuilder() {
@@ -1118,6 +1410,13 @@ public final class TestOuterClass {
             yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Configuration of the test.
+       * A test can have multiple configurations if it can be
+       * executed on multiple agents simultaneously. For more information, see
+       * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration.Builder addConfigurationsBuilder(
@@ -1126,6 +1425,13 @@ public final class TestOuterClass {
             index, yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Configuration of the test.
+       * A test can have multiple configurations if it can be
+       * executed on multiple agents simultaneously. For more information, see
+       * [Load testing using multiple agents](docs/load-testing/tutorials/loadtesting-multiply).
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.test.SingleAgentConfiguration configurations = 2;</code>
        */
       public java.util.List<yandex.cloud.api.loadtesting.api.v1.test.SingleAgentConfigurationOuterClass.SingleAgentConfiguration.Builder> 
@@ -1151,6 +1457,10 @@ public final class TestOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.loadtesting.api.v1.test.DetailsOuterClass.Details, yandex.cloud.api.loadtesting.api.v1.test.DetailsOuterClass.Details.Builder, yandex.cloud.api.loadtesting.api.v1.test.DetailsOuterClass.DetailsOrBuilder> detailsBuilder_;
       /**
+       * <pre>
+       * Test meta information. Name, description, etc.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Details details = 3;</code>
        * @return Whether the details field is set.
        */
@@ -1158,6 +1468,10 @@ public final class TestOuterClass {
         return detailsBuilder_ != null || details_ != null;
       }
       /**
+       * <pre>
+       * Test meta information. Name, description, etc.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Details details = 3;</code>
        * @return The details.
        */
@@ -1169,6 +1483,10 @@ public final class TestOuterClass {
         }
       }
       /**
+       * <pre>
+       * Test meta information. Name, description, etc.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Details details = 3;</code>
        */
       public Builder setDetails(yandex.cloud.api.loadtesting.api.v1.test.DetailsOuterClass.Details value) {
@@ -1185,6 +1503,10 @@ public final class TestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test meta information. Name, description, etc.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Details details = 3;</code>
        */
       public Builder setDetails(
@@ -1199,6 +1521,10 @@ public final class TestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test meta information. Name, description, etc.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Details details = 3;</code>
        */
       public Builder mergeDetails(yandex.cloud.api.loadtesting.api.v1.test.DetailsOuterClass.Details value) {
@@ -1217,6 +1543,10 @@ public final class TestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test meta information. Name, description, etc.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Details details = 3;</code>
        */
       public Builder clearDetails() {
@@ -1231,6 +1561,10 @@ public final class TestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test meta information. Name, description, etc.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Details details = 3;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.test.DetailsOuterClass.Details.Builder getDetailsBuilder() {
@@ -1239,6 +1573,10 @@ public final class TestOuterClass {
         return getDetailsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Test meta information. Name, description, etc.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Details details = 3;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.test.DetailsOuterClass.DetailsOrBuilder getDetailsOrBuilder() {
@@ -1250,6 +1588,10 @@ public final class TestOuterClass {
         }
       }
       /**
+       * <pre>
+       * Test meta information. Name, description, etc.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Details details = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1270,6 +1612,10 @@ public final class TestOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.loadtesting.api.v1.test.SummaryOuterClass.Summary, yandex.cloud.api.loadtesting.api.v1.test.SummaryOuterClass.Summary.Builder, yandex.cloud.api.loadtesting.api.v1.test.SummaryOuterClass.SummaryOrBuilder> summaryBuilder_;
       /**
+       * <pre>
+       * Test execution information.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Summary summary = 4;</code>
        * @return Whether the summary field is set.
        */
@@ -1277,6 +1623,10 @@ public final class TestOuterClass {
         return summaryBuilder_ != null || summary_ != null;
       }
       /**
+       * <pre>
+       * Test execution information.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Summary summary = 4;</code>
        * @return The summary.
        */
@@ -1288,6 +1638,10 @@ public final class TestOuterClass {
         }
       }
       /**
+       * <pre>
+       * Test execution information.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Summary summary = 4;</code>
        */
       public Builder setSummary(yandex.cloud.api.loadtesting.api.v1.test.SummaryOuterClass.Summary value) {
@@ -1304,6 +1658,10 @@ public final class TestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test execution information.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Summary summary = 4;</code>
        */
       public Builder setSummary(
@@ -1318,6 +1676,10 @@ public final class TestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test execution information.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Summary summary = 4;</code>
        */
       public Builder mergeSummary(yandex.cloud.api.loadtesting.api.v1.test.SummaryOuterClass.Summary value) {
@@ -1336,6 +1698,10 @@ public final class TestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test execution information.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Summary summary = 4;</code>
        */
       public Builder clearSummary() {
@@ -1350,6 +1716,10 @@ public final class TestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Test execution information.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Summary summary = 4;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.test.SummaryOuterClass.Summary.Builder getSummaryBuilder() {
@@ -1358,6 +1728,10 @@ public final class TestOuterClass {
         return getSummaryFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Test execution information.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Summary summary = 4;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.test.SummaryOuterClass.SummaryOrBuilder getSummaryOrBuilder() {
@@ -1369,6 +1743,10 @@ public final class TestOuterClass {
         }
       }
       /**
+       * <pre>
+       * Test execution information.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.test.Summary summary = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1387,6 +1765,10 @@ public final class TestOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder that the test belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 5;</code>
        * @return The folderId.
        */
@@ -1403,6 +1785,10 @@ public final class TestOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the test belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 5;</code>
        * @return The bytes for folderId.
        */
@@ -1420,6 +1806,10 @@ public final class TestOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder that the test belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 5;</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -1435,6 +1825,10 @@ public final class TestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the test belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 5;</code>
        * @return This builder for chaining.
        */
@@ -1445,6 +1839,10 @@ public final class TestOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder that the test belongs to.
+       * </pre>
+       *
        * <code>string folder_id = 5;</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.

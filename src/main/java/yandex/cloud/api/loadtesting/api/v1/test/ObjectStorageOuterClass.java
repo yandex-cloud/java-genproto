@@ -19,11 +19,19 @@ public final class ObjectStorageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Bucket name.
+     * </pre>
+     *
      * <code>string bucket = 1;</code>
      * @return The bucket.
      */
     java.lang.String getBucket();
     /**
+     * <pre>
+     * Bucket name.
+     * </pre>
+     *
      * <code>string bucket = 1;</code>
      * @return The bytes for bucket.
      */
@@ -31,11 +39,19 @@ public final class ObjectStorageOuterClass {
         getBucketBytes();
 
     /**
+     * <pre>
+     * File name.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * File name.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -43,6 +59,10 @@ public final class ObjectStorageOuterClass {
         getNameBytes();
   }
   /**
+   * <pre>
+   * Reference to a file stored in Object Storage.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.loadtesting.api.v1.test.ObjectStorage}
    */
   public static final class ObjectStorage extends
@@ -136,6 +156,10 @@ public final class ObjectStorageOuterClass {
     public static final int BUCKET_FIELD_NUMBER = 1;
     private volatile java.lang.Object bucket_;
     /**
+     * <pre>
+     * Bucket name.
+     * </pre>
+     *
      * <code>string bucket = 1;</code>
      * @return The bucket.
      */
@@ -153,6 +177,10 @@ public final class ObjectStorageOuterClass {
       }
     }
     /**
+     * <pre>
+     * Bucket name.
+     * </pre>
+     *
      * <code>string bucket = 1;</code>
      * @return The bytes for bucket.
      */
@@ -174,6 +202,10 @@ public final class ObjectStorageOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * File name.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The name.
      */
@@ -191,6 +223,10 @@ public final class ObjectStorageOuterClass {
       }
     }
     /**
+     * <pre>
+     * File name.
+     * </pre>
+     *
      * <code>string name = 2;</code>
      * @return The bytes for name.
      */
@@ -374,6 +410,10 @@ public final class ObjectStorageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Reference to a file stored in Object Storage.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.loadtesting.api.v1.test.ObjectStorage}
      */
     public static final class Builder extends
@@ -530,6 +570,10 @@ public final class ObjectStorageOuterClass {
 
       private java.lang.Object bucket_ = "";
       /**
+       * <pre>
+       * Bucket name.
+       * </pre>
+       *
        * <code>string bucket = 1;</code>
        * @return The bucket.
        */
@@ -546,6 +590,10 @@ public final class ObjectStorageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Bucket name.
+       * </pre>
+       *
        * <code>string bucket = 1;</code>
        * @return The bytes for bucket.
        */
@@ -563,6 +611,10 @@ public final class ObjectStorageOuterClass {
         }
       }
       /**
+       * <pre>
+       * Bucket name.
+       * </pre>
+       *
        * <code>string bucket = 1;</code>
        * @param value The bucket to set.
        * @return This builder for chaining.
@@ -578,6 +630,10 @@ public final class ObjectStorageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Bucket name.
+       * </pre>
+       *
        * <code>string bucket = 1;</code>
        * @return This builder for chaining.
        */
@@ -588,6 +644,10 @@ public final class ObjectStorageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Bucket name.
+       * </pre>
+       *
        * <code>string bucket = 1;</code>
        * @param value The bytes for bucket to set.
        * @return This builder for chaining.
@@ -606,6 +666,10 @@ public final class ObjectStorageOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * File name.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return The name.
        */
@@ -622,6 +686,10 @@ public final class ObjectStorageOuterClass {
         }
       }
       /**
+       * <pre>
+       * File name.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return The bytes for name.
        */
@@ -639,6 +707,10 @@ public final class ObjectStorageOuterClass {
         }
       }
       /**
+       * <pre>
+       * File name.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -654,6 +726,10 @@ public final class ObjectStorageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * File name.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @return This builder for chaining.
        */
@@ -664,6 +740,10 @@ public final class ObjectStorageOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * File name.
+       * </pre>
+       *
        * <code>string name = 2;</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.

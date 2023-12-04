@@ -19,11 +19,19 @@ public final class TagOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Key of the tag.
+     * </pre>
+     *
      * <code>string key = 1;</code>
      * @return The key.
      */
     java.lang.String getKey();
     /**
+     * <pre>
+     * Key of the tag.
+     * </pre>
+     *
      * <code>string key = 1;</code>
      * @return The bytes for key.
      */
@@ -31,11 +39,19 @@ public final class TagOuterClass {
         getKeyBytes();
 
     /**
+     * <pre>
+     * Value of the tag.
+     * </pre>
+     *
      * <code>string value = 2;</code>
      * @return The value.
      */
     java.lang.String getValue();
     /**
+     * <pre>
+     * Value of the tag.
+     * </pre>
+     *
      * <code>string value = 2;</code>
      * @return The bytes for value.
      */
@@ -43,6 +59,10 @@ public final class TagOuterClass {
         getValueBytes();
   }
   /**
+   * <pre>
+   * Tag attached to some entity.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.loadtesting.api.v1.common.Tag}
    */
   public static final class Tag extends
@@ -136,6 +156,10 @@ public final class TagOuterClass {
     public static final int KEY_FIELD_NUMBER = 1;
     private volatile java.lang.Object key_;
     /**
+     * <pre>
+     * Key of the tag.
+     * </pre>
+     *
      * <code>string key = 1;</code>
      * @return The key.
      */
@@ -153,6 +177,10 @@ public final class TagOuterClass {
       }
     }
     /**
+     * <pre>
+     * Key of the tag.
+     * </pre>
+     *
      * <code>string key = 1;</code>
      * @return The bytes for key.
      */
@@ -174,6 +202,10 @@ public final class TagOuterClass {
     public static final int VALUE_FIELD_NUMBER = 2;
     private volatile java.lang.Object value_;
     /**
+     * <pre>
+     * Value of the tag.
+     * </pre>
+     *
      * <code>string value = 2;</code>
      * @return The value.
      */
@@ -191,6 +223,10 @@ public final class TagOuterClass {
       }
     }
     /**
+     * <pre>
+     * Value of the tag.
+     * </pre>
+     *
      * <code>string value = 2;</code>
      * @return The bytes for value.
      */
@@ -374,6 +410,10 @@ public final class TagOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Tag attached to some entity.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.loadtesting.api.v1.common.Tag}
      */
     public static final class Builder extends
@@ -530,6 +570,10 @@ public final class TagOuterClass {
 
       private java.lang.Object key_ = "";
       /**
+       * <pre>
+       * Key of the tag.
+       * </pre>
+       *
        * <code>string key = 1;</code>
        * @return The key.
        */
@@ -546,6 +590,10 @@ public final class TagOuterClass {
         }
       }
       /**
+       * <pre>
+       * Key of the tag.
+       * </pre>
+       *
        * <code>string key = 1;</code>
        * @return The bytes for key.
        */
@@ -563,6 +611,10 @@ public final class TagOuterClass {
         }
       }
       /**
+       * <pre>
+       * Key of the tag.
+       * </pre>
+       *
        * <code>string key = 1;</code>
        * @param value The key to set.
        * @return This builder for chaining.
@@ -578,6 +630,10 @@ public final class TagOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Key of the tag.
+       * </pre>
+       *
        * <code>string key = 1;</code>
        * @return This builder for chaining.
        */
@@ -588,6 +644,10 @@ public final class TagOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Key of the tag.
+       * </pre>
+       *
        * <code>string key = 1;</code>
        * @param value The bytes for key to set.
        * @return This builder for chaining.
@@ -606,6 +666,10 @@ public final class TagOuterClass {
 
       private java.lang.Object value_ = "";
       /**
+       * <pre>
+       * Value of the tag.
+       * </pre>
+       *
        * <code>string value = 2;</code>
        * @return The value.
        */
@@ -622,6 +686,10 @@ public final class TagOuterClass {
         }
       }
       /**
+       * <pre>
+       * Value of the tag.
+       * </pre>
+       *
        * <code>string value = 2;</code>
        * @return The bytes for value.
        */
@@ -639,6 +707,10 @@ public final class TagOuterClass {
         }
       }
       /**
+       * <pre>
+       * Value of the tag.
+       * </pre>
+       *
        * <code>string value = 2;</code>
        * @param value The value to set.
        * @return This builder for chaining.
@@ -654,6 +726,10 @@ public final class TagOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Value of the tag.
+       * </pre>
+       *
        * <code>string value = 2;</code>
        * @return This builder for chaining.
        */
@@ -664,6 +740,10 @@ public final class TagOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Value of the tag.
+       * </pre>
+       *
        * <code>string value = 2;</code>
        * @param value The bytes for value to set.
        * @return This builder for chaining.

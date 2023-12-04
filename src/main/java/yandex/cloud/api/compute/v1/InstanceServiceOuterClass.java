@@ -4037,6 +4037,33 @@ public final class InstanceServiceOuterClass {
 
     /**
      * <pre>
+     * Placement policy configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+     * @return Whether the placementPolicy field is set.
+     */
+    boolean hasPlacementPolicy();
+    /**
+     * <pre>
+     * Placement policy configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+     * @return The placementPolicy.
+     */
+    yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy getPlacementPolicy();
+    /**
+     * <pre>
+     * Placement policy configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+     */
+    yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicyOrBuilder getPlacementPolicyOrBuilder();
+
+    /**
+     * <pre>
      * GPU settings.
      * </pre>
      *
@@ -4064,30 +4091,49 @@ public final class InstanceServiceOuterClass {
 
     /**
      * <pre>
-     * Placement policy configuration.
+     * Behaviour on maintenance events
      * </pre>
      *
-     * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
-     * @return Whether the placementPolicy field is set.
+     * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 21;</code>
+     * @return The enum numeric value on the wire for maintenancePolicy.
      */
-    boolean hasPlacementPolicy();
+    int getMaintenancePolicyValue();
     /**
      * <pre>
-     * Placement policy configuration.
+     * Behaviour on maintenance events
      * </pre>
      *
-     * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
-     * @return The placementPolicy.
+     * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 21;</code>
+     * @return The maintenancePolicy.
      */
-    yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy getPlacementPolicy();
+    yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy getMaintenancePolicy();
+
     /**
      * <pre>
-     * Placement policy configuration.
+     * Time between notification via metadata service and maintenance
      * </pre>
      *
-     * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+     * <code>.google.protobuf.Duration maintenance_grace_period = 22 [(.yandex.cloud.value) = "1s-24h"];</code>
+     * @return Whether the maintenanceGracePeriod field is set.
      */
-    yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicyOrBuilder getPlacementPolicyOrBuilder();
+    boolean hasMaintenanceGracePeriod();
+    /**
+     * <pre>
+     * Time between notification via metadata service and maintenance
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration maintenance_grace_period = 22 [(.yandex.cloud.value) = "1s-24h"];</code>
+     * @return The maintenanceGracePeriod.
+     */
+    com.google.protobuf.Duration getMaintenanceGracePeriod();
+    /**
+     * <pre>
+     * Time between notification via metadata service and maintenance
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration maintenance_grace_period = 22 [(.yandex.cloud.value) = "1s-24h"];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getMaintenanceGracePeriodOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.CreateInstanceRequest}
@@ -4113,6 +4159,7 @@ public final class InstanceServiceOuterClass {
       networkInterfaceSpecs_ = java.util.Collections.emptyList();
       hostname_ = "";
       serviceAccountId_ = "";
+      maintenancePolicy_ = 0;
     }
 
     @java.lang.Override
@@ -4337,6 +4384,25 @@ public final class InstanceServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(gpuSettings_);
                 gpuSettings_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 168: {
+              int rawValue = input.readEnum();
+
+              maintenancePolicy_ = rawValue;
+              break;
+            }
+            case 178: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (maintenanceGracePeriod_ != null) {
+                subBuilder = maintenanceGracePeriod_.toBuilder();
+              }
+              maintenanceGracePeriod_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maintenanceGracePeriod_);
+                maintenanceGracePeriod_ = subBuilder.buildPartial();
               }
 
               break;
@@ -5415,6 +5481,44 @@ public final class InstanceServiceOuterClass {
       return getNetworkSettings();
     }
 
+    public static final int PLACEMENT_POLICY_FIELD_NUMBER = 16;
+    private yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy placementPolicy_;
+    /**
+     * <pre>
+     * Placement policy configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+     * @return Whether the placementPolicy field is set.
+     */
+    @java.lang.Override
+    public boolean hasPlacementPolicy() {
+      return placementPolicy_ != null;
+    }
+    /**
+     * <pre>
+     * Placement policy configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+     * @return The placementPolicy.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy getPlacementPolicy() {
+      return placementPolicy_ == null ? yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.getDefaultInstance() : placementPolicy_;
+    }
+    /**
+     * <pre>
+     * Placement policy configuration.
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicyOrBuilder getPlacementPolicyOrBuilder() {
+      return getPlacementPolicy();
+    }
+
     public static final int GPU_SETTINGS_FIELD_NUMBER = 20;
     private yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings gpuSettings_;
     /**
@@ -5453,42 +5557,69 @@ public final class InstanceServiceOuterClass {
       return getGpuSettings();
     }
 
-    public static final int PLACEMENT_POLICY_FIELD_NUMBER = 16;
-    private yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy placementPolicy_;
+    public static final int MAINTENANCE_POLICY_FIELD_NUMBER = 21;
+    private int maintenancePolicy_;
     /**
      * <pre>
-     * Placement policy configuration.
+     * Behaviour on maintenance events
      * </pre>
      *
-     * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
-     * @return Whether the placementPolicy field is set.
+     * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 21;</code>
+     * @return The enum numeric value on the wire for maintenancePolicy.
      */
-    @java.lang.Override
-    public boolean hasPlacementPolicy() {
-      return placementPolicy_ != null;
+    @java.lang.Override public int getMaintenancePolicyValue() {
+      return maintenancePolicy_;
     }
     /**
      * <pre>
-     * Placement policy configuration.
+     * Behaviour on maintenance events
      * </pre>
      *
-     * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
-     * @return The placementPolicy.
+     * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 21;</code>
+     * @return The maintenancePolicy.
+     */
+    @java.lang.Override public yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy getMaintenancePolicy() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy result = yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.valueOf(maintenancePolicy_);
+      return result == null ? yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.UNRECOGNIZED : result;
+    }
+
+    public static final int MAINTENANCE_GRACE_PERIOD_FIELD_NUMBER = 22;
+    private com.google.protobuf.Duration maintenanceGracePeriod_;
+    /**
+     * <pre>
+     * Time between notification via metadata service and maintenance
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration maintenance_grace_period = 22 [(.yandex.cloud.value) = "1s-24h"];</code>
+     * @return Whether the maintenanceGracePeriod field is set.
      */
     @java.lang.Override
-    public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy getPlacementPolicy() {
-      return placementPolicy_ == null ? yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.getDefaultInstance() : placementPolicy_;
+    public boolean hasMaintenanceGracePeriod() {
+      return maintenanceGracePeriod_ != null;
     }
     /**
      * <pre>
-     * Placement policy configuration.
+     * Time between notification via metadata service and maintenance
      * </pre>
      *
-     * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+     * <code>.google.protobuf.Duration maintenance_grace_period = 22 [(.yandex.cloud.value) = "1s-24h"];</code>
+     * @return The maintenanceGracePeriod.
      */
     @java.lang.Override
-    public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicyOrBuilder getPlacementPolicyOrBuilder() {
-      return getPlacementPolicy();
+    public com.google.protobuf.Duration getMaintenanceGracePeriod() {
+      return maintenanceGracePeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : maintenanceGracePeriod_;
+    }
+    /**
+     * <pre>
+     * Time between notification via metadata service and maintenance
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration maintenance_grace_period = 22 [(.yandex.cloud.value) = "1s-24h"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getMaintenanceGracePeriodOrBuilder() {
+      return getMaintenanceGracePeriod();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -5570,6 +5701,12 @@ public final class InstanceServiceOuterClass {
       }
       if (gpuSettings_ != null) {
         output.writeMessage(20, getGpuSettings());
+      }
+      if (maintenancePolicy_ != yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.MAINTENANCE_POLICY_UNSPECIFIED.getNumber()) {
+        output.writeEnum(21, maintenancePolicy_);
+      }
+      if (maintenanceGracePeriod_ != null) {
+        output.writeMessage(22, getMaintenanceGracePeriod());
       }
       unknownFields.writeTo(output);
     }
@@ -5665,6 +5802,14 @@ public final class InstanceServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(20, getGpuSettings());
       }
+      if (maintenancePolicy_ != yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.MAINTENANCE_POLICY_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(21, maintenancePolicy_);
+      }
+      if (maintenanceGracePeriod_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(22, getMaintenanceGracePeriod());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5731,15 +5876,21 @@ public final class InstanceServiceOuterClass {
         if (!getNetworkSettings()
             .equals(other.getNetworkSettings())) return false;
       }
+      if (hasPlacementPolicy() != other.hasPlacementPolicy()) return false;
+      if (hasPlacementPolicy()) {
+        if (!getPlacementPolicy()
+            .equals(other.getPlacementPolicy())) return false;
+      }
       if (hasGpuSettings() != other.hasGpuSettings()) return false;
       if (hasGpuSettings()) {
         if (!getGpuSettings()
             .equals(other.getGpuSettings())) return false;
       }
-      if (hasPlacementPolicy() != other.hasPlacementPolicy()) return false;
-      if (hasPlacementPolicy()) {
-        if (!getPlacementPolicy()
-            .equals(other.getPlacementPolicy())) return false;
+      if (maintenancePolicy_ != other.maintenancePolicy_) return false;
+      if (hasMaintenanceGracePeriod() != other.hasMaintenanceGracePeriod()) return false;
+      if (hasMaintenanceGracePeriod()) {
+        if (!getMaintenanceGracePeriod()
+            .equals(other.getMaintenanceGracePeriod())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -5810,13 +5961,19 @@ public final class InstanceServiceOuterClass {
         hash = (37 * hash) + NETWORK_SETTINGS_FIELD_NUMBER;
         hash = (53 * hash) + getNetworkSettings().hashCode();
       }
+      if (hasPlacementPolicy()) {
+        hash = (37 * hash) + PLACEMENT_POLICY_FIELD_NUMBER;
+        hash = (53 * hash) + getPlacementPolicy().hashCode();
+      }
       if (hasGpuSettings()) {
         hash = (37 * hash) + GPU_SETTINGS_FIELD_NUMBER;
         hash = (53 * hash) + getGpuSettings().hashCode();
       }
-      if (hasPlacementPolicy()) {
-        hash = (37 * hash) + PLACEMENT_POLICY_FIELD_NUMBER;
-        hash = (53 * hash) + getPlacementPolicy().hashCode();
+      hash = (37 * hash) + MAINTENANCE_POLICY_FIELD_NUMBER;
+      hash = (53 * hash) + maintenancePolicy_;
+      if (hasMaintenanceGracePeriod()) {
+        hash = (37 * hash) + MAINTENANCE_GRACE_PERIOD_FIELD_NUMBER;
+        hash = (53 * hash) + getMaintenanceGracePeriod().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -6051,17 +6208,25 @@ public final class InstanceServiceOuterClass {
           networkSettings_ = null;
           networkSettingsBuilder_ = null;
         }
+        if (placementPolicyBuilder_ == null) {
+          placementPolicy_ = null;
+        } else {
+          placementPolicy_ = null;
+          placementPolicyBuilder_ = null;
+        }
         if (gpuSettingsBuilder_ == null) {
           gpuSettings_ = null;
         } else {
           gpuSettings_ = null;
           gpuSettingsBuilder_ = null;
         }
-        if (placementPolicyBuilder_ == null) {
-          placementPolicy_ = null;
+        maintenancePolicy_ = 0;
+
+        if (maintenanceGracePeriodBuilder_ == null) {
+          maintenanceGracePeriod_ = null;
         } else {
-          placementPolicy_ = null;
-          placementPolicyBuilder_ = null;
+          maintenanceGracePeriod_ = null;
+          maintenanceGracePeriodBuilder_ = null;
         }
         return this;
       }
@@ -6162,15 +6327,21 @@ public final class InstanceServiceOuterClass {
         } else {
           result.networkSettings_ = networkSettingsBuilder_.build();
         }
+        if (placementPolicyBuilder_ == null) {
+          result.placementPolicy_ = placementPolicy_;
+        } else {
+          result.placementPolicy_ = placementPolicyBuilder_.build();
+        }
         if (gpuSettingsBuilder_ == null) {
           result.gpuSettings_ = gpuSettings_;
         } else {
           result.gpuSettings_ = gpuSettingsBuilder_.build();
         }
-        if (placementPolicyBuilder_ == null) {
-          result.placementPolicy_ = placementPolicy_;
+        result.maintenancePolicy_ = maintenancePolicy_;
+        if (maintenanceGracePeriodBuilder_ == null) {
+          result.maintenanceGracePeriod_ = maintenanceGracePeriod_;
         } else {
-          result.placementPolicy_ = placementPolicyBuilder_.build();
+          result.maintenanceGracePeriod_ = maintenanceGracePeriodBuilder_.build();
         }
         onBuilt();
         return result;
@@ -6371,11 +6542,17 @@ public final class InstanceServiceOuterClass {
         if (other.hasNetworkSettings()) {
           mergeNetworkSettings(other.getNetworkSettings());
         }
+        if (other.hasPlacementPolicy()) {
+          mergePlacementPolicy(other.getPlacementPolicy());
+        }
         if (other.hasGpuSettings()) {
           mergeGpuSettings(other.getGpuSettings());
         }
-        if (other.hasPlacementPolicy()) {
-          mergePlacementPolicy(other.getPlacementPolicy());
+        if (other.maintenancePolicy_ != 0) {
+          setMaintenancePolicyValue(other.getMaintenancePolicyValue());
+        }
+        if (other.hasMaintenanceGracePeriod()) {
+          mergeMaintenanceGracePeriod(other.getMaintenanceGracePeriod());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9609,6 +9786,161 @@ public final class InstanceServiceOuterClass {
         return networkSettingsBuilder_;
       }
 
+      private yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy placementPolicy_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicyOrBuilder> placementPolicyBuilder_;
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+       * @return Whether the placementPolicy field is set.
+       */
+      public boolean hasPlacementPolicy() {
+        return placementPolicyBuilder_ != null || placementPolicy_ != null;
+      }
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+       * @return The placementPolicy.
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy getPlacementPolicy() {
+        if (placementPolicyBuilder_ == null) {
+          return placementPolicy_ == null ? yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.getDefaultInstance() : placementPolicy_;
+        } else {
+          return placementPolicyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+       */
+      public Builder setPlacementPolicy(yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy value) {
+        if (placementPolicyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          placementPolicy_ = value;
+          onChanged();
+        } else {
+          placementPolicyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+       */
+      public Builder setPlacementPolicy(
+          yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.Builder builderForValue) {
+        if (placementPolicyBuilder_ == null) {
+          placementPolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          placementPolicyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+       */
+      public Builder mergePlacementPolicy(yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy value) {
+        if (placementPolicyBuilder_ == null) {
+          if (placementPolicy_ != null) {
+            placementPolicy_ =
+              yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.newBuilder(placementPolicy_).mergeFrom(value).buildPartial();
+          } else {
+            placementPolicy_ = value;
+          }
+          onChanged();
+        } else {
+          placementPolicyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+       */
+      public Builder clearPlacementPolicy() {
+        if (placementPolicyBuilder_ == null) {
+          placementPolicy_ = null;
+          onChanged();
+        } else {
+          placementPolicy_ = null;
+          placementPolicyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.Builder getPlacementPolicyBuilder() {
+        
+        onChanged();
+        return getPlacementPolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+       */
+      public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicyOrBuilder getPlacementPolicyOrBuilder() {
+        if (placementPolicyBuilder_ != null) {
+          return placementPolicyBuilder_.getMessageOrBuilder();
+        } else {
+          return placementPolicy_ == null ?
+              yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.getDefaultInstance() : placementPolicy_;
+        }
+      }
+      /**
+       * <pre>
+       * Placement policy configuration.
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicyOrBuilder> 
+          getPlacementPolicyFieldBuilder() {
+        if (placementPolicyBuilder_ == null) {
+          placementPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicyOrBuilder>(
+                  getPlacementPolicy(),
+                  getParentForChildren(),
+                  isClean());
+          placementPolicy_ = null;
+        }
+        return placementPolicyBuilder_;
+      }
+
       private yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings gpuSettings_;
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings, yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettings.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.GpuSettingsOrBuilder> gpuSettingsBuilder_;
@@ -9764,159 +10096,233 @@ public final class InstanceServiceOuterClass {
         return gpuSettingsBuilder_;
       }
 
-      private yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy placementPolicy_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicyOrBuilder> placementPolicyBuilder_;
+      private int maintenancePolicy_ = 0;
       /**
        * <pre>
-       * Placement policy configuration.
+       * Behaviour on maintenance events
        * </pre>
        *
-       * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
-       * @return Whether the placementPolicy field is set.
+       * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 21;</code>
+       * @return The enum numeric value on the wire for maintenancePolicy.
        */
-      public boolean hasPlacementPolicy() {
-        return placementPolicyBuilder_ != null || placementPolicy_ != null;
+      @java.lang.Override public int getMaintenancePolicyValue() {
+        return maintenancePolicy_;
       }
       /**
        * <pre>
-       * Placement policy configuration.
+       * Behaviour on maintenance events
        * </pre>
        *
-       * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
-       * @return The placementPolicy.
+       * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 21;</code>
+       * @param value The enum numeric value on the wire for maintenancePolicy to set.
+       * @return This builder for chaining.
        */
-      public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy getPlacementPolicy() {
-        if (placementPolicyBuilder_ == null) {
-          return placementPolicy_ == null ? yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.getDefaultInstance() : placementPolicy_;
+      public Builder setMaintenancePolicyValue(int value) {
+        
+        maintenancePolicy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Behaviour on maintenance events
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 21;</code>
+       * @return The maintenancePolicy.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy getMaintenancePolicy() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy result = yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.valueOf(maintenancePolicy_);
+        return result == null ? yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Behaviour on maintenance events
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 21;</code>
+       * @param value The maintenancePolicy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaintenancePolicy(yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        maintenancePolicy_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Behaviour on maintenance events
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 21;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaintenancePolicy() {
+        
+        maintenancePolicy_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration maintenanceGracePeriod_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> maintenanceGracePeriodBuilder_;
+      /**
+       * <pre>
+       * Time between notification via metadata service and maintenance
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration maintenance_grace_period = 22 [(.yandex.cloud.value) = "1s-24h"];</code>
+       * @return Whether the maintenanceGracePeriod field is set.
+       */
+      public boolean hasMaintenanceGracePeriod() {
+        return maintenanceGracePeriodBuilder_ != null || maintenanceGracePeriod_ != null;
+      }
+      /**
+       * <pre>
+       * Time between notification via metadata service and maintenance
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration maintenance_grace_period = 22 [(.yandex.cloud.value) = "1s-24h"];</code>
+       * @return The maintenanceGracePeriod.
+       */
+      public com.google.protobuf.Duration getMaintenanceGracePeriod() {
+        if (maintenanceGracePeriodBuilder_ == null) {
+          return maintenanceGracePeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : maintenanceGracePeriod_;
         } else {
-          return placementPolicyBuilder_.getMessage();
+          return maintenanceGracePeriodBuilder_.getMessage();
         }
       }
       /**
        * <pre>
-       * Placement policy configuration.
+       * Time between notification via metadata service and maintenance
        * </pre>
        *
-       * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+       * <code>.google.protobuf.Duration maintenance_grace_period = 22 [(.yandex.cloud.value) = "1s-24h"];</code>
        */
-      public Builder setPlacementPolicy(yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy value) {
-        if (placementPolicyBuilder_ == null) {
+      public Builder setMaintenanceGracePeriod(com.google.protobuf.Duration value) {
+        if (maintenanceGracePeriodBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          placementPolicy_ = value;
+          maintenanceGracePeriod_ = value;
           onChanged();
         } else {
-          placementPolicyBuilder_.setMessage(value);
+          maintenanceGracePeriodBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
        * <pre>
-       * Placement policy configuration.
+       * Time between notification via metadata service and maintenance
        * </pre>
        *
-       * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+       * <code>.google.protobuf.Duration maintenance_grace_period = 22 [(.yandex.cloud.value) = "1s-24h"];</code>
        */
-      public Builder setPlacementPolicy(
-          yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.Builder builderForValue) {
-        if (placementPolicyBuilder_ == null) {
-          placementPolicy_ = builderForValue.build();
+      public Builder setMaintenanceGracePeriod(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (maintenanceGracePeriodBuilder_ == null) {
+          maintenanceGracePeriod_ = builderForValue.build();
           onChanged();
         } else {
-          placementPolicyBuilder_.setMessage(builderForValue.build());
+          maintenanceGracePeriodBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
        * <pre>
-       * Placement policy configuration.
+       * Time between notification via metadata service and maintenance
        * </pre>
        *
-       * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+       * <code>.google.protobuf.Duration maintenance_grace_period = 22 [(.yandex.cloud.value) = "1s-24h"];</code>
        */
-      public Builder mergePlacementPolicy(yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy value) {
-        if (placementPolicyBuilder_ == null) {
-          if (placementPolicy_ != null) {
-            placementPolicy_ =
-              yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.newBuilder(placementPolicy_).mergeFrom(value).buildPartial();
+      public Builder mergeMaintenanceGracePeriod(com.google.protobuf.Duration value) {
+        if (maintenanceGracePeriodBuilder_ == null) {
+          if (maintenanceGracePeriod_ != null) {
+            maintenanceGracePeriod_ =
+              com.google.protobuf.Duration.newBuilder(maintenanceGracePeriod_).mergeFrom(value).buildPartial();
           } else {
-            placementPolicy_ = value;
+            maintenanceGracePeriod_ = value;
           }
           onChanged();
         } else {
-          placementPolicyBuilder_.mergeFrom(value);
+          maintenanceGracePeriodBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
        * <pre>
-       * Placement policy configuration.
+       * Time between notification via metadata service and maintenance
        * </pre>
        *
-       * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+       * <code>.google.protobuf.Duration maintenance_grace_period = 22 [(.yandex.cloud.value) = "1s-24h"];</code>
        */
-      public Builder clearPlacementPolicy() {
-        if (placementPolicyBuilder_ == null) {
-          placementPolicy_ = null;
+      public Builder clearMaintenanceGracePeriod() {
+        if (maintenanceGracePeriodBuilder_ == null) {
+          maintenanceGracePeriod_ = null;
           onChanged();
         } else {
-          placementPolicy_ = null;
-          placementPolicyBuilder_ = null;
+          maintenanceGracePeriod_ = null;
+          maintenanceGracePeriodBuilder_ = null;
         }
 
         return this;
       }
       /**
        * <pre>
-       * Placement policy configuration.
+       * Time between notification via metadata service and maintenance
        * </pre>
        *
-       * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+       * <code>.google.protobuf.Duration maintenance_grace_period = 22 [(.yandex.cloud.value) = "1s-24h"];</code>
        */
-      public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.Builder getPlacementPolicyBuilder() {
+      public com.google.protobuf.Duration.Builder getMaintenanceGracePeriodBuilder() {
         
         onChanged();
-        return getPlacementPolicyFieldBuilder().getBuilder();
+        return getMaintenanceGracePeriodFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * Placement policy configuration.
+       * Time between notification via metadata service and maintenance
        * </pre>
        *
-       * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+       * <code>.google.protobuf.Duration maintenance_grace_period = 22 [(.yandex.cloud.value) = "1s-24h"];</code>
        */
-      public yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicyOrBuilder getPlacementPolicyOrBuilder() {
-        if (placementPolicyBuilder_ != null) {
-          return placementPolicyBuilder_.getMessageOrBuilder();
+      public com.google.protobuf.DurationOrBuilder getMaintenanceGracePeriodOrBuilder() {
+        if (maintenanceGracePeriodBuilder_ != null) {
+          return maintenanceGracePeriodBuilder_.getMessageOrBuilder();
         } else {
-          return placementPolicy_ == null ?
-              yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.getDefaultInstance() : placementPolicy_;
+          return maintenanceGracePeriod_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : maintenanceGracePeriod_;
         }
       }
       /**
        * <pre>
-       * Placement policy configuration.
+       * Time between notification via metadata service and maintenance
        * </pre>
        *
-       * <code>.yandex.cloud.compute.v1.PlacementPolicy placement_policy = 16;</code>
+       * <code>.google.protobuf.Duration maintenance_grace_period = 22 [(.yandex.cloud.value) = "1s-24h"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicyOrBuilder> 
-          getPlacementPolicyFieldBuilder() {
-        if (placementPolicyBuilder_ == null) {
-          placementPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicy.Builder, yandex.cloud.api.compute.v1.InstanceOuterClass.PlacementPolicyOrBuilder>(
-                  getPlacementPolicy(),
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getMaintenanceGracePeriodFieldBuilder() {
+        if (maintenanceGracePeriodBuilder_ == null) {
+          maintenanceGracePeriodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getMaintenanceGracePeriod(),
                   getParentForChildren(),
                   isClean());
-          placementPolicy_ = null;
+          maintenanceGracePeriod_ = null;
         }
-        return placementPolicyBuilder_;
+        return maintenanceGracePeriodBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10998,6 +11404,52 @@ public final class InstanceServiceOuterClass {
      * <code>.yandex.cloud.compute.v1.SchedulingPolicy scheduling_policy = 12;</code>
      */
     yandex.cloud.api.compute.v1.InstanceOuterClass.SchedulingPolicyOrBuilder getSchedulingPolicyOrBuilder();
+
+    /**
+     * <pre>
+     * Behaviour on maintenance events
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 14;</code>
+     * @return The enum numeric value on the wire for maintenancePolicy.
+     */
+    int getMaintenancePolicyValue();
+    /**
+     * <pre>
+     * Behaviour on maintenance events
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 14;</code>
+     * @return The maintenancePolicy.
+     */
+    yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy getMaintenancePolicy();
+
+    /**
+     * <pre>
+     * Time between notification via metadata service and maintenance
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration maintenance_grace_period = 15 [(.yandex.cloud.value) = "1s-24h"];</code>
+     * @return Whether the maintenanceGracePeriod field is set.
+     */
+    boolean hasMaintenanceGracePeriod();
+    /**
+     * <pre>
+     * Time between notification via metadata service and maintenance
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration maintenance_grace_period = 15 [(.yandex.cloud.value) = "1s-24h"];</code>
+     * @return The maintenanceGracePeriod.
+     */
+    com.google.protobuf.Duration getMaintenanceGracePeriod();
+    /**
+     * <pre>
+     * Time between notification via metadata service and maintenance
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration maintenance_grace_period = 15 [(.yandex.cloud.value) = "1s-24h"];</code>
+     */
+    com.google.protobuf.DurationOrBuilder getMaintenanceGracePeriodOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.compute.v1.UpdateInstanceRequest}
@@ -11017,6 +11469,7 @@ public final class InstanceServiceOuterClass {
       description_ = "";
       platformId_ = "";
       serviceAccountId_ = "";
+      maintenancePolicy_ = 0;
     }
 
     @java.lang.Override
@@ -11180,6 +11633,25 @@ public final class InstanceServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(metadataOptions_);
                 metadataOptions_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 112: {
+              int rawValue = input.readEnum();
+
+              maintenancePolicy_ = rawValue;
+              break;
+            }
+            case 122: {
+              com.google.protobuf.Duration.Builder subBuilder = null;
+              if (maintenanceGracePeriod_ != null) {
+                subBuilder = maintenanceGracePeriod_.toBuilder();
+              }
+              maintenanceGracePeriod_ = input.readMessage(com.google.protobuf.Duration.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(maintenanceGracePeriod_);
+                maintenanceGracePeriod_ = subBuilder.buildPartial();
               }
 
               break;
@@ -11925,6 +12397,71 @@ public final class InstanceServiceOuterClass {
       return getSchedulingPolicy();
     }
 
+    public static final int MAINTENANCE_POLICY_FIELD_NUMBER = 14;
+    private int maintenancePolicy_;
+    /**
+     * <pre>
+     * Behaviour on maintenance events
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 14;</code>
+     * @return The enum numeric value on the wire for maintenancePolicy.
+     */
+    @java.lang.Override public int getMaintenancePolicyValue() {
+      return maintenancePolicy_;
+    }
+    /**
+     * <pre>
+     * Behaviour on maintenance events
+     * </pre>
+     *
+     * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 14;</code>
+     * @return The maintenancePolicy.
+     */
+    @java.lang.Override public yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy getMaintenancePolicy() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy result = yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.valueOf(maintenancePolicy_);
+      return result == null ? yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.UNRECOGNIZED : result;
+    }
+
+    public static final int MAINTENANCE_GRACE_PERIOD_FIELD_NUMBER = 15;
+    private com.google.protobuf.Duration maintenanceGracePeriod_;
+    /**
+     * <pre>
+     * Time between notification via metadata service and maintenance
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration maintenance_grace_period = 15 [(.yandex.cloud.value) = "1s-24h"];</code>
+     * @return Whether the maintenanceGracePeriod field is set.
+     */
+    @java.lang.Override
+    public boolean hasMaintenanceGracePeriod() {
+      return maintenanceGracePeriod_ != null;
+    }
+    /**
+     * <pre>
+     * Time between notification via metadata service and maintenance
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration maintenance_grace_period = 15 [(.yandex.cloud.value) = "1s-24h"];</code>
+     * @return The maintenanceGracePeriod.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Duration getMaintenanceGracePeriod() {
+      return maintenanceGracePeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : maintenanceGracePeriod_;
+    }
+    /**
+     * <pre>
+     * Time between notification via metadata service and maintenance
+     * </pre>
+     *
+     * <code>.google.protobuf.Duration maintenance_grace_period = 15 [(.yandex.cloud.value) = "1s-24h"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.DurationOrBuilder getMaintenanceGracePeriodOrBuilder() {
+      return getMaintenanceGracePeriod();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11983,6 +12520,12 @@ public final class InstanceServiceOuterClass {
       }
       if (metadataOptions_ != null) {
         output.writeMessage(13, getMetadataOptions());
+      }
+      if (maintenancePolicy_ != yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.MAINTENANCE_POLICY_UNSPECIFIED.getNumber()) {
+        output.writeEnum(14, maintenancePolicy_);
+      }
+      if (maintenanceGracePeriod_ != null) {
+        output.writeMessage(15, getMaintenanceGracePeriod());
       }
       unknownFields.writeTo(output);
     }
@@ -12052,6 +12595,14 @@ public final class InstanceServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getMetadataOptions());
       }
+      if (maintenancePolicy_ != yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.MAINTENANCE_POLICY_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(14, maintenancePolicy_);
+      }
+      if (maintenanceGracePeriod_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getMaintenanceGracePeriod());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -12111,6 +12662,12 @@ public final class InstanceServiceOuterClass {
         if (!getSchedulingPolicy()
             .equals(other.getSchedulingPolicy())) return false;
       }
+      if (maintenancePolicy_ != other.maintenancePolicy_) return false;
+      if (hasMaintenanceGracePeriod() != other.hasMaintenanceGracePeriod()) return false;
+      if (hasMaintenanceGracePeriod()) {
+        if (!getMaintenanceGracePeriod()
+            .equals(other.getMaintenanceGracePeriod())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -12163,6 +12720,12 @@ public final class InstanceServiceOuterClass {
       if (hasSchedulingPolicy()) {
         hash = (37 * hash) + SCHEDULING_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getSchedulingPolicy().hashCode();
+      }
+      hash = (37 * hash) + MAINTENANCE_POLICY_FIELD_NUMBER;
+      hash = (53 * hash) + maintenancePolicy_;
+      if (hasMaintenanceGracePeriod()) {
+        hash = (37 * hash) + MAINTENANCE_GRACE_PERIOD_FIELD_NUMBER;
+        hash = (53 * hash) + getMaintenanceGracePeriod().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -12371,6 +12934,14 @@ public final class InstanceServiceOuterClass {
           schedulingPolicy_ = null;
           schedulingPolicyBuilder_ = null;
         }
+        maintenancePolicy_ = 0;
+
+        if (maintenanceGracePeriodBuilder_ == null) {
+          maintenanceGracePeriod_ = null;
+        } else {
+          maintenanceGracePeriod_ = null;
+          maintenanceGracePeriodBuilder_ = null;
+        }
         return this;
       }
 
@@ -12436,6 +13007,12 @@ public final class InstanceServiceOuterClass {
           result.schedulingPolicy_ = schedulingPolicy_;
         } else {
           result.schedulingPolicy_ = schedulingPolicyBuilder_.build();
+        }
+        result.maintenancePolicy_ = maintenancePolicy_;
+        if (maintenanceGracePeriodBuilder_ == null) {
+          result.maintenanceGracePeriod_ = maintenanceGracePeriod_;
+        } else {
+          result.maintenanceGracePeriod_ = maintenanceGracePeriodBuilder_.build();
         }
         onBuilt();
         return result;
@@ -12526,6 +13103,12 @@ public final class InstanceServiceOuterClass {
         }
         if (other.hasSchedulingPolicy()) {
           mergeSchedulingPolicy(other.getSchedulingPolicy());
+        }
+        if (other.maintenancePolicy_ != 0) {
+          setMaintenancePolicyValue(other.getMaintenancePolicyValue());
+        }
+        if (other.hasMaintenanceGracePeriod()) {
+          mergeMaintenanceGracePeriod(other.getMaintenanceGracePeriod());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -14371,6 +14954,235 @@ public final class InstanceServiceOuterClass {
           schedulingPolicy_ = null;
         }
         return schedulingPolicyBuilder_;
+      }
+
+      private int maintenancePolicy_ = 0;
+      /**
+       * <pre>
+       * Behaviour on maintenance events
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 14;</code>
+       * @return The enum numeric value on the wire for maintenancePolicy.
+       */
+      @java.lang.Override public int getMaintenancePolicyValue() {
+        return maintenancePolicy_;
+      }
+      /**
+       * <pre>
+       * Behaviour on maintenance events
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 14;</code>
+       * @param value The enum numeric value on the wire for maintenancePolicy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaintenancePolicyValue(int value) {
+        
+        maintenancePolicy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Behaviour on maintenance events
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 14;</code>
+       * @return The maintenancePolicy.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy getMaintenancePolicy() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy result = yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.valueOf(maintenancePolicy_);
+        return result == null ? yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Behaviour on maintenance events
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 14;</code>
+       * @param value The maintenancePolicy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaintenancePolicy(yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        maintenancePolicy_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Behaviour on maintenance events
+       * </pre>
+       *
+       * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 14;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaintenancePolicy() {
+        
+        maintenancePolicy_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Duration maintenanceGracePeriod_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> maintenanceGracePeriodBuilder_;
+      /**
+       * <pre>
+       * Time between notification via metadata service and maintenance
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration maintenance_grace_period = 15 [(.yandex.cloud.value) = "1s-24h"];</code>
+       * @return Whether the maintenanceGracePeriod field is set.
+       */
+      public boolean hasMaintenanceGracePeriod() {
+        return maintenanceGracePeriodBuilder_ != null || maintenanceGracePeriod_ != null;
+      }
+      /**
+       * <pre>
+       * Time between notification via metadata service and maintenance
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration maintenance_grace_period = 15 [(.yandex.cloud.value) = "1s-24h"];</code>
+       * @return The maintenanceGracePeriod.
+       */
+      public com.google.protobuf.Duration getMaintenanceGracePeriod() {
+        if (maintenanceGracePeriodBuilder_ == null) {
+          return maintenanceGracePeriod_ == null ? com.google.protobuf.Duration.getDefaultInstance() : maintenanceGracePeriod_;
+        } else {
+          return maintenanceGracePeriodBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Time between notification via metadata service and maintenance
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration maintenance_grace_period = 15 [(.yandex.cloud.value) = "1s-24h"];</code>
+       */
+      public Builder setMaintenanceGracePeriod(com.google.protobuf.Duration value) {
+        if (maintenanceGracePeriodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          maintenanceGracePeriod_ = value;
+          onChanged();
+        } else {
+          maintenanceGracePeriodBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Time between notification via metadata service and maintenance
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration maintenance_grace_period = 15 [(.yandex.cloud.value) = "1s-24h"];</code>
+       */
+      public Builder setMaintenanceGracePeriod(
+          com.google.protobuf.Duration.Builder builderForValue) {
+        if (maintenanceGracePeriodBuilder_ == null) {
+          maintenanceGracePeriod_ = builderForValue.build();
+          onChanged();
+        } else {
+          maintenanceGracePeriodBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Time between notification via metadata service and maintenance
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration maintenance_grace_period = 15 [(.yandex.cloud.value) = "1s-24h"];</code>
+       */
+      public Builder mergeMaintenanceGracePeriod(com.google.protobuf.Duration value) {
+        if (maintenanceGracePeriodBuilder_ == null) {
+          if (maintenanceGracePeriod_ != null) {
+            maintenanceGracePeriod_ =
+              com.google.protobuf.Duration.newBuilder(maintenanceGracePeriod_).mergeFrom(value).buildPartial();
+          } else {
+            maintenanceGracePeriod_ = value;
+          }
+          onChanged();
+        } else {
+          maintenanceGracePeriodBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Time between notification via metadata service and maintenance
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration maintenance_grace_period = 15 [(.yandex.cloud.value) = "1s-24h"];</code>
+       */
+      public Builder clearMaintenanceGracePeriod() {
+        if (maintenanceGracePeriodBuilder_ == null) {
+          maintenanceGracePeriod_ = null;
+          onChanged();
+        } else {
+          maintenanceGracePeriod_ = null;
+          maintenanceGracePeriodBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Time between notification via metadata service and maintenance
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration maintenance_grace_period = 15 [(.yandex.cloud.value) = "1s-24h"];</code>
+       */
+      public com.google.protobuf.Duration.Builder getMaintenanceGracePeriodBuilder() {
+        
+        onChanged();
+        return getMaintenanceGracePeriodFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Time between notification via metadata service and maintenance
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration maintenance_grace_period = 15 [(.yandex.cloud.value) = "1s-24h"];</code>
+       */
+      public com.google.protobuf.DurationOrBuilder getMaintenanceGracePeriodOrBuilder() {
+        if (maintenanceGracePeriodBuilder_ != null) {
+          return maintenanceGracePeriodBuilder_.getMessageOrBuilder();
+        } else {
+          return maintenanceGracePeriod_ == null ?
+              com.google.protobuf.Duration.getDefaultInstance() : maintenanceGracePeriod_;
+        }
+      }
+      /**
+       * <pre>
+       * Time between notification via metadata service and maintenance
+       * </pre>
+       *
+       * <code>.google.protobuf.Duration maintenance_grace_period = 15 [(.yandex.cloud.value) = "1s-24h"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 
+          getMaintenanceGracePeriodFieldBuilder() {
+        if (maintenanceGracePeriodBuilder_ == null) {
+          maintenanceGracePeriodBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder>(
+                  getMaintenanceGracePeriod(),
+                  getParentForChildren(),
+                  isClean());
+          maintenanceGracePeriod_ = null;
+        }
+        return maintenanceGracePeriodBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -56620,352 +57432,363 @@ public final class InstanceServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n.yandex/cloud/compute/v1/instance_servi" +
       "ce.proto\022\027yandex.cloud.compute.v1\032\034googl" +
-      "e/api/annotations.proto\032 google/protobuf" +
-      "/field_mask.proto\032 yandex/cloud/access/a" +
-      "ccess.proto\032 yandex/cloud/api/operation." +
-      "proto\032\"yandex/cloud/compute/v1/disk.prot" +
-      "o\032&yandex/cloud/compute/v1/instance.prot" +
-      "o\032&yandex/cloud/operation/operation.prot" +
-      "o\032\035yandex/cloud/validation.proto\"l\n\022GetI" +
-      "nstanceRequest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071" +
-      "\001\212\3101\004<=50\0223\n\004view\030\002 \001(\0162%.yandex.cloud.c" +
-      "ompute.v1.InstanceView\"\256\001\n\024ListInstances" +
-      "Request\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50" +
-      "\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_" +
-      "token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n" +
-      "\212\3101\006<=1000\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=100\"" +
-      "f\n\025ListInstancesResponse\0224\n\tinstances\030\001 " +
-      "\003(\0132!.yandex.cloud.compute.v1.Instance\022\027" +
-      "\n\017next_page_token\030\002 \001(\t\"\373\n\n\025CreateInstan" +
-      "ceRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
-      "50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0" +
-      ",61}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101" +
-      "\005<=256\022\223\001\n\006labels\030\004 \003(\0132:.yandex.cloud.c" +
-      "ompute.v1.CreateInstanceRequest.LabelsEn" +
-      "tryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*" +
-      "\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\035\n\007" +
-      "zone_id\030\005 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n\013platform_" +
-      "id\030\006 \001(\tB\004\350\3071\001\022D\n\016resources_spec\030\007 \001(\0132&" +
-      ".yandex.cloud.compute.v1.ResourcesSpecB\004" +
-      "\350\3071\001\022N\n\010metadata\030\010 \003(\0132<.yandex.cloud.co" +
-      "mpute.v1.CreateInstanceRequest.MetadataE" +
-      "ntry\022B\n\020metadata_options\030\023 \001(\0132(.yandex." +
-      "cloud.compute.v1.MetadataOptions\022G\n\016boot" +
-      "_disk_spec\030\t \001(\0132).yandex.cloud.compute." +
-      "v1.AttachedDiskSpecB\004\350\3071\001\022P\n\024secondary_d" +
-      "isk_specs\030\n \003(\0132).yandex.cloud.compute.v" +
-      "1.AttachedDiskSpecB\007\202\3101\003<=3\022H\n\020local_dis" +
-      "k_specs\030\022 \003(\0132..yandex.cloud.compute.v1." +
-      "AttachedLocalDiskSpec\022I\n\020filesystem_spec" +
-      "s\030\021 \003(\0132/.yandex.cloud.compute.v1.Attach" +
-      "edFilesystemSpec\022U\n\027network_interface_sp" +
-      "ecs\030\013 \003(\0132-.yandex.cloud.compute.v1.Netw" +
-      "orkInterfaceSpecB\005\202\3101\0011\0226\n\010hostname\030\014 \001(" +
-      "\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022" +
-      "D\n\021scheduling_policy\030\r \001(\0132).yandex.clou" +
-      "d.compute.v1.SchedulingPolicy\022\032\n\022service" +
-      "_account_id\030\016 \001(\t\022B\n\020network_settings\030\017 " +
-      "\001(\0132(.yandex.cloud.compute.v1.NetworkSet" +
-      "tings\022:\n\014gpu_settings\030\024 \001(\0132$.yandex.clo" +
-      "ud.compute.v1.GpuSettings\022B\n\020placement_p" +
-      "olicy\030\020 \001(\0132(.yandex.cloud.compute.v1.Pl" +
-      "acementPolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(" +
-      "\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMetadataEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"7\n\026CreateI" +
-      "nstanceMetadata\022\035\n\013instance_id\030\001 \001(\tB\010\212\310" +
-      "1\004<=50\"\210\007\n\025UpdateInstanceRequest\022!\n\013inst" +
-      "ance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_ma" +
-      "sk\030\002 \001(\0132\032.google.protobuf.FieldMask\0222\n\004" +
-      "name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a" +
-      "-z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=256" +
-      "\022\223\001\n\006labels\030\005 \003(\0132:.yandex.cloud.compute" +
-      ".v1.UpdateInstanceRequest.LabelsEntryBG\202" +
-      "\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032\004" +
-      "1-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\023\n\013platfo" +
-      "rm_id\030\006 \001(\t\022>\n\016resources_spec\030\007 \001(\0132&.ya" +
-      "ndex.cloud.compute.v1.ResourcesSpec\022N\n\010m" +
-      "etadata\030\010 \003(\0132<.yandex.cloud.compute.v1." +
-      "UpdateInstanceRequest.MetadataEntry\022B\n\020m" +
-      "etadata_options\030\r \001(\0132(.yandex.cloud.com" +
-      "pute.v1.MetadataOptions\022\032\n\022service_accou" +
-      "nt_id\030\t \001(\t\022B\n\020network_settings\030\n \001(\0132(." +
-      "yandex.cloud.compute.v1.NetworkSettings\022" +
-      "B\n\020placement_policy\030\013 \001(\0132(.yandex.cloud" +
-      ".compute.v1.PlacementPolicy\022D\n\021schedulin" +
-      "g_policy\030\014 \001(\0132).yandex.cloud.compute.v1" +
-      ".SchedulingPolicy\032-\n\013LabelsEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMetadataEntr" +
-      "y\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-\n\026Upd" +
-      "ateInstanceMetadata\022\023\n\013instance_id\030\001 \001(\t" +
-      "\":\n\025DeleteInstanceRequest\022!\n\013instance_id" +
-      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026DeleteInstanceMe" +
-      "tadata\022\023\n\013instance_id\030\001 \001(\t\"\307\001\n\035UpdateIn" +
-      "stanceMetadataRequest\022\023\n\013instance_id\030\001 \001" +
-      "(\t\022\016\n\006delete\030\002 \003(\t\022R\n\006upsert\030\003 \003(\0132B.yan" +
-      "dex.cloud.compute.v1.UpdateInstanceMetad" +
-      "ataRequest.UpsertEntry\032-\n\013UpsertEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"5\n\036UpdateI" +
-      "nstanceMetadataMetadata\022\023\n\013instance_id\030\001" +
-      " \001(\t\"b\n\"GetInstanceSerialPortOutputReque" +
-      "st\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n" +
-      "\004port\030\002 \001(\003B\013\372\3071\0071,2,3,4\"7\n#GetInstanceS" +
-      "erialPortOutputResponse\022\020\n\010contents\030\001 \001(" +
-      "\t\"8\n\023StopInstanceRequest\022!\n\013instance_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\024StopInstanceMetad" +
-      "ata\022\023\n\013instance_id\030\001 \001(\t\"9\n\024StartInstanc" +
-      "eRequest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\",\n\025StartInstanceMetadata\022\023\n\013instance" +
-      "_id\030\001 \001(\t\";\n\026RestartInstanceRequest\022!\n\013i" +
-      "nstance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\".\n\027Restar" +
-      "tInstanceMetadata\022\023\n\013instance_id\030\001 \001(\t\"\213" +
-      "\001\n\031AttachInstanceDiskRequest\022!\n\013instance" +
-      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022K\n\022attached_disk" +
-      "_spec\030\002 \001(\0132).yandex.cloud.compute.v1.At" +
-      "tachedDiskSpecB\004\350\3071\001\"B\n\032AttachInstanceDi" +
-      "skMetadata\022\023\n\013instance_id\030\001 \001(\t\022\017\n\007disk_" +
-      "id\030\002 \001(\t\"\232\001\n\031DetachInstanceDiskRequest\022!" +
-      "\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033\n\007dis" +
-      "k_id\030\002 \001(\tB\010\212\3101\004<=50H\000\022/\n\013device_name\030\003 " +
-      "\001(\tB\030\362\3071\024[a-z][a-z0-9-_]{,19}H\000B\014\n\004disk\022" +
-      "\004\300\3011\001\"B\n\032DetachInstanceDiskMetadata\022\023\n\013i" +
-      "nstance_id\030\001 \001(\t\022\017\n\007disk_id\030\002 \001(\t\"\235\001\n\037At" +
-      "tachInstanceFilesystemRequest\022!\n\013instanc" +
-      "e_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022W\n\030attached_fil" +
-      "esystem_spec\030\002 \001(\0132/.yandex.cloud.comput" +
-      "e.v1.AttachedFilesystemSpecB\004\350\3071\001\"N\n Att" +
-      "achInstanceFilesystemMetadata\022\023\n\013instanc" +
-      "e_id\030\001 \001(\t\022\025\n\rfilesystem_id\030\002 \001(\t\"\254\001\n\037De" +
-      "tachInstanceFilesystemRequest\022!\n\013instanc" +
-      "e_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\rfilesystem_i" +
-      "d\030\002 \001(\tB\010\212\3101\004<=50H\000\022/\n\013device_name\030\003 \001(\t" +
-      "B\030\362\3071\024[a-z][a-z0-9-_]{,19}H\000B\022\n\nfilesyst" +
-      "em\022\004\300\3011\001\"N\n DetachInstanceFilesystemMeta" +
-      "data\022\023\n\013instance_id\030\001 \001(\t\022\025\n\rfilesystem_" +
-      "id\030\002 \001(\t\"\266\001\n\035AddInstanceOneToOneNatReque" +
-      "st\022\023\n\013instance_id\030\001 \001(\t\022\037\n\027network_inter" +
-      "face_index\030\002 \001(\t\022\030\n\020internal_address\030\003 \001" +
-      "(\t\022E\n\023one_to_one_nat_spec\030\004 \001(\0132(.yandex" +
-      ".cloud.compute.v1.OneToOneNatSpec\"5\n\036Add" +
-      "InstanceOneToOneNatMetadata\022\023\n\013instance_" +
-      "id\030\001 \001(\t\"r\n RemoveInstanceOneToOneNatReq" +
-      "uest\022\023\n\013instance_id\030\001 \001(\t\022\037\n\027network_int" +
-      "erface_index\030\002 \001(\t\022\030\n\020internal_address\030\003" +
-      " \001(\t\"8\n!RemoveInstanceOneToOneNatMetadat" +
-      "a\022\023\n\013instance_id\030\001 \001(\t\"\345\002\n%UpdateInstanc" +
-      "eNetworkInterfaceRequest\022\031\n\013instance_id\030" +
-      "\001 \001(\tB\004\350\3071\001\022%\n\027network_interface_index\030\002" +
-      " \001(\tB\004\350\3071\001\022/\n\013update_mask\030\003 \001(\0132\032.google" +
-      ".protobuf.FieldMask\022\021\n\tsubnet_id\030\004 \001(\t\022L" +
-      "\n\027primary_v4_address_spec\030\005 \001(\0132+.yandex" +
-      ".cloud.compute.v1.PrimaryAddressSpec\022L\n\027" +
-      "primary_v6_address_spec\030\006 \001(\0132+.yandex.c" +
-      "loud.compute.v1.PrimaryAddressSpec\022\032\n\022se" +
-      "curity_group_ids\030\007 \003(\t\"^\n&UpdateInstance" +
-      "NetworkInterfaceMetadata\022\023\n\013instance_id\030" +
-      "\001 \001(\t\022\037\n\027network_interface_index\030\002 \001(\t\"\200" +
-      "\001\n\035ListInstanceOperationsRequest\022!\n\013inst" +
-      "ance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size" +
-      "\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t" +
-      "\212\3101\005<=100\"p\n\036ListInstanceOperationsRespo" +
-      "nse\0225\n\noperations\030\001 \003(\0132!.yandex.cloud.o" +
-      "peration.Operation\022\027\n\017next_page_token\030\002 " +
-      "\001(\t\"\347\001\n\rResourcesSpec\022&\n\006memory\030\001 \001(\003B\026\350" +
-      "\3071\001\372\3071\016<=274877906944\022i\n\005cores\030\002 \001(\003BZ\350\307" +
-      "1\001\372\3071R2,4,6,8,10,12,14,16,18,20,22,24,26" +
-      ",28,30,32,34,36,40,44,48,52,56,60,64,68," +
-      "72,76,80\022(\n\rcore_fraction\030\003 \001(\003B\021\372\3071\r0,5" +
-      ",20,50,100\022\031\n\004gpus\030\004 \001(\003B\013\372\3071\0070,1,2,4\"\230\005" +
-      "\n\020AttachedDiskSpec\022<\n\004mode\030\001 \001(\0162..yande" +
-      "x.cloud.compute.v1.AttachedDiskSpec.Mode" +
-      "\022-\n\013device_name\030\002 \001(\tB\030\362\3071\024[a-z][a-z0-9-" +
-      "_]{,19}\022\023\n\013auto_delete\030\003 \001(\010\022G\n\tdisk_spe" +
-      "c\030\004 \001(\01322.yandex.cloud.compute.v1.Attach" +
-      "edDiskSpec.DiskSpecH\000\022\033\n\007disk_id\030\005 \001(\tB\010" +
-      "\212\3101\004<=50H\000\032\320\002\n\010DiskSpec\0222\n\004name\030\001 \001(\tB$\362" +
-      "\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013d" +
-      "escription\030\002 \001(\tB\t\212\3101\005<=256\022\031\n\007type_id\030\003" +
-      " \001(\tB\010\212\3101\004<=50\022+\n\004size\030\004 \001(\003B\035\350\3071\001\372\3071\02541" +
-      "94304-4398046511104\022\022\n\nblock_size\030\010 \001(\003\022" +
-      "K\n\025disk_placement_policy\030\007 \001(\0132,.yandex." +
-      "cloud.compute.v1.DiskPlacementPolicy\022\034\n\010" +
-      "image_id\030\005 \001(\tB\010\212\3101\004<=50H\000\022\037\n\013snapshot_i" +
-      "d\030\006 \001(\tB\010\212\3101\004<=50H\000B\010\n\006source\";\n\004Mode\022\024\n" +
-      "\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022\016\n\nRE" +
-      "AD_WRITE\020\002B\014\n\004disk\022\004\300\3011\001\"+\n\025AttachedLoca" +
-      "lDiskSpec\022\022\n\004size\030\001 \001(\003B\004\350\3071\001\"\351\001\n\026Attach" +
-      "edFilesystemSpec\022B\n\004mode\030\001 \001(\01624.yandex." +
-      "cloud.compute.v1.AttachedFilesystemSpec." +
-      "Mode\022-\n\013device_name\030\002 \001(\tB\030\362\3071\024[a-z][a-z" +
-      "0-9-_]{,19}\022\037\n\rfilesystem_id\030\003 \001(\tB\010\212\3101\004" +
-      "<=50\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tRE" +
-      "AD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"\357\001\n\024NetworkInt" +
-      "erfaceSpec\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\022L\n\027primary_v4_address_spec\030\002 \001(\0132+.y" +
-      "andex.cloud.compute.v1.PrimaryAddressSpe" +
-      "c\022L\n\027primary_v6_address_spec\030\003 \001(\0132+.yan" +
-      "dex.cloud.compute.v1.PrimaryAddressSpec\022" +
-      "\032\n\022security_group_ids\030\006 \003(\t\"\256\001\n\022PrimaryA" +
-      "ddressSpec\022\017\n\007address\030\001 \001(\t\022E\n\023one_to_on" +
-      "e_nat_spec\030\002 \001(\0132(.yandex.cloud.compute." +
-      "v1.OneToOneNatSpec\022@\n\020dns_record_specs\030\003" +
-      " \003(\0132&.yandex.cloud.compute.v1.DnsRecord" +
-      "Spec\"\234\001\n\017OneToOneNatSpec\0226\n\nip_version\030\001" +
-      " \001(\0162\".yandex.cloud.compute.v1.IpVersion" +
-      "\022\017\n\007address\030\002 \001(\t\022@\n\020dns_record_specs\030\003 " +
-      "\003(\0132&.yandex.cloud.compute.v1.DnsRecordS" +
-      "pec\"_\n\rDnsRecordSpec\022\022\n\004fqdn\030\001 \001(\tB\004\350\3071\001" +
-      "\022\023\n\013dns_zone_id\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B\013\372\3071\007" +
-      "0-86400\022\013\n\003ptr\030\004 \001(\010\"e\n\023MoveInstanceRequ" +
-      "est\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022+" +
-      "\n\025destination_folder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\"d\n\024MoveInstanceMetadata\022\023\n\013instance_" +
-      "id\030\001 \001(\t\022\030\n\020source_folder_id\030\002 \001(\t\022\035\n\025de" +
-      "stination_folder_id\030\003 \001(\t\"\344\002\n\027RelocateIn" +
-      "stanceRequest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\022)\n\023destination_zone_id\030\002 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\022Y\n\027network_interface_specs\030\003" +
+      "e/api/annotations.proto\032\036google/protobuf" +
+      "/duration.proto\032 google/protobuf/field_m" +
+      "ask.proto\032 yandex/cloud/access/access.pr" +
+      "oto\032 yandex/cloud/api/operation.proto\032\"y" +
+      "andex/cloud/compute/v1/disk.proto\032&yande" +
+      "x/cloud/compute/v1/instance.proto\032)yande" +
+      "x/cloud/compute/v1/maintenance.proto\032&ya" +
+      "ndex/cloud/operation/operation.proto\032\035ya" +
+      "ndex/cloud/validation.proto\"l\n\022GetInstan" +
+      "ceRequest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\0223\n\004view\030\002 \001(\0162%.yandex.cloud.comput" +
+      "e.v1.InstanceView\"\256\001\n\024ListInstancesReque" +
+      "st\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tp" +
+      "age_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token" +
+      "\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<" +
+      "=1000\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=100\"f\n\025Li" +
+      "stInstancesResponse\0224\n\tinstances\030\001 \003(\0132!" +
+      ".yandex.cloud.compute.v1.Instance\022\027\n\017nex" +
+      "t_page_token\030\002 \001(\t\"\214\014\n\025CreateInstanceReq" +
+      "uest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0222\n" +
+      "\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[" +
+      "a-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=25" +
+      "6\022\223\001\n\006labels\030\004 \003(\0132:.yandex.cloud.comput" +
+      "e.v1.CreateInstanceRequest.LabelsEntryBG" +
+      "\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101\006\032" +
+      "\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\035\n\007zone_" +
+      "id\030\005 \001(\tB\014\350\3071\001\212\3101\004<=50\022\031\n\013platform_id\030\006 " +
+      "\001(\tB\004\350\3071\001\022D\n\016resources_spec\030\007 \001(\0132&.yand" +
+      "ex.cloud.compute.v1.ResourcesSpecB\004\350\3071\001\022" +
+      "N\n\010metadata\030\010 \003(\0132<.yandex.cloud.compute" +
+      ".v1.CreateInstanceRequest.MetadataEntry\022" +
+      "B\n\020metadata_options\030\023 \001(\0132(.yandex.cloud" +
+      ".compute.v1.MetadataOptions\022G\n\016boot_disk" +
+      "_spec\030\t \001(\0132).yandex.cloud.compute.v1.At" +
+      "tachedDiskSpecB\004\350\3071\001\022P\n\024secondary_disk_s" +
+      "pecs\030\n \003(\0132).yandex.cloud.compute.v1.Att" +
+      "achedDiskSpecB\007\202\3101\003<=3\022H\n\020local_disk_spe" +
+      "cs\030\022 \003(\0132..yandex.cloud.compute.v1.Attac" +
+      "hedLocalDiskSpec\022I\n\020filesystem_specs\030\021 \003" +
+      "(\0132/.yandex.cloud.compute.v1.AttachedFil" +
+      "esystemSpec\022U\n\027network_interface_specs\030\013" +
       " \003(\0132-.yandex.cloud.compute.v1.NetworkIn" +
-      "terfaceSpecB\t\202\3101\0011\350\3071\001\022I\n\023boot_disk_plac" +
-      "ement\030\004 \001(\0132,.yandex.cloud.compute.v1.Di" +
-      "skPlacementPolicy\022U\n\031secondary_disk_plac" +
-      "ements\030\005 \003(\01322.yandex.cloud.compute.v1.D" +
-      "iskPlacementPolicyChange\"d\n\030RelocateInst" +
-      "anceMetadata\022\023\n\013instance_id\030\001 \001(\t\022\026\n\016sou" +
-      "rce_zone_id\030\002 \001(\t\022\033\n\023destination_zone_id" +
-      "\030\003 \001(\t\"0\n\031GuestStopInstanceMetadata\022\023\n\013i" +
-      "nstance_id\030\001 \001(\t\".\n\027PreemptInstanceMetad" +
-      "ata\022\023\n\013instance_id\030\001 \001(\t\",\n\025CrashInstanc" +
-      "eMetadata\022\023\n\013instance_id\030\001 \001(\t*#\n\014Instan" +
-      "ceView\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\0012\230$\n\017Instance" +
-      "Service\022\202\001\n\003Get\022+.yandex.cloud.compute.v" +
-      "1.GetInstanceRequest\032!.yandex.cloud.comp" +
-      "ute.v1.Instance\"+\202\323\344\223\002%\022#/compute/v1/ins" +
-      "tances/{instance_id}\022\204\001\n\004List\022-.yandex.c" +
-      "loud.compute.v1.ListInstancesRequest\032..y" +
-      "andex.cloud.compute.v1.ListInstancesResp" +
-      "onse\"\035\202\323\344\223\002\027\022\025/compute/v1/instances\022\243\001\n\006" +
-      "Create\022..yandex.cloud.compute.v1.CreateI" +
-      "nstanceRequest\032!.yandex.cloud.operation." +
-      "Operation\"F\202\323\344\223\002\032\"\025/compute/v1/instances" +
-      ":\001*\262\322*\"\n\026CreateInstanceMetadata\022\010Instanc" +
-      "e\022\261\001\n\006Update\022..yandex.cloud.compute.v1.U" +
-      "pdateInstanceRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"T\202\323\344\223\002(2#/compute/v1/ins" +
-      "tances/{instance_id}:\001*\262\322*\"\n\026UpdateInsta" +
-      "nceMetadata\022\010Instance\022\273\001\n\006Delete\022..yande" +
-      "x.cloud.compute.v1.DeleteInstanceRequest" +
-      "\032!.yandex.cloud.operation.Operation\"^\202\323\344" +
-      "\223\002%*#/compute/v1/instances/{instance_id}" +
-      "\262\322*/\n\026DeleteInstanceMetadata\022\025google.pro" +
-      "tobuf.Empty\022\330\001\n\016UpdateMetadata\0226.yandex." +
-      "cloud.compute.v1.UpdateInstanceMetadataR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"k\202\323\344\223\0027\"2/compute/v1/instances/{instan" +
-      "ce_id}/updateMetadata:\001*\262\322**\n\036UpdateInst" +
-      "anceMetadataMetadata\022\010Instance\022\316\001\n\023GetSe" +
-      "rialPortOutput\022;.yandex.cloud.compute.v1" +
-      ".GetInstanceSerialPortOutputRequest\032<.ya" +
-      "ndex.cloud.compute.v1.GetInstanceSerialP" +
-      "ortOutputResponse\"<\202\323\344\223\0026\0224/compute/v1/i" +
-      "nstances/{instance_id}:serialPortOutput\022" +
-      "\272\001\n\004Stop\022,.yandex.cloud.compute.v1.StopI" +
-      "nstanceRequest\032!.yandex.cloud.operation." +
-      "Operation\"a\202\323\344\223\002*\"(/compute/v1/instances" +
-      "/{instance_id}:stop\262\322*-\n\024StopInstanceMet" +
-      "adata\022\025google.protobuf.Empty\022\261\001\n\005Start\022-" +
-      ".yandex.cloud.compute.v1.StartInstanceRe" +
+      "terfaceSpecB\005\202\3101\0011\0226\n\010hostname\030\014 \001(\tB$\362\307" +
+      "1 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022D\n\021sc" +
+      "heduling_policy\030\r \001(\0132).yandex.cloud.com" +
+      "pute.v1.SchedulingPolicy\022\032\n\022service_acco" +
+      "unt_id\030\016 \001(\t\022B\n\020network_settings\030\017 \001(\0132(" +
+      ".yandex.cloud.compute.v1.NetworkSettings" +
+      "\022B\n\020placement_policy\030\020 \001(\0132(.yandex.clou" +
+      "d.compute.v1.PlacementPolicy\022:\n\014gpu_sett" +
+      "ings\030\024 \001(\0132$.yandex.cloud.compute.v1.Gpu" +
+      "Settings\022F\n\022maintenance_policy\030\025 \001(\0162*.y" +
+      "andex.cloud.compute.v1.MaintenancePolicy" +
+      "\022G\n\030maintenance_grace_period\030\026 \001(\0132\031.goo" +
+      "gle.protobuf.DurationB\n\372\3071\0061s-24h\032-\n\013Lab" +
+      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "\032/\n\rMetadataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t:\0028\001\"7\n\026CreateInstanceMetadata\022\035\n\013i" +
+      "nstance_id\030\001 \001(\tB\010\212\3101\004<=50\"\231\010\n\025UpdateIns" +
+      "tanceRequest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212" +
+      "\3101\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.pr" +
+      "otobuf.FieldMask\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-" +
+      "z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descript" +
+      "ion\030\004 \001(\tB\t\212\3101\005<=256\022\223\001\n\006labels\030\005 \003(\0132:." +
+      "yandex.cloud.compute.v1.UpdateInstanceRe" +
+      "quest.LabelsEntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[" +
+      "-_./\\@0-9a-z]*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./" +
+      "\\@0-9a-z]*\022\023\n\013platform_id\030\006 \001(\t\022>\n\016resou" +
+      "rces_spec\030\007 \001(\0132&.yandex.cloud.compute.v" +
+      "1.ResourcesSpec\022N\n\010metadata\030\010 \003(\0132<.yand" +
+      "ex.cloud.compute.v1.UpdateInstanceReques" +
+      "t.MetadataEntry\022B\n\020metadata_options\030\r \001(" +
+      "\0132(.yandex.cloud.compute.v1.MetadataOpti" +
+      "ons\022\032\n\022service_account_id\030\t \001(\t\022B\n\020netwo" +
+      "rk_settings\030\n \001(\0132(.yandex.cloud.compute" +
+      ".v1.NetworkSettings\022B\n\020placement_policy\030" +
+      "\013 \001(\0132(.yandex.cloud.compute.v1.Placemen" +
+      "tPolicy\022D\n\021scheduling_policy\030\014 \001(\0132).yan" +
+      "dex.cloud.compute.v1.SchedulingPolicy\022F\n" +
+      "\022maintenance_policy\030\016 \001(\0162*.yandex.cloud" +
+      ".compute.v1.MaintenancePolicy\022G\n\030mainten" +
+      "ance_grace_period\030\017 \001(\0132\031.google.protobu" +
+      "f.DurationB\n\372\3071\0061s-24h\032-\n\013LabelsEntry\022\013\n" +
+      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032/\n\rMetadat" +
+      "aEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"-" +
+      "\n\026UpdateInstanceMetadata\022\023\n\013instance_id\030" +
+      "\001 \001(\t\":\n\025DeleteInstanceRequest\022!\n\013instan" +
+      "ce_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"-\n\026DeleteInsta" +
+      "nceMetadata\022\023\n\013instance_id\030\001 \001(\t\"\307\001\n\035Upd" +
+      "ateInstanceMetadataRequest\022\023\n\013instance_i" +
+      "d\030\001 \001(\t\022\016\n\006delete\030\002 \003(\t\022R\n\006upsert\030\003 \003(\0132" +
+      "B.yandex.cloud.compute.v1.UpdateInstance" +
+      "MetadataRequest.UpsertEntry\032-\n\013UpsertEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"5\n\036Up" +
+      "dateInstanceMetadataMetadata\022\023\n\013instance" +
+      "_id\030\001 \001(\t\"b\n\"GetInstanceSerialPortOutput" +
+      "Request\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\022\031\n\004port\030\002 \001(\003B\013\372\3071\0071,2,3,4\"7\n#GetInst" +
+      "anceSerialPortOutputResponse\022\020\n\010contents" +
+      "\030\001 \001(\t\"8\n\023StopInstanceRequest\022!\n\013instanc" +
+      "e_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\024StopInstance" +
+      "Metadata\022\023\n\013instance_id\030\001 \001(\t\"9\n\024StartIn" +
+      "stanceRequest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\",\n\025StartInstanceMetadata\022\023\n\013ins" +
+      "tance_id\030\001 \001(\t\";\n\026RestartInstanceRequest" +
+      "\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\".\n\027R" +
+      "estartInstanceMetadata\022\023\n\013instance_id\030\001 " +
+      "\001(\t\"\213\001\n\031AttachInstanceDiskRequest\022!\n\013ins" +
+      "tance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022K\n\022attached" +
+      "_disk_spec\030\002 \001(\0132).yandex.cloud.compute." +
+      "v1.AttachedDiskSpecB\004\350\3071\001\"B\n\032AttachInsta" +
+      "nceDiskMetadata\022\023\n\013instance_id\030\001 \001(\t\022\017\n\007" +
+      "disk_id\030\002 \001(\t\"\232\001\n\031DetachInstanceDiskRequ" +
+      "est\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\033" +
+      "\n\007disk_id\030\002 \001(\tB\010\212\3101\004<=50H\000\022/\n\013device_na" +
+      "me\030\003 \001(\tB\030\362\3071\024[a-z][a-z0-9-_]{,19}H\000B\014\n\004" +
+      "disk\022\004\300\3011\001\"B\n\032DetachInstanceDiskMetadata" +
+      "\022\023\n\013instance_id\030\001 \001(\t\022\017\n\007disk_id\030\002 \001(\t\"\235" +
+      "\001\n\037AttachInstanceFilesystemRequest\022!\n\013in" +
+      "stance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022W\n\030attache" +
+      "d_filesystem_spec\030\002 \001(\0132/.yandex.cloud.c" +
+      "ompute.v1.AttachedFilesystemSpecB\004\350\3071\001\"N" +
+      "\n AttachInstanceFilesystemMetadata\022\023\n\013in" +
+      "stance_id\030\001 \001(\t\022\025\n\rfilesystem_id\030\002 \001(\t\"\254" +
+      "\001\n\037DetachInstanceFilesystemRequest\022!\n\013in" +
+      "stance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\rfilesys" +
+      "tem_id\030\002 \001(\tB\010\212\3101\004<=50H\000\022/\n\013device_name\030" +
+      "\003 \001(\tB\030\362\3071\024[a-z][a-z0-9-_]{,19}H\000B\022\n\nfil" +
+      "esystem\022\004\300\3011\001\"N\n DetachInstanceFilesyste" +
+      "mMetadata\022\023\n\013instance_id\030\001 \001(\t\022\025\n\rfilesy" +
+      "stem_id\030\002 \001(\t\"\266\001\n\035AddInstanceOneToOneNat" +
+      "Request\022\023\n\013instance_id\030\001 \001(\t\022\037\n\027network_" +
+      "interface_index\030\002 \001(\t\022\030\n\020internal_addres" +
+      "s\030\003 \001(\t\022E\n\023one_to_one_nat_spec\030\004 \001(\0132(.y" +
+      "andex.cloud.compute.v1.OneToOneNatSpec\"5" +
+      "\n\036AddInstanceOneToOneNatMetadata\022\023\n\013inst" +
+      "ance_id\030\001 \001(\t\"r\n RemoveInstanceOneToOneN" +
+      "atRequest\022\023\n\013instance_id\030\001 \001(\t\022\037\n\027networ" +
+      "k_interface_index\030\002 \001(\t\022\030\n\020internal_addr" +
+      "ess\030\003 \001(\t\"8\n!RemoveInstanceOneToOneNatMe" +
+      "tadata\022\023\n\013instance_id\030\001 \001(\t\"\345\002\n%UpdateIn" +
+      "stanceNetworkInterfaceRequest\022\031\n\013instanc" +
+      "e_id\030\001 \001(\tB\004\350\3071\001\022%\n\027network_interface_in" +
+      "dex\030\002 \001(\tB\004\350\3071\001\022/\n\013update_mask\030\003 \001(\0132\032.g" +
+      "oogle.protobuf.FieldMask\022\021\n\tsubnet_id\030\004 " +
+      "\001(\t\022L\n\027primary_v4_address_spec\030\005 \001(\0132+.y" +
+      "andex.cloud.compute.v1.PrimaryAddressSpe" +
+      "c\022L\n\027primary_v6_address_spec\030\006 \001(\0132+.yan" +
+      "dex.cloud.compute.v1.PrimaryAddressSpec\022" +
+      "\032\n\022security_group_ids\030\007 \003(\t\"^\n&UpdateIns" +
+      "tanceNetworkInterfaceMetadata\022\023\n\013instanc" +
+      "e_id\030\001 \001(\t\022\037\n\027network_interface_index\030\002 " +
+      "\001(\t\"\200\001\n\035ListInstanceOperationsRequest\022!\n" +
+      "\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage" +
+      "_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 " +
+      "\001(\tB\t\212\3101\005<=100\"p\n\036ListInstanceOperations" +
+      "Response\0225\n\noperations\030\001 \003(\0132!.yandex.cl" +
+      "oud.operation.Operation\022\027\n\017next_page_tok" +
+      "en\030\002 \001(\t\"\347\001\n\rResourcesSpec\022&\n\006memory\030\001 \001" +
+      "(\003B\026\350\3071\001\372\3071\016<=274877906944\022i\n\005cores\030\002 \001(" +
+      "\003BZ\350\3071\001\372\3071R2,4,6,8,10,12,14,16,18,20,22," +
+      "24,26,28,30,32,34,36,40,44,48,52,56,60,6" +
+      "4,68,72,76,80\022(\n\rcore_fraction\030\003 \001(\003B\021\372\307" +
+      "1\r0,5,20,50,100\022\031\n\004gpus\030\004 \001(\003B\013\372\3071\0070,1,2" +
+      ",4\"\230\005\n\020AttachedDiskSpec\022<\n\004mode\030\001 \001(\0162.." +
+      "yandex.cloud.compute.v1.AttachedDiskSpec" +
+      ".Mode\022-\n\013device_name\030\002 \001(\tB\030\362\3071\024[a-z][a-" +
+      "z0-9-_]{,19}\022\023\n\013auto_delete\030\003 \001(\010\022G\n\tdis" +
+      "k_spec\030\004 \001(\01322.yandex.cloud.compute.v1.A" +
+      "ttachedDiskSpec.DiskSpecH\000\022\033\n\007disk_id\030\005 " +
+      "\001(\tB\010\212\3101\004<=50H\000\032\320\002\n\010DiskSpec\0222\n\004name\030\001 \001" +
+      "(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}[a-z0-9])?" +
+      "\022\036\n\013description\030\002 \001(\tB\t\212\3101\005<=256\022\031\n\007type" +
+      "_id\030\003 \001(\tB\010\212\3101\004<=50\022+\n\004size\030\004 \001(\003B\035\350\3071\001\372" +
+      "\3071\0254194304-4398046511104\022\022\n\nblock_size\030\010" +
+      " \001(\003\022K\n\025disk_placement_policy\030\007 \001(\0132,.ya" +
+      "ndex.cloud.compute.v1.DiskPlacementPolic" +
+      "y\022\034\n\010image_id\030\005 \001(\tB\010\212\3101\004<=50H\000\022\037\n\013snaps" +
+      "hot_id\030\006 \001(\tB\010\212\3101\004<=50H\000B\010\n\006source\";\n\004Mo" +
+      "de\022\024\n\020MODE_UNSPECIFIED\020\000\022\r\n\tREAD_ONLY\020\001\022" +
+      "\016\n\nREAD_WRITE\020\002B\014\n\004disk\022\004\300\3011\001\"+\n\025Attache" +
+      "dLocalDiskSpec\022\022\n\004size\030\001 \001(\003B\004\350\3071\001\"\351\001\n\026A" +
+      "ttachedFilesystemSpec\022B\n\004mode\030\001 \001(\01624.ya" +
+      "ndex.cloud.compute.v1.AttachedFilesystem" +
+      "Spec.Mode\022-\n\013device_name\030\002 \001(\tB\030\362\3071\024[a-z" +
+      "][a-z0-9-_]{,19}\022\037\n\rfilesystem_id\030\003 \001(\tB" +
+      "\010\212\3101\004<=50\";\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020\000\022" +
+      "\r\n\tREAD_ONLY\020\001\022\016\n\nREAD_WRITE\020\002\"\357\001\n\024Netwo" +
+      "rkInterfaceSpec\022\037\n\tsubnet_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\022L\n\027primary_v4_address_spec\030\002 \001(" +
+      "\0132+.yandex.cloud.compute.v1.PrimaryAddre" +
+      "ssSpec\022L\n\027primary_v6_address_spec\030\003 \001(\0132" +
+      "+.yandex.cloud.compute.v1.PrimaryAddress" +
+      "Spec\022\032\n\022security_group_ids\030\006 \003(\t\"\256\001\n\022Pri" +
+      "maryAddressSpec\022\017\n\007address\030\001 \001(\t\022E\n\023one_" +
+      "to_one_nat_spec\030\002 \001(\0132(.yandex.cloud.com" +
+      "pute.v1.OneToOneNatSpec\022@\n\020dns_record_sp" +
+      "ecs\030\003 \003(\0132&.yandex.cloud.compute.v1.DnsR" +
+      "ecordSpec\"\234\001\n\017OneToOneNatSpec\0226\n\nip_vers" +
+      "ion\030\001 \001(\0162\".yandex.cloud.compute.v1.IpVe" +
+      "rsion\022\017\n\007address\030\002 \001(\t\022@\n\020dns_record_spe" +
+      "cs\030\003 \003(\0132&.yandex.cloud.compute.v1.DnsRe" +
+      "cordSpec\"_\n\rDnsRecordSpec\022\022\n\004fqdn\030\001 \001(\tB" +
+      "\004\350\3071\001\022\023\n\013dns_zone_id\030\002 \001(\t\022\030\n\003ttl\030\003 \001(\003B" +
+      "\013\372\3071\0070-86400\022\013\n\003ptr\030\004 \001(\010\"e\n\023MoveInstanc" +
+      "eRequest\022!\n\013instance_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022+\n\025destination_folder_id\030\002 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\"d\n\024MoveInstanceMetadata\022\023\n\013inst" +
+      "ance_id\030\001 \001(\t\022\030\n\020source_folder_id\030\002 \001(\t\022" +
+      "\035\n\025destination_folder_id\030\003 \001(\t\"\344\002\n\027Reloc" +
+      "ateInstanceRequest\022!\n\013instance_id\030\001 \001(\tB" +
+      "\014\350\3071\001\212\3101\004<=50\022)\n\023destination_zone_id\030\002 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022Y\n\027network_interface_sp" +
+      "ecs\030\003 \003(\0132-.yandex.cloud.compute.v1.Netw" +
+      "orkInterfaceSpecB\t\202\3101\0011\350\3071\001\022I\n\023boot_disk" +
+      "_placement\030\004 \001(\0132,.yandex.cloud.compute." +
+      "v1.DiskPlacementPolicy\022U\n\031secondary_disk" +
+      "_placements\030\005 \003(\01322.yandex.cloud.compute" +
+      ".v1.DiskPlacementPolicyChange\"d\n\030Relocat" +
+      "eInstanceMetadata\022\023\n\013instance_id\030\001 \001(\t\022\026" +
+      "\n\016source_zone_id\030\002 \001(\t\022\033\n\023destination_zo" +
+      "ne_id\030\003 \001(\t\"0\n\031GuestStopInstanceMetadata" +
+      "\022\023\n\013instance_id\030\001 \001(\t\".\n\027PreemptInstance" +
+      "Metadata\022\023\n\013instance_id\030\001 \001(\t\",\n\025CrashIn" +
+      "stanceMetadata\022\023\n\013instance_id\030\001 \001(\t*#\n\014I" +
+      "nstanceView\022\t\n\005BASIC\020\000\022\010\n\004FULL\020\0012\230$\n\017Ins" +
+      "tanceService\022\202\001\n\003Get\022+.yandex.cloud.comp" +
+      "ute.v1.GetInstanceRequest\032!.yandex.cloud" +
+      ".compute.v1.Instance\"+\202\323\344\223\002%\022#/compute/v" +
+      "1/instances/{instance_id}\022\204\001\n\004List\022-.yan" +
+      "dex.cloud.compute.v1.ListInstancesReques" +
+      "t\032..yandex.cloud.compute.v1.ListInstance" +
+      "sResponse\"\035\202\323\344\223\002\027\022\025/compute/v1/instances" +
+      "\022\243\001\n\006Create\022..yandex.cloud.compute.v1.Cr" +
+      "eateInstanceRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"F\202\323\344\223\002\032\"\025/compute/v1/inst" +
+      "ances:\001*\262\322*\"\n\026CreateInstanceMetadata\022\010In" +
+      "stance\022\261\001\n\006Update\022..yandex.cloud.compute" +
+      ".v1.UpdateInstanceRequest\032!.yandex.cloud" +
+      ".operation.Operation\"T\202\323\344\223\002(2#/compute/v" +
+      "1/instances/{instance_id}:\001*\262\322*\"\n\026Update" +
+      "InstanceMetadata\022\010Instance\022\273\001\n\006Delete\022.." +
+      "yandex.cloud.compute.v1.DeleteInstanceRe" +
       "quest\032!.yandex.cloud.operation.Operation" +
-      "\"V\202\323\344\223\002+\")/compute/v1/instances/{instanc" +
-      "e_id}:start\262\322*!\n\025StartInstanceMetadata\022\010" +
-      "Instance\022\306\001\n\007Restart\022/.yandex.cloud.comp" +
-      "ute.v1.RestartInstanceRequest\032!.yandex.c" +
-      "loud.operation.Operation\"g\202\323\344\223\002-\"+/compu" +
-      "te/v1/instances/{instance_id}:restart\262\322*" +
-      "0\n\027RestartInstanceMetadata\022\025google.proto" +
-      "buf.Empty\022\310\001\n\nAttachDisk\0222.yandex.cloud." +
-      "compute.v1.AttachInstanceDiskRequest\032!.y" +
-      "andex.cloud.operation.Operation\"c\202\323\344\223\0023\"" +
-      "./compute/v1/instances/{instance_id}:att" +
-      "achDisk:\001*\262\322*&\n\032AttachInstanceDiskMetada" +
-      "ta\022\010Instance\022\310\001\n\nDetachDisk\0222.yandex.clo" +
-      "ud.compute.v1.DetachInstanceDiskRequest\032" +
-      "!.yandex.cloud.operation.Operation\"c\202\323\344\223" +
-      "\0023\"./compute/v1/instances/{instance_id}:" +
-      "detachDisk:\001*\262\322*&\n\032DetachInstanceDiskMet" +
-      "adata\022\010Instance\022\340\001\n\020AttachFilesystem\0228.y" +
-      "andex.cloud.compute.v1.AttachInstanceFil" +
-      "esystemRequest\032!.yandex.cloud.operation." +
-      "Operation\"o\202\323\344\223\0029\"4/compute/v1/instances" +
-      "/{instance_id}:attachFilesystem:\001*\262\322*,\n " +
-      "AttachInstanceFilesystemMetadata\022\010Instan" +
-      "ce\022\340\001\n\020DetachFilesystem\0228.yandex.cloud.c" +
-      "ompute.v1.DetachInstanceFilesystemReques" +
-      "t\032!.yandex.cloud.operation.Operation\"o\202\323" +
-      "\344\223\0029\"4/compute/v1/instances/{instance_id" +
-      "}:detachFilesystem:\001*\262\322*,\n DetachInstanc" +
-      "eFilesystemMetadata\022\010Instance\022\330\001\n\016AddOne" +
-      "ToOneNat\0226.yandex.cloud.compute.v1.AddIn" +
-      "stanceOneToOneNatRequest\032!.yandex.cloud." +
-      "operation.Operation\"k\202\323\344\223\0027\"2/compute/v1" +
-      "/instances/{instance_id}/addOneToOneNat:" +
-      "\001*\262\322**\n\036AddInstanceOneToOneNatMetadata\022\010" +
-      "Instance\022\344\001\n\021RemoveOneToOneNat\0229.yandex." +
-      "cloud.compute.v1.RemoveInstanceOneToOneN" +
-      "atRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"q\202\323\344\223\002:\"5/compute/v1/instances/{ins" +
-      "tance_id}/removeOneToOneNat:\001*\262\322*-\n!Remo" +
-      "veInstanceOneToOneNatMetadata\022\010Instance\022" +
-      "\370\001\n\026UpdateNetworkInterface\022>.yandex.clou" +
-      "d.compute.v1.UpdateInstanceNetworkInterf" +
-      "aceRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"{\202\323\344\223\002?2:/compute/v1/instances/{in" +
-      "stance_id}/updateNetworkInterface:\001*\262\322*2" +
-      "\n&UpdateInstanceNetworkInterfaceMetadata" +
-      "\022\010Instance\022\271\001\n\016ListOperations\0226.yandex.c" +
-      "loud.compute.v1.ListInstanceOperationsRe" +
-      "quest\0327.yandex.cloud.compute.v1.ListInst" +
-      "anceOperationsResponse\"6\202\323\344\223\0020\022./compute" +
-      "/v1/instances/{instance_id}/operations\022\260" +
-      "\001\n\004Move\022,.yandex.cloud.compute.v1.MoveIn" +
-      "stanceRequest\032!.yandex.cloud.operation.O" +
-      "peration\"W\202\323\344\223\002-\"(/compute/v1/instances/" +
-      "{instance_id}:move:\001*\262\322* \n\024MoveInstanceM" +
-      "etadata\022\010Instance\022\300\001\n\010Relocate\0220.yandex." +
-      "cloud.compute.v1.RelocateInstanceRequest" +
-      "\032!.yandex.cloud.operation.Operation\"_\202\323\344" +
-      "\223\0021\",/compute/v1/instances/{instance_id}" +
-      ":relocate:\001*\262\322*$\n\030RelocateInstanceMetada" +
-      "ta\022\010Instance\022\265\001\n\022ListAccessBindings\022..ya" +
-      "ndex.cloud.access.ListAccessBindingsRequ" +
-      "est\032/.yandex.cloud.access.ListAccessBind" +
-      "ingsResponse\">\202\323\344\223\0028\0226/compute/v1/instan" +
-      "ces/{resource_id}:listAccessBindings\022\364\001\n" +
-      "\021SetAccessBindings\022-.yandex.cloud.access" +
-      ".SetAccessBindingsRequest\032!.yandex.cloud" +
-      ".operation.Operation\"\214\001\202\323\344\223\002:\"5/compute/" +
-      "v1/instances/{resource_id}:setAccessBind" +
-      "ings:\001*\262\322*H\n access.SetAccessBindingsMet" +
-      "adata\022$access.AccessBindingsOperationRes" +
-      "ult\022\200\002\n\024UpdateAccessBindings\0220.yandex.cl" +
-      "oud.access.UpdateAccessBindingsRequest\032!" +
-      ".yandex.cloud.operation.Operation\"\222\001\202\323\344\223" +
-      "\002=\"8/compute/v1/instances/{resource_id}:" +
-      "updateAccessBindings:\001*\262\322*K\n#access.Upda" +
-      "teAccessBindingsMetadata\022$access.AccessB" +
-      "indingsOperationResultBb\n\033yandex.cloud.a" +
-      "pi.compute.v1ZCgithub.com/yandex-cloud/g" +
-      "o-genproto/yandex/cloud/compute/v1;compu" +
-      "teb\006proto3"
+      "\"^\202\323\344\223\002%*#/compute/v1/instances/{instanc" +
+      "e_id}\262\322*/\n\026DeleteInstanceMetadata\022\025googl" +
+      "e.protobuf.Empty\022\330\001\n\016UpdateMetadata\0226.ya" +
+      "ndex.cloud.compute.v1.UpdateInstanceMeta" +
+      "dataRequest\032!.yandex.cloud.operation.Ope" +
+      "ration\"k\202\323\344\223\0027\"2/compute/v1/instances/{i" +
+      "nstance_id}/updateMetadata:\001*\262\322**\n\036Updat" +
+      "eInstanceMetadataMetadata\022\010Instance\022\316\001\n\023" +
+      "GetSerialPortOutput\022;.yandex.cloud.compu" +
+      "te.v1.GetInstanceSerialPortOutputRequest" +
+      "\032<.yandex.cloud.compute.v1.GetInstanceSe" +
+      "rialPortOutputResponse\"<\202\323\344\223\0026\0224/compute" +
+      "/v1/instances/{instance_id}:serialPortOu" +
+      "tput\022\272\001\n\004Stop\022,.yandex.cloud.compute.v1." +
+      "StopInstanceRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"a\202\323\344\223\002*\"(/compute/v1/inst" +
+      "ances/{instance_id}:stop\262\322*-\n\024StopInstan" +
+      "ceMetadata\022\025google.protobuf.Empty\022\261\001\n\005St" +
+      "art\022-.yandex.cloud.compute.v1.StartInsta" +
+      "nceRequest\032!.yandex.cloud.operation.Oper" +
+      "ation\"V\202\323\344\223\002+\")/compute/v1/instances/{in" +
+      "stance_id}:start\262\322*!\n\025StartInstanceMetad" +
+      "ata\022\010Instance\022\306\001\n\007Restart\022/.yandex.cloud" +
+      ".compute.v1.RestartInstanceRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"g\202\323\344\223\002-\"+/" +
+      "compute/v1/instances/{instance_id}:resta" +
+      "rt\262\322*0\n\027RestartInstanceMetadata\022\025google." +
+      "protobuf.Empty\022\310\001\n\nAttachDisk\0222.yandex.c" +
+      "loud.compute.v1.AttachInstanceDiskReques" +
+      "t\032!.yandex.cloud.operation.Operation\"c\202\323" +
+      "\344\223\0023\"./compute/v1/instances/{instance_id" +
+      "}:attachDisk:\001*\262\322*&\n\032AttachInstanceDiskM" +
+      "etadata\022\010Instance\022\310\001\n\nDetachDisk\0222.yande" +
+      "x.cloud.compute.v1.DetachInstanceDiskReq" +
+      "uest\032!.yandex.cloud.operation.Operation\"" +
+      "c\202\323\344\223\0023\"./compute/v1/instances/{instance" +
+      "_id}:detachDisk:\001*\262\322*&\n\032DetachInstanceDi" +
+      "skMetadata\022\010Instance\022\340\001\n\020AttachFilesyste" +
+      "m\0228.yandex.cloud.compute.v1.AttachInstan" +
+      "ceFilesystemRequest\032!.yandex.cloud.opera" +
+      "tion.Operation\"o\202\323\344\223\0029\"4/compute/v1/inst" +
+      "ances/{instance_id}:attachFilesystem:\001*\262" +
+      "\322*,\n AttachInstanceFilesystemMetadata\022\010I" +
+      "nstance\022\340\001\n\020DetachFilesystem\0228.yandex.cl" +
+      "oud.compute.v1.DetachInstanceFilesystemR" +
+      "equest\032!.yandex.cloud.operation.Operatio" +
+      "n\"o\202\323\344\223\0029\"4/compute/v1/instances/{instan" +
+      "ce_id}:detachFilesystem:\001*\262\322*,\n DetachIn" +
+      "stanceFilesystemMetadata\022\010Instance\022\330\001\n\016A" +
+      "ddOneToOneNat\0226.yandex.cloud.compute.v1." +
+      "AddInstanceOneToOneNatRequest\032!.yandex.c" +
+      "loud.operation.Operation\"k\202\323\344\223\0027\"2/compu" +
+      "te/v1/instances/{instance_id}/addOneToOn" +
+      "eNat:\001*\262\322**\n\036AddInstanceOneToOneNatMetad" +
+      "ata\022\010Instance\022\344\001\n\021RemoveOneToOneNat\0229.ya" +
+      "ndex.cloud.compute.v1.RemoveInstanceOneT" +
+      "oOneNatRequest\032!.yandex.cloud.operation." +
+      "Operation\"q\202\323\344\223\002:\"5/compute/v1/instances" +
+      "/{instance_id}/removeOneToOneNat:\001*\262\322*-\n" +
+      "!RemoveInstanceOneToOneNatMetadata\022\010Inst" +
+      "ance\022\370\001\n\026UpdateNetworkInterface\022>.yandex" +
+      ".cloud.compute.v1.UpdateInstanceNetworkI" +
+      "nterfaceRequest\032!.yandex.cloud.operation" +
+      ".Operation\"{\202\323\344\223\002?2:/compute/v1/instance" +
+      "s/{instance_id}/updateNetworkInterface:\001" +
+      "*\262\322*2\n&UpdateInstanceNetworkInterfaceMet" +
+      "adata\022\010Instance\022\271\001\n\016ListOperations\0226.yan" +
+      "dex.cloud.compute.v1.ListInstanceOperati" +
+      "onsRequest\0327.yandex.cloud.compute.v1.Lis" +
+      "tInstanceOperationsResponse\"6\202\323\344\223\0020\022./co" +
+      "mpute/v1/instances/{instance_id}/operati" +
+      "ons\022\260\001\n\004Move\022,.yandex.cloud.compute.v1.M" +
+      "oveInstanceRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"W\202\323\344\223\002-\"(/compute/v1/insta" +
+      "nces/{instance_id}:move:\001*\262\322* \n\024MoveInst" +
+      "anceMetadata\022\010Instance\022\300\001\n\010Relocate\0220.ya" +
+      "ndex.cloud.compute.v1.RelocateInstanceRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"_\202\323\344\223\0021\",/compute/v1/instances/{instanc" +
+      "e_id}:relocate:\001*\262\322*$\n\030RelocateInstanceM" +
+      "etadata\022\010Instance\022\265\001\n\022ListAccessBindings" +
+      "\022..yandex.cloud.access.ListAccessBinding" +
+      "sRequest\032/.yandex.cloud.access.ListAcces" +
+      "sBindingsResponse\">\202\323\344\223\0028\0226/compute/v1/i" +
+      "nstances/{resource_id}:listAccessBinding" +
+      "s\022\364\001\n\021SetAccessBindings\022-.yandex.cloud.a" +
+      "ccess.SetAccessBindingsRequest\032!.yandex." +
+      "cloud.operation.Operation\"\214\001\202\323\344\223\002:\"5/com" +
+      "pute/v1/instances/{resource_id}:setAcces" +
+      "sBindings:\001*\262\322*H\n access.SetAccessBindin" +
+      "gsMetadata\022$access.AccessBindingsOperati" +
+      "onResult\022\200\002\n\024UpdateAccessBindings\0220.yand" +
+      "ex.cloud.access.UpdateAccessBindingsRequ" +
+      "est\032!.yandex.cloud.operation.Operation\"\222" +
+      "\001\202\323\344\223\002=\"8/compute/v1/instances/{resource" +
+      "_id}:updateAccessBindings:\001*\262\322*K\n#access" +
+      ".UpdateAccessBindingsMetadata\022$access.Ac" +
+      "cessBindingsOperationResultBb\n\033yandex.cl" +
+      "oud.api.compute.v1ZCgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/compute/v1;" +
+      "computeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.FieldMaskProto.getDescriptor(),
           yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.compute.v1.DiskOuterClass.getDescriptor(),
           yandex.cloud.api.compute.v1.InstanceOuterClass.getDescriptor(),
+          yandex.cloud.api.compute.v1.Maintenance.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
@@ -56992,7 +57815,7 @@ public final class InstanceServiceOuterClass {
     internal_static_yandex_cloud_compute_v1_CreateInstanceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_CreateInstanceRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "ZoneId", "PlatformId", "ResourcesSpec", "Metadata", "MetadataOptions", "BootDiskSpec", "SecondaryDiskSpecs", "LocalDiskSpecs", "FilesystemSpecs", "NetworkInterfaceSpecs", "Hostname", "SchedulingPolicy", "ServiceAccountId", "NetworkSettings", "GpuSettings", "PlacementPolicy", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "ZoneId", "PlatformId", "ResourcesSpec", "Metadata", "MetadataOptions", "BootDiskSpec", "SecondaryDiskSpecs", "LocalDiskSpecs", "FilesystemSpecs", "NetworkInterfaceSpecs", "Hostname", "SchedulingPolicy", "ServiceAccountId", "NetworkSettings", "PlacementPolicy", "GpuSettings", "MaintenancePolicy", "MaintenanceGracePeriod", });
     internal_static_yandex_cloud_compute_v1_CreateInstanceRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_CreateInstanceRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_CreateInstanceRequest_LabelsEntry_fieldAccessorTable = new
@@ -57016,7 +57839,7 @@ public final class InstanceServiceOuterClass {
     internal_static_yandex_cloud_compute_v1_UpdateInstanceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_compute_v1_UpdateInstanceRequest_descriptor,
-        new java.lang.String[] { "InstanceId", "UpdateMask", "Name", "Description", "Labels", "PlatformId", "ResourcesSpec", "Metadata", "MetadataOptions", "ServiceAccountId", "NetworkSettings", "PlacementPolicy", "SchedulingPolicy", });
+        new java.lang.String[] { "InstanceId", "UpdateMask", "Name", "Description", "Labels", "PlatformId", "ResourcesSpec", "Metadata", "MetadataOptions", "ServiceAccountId", "NetworkSettings", "PlacementPolicy", "SchedulingPolicy", "MaintenancePolicy", "MaintenanceGracePeriod", });
     internal_static_yandex_cloud_compute_v1_UpdateInstanceRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_compute_v1_UpdateInstanceRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_compute_v1_UpdateInstanceRequest_LabelsEntry_fieldAccessorTable = new
@@ -57319,11 +58142,13 @@ public final class InstanceServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.FieldMaskProto.getDescriptor();
     yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.compute.v1.DiskOuterClass.getDescriptor();
     yandex.cloud.api.compute.v1.InstanceOuterClass.getDescriptor();
+    yandex.cloud.api.compute.v1.Maintenance.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }

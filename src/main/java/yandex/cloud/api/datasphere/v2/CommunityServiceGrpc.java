@@ -3,6 +3,9 @@ package yandex.cloud.api.datasphere.v2;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for managing Community resources.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -308,6 +311,9 @@ public final class CommunityServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Community resources.
+   * </pre>
    */
   public static abstract class CommunityServiceImplBase implements io.grpc.BindableService {
 
@@ -454,6 +460,9 @@ public final class CommunityServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Community resources.
+   * </pre>
    */
   public static final class CommunityServiceStub extends io.grpc.stub.AbstractAsyncStub<CommunityServiceStub> {
     private CommunityServiceStub(
@@ -557,6 +566,9 @@ public final class CommunityServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Community resources.
+   * </pre>
    */
   public static final class CommunityServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<CommunityServiceBlockingStub> {
     private CommunityServiceBlockingStub(
@@ -652,6 +664,9 @@ public final class CommunityServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Community resources.
+   * </pre>
    */
   public static final class CommunityServiceFutureStub extends io.grpc.stub.AbstractFutureStub<CommunityServiceFutureStub> {
     private CommunityServiceFutureStub(

@@ -4287,6 +4287,21 @@ public final class Clickhouse {
      */
     com.google.protobuf.EmptyOrBuilder getTransferIdOrBuilder();
 
+    /**
+     * <code>.google.protobuf.Empty round_robin = 4;</code>
+     * @return Whether the roundRobin field is set.
+     */
+    boolean hasRoundRobin();
+    /**
+     * <code>.google.protobuf.Empty round_robin = 4;</code>
+     * @return The roundRobin.
+     */
+    com.google.protobuf.Empty getRoundRobin();
+    /**
+     * <code>.google.protobuf.Empty round_robin = 4;</code>
+     */
+    com.google.protobuf.EmptyOrBuilder getRoundRobinOrBuilder();
+
     public yandex.cloud.api.datatransfer.v1.endpoint.Clickhouse.ClickhouseSharding.ShardingCase getShardingCase();
   }
   /**
@@ -4374,6 +4389,20 @@ public final class Clickhouse {
                 sharding_ = subBuilder.buildPartial();
               }
               shardingCase_ = 3;
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Empty.Builder subBuilder = null;
+              if (shardingCase_ == 4) {
+                subBuilder = ((com.google.protobuf.Empty) sharding_).toBuilder();
+              }
+              sharding_ =
+                  input.readMessage(com.google.protobuf.Empty.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.google.protobuf.Empty) sharding_);
+                sharding_ = subBuilder.buildPartial();
+              }
+              shardingCase_ = 4;
               break;
             }
             default: {
@@ -6698,6 +6727,7 @@ public final class Clickhouse {
       COLUMN_VALUE_HASH(1),
       CUSTOM_MAPPING(2),
       TRANSFER_ID(3),
+      ROUND_ROBIN(4),
       SHARDING_NOT_SET(0);
       private final int value;
       private ShardingCase(int value) {
@@ -6718,6 +6748,7 @@ public final class Clickhouse {
           case 1: return COLUMN_VALUE_HASH;
           case 2: return CUSTOM_MAPPING;
           case 3: return TRANSFER_ID;
+          case 4: return ROUND_ROBIN;
           case 0: return SHARDING_NOT_SET;
           default: return null;
         }
@@ -6826,6 +6857,37 @@ public final class Clickhouse {
       return com.google.protobuf.Empty.getDefaultInstance();
     }
 
+    public static final int ROUND_ROBIN_FIELD_NUMBER = 4;
+    /**
+     * <code>.google.protobuf.Empty round_robin = 4;</code>
+     * @return Whether the roundRobin field is set.
+     */
+    @java.lang.Override
+    public boolean hasRoundRobin() {
+      return shardingCase_ == 4;
+    }
+    /**
+     * <code>.google.protobuf.Empty round_robin = 4;</code>
+     * @return The roundRobin.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Empty getRoundRobin() {
+      if (shardingCase_ == 4) {
+         return (com.google.protobuf.Empty) sharding_;
+      }
+      return com.google.protobuf.Empty.getDefaultInstance();
+    }
+    /**
+     * <code>.google.protobuf.Empty round_robin = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.EmptyOrBuilder getRoundRobinOrBuilder() {
+      if (shardingCase_ == 4) {
+         return (com.google.protobuf.Empty) sharding_;
+      }
+      return com.google.protobuf.Empty.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6849,6 +6911,9 @@ public final class Clickhouse {
       if (shardingCase_ == 3) {
         output.writeMessage(3, (com.google.protobuf.Empty) sharding_);
       }
+      if (shardingCase_ == 4) {
+        output.writeMessage(4, (com.google.protobuf.Empty) sharding_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6869,6 +6934,10 @@ public final class Clickhouse {
       if (shardingCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, (com.google.protobuf.Empty) sharding_);
+      }
+      if (shardingCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (com.google.protobuf.Empty) sharding_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6899,6 +6968,10 @@ public final class Clickhouse {
           if (!getTransferId()
               .equals(other.getTransferId())) return false;
           break;
+        case 4:
+          if (!getRoundRobin()
+              .equals(other.getRoundRobin())) return false;
+          break;
         case 0:
         default:
       }
@@ -6925,6 +6998,10 @@ public final class Clickhouse {
         case 3:
           hash = (37 * hash) + TRANSFER_ID_FIELD_NUMBER;
           hash = (53 * hash) + getTransferId().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + ROUND_ROBIN_FIELD_NUMBER;
+          hash = (53 * hash) + getRoundRobin().hashCode();
           break;
         case 0:
         default:
@@ -7111,6 +7188,13 @@ public final class Clickhouse {
             result.sharding_ = transferIdBuilder_.build();
           }
         }
+        if (shardingCase_ == 4) {
+          if (roundRobinBuilder_ == null) {
+            result.sharding_ = sharding_;
+          } else {
+            result.sharding_ = roundRobinBuilder_.build();
+          }
+        }
         result.shardingCase_ = shardingCase_;
         onBuilt();
         return result;
@@ -7171,6 +7255,10 @@ public final class Clickhouse {
           }
           case TRANSFER_ID: {
             mergeTransferId(other.getTransferId());
+            break;
+          }
+          case ROUND_ROBIN: {
+            mergeRoundRobin(other.getRoundRobin());
             break;
           }
           case SHARDING_NOT_SET: {
@@ -7642,6 +7730,147 @@ public final class Clickhouse {
         shardingCase_ = 3;
         onChanged();;
         return transferIdBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Empty, com.google.protobuf.Empty.Builder, com.google.protobuf.EmptyOrBuilder> roundRobinBuilder_;
+      /**
+       * <code>.google.protobuf.Empty round_robin = 4;</code>
+       * @return Whether the roundRobin field is set.
+       */
+      @java.lang.Override
+      public boolean hasRoundRobin() {
+        return shardingCase_ == 4;
+      }
+      /**
+       * <code>.google.protobuf.Empty round_robin = 4;</code>
+       * @return The roundRobin.
+       */
+      @java.lang.Override
+      public com.google.protobuf.Empty getRoundRobin() {
+        if (roundRobinBuilder_ == null) {
+          if (shardingCase_ == 4) {
+            return (com.google.protobuf.Empty) sharding_;
+          }
+          return com.google.protobuf.Empty.getDefaultInstance();
+        } else {
+          if (shardingCase_ == 4) {
+            return roundRobinBuilder_.getMessage();
+          }
+          return com.google.protobuf.Empty.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Empty round_robin = 4;</code>
+       */
+      public Builder setRoundRobin(com.google.protobuf.Empty value) {
+        if (roundRobinBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          sharding_ = value;
+          onChanged();
+        } else {
+          roundRobinBuilder_.setMessage(value);
+        }
+        shardingCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Empty round_robin = 4;</code>
+       */
+      public Builder setRoundRobin(
+          com.google.protobuf.Empty.Builder builderForValue) {
+        if (roundRobinBuilder_ == null) {
+          sharding_ = builderForValue.build();
+          onChanged();
+        } else {
+          roundRobinBuilder_.setMessage(builderForValue.build());
+        }
+        shardingCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Empty round_robin = 4;</code>
+       */
+      public Builder mergeRoundRobin(com.google.protobuf.Empty value) {
+        if (roundRobinBuilder_ == null) {
+          if (shardingCase_ == 4 &&
+              sharding_ != com.google.protobuf.Empty.getDefaultInstance()) {
+            sharding_ = com.google.protobuf.Empty.newBuilder((com.google.protobuf.Empty) sharding_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            sharding_ = value;
+          }
+          onChanged();
+        } else {
+          if (shardingCase_ == 4) {
+            roundRobinBuilder_.mergeFrom(value);
+          }
+          roundRobinBuilder_.setMessage(value);
+        }
+        shardingCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Empty round_robin = 4;</code>
+       */
+      public Builder clearRoundRobin() {
+        if (roundRobinBuilder_ == null) {
+          if (shardingCase_ == 4) {
+            shardingCase_ = 0;
+            sharding_ = null;
+            onChanged();
+          }
+        } else {
+          if (shardingCase_ == 4) {
+            shardingCase_ = 0;
+            sharding_ = null;
+          }
+          roundRobinBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Empty round_robin = 4;</code>
+       */
+      public com.google.protobuf.Empty.Builder getRoundRobinBuilder() {
+        return getRoundRobinFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Empty round_robin = 4;</code>
+       */
+      @java.lang.Override
+      public com.google.protobuf.EmptyOrBuilder getRoundRobinOrBuilder() {
+        if ((shardingCase_ == 4) && (roundRobinBuilder_ != null)) {
+          return roundRobinBuilder_.getMessageOrBuilder();
+        } else {
+          if (shardingCase_ == 4) {
+            return (com.google.protobuf.Empty) sharding_;
+          }
+          return com.google.protobuf.Empty.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Empty round_robin = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Empty, com.google.protobuf.Empty.Builder, com.google.protobuf.EmptyOrBuilder> 
+          getRoundRobinFieldBuilder() {
+        if (roundRobinBuilder_ == null) {
+          if (!(shardingCase_ == 4)) {
+            sharding_ = com.google.protobuf.Empty.getDefaultInstance();
+          }
+          roundRobinBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Empty, com.google.protobuf.Empty.Builder, com.google.protobuf.EmptyOrBuilder>(
+                  (com.google.protobuf.Empty) sharding_,
+                  getParentForChildren(),
+                  isClean());
+          sharding_ = null;
+        }
+        shardingCase_ = 4;
+        onChanged();;
+        return roundRobinBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -11305,46 +11534,47 @@ public final class Clickhouse {
       "lickhouseConnection\022`\n\022connection_option" +
       "s\030\001 \001(\0132B.yandex.cloud.datatransfer.v1.e" +
       "ndpoint.ClickhouseConnectionOptionsH\000B\014\n" +
-      "\nconnection\"\315\004\n\022ClickhouseSharding\022f\n\021co" +
+      "\nconnection\"\374\004\n\022ClickhouseSharding\022f\n\021co" +
       "lumn_value_hash\030\001 \001(\0132I.yandex.cloud.dat" +
       "atransfer.v1.endpoint.ClickhouseSharding" +
       ".ColumnValueHashH\000\022f\n\016custom_mapping\030\002 \001" +
       "(\0132L.yandex.cloud.datatransfer.v1.endpoi" +
       "nt.ClickhouseSharding.ColumnValueMapping" +
       "H\000\022-\n\013transfer_id\030\003 \001(\0132\026.google.protobu" +
-      "f.EmptyH\000\032&\n\017ColumnValueHash\022\023\n\013column_n" +
-      "ame\030\001 \001(\t\032\203\002\n\022ColumnValueMapping\022\023\n\013colu" +
-      "mn_name\030\001 \001(\t\022j\n\007mapping\030\002 \003(\0132Y.yandex." +
-      "cloud.datatransfer.v1.endpoint.Clickhous" +
-      "eSharding.ColumnValueMapping.ValueToShar" +
-      "d\032l\n\014ValueToShard\022H\n\014column_value\030\001 \001(\0132" +
-      "2.yandex.cloud.datatransfer.v1.endpoint." +
-      "ColumnValue\022\022\n\nshard_name\030\002 \001(\tB\n\n\010shard" +
-      "ing\"\277\001\n\020ClickhouseSource\022O\n\nconnection\030\001" +
-      " \001(\0132;.yandex.cloud.datatransfer.v1.endp" +
-      "oint.ClickhouseConnection\022\021\n\tsubnet_id\030\t" +
-      " \001(\t\022\027\n\017security_groups\030\n \003(\t\022\026\n\016include" +
-      "_tables\030\007 \003(\t\022\026\n\016exclude_tables\030\010 \003(\t\"\230\003" +
-      "\n\020ClickhouseTarget\022O\n\nconnection\030\002 \001(\0132;" +
-      ".yandex.cloud.datatransfer.v1.endpoint.C" +
-      "lickhouseConnection\022\021\n\tsubnet_id\030\014 \001(\t\022\027" +
-      "\n\017security_groups\0303 \003(\t\022\037\n\027clickhouse_cl" +
-      "uster_name\0302 \001(\t\022A\n\talt_names\030\021 \003(\0132..ya" +
-      "ndex.cloud.datatransfer.v1.endpoint.AltN" +
-      "ame\022K\n\010sharding\030\026 \001(\01329.yandex.cloud.dat" +
-      "atransfer.v1.endpoint.ClickhouseSharding" +
-      "\022V\n\016cleanup_policy\030\025 \001(\0162>.yandex.cloud." +
-      "datatransfer.v1.endpoint.ClickhouseClean" +
-      "upPolicy*\270\001\n\027ClickhouseCleanupPolicy\022)\n%" +
-      "CLICKHOUSE_CLEANUP_POLICY_UNSPECIFIED\020\000\022" +
-      "&\n\"CLICKHOUSE_CLEANUP_POLICY_DISABLED\020\001\022" +
-      "\"\n\036CLICKHOUSE_CLEANUP_POLICY_DROP\020\002\022&\n\"C" +
-      "LICKHOUSE_CLEANUP_POLICY_TRUNCATE\020\003B\247\001\n)" +
-      "yandex.cloud.api.datatransfer.v1.endpoin" +
-      "tZRgithub.com/yandex-cloud/go-genproto/y" +
-      "andex/cloud/datatransfer/v1/endpoint;end" +
-      "point\252\002%Yandex.Cloud.Datatransfer.V1.End" +
-      "Pointb\006proto3"
+      "f.EmptyH\000\022-\n\013round_robin\030\004 \001(\0132\026.google." +
+      "protobuf.EmptyH\000\032&\n\017ColumnValueHash\022\023\n\013c" +
+      "olumn_name\030\001 \001(\t\032\203\002\n\022ColumnValueMapping\022" +
+      "\023\n\013column_name\030\001 \001(\t\022j\n\007mapping\030\002 \003(\0132Y." +
+      "yandex.cloud.datatransfer.v1.endpoint.Cl" +
+      "ickhouseSharding.ColumnValueMapping.Valu" +
+      "eToShard\032l\n\014ValueToShard\022H\n\014column_value" +
+      "\030\001 \001(\01322.yandex.cloud.datatransfer.v1.en" +
+      "dpoint.ColumnValue\022\022\n\nshard_name\030\002 \001(\tB\n" +
+      "\n\010sharding\"\277\001\n\020ClickhouseSource\022O\n\nconne" +
+      "ction\030\001 \001(\0132;.yandex.cloud.datatransfer." +
+      "v1.endpoint.ClickhouseConnection\022\021\n\tsubn" +
+      "et_id\030\t \001(\t\022\027\n\017security_groups\030\n \003(\t\022\026\n\016" +
+      "include_tables\030\007 \003(\t\022\026\n\016exclude_tables\030\010" +
+      " \003(\t\"\230\003\n\020ClickhouseTarget\022O\n\nconnection\030" +
+      "\002 \001(\0132;.yandex.cloud.datatransfer.v1.end" +
+      "point.ClickhouseConnection\022\021\n\tsubnet_id\030" +
+      "\014 \001(\t\022\027\n\017security_groups\0303 \003(\t\022\037\n\027clickh" +
+      "ouse_cluster_name\0302 \001(\t\022A\n\talt_names\030\021 \003" +
+      "(\0132..yandex.cloud.datatransfer.v1.endpoi" +
+      "nt.AltName\022K\n\010sharding\030\026 \001(\01329.yandex.cl" +
+      "oud.datatransfer.v1.endpoint.ClickhouseS" +
+      "harding\022V\n\016cleanup_policy\030\025 \001(\0162>.yandex" +
+      ".cloud.datatransfer.v1.endpoint.Clickhou" +
+      "seCleanupPolicy*\270\001\n\027ClickhouseCleanupPol" +
+      "icy\022)\n%CLICKHOUSE_CLEANUP_POLICY_UNSPECI" +
+      "FIED\020\000\022&\n\"CLICKHOUSE_CLEANUP_POLICY_DISA" +
+      "BLED\020\001\022\"\n\036CLICKHOUSE_CLEANUP_POLICY_DROP" +
+      "\020\002\022&\n\"CLICKHOUSE_CLEANUP_POLICY_TRUNCATE" +
+      "\020\003B\247\001\n)yandex.cloud.api.datatransfer.v1." +
+      "endpointZRgithub.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/datatransfer/v1/endpo" +
+      "int;endpoint\252\002%Yandex.Cloud.Datatransfer" +
+      ".V1.EndPointb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -11381,7 +11611,7 @@ public final class Clickhouse {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseSharding_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseSharding_descriptor,
-        new java.lang.String[] { "ColumnValueHash", "CustomMapping", "TransferId", "Sharding", });
+        new java.lang.String[] { "ColumnValueHash", "CustomMapping", "TransferId", "RoundRobin", "Sharding", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseSharding_ColumnValueHash_descriptor =
       internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseSharding_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_ClickhouseSharding_ColumnValueHash_fieldAccessorTable = new

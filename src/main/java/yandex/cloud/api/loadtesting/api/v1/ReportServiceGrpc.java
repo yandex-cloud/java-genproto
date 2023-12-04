@@ -95,6 +95,9 @@ public final class ReportServiceGrpc {
   public static abstract class ReportServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Returns a report table for the specified test.
+     * </pre>
      */
     public void getTable(yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.GetTableReportRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.GetTableReportResponse> responseObserver) {
@@ -129,6 +132,9 @@ public final class ReportServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns a report table for the specified test.
+     * </pre>
      */
     public void getTable(yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.GetTableReportRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.GetTableReportResponse> responseObserver) {
@@ -152,6 +158,9 @@ public final class ReportServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns a report table for the specified test.
+     * </pre>
      */
     public yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.GetTableReportResponse getTable(yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.GetTableReportRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -174,6 +183,9 @@ public final class ReportServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns a report table for the specified test.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.GetTableReportResponse> getTable(
         yandex.cloud.api.loadtesting.api.v1.ReportServiceOuterClass.GetTableReportRequest request) {

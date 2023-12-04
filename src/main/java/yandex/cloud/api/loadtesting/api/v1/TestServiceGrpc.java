@@ -77,6 +77,99 @@ public final class TestServiceGrpc {
     return getGetMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getStopMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Stop",
+      requestType = yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getStopMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getStopMethod;
+    if ((getStopMethod = TestServiceGrpc.getStopMethod) == null) {
+      synchronized (TestServiceGrpc.class) {
+        if ((getStopMethod = TestServiceGrpc.getStopMethod) == null) {
+          TestServiceGrpc.getStopMethod = getStopMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Stop"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new TestServiceMethodDescriptorSupplier("Stop"))
+              .build();
+        }
+      }
+    }
+    return getStopMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Delete",
+      requestType = yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getDeleteMethod;
+    if ((getDeleteMethod = TestServiceGrpc.getDeleteMethod) == null) {
+      synchronized (TestServiceGrpc.class) {
+        if ((getDeleteMethod = TestServiceGrpc.getDeleteMethod) == null) {
+          TestServiceGrpc.getDeleteMethod = getDeleteMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Delete"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new TestServiceMethodDescriptorSupplier("Delete"))
+              .build();
+        }
+      }
+    }
+    return getDeleteMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest,
+      yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse> getListMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "List",
+      requestType = yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest.class,
+      responseType = yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest,
+      yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse> getListMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest, yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse> getListMethod;
+    if ((getListMethod = TestServiceGrpc.getListMethod) == null) {
+      synchronized (TestServiceGrpc.class) {
+        if ((getListMethod = TestServiceGrpc.getListMethod) == null) {
+          TestServiceGrpc.getListMethod = getListMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest, yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TestServiceMethodDescriptorSupplier("List"))
+              .build();
+        }
+      }
+    }
+    return getListMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -126,6 +219,9 @@ public final class TestServiceGrpc {
   public static abstract class TestServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Creates (runs) a test in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.CreateTestRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -133,10 +229,44 @@ public final class TestServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified test.
+     * To get the list of all available tests, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.GetTestRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Stops the specified test.
+     * </pre>
+     */
+    public void stop(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getStopMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes specified tests.
+     * </pre>
+     */
+    public void delete(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of test in the specified folder.
+     * </pre>
+     */
+    public void list(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -155,6 +285,27 @@ public final class TestServiceGrpc {
                 yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.GetTestRequest,
                 yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test>(
                   this, METHODID_GET)))
+          .addMethod(
+            getStopMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_STOP)))
+          .addMethod(
+            getDeleteMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_DELETE)))
+          .addMethod(
+            getListMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest,
+                yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse>(
+                  this, METHODID_LIST)))
           .build();
     }
   }
@@ -174,6 +325,9 @@ public final class TestServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates (runs) a test in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.CreateTestRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -182,11 +336,48 @@ public final class TestServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified test.
+     * To get the list of all available tests, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.GetTestRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Stops the specified test.
+     * </pre>
+     */
+    public void stop(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getStopMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes specified tests.
+     * </pre>
+     */
+    public void delete(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of test in the specified folder.
+     * </pre>
+     */
+    public void list(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -205,6 +396,9 @@ public final class TestServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates (runs) a test in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.CreateTestRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -212,10 +406,44 @@ public final class TestServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified test.
+     * To get the list of all available tests, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test get(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.GetTestRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Stops the specified test.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation stop(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getStopMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes specified tests.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of test in the specified folder.
+     * </pre>
+     */
+    public yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse list(yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListMethod(), getCallOptions(), request);
     }
   }
 
@@ -234,6 +462,9 @@ public final class TestServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates (runs) a test in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.CreateTestRequest request) {
@@ -242,16 +473,56 @@ public final class TestServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified test.
+     * To get the list of all available tests, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test> get(
         yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.GetTestRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Stops the specified test.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> stop(
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getStopMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes specified tests.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of test in the specified folder.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse> list(
+        yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE = 0;
   private static final int METHODID_GET = 1;
+  private static final int METHODID_STOP = 2;
+  private static final int METHODID_DELETE = 3;
+  private static final int METHODID_LIST = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -277,6 +548,18 @@ public final class TestServiceGrpc {
         case METHODID_GET:
           serviceImpl.get((yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.GetTestRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.test.TestOuterClass.Test>) responseObserver);
+          break;
+        case METHODID_STOP:
+          serviceImpl.stop((yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.StopTestRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_DELETE:
+          serviceImpl.delete((yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.DeleteTestRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_LIST:
+          serviceImpl.list((yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.TestServiceOuterClass.ListTestsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -341,6 +624,9 @@ public final class TestServiceGrpc {
               .setSchemaDescriptor(new TestServiceFileDescriptorSupplier())
               .addMethod(getCreateMethod())
               .addMethod(getGetMethod())
+              .addMethod(getStopMethod())
+              .addMethod(getDeleteMethod())
+              .addMethod(getListMethod())
               .build();
         }
       }

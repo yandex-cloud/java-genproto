@@ -19,16 +19,28 @@ public final class AgentSelectorOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Selection by agent ID.
+     * </pre>
+     *
      * <code>string agent_id = 1;</code>
      * @return Whether the agentId field is set.
      */
     boolean hasAgentId();
     /**
+     * <pre>
+     * Selection by agent ID.
+     * </pre>
+     *
      * <code>string agent_id = 1;</code>
      * @return The agentId.
      */
     java.lang.String getAgentId();
     /**
+     * <pre>
+     * Selection by agent ID.
+     * </pre>
+     *
      * <code>string agent_id = 1;</code>
      * @return The bytes for agentId.
      */
@@ -38,6 +50,11 @@ public final class AgentSelectorOuterClass {
     public yandex.cloud.api.loadtesting.api.v1.test.AgentSelectorOuterClass.AgentSelector.AgentCase getAgentCase();
   }
   /**
+   * <pre>
+   * Agent selection criterion.
+   * The structure is used by service to determine on which agents a specific test should be executed.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.loadtesting.api.v1.test.AgentSelector}
    */
   public static final class AgentSelector extends
@@ -161,6 +178,10 @@ public final class AgentSelectorOuterClass {
 
     public static final int AGENT_ID_FIELD_NUMBER = 1;
     /**
+     * <pre>
+     * Selection by agent ID.
+     * </pre>
+     *
      * <code>string agent_id = 1;</code>
      * @return Whether the agentId field is set.
      */
@@ -168,6 +189,10 @@ public final class AgentSelectorOuterClass {
       return agentCase_ == 1;
     }
     /**
+     * <pre>
+     * Selection by agent ID.
+     * </pre>
+     *
      * <code>string agent_id = 1;</code>
      * @return The agentId.
      */
@@ -189,6 +214,10 @@ public final class AgentSelectorOuterClass {
       }
     }
     /**
+     * <pre>
+     * Selection by agent ID.
+     * </pre>
+     *
      * <code>string agent_id = 1;</code>
      * @return The bytes for agentId.
      */
@@ -379,6 +408,11 @@ public final class AgentSelectorOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Agent selection criterion.
+     * The structure is used by service to determine on which agents a specific test should be executed.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.loadtesting.api.v1.test.AgentSelector}
      */
     public static final class Builder extends
@@ -552,6 +586,10 @@ public final class AgentSelectorOuterClass {
 
 
       /**
+       * <pre>
+       * Selection by agent ID.
+       * </pre>
+       *
        * <code>string agent_id = 1;</code>
        * @return Whether the agentId field is set.
        */
@@ -560,6 +598,10 @@ public final class AgentSelectorOuterClass {
         return agentCase_ == 1;
       }
       /**
+       * <pre>
+       * Selection by agent ID.
+       * </pre>
+       *
        * <code>string agent_id = 1;</code>
        * @return The agentId.
        */
@@ -582,6 +624,10 @@ public final class AgentSelectorOuterClass {
         }
       }
       /**
+       * <pre>
+       * Selection by agent ID.
+       * </pre>
+       *
        * <code>string agent_id = 1;</code>
        * @return The bytes for agentId.
        */
@@ -605,6 +651,10 @@ public final class AgentSelectorOuterClass {
         }
       }
       /**
+       * <pre>
+       * Selection by agent ID.
+       * </pre>
+       *
        * <code>string agent_id = 1;</code>
        * @param value The agentId to set.
        * @return This builder for chaining.
@@ -620,6 +670,10 @@ public final class AgentSelectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Selection by agent ID.
+       * </pre>
+       *
        * <code>string agent_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -632,6 +686,10 @@ public final class AgentSelectorOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Selection by agent ID.
+       * </pre>
+       *
        * <code>string agent_id = 1;</code>
        * @param value The bytes for agentId to set.
        * @return This builder for chaining.

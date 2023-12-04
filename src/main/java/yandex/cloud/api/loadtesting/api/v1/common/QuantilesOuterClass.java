@@ -19,60 +19,100 @@ public final class QuantilesOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * 50 percentile (median).
+     * </pre>
+     *
      * <code>double q50 = 1;</code>
      * @return The q50.
      */
     double getQ50();
 
     /**
+     * <pre>
+     * 75 percentile.
+     * </pre>
+     *
      * <code>double q75 = 2;</code>
      * @return The q75.
      */
     double getQ75();
 
     /**
+     * <pre>
+     * 80 percentile.
+     * </pre>
+     *
      * <code>double q80 = 3;</code>
      * @return The q80.
      */
     double getQ80();
 
     /**
+     * <pre>
+     * 85 percentile.
+     * </pre>
+     *
      * <code>double q85 = 4;</code>
      * @return The q85.
      */
     double getQ85();
 
     /**
+     * <pre>
+     * 90 percentile.
+     * </pre>
+     *
      * <code>double q90 = 5;</code>
      * @return The q90.
      */
     double getQ90();
 
     /**
+     * <pre>
+     * 95 percentile.
+     * </pre>
+     *
      * <code>double q95 = 6;</code>
      * @return The q95.
      */
     double getQ95();
 
     /**
+     * <pre>
+     * 98 percentile.
+     * </pre>
+     *
      * <code>double q98 = 7;</code>
      * @return The q98.
      */
     double getQ98();
 
     /**
+     * <pre>
+     * 99 percentile.
+     * </pre>
+     *
      * <code>double q99 = 8;</code>
      * @return The q99.
      */
     double getQ99();
 
     /**
+     * <pre>
+     * 100 percentile (maximum or minimum).
+     * </pre>
+     *
      * <code>double q100 = 9;</code>
      * @return The q100.
      */
     double getQ100();
   }
   /**
+   * <pre>
+   * Statistical data aggregated by predefined set of quantiles.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.loadtesting.api.v1.common.Quantiles}
    */
   public static final class Quantiles extends
@@ -197,6 +237,10 @@ public final class QuantilesOuterClass {
     public static final int Q50_FIELD_NUMBER = 1;
     private double q50_;
     /**
+     * <pre>
+     * 50 percentile (median).
+     * </pre>
+     *
      * <code>double q50 = 1;</code>
      * @return The q50.
      */
@@ -208,6 +252,10 @@ public final class QuantilesOuterClass {
     public static final int Q75_FIELD_NUMBER = 2;
     private double q75_;
     /**
+     * <pre>
+     * 75 percentile.
+     * </pre>
+     *
      * <code>double q75 = 2;</code>
      * @return The q75.
      */
@@ -219,6 +267,10 @@ public final class QuantilesOuterClass {
     public static final int Q80_FIELD_NUMBER = 3;
     private double q80_;
     /**
+     * <pre>
+     * 80 percentile.
+     * </pre>
+     *
      * <code>double q80 = 3;</code>
      * @return The q80.
      */
@@ -230,6 +282,10 @@ public final class QuantilesOuterClass {
     public static final int Q85_FIELD_NUMBER = 4;
     private double q85_;
     /**
+     * <pre>
+     * 85 percentile.
+     * </pre>
+     *
      * <code>double q85 = 4;</code>
      * @return The q85.
      */
@@ -241,6 +297,10 @@ public final class QuantilesOuterClass {
     public static final int Q90_FIELD_NUMBER = 5;
     private double q90_;
     /**
+     * <pre>
+     * 90 percentile.
+     * </pre>
+     *
      * <code>double q90 = 5;</code>
      * @return The q90.
      */
@@ -252,6 +312,10 @@ public final class QuantilesOuterClass {
     public static final int Q95_FIELD_NUMBER = 6;
     private double q95_;
     /**
+     * <pre>
+     * 95 percentile.
+     * </pre>
+     *
      * <code>double q95 = 6;</code>
      * @return The q95.
      */
@@ -263,6 +327,10 @@ public final class QuantilesOuterClass {
     public static final int Q98_FIELD_NUMBER = 7;
     private double q98_;
     /**
+     * <pre>
+     * 98 percentile.
+     * </pre>
+     *
      * <code>double q98 = 7;</code>
      * @return The q98.
      */
@@ -274,6 +342,10 @@ public final class QuantilesOuterClass {
     public static final int Q99_FIELD_NUMBER = 8;
     private double q99_;
     /**
+     * <pre>
+     * 99 percentile.
+     * </pre>
+     *
      * <code>double q99 = 8;</code>
      * @return The q99.
      */
@@ -285,6 +357,10 @@ public final class QuantilesOuterClass {
     public static final int Q100_FIELD_NUMBER = 9;
     private double q100_;
     /**
+     * <pre>
+     * 100 percentile (maximum or minimum).
+     * </pre>
+     *
      * <code>double q100 = 9;</code>
      * @return The q100.
      */
@@ -555,6 +631,10 @@ public final class QuantilesOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Statistical data aggregated by predefined set of quantiles.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.loadtesting.api.v1.common.Quantiles}
      */
     public static final class Builder extends
@@ -751,6 +831,10 @@ public final class QuantilesOuterClass {
 
       private double q50_ ;
       /**
+       * <pre>
+       * 50 percentile (median).
+       * </pre>
+       *
        * <code>double q50 = 1;</code>
        * @return The q50.
        */
@@ -759,6 +843,10 @@ public final class QuantilesOuterClass {
         return q50_;
       }
       /**
+       * <pre>
+       * 50 percentile (median).
+       * </pre>
+       *
        * <code>double q50 = 1;</code>
        * @param value The q50 to set.
        * @return This builder for chaining.
@@ -770,6 +858,10 @@ public final class QuantilesOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 50 percentile (median).
+       * </pre>
+       *
        * <code>double q50 = 1;</code>
        * @return This builder for chaining.
        */
@@ -782,6 +874,10 @@ public final class QuantilesOuterClass {
 
       private double q75_ ;
       /**
+       * <pre>
+       * 75 percentile.
+       * </pre>
+       *
        * <code>double q75 = 2;</code>
        * @return The q75.
        */
@@ -790,6 +886,10 @@ public final class QuantilesOuterClass {
         return q75_;
       }
       /**
+       * <pre>
+       * 75 percentile.
+       * </pre>
+       *
        * <code>double q75 = 2;</code>
        * @param value The q75 to set.
        * @return This builder for chaining.
@@ -801,6 +901,10 @@ public final class QuantilesOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 75 percentile.
+       * </pre>
+       *
        * <code>double q75 = 2;</code>
        * @return This builder for chaining.
        */
@@ -813,6 +917,10 @@ public final class QuantilesOuterClass {
 
       private double q80_ ;
       /**
+       * <pre>
+       * 80 percentile.
+       * </pre>
+       *
        * <code>double q80 = 3;</code>
        * @return The q80.
        */
@@ -821,6 +929,10 @@ public final class QuantilesOuterClass {
         return q80_;
       }
       /**
+       * <pre>
+       * 80 percentile.
+       * </pre>
+       *
        * <code>double q80 = 3;</code>
        * @param value The q80 to set.
        * @return This builder for chaining.
@@ -832,6 +944,10 @@ public final class QuantilesOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 80 percentile.
+       * </pre>
+       *
        * <code>double q80 = 3;</code>
        * @return This builder for chaining.
        */
@@ -844,6 +960,10 @@ public final class QuantilesOuterClass {
 
       private double q85_ ;
       /**
+       * <pre>
+       * 85 percentile.
+       * </pre>
+       *
        * <code>double q85 = 4;</code>
        * @return The q85.
        */
@@ -852,6 +972,10 @@ public final class QuantilesOuterClass {
         return q85_;
       }
       /**
+       * <pre>
+       * 85 percentile.
+       * </pre>
+       *
        * <code>double q85 = 4;</code>
        * @param value The q85 to set.
        * @return This builder for chaining.
@@ -863,6 +987,10 @@ public final class QuantilesOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 85 percentile.
+       * </pre>
+       *
        * <code>double q85 = 4;</code>
        * @return This builder for chaining.
        */
@@ -875,6 +1003,10 @@ public final class QuantilesOuterClass {
 
       private double q90_ ;
       /**
+       * <pre>
+       * 90 percentile.
+       * </pre>
+       *
        * <code>double q90 = 5;</code>
        * @return The q90.
        */
@@ -883,6 +1015,10 @@ public final class QuantilesOuterClass {
         return q90_;
       }
       /**
+       * <pre>
+       * 90 percentile.
+       * </pre>
+       *
        * <code>double q90 = 5;</code>
        * @param value The q90 to set.
        * @return This builder for chaining.
@@ -894,6 +1030,10 @@ public final class QuantilesOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 90 percentile.
+       * </pre>
+       *
        * <code>double q90 = 5;</code>
        * @return This builder for chaining.
        */
@@ -906,6 +1046,10 @@ public final class QuantilesOuterClass {
 
       private double q95_ ;
       /**
+       * <pre>
+       * 95 percentile.
+       * </pre>
+       *
        * <code>double q95 = 6;</code>
        * @return The q95.
        */
@@ -914,6 +1058,10 @@ public final class QuantilesOuterClass {
         return q95_;
       }
       /**
+       * <pre>
+       * 95 percentile.
+       * </pre>
+       *
        * <code>double q95 = 6;</code>
        * @param value The q95 to set.
        * @return This builder for chaining.
@@ -925,6 +1073,10 @@ public final class QuantilesOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 95 percentile.
+       * </pre>
+       *
        * <code>double q95 = 6;</code>
        * @return This builder for chaining.
        */
@@ -937,6 +1089,10 @@ public final class QuantilesOuterClass {
 
       private double q98_ ;
       /**
+       * <pre>
+       * 98 percentile.
+       * </pre>
+       *
        * <code>double q98 = 7;</code>
        * @return The q98.
        */
@@ -945,6 +1101,10 @@ public final class QuantilesOuterClass {
         return q98_;
       }
       /**
+       * <pre>
+       * 98 percentile.
+       * </pre>
+       *
        * <code>double q98 = 7;</code>
        * @param value The q98 to set.
        * @return This builder for chaining.
@@ -956,6 +1116,10 @@ public final class QuantilesOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 98 percentile.
+       * </pre>
+       *
        * <code>double q98 = 7;</code>
        * @return This builder for chaining.
        */
@@ -968,6 +1132,10 @@ public final class QuantilesOuterClass {
 
       private double q99_ ;
       /**
+       * <pre>
+       * 99 percentile.
+       * </pre>
+       *
        * <code>double q99 = 8;</code>
        * @return The q99.
        */
@@ -976,6 +1144,10 @@ public final class QuantilesOuterClass {
         return q99_;
       }
       /**
+       * <pre>
+       * 99 percentile.
+       * </pre>
+       *
        * <code>double q99 = 8;</code>
        * @param value The q99 to set.
        * @return This builder for chaining.
@@ -987,6 +1159,10 @@ public final class QuantilesOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 99 percentile.
+       * </pre>
+       *
        * <code>double q99 = 8;</code>
        * @return This builder for chaining.
        */
@@ -999,6 +1175,10 @@ public final class QuantilesOuterClass {
 
       private double q100_ ;
       /**
+       * <pre>
+       * 100 percentile (maximum or minimum).
+       * </pre>
+       *
        * <code>double q100 = 9;</code>
        * @return The q100.
        */
@@ -1007,6 +1187,10 @@ public final class QuantilesOuterClass {
         return q100_;
       }
       /**
+       * <pre>
+       * 100 percentile (maximum or minimum).
+       * </pre>
+       *
        * <code>double q100 = 9;</code>
        * @param value The q100 to set.
        * @return This builder for chaining.
@@ -1018,6 +1202,10 @@ public final class QuantilesOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * 100 percentile (maximum or minimum).
+       * </pre>
+       *
        * <code>double q100 = 9;</code>
        * @return This builder for chaining.
        */

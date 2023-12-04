@@ -19,11 +19,19 @@ public final class AgentServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to create an agent in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to create an agent in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -31,11 +39,21 @@ public final class AgentServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * Name of the agent.
+     * A created compute instance will have the same name.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the agent.
+     * A created compute instance will have the same name.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      * @return The bytes for name.
      */
@@ -43,11 +61,21 @@ public final class AgentServiceOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the agent.
+     * A created compute instance will have the same description.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the agent.
+     * A created compute instance will have the same description.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
@@ -55,26 +83,48 @@ public final class AgentServiceOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Parameters for compute instance to be created.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.agent.CreateComputeInstance compute_instance_params = 4;</code>
      * @return Whether the computeInstanceParams field is set.
      */
     boolean hasComputeInstanceParams();
     /**
+     * <pre>
+     * Parameters for compute instance to be created.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.agent.CreateComputeInstance compute_instance_params = 4;</code>
      * @return The computeInstanceParams.
      */
     yandex.cloud.api.loadtesting.api.v1.agent.CreateComputeInstanceOuterClass.CreateComputeInstance getComputeInstanceParams();
     /**
+     * <pre>
+     * Parameters for compute instance to be created.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.agent.CreateComputeInstance compute_instance_params = 4;</code>
      */
     yandex.cloud.api.loadtesting.api.v1.agent.CreateComputeInstanceOuterClass.CreateComputeInstanceOrBuilder getComputeInstanceParamsOrBuilder();
 
     /**
+     * <pre>
+     * Version of the agent.
+     * If not provided, the most recent agent version will be used.
+     * </pre>
+     *
      * <code>string agent_version = 5;</code>
      * @return The agentVersion.
      */
     java.lang.String getAgentVersion();
     /**
+     * <pre>
+     * Version of the agent.
+     * If not provided, the most recent agent version will be used.
+     * </pre>
+     *
      * <code>string agent_version = 5;</code>
      * @return The bytes for agentVersion.
      */
@@ -202,6 +252,10 @@ public final class AgentServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to create an agent in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
@@ -219,6 +273,10 @@ public final class AgentServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to create an agent in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -240,6 +298,11 @@ public final class AgentServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the agent.
+     * A created compute instance will have the same name.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      * @return The name.
      */
@@ -257,6 +320,11 @@ public final class AgentServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the agent.
+     * A created compute instance will have the same name.
+     * </pre>
+     *
      * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
      * @return The bytes for name.
      */
@@ -278,6 +346,11 @@ public final class AgentServiceOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 3;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the agent.
+     * A created compute instance will have the same description.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
@@ -295,6 +368,11 @@ public final class AgentServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the agent.
+     * A created compute instance will have the same description.
+     * </pre>
+     *
      * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
@@ -316,6 +394,10 @@ public final class AgentServiceOuterClass {
     public static final int COMPUTE_INSTANCE_PARAMS_FIELD_NUMBER = 4;
     private yandex.cloud.api.loadtesting.api.v1.agent.CreateComputeInstanceOuterClass.CreateComputeInstance computeInstanceParams_;
     /**
+     * <pre>
+     * Parameters for compute instance to be created.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.agent.CreateComputeInstance compute_instance_params = 4;</code>
      * @return Whether the computeInstanceParams field is set.
      */
@@ -324,6 +406,10 @@ public final class AgentServiceOuterClass {
       return computeInstanceParams_ != null;
     }
     /**
+     * <pre>
+     * Parameters for compute instance to be created.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.agent.CreateComputeInstance compute_instance_params = 4;</code>
      * @return The computeInstanceParams.
      */
@@ -332,6 +418,10 @@ public final class AgentServiceOuterClass {
       return computeInstanceParams_ == null ? yandex.cloud.api.loadtesting.api.v1.agent.CreateComputeInstanceOuterClass.CreateComputeInstance.getDefaultInstance() : computeInstanceParams_;
     }
     /**
+     * <pre>
+     * Parameters for compute instance to be created.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.agent.CreateComputeInstance compute_instance_params = 4;</code>
      */
     @java.lang.Override
@@ -342,6 +432,11 @@ public final class AgentServiceOuterClass {
     public static final int AGENT_VERSION_FIELD_NUMBER = 5;
     private volatile java.lang.Object agentVersion_;
     /**
+     * <pre>
+     * Version of the agent.
+     * If not provided, the most recent agent version will be used.
+     * </pre>
+     *
      * <code>string agent_version = 5;</code>
      * @return The agentVersion.
      */
@@ -359,6 +454,11 @@ public final class AgentServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Version of the agent.
+     * If not provided, the most recent agent version will be used.
+     * </pre>
+     *
      * <code>string agent_version = 5;</code>
      * @return The bytes for agentVersion.
      */
@@ -762,6 +862,10 @@ public final class AgentServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to create an agent in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The folderId.
        */
@@ -778,6 +882,10 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create an agent in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for folderId.
        */
@@ -795,6 +903,10 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to create an agent in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -810,6 +922,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create an agent in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -820,6 +936,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to create an agent in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -838,6 +958,11 @@ public final class AgentServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the agent.
+       * A created compute instance will have the same name.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        * @return The name.
        */
@@ -854,6 +979,11 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the agent.
+       * A created compute instance will have the same name.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        * @return The bytes for name.
        */
@@ -871,6 +1001,11 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the agent.
+       * A created compute instance will have the same name.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -886,6 +1021,11 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the agent.
+       * A created compute instance will have the same name.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        * @return This builder for chaining.
        */
@@ -896,6 +1036,11 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the agent.
+       * A created compute instance will have the same name.
+       * </pre>
+       *
        * <code>string name = 2 [(.yandex.cloud.pattern) = "|[a-z][-a-z0-9]{1,61}[a-z0-9]"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -914,6 +1059,11 @@ public final class AgentServiceOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the agent.
+       * A created compute instance will have the same description.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The description.
        */
@@ -930,6 +1080,11 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the agent.
+       * A created compute instance will have the same description.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for description.
        */
@@ -947,6 +1102,11 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the agent.
+       * A created compute instance will have the same description.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -962,6 +1122,11 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the agent.
+       * A created compute instance will have the same description.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
@@ -972,6 +1137,11 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the agent.
+       * A created compute instance will have the same description.
+       * </pre>
+       *
        * <code>string description = 3 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -992,6 +1162,10 @@ public final class AgentServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.loadtesting.api.v1.agent.CreateComputeInstanceOuterClass.CreateComputeInstance, yandex.cloud.api.loadtesting.api.v1.agent.CreateComputeInstanceOuterClass.CreateComputeInstance.Builder, yandex.cloud.api.loadtesting.api.v1.agent.CreateComputeInstanceOuterClass.CreateComputeInstanceOrBuilder> computeInstanceParamsBuilder_;
       /**
+       * <pre>
+       * Parameters for compute instance to be created.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.agent.CreateComputeInstance compute_instance_params = 4;</code>
        * @return Whether the computeInstanceParams field is set.
        */
@@ -999,6 +1173,10 @@ public final class AgentServiceOuterClass {
         return computeInstanceParamsBuilder_ != null || computeInstanceParams_ != null;
       }
       /**
+       * <pre>
+       * Parameters for compute instance to be created.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.agent.CreateComputeInstance compute_instance_params = 4;</code>
        * @return The computeInstanceParams.
        */
@@ -1010,6 +1188,10 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Parameters for compute instance to be created.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.agent.CreateComputeInstance compute_instance_params = 4;</code>
        */
       public Builder setComputeInstanceParams(yandex.cloud.api.loadtesting.api.v1.agent.CreateComputeInstanceOuterClass.CreateComputeInstance value) {
@@ -1026,6 +1208,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Parameters for compute instance to be created.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.agent.CreateComputeInstance compute_instance_params = 4;</code>
        */
       public Builder setComputeInstanceParams(
@@ -1040,6 +1226,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Parameters for compute instance to be created.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.agent.CreateComputeInstance compute_instance_params = 4;</code>
        */
       public Builder mergeComputeInstanceParams(yandex.cloud.api.loadtesting.api.v1.agent.CreateComputeInstanceOuterClass.CreateComputeInstance value) {
@@ -1058,6 +1248,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Parameters for compute instance to be created.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.agent.CreateComputeInstance compute_instance_params = 4;</code>
        */
       public Builder clearComputeInstanceParams() {
@@ -1072,6 +1266,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Parameters for compute instance to be created.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.agent.CreateComputeInstance compute_instance_params = 4;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.agent.CreateComputeInstanceOuterClass.CreateComputeInstance.Builder getComputeInstanceParamsBuilder() {
@@ -1080,6 +1278,10 @@ public final class AgentServiceOuterClass {
         return getComputeInstanceParamsFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Parameters for compute instance to be created.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.agent.CreateComputeInstance compute_instance_params = 4;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.agent.CreateComputeInstanceOuterClass.CreateComputeInstanceOrBuilder getComputeInstanceParamsOrBuilder() {
@@ -1091,6 +1293,10 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Parameters for compute instance to be created.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.agent.CreateComputeInstance compute_instance_params = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1109,6 +1315,11 @@ public final class AgentServiceOuterClass {
 
       private java.lang.Object agentVersion_ = "";
       /**
+       * <pre>
+       * Version of the agent.
+       * If not provided, the most recent agent version will be used.
+       * </pre>
+       *
        * <code>string agent_version = 5;</code>
        * @return The agentVersion.
        */
@@ -1125,6 +1336,11 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Version of the agent.
+       * If not provided, the most recent agent version will be used.
+       * </pre>
+       *
        * <code>string agent_version = 5;</code>
        * @return The bytes for agentVersion.
        */
@@ -1142,6 +1358,11 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Version of the agent.
+       * If not provided, the most recent agent version will be used.
+       * </pre>
+       *
        * <code>string agent_version = 5;</code>
        * @param value The agentVersion to set.
        * @return This builder for chaining.
@@ -1157,6 +1378,11 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version of the agent.
+       * If not provided, the most recent agent version will be used.
+       * </pre>
+       *
        * <code>string agent_version = 5;</code>
        * @return This builder for chaining.
        */
@@ -1167,6 +1393,11 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Version of the agent.
+       * If not provided, the most recent agent version will be used.
+       * </pre>
+       *
        * <code>string agent_version = 5;</code>
        * @param value The bytes for agentVersion to set.
        * @return This builder for chaining.
@@ -1240,11 +1471,19 @@ public final class AgentServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the agent that is being created.
+     * </pre>
+     *
      * <code>string agent_id = 1;</code>
      * @return The agentId.
      */
     java.lang.String getAgentId();
     /**
+     * <pre>
+     * ID of the agent that is being created.
+     * </pre>
+     *
      * <code>string agent_id = 1;</code>
      * @return The bytes for agentId.
      */
@@ -1338,6 +1577,10 @@ public final class AgentServiceOuterClass {
     public static final int AGENT_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object agentId_;
     /**
+     * <pre>
+     * ID of the agent that is being created.
+     * </pre>
+     *
      * <code>string agent_id = 1;</code>
      * @return The agentId.
      */
@@ -1355,6 +1598,10 @@ public final class AgentServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the agent that is being created.
+     * </pre>
+     *
      * <code>string agent_id = 1;</code>
      * @return The bytes for agentId.
      */
@@ -1677,6 +1924,10 @@ public final class AgentServiceOuterClass {
 
       private java.lang.Object agentId_ = "";
       /**
+       * <pre>
+       * ID of the agent that is being created.
+       * </pre>
+       *
        * <code>string agent_id = 1;</code>
        * @return The agentId.
        */
@@ -1693,6 +1944,10 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the agent that is being created.
+       * </pre>
+       *
        * <code>string agent_id = 1;</code>
        * @return The bytes for agentId.
        */
@@ -1710,6 +1965,10 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the agent that is being created.
+       * </pre>
+       *
        * <code>string agent_id = 1;</code>
        * @param value The agentId to set.
        * @return This builder for chaining.
@@ -1725,6 +1984,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the agent that is being created.
+       * </pre>
+       *
        * <code>string agent_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -1735,6 +1998,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the agent that is being created.
+       * </pre>
+       *
        * <code>string agent_id = 1;</code>
        * @param value The bytes for agentId to set.
        * @return This builder for chaining.
@@ -1808,11 +2075,19 @@ public final class AgentServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the agent to return.
+     * </pre>
+     *
      * <code>string agent_id = 2;</code>
      * @return The agentId.
      */
     java.lang.String getAgentId();
     /**
+     * <pre>
+     * ID of the agent to return.
+     * </pre>
+     *
      * <code>string agent_id = 2;</code>
      * @return The bytes for agentId.
      */
@@ -1906,6 +2181,10 @@ public final class AgentServiceOuterClass {
     public static final int AGENT_ID_FIELD_NUMBER = 2;
     private volatile java.lang.Object agentId_;
     /**
+     * <pre>
+     * ID of the agent to return.
+     * </pre>
+     *
      * <code>string agent_id = 2;</code>
      * @return The agentId.
      */
@@ -1923,6 +2202,10 @@ public final class AgentServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the agent to return.
+     * </pre>
+     *
      * <code>string agent_id = 2;</code>
      * @return The bytes for agentId.
      */
@@ -2245,6 +2528,10 @@ public final class AgentServiceOuterClass {
 
       private java.lang.Object agentId_ = "";
       /**
+       * <pre>
+       * ID of the agent to return.
+       * </pre>
+       *
        * <code>string agent_id = 2;</code>
        * @return The agentId.
        */
@@ -2261,6 +2548,10 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the agent to return.
+       * </pre>
+       *
        * <code>string agent_id = 2;</code>
        * @return The bytes for agentId.
        */
@@ -2278,6 +2569,10 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the agent to return.
+       * </pre>
+       *
        * <code>string agent_id = 2;</code>
        * @param value The agentId to set.
        * @return This builder for chaining.
@@ -2293,6 +2588,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the agent to return.
+       * </pre>
+       *
        * <code>string agent_id = 2;</code>
        * @return This builder for chaining.
        */
@@ -2303,6 +2602,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the agent to return.
+       * </pre>
+       *
        * <code>string agent_id = 2;</code>
        * @param value The bytes for agentId to set.
        * @return This builder for chaining.
@@ -2376,11 +2679,19 @@ public final class AgentServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the agent to delete.
+     * </pre>
+     *
      * <code>string agent_id = 1;</code>
      * @return The agentId.
      */
     java.lang.String getAgentId();
     /**
+     * <pre>
+     * ID of the agent to delete.
+     * </pre>
+     *
      * <code>string agent_id = 1;</code>
      * @return The bytes for agentId.
      */
@@ -2474,6 +2785,10 @@ public final class AgentServiceOuterClass {
     public static final int AGENT_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object agentId_;
     /**
+     * <pre>
+     * ID of the agent to delete.
+     * </pre>
+     *
      * <code>string agent_id = 1;</code>
      * @return The agentId.
      */
@@ -2491,6 +2806,10 @@ public final class AgentServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the agent to delete.
+     * </pre>
+     *
      * <code>string agent_id = 1;</code>
      * @return The bytes for agentId.
      */
@@ -2813,6 +3132,10 @@ public final class AgentServiceOuterClass {
 
       private java.lang.Object agentId_ = "";
       /**
+       * <pre>
+       * ID of the agent to delete.
+       * </pre>
+       *
        * <code>string agent_id = 1;</code>
        * @return The agentId.
        */
@@ -2829,6 +3152,10 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the agent to delete.
+       * </pre>
+       *
        * <code>string agent_id = 1;</code>
        * @return The bytes for agentId.
        */
@@ -2846,6 +3173,10 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the agent to delete.
+       * </pre>
+       *
        * <code>string agent_id = 1;</code>
        * @param value The agentId to set.
        * @return This builder for chaining.
@@ -2861,6 +3192,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the agent to delete.
+       * </pre>
+       *
        * <code>string agent_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -2871,6 +3206,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the agent to delete.
+       * </pre>
+       *
        * <code>string agent_id = 1;</code>
        * @param value The bytes for agentId to set.
        * @return This builder for chaining.
@@ -2944,11 +3283,19 @@ public final class AgentServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the agent that is being deleted.
+     * </pre>
+     *
      * <code>string agent_id = 1;</code>
      * @return The agentId.
      */
     java.lang.String getAgentId();
     /**
+     * <pre>
+     * ID of the agent that is being deleted.
+     * </pre>
+     *
      * <code>string agent_id = 1;</code>
      * @return The bytes for agentId.
      */
@@ -3042,6 +3389,10 @@ public final class AgentServiceOuterClass {
     public static final int AGENT_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object agentId_;
     /**
+     * <pre>
+     * ID of the agent that is being deleted.
+     * </pre>
+     *
      * <code>string agent_id = 1;</code>
      * @return The agentId.
      */
@@ -3059,6 +3410,10 @@ public final class AgentServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the agent that is being deleted.
+     * </pre>
+     *
      * <code>string agent_id = 1;</code>
      * @return The bytes for agentId.
      */
@@ -3381,6 +3736,10 @@ public final class AgentServiceOuterClass {
 
       private java.lang.Object agentId_ = "";
       /**
+       * <pre>
+       * ID of the agent that is being deleted.
+       * </pre>
+       *
        * <code>string agent_id = 1;</code>
        * @return The agentId.
        */
@@ -3397,6 +3756,10 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the agent that is being deleted.
+       * </pre>
+       *
        * <code>string agent_id = 1;</code>
        * @return The bytes for agentId.
        */
@@ -3414,6 +3777,10 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the agent that is being deleted.
+       * </pre>
+       *
        * <code>string agent_id = 1;</code>
        * @param value The agentId to set.
        * @return This builder for chaining.
@@ -3429,6 +3796,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the agent that is being deleted.
+       * </pre>
+       *
        * <code>string agent_id = 1;</code>
        * @return This builder for chaining.
        */
@@ -3439,6 +3810,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the agent that is being deleted.
+       * </pre>
+       *
        * <code>string agent_id = 1;</code>
        * @param value The bytes for agentId to set.
        * @return This builder for chaining.
@@ -3512,11 +3887,19 @@ public final class AgentServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the folder to list agents in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
     java.lang.String getFolderId();
     /**
+     * <pre>
+     * ID of the folder to list agents in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -3524,17 +3907,34 @@ public final class AgentServiceOuterClass {
         getFolderIdBytes();
 
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListAgentsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
     long getPageSize();
 
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListAgentsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
     java.lang.String getPageToken();
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListAgentsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
@@ -3542,11 +3942,49 @@ public final class AgentServiceOuterClass {
         getPageTokenBytes();
 
     /**
+     * <pre>
+     * A filter expression that filters agents listed in the response.
+     * The filter expression may contain multiple field expressions joined by `AND`.
+     * The field expression must specify:
+     * 1. The field name.
+     * 2. An operator:
+     *    - `=`, `!=`, `CONTAINS`, for single values.
+     *    - `IN` or `NOT IN` for lists of values.
+     * 3. The value. String values must be encosed in `"`, boolean values are {`true`, `false`}, timestamp values in ISO-8601.
+     * Currently supported fields:
+     * - `id` [yandex.cloud.loadtesting.api.v1.agent.Agent.id]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`
+     * - `name` [yandex.cloud.loadtesting.api.v1.agent.Agent.name]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`, `CONTAINS`
+     * Examples: 
+     * - `id IN ("1", "2", "3")`
+     * - `name CONTAINS "compute-agent-large" AND id NOT IN ("4", "5")`
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The filter.
      */
     java.lang.String getFilter();
     /**
+     * <pre>
+     * A filter expression that filters agents listed in the response.
+     * The filter expression may contain multiple field expressions joined by `AND`.
+     * The field expression must specify:
+     * 1. The field name.
+     * 2. An operator:
+     *    - `=`, `!=`, `CONTAINS`, for single values.
+     *    - `IN` or `NOT IN` for lists of values.
+     * 3. The value. String values must be encosed in `"`, boolean values are {`true`, `false`}, timestamp values in ISO-8601.
+     * Currently supported fields:
+     * - `id` [yandex.cloud.loadtesting.api.v1.agent.Agent.id]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`
+     * - `name` [yandex.cloud.loadtesting.api.v1.agent.Agent.name]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`, `CONTAINS`
+     * Examples: 
+     * - `id IN ("1", "2", "3")`
+     * - `name CONTAINS "compute-agent-large" AND id NOT IN ("4", "5")`
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for filter.
      */
@@ -3659,6 +4097,10 @@ public final class AgentServiceOuterClass {
     public static final int FOLDER_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object folderId_;
     /**
+     * <pre>
+     * ID of the folder to list agents in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The folderId.
      */
@@ -3676,6 +4118,10 @@ public final class AgentServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the folder to list agents in.
+     * </pre>
+     *
      * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for folderId.
      */
@@ -3697,6 +4143,13 @@ public final class AgentServiceOuterClass {
     public static final int PAGE_SIZE_FIELD_NUMBER = 2;
     private long pageSize_;
     /**
+     * <pre>
+     * The maximum number of results per page to return. If the number of available
+     * results is larger than `page_size`, the service returns a [ListAgentsResponse.next_page_token]
+     * that can be used to get the next page of results in subsequent list requests.
+     * Default value: 100.
+     * </pre>
+     *
      * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
      * @return The pageSize.
      */
@@ -3708,6 +4161,11 @@ public final class AgentServiceOuterClass {
     public static final int PAGE_TOKEN_FIELD_NUMBER = 3;
     private volatile java.lang.Object pageToken_;
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListAgentsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The pageToken.
      */
@@ -3725,6 +4183,11 @@ public final class AgentServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Page token. To get the next page of results, set `page_token` to the 
+     * [ListAgentsResponse.next_page_token] returned by a previous list request.
+     * </pre>
+     *
      * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for pageToken.
      */
@@ -3746,6 +4209,25 @@ public final class AgentServiceOuterClass {
     public static final int FILTER_FIELD_NUMBER = 4;
     private volatile java.lang.Object filter_;
     /**
+     * <pre>
+     * A filter expression that filters agents listed in the response.
+     * The filter expression may contain multiple field expressions joined by `AND`.
+     * The field expression must specify:
+     * 1. The field name.
+     * 2. An operator:
+     *    - `=`, `!=`, `CONTAINS`, for single values.
+     *    - `IN` or `NOT IN` for lists of values.
+     * 3. The value. String values must be encosed in `"`, boolean values are {`true`, `false`}, timestamp values in ISO-8601.
+     * Currently supported fields:
+     * - `id` [yandex.cloud.loadtesting.api.v1.agent.Agent.id]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`
+     * - `name` [yandex.cloud.loadtesting.api.v1.agent.Agent.name]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`, `CONTAINS`
+     * Examples: 
+     * - `id IN ("1", "2", "3")`
+     * - `name CONTAINS "compute-agent-large" AND id NOT IN ("4", "5")`
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The filter.
      */
@@ -3763,6 +4245,25 @@ public final class AgentServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * A filter expression that filters agents listed in the response.
+     * The filter expression may contain multiple field expressions joined by `AND`.
+     * The field expression must specify:
+     * 1. The field name.
+     * 2. An operator:
+     *    - `=`, `!=`, `CONTAINS`, for single values.
+     *    - `IN` or `NOT IN` for lists of values.
+     * 3. The value. String values must be encosed in `"`, boolean values are {`true`, `false`}, timestamp values in ISO-8601.
+     * Currently supported fields:
+     * - `id` [yandex.cloud.loadtesting.api.v1.agent.Agent.id]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`
+     * - `name` [yandex.cloud.loadtesting.api.v1.agent.Agent.name]
+     *   - operators: `=`, `!=`, `IN`, `NOT IN`, `CONTAINS`
+     * Examples: 
+     * - `id IN ("1", "2", "3")`
+     * - `name CONTAINS "compute-agent-large" AND id NOT IN ("4", "5")`
+     * </pre>
+     *
      * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
      * @return The bytes for filter.
      */
@@ -4137,6 +4638,10 @@ public final class AgentServiceOuterClass {
 
       private java.lang.Object folderId_ = "";
       /**
+       * <pre>
+       * ID of the folder to list agents in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The folderId.
        */
@@ -4153,6 +4658,10 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list agents in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for folderId.
        */
@@ -4170,6 +4679,10 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the folder to list agents in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The folderId to set.
        * @return This builder for chaining.
@@ -4185,6 +4698,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list agents in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
@@ -4195,6 +4712,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the folder to list agents in.
+       * </pre>
+       *
        * <code>string folder_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for folderId to set.
        * @return This builder for chaining.
@@ -4213,6 +4734,13 @@ public final class AgentServiceOuterClass {
 
       private long pageSize_ ;
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListAgentsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return The pageSize.
        */
@@ -4221,6 +4749,13 @@ public final class AgentServiceOuterClass {
         return pageSize_;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListAgentsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @param value The pageSize to set.
        * @return This builder for chaining.
@@ -4232,6 +4767,13 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * The maximum number of results per page to return. If the number of available
+       * results is larger than `page_size`, the service returns a [ListAgentsResponse.next_page_token]
+       * that can be used to get the next page of results in subsequent list requests.
+       * Default value: 100.
+       * </pre>
+       *
        * <code>int64 page_size = 2 [(.yandex.cloud.value) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
@@ -4244,6 +4786,11 @@ public final class AgentServiceOuterClass {
 
       private java.lang.Object pageToken_ = "";
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListAgentsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The pageToken.
        */
@@ -4260,6 +4807,11 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListAgentsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The bytes for pageToken.
        */
@@ -4277,6 +4829,11 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListAgentsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The pageToken to set.
        * @return This builder for chaining.
@@ -4292,6 +4849,11 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListAgentsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
@@ -4302,6 +4864,11 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Page token. To get the next page of results, set `page_token` to the 
+       * [ListAgentsResponse.next_page_token] returned by a previous list request.
+       * </pre>
+       *
        * <code>string page_token = 3 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The bytes for pageToken to set.
        * @return This builder for chaining.
@@ -4320,6 +4887,25 @@ public final class AgentServiceOuterClass {
 
       private java.lang.Object filter_ = "";
       /**
+       * <pre>
+       * A filter expression that filters agents listed in the response.
+       * The filter expression may contain multiple field expressions joined by `AND`.
+       * The field expression must specify:
+       * 1. The field name.
+       * 2. An operator:
+       *    - `=`, `!=`, `CONTAINS`, for single values.
+       *    - `IN` or `NOT IN` for lists of values.
+       * 3. The value. String values must be encosed in `"`, boolean values are {`true`, `false`}, timestamp values in ISO-8601.
+       * Currently supported fields:
+       * - `id` [yandex.cloud.loadtesting.api.v1.agent.Agent.id]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`
+       * - `name` [yandex.cloud.loadtesting.api.v1.agent.Agent.name]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`, `CONTAINS`
+       * Examples: 
+       * - `id IN ("1", "2", "3")`
+       * - `name CONTAINS "compute-agent-large" AND id NOT IN ("4", "5")`
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The filter.
        */
@@ -4336,6 +4922,25 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters agents listed in the response.
+       * The filter expression may contain multiple field expressions joined by `AND`.
+       * The field expression must specify:
+       * 1. The field name.
+       * 2. An operator:
+       *    - `=`, `!=`, `CONTAINS`, for single values.
+       *    - `IN` or `NOT IN` for lists of values.
+       * 3. The value. String values must be encosed in `"`, boolean values are {`true`, `false`}, timestamp values in ISO-8601.
+       * Currently supported fields:
+       * - `id` [yandex.cloud.loadtesting.api.v1.agent.Agent.id]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`
+       * - `name` [yandex.cloud.loadtesting.api.v1.agent.Agent.name]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`, `CONTAINS`
+       * Examples: 
+       * - `id IN ("1", "2", "3")`
+       * - `name CONTAINS "compute-agent-large" AND id NOT IN ("4", "5")`
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return The bytes for filter.
        */
@@ -4353,6 +4958,25 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * A filter expression that filters agents listed in the response.
+       * The filter expression may contain multiple field expressions joined by `AND`.
+       * The field expression must specify:
+       * 1. The field name.
+       * 2. An operator:
+       *    - `=`, `!=`, `CONTAINS`, for single values.
+       *    - `IN` or `NOT IN` for lists of values.
+       * 3. The value. String values must be encosed in `"`, boolean values are {`true`, `false`}, timestamp values in ISO-8601.
+       * Currently supported fields:
+       * - `id` [yandex.cloud.loadtesting.api.v1.agent.Agent.id]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`
+       * - `name` [yandex.cloud.loadtesting.api.v1.agent.Agent.name]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`, `CONTAINS`
+       * Examples: 
+       * - `id IN ("1", "2", "3")`
+       * - `name CONTAINS "compute-agent-large" AND id NOT IN ("4", "5")`
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The filter to set.
        * @return This builder for chaining.
@@ -4368,6 +4992,25 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters agents listed in the response.
+       * The filter expression may contain multiple field expressions joined by `AND`.
+       * The field expression must specify:
+       * 1. The field name.
+       * 2. An operator:
+       *    - `=`, `!=`, `CONTAINS`, for single values.
+       *    - `IN` or `NOT IN` for lists of values.
+       * 3. The value. String values must be encosed in `"`, boolean values are {`true`, `false`}, timestamp values in ISO-8601.
+       * Currently supported fields:
+       * - `id` [yandex.cloud.loadtesting.api.v1.agent.Agent.id]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`
+       * - `name` [yandex.cloud.loadtesting.api.v1.agent.Agent.name]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`, `CONTAINS`
+       * Examples: 
+       * - `id IN ("1", "2", "3")`
+       * - `name CONTAINS "compute-agent-large" AND id NOT IN ("4", "5")`
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @return This builder for chaining.
        */
@@ -4378,6 +5021,25 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * A filter expression that filters agents listed in the response.
+       * The filter expression may contain multiple field expressions joined by `AND`.
+       * The field expression must specify:
+       * 1. The field name.
+       * 2. An operator:
+       *    - `=`, `!=`, `CONTAINS`, for single values.
+       *    - `IN` or `NOT IN` for lists of values.
+       * 3. The value. String values must be encosed in `"`, boolean values are {`true`, `false`}, timestamp values in ISO-8601.
+       * Currently supported fields:
+       * - `id` [yandex.cloud.loadtesting.api.v1.agent.Agent.id]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`
+       * - `name` [yandex.cloud.loadtesting.api.v1.agent.Agent.name]
+       *   - operators: `=`, `!=`, `IN`, `NOT IN`, `CONTAINS`
+       * Examples: 
+       * - `id IN ("1", "2", "3")`
+       * - `name CONTAINS "compute-agent-large" AND id NOT IN ("4", "5")`
+       * </pre>
+       *
        * <code>string filter = 4 [(.yandex.cloud.length) = "&lt;=1000"];</code>
        * @param value The bytes for filter to set.
        * @return This builder for chaining.
@@ -4451,35 +5113,69 @@ public final class AgentServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * List of agents in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
      */
     java.util.List<yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.Agent> 
         getAgentsList();
     /**
+     * <pre>
+     * List of agents in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
      */
     yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.Agent getAgents(int index);
     /**
+     * <pre>
+     * List of agents in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
      */
     int getAgentsCount();
     /**
+     * <pre>
+     * List of agents in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
      */
     java.util.List<? extends yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.AgentOrBuilder> 
         getAgentsOrBuilderList();
     /**
+     * <pre>
+     * List of agents in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
      */
     yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.AgentOrBuilder getAgentsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListAgentsRequest.page_size], use `next_page_token` as the value
+     * for the [ListAgentsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The nextPageToken.
      */
     java.lang.String getNextPageToken();
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListAgentsRequest.page_size], use `next_page_token` as the value
+     * for the [ListAgentsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for nextPageToken.
      */
@@ -4587,6 +5283,10 @@ public final class AgentServiceOuterClass {
     public static final int AGENTS_FIELD_NUMBER = 1;
     private java.util.List<yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.Agent> agents_;
     /**
+     * <pre>
+     * List of agents in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
      */
     @java.lang.Override
@@ -4594,6 +5294,10 @@ public final class AgentServiceOuterClass {
       return agents_;
     }
     /**
+     * <pre>
+     * List of agents in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
      */
     @java.lang.Override
@@ -4602,6 +5306,10 @@ public final class AgentServiceOuterClass {
       return agents_;
     }
     /**
+     * <pre>
+     * List of agents in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
      */
     @java.lang.Override
@@ -4609,6 +5317,10 @@ public final class AgentServiceOuterClass {
       return agents_.size();
     }
     /**
+     * <pre>
+     * List of agents in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
      */
     @java.lang.Override
@@ -4616,6 +5328,10 @@ public final class AgentServiceOuterClass {
       return agents_.get(index);
     }
     /**
+     * <pre>
+     * List of agents in the specified folder.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
      */
     @java.lang.Override
@@ -4627,6 +5343,13 @@ public final class AgentServiceOuterClass {
     public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
     private volatile java.lang.Object nextPageToken_;
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListAgentsRequest.page_size], use `next_page_token` as the value
+     * for the [ListAgentsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The nextPageToken.
      */
@@ -4644,6 +5367,13 @@ public final class AgentServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * Token for getting the next page of the list. If the number of results is greater than
+     * the specified [ListAgentsRequest.page_size], use `next_page_token` as the value
+     * for the [ListAgentsRequest.page_token] parameter in the next list request.
+     * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+     * </pre>
+     *
      * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
      * @return The bytes for nextPageToken.
      */
@@ -5034,6 +5764,10 @@ public final class AgentServiceOuterClass {
           yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.Agent, yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.Agent.Builder, yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.AgentOrBuilder> agentsBuilder_;
 
       /**
+       * <pre>
+       * List of agents in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
        */
       public java.util.List<yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.Agent> getAgentsList() {
@@ -5044,6 +5778,10 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of agents in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
        */
       public int getAgentsCount() {
@@ -5054,6 +5792,10 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of agents in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.Agent getAgents(int index) {
@@ -5064,6 +5806,10 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of agents in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
        */
       public Builder setAgents(
@@ -5081,6 +5827,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of agents in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
        */
       public Builder setAgents(
@@ -5095,6 +5845,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of agents in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
        */
       public Builder addAgents(yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.Agent value) {
@@ -5111,6 +5865,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of agents in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
        */
       public Builder addAgents(
@@ -5128,6 +5886,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of agents in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
        */
       public Builder addAgents(
@@ -5142,6 +5904,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of agents in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
        */
       public Builder addAgents(
@@ -5156,6 +5922,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of agents in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
        */
       public Builder addAllAgents(
@@ -5171,6 +5941,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of agents in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
        */
       public Builder clearAgents() {
@@ -5184,6 +5958,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of agents in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
        */
       public Builder removeAgents(int index) {
@@ -5197,6 +5975,10 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * List of agents in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.Agent.Builder getAgentsBuilder(
@@ -5204,6 +5986,10 @@ public final class AgentServiceOuterClass {
         return getAgentsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * List of agents in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.AgentOrBuilder getAgentsOrBuilder(
@@ -5214,6 +6000,10 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of agents in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
        */
       public java.util.List<? extends yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.AgentOrBuilder> 
@@ -5225,6 +6015,10 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * List of agents in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.Agent.Builder addAgentsBuilder() {
@@ -5232,6 +6026,10 @@ public final class AgentServiceOuterClass {
             yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.Agent.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of agents in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.Agent.Builder addAgentsBuilder(
@@ -5240,6 +6038,10 @@ public final class AgentServiceOuterClass {
             index, yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.Agent.getDefaultInstance());
       }
       /**
+       * <pre>
+       * List of agents in the specified folder.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.agent.Agent agents = 1;</code>
        */
       public java.util.List<yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.Agent.Builder> 
@@ -5263,6 +6065,13 @@ public final class AgentServiceOuterClass {
 
       private java.lang.Object nextPageToken_ = "";
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListAgentsRequest.page_size], use `next_page_token` as the value
+       * for the [ListAgentsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The nextPageToken.
        */
@@ -5279,6 +6088,13 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListAgentsRequest.page_size], use `next_page_token` as the value
+       * for the [ListAgentsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return The bytes for nextPageToken.
        */
@@ -5296,6 +6112,13 @@ public final class AgentServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListAgentsRequest.page_size], use `next_page_token` as the value
+       * for the [ListAgentsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The nextPageToken to set.
        * @return This builder for chaining.
@@ -5311,6 +6134,13 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListAgentsRequest.page_size], use `next_page_token` as the value
+       * for the [ListAgentsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @return This builder for chaining.
        */
@@ -5321,6 +6151,13 @@ public final class AgentServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Token for getting the next page of the list. If the number of results is greater than
+       * the specified [ListAgentsRequest.page_size], use `next_page_token` as the value
+       * for the [ListAgentsRequest.page_token] parameter in the next list request.
+       * Each subsequent page will have its own `next_page_token` to continue paging through the results.
+       * </pre>
+       *
        * <code>string next_page_token = 2 [(.yandex.cloud.length) = "&lt;=100"];</code>
        * @param value The bytes for nextPageToken to set.
        * @return This builder for chaining.

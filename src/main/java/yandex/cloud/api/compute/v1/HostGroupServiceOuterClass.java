@@ -3307,7 +3307,7 @@ public final class HostGroupServiceOuterClass {
      * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 7;</code>
      * @return The maintenancePolicy.
      */
-    yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy getMaintenancePolicy();
+    yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy getMaintenancePolicy();
 
     /**
      * <pre>
@@ -3844,10 +3844,10 @@ public final class HostGroupServiceOuterClass {
      * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 7;</code>
      * @return The maintenancePolicy.
      */
-    @java.lang.Override public yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy getMaintenancePolicy() {
+    @java.lang.Override public yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy getMaintenancePolicy() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy result = yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.valueOf(maintenancePolicy_);
-      return result == null ? yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.UNRECOGNIZED : result;
+      yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy result = yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.valueOf(maintenancePolicy_);
+      return result == null ? yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.UNRECOGNIZED : result;
     }
 
     public static final int SCALE_POLICY_FIELD_NUMBER = 8;
@@ -3923,7 +3923,7 @@ public final class HostGroupServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(typeId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, typeId_);
       }
-      if (maintenancePolicy_ != yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.MAINTENANCE_POLICY_UNSPECIFIED.getNumber()) {
+      if (maintenancePolicy_ != yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.MAINTENANCE_POLICY_UNSPECIFIED.getNumber()) {
         output.writeEnum(7, maintenancePolicy_);
       }
       if (scalePolicy_ != null) {
@@ -3963,7 +3963,7 @@ public final class HostGroupServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(typeId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, typeId_);
       }
-      if (maintenancePolicy_ != yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.MAINTENANCE_POLICY_UNSPECIFIED.getNumber()) {
+      if (maintenancePolicy_ != yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.MAINTENANCE_POLICY_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(7, maintenancePolicy_);
       }
@@ -5035,10 +5035,10 @@ public final class HostGroupServiceOuterClass {
        * @return The maintenancePolicy.
        */
       @java.lang.Override
-      public yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy getMaintenancePolicy() {
+      public yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy getMaintenancePolicy() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy result = yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.valueOf(maintenancePolicy_);
-        return result == null ? yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.UNRECOGNIZED : result;
+        yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy result = yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.valueOf(maintenancePolicy_);
+        return result == null ? yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -5049,7 +5049,7 @@ public final class HostGroupServiceOuterClass {
        * @param value The maintenancePolicy to set.
        * @return This builder for chaining.
        */
-      public Builder setMaintenancePolicy(yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy value) {
+      public Builder setMaintenancePolicy(yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -6053,7 +6053,7 @@ public final class HostGroupServiceOuterClass {
      * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 6;</code>
      * @return The maintenancePolicy.
      */
-    yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy getMaintenancePolicy();
+    yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy getMaintenancePolicy();
 
     /**
      * <pre>
@@ -6539,10 +6539,10 @@ public final class HostGroupServiceOuterClass {
      * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 6;</code>
      * @return The maintenancePolicy.
      */
-    @java.lang.Override public yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy getMaintenancePolicy() {
+    @java.lang.Override public yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy getMaintenancePolicy() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy result = yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.valueOf(maintenancePolicy_);
-      return result == null ? yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.UNRECOGNIZED : result;
+      yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy result = yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.valueOf(maintenancePolicy_);
+      return result == null ? yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.UNRECOGNIZED : result;
     }
 
     public static final int SCALE_POLICY_FIELD_NUMBER = 7;
@@ -6615,7 +6615,7 @@ public final class HostGroupServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           5);
-      if (maintenancePolicy_ != yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.MAINTENANCE_POLICY_UNSPECIFIED.getNumber()) {
+      if (maintenancePolicy_ != yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.MAINTENANCE_POLICY_UNSPECIFIED.getNumber()) {
         output.writeEnum(6, maintenancePolicy_);
       }
       if (scalePolicy_ != null) {
@@ -6653,7 +6653,7 @@ public final class HostGroupServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(5, labels__);
       }
-      if (maintenancePolicy_ != yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.MAINTENANCE_POLICY_UNSPECIFIED.getNumber()) {
+      if (maintenancePolicy_ != yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.MAINTENANCE_POLICY_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, maintenancePolicy_);
       }
@@ -7696,10 +7696,10 @@ public final class HostGroupServiceOuterClass {
        * @return The maintenancePolicy.
        */
       @java.lang.Override
-      public yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy getMaintenancePolicy() {
+      public yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy getMaintenancePolicy() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy result = yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.valueOf(maintenancePolicy_);
-        return result == null ? yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.UNRECOGNIZED : result;
+        yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy result = yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.valueOf(maintenancePolicy_);
+        return result == null ? yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -7710,7 +7710,7 @@ public final class HostGroupServiceOuterClass {
        * @param value The maintenancePolicy to set.
        * @return This builder for chaining.
        */
-      public Builder setMaintenancePolicy(yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy value) {
+      public Builder setMaintenancePolicy(yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -18326,135 +18326,136 @@ public final class HostGroupServiceOuterClass {
       ".proto\032 yandex/cloud/api/operation.proto" +
       "\032&yandex/cloud/compute/v1/instance.proto" +
       "\032(yandex/cloud/compute/v1/host_group.pro" +
-      "to\032&yandex/cloud/operation/operation.pro" +
-      "to\032\035yandex/cloud/validation.proto\":\n\023Get" +
-      "HostGroupRequest\022#\n\rhost_group_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\"\257\001\n\025ListHostGroupsRequest\022" +
-      "\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage" +
-      "_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 " +
-      "\001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<=10" +
-      "00\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=100\"j\n\026ListH" +
-      "ostGroupsResponse\0227\n\013host_groups\030\001 \003(\0132\"" +
-      ".yandex.cloud.compute.v1.HostGroup\022\027\n\017ne" +
-      "xt_page_token\030\002 \001(\t\"\225\004\n\026CreateHostGroupR" +
-      "equest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
-      "2\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61" +
-      "}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101\005<=" +
-      "256\022\224\001\n\006labels\030\004 \003(\0132;.yandex.cloud.comp" +
-      "ute.v1.CreateHostGroupRequest.LabelsEntr" +
-      "yBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\310" +
-      "1\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\035\n\007zo" +
-      "ne_id\030\005 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\007type_id\030\006 \001" +
-      "(\tB\014\350\3071\001\212\3101\004<=50\022F\n\022maintenance_policy\030\007" +
-      " \001(\0162*.yandex.cloud.compute.v1.Maintenan" +
-      "cePolicy\022:\n\014scale_policy\030\010 \001(\0132$.yandex." +
-      "cloud.compute.v1.ScalePolicy\032-\n\013LabelsEn" +
-      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"0\n\027C" +
-      "reateHostGroupMetadata\022\025\n\rhost_group_id\030" +
-      "\001 \001(\t\"\214\004\n\026UpdateHostGroupRequest\022#\n\rhost" +
-      "_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_" +
-      "mask\030\002 \001(\0132\032.google.protobuf.FieldMask\0222" +
-      "\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0,61}" +
-      "[a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005<=2" +
-      "56\022\224\001\n\006labels\030\005 \003(\0132;.yandex.cloud.compu" +
-      "te.v1.UpdateHostGroupRequest.LabelsEntry" +
-      "BG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*\262\3101" +
-      "\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022F\n\022mai" +
-      "ntenance_policy\030\006 \001(\0162*.yandex.cloud.com" +
-      "pute.v1.MaintenancePolicy\022:\n\014scale_polic" +
-      "y\030\007 \001(\0132$.yandex.cloud.compute.v1.ScaleP" +
-      "olicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005val" +
-      "ue\030\002 \001(\t:\0028\001\"0\n\027UpdateHostGroupMetadata\022" +
-      "\025\n\rhost_group_id\030\001 \001(\t\"=\n\026DeleteHostGrou" +
-      "pRequest\022#\n\rhost_group_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\"0\n\027DeleteHostGroupMetadata\022\025\n\rhost" +
-      "_group_id\030\001 \001(\t\"\236\001\n\035ListHostGroupInstanc" +
-      "esRequest\022#\n\rhost_group_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n" +
-      "\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004" +
-      " \001(\tB\n\212\3101\006<=1000\"o\n\036ListHostGroupInstanc" +
-      "esResponse\0224\n\tinstances\030\001 \003(\0132!.yandex.c" +
-      "loud.compute.v1.Instance\022\027\n\017next_page_to" +
-      "ken\030\002 \001(\t\"~\n\031ListHostGroupHostsRequest\022#" +
-      "\n\rhost_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tp" +
+      "to\032)yandex/cloud/compute/v1/maintenance." +
+      "proto\032&yandex/cloud/operation/operation." +
+      "proto\032\035yandex/cloud/validation.proto\":\n\023" +
+      "GetHostGroupRequest\022#\n\rhost_group_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\"\257\001\n\025ListHostGroupsReque" +
+      "st\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tp" +
       "age_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_token" +
-      "\030\003 \001(\tB\t\212\3101\005<=100\"c\n\032ListHostGroupHostsR" +
-      "esponse\022,\n\005hosts\030\001 \003(\0132\035.yandex.cloud.co" +
-      "mpute.v1.Host\022\027\n\017next_page_token\030\002 \001(\t\"\302" +
-      "\001\n\032UpdateHostGroupHostRequest\022#\n\rhost_gr" +
-      "oup_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\007host_id\030\002 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\003 \001(\0132\032" +
-      ".google.protobuf.FieldMask\022/\n\013deadline_a" +
-      "t\030\004 \001(\0132\032.google.protobuf.Timestamp\"E\n\033U" +
-      "pdateHostGroupHostMetadata\022\025\n\rhost_group" +
-      "_id\030\001 \001(\t\022\017\n\007host_id\030\002 \001(\t\"\203\001\n\036ListHostG" +
-      "roupOperationsRequest\022#\n\rhost_group_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372" +
-      "\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100" +
-      "\"q\n\037ListHostGroupOperationsResponse\0225\n\no" +
-      "perations\030\001 \003(\0132!.yandex.cloud.operation" +
-      ".Operation\022\027\n\017next_page_token\030\002 \001(\t2\376\021\n\020" +
-      "HostGroupService\022\207\001\n\003Get\022,.yandex.cloud." +
-      "compute.v1.GetHostGroupRequest\032\".yandex." +
-      "cloud.compute.v1.HostGroup\".\202\323\344\223\002(\022&/com" +
-      "pute/v1/hostGroups/{host_group_id}\022\207\001\n\004L" +
-      "ist\022..yandex.cloud.compute.v1.ListHostGr" +
-      "oupsRequest\032/.yandex.cloud.compute.v1.Li" +
-      "stHostGroupsResponse\"\036\202\323\344\223\002\030\022\026/compute/v" +
-      "1/hostGroups\022\247\001\n\006Create\022/.yandex.cloud.c" +
-      "ompute.v1.CreateHostGroupRequest\032!.yande" +
-      "x.cloud.operation.Operation\"I\202\323\344\223\002\033\"\026/co" +
-      "mpute/v1/hostGroups:\001*\262\322*$\n\027CreateHostGr" +
-      "oupMetadata\022\tHostGroup\022\267\001\n\006Update\022/.yand" +
-      "ex.cloud.compute.v1.UpdateHostGroupReque" +
-      "st\032!.yandex.cloud.operation.Operation\"Y\202" +
-      "\323\344\223\002+2&/compute/v1/hostGroups/{host_grou" +
-      "p_id}:\001*\262\322*$\n\027UpdateHostGroupMetadata\022\tH" +
-      "ostGroup\022\300\001\n\006Delete\022/.yandex.cloud.compu" +
-      "te.v1.DeleteHostGroupRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"b\202\323\344\223\002(*&/comput" +
-      "e/v1/hostGroups/{host_group_id}\262\322*0\n\027Del" +
-      "eteHostGroupMetadata\022\025google.protobuf.Em" +
-      "pty\022\276\001\n\016ListOperations\0227.yandex.cloud.co" +
-      "mpute.v1.ListHostGroupOperationsRequest\032" +
-      "8.yandex.cloud.compute.v1.ListHostGroupO" +
-      "perationsResponse\"9\202\323\344\223\0023\0221/compute/v1/h" +
-      "ostGroups/{host_group_id}/operations\022\272\001\n" +
-      "\rListInstances\0226.yandex.cloud.compute.v1" +
-      ".ListHostGroupInstancesRequest\0327.yandex." +
-      "cloud.compute.v1.ListHostGroupInstancesR" +
-      "esponse\"8\202\323\344\223\0022\0220/compute/v1/hostGroups/" +
-      "{host_group_id}/instances\022\252\001\n\tListHosts\022" +
-      "2.yandex.cloud.compute.v1.ListHostGroupH" +
-      "ostsRequest\0323.yandex.cloud.compute.v1.Li" +
-      "stHostGroupHostsResponse\"4\202\323\344\223\002.\022,/compu" +
-      "te/v1/hostGroups/{host_group_id}/hosts\022\316" +
-      "\001\n\nUpdateHost\0223.yandex.cloud.compute.v1." +
-      "UpdateHostGroupHostRequest\032!.yandex.clou" +
-      "d.operation.Operation\"h\202\323\344\223\002;26/compute/" +
-      "v1/hostGroups/{host_group_id}/hosts/{hos" +
-      "t_id}:\001*\262\322*#\n\033UpdateHostGroupHostMetadat" +
-      "a\022\004Host\022\266\001\n\022ListAccessBindings\022..yandex." +
-      "cloud.access.ListAccessBindingsRequest\032/" +
-      ".yandex.cloud.access.ListAccessBindingsR" +
-      "esponse\"?\202\323\344\223\0029\0227/compute/v1/hostGroups/" +
-      "{resource_id}:listAccessBindings\022\365\001\n\021Set" +
-      "AccessBindings\022-.yandex.cloud.access.Set" +
-      "AccessBindingsRequest\032!.yandex.cloud.ope" +
-      "ration.Operation\"\215\001\202\323\344\223\002;\"6/compute/v1/h" +
-      "ostGroups/{resource_id}:setAccessBinding" +
-      "s:\001*\262\322*H\n access.SetAccessBindingsMetada" +
-      "ta\022$access.AccessBindingsOperationResult" +
-      "\022\201\002\n\024UpdateAccessBindings\0220.yandex.cloud" +
-      ".access.UpdateAccessBindingsRequest\032!.ya" +
-      "ndex.cloud.operation.Operation\"\223\001\202\323\344\223\002>\"" +
-      "9/compute/v1/hostGroups/{resource_id}:up" +
-      "dateAccessBindings:\001*\262\322*K\n#access.Update" +
-      "AccessBindingsMetadata\022$access.AccessBin" +
-      "dingsOperationResultBb\n\033yandex.cloud.api" +
-      ".compute.v1ZCgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/compute/v1;compute" +
-      "b\006proto3"
+      "\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030\004 \001(\tB\n\212\3101\006<" +
+      "=1000\022\033\n\010order_by\030\005 \001(\tB\t\212\3101\005<=100\"j\n\026Li" +
+      "stHostGroupsResponse\0227\n\013host_groups\030\001 \003(" +
+      "\0132\".yandex.cloud.compute.v1.HostGroup\022\027\n" +
+      "\017next_page_token\030\002 \001(\t\"\225\004\n\026CreateHostGro" +
+      "upRequest\022\037\n\tfolder_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\0222\n\004name\030\002 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0" +
+      ",61}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB\t\212\3101" +
+      "\005<=256\022\224\001\n\006labels\030\004 \003(\0132;.yandex.cloud.c" +
+      "ompute.v1.CreateHostGroupRequest.LabelsE" +
+      "ntryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]" +
+      "*\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022\035\n" +
+      "\007zone_id\030\005 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\007type_id\030" +
+      "\006 \001(\tB\014\350\3071\001\212\3101\004<=50\022F\n\022maintenance_polic" +
+      "y\030\007 \001(\0162*.yandex.cloud.compute.v1.Mainte" +
+      "nancePolicy\022:\n\014scale_policy\030\010 \001(\0132$.yand" +
+      "ex.cloud.compute.v1.ScalePolicy\032-\n\013Label" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"0" +
+      "\n\027CreateHostGroupMetadata\022\025\n\rhost_group_" +
+      "id\030\001 \001(\t\"\214\004\n\026UpdateHostGroupRequest\022#\n\rh" +
+      "ost_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013upda" +
+      "te_mask\030\002 \001(\0132\032.google.protobuf.FieldMas" +
+      "k\0222\n\004name\030\003 \001(\tB$\362\3071 |[a-z]([-a-z0-9]{0," +
+      "61}[a-z0-9])?\022\036\n\013description\030\004 \001(\tB\t\212\3101\005" +
+      "<=256\022\224\001\n\006labels\030\005 \003(\0132;.yandex.cloud.co" +
+      "mpute.v1.UpdateHostGroupRequest.LabelsEn" +
+      "tryBG\202\3101\004<=64\212\3101\004<=63\362\3071\017[-_./\\@0-9a-z]*" +
+      "\262\3101\006\032\0041-63\262\3101\026\022\024[a-z][-_./\\@0-9a-z]*\022F\n\022" +
+      "maintenance_policy\030\006 \001(\0162*.yandex.cloud." +
+      "compute.v1.MaintenancePolicy\022:\n\014scale_po" +
+      "licy\030\007 \001(\0132$.yandex.cloud.compute.v1.Sca" +
+      "lePolicy\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t:\0028\001\"0\n\027UpdateHostGroupMetada" +
+      "ta\022\025\n\rhost_group_id\030\001 \001(\t\"=\n\026DeleteHostG" +
+      "roupRequest\022#\n\rhost_group_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\"0\n\027DeleteHostGroupMetadata\022\025\n\rh" +
+      "ost_group_id\030\001 \001(\t\"\236\001\n\035ListHostGroupInst" +
+      "ancesRequest\022#\n\rhost_group_id\030\001 \001(\tB\014\350\3071" +
+      "\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000" +
+      "\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filte" +
+      "r\030\004 \001(\tB\n\212\3101\006<=1000\"o\n\036ListHostGroupInst" +
+      "ancesResponse\0224\n\tinstances\030\001 \003(\0132!.yande" +
+      "x.cloud.compute.v1.Instance\022\027\n\017next_page" +
+      "_token\030\002 \001(\t\"~\n\031ListHostGroupHostsReques" +
+      "t\022#\n\rhost_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035" +
+      "\n\tpage_size\030\002 \001(\003B\n\372\3071\006<=1000\022\035\n\npage_to" +
+      "ken\030\003 \001(\tB\t\212\3101\005<=100\"c\n\032ListHostGroupHos" +
+      "tsResponse\022,\n\005hosts\030\001 \003(\0132\035.yandex.cloud" +
+      ".compute.v1.Host\022\027\n\017next_page_token\030\002 \001(" +
+      "\t\"\302\001\n\032UpdateHostGroupHostRequest\022#\n\rhost" +
+      "_group_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\007host_id" +
+      "\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mask\030\003 \001(" +
+      "\0132\032.google.protobuf.FieldMask\022/\n\013deadlin" +
+      "e_at\030\004 \001(\0132\032.google.protobuf.Timestamp\"E" +
+      "\n\033UpdateHostGroupHostMetadata\022\025\n\rhost_gr" +
+      "oup_id\030\001 \001(\t\022\017\n\007host_id\030\002 \001(\t\"\203\001\n\036ListHo" +
+      "stGroupOperationsRequest\022#\n\rhost_group_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\035\n\tpage_size\030\002 \001(\003" +
+      "B\n\372\3071\006<=1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=" +
+      "100\"q\n\037ListHostGroupOperationsResponse\0225" +
+      "\n\noperations\030\001 \003(\0132!.yandex.cloud.operat" +
+      "ion.Operation\022\027\n\017next_page_token\030\002 \001(\t2\376" +
+      "\021\n\020HostGroupService\022\207\001\n\003Get\022,.yandex.clo" +
+      "ud.compute.v1.GetHostGroupRequest\032\".yand" +
+      "ex.cloud.compute.v1.HostGroup\".\202\323\344\223\002(\022&/" +
+      "compute/v1/hostGroups/{host_group_id}\022\207\001" +
+      "\n\004List\022..yandex.cloud.compute.v1.ListHos" +
+      "tGroupsRequest\032/.yandex.cloud.compute.v1" +
+      ".ListHostGroupsResponse\"\036\202\323\344\223\002\030\022\026/comput" +
+      "e/v1/hostGroups\022\247\001\n\006Create\022/.yandex.clou" +
+      "d.compute.v1.CreateHostGroupRequest\032!.ya" +
+      "ndex.cloud.operation.Operation\"I\202\323\344\223\002\033\"\026" +
+      "/compute/v1/hostGroups:\001*\262\322*$\n\027CreateHos" +
+      "tGroupMetadata\022\tHostGroup\022\267\001\n\006Update\022/.y" +
+      "andex.cloud.compute.v1.UpdateHostGroupRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"Y\202\323\344\223\002+2&/compute/v1/hostGroups/{host_g" +
+      "roup_id}:\001*\262\322*$\n\027UpdateHostGroupMetadata" +
+      "\022\tHostGroup\022\300\001\n\006Delete\022/.yandex.cloud.co" +
+      "mpute.v1.DeleteHostGroupRequest\032!.yandex" +
+      ".cloud.operation.Operation\"b\202\323\344\223\002(*&/com" +
+      "pute/v1/hostGroups/{host_group_id}\262\322*0\n\027" +
+      "DeleteHostGroupMetadata\022\025google.protobuf" +
+      ".Empty\022\276\001\n\016ListOperations\0227.yandex.cloud" +
+      ".compute.v1.ListHostGroupOperationsReque" +
+      "st\0328.yandex.cloud.compute.v1.ListHostGro" +
+      "upOperationsResponse\"9\202\323\344\223\0023\0221/compute/v" +
+      "1/hostGroups/{host_group_id}/operations\022" +
+      "\272\001\n\rListInstances\0226.yandex.cloud.compute" +
+      ".v1.ListHostGroupInstancesRequest\0327.yand" +
+      "ex.cloud.compute.v1.ListHostGroupInstanc" +
+      "esResponse\"8\202\323\344\223\0022\0220/compute/v1/hostGrou" +
+      "ps/{host_group_id}/instances\022\252\001\n\tListHos" +
+      "ts\0222.yandex.cloud.compute.v1.ListHostGro" +
+      "upHostsRequest\0323.yandex.cloud.compute.v1" +
+      ".ListHostGroupHostsResponse\"4\202\323\344\223\002.\022,/co" +
+      "mpute/v1/hostGroups/{host_group_id}/host" +
+      "s\022\316\001\n\nUpdateHost\0223.yandex.cloud.compute." +
+      "v1.UpdateHostGroupHostRequest\032!.yandex.c" +
+      "loud.operation.Operation\"h\202\323\344\223\002;26/compu" +
+      "te/v1/hostGroups/{host_group_id}/hosts/{" +
+      "host_id}:\001*\262\322*#\n\033UpdateHostGroupHostMeta" +
+      "data\022\004Host\022\266\001\n\022ListAccessBindings\022..yand" +
+      "ex.cloud.access.ListAccessBindingsReques" +
+      "t\032/.yandex.cloud.access.ListAccessBindin" +
+      "gsResponse\"?\202\323\344\223\0029\0227/compute/v1/hostGrou" +
+      "ps/{resource_id}:listAccessBindings\022\365\001\n\021" +
+      "SetAccessBindings\022-.yandex.cloud.access." +
+      "SetAccessBindingsRequest\032!.yandex.cloud." +
+      "operation.Operation\"\215\001\202\323\344\223\002;\"6/compute/v" +
+      "1/hostGroups/{resource_id}:setAccessBind" +
+      "ings:\001*\262\322*H\n access.SetAccessBindingsMet" +
+      "adata\022$access.AccessBindingsOperationRes" +
+      "ult\022\201\002\n\024UpdateAccessBindings\0220.yandex.cl" +
+      "oud.access.UpdateAccessBindingsRequest\032!" +
+      ".yandex.cloud.operation.Operation\"\223\001\202\323\344\223" +
+      "\002>\"9/compute/v1/hostGroups/{resource_id}" +
+      ":updateAccessBindings:\001*\262\322*K\n#access.Upd" +
+      "ateAccessBindingsMetadata\022$access.Access" +
+      "BindingsOperationResultBb\n\033yandex.cloud." +
+      "api.compute.v1ZCgithub.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/compute/v1;comp" +
+      "uteb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -18466,6 +18467,7 @@ public final class HostGroupServiceOuterClass {
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.compute.v1.InstanceOuterClass.getDescriptor(),
           yandex.cloud.api.compute.v1.HostGroupOuterClass.getDescriptor(),
+          yandex.cloud.api.compute.v1.Maintenance.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
@@ -18602,6 +18604,7 @@ public final class HostGroupServiceOuterClass {
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.compute.v1.InstanceOuterClass.getDescriptor();
     yandex.cloud.api.compute.v1.HostGroupOuterClass.getDescriptor();
+    yandex.cloud.api.compute.v1.Maintenance.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }

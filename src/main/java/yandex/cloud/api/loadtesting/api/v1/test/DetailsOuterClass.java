@@ -19,11 +19,19 @@ public final class DetailsOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Name of the test.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
+     * <pre>
+     * Name of the test.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
@@ -31,11 +39,19 @@ public final class DetailsOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * Description of the test.
+     * </pre>
+     *
      * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
     java.lang.String getDescription();
     /**
+     * <pre>
+     * Description of the test.
+     * </pre>
+     *
      * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
@@ -43,35 +59,63 @@ public final class DetailsOuterClass {
         getDescriptionBytes();
 
     /**
+     * <pre>
+     * Tags assigned to the test.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
      */
     java.util.List<yandex.cloud.api.loadtesting.api.v1.common.TagOuterClass.Tag> 
         getTagsList();
     /**
+     * <pre>
+     * Tags assigned to the test.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
      */
     yandex.cloud.api.loadtesting.api.v1.common.TagOuterClass.Tag getTags(int index);
     /**
+     * <pre>
+     * Tags assigned to the test.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
      */
     int getTagsCount();
     /**
+     * <pre>
+     * Tags assigned to the test.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
      */
     java.util.List<? extends yandex.cloud.api.loadtesting.api.v1.common.TagOuterClass.TagOrBuilder> 
         getTagsOrBuilderList();
     /**
+     * <pre>
+     * Tags assigned to the test.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
      */
     yandex.cloud.api.loadtesting.api.v1.common.TagOuterClass.TagOrBuilder getTagsOrBuilder(
         int index);
 
     /**
+     * <pre>
+     * ID of the logging group to which test artifacts are uploaded.
+     * </pre>
+     *
      * <code>string logging_log_group_id = 4;</code>
      * @return The loggingLogGroupId.
      */
     java.lang.String getLoggingLogGroupId();
     /**
+     * <pre>
+     * ID of the logging group to which test artifacts are uploaded.
+     * </pre>
+     *
      * <code>string logging_log_group_id = 4;</code>
      * @return The bytes for loggingLogGroupId.
      */
@@ -80,8 +124,7 @@ public final class DetailsOuterClass {
   }
   /**
    * <pre>
-   * Details specific for Cloud, without progress and results.
-   * These details will be used for retry also.
+   * Test meta information.
    * </pre>
    *
    * Protobuf type {@code yandex.cloud.loadtesting.api.v1.test.Details}
@@ -198,6 +241,10 @@ public final class DetailsOuterClass {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
+     * <pre>
+     * Name of the test.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The name.
      */
@@ -215,6 +262,10 @@ public final class DetailsOuterClass {
       }
     }
     /**
+     * <pre>
+     * Name of the test.
+     * </pre>
+     *
      * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
      * @return The bytes for name.
      */
@@ -236,6 +287,10 @@ public final class DetailsOuterClass {
     public static final int DESCRIPTION_FIELD_NUMBER = 2;
     private volatile java.lang.Object description_;
     /**
+     * <pre>
+     * Description of the test.
+     * </pre>
+     *
      * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The description.
      */
@@ -253,6 +308,10 @@ public final class DetailsOuterClass {
       }
     }
     /**
+     * <pre>
+     * Description of the test.
+     * </pre>
+     *
      * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
      * @return The bytes for description.
      */
@@ -274,6 +333,10 @@ public final class DetailsOuterClass {
     public static final int TAGS_FIELD_NUMBER = 3;
     private java.util.List<yandex.cloud.api.loadtesting.api.v1.common.TagOuterClass.Tag> tags_;
     /**
+     * <pre>
+     * Tags assigned to the test.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
      */
     @java.lang.Override
@@ -281,6 +344,10 @@ public final class DetailsOuterClass {
       return tags_;
     }
     /**
+     * <pre>
+     * Tags assigned to the test.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
      */
     @java.lang.Override
@@ -289,6 +356,10 @@ public final class DetailsOuterClass {
       return tags_;
     }
     /**
+     * <pre>
+     * Tags assigned to the test.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
      */
     @java.lang.Override
@@ -296,6 +367,10 @@ public final class DetailsOuterClass {
       return tags_.size();
     }
     /**
+     * <pre>
+     * Tags assigned to the test.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
      */
     @java.lang.Override
@@ -303,6 +378,10 @@ public final class DetailsOuterClass {
       return tags_.get(index);
     }
     /**
+     * <pre>
+     * Tags assigned to the test.
+     * </pre>
+     *
      * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
      */
     @java.lang.Override
@@ -314,6 +393,10 @@ public final class DetailsOuterClass {
     public static final int LOGGING_LOG_GROUP_ID_FIELD_NUMBER = 4;
     private volatile java.lang.Object loggingLogGroupId_;
     /**
+     * <pre>
+     * ID of the logging group to which test artifacts are uploaded.
+     * </pre>
+     *
      * <code>string logging_log_group_id = 4;</code>
      * @return The loggingLogGroupId.
      */
@@ -331,6 +414,10 @@ public final class DetailsOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the logging group to which test artifacts are uploaded.
+     * </pre>
+     *
      * <code>string logging_log_group_id = 4;</code>
      * @return The bytes for loggingLogGroupId.
      */
@@ -538,8 +625,7 @@ public final class DetailsOuterClass {
     }
     /**
      * <pre>
-     * Details specific for Cloud, without progress and results.
-     * These details will be used for retry also.
+     * Test meta information.
      * </pre>
      *
      * Protobuf type {@code yandex.cloud.loadtesting.api.v1.test.Details}
@@ -749,6 +835,10 @@ public final class DetailsOuterClass {
 
       private java.lang.Object name_ = "";
       /**
+       * <pre>
+       * Name of the test.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The name.
        */
@@ -765,6 +855,10 @@ public final class DetailsOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the test.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return The bytes for name.
        */
@@ -782,6 +876,10 @@ public final class DetailsOuterClass {
         }
       }
       /**
+       * <pre>
+       * Name of the test.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
@@ -797,6 +895,10 @@ public final class DetailsOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the test.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @return This builder for chaining.
        */
@@ -807,6 +909,10 @@ public final class DetailsOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Name of the test.
+       * </pre>
+       *
        * <code>string name = 1 [(.yandex.cloud.pattern) = "|[a-z]([-a-z0-9]{0,61}[a-z0-9])?"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
@@ -825,6 +931,10 @@ public final class DetailsOuterClass {
 
       private java.lang.Object description_ = "";
       /**
+       * <pre>
+       * Description of the test.
+       * </pre>
+       *
        * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The description.
        */
@@ -841,6 +951,10 @@ public final class DetailsOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the test.
+       * </pre>
+       *
        * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return The bytes for description.
        */
@@ -858,6 +972,10 @@ public final class DetailsOuterClass {
         }
       }
       /**
+       * <pre>
+       * Description of the test.
+       * </pre>
+       *
        * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The description to set.
        * @return This builder for chaining.
@@ -873,6 +991,10 @@ public final class DetailsOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the test.
+       * </pre>
+       *
        * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @return This builder for chaining.
        */
@@ -883,6 +1005,10 @@ public final class DetailsOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Description of the test.
+       * </pre>
+       *
        * <code>string description = 2 [(.yandex.cloud.length) = "&lt;=256"];</code>
        * @param value The bytes for description to set.
        * @return This builder for chaining.
@@ -912,6 +1038,10 @@ public final class DetailsOuterClass {
           yandex.cloud.api.loadtesting.api.v1.common.TagOuterClass.Tag, yandex.cloud.api.loadtesting.api.v1.common.TagOuterClass.Tag.Builder, yandex.cloud.api.loadtesting.api.v1.common.TagOuterClass.TagOrBuilder> tagsBuilder_;
 
       /**
+       * <pre>
+       * Tags assigned to the test.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
        */
       public java.util.List<yandex.cloud.api.loadtesting.api.v1.common.TagOuterClass.Tag> getTagsList() {
@@ -922,6 +1052,10 @@ public final class DetailsOuterClass {
         }
       }
       /**
+       * <pre>
+       * Tags assigned to the test.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
        */
       public int getTagsCount() {
@@ -932,6 +1066,10 @@ public final class DetailsOuterClass {
         }
       }
       /**
+       * <pre>
+       * Tags assigned to the test.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.common.TagOuterClass.Tag getTags(int index) {
@@ -942,6 +1080,10 @@ public final class DetailsOuterClass {
         }
       }
       /**
+       * <pre>
+       * Tags assigned to the test.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
        */
       public Builder setTags(
@@ -959,6 +1101,10 @@ public final class DetailsOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Tags assigned to the test.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
        */
       public Builder setTags(
@@ -973,6 +1119,10 @@ public final class DetailsOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Tags assigned to the test.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
        */
       public Builder addTags(yandex.cloud.api.loadtesting.api.v1.common.TagOuterClass.Tag value) {
@@ -989,6 +1139,10 @@ public final class DetailsOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Tags assigned to the test.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
        */
       public Builder addTags(
@@ -1006,6 +1160,10 @@ public final class DetailsOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Tags assigned to the test.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
        */
       public Builder addTags(
@@ -1020,6 +1178,10 @@ public final class DetailsOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Tags assigned to the test.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
        */
       public Builder addTags(
@@ -1034,6 +1196,10 @@ public final class DetailsOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Tags assigned to the test.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
        */
       public Builder addAllTags(
@@ -1049,6 +1215,10 @@ public final class DetailsOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Tags assigned to the test.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
        */
       public Builder clearTags() {
@@ -1062,6 +1232,10 @@ public final class DetailsOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Tags assigned to the test.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
        */
       public Builder removeTags(int index) {
@@ -1075,6 +1249,10 @@ public final class DetailsOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Tags assigned to the test.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.common.TagOuterClass.Tag.Builder getTagsBuilder(
@@ -1082,6 +1260,10 @@ public final class DetailsOuterClass {
         return getTagsFieldBuilder().getBuilder(index);
       }
       /**
+       * <pre>
+       * Tags assigned to the test.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.common.TagOuterClass.TagOrBuilder getTagsOrBuilder(
@@ -1092,6 +1274,10 @@ public final class DetailsOuterClass {
         }
       }
       /**
+       * <pre>
+       * Tags assigned to the test.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
        */
       public java.util.List<? extends yandex.cloud.api.loadtesting.api.v1.common.TagOuterClass.TagOrBuilder> 
@@ -1103,6 +1289,10 @@ public final class DetailsOuterClass {
         }
       }
       /**
+       * <pre>
+       * Tags assigned to the test.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.common.TagOuterClass.Tag.Builder addTagsBuilder() {
@@ -1110,6 +1300,10 @@ public final class DetailsOuterClass {
             yandex.cloud.api.loadtesting.api.v1.common.TagOuterClass.Tag.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Tags assigned to the test.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.common.TagOuterClass.Tag.Builder addTagsBuilder(
@@ -1118,6 +1312,10 @@ public final class DetailsOuterClass {
             index, yandex.cloud.api.loadtesting.api.v1.common.TagOuterClass.Tag.getDefaultInstance());
       }
       /**
+       * <pre>
+       * Tags assigned to the test.
+       * </pre>
+       *
        * <code>repeated .yandex.cloud.loadtesting.api.v1.common.Tag tags = 3;</code>
        */
       public java.util.List<yandex.cloud.api.loadtesting.api.v1.common.TagOuterClass.Tag.Builder> 
@@ -1141,6 +1339,10 @@ public final class DetailsOuterClass {
 
       private java.lang.Object loggingLogGroupId_ = "";
       /**
+       * <pre>
+       * ID of the logging group to which test artifacts are uploaded.
+       * </pre>
+       *
        * <code>string logging_log_group_id = 4;</code>
        * @return The loggingLogGroupId.
        */
@@ -1157,6 +1359,10 @@ public final class DetailsOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the logging group to which test artifacts are uploaded.
+       * </pre>
+       *
        * <code>string logging_log_group_id = 4;</code>
        * @return The bytes for loggingLogGroupId.
        */
@@ -1174,6 +1380,10 @@ public final class DetailsOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the logging group to which test artifacts are uploaded.
+       * </pre>
+       *
        * <code>string logging_log_group_id = 4;</code>
        * @param value The loggingLogGroupId to set.
        * @return This builder for chaining.
@@ -1189,6 +1399,10 @@ public final class DetailsOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the logging group to which test artifacts are uploaded.
+       * </pre>
+       *
        * <code>string logging_log_group_id = 4;</code>
        * @return This builder for chaining.
        */
@@ -1199,6 +1413,10 @@ public final class DetailsOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the logging group to which test artifacts are uploaded.
+       * </pre>
+       *
        * <code>string logging_log_group_id = 4;</code>
        * @param value The bytes for loggingLogGroupId to set.
        * @return This builder for chaining.

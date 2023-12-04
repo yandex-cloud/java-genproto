@@ -19,10 +19,18 @@ public final class ReportOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Total count of HTTP responses, grouped by HTTP response code.
+     * </pre>
+     *
      * <code>map&lt;int64, int64&gt; http_codes = 1;</code>
      */
     int getHttpCodesCount();
     /**
+     * <pre>
+     * Total count of HTTP responses, grouped by HTTP response code.
+     * </pre>
+     *
      * <code>map&lt;int64, int64&gt; http_codes = 1;</code>
      */
     boolean containsHttpCodes(
@@ -34,11 +42,19 @@ public final class ReportOuterClass {
     java.util.Map<java.lang.Long, java.lang.Long>
     getHttpCodes();
     /**
+     * <pre>
+     * Total count of HTTP responses, grouped by HTTP response code.
+     * </pre>
+     *
      * <code>map&lt;int64, int64&gt; http_codes = 1;</code>
      */
     java.util.Map<java.lang.Long, java.lang.Long>
     getHttpCodesMap();
     /**
+     * <pre>
+     * Total count of HTTP responses, grouped by HTTP response code.
+     * </pre>
+     *
      * <code>map&lt;int64, int64&gt; http_codes = 1;</code>
      */
 
@@ -46,6 +62,10 @@ public final class ReportOuterClass {
         long key,
         long defaultValue);
     /**
+     * <pre>
+     * Total count of HTTP responses, grouped by HTTP response code.
+     * </pre>
+     *
      * <code>map&lt;int64, int64&gt; http_codes = 1;</code>
      */
 
@@ -53,10 +73,18 @@ public final class ReportOuterClass {
         long key);
 
     /**
+     * <pre>
+     * Total count of network responses, grouped by response code.
+     * </pre>
+     *
      * <code>map&lt;int64, int64&gt; net_codes = 2;</code>
      */
     int getNetCodesCount();
     /**
+     * <pre>
+     * Total count of network responses, grouped by response code.
+     * </pre>
+     *
      * <code>map&lt;int64, int64&gt; net_codes = 2;</code>
      */
     boolean containsNetCodes(
@@ -68,11 +96,19 @@ public final class ReportOuterClass {
     java.util.Map<java.lang.Long, java.lang.Long>
     getNetCodes();
     /**
+     * <pre>
+     * Total count of network responses, grouped by response code.
+     * </pre>
+     *
      * <code>map&lt;int64, int64&gt; net_codes = 2;</code>
      */
     java.util.Map<java.lang.Long, java.lang.Long>
     getNetCodesMap();
     /**
+     * <pre>
+     * Total count of network responses, grouped by response code.
+     * </pre>
+     *
      * <code>map&lt;int64, int64&gt; net_codes = 2;</code>
      */
 
@@ -80,6 +116,10 @@ public final class ReportOuterClass {
         long key,
         long defaultValue);
     /**
+     * <pre>
+     * Total count of network responses, grouped by response code.
+     * </pre>
+     *
      * <code>map&lt;int64, int64&gt; net_codes = 2;</code>
      */
 
@@ -87,21 +127,37 @@ public final class ReportOuterClass {
         long key);
 
     /**
+     * <pre>
+     * Response time statistics, aggregated by quantiles.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.common.Quantiles quantiles = 3;</code>
      * @return Whether the quantiles field is set.
      */
     boolean hasQuantiles();
     /**
+     * <pre>
+     * Response time statistics, aggregated by quantiles.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.common.Quantiles quantiles = 3;</code>
      * @return The quantiles.
      */
     yandex.cloud.api.loadtesting.api.v1.common.QuantilesOuterClass.Quantiles getQuantiles();
     /**
+     * <pre>
+     * Response time statistics, aggregated by quantiles.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.common.Quantiles quantiles = 3;</code>
      */
     yandex.cloud.api.loadtesting.api.v1.common.QuantilesOuterClass.QuantilesOrBuilder getQuantilesOrBuilder();
   }
   /**
+   * <pre>
+   * Aggregated test results.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.loadtesting.api.v1.report.table.Report}
    */
   public static final class Report extends
@@ -259,6 +315,10 @@ public final class ReportOuterClass {
       return internalGetHttpCodes().getMap().size();
     }
     /**
+     * <pre>
+     * Total count of HTTP responses, grouped by HTTP response code.
+     * </pre>
+     *
      * <code>map&lt;int64, int64&gt; http_codes = 1;</code>
      */
 
@@ -277,6 +337,10 @@ public final class ReportOuterClass {
       return getHttpCodesMap();
     }
     /**
+     * <pre>
+     * Total count of HTTP responses, grouped by HTTP response code.
+     * </pre>
+     *
      * <code>map&lt;int64, int64&gt; http_codes = 1;</code>
      */
     @java.lang.Override
@@ -285,6 +349,10 @@ public final class ReportOuterClass {
       return internalGetHttpCodes().getMap();
     }
     /**
+     * <pre>
+     * Total count of HTTP responses, grouped by HTTP response code.
+     * </pre>
+     *
      * <code>map&lt;int64, int64&gt; http_codes = 1;</code>
      */
     @java.lang.Override
@@ -298,6 +366,10 @@ public final class ReportOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Total count of HTTP responses, grouped by HTTP response code.
+     * </pre>
+     *
      * <code>map&lt;int64, int64&gt; http_codes = 1;</code>
      */
     @java.lang.Override
@@ -340,6 +412,10 @@ public final class ReportOuterClass {
       return internalGetNetCodes().getMap().size();
     }
     /**
+     * <pre>
+     * Total count of network responses, grouped by response code.
+     * </pre>
+     *
      * <code>map&lt;int64, int64&gt; net_codes = 2;</code>
      */
 
@@ -358,6 +434,10 @@ public final class ReportOuterClass {
       return getNetCodesMap();
     }
     /**
+     * <pre>
+     * Total count of network responses, grouped by response code.
+     * </pre>
+     *
      * <code>map&lt;int64, int64&gt; net_codes = 2;</code>
      */
     @java.lang.Override
@@ -366,6 +446,10 @@ public final class ReportOuterClass {
       return internalGetNetCodes().getMap();
     }
     /**
+     * <pre>
+     * Total count of network responses, grouped by response code.
+     * </pre>
+     *
      * <code>map&lt;int64, int64&gt; net_codes = 2;</code>
      */
     @java.lang.Override
@@ -379,6 +463,10 @@ public final class ReportOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Total count of network responses, grouped by response code.
+     * </pre>
+     *
      * <code>map&lt;int64, int64&gt; net_codes = 2;</code>
      */
     @java.lang.Override
@@ -397,6 +485,10 @@ public final class ReportOuterClass {
     public static final int QUANTILES_FIELD_NUMBER = 3;
     private yandex.cloud.api.loadtesting.api.v1.common.QuantilesOuterClass.Quantiles quantiles_;
     /**
+     * <pre>
+     * Response time statistics, aggregated by quantiles.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.common.Quantiles quantiles = 3;</code>
      * @return Whether the quantiles field is set.
      */
@@ -405,6 +497,10 @@ public final class ReportOuterClass {
       return quantiles_ != null;
     }
     /**
+     * <pre>
+     * Response time statistics, aggregated by quantiles.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.common.Quantiles quantiles = 3;</code>
      * @return The quantiles.
      */
@@ -413,6 +509,10 @@ public final class ReportOuterClass {
       return quantiles_ == null ? yandex.cloud.api.loadtesting.api.v1.common.QuantilesOuterClass.Quantiles.getDefaultInstance() : quantiles_;
     }
     /**
+     * <pre>
+     * Response time statistics, aggregated by quantiles.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.common.Quantiles quantiles = 3;</code>
      */
     @java.lang.Override
@@ -625,6 +725,10 @@ public final class ReportOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Aggregated test results.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.loadtesting.api.v1.report.table.Report}
      */
     public static final class Builder extends
@@ -844,6 +948,10 @@ public final class ReportOuterClass {
         return internalGetHttpCodes().getMap().size();
       }
       /**
+       * <pre>
+       * Total count of HTTP responses, grouped by HTTP response code.
+       * </pre>
+       *
        * <code>map&lt;int64, int64&gt; http_codes = 1;</code>
        */
 
@@ -862,6 +970,10 @@ public final class ReportOuterClass {
         return getHttpCodesMap();
       }
       /**
+       * <pre>
+       * Total count of HTTP responses, grouped by HTTP response code.
+       * </pre>
+       *
        * <code>map&lt;int64, int64&gt; http_codes = 1;</code>
        */
       @java.lang.Override
@@ -870,6 +982,10 @@ public final class ReportOuterClass {
         return internalGetHttpCodes().getMap();
       }
       /**
+       * <pre>
+       * Total count of HTTP responses, grouped by HTTP response code.
+       * </pre>
+       *
        * <code>map&lt;int64, int64&gt; http_codes = 1;</code>
        */
       @java.lang.Override
@@ -883,6 +999,10 @@ public final class ReportOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Total count of HTTP responses, grouped by HTTP response code.
+       * </pre>
+       *
        * <code>map&lt;int64, int64&gt; http_codes = 1;</code>
        */
       @java.lang.Override
@@ -904,6 +1024,10 @@ public final class ReportOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Total count of HTTP responses, grouped by HTTP response code.
+       * </pre>
+       *
        * <code>map&lt;int64, int64&gt; http_codes = 1;</code>
        */
 
@@ -923,6 +1047,10 @@ public final class ReportOuterClass {
         return internalGetMutableHttpCodes().getMutableMap();
       }
       /**
+       * <pre>
+       * Total count of HTTP responses, grouped by HTTP response code.
+       * </pre>
+       *
        * <code>map&lt;int64, int64&gt; http_codes = 1;</code>
        */
       public Builder putHttpCodes(
@@ -935,6 +1063,10 @@ public final class ReportOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Total count of HTTP responses, grouped by HTTP response code.
+       * </pre>
+       *
        * <code>map&lt;int64, int64&gt; http_codes = 1;</code>
        */
 
@@ -972,6 +1104,10 @@ public final class ReportOuterClass {
         return internalGetNetCodes().getMap().size();
       }
       /**
+       * <pre>
+       * Total count of network responses, grouped by response code.
+       * </pre>
+       *
        * <code>map&lt;int64, int64&gt; net_codes = 2;</code>
        */
 
@@ -990,6 +1126,10 @@ public final class ReportOuterClass {
         return getNetCodesMap();
       }
       /**
+       * <pre>
+       * Total count of network responses, grouped by response code.
+       * </pre>
+       *
        * <code>map&lt;int64, int64&gt; net_codes = 2;</code>
        */
       @java.lang.Override
@@ -998,6 +1138,10 @@ public final class ReportOuterClass {
         return internalGetNetCodes().getMap();
       }
       /**
+       * <pre>
+       * Total count of network responses, grouped by response code.
+       * </pre>
+       *
        * <code>map&lt;int64, int64&gt; net_codes = 2;</code>
        */
       @java.lang.Override
@@ -1011,6 +1155,10 @@ public final class ReportOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Total count of network responses, grouped by response code.
+       * </pre>
+       *
        * <code>map&lt;int64, int64&gt; net_codes = 2;</code>
        */
       @java.lang.Override
@@ -1032,6 +1180,10 @@ public final class ReportOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Total count of network responses, grouped by response code.
+       * </pre>
+       *
        * <code>map&lt;int64, int64&gt; net_codes = 2;</code>
        */
 
@@ -1051,6 +1203,10 @@ public final class ReportOuterClass {
         return internalGetMutableNetCodes().getMutableMap();
       }
       /**
+       * <pre>
+       * Total count of network responses, grouped by response code.
+       * </pre>
+       *
        * <code>map&lt;int64, int64&gt; net_codes = 2;</code>
        */
       public Builder putNetCodes(
@@ -1063,6 +1219,10 @@ public final class ReportOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Total count of network responses, grouped by response code.
+       * </pre>
+       *
        * <code>map&lt;int64, int64&gt; net_codes = 2;</code>
        */
 
@@ -1077,6 +1237,10 @@ public final class ReportOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.loadtesting.api.v1.common.QuantilesOuterClass.Quantiles, yandex.cloud.api.loadtesting.api.v1.common.QuantilesOuterClass.Quantiles.Builder, yandex.cloud.api.loadtesting.api.v1.common.QuantilesOuterClass.QuantilesOrBuilder> quantilesBuilder_;
       /**
+       * <pre>
+       * Response time statistics, aggregated by quantiles.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.common.Quantiles quantiles = 3;</code>
        * @return Whether the quantiles field is set.
        */
@@ -1084,6 +1248,10 @@ public final class ReportOuterClass {
         return quantilesBuilder_ != null || quantiles_ != null;
       }
       /**
+       * <pre>
+       * Response time statistics, aggregated by quantiles.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.common.Quantiles quantiles = 3;</code>
        * @return The quantiles.
        */
@@ -1095,6 +1263,10 @@ public final class ReportOuterClass {
         }
       }
       /**
+       * <pre>
+       * Response time statistics, aggregated by quantiles.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.common.Quantiles quantiles = 3;</code>
        */
       public Builder setQuantiles(yandex.cloud.api.loadtesting.api.v1.common.QuantilesOuterClass.Quantiles value) {
@@ -1111,6 +1283,10 @@ public final class ReportOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Response time statistics, aggregated by quantiles.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.common.Quantiles quantiles = 3;</code>
        */
       public Builder setQuantiles(
@@ -1125,6 +1301,10 @@ public final class ReportOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Response time statistics, aggregated by quantiles.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.common.Quantiles quantiles = 3;</code>
        */
       public Builder mergeQuantiles(yandex.cloud.api.loadtesting.api.v1.common.QuantilesOuterClass.Quantiles value) {
@@ -1143,6 +1323,10 @@ public final class ReportOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Response time statistics, aggregated by quantiles.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.common.Quantiles quantiles = 3;</code>
        */
       public Builder clearQuantiles() {
@@ -1157,6 +1341,10 @@ public final class ReportOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Response time statistics, aggregated by quantiles.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.common.Quantiles quantiles = 3;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.common.QuantilesOuterClass.Quantiles.Builder getQuantilesBuilder() {
@@ -1165,6 +1353,10 @@ public final class ReportOuterClass {
         return getQuantilesFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Response time statistics, aggregated by quantiles.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.common.Quantiles quantiles = 3;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.common.QuantilesOuterClass.QuantilesOrBuilder getQuantilesOrBuilder() {
@@ -1176,6 +1368,10 @@ public final class ReportOuterClass {
         }
       }
       /**
+       * <pre>
+       * Response time statistics, aggregated by quantiles.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.common.Quantiles quantiles = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<

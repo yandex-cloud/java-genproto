@@ -19,18 +19,70 @@ public final class ConfigOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the test config. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
+     * <pre>
+     * ID of the test config. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
+
+    /**
+     * <pre>
+     * ID of the folder that the config belongs to.
+     * </pre>
+     *
+     * <code>string folder_id = 2;</code>
+     * @return The folderId.
+     */
+    java.lang.String getFolderId();
+    /**
+     * <pre>
+     * ID of the folder that the config belongs to.
+     * </pre>
+     *
+     * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
+     */
+    com.google.protobuf.ByteString
+        getFolderIdBytes();
+
+    /**
+     * <pre>
+     * Config content in YAML format.
+     * </pre>
+     *
+     * <code>string yaml_string = 3;</code>
+     * @return The yamlString.
+     */
+    java.lang.String getYamlString();
+    /**
+     * <pre>
+     * Config content in YAML format.
+     * </pre>
+     *
+     * <code>string yaml_string = 3;</code>
+     * @return The bytes for yamlString.
+     */
+    com.google.protobuf.ByteString
+        getYamlStringBytes();
   }
   /**
+   * <pre>
+   * Test config.
+   * </pre>
+   *
    * Protobuf type {@code yandex.cloud.loadtesting.api.v1.config.Config}
    */
   public static final class Config extends
@@ -44,6 +96,8 @@ public final class ConfigOuterClass {
     }
     private Config() {
       id_ = "";
+      folderId_ = "";
+      yamlString_ = "";
     }
 
     @java.lang.Override
@@ -82,6 +136,18 @@ public final class ConfigOuterClass {
               id_ = s;
               break;
             }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              folderId_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              yamlString_ = s;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -117,6 +183,10 @@ public final class ConfigOuterClass {
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
+     * <pre>
+     * ID of the test config. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The id.
      */
@@ -134,6 +204,10 @@ public final class ConfigOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the test config. Generated at creation time.
+     * </pre>
+     *
      * <code>string id = 1;</code>
      * @return The bytes for id.
      */
@@ -146,6 +220,98 @@ public final class ConfigOuterClass {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FOLDER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object folderId_;
+    /**
+     * <pre>
+     * ID of the folder that the config belongs to.
+     * </pre>
+     *
+     * <code>string folder_id = 2;</code>
+     * @return The folderId.
+     */
+    @java.lang.Override
+    public java.lang.String getFolderId() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        folderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * ID of the folder that the config belongs to.
+     * </pre>
+     *
+     * <code>string folder_id = 2;</code>
+     * @return The bytes for folderId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFolderIdBytes() {
+      java.lang.Object ref = folderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        folderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int YAML_STRING_FIELD_NUMBER = 3;
+    private volatile java.lang.Object yamlString_;
+    /**
+     * <pre>
+     * Config content in YAML format.
+     * </pre>
+     *
+     * <code>string yaml_string = 3;</code>
+     * @return The yamlString.
+     */
+    @java.lang.Override
+    public java.lang.String getYamlString() {
+      java.lang.Object ref = yamlString_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        yamlString_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Config content in YAML format.
+     * </pre>
+     *
+     * <code>string yaml_string = 3;</code>
+     * @return The bytes for yamlString.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getYamlStringBytes() {
+      java.lang.Object ref = yamlString_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        yamlString_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -169,6 +335,12 @@ public final class ConfigOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, folderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(yamlString_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, yamlString_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -180,6 +352,12 @@ public final class ConfigOuterClass {
       size = 0;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(folderId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, folderId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(yamlString_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, yamlString_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -198,6 +376,10 @@ public final class ConfigOuterClass {
 
       if (!getId()
           .equals(other.getId())) return false;
+      if (!getFolderId()
+          .equals(other.getFolderId())) return false;
+      if (!getYamlString()
+          .equals(other.getYamlString())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -211,6 +393,10 @@ public final class ConfigOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + FOLDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFolderId().hashCode();
+      hash = (37 * hash) + YAML_STRING_FIELD_NUMBER;
+      hash = (53 * hash) + getYamlString().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -307,6 +493,10 @@ public final class ConfigOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Test config.
+     * </pre>
+     *
      * Protobuf type {@code yandex.cloud.loadtesting.api.v1.config.Config}
      */
     public static final class Builder extends
@@ -346,6 +536,10 @@ public final class ConfigOuterClass {
         super.clear();
         id_ = "";
 
+        folderId_ = "";
+
+        yamlString_ = "";
+
         return this;
       }
 
@@ -373,6 +567,8 @@ public final class ConfigOuterClass {
       public yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config buildPartial() {
         yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config result = new yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config(this);
         result.id_ = id_;
+        result.folderId_ = folderId_;
+        result.yamlString_ = yamlString_;
         onBuilt();
         return result;
       }
@@ -425,6 +621,14 @@ public final class ConfigOuterClass {
           id_ = other.id_;
           onChanged();
         }
+        if (!other.getFolderId().isEmpty()) {
+          folderId_ = other.folderId_;
+          onChanged();
+        }
+        if (!other.getYamlString().isEmpty()) {
+          yamlString_ = other.yamlString_;
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -456,6 +660,10 @@ public final class ConfigOuterClass {
 
       private java.lang.Object id_ = "";
       /**
+       * <pre>
+       * ID of the test config. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The id.
        */
@@ -472,6 +680,10 @@ public final class ConfigOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the test config. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return The bytes for id.
        */
@@ -489,6 +701,10 @@ public final class ConfigOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the test config. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The id to set.
        * @return This builder for chaining.
@@ -504,6 +720,10 @@ public final class ConfigOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the test config. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @return This builder for chaining.
        */
@@ -514,6 +734,10 @@ public final class ConfigOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the test config. Generated at creation time.
+       * </pre>
+       *
        * <code>string id = 1;</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
@@ -526,6 +750,198 @@ public final class ConfigOuterClass {
   checkByteStringIsUtf8(value);
         
         id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object folderId_ = "";
+      /**
+       * <pre>
+       * ID of the folder that the config belongs to.
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       * @return The folderId.
+       */
+      public java.lang.String getFolderId() {
+        java.lang.Object ref = folderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          folderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder that the config belongs to.
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       * @return The bytes for folderId.
+       */
+      public com.google.protobuf.ByteString
+          getFolderIdBytes() {
+        java.lang.Object ref = folderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          folderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * ID of the folder that the config belongs to.
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       * @param value The folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder that the config belongs to.
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFolderId() {
+        
+        folderId_ = getDefaultInstance().getFolderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * ID of the folder that the config belongs to.
+       * </pre>
+       *
+       * <code>string folder_id = 2;</code>
+       * @param value The bytes for folderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFolderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        folderId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object yamlString_ = "";
+      /**
+       * <pre>
+       * Config content in YAML format.
+       * </pre>
+       *
+       * <code>string yaml_string = 3;</code>
+       * @return The yamlString.
+       */
+      public java.lang.String getYamlString() {
+        java.lang.Object ref = yamlString_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          yamlString_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Config content in YAML format.
+       * </pre>
+       *
+       * <code>string yaml_string = 3;</code>
+       * @return The bytes for yamlString.
+       */
+      public com.google.protobuf.ByteString
+          getYamlStringBytes() {
+        java.lang.Object ref = yamlString_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          yamlString_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Config content in YAML format.
+       * </pre>
+       *
+       * <code>string yaml_string = 3;</code>
+       * @param value The yamlString to set.
+       * @return This builder for chaining.
+       */
+      public Builder setYamlString(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        yamlString_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Config content in YAML format.
+       * </pre>
+       *
+       * <code>string yaml_string = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearYamlString() {
+        
+        yamlString_ = getDefaultInstance().getYamlString();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Config content in YAML format.
+       * </pre>
+       *
+       * <code>string yaml_string = 3;</code>
+       * @param value The bytes for yamlString to set.
+       * @return This builder for chaining.
+       */
+      public Builder setYamlStringBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        yamlString_ = value;
         onChanged();
         return this;
       }
@@ -598,7 +1014,8 @@ public final class ConfigOuterClass {
     java.lang.String[] descriptorData = {
       "\n3yandex/cloud/loadtesting/api/v1/config" +
       "/config.proto\022&yandex.cloud.loadtesting." +
-      "api.v1.config\"\024\n\006Config\022\n\n\002id\030\001 \001(\tB\177\n*y" +
+      "api.v1.config\"<\n\006Config\022\n\n\002id\030\001 \001(\t\022\021\n\tf" +
+      "older_id\030\002 \001(\t\022\023\n\013yaml_string\030\003 \001(\tB\177\n*y" +
       "andex.cloud.api.loadtesting.api.v1.confi" +
       "gZQgithub.com/yandex-cloud/go-genproto/y" +
       "andex/cloud/loadtesting/api/v1/config;co" +
@@ -613,7 +1030,7 @@ public final class ConfigOuterClass {
     internal_static_yandex_cloud_loadtesting_api_v1_config_Config_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_loadtesting_api_v1_config_Config_descriptor,
-        new java.lang.String[] { "Id", });
+        new java.lang.String[] { "Id", "FolderId", "YamlString", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

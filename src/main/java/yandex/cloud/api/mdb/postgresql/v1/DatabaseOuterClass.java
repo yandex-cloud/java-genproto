@@ -3170,7 +3170,7 @@ public final class DatabaseOuterClass {
      * To get the list of available PostgreSQL users, make a [UserService.List] request.
      * </pre>
      *
-     * <code>string owner = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string owner = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The owner.
      */
     java.lang.String getOwner();
@@ -3180,7 +3180,7 @@ public final class DatabaseOuterClass {
      * To get the list of available PostgreSQL users, make a [UserService.List] request.
      * </pre>
      *
-     * <code>string owner = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string owner = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for owner.
      */
     com.google.protobuf.ByteString
@@ -3517,7 +3517,7 @@ public final class DatabaseOuterClass {
      * To get the list of available PostgreSQL users, make a [UserService.List] request.
      * </pre>
      *
-     * <code>string owner = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string owner = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The owner.
      */
     @java.lang.Override
@@ -3539,7 +3539,7 @@ public final class DatabaseOuterClass {
      * To get the list of available PostgreSQL users, make a [UserService.List] request.
      * </pre>
      *
-     * <code>string owner = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+     * <code>string owner = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
      * @return The bytes for owner.
      */
     @java.lang.Override
@@ -4360,7 +4360,7 @@ public final class DatabaseOuterClass {
        * To get the list of available PostgreSQL users, make a [UserService.List] request.
        * </pre>
        *
-       * <code>string owner = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string owner = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The owner.
        */
       public java.lang.String getOwner() {
@@ -4381,7 +4381,7 @@ public final class DatabaseOuterClass {
        * To get the list of available PostgreSQL users, make a [UserService.List] request.
        * </pre>
        *
-       * <code>string owner = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string owner = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return The bytes for owner.
        */
       public com.google.protobuf.ByteString
@@ -4403,7 +4403,7 @@ public final class DatabaseOuterClass {
        * To get the list of available PostgreSQL users, make a [UserService.List] request.
        * </pre>
        *
-       * <code>string owner = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string owner = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The owner to set.
        * @return This builder for chaining.
        */
@@ -4423,7 +4423,7 @@ public final class DatabaseOuterClass {
        * To get the list of available PostgreSQL users, make a [UserService.List] request.
        * </pre>
        *
-       * <code>string owner = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string owner = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @return This builder for chaining.
        */
       public Builder clearOwner() {
@@ -4438,7 +4438,7 @@ public final class DatabaseOuterClass {
        * To get the list of available PostgreSQL users, make a [UserService.List] request.
        * </pre>
        *
-       * <code>string owner = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=63"];</code>
+       * <code>string owner = 2 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=63"];</code>
        * @param value The bytes for owner to set.
        * @return This builder for chaining.
        */
@@ -5314,19 +5314,19 @@ public final class DatabaseOuterClass {
       "b.postgresql.v1.Extension\022\023\n\013template_db" +
       "\030\007 \001(\t\0227\n\023deletion_protection\030\010 \001(\0132\032.go" +
       "ogle.protobuf.BoolValue\"*\n\tExtension\022\014\n\004" +
-      "name\030\001 \001(\t\022\017\n\007version\030\002 \001(\t\"\353\002\n\014Database" +
+      "name\030\001 \001(\t\022\017\n\007version\030\002 \001(\t\"\354\002\n\014Database" +
       "Spec\022,\n\004name\030\001 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-z" +
-      "A-Z0-9_-]*\022,\n\005owner\030\002 \001(\tB\035\350\3071\001\212\3101\004<=63\362" +
-      "\3071\r[a-zA-Z0-9_]*\022+\n\nlc_collate\030\003 \001(\tB\027\362\307" +
-      "1\023|[a-zA-Z_]+.UTF-8|C\022)\n\010lc_ctype\030\004 \001(\tB" +
-      "\027\362\3071\023|[a-zA-Z_]+.UTF-8|C\022=\n\nextensions\030\005" +
-      " \003(\0132).yandex.cloud.mdb.postgresql.v1.Ex" +
-      "tension\022/\n\013template_db\030\006 \001(\tB\032\212\3101\004<=63\362\307" +
-      "1\016[a-zA-Z0-9_-]*\0227\n\023deletion_protection\030" +
-      "\007 \001(\0132\032.google.protobuf.BoolValueBs\n\"yan" +
-      "dex.cloud.api.mdb.postgresql.v1ZMgithub." +
-      "com/yandex-cloud/go-genproto/yandex/clou" +
-      "d/mdb/postgresql/v1;postgresqlb\006proto3"
+      "A-Z0-9_-]*\022-\n\005owner\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362" +
+      "\3071\016[a-zA-Z0-9_-]*\022+\n\nlc_collate\030\003 \001(\tB\027\362" +
+      "\3071\023|[a-zA-Z_]+.UTF-8|C\022)\n\010lc_ctype\030\004 \001(\t" +
+      "B\027\362\3071\023|[a-zA-Z_]+.UTF-8|C\022=\n\nextensions\030" +
+      "\005 \003(\0132).yandex.cloud.mdb.postgresql.v1.E" +
+      "xtension\022/\n\013template_db\030\006 \001(\tB\032\212\3101\004<=63\362" +
+      "\3071\016[a-zA-Z0-9_-]*\0227\n\023deletion_protection" +
+      "\030\007 \001(\0132\032.google.protobuf.BoolValueBs\n\"ya" +
+      "ndex.cloud.api.mdb.postgresql.v1ZMgithub" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/mdb/postgresql/v1;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

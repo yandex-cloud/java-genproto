@@ -4488,21 +4488,25 @@ public final class Kafka {
     /**
      * <pre>
      * Full source topic name
+     * Deprecated in favor of topic names
      * </pre>
      *
-     * <code>string topic_name = 4;</code>
+     * <code>string topic_name = 4 [deprecated = true];</code>
+     * @deprecated
      * @return The topicName.
      */
-    java.lang.String getTopicName();
+    @java.lang.Deprecated java.lang.String getTopicName();
     /**
      * <pre>
      * Full source topic name
+     * Deprecated in favor of topic names
      * </pre>
      *
-     * <code>string topic_name = 4;</code>
+     * <code>string topic_name = 4 [deprecated = true];</code>
+     * @deprecated
      * @return The bytes for topicName.
      */
-    com.google.protobuf.ByteString
+    @java.lang.Deprecated com.google.protobuf.ByteString
         getTopicNameBytes();
 
     /**
@@ -4558,6 +4562,47 @@ public final class Kafka {
      * <code>.yandex.cloud.datatransfer.v1.endpoint.Parser parser = 7;</code>
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Parsers.ParserOrBuilder getParserOrBuilder();
+
+    /**
+     * <pre>
+     * List of topic names to read
+     * </pre>
+     *
+     * <code>repeated string topic_names = 8;</code>
+     * @return A list containing the topicNames.
+     */
+    java.util.List<java.lang.String>
+        getTopicNamesList();
+    /**
+     * <pre>
+     * List of topic names to read
+     * </pre>
+     *
+     * <code>repeated string topic_names = 8;</code>
+     * @return The count of topicNames.
+     */
+    int getTopicNamesCount();
+    /**
+     * <pre>
+     * List of topic names to read
+     * </pre>
+     *
+     * <code>repeated string topic_names = 8;</code>
+     * @param index The index of the element to return.
+     * @return The topicNames at the given index.
+     */
+    java.lang.String getTopicNames(int index);
+    /**
+     * <pre>
+     * List of topic names to read
+     * </pre>
+     *
+     * <code>repeated string topic_names = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the topicNames at the given index.
+     */
+    com.google.protobuf.ByteString
+        getTopicNamesBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.KafkaSource}
@@ -4574,6 +4619,7 @@ public final class Kafka {
     private KafkaSource() {
       securityGroups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       topicName_ = "";
+      topicNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -4674,6 +4720,15 @@ public final class Kafka {
 
               break;
             }
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                topicNames_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              topicNames_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4691,6 +4746,9 @@ public final class Kafka {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           securityGroups_ = securityGroups_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          topicNames_ = topicNames_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -4841,13 +4899,15 @@ public final class Kafka {
     /**
      * <pre>
      * Full source topic name
+     * Deprecated in favor of topic names
      * </pre>
      *
-     * <code>string topic_name = 4;</code>
+     * <code>string topic_name = 4 [deprecated = true];</code>
+     * @deprecated
      * @return The topicName.
      */
     @java.lang.Override
-    public java.lang.String getTopicName() {
+    @java.lang.Deprecated public java.lang.String getTopicName() {
       java.lang.Object ref = topicName_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
@@ -4862,13 +4922,15 @@ public final class Kafka {
     /**
      * <pre>
      * Full source topic name
+     * Deprecated in favor of topic names
      * </pre>
      *
-     * <code>string topic_name = 4;</code>
+     * <code>string topic_name = 4 [deprecated = true];</code>
+     * @deprecated
      * @return The bytes for topicName.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
+    @java.lang.Deprecated public com.google.protobuf.ByteString
         getTopicNameBytes() {
       java.lang.Object ref = topicName_;
       if (ref instanceof java.lang.String) {
@@ -4958,6 +5020,57 @@ public final class Kafka {
       return getParser();
     }
 
+    public static final int TOPIC_NAMES_FIELD_NUMBER = 8;
+    private com.google.protobuf.LazyStringList topicNames_;
+    /**
+     * <pre>
+     * List of topic names to read
+     * </pre>
+     *
+     * <code>repeated string topic_names = 8;</code>
+     * @return A list containing the topicNames.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTopicNamesList() {
+      return topicNames_;
+    }
+    /**
+     * <pre>
+     * List of topic names to read
+     * </pre>
+     *
+     * <code>repeated string topic_names = 8;</code>
+     * @return The count of topicNames.
+     */
+    public int getTopicNamesCount() {
+      return topicNames_.size();
+    }
+    /**
+     * <pre>
+     * List of topic names to read
+     * </pre>
+     *
+     * <code>repeated string topic_names = 8;</code>
+     * @param index The index of the element to return.
+     * @return The topicNames at the given index.
+     */
+    public java.lang.String getTopicNames(int index) {
+      return topicNames_.get(index);
+    }
+    /**
+     * <pre>
+     * List of topic names to read
+     * </pre>
+     *
+     * <code>repeated string topic_names = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the topicNames at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getTopicNamesBytes(int index) {
+      return topicNames_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4989,6 +5102,9 @@ public final class Kafka {
       }
       if (parser_ != null) {
         output.writeMessage(7, getParser());
+      }
+      for (int i = 0; i < topicNames_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, topicNames_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -5025,6 +5141,14 @@ public final class Kafka {
       if (parser_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getParser());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < topicNames_.size(); i++) {
+          dataSize += computeStringSizeNoTag(topicNames_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTopicNamesList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5065,6 +5189,8 @@ public final class Kafka {
         if (!getParser()
             .equals(other.getParser())) return false;
       }
+      if (!getTopicNamesList()
+          .equals(other.getTopicNamesList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5097,6 +5223,10 @@ public final class Kafka {
       if (hasParser()) {
         hash = (37 * hash) + PARSER_FIELD_NUMBER;
         hash = (53 * hash) + getParser().hashCode();
+      }
+      if (getTopicNamesCount() > 0) {
+        hash = (37 * hash) + TOPIC_NAMES_FIELD_NUMBER;
+        hash = (53 * hash) + getTopicNamesList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5259,6 +5389,8 @@ public final class Kafka {
           parser_ = null;
           parserBuilder_ = null;
         }
+        topicNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -5312,6 +5444,11 @@ public final class Kafka {
         } else {
           result.parser_ = parserBuilder_.build();
         }
+        if (((bitField0_ & 0x00000002) != 0)) {
+          topicNames_ = topicNames_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.topicNames_ = topicNames_;
         onBuilt();
         return result;
       }
@@ -5385,6 +5522,16 @@ public final class Kafka {
         }
         if (other.hasParser()) {
           mergeParser(other.getParser());
+        }
+        if (!other.topicNames_.isEmpty()) {
+          if (topicNames_.isEmpty()) {
+            topicNames_ = other.topicNames_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureTopicNamesIsMutable();
+            topicNames_.addAll(other.topicNames_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5876,12 +6023,14 @@ public final class Kafka {
       /**
        * <pre>
        * Full source topic name
+       * Deprecated in favor of topic names
        * </pre>
        *
-       * <code>string topic_name = 4;</code>
+       * <code>string topic_name = 4 [deprecated = true];</code>
+       * @deprecated
        * @return The topicName.
        */
-      public java.lang.String getTopicName() {
+      @java.lang.Deprecated public java.lang.String getTopicName() {
         java.lang.Object ref = topicName_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
@@ -5896,12 +6045,14 @@ public final class Kafka {
       /**
        * <pre>
        * Full source topic name
+       * Deprecated in favor of topic names
        * </pre>
        *
-       * <code>string topic_name = 4;</code>
+       * <code>string topic_name = 4 [deprecated = true];</code>
+       * @deprecated
        * @return The bytes for topicName.
        */
-      public com.google.protobuf.ByteString
+      @java.lang.Deprecated public com.google.protobuf.ByteString
           getTopicNameBytes() {
         java.lang.Object ref = topicName_;
         if (ref instanceof String) {
@@ -5917,13 +6068,15 @@ public final class Kafka {
       /**
        * <pre>
        * Full source topic name
+       * Deprecated in favor of topic names
        * </pre>
        *
-       * <code>string topic_name = 4;</code>
+       * <code>string topic_name = 4 [deprecated = true];</code>
+       * @deprecated
        * @param value The topicName to set.
        * @return This builder for chaining.
        */
-      public Builder setTopicName(
+      @java.lang.Deprecated public Builder setTopicName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
@@ -5936,12 +6089,14 @@ public final class Kafka {
       /**
        * <pre>
        * Full source topic name
+       * Deprecated in favor of topic names
        * </pre>
        *
-       * <code>string topic_name = 4;</code>
+       * <code>string topic_name = 4 [deprecated = true];</code>
+       * @deprecated
        * @return This builder for chaining.
        */
-      public Builder clearTopicName() {
+      @java.lang.Deprecated public Builder clearTopicName() {
         
         topicName_ = getDefaultInstance().getTopicName();
         onChanged();
@@ -5950,13 +6105,15 @@ public final class Kafka {
       /**
        * <pre>
        * Full source topic name
+       * Deprecated in favor of topic names
        * </pre>
        *
-       * <code>string topic_name = 4;</code>
+       * <code>string topic_name = 4 [deprecated = true];</code>
+       * @deprecated
        * @param value The bytes for topicName to set.
        * @return This builder for chaining.
        */
-      public Builder setTopicNameBytes(
+      @java.lang.Deprecated public Builder setTopicNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
@@ -6276,6 +6433,152 @@ public final class Kafka {
           parser_ = null;
         }
         return parserBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList topicNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTopicNamesIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          topicNames_ = new com.google.protobuf.LazyStringArrayList(topicNames_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * List of topic names to read
+       * </pre>
+       *
+       * <code>repeated string topic_names = 8;</code>
+       * @return A list containing the topicNames.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTopicNamesList() {
+        return topicNames_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of topic names to read
+       * </pre>
+       *
+       * <code>repeated string topic_names = 8;</code>
+       * @return The count of topicNames.
+       */
+      public int getTopicNamesCount() {
+        return topicNames_.size();
+      }
+      /**
+       * <pre>
+       * List of topic names to read
+       * </pre>
+       *
+       * <code>repeated string topic_names = 8;</code>
+       * @param index The index of the element to return.
+       * @return The topicNames at the given index.
+       */
+      public java.lang.String getTopicNames(int index) {
+        return topicNames_.get(index);
+      }
+      /**
+       * <pre>
+       * List of topic names to read
+       * </pre>
+       *
+       * <code>repeated string topic_names = 8;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the topicNames at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getTopicNamesBytes(int index) {
+        return topicNames_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of topic names to read
+       * </pre>
+       *
+       * <code>repeated string topic_names = 8;</code>
+       * @param index The index to set the value at.
+       * @param value The topicNames to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTopicNames(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTopicNamesIsMutable();
+        topicNames_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of topic names to read
+       * </pre>
+       *
+       * <code>repeated string topic_names = 8;</code>
+       * @param value The topicNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTopicNames(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTopicNamesIsMutable();
+        topicNames_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of topic names to read
+       * </pre>
+       *
+       * <code>repeated string topic_names = 8;</code>
+       * @param values The topicNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllTopicNames(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTopicNamesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, topicNames_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of topic names to read
+       * </pre>
+       *
+       * <code>repeated string topic_names = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTopicNames() {
+        topicNames_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of topic names to read
+       * </pre>
+       *
+       * <code>repeated string topic_names = 8;</code>
+       * @param value The bytes of the topicNames to add.
+       * @return This builder for chaining.
+       */
+      public Builder addTopicNamesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTopicNamesIsMutable();
+        topicNames_.add(value);
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -9917,37 +10220,38 @@ public final class Kafka {
       "\n\010password\030\004 \001(\0132-.yandex.cloud.datatran" +
       "sfer.v1.endpoint.Secret\022H\n\tmechanism\030\003 \001" +
       "(\01625.yandex.cloud.datatransfer.v1.endpoi" +
-      "nt.KafkaMechanism\"\343\002\n\013KafkaSource\022Q\n\ncon" +
+      "nt.KafkaMechanism\"\374\002\n\013KafkaSource\022Q\n\ncon" +
       "nection\030\001 \001(\0132=.yandex.cloud.datatransfe" +
       "r.v1.endpoint.KafkaConnectionOptions\022>\n\004" +
       "auth\030\002 \001(\01320.yandex.cloud.datatransfer.v" +
       "1.endpoint.KafkaAuth\022\027\n\017security_groups\030" +
-      "\003 \003(\t\022\022\n\ntopic_name\030\004 \001(\t\022U\n\013transformer" +
-      "\030\005 \001(\0132@.yandex.cloud.datatransfer.v1.en" +
-      "dpoint.DataTransformationOptions\022=\n\006pars" +
-      "er\030\007 \001(\0132-.yandex.cloud.datatransfer.v1." +
-      "endpoint.Parser\"\331\002\n\013KafkaTarget\022Q\n\nconne" +
-      "ction\030\001 \001(\0132=.yandex.cloud.datatransfer." +
-      "v1.endpoint.KafkaConnectionOptions\022>\n\004au" +
-      "th\030\002 \001(\01320.yandex.cloud.datatransfer.v1." +
-      "endpoint.KafkaAuth\022\027\n\017security_groups\030\003 " +
-      "\003(\t\022W\n\016topic_settings\030\007 \001(\0132?.yandex.clo" +
-      "ud.datatransfer.v1.endpoint.KafkaTargetT" +
-      "opicSettings\022E\n\nserializer\030\010 \001(\01321.yande" +
-      "x.cloud.datatransfer.v1.endpoint.Seriali" +
-      "zer\"\216\001\n\030KafkaTargetTopicSettings\022H\n\005topi" +
-      "c\030\001 \001(\01327.yandex.cloud.datatransfer.v1.e" +
-      "ndpoint.KafkaTargetTopicH\000\022\026\n\014topic_pref" +
-      "ix\030\002 \001(\tH\000B\020\n\016topic_settings\"=\n\020KafkaTar" +
-      "getTopic\022\022\n\ntopic_name\030\001 \001(\t\022\025\n\rsave_tx_" +
-      "order\030\002 \001(\010*i\n\016KafkaMechanism\022\037\n\033KAFKA_M" +
-      "ECHANISM_UNSPECIFIED\020\000\022\032\n\026KAFKA_MECHANIS" +
-      "M_SHA256\020\001\022\032\n\026KAFKA_MECHANISM_SHA512\020\002B\247" +
-      "\001\n)yandex.cloud.api.datatransfer.v1.endp" +
-      "ointZRgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/datatransfer/v1/endpoint;" +
-      "endpoint\252\002%Yandex.Cloud.Datatransfer.V1." +
-      "EndPointb\006proto3"
+      "\003 \003(\t\022\026\n\ntopic_name\030\004 \001(\tB\002\030\001\022U\n\013transfo" +
+      "rmer\030\005 \001(\0132@.yandex.cloud.datatransfer.v" +
+      "1.endpoint.DataTransformationOptions\022=\n\006" +
+      "parser\030\007 \001(\0132-.yandex.cloud.datatransfer" +
+      ".v1.endpoint.Parser\022\023\n\013topic_names\030\010 \003(\t" +
+      "\"\331\002\n\013KafkaTarget\022Q\n\nconnection\030\001 \001(\0132=.y" +
+      "andex.cloud.datatransfer.v1.endpoint.Kaf" +
+      "kaConnectionOptions\022>\n\004auth\030\002 \001(\01320.yand" +
+      "ex.cloud.datatransfer.v1.endpoint.KafkaA" +
+      "uth\022\027\n\017security_groups\030\003 \003(\t\022W\n\016topic_se" +
+      "ttings\030\007 \001(\0132?.yandex.cloud.datatransfer" +
+      ".v1.endpoint.KafkaTargetTopicSettings\022E\n" +
+      "\nserializer\030\010 \001(\01321.yandex.cloud.datatra" +
+      "nsfer.v1.endpoint.Serializer\"\216\001\n\030KafkaTa" +
+      "rgetTopicSettings\022H\n\005topic\030\001 \001(\01327.yande" +
+      "x.cloud.datatransfer.v1.endpoint.KafkaTa" +
+      "rgetTopicH\000\022\026\n\014topic_prefix\030\002 \001(\tH\000B\020\n\016t" +
+      "opic_settings\"=\n\020KafkaTargetTopic\022\022\n\ntop" +
+      "ic_name\030\001 \001(\t\022\025\n\rsave_tx_order\030\002 \001(\010*i\n\016" +
+      "KafkaMechanism\022\037\n\033KAFKA_MECHANISM_UNSPEC" +
+      "IFIED\020\000\022\032\n\026KAFKA_MECHANISM_SHA256\020\001\022\032\n\026K" +
+      "AFKA_MECHANISM_SHA512\020\002B\247\001\n)yandex.cloud" +
+      ".api.datatransfer.v1.endpointZRgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "datatransfer/v1/endpoint;endpoint\252\002%Yand" +
+      "ex.Cloud.Datatransfer.V1.EndPointb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9985,7 +10289,7 @@ public final class Kafka {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_KafkaSource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_KafkaSource_descriptor,
-        new java.lang.String[] { "Connection", "Auth", "SecurityGroups", "TopicName", "Transformer", "Parser", });
+        new java.lang.String[] { "Connection", "Auth", "SecurityGroups", "TopicName", "Transformer", "Parser", "TopicNames", });
     internal_static_yandex_cloud_datatransfer_v1_endpoint_KafkaTarget_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_yandex_cloud_datatransfer_v1_endpoint_KafkaTarget_fieldAccessorTable = new

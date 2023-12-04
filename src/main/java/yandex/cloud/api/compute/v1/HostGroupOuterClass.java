@@ -14,139 +14,6 @@ public final class HostGroupOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  /**
-   * Protobuf enum {@code yandex.cloud.compute.v1.MaintenancePolicy}
-   */
-  public enum MaintenancePolicy
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>MAINTENANCE_POLICY_UNSPECIFIED = 0;</code>
-     */
-    MAINTENANCE_POLICY_UNSPECIFIED(0),
-    /**
-     * <pre>
-     * Restart instances on the same host after maintenance event.
-     * </pre>
-     *
-     * <code>RESTART = 1;</code>
-     */
-    RESTART(1),
-    /**
-     * <pre>
-     * Migrate instances to another host before maintenance event.
-     * </pre>
-     *
-     * <code>MIGRATE = 2;</code>
-     */
-    MIGRATE(2),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <code>MAINTENANCE_POLICY_UNSPECIFIED = 0;</code>
-     */
-    public static final int MAINTENANCE_POLICY_UNSPECIFIED_VALUE = 0;
-    /**
-     * <pre>
-     * Restart instances on the same host after maintenance event.
-     * </pre>
-     *
-     * <code>RESTART = 1;</code>
-     */
-    public static final int RESTART_VALUE = 1;
-    /**
-     * <pre>
-     * Migrate instances to another host before maintenance event.
-     * </pre>
-     *
-     * <code>MIGRATE = 2;</code>
-     */
-    public static final int MIGRATE_VALUE = 2;
-
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static MaintenancePolicy valueOf(int value) {
-      return forNumber(value);
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
-    public static MaintenancePolicy forNumber(int value) {
-      switch (value) {
-        case 0: return MAINTENANCE_POLICY_UNSPECIFIED;
-        case 1: return RESTART;
-        case 2: return MIGRATE;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<MaintenancePolicy>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        MaintenancePolicy> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<MaintenancePolicy>() {
-            public MaintenancePolicy findValueByNumber(int number) {
-              return MaintenancePolicy.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return yandex.cloud.api.compute.v1.HostGroupOuterClass.getDescriptor().getEnumTypes().get(0);
-    }
-
-    private static final MaintenancePolicy[] VALUES = values();
-
-    public static MaintenancePolicy valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private MaintenancePolicy(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:yandex.cloud.compute.v1.MaintenancePolicy)
-  }
-
   public interface HostGroupOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.compute.v1.HostGroup)
       com.google.protobuf.MessageOrBuilder {
@@ -388,7 +255,7 @@ public final class HostGroupOuterClass {
      * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 10;</code>
      * @return The maintenancePolicy.
      */
-    yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy getMaintenancePolicy();
+    yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy getMaintenancePolicy();
 
     /**
      * <pre>
@@ -1200,10 +1067,10 @@ public final class HostGroupOuterClass {
      * <code>.yandex.cloud.compute.v1.MaintenancePolicy maintenance_policy = 10;</code>
      * @return The maintenancePolicy.
      */
-    @java.lang.Override public yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy getMaintenancePolicy() {
+    @java.lang.Override public yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy getMaintenancePolicy() {
       @SuppressWarnings("deprecation")
-      yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy result = yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.valueOf(maintenancePolicy_);
-      return result == null ? yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.UNRECOGNIZED : result;
+      yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy result = yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.valueOf(maintenancePolicy_);
+      return result == null ? yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.UNRECOGNIZED : result;
     }
 
     public static final int SCALE_POLICY_FIELD_NUMBER = 11;
@@ -1288,7 +1155,7 @@ public final class HostGroupOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(typeId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 9, typeId_);
       }
-      if (maintenancePolicy_ != yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.MAINTENANCE_POLICY_UNSPECIFIED.getNumber()) {
+      if (maintenancePolicy_ != yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.MAINTENANCE_POLICY_UNSPECIFIED.getNumber()) {
         output.writeEnum(10, maintenancePolicy_);
       }
       if (scalePolicy_ != null) {
@@ -1339,7 +1206,7 @@ public final class HostGroupOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(typeId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, typeId_);
       }
-      if (maintenancePolicy_ != yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.MAINTENANCE_POLICY_UNSPECIFIED.getNumber()) {
+      if (maintenancePolicy_ != yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.MAINTENANCE_POLICY_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(10, maintenancePolicy_);
       }
@@ -2778,10 +2645,10 @@ public final class HostGroupOuterClass {
        * @return The maintenancePolicy.
        */
       @java.lang.Override
-      public yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy getMaintenancePolicy() {
+      public yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy getMaintenancePolicy() {
         @SuppressWarnings("deprecation")
-        yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy result = yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.valueOf(maintenancePolicy_);
-        return result == null ? yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy.UNRECOGNIZED : result;
+        yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy result = yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.valueOf(maintenancePolicy_);
+        return result == null ? yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -2792,7 +2659,7 @@ public final class HostGroupOuterClass {
        * @param value The maintenancePolicy to set.
        * @return This builder for chaining.
        */
-      public Builder setMaintenancePolicy(yandex.cloud.api.compute.v1.HostGroupOuterClass.MaintenancePolicy value) {
+      public Builder setMaintenancePolicy(yandex.cloud.api.compute.v1.Maintenance.MaintenancePolicy value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -6459,33 +6326,32 @@ public final class HostGroupOuterClass {
     java.lang.String[] descriptorData = {
       "\n(yandex/cloud/compute/v1/host_group.pro" +
       "to\022\027yandex.cloud.compute.v1\032\037google/prot" +
-      "obuf/timestamp.proto\"\244\004\n\tHostGroup\022\n\n\002id" +
-      "\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_at\030" +
-      "\003 \001(\0132\032.google.protobuf.Timestamp\022\014\n\004nam" +
-      "e\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022>\n\006labels\030\006" +
-      " \003(\0132..yandex.cloud.compute.v1.HostGroup" +
-      ".LabelsEntry\022\017\n\007zone_id\030\007 \001(\t\0229\n\006status\030" +
-      "\010 \001(\0162).yandex.cloud.compute.v1.HostGrou" +
-      "p.Status\022\017\n\007type_id\030\t \001(\t\022F\n\022maintenance" +
-      "_policy\030\n \001(\0162*.yandex.cloud.compute.v1." +
-      "MaintenancePolicy\022:\n\014scale_policy\030\013 \001(\0132" +
-      "$.yandex.cloud.compute.v1.ScalePolicy\032-\n" +
-      "\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
-      ":\0028\001\"U\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\014" +
-      "\n\010CREATING\020\001\022\t\n\005READY\020\002\022\014\n\010UPDATING\020\003\022\014\n" +
-      "\010DELETING\020\004\"\312\001\n\004Host\022\n\n\002id\030\001 \001(\t\0224\n\006stat" +
-      "us\030\002 \001(\0162$.yandex.cloud.compute.v1.Host." +
-      "Status\022\021\n\tserver_id\030\003 \001(\t\0229\n\013replacement" +
-      "\030\004 \001(\0132$.yandex.cloud.compute.v1.Replace" +
-      "ment\"2\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020\000\022\006" +
-      "\n\002UP\020\001\022\010\n\004DOWN\020\002\"\177\n\013ScalePolicy\022F\n\013fixed" +
-      "_scale\030\001 \001(\0132/.yandex.cloud.compute.v1.S" +
-      "calePolicy.FixedScaleH\000\032\032\n\nFixedScale\022\014\n" +
-      "\004size\030\001 \001(\003B\014\n\nscale_type\"O\n\013Replacement" +
-      "\022\017\n\007host_id\030\001 \001(\t\022/\n\013deadline_at\030\002 \001(\0132\032" +
-      ".google.protobuf.Timestamp*Q\n\021Maintenanc" +
-      "ePolicy\022\"\n\036MAINTENANCE_POLICY_UNSPECIFIE" +
-      "D\020\000\022\013\n\007RESTART\020\001\022\013\n\007MIGRATE\020\002Bb\n\033yandex." +
+      "obuf/timestamp.proto\032)yandex/cloud/compu" +
+      "te/v1/maintenance.proto\"\244\004\n\tHostGroup\022\n\n" +
+      "\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreated_" +
+      "at\030\003 \001(\0132\032.google.protobuf.Timestamp\022\014\n\004" +
+      "name\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\022>\n\006label" +
+      "s\030\006 \003(\0132..yandex.cloud.compute.v1.HostGr" +
+      "oup.LabelsEntry\022\017\n\007zone_id\030\007 \001(\t\0229\n\006stat" +
+      "us\030\010 \001(\0162).yandex.cloud.compute.v1.HostG" +
+      "roup.Status\022\017\n\007type_id\030\t \001(\t\022F\n\022maintena" +
+      "nce_policy\030\n \001(\0162*.yandex.cloud.compute." +
+      "v1.MaintenancePolicy\022:\n\014scale_policy\030\013 \001" +
+      "(\0132$.yandex.cloud.compute.v1.ScalePolicy" +
+      "\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 " +
+      "\001(\t:\0028\001\"U\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020" +
+      "\000\022\014\n\010CREATING\020\001\022\t\n\005READY\020\002\022\014\n\010UPDATING\020\003" +
+      "\022\014\n\010DELETING\020\004\"\312\001\n\004Host\022\n\n\002id\030\001 \001(\t\0224\n\006s" +
+      "tatus\030\002 \001(\0162$.yandex.cloud.compute.v1.Ho" +
+      "st.Status\022\021\n\tserver_id\030\003 \001(\t\0229\n\013replacem" +
+      "ent\030\004 \001(\0132$.yandex.cloud.compute.v1.Repl" +
+      "acement\"2\n\006Status\022\026\n\022STATUS_UNSPECIFIED\020" +
+      "\000\022\006\n\002UP\020\001\022\010\n\004DOWN\020\002\"\177\n\013ScalePolicy\022F\n\013fi" +
+      "xed_scale\030\001 \001(\0132/.yandex.cloud.compute.v" +
+      "1.ScalePolicy.FixedScaleH\000\032\032\n\nFixedScale" +
+      "\022\014\n\004size\030\001 \001(\003B\014\n\nscale_type\"O\n\013Replacem" +
+      "ent\022\017\n\007host_id\030\001 \001(\t\022/\n\013deadline_at\030\002 \001(" +
+      "\0132\032.google.protobuf.TimestampBb\n\033yandex." +
       "cloud.api.compute.v1ZCgithub.com/yandex-" +
       "cloud/go-genproto/yandex/cloud/compute/v" +
       "1;computeb\006proto3"
@@ -6494,6 +6360,7 @@ public final class HostGroupOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          yandex.cloud.api.compute.v1.Maintenance.getDescriptor(),
         });
     internal_static_yandex_cloud_compute_v1_HostGroup_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -6532,6 +6399,7 @@ public final class HostGroupOuterClass {
         internal_static_yandex_cloud_compute_v1_Replacement_descriptor,
         new java.lang.String[] { "HostId", "DeadlineAt", });
     com.google.protobuf.TimestampProto.getDescriptor();
+    yandex.cloud.api.compute.v1.Maintenance.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

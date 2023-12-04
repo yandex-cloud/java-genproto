@@ -5359,7 +5359,7 @@ public final class UserOuterClass {
      * Name of the user.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=32"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=32"];</code>
      * @return The name.
      */
     java.lang.String getName();
@@ -5368,7 +5368,7 @@ public final class UserOuterClass {
      * Name of the user.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=32"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=32"];</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -5702,7 +5702,7 @@ public final class UserOuterClass {
      * Name of the user.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=32"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=32"];</code>
      * @return The name.
      */
     @java.lang.Override
@@ -5723,7 +5723,7 @@ public final class UserOuterClass {
      * Name of the user.
      * </pre>
      *
-     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=32"];</code>
+     * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=32"];</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -6470,7 +6470,7 @@ public final class UserOuterClass {
        * Name of the user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=32"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=32"];</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -6490,7 +6490,7 @@ public final class UserOuterClass {
        * Name of the user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=32"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=32"];</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -6511,7 +6511,7 @@ public final class UserOuterClass {
        * Name of the user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=32"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=32"];</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -6530,7 +6530,7 @@ public final class UserOuterClass {
        * Name of the user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=32"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=32"];</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -6544,7 +6544,7 @@ public final class UserOuterClass {
        * Name of the user.
        * </pre>
        *
-       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_]*", (.yandex.cloud.length) = "&lt;=32"];</code>
+       * <code>string name = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.pattern) = "[a-zA-Z0-9_-]*", (.yandex.cloud.length) = "&lt;=32"];</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -7531,26 +7531,26 @@ public final class UserOuterClass {
       "F\n\030max_connections_per_hour\030\003 \001(\0132\033.goog" +
       "le.protobuf.Int64ValueB\007\372\3071\003>=0\022B\n\024max_u" +
       "ser_connections\030\004 \001(\0132\033.google.protobuf." +
-      "Int64ValueB\007\372\3071\003>=0\"\353\002\n\010UserSpec\022+\n\004name" +
-      "\030\001 \001(\tB\035\350\3071\001\212\3101\004<=32\362\3071\r[a-zA-Z0-9_]*\022\037\n" +
-      "\010password\030\002 \001(\tB\r\350\3071\001\212\3101\0058-128\022:\n\013permis" +
-      "sions\030\003 \003(\0132%.yandex.cloud.mdb.mysql.v1." +
-      "Permission\022G\n\022global_permissions\030\004 \003(\0162+" +
-      ".yandex.cloud.mdb.mysql.v1.GlobalPermiss" +
-      "ion\022F\n\021connection_limits\030\005 \001(\0132+.yandex." +
-      "cloud.mdb.mysql.v1.ConnectionLimits\022D\n\025a" +
-      "uthentication_plugin\030\006 \001(\0162%.yandex.clou" +
-      "d.mdb.mysql.v1.AuthPlugin*\236\001\n\020GlobalPerm" +
-      "ission\022!\n\035GLOBAL_PERMISSION_UNSPECIFIED\020" +
-      "\000\022\026\n\022REPLICATION_CLIENT\020\001\022\025\n\021REPLICATION" +
-      "_SLAVE\020\002\022\013\n\007PROCESS\020\003\022\031\n\025FLUSH_OPTIMIZER" +
-      "_COSTS\020\004\022\020\n\014SHOW_ROUTINE\020\005*t\n\nAuthPlugin" +
-      "\022\033\n\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_N" +
-      "ATIVE_PASSWORD\020\001\022\031\n\025CACHING_SHA2_PASSWOR" +
-      "D\020\002\022\023\n\017SHA256_PASSWORD\020\003Bd\n\035yandex.cloud" +
-      ".api.mdb.mysql.v1ZCgithub.com/yandex-clo" +
-      "ud/go-genproto/yandex/cloud/mdb/mysql/v1" +
-      ";mysqlb\006proto3"
+      "Int64ValueB\007\372\3071\003>=0\"\354\002\n\010UserSpec\022,\n\004name" +
+      "\030\001 \001(\tB\036\350\3071\001\212\3101\004<=32\362\3071\016[a-zA-Z0-9_-]*\022\037" +
+      "\n\010password\030\002 \001(\tB\r\350\3071\001\212\3101\0058-128\022:\n\013permi" +
+      "ssions\030\003 \003(\0132%.yandex.cloud.mdb.mysql.v1" +
+      ".Permission\022G\n\022global_permissions\030\004 \003(\0162" +
+      "+.yandex.cloud.mdb.mysql.v1.GlobalPermis" +
+      "sion\022F\n\021connection_limits\030\005 \001(\0132+.yandex" +
+      ".cloud.mdb.mysql.v1.ConnectionLimits\022D\n\025" +
+      "authentication_plugin\030\006 \001(\0162%.yandex.clo" +
+      "ud.mdb.mysql.v1.AuthPlugin*\236\001\n\020GlobalPer" +
+      "mission\022!\n\035GLOBAL_PERMISSION_UNSPECIFIED" +
+      "\020\000\022\026\n\022REPLICATION_CLIENT\020\001\022\025\n\021REPLICATIO" +
+      "N_SLAVE\020\002\022\013\n\007PROCESS\020\003\022\031\n\025FLUSH_OPTIMIZE" +
+      "R_COSTS\020\004\022\020\n\014SHOW_ROUTINE\020\005*t\n\nAuthPlugi" +
+      "n\022\033\n\027AUTH_PLUGIN_UNSPECIFIED\020\000\022\031\n\025MYSQL_" +
+      "NATIVE_PASSWORD\020\001\022\031\n\025CACHING_SHA2_PASSWO" +
+      "RD\020\002\022\023\n\017SHA256_PASSWORD\020\003Bd\n\035yandex.clou" +
+      "d.api.mdb.mysql.v1ZCgithub.com/yandex-cl" +
+      "oud/go-genproto/yandex/cloud/mdb/mysql/v" +
+      "1;mysqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

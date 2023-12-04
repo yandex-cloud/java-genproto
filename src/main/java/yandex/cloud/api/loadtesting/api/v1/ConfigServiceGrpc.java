@@ -46,6 +46,68 @@ public final class ConfigServiceGrpc {
     return getCreateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest,
+      yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config> getGetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Get",
+      requestType = yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest.class,
+      responseType = yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest,
+      yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config> getGetMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest, yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config> getGetMethod;
+    if ((getGetMethod = ConfigServiceGrpc.getGetMethod) == null) {
+      synchronized (ConfigServiceGrpc.class) {
+        if ((getGetMethod = ConfigServiceGrpc.getGetMethod) == null) {
+          ConfigServiceGrpc.getGetMethod = getGetMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest, yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Get"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config.getDefaultInstance()))
+              .setSchemaDescriptor(new ConfigServiceMethodDescriptorSupplier("Get"))
+              .build();
+        }
+      }
+    }
+    return getGetMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest,
+      yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse> getListMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "List",
+      requestType = yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest.class,
+      responseType = yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest,
+      yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse> getListMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest, yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse> getListMethod;
+    if ((getListMethod = ConfigServiceGrpc.getListMethod) == null) {
+      synchronized (ConfigServiceGrpc.class) {
+        if ((getListMethod = ConfigServiceGrpc.getListMethod) == null) {
+          ConfigServiceGrpc.getListMethod = getListMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest, yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "List"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ConfigServiceMethodDescriptorSupplier("List"))
+              .build();
+        }
+      }
+    }
+    return getListMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -95,10 +157,34 @@ public final class ConfigServiceGrpc {
   public static abstract class ConfigServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Creates a test config in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.CreateConfigRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns the specified config.
+     * To get the list of all available configs, make a [List] request.
+     * </pre>
+     */
+    public void get(yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of configs in the specified folder.
+     * </pre>
+     */
+    public void list(yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -110,6 +196,20 @@ public final class ConfigServiceGrpc {
                 yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.CreateConfigRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_CREATE)))
+          .addMethod(
+            getGetMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest,
+                yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config>(
+                  this, METHODID_GET)))
+          .addMethod(
+            getListMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest,
+                yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse>(
+                  this, METHODID_LIST)))
           .build();
     }
   }
@@ -129,11 +229,37 @@ public final class ConfigServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a test config in the specified folder.
+     * </pre>
      */
     public void create(yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.CreateConfigRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns the specified config.
+     * To get the list of all available configs, make a [List] request.
+     * </pre>
+     */
+    public void get(yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of configs in the specified folder.
+     * </pre>
+     */
+    public void list(yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -152,10 +278,34 @@ public final class ConfigServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a test config in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.CreateConfigRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns the specified config.
+     * To get the list of all available configs, make a [List] request.
+     * </pre>
+     */
+    public yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config get(yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of configs in the specified folder.
+     * </pre>
+     */
+    public yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse list(yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListMethod(), getCallOptions(), request);
     }
   }
 
@@ -174,15 +324,43 @@ public final class ConfigServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates a test config in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.CreateConfigRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Returns the specified config.
+     * To get the list of all available configs, make a [List] request.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config> get(
+        yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Retrieves the list of configs in the specified folder.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse> list(
+        yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE = 0;
+  private static final int METHODID_GET = 1;
+  private static final int METHODID_LIST = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -204,6 +382,14 @@ public final class ConfigServiceGrpc {
         case METHODID_CREATE:
           serviceImpl.create((yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.CreateConfigRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_GET:
+          serviceImpl.get((yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.GetConfigRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.config.ConfigOuterClass.Config>) responseObserver);
+          break;
+        case METHODID_LIST:
+          serviceImpl.list((yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.ConfigServiceOuterClass.ListConfigsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -267,6 +453,8 @@ public final class ConfigServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ConfigServiceFileDescriptorSupplier())
               .addMethod(getCreateMethod())
+              .addMethod(getGetMethod())
+              .addMethod(getListMethod())
               .build();
         }
       }

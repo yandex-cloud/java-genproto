@@ -19,11 +19,19 @@ public final class ReportServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * ID of the test for which report table will be returned.
+     * </pre>
+     *
      * <code>string test_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The testId.
      */
     java.lang.String getTestId();
     /**
+     * <pre>
+     * ID of the test for which report table will be returned.
+     * </pre>
+     *
      * <code>string test_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for testId.
      */
@@ -117,6 +125,10 @@ public final class ReportServiceOuterClass {
     public static final int TEST_ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object testId_;
     /**
+     * <pre>
+     * ID of the test for which report table will be returned.
+     * </pre>
+     *
      * <code>string test_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The testId.
      */
@@ -134,6 +146,10 @@ public final class ReportServiceOuterClass {
       }
     }
     /**
+     * <pre>
+     * ID of the test for which report table will be returned.
+     * </pre>
+     *
      * <code>string test_id = 1 [(.yandex.cloud.required) = true];</code>
      * @return The bytes for testId.
      */
@@ -456,6 +472,10 @@ public final class ReportServiceOuterClass {
 
       private java.lang.Object testId_ = "";
       /**
+       * <pre>
+       * ID of the test for which report table will be returned.
+       * </pre>
+       *
        * <code>string test_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The testId.
        */
@@ -472,6 +492,10 @@ public final class ReportServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the test for which report table will be returned.
+       * </pre>
+       *
        * <code>string test_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return The bytes for testId.
        */
@@ -489,6 +513,10 @@ public final class ReportServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * ID of the test for which report table will be returned.
+       * </pre>
+       *
        * <code>string test_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The testId to set.
        * @return This builder for chaining.
@@ -504,6 +532,10 @@ public final class ReportServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the test for which report table will be returned.
+       * </pre>
+       *
        * <code>string test_id = 1 [(.yandex.cloud.required) = true];</code>
        * @return This builder for chaining.
        */
@@ -514,6 +546,10 @@ public final class ReportServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * ID of the test for which report table will be returned.
+       * </pre>
+       *
        * <code>string test_id = 1 [(.yandex.cloud.required) = true];</code>
        * @param value The bytes for testId to set.
        * @return This builder for chaining.
@@ -587,36 +623,64 @@ public final class ReportServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
+     * <pre>
+     * Status of report table.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.report.Status status = 1;</code>
      * @return The enum numeric value on the wire for status.
      */
     int getStatusValue();
     /**
+     * <pre>
+     * Status of report table.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.report.Status status = 1;</code>
      * @return The status.
      */
     yandex.cloud.api.loadtesting.api.v1.report.StatusOuterClass.Status getStatus();
 
     /**
+     * <pre>
+     * Result for all test cases combined ("overall" test case).
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.report.table.Report overall = 2;</code>
      * @return Whether the overall field is set.
      */
     boolean hasOverall();
     /**
+     * <pre>
+     * Result for all test cases combined ("overall" test case).
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.report.table.Report overall = 2;</code>
      * @return The overall.
      */
     yandex.cloud.api.loadtesting.api.v1.report.table.ReportOuterClass.Report getOverall();
     /**
+     * <pre>
+     * Result for all test cases combined ("overall" test case).
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.report.table.Report overall = 2;</code>
      */
     yandex.cloud.api.loadtesting.api.v1.report.table.ReportOuterClass.ReportOrBuilder getOverallOrBuilder();
 
     /**
+     * <pre>
+     * Results for individual test cases, mapped as `case_name:report`.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.report.table.Report&gt; cases = 3;</code>
      */
     int getCasesCount();
     /**
+     * <pre>
+     * Results for individual test cases, mapped as `case_name:report`.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.report.table.Report&gt; cases = 3;</code>
      */
     boolean containsCases(
@@ -628,11 +692,19 @@ public final class ReportServiceOuterClass {
     java.util.Map<java.lang.String, yandex.cloud.api.loadtesting.api.v1.report.table.ReportOuterClass.Report>
     getCases();
     /**
+     * <pre>
+     * Results for individual test cases, mapped as `case_name:report`.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.report.table.Report&gt; cases = 3;</code>
      */
     java.util.Map<java.lang.String, yandex.cloud.api.loadtesting.api.v1.report.table.ReportOuterClass.Report>
     getCasesMap();
     /**
+     * <pre>
+     * Results for individual test cases, mapped as `case_name:report`.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.report.table.Report&gt; cases = 3;</code>
      */
 
@@ -640,6 +712,10 @@ public final class ReportServiceOuterClass {
         java.lang.String key,
         yandex.cloud.api.loadtesting.api.v1.report.table.ReportOuterClass.Report defaultValue);
     /**
+     * <pre>
+     * Results for individual test cases, mapped as `case_name:report`.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.report.table.Report&gt; cases = 3;</code>
      */
 
@@ -772,6 +848,10 @@ public final class ReportServiceOuterClass {
     public static final int STATUS_FIELD_NUMBER = 1;
     private int status_;
     /**
+     * <pre>
+     * Status of report table.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.report.Status status = 1;</code>
      * @return The enum numeric value on the wire for status.
      */
@@ -779,6 +859,10 @@ public final class ReportServiceOuterClass {
       return status_;
     }
     /**
+     * <pre>
+     * Status of report table.
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.report.Status status = 1;</code>
      * @return The status.
      */
@@ -791,6 +875,10 @@ public final class ReportServiceOuterClass {
     public static final int OVERALL_FIELD_NUMBER = 2;
     private yandex.cloud.api.loadtesting.api.v1.report.table.ReportOuterClass.Report overall_;
     /**
+     * <pre>
+     * Result for all test cases combined ("overall" test case).
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.report.table.Report overall = 2;</code>
      * @return Whether the overall field is set.
      */
@@ -799,6 +887,10 @@ public final class ReportServiceOuterClass {
       return overall_ != null;
     }
     /**
+     * <pre>
+     * Result for all test cases combined ("overall" test case).
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.report.table.Report overall = 2;</code>
      * @return The overall.
      */
@@ -807,6 +899,10 @@ public final class ReportServiceOuterClass {
       return overall_ == null ? yandex.cloud.api.loadtesting.api.v1.report.table.ReportOuterClass.Report.getDefaultInstance() : overall_;
     }
     /**
+     * <pre>
+     * Result for all test cases combined ("overall" test case).
+     * </pre>
+     *
      * <code>.yandex.cloud.loadtesting.api.v1.report.table.Report overall = 2;</code>
      */
     @java.lang.Override
@@ -841,6 +937,10 @@ public final class ReportServiceOuterClass {
       return internalGetCases().getMap().size();
     }
     /**
+     * <pre>
+     * Results for individual test cases, mapped as `case_name:report`.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.report.table.Report&gt; cases = 3;</code>
      */
 
@@ -859,6 +959,10 @@ public final class ReportServiceOuterClass {
       return getCasesMap();
     }
     /**
+     * <pre>
+     * Results for individual test cases, mapped as `case_name:report`.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.report.table.Report&gt; cases = 3;</code>
      */
     @java.lang.Override
@@ -867,6 +971,10 @@ public final class ReportServiceOuterClass {
       return internalGetCases().getMap();
     }
     /**
+     * <pre>
+     * Results for individual test cases, mapped as `case_name:report`.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.report.table.Report&gt; cases = 3;</code>
      */
     @java.lang.Override
@@ -880,6 +988,10 @@ public final class ReportServiceOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
+     * <pre>
+     * Results for individual test cases, mapped as `case_name:report`.
+     * </pre>
+     *
      * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.report.table.Report&gt; cases = 3;</code>
      */
     @java.lang.Override
@@ -1279,6 +1391,10 @@ public final class ReportServiceOuterClass {
 
       private int status_ = 0;
       /**
+       * <pre>
+       * Status of report table.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.report.Status status = 1;</code>
        * @return The enum numeric value on the wire for status.
        */
@@ -1286,6 +1402,10 @@ public final class ReportServiceOuterClass {
         return status_;
       }
       /**
+       * <pre>
+       * Status of report table.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.report.Status status = 1;</code>
        * @param value The enum numeric value on the wire for status to set.
        * @return This builder for chaining.
@@ -1297,6 +1417,10 @@ public final class ReportServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of report table.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.report.Status status = 1;</code>
        * @return The status.
        */
@@ -1307,6 +1431,10 @@ public final class ReportServiceOuterClass {
         return result == null ? yandex.cloud.api.loadtesting.api.v1.report.StatusOuterClass.Status.UNRECOGNIZED : result;
       }
       /**
+       * <pre>
+       * Status of report table.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.report.Status status = 1;</code>
        * @param value The status to set.
        * @return This builder for chaining.
@@ -1321,6 +1449,10 @@ public final class ReportServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Status of report table.
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.report.Status status = 1;</code>
        * @return This builder for chaining.
        */
@@ -1335,6 +1467,10 @@ public final class ReportServiceOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           yandex.cloud.api.loadtesting.api.v1.report.table.ReportOuterClass.Report, yandex.cloud.api.loadtesting.api.v1.report.table.ReportOuterClass.Report.Builder, yandex.cloud.api.loadtesting.api.v1.report.table.ReportOuterClass.ReportOrBuilder> overallBuilder_;
       /**
+       * <pre>
+       * Result for all test cases combined ("overall" test case).
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.report.table.Report overall = 2;</code>
        * @return Whether the overall field is set.
        */
@@ -1342,6 +1478,10 @@ public final class ReportServiceOuterClass {
         return overallBuilder_ != null || overall_ != null;
       }
       /**
+       * <pre>
+       * Result for all test cases combined ("overall" test case).
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.report.table.Report overall = 2;</code>
        * @return The overall.
        */
@@ -1353,6 +1493,10 @@ public final class ReportServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Result for all test cases combined ("overall" test case).
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.report.table.Report overall = 2;</code>
        */
       public Builder setOverall(yandex.cloud.api.loadtesting.api.v1.report.table.ReportOuterClass.Report value) {
@@ -1369,6 +1513,10 @@ public final class ReportServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Result for all test cases combined ("overall" test case).
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.report.table.Report overall = 2;</code>
        */
       public Builder setOverall(
@@ -1383,6 +1531,10 @@ public final class ReportServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Result for all test cases combined ("overall" test case).
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.report.table.Report overall = 2;</code>
        */
       public Builder mergeOverall(yandex.cloud.api.loadtesting.api.v1.report.table.ReportOuterClass.Report value) {
@@ -1401,6 +1553,10 @@ public final class ReportServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Result for all test cases combined ("overall" test case).
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.report.table.Report overall = 2;</code>
        */
       public Builder clearOverall() {
@@ -1415,6 +1571,10 @@ public final class ReportServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Result for all test cases combined ("overall" test case).
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.report.table.Report overall = 2;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.report.table.ReportOuterClass.Report.Builder getOverallBuilder() {
@@ -1423,6 +1583,10 @@ public final class ReportServiceOuterClass {
         return getOverallFieldBuilder().getBuilder();
       }
       /**
+       * <pre>
+       * Result for all test cases combined ("overall" test case).
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.report.table.Report overall = 2;</code>
        */
       public yandex.cloud.api.loadtesting.api.v1.report.table.ReportOuterClass.ReportOrBuilder getOverallOrBuilder() {
@@ -1434,6 +1598,10 @@ public final class ReportServiceOuterClass {
         }
       }
       /**
+       * <pre>
+       * Result for all test cases combined ("overall" test case).
+       * </pre>
+       *
        * <code>.yandex.cloud.loadtesting.api.v1.report.table.Report overall = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1477,6 +1645,10 @@ public final class ReportServiceOuterClass {
         return internalGetCases().getMap().size();
       }
       /**
+       * <pre>
+       * Results for individual test cases, mapped as `case_name:report`.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.report.table.Report&gt; cases = 3;</code>
        */
 
@@ -1495,6 +1667,10 @@ public final class ReportServiceOuterClass {
         return getCasesMap();
       }
       /**
+       * <pre>
+       * Results for individual test cases, mapped as `case_name:report`.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.report.table.Report&gt; cases = 3;</code>
        */
       @java.lang.Override
@@ -1503,6 +1679,10 @@ public final class ReportServiceOuterClass {
         return internalGetCases().getMap();
       }
       /**
+       * <pre>
+       * Results for individual test cases, mapped as `case_name:report`.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.report.table.Report&gt; cases = 3;</code>
        */
       @java.lang.Override
@@ -1516,6 +1696,10 @@ public final class ReportServiceOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
+       * <pre>
+       * Results for individual test cases, mapped as `case_name:report`.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.report.table.Report&gt; cases = 3;</code>
        */
       @java.lang.Override
@@ -1537,6 +1721,10 @@ public final class ReportServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Results for individual test cases, mapped as `case_name:report`.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.report.table.Report&gt; cases = 3;</code>
        */
 
@@ -1556,6 +1744,10 @@ public final class ReportServiceOuterClass {
         return internalGetMutableCases().getMutableMap();
       }
       /**
+       * <pre>
+       * Results for individual test cases, mapped as `case_name:report`.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.report.table.Report&gt; cases = 3;</code>
        */
       public Builder putCases(
@@ -1571,6 +1763,10 @@ public final class ReportServiceOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * Results for individual test cases, mapped as `case_name:report`.
+       * </pre>
+       *
        * <code>map&lt;string, .yandex.cloud.loadtesting.api.v1.report.table.Report&gt; cases = 3;</code>
        */
 

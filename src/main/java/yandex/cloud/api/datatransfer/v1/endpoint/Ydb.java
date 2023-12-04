@@ -2123,6 +2123,17 @@ public final class Ydb {
      * @return The cleanupPolicy.
      */
     yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbCleanupPolicy getCleanupPolicy();
+
+    /**
+     * <pre>
+     * Should create column-oriented table (OLAP). By default it creates row-oriented
+     * (OLTP)
+     * </pre>
+     *
+     * <code>bool is_table_column_oriented = 34;</code>
+     * @return The isTableColumnOriented.
+     */
+    boolean getIsTableColumnOriented();
   }
   /**
    * Protobuf type {@code yandex.cloud.datatransfer.v1.endpoint.YdbTarget}
@@ -2227,6 +2238,11 @@ public final class Ydb {
                 mutable_bitField0_ |= 0x00000001;
               }
               securityGroups_.add(s);
+              break;
+            }
+            case 272: {
+
+              isTableColumnOriented_ = input.readBool();
               break;
             }
             default: {
@@ -2610,6 +2626,22 @@ public final class Ydb {
       return result == null ? yandex.cloud.api.datatransfer.v1.endpoint.Ydb.YdbCleanupPolicy.UNRECOGNIZED : result;
     }
 
+    public static final int IS_TABLE_COLUMN_ORIENTED_FIELD_NUMBER = 34;
+    private boolean isTableColumnOriented_;
+    /**
+     * <pre>
+     * Should create column-oriented table (OLAP). By default it creates row-oriented
+     * (OLTP)
+     * </pre>
+     *
+     * <code>bool is_table_column_oriented = 34;</code>
+     * @return The isTableColumnOriented.
+     */
+    @java.lang.Override
+    public boolean getIsTableColumnOriented() {
+      return isTableColumnOriented_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2647,6 +2679,9 @@ public final class Ydb {
       }
       for (int i = 0; i < securityGroups_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 33, securityGroups_.getRaw(i));
+      }
+      if (isTableColumnOriented_ != false) {
+        output.writeBool(34, isTableColumnOriented_);
       }
       unknownFields.writeTo(output);
     }
@@ -2687,6 +2722,10 @@ public final class Ydb {
         size += dataSize;
         size += 2 * getSecurityGroupsList().size();
       }
+      if (isTableColumnOriented_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(34, isTableColumnOriented_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2717,6 +2756,8 @@ public final class Ydb {
       if (!getSaKeyContent()
           .equals(other.getSaKeyContent())) return false;
       if (cleanupPolicy_ != other.cleanupPolicy_) return false;
+      if (getIsTableColumnOriented()
+          != other.getIsTableColumnOriented()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -2746,6 +2787,9 @@ public final class Ydb {
       hash = (53 * hash) + getSaKeyContent().hashCode();
       hash = (37 * hash) + CLEANUP_POLICY_FIELD_NUMBER;
       hash = (53 * hash) + cleanupPolicy_;
+      hash = (37 * hash) + IS_TABLE_COLUMN_ORIENTED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsTableColumnOriented());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2895,6 +2939,8 @@ public final class Ydb {
 
         cleanupPolicy_ = 0;
 
+        isTableColumnOriented_ = false;
+
         return this;
       }
 
@@ -2934,6 +2980,7 @@ public final class Ydb {
         result.securityGroups_ = securityGroups_;
         result.saKeyContent_ = saKeyContent_;
         result.cleanupPolicy_ = cleanupPolicy_;
+        result.isTableColumnOriented_ = isTableColumnOriented_;
         onBuilt();
         return result;
       }
@@ -3018,6 +3065,9 @@ public final class Ydb {
         }
         if (other.cleanupPolicy_ != 0) {
           setCleanupPolicyValue(other.getCleanupPolicyValue());
+        }
+        if (other.getIsTableColumnOriented() != false) {
+          setIsTableColumnOriented(other.getIsTableColumnOriented());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3824,6 +3874,52 @@ public final class Ydb {
         onChanged();
         return this;
       }
+
+      private boolean isTableColumnOriented_ ;
+      /**
+       * <pre>
+       * Should create column-oriented table (OLAP). By default it creates row-oriented
+       * (OLTP)
+       * </pre>
+       *
+       * <code>bool is_table_column_oriented = 34;</code>
+       * @return The isTableColumnOriented.
+       */
+      @java.lang.Override
+      public boolean getIsTableColumnOriented() {
+        return isTableColumnOriented_;
+      }
+      /**
+       * <pre>
+       * Should create column-oriented table (OLAP). By default it creates row-oriented
+       * (OLTP)
+       * </pre>
+       *
+       * <code>bool is_table_column_oriented = 34;</code>
+       * @param value The isTableColumnOriented to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsTableColumnOriented(boolean value) {
+        
+        isTableColumnOriented_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Should create column-oriented table (OLAP). By default it creates row-oriented
+       * (OLTP)
+       * </pre>
+       *
+       * <code>bool is_table_column_oriented = 34;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsTableColumnOriented() {
+        
+        isTableColumnOriented_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3902,20 +3998,21 @@ public final class Ydb {
       "\022\020\n\010instance\030\002 \001(\t\022\032\n\022service_account_id" +
       "\030\006 \001(\t\022\r\n\005paths\030\005 \003(\t\022\021\n\tsubnet_id\030\036 \001(\t" +
       "\022\027\n\017security_groups\030\" \003(\t\022\026\n\016sa_key_cont" +
-      "ent\030! \001(\t\"\356\001\n\tYdbTarget\022\020\n\010database\030\001 \001(" +
+      "ent\030! \001(\t\"\220\002\n\tYdbTarget\022\020\n\010database\030\001 \001(" +
       "\t\022\020\n\010instance\030\002 \001(\t\022\032\n\022service_account_i" +
       "d\030\013 \001(\t\022\014\n\004path\030\n \001(\t\022\021\n\tsubnet_id\030\036 \001(\t" +
       "\022\027\n\017security_groups\030! \003(\t\022\026\n\016sa_key_cont" +
       "ent\030  \001(\t\022O\n\016cleanup_policy\030\025 \001(\01627.yand" +
       "ex.cloud.datatransfer.v1.endpoint.YdbCle" +
-      "anupPolicy*t\n\020YdbCleanupPolicy\022\"\n\036YDB_CL" +
-      "EANUP_POLICY_UNSPECIFIED\020\000\022\037\n\033YDB_CLEANU" +
-      "P_POLICY_DISABLED\020\001\022\033\n\027YDB_CLEANUP_POLIC" +
-      "Y_DROP\020\002B\247\001\n)yandex.cloud.api.datatransf" +
-      "er.v1.endpointZRgithub.com/yandex-cloud/" +
-      "go-genproto/yandex/cloud/datatransfer/v1" +
-      "/endpoint;endpoint\252\002%Yandex.Cloud.Datatr" +
-      "ansfer.V1.EndPointb\006proto3"
+      "anupPolicy\022 \n\030is_table_column_oriented\030\"" +
+      " \001(\010*t\n\020YdbCleanupPolicy\022\"\n\036YDB_CLEANUP_" +
+      "POLICY_UNSPECIFIED\020\000\022\037\n\033YDB_CLEANUP_POLI" +
+      "CY_DISABLED\020\001\022\033\n\027YDB_CLEANUP_POLICY_DROP" +
+      "\020\002B\247\001\n)yandex.cloud.api.datatransfer.v1." +
+      "endpointZRgithub.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/datatransfer/v1/endpo" +
+      "int;endpoint\252\002%Yandex.Cloud.Datatransfer" +
+      ".V1.EndPointb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3932,7 +4029,7 @@ public final class Ydb {
     internal_static_yandex_cloud_datatransfer_v1_endpoint_YdbTarget_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datatransfer_v1_endpoint_YdbTarget_descriptor,
-        new java.lang.String[] { "Database", "Instance", "ServiceAccountId", "Path", "SubnetId", "SecurityGroups", "SaKeyContent", "CleanupPolicy", });
+        new java.lang.String[] { "Database", "Instance", "ServiceAccountId", "Path", "SubnetId", "SecurityGroups", "SaKeyContent", "CleanupPolicy", "IsTableColumnOriented", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

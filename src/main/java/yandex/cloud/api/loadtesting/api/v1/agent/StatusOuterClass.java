@@ -15,75 +15,147 @@ public final class StatusOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
+   * <pre>
+   * Agent status.
+   * </pre>
+   *
    * Protobuf enum {@code yandex.cloud.loadtesting.api.v1.agent.Status}
    */
   public enum Status
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
+     * <pre>
+     * Status is not specified.
+     * </pre>
+     *
      * <code>STATUS_UNSPECIFIED = 0;</code>
      */
     STATUS_UNSPECIFIED(0),
     /**
+     * <pre>
+     * Agent is preparing a test to be executed.
+     * </pre>
+     *
      * <code>PREPARING_TEST = 1;</code>
      */
     PREPARING_TEST(1),
     /**
+     * <pre>
+     * Agent is ready to take a test.
+     * </pre>
+     *
      * <code>READY_FOR_TEST = 2;</code>
      */
     READY_FOR_TEST(2),
     /**
+     * <pre>
+     * Agent is executing a test.
+     * </pre>
+     *
      * <code>TESTING = 3;</code>
      */
     TESTING(3),
     /**
+     * <pre>
+     * Agent application encountered an error and cannot operate normally.
+     * </pre>
+     *
      * <code>TANK_FAILED = 4;</code>
      */
     TANK_FAILED(4),
     /**
+     * <pre>
+     * Agent is waiting for resources to be allocated.
+     * </pre>
+     *
      * <code>PROVISIONING = 5;</code>
      */
     PROVISIONING(5),
     /**
+     * <pre>
+     * Agent is being stopped.
+     * </pre>
+     *
      * <code>STOPPING = 6;</code>
      */
     STOPPING(6),
     /**
+     * <pre>
+     * Agent is stopped.
+     * </pre>
+     *
      * <code>STOPPED = 7;</code>
      */
     STOPPED(7),
     /**
+     * <pre>
+     * Agent is being started.
+     * </pre>
+     *
      * <code>STARTING = 8;</code>
      */
     STARTING(8),
     /**
+     * <pre>
+     * Agent is being restarted.
+     * </pre>
+     *
      * <code>RESTARTING = 9;</code>
      */
     RESTARTING(9),
     /**
+     * <pre>
+     * Agent is being updated.
+     * </pre>
+     *
      * <code>UPDATING = 10;</code>
      */
     UPDATING(10),
     /**
+     * <pre>
+     * Agent encountered an error and cannot operate.
+     * </pre>
+     *
      * <code>ERROR = 11;</code>
      */
     ERROR(11),
     /**
+     * <pre>
+     * Agent is crashed and will be restarted automatically.
+     * </pre>
+     *
      * <code>CRASHED = 12;</code>
      */
     CRASHED(12),
     /**
+     * <pre>
+     * Agent is being deleted.
+     * </pre>
+     *
      * <code>DELETING = 13;</code>
      */
     DELETING(13),
     /**
+     * <pre>
+     * Service is waiting for connection with agent to be established.
+     * </pre>
+     *
      * <code>INITIALIZING_CONNECTION = 15;</code>
      */
     INITIALIZING_CONNECTION(15),
     /**
+     * <pre>
+     * Service has lost connection with agent.
+     * </pre>
+     *
      * <code>LOST_CONNECTION_WITH_AGENT = 16;</code>
      */
     LOST_CONNECTION_WITH_AGENT(16),
     /**
+     * <pre>
+     * Agent is uploading test artifacts.
+     * </pre>
+     *
      * <code>UPLOADING_ARTIFACTS = 17;</code>
      */
     UPLOADING_ARTIFACTS(17),
@@ -91,70 +163,138 @@ public final class StatusOuterClass {
     ;
 
     /**
+     * <pre>
+     * Status is not specified.
+     * </pre>
+     *
      * <code>STATUS_UNSPECIFIED = 0;</code>
      */
     public static final int STATUS_UNSPECIFIED_VALUE = 0;
     /**
+     * <pre>
+     * Agent is preparing a test to be executed.
+     * </pre>
+     *
      * <code>PREPARING_TEST = 1;</code>
      */
     public static final int PREPARING_TEST_VALUE = 1;
     /**
+     * <pre>
+     * Agent is ready to take a test.
+     * </pre>
+     *
      * <code>READY_FOR_TEST = 2;</code>
      */
     public static final int READY_FOR_TEST_VALUE = 2;
     /**
+     * <pre>
+     * Agent is executing a test.
+     * </pre>
+     *
      * <code>TESTING = 3;</code>
      */
     public static final int TESTING_VALUE = 3;
     /**
+     * <pre>
+     * Agent application encountered an error and cannot operate normally.
+     * </pre>
+     *
      * <code>TANK_FAILED = 4;</code>
      */
     public static final int TANK_FAILED_VALUE = 4;
     /**
+     * <pre>
+     * Agent is waiting for resources to be allocated.
+     * </pre>
+     *
      * <code>PROVISIONING = 5;</code>
      */
     public static final int PROVISIONING_VALUE = 5;
     /**
+     * <pre>
+     * Agent is being stopped.
+     * </pre>
+     *
      * <code>STOPPING = 6;</code>
      */
     public static final int STOPPING_VALUE = 6;
     /**
+     * <pre>
+     * Agent is stopped.
+     * </pre>
+     *
      * <code>STOPPED = 7;</code>
      */
     public static final int STOPPED_VALUE = 7;
     /**
+     * <pre>
+     * Agent is being started.
+     * </pre>
+     *
      * <code>STARTING = 8;</code>
      */
     public static final int STARTING_VALUE = 8;
     /**
+     * <pre>
+     * Agent is being restarted.
+     * </pre>
+     *
      * <code>RESTARTING = 9;</code>
      */
     public static final int RESTARTING_VALUE = 9;
     /**
+     * <pre>
+     * Agent is being updated.
+     * </pre>
+     *
      * <code>UPDATING = 10;</code>
      */
     public static final int UPDATING_VALUE = 10;
     /**
+     * <pre>
+     * Agent encountered an error and cannot operate.
+     * </pre>
+     *
      * <code>ERROR = 11;</code>
      */
     public static final int ERROR_VALUE = 11;
     /**
+     * <pre>
+     * Agent is crashed and will be restarted automatically.
+     * </pre>
+     *
      * <code>CRASHED = 12;</code>
      */
     public static final int CRASHED_VALUE = 12;
     /**
+     * <pre>
+     * Agent is being deleted.
+     * </pre>
+     *
      * <code>DELETING = 13;</code>
      */
     public static final int DELETING_VALUE = 13;
     /**
+     * <pre>
+     * Service is waiting for connection with agent to be established.
+     * </pre>
+     *
      * <code>INITIALIZING_CONNECTION = 15;</code>
      */
     public static final int INITIALIZING_CONNECTION_VALUE = 15;
     /**
+     * <pre>
+     * Service has lost connection with agent.
+     * </pre>
+     *
      * <code>LOST_CONNECTION_WITH_AGENT = 16;</code>
      */
     public static final int LOST_CONNECTION_WITH_AGENT_VALUE = 16;
     /**
+     * <pre>
+     * Agent is uploading test artifacts.
+     * </pre>
+     *
      * <code>UPLOADING_ARTIFACTS = 17;</code>
      */
     public static final int UPLOADING_ARTIFACTS_VALUE = 17;

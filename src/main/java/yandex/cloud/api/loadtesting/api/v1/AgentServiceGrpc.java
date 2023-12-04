@@ -188,6 +188,10 @@ public final class AgentServiceGrpc {
   public static abstract class AgentServiceImplBase implements io.grpc.BindableService {
 
     /**
+     * <pre>
+     * Creates an agent in the specified folder.
+     * Also creates a corresponding compute instance.
+     * </pre>
      */
     public void create(yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.CreateAgentRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -195,6 +199,10 @@ public final class AgentServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified agent.
+     * To get the list of all available agents, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.GetAgentRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.Agent> responseObserver) {
@@ -202,6 +210,9 @@ public final class AgentServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of agents in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsResponse> responseObserver) {
@@ -209,6 +220,10 @@ public final class AgentServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified agent.
+     * Also deletes a corresponding compute instance.
+     * </pre>
      */
     public void delete(yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.DeleteAgentRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -264,6 +279,10 @@ public final class AgentServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates an agent in the specified folder.
+     * Also creates a corresponding compute instance.
+     * </pre>
      */
     public void create(yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.CreateAgentRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -272,6 +291,10 @@ public final class AgentServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified agent.
+     * To get the list of all available agents, make a [List] request.
+     * </pre>
      */
     public void get(yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.GetAgentRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.Agent> responseObserver) {
@@ -280,6 +303,9 @@ public final class AgentServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of agents in the specified folder.
+     * </pre>
      */
     public void list(yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsResponse> responseObserver) {
@@ -288,6 +314,10 @@ public final class AgentServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified agent.
+     * Also deletes a corresponding compute instance.
+     * </pre>
      */
     public void delete(yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.DeleteAgentRequest request,
         io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
@@ -311,6 +341,10 @@ public final class AgentServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates an agent in the specified folder.
+     * Also creates a corresponding compute instance.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation create(yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.CreateAgentRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -318,6 +352,10 @@ public final class AgentServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified agent.
+     * To get the list of all available agents, make a [List] request.
+     * </pre>
      */
     public yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.Agent get(yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.GetAgentRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -325,6 +363,9 @@ public final class AgentServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of agents in the specified folder.
+     * </pre>
      */
     public yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsResponse list(yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -332,6 +373,10 @@ public final class AgentServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified agent.
+     * Also deletes a corresponding compute instance.
+     * </pre>
      */
     public yandex.cloud.api.operation.OperationOuterClass.Operation delete(yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.DeleteAgentRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -354,6 +399,10 @@ public final class AgentServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Creates an agent in the specified folder.
+     * Also creates a corresponding compute instance.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> create(
         yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.CreateAgentRequest request) {
@@ -362,6 +411,10 @@ public final class AgentServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Returns the specified agent.
+     * To get the list of all available agents, make a [List] request.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.loadtesting.api.v1.agent.AgentOuterClass.Agent> get(
         yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.GetAgentRequest request) {
@@ -370,6 +423,9 @@ public final class AgentServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Retrieves the list of agents in the specified folder.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsResponse> list(
         yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.ListAgentsRequest request) {
@@ -378,6 +434,10 @@ public final class AgentServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Deletes the specified agent.
+     * Also deletes a corresponding compute instance.
+     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> delete(
         yandex.cloud.api.loadtesting.api.v1.AgentServiceOuterClass.DeleteAgentRequest request) {
