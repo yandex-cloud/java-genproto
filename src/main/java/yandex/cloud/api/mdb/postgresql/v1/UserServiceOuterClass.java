@@ -4786,6 +4786,27 @@ public final class UserServiceOuterClass {
      * <code>.google.protobuf.BoolValue deletion_protection = 10;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder();
+
+    /**
+     * <pre>
+     * New password-based authentication method for user.
+     * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 11;</code>
+     * @return The enum numeric value on the wire for userPasswordEncryption.
+     */
+    int getUserPasswordEncryptionValue();
+    /**
+     * <pre>
+     * New password-based authentication method for user.
+     * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 11;</code>
+     * @return The userPasswordEncryption.
+     */
+    yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption getUserPasswordEncryption();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.UpdateUserRequest}
@@ -4805,6 +4826,7 @@ public final class UserServiceOuterClass {
       password_ = "";
       permissions_ = java.util.Collections.emptyList();
       grants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      userPasswordEncryption_ = 0;
     }
 
     @java.lang.Override
@@ -4929,6 +4951,12 @@ public final class UserServiceOuterClass {
                 deletionProtection_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 88: {
+              int rawValue = input.readEnum();
+
+              userPasswordEncryption_ = rawValue;
               break;
             }
             default: {
@@ -5390,6 +5418,35 @@ public final class UserServiceOuterClass {
       return getDeletionProtection();
     }
 
+    public static final int USER_PASSWORD_ENCRYPTION_FIELD_NUMBER = 11;
+    private int userPasswordEncryption_;
+    /**
+     * <pre>
+     * New password-based authentication method for user.
+     * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 11;</code>
+     * @return The enum numeric value on the wire for userPasswordEncryption.
+     */
+    @java.lang.Override public int getUserPasswordEncryptionValue() {
+      return userPasswordEncryption_;
+    }
+    /**
+     * <pre>
+     * New password-based authentication method for user.
+     * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 11;</code>
+     * @return The userPasswordEncryption.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption getUserPasswordEncryption() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption result = yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption.valueOf(userPasswordEncryption_);
+      return result == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5433,6 +5490,9 @@ public final class UserServiceOuterClass {
       }
       if (deletionProtection_ != null) {
         output.writeMessage(10, getDeletionProtection());
+      }
+      if (userPasswordEncryption_ != yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption.USER_PASSWORD_ENCRYPTION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(11, userPasswordEncryption_);
       }
       unknownFields.writeTo(output);
     }
@@ -5484,6 +5544,10 @@ public final class UserServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getDeletionProtection());
       }
+      if (userPasswordEncryption_ != yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption.USER_PASSWORD_ENCRYPTION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(11, userPasswordEncryption_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5531,6 +5595,7 @@ public final class UserServiceOuterClass {
         if (!getDeletionProtection()
             .equals(other.getDeletionProtection())) return false;
       }
+      if (userPasswordEncryption_ != other.userPasswordEncryption_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -5575,6 +5640,8 @@ public final class UserServiceOuterClass {
         hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
         hash = (53 * hash) + getDeletionProtection().hashCode();
       }
+      hash = (37 * hash) + USER_PASSWORD_ENCRYPTION_FIELD_NUMBER;
+      hash = (53 * hash) + userPasswordEncryption_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5749,6 +5816,8 @@ public final class UserServiceOuterClass {
           deletionProtection_ = null;
           deletionProtectionBuilder_ = null;
         }
+        userPasswordEncryption_ = 0;
+
         return this;
       }
 
@@ -5814,6 +5883,7 @@ public final class UserServiceOuterClass {
         } else {
           result.deletionProtection_ = deletionProtectionBuilder_.build();
         }
+        result.userPasswordEncryption_ = userPasswordEncryption_;
         onBuilt();
         return result;
       }
@@ -5924,6 +5994,9 @@ public final class UserServiceOuterClass {
         }
         if (other.hasDeletionProtection()) {
           mergeDeletionProtection(other.getDeletionProtection());
+        }
+        if (other.userPasswordEncryption_ != 0) {
+          setUserPasswordEncryptionValue(other.getUserPasswordEncryptionValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -7372,6 +7445,85 @@ public final class UserServiceOuterClass {
           deletionProtection_ = null;
         }
         return deletionProtectionBuilder_;
+      }
+
+      private int userPasswordEncryption_ = 0;
+      /**
+       * <pre>
+       * New password-based authentication method for user.
+       * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 11;</code>
+       * @return The enum numeric value on the wire for userPasswordEncryption.
+       */
+      @java.lang.Override public int getUserPasswordEncryptionValue() {
+        return userPasswordEncryption_;
+      }
+      /**
+       * <pre>
+       * New password-based authentication method for user.
+       * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 11;</code>
+       * @param value The enum numeric value on the wire for userPasswordEncryption to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserPasswordEncryptionValue(int value) {
+        
+        userPasswordEncryption_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New password-based authentication method for user.
+       * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 11;</code>
+       * @return The userPasswordEncryption.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption getUserPasswordEncryption() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption result = yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption.valueOf(userPasswordEncryption_);
+        return result == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * New password-based authentication method for user.
+       * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 11;</code>
+       * @param value The userPasswordEncryption to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserPasswordEncryption(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        userPasswordEncryption_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * New password-based authentication method for user.
+       * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserPasswordEncryption() {
+        
+        userPasswordEncryption_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -13562,7 +13714,7 @@ public final class UserServiceOuterClass {
       "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022A\n\tuser_spec\030\002 \001(\0132" +
       "(.yandex.cloud.mdb.postgresql.v1.UserSpe" +
       "cB\004\350\3071\001\";\n\022CreateUserMetadata\022\022\n\ncluster" +
-      "_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\344\003\n\021UpdateU" +
+      "_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\276\004\n\021UpdateU" +
       "serRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
       "<=50\0221\n\tuser_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071" +
       "\016[a-zA-Z0-9_-]*\022/\n\013update_mask\030\003 \001(\0132\032.g" +
@@ -13574,65 +13726,67 @@ public final class UserServiceOuterClass {
       "UserSettings\022)\n\005login\030\010 \001(\0132\032.google.pro" +
       "tobuf.BoolValue\022)\n\006grants\030\t \003(\tB\031\212\3101\004<=6" +
       "3\362\3071\r[a-zA-Z0-9_]*\0227\n\023deletion_protectio" +
-      "n\030\n \001(\0132\032.google.protobuf.BoolValue\";\n\022U" +
-      "pdateUserMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n" +
-      "\tuser_name\030\002 \001(\t\"h\n\021DeleteUserRequest\022 \n" +
-      "\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0221\n\tuser_" +
-      "name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-" +
-      "]*\";\n\022DeleteUserMetadata\022\022\n\ncluster_id\030\001" +
-      " \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\267\001\n\032GrantUserPer" +
-      "missionRequest\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001" +
-      "\212\3101\004<=50\0221\n\tuser_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=6" +
-      "3\362\3071\016[a-zA-Z0-9_-]*\022D\n\npermission\030\003 \001(\0132" +
-      "*.yandex.cloud.mdb.postgresql.v1.Permiss" +
-      "ionB\004\350\3071\001\"D\n\033GrantUserPermissionMetadata" +
-      "\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"" +
-      "\251\001\n\033RevokeUserPermissionRequest\022 \n\nclust" +
-      "er_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0221\n\tuser_name\030\002" +
-      " \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\0225\n\r" +
-      "database_name\030\003 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-" +
-      "zA-Z0-9_-]*\"E\n\034RevokeUserPermissionMetad" +
-      "ata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001" +
-      "(\t2\255\013\n\013UserService\022\243\001\n\003Get\022..yandex.clou" +
-      "d.mdb.postgresql.v1.GetUserRequest\032$.yan" +
-      "dex.cloud.mdb.postgresql.v1.User\"F\202\323\344\223\002@" +
-      "\022>/managed-postgresql/v1/clusters/{clust" +
-      "er_id}/users/{user_name}\022\247\001\n\004List\0220.yand" +
-      "ex.cloud.mdb.postgresql.v1.ListUsersRequ" +
-      "est\0321.yandex.cloud.mdb.postgresql.v1.Lis" +
-      "tUsersResponse\":\202\323\344\223\0024\0222/managed-postgre" +
-      "sql/v1/clusters/{cluster_id}/users\022\273\001\n\006C" +
-      "reate\0221.yandex.cloud.mdb.postgresql.v1.C" +
-      "reateUserRequest\032!.yandex.cloud.operatio" +
-      "n.Operation\"[\202\323\344\223\0027\"2/managed-postgresql" +
-      "/v1/clusters/{cluster_id}/users:\001*\262\322*\032\n\022" +
-      "CreateUserMetadata\022\004User\022\307\001\n\006Update\0221.ya" +
-      "ndex.cloud.mdb.postgresql.v1.UpdateUserR" +
-      "equest\032!.yandex.cloud.operation.Operatio" +
-      "n\"g\202\323\344\223\002C2>/managed-postgresql/v1/cluste" +
-      "rs/{cluster_id}/users/{user_name}:\001*\262\322*\032" +
-      "\n\022UpdateUserMetadata\022\004User\022\325\001\n\006Delete\0221." +
-      "yandex.cloud.mdb.postgresql.v1.DeleteUse" +
-      "rRequest\032!.yandex.cloud.operation.Operat" +
-      "ion\"u\202\323\344\223\002@*>/managed-postgresql/v1/clus" +
-      "ters/{cluster_id}/users/{user_name}\262\322*+\n" +
-      "\022DeleteUserMetadata\022\025google.protobuf.Emp" +
-      "ty\022\363\001\n\017GrantPermission\022:.yandex.cloud.md" +
-      "b.postgresql.v1.GrantUserPermissionReque" +
-      "st\032!.yandex.cloud.operation.Operation\"\200\001" +
-      "\202\323\344\223\002S\"N/managed-postgresql/v1/clusters/" +
-      "{cluster_id}/users/{user_name}:grantPerm" +
-      "ission:\001*\262\322*#\n\033GrantUserPermissionMetada" +
-      "ta\022\004User\022\367\001\n\020RevokePermission\022;.yandex.c" +
-      "loud.mdb.postgresql.v1.RevokeUserPermiss" +
-      "ionRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"\202\001\202\323\344\223\002T\"O/managed-postgresql/v1/c" +
-      "lusters/{cluster_id}/users/{user_name}:r" +
-      "evokePermission:\001*\262\322*$\n\034RevokeUserPermis" +
-      "sionMetadata\022\004UserBs\n\"yandex.cloud.api.m" +
-      "db.postgresql.v1ZMgithub.com/yandex-clou" +
-      "d/go-genproto/yandex/cloud/mdb/postgresq" +
-      "l/v1;postgresqlb\006proto3"
+      "n\030\n \001(\0132\032.google.protobuf.BoolValue\022X\n\030u" +
+      "ser_password_encryption\030\013 \001(\01626.yandex.c" +
+      "loud.mdb.postgresql.v1.UserPasswordEncry" +
+      "ption\";\n\022UpdateUserMetadata\022\022\n\ncluster_i" +
+      "d\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"h\n\021DeleteUser" +
+      "Request\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
+      "0\0221\n\tuser_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a" +
+      "-zA-Z0-9_-]*\";\n\022DeleteUserMetadata\022\022\n\ncl" +
+      "uster_id\030\001 \001(\t\022\021\n\tuser_name\030\002 \001(\t\"\267\001\n\032Gr" +
+      "antUserPermissionRequest\022 \n\ncluster_id\030\001" +
+      " \001(\tB\014\350\3071\001\212\3101\004<=50\0221\n\tuser_name\030\002 \001(\tB\036\350" +
+      "\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0-9_-]*\022D\n\npermiss" +
+      "ion\030\003 \001(\0132*.yandex.cloud.mdb.postgresql." +
+      "v1.PermissionB\004\350\3071\001\"D\n\033GrantUserPermissi" +
+      "onMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tuser_n" +
+      "ame\030\002 \001(\t\"\251\001\n\033RevokeUserPermissionReques" +
+      "t\022 \n\ncluster_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0221\n\tu" +
+      "ser_name\030\002 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA-Z0" +
+      "-9_-]*\0225\n\rdatabase_name\030\003 \001(\tB\036\350\3071\001\212\3101\004<" +
+      "=63\362\3071\016[a-zA-Z0-9_-]*\"E\n\034RevokeUserPermi" +
+      "ssionMetadata\022\022\n\ncluster_id\030\001 \001(\t\022\021\n\tuse" +
+      "r_name\030\002 \001(\t2\255\013\n\013UserService\022\243\001\n\003Get\022..y" +
+      "andex.cloud.mdb.postgresql.v1.GetUserReq" +
+      "uest\032$.yandex.cloud.mdb.postgresql.v1.Us" +
+      "er\"F\202\323\344\223\002@\022>/managed-postgresql/v1/clust" +
+      "ers/{cluster_id}/users/{user_name}\022\247\001\n\004L" +
+      "ist\0220.yandex.cloud.mdb.postgresql.v1.Lis" +
+      "tUsersRequest\0321.yandex.cloud.mdb.postgre" +
+      "sql.v1.ListUsersResponse\":\202\323\344\223\0024\0222/manag" +
+      "ed-postgresql/v1/clusters/{cluster_id}/u" +
+      "sers\022\273\001\n\006Create\0221.yandex.cloud.mdb.postg" +
+      "resql.v1.CreateUserRequest\032!.yandex.clou" +
+      "d.operation.Operation\"[\202\323\344\223\0027\"2/managed-" +
+      "postgresql/v1/clusters/{cluster_id}/user" +
+      "s:\001*\262\322*\032\n\022CreateUserMetadata\022\004User\022\307\001\n\006U" +
+      "pdate\0221.yandex.cloud.mdb.postgresql.v1.U" +
+      "pdateUserRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"g\202\323\344\223\002C2>/managed-postgresql" +
+      "/v1/clusters/{cluster_id}/users/{user_na" +
+      "me}:\001*\262\322*\032\n\022UpdateUserMetadata\022\004User\022\325\001\n" +
+      "\006Delete\0221.yandex.cloud.mdb.postgresql.v1" +
+      ".DeleteUserRequest\032!.yandex.cloud.operat" +
+      "ion.Operation\"u\202\323\344\223\002@*>/managed-postgres" +
+      "ql/v1/clusters/{cluster_id}/users/{user_" +
+      "name}\262\322*+\n\022DeleteUserMetadata\022\025google.pr" +
+      "otobuf.Empty\022\363\001\n\017GrantPermission\022:.yande" +
+      "x.cloud.mdb.postgresql.v1.GrantUserPermi" +
+      "ssionRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"\200\001\202\323\344\223\002S\"N/managed-postgresql/v1" +
+      "/clusters/{cluster_id}/users/{user_name}" +
+      ":grantPermission:\001*\262\322*#\n\033GrantUserPermis" +
+      "sionMetadata\022\004User\022\367\001\n\020RevokePermission\022" +
+      ";.yandex.cloud.mdb.postgresql.v1.RevokeU" +
+      "serPermissionRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"\202\001\202\323\344\223\002T\"O/managed-postg" +
+      "resql/v1/clusters/{cluster_id}/users/{us" +
+      "er_name}:revokePermission:\001*\262\322*$\n\034Revoke" +
+      "UserPermissionMetadata\022\004UserBs\n\"yandex.c" +
+      "loud.api.mdb.postgresql.v1ZMgithub.com/y" +
+      "andex-cloud/go-genproto/yandex/cloud/mdb" +
+      "/postgresql/v1;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -13680,7 +13834,7 @@ public final class UserServiceOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_UpdateUserRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_UpdateUserRequest_descriptor,
-        new java.lang.String[] { "ClusterId", "UserName", "UpdateMask", "Password", "Permissions", "ConnLimit", "Settings", "Login", "Grants", "DeletionProtection", });
+        new java.lang.String[] { "ClusterId", "UserName", "UpdateMask", "Password", "Permissions", "ConnLimit", "Settings", "Login", "Grants", "DeletionProtection", "UserPasswordEncryption", });
     internal_static_yandex_cloud_mdb_postgresql_v1_UpdateUserMetadata_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_mdb_postgresql_v1_UpdateUserMetadata_fieldAccessorTable = new

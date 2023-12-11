@@ -638,6 +638,37 @@ public final class InstanceServiceGrpc {
     return getRelocateMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.SimulateInstanceMaintenanceEventRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getSimulateMaintenanceEventMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SimulateMaintenanceEvent",
+      requestType = yandex.cloud.api.compute.v1.InstanceServiceOuterClass.SimulateInstanceMaintenanceEventRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.SimulateInstanceMaintenanceEventRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getSimulateMaintenanceEventMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.SimulateInstanceMaintenanceEventRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getSimulateMaintenanceEventMethod;
+    if ((getSimulateMaintenanceEventMethod = InstanceServiceGrpc.getSimulateMaintenanceEventMethod) == null) {
+      synchronized (InstanceServiceGrpc.class) {
+        if ((getSimulateMaintenanceEventMethod = InstanceServiceGrpc.getSimulateMaintenanceEventMethod) == null) {
+          InstanceServiceGrpc.getSimulateMaintenanceEventMethod = getSimulateMaintenanceEventMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.compute.v1.InstanceServiceOuterClass.SimulateInstanceMaintenanceEventRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SimulateMaintenanceEvent"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.compute.v1.InstanceServiceOuterClass.SimulateInstanceMaintenanceEventRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new InstanceServiceMethodDescriptorSupplier("SimulateMaintenanceEvent"))
+              .build();
+        }
+      }
+    }
+    return getSimulateMaintenanceEventMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.access.Access.ListAccessBindingsRequest,
       yandex.cloud.api.access.Access.ListAccessBindingsResponse> getListAccessBindingsMethod;
 
@@ -999,6 +1030,13 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     */
+    public void simulateMaintenanceEvent(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.SimulateInstanceMaintenanceEventRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSimulateMaintenanceEventMethod(), responseObserver);
+    }
+
+    /**
      * <pre>
      * Lists access bindings for the instance.
      * </pre>
@@ -1170,6 +1208,13 @@ public final class InstanceServiceGrpc {
                 yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RelocateInstanceRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_RELOCATE)))
+          .addMethod(
+            getSimulateMaintenanceEventMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.compute.v1.InstanceServiceOuterClass.SimulateInstanceMaintenanceEventRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_SIMULATE_MAINTENANCE_EVENT)))
           .addMethod(
             getListAccessBindingsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1449,6 +1494,14 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     */
+    public void simulateMaintenanceEvent(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.SimulateInstanceMaintenanceEventRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSimulateMaintenanceEventMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
      * <pre>
      * Lists access bindings for the instance.
      * </pre>
@@ -1713,6 +1766,13 @@ public final class InstanceServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation relocate(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RelocateInstanceRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getRelocateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation simulateMaintenanceEvent(yandex.cloud.api.compute.v1.InstanceServiceOuterClass.SimulateInstanceMaintenanceEventRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSimulateMaintenanceEventMethod(), getCallOptions(), request);
     }
 
     /**
@@ -2000,6 +2060,14 @@ public final class InstanceServiceGrpc {
     }
 
     /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> simulateMaintenanceEvent(
+        yandex.cloud.api.compute.v1.InstanceServiceOuterClass.SimulateInstanceMaintenanceEventRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSimulateMaintenanceEventMethod(), getCallOptions()), request);
+    }
+
+    /**
      * <pre>
      * Lists access bindings for the instance.
      * </pre>
@@ -2053,9 +2121,10 @@ public final class InstanceServiceGrpc {
   private static final int METHODID_LIST_OPERATIONS = 17;
   private static final int METHODID_MOVE = 18;
   private static final int METHODID_RELOCATE = 19;
-  private static final int METHODID_LIST_ACCESS_BINDINGS = 20;
-  private static final int METHODID_SET_ACCESS_BINDINGS = 21;
-  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 22;
+  private static final int METHODID_SIMULATE_MAINTENANCE_EVENT = 20;
+  private static final int METHODID_LIST_ACCESS_BINDINGS = 21;
+  private static final int METHODID_SET_ACCESS_BINDINGS = 22;
+  private static final int METHODID_UPDATE_ACCESS_BINDINGS = 23;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -2154,6 +2223,10 @@ public final class InstanceServiceGrpc {
           serviceImpl.relocate((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.RelocateInstanceRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
+        case METHODID_SIMULATE_MAINTENANCE_EVENT:
+          serviceImpl.simulateMaintenanceEvent((yandex.cloud.api.compute.v1.InstanceServiceOuterClass.SimulateInstanceMaintenanceEventRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
         case METHODID_LIST_ACCESS_BINDINGS:
           serviceImpl.listAccessBindings((yandex.cloud.api.access.Access.ListAccessBindingsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.access.Access.ListAccessBindingsResponse>) responseObserver);
@@ -2247,6 +2320,7 @@ public final class InstanceServiceGrpc {
               .addMethod(getListOperationsMethod())
               .addMethod(getMoveMethod())
               .addMethod(getRelocateMethod())
+              .addMethod(getSimulateMaintenanceEventMethod())
               .addMethod(getListAccessBindingsMethod())
               .addMethod(getSetAccessBindingsMethod())
               .addMethod(getUpdateAccessBindingsMethod())

@@ -9789,7 +9789,7 @@ public final class ClusterOuterClass {
      * Retention policy of automated backups.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-60"];</code>
      * @return Whether the backupRetainPeriodDays field is set.
      */
     boolean hasBackupRetainPeriodDays();
@@ -9798,7 +9798,7 @@ public final class ClusterOuterClass {
      * Retention policy of automated backups.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-60"];</code>
      * @return The backupRetainPeriodDays.
      */
     com.google.protobuf.Int64Value getBackupRetainPeriodDays();
@@ -9807,7 +9807,7 @@ public final class ClusterOuterClass {
      * Retention policy of automated backups.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-60"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder();
 
@@ -10124,7 +10124,7 @@ public final class ClusterOuterClass {
      * Retention policy of automated backups.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-60"];</code>
      * @return Whether the backupRetainPeriodDays field is set.
      */
     @java.lang.Override
@@ -10136,7 +10136,7 @@ public final class ClusterOuterClass {
      * Retention policy of automated backups.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-60"];</code>
      * @return The backupRetainPeriodDays.
      */
     @java.lang.Override
@@ -10148,7 +10148,7 @@ public final class ClusterOuterClass {
      * Retention policy of automated backups.
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+     * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-60"];</code>
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder() {
@@ -11006,7 +11006,7 @@ public final class ClusterOuterClass {
        * Retention policy of automated backups.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-60"];</code>
        * @return Whether the backupRetainPeriodDays field is set.
        */
       public boolean hasBackupRetainPeriodDays() {
@@ -11017,7 +11017,7 @@ public final class ClusterOuterClass {
        * Retention policy of automated backups.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-60"];</code>
        * @return The backupRetainPeriodDays.
        */
       public com.google.protobuf.Int64Value getBackupRetainPeriodDays() {
@@ -11032,7 +11032,7 @@ public final class ClusterOuterClass {
        * Retention policy of automated backups.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-60"];</code>
        */
       public Builder setBackupRetainPeriodDays(com.google.protobuf.Int64Value value) {
         if (backupRetainPeriodDaysBuilder_ == null) {
@@ -11052,7 +11052,7 @@ public final class ClusterOuterClass {
        * Retention policy of automated backups.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-60"];</code>
        */
       public Builder setBackupRetainPeriodDays(
           com.google.protobuf.Int64Value.Builder builderForValue) {
@@ -11070,7 +11070,7 @@ public final class ClusterOuterClass {
        * Retention policy of automated backups.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-60"];</code>
        */
       public Builder mergeBackupRetainPeriodDays(com.google.protobuf.Int64Value value) {
         if (backupRetainPeriodDaysBuilder_ == null) {
@@ -11092,7 +11092,7 @@ public final class ClusterOuterClass {
        * Retention policy of automated backups.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-60"];</code>
        */
       public Builder clearBackupRetainPeriodDays() {
         if (backupRetainPeriodDaysBuilder_ == null) {
@@ -11110,7 +11110,7 @@ public final class ClusterOuterClass {
        * Retention policy of automated backups.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-60"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getBackupRetainPeriodDaysBuilder() {
         
@@ -11122,7 +11122,7 @@ public final class ClusterOuterClass {
        * Retention policy of automated backups.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-60"];</code>
        */
       public com.google.protobuf.Int64ValueOrBuilder getBackupRetainPeriodDaysOrBuilder() {
         if (backupRetainPeriodDaysBuilder_ != null) {
@@ -11137,7 +11137,7 @@ public final class ClusterOuterClass {
        * Retention policy of automated backups.
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-7"];</code>
+       * <code>.google.protobuf.Int64Value backup_retain_period_days = 9 [(.yandex.cloud.value) = "1-60"];</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
@@ -15079,27 +15079,27 @@ public final class ClusterOuterClass {
       "(\0132+.yandex.cloud.mdb.greenplum.v1.PXFCo" +
       "nfigSetB\022\n\020greenplum_config\"=\n\nMonitorin" +
       "g\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\014\n\004" +
-      "link\030\003 \001(\t\"\251\002\n\017GreenplumConfig\022\017\n\007versio" +
+      "link\030\003 \001(\t\"\252\002\n\017GreenplumConfig\022\017\n\007versio" +
       "n\030\001 \001(\t\0223\n\023backup_window_start\030\002 \001(\0132\026.g" +
-      "oogle.type.TimeOfDay\022G\n\031backup_retain_pe" +
+      "oogle.type.TimeOfDay\022H\n\031backup_retain_pe" +
       "riod_days\030\t \001(\0132\033.google.protobuf.Int64V" +
-      "alueB\007\372\3071\0031-7\0225\n\006access\030\003 \001(\0132%.yandex.c" +
-      "loud.mdb.greenplum.v1.Access\022\031\n\007zone_id\030" +
-      "\004 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\005 \001(\tB\010\212\3101\004" +
-      "<=50\022\030\n\020assign_public_ip\030\006 \001(\010\"C\n\006Access" +
-      "\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022\025\n\r" +
-      "data_transfer\030\003 \001(\010\"\326\001\n\026GreenplumRestore" +
-      "Config\0223\n\023backup_window_start\030\001 \001(\0132\026.go" +
-      "ogle.type.TimeOfDay\0225\n\006access\030\002 \001(\0132%.ya" +
-      "ndex.cloud.mdb.greenplum.v1.Access\022\031\n\007zo" +
-      "ne_id\030\003 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\004 \001(\t" +
-      "B\010\212\3101\004<=50\022\030\n\020assign_public_ip\030\005 \001(\010\"A\n\020" +
-      "RestoreResources\022\032\n\022resource_preset_id\030\001" +
-      " \001(\t\022\021\n\tdisk_size\030\002 \001(\003\"\036\n\014CloudStorage\022" +
-      "\016\n\006enable\030\001 \001(\010Bp\n!yandex.cloud.api.mdb." +
-      "greenplum.v1ZKgithub.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/mdb/greenplum/v1;" +
-      "greenplumb\006proto3"
+      "alueB\010\372\3071\0041-60\0225\n\006access\030\003 \001(\0132%.yandex." +
+      "cloud.mdb.greenplum.v1.Access\022\031\n\007zone_id" +
+      "\030\004 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\005 \001(\tB\010\212\3101" +
+      "\004<=50\022\030\n\020assign_public_ip\030\006 \001(\010\"C\n\006Acces" +
+      "s\022\021\n\tdata_lens\030\001 \001(\010\022\017\n\007web_sql\030\002 \001(\010\022\025\n" +
+      "\rdata_transfer\030\003 \001(\010\"\326\001\n\026GreenplumRestor" +
+      "eConfig\0223\n\023backup_window_start\030\001 \001(\0132\026.g" +
+      "oogle.type.TimeOfDay\0225\n\006access\030\002 \001(\0132%.y" +
+      "andex.cloud.mdb.greenplum.v1.Access\022\031\n\007z" +
+      "one_id\030\003 \001(\tB\010\212\3101\004<=50\022\033\n\tsubnet_id\030\004 \001(" +
+      "\tB\010\212\3101\004<=50\022\030\n\020assign_public_ip\030\005 \001(\010\"A\n" +
+      "\020RestoreResources\022\032\n\022resource_preset_id\030" +
+      "\001 \001(\t\022\021\n\tdisk_size\030\002 \001(\003\"\036\n\014CloudStorage" +
+      "\022\016\n\006enable\030\001 \001(\010Bp\n!yandex.cloud.api.mdb" +
+      ".greenplum.v1ZKgithub.com/yandex-cloud/g" +
+      "o-genproto/yandex/cloud/mdb/greenplum/v1" +
+      ";greenplumb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

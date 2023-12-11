@@ -2265,6 +2265,25 @@ public final class Postgresql10 {
      * <code>.google.protobuf.Int64Value log_autovacuum_min_duration = 165 [(.yandex.cloud.value) = "-1-2147483647"];</code>
      */
     com.google.protobuf.Int64ValueOrBuilder getLogAutovacuumMinDurationOrBuilder();
+
+    /**
+     * <pre>
+     * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_MD5 ``.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig10.PasswordEncryption password_encryption = 167;</code>
+     * @return The enum numeric value on the wire for passwordEncryption.
+     */
+    int getPasswordEncryptionValue();
+    /**
+     * <pre>
+     * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_MD5 ``.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig10.PasswordEncryption password_encryption = 167;</code>
+     * @return The passwordEncryption.
+     */
+    yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.PasswordEncryption getPasswordEncryption();
   }
   /**
    * <pre>
@@ -2304,6 +2323,7 @@ public final class Postgresql10 {
       sharedPreloadLibraries_ = java.util.Collections.emptyList();
       pgHintPlanDebugPrint_ = 0;
       pgHintPlanMessageLevel_ = 0;
+      passwordEncryption_ = 0;
     }
 
     @java.lang.Override
@@ -3885,6 +3905,12 @@ public final class Postgresql10 {
 
               break;
             }
+            case 1336: {
+              int rawValue = input.readEnum();
+
+              passwordEncryption_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -4893,6 +4919,123 @@ public final class Postgresql10 {
     }
 
     /**
+     * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig10.PasswordEncryption}
+     */
+    public enum PasswordEncryption
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>PASSWORD_ENCRYPTION_UNSPECIFIED = 0;</code>
+       */
+      PASSWORD_ENCRYPTION_UNSPECIFIED(0),
+      /**
+       * <code>PASSWORD_ENCRYPTION_MD5 = 1;</code>
+       */
+      PASSWORD_ENCRYPTION_MD5(1),
+      /**
+       * <code>PASSWORD_ENCRYPTION_SCRAM_SHA_256 = 2;</code>
+       */
+      PASSWORD_ENCRYPTION_SCRAM_SHA_256(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>PASSWORD_ENCRYPTION_UNSPECIFIED = 0;</code>
+       */
+      public static final int PASSWORD_ENCRYPTION_UNSPECIFIED_VALUE = 0;
+      /**
+       * <code>PASSWORD_ENCRYPTION_MD5 = 1;</code>
+       */
+      public static final int PASSWORD_ENCRYPTION_MD5_VALUE = 1;
+      /**
+       * <code>PASSWORD_ENCRYPTION_SCRAM_SHA_256 = 2;</code>
+       */
+      public static final int PASSWORD_ENCRYPTION_SCRAM_SHA_256_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PasswordEncryption valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static PasswordEncryption forNumber(int value) {
+        switch (value) {
+          case 0: return PASSWORD_ENCRYPTION_UNSPECIFIED;
+          case 1: return PASSWORD_ENCRYPTION_MD5;
+          case 2: return PASSWORD_ENCRYPTION_SCRAM_SHA_256;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<PasswordEncryption>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          PasswordEncryption> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<PasswordEncryption>() {
+              public PasswordEncryption findValueByNumber(int number) {
+                return PasswordEncryption.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.getDescriptor().getEnumTypes().get(7);
+      }
+
+      private static final PasswordEncryption[] VALUES = values();
+
+      public static PasswordEncryption valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private PasswordEncryption(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig10.PasswordEncryption)
+    }
+
+    /**
      * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig10.TransactionIsolation}
      */
     public enum TransactionIsolation
@@ -5001,7 +5144,7 @@ public final class Postgresql10 {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.getDescriptor().getEnumTypes().get(7);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.getDescriptor().getEnumTypes().get(8);
       }
 
       private static final TransactionIsolation[] VALUES = values();
@@ -5118,7 +5261,7 @@ public final class Postgresql10 {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.getDescriptor().getEnumTypes().get(8);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.getDescriptor().getEnumTypes().get(9);
       }
 
       private static final ByteaOutput[] VALUES = values();
@@ -5235,7 +5378,7 @@ public final class Postgresql10 {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.getDescriptor().getEnumTypes().get(9);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.getDescriptor().getEnumTypes().get(10);
       }
 
       private static final XmlBinary[] VALUES = values();
@@ -5352,7 +5495,7 @@ public final class Postgresql10 {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.getDescriptor().getEnumTypes().get(10);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.getDescriptor().getEnumTypes().get(11);
       }
 
       private static final XmlOption[] VALUES = values();
@@ -5487,7 +5630,7 @@ public final class Postgresql10 {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.getDescriptor().getEnumTypes().get(11);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.getDescriptor().getEnumTypes().get(12);
       }
 
       private static final BackslashQuote[] VALUES = values();
@@ -5622,7 +5765,7 @@ public final class Postgresql10 {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.getDescriptor().getEnumTypes().get(12);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.getDescriptor().getEnumTypes().get(13);
       }
 
       private static final PgHintPlanDebugPrint[] VALUES = values();
@@ -5793,7 +5936,7 @@ public final class Postgresql10 {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.getDescriptor().getEnumTypes().get(13);
+        return yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.getDescriptor().getEnumTypes().get(14);
       }
 
       private static final SharedPreloadLibraries[] VALUES = values();
@@ -9475,6 +9618,33 @@ public final class Postgresql10 {
       return getLogAutovacuumMinDuration();
     }
 
+    public static final int PASSWORD_ENCRYPTION_FIELD_NUMBER = 167;
+    private int passwordEncryption_;
+    /**
+     * <pre>
+     * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_MD5 ``.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig10.PasswordEncryption password_encryption = 167;</code>
+     * @return The enum numeric value on the wire for passwordEncryption.
+     */
+    @java.lang.Override public int getPasswordEncryptionValue() {
+      return passwordEncryption_;
+    }
+    /**
+     * <pre>
+     * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_MD5 ``.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig10.PasswordEncryption password_encryption = 167;</code>
+     * @return The passwordEncryption.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.PasswordEncryption getPasswordEncryption() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.PasswordEncryption result = yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.PasswordEncryption.valueOf(passwordEncryption_);
+      return result == null ? yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.PasswordEncryption.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9877,6 +10047,9 @@ public final class Postgresql10 {
       }
       if (logAutovacuumMinDuration_ != null) {
         output.writeMessage(165, getLogAutovacuumMinDuration());
+      }
+      if (passwordEncryption_ != yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.PasswordEncryption.PASSWORD_ENCRYPTION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(167, passwordEncryption_);
       }
       unknownFields.writeTo(output);
     }
@@ -10404,6 +10577,10 @@ public final class Postgresql10 {
       if (logAutovacuumMinDuration_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(165, getLogAutovacuumMinDuration());
+      }
+      if (passwordEncryption_ != yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.PasswordEncryption.PASSWORD_ENCRYPTION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(167, passwordEncryption_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -10986,6 +11163,7 @@ public final class Postgresql10 {
         if (!getLogAutovacuumMinDuration()
             .equals(other.getLogAutovacuumMinDuration())) return false;
       }
+      if (passwordEncryption_ != other.passwordEncryption_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -11473,6 +11651,8 @@ public final class Postgresql10 {
         hash = (37 * hash) + LOG_AUTOVACUUM_MIN_DURATION_FIELD_NUMBER;
         hash = (53 * hash) + getLogAutovacuumMinDuration().hashCode();
       }
+      hash = (37 * hash) + PASSWORD_ENCRYPTION_FIELD_NUMBER;
+      hash = (53 * hash) + passwordEncryption_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12304,6 +12484,8 @@ public final class Postgresql10 {
           logAutovacuumMinDuration_ = null;
           logAutovacuumMinDurationBuilder_ = null;
         }
+        passwordEncryption_ = 0;
+
         return this;
       }
 
@@ -12899,6 +13081,7 @@ public final class Postgresql10 {
         } else {
           result.logAutovacuumMinDuration_ = logAutovacuumMinDurationBuilder_.build();
         }
+        result.passwordEncryption_ = passwordEncryption_;
         onBuilt();
         return result;
       }
@@ -13339,6 +13522,9 @@ public final class Postgresql10 {
         }
         if (other.hasLogAutovacuumMinDuration()) {
           mergeLogAutovacuumMinDuration(other.getLogAutovacuumMinDuration());
+        }
+        if (other.passwordEncryption_ != 0) {
+          setPasswordEncryptionValue(other.getPasswordEncryptionValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -28648,6 +28834,80 @@ public final class Postgresql10 {
         }
         return logAutovacuumMinDurationBuilder_;
       }
+
+      private int passwordEncryption_ = 0;
+      /**
+       * <pre>
+       * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_MD5 ``.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig10.PasswordEncryption password_encryption = 167;</code>
+       * @return The enum numeric value on the wire for passwordEncryption.
+       */
+      @java.lang.Override public int getPasswordEncryptionValue() {
+        return passwordEncryption_;
+      }
+      /**
+       * <pre>
+       * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_MD5 ``.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig10.PasswordEncryption password_encryption = 167;</code>
+       * @param value The enum numeric value on the wire for passwordEncryption to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPasswordEncryptionValue(int value) {
+        
+        passwordEncryption_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_MD5 ``.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig10.PasswordEncryption password_encryption = 167;</code>
+       * @return The passwordEncryption.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.PasswordEncryption getPasswordEncryption() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.PasswordEncryption result = yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.PasswordEncryption.valueOf(passwordEncryption_);
+        return result == null ? yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.PasswordEncryption.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_MD5 ``.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig10.PasswordEncryption password_encryption = 167;</code>
+       * @param value The passwordEncryption to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPasswordEncryption(yandex.cloud.api.mdb.postgresql.v1.config.Postgresql10.PostgresqlConfig10.PasswordEncryption value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        passwordEncryption_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A default value for `` user_password_encryption `` user-level setting, if it not specified for new users. Possible values are `` PASSWORD_ENCRYPTION_MD5 `` or `` PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``. The default is `` PASSWORD_ENCRYPTION_MD5 ``.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.config.PostgresqlConfig10.PasswordEncryption password_encryption = 167;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPasswordEncryption() {
+        
+        passwordEncryption_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -29946,7 +30206,7 @@ public final class Postgresql10 {
       "postgresql10.proto\022%yandex.cloud.mdb.pos" +
       "tgresql.v1.config\032\036google/protobuf/wrapp" +
       "ers.proto\032\035yandex/cloud/validation.proto" +
-      "\"\304V\n\022PostgresqlConfig10\0224\n\017max_connectio" +
+      "\"\257X\n\022PostgresqlConfig10\0224\n\017max_connectio" +
       "ns\030\001 \001(\0132\033.google.protobuf.Int64Value\0223\n" +
       "\016shared_buffers\030\002 \001(\0132\033.google.protobuf." +
       "Int64Value\0221\n\014temp_buffers\030\003 \001(\0132\033.googl" +
@@ -30161,79 +30421,85 @@ public final class Postgresql10 {
       "647\022=\n\030log_replication_commands\030\244\001 \001(\0132\032" +
       ".google.protobuf.BoolValue\022T\n\033log_autova" +
       "cuum_min_duration\030\245\001 \001(\0132\033.google.protob" +
-      "uf.Int64ValueB\021\372\3071\r-1-2147483647\"S\n\010WalL" +
-      "evel\022\031\n\025WAL_LEVEL_UNSPECIFIED\020\000\022\025\n\021WAL_L" +
-      "EVEL_REPLICA\020\001\022\025\n\021WAL_LEVEL_LOGICAL\020\002\"\326\001" +
-      "\n\021SynchronousCommit\022\"\n\036SYNCHRONOUS_COMMI" +
-      "T_UNSPECIFIED\020\000\022\031\n\025SYNCHRONOUS_COMMIT_ON" +
-      "\020\001\022\032\n\026SYNCHRONOUS_COMMIT_OFF\020\002\022\034\n\030SYNCHR" +
-      "ONOUS_COMMIT_LOCAL\020\003\022#\n\037SYNCHRONOUS_COMM" +
-      "IT_REMOTE_WRITE\020\004\022#\n\037SYNCHRONOUS_COMMIT_" +
-      "REMOTE_APPLY\020\005\"\232\001\n\023ConstraintExclusion\022$" +
-      "\n CONSTRAINT_EXCLUSION_UNSPECIFIED\020\000\022\033\n\027" +
-      "CONSTRAINT_EXCLUSION_ON\020\001\022\034\n\030CONSTRAINT_" +
-      "EXCLUSION_OFF\020\002\022\"\n\036CONSTRAINT_EXCLUSION_" +
-      "PARTITION\020\003\"\222\001\n\021ForceParallelMode\022#\n\037FOR" +
-      "CE_PARALLEL_MODE_UNSPECIFIED\020\000\022\032\n\026FORCE_" +
-      "PARALLEL_MODE_ON\020\001\022\033\n\027FORCE_PARALLEL_MOD" +
-      "E_OFF\020\002\022\037\n\033FORCE_PARALLEL_MODE_REGRESS\020\003" +
-      "\"\231\001\n\021LogErrorVerbosity\022#\n\037LOG_ERROR_VERB" +
-      "OSITY_UNSPECIFIED\020\000\022\035\n\031LOG_ERROR_VERBOSI" +
-      "TY_TERSE\020\001\022\037\n\033LOG_ERROR_VERBOSITY_DEFAUL" +
-      "T\020\002\022\037\n\033LOG_ERROR_VERBOSITY_VERBOSE\020\003\"\222\002\n" +
-      "\010LogLevel\022\031\n\025LOG_LEVEL_UNSPECIFIED\020\000\022\024\n\020" +
-      "LOG_LEVEL_DEBUG5\020\001\022\024\n\020LOG_LEVEL_DEBUG4\020\002" +
-      "\022\024\n\020LOG_LEVEL_DEBUG3\020\003\022\024\n\020LOG_LEVEL_DEBU" +
-      "G2\020\004\022\024\n\020LOG_LEVEL_DEBUG1\020\005\022\021\n\rLOG_LEVEL_" +
-      "LOG\020\006\022\024\n\020LOG_LEVEL_NOTICE\020\007\022\025\n\021LOG_LEVEL" +
-      "_WARNING\020\010\022\023\n\017LOG_LEVEL_ERROR\020\t\022\023\n\017LOG_L" +
-      "EVEL_FATAL\020\n\022\023\n\017LOG_LEVEL_PANIC\020\013\"\212\001\n\014Lo" +
-      "gStatement\022\035\n\031LOG_STATEMENT_UNSPECIFIED\020" +
-      "\000\022\026\n\022LOG_STATEMENT_NONE\020\001\022\025\n\021LOG_STATEME" +
-      "NT_DDL\020\002\022\025\n\021LOG_STATEMENT_MOD\020\003\022\025\n\021LOG_S" +
-      "TATEMENT_ALL\020\004\"\346\001\n\024TransactionIsolation\022" +
-      "%\n!TRANSACTION_ISOLATION_UNSPECIFIED\020\000\022*" +
-      "\n&TRANSACTION_ISOLATION_READ_UNCOMMITTED" +
-      "\020\001\022(\n$TRANSACTION_ISOLATION_READ_COMMITT" +
-      "ED\020\002\022)\n%TRANSACTION_ISOLATION_REPEATABLE" +
-      "_READ\020\003\022&\n\"TRANSACTION_ISOLATION_SERIALI" +
-      "ZABLE\020\004\"[\n\013ByteaOutput\022\034\n\030BYTEA_OUTPUT_U" +
-      "NSPECIFIED\020\000\022\024\n\020BYTEA_OUTPUT_HEX\020\001\022\030\n\024BY" +
-      "TEA_OUTPUT_ESCAPED\020\002\"R\n\tXmlBinary\022\032\n\026XML" +
-      "_BINARY_UNSPECIFIED\020\000\022\025\n\021XML_BINARY_BASE" +
-      "64\020\001\022\022\n\016XML_BINARY_HEX\020\002\"X\n\tXmlOption\022\032\n" +
-      "\026XML_OPTION_UNSPECIFIED\020\000\022\027\n\023XML_OPTION_" +
-      "DOCUMENT\020\001\022\026\n\022XML_OPTION_CONTENT\020\002\"\232\001\n\016B" +
-      "ackslashQuote\022\037\n\033BACKSLASH_QUOTE_UNSPECI" +
-      "FIED\020\000\022\023\n\017BACKSLASH_QUOTE\020\001\022\026\n\022BACKSLASH" +
-      "_QUOTE_ON\020\002\022\027\n\023BACKSLASH_QUOTE_OFF\020\003\022!\n\035" +
-      "BACKSLASH_QUOTE_SAFE_ENCODING\020\004\"\320\001\n\024PgHi" +
-      "ntPlanDebugPrint\022(\n$PG_HINT_PLAN_DEBUG_P" +
-      "RINT_UNSPECIFIED\020\000\022 \n\034PG_HINT_PLAN_DEBUG" +
-      "_PRINT_OFF\020\001\022\037\n\033PG_HINT_PLAN_DEBUG_PRINT" +
-      "_ON\020\002\022%\n!PG_HINT_PLAN_DEBUG_PRINT_DETAIL" +
-      "ED\020\003\022$\n PG_HINT_PLAN_DEBUG_PRINT_VERBOSE" +
-      "\020\004\"\212\003\n\026SharedPreloadLibraries\022(\n$SHARED_" +
-      "PRELOAD_LIBRARIES_UNSPECIFIED\020\000\022)\n%SHARE" +
-      "D_PRELOAD_LIBRARIES_AUTO_EXPLAIN\020\001\022)\n%SH" +
-      "ARED_PRELOAD_LIBRARIES_PG_HINT_PLAN\020\002\022(\n" +
-      "$SHARED_PRELOAD_LIBRARIES_TIMESCALEDB\020\003\022" +
-      ")\n%SHARED_PRELOAD_LIBRARIES_PG_QUALSTATS" +
-      "\020\004\022$\n SHARED_PRELOAD_LIBRARIES_PG_CRON\020\005" +
-      "\022&\n\"SHARED_PRELOAD_LIBRARIES_PGLOGICAL\020\006" +
-      "\022\'\n#SHARED_PRELOAD_LIBRARIES_PG_PREWARM\020" +
-      "\007\022$\n SHARED_PRELOAD_LIBRARIES_PGAUDIT\020\010\"" +
-      "\225\002\n\025PostgresqlConfigSet10\022Y\n\020effective_c" +
-      "onfig\030\001 \001(\01329.yandex.cloud.mdb.postgresq" +
-      "l.v1.config.PostgresqlConfig10B\004\350\3071\001\022N\n\013" +
-      "user_config\030\002 \001(\01329.yandex.cloud.mdb.pos" +
-      "tgresql.v1.config.PostgresqlConfig10\022Q\n\016" +
-      "default_config\030\003 \001(\01329.yandex.cloud.mdb." +
-      "postgresql.v1.config.PostgresqlConfig10B" +
-      "\201\001\n)yandex.cloud.api.mdb.postgresql.v1.c" +
-      "onfigZTgithub.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/mdb/postgresql/v1/config" +
-      ";postgresqlb\006proto3"
+      "uf.Int64ValueB\021\372\3071\r-1-2147483647\022j\n\023pass" +
+      "word_encryption\030\247\001 \001(\0162L.yandex.cloud.md" +
+      "b.postgresql.v1.config.PostgresqlConfig1" +
+      "0.PasswordEncryption\"S\n\010WalLevel\022\031\n\025WAL_" +
+      "LEVEL_UNSPECIFIED\020\000\022\025\n\021WAL_LEVEL_REPLICA" +
+      "\020\001\022\025\n\021WAL_LEVEL_LOGICAL\020\002\"\326\001\n\021Synchronou" +
+      "sCommit\022\"\n\036SYNCHRONOUS_COMMIT_UNSPECIFIE" +
+      "D\020\000\022\031\n\025SYNCHRONOUS_COMMIT_ON\020\001\022\032\n\026SYNCHR" +
+      "ONOUS_COMMIT_OFF\020\002\022\034\n\030SYNCHRONOUS_COMMIT" +
+      "_LOCAL\020\003\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_WR" +
+      "ITE\020\004\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_APPLY" +
+      "\020\005\"\232\001\n\023ConstraintExclusion\022$\n CONSTRAINT" +
+      "_EXCLUSION_UNSPECIFIED\020\000\022\033\n\027CONSTRAINT_E" +
+      "XCLUSION_ON\020\001\022\034\n\030CONSTRAINT_EXCLUSION_OF" +
+      "F\020\002\022\"\n\036CONSTRAINT_EXCLUSION_PARTITION\020\003\"" +
+      "\222\001\n\021ForceParallelMode\022#\n\037FORCE_PARALLEL_" +
+      "MODE_UNSPECIFIED\020\000\022\032\n\026FORCE_PARALLEL_MOD" +
+      "E_ON\020\001\022\033\n\027FORCE_PARALLEL_MODE_OFF\020\002\022\037\n\033F" +
+      "ORCE_PARALLEL_MODE_REGRESS\020\003\"\231\001\n\021LogErro" +
+      "rVerbosity\022#\n\037LOG_ERROR_VERBOSITY_UNSPEC" +
+      "IFIED\020\000\022\035\n\031LOG_ERROR_VERBOSITY_TERSE\020\001\022\037" +
+      "\n\033LOG_ERROR_VERBOSITY_DEFAULT\020\002\022\037\n\033LOG_E" +
+      "RROR_VERBOSITY_VERBOSE\020\003\"\222\002\n\010LogLevel\022\031\n" +
+      "\025LOG_LEVEL_UNSPECIFIED\020\000\022\024\n\020LOG_LEVEL_DE" +
+      "BUG5\020\001\022\024\n\020LOG_LEVEL_DEBUG4\020\002\022\024\n\020LOG_LEVE" +
+      "L_DEBUG3\020\003\022\024\n\020LOG_LEVEL_DEBUG2\020\004\022\024\n\020LOG_" +
+      "LEVEL_DEBUG1\020\005\022\021\n\rLOG_LEVEL_LOG\020\006\022\024\n\020LOG" +
+      "_LEVEL_NOTICE\020\007\022\025\n\021LOG_LEVEL_WARNING\020\010\022\023" +
+      "\n\017LOG_LEVEL_ERROR\020\t\022\023\n\017LOG_LEVEL_FATAL\020\n" +
+      "\022\023\n\017LOG_LEVEL_PANIC\020\013\"\212\001\n\014LogStatement\022\035" +
+      "\n\031LOG_STATEMENT_UNSPECIFIED\020\000\022\026\n\022LOG_STA" +
+      "TEMENT_NONE\020\001\022\025\n\021LOG_STATEMENT_DDL\020\002\022\025\n\021" +
+      "LOG_STATEMENT_MOD\020\003\022\025\n\021LOG_STATEMENT_ALL" +
+      "\020\004\"}\n\022PasswordEncryption\022#\n\037PASSWORD_ENC" +
+      "RYPTION_UNSPECIFIED\020\000\022\033\n\027PASSWORD_ENCRYP" +
+      "TION_MD5\020\001\022%\n!PASSWORD_ENCRYPTION_SCRAM_" +
+      "SHA_256\020\002\"\346\001\n\024TransactionIsolation\022%\n!TR" +
+      "ANSACTION_ISOLATION_UNSPECIFIED\020\000\022*\n&TRA" +
+      "NSACTION_ISOLATION_READ_UNCOMMITTED\020\001\022(\n" +
+      "$TRANSACTION_ISOLATION_READ_COMMITTED\020\002\022" +
+      ")\n%TRANSACTION_ISOLATION_REPEATABLE_READ" +
+      "\020\003\022&\n\"TRANSACTION_ISOLATION_SERIALIZABLE" +
+      "\020\004\"[\n\013ByteaOutput\022\034\n\030BYTEA_OUTPUT_UNSPEC" +
+      "IFIED\020\000\022\024\n\020BYTEA_OUTPUT_HEX\020\001\022\030\n\024BYTEA_O" +
+      "UTPUT_ESCAPED\020\002\"R\n\tXmlBinary\022\032\n\026XML_BINA" +
+      "RY_UNSPECIFIED\020\000\022\025\n\021XML_BINARY_BASE64\020\001\022" +
+      "\022\n\016XML_BINARY_HEX\020\002\"X\n\tXmlOption\022\032\n\026XML_" +
+      "OPTION_UNSPECIFIED\020\000\022\027\n\023XML_OPTION_DOCUM" +
+      "ENT\020\001\022\026\n\022XML_OPTION_CONTENT\020\002\"\232\001\n\016Backsl" +
+      "ashQuote\022\037\n\033BACKSLASH_QUOTE_UNSPECIFIED\020" +
+      "\000\022\023\n\017BACKSLASH_QUOTE\020\001\022\026\n\022BACKSLASH_QUOT" +
+      "E_ON\020\002\022\027\n\023BACKSLASH_QUOTE_OFF\020\003\022!\n\035BACKS" +
+      "LASH_QUOTE_SAFE_ENCODING\020\004\"\320\001\n\024PgHintPla" +
+      "nDebugPrint\022(\n$PG_HINT_PLAN_DEBUG_PRINT_" +
+      "UNSPECIFIED\020\000\022 \n\034PG_HINT_PLAN_DEBUG_PRIN" +
+      "T_OFF\020\001\022\037\n\033PG_HINT_PLAN_DEBUG_PRINT_ON\020\002" +
+      "\022%\n!PG_HINT_PLAN_DEBUG_PRINT_DETAILED\020\003\022" +
+      "$\n PG_HINT_PLAN_DEBUG_PRINT_VERBOSE\020\004\"\212\003" +
+      "\n\026SharedPreloadLibraries\022(\n$SHARED_PRELO" +
+      "AD_LIBRARIES_UNSPECIFIED\020\000\022)\n%SHARED_PRE" +
+      "LOAD_LIBRARIES_AUTO_EXPLAIN\020\001\022)\n%SHARED_" +
+      "PRELOAD_LIBRARIES_PG_HINT_PLAN\020\002\022(\n$SHAR" +
+      "ED_PRELOAD_LIBRARIES_TIMESCALEDB\020\003\022)\n%SH" +
+      "ARED_PRELOAD_LIBRARIES_PG_QUALSTATS\020\004\022$\n" +
+      " SHARED_PRELOAD_LIBRARIES_PG_CRON\020\005\022&\n\"S" +
+      "HARED_PRELOAD_LIBRARIES_PGLOGICAL\020\006\022\'\n#S" +
+      "HARED_PRELOAD_LIBRARIES_PG_PREWARM\020\007\022$\n " +
+      "SHARED_PRELOAD_LIBRARIES_PGAUDIT\020\010\"\225\002\n\025P" +
+      "ostgresqlConfigSet10\022Y\n\020effective_config" +
+      "\030\001 \001(\01329.yandex.cloud.mdb.postgresql.v1." +
+      "config.PostgresqlConfig10B\004\350\3071\001\022N\n\013user_" +
+      "config\030\002 \001(\01329.yandex.cloud.mdb.postgres" +
+      "ql.v1.config.PostgresqlConfig10\022Q\n\016defau" +
+      "lt_config\030\003 \001(\01329.yandex.cloud.mdb.postg" +
+      "resql.v1.config.PostgresqlConfig10B\201\001\n)y" +
+      "andex.cloud.api.mdb.postgresql.v1.config" +
+      "ZTgithub.com/yandex-cloud/go-genproto/ya" +
+      "ndex/cloud/mdb/postgresql/v1/config;post" +
+      "gresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -30246,7 +30512,7 @@ public final class Postgresql10 {
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig10_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfig10_descriptor,
-        new java.lang.String[] { "MaxConnections", "SharedBuffers", "TempBuffers", "MaxPreparedTransactions", "WorkMem", "MaintenanceWorkMem", "ReplacementSortTuples", "AutovacuumWorkMem", "TempFileLimit", "VacuumCostDelay", "VacuumCostPageHit", "VacuumCostPageMiss", "VacuumCostPageDirty", "VacuumCostLimit", "BgwriterDelay", "BgwriterLruMaxpages", "BgwriterLruMultiplier", "BgwriterFlushAfter", "BackendFlushAfter", "OldSnapshotThreshold", "WalLevel", "SynchronousCommit", "CheckpointTimeout", "CheckpointCompletionTarget", "CheckpointFlushAfter", "MaxWalSize", "MinWalSize", "MaxStandbyStreamingDelay", "DefaultStatisticsTarget", "ConstraintExclusion", "CursorTupleFraction", "FromCollapseLimit", "JoinCollapseLimit", "ForceParallelMode", "ClientMinMessages", "LogMinMessages", "LogMinErrorStatement", "LogMinDurationStatement", "LogCheckpoints", "LogConnections", "LogDisconnections", "LogDuration", "LogErrorVerbosity", "LogLockWaits", "LogStatement", "LogTempFiles", "SearchPath", "RowSecurity", "DefaultTransactionIsolation", "StatementTimeout", "LockTimeout", "IdleInTransactionSessionTimeout", "ByteaOutput", "Xmlbinary", "Xmloption", "GinPendingListLimit", "DeadlockTimeout", "MaxLocksPerTransaction", "MaxPredLocksPerTransaction", "ArrayNulls", "BackslashQuote", "DefaultWithOids", "EscapeStringWarning", "LoCompatPrivileges", "OperatorPrecedenceWarning", "QuoteAllIdentifiers", "StandardConformingStrings", "SynchronizeSeqscans", "TransformNullEquals", "ExitOnError", "SeqPageCost", "RandomPageCost", "AutovacuumMaxWorkers", "AutovacuumVacuumCostDelay", "AutovacuumVacuumCostLimit", "AutovacuumNaptime", "ArchiveTimeout", "TrackActivityQuerySize", "EnableBitmapscan", "EnableHashagg", "EnableHashjoin", "EnableIndexscan", "EnableIndexonlyscan", "EnableMaterial", "EnableMergejoin", "EnableNestloop", "EnableSeqscan", "EnableSort", "EnableTidscan", "MaxWorkerProcesses", "MaxParallelWorkers", "MaxParallelWorkersPerGather", "AutovacuumVacuumScaleFactor", "AutovacuumAnalyzeScaleFactor", "DefaultTransactionReadOnly", "Timezone", "EffectiveIoConcurrency", "EffectiveCacheSize", "SharedPreloadLibraries", "AutoExplainLogMinDuration", "AutoExplainLogAnalyze", "AutoExplainLogBuffers", "AutoExplainLogTiming", "AutoExplainLogTriggers", "AutoExplainLogVerbose", "AutoExplainLogNestedStatements", "AutoExplainSampleRate", "PgHintPlanEnableHint", "PgHintPlanEnableHintTable", "PgHintPlanDebugPrint", "PgHintPlanMessageLevel", "PgQualstatsEnabled", "PgQualstatsTrackConstants", "PgQualstatsMax", "PgQualstatsResolveOids", "PgQualstatsSampleRate", "MaxStackDepth", "Geqo", "GeqoThreshold", "GeqoEffort", "GeqoPoolSize", "GeqoGenerations", "GeqoSelectionBias", "GeqoSeed", "MaxStandbyArchiveDelay", "SessionDurationTimeout", "LogReplicationCommands", "LogAutovacuumMinDuration", });
+        new java.lang.String[] { "MaxConnections", "SharedBuffers", "TempBuffers", "MaxPreparedTransactions", "WorkMem", "MaintenanceWorkMem", "ReplacementSortTuples", "AutovacuumWorkMem", "TempFileLimit", "VacuumCostDelay", "VacuumCostPageHit", "VacuumCostPageMiss", "VacuumCostPageDirty", "VacuumCostLimit", "BgwriterDelay", "BgwriterLruMaxpages", "BgwriterLruMultiplier", "BgwriterFlushAfter", "BackendFlushAfter", "OldSnapshotThreshold", "WalLevel", "SynchronousCommit", "CheckpointTimeout", "CheckpointCompletionTarget", "CheckpointFlushAfter", "MaxWalSize", "MinWalSize", "MaxStandbyStreamingDelay", "DefaultStatisticsTarget", "ConstraintExclusion", "CursorTupleFraction", "FromCollapseLimit", "JoinCollapseLimit", "ForceParallelMode", "ClientMinMessages", "LogMinMessages", "LogMinErrorStatement", "LogMinDurationStatement", "LogCheckpoints", "LogConnections", "LogDisconnections", "LogDuration", "LogErrorVerbosity", "LogLockWaits", "LogStatement", "LogTempFiles", "SearchPath", "RowSecurity", "DefaultTransactionIsolation", "StatementTimeout", "LockTimeout", "IdleInTransactionSessionTimeout", "ByteaOutput", "Xmlbinary", "Xmloption", "GinPendingListLimit", "DeadlockTimeout", "MaxLocksPerTransaction", "MaxPredLocksPerTransaction", "ArrayNulls", "BackslashQuote", "DefaultWithOids", "EscapeStringWarning", "LoCompatPrivileges", "OperatorPrecedenceWarning", "QuoteAllIdentifiers", "StandardConformingStrings", "SynchronizeSeqscans", "TransformNullEquals", "ExitOnError", "SeqPageCost", "RandomPageCost", "AutovacuumMaxWorkers", "AutovacuumVacuumCostDelay", "AutovacuumVacuumCostLimit", "AutovacuumNaptime", "ArchiveTimeout", "TrackActivityQuerySize", "EnableBitmapscan", "EnableHashagg", "EnableHashjoin", "EnableIndexscan", "EnableIndexonlyscan", "EnableMaterial", "EnableMergejoin", "EnableNestloop", "EnableSeqscan", "EnableSort", "EnableTidscan", "MaxWorkerProcesses", "MaxParallelWorkers", "MaxParallelWorkersPerGather", "AutovacuumVacuumScaleFactor", "AutovacuumAnalyzeScaleFactor", "DefaultTransactionReadOnly", "Timezone", "EffectiveIoConcurrency", "EffectiveCacheSize", "SharedPreloadLibraries", "AutoExplainLogMinDuration", "AutoExplainLogAnalyze", "AutoExplainLogBuffers", "AutoExplainLogTiming", "AutoExplainLogTriggers", "AutoExplainLogVerbose", "AutoExplainLogNestedStatements", "AutoExplainSampleRate", "PgHintPlanEnableHint", "PgHintPlanEnableHintTable", "PgHintPlanDebugPrint", "PgHintPlanMessageLevel", "PgQualstatsEnabled", "PgQualstatsTrackConstants", "PgQualstatsMax", "PgQualstatsResolveOids", "PgQualstatsSampleRate", "MaxStackDepth", "Geqo", "GeqoThreshold", "GeqoEffort", "GeqoPoolSize", "GeqoGenerations", "GeqoSelectionBias", "GeqoSeed", "MaxStandbyArchiveDelay", "SessionDurationTimeout", "LogReplicationCommands", "LogAutovacuumMinDuration", "PasswordEncryption", });
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfigSet10_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_postgresql_v1_config_PostgresqlConfigSet10_fieldAccessorTable = new

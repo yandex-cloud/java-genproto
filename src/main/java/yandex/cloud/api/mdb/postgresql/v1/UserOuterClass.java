@@ -14,6 +14,123 @@ public final class UserOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  /**
+   * Protobuf enum {@code yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption}
+   */
+  public enum UserPasswordEncryption
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>USER_PASSWORD_ENCRYPTION_UNSPECIFIED = 0;</code>
+     */
+    USER_PASSWORD_ENCRYPTION_UNSPECIFIED(0),
+    /**
+     * <code>USER_PASSWORD_ENCRYPTION_MD5 = 1;</code>
+     */
+    USER_PASSWORD_ENCRYPTION_MD5(1),
+    /**
+     * <code>USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 = 2;</code>
+     */
+    USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256(2),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <code>USER_PASSWORD_ENCRYPTION_UNSPECIFIED = 0;</code>
+     */
+    public static final int USER_PASSWORD_ENCRYPTION_UNSPECIFIED_VALUE = 0;
+    /**
+     * <code>USER_PASSWORD_ENCRYPTION_MD5 = 1;</code>
+     */
+    public static final int USER_PASSWORD_ENCRYPTION_MD5_VALUE = 1;
+    /**
+     * <code>USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 = 2;</code>
+     */
+    public static final int USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256_VALUE = 2;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static UserPasswordEncryption valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static UserPasswordEncryption forNumber(int value) {
+      switch (value) {
+        case 0: return USER_PASSWORD_ENCRYPTION_UNSPECIFIED;
+        case 1: return USER_PASSWORD_ENCRYPTION_MD5;
+        case 2: return USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<UserPasswordEncryption>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        UserPasswordEncryption> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<UserPasswordEncryption>() {
+            public UserPasswordEncryption findValueByNumber(int number) {
+              return UserPasswordEncryption.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final UserPasswordEncryption[] VALUES = values();
+
+    public static UserPasswordEncryption valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private UserPasswordEncryption(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption)
+  }
+
   public interface UserOrBuilder extends
       // @@protoc_insertion_point(interface_extends:yandex.cloud.mdb.postgresql.v1.User)
       com.google.protobuf.MessageOrBuilder {
@@ -234,6 +351,29 @@ public final class UserOuterClass {
      * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder();
+
+    /**
+     * <pre>
+     * Password-based authentication method for user.
+     * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+     * The default is `` password_encryption `` setting for cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 9;</code>
+     * @return The enum numeric value on the wire for userPasswordEncryption.
+     */
+    int getUserPasswordEncryptionValue();
+    /**
+     * <pre>
+     * Password-based authentication method for user.
+     * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+     * The default is `` password_encryption `` setting for cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 9;</code>
+     * @return The userPasswordEncryption.
+     */
+    yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption getUserPasswordEncryption();
   }
   /**
    * <pre>
@@ -257,6 +397,7 @@ public final class UserOuterClass {
       clusterId_ = "";
       permissions_ = java.util.Collections.emptyList();
       grants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      userPasswordEncryption_ = 0;
     }
 
     @java.lang.Override
@@ -362,6 +503,12 @@ public final class UserOuterClass {
                 deletionProtection_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 72: {
+              int rawValue = input.readEnum();
+
+              userPasswordEncryption_ = rawValue;
               break;
             }
             default: {
@@ -735,6 +882,37 @@ public final class UserOuterClass {
       return getDeletionProtection();
     }
 
+    public static final int USER_PASSWORD_ENCRYPTION_FIELD_NUMBER = 9;
+    private int userPasswordEncryption_;
+    /**
+     * <pre>
+     * Password-based authentication method for user.
+     * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+     * The default is `` password_encryption `` setting for cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 9;</code>
+     * @return The enum numeric value on the wire for userPasswordEncryption.
+     */
+    @java.lang.Override public int getUserPasswordEncryptionValue() {
+      return userPasswordEncryption_;
+    }
+    /**
+     * <pre>
+     * Password-based authentication method for user.
+     * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+     * The default is `` password_encryption `` setting for cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 9;</code>
+     * @return The userPasswordEncryption.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption getUserPasswordEncryption() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption result = yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption.valueOf(userPasswordEncryption_);
+      return result == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -772,6 +950,9 @@ public final class UserOuterClass {
       }
       if (deletionProtection_ != null) {
         output.writeMessage(8, getDeletionProtection());
+      }
+      if (userPasswordEncryption_ != yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption.USER_PASSWORD_ENCRYPTION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(9, userPasswordEncryption_);
       }
       unknownFields.writeTo(output);
     }
@@ -816,6 +997,10 @@ public final class UserOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getDeletionProtection());
       }
+      if (userPasswordEncryption_ != yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption.USER_PASSWORD_ENCRYPTION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(9, userPasswordEncryption_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -856,6 +1041,7 @@ public final class UserOuterClass {
         if (!getDeletionProtection()
             .equals(other.getDeletionProtection())) return false;
       }
+      if (userPasswordEncryption_ != other.userPasswordEncryption_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -894,6 +1080,8 @@ public final class UserOuterClass {
         hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
         hash = (53 * hash) + getDeletionProtection().hashCode();
       }
+      hash = (37 * hash) + USER_PASSWORD_ENCRYPTION_FIELD_NUMBER;
+      hash = (53 * hash) + userPasswordEncryption_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1065,6 +1253,8 @@ public final class UserOuterClass {
           deletionProtection_ = null;
           deletionProtectionBuilder_ = null;
         }
+        userPasswordEncryption_ = 0;
+
         return this;
       }
 
@@ -1124,6 +1314,7 @@ public final class UserOuterClass {
         } else {
           result.deletionProtection_ = deletionProtectionBuilder_.build();
         }
+        result.userPasswordEncryption_ = userPasswordEncryption_;
         onBuilt();
         return result;
       }
@@ -1227,6 +1418,9 @@ public final class UserOuterClass {
         }
         if (other.hasDeletionProtection()) {
           mergeDeletionProtection(other.getDeletionProtection());
+        }
+        if (other.userPasswordEncryption_ != 0) {
+          setUserPasswordEncryptionValue(other.getUserPasswordEncryptionValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2415,6 +2609,90 @@ public final class UserOuterClass {
         }
         return deletionProtectionBuilder_;
       }
+
+      private int userPasswordEncryption_ = 0;
+      /**
+       * <pre>
+       * Password-based authentication method for user.
+       * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+       * The default is `` password_encryption `` setting for cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 9;</code>
+       * @return The enum numeric value on the wire for userPasswordEncryption.
+       */
+      @java.lang.Override public int getUserPasswordEncryptionValue() {
+        return userPasswordEncryption_;
+      }
+      /**
+       * <pre>
+       * Password-based authentication method for user.
+       * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+       * The default is `` password_encryption `` setting for cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 9;</code>
+       * @param value The enum numeric value on the wire for userPasswordEncryption to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserPasswordEncryptionValue(int value) {
+        
+        userPasswordEncryption_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Password-based authentication method for user.
+       * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+       * The default is `` password_encryption `` setting for cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 9;</code>
+       * @return The userPasswordEncryption.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption getUserPasswordEncryption() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption result = yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption.valueOf(userPasswordEncryption_);
+        return result == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Password-based authentication method for user.
+       * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+       * The default is `` password_encryption `` setting for cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 9;</code>
+       * @param value The userPasswordEncryption to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserPasswordEncryption(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        userPasswordEncryption_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Password-based authentication method for user.
+       * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+       * The default is `` password_encryption `` setting for cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserPasswordEncryption() {
+        
+        userPasswordEncryption_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -3327,6 +3605,29 @@ public final class UserOuterClass {
      * <code>.google.protobuf.BoolValue deletion_protection = 8;</code>
      */
     com.google.protobuf.BoolValueOrBuilder getDeletionProtectionOrBuilder();
+
+    /**
+     * <pre>
+     * Password-based authentication method for user.
+     * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+     * The default is `` password_encryption `` setting for cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 9;</code>
+     * @return The enum numeric value on the wire for userPasswordEncryption.
+     */
+    int getUserPasswordEncryptionValue();
+    /**
+     * <pre>
+     * Password-based authentication method for user.
+     * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+     * The default is `` password_encryption `` setting for cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 9;</code>
+     * @return The userPasswordEncryption.
+     */
+    yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption getUserPasswordEncryption();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.postgresql.v1.UserSpec}
@@ -3345,6 +3646,7 @@ public final class UserOuterClass {
       password_ = "";
       permissions_ = java.util.Collections.emptyList();
       grants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      userPasswordEncryption_ = 0;
     }
 
     @java.lang.Override
@@ -3458,6 +3760,12 @@ public final class UserOuterClass {
                 deletionProtection_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 72: {
+              int rawValue = input.readEnum();
+
+              userPasswordEncryption_ = rawValue;
               break;
             }
             default: {
@@ -3872,6 +4180,37 @@ public final class UserOuterClass {
       return getDeletionProtection();
     }
 
+    public static final int USER_PASSWORD_ENCRYPTION_FIELD_NUMBER = 9;
+    private int userPasswordEncryption_;
+    /**
+     * <pre>
+     * Password-based authentication method for user.
+     * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+     * The default is `` password_encryption `` setting for cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 9;</code>
+     * @return The enum numeric value on the wire for userPasswordEncryption.
+     */
+    @java.lang.Override public int getUserPasswordEncryptionValue() {
+      return userPasswordEncryption_;
+    }
+    /**
+     * <pre>
+     * Password-based authentication method for user.
+     * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+     * The default is `` password_encryption `` setting for cluster.
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 9;</code>
+     * @return The userPasswordEncryption.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption getUserPasswordEncryption() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption result = yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption.valueOf(userPasswordEncryption_);
+      return result == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3909,6 +4248,9 @@ public final class UserOuterClass {
       }
       if (deletionProtection_ != null) {
         output.writeMessage(8, getDeletionProtection());
+      }
+      if (userPasswordEncryption_ != yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption.USER_PASSWORD_ENCRYPTION_UNSPECIFIED.getNumber()) {
+        output.writeEnum(9, userPasswordEncryption_);
       }
       unknownFields.writeTo(output);
     }
@@ -3953,6 +4295,10 @@ public final class UserOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getDeletionProtection());
       }
+      if (userPasswordEncryption_ != yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption.USER_PASSWORD_ENCRYPTION_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(9, userPasswordEncryption_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3996,6 +4342,7 @@ public final class UserOuterClass {
         if (!getDeletionProtection()
             .equals(other.getDeletionProtection())) return false;
       }
+      if (userPasswordEncryption_ != other.userPasswordEncryption_) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4035,6 +4382,8 @@ public final class UserOuterClass {
         hash = (37 * hash) + DELETION_PROTECTION_FIELD_NUMBER;
         hash = (53 * hash) + getDeletionProtection().hashCode();
       }
+      hash = (37 * hash) + USER_PASSWORD_ENCRYPTION_FIELD_NUMBER;
+      hash = (53 * hash) + userPasswordEncryption_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4205,6 +4554,8 @@ public final class UserOuterClass {
           deletionProtection_ = null;
           deletionProtectionBuilder_ = null;
         }
+        userPasswordEncryption_ = 0;
+
         return this;
       }
 
@@ -4268,6 +4619,7 @@ public final class UserOuterClass {
         } else {
           result.deletionProtection_ = deletionProtectionBuilder_.build();
         }
+        result.userPasswordEncryption_ = userPasswordEncryption_;
         onBuilt();
         return result;
       }
@@ -4371,6 +4723,9 @@ public final class UserOuterClass {
         }
         if (other.hasDeletionProtection()) {
           mergeDeletionProtection(other.getDeletionProtection());
+        }
+        if (other.userPasswordEncryption_ != 0) {
+          setUserPasswordEncryptionValue(other.getUserPasswordEncryptionValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5724,6 +6079,90 @@ public final class UserOuterClass {
           deletionProtection_ = null;
         }
         return deletionProtectionBuilder_;
+      }
+
+      private int userPasswordEncryption_ = 0;
+      /**
+       * <pre>
+       * Password-based authentication method for user.
+       * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+       * The default is `` password_encryption `` setting for cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 9;</code>
+       * @return The enum numeric value on the wire for userPasswordEncryption.
+       */
+      @java.lang.Override public int getUserPasswordEncryptionValue() {
+        return userPasswordEncryption_;
+      }
+      /**
+       * <pre>
+       * Password-based authentication method for user.
+       * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+       * The default is `` password_encryption `` setting for cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 9;</code>
+       * @param value The enum numeric value on the wire for userPasswordEncryption to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserPasswordEncryptionValue(int value) {
+        
+        userPasswordEncryption_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Password-based authentication method for user.
+       * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+       * The default is `` password_encryption `` setting for cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 9;</code>
+       * @return The userPasswordEncryption.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption getUserPasswordEncryption() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption result = yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption.valueOf(userPasswordEncryption_);
+        return result == null ? yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Password-based authentication method for user.
+       * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+       * The default is `` password_encryption `` setting for cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 9;</code>
+       * @param value The userPasswordEncryption to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserPasswordEncryption(yandex.cloud.api.mdb.postgresql.v1.UserOuterClass.UserPasswordEncryption value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        userPasswordEncryption_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Password-based authentication method for user.
+       * Possible values are `` USER_PASSWORD_ENCRYPTION_MD5 `` or `` USER_PASSWORD_ENCRYPTION_SCRAM_SHA_256 ``.
+       * The default is `` password_encryption `` setting for cluster.
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.postgresql.v1.UserPasswordEncryption user_password_encryption = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserPasswordEncryption() {
+        
+        userPasswordEncryption_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10015,7 +10454,7 @@ public final class UserOuterClass {
       "\n)yandex/cloud/mdb/postgresql/v1/user.pr" +
       "oto\022\036yandex.cloud.mdb.postgresql.v1\032\036goo" +
       "gle/protobuf/wrappers.proto\032\035yandex/clou" +
-      "d/validation.proto\"\314\002\n\004User\022\014\n\004name\030\001 \001(" +
+      "d/validation.proto\"\246\003\n\004User\022\014\n\004name\030\001 \001(" +
       "\t\022\022\n\ncluster_id\030\002 \001(\t\022?\n\013permissions\030\003 \003" +
       "(\0132*.yandex.cloud.mdb.postgresql.v1.Perm" +
       "ission\022\022\n\nconn_limit\030\004 \001(\003\022>\n\010settings\030\005" +
@@ -10023,60 +10462,68 @@ public final class UserOuterClass {
       "erSettings\022)\n\005login\030\006 \001(\0132\032.google.proto" +
       "buf.BoolValue\022)\n\006grants\030\007 \003(\tB\031\212\3101\004<=63\362" +
       "\3071\r[a-zA-Z0-9_]*\0227\n\023deletion_protection\030" +
-      "\010 \001(\0132\032.google.protobuf.BoolValue\"#\n\nPer" +
-      "mission\022\025\n\rdatabase_name\030\001 \001(\t\"\244\003\n\010UserS" +
-      "pec\022,\n\004name\030\001 \001(\tB\036\350\3071\001\212\3101\004<=63\362\3071\016[a-zA" +
-      "-Z0-9_-]*\022\037\n\010password\030\002 \001(\tB\r\350\3071\001\212\3101\0058-1" +
-      "28\022?\n\013permissions\030\003 \003(\0132*.yandex.cloud.m" +
-      "db.postgresql.v1.Permission\0229\n\nconn_limi" +
-      "t\030\004 \001(\0132\033.google.protobuf.Int64ValueB\010\372\307" +
-      "1\004>=10\022>\n\010settings\030\005 \001(\0132,.yandex.cloud." +
-      "mdb.postgresql.v1.UserSettings\022)\n\005login\030" +
-      "\006 \001(\0132\032.google.protobuf.BoolValue\022)\n\006gra" +
-      "nts\030\007 \003(\tB\031\212\3101\004<=63\362\3071\r[a-zA-Z0-9_]*\0227\n\023" +
-      "deletion_protection\030\010 \001(\0132\032.google.proto" +
-      "buf.BoolValue\"\370\013\n\014UserSettings\022h\n\035defaul" +
-      "t_transaction_isolation\030\001 \001(\0162A.yandex.c" +
-      "loud.mdb.postgresql.v1.UserSettings.Tran" +
-      "sactionIsolation\0221\n\014lock_timeout\030\002 \001(\0132\033" +
-      ".google.protobuf.Int64Value\022?\n\032log_min_d" +
-      "uration_statement\030\003 \001(\0132\033.google.protobu" +
-      "f.Int64Value\022Z\n\022synchronous_commit\030\004 \001(\016" +
-      "2>.yandex.cloud.mdb.postgresql.v1.UserSe" +
-      "ttings.SynchronousCommit\0224\n\017temp_file_li" +
-      "mit\030\005 \001(\0132\033.google.protobuf.Int64Value\022P" +
-      "\n\rlog_statement\030\006 \001(\01629.yandex.cloud.mdb" +
-      ".postgresql.v1.UserSettings.LogStatement" +
-      "\022K\n\tpool_mode\030\007 \001(\01628.yandex.cloud.mdb.p" +
-      "ostgresql.v1.UserSettings.PoolingMode\022?\n" +
-      "\033prepared_statements_pooling\030\010 \001(\0132\032.goo" +
-      "gle.protobuf.BoolValue\0224\n\017catchup_timeou" +
-      "t\030\t \001(\0132\033.google.protobuf.Int64Value\0227\n\022" +
-      "wal_sender_timeout\030\n \001(\0132\033.google.protob" +
-      "uf.Int64Value\022H\n#idle_in_transaction_ses" +
-      "sion_timeout\030\013 \001(\0132\033.google.protobuf.Int" +
-      "64Value\0226\n\021statement_timeout\030\014 \001(\0132\033.goo" +
-      "gle.protobuf.Int64Value\"\326\001\n\021SynchronousC" +
-      "ommit\022\"\n\036SYNCHRONOUS_COMMIT_UNSPECIFIED\020" +
-      "\000\022\031\n\025SYNCHRONOUS_COMMIT_ON\020\001\022\032\n\026SYNCHRON" +
-      "OUS_COMMIT_OFF\020\002\022\034\n\030SYNCHRONOUS_COMMIT_L" +
-      "OCAL\020\003\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_WRIT" +
-      "E\020\004\022#\n\037SYNCHRONOUS_COMMIT_REMOTE_APPLY\020\005" +
-      "\"\212\001\n\014LogStatement\022\035\n\031LOG_STATEMENT_UNSPE" +
-      "CIFIED\020\000\022\026\n\022LOG_STATEMENT_NONE\020\001\022\025\n\021LOG_" +
-      "STATEMENT_DDL\020\002\022\025\n\021LOG_STATEMENT_MOD\020\003\022\025" +
-      "\n\021LOG_STATEMENT_ALL\020\004\"\346\001\n\024TransactionIso" +
-      "lation\022%\n!TRANSACTION_ISOLATION_UNSPECIF" +
-      "IED\020\000\022*\n&TRANSACTION_ISOLATION_READ_UNCO" +
-      "MMITTED\020\001\022(\n$TRANSACTION_ISOLATION_READ_" +
-      "COMMITTED\020\002\022)\n%TRANSACTION_ISOLATION_REP" +
-      "EATABLE_READ\020\003\022&\n\"TRANSACTION_ISOLATION_" +
-      "SERIALIZABLE\020\004\"X\n\013PoolingMode\022\034\n\030POOLING" +
-      "_MODE_UNSPECIFIED\020\000\022\013\n\007SESSION\020\001\022\017\n\013TRAN" +
-      "SACTION\020\002\022\r\n\tSTATEMENT\020\003Bs\n\"yandex.cloud" +
-      ".api.mdb.postgresql.v1ZMgithub.com/yande" +
-      "x-cloud/go-genproto/yandex/cloud/mdb/pos" +
-      "tgresql/v1;postgresqlb\006proto3"
+      "\010 \001(\0132\032.google.protobuf.BoolValue\022X\n\030use" +
+      "r_password_encryption\030\t \001(\01626.yandex.clo" +
+      "ud.mdb.postgresql.v1.UserPasswordEncrypt" +
+      "ion\"#\n\nPermission\022\025\n\rdatabase_name\030\001 \001(\t" +
+      "\"\376\003\n\010UserSpec\022,\n\004name\030\001 \001(\tB\036\350\3071\001\212\3101\004<=6" +
+      "3\362\3071\016[a-zA-Z0-9_-]*\022\037\n\010password\030\002 \001(\tB\r\350" +
+      "\3071\001\212\3101\0058-128\022?\n\013permissions\030\003 \003(\0132*.yand" +
+      "ex.cloud.mdb.postgresql.v1.Permission\0229\n" +
+      "\nconn_limit\030\004 \001(\0132\033.google.protobuf.Int6" +
+      "4ValueB\010\372\3071\004>=10\022>\n\010settings\030\005 \001(\0132,.yan" +
+      "dex.cloud.mdb.postgresql.v1.UserSettings" +
+      "\022)\n\005login\030\006 \001(\0132\032.google.protobuf.BoolVa" +
+      "lue\022)\n\006grants\030\007 \003(\tB\031\212\3101\004<=63\362\3071\r[a-zA-Z" +
+      "0-9_]*\0227\n\023deletion_protection\030\010 \001(\0132\032.go" +
+      "ogle.protobuf.BoolValue\022X\n\030user_password" +
+      "_encryption\030\t \001(\01626.yandex.cloud.mdb.pos" +
+      "tgresql.v1.UserPasswordEncryption\"\370\013\n\014Us" +
+      "erSettings\022h\n\035default_transaction_isolat" +
+      "ion\030\001 \001(\0162A.yandex.cloud.mdb.postgresql." +
+      "v1.UserSettings.TransactionIsolation\0221\n\014" +
+      "lock_timeout\030\002 \001(\0132\033.google.protobuf.Int" +
+      "64Value\022?\n\032log_min_duration_statement\030\003 " +
+      "\001(\0132\033.google.protobuf.Int64Value\022Z\n\022sync" +
+      "hronous_commit\030\004 \001(\0162>.yandex.cloud.mdb." +
+      "postgresql.v1.UserSettings.SynchronousCo" +
+      "mmit\0224\n\017temp_file_limit\030\005 \001(\0132\033.google.p" +
+      "rotobuf.Int64Value\022P\n\rlog_statement\030\006 \001(" +
+      "\01629.yandex.cloud.mdb.postgresql.v1.UserS" +
+      "ettings.LogStatement\022K\n\tpool_mode\030\007 \001(\0162" +
+      "8.yandex.cloud.mdb.postgresql.v1.UserSet" +
+      "tings.PoolingMode\022?\n\033prepared_statements" +
+      "_pooling\030\010 \001(\0132\032.google.protobuf.BoolVal" +
+      "ue\0224\n\017catchup_timeout\030\t \001(\0132\033.google.pro" +
+      "tobuf.Int64Value\0227\n\022wal_sender_timeout\030\n" +
+      " \001(\0132\033.google.protobuf.Int64Value\022H\n#idl" +
+      "e_in_transaction_session_timeout\030\013 \001(\0132\033" +
+      ".google.protobuf.Int64Value\0226\n\021statement" +
+      "_timeout\030\014 \001(\0132\033.google.protobuf.Int64Va" +
+      "lue\"\326\001\n\021SynchronousCommit\022\"\n\036SYNCHRONOUS" +
+      "_COMMIT_UNSPECIFIED\020\000\022\031\n\025SYNCHRONOUS_COM" +
+      "MIT_ON\020\001\022\032\n\026SYNCHRONOUS_COMMIT_OFF\020\002\022\034\n\030" +
+      "SYNCHRONOUS_COMMIT_LOCAL\020\003\022#\n\037SYNCHRONOU" +
+      "S_COMMIT_REMOTE_WRITE\020\004\022#\n\037SYNCHRONOUS_C" +
+      "OMMIT_REMOTE_APPLY\020\005\"\212\001\n\014LogStatement\022\035\n" +
+      "\031LOG_STATEMENT_UNSPECIFIED\020\000\022\026\n\022LOG_STAT" +
+      "EMENT_NONE\020\001\022\025\n\021LOG_STATEMENT_DDL\020\002\022\025\n\021L" +
+      "OG_STATEMENT_MOD\020\003\022\025\n\021LOG_STATEMENT_ALL\020" +
+      "\004\"\346\001\n\024TransactionIsolation\022%\n!TRANSACTIO" +
+      "N_ISOLATION_UNSPECIFIED\020\000\022*\n&TRANSACTION" +
+      "_ISOLATION_READ_UNCOMMITTED\020\001\022(\n$TRANSAC" +
+      "TION_ISOLATION_READ_COMMITTED\020\002\022)\n%TRANS" +
+      "ACTION_ISOLATION_REPEATABLE_READ\020\003\022&\n\"TR" +
+      "ANSACTION_ISOLATION_SERIALIZABLE\020\004\"X\n\013Po" +
+      "olingMode\022\034\n\030POOLING_MODE_UNSPECIFIED\020\000\022" +
+      "\013\n\007SESSION\020\001\022\017\n\013TRANSACTION\020\002\022\r\n\tSTATEME" +
+      "NT\020\003*\220\001\n\026UserPasswordEncryption\022(\n$USER_" +
+      "PASSWORD_ENCRYPTION_UNSPECIFIED\020\000\022 \n\034USE" +
+      "R_PASSWORD_ENCRYPTION_MD5\020\001\022*\n&USER_PASS" +
+      "WORD_ENCRYPTION_SCRAM_SHA_256\020\002Bs\n\"yande" +
+      "x.cloud.api.mdb.postgresql.v1ZMgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "mdb/postgresql/v1;postgresqlb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10089,7 +10536,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_User_descriptor,
-        new java.lang.String[] { "Name", "ClusterId", "Permissions", "ConnLimit", "Settings", "Login", "Grants", "DeletionProtection", });
+        new java.lang.String[] { "Name", "ClusterId", "Permissions", "ConnLimit", "Settings", "Login", "Grants", "DeletionProtection", "UserPasswordEncryption", });
     internal_static_yandex_cloud_mdb_postgresql_v1_Permission_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_mdb_postgresql_v1_Permission_fieldAccessorTable = new
@@ -10101,7 +10548,7 @@ public final class UserOuterClass {
     internal_static_yandex_cloud_mdb_postgresql_v1_UserSpec_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_postgresql_v1_UserSpec_descriptor,
-        new java.lang.String[] { "Name", "Password", "Permissions", "ConnLimit", "Settings", "Login", "Grants", "DeletionProtection", });
+        new java.lang.String[] { "Name", "Password", "Permissions", "ConnLimit", "Settings", "Login", "Grants", "DeletionProtection", "UserPasswordEncryption", });
     internal_static_yandex_cloud_mdb_postgresql_v1_UserSettings_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_yandex_cloud_mdb_postgresql_v1_UserSettings_fieldAccessorTable = new

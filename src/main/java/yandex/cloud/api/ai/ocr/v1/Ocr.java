@@ -11114,37 +11114,10 @@ public final class Ocr {
 
     /**
      * <pre>
-     * Table position from full_text string.
-     * </pre>
-     *
-     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
-     * @return Whether the textSegments field is set.
-     */
-    boolean hasTextSegments();
-    /**
-     * <pre>
-     * Table position from full_text string.
-     * </pre>
-     *
-     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
-     * @return The textSegments.
-     */
-    yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments();
-    /**
-     * <pre>
-     * Table position from full_text string.
-     * </pre>
-     *
-     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
-     */
-    yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder();
-
-    /**
-     * <pre>
      * Table cells.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
      */
     java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TableCell> 
         getCellsList();
@@ -11153,7 +11126,7 @@ public final class Ocr {
      * Table cells.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
      */
     yandex.cloud.api.ai.ocr.v1.Ocr.TableCell getCells(int index);
     /**
@@ -11161,7 +11134,7 @@ public final class Ocr {
      * Table cells.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
      */
     int getCellsCount();
     /**
@@ -11169,7 +11142,7 @@ public final class Ocr {
      * Table cells.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
      */
     java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TableCellOrBuilder> 
         getCellsOrBuilderList();
@@ -11178,7 +11151,7 @@ public final class Ocr {
      * Table cells.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
      */
     yandex.cloud.api.ai.ocr.v1.Ocr.TableCellOrBuilder getCellsOrBuilder(
         int index);
@@ -11254,19 +11227,6 @@ public final class Ocr {
               break;
             }
             case 34: {
-              yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder subBuilder = null;
-              if (textSegments_ != null) {
-                subBuilder = textSegments_.toBuilder();
-              }
-              textSegments_ = input.readMessage(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(textSegments_);
-                textSegments_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 42: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 cells_ = new java.util.ArrayList<yandex.cloud.api.ai.ocr.v1.Ocr.TableCell>();
                 mutable_bitField0_ |= 0x00000001;
@@ -11378,52 +11338,14 @@ public final class Ocr {
       return columnCount_;
     }
 
-    public static final int TEXT_SEGMENTS_FIELD_NUMBER = 4;
-    private yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments textSegments_;
-    /**
-     * <pre>
-     * Table position from full_text string.
-     * </pre>
-     *
-     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
-     * @return Whether the textSegments field is set.
-     */
-    @java.lang.Override
-    public boolean hasTextSegments() {
-      return textSegments_ != null;
-    }
-    /**
-     * <pre>
-     * Table position from full_text string.
-     * </pre>
-     *
-     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
-     * @return The textSegments.
-     */
-    @java.lang.Override
-    public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments() {
-      return textSegments_ == null ? yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.getDefaultInstance() : textSegments_;
-    }
-    /**
-     * <pre>
-     * Table position from full_text string.
-     * </pre>
-     *
-     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
-     */
-    @java.lang.Override
-    public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder() {
-      return getTextSegments();
-    }
-
-    public static final int CELLS_FIELD_NUMBER = 5;
+    public static final int CELLS_FIELD_NUMBER = 4;
     private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TableCell> cells_;
     /**
      * <pre>
      * Table cells.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
      */
     @java.lang.Override
     public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TableCell> getCellsList() {
@@ -11434,7 +11356,7 @@ public final class Ocr {
      * Table cells.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
      */
     @java.lang.Override
     public java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TableCellOrBuilder> 
@@ -11446,7 +11368,7 @@ public final class Ocr {
      * Table cells.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
      */
     @java.lang.Override
     public int getCellsCount() {
@@ -11457,7 +11379,7 @@ public final class Ocr {
      * Table cells.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
      */
     @java.lang.Override
     public yandex.cloud.api.ai.ocr.v1.Ocr.TableCell getCells(int index) {
@@ -11468,7 +11390,7 @@ public final class Ocr {
      * Table cells.
      * </pre>
      *
-     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
      */
     @java.lang.Override
     public yandex.cloud.api.ai.ocr.v1.Ocr.TableCellOrBuilder getCellsOrBuilder(
@@ -11499,11 +11421,8 @@ public final class Ocr {
       if (columnCount_ != 0L) {
         output.writeInt64(3, columnCount_);
       }
-      if (textSegments_ != null) {
-        output.writeMessage(4, getTextSegments());
-      }
       for (int i = 0; i < cells_.size(); i++) {
-        output.writeMessage(5, cells_.get(i));
+        output.writeMessage(4, cells_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -11526,13 +11445,9 @@ public final class Ocr {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, columnCount_);
       }
-      if (textSegments_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getTextSegments());
-      }
       for (int i = 0; i < cells_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, cells_.get(i));
+          .computeMessageSize(4, cells_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11558,11 +11473,6 @@ public final class Ocr {
           != other.getRowCount()) return false;
       if (getColumnCount()
           != other.getColumnCount()) return false;
-      if (hasTextSegments() != other.hasTextSegments()) return false;
-      if (hasTextSegments()) {
-        if (!getTextSegments()
-            .equals(other.getTextSegments())) return false;
-      }
       if (!getCellsList()
           .equals(other.getCellsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
@@ -11586,10 +11496,6 @@ public final class Ocr {
       hash = (37 * hash) + COLUMN_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getColumnCount());
-      if (hasTextSegments()) {
-        hash = (37 * hash) + TEXT_SEGMENTS_FIELD_NUMBER;
-        hash = (53 * hash) + getTextSegments().hashCode();
-      }
       if (getCellsCount() > 0) {
         hash = (37 * hash) + CELLS_FIELD_NUMBER;
         hash = (53 * hash) + getCellsList().hashCode();
@@ -11738,12 +11644,6 @@ public final class Ocr {
 
         columnCount_ = 0L;
 
-        if (textSegmentsBuilder_ == null) {
-          textSegments_ = null;
-        } else {
-          textSegments_ = null;
-          textSegmentsBuilder_ = null;
-        }
         if (cellsBuilder_ == null) {
           cells_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -11784,11 +11684,6 @@ public final class Ocr {
         }
         result.rowCount_ = rowCount_;
         result.columnCount_ = columnCount_;
-        if (textSegmentsBuilder_ == null) {
-          result.textSegments_ = textSegments_;
-        } else {
-          result.textSegments_ = textSegmentsBuilder_.build();
-        }
         if (cellsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             cells_ = java.util.Collections.unmodifiableList(cells_);
@@ -11854,9 +11749,6 @@ public final class Ocr {
         }
         if (other.getColumnCount() != 0L) {
           setColumnCount(other.getColumnCount());
-        }
-        if (other.hasTextSegments()) {
-          mergeTextSegments(other.getTextSegments());
         }
         if (cellsBuilder_ == null) {
           if (!other.cells_.isEmpty()) {
@@ -12155,161 +12047,6 @@ public final class Ocr {
         return this;
       }
 
-      private yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments textSegments_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> textSegmentsBuilder_;
-      /**
-       * <pre>
-       * Table position from full_text string.
-       * </pre>
-       *
-       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
-       * @return Whether the textSegments field is set.
-       */
-      public boolean hasTextSegments() {
-        return textSegmentsBuilder_ != null || textSegments_ != null;
-      }
-      /**
-       * <pre>
-       * Table position from full_text string.
-       * </pre>
-       *
-       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
-       * @return The textSegments.
-       */
-      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments() {
-        if (textSegmentsBuilder_ == null) {
-          return textSegments_ == null ? yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.getDefaultInstance() : textSegments_;
-        } else {
-          return textSegmentsBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * Table position from full_text string.
-       * </pre>
-       *
-       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
-       */
-      public Builder setTextSegments(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments value) {
-        if (textSegmentsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          textSegments_ = value;
-          onChanged();
-        } else {
-          textSegmentsBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Table position from full_text string.
-       * </pre>
-       *
-       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
-       */
-      public Builder setTextSegments(
-          yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder builderForValue) {
-        if (textSegmentsBuilder_ == null) {
-          textSegments_ = builderForValue.build();
-          onChanged();
-        } else {
-          textSegmentsBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Table position from full_text string.
-       * </pre>
-       *
-       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
-       */
-      public Builder mergeTextSegments(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments value) {
-        if (textSegmentsBuilder_ == null) {
-          if (textSegments_ != null) {
-            textSegments_ =
-              yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.newBuilder(textSegments_).mergeFrom(value).buildPartial();
-          } else {
-            textSegments_ = value;
-          }
-          onChanged();
-        } else {
-          textSegmentsBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Table position from full_text string.
-       * </pre>
-       *
-       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
-       */
-      public Builder clearTextSegments() {
-        if (textSegmentsBuilder_ == null) {
-          textSegments_ = null;
-          onChanged();
-        } else {
-          textSegments_ = null;
-          textSegmentsBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * Table position from full_text string.
-       * </pre>
-       *
-       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
-       */
-      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder getTextSegmentsBuilder() {
-        
-        onChanged();
-        return getTextSegmentsFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * Table position from full_text string.
-       * </pre>
-       *
-       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
-       */
-      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder() {
-        if (textSegmentsBuilder_ != null) {
-          return textSegmentsBuilder_.getMessageOrBuilder();
-        } else {
-          return textSegments_ == null ?
-              yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.getDefaultInstance() : textSegments_;
-        }
-      }
-      /**
-       * <pre>
-       * Table position from full_text string.
-       * </pre>
-       *
-       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 4;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> 
-          getTextSegmentsFieldBuilder() {
-        if (textSegmentsBuilder_ == null) {
-          textSegmentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder>(
-                  getTextSegments(),
-                  getParentForChildren(),
-                  isClean());
-          textSegments_ = null;
-        }
-        return textSegmentsBuilder_;
-      }
-
       private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TableCell> cells_ =
         java.util.Collections.emptyList();
       private void ensureCellsIsMutable() {
@@ -12327,7 +12064,7 @@ public final class Ocr {
        * Table cells.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
        */
       public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TableCell> getCellsList() {
         if (cellsBuilder_ == null) {
@@ -12341,7 +12078,7 @@ public final class Ocr {
        * Table cells.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
        */
       public int getCellsCount() {
         if (cellsBuilder_ == null) {
@@ -12355,7 +12092,7 @@ public final class Ocr {
        * Table cells.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
        */
       public yandex.cloud.api.ai.ocr.v1.Ocr.TableCell getCells(int index) {
         if (cellsBuilder_ == null) {
@@ -12369,7 +12106,7 @@ public final class Ocr {
        * Table cells.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
        */
       public Builder setCells(
           int index, yandex.cloud.api.ai.ocr.v1.Ocr.TableCell value) {
@@ -12390,7 +12127,7 @@ public final class Ocr {
        * Table cells.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
        */
       public Builder setCells(
           int index, yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.Builder builderForValue) {
@@ -12408,7 +12145,7 @@ public final class Ocr {
        * Table cells.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
        */
       public Builder addCells(yandex.cloud.api.ai.ocr.v1.Ocr.TableCell value) {
         if (cellsBuilder_ == null) {
@@ -12428,7 +12165,7 @@ public final class Ocr {
        * Table cells.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
        */
       public Builder addCells(
           int index, yandex.cloud.api.ai.ocr.v1.Ocr.TableCell value) {
@@ -12449,7 +12186,7 @@ public final class Ocr {
        * Table cells.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
        */
       public Builder addCells(
           yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.Builder builderForValue) {
@@ -12467,7 +12204,7 @@ public final class Ocr {
        * Table cells.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
        */
       public Builder addCells(
           int index, yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.Builder builderForValue) {
@@ -12485,7 +12222,7 @@ public final class Ocr {
        * Table cells.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
        */
       public Builder addAllCells(
           java.lang.Iterable<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TableCell> values) {
@@ -12504,7 +12241,7 @@ public final class Ocr {
        * Table cells.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
        */
       public Builder clearCells() {
         if (cellsBuilder_ == null) {
@@ -12521,7 +12258,7 @@ public final class Ocr {
        * Table cells.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
        */
       public Builder removeCells(int index) {
         if (cellsBuilder_ == null) {
@@ -12538,7 +12275,7 @@ public final class Ocr {
        * Table cells.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
        */
       public yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.Builder getCellsBuilder(
           int index) {
@@ -12549,7 +12286,7 @@ public final class Ocr {
        * Table cells.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
        */
       public yandex.cloud.api.ai.ocr.v1.Ocr.TableCellOrBuilder getCellsOrBuilder(
           int index) {
@@ -12563,7 +12300,7 @@ public final class Ocr {
        * Table cells.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
        */
       public java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TableCellOrBuilder> 
            getCellsOrBuilderList() {
@@ -12578,7 +12315,7 @@ public final class Ocr {
        * Table cells.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
        */
       public yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.Builder addCellsBuilder() {
         return getCellsFieldBuilder().addBuilder(
@@ -12589,7 +12326,7 @@ public final class Ocr {
        * Table cells.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
        */
       public yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.Builder addCellsBuilder(
           int index) {
@@ -12601,7 +12338,7 @@ public final class Ocr {
        * Table cells.
        * </pre>
        *
-       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 5;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TableCell cells = 4;</code>
        */
       public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TableCell.Builder> 
            getCellsBuilderList() {
@@ -12770,27 +12507,44 @@ public final class Ocr {
      * Table cell position from full_text string.
      * </pre>
      *
-     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
-     * @return Whether the textSegments field is set.
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
      */
-    boolean hasTextSegments();
+    java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> 
+        getTextSegmentsList();
     /**
      * <pre>
      * Table cell position from full_text string.
      * </pre>
      *
-     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
-     * @return The textSegments.
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
      */
-    yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments();
+    yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments(int index);
     /**
      * <pre>
      * Table cell position from full_text string.
      * </pre>
      *
-     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
      */
-    yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder();
+    int getTextSegmentsCount();
+    /**
+     * <pre>
+     * Table cell position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+     */
+    java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> 
+        getTextSegmentsOrBuilderList();
+    /**
+     * <pre>
+     * Table cell position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+     */
+    yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.ai.ocr.v1.TableCell}
@@ -12806,6 +12560,7 @@ public final class Ocr {
     }
     private TableCell() {
       text_ = "";
+      textSegments_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -12828,6 +12583,7 @@ public final class Ocr {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -12878,16 +12634,12 @@ public final class Ocr {
               break;
             }
             case 58: {
-              yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder subBuilder = null;
-              if (textSegments_ != null) {
-                subBuilder = textSegments_.toBuilder();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                textSegments_ = new java.util.ArrayList<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments>();
+                mutable_bitField0_ |= 0x00000001;
               }
-              textSegments_ = input.readMessage(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(textSegments_);
-                textSegments_ = subBuilder.buildPartial();
-              }
-
+              textSegments_.add(
+                  input.readMessage(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -12905,6 +12657,9 @@ public final class Ocr {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          textSegments_ = java.util.Collections.unmodifiableList(textSegments_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -13067,41 +12822,63 @@ public final class Ocr {
     }
 
     public static final int TEXT_SEGMENTS_FIELD_NUMBER = 7;
-    private yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments textSegments_;
+    private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> textSegments_;
     /**
      * <pre>
      * Table cell position from full_text string.
      * </pre>
      *
-     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
-     * @return Whether the textSegments field is set.
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
      */
     @java.lang.Override
-    public boolean hasTextSegments() {
-      return textSegments_ != null;
+    public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> getTextSegmentsList() {
+      return textSegments_;
     }
     /**
      * <pre>
      * Table cell position from full_text string.
      * </pre>
      *
-     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
-     * @return The textSegments.
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments() {
-      return textSegments_ == null ? yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.getDefaultInstance() : textSegments_;
+    public java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> 
+        getTextSegmentsOrBuilderList() {
+      return textSegments_;
     }
     /**
      * <pre>
      * Table cell position from full_text string.
      * </pre>
      *
-     * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
      */
     @java.lang.Override
-    public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder() {
-      return getTextSegments();
+    public int getTextSegmentsCount() {
+      return textSegments_.size();
+    }
+    /**
+     * <pre>
+     * Table cell position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments(int index) {
+      return textSegments_.get(index);
+    }
+    /**
+     * <pre>
+     * Table cell position from full_text string.
+     * </pre>
+     *
+     * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder(
+        int index) {
+      return textSegments_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -13136,8 +12913,8 @@ public final class Ocr {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, text_);
       }
-      if (textSegments_ != null) {
-        output.writeMessage(7, getTextSegments());
+      for (int i = 0; i < textSegments_.size(); i++) {
+        output.writeMessage(7, textSegments_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -13171,9 +12948,9 @@ public final class Ocr {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(text_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, text_);
       }
-      if (textSegments_ != null) {
+      for (int i = 0; i < textSegments_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getTextSegments());
+          .computeMessageSize(7, textSegments_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -13205,11 +12982,8 @@ public final class Ocr {
           != other.getRowSpan()) return false;
       if (!getText()
           .equals(other.getText())) return false;
-      if (hasTextSegments() != other.hasTextSegments()) return false;
-      if (hasTextSegments()) {
-        if (!getTextSegments()
-            .equals(other.getTextSegments())) return false;
-      }
+      if (!getTextSegmentsList()
+          .equals(other.getTextSegmentsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -13239,9 +13013,9 @@ public final class Ocr {
           getRowSpan());
       hash = (37 * hash) + TEXT_FIELD_NUMBER;
       hash = (53 * hash) + getText().hashCode();
-      if (hasTextSegments()) {
+      if (getTextSegmentsCount() > 0) {
         hash = (37 * hash) + TEXT_SEGMENTS_FIELD_NUMBER;
-        hash = (53 * hash) + getTextSegments().hashCode();
+        hash = (53 * hash) + getTextSegmentsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -13371,6 +13145,7 @@ public final class Ocr {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getTextSegmentsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -13393,10 +13168,10 @@ public final class Ocr {
         text_ = "";
 
         if (textSegmentsBuilder_ == null) {
-          textSegments_ = null;
+          textSegments_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          textSegments_ = null;
-          textSegmentsBuilder_ = null;
+          textSegmentsBuilder_.clear();
         }
         return this;
       }
@@ -13424,6 +13199,7 @@ public final class Ocr {
       @java.lang.Override
       public yandex.cloud.api.ai.ocr.v1.Ocr.TableCell buildPartial() {
         yandex.cloud.api.ai.ocr.v1.Ocr.TableCell result = new yandex.cloud.api.ai.ocr.v1.Ocr.TableCell(this);
+        int from_bitField0_ = bitField0_;
         if (boundingBoxBuilder_ == null) {
           result.boundingBox_ = boundingBox_;
         } else {
@@ -13435,6 +13211,10 @@ public final class Ocr {
         result.rowSpan_ = rowSpan_;
         result.text_ = text_;
         if (textSegmentsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            textSegments_ = java.util.Collections.unmodifiableList(textSegments_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
           result.textSegments_ = textSegments_;
         } else {
           result.textSegments_ = textSegmentsBuilder_.build();
@@ -13506,8 +13286,31 @@ public final class Ocr {
           text_ = other.text_;
           onChanged();
         }
-        if (other.hasTextSegments()) {
-          mergeTextSegments(other.getTextSegments());
+        if (textSegmentsBuilder_ == null) {
+          if (!other.textSegments_.isEmpty()) {
+            if (textSegments_.isEmpty()) {
+              textSegments_ = other.textSegments_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTextSegmentsIsMutable();
+              textSegments_.addAll(other.textSegments_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.textSegments_.isEmpty()) {
+            if (textSegmentsBuilder_.isEmpty()) {
+              textSegmentsBuilder_.dispose();
+              textSegmentsBuilder_ = null;
+              textSegments_ = other.textSegments_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              textSegmentsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTextSegmentsFieldBuilder() : null;
+            } else {
+              textSegmentsBuilder_.addAllMessages(other.textSegments_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -13537,6 +13340,7 @@ public final class Ocr {
         }
         return this;
       }
+      private int bitField0_;
 
       private yandex.cloud.api.ai.ocr.v1.Ocr.Polygon boundingBox_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -13961,33 +13765,30 @@ public final class Ocr {
         return this;
       }
 
-      private yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments textSegments_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> textSegmentsBuilder_;
-      /**
-       * <pre>
-       * Table cell position from full_text string.
-       * </pre>
-       *
-       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
-       * @return Whether the textSegments field is set.
-       */
-      public boolean hasTextSegments() {
-        return textSegmentsBuilder_ != null || textSegments_ != null;
+      private java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> textSegments_ =
+        java.util.Collections.emptyList();
+      private void ensureTextSegmentsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          textSegments_ = new java.util.ArrayList<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments>(textSegments_);
+          bitField0_ |= 0x00000001;
+         }
       }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> textSegmentsBuilder_;
+
       /**
        * <pre>
        * Table cell position from full_text string.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
-       * @return The textSegments.
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
        */
-      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments() {
+      public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> getTextSegmentsList() {
         if (textSegmentsBuilder_ == null) {
-          return textSegments_ == null ? yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.getDefaultInstance() : textSegments_;
+          return java.util.Collections.unmodifiableList(textSegments_);
         } else {
-          return textSegmentsBuilder_.getMessage();
+          return textSegmentsBuilder_.getMessageList();
         }
       }
       /**
@@ -13995,19 +13796,48 @@ public final class Ocr {
        * Table cell position from full_text string.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
        */
-      public Builder setTextSegments(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments value) {
+      public int getTextSegmentsCount() {
+        if (textSegmentsBuilder_ == null) {
+          return textSegments_.size();
+        } else {
+          return textSegmentsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Table cell position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments getTextSegments(int index) {
+        if (textSegmentsBuilder_ == null) {
+          return textSegments_.get(index);
+        } else {
+          return textSegmentsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Table cell position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       */
+      public Builder setTextSegments(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments value) {
         if (textSegmentsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          textSegments_ = value;
+          ensureTextSegmentsIsMutable();
+          textSegments_.set(index, value);
           onChanged();
         } else {
-          textSegmentsBuilder_.setMessage(value);
+          textSegmentsBuilder_.setMessage(index, value);
         }
-
         return this;
       }
       /**
@@ -14015,17 +13845,76 @@ public final class Ocr {
        * Table cell position from full_text string.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
        */
       public Builder setTextSegments(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder builderForValue) {
+        if (textSegmentsBuilder_ == null) {
+          ensureTextSegmentsIsMutable();
+          textSegments_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          textSegmentsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Table cell position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       */
+      public Builder addTextSegments(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments value) {
+        if (textSegmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTextSegmentsIsMutable();
+          textSegments_.add(value);
+          onChanged();
+        } else {
+          textSegmentsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Table cell position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       */
+      public Builder addTextSegments(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments value) {
+        if (textSegmentsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTextSegmentsIsMutable();
+          textSegments_.add(index, value);
+          onChanged();
+        } else {
+          textSegmentsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Table cell position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       */
+      public Builder addTextSegments(
           yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder builderForValue) {
         if (textSegmentsBuilder_ == null) {
-          textSegments_ = builderForValue.build();
+          ensureTextSegmentsIsMutable();
+          textSegments_.add(builderForValue.build());
           onChanged();
         } else {
-          textSegmentsBuilder_.setMessage(builderForValue.build());
+          textSegmentsBuilder_.addMessage(builderForValue.build());
         }
-
         return this;
       }
       /**
@@ -14033,21 +13922,17 @@ public final class Ocr {
        * Table cell position from full_text string.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
        */
-      public Builder mergeTextSegments(yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments value) {
+      public Builder addTextSegments(
+          int index, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder builderForValue) {
         if (textSegmentsBuilder_ == null) {
-          if (textSegments_ != null) {
-            textSegments_ =
-              yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.newBuilder(textSegments_).mergeFrom(value).buildPartial();
-          } else {
-            textSegments_ = value;
-          }
+          ensureTextSegmentsIsMutable();
+          textSegments_.add(index, builderForValue.build());
           onChanged();
         } else {
-          textSegmentsBuilder_.mergeFrom(value);
+          textSegmentsBuilder_.addMessage(index, builderForValue.build());
         }
-
         return this;
       }
       /**
@@ -14055,17 +13940,35 @@ public final class Ocr {
        * Table cell position from full_text string.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       */
+      public Builder addAllTextSegments(
+          java.lang.Iterable<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments> values) {
+        if (textSegmentsBuilder_ == null) {
+          ensureTextSegmentsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, textSegments_);
+          onChanged();
+        } else {
+          textSegmentsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Table cell position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
        */
       public Builder clearTextSegments() {
         if (textSegmentsBuilder_ == null) {
-          textSegments_ = null;
+          textSegments_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
-          textSegments_ = null;
-          textSegmentsBuilder_ = null;
+          textSegmentsBuilder_.clear();
         }
-
         return this;
       }
       /**
@@ -14073,26 +13976,41 @@ public final class Ocr {
        * Table cell position from full_text string.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
        */
-      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder getTextSegmentsBuilder() {
-        
-        onChanged();
-        return getTextSegmentsFieldBuilder().getBuilder();
+      public Builder removeTextSegments(int index) {
+        if (textSegmentsBuilder_ == null) {
+          ensureTextSegmentsIsMutable();
+          textSegments_.remove(index);
+          onChanged();
+        } else {
+          textSegmentsBuilder_.remove(index);
+        }
+        return this;
       }
       /**
        * <pre>
        * Table cell position from full_text string.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
        */
-      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder() {
-        if (textSegmentsBuilder_ != null) {
-          return textSegmentsBuilder_.getMessageOrBuilder();
-        } else {
-          return textSegments_ == null ?
-              yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.getDefaultInstance() : textSegments_;
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder getTextSegmentsBuilder(
+          int index) {
+        return getTextSegmentsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Table cell position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder getTextSegmentsOrBuilder(
+          int index) {
+        if (textSegmentsBuilder_ == null) {
+          return textSegments_.get(index);  } else {
+          return textSegmentsBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
@@ -14100,15 +14018,58 @@ public final class Ocr {
        * Table cell position from full_text string.
        * </pre>
        *
-       * <code>.yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
+      public java.util.List<? extends yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> 
+           getTextSegmentsOrBuilderList() {
+        if (textSegmentsBuilder_ != null) {
+          return textSegmentsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(textSegments_);
+        }
+      }
+      /**
+       * <pre>
+       * Table cell position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder addTextSegmentsBuilder() {
+        return getTextSegmentsFieldBuilder().addBuilder(
+            yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Table cell position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       */
+      public yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder addTextSegmentsBuilder(
+          int index) {
+        return getTextSegmentsFieldBuilder().addBuilder(
+            index, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Table cell position from full_text string.
+       * </pre>
+       *
+       * <code>repeated .yandex.cloud.ai.ocr.v1.TextSegments text_segments = 7;</code>
+       */
+      public java.util.List<yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder> 
+           getTextSegmentsBuilderList() {
+        return getTextSegmentsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder> 
           getTextSegmentsFieldBuilder() {
         if (textSegmentsBuilder_ == null) {
-          textSegmentsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          textSegmentsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegments.Builder, yandex.cloud.api.ai.ocr.v1.Ocr.TextSegmentsOrBuilder>(
-                  getTextSegments(),
+                  textSegments_,
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           textSegments_ = null;
@@ -14259,20 +14220,19 @@ public final class Ocr {
       "x\030\003 \001(\003\022;\n\rtext_segments\030\004 \003(\0132$.yandex." +
       "cloud.ai.ocr.v1.TextSegments\"3\n\014TextSegm" +
       "ents\022\023\n\013start_index\030\001 \001(\003\022\016\n\006length\030\002 \001(" +
-      "\003\"\326\001\n\005Table\0225\n\014bounding_box\030\001 \001(\0132\037.yand" +
+      "\003\"\231\001\n\005Table\0225\n\014bounding_box\030\001 \001(\0132\037.yand" +
       "ex.cloud.ai.ocr.v1.Polygon\022\021\n\trow_count\030" +
-      "\002 \001(\003\022\024\n\014column_count\030\003 \001(\003\022;\n\rtext_segm" +
-      "ents\030\004 \001(\0132$.yandex.cloud.ai.ocr.v1.Text" +
-      "Segments\0220\n\005cells\030\005 \003(\0132!.yandex.cloud.a" +
-      "i.ocr.v1.TableCell\"\335\001\n\tTableCell\0225\n\014boun" +
-      "ding_box\030\001 \001(\0132\037.yandex.cloud.ai.ocr.v1." +
-      "Polygon\022\021\n\trow_index\030\002 \001(\003\022\024\n\014column_ind" +
-      "ex\030\003 \001(\003\022\023\n\013column_span\030\004 \001(\003\022\020\n\010row_spa" +
-      "n\030\005 \001(\003\022\014\n\004text\030\006 \001(\t\022;\n\rtext_segments\030\007" +
-      " \001(\0132$.yandex.cloud.ai.ocr.v1.TextSegmen" +
-      "tsB\\\n\032yandex.cloud.api.ai.ocr.v1Z>github" +
-      ".com/yandex-cloud/go-genproto/yandex/clo" +
-      "ud/ai/ocr/v1;ocrb\006proto3"
+      "\002 \001(\003\022\024\n\014column_count\030\003 \001(\003\0220\n\005cells\030\004 \003" +
+      "(\0132!.yandex.cloud.ai.ocr.v1.TableCell\"\335\001" +
+      "\n\tTableCell\0225\n\014bounding_box\030\001 \001(\0132\037.yand" +
+      "ex.cloud.ai.ocr.v1.Polygon\022\021\n\trow_index\030" +
+      "\002 \001(\003\022\024\n\014column_index\030\003 \001(\003\022\023\n\013column_sp" +
+      "an\030\004 \001(\003\022\020\n\010row_span\030\005 \001(\003\022\014\n\004text\030\006 \001(\t" +
+      "\022;\n\rtext_segments\030\007 \003(\0132$.yandex.cloud.a" +
+      "i.ocr.v1.TextSegmentsB\\\n\032yandex.cloud.ap" +
+      "i.ai.ocr.v1Z>github.com/yandex-cloud/go-" +
+      "genproto/yandex/cloud/ai/ocr/v1;ocrb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14337,7 +14297,7 @@ public final class Ocr {
     internal_static_yandex_cloud_ai_ocr_v1_Table_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_ai_ocr_v1_Table_descriptor,
-        new java.lang.String[] { "BoundingBox", "RowCount", "ColumnCount", "TextSegments", "Cells", });
+        new java.lang.String[] { "BoundingBox", "RowCount", "ColumnCount", "Cells", });
     internal_static_yandex_cloud_ai_ocr_v1_TableCell_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_ai_ocr_v1_TableCell_fieldAccessorTable = new
