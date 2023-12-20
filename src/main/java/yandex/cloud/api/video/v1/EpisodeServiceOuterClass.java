@@ -3207,6 +3207,21 @@ public final class EpisodeServiceOuterClass {
      */
     yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParamsOrBuilder getPublicAccessOrBuilder();
 
+    /**
+     * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+     * @return Whether the authSystemAccess field is set.
+     */
+    boolean hasAuthSystemAccess();
+    /**
+     * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+     * @return The authSystemAccess.
+     */
+    yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams getAuthSystemAccess();
+    /**
+     * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+     */
+    yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParamsOrBuilder getAuthSystemAccessOrBuilder();
+
     public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.CreateEpisodeRequest.ParentIdCase getParentIdCase();
 
     public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.CreateEpisodeRequest.AccessRightsCase getAccessRightsCase();
@@ -3334,6 +3349,20 @@ public final class EpisodeServiceOuterClass {
               accessRightsCase_ = 1000;
               break;
             }
+            case 8018: {
+              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.Builder subBuilder = null;
+              if (accessRightsCase_ == 1002) {
+                subBuilder = ((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_).toBuilder();
+              }
+              accessRights_ =
+                  input.readMessage(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_);
+                accessRights_ = subBuilder.buildPartial();
+              }
+              accessRightsCase_ = 1002;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3413,6 +3442,7 @@ public final class EpisodeServiceOuterClass {
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       PUBLIC_ACCESS(1000),
+      AUTH_SYSTEM_ACCESS(1002),
       ACCESSRIGHTS_NOT_SET(0);
       private final int value;
       private AccessRightsCase(int value) {
@@ -3431,6 +3461,7 @@ public final class EpisodeServiceOuterClass {
       public static AccessRightsCase forNumber(int value) {
         switch (value) {
           case 1000: return PUBLIC_ACCESS;
+          case 1002: return AUTH_SYSTEM_ACCESS;
           case 0: return ACCESSRIGHTS_NOT_SET;
           default: return null;
         }
@@ -3758,6 +3789,37 @@ public final class EpisodeServiceOuterClass {
       return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParams.getDefaultInstance();
     }
 
+    public static final int AUTH_SYSTEM_ACCESS_FIELD_NUMBER = 1002;
+    /**
+     * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+     * @return Whether the authSystemAccess field is set.
+     */
+    @java.lang.Override
+    public boolean hasAuthSystemAccess() {
+      return accessRightsCase_ == 1002;
+    }
+    /**
+     * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+     * @return The authSystemAccess.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams getAuthSystemAccess() {
+      if (accessRightsCase_ == 1002) {
+         return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_;
+      }
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParamsOrBuilder getAuthSystemAccessOrBuilder() {
+      if (accessRightsCase_ == 1002) {
+         return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_;
+      }
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3799,6 +3861,9 @@ public final class EpisodeServiceOuterClass {
       if (accessRightsCase_ == 1000) {
         output.writeMessage(1000, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParams) accessRights_);
       }
+      if (accessRightsCase_ == 1002) {
+        output.writeMessage(1002, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -3838,6 +3903,10 @@ public final class EpisodeServiceOuterClass {
       if (accessRightsCase_ == 1000) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1000, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParams) accessRights_);
+      }
+      if (accessRightsCase_ == 1002) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1002, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3891,6 +3960,10 @@ public final class EpisodeServiceOuterClass {
           if (!getPublicAccess()
               .equals(other.getPublicAccess())) return false;
           break;
+        case 1002:
+          if (!getAuthSystemAccess()
+              .equals(other.getAuthSystemAccess())) return false;
+          break;
         case 0:
         default:
       }
@@ -3938,6 +4011,10 @@ public final class EpisodeServiceOuterClass {
         case 1000:
           hash = (37 * hash) + PUBLIC_ACCESS_FIELD_NUMBER;
           hash = (53 * hash) + getPublicAccess().hashCode();
+          break;
+        case 1002:
+          hash = (37 * hash) + AUTH_SYSTEM_ACCESS_FIELD_NUMBER;
+          hash = (53 * hash) + getAuthSystemAccess().hashCode();
           break;
         case 0:
         default:
@@ -4152,6 +4229,13 @@ public final class EpisodeServiceOuterClass {
             result.accessRights_ = publicAccessBuilder_.build();
           }
         }
+        if (accessRightsCase_ == 1002) {
+          if (authSystemAccessBuilder_ == null) {
+            result.accessRights_ = accessRights_;
+          } else {
+            result.accessRights_ = authSystemAccessBuilder_.build();
+          }
+        }
         result.parentIdCase_ = parentIdCase_;
         result.accessRightsCase_ = accessRightsCase_;
         onBuilt();
@@ -4243,6 +4327,10 @@ public final class EpisodeServiceOuterClass {
         switch (other.getAccessRightsCase()) {
           case PUBLIC_ACCESS: {
             mergePublicAccess(other.getPublicAccess());
+            break;
+          }
+          case AUTH_SYSTEM_ACCESS: {
+            mergeAuthSystemAccess(other.getAuthSystemAccess());
             break;
           }
           case ACCESSRIGHTS_NOT_SET: {
@@ -5139,6 +5227,147 @@ public final class EpisodeServiceOuterClass {
         onChanged();;
         return publicAccessBuilder_;
       }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParamsOrBuilder> authSystemAccessBuilder_;
+      /**
+       * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+       * @return Whether the authSystemAccess field is set.
+       */
+      @java.lang.Override
+      public boolean hasAuthSystemAccess() {
+        return accessRightsCase_ == 1002;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+       * @return The authSystemAccess.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams getAuthSystemAccess() {
+        if (authSystemAccessBuilder_ == null) {
+          if (accessRightsCase_ == 1002) {
+            return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_;
+          }
+          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.getDefaultInstance();
+        } else {
+          if (accessRightsCase_ == 1002) {
+            return authSystemAccessBuilder_.getMessage();
+          }
+          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+       */
+      public Builder setAuthSystemAccess(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams value) {
+        if (authSystemAccessBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          accessRights_ = value;
+          onChanged();
+        } else {
+          authSystemAccessBuilder_.setMessage(value);
+        }
+        accessRightsCase_ = 1002;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+       */
+      public Builder setAuthSystemAccess(
+          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.Builder builderForValue) {
+        if (authSystemAccessBuilder_ == null) {
+          accessRights_ = builderForValue.build();
+          onChanged();
+        } else {
+          authSystemAccessBuilder_.setMessage(builderForValue.build());
+        }
+        accessRightsCase_ = 1002;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+       */
+      public Builder mergeAuthSystemAccess(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams value) {
+        if (authSystemAccessBuilder_ == null) {
+          if (accessRightsCase_ == 1002 &&
+              accessRights_ != yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.getDefaultInstance()) {
+            accessRights_ = yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.newBuilder((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            accessRights_ = value;
+          }
+          onChanged();
+        } else {
+          if (accessRightsCase_ == 1002) {
+            authSystemAccessBuilder_.mergeFrom(value);
+          }
+          authSystemAccessBuilder_.setMessage(value);
+        }
+        accessRightsCase_ = 1002;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+       */
+      public Builder clearAuthSystemAccess() {
+        if (authSystemAccessBuilder_ == null) {
+          if (accessRightsCase_ == 1002) {
+            accessRightsCase_ = 0;
+            accessRights_ = null;
+            onChanged();
+          }
+        } else {
+          if (accessRightsCase_ == 1002) {
+            accessRightsCase_ = 0;
+            accessRights_ = null;
+          }
+          authSystemAccessBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+       */
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.Builder getAuthSystemAccessBuilder() {
+        return getAuthSystemAccessFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParamsOrBuilder getAuthSystemAccessOrBuilder() {
+        if ((accessRightsCase_ == 1002) && (authSystemAccessBuilder_ != null)) {
+          return authSystemAccessBuilder_.getMessageOrBuilder();
+        } else {
+          if (accessRightsCase_ == 1002) {
+            return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_;
+          }
+          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParamsOrBuilder> 
+          getAuthSystemAccessFieldBuilder() {
+        if (authSystemAccessBuilder_ == null) {
+          if (!(accessRightsCase_ == 1002)) {
+            accessRights_ = yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.getDefaultInstance();
+          }
+          authSystemAccessBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParamsOrBuilder>(
+                  (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_,
+                  getParentForChildren(),
+                  isClean());
+          accessRights_ = null;
+        }
+        accessRightsCase_ = 1002;
+        onChanged();;
+        return authSystemAccessBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -5605,6 +5834,424 @@ public final class EpisodeServiceOuterClass {
 
     @java.lang.Override
     public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface EpisodeAuthSystemAccessParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.EpisodeAuthSystemAccessParams)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.video.v1.EpisodeAuthSystemAccessParams}
+   */
+  public static final class EpisodeAuthSystemAccessParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.EpisodeAuthSystemAccessParams)
+      EpisodeAuthSystemAccessParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EpisodeAuthSystemAccessParams.newBuilder() to construct.
+    private EpisodeAuthSystemAccessParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EpisodeAuthSystemAccessParams() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EpisodeAuthSystemAccessParams();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EpisodeAuthSystemAccessParams(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_EpisodeAuthSystemAccessParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_EpisodeAuthSystemAccessParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.class, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams other = (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.EpisodeAuthSystemAccessParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.EpisodeAuthSystemAccessParams)
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_EpisodeAuthSystemAccessParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_EpisodeAuthSystemAccessParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.class, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.internal_static_yandex_cloud_video_v1_EpisodeAuthSystemAccessParams_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams build() {
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams buildPartial() {
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams result = new yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) {
+          return mergeFrom((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams other) {
+        if (other == yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.EpisodeAuthSystemAccessParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.EpisodeAuthSystemAccessParams)
+    private static final yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams();
+    }
+
+    public static yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EpisodeAuthSystemAccessParams>
+        PARSER = new com.google.protobuf.AbstractParser<EpisodeAuthSystemAccessParams>() {
+      @java.lang.Override
+      public EpisodeAuthSystemAccessParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EpisodeAuthSystemAccessParams(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EpisodeAuthSystemAccessParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EpisodeAuthSystemAccessParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6296,6 +6943,21 @@ public final class EpisodeServiceOuterClass {
      */
     yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParamsOrBuilder getPublicAccessOrBuilder();
 
+    /**
+     * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+     * @return Whether the authSystemAccess field is set.
+     */
+    boolean hasAuthSystemAccess();
+    /**
+     * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+     * @return The authSystemAccess.
+     */
+    yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams getAuthSystemAccess();
+    /**
+     * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+     */
+    yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParamsOrBuilder getAuthSystemAccessOrBuilder();
+
     public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.UpdateEpisodeRequest.AccessRightsCase getAccessRightsCase();
   }
   /**
@@ -6429,6 +7091,20 @@ public final class EpisodeServiceOuterClass {
               accessRightsCase_ = 1000;
               break;
             }
+            case 8018: {
+              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.Builder subBuilder = null;
+              if (accessRightsCase_ == 1002) {
+                subBuilder = ((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_).toBuilder();
+              }
+              accessRights_ =
+                  input.readMessage(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_);
+                accessRights_ = subBuilder.buildPartial();
+              }
+              accessRightsCase_ = 1002;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -6467,6 +7143,7 @@ public final class EpisodeServiceOuterClass {
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       PUBLIC_ACCESS(1000),
+      AUTH_SYSTEM_ACCESS(1002),
       ACCESSRIGHTS_NOT_SET(0);
       private final int value;
       private AccessRightsCase(int value) {
@@ -6485,6 +7162,7 @@ public final class EpisodeServiceOuterClass {
       public static AccessRightsCase forNumber(int value) {
         switch (value) {
           case 1000: return PUBLIC_ACCESS;
+          case 1002: return AUTH_SYSTEM_ACCESS;
           case 0: return ACCESSRIGHTS_NOT_SET;
           default: return null;
         }
@@ -6772,6 +7450,37 @@ public final class EpisodeServiceOuterClass {
       return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParams.getDefaultInstance();
     }
 
+    public static final int AUTH_SYSTEM_ACCESS_FIELD_NUMBER = 1002;
+    /**
+     * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+     * @return Whether the authSystemAccess field is set.
+     */
+    @java.lang.Override
+    public boolean hasAuthSystemAccess() {
+      return accessRightsCase_ == 1002;
+    }
+    /**
+     * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+     * @return The authSystemAccess.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams getAuthSystemAccess() {
+      if (accessRightsCase_ == 1002) {
+         return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_;
+      }
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParamsOrBuilder getAuthSystemAccessOrBuilder() {
+      if (accessRightsCase_ == 1002) {
+         return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_;
+      }
+      return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6813,6 +7522,9 @@ public final class EpisodeServiceOuterClass {
       if (accessRightsCase_ == 1000) {
         output.writeMessage(1000, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParams) accessRights_);
       }
+      if (accessRightsCase_ == 1002) {
+        output.writeMessage(1002, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6853,6 +7565,10 @@ public final class EpisodeServiceOuterClass {
       if (accessRightsCase_ == 1000) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1000, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodePublicAccessParams) accessRights_);
+      }
+      if (accessRightsCase_ == 1002) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1002, (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -6900,6 +7616,10 @@ public final class EpisodeServiceOuterClass {
           if (!getPublicAccess()
               .equals(other.getPublicAccess())) return false;
           break;
+        case 1002:
+          if (!getAuthSystemAccess()
+              .equals(other.getAuthSystemAccess())) return false;
+          break;
         case 0:
         default:
       }
@@ -6941,6 +7661,10 @@ public final class EpisodeServiceOuterClass {
         case 1000:
           hash = (37 * hash) + PUBLIC_ACCESS_FIELD_NUMBER;
           hash = (53 * hash) + getPublicAccess().hashCode();
+          break;
+        case 1002:
+          hash = (37 * hash) + AUTH_SYSTEM_ACCESS_FIELD_NUMBER;
+          hash = (53 * hash) + getAuthSystemAccess().hashCode();
           break;
         case 0:
         default:
@@ -7161,6 +7885,13 @@ public final class EpisodeServiceOuterClass {
             result.accessRights_ = publicAccessBuilder_.build();
           }
         }
+        if (accessRightsCase_ == 1002) {
+          if (authSystemAccessBuilder_ == null) {
+            result.accessRights_ = accessRights_;
+          } else {
+            result.accessRights_ = authSystemAccessBuilder_.build();
+          }
+        }
         result.accessRightsCase_ = accessRightsCase_;
         onBuilt();
         return result;
@@ -7241,6 +7972,10 @@ public final class EpisodeServiceOuterClass {
         switch (other.getAccessRightsCase()) {
           case PUBLIC_ACCESS: {
             mergePublicAccess(other.getPublicAccess());
+            break;
+          }
+          case AUTH_SYSTEM_ACCESS: {
+            mergeAuthSystemAccess(other.getAuthSystemAccess());
             break;
           }
           case ACCESSRIGHTS_NOT_SET: {
@@ -8122,6 +8857,147 @@ public final class EpisodeServiceOuterClass {
         accessRightsCase_ = 1000;
         onChanged();;
         return publicAccessBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParamsOrBuilder> authSystemAccessBuilder_;
+      /**
+       * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+       * @return Whether the authSystemAccess field is set.
+       */
+      @java.lang.Override
+      public boolean hasAuthSystemAccess() {
+        return accessRightsCase_ == 1002;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+       * @return The authSystemAccess.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams getAuthSystemAccess() {
+        if (authSystemAccessBuilder_ == null) {
+          if (accessRightsCase_ == 1002) {
+            return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_;
+          }
+          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.getDefaultInstance();
+        } else {
+          if (accessRightsCase_ == 1002) {
+            return authSystemAccessBuilder_.getMessage();
+          }
+          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+       */
+      public Builder setAuthSystemAccess(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams value) {
+        if (authSystemAccessBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          accessRights_ = value;
+          onChanged();
+        } else {
+          authSystemAccessBuilder_.setMessage(value);
+        }
+        accessRightsCase_ = 1002;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+       */
+      public Builder setAuthSystemAccess(
+          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.Builder builderForValue) {
+        if (authSystemAccessBuilder_ == null) {
+          accessRights_ = builderForValue.build();
+          onChanged();
+        } else {
+          authSystemAccessBuilder_.setMessage(builderForValue.build());
+        }
+        accessRightsCase_ = 1002;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+       */
+      public Builder mergeAuthSystemAccess(yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams value) {
+        if (authSystemAccessBuilder_ == null) {
+          if (accessRightsCase_ == 1002 &&
+              accessRights_ != yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.getDefaultInstance()) {
+            accessRights_ = yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.newBuilder((yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            accessRights_ = value;
+          }
+          onChanged();
+        } else {
+          if (accessRightsCase_ == 1002) {
+            authSystemAccessBuilder_.mergeFrom(value);
+          }
+          authSystemAccessBuilder_.setMessage(value);
+        }
+        accessRightsCase_ = 1002;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+       */
+      public Builder clearAuthSystemAccess() {
+        if (authSystemAccessBuilder_ == null) {
+          if (accessRightsCase_ == 1002) {
+            accessRightsCase_ = 0;
+            accessRights_ = null;
+            onChanged();
+          }
+        } else {
+          if (accessRightsCase_ == 1002) {
+            accessRightsCase_ = 0;
+            accessRights_ = null;
+          }
+          authSystemAccessBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+       */
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.Builder getAuthSystemAccessBuilder() {
+        return getAuthSystemAccessFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParamsOrBuilder getAuthSystemAccessOrBuilder() {
+        if ((accessRightsCase_ == 1002) && (authSystemAccessBuilder_ != null)) {
+          return authSystemAccessBuilder_.getMessageOrBuilder();
+        } else {
+          if (accessRightsCase_ == 1002) {
+            return (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_;
+          }
+          return yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.EpisodeAuthSystemAccessParams auth_system_access = 1002;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParamsOrBuilder> 
+          getAuthSystemAccessFieldBuilder() {
+        if (authSystemAccessBuilder_ == null) {
+          if (!(accessRightsCase_ == 1002)) {
+            accessRights_ = yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.getDefaultInstance();
+          }
+          authSystemAccessBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams.Builder, yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParamsOrBuilder>(
+                  (yandex.cloud.api.video.v1.EpisodeServiceOuterClass.EpisodeAuthSystemAccessParams) accessRights_,
+                  getParentForChildren(),
+                  isClean());
+          accessRights_ = null;
+        }
+        accessRightsCase_ = 1002;
+        onChanged();;
+        return authSystemAccessBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -14527,6 +15403,11 @@ public final class EpisodeServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_EpisodePublicAccessParams_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_EpisodeAuthSystemAccessParams_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_EpisodeAuthSystemAccessParams_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_CreateEpisodeMetadata_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -14608,7 +15489,7 @@ public final class EpisodeServiceOuterClass {
       "by\030f \001(\t\022\016\n\006filter\030g \001(\tB\013\n\tparent_id\"a\n" +
       "\024ListEpisodesResponse\0220\n\010episodes\030\001 \003(\0132" +
       "\036.yandex.cloud.video.v1.Episode\022\027\n\017next_" +
-      "page_token\030d \001(\t\"\330\002\n\024CreateEpisodeReques" +
+      "page_token\030d \001(\t\"\265\003\n\024CreateEpisodeReques" +
       "t\022\023\n\tstream_id\030d \001(\tH\000\022\021\n\007line_id\030e \001(\tH" +
       "\000\022\r\n\005title\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\024\n" +
       "\014thumbnail_id\030\004 \001(\t\022.\n\nstart_time\030\005 \001(\0132" +
@@ -14616,58 +15497,64 @@ public final class EpisodeServiceOuterClass {
       "me\030\006 \001(\0132\032.google.protobuf.Timestamp\022\023\n\013" +
       "dvr_seconds\030\007 \001(\003\022J\n\rpublic_access\030\350\007 \001(" +
       "\01320.yandex.cloud.video.v1.EpisodePublicA" +
-      "ccessParamsH\001B\013\n\tparent_idB\017\n\raccess_rig" +
-      "hts\"\033\n\031EpisodePublicAccessParams\"+\n\025Crea" +
-      "teEpisodeMetadata\022\022\n\nepisode_id\030\001 \001(\t\"\347\002" +
-      "\n\024UpdateEpisodeRequest\022\022\n\nepisode_id\030\001 \001" +
-      "(\t\022.\n\nfield_mask\030\002 \001(\0132\032.google.protobuf" +
-      ".FieldMask\022\r\n\005title\030\003 \001(\t\022\023\n\013description" +
-      "\030\004 \001(\t\022\024\n\014thumbnail_id\030\005 \001(\t\022.\n\nstart_ti" +
-      "me\030\006 \001(\0132\032.google.protobuf.Timestamp\022/\n\013" +
-      "finish_time\030\007 \001(\0132\032.google.protobuf.Time" +
-      "stamp\022\023\n\013dvr_seconds\030\010 \001(\003\022J\n\rpublic_acc" +
-      "ess\030\350\007 \001(\01320.yandex.cloud.video.v1.Episo" +
-      "dePublicAccessParamsH\000B\017\n\raccess_rights\"" +
-      "+\n\025UpdateEpisodeMetadata\022\022\n\nepisode_id\030\001" +
-      " \001(\t\"*\n\024DeleteEpisodeRequest\022\022\n\nepisode_" +
-      "id\030\001 \001(\t\"+\n\025DeleteEpisodeMetadata\022\022\n\nepi" +
-      "sode_id\030\001 \001(\t\"\243\001\n\033PerformEpisodeActionRe" +
-      "quest\022\022\n\nepisode_id\030\001 \001(\t\0220\n\003ban\030\350\007 \001(\0132" +
-      " .yandex.cloud.video.v1.BanActionH\000\0224\n\005u" +
-      "nban\030\351\007 \001(\0132\".yandex.cloud.video.v1.Unba" +
-      "nActionH\000B\010\n\006action\"\013\n\tBanAction\"\r\n\013Unba" +
-      "nAction\"2\n\034PerformEpisodeActionMetadata\022" +
-      "\022\n\nepisode_id\030\001 \001(\t\"l\n\032GetEpisodePlayerU" +
-      "RLRequest\022\022\n\nepisode_id\030\001 \001(\t\022:\n\006params\030" +
-      "\002 \001(\0132*.yandex.cloud.video.v1.EpisodePla" +
-      "yerParams\"E\n\023EpisodePlayerParams\022\014\n\004mute" +
-      "\030\001 \001(\010\022\020\n\010autoplay\030\002 \001(\010\022\016\n\006hidden\030\003 \001(\010" +
-      "\"?\n\033GetEpisodePlayerURLResponse\022\022\n\nplaye" +
-      "r_url\030\001 \001(\t\022\014\n\004html\030\002 \001(\t2\344\006\n\016EpisodeSer" +
-      "vice\022Q\n\003Get\022(.yandex.cloud.video.v1.GetE" +
-      "pisodeRequest\032\036.yandex.cloud.video.v1.Ep" +
-      "isode\"\000\022a\n\004List\022*.yandex.cloud.video.v1." +
-      "ListEpisodesRequest\032+.yandex.cloud.video" +
-      ".v1.ListEpisodesResponse\"\000\022~\n\006Create\022+.y" +
-      "andex.cloud.video.v1.CreateEpisodeReques" +
-      "t\032!.yandex.cloud.operation.Operation\"$\262\322" +
-      "* \n\025CreateEpisodeMetadata\022\007Episode\022~\n\006Up" +
-      "date\022+.yandex.cloud.video.v1.UpdateEpiso" +
-      "deRequest\032!.yandex.cloud.operation.Opera" +
-      "tion\"$\262\322* \n\025UpdateEpisodeMetadata\022\007Episo" +
-      "de\022\214\001\n\006Delete\022+.yandex.cloud.video.v1.De" +
-      "leteEpisodeRequest\032!.yandex.cloud.operat" +
-      "ion.Operation\"2\262\322*.\n\025DeleteEpisodeMetada" +
-      "ta\022\025google.protobuf.Empty\022\223\001\n\rPerformAct" +
-      "ion\0222.yandex.cloud.video.v1.PerformEpiso" +
-      "deActionRequest\032!.yandex.cloud.operation" +
-      ".Operation\"+\262\322*\'\n\034PerformEpisodeActionMe" +
-      "tadata\022\007Episode\022w\n\014GetPlayerURL\0221.yandex" +
-      ".cloud.video.v1.GetEpisodePlayerURLReque" +
-      "st\0322.yandex.cloud.video.v1.GetEpisodePla" +
-      "yerURLResponse\"\000B\\\n\031yandex.cloud.api.vid" +
-      "eo.v1Z?github.com/yandex-cloud/go-genpro" +
-      "to/yandex/cloud/video/v1;videob\006proto3"
+      "ccessParamsH\001\022S\n\022auth_system_access\030\352\007 \001" +
+      "(\01324.yandex.cloud.video.v1.EpisodeAuthSy" +
+      "stemAccessParamsH\001B\013\n\tparent_idB\017\n\racces" +
+      "s_rightsJ\006\010\351\007\020\352\007\"\033\n\031EpisodePublicAccessP" +
+      "arams\"\037\n\035EpisodeAuthSystemAccessParams\"+" +
+      "\n\025CreateEpisodeMetadata\022\022\n\nepisode_id\030\001 " +
+      "\001(\t\"\304\003\n\024UpdateEpisodeRequest\022\022\n\nepisode_" +
+      "id\030\001 \001(\t\022.\n\nfield_mask\030\002 \001(\0132\032.google.pr" +
+      "otobuf.FieldMask\022\r\n\005title\030\003 \001(\t\022\023\n\013descr" +
+      "iption\030\004 \001(\t\022\024\n\014thumbnail_id\030\005 \001(\t\022.\n\nst" +
+      "art_time\030\006 \001(\0132\032.google.protobuf.Timesta" +
+      "mp\022/\n\013finish_time\030\007 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022\023\n\013dvr_seconds\030\010 \001(\003\022J\n\rpubl" +
+      "ic_access\030\350\007 \001(\01320.yandex.cloud.video.v1" +
+      ".EpisodePublicAccessParamsH\000\022S\n\022auth_sys" +
+      "tem_access\030\352\007 \001(\01324.yandex.cloud.video.v" +
+      "1.EpisodeAuthSystemAccessParamsH\000B\017\n\racc" +
+      "ess_rightsJ\006\010\351\007\020\352\007\"+\n\025UpdateEpisodeMetad" +
+      "ata\022\022\n\nepisode_id\030\001 \001(\t\"*\n\024DeleteEpisode" +
+      "Request\022\022\n\nepisode_id\030\001 \001(\t\"+\n\025DeleteEpi" +
+      "sodeMetadata\022\022\n\nepisode_id\030\001 \001(\t\"\243\001\n\033Per" +
+      "formEpisodeActionRequest\022\022\n\nepisode_id\030\001" +
+      " \001(\t\0220\n\003ban\030\350\007 \001(\0132 .yandex.cloud.video." +
+      "v1.BanActionH\000\0224\n\005unban\030\351\007 \001(\0132\".yandex." +
+      "cloud.video.v1.UnbanActionH\000B\010\n\006action\"\013" +
+      "\n\tBanAction\"\r\n\013UnbanAction\"2\n\034PerformEpi" +
+      "sodeActionMetadata\022\022\n\nepisode_id\030\001 \001(\t\"l" +
+      "\n\032GetEpisodePlayerURLRequest\022\022\n\nepisode_" +
+      "id\030\001 \001(\t\022:\n\006params\030\002 \001(\0132*.yandex.cloud." +
+      "video.v1.EpisodePlayerParams\"E\n\023EpisodeP" +
+      "layerParams\022\014\n\004mute\030\001 \001(\010\022\020\n\010autoplay\030\002 " +
+      "\001(\010\022\016\n\006hidden\030\003 \001(\010\"?\n\033GetEpisodePlayerU" +
+      "RLResponse\022\022\n\nplayer_url\030\001 \001(\t\022\014\n\004html\030\002" +
+      " \001(\t2\344\006\n\016EpisodeService\022Q\n\003Get\022(.yandex." +
+      "cloud.video.v1.GetEpisodeRequest\032\036.yande" +
+      "x.cloud.video.v1.Episode\"\000\022a\n\004List\022*.yan" +
+      "dex.cloud.video.v1.ListEpisodesRequest\032+" +
+      ".yandex.cloud.video.v1.ListEpisodesRespo" +
+      "nse\"\000\022~\n\006Create\022+.yandex.cloud.video.v1." +
+      "CreateEpisodeRequest\032!.yandex.cloud.oper" +
+      "ation.Operation\"$\262\322* \n\025CreateEpisodeMeta" +
+      "data\022\007Episode\022~\n\006Update\022+.yandex.cloud.v" +
+      "ideo.v1.UpdateEpisodeRequest\032!.yandex.cl" +
+      "oud.operation.Operation\"$\262\322* \n\025UpdateEpi" +
+      "sodeMetadata\022\007Episode\022\214\001\n\006Delete\022+.yande" +
+      "x.cloud.video.v1.DeleteEpisodeRequest\032!." +
+      "yandex.cloud.operation.Operation\"2\262\322*.\n\025" +
+      "DeleteEpisodeMetadata\022\025google.protobuf.E" +
+      "mpty\022\223\001\n\rPerformAction\0222.yandex.cloud.vi" +
+      "deo.v1.PerformEpisodeActionRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"+\262\322*\'\n\034Per" +
+      "formEpisodeActionMetadata\022\007Episode\022w\n\014Ge" +
+      "tPlayerURL\0221.yandex.cloud.video.v1.GetEp" +
+      "isodePlayerURLRequest\0322.yandex.cloud.vid" +
+      "eo.v1.GetEpisodePlayerURLResponse\"\000B\\\n\031y" +
+      "andex.cloud.api.video.v1Z?github.com/yan" +
+      "dex-cloud/go-genproto/yandex/cloud/video" +
+      "/v1;videob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -14701,81 +15588,87 @@ public final class EpisodeServiceOuterClass {
     internal_static_yandex_cloud_video_v1_CreateEpisodeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_CreateEpisodeRequest_descriptor,
-        new java.lang.String[] { "StreamId", "LineId", "Title", "Description", "ThumbnailId", "StartTime", "FinishTime", "DvrSeconds", "PublicAccess", "ParentId", "AccessRights", });
+        new java.lang.String[] { "StreamId", "LineId", "Title", "Description", "ThumbnailId", "StartTime", "FinishTime", "DvrSeconds", "PublicAccess", "AuthSystemAccess", "ParentId", "AccessRights", });
     internal_static_yandex_cloud_video_v1_EpisodePublicAccessParams_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_yandex_cloud_video_v1_EpisodePublicAccessParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_EpisodePublicAccessParams_descriptor,
         new java.lang.String[] { });
-    internal_static_yandex_cloud_video_v1_CreateEpisodeMetadata_descriptor =
+    internal_static_yandex_cloud_video_v1_EpisodeAuthSystemAccessParams_descriptor =
       getDescriptor().getMessageTypes().get(5);
+    internal_static_yandex_cloud_video_v1_EpisodeAuthSystemAccessParams_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_EpisodeAuthSystemAccessParams_descriptor,
+        new java.lang.String[] { });
+    internal_static_yandex_cloud_video_v1_CreateEpisodeMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(6);
     internal_static_yandex_cloud_video_v1_CreateEpisodeMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_CreateEpisodeMetadata_descriptor,
         new java.lang.String[] { "EpisodeId", });
     internal_static_yandex_cloud_video_v1_UpdateEpisodeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_video_v1_UpdateEpisodeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_UpdateEpisodeRequest_descriptor,
-        new java.lang.String[] { "EpisodeId", "FieldMask", "Title", "Description", "ThumbnailId", "StartTime", "FinishTime", "DvrSeconds", "PublicAccess", "AccessRights", });
+        new java.lang.String[] { "EpisodeId", "FieldMask", "Title", "Description", "ThumbnailId", "StartTime", "FinishTime", "DvrSeconds", "PublicAccess", "AuthSystemAccess", "AccessRights", });
     internal_static_yandex_cloud_video_v1_UpdateEpisodeMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_yandex_cloud_video_v1_UpdateEpisodeMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_UpdateEpisodeMetadata_descriptor,
         new java.lang.String[] { "EpisodeId", });
     internal_static_yandex_cloud_video_v1_DeleteEpisodeRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_yandex_cloud_video_v1_DeleteEpisodeRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_DeleteEpisodeRequest_descriptor,
         new java.lang.String[] { "EpisodeId", });
     internal_static_yandex_cloud_video_v1_DeleteEpisodeMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_yandex_cloud_video_v1_DeleteEpisodeMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_DeleteEpisodeMetadata_descriptor,
         new java.lang.String[] { "EpisodeId", });
     internal_static_yandex_cloud_video_v1_PerformEpisodeActionRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_yandex_cloud_video_v1_PerformEpisodeActionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_PerformEpisodeActionRequest_descriptor,
         new java.lang.String[] { "EpisodeId", "Ban", "Unban", "Action", });
     internal_static_yandex_cloud_video_v1_BanAction_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_yandex_cloud_video_v1_BanAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_BanAction_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_video_v1_UnbanAction_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_yandex_cloud_video_v1_UnbanAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_UnbanAction_descriptor,
         new java.lang.String[] { });
     internal_static_yandex_cloud_video_v1_PerformEpisodeActionMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_yandex_cloud_video_v1_PerformEpisodeActionMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_PerformEpisodeActionMetadata_descriptor,
         new java.lang.String[] { "EpisodeId", });
     internal_static_yandex_cloud_video_v1_GetEpisodePlayerURLRequest_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_yandex_cloud_video_v1_GetEpisodePlayerURLRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_GetEpisodePlayerURLRequest_descriptor,
         new java.lang.String[] { "EpisodeId", "Params", });
     internal_static_yandex_cloud_video_v1_EpisodePlayerParams_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_yandex_cloud_video_v1_EpisodePlayerParams_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_EpisodePlayerParams_descriptor,
         new java.lang.String[] { "Mute", "Autoplay", "Hidden", });
     internal_static_yandex_cloud_video_v1_GetEpisodePlayerURLResponse_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_yandex_cloud_video_v1_GetEpisodePlayerURLResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_GetEpisodePlayerURLResponse_descriptor,

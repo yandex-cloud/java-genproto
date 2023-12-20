@@ -3,6 +3,9 @@ package yandex.cloud.api.loadtesting.api.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for managing test configurations.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -153,6 +156,9 @@ public final class ConfigServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing test configurations.
+   * </pre>
    */
   public static abstract class ConfigServiceImplBase implements io.grpc.BindableService {
 
@@ -215,6 +221,9 @@ public final class ConfigServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing test configurations.
+   * </pre>
    */
   public static final class ConfigServiceStub extends io.grpc.stub.AbstractAsyncStub<ConfigServiceStub> {
     private ConfigServiceStub(
@@ -264,6 +273,9 @@ public final class ConfigServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing test configurations.
+   * </pre>
    */
   public static final class ConfigServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<ConfigServiceBlockingStub> {
     private ConfigServiceBlockingStub(
@@ -310,6 +322,9 @@ public final class ConfigServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing test configurations.
+   * </pre>
    */
   public static final class ConfigServiceFutureStub extends io.grpc.stub.AbstractFutureStub<ConfigServiceFutureStub> {
     private ConfigServiceFutureStub(

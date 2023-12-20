@@ -266,6 +266,68 @@ public final class CommunityServiceGrpc {
     return getUpdateAccessBindingsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.AddCommunityResourceRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getAddResourceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddResource",
+      requestType = yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.AddCommunityResourceRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.AddCommunityResourceRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getAddResourceMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.AddCommunityResourceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getAddResourceMethod;
+    if ((getAddResourceMethod = CommunityServiceGrpc.getAddResourceMethod) == null) {
+      synchronized (CommunityServiceGrpc.class) {
+        if ((getAddResourceMethod = CommunityServiceGrpc.getAddResourceMethod) == null) {
+          CommunityServiceGrpc.getAddResourceMethod = getAddResourceMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.AddCommunityResourceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddResource"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.AddCommunityResourceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new CommunityServiceMethodDescriptorSupplier("AddResource"))
+              .build();
+        }
+      }
+    }
+    return getAddResourceMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.RemoveCommunityResourceRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRemoveResourceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RemoveResource",
+      requestType = yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.RemoveCommunityResourceRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.RemoveCommunityResourceRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getRemoveResourceMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.RemoveCommunityResourceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getRemoveResourceMethod;
+    if ((getRemoveResourceMethod = CommunityServiceGrpc.getRemoveResourceMethod) == null) {
+      synchronized (CommunityServiceGrpc.class) {
+        if ((getRemoveResourceMethod = CommunityServiceGrpc.getRemoveResourceMethod) == null) {
+          CommunityServiceGrpc.getRemoveResourceMethod = getRemoveResourceMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.RemoveCommunityResourceRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RemoveResource"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.RemoveCommunityResourceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new CommunityServiceMethodDescriptorSupplier("RemoveResource"))
+              .build();
+        }
+      }
+    }
+    return getRemoveResourceMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -397,6 +459,26 @@ public final class CommunityServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateAccessBindingsMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Adds shared resource to community
+     * </pre>
+     */
+    public void addResource(yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.AddCommunityResourceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddResourceMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Removes shared resource from community
+     * </pre>
+     */
+    public void removeResource(yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.RemoveCommunityResourceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRemoveResourceMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -455,6 +537,20 @@ public final class CommunityServiceGrpc {
                 yandex.cloud.api.access.Access.UpdateAccessBindingsRequest,
                 yandex.cloud.api.operation.OperationOuterClass.Operation>(
                   this, METHODID_UPDATE_ACCESS_BINDINGS)))
+          .addMethod(
+            getAddResourceMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.AddCommunityResourceRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_ADD_RESOURCE)))
+          .addMethod(
+            getRemoveResourceMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.RemoveCommunityResourceRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_REMOVE_RESOURCE)))
           .build();
     }
   }
@@ -563,6 +659,28 @@ public final class CommunityServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Adds shared resource to community
+     * </pre>
+     */
+    public void addResource(yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.AddCommunityResourceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAddResourceMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Removes shared resource from community
+     * </pre>
+     */
+    public void removeResource(yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.RemoveCommunityResourceRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRemoveResourceMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -660,6 +778,26 @@ public final class CommunityServiceGrpc {
     public yandex.cloud.api.operation.OperationOuterClass.Operation updateAccessBindings(yandex.cloud.api.access.Access.UpdateAccessBindingsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getUpdateAccessBindingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Adds shared resource to community
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation addResource(yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.AddCommunityResourceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddResourceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Removes shared resource from community
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation removeResource(yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.RemoveCommunityResourceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRemoveResourceMethod(), getCallOptions(), request);
     }
   }
 
@@ -767,6 +905,28 @@ public final class CommunityServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getUpdateAccessBindingsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Adds shared resource to community
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> addResource(
+        yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.AddCommunityResourceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAddResourceMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Removes shared resource from community
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> removeResource(
+        yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.RemoveCommunityResourceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRemoveResourceMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE = 0;
@@ -777,6 +937,8 @@ public final class CommunityServiceGrpc {
   private static final int METHODID_LIST_ACCESS_BINDINGS = 5;
   private static final int METHODID_SET_ACCESS_BINDINGS = 6;
   private static final int METHODID_UPDATE_ACCESS_BINDINGS = 7;
+  private static final int METHODID_ADD_RESOURCE = 8;
+  private static final int METHODID_REMOVE_RESOURCE = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -825,6 +987,14 @@ public final class CommunityServiceGrpc {
           break;
         case METHODID_UPDATE_ACCESS_BINDINGS:
           serviceImpl.updateAccessBindings((yandex.cloud.api.access.Access.UpdateAccessBindingsRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_ADD_RESOURCE:
+          serviceImpl.addResource((yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.AddCommunityResourceRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
+          break;
+        case METHODID_REMOVE_RESOURCE:
+          serviceImpl.removeResource((yandex.cloud.api.datasphere.v2.CommunityServiceOuterClass.RemoveCommunityResourceRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         default:
@@ -896,6 +1066,8 @@ public final class CommunityServiceGrpc {
               .addMethod(getListAccessBindingsMethod())
               .addMethod(getSetAccessBindingsMethod())
               .addMethod(getUpdateAccessBindingsMethod())
+              .addMethod(getAddResourceMethod())
+              .addMethod(getRemoveResourceMethod())
               .build();
         }
       }

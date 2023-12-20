@@ -3,6 +3,9 @@ package yandex.cloud.api.loadtesting.api.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for managing Load Testing agents.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -184,6 +187,9 @@ public final class AgentServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Load Testing agents.
+   * </pre>
    */
   public static abstract class AgentServiceImplBase implements io.grpc.BindableService {
 
@@ -265,6 +271,9 @@ public final class AgentServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Load Testing agents.
+   * </pre>
    */
   public static final class AgentServiceStub extends io.grpc.stub.AbstractAsyncStub<AgentServiceStub> {
     private AgentServiceStub(
@@ -327,6 +336,9 @@ public final class AgentServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Load Testing agents.
+   * </pre>
    */
   public static final class AgentServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<AgentServiceBlockingStub> {
     private AgentServiceBlockingStub(
@@ -385,6 +397,9 @@ public final class AgentServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing Load Testing agents.
+   * </pre>
    */
   public static final class AgentServiceFutureStub extends io.grpc.stub.AbstractFutureStub<AgentServiceFutureStub> {
     private AgentServiceFutureStub(

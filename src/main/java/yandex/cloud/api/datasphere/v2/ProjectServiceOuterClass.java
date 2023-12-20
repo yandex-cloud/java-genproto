@@ -23823,6 +23823,1656 @@ public final class ProjectServiceOuterClass {
 
   }
 
+  public interface AddResourceToProjectRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v2.AddResourceToProjectRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The projectId.
+     */
+    java.lang.String getProjectId();
+    /**
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for projectId.
+     */
+    com.google.protobuf.ByteString
+        getProjectIdBytes();
+
+    /**
+     * <code>.yandex.cloud.datasphere.v2.ResourceType resource_type = 2;</code>
+     * @return The enum numeric value on the wire for resourceType.
+     */
+    int getResourceTypeValue();
+    /**
+     * <code>.yandex.cloud.datasphere.v2.ResourceType resource_type = 2;</code>
+     * @return The resourceType.
+     */
+    yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType getResourceType();
+
+    /**
+     * <code>string resource_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The resourceId.
+     */
+    java.lang.String getResourceId();
+    /**
+     * <code>string resource_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for resourceId.
+     */
+    com.google.protobuf.ByteString
+        getResourceIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v2.AddResourceToProjectRequest}
+   */
+  public static final class AddResourceToProjectRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v2.AddResourceToProjectRequest)
+      AddResourceToProjectRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AddResourceToProjectRequest.newBuilder() to construct.
+    private AddResourceToProjectRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AddResourceToProjectRequest() {
+      projectId_ = "";
+      resourceType_ = 0;
+      resourceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AddResourceToProjectRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AddResourceToProjectRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              projectId_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              resourceType_ = rawValue;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resourceId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_AddResourceToProjectRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_AddResourceToProjectRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest.class, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest.Builder.class);
+    }
+
+    public static final int PROJECT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object projectId_;
+    /**
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The projectId.
+     */
+    @java.lang.Override
+    public java.lang.String getProjectId() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for projectId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProjectIdBytes() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESOURCE_TYPE_FIELD_NUMBER = 2;
+    private int resourceType_;
+    /**
+     * <code>.yandex.cloud.datasphere.v2.ResourceType resource_type = 2;</code>
+     * @return The enum numeric value on the wire for resourceType.
+     */
+    @java.lang.Override public int getResourceTypeValue() {
+      return resourceType_;
+    }
+    /**
+     * <code>.yandex.cloud.datasphere.v2.ResourceType resource_type = 2;</code>
+     * @return The resourceType.
+     */
+    @java.lang.Override public yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType getResourceType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType result = yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType.valueOf(resourceType_);
+      return result == null ? yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType.UNRECOGNIZED : result;
+    }
+
+    public static final int RESOURCE_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object resourceId_;
+    /**
+     * <code>string resource_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The resourceId.
+     */
+    @java.lang.Override
+    public java.lang.String getResourceId() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string resource_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for resourceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceIdBytes() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, projectId_);
+      }
+      if (resourceType_ != yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType.RESOURCE_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, resourceType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, resourceId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, projectId_);
+      }
+      if (resourceType_ != yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType.RESOURCE_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, resourceType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, resourceId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest other = (yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest) obj;
+
+      if (!getProjectId()
+          .equals(other.getProjectId())) return false;
+      if (resourceType_ != other.resourceType_) return false;
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectId().hashCode();
+      hash = (37 * hash) + RESOURCE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + resourceType_;
+      hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getResourceId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v2.AddResourceToProjectRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v2.AddResourceToProjectRequest)
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_AddResourceToProjectRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_AddResourceToProjectRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest.class, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        projectId_ = "";
+
+        resourceType_ = 0;
+
+        resourceId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_AddResourceToProjectRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest build() {
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest buildPartial() {
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest result = new yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest(this);
+        result.projectId_ = projectId_;
+        result.resourceType_ = resourceType_;
+        result.resourceId_ = resourceId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest) {
+          return mergeFrom((yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest other) {
+        if (other == yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest.getDefaultInstance()) return this;
+        if (!other.getProjectId().isEmpty()) {
+          projectId_ = other.projectId_;
+          onChanged();
+        }
+        if (other.resourceType_ != 0) {
+          setResourceTypeValue(other.getResourceTypeValue());
+        }
+        if (!other.getResourceId().isEmpty()) {
+          resourceId_ = other.resourceId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object projectId_ = "";
+      /**
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The projectId.
+       */
+      public java.lang.String getProjectId() {
+        java.lang.Object ref = projectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for projectId.
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdBytes() {
+        java.lang.Object ref = projectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProjectId() {
+        
+        projectId_ = getDefaultInstance().getProjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int resourceType_ = 0;
+      /**
+       * <code>.yandex.cloud.datasphere.v2.ResourceType resource_type = 2;</code>
+       * @return The enum numeric value on the wire for resourceType.
+       */
+      @java.lang.Override public int getResourceTypeValue() {
+        return resourceType_;
+      }
+      /**
+       * <code>.yandex.cloud.datasphere.v2.ResourceType resource_type = 2;</code>
+       * @param value The enum numeric value on the wire for resourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceTypeValue(int value) {
+        
+        resourceType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datasphere.v2.ResourceType resource_type = 2;</code>
+       * @return The resourceType.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType getResourceType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType result = yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType.valueOf(resourceType_);
+        return result == null ? yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.datasphere.v2.ResourceType resource_type = 2;</code>
+       * @param value The resourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceType(yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        resourceType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datasphere.v2.ResourceType resource_type = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceType() {
+        
+        resourceType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object resourceId_ = "";
+      /**
+       * <code>string resource_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The resourceId.
+       */
+      public java.lang.String getResourceId() {
+        java.lang.Object ref = resourceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string resource_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for resourceId.
+       */
+      public com.google.protobuf.ByteString
+          getResourceIdBytes() {
+        java.lang.Object ref = resourceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string resource_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resource_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceId() {
+        
+        resourceId_ = getDefaultInstance().getResourceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resource_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v2.AddResourceToProjectRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v2.AddResourceToProjectRequest)
+    private static final yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest();
+    }
+
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddResourceToProjectRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AddResourceToProjectRequest>() {
+      @java.lang.Override
+      public AddResourceToProjectRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AddResourceToProjectRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddResourceToProjectRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddResourceToProjectRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.AddResourceToProjectRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RemoveResourceFromProjectRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.datasphere.v2.RemoveResourceFromProjectRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The projectId.
+     */
+    java.lang.String getProjectId();
+    /**
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for projectId.
+     */
+    com.google.protobuf.ByteString
+        getProjectIdBytes();
+
+    /**
+     * <code>.yandex.cloud.datasphere.v2.ResourceType resource_type = 2;</code>
+     * @return The enum numeric value on the wire for resourceType.
+     */
+    int getResourceTypeValue();
+    /**
+     * <code>.yandex.cloud.datasphere.v2.ResourceType resource_type = 2;</code>
+     * @return The resourceType.
+     */
+    yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType getResourceType();
+
+    /**
+     * <code>string resource_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The resourceId.
+     */
+    java.lang.String getResourceId();
+    /**
+     * <code>string resource_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for resourceId.
+     */
+    com.google.protobuf.ByteString
+        getResourceIdBytes();
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.datasphere.v2.RemoveResourceFromProjectRequest}
+   */
+  public static final class RemoveResourceFromProjectRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.datasphere.v2.RemoveResourceFromProjectRequest)
+      RemoveResourceFromProjectRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RemoveResourceFromProjectRequest.newBuilder() to construct.
+    private RemoveResourceFromProjectRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RemoveResourceFromProjectRequest() {
+      projectId_ = "";
+      resourceType_ = 0;
+      resourceId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RemoveResourceFromProjectRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private RemoveResourceFromProjectRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              projectId_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              resourceType_ = rawValue;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              resourceId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_RemoveResourceFromProjectRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_RemoveResourceFromProjectRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest.class, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest.Builder.class);
+    }
+
+    public static final int PROJECT_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object projectId_;
+    /**
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The projectId.
+     */
+    @java.lang.Override
+    public java.lang.String getProjectId() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        projectId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+     * @return The bytes for projectId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProjectIdBytes() {
+      java.lang.Object ref = projectId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        projectId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RESOURCE_TYPE_FIELD_NUMBER = 2;
+    private int resourceType_;
+    /**
+     * <code>.yandex.cloud.datasphere.v2.ResourceType resource_type = 2;</code>
+     * @return The enum numeric value on the wire for resourceType.
+     */
+    @java.lang.Override public int getResourceTypeValue() {
+      return resourceType_;
+    }
+    /**
+     * <code>.yandex.cloud.datasphere.v2.ResourceType resource_type = 2;</code>
+     * @return The resourceType.
+     */
+    @java.lang.Override public yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType getResourceType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType result = yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType.valueOf(resourceType_);
+      return result == null ? yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType.UNRECOGNIZED : result;
+    }
+
+    public static final int RESOURCE_ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object resourceId_;
+    /**
+     * <code>string resource_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The resourceId.
+     */
+    @java.lang.Override
+    public java.lang.String getResourceId() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        resourceId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string resource_id = 3 [(.yandex.cloud.required) = true];</code>
+     * @return The bytes for resourceId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getResourceIdBytes() {
+      java.lang.Object ref = resourceId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        resourceId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, projectId_);
+      }
+      if (resourceType_ != yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType.RESOURCE_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, resourceType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, resourceId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(projectId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, projectId_);
+      }
+      if (resourceType_ != yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType.RESOURCE_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, resourceType_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, resourceId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest other = (yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest) obj;
+
+      if (!getProjectId()
+          .equals(other.getProjectId())) return false;
+      if (resourceType_ != other.resourceType_) return false;
+      if (!getResourceId()
+          .equals(other.getResourceId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROJECT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProjectId().hashCode();
+      hash = (37 * hash) + RESOURCE_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + resourceType_;
+      hash = (37 * hash) + RESOURCE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getResourceId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.datasphere.v2.RemoveResourceFromProjectRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.datasphere.v2.RemoveResourceFromProjectRequest)
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_RemoveResourceFromProjectRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_RemoveResourceFromProjectRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest.class, yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        projectId_ = "";
+
+        resourceType_ = 0;
+
+        resourceId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.internal_static_yandex_cloud_datasphere_v2_RemoveResourceFromProjectRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest getDefaultInstanceForType() {
+        return yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest build() {
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest buildPartial() {
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest result = new yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest(this);
+        result.projectId_ = projectId_;
+        result.resourceType_ = resourceType_;
+        result.resourceId_ = resourceId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest) {
+          return mergeFrom((yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest other) {
+        if (other == yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest.getDefaultInstance()) return this;
+        if (!other.getProjectId().isEmpty()) {
+          projectId_ = other.projectId_;
+          onChanged();
+        }
+        if (other.resourceType_ != 0) {
+          setResourceTypeValue(other.getResourceTypeValue());
+        }
+        if (!other.getResourceId().isEmpty()) {
+          resourceId_ = other.resourceId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object projectId_ = "";
+      /**
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The projectId.
+       */
+      public java.lang.String getProjectId() {
+        java.lang.Object ref = projectId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          projectId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return The bytes for projectId.
+       */
+      public com.google.protobuf.ByteString
+          getProjectIdBytes() {
+        java.lang.Object ref = projectId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          projectId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProjectId() {
+        
+        projectId_ = getDefaultInstance().getProjectId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string project_id = 1 [(.yandex.cloud.required) = true, (.yandex.cloud.length) = "&lt;=50"];</code>
+       * @param value The bytes for projectId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProjectIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        projectId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int resourceType_ = 0;
+      /**
+       * <code>.yandex.cloud.datasphere.v2.ResourceType resource_type = 2;</code>
+       * @return The enum numeric value on the wire for resourceType.
+       */
+      @java.lang.Override public int getResourceTypeValue() {
+        return resourceType_;
+      }
+      /**
+       * <code>.yandex.cloud.datasphere.v2.ResourceType resource_type = 2;</code>
+       * @param value The enum numeric value on the wire for resourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceTypeValue(int value) {
+        
+        resourceType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datasphere.v2.ResourceType resource_type = 2;</code>
+       * @return The resourceType.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType getResourceType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType result = yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType.valueOf(resourceType_);
+        return result == null ? yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.yandex.cloud.datasphere.v2.ResourceType resource_type = 2;</code>
+       * @param value The resourceType to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceType(yandex.cloud.api.datasphere.v2.DsResourceTypes.ResourceType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        resourceType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.datasphere.v2.ResourceType resource_type = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceType() {
+        
+        resourceType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object resourceId_ = "";
+      /**
+       * <code>string resource_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The resourceId.
+       */
+      public java.lang.String getResourceId() {
+        java.lang.Object ref = resourceId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          resourceId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string resource_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @return The bytes for resourceId.
+       */
+      public com.google.protobuf.ByteString
+          getResourceIdBytes() {
+        java.lang.Object ref = resourceId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          resourceId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string resource_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resource_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResourceId() {
+        
+        resourceId_ = getDefaultInstance().getResourceId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string resource_id = 3 [(.yandex.cloud.required) = true];</code>
+       * @param value The bytes for resourceId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResourceIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        resourceId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.datasphere.v2.RemoveResourceFromProjectRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.datasphere.v2.RemoveResourceFromProjectRequest)
+    private static final yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest();
+    }
+
+    public static yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RemoveResourceFromProjectRequest>
+        PARSER = new com.google.protobuf.AbstractParser<RemoveResourceFromProjectRequest>() {
+      @java.lang.Override
+      public RemoveResourceFromProjectRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new RemoveResourceFromProjectRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<RemoveResourceFromProjectRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RemoveResourceFromProjectRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.datasphere.v2.ProjectServiceOuterClass.RemoveResourceFromProjectRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_datasphere_v2_CreateProjectRequest_descriptor;
   private static final 
@@ -23958,6 +25608,16 @@ public final class ProjectServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_datasphere_v2_UpdateProjectAccessBindingsMetadata_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v2_AddResourceToProjectRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v2_AddResourceToProjectRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_datasphere_v2_RemoveResourceFromProjectRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_datasphere_v2_RemoveResourceFromProjectRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -23975,167 +25635,186 @@ public final class ProjectServiceOuterClass {
       "proto\032\036google/protobuf/wrappers.proto\032 y" +
       "andex/cloud/api/operation.proto\032 yandex/" +
       "cloud/access/access.proto\032(yandex/cloud/" +
-      "datasphere/v2/project.proto\032&yandex/clou" +
-      "d/operation/operation.proto\032\035yandex/clou" +
-      "d/validation.proto\"\326\003\n\024CreateProjectRequ" +
-      "est\022\"\n\014community_id\030\001 \001(\tB\014\212\3101\004<=50\350\3071\001\022" +
-      "9\n\004name\030\002 \001(\tB+\212\3101\004<=63\362\3071\037[a-z]([-a-z0-" +
-      "9]{0,61}[a-z0-9])?\022\036\n\013description\030\003 \001(\tB" +
-      "\t\212\3101\005<=256\022\215\001\n\006labels\030\004 \003(\0132<.yandex.clo" +
-      "ud.datasphere.v2.CreateProjectRequest.La" +
-      "belsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z" +
-      "]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022>\n\010se" +
-      "ttings\030\005 \001(\0132,.yandex.cloud.datasphere.v" +
-      "2.Project.Settings\022:\n\006limits\030\006 \001(\0132*.yan" +
-      "dex.cloud.datasphere.v2.Project.Limits\032-" +
-      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001J\004\010\007\020\010\"+\n\025CreateProjectMetadata\022\022\n\n" +
-      "project_id\030\001 \001(\t\"\377\003\n\024UpdateProjectReques" +
-      "t\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013u" +
-      "pdate_mask\030\002 \001(\0132\032.google.protobuf.Field" +
-      "Mask\0229\n\004name\030\003 \001(\tB+\212\3101\004<=63\362\3071\037[a-z]([-" +
-      "a-z0-9]{0,61}[a-z0-9])?\022\036\n\013description\030\004" +
-      " \001(\tB\t\212\3101\005<=256\022\215\001\n\006labels\030\005 \003(\0132<.yande" +
-      "x.cloud.datasphere.v2.UpdateProjectReque" +
-      "st.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0" +
-      "-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022" +
-      ">\n\010settings\030\006 \001(\0132,.yandex.cloud.datasph" +
-      "ere.v2.Project.Settings\022:\n\006limits\030\007 \001(\0132" +
-      "*.yandex.cloud.datasphere.v2.Project.Lim" +
-      "its\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value" +
-      "\030\002 \001(\t:\0028\001\"+\n\025UpdateProjectMetadata\022\022\n\np" +
-      "roject_id\030\001 \001(\t\"8\n\024DeleteProjectRequest\022" +
-      " \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"+\n\025Del" +
-      "eteProjectMetadata\022\022\n\nproject_id\030\001 \001(\t\"6" +
-      "\n\022OpenProjectRequest\022 \n\nproject_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\"\320\003\n\023OpenProjectMetadata\022\022" +
-      "\n\nproject_id\030\001 \001(\t\022Q\n\006status\030\002 \001(\0162A.yan" +
-      "dex.cloud.datasphere.v2.OpenProjectMetad" +
-      "ata.OpenProjectStatus\"\321\002\n\021OpenProjectSta" +
-      "tus\022#\n\037OPEN_PROJECT_STATUS_UNSPECIFIED\020\000" +
-      "\022#\n\037OPEN_PROJECT_STATUS_CLOSING_IDE\020\001\022)\n" +
-      "%OPEN_PROJECT_STATUS_UNZIPPING_PROJECT\020\002" +
-      "\022%\n!OPEN_PROJECT_STATUS_ALLOCATING_VM\020\003\022" +
-      ",\n(OPEN_PROJECT_STATUS_ALLOCATING_RESOUR" +
-      "CES\020\004\022$\n OPEN_PROJECT_STATUS_STARTING_ID" +
-      "E\020\005\022+\n\'OPEN_PROJECT_STATUS_APPLYING_CHEC" +
-      "KPOINT\020\006\022\037\n\033OPEN_PROJECT_STATUS_UNKNOWN\020" +
-      "\007\"A\n\023OpenProjectResponse\022\023\n\013project_url\030" +
-      "\001 \001(\t\022\025\n\rsession_token\030\002 \001(\t\"5\n\021GetProje" +
-      "ctRequest\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
-      "=50\"\242\001\n\023ListProjectsRequest\022\032\n\014community" +
-      "_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\006" +
-      "0-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\034\n" +
-      "\024project_name_pattern\030\004 \001(\t\022\023\n\013owned_by_" +
-      "id\030\005 \001(\t\"f\n\024ListProjectsResponse\0225\n\010proj" +
-      "ects\030\001 \003(\0132#.yandex.cloud.datasphere.v2." +
-      "Project\022\027\n\017next_page_token\030\002 \001(\t\"9\n\025GetU" +
-      "nitBalanceRequest\022 \n\nproject_id\030\001 \001(\tB\014\350" +
-      "\3071\001\212\3101\004<=50\"K\n\026GetUnitBalanceResponse\0221\n" +
-      "\014unit_balance\030\001 \001(\0132\033.google.protobuf.In" +
-      "t64Value\"l\n\025SetUnitBalanceRequest\022 \n\npro" +
-      "ject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0221\n\014unit_bala" +
-      "nce\030\002 \001(\0132\033.google.protobuf.Int64Value\"," +
-      "\n\026SetUnitBalanceMetadata\022\022\n\nproject_id\030\001" +
-      " \001(\t\"\334\001\n\027ProjectExecutionRequest\022 \n\nproj" +
-      "ect_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\013notebook_i" +
-      "d\030\002 \001(\tB\t\212\3101\005<=200H\000\022\034\n\007cell_id\030\003 \001(\tB\t\212" +
-      "\3101\005<=200H\000\0220\n\017input_variables\030\004 \001(\0132\027.go" +
-      "ogle.protobuf.Struct\022\035\n\025output_variable_" +
-      "names\030\005 \003(\tB\016\n\006target\022\004\300\3011\001\"~\n\030ProjectEx" +
-      "ecutionMetadata\022\022\n\nproject_id\030\001 \001(\t\022 \n\013n" +
+      "datasphere/v2/project.proto\032/yandex/clou" +
+      "d/datasphere/v2/resource_types.proto\032&ya" +
+      "ndex/cloud/operation/operation.proto\032\035ya" +
+      "ndex/cloud/validation.proto\"\326\003\n\024CreatePr" +
+      "ojectRequest\022\"\n\014community_id\030\001 \001(\tB\014\212\3101\004" +
+      "<=50\350\3071\001\0229\n\004name\030\002 \001(\tB+\212\3101\004<=63\362\3071\037[a-z" +
+      "]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013descripti" +
+      "on\030\003 \001(\tB\t\212\3101\005<=256\022\215\001\n\006labels\030\004 \003(\0132<.y" +
+      "andex.cloud.datasphere.v2.CreateProjectR" +
+      "equest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013" +
+      "[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-" +
+      "z]*\022>\n\010settings\030\005 \001(\0132,.yandex.cloud.dat" +
+      "asphere.v2.Project.Settings\022:\n\006limits\030\006 " +
+      "\001(\0132*.yandex.cloud.datasphere.v2.Project" +
+      ".Limits\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001J\004\010\007\020\010\"+\n\025CreateProjectMet" +
+      "adata\022\022\n\nproject_id\030\001 \001(\t\"\377\003\n\024UpdateProj" +
+      "ectRequest\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004" +
+      "<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.proto" +
+      "buf.FieldMask\0229\n\004name\030\003 \001(\tB+\212\3101\004<=63\362\3071" +
+      "\037[a-z]([-a-z0-9]{0,61}[a-z0-9])?\022\036\n\013desc" +
+      "ription\030\004 \001(\tB\t\212\3101\005<=256\022\215\001\n\006labels\030\005 \003(" +
+      "\0132<.yandex.cloud.datasphere.v2.UpdatePro" +
+      "jectRequest.LabelsEntryB?\202\3101\004<=64\212\3101\004<=6" +
+      "3\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_" +
+      "0-9a-z]*\022>\n\010settings\030\006 \001(\0132,.yandex.clou" +
+      "d.datasphere.v2.Project.Settings\022:\n\006limi" +
+      "ts\030\007 \001(\0132*.yandex.cloud.datasphere.v2.Pr" +
+      "oject.Limits\032-\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001\"+\n\025UpdateProjectMeta" +
+      "data\022\022\n\nproject_id\030\001 \001(\t\"8\n\024DeleteProjec" +
+      "tRequest\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=" +
+      "50\"+\n\025DeleteProjectMetadata\022\022\n\nproject_i" +
+      "d\030\001 \001(\t\"6\n\022OpenProjectRequest\022 \n\nproject" +
+      "_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\320\003\n\023OpenProjectM" +
+      "etadata\022\022\n\nproject_id\030\001 \001(\t\022Q\n\006status\030\002 " +
+      "\001(\0162A.yandex.cloud.datasphere.v2.OpenPro" +
+      "jectMetadata.OpenProjectStatus\"\321\002\n\021OpenP" +
+      "rojectStatus\022#\n\037OPEN_PROJECT_STATUS_UNSP" +
+      "ECIFIED\020\000\022#\n\037OPEN_PROJECT_STATUS_CLOSING" +
+      "_IDE\020\001\022)\n%OPEN_PROJECT_STATUS_UNZIPPING_" +
+      "PROJECT\020\002\022%\n!OPEN_PROJECT_STATUS_ALLOCAT" +
+      "ING_VM\020\003\022,\n(OPEN_PROJECT_STATUS_ALLOCATI" +
+      "NG_RESOURCES\020\004\022$\n OPEN_PROJECT_STATUS_ST" +
+      "ARTING_IDE\020\005\022+\n\'OPEN_PROJECT_STATUS_APPL" +
+      "YING_CHECKPOINT\020\006\022\037\n\033OPEN_PROJECT_STATUS" +
+      "_UNKNOWN\020\007\"A\n\023OpenProjectResponse\022\023\n\013pro" +
+      "ject_url\030\001 \001(\t\022\025\n\rsession_token\030\002 \001(\t\"5\n" +
+      "\021GetProjectRequest\022 \n\nproject_id\030\001 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\"\242\001\n\023ListProjectsRequest\022\032\n\014" +
+      "community_id\030\001 \001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 " +
+      "\001(\003B\n\372\3071\0060-1000\022\035\n\npage_token\030\003 \001(\tB\t\212\3101" +
+      "\005<=100\022\034\n\024project_name_pattern\030\004 \001(\t\022\023\n\013" +
+      "owned_by_id\030\005 \001(\t\"f\n\024ListProjectsRespons" +
+      "e\0225\n\010projects\030\001 \003(\0132#.yandex.cloud.datas" +
+      "phere.v2.Project\022\027\n\017next_page_token\030\002 \001(" +
+      "\t\"9\n\025GetUnitBalanceRequest\022 \n\nproject_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"K\n\026GetUnitBalanceRe" +
+      "sponse\0221\n\014unit_balance\030\001 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\"l\n\025SetUnitBalanceReque" +
+      "st\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\0221\n\014" +
+      "unit_balance\030\002 \001(\0132\033.google.protobuf.Int" +
+      "64Value\",\n\026SetUnitBalanceMetadata\022\022\n\npro" +
+      "ject_id\030\001 \001(\t\"\334\001\n\027ProjectExecutionReques" +
+      "t\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022 \n\013n" +
       "otebook_id\030\002 \001(\tB\t\212\3101\005<=200H\000\022\034\n\007cell_id" +
-      "\030\003 \001(\tB\t\212\3101\005<=200H\000B\016\n\006target\022\004\300\3011\001\"\253\001\n\030" +
-      "ProjectExecutionResponse\022\025\n\rcheckpoint_i" +
-      "d\030\001 \001(\t\0221\n\020output_variables\030\002 \001(\0132\027.goog" +
-      "le.protobuf.Struct\022E\n\020execution_status\030\003" +
-      " \001(\0162+.yandex.cloud.datasphere.v2.Execut" +
-      "ionStatus\"\233\001\n\022CellOutputsRequest\022 \n\nproj" +
-      "ect_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\036\n\007cell_id\030\002 " +
-      "\001(\tB\r\350\3071\001\212\3101\005<=200\022\025\n\rcheckpoint_id\030\003 \001(" +
-      "\t\022,\n\010start_at\030\004 \001(\0132\032.google.protobuf.Ti" +
-      "mestamp\"&\n\023CellOutputsResponse\022\017\n\007output" +
-      "s\030\001 \003(\t\"\217\001\n\030GetStateVariablesRequest\022 \n\n" +
-      "project_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\"\n\013notebo" +
-      "ok_id\030\002 \001(\tB\r\350\3071\001\212\3101\005<=200\022\026\n\016variable_n" +
-      "ames\030\003 \003(\t\022\025\n\rcheckpoint_id\030\004 \001(\t\"G\n\031Get" +
-      "StateVariablesResponse\022*\n\tvariables\030\001 \001(" +
-      "\0132\027.google.protobuf.Struct\"6\n SetProject" +
-      "AccessBindingsMetadata\022\022\n\nproject_id\030\001 \001" +
-      "(\t\"9\n#UpdateProjectAccessBindingsMetadat" +
-      "a\022\022\n\nproject_id\030\001 \001(\t*S\n\017ExecutionStatus" +
-      "\022 \n\034EXECUTION_STATUS_UNSPECIFIED\020\000\022\006\n\002OK" +
-      "\020\001\022\t\n\005ERROR\020\002\022\013\n\007ABORTED\020\0032\351\024\n\016ProjectSe" +
-      "rvice\022\245\001\n\006Create\0220.yandex.cloud.datasphe" +
-      "re.v2.CreateProjectRequest\032!.yandex.clou" +
-      "d.operation.Operation\"F\202\323\344\223\002\034\"\027/datasphe" +
-      "re/v2/projects:\001*\262\322* \n\025CreateProjectMeta" +
-      "data\022\007Project\022\262\001\n\006Update\0220.yandex.cloud." +
-      "datasphere.v2.UpdateProjectRequest\032!.yan" +
-      "dex.cloud.operation.Operation\"S\202\323\344\223\002)2$/" +
-      "datasphere/v2/projects/{project_id}:\001*\262\322" +
-      "* \n\025UpdateProjectMetadata\022\007Project\022\275\001\n\006D" +
-      "elete\0220.yandex.cloud.datasphere.v2.Delet" +
-      "eProjectRequest\032!.yandex.cloud.operation" +
-      ".Operation\"^\202\323\344\223\002&*$/datasphere/v2/proje" +
-      "cts/{project_id}\262\322*.\n\025DeleteProjectMetad" +
-      "ata\022\025google.protobuf.Empty\022\275\001\n\004Open\022..ya" +
-      "ndex.cloud.datasphere.v2.OpenProjectRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"b" +
-      "\202\323\344\223\002.\")/datasphere/v2/projects/{project" +
-      "_id}:open:\001*\262\322**\n\023OpenProjectMetadata\022\023O" +
-      "penProjectResponse\022\207\001\n\003Get\022-.yandex.clou" +
-      "d.datasphere.v2.GetProjectRequest\032#.yand" +
-      "ex.cloud.datasphere.v2.Project\",\202\323\344\223\002&\022$" +
-      "/datasphere/v2/projects/{project_id}\022\212\001\n" +
-      "\004List\022/.yandex.cloud.datasphere.v2.ListP" +
-      "rojectsRequest\0320.yandex.cloud.datasphere" +
-      ".v2.ListProjectsResponse\"\037\202\323\344\223\002\031\022\027/datas" +
-      "phere/v2/projects\022\261\001\n\016GetUnitBalance\0221.y" +
-      "andex.cloud.datasphere.v2.GetUnitBalance" +
-      "Request\0322.yandex.cloud.datasphere.v2.Get" +
-      "UnitBalanceResponse\"8\202\323\344\223\0022\0220/datasphere" +
-      "/v2/projects/{project_id}:unitBalance\022\326\001" +
-      "\n\016SetUnitBalance\0221.yandex.cloud.datasphe" +
-      "re.v2.SetUnitBalanceRequest\032!.yandex.clo" +
-      "ud.operation.Operation\"n\202\323\344\223\0025\"0/datasph" +
-      "ere/v2/projects/{project_id}:unitBalance" +
-      ":\001*\262\322*/\n\026SetUnitBalanceMetadata\022\025google." +
-      "protobuf.Empty\022\322\001\n\007Execute\0223.yandex.clou" +
-      "d.datasphere.v2.ProjectExecutionRequest\032" +
-      "!.yandex.cloud.operation.Operation\"o\202\323\344\223" +
-      "\0021\",/datasphere/v2/projects/{project_id}" +
-      ":execute:\001*\262\322*4\n\030ProjectExecutionMetadat" +
-      "a\022\030ProjectExecutionResponse\022\253\001\n\016GetCellO" +
-      "utputs\022..yandex.cloud.datasphere.v2.Cell" +
-      "OutputsRequest\032/.yandex.cloud.datasphere" +
-      ".v2.CellOutputsResponse\"8\202\323\344\223\0022\0220/datasp" +
-      "here/v2/projects/{project_id}:cellOutput" +
-      "s\022\275\001\n\021GetStateVariables\0224.yandex.cloud.d" +
-      "atasphere.v2.GetStateVariablesRequest\0325." +
-      "yandex.cloud.datasphere.v2.GetStateVaria" +
-      "blesResponse\";\202\323\344\223\0025\0223/datasphere/v2/pro" +
-      "jects/{project_id}:stateVariables\022\263\001\n\022Li" +
-      "stAccessBindings\022..yandex.cloud.access.L" +
-      "istAccessBindingsRequest\032/.yandex.cloud." +
-      "access.ListAccessBindingsResponse\"<\202\323\344\223\002" +
-      "6\0224/datasphere/v2/projects/{resource_id}" +
-      ":accessBindings\022\346\001\n\021SetAccessBindings\022-." +
-      "yandex.cloud.access.SetAccessBindingsReq" +
+      "\030\003 \001(\tB\t\212\3101\005<=200H\000\0220\n\017input_variables\030\004" +
+      " \001(\0132\027.google.protobuf.Struct\022\035\n\025output_" +
+      "variable_names\030\005 \003(\tB\016\n\006target\022\004\300\3011\001\"~\n\030" +
+      "ProjectExecutionMetadata\022\022\n\nproject_id\030\001" +
+      " \001(\t\022 \n\013notebook_id\030\002 \001(\tB\t\212\3101\005<=200H\000\022\034" +
+      "\n\007cell_id\030\003 \001(\tB\t\212\3101\005<=200H\000B\016\n\006target\022\004" +
+      "\300\3011\001\"\253\001\n\030ProjectExecutionResponse\022\025\n\rche" +
+      "ckpoint_id\030\001 \001(\t\0221\n\020output_variables\030\002 \001" +
+      "(\0132\027.google.protobuf.Struct\022E\n\020execution" +
+      "_status\030\003 \001(\0162+.yandex.cloud.datasphere." +
+      "v2.ExecutionStatus\"\233\001\n\022CellOutputsReques" +
+      "t\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022\036\n\007c" +
+      "ell_id\030\002 \001(\tB\r\350\3071\001\212\3101\005<=200\022\025\n\rcheckpoin" +
+      "t_id\030\003 \001(\t\022,\n\010start_at\030\004 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\"&\n\023CellOutputsResponse\022" +
+      "\017\n\007outputs\030\001 \003(\t\"\217\001\n\030GetStateVariablesRe" +
+      "quest\022 \n\nproject_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022" +
+      "\"\n\013notebook_id\030\002 \001(\tB\r\350\3071\001\212\3101\005<=200\022\026\n\016v" +
+      "ariable_names\030\003 \003(\t\022\025\n\rcheckpoint_id\030\004 \001" +
+      "(\t\"G\n\031GetStateVariablesResponse\022*\n\tvaria" +
+      "bles\030\001 \001(\0132\027.google.protobuf.Struct\"6\n S" +
+      "etProjectAccessBindingsMetadata\022\022\n\nproje" +
+      "ct_id\030\001 \001(\t\"9\n#UpdateProjectAccessBindin" +
+      "gsMetadata\022\022\n\nproject_id\030\001 \001(\t\"\233\001\n\033AddRe" +
+      "sourceToProjectRequest\022 \n\nproject_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022?\n\rresource_type\030\002 \001(\0162" +
+      "(.yandex.cloud.datasphere.v2.ResourceTyp" +
+      "e\022\031\n\013resource_id\030\003 \001(\tB\004\350\3071\001\"\240\001\n RemoveR" +
+      "esourceFromProjectRequest\022 \n\nproject_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022?\n\rresource_type\030\002 \001" +
+      "(\0162(.yandex.cloud.datasphere.v2.Resource" +
+      "Type\022\031\n\013resource_id\030\003 \001(\tB\004\350\3071\001*S\n\017Execu" +
+      "tionStatus\022 \n\034EXECUTION_STATUS_UNSPECIFI" +
+      "ED\020\000\022\006\n\002OK\020\001\022\t\n\005ERROR\020\002\022\013\n\007ABORTED\020\0032\376\027\n" +
+      "\016ProjectService\022\245\001\n\006Create\0220.yandex.clou" +
+      "d.datasphere.v2.CreateProjectRequest\032!.y" +
+      "andex.cloud.operation.Operation\"F\202\323\344\223\002\034\"" +
+      "\027/datasphere/v2/projects:\001*\262\322* \n\025CreateP" +
+      "rojectMetadata\022\007Project\022\262\001\n\006Update\0220.yan" +
+      "dex.cloud.datasphere.v2.UpdateProjectReq" +
       "uest\032!.yandex.cloud.operation.Operation\"" +
-      "\177\202\323\344\223\002<\"7/datasphere/v2/projects/{resour" +
-      "ce_id}:setAccessBindings:\001*\262\322*9\n SetProj" +
-      "ectAccessBindingsMetadata\022\025google.protob" +
-      "uf.Empty\022\363\001\n\024UpdateAccessBindings\0220.yand" +
-      "ex.cloud.access.UpdateAccessBindingsRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"\205" +
-      "\001\202\323\344\223\002?2:/datasphere/v2/projects/{resour" +
-      "ce_id}:updateAccessBindings:\001*\262\322*<\n#Upda" +
-      "teProjectAccessBindingsMetadata\022\025google." +
-      "protobuf.EmptyBk\n\036yandex.cloud.api.datas" +
-      "phere.v2ZIgithub.com/yandex-cloud/go-gen" +
-      "proto/yandex/cloud/datasphere/v2;datasph" +
-      "ereb\006proto3"
+      "S\202\323\344\223\002)2$/datasphere/v2/projects/{projec" +
+      "t_id}:\001*\262\322* \n\025UpdateProjectMetadata\022\007Pro" +
+      "ject\022\275\001\n\006Delete\0220.yandex.cloud.dataspher" +
+      "e.v2.DeleteProjectRequest\032!.yandex.cloud" +
+      ".operation.Operation\"^\202\323\344\223\002&*$/dataspher" +
+      "e/v2/projects/{project_id}\262\322*.\n\025DeletePr" +
+      "ojectMetadata\022\025google.protobuf.Empty\022\275\001\n" +
+      "\004Open\022..yandex.cloud.datasphere.v2.OpenP" +
+      "rojectRequest\032!.yandex.cloud.operation.O" +
+      "peration\"b\202\323\344\223\002.\")/datasphere/v2/project" +
+      "s/{project_id}:open:\001*\262\322**\n\023OpenProjectM" +
+      "etadata\022\023OpenProjectResponse\022\207\001\n\003Get\022-.y" +
+      "andex.cloud.datasphere.v2.GetProjectRequ" +
+      "est\032#.yandex.cloud.datasphere.v2.Project" +
+      "\",\202\323\344\223\002&\022$/datasphere/v2/projects/{proje" +
+      "ct_id}\022\212\001\n\004List\022/.yandex.cloud.dataspher" +
+      "e.v2.ListProjectsRequest\0320.yandex.cloud." +
+      "datasphere.v2.ListProjectsResponse\"\037\202\323\344\223" +
+      "\002\031\022\027/datasphere/v2/projects\022\261\001\n\016GetUnitB" +
+      "alance\0221.yandex.cloud.datasphere.v2.GetU" +
+      "nitBalanceRequest\0322.yandex.cloud.datasph" +
+      "ere.v2.GetUnitBalanceResponse\"8\202\323\344\223\0022\0220/" +
+      "datasphere/v2/projects/{project_id}:unit" +
+      "Balance\022\326\001\n\016SetUnitBalance\0221.yandex.clou" +
+      "d.datasphere.v2.SetUnitBalanceRequest\032!." +
+      "yandex.cloud.operation.Operation\"n\202\323\344\223\0025" +
+      "\"0/datasphere/v2/projects/{project_id}:u" +
+      "nitBalance:\001*\262\322*/\n\026SetUnitBalanceMetadat" +
+      "a\022\025google.protobuf.Empty\022\322\001\n\007Execute\0223.y" +
+      "andex.cloud.datasphere.v2.ProjectExecuti" +
+      "onRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"o\202\323\344\223\0021\",/datasphere/v2/projects/{p" +
+      "roject_id}:execute:\001*\262\322*4\n\030ProjectExecut" +
+      "ionMetadata\022\030ProjectExecutionResponse\022\253\001" +
+      "\n\016GetCellOutputs\022..yandex.cloud.datasphe" +
+      "re.v2.CellOutputsRequest\032/.yandex.cloud." +
+      "datasphere.v2.CellOutputsResponse\"8\202\323\344\223\002" +
+      "2\0220/datasphere/v2/projects/{project_id}:" +
+      "cellOutputs\022\275\001\n\021GetStateVariables\0224.yand" +
+      "ex.cloud.datasphere.v2.GetStateVariables" +
+      "Request\0325.yandex.cloud.datasphere.v2.Get" +
+      "StateVariablesResponse\";\202\323\344\223\0025\0223/datasph" +
+      "ere/v2/projects/{project_id}:stateVariab" +
+      "les\022\263\001\n\022ListAccessBindings\022..yandex.clou" +
+      "d.access.ListAccessBindingsRequest\032/.yan" +
+      "dex.cloud.access.ListAccessBindingsRespo" +
+      "nse\"<\202\323\344\223\0026\0224/datasphere/v2/projects/{re" +
+      "source_id}:accessBindings\022\346\001\n\021SetAccessB" +
+      "indings\022-.yandex.cloud.access.SetAccessB" +
+      "indingsRequest\032!.yandex.cloud.operation." +
+      "Operation\"\177\202\323\344\223\002<\"7/datasphere/v2/projec" +
+      "ts/{resource_id}:setAccessBindings:\001*\262\322*" +
+      "9\n SetProjectAccessBindingsMetadata\022\025goo" +
+      "gle.protobuf.Empty\022\363\001\n\024UpdateAccessBindi" +
+      "ngs\0220.yandex.cloud.access.UpdateAccessBi" +
+      "ndingsRequest\032!.yandex.cloud.operation.O" +
+      "peration\"\205\001\202\323\344\223\002?2:/datasphere/v2/projec" +
+      "ts/{resource_id}:updateAccessBindings:\001*" +
+      "\262\322*<\n#UpdateProjectAccessBindingsMetadat" +
+      "a\022\025google.protobuf.Empty\022\302\001\n\013AddResource" +
+      "\0227.yandex.cloud.datasphere.v2.AddResourc" +
+      "eToProjectRequest\032!.yandex.cloud.operati" +
+      "on.Operation\"W\202\323\344\223\0026\"1/datasphere/v2/pro" +
+      "jects/{resource_id}:addResource:\001*\262\322*\027\022\025" +
+      "google.protobuf.Empty\022\315\001\n\016RemoveResource" +
+      "\022<.yandex.cloud.datasphere.v2.RemoveReso" +
+      "urceFromProjectRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"Z\202\323\344\223\0029\"4/datasphere/v" +
+      "2/projects/{resource_id}:removeResource:" +
+      "\001*\262\322*\027\022\025google.protobuf.EmptyBk\n\036yandex." +
+      "cloud.api.datasphere.v2ZIgithub.com/yand" +
+      "ex-cloud/go-genproto/yandex/cloud/datasp" +
+      "here/v2;datasphereb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -24148,6 +25827,7 @@ public final class ProjectServiceOuterClass {
           yandex.cloud.api.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.access.Access.getDescriptor(),
           yandex.cloud.api.datasphere.v2.ProjectOuterClass.getDescriptor(),
+          yandex.cloud.api.datasphere.v2.DsResourceTypes.getDescriptor(),
           yandex.cloud.api.operation.OperationOuterClass.getDescriptor(),
           yandex.cloud.api.Validation.getDescriptor(),
         });
@@ -24313,6 +25993,18 @@ public final class ProjectServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_datasphere_v2_UpdateProjectAccessBindingsMetadata_descriptor,
         new java.lang.String[] { "ProjectId", });
+    internal_static_yandex_cloud_datasphere_v2_AddResourceToProjectRequest_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_yandex_cloud_datasphere_v2_AddResourceToProjectRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v2_AddResourceToProjectRequest_descriptor,
+        new java.lang.String[] { "ProjectId", "ResourceType", "ResourceId", });
+    internal_static_yandex_cloud_datasphere_v2_RemoveResourceFromProjectRequest_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_yandex_cloud_datasphere_v2_RemoveResourceFromProjectRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_datasphere_v2_RemoveResourceFromProjectRequest_descriptor,
+        new java.lang.String[] { "ProjectId", "ResourceType", "ResourceId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -24334,6 +26026,7 @@ public final class ProjectServiceOuterClass {
     yandex.cloud.api.OperationOuterClass.getDescriptor();
     yandex.cloud.api.access.Access.getDescriptor();
     yandex.cloud.api.datasphere.v2.ProjectOuterClass.getDescriptor();
+    yandex.cloud.api.datasphere.v2.DsResourceTypes.getDescriptor();
     yandex.cloud.api.operation.OperationOuterClass.getDescriptor();
     yandex.cloud.api.Validation.getDescriptor();
   }

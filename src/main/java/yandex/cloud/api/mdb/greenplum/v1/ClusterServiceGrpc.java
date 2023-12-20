@@ -452,6 +452,37 @@ public final class ClusterServiceGrpc {
     return getListBackupsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.BackupClusterRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getBackupMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Backup",
+      requestType = yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.BackupClusterRequest.class,
+      responseType = yandex.cloud.api.operation.OperationOuterClass.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.BackupClusterRequest,
+      yandex.cloud.api.operation.OperationOuterClass.Operation> getBackupMethod() {
+    io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.BackupClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation> getBackupMethod;
+    if ((getBackupMethod = ClusterServiceGrpc.getBackupMethod) == null) {
+      synchronized (ClusterServiceGrpc.class) {
+        if ((getBackupMethod = ClusterServiceGrpc.getBackupMethod) == null) {
+          ClusterServiceGrpc.getBackupMethod = getBackupMethod =
+              io.grpc.MethodDescriptor.<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.BackupClusterRequest, yandex.cloud.api.operation.OperationOuterClass.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Backup"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.BackupClusterRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  yandex.cloud.api.operation.OperationOuterClass.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ClusterServiceMethodDescriptorSupplier("Backup"))
+              .build();
+        }
+      }
+    }
+    return getBackupMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.RestoreClusterRequest,
       yandex.cloud.api.operation.OperationOuterClass.Operation> getRestoreMethod;
 
@@ -677,6 +708,16 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Creates a backup for the specified Greenplum cluster.
+     * </pre>
+     */
+    public void backup(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.BackupClusterRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBackupMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates a new Greenplum® cluster using the specified backup.
      * </pre>
      */
@@ -785,6 +826,13 @@ public final class ClusterServiceGrpc {
                 yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterBackupsRequest,
                 yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterBackupsResponse>(
                   this, METHODID_LIST_BACKUPS)))
+          .addMethod(
+            getBackupMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.BackupClusterRequest,
+                yandex.cloud.api.operation.OperationOuterClass.Operation>(
+                  this, METHODID_BACKUP)))
           .addMethod(
             getRestoreMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -970,6 +1018,17 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Creates a backup for the specified Greenplum cluster.
+     * </pre>
+     */
+    public void backup(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.BackupClusterRequest request,
+        io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBackupMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates a new Greenplum® cluster using the specified backup.
      * </pre>
      */
@@ -1137,6 +1196,16 @@ public final class ClusterServiceGrpc {
     public yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterBackupsResponse listBackups(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterBackupsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListBackupsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a backup for the specified Greenplum cluster.
+     * </pre>
+     */
+    public yandex.cloud.api.operation.OperationOuterClass.Operation backup(yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.BackupClusterRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBackupMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1313,6 +1382,17 @@ public final class ClusterServiceGrpc {
 
     /**
      * <pre>
+     * Creates a backup for the specified Greenplum cluster.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<yandex.cloud.api.operation.OperationOuterClass.Operation> backup(
+        yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.BackupClusterRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBackupMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Creates a new Greenplum® cluster using the specified backup.
      * </pre>
      */
@@ -1337,7 +1417,8 @@ public final class ClusterServiceGrpc {
   private static final int METHODID_LIST_LOGS = 11;
   private static final int METHODID_STREAM_LOGS = 12;
   private static final int METHODID_LIST_BACKUPS = 13;
-  private static final int METHODID_RESTORE = 14;
+  private static final int METHODID_BACKUP = 14;
+  private static final int METHODID_RESTORE = 15;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1411,6 +1492,10 @@ public final class ClusterServiceGrpc {
         case METHODID_LIST_BACKUPS:
           serviceImpl.listBackups((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterBackupsRequest) request,
               (io.grpc.stub.StreamObserver<yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.ListClusterBackupsResponse>) responseObserver);
+          break;
+        case METHODID_BACKUP:
+          serviceImpl.backup((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.BackupClusterRequest) request,
+              (io.grpc.stub.StreamObserver<yandex.cloud.api.operation.OperationOuterClass.Operation>) responseObserver);
           break;
         case METHODID_RESTORE:
           serviceImpl.restore((yandex.cloud.api.mdb.greenplum.v1.ClusterServiceOuterClass.RestoreClusterRequest) request,
@@ -1491,6 +1576,7 @@ public final class ClusterServiceGrpc {
               .addMethod(getListLogsMethod())
               .addMethod(getStreamLogsMethod())
               .addMethod(getListBackupsMethod())
+              .addMethod(getBackupMethod())
               .addMethod(getRestoreMethod())
               .build();
         }

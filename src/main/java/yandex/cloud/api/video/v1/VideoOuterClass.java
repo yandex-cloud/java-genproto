@@ -146,6 +146,21 @@ public final class VideoOuterClass {
     yandex.cloud.api.video.v1.VideoOuterClass.VideoPublicAccessRightsOrBuilder getPublicAccessOrBuilder();
 
     /**
+     * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessRights auth_system_access = 2002;</code>
+     * @return Whether the authSystemAccess field is set.
+     */
+    boolean hasAuthSystemAccess();
+    /**
+     * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessRights auth_system_access = 2002;</code>
+     * @return The authSystemAccess.
+     */
+    yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights getAuthSystemAccess();
+    /**
+     * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessRights auth_system_access = 2002;</code>
+     */
+    yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRightsOrBuilder getAuthSystemAccessOrBuilder();
+
+    /**
      * <code>.google.protobuf.Timestamp created_at = 100;</code>
      * @return Whether the createdAt field is set.
      */
@@ -338,6 +353,20 @@ public final class VideoOuterClass {
                 accessRights_ = subBuilder.buildPartial();
               }
               accessRightsCase_ = 2000;
+              break;
+            }
+            case 16018: {
+              yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights.Builder subBuilder = null;
+              if (accessRightsCase_ == 2002) {
+                subBuilder = ((yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights) accessRights_).toBuilder();
+              }
+              accessRights_ =
+                  input.readMessage(yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights) accessRights_);
+                accessRights_ = subBuilder.buildPartial();
+              }
+              accessRightsCase_ = 2002;
               break;
             }
             default: {
@@ -669,6 +698,7 @@ public final class VideoOuterClass {
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       PUBLIC_ACCESS(2000),
+      AUTH_SYSTEM_ACCESS(2002),
       ACCESSRIGHTS_NOT_SET(0);
       private final int value;
       private AccessRightsCase(int value) {
@@ -687,6 +717,7 @@ public final class VideoOuterClass {
       public static AccessRightsCase forNumber(int value) {
         switch (value) {
           case 2000: return PUBLIC_ACCESS;
+          case 2002: return AUTH_SYSTEM_ACCESS;
           case 0: return ACCESSRIGHTS_NOT_SET;
           default: return null;
         }
@@ -1018,6 +1049,37 @@ public final class VideoOuterClass {
       return yandex.cloud.api.video.v1.VideoOuterClass.VideoPublicAccessRights.getDefaultInstance();
     }
 
+    public static final int AUTH_SYSTEM_ACCESS_FIELD_NUMBER = 2002;
+    /**
+     * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessRights auth_system_access = 2002;</code>
+     * @return Whether the authSystemAccess field is set.
+     */
+    @java.lang.Override
+    public boolean hasAuthSystemAccess() {
+      return accessRightsCase_ == 2002;
+    }
+    /**
+     * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessRights auth_system_access = 2002;</code>
+     * @return The authSystemAccess.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights getAuthSystemAccess() {
+      if (accessRightsCase_ == 2002) {
+         return (yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights) accessRights_;
+      }
+      return yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights.getDefaultInstance();
+    }
+    /**
+     * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessRights auth_system_access = 2002;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRightsOrBuilder getAuthSystemAccessOrBuilder() {
+      if (accessRightsCase_ == 2002) {
+         return (yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights) accessRights_;
+      }
+      return yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights.getDefaultInstance();
+    }
+
     public static final int CREATED_AT_FIELD_NUMBER = 100;
     private com.google.protobuf.Timestamp createdAt_;
     /**
@@ -1120,6 +1182,9 @@ public final class VideoOuterClass {
       if (accessRightsCase_ == 2000) {
         output.writeMessage(2000, (yandex.cloud.api.video.v1.VideoOuterClass.VideoPublicAccessRights) accessRights_);
       }
+      if (accessRightsCase_ == 2002) {
+        output.writeMessage(2002, (yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights) accessRights_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1171,6 +1236,10 @@ public final class VideoOuterClass {
       if (accessRightsCase_ == 2000) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2000, (yandex.cloud.api.video.v1.VideoOuterClass.VideoPublicAccessRights) accessRights_);
+      }
+      if (accessRightsCase_ == 2002) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2002, (yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights) accessRights_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1229,6 +1298,10 @@ public final class VideoOuterClass {
           if (!getPublicAccess()
               .equals(other.getPublicAccess())) return false;
           break;
+        case 2002:
+          if (!getAuthSystemAccess()
+              .equals(other.getAuthSystemAccess())) return false;
+          break;
         case 0:
         default:
       }
@@ -1281,6 +1354,10 @@ public final class VideoOuterClass {
         case 2000:
           hash = (37 * hash) + PUBLIC_ACCESS_FIELD_NUMBER;
           hash = (53 * hash) + getPublicAccess().hashCode();
+          break;
+        case 2002:
+          hash = (37 * hash) + AUTH_SYSTEM_ACCESS_FIELD_NUMBER;
+          hash = (53 * hash) + getAuthSystemAccess().hashCode();
           break;
         case 0:
         default:
@@ -1506,6 +1583,13 @@ public final class VideoOuterClass {
             result.accessRights_ = publicAccessBuilder_.build();
           }
         }
+        if (accessRightsCase_ == 2002) {
+          if (authSystemAccessBuilder_ == null) {
+            result.accessRights_ = accessRights_;
+          } else {
+            result.accessRights_ = authSystemAccessBuilder_.build();
+          }
+        }
         if (createdAtBuilder_ == null) {
           result.createdAt_ = createdAt_;
         } else {
@@ -1613,6 +1697,10 @@ public final class VideoOuterClass {
         switch (other.getAccessRightsCase()) {
           case PUBLIC_ACCESS: {
             mergePublicAccess(other.getPublicAccess());
+            break;
+          }
+          case AUTH_SYSTEM_ACCESS: {
+            mergeAuthSystemAccess(other.getAuthSystemAccess());
             break;
           }
           case ACCESSRIGHTS_NOT_SET: {
@@ -2565,6 +2653,147 @@ public final class VideoOuterClass {
         accessRightsCase_ = 2000;
         onChanged();;
         return publicAccessBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights, yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights.Builder, yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRightsOrBuilder> authSystemAccessBuilder_;
+      /**
+       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessRights auth_system_access = 2002;</code>
+       * @return Whether the authSystemAccess field is set.
+       */
+      @java.lang.Override
+      public boolean hasAuthSystemAccess() {
+        return accessRightsCase_ == 2002;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessRights auth_system_access = 2002;</code>
+       * @return The authSystemAccess.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights getAuthSystemAccess() {
+        if (authSystemAccessBuilder_ == null) {
+          if (accessRightsCase_ == 2002) {
+            return (yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights) accessRights_;
+          }
+          return yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights.getDefaultInstance();
+        } else {
+          if (accessRightsCase_ == 2002) {
+            return authSystemAccessBuilder_.getMessage();
+          }
+          return yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessRights auth_system_access = 2002;</code>
+       */
+      public Builder setAuthSystemAccess(yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights value) {
+        if (authSystemAccessBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          accessRights_ = value;
+          onChanged();
+        } else {
+          authSystemAccessBuilder_.setMessage(value);
+        }
+        accessRightsCase_ = 2002;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessRights auth_system_access = 2002;</code>
+       */
+      public Builder setAuthSystemAccess(
+          yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights.Builder builderForValue) {
+        if (authSystemAccessBuilder_ == null) {
+          accessRights_ = builderForValue.build();
+          onChanged();
+        } else {
+          authSystemAccessBuilder_.setMessage(builderForValue.build());
+        }
+        accessRightsCase_ = 2002;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessRights auth_system_access = 2002;</code>
+       */
+      public Builder mergeAuthSystemAccess(yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights value) {
+        if (authSystemAccessBuilder_ == null) {
+          if (accessRightsCase_ == 2002 &&
+              accessRights_ != yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights.getDefaultInstance()) {
+            accessRights_ = yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights.newBuilder((yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights) accessRights_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            accessRights_ = value;
+          }
+          onChanged();
+        } else {
+          if (accessRightsCase_ == 2002) {
+            authSystemAccessBuilder_.mergeFrom(value);
+          }
+          authSystemAccessBuilder_.setMessage(value);
+        }
+        accessRightsCase_ = 2002;
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessRights auth_system_access = 2002;</code>
+       */
+      public Builder clearAuthSystemAccess() {
+        if (authSystemAccessBuilder_ == null) {
+          if (accessRightsCase_ == 2002) {
+            accessRightsCase_ = 0;
+            accessRights_ = null;
+            onChanged();
+          }
+        } else {
+          if (accessRightsCase_ == 2002) {
+            accessRightsCase_ = 0;
+            accessRights_ = null;
+          }
+          authSystemAccessBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessRights auth_system_access = 2002;</code>
+       */
+      public yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights.Builder getAuthSystemAccessBuilder() {
+        return getAuthSystemAccessFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessRights auth_system_access = 2002;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRightsOrBuilder getAuthSystemAccessOrBuilder() {
+        if ((accessRightsCase_ == 2002) && (authSystemAccessBuilder_ != null)) {
+          return authSystemAccessBuilder_.getMessageOrBuilder();
+        } else {
+          if (accessRightsCase_ == 2002) {
+            return (yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights) accessRights_;
+          }
+          return yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.yandex.cloud.video.v1.VideoAuthSystemAccessRights auth_system_access = 2002;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights, yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights.Builder, yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRightsOrBuilder> 
+          getAuthSystemAccessFieldBuilder() {
+        if (authSystemAccessBuilder_ == null) {
+          if (!(accessRightsCase_ == 2002)) {
+            accessRights_ = yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights.getDefaultInstance();
+          }
+          authSystemAccessBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights, yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights.Builder, yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRightsOrBuilder>(
+                  (yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights) accessRights_,
+                  getParentForChildren(),
+                  isClean());
+          accessRights_ = null;
+        }
+        accessRightsCase_ = 2002;
+        onChanged();;
+        return authSystemAccessBuilder_;
       }
 
       private com.google.protobuf.Timestamp createdAt_;
@@ -3843,6 +4072,424 @@ public final class VideoOuterClass {
 
   }
 
+  public interface VideoAuthSystemAccessRightsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.video.v1.VideoAuthSystemAccessRights)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code yandex.cloud.video.v1.VideoAuthSystemAccessRights}
+   */
+  public static final class VideoAuthSystemAccessRights extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.video.v1.VideoAuthSystemAccessRights)
+      VideoAuthSystemAccessRightsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use VideoAuthSystemAccessRights.newBuilder() to construct.
+    private VideoAuthSystemAccessRights(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private VideoAuthSystemAccessRights() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new VideoAuthSystemAccessRights();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private VideoAuthSystemAccessRights(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.video.v1.VideoOuterClass.internal_static_yandex_cloud_video_v1_VideoAuthSystemAccessRights_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.video.v1.VideoOuterClass.internal_static_yandex_cloud_video_v1_VideoAuthSystemAccessRights_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights.class, yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights other = (yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code yandex.cloud.video.v1.VideoAuthSystemAccessRights}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.video.v1.VideoAuthSystemAccessRights)
+        yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRightsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.video.v1.VideoOuterClass.internal_static_yandex_cloud_video_v1_VideoAuthSystemAccessRights_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.video.v1.VideoOuterClass.internal_static_yandex_cloud_video_v1_VideoAuthSystemAccessRights_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights.class, yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.video.v1.VideoOuterClass.internal_static_yandex_cloud_video_v1_VideoAuthSystemAccessRights_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights getDefaultInstanceForType() {
+        return yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights build() {
+        yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights buildPartial() {
+        yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights result = new yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights) {
+          return mergeFrom((yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights other) {
+        if (other == yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.video.v1.VideoAuthSystemAccessRights)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.video.v1.VideoAuthSystemAccessRights)
+    private static final yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights();
+    }
+
+    public static yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<VideoAuthSystemAccessRights>
+        PARSER = new com.google.protobuf.AbstractParser<VideoAuthSystemAccessRights>() {
+      @java.lang.Override
+      public VideoAuthSystemAccessRights parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new VideoAuthSystemAccessRights(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<VideoAuthSystemAccessRights> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VideoAuthSystemAccessRights> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.video.v1.VideoOuterClass.VideoAuthSystemAccessRights getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_video_v1_Video_descriptor;
   private static final 
@@ -3858,6 +4505,11 @@ public final class VideoOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_video_v1_VideoPublicAccessRights_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_video_v1_VideoAuthSystemAccessRights_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_video_v1_VideoAuthSystemAccessRights_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3870,7 +4522,7 @@ public final class VideoOuterClass {
       "\n!yandex/cloud/video/v1/video.proto\022\025yan" +
       "dex.cloud.video.v1\032\037google/protobuf/time" +
       "stamp.proto\032\036google/protobuf/duration.pr" +
-      "oto\"\316\005\n\005Video\022\n\n\002id\030\001 \001(\t\022\022\n\nchannel_id\030" +
+      "oto\"\251\006\n\005Video\022\n\n\002id\030\001 \001(\t\022\022\n\nchannel_id\030" +
       "\002 \001(\t\022\r\n\005title\030\003 \001(\t\022\023\n\013description\030\004 \001(" +
       "\t\022\024\n\014thumbnail_id\030\005 \001(\t\0228\n\006status\030\006 \001(\0162" +
       "(.yandex.cloud.video.v1.Video.VideoStatu" +
@@ -3880,19 +4532,22 @@ public final class VideoOuterClass {
       "\0227\n\004tusd\030\350\007 \001(\0132&.yandex.cloud.video.v1." +
       "VideoTUSDSourceH\000\022H\n\rpublic_access\030\320\017 \001(" +
       "\0132..yandex.cloud.video.v1.VideoPublicAcc" +
-      "essRightsH\001\022.\n\ncreated_at\030d \001(\0132\032.google" +
-      ".protobuf.Timestamp\022.\n\nupdated_at\030e \001(\0132" +
-      "\032.google.protobuf.Timestamp\"e\n\013VideoStat" +
-      "us\022\034\n\030VIDEO_STATUS_UNSPECIFIED\020\000\022\022\n\016WAIT" +
-      "_UPLOADING\020\001\022\016\n\nPROCESSING\020\004\022\t\n\005READY\020\005\022" +
-      "\t\n\005ERROR\020\007\"U\n\020VisibilityStatus\022!\n\035VISIBI" +
-      "LITY_STATUS_UNSPECIFIED\020\000\022\r\n\tPUBLISHED\020\001" +
-      "\022\017\n\013UNPUBLISHED\020\002B\010\n\006sourceB\017\n\raccess_ri" +
-      "ghts\"\036\n\017VideoTUSDSource\022\013\n\003url\030\001 \001(\t\"\031\n\027" +
-      "VideoPublicAccessRightsB\\\n\031yandex.cloud." +
-      "api.video.v1Z?github.com/yandex-cloud/go" +
-      "-genproto/yandex/cloud/video/v1;videob\006p" +
-      "roto3"
+      "essRightsH\001\022Q\n\022auth_system_access\030\322\017 \001(\013" +
+      "22.yandex.cloud.video.v1.VideoAuthSystem" +
+      "AccessRightsH\001\022.\n\ncreated_at\030d \001(\0132\032.goo" +
+      "gle.protobuf.Timestamp\022.\n\nupdated_at\030e \001" +
+      "(\0132\032.google.protobuf.Timestamp\"e\n\013VideoS" +
+      "tatus\022\034\n\030VIDEO_STATUS_UNSPECIFIED\020\000\022\022\n\016W" +
+      "AIT_UPLOADING\020\001\022\016\n\nPROCESSING\020\004\022\t\n\005READY" +
+      "\020\005\022\t\n\005ERROR\020\007\"U\n\020VisibilityStatus\022!\n\035VIS" +
+      "IBILITY_STATUS_UNSPECIFIED\020\000\022\r\n\tPUBLISHE" +
+      "D\020\001\022\017\n\013UNPUBLISHED\020\002B\010\n\006sourceB\017\n\raccess" +
+      "_rightsJ\006\010\321\017\020\322\017\"\036\n\017VideoTUSDSource\022\013\n\003ur" +
+      "l\030\001 \001(\t\"\031\n\027VideoPublicAccessRights\"\035\n\033Vi" +
+      "deoAuthSystemAccessRightsB\\\n\031yandex.clou" +
+      "d.api.video.v1Z?github.com/yandex-cloud/" +
+      "go-genproto/yandex/cloud/video/v1;videob" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3905,7 +4560,7 @@ public final class VideoOuterClass {
     internal_static_yandex_cloud_video_v1_Video_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_Video_descriptor,
-        new java.lang.String[] { "Id", "ChannelId", "Title", "Description", "ThumbnailId", "Status", "Duration", "VisibilityStatus", "Tusd", "PublicAccess", "CreatedAt", "UpdatedAt", "Source", "AccessRights", });
+        new java.lang.String[] { "Id", "ChannelId", "Title", "Description", "ThumbnailId", "Status", "Duration", "VisibilityStatus", "Tusd", "PublicAccess", "AuthSystemAccess", "CreatedAt", "UpdatedAt", "Source", "AccessRights", });
     internal_static_yandex_cloud_video_v1_VideoTUSDSource_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_yandex_cloud_video_v1_VideoTUSDSource_fieldAccessorTable = new
@@ -3917,6 +4572,12 @@ public final class VideoOuterClass {
     internal_static_yandex_cloud_video_v1_VideoPublicAccessRights_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_video_v1_VideoPublicAccessRights_descriptor,
+        new java.lang.String[] { });
+    internal_static_yandex_cloud_video_v1_VideoAuthSystemAccessRights_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_yandex_cloud_video_v1_VideoAuthSystemAccessRights_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_video_v1_VideoAuthSystemAccessRights_descriptor,
         new java.lang.String[] { });
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.DurationProto.getDescriptor();

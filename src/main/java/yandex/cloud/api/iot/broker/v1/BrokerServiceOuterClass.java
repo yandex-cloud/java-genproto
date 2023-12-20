@@ -2844,6 +2844,33 @@ public final class BrokerServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getPasswordBytes();
+
+    /**
+     * <pre>
+     * Options for logging broker events
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 7;</code>
+     * @return Whether the logOptions field is set.
+     */
+    boolean hasLogOptions();
+    /**
+     * <pre>
+     * Options for logging broker events
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 7;</code>
+     * @return The logOptions.
+     */
+    yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions getLogOptions();
+    /**
+     * <pre>
+     * Options for logging broker events
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 7;</code>
+     */
+    yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptionsOrBuilder getLogOptionsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.iot.broker.v1.CreateBrokerRequest}
@@ -2940,6 +2967,19 @@ public final class BrokerServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               password_ = s;
+              break;
+            }
+            case 58: {
+              yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions.Builder subBuilder = null;
+              if (logOptions_ != null) {
+                subBuilder = logOptions_.toBuilder();
+              }
+              logOptions_ = input.readMessage(yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logOptions_);
+                logOptions_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -3946,6 +3986,44 @@ public final class BrokerServiceOuterClass {
       }
     }
 
+    public static final int LOG_OPTIONS_FIELD_NUMBER = 7;
+    private yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions logOptions_;
+    /**
+     * <pre>
+     * Options for logging broker events
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 7;</code>
+     * @return Whether the logOptions field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogOptions() {
+      return logOptions_ != null;
+    }
+    /**
+     * <pre>
+     * Options for logging broker events
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 7;</code>
+     * @return The logOptions.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions getLogOptions() {
+      return logOptions_ == null ? yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions.getDefaultInstance() : logOptions_;
+    }
+    /**
+     * <pre>
+     * Options for logging broker events
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 7;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptionsOrBuilder getLogOptionsOrBuilder() {
+      return getLogOptions();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3980,6 +4058,9 @@ public final class BrokerServiceOuterClass {
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, password_);
+      }
+      if (logOptions_ != null) {
+        output.writeMessage(7, getLogOptions());
       }
       unknownFields.writeTo(output);
     }
@@ -4016,6 +4097,10 @@ public final class BrokerServiceOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(password_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, password_);
       }
+      if (logOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getLogOptions());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4043,6 +4128,11 @@ public final class BrokerServiceOuterClass {
           .equals(other.getCertificatesList())) return false;
       if (!getPassword()
           .equals(other.getPassword())) return false;
+      if (hasLogOptions() != other.hasLogOptions()) return false;
+      if (hasLogOptions()) {
+        if (!getLogOptions()
+            .equals(other.getLogOptions())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4070,6 +4160,10 @@ public final class BrokerServiceOuterClass {
       }
       hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
       hash = (53 * hash) + getPassword().hashCode();
+      if (hasLogOptions()) {
+        hash = (37 * hash) + LOG_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getLogOptions().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4241,6 +4335,12 @@ public final class BrokerServiceOuterClass {
         }
         password_ = "";
 
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = null;
+        } else {
+          logOptions_ = null;
+          logOptionsBuilder_ = null;
+        }
         return this;
       }
 
@@ -4283,6 +4383,11 @@ public final class BrokerServiceOuterClass {
           result.certificates_ = certificatesBuilder_.build();
         }
         result.password_ = password_;
+        if (logOptionsBuilder_ == null) {
+          result.logOptions_ = logOptions_;
+        } else {
+          result.logOptions_ = logOptionsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -4374,6 +4479,9 @@ public final class BrokerServiceOuterClass {
         if (!other.getPassword().isEmpty()) {
           password_ = other.password_;
           onChanged();
+        }
+        if (other.hasLogOptions()) {
+          mergeLogOptions(other.getLogOptions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5269,6 +5377,161 @@ public final class BrokerServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions logOptions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions, yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions.Builder, yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptionsOrBuilder> logOptionsBuilder_;
+      /**
+       * <pre>
+       * Options for logging broker events
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 7;</code>
+       * @return Whether the logOptions field is set.
+       */
+      public boolean hasLogOptions() {
+        return logOptionsBuilder_ != null || logOptions_ != null;
+      }
+      /**
+       * <pre>
+       * Options for logging broker events
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 7;</code>
+       * @return The logOptions.
+       */
+      public yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions getLogOptions() {
+        if (logOptionsBuilder_ == null) {
+          return logOptions_ == null ? yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions.getDefaultInstance() : logOptions_;
+        } else {
+          return logOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Options for logging broker events
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 7;</code>
+       */
+      public Builder setLogOptions(yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions value) {
+        if (logOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logOptions_ = value;
+          onChanged();
+        } else {
+          logOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging broker events
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 7;</code>
+       */
+      public Builder setLogOptions(
+          yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions.Builder builderForValue) {
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          logOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging broker events
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 7;</code>
+       */
+      public Builder mergeLogOptions(yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions value) {
+        if (logOptionsBuilder_ == null) {
+          if (logOptions_ != null) {
+            logOptions_ =
+              yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions.newBuilder(logOptions_).mergeFrom(value).buildPartial();
+          } else {
+            logOptions_ = value;
+          }
+          onChanged();
+        } else {
+          logOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging broker events
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 7;</code>
+       */
+      public Builder clearLogOptions() {
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = null;
+          onChanged();
+        } else {
+          logOptions_ = null;
+          logOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging broker events
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 7;</code>
+       */
+      public yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions.Builder getLogOptionsBuilder() {
+        
+        onChanged();
+        return getLogOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Options for logging broker events
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 7;</code>
+       */
+      public yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptionsOrBuilder getLogOptionsOrBuilder() {
+        if (logOptionsBuilder_ != null) {
+          return logOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return logOptions_ == null ?
+              yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions.getDefaultInstance() : logOptions_;
+        }
+      }
+      /**
+       * <pre>
+       * Options for logging broker events
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions, yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions.Builder, yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptionsOrBuilder> 
+          getLogOptionsFieldBuilder() {
+        if (logOptionsBuilder_ == null) {
+          logOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions, yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions.Builder, yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptionsOrBuilder>(
+                  getLogOptions(),
+                  getParentForChildren(),
+                  isClean());
+          logOptions_ = null;
+        }
+        return logOptionsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6077,6 +6340,33 @@ public final class BrokerServiceOuterClass {
 
     java.lang.String getLabelsOrThrow(
         java.lang.String key);
+
+    /**
+     * <pre>
+     * Options for logging broker events
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 6;</code>
+     * @return Whether the logOptions field is set.
+     */
+    boolean hasLogOptions();
+    /**
+     * <pre>
+     * Options for logging broker events
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 6;</code>
+     * @return The logOptions.
+     */
+    yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions getLogOptions();
+    /**
+     * <pre>
+     * Options for logging broker events
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 6;</code>
+     */
+    yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptionsOrBuilder getLogOptionsOrBuilder();
   }
   /**
    * Protobuf type {@code yandex.cloud.iot.broker.v1.UpdateBrokerRequest}
@@ -6169,6 +6459,19 @@ public final class BrokerServiceOuterClass {
                   LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               labels_.getMutableMap().put(
                   labels__.getKey(), labels__.getValue());
+              break;
+            }
+            case 50: {
+              yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions.Builder subBuilder = null;
+              if (logOptions_ != null) {
+                subBuilder = logOptions_.toBuilder();
+              }
+              logOptions_ = input.readMessage(yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(logOptions_);
+                logOptions_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -6494,6 +6797,44 @@ public final class BrokerServiceOuterClass {
       return map.get(key);
     }
 
+    public static final int LOG_OPTIONS_FIELD_NUMBER = 6;
+    private yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions logOptions_;
+    /**
+     * <pre>
+     * Options for logging broker events
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 6;</code>
+     * @return Whether the logOptions field is set.
+     */
+    @java.lang.Override
+    public boolean hasLogOptions() {
+      return logOptions_ != null;
+    }
+    /**
+     * <pre>
+     * Options for logging broker events
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 6;</code>
+     * @return The logOptions.
+     */
+    @java.lang.Override
+    public yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions getLogOptions() {
+      return logOptions_ == null ? yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions.getDefaultInstance() : logOptions_;
+    }
+    /**
+     * <pre>
+     * Options for logging broker events
+     * </pre>
+     *
+     * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 6;</code>
+     */
+    @java.lang.Override
+    public yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptionsOrBuilder getLogOptionsOrBuilder() {
+      return getLogOptions();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6526,6 +6867,9 @@ public final class BrokerServiceOuterClass {
           internalGetLabels(),
           LabelsDefaultEntryHolder.defaultEntry,
           5);
+      if (logOptions_ != null) {
+        output.writeMessage(6, getLogOptions());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -6558,6 +6902,10 @@ public final class BrokerServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(5, labels__);
       }
+      if (logOptions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getLogOptions());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6586,6 +6934,11 @@ public final class BrokerServiceOuterClass {
           .equals(other.getDescription())) return false;
       if (!internalGetLabels().equals(
           other.internalGetLabels())) return false;
+      if (hasLogOptions() != other.hasLogOptions()) return false;
+      if (hasLogOptions()) {
+        if (!getLogOptions()
+            .equals(other.getLogOptions())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -6610,6 +6963,10 @@ public final class BrokerServiceOuterClass {
       if (!internalGetLabels().getMap().isEmpty()) {
         hash = (37 * hash) + LABELS_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLabels().hashCode();
+      }
+      if (hasLogOptions()) {
+        hash = (37 * hash) + LOG_OPTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getLogOptions().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -6779,6 +7136,12 @@ public final class BrokerServiceOuterClass {
         description_ = "";
 
         internalGetMutableLabels().clear();
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = null;
+        } else {
+          logOptions_ = null;
+          logOptionsBuilder_ = null;
+        }
         return this;
       }
 
@@ -6816,6 +7179,11 @@ public final class BrokerServiceOuterClass {
         result.description_ = description_;
         result.labels_ = internalGetLabels();
         result.labels_.makeImmutable();
+        if (logOptionsBuilder_ == null) {
+          result.logOptions_ = logOptions_;
+        } else {
+          result.logOptions_ = logOptionsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -6881,6 +7249,9 @@ public final class BrokerServiceOuterClass {
         }
         internalGetMutableLabels().mergeFrom(
             other.internalGetLabels());
+        if (other.hasLogOptions()) {
+          mergeLogOptions(other.getLogOptions());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -7523,6 +7894,161 @@ public final class BrokerServiceOuterClass {
         internalGetMutableLabels().getMutableMap()
             .putAll(values);
         return this;
+      }
+
+      private yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions logOptions_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions, yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions.Builder, yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptionsOrBuilder> logOptionsBuilder_;
+      /**
+       * <pre>
+       * Options for logging broker events
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 6;</code>
+       * @return Whether the logOptions field is set.
+       */
+      public boolean hasLogOptions() {
+        return logOptionsBuilder_ != null || logOptions_ != null;
+      }
+      /**
+       * <pre>
+       * Options for logging broker events
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 6;</code>
+       * @return The logOptions.
+       */
+      public yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions getLogOptions() {
+        if (logOptionsBuilder_ == null) {
+          return logOptions_ == null ? yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions.getDefaultInstance() : logOptions_;
+        } else {
+          return logOptionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Options for logging broker events
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 6;</code>
+       */
+      public Builder setLogOptions(yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions value) {
+        if (logOptionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          logOptions_ = value;
+          onChanged();
+        } else {
+          logOptionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging broker events
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 6;</code>
+       */
+      public Builder setLogOptions(
+          yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions.Builder builderForValue) {
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = builderForValue.build();
+          onChanged();
+        } else {
+          logOptionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging broker events
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 6;</code>
+       */
+      public Builder mergeLogOptions(yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions value) {
+        if (logOptionsBuilder_ == null) {
+          if (logOptions_ != null) {
+            logOptions_ =
+              yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions.newBuilder(logOptions_).mergeFrom(value).buildPartial();
+          } else {
+            logOptions_ = value;
+          }
+          onChanged();
+        } else {
+          logOptionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging broker events
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 6;</code>
+       */
+      public Builder clearLogOptions() {
+        if (logOptionsBuilder_ == null) {
+          logOptions_ = null;
+          onChanged();
+        } else {
+          logOptions_ = null;
+          logOptionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Options for logging broker events
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 6;</code>
+       */
+      public yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions.Builder getLogOptionsBuilder() {
+        
+        onChanged();
+        return getLogOptionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Options for logging broker events
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 6;</code>
+       */
+      public yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptionsOrBuilder getLogOptionsOrBuilder() {
+        if (logOptionsBuilder_ != null) {
+          return logOptionsBuilder_.getMessageOrBuilder();
+        } else {
+          return logOptions_ == null ?
+              yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions.getDefaultInstance() : logOptions_;
+        }
+      }
+      /**
+       * <pre>
+       * Options for logging broker events
+       * </pre>
+       *
+       * <code>.yandex.cloud.iot.broker.v1.LogOptions log_options = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions, yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions.Builder, yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptionsOrBuilder> 
+          getLogOptionsFieldBuilder() {
+        if (logOptionsBuilder_ == null) {
+          logOptionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions, yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptions.Builder, yandex.cloud.api.iot.broker.v1.BrokerOuterClass.LogOptionsOrBuilder>(
+                  getLogOptions(),
+                  getParentForChildren(),
+                  isClean());
+          logOptions_ = null;
+        }
+        return logOptionsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -21178,8 +21704,8 @@ public final class BrokerServiceOuterClass {
       "age_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035\n\npage_token" +
       "\030\003 \001(\tB\t\212\3101\005<=100\"c\n\023ListBrokersResponse" +
       "\0223\n\007brokers\030\001 \003(\0132\".yandex.cloud.iot.bro" +
-      "ker.v1.Broker\022\027\n\017next_page_token\030\002 \001(\t\"\320" +
-      "\003\n\023CreateBrokerRequest\022\037\n\tfolder_id\030\001 \001(" +
+      "ker.v1.Broker\022\027\n\017next_page_token\030\002 \001(\t\"\215" +
+      "\004\n\023CreateBrokerRequest\022\037\n\tfolder_id\030\001 \001(" +
       "\tB\014\350\3071\001\212\3101\004<=50\022,\n\004name\030\002 \001(\tB\036\350\3071\001\212\3101\004<" +
       "=50\362\3071\016[a-zA-Z0-9_-]*\022\036\n\013description\030\003 \001" +
       "(\tB\t\212\3101\005<=256\022\214\001\n\006labels\030\004 \003(\0132;.yandex." +
@@ -21188,116 +21714,119 @@ public final class BrokerServiceOuterClass {
       "-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\022Q\n\014" +
       "certificates\030\005 \003(\0132;.yandex.cloud.iot.br" +
       "oker.v1.CreateBrokerRequest.Certificate\022" +
-      "\020\n\010password\030\006 \001(\t\032-\n\013LabelsEntry\022\013\n\003key\030" +
-      "\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032\'\n\013Certificate\022" +
-      "\030\n\020certificate_data\030\001 \001(\t\")\n\024CreateBroke" +
-      "rMetadata\022\021\n\tbroker_id\030\001 \001(\t\"\357\002\n\023UpdateB" +
-      "rokerRequest\022\037\n\tbroker_id\030\001 \001(\tB\014\350\3071\001\212\3101" +
-      "\004<=50\022/\n\013update_mask\030\002 \001(\0132\032.google.prot" +
-      "obuf.FieldMask\022(\n\004name\030\003 \001(\tB\032\212\3101\004<=50\362\307" +
-      "1\016[a-zA-Z0-9_-]*\022\036\n\013description\030\004 \001(\tB\t\212" +
-      "\3101\005<=256\022\214\001\n\006labels\030\005 \003(\0132;.yandex.cloud" +
-      ".iot.broker.v1.UpdateBrokerRequest.Label" +
-      "sEntryB?\202\3101\004<=64\212\3101\004<=63\362\3071\013[-_0-9a-z]*\262" +
-      "\3101\006\032\0041-63\262\3101\022\022\020[a-z][-_0-9a-z]*\032-\n\013Label" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\")" +
-      "\n\024UpdateBrokerMetadata\022\021\n\tbroker_id\030\001 \001(" +
-      "\t\"6\n\023DeleteBrokerRequest\022\037\n\tbroker_id\030\001 " +
-      "\001(\tB\014\350\3071\001\212\3101\004<=50\")\n\024DeleteBrokerMetadat" +
-      "a\022\021\n\tbroker_id\030\001 \001(\t\"@\n\035ListBrokerCertif" +
-      "icatesRequest\022\037\n\tbroker_id\030\001 \001(\tB\014\350\3071\001\212\310" +
-      "1\004<=50\"e\n\036ListBrokerCertificatesResponse" +
-      "\022C\n\014certificates\030\001 \003(\0132-.yandex.cloud.io" +
-      "t.broker.v1.BrokerCertificate\"X\n\033AddBrok" +
-      "erCertificateRequest\022\037\n\tbroker_id\030\001 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\022\030\n\020certificate_data\030\003 \001(\t\"" +
-      "F\n\034AddBrokerCertificateMetadata\022\021\n\tbroke" +
-      "r_id\030\001 \001(\t\022\023\n\013fingerprint\030\002 \001(\t\"d\n\036Delet" +
-      "eBrokerCertificateRequest\022\037\n\tbroker_id\030\001" +
-      " \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013fingerprint\030\002 \001(\tB" +
-      "\014\350\3071\001\212\3101\004<=50\"e\n\037DeleteBrokerCertificate" +
-      "Metadata\022\037\n\tbroker_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=5" +
-      "0\022!\n\013fingerprint\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"=\n\032" +
-      "ListBrokerPasswordsRequest\022\037\n\tbroker_id\030" +
-      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\\\n\033ListBrokerPasswor" +
-      "dsResponse\022=\n\tpasswords\030\001 \003(\0132*.yandex.c" +
-      "loud.iot.broker.v1.BrokerPassword\"W\n\030Add" +
-      "BrokerPasswordRequest\022\037\n\tbroker_id\030\001 \001(\t" +
-      "B\014\350\3071\001\212\3101\004<=50\022\032\n\010password\030\002 \001(\tB\010\212\3101\004>=" +
-      "14\"C\n\031AddBrokerPasswordMetadata\022\021\n\tbroke" +
-      "r_id\030\001 \001(\t\022\023\n\013password_id\030\002 \001(\t\"a\n\033Delet" +
-      "eBrokerPasswordRequest\022\037\n\tbroker_id\030\001 \001(" +
-      "\tB\014\350\3071\001\212\3101\004<=50\022!\n\013password_id\030\002 \001(\tB\014\350\307" +
-      "1\001\212\3101\004<=50\"b\n\034DeleteBrokerPasswordMetada" +
-      "ta\022\037\n\tbroker_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013p" +
-      "assword_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\220\001\n\033ListB" +
-      "rokerOperationsRequest\022\027\n\tbroker_id\030\001 \001(" +
-      "\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000\022\035" +
-      "\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filter\030" +
-      "\004 \001(\tB\n\212\3101\006<=1000\"n\n\034ListBrokerOperation" +
-      "sResponse\0225\n\noperations\030\001 \003(\0132!.yandex.c" +
-      "loud.operation.Operation\022\027\n\017next_page_to" +
-      "ken\030\002 \001(\t2\200\022\n\rBrokerService\022\203\001\n\003Get\022,.ya" +
-      "ndex.cloud.iot.broker.v1.GetBrokerReques" +
-      "t\032\".yandex.cloud.iot.broker.v1.Broker\"*\202" +
-      "\323\344\223\002$\022\"/iot-broker/v1/brokers/{broker_id" +
-      "}\022\207\001\n\004List\022..yandex.cloud.iot.broker.v1." +
-      "ListBrokersRequest\032/.yandex.cloud.iot.br" +
-      "oker.v1.ListBrokersResponse\"\036\202\323\344\223\002\030\022\026/io" +
-      "t-broker/v1/brokers\022\241\001\n\006Create\022/.yandex." +
-      "cloud.iot.broker.v1.CreateBrokerRequest\032" +
-      "!.yandex.cloud.operation.Operation\"C\202\323\344\223" +
-      "\002\033\"\026/iot-broker/v1/brokers:\001*\262\322*\036\n\024Creat" +
-      "eBrokerMetadata\022\006Broker\022\255\001\n\006Update\022/.yan" +
-      "dex.cloud.iot.broker.v1.UpdateBrokerRequ" +
-      "est\032!.yandex.cloud.operation.Operation\"O" +
-      "\202\323\344\223\002\'2\"/iot-broker/v1/brokers/{broker_i" +
-      "d}:\001*\262\322*\036\n\024UpdateBrokerMetadata\022\006Broker\022" +
-      "\271\001\n\006Delete\022/.yandex.cloud.iot.broker.v1." +
-      "DeleteBrokerRequest\032!.yandex.cloud.opera" +
-      "tion.Operation\"[\202\323\344\223\002$*\"/iot-broker/v1/b" +
-      "rokers/{broker_id}\262\322*-\n\024DeleteBrokerMeta" +
-      "data\022\025google.protobuf.Empty\022\302\001\n\020ListCert" +
-      "ificates\0229.yandex.cloud.iot.broker.v1.Li" +
-      "stBrokerCertificatesRequest\032:.yandex.clo" +
-      "ud.iot.broker.v1.ListBrokerCertificatesR" +
-      "esponse\"7\202\323\344\223\0021\022//iot-broker/v1/brokers/" +
-      "{broker_id}/certificates\022\335\001\n\016AddCertific" +
-      "ate\0227.yandex.cloud.iot.broker.v1.AddBrok" +
-      "erCertificateRequest\032!.yandex.cloud.oper" +
-      "ation.Operation\"o\202\323\344\223\0024\"//iot-broker/v1/" +
-      "brokers/{broker_id}/certificates:\001*\262\322*1\n" +
-      "\034AddBrokerCertificateMetadata\022\021BrokerCer" +
-      "tificate\022\366\001\n\021DeleteCertificate\022:.yandex." +
-      "cloud.iot.broker.v1.DeleteBrokerCertific" +
-      "ateRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"\201\001\202\323\344\223\002?*=/iot-broker/v1/brokers/{" +
-      "broker_id}/certificates/{fingerprint}\262\322*" +
-      "8\n\037DeleteBrokerCertificateMetadata\022\025goog" +
-      "le.protobuf.Empty\022\266\001\n\rListPasswords\0226.ya" +
-      "ndex.cloud.iot.broker.v1.ListBrokerPassw" +
-      "ordsRequest\0327.yandex.cloud.iot.broker.v1" +
-      ".ListBrokerPasswordsResponse\"4\202\323\344\223\002.\022,/i" +
-      "ot-broker/v1/brokers/{broker_id}/passwor" +
-      "ds\022\316\001\n\013AddPassword\0224.yandex.cloud.iot.br" +
-      "oker.v1.AddBrokerPasswordRequest\032!.yande" +
-      "x.cloud.operation.Operation\"f\202\323\344\223\0021\",/io" +
-      "t-broker/v1/brokers/{broker_id}/password" +
-      "s:\001*\262\322*+\n\031AddBrokerPasswordMetadata\022\016Bro" +
-      "kerPassword\022\351\001\n\016DeletePassword\0227.yandex." +
-      "cloud.iot.broker.v1.DeleteBrokerPassword" +
-      "Request\032!.yandex.cloud.operation.Operati" +
-      "on\"{\202\323\344\223\002<*:/iot-broker/v1/brokers/{brok" +
-      "er_id}/passwords/{password_id}\262\322*5\n\034Dele" +
-      "teBrokerPasswordMetadata\022\025google.protobu" +
-      "f.Empty\022\272\001\n\016ListOperations\0227.yandex.clou" +
-      "d.iot.broker.v1.ListBrokerOperationsRequ" +
-      "est\0328.yandex.cloud.iot.broker.v1.ListBro" +
-      "kerOperationsResponse\"5\202\323\344\223\002/\022-/iot-brok" +
-      "er/v1/brokers/{broker_id}/operationsBg\n\036" +
-      "yandex.cloud.api.iot.broker.v1ZEgithub.c" +
-      "om/yandex-cloud/go-genproto/yandex/cloud" +
-      "/iot/broker/v1;brokerb\006proto3"
+      "\020\n\010password\030\006 \001(\t\022;\n\013log_options\030\007 \001(\0132&" +
+      ".yandex.cloud.iot.broker.v1.LogOptions\032-" +
+      "\n\013LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
+      "\t:\0028\001\032\'\n\013Certificate\022\030\n\020certificate_data" +
+      "\030\001 \001(\t\")\n\024CreateBrokerMetadata\022\021\n\tbroker" +
+      "_id\030\001 \001(\t\"\254\003\n\023UpdateBrokerRequest\022\037\n\tbro" +
+      "ker_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022/\n\013update_mas" +
+      "k\030\002 \001(\0132\032.google.protobuf.FieldMask\022(\n\004n" +
+      "ame\030\003 \001(\tB\032\212\3101\004<=50\362\3071\016[a-zA-Z0-9_-]*\022\036\n" +
+      "\013description\030\004 \001(\tB\t\212\3101\005<=256\022\214\001\n\006labels" +
+      "\030\005 \003(\0132;.yandex.cloud.iot.broker.v1.Upda" +
+      "teBrokerRequest.LabelsEntryB?\202\3101\004<=64\212\3101" +
+      "\004<=63\362\3071\013[-_0-9a-z]*\262\3101\006\032\0041-63\262\3101\022\022\020[a-z" +
+      "][-_0-9a-z]*\022;\n\013log_options\030\006 \001(\0132&.yand" +
+      "ex.cloud.iot.broker.v1.LogOptions\032-\n\013Lab" +
+      "elsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001" +
+      "\")\n\024UpdateBrokerMetadata\022\021\n\tbroker_id\030\001 " +
+      "\001(\t\"6\n\023DeleteBrokerRequest\022\037\n\tbroker_id\030" +
+      "\001 \001(\tB\014\350\3071\001\212\3101\004<=50\")\n\024DeleteBrokerMetad" +
+      "ata\022\021\n\tbroker_id\030\001 \001(\t\"@\n\035ListBrokerCert" +
+      "ificatesRequest\022\037\n\tbroker_id\030\001 \001(\tB\014\350\3071\001" +
+      "\212\3101\004<=50\"e\n\036ListBrokerCertificatesRespon" +
+      "se\022C\n\014certificates\030\001 \003(\0132-.yandex.cloud." +
+      "iot.broker.v1.BrokerCertificate\"X\n\033AddBr" +
+      "okerCertificateRequest\022\037\n\tbroker_id\030\001 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\022\030\n\020certificate_data\030\003 \001(" +
+      "\t\"F\n\034AddBrokerCertificateMetadata\022\021\n\tbro" +
+      "ker_id\030\001 \001(\t\022\023\n\013fingerprint\030\002 \001(\t\"d\n\036Del" +
+      "eteBrokerCertificateRequest\022\037\n\tbroker_id" +
+      "\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013fingerprint\030\002 \001(" +
+      "\tB\014\350\3071\001\212\3101\004<=50\"e\n\037DeleteBrokerCertifica" +
+      "teMetadata\022\037\n\tbroker_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<" +
+      "=50\022!\n\013fingerprint\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"=" +
+      "\n\032ListBrokerPasswordsRequest\022\037\n\tbroker_i" +
+      "d\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\"\\\n\033ListBrokerPassw" +
+      "ordsResponse\022=\n\tpasswords\030\001 \003(\0132*.yandex" +
+      ".cloud.iot.broker.v1.BrokerPassword\"W\n\030A" +
+      "ddBrokerPasswordRequest\022\037\n\tbroker_id\030\001 \001" +
+      "(\tB\014\350\3071\001\212\3101\004<=50\022\032\n\010password\030\002 \001(\tB\010\212\3101\004" +
+      ">=14\"C\n\031AddBrokerPasswordMetadata\022\021\n\tbro" +
+      "ker_id\030\001 \001(\t\022\023\n\013password_id\030\002 \001(\t\"a\n\033Del" +
+      "eteBrokerPasswordRequest\022\037\n\tbroker_id\030\001 " +
+      "\001(\tB\014\350\3071\001\212\3101\004<=50\022!\n\013password_id\030\002 \001(\tB\014" +
+      "\350\3071\001\212\3101\004<=50\"b\n\034DeleteBrokerPasswordMeta" +
+      "data\022\037\n\tbroker_id\030\001 \001(\tB\014\350\3071\001\212\3101\004<=50\022!\n" +
+      "\013password_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<=50\"\220\001\n\033Lis" +
+      "tBrokerOperationsRequest\022\027\n\tbroker_id\030\001 " +
+      "\001(\tB\004\350\3071\001\022\035\n\tpage_size\030\002 \001(\003B\n\372\3071\0060-1000" +
+      "\022\035\n\npage_token\030\003 \001(\tB\t\212\3101\005<=100\022\032\n\006filte" +
+      "r\030\004 \001(\tB\n\212\3101\006<=1000\"n\n\034ListBrokerOperati" +
+      "onsResponse\0225\n\noperations\030\001 \003(\0132!.yandex" +
+      ".cloud.operation.Operation\022\027\n\017next_page_" +
+      "token\030\002 \001(\t2\200\022\n\rBrokerService\022\203\001\n\003Get\022,." +
+      "yandex.cloud.iot.broker.v1.GetBrokerRequ" +
+      "est\032\".yandex.cloud.iot.broker.v1.Broker\"" +
+      "*\202\323\344\223\002$\022\"/iot-broker/v1/brokers/{broker_" +
+      "id}\022\207\001\n\004List\022..yandex.cloud.iot.broker.v" +
+      "1.ListBrokersRequest\032/.yandex.cloud.iot." +
+      "broker.v1.ListBrokersResponse\"\036\202\323\344\223\002\030\022\026/" +
+      "iot-broker/v1/brokers\022\241\001\n\006Create\022/.yande" +
+      "x.cloud.iot.broker.v1.CreateBrokerReques" +
+      "t\032!.yandex.cloud.operation.Operation\"C\202\323" +
+      "\344\223\002\033\"\026/iot-broker/v1/brokers:\001*\262\322*\036\n\024Cre" +
+      "ateBrokerMetadata\022\006Broker\022\255\001\n\006Update\022/.y" +
+      "andex.cloud.iot.broker.v1.UpdateBrokerRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"O\202\323\344\223\002\'2\"/iot-broker/v1/brokers/{broker" +
+      "_id}:\001*\262\322*\036\n\024UpdateBrokerMetadata\022\006Broke" +
+      "r\022\271\001\n\006Delete\022/.yandex.cloud.iot.broker.v" +
+      "1.DeleteBrokerRequest\032!.yandex.cloud.ope" +
+      "ration.Operation\"[\202\323\344\223\002$*\"/iot-broker/v1" +
+      "/brokers/{broker_id}\262\322*-\n\024DeleteBrokerMe" +
+      "tadata\022\025google.protobuf.Empty\022\302\001\n\020ListCe" +
+      "rtificates\0229.yandex.cloud.iot.broker.v1." +
+      "ListBrokerCertificatesRequest\032:.yandex.c" +
+      "loud.iot.broker.v1.ListBrokerCertificate" +
+      "sResponse\"7\202\323\344\223\0021\022//iot-broker/v1/broker" +
+      "s/{broker_id}/certificates\022\335\001\n\016AddCertif" +
+      "icate\0227.yandex.cloud.iot.broker.v1.AddBr" +
+      "okerCertificateRequest\032!.yandex.cloud.op" +
+      "eration.Operation\"o\202\323\344\223\0024\"//iot-broker/v" +
+      "1/brokers/{broker_id}/certificates:\001*\262\322*" +
+      "1\n\034AddBrokerCertificateMetadata\022\021BrokerC" +
+      "ertificate\022\366\001\n\021DeleteCertificate\022:.yande" +
+      "x.cloud.iot.broker.v1.DeleteBrokerCertif" +
+      "icateRequest\032!.yandex.cloud.operation.Op" +
+      "eration\"\201\001\202\323\344\223\002?*=/iot-broker/v1/brokers" +
+      "/{broker_id}/certificates/{fingerprint}\262" +
+      "\322*8\n\037DeleteBrokerCertificateMetadata\022\025go" +
+      "ogle.protobuf.Empty\022\266\001\n\rListPasswords\0226." +
+      "yandex.cloud.iot.broker.v1.ListBrokerPas" +
+      "swordsRequest\0327.yandex.cloud.iot.broker." +
+      "v1.ListBrokerPasswordsResponse\"4\202\323\344\223\002.\022," +
+      "/iot-broker/v1/brokers/{broker_id}/passw" +
+      "ords\022\316\001\n\013AddPassword\0224.yandex.cloud.iot." +
+      "broker.v1.AddBrokerPasswordRequest\032!.yan" +
+      "dex.cloud.operation.Operation\"f\202\323\344\223\0021\",/" +
+      "iot-broker/v1/brokers/{broker_id}/passwo" +
+      "rds:\001*\262\322*+\n\031AddBrokerPasswordMetadata\022\016B" +
+      "rokerPassword\022\351\001\n\016DeletePassword\0227.yande" +
+      "x.cloud.iot.broker.v1.DeleteBrokerPasswo" +
+      "rdRequest\032!.yandex.cloud.operation.Opera" +
+      "tion\"{\202\323\344\223\002<*:/iot-broker/v1/brokers/{br" +
+      "oker_id}/passwords/{password_id}\262\322*5\n\034De" +
+      "leteBrokerPasswordMetadata\022\025google.proto" +
+      "buf.Empty\022\272\001\n\016ListOperations\0227.yandex.cl" +
+      "oud.iot.broker.v1.ListBrokerOperationsRe" +
+      "quest\0328.yandex.cloud.iot.broker.v1.ListB" +
+      "rokerOperationsResponse\"5\202\323\344\223\002/\022-/iot-br" +
+      "oker/v1/brokers/{broker_id}/operationsBg" +
+      "\n\036yandex.cloud.api.iot.broker.v1ZEgithub" +
+      ".com/yandex-cloud/go-genproto/yandex/clo" +
+      "ud/iot/broker/v1;brokerb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21332,7 +21861,7 @@ public final class BrokerServiceOuterClass {
     internal_static_yandex_cloud_iot_broker_v1_CreateBrokerRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_broker_v1_CreateBrokerRequest_descriptor,
-        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Certificates", "Password", });
+        new java.lang.String[] { "FolderId", "Name", "Description", "Labels", "Certificates", "Password", "LogOptions", });
     internal_static_yandex_cloud_iot_broker_v1_CreateBrokerRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_iot_broker_v1_CreateBrokerRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_iot_broker_v1_CreateBrokerRequest_LabelsEntry_fieldAccessorTable = new
@@ -21356,7 +21885,7 @@ public final class BrokerServiceOuterClass {
     internal_static_yandex_cloud_iot_broker_v1_UpdateBrokerRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_iot_broker_v1_UpdateBrokerRequest_descriptor,
-        new java.lang.String[] { "BrokerId", "UpdateMask", "Name", "Description", "Labels", });
+        new java.lang.String[] { "BrokerId", "UpdateMask", "Name", "Description", "Labels", "LogOptions", });
     internal_static_yandex_cloud_iot_broker_v1_UpdateBrokerRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_iot_broker_v1_UpdateBrokerRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_iot_broker_v1_UpdateBrokerRequest_LabelsEntry_fieldAccessorTable = new

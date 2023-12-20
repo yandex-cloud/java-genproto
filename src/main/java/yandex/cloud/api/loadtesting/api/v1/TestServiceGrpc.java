@@ -3,6 +3,9 @@ package yandex.cloud.api.loadtesting.api.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ * A set of methods for managing tests.
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.43.2)",
@@ -215,6 +218,9 @@ public final class TestServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing tests.
+   * </pre>
    */
   public static abstract class TestServiceImplBase implements io.grpc.BindableService {
 
@@ -311,6 +317,9 @@ public final class TestServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing tests.
+   * </pre>
    */
   public static final class TestServiceStub extends io.grpc.stub.AbstractAsyncStub<TestServiceStub> {
     private TestServiceStub(
@@ -382,6 +391,9 @@ public final class TestServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing tests.
+   * </pre>
    */
   public static final class TestServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<TestServiceBlockingStub> {
     private TestServiceBlockingStub(
@@ -448,6 +460,9 @@ public final class TestServiceGrpc {
   }
 
   /**
+   * <pre>
+   * A set of methods for managing tests.
+   * </pre>
    */
   public static final class TestServiceFutureStub extends io.grpc.stub.AbstractFutureStub<TestServiceFutureStub> {
     private TestServiceFutureStub(

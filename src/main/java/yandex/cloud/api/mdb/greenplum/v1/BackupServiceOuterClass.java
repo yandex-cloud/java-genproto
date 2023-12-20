@@ -3251,7 +3251,7 @@ public final class BackupServiceOuterClass {
      * ID of the Greenplum backup that is being created.
      * </pre>
      *
-     * <code>string cluster_id = 2;</code>
+     * <code>string cluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The clusterId.
      */
     java.lang.String getClusterId();
@@ -3260,7 +3260,7 @@ public final class BackupServiceOuterClass {
      * ID of the Greenplum backup that is being created.
      * </pre>
      *
-     * <code>string cluster_id = 2;</code>
+     * <code>string cluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for clusterId.
      */
     com.google.protobuf.ByteString
@@ -3410,7 +3410,7 @@ public final class BackupServiceOuterClass {
      * ID of the Greenplum backup that is being created.
      * </pre>
      *
-     * <code>string cluster_id = 2;</code>
+     * <code>string cluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The clusterId.
      */
     @java.lang.Override
@@ -3431,7 +3431,7 @@ public final class BackupServiceOuterClass {
      * ID of the Greenplum backup that is being created.
      * </pre>
      *
-     * <code>string cluster_id = 2;</code>
+     * <code>string cluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
      * @return The bytes for clusterId.
      */
     @java.lang.Override
@@ -3870,7 +3870,7 @@ public final class BackupServiceOuterClass {
        * ID of the Greenplum backup that is being created.
        * </pre>
        *
-       * <code>string cluster_id = 2;</code>
+       * <code>string cluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The clusterId.
        */
       public java.lang.String getClusterId() {
@@ -3890,7 +3890,7 @@ public final class BackupServiceOuterClass {
        * ID of the Greenplum backup that is being created.
        * </pre>
        *
-       * <code>string cluster_id = 2;</code>
+       * <code>string cluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return The bytes for clusterId.
        */
       public com.google.protobuf.ByteString
@@ -3911,7 +3911,7 @@ public final class BackupServiceOuterClass {
        * ID of the Greenplum backup that is being created.
        * </pre>
        *
-       * <code>string cluster_id = 2;</code>
+       * <code>string cluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The clusterId to set.
        * @return This builder for chaining.
        */
@@ -3930,7 +3930,7 @@ public final class BackupServiceOuterClass {
        * ID of the Greenplum backup that is being created.
        * </pre>
        *
-       * <code>string cluster_id = 2;</code>
+       * <code>string cluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @return This builder for chaining.
        */
       public Builder clearClusterId() {
@@ -3944,7 +3944,7 @@ public final class BackupServiceOuterClass {
        * ID of the Greenplum backup that is being created.
        * </pre>
        *
-       * <code>string cluster_id = 2;</code>
+       * <code>string cluster_id = 2 [(.yandex.cloud.length) = "&lt;=50"];</code>
        * @param value The bytes for clusterId to set.
        * @return This builder for chaining.
        */
@@ -4058,20 +4058,20 @@ public final class BackupServiceOuterClass {
       "ckupsResponse\0226\n\007backups\030\001 \003(\0132%.yandex." +
       "cloud.mdb.greenplum.v1.Backup\022\027\n\017next_pa" +
       "ge_token\030\002 \001(\t\".\n\023DeleteBackupRequest\022\027\n" +
-      "\tbackup_id\030\001 \001(\tB\004\350\3071\001\"=\n\024DeleteBackupMe" +
-      "tadata\022\021\n\tbackup_id\030\001 \001(\t\022\022\n\ncluster_id\030" +
-      "\002 \001(\t2\271\002\n\rBackupService\022\220\001\n\003Get\022/.yandex" +
-      ".cloud.mdb.greenplum.v1.GetBackupRequest" +
-      "\032%.yandex.cloud.mdb.greenplum.v1.Backup\"" +
-      "1\202\323\344\223\002+\022)/managed-greenplum/v1/backups/{" +
-      "backup_id}\022\224\001\n\004List\0221.yandex.cloud.mdb.g" +
-      "reenplum.v1.ListBackupsRequest\0322.yandex." +
-      "cloud.mdb.greenplum.v1.ListBackupsRespon" +
-      "se\"%\202\323\344\223\002\037\022\035/managed-greenplum/v1/backup" +
-      "sBp\n!yandex.cloud.api.mdb.greenplum.v1ZK" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/mdb/greenplum/v1;greenplumb\006pro" +
-      "to3"
+      "\tbackup_id\030\001 \001(\tB\004\350\3071\001\"G\n\024DeleteBackupMe" +
+      "tadata\022\021\n\tbackup_id\030\001 \001(\t\022\034\n\ncluster_id\030" +
+      "\002 \001(\tB\010\212\3101\004<=502\271\002\n\rBackupService\022\220\001\n\003Ge" +
+      "t\022/.yandex.cloud.mdb.greenplum.v1.GetBac" +
+      "kupRequest\032%.yandex.cloud.mdb.greenplum." +
+      "v1.Backup\"1\202\323\344\223\002+\022)/managed-greenplum/v1" +
+      "/backups/{backup_id}\022\224\001\n\004List\0221.yandex.c" +
+      "loud.mdb.greenplum.v1.ListBackupsRequest" +
+      "\0322.yandex.cloud.mdb.greenplum.v1.ListBac" +
+      "kupsResponse\"%\202\323\344\223\002\037\022\035/managed-greenplum" +
+      "/v1/backupsBp\n!yandex.cloud.api.mdb.gree" +
+      "nplum.v1ZKgithub.com/yandex-cloud/go-gen" +
+      "proto/yandex/cloud/mdb/greenplum/v1;gree" +
+      "nplumb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

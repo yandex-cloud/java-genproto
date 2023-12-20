@@ -22826,6 +22826,60 @@ public final class BucketOuterClass {
        * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
        */
       com.google.protobuf.Int64ValueOrBuilder getObjectSizeLessThanOrBuilder();
+
+      /**
+       * <pre>
+       * Tags that the object's tag set must have for the rule to apply.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Tag tag = 4;</code>
+       * @return Whether the tag field is set.
+       */
+      boolean hasTag();
+      /**
+       * <pre>
+       * Tags that the object's tag set must have for the rule to apply.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Tag tag = 4;</code>
+       * @return The tag.
+       */
+      yandex.cloud.api.storage.v1.BucketOuterClass.Tag getTag();
+      /**
+       * <pre>
+       * Tags that the object's tag set must have for the rule to apply.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Tag tag = 4;</code>
+       */
+      yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder getTagOrBuilder();
+
+      /**
+       * <pre>
+       * Apply a logical AND to all of the predicates configured inside the And operator.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.LifecycleRule.RuleFilter.And and_operator = 5;</code>
+       * @return Whether the andOperator field is set.
+       */
+      boolean hasAndOperator();
+      /**
+       * <pre>
+       * Apply a logical AND to all of the predicates configured inside the And operator.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.LifecycleRule.RuleFilter.And and_operator = 5;</code>
+       * @return The andOperator.
+       */
+      yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And getAndOperator();
+      /**
+       * <pre>
+       * Apply a logical AND to all of the predicates configured inside the And operator.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.LifecycleRule.RuleFilter.And and_operator = 5;</code>
+       */
+      yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.AndOrBuilder getAndOperatorOrBuilder();
     }
     /**
      * Protobuf type {@code yandex.cloud.storage.v1.LifecycleRule.RuleFilter}
@@ -22905,6 +22959,32 @@ public final class BucketOuterClass {
 
                 break;
               }
+              case 34: {
+                yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder subBuilder = null;
+                if (tag_ != null) {
+                  subBuilder = tag_.toBuilder();
+                }
+                tag_ = input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.Tag.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(tag_);
+                  tag_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
+              case 42: {
+                yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And.Builder subBuilder = null;
+                if (andOperator_ != null) {
+                  subBuilder = andOperator_.toBuilder();
+                }
+                andOperator_ = input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(andOperator_);
+                  andOperator_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -22935,6 +23015,1355 @@ public final class BucketOuterClass {
         return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_LifecycleRule_RuleFilter_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.class, yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.Builder.class);
+      }
+
+      public interface AndOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:yandex.cloud.storage.v1.LifecycleRule.RuleFilter.And)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string prefix = 1;</code>
+         * @return The prefix.
+         */
+        java.lang.String getPrefix();
+        /**
+         * <code>string prefix = 1;</code>
+         * @return The bytes for prefix.
+         */
+        com.google.protobuf.ByteString
+            getPrefixBytes();
+
+        /**
+         * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+         * @return Whether the objectSizeGreaterThan field is set.
+         */
+        boolean hasObjectSizeGreaterThan();
+        /**
+         * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+         * @return The objectSizeGreaterThan.
+         */
+        com.google.protobuf.Int64Value getObjectSizeGreaterThan();
+        /**
+         * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+         */
+        com.google.protobuf.Int64ValueOrBuilder getObjectSizeGreaterThanOrBuilder();
+
+        /**
+         * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+         * @return Whether the objectSizeLessThan field is set.
+         */
+        boolean hasObjectSizeLessThan();
+        /**
+         * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+         * @return The objectSizeLessThan.
+         */
+        com.google.protobuf.Int64Value getObjectSizeLessThan();
+        /**
+         * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+         */
+        com.google.protobuf.Int64ValueOrBuilder getObjectSizeLessThanOrBuilder();
+
+        /**
+         * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+         */
+        java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag> 
+            getTagList();
+        /**
+         * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+         */
+        yandex.cloud.api.storage.v1.BucketOuterClass.Tag getTag(int index);
+        /**
+         * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+         */
+        int getTagCount();
+        /**
+         * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+         */
+        java.util.List<? extends yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder> 
+            getTagOrBuilderList();
+        /**
+         * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+         */
+        yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder getTagOrBuilder(
+            int index);
+      }
+      /**
+       * Protobuf type {@code yandex.cloud.storage.v1.LifecycleRule.RuleFilter.And}
+       */
+      public static final class And extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:yandex.cloud.storage.v1.LifecycleRule.RuleFilter.And)
+          AndOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use And.newBuilder() to construct.
+        private And(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private And() {
+          prefix_ = "";
+          tag_ = java.util.Collections.emptyList();
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new And();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private And(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  java.lang.String s = input.readStringRequireUtf8();
+
+                  prefix_ = s;
+                  break;
+                }
+                case 18: {
+                  com.google.protobuf.Int64Value.Builder subBuilder = null;
+                  if (objectSizeGreaterThan_ != null) {
+                    subBuilder = objectSizeGreaterThan_.toBuilder();
+                  }
+                  objectSizeGreaterThan_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                  if (subBuilder != null) {
+                    subBuilder.mergeFrom(objectSizeGreaterThan_);
+                    objectSizeGreaterThan_ = subBuilder.buildPartial();
+                  }
+
+                  break;
+                }
+                case 26: {
+                  com.google.protobuf.Int64Value.Builder subBuilder = null;
+                  if (objectSizeLessThan_ != null) {
+                    subBuilder = objectSizeLessThan_.toBuilder();
+                  }
+                  objectSizeLessThan_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+                  if (subBuilder != null) {
+                    subBuilder.mergeFrom(objectSizeLessThan_);
+                    objectSizeLessThan_ = subBuilder.buildPartial();
+                  }
+
+                  break;
+                }
+                case 34: {
+                  if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                    tag_ = new java.util.ArrayList<yandex.cloud.api.storage.v1.BucketOuterClass.Tag>();
+                    mutable_bitField0_ |= 0x00000001;
+                  }
+                  tag_.add(
+                      input.readMessage(yandex.cloud.api.storage.v1.BucketOuterClass.Tag.parser(), extensionRegistry));
+                  break;
+                }
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            if (((mutable_bitField0_ & 0x00000001) != 0)) {
+              tag_ = java.util.Collections.unmodifiableList(tag_);
+            }
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_LifecycleRule_RuleFilter_And_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_LifecycleRule_RuleFilter_And_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And.class, yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And.Builder.class);
+        }
+
+        public static final int PREFIX_FIELD_NUMBER = 1;
+        private volatile java.lang.Object prefix_;
+        /**
+         * <code>string prefix = 1;</code>
+         * @return The prefix.
+         */
+        @java.lang.Override
+        public java.lang.String getPrefix() {
+          java.lang.Object ref = prefix_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            prefix_ = s;
+            return s;
+          }
+        }
+        /**
+         * <code>string prefix = 1;</code>
+         * @return The bytes for prefix.
+         */
+        @java.lang.Override
+        public com.google.protobuf.ByteString
+            getPrefixBytes() {
+          java.lang.Object ref = prefix_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            prefix_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int OBJECT_SIZE_GREATER_THAN_FIELD_NUMBER = 2;
+        private com.google.protobuf.Int64Value objectSizeGreaterThan_;
+        /**
+         * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+         * @return Whether the objectSizeGreaterThan field is set.
+         */
+        @java.lang.Override
+        public boolean hasObjectSizeGreaterThan() {
+          return objectSizeGreaterThan_ != null;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+         * @return The objectSizeGreaterThan.
+         */
+        @java.lang.Override
+        public com.google.protobuf.Int64Value getObjectSizeGreaterThan() {
+          return objectSizeGreaterThan_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : objectSizeGreaterThan_;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+         */
+        @java.lang.Override
+        public com.google.protobuf.Int64ValueOrBuilder getObjectSizeGreaterThanOrBuilder() {
+          return getObjectSizeGreaterThan();
+        }
+
+        public static final int OBJECT_SIZE_LESS_THAN_FIELD_NUMBER = 3;
+        private com.google.protobuf.Int64Value objectSizeLessThan_;
+        /**
+         * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+         * @return Whether the objectSizeLessThan field is set.
+         */
+        @java.lang.Override
+        public boolean hasObjectSizeLessThan() {
+          return objectSizeLessThan_ != null;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+         * @return The objectSizeLessThan.
+         */
+        @java.lang.Override
+        public com.google.protobuf.Int64Value getObjectSizeLessThan() {
+          return objectSizeLessThan_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : objectSizeLessThan_;
+        }
+        /**
+         * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+         */
+        @java.lang.Override
+        public com.google.protobuf.Int64ValueOrBuilder getObjectSizeLessThanOrBuilder() {
+          return getObjectSizeLessThan();
+        }
+
+        public static final int TAG_FIELD_NUMBER = 4;
+        private java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag> tag_;
+        /**
+         * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+         */
+        @java.lang.Override
+        public java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag> getTagList() {
+          return tag_;
+        }
+        /**
+         * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+         */
+        @java.lang.Override
+        public java.util.List<? extends yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder> 
+            getTagOrBuilderList() {
+          return tag_;
+        }
+        /**
+         * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+         */
+        @java.lang.Override
+        public int getTagCount() {
+          return tag_.size();
+        }
+        /**
+         * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.Tag getTag(int index) {
+          return tag_.get(index);
+        }
+        /**
+         * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+         */
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder getTagOrBuilder(
+            int index) {
+          return tag_.get(index);
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 1, prefix_);
+          }
+          if (objectSizeGreaterThan_ != null) {
+            output.writeMessage(2, getObjectSizeGreaterThan());
+          }
+          if (objectSizeLessThan_ != null) {
+            output.writeMessage(3, getObjectSizeLessThan());
+          }
+          for (int i = 0; i < tag_.size(); i++) {
+            output.writeMessage(4, tag_.get(i));
+          }
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(prefix_)) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, prefix_);
+          }
+          if (objectSizeGreaterThan_ != null) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(2, getObjectSizeGreaterThan());
+          }
+          if (objectSizeLessThan_ != null) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(3, getObjectSizeLessThan());
+          }
+          for (int i = 0; i < tag_.size(); i++) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(4, tag_.get(i));
+          }
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And)) {
+            return super.equals(obj);
+          }
+          yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And other = (yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And) obj;
+
+          if (!getPrefix()
+              .equals(other.getPrefix())) return false;
+          if (hasObjectSizeGreaterThan() != other.hasObjectSizeGreaterThan()) return false;
+          if (hasObjectSizeGreaterThan()) {
+            if (!getObjectSizeGreaterThan()
+                .equals(other.getObjectSizeGreaterThan())) return false;
+          }
+          if (hasObjectSizeLessThan() != other.hasObjectSizeLessThan()) return false;
+          if (hasObjectSizeLessThan()) {
+            if (!getObjectSizeLessThan()
+                .equals(other.getObjectSizeLessThan())) return false;
+          }
+          if (!getTagList()
+              .equals(other.getTagList())) return false;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          hash = (37 * hash) + PREFIX_FIELD_NUMBER;
+          hash = (53 * hash) + getPrefix().hashCode();
+          if (hasObjectSizeGreaterThan()) {
+            hash = (37 * hash) + OBJECT_SIZE_GREATER_THAN_FIELD_NUMBER;
+            hash = (53 * hash) + getObjectSizeGreaterThan().hashCode();
+          }
+          if (hasObjectSizeLessThan()) {
+            hash = (37 * hash) + OBJECT_SIZE_LESS_THAN_FIELD_NUMBER;
+            hash = (53 * hash) + getObjectSizeLessThan().hashCode();
+          }
+          if (getTagCount() > 0) {
+            hash = (37 * hash) + TAG_FIELD_NUMBER;
+            hash = (53 * hash) + getTagList().hashCode();
+          }
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code yandex.cloud.storage.v1.LifecycleRule.RuleFilter.And}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:yandex.cloud.storage.v1.LifecycleRule.RuleFilter.And)
+            yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.AndOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_LifecycleRule_RuleFilter_And_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_LifecycleRule_RuleFilter_And_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And.class, yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And.Builder.class);
+          }
+
+          // Construct using yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+              getTagFieldBuilder();
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            prefix_ = "";
+
+            if (objectSizeGreaterThanBuilder_ == null) {
+              objectSizeGreaterThan_ = null;
+            } else {
+              objectSizeGreaterThan_ = null;
+              objectSizeGreaterThanBuilder_ = null;
+            }
+            if (objectSizeLessThanBuilder_ == null) {
+              objectSizeLessThan_ = null;
+            } else {
+              objectSizeLessThan_ = null;
+              objectSizeLessThanBuilder_ = null;
+            }
+            if (tagBuilder_ == null) {
+              tag_ = java.util.Collections.emptyList();
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              tagBuilder_.clear();
+            }
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return yandex.cloud.api.storage.v1.BucketOuterClass.internal_static_yandex_cloud_storage_v1_LifecycleRule_RuleFilter_And_descriptor;
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And getDefaultInstanceForType() {
+            return yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And build() {
+            yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And buildPartial() {
+            yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And result = new yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And(this);
+            int from_bitField0_ = bitField0_;
+            result.prefix_ = prefix_;
+            if (objectSizeGreaterThanBuilder_ == null) {
+              result.objectSizeGreaterThan_ = objectSizeGreaterThan_;
+            } else {
+              result.objectSizeGreaterThan_ = objectSizeGreaterThanBuilder_.build();
+            }
+            if (objectSizeLessThanBuilder_ == null) {
+              result.objectSizeLessThan_ = objectSizeLessThan_;
+            } else {
+              result.objectSizeLessThan_ = objectSizeLessThanBuilder_.build();
+            }
+            if (tagBuilder_ == null) {
+              if (((bitField0_ & 0x00000001) != 0)) {
+                tag_ = java.util.Collections.unmodifiableList(tag_);
+                bitField0_ = (bitField0_ & ~0x00000001);
+              }
+              result.tag_ = tag_;
+            } else {
+              result.tag_ = tagBuilder_.build();
+            }
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And) {
+              return mergeFrom((yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And other) {
+            if (other == yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And.getDefaultInstance()) return this;
+            if (!other.getPrefix().isEmpty()) {
+              prefix_ = other.prefix_;
+              onChanged();
+            }
+            if (other.hasObjectSizeGreaterThan()) {
+              mergeObjectSizeGreaterThan(other.getObjectSizeGreaterThan());
+            }
+            if (other.hasObjectSizeLessThan()) {
+              mergeObjectSizeLessThan(other.getObjectSizeLessThan());
+            }
+            if (tagBuilder_ == null) {
+              if (!other.tag_.isEmpty()) {
+                if (tag_.isEmpty()) {
+                  tag_ = other.tag_;
+                  bitField0_ = (bitField0_ & ~0x00000001);
+                } else {
+                  ensureTagIsMutable();
+                  tag_.addAll(other.tag_);
+                }
+                onChanged();
+              }
+            } else {
+              if (!other.tag_.isEmpty()) {
+                if (tagBuilder_.isEmpty()) {
+                  tagBuilder_.dispose();
+                  tagBuilder_ = null;
+                  tag_ = other.tag_;
+                  bitField0_ = (bitField0_ & ~0x00000001);
+                  tagBuilder_ = 
+                    com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                       getTagFieldBuilder() : null;
+                } else {
+                  tagBuilder_.addAllMessages(other.tag_);
+                }
+              }
+            }
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          private int bitField0_;
+
+          private java.lang.Object prefix_ = "";
+          /**
+           * <code>string prefix = 1;</code>
+           * @return The prefix.
+           */
+          public java.lang.String getPrefix() {
+            java.lang.Object ref = prefix_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              prefix_ = s;
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <code>string prefix = 1;</code>
+           * @return The bytes for prefix.
+           */
+          public com.google.protobuf.ByteString
+              getPrefixBytes() {
+            java.lang.Object ref = prefix_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              prefix_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <code>string prefix = 1;</code>
+           * @param value The prefix to set.
+           * @return This builder for chaining.
+           */
+          public Builder setPrefix(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  
+            prefix_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>string prefix = 1;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearPrefix() {
+            
+            prefix_ = getDefaultInstance().getPrefix();
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>string prefix = 1;</code>
+           * @param value The bytes for prefix to set.
+           * @return This builder for chaining.
+           */
+          public Builder setPrefixBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+            
+            prefix_ = value;
+            onChanged();
+            return this;
+          }
+
+          private com.google.protobuf.Int64Value objectSizeGreaterThan_;
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> objectSizeGreaterThanBuilder_;
+          /**
+           * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+           * @return Whether the objectSizeGreaterThan field is set.
+           */
+          public boolean hasObjectSizeGreaterThan() {
+            return objectSizeGreaterThanBuilder_ != null || objectSizeGreaterThan_ != null;
+          }
+          /**
+           * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+           * @return The objectSizeGreaterThan.
+           */
+          public com.google.protobuf.Int64Value getObjectSizeGreaterThan() {
+            if (objectSizeGreaterThanBuilder_ == null) {
+              return objectSizeGreaterThan_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : objectSizeGreaterThan_;
+            } else {
+              return objectSizeGreaterThanBuilder_.getMessage();
+            }
+          }
+          /**
+           * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+           */
+          public Builder setObjectSizeGreaterThan(com.google.protobuf.Int64Value value) {
+            if (objectSizeGreaterThanBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              objectSizeGreaterThan_ = value;
+              onChanged();
+            } else {
+              objectSizeGreaterThanBuilder_.setMessage(value);
+            }
+
+            return this;
+          }
+          /**
+           * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+           */
+          public Builder setObjectSizeGreaterThan(
+              com.google.protobuf.Int64Value.Builder builderForValue) {
+            if (objectSizeGreaterThanBuilder_ == null) {
+              objectSizeGreaterThan_ = builderForValue.build();
+              onChanged();
+            } else {
+              objectSizeGreaterThanBuilder_.setMessage(builderForValue.build());
+            }
+
+            return this;
+          }
+          /**
+           * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+           */
+          public Builder mergeObjectSizeGreaterThan(com.google.protobuf.Int64Value value) {
+            if (objectSizeGreaterThanBuilder_ == null) {
+              if (objectSizeGreaterThan_ != null) {
+                objectSizeGreaterThan_ =
+                  com.google.protobuf.Int64Value.newBuilder(objectSizeGreaterThan_).mergeFrom(value).buildPartial();
+              } else {
+                objectSizeGreaterThan_ = value;
+              }
+              onChanged();
+            } else {
+              objectSizeGreaterThanBuilder_.mergeFrom(value);
+            }
+
+            return this;
+          }
+          /**
+           * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+           */
+          public Builder clearObjectSizeGreaterThan() {
+            if (objectSizeGreaterThanBuilder_ == null) {
+              objectSizeGreaterThan_ = null;
+              onChanged();
+            } else {
+              objectSizeGreaterThan_ = null;
+              objectSizeGreaterThanBuilder_ = null;
+            }
+
+            return this;
+          }
+          /**
+           * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+           */
+          public com.google.protobuf.Int64Value.Builder getObjectSizeGreaterThanBuilder() {
+            
+            onChanged();
+            return getObjectSizeGreaterThanFieldBuilder().getBuilder();
+          }
+          /**
+           * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+           */
+          public com.google.protobuf.Int64ValueOrBuilder getObjectSizeGreaterThanOrBuilder() {
+            if (objectSizeGreaterThanBuilder_ != null) {
+              return objectSizeGreaterThanBuilder_.getMessageOrBuilder();
+            } else {
+              return objectSizeGreaterThan_ == null ?
+                  com.google.protobuf.Int64Value.getDefaultInstance() : objectSizeGreaterThan_;
+            }
+          }
+          /**
+           * <code>.google.protobuf.Int64Value object_size_greater_than = 2;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+              getObjectSizeGreaterThanFieldBuilder() {
+            if (objectSizeGreaterThanBuilder_ == null) {
+              objectSizeGreaterThanBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                      getObjectSizeGreaterThan(),
+                      getParentForChildren(),
+                      isClean());
+              objectSizeGreaterThan_ = null;
+            }
+            return objectSizeGreaterThanBuilder_;
+          }
+
+          private com.google.protobuf.Int64Value objectSizeLessThan_;
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> objectSizeLessThanBuilder_;
+          /**
+           * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+           * @return Whether the objectSizeLessThan field is set.
+           */
+          public boolean hasObjectSizeLessThan() {
+            return objectSizeLessThanBuilder_ != null || objectSizeLessThan_ != null;
+          }
+          /**
+           * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+           * @return The objectSizeLessThan.
+           */
+          public com.google.protobuf.Int64Value getObjectSizeLessThan() {
+            if (objectSizeLessThanBuilder_ == null) {
+              return objectSizeLessThan_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : objectSizeLessThan_;
+            } else {
+              return objectSizeLessThanBuilder_.getMessage();
+            }
+          }
+          /**
+           * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+           */
+          public Builder setObjectSizeLessThan(com.google.protobuf.Int64Value value) {
+            if (objectSizeLessThanBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              objectSizeLessThan_ = value;
+              onChanged();
+            } else {
+              objectSizeLessThanBuilder_.setMessage(value);
+            }
+
+            return this;
+          }
+          /**
+           * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+           */
+          public Builder setObjectSizeLessThan(
+              com.google.protobuf.Int64Value.Builder builderForValue) {
+            if (objectSizeLessThanBuilder_ == null) {
+              objectSizeLessThan_ = builderForValue.build();
+              onChanged();
+            } else {
+              objectSizeLessThanBuilder_.setMessage(builderForValue.build());
+            }
+
+            return this;
+          }
+          /**
+           * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+           */
+          public Builder mergeObjectSizeLessThan(com.google.protobuf.Int64Value value) {
+            if (objectSizeLessThanBuilder_ == null) {
+              if (objectSizeLessThan_ != null) {
+                objectSizeLessThan_ =
+                  com.google.protobuf.Int64Value.newBuilder(objectSizeLessThan_).mergeFrom(value).buildPartial();
+              } else {
+                objectSizeLessThan_ = value;
+              }
+              onChanged();
+            } else {
+              objectSizeLessThanBuilder_.mergeFrom(value);
+            }
+
+            return this;
+          }
+          /**
+           * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+           */
+          public Builder clearObjectSizeLessThan() {
+            if (objectSizeLessThanBuilder_ == null) {
+              objectSizeLessThan_ = null;
+              onChanged();
+            } else {
+              objectSizeLessThan_ = null;
+              objectSizeLessThanBuilder_ = null;
+            }
+
+            return this;
+          }
+          /**
+           * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+           */
+          public com.google.protobuf.Int64Value.Builder getObjectSizeLessThanBuilder() {
+            
+            onChanged();
+            return getObjectSizeLessThanFieldBuilder().getBuilder();
+          }
+          /**
+           * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+           */
+          public com.google.protobuf.Int64ValueOrBuilder getObjectSizeLessThanOrBuilder() {
+            if (objectSizeLessThanBuilder_ != null) {
+              return objectSizeLessThanBuilder_.getMessageOrBuilder();
+            } else {
+              return objectSizeLessThan_ == null ?
+                  com.google.protobuf.Int64Value.getDefaultInstance() : objectSizeLessThan_;
+            }
+          }
+          /**
+           * <code>.google.protobuf.Int64Value object_size_less_than = 3;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+              getObjectSizeLessThanFieldBuilder() {
+            if (objectSizeLessThanBuilder_ == null) {
+              objectSizeLessThanBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                      getObjectSizeLessThan(),
+                      getParentForChildren(),
+                      isClean());
+              objectSizeLessThan_ = null;
+            }
+            return objectSizeLessThanBuilder_;
+          }
+
+          private java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag> tag_ =
+            java.util.Collections.emptyList();
+          private void ensureTagIsMutable() {
+            if (!((bitField0_ & 0x00000001) != 0)) {
+              tag_ = new java.util.ArrayList<yandex.cloud.api.storage.v1.BucketOuterClass.Tag>(tag_);
+              bitField0_ |= 0x00000001;
+             }
+          }
+
+          private com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.storage.v1.BucketOuterClass.Tag, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder> tagBuilder_;
+
+          /**
+           * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+           */
+          public java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag> getTagList() {
+            if (tagBuilder_ == null) {
+              return java.util.Collections.unmodifiableList(tag_);
+            } else {
+              return tagBuilder_.getMessageList();
+            }
+          }
+          /**
+           * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+           */
+          public int getTagCount() {
+            if (tagBuilder_ == null) {
+              return tag_.size();
+            } else {
+              return tagBuilder_.getCount();
+            }
+          }
+          /**
+           * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+           */
+          public yandex.cloud.api.storage.v1.BucketOuterClass.Tag getTag(int index) {
+            if (tagBuilder_ == null) {
+              return tag_.get(index);
+            } else {
+              return tagBuilder_.getMessage(index);
+            }
+          }
+          /**
+           * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+           */
+          public Builder setTag(
+              int index, yandex.cloud.api.storage.v1.BucketOuterClass.Tag value) {
+            if (tagBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureTagIsMutable();
+              tag_.set(index, value);
+              onChanged();
+            } else {
+              tagBuilder_.setMessage(index, value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+           */
+          public Builder setTag(
+              int index, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder builderForValue) {
+            if (tagBuilder_ == null) {
+              ensureTagIsMutable();
+              tag_.set(index, builderForValue.build());
+              onChanged();
+            } else {
+              tagBuilder_.setMessage(index, builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+           */
+          public Builder addTag(yandex.cloud.api.storage.v1.BucketOuterClass.Tag value) {
+            if (tagBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureTagIsMutable();
+              tag_.add(value);
+              onChanged();
+            } else {
+              tagBuilder_.addMessage(value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+           */
+          public Builder addTag(
+              int index, yandex.cloud.api.storage.v1.BucketOuterClass.Tag value) {
+            if (tagBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureTagIsMutable();
+              tag_.add(index, value);
+              onChanged();
+            } else {
+              tagBuilder_.addMessage(index, value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+           */
+          public Builder addTag(
+              yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder builderForValue) {
+            if (tagBuilder_ == null) {
+              ensureTagIsMutable();
+              tag_.add(builderForValue.build());
+              onChanged();
+            } else {
+              tagBuilder_.addMessage(builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+           */
+          public Builder addTag(
+              int index, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder builderForValue) {
+            if (tagBuilder_ == null) {
+              ensureTagIsMutable();
+              tag_.add(index, builderForValue.build());
+              onChanged();
+            } else {
+              tagBuilder_.addMessage(index, builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+           */
+          public Builder addAllTag(
+              java.lang.Iterable<? extends yandex.cloud.api.storage.v1.BucketOuterClass.Tag> values) {
+            if (tagBuilder_ == null) {
+              ensureTagIsMutable();
+              com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                  values, tag_);
+              onChanged();
+            } else {
+              tagBuilder_.addAllMessages(values);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+           */
+          public Builder clearTag() {
+            if (tagBuilder_ == null) {
+              tag_ = java.util.Collections.emptyList();
+              bitField0_ = (bitField0_ & ~0x00000001);
+              onChanged();
+            } else {
+              tagBuilder_.clear();
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+           */
+          public Builder removeTag(int index) {
+            if (tagBuilder_ == null) {
+              ensureTagIsMutable();
+              tag_.remove(index);
+              onChanged();
+            } else {
+              tagBuilder_.remove(index);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+           */
+          public yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder getTagBuilder(
+              int index) {
+            return getTagFieldBuilder().getBuilder(index);
+          }
+          /**
+           * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+           */
+          public yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder getTagOrBuilder(
+              int index) {
+            if (tagBuilder_ == null) {
+              return tag_.get(index);  } else {
+              return tagBuilder_.getMessageOrBuilder(index);
+            }
+          }
+          /**
+           * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+           */
+          public java.util.List<? extends yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder> 
+               getTagOrBuilderList() {
+            if (tagBuilder_ != null) {
+              return tagBuilder_.getMessageOrBuilderList();
+            } else {
+              return java.util.Collections.unmodifiableList(tag_);
+            }
+          }
+          /**
+           * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+           */
+          public yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder addTagBuilder() {
+            return getTagFieldBuilder().addBuilder(
+                yandex.cloud.api.storage.v1.BucketOuterClass.Tag.getDefaultInstance());
+          }
+          /**
+           * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+           */
+          public yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder addTagBuilder(
+              int index) {
+            return getTagFieldBuilder().addBuilder(
+                index, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.getDefaultInstance());
+          }
+          /**
+           * <code>repeated .yandex.cloud.storage.v1.Tag tag = 4;</code>
+           */
+          public java.util.List<yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder> 
+               getTagBuilderList() {
+            return getTagFieldBuilder().getBuilderList();
+          }
+          private com.google.protobuf.RepeatedFieldBuilderV3<
+              yandex.cloud.api.storage.v1.BucketOuterClass.Tag, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder> 
+              getTagFieldBuilder() {
+            if (tagBuilder_ == null) {
+              tagBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                  yandex.cloud.api.storage.v1.BucketOuterClass.Tag, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder>(
+                      tag_,
+                      ((bitField0_ & 0x00000001) != 0),
+                      getParentForChildren(),
+                      isClean());
+              tag_ = null;
+            }
+            return tagBuilder_;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:yandex.cloud.storage.v1.LifecycleRule.RuleFilter.And)
+        }
+
+        // @@protoc_insertion_point(class_scope:yandex.cloud.storage.v1.LifecycleRule.RuleFilter.And)
+        private static final yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And();
+        }
+
+        public static yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<And>
+            PARSER = new com.google.protobuf.AbstractParser<And>() {
+          @java.lang.Override
+          public And parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new And(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<And> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<And> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
       }
 
       public static final int PREFIX_FIELD_NUMBER = 1;
@@ -23059,6 +24488,82 @@ public final class BucketOuterClass {
         return getObjectSizeLessThan();
       }
 
+      public static final int TAG_FIELD_NUMBER = 4;
+      private yandex.cloud.api.storage.v1.BucketOuterClass.Tag tag_;
+      /**
+       * <pre>
+       * Tags that the object's tag set must have for the rule to apply.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Tag tag = 4;</code>
+       * @return Whether the tag field is set.
+       */
+      @java.lang.Override
+      public boolean hasTag() {
+        return tag_ != null;
+      }
+      /**
+       * <pre>
+       * Tags that the object's tag set must have for the rule to apply.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Tag tag = 4;</code>
+       * @return The tag.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.Tag getTag() {
+        return tag_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.Tag.getDefaultInstance() : tag_;
+      }
+      /**
+       * <pre>
+       * Tags that the object's tag set must have for the rule to apply.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.Tag tag = 4;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder getTagOrBuilder() {
+        return getTag();
+      }
+
+      public static final int AND_OPERATOR_FIELD_NUMBER = 5;
+      private yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And andOperator_;
+      /**
+       * <pre>
+       * Apply a logical AND to all of the predicates configured inside the And operator.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.LifecycleRule.RuleFilter.And and_operator = 5;</code>
+       * @return Whether the andOperator field is set.
+       */
+      @java.lang.Override
+      public boolean hasAndOperator() {
+        return andOperator_ != null;
+      }
+      /**
+       * <pre>
+       * Apply a logical AND to all of the predicates configured inside the And operator.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.LifecycleRule.RuleFilter.And and_operator = 5;</code>
+       * @return The andOperator.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And getAndOperator() {
+        return andOperator_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And.getDefaultInstance() : andOperator_;
+      }
+      /**
+       * <pre>
+       * Apply a logical AND to all of the predicates configured inside the And operator.
+       * </pre>
+       *
+       * <code>.yandex.cloud.storage.v1.LifecycleRule.RuleFilter.And and_operator = 5;</code>
+       */
+      @java.lang.Override
+      public yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.AndOrBuilder getAndOperatorOrBuilder() {
+        return getAndOperator();
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -23082,6 +24587,12 @@ public final class BucketOuterClass {
         if (objectSizeLessThan_ != null) {
           output.writeMessage(3, getObjectSizeLessThan());
         }
+        if (tag_ != null) {
+          output.writeMessage(4, getTag());
+        }
+        if (andOperator_ != null) {
+          output.writeMessage(5, getAndOperator());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -23101,6 +24612,14 @@ public final class BucketOuterClass {
         if (objectSizeLessThan_ != null) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, getObjectSizeLessThan());
+        }
+        if (tag_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, getTag());
+        }
+        if (andOperator_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, getAndOperator());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -23129,6 +24648,16 @@ public final class BucketOuterClass {
           if (!getObjectSizeLessThan()
               .equals(other.getObjectSizeLessThan())) return false;
         }
+        if (hasTag() != other.hasTag()) return false;
+        if (hasTag()) {
+          if (!getTag()
+              .equals(other.getTag())) return false;
+        }
+        if (hasAndOperator() != other.hasAndOperator()) return false;
+        if (hasAndOperator()) {
+          if (!getAndOperator()
+              .equals(other.getAndOperator())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -23149,6 +24678,14 @@ public final class BucketOuterClass {
         if (hasObjectSizeLessThan()) {
           hash = (37 * hash) + OBJECT_SIZE_LESS_THAN_FIELD_NUMBER;
           hash = (53 * hash) + getObjectSizeLessThan().hashCode();
+        }
+        if (hasTag()) {
+          hash = (37 * hash) + TAG_FIELD_NUMBER;
+          hash = (53 * hash) + getTag().hashCode();
+        }
+        if (hasAndOperator()) {
+          hash = (37 * hash) + AND_OPERATOR_FIELD_NUMBER;
+          hash = (53 * hash) + getAndOperator().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
@@ -23297,6 +24834,18 @@ public final class BucketOuterClass {
             objectSizeLessThan_ = null;
             objectSizeLessThanBuilder_ = null;
           }
+          if (tagBuilder_ == null) {
+            tag_ = null;
+          } else {
+            tag_ = null;
+            tagBuilder_ = null;
+          }
+          if (andOperatorBuilder_ == null) {
+            andOperator_ = null;
+          } else {
+            andOperator_ = null;
+            andOperatorBuilder_ = null;
+          }
           return this;
         }
 
@@ -23333,6 +24882,16 @@ public final class BucketOuterClass {
             result.objectSizeLessThan_ = objectSizeLessThan_;
           } else {
             result.objectSizeLessThan_ = objectSizeLessThanBuilder_.build();
+          }
+          if (tagBuilder_ == null) {
+            result.tag_ = tag_;
+          } else {
+            result.tag_ = tagBuilder_.build();
+          }
+          if (andOperatorBuilder_ == null) {
+            result.andOperator_ = andOperator_;
+          } else {
+            result.andOperator_ = andOperatorBuilder_.build();
           }
           onBuilt();
           return result;
@@ -23391,6 +24950,12 @@ public final class BucketOuterClass {
           }
           if (other.hasObjectSizeLessThan()) {
             mergeObjectSizeLessThan(other.getObjectSizeLessThan());
+          }
+          if (other.hasTag()) {
+            mergeTag(other.getTag());
+          }
+          if (other.hasAndOperator()) {
+            mergeAndOperator(other.getAndOperator());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -23825,6 +25390,316 @@ public final class BucketOuterClass {
             objectSizeLessThan_ = null;
           }
           return objectSizeLessThanBuilder_;
+        }
+
+        private yandex.cloud.api.storage.v1.BucketOuterClass.Tag tag_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.storage.v1.BucketOuterClass.Tag, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder> tagBuilder_;
+        /**
+         * <pre>
+         * Tags that the object's tag set must have for the rule to apply.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.Tag tag = 4;</code>
+         * @return Whether the tag field is set.
+         */
+        public boolean hasTag() {
+          return tagBuilder_ != null || tag_ != null;
+        }
+        /**
+         * <pre>
+         * Tags that the object's tag set must have for the rule to apply.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.Tag tag = 4;</code>
+         * @return The tag.
+         */
+        public yandex.cloud.api.storage.v1.BucketOuterClass.Tag getTag() {
+          if (tagBuilder_ == null) {
+            return tag_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.Tag.getDefaultInstance() : tag_;
+          } else {
+            return tagBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Tags that the object's tag set must have for the rule to apply.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.Tag tag = 4;</code>
+         */
+        public Builder setTag(yandex.cloud.api.storage.v1.BucketOuterClass.Tag value) {
+          if (tagBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            tag_ = value;
+            onChanged();
+          } else {
+            tagBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Tags that the object's tag set must have for the rule to apply.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.Tag tag = 4;</code>
+         */
+        public Builder setTag(
+            yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder builderForValue) {
+          if (tagBuilder_ == null) {
+            tag_ = builderForValue.build();
+            onChanged();
+          } else {
+            tagBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Tags that the object's tag set must have for the rule to apply.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.Tag tag = 4;</code>
+         */
+        public Builder mergeTag(yandex.cloud.api.storage.v1.BucketOuterClass.Tag value) {
+          if (tagBuilder_ == null) {
+            if (tag_ != null) {
+              tag_ =
+                yandex.cloud.api.storage.v1.BucketOuterClass.Tag.newBuilder(tag_).mergeFrom(value).buildPartial();
+            } else {
+              tag_ = value;
+            }
+            onChanged();
+          } else {
+            tagBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Tags that the object's tag set must have for the rule to apply.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.Tag tag = 4;</code>
+         */
+        public Builder clearTag() {
+          if (tagBuilder_ == null) {
+            tag_ = null;
+            onChanged();
+          } else {
+            tag_ = null;
+            tagBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Tags that the object's tag set must have for the rule to apply.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.Tag tag = 4;</code>
+         */
+        public yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder getTagBuilder() {
+          
+          onChanged();
+          return getTagFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Tags that the object's tag set must have for the rule to apply.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.Tag tag = 4;</code>
+         */
+        public yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder getTagOrBuilder() {
+          if (tagBuilder_ != null) {
+            return tagBuilder_.getMessageOrBuilder();
+          } else {
+            return tag_ == null ?
+                yandex.cloud.api.storage.v1.BucketOuterClass.Tag.getDefaultInstance() : tag_;
+          }
+        }
+        /**
+         * <pre>
+         * Tags that the object's tag set must have for the rule to apply.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.Tag tag = 4;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.storage.v1.BucketOuterClass.Tag, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder> 
+            getTagFieldBuilder() {
+          if (tagBuilder_ == null) {
+            tagBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.storage.v1.BucketOuterClass.Tag, yandex.cloud.api.storage.v1.BucketOuterClass.Tag.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.TagOrBuilder>(
+                    getTag(),
+                    getParentForChildren(),
+                    isClean());
+            tag_ = null;
+          }
+          return tagBuilder_;
+        }
+
+        private yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And andOperator_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And, yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.AndOrBuilder> andOperatorBuilder_;
+        /**
+         * <pre>
+         * Apply a logical AND to all of the predicates configured inside the And operator.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.LifecycleRule.RuleFilter.And and_operator = 5;</code>
+         * @return Whether the andOperator field is set.
+         */
+        public boolean hasAndOperator() {
+          return andOperatorBuilder_ != null || andOperator_ != null;
+        }
+        /**
+         * <pre>
+         * Apply a logical AND to all of the predicates configured inside the And operator.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.LifecycleRule.RuleFilter.And and_operator = 5;</code>
+         * @return The andOperator.
+         */
+        public yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And getAndOperator() {
+          if (andOperatorBuilder_ == null) {
+            return andOperator_ == null ? yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And.getDefaultInstance() : andOperator_;
+          } else {
+            return andOperatorBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * Apply a logical AND to all of the predicates configured inside the And operator.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.LifecycleRule.RuleFilter.And and_operator = 5;</code>
+         */
+        public Builder setAndOperator(yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And value) {
+          if (andOperatorBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            andOperator_ = value;
+            onChanged();
+          } else {
+            andOperatorBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Apply a logical AND to all of the predicates configured inside the And operator.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.LifecycleRule.RuleFilter.And and_operator = 5;</code>
+         */
+        public Builder setAndOperator(
+            yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And.Builder builderForValue) {
+          if (andOperatorBuilder_ == null) {
+            andOperator_ = builderForValue.build();
+            onChanged();
+          } else {
+            andOperatorBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Apply a logical AND to all of the predicates configured inside the And operator.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.LifecycleRule.RuleFilter.And and_operator = 5;</code>
+         */
+        public Builder mergeAndOperator(yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And value) {
+          if (andOperatorBuilder_ == null) {
+            if (andOperator_ != null) {
+              andOperator_ =
+                yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And.newBuilder(andOperator_).mergeFrom(value).buildPartial();
+            } else {
+              andOperator_ = value;
+            }
+            onChanged();
+          } else {
+            andOperatorBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Apply a logical AND to all of the predicates configured inside the And operator.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.LifecycleRule.RuleFilter.And and_operator = 5;</code>
+         */
+        public Builder clearAndOperator() {
+          if (andOperatorBuilder_ == null) {
+            andOperator_ = null;
+            onChanged();
+          } else {
+            andOperator_ = null;
+            andOperatorBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * Apply a logical AND to all of the predicates configured inside the And operator.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.LifecycleRule.RuleFilter.And and_operator = 5;</code>
+         */
+        public yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And.Builder getAndOperatorBuilder() {
+          
+          onChanged();
+          return getAndOperatorFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * Apply a logical AND to all of the predicates configured inside the And operator.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.LifecycleRule.RuleFilter.And and_operator = 5;</code>
+         */
+        public yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.AndOrBuilder getAndOperatorOrBuilder() {
+          if (andOperatorBuilder_ != null) {
+            return andOperatorBuilder_.getMessageOrBuilder();
+          } else {
+            return andOperator_ == null ?
+                yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And.getDefaultInstance() : andOperator_;
+          }
+        }
+        /**
+         * <pre>
+         * Apply a logical AND to all of the predicates configured inside the And operator.
+         * </pre>
+         *
+         * <code>.yandex.cloud.storage.v1.LifecycleRule.RuleFilter.And and_operator = 5;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And, yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.AndOrBuilder> 
+            getAndOperatorFieldBuilder() {
+          if (andOperatorBuilder_ == null) {
+            andOperatorBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And, yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.And.Builder, yandex.cloud.api.storage.v1.BucketOuterClass.LifecycleRule.RuleFilter.AndOrBuilder>(
+                    getAndOperator(),
+                    getParentForChildren(),
+                    isClean());
+            andOperator_ = null;
+          }
+          return andOperatorBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -39549,6 +41424,11 @@ public final class BucketOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_storage_v1_LifecycleRule_RuleFilter_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_storage_v1_LifecycleRule_RuleFilter_And_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_storage_v1_LifecycleRule_RuleFilter_And_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_storage_v1_Counters_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -39677,7 +41557,7 @@ public final class BucketOuterClass {
       "irect\030\002 \001(\01321.yandex.cloud.storage.v1.We" +
       "bsiteSettings.Redirect\"K\n\010Protocol\022\030\n\024PR" +
       "OTOCOL_UNSPECIFIED\020\000\022\021\n\rPROTOCOL_HTTP\020\001\022" +
-      "\022\n\016PROTOCOL_HTTPS\020\002\"\364\t\n\rLifecycleRule\022(\n" +
+      "\022\n\016PROTOCOL_HTTPS\020\002\"\252\014\n\rLifecycleRule\022(\n" +
       "\002id\030\001 \001(\0132\034.google.protobuf.StringValue\022" +
       "\017\n\007enabled\030\002 \001(\010\022A\n\006filter\030\003 \001(\01321.yande" +
       "x.cloud.storage.v1.LifecycleRule.RuleFil" +
@@ -39705,70 +41585,77 @@ public final class BucketOuterClass {
       "\032.google.protobuf.Timestamp\022)\n\004days\030\002 \001(" +
       "\0132\033.google.protobuf.Int64Value\022@\n\034expire" +
       "d_object_delete_marker\030\003 \001(\0132\032.google.pr" +
-      "otobuf.BoolValue\032\227\001\n\nRuleFilter\022\016\n\006prefi" +
+      "otobuf.BoolValue\032\315\003\n\nRuleFilter\022\016\n\006prefi" +
       "x\030\001 \001(\t\022=\n\030object_size_greater_than\030\002 \001(" +
       "\0132\033.google.protobuf.Int64Value\022:\n\025object" +
       "_size_less_than\030\003 \001(\0132\033.google.protobuf." +
-      "Int64Value\"\335\001\n\010Counters\022\032\n\022simple_object" +
-      "_size\030\001 \001(\003\022\033\n\023simple_object_count\030\002 \001(\003" +
-      "\022\032\n\022objects_parts_size\030\003 \001(\003\022\033\n\023objects_" +
-      "parts_count\030\004 \001(\003\022\036\n\026multipart_objects_s" +
-      "ize\030\005 \001(\003\022\037\n\027multipart_objects_count\030\006 \001" +
-      "(\003\022\036\n\026active_multipart_count\030\007 \001(\003\"]\n\023Op" +
-      "tionalSizeByClass\022\025\n\rstorage_class\030\001 \001(\t" +
-      "\022/\n\nclass_size\030\002 \001(\0132\033.google.protobuf.I" +
-      "nt64Value\"8\n\013SizeByClass\022\025\n\rstorage_clas" +
-      "s\030\001 \001(\t\022\022\n\nclass_size\030\002 \001(\003\"]\n\017CountersB" +
-      "yClass\022\025\n\rstorage_class\030\001 \001(\t\0223\n\010counter" +
-      "s\030\002 \001(\0132!.yandex.cloud.storage.v1.Counte" +
-      "rs\"\252\004\n\013BucketStats\022\014\n\004name\030\001 \001(\t\022-\n\010max_" +
-      "size\030\002 \001(\0132\033.google.protobuf.Int64Value\022" +
-      "\021\n\tused_size\030\003 \001(\003\022M\n\027storage_class_max_" +
-      "sizes\030\004 \003(\0132,.yandex.cloud.storage.v1.Op" +
-      "tionalSizeByClass\022F\n\030storage_class_used_" +
-      "sizes\030\005 \003(\0132$.yandex.cloud.storage.v1.Si" +
-      "zeByClass\022H\n\026storage_class_counters\030\006 \003(" +
-      "\0132(.yandex.cloud.storage.v1.CountersByCl" +
-      "ass\022;\n\025default_storage_class\030\007 \001(\0132\034.goo" +
-      "gle.protobuf.StringValue\022M\n\026anonymous_ac" +
-      "cess_flags\030\010 \001(\0132-.yandex.cloud.storage." +
-      "v1.AnonymousAccessFlags\022.\n\ncreated_at\030\t " +
-      "\001(\0132\032.google.protobuf.Timestamp\022.\n\nupdat" +
-      "ed_at\030\n \001(\0132\032.google.protobuf.Timestamp\"" +
-      "\301\003\n\013HTTPSConfig\022\014\n\004name\030\001 \001(\t\022D\n\013source_" +
-      "type\030\002 \001(\0162/.yandex.cloud.storage.v1.HTT" +
-      "PSConfig.SourceType\022,\n\006issuer\030\003 \001(\0132\034.go" +
-      "ogle.protobuf.StringValue\022-\n\007subject\030\004 \001" +
-      "(\0132\034.google.protobuf.StringValue\022\021\n\tdns_" +
-      "names\030\005 \003(\t\022.\n\nnot_before\030\006 \001(\0132\032.google" +
-      ".protobuf.Timestamp\022-\n\tnot_after\030\007 \001(\0132\032" +
-      ".google.protobuf.Timestamp\022\026\n\016certificat" +
-      "e_id\030\010 \001(\t\"w\n\nSourceType\022\033\n\027SOURCE_TYPE_" +
-      "UNSPECIFIED\020\000\022\034\n\030SOURCE_TYPE_SELF_MANAGE" +
-      "D\020\001\022.\n*SOURCE_TYPE_MANAGED_BY_CERTIFICAT" +
-      "E_MANAGER\020\002\"\363\003\n\nObjectLock\022D\n\006status\030\002 \001" +
-      "(\01624.yandex.cloud.storage.v1.ObjectLock." +
-      "ObjectLockStatus\022O\n\021default_retention\030\003 " +
-      "\001(\01324.yandex.cloud.storage.v1.ObjectLock" +
-      ".DefaultRetention\032\324\001\n\020DefaultRetention\022G" +
-      "\n\004mode\030\001 \001(\01629.yandex.cloud.storage.v1.O" +
-      "bjectLock.DefaultRetention.Mode\022\016\n\004days\030" +
-      "\002 \001(\003H\000\022\017\n\005years\030\003 \001(\003H\000\"F\n\004Mode\022\024\n\020MODE" +
-      "_UNSPECIFIED\020\000\022\023\n\017MODE_GOVERNANCE\020\001\022\023\n\017M" +
-      "ODE_COMPLIANCE\020\002B\016\n\006period\022\004\300\3011\001\"w\n\020Obje" +
-      "ctLockStatus\022\"\n\036OBJECT_LOCK_STATUS_UNSPE" +
-      "CIFIED\020\000\022\037\n\033OBJECT_LOCK_STATUS_DISABLED\020" +
-      "\001\022\036\n\032OBJECT_LOCK_STATUS_ENABLED\020\002\"\223\001\n\nEn" +
-      "cryption\022A\n\005rules\030\001 \003(\01322.yandex.cloud.s" +
-      "torage.v1.Encryption.EncryptionRule\032B\n\016E" +
-      "ncryptionRule\022\031\n\021kms_master_key_id\030\001 \001(\t" +
-      "\022\025\n\rsse_algorithm\030\002 \001(\t*s\n\nVersioning\022\032\n" +
-      "\026VERSIONING_UNSPECIFIED\020\000\022\027\n\023VERSIONING_" +
-      "DISABLED\020\001\022\026\n\022VERSIONING_ENABLED\020\002\022\030\n\024VE" +
-      "RSIONING_SUSPENDED\020\003Bb\n\033yandex.cloud.api" +
-      ".storage.v1ZCgithub.com/yandex-cloud/go-" +
-      "genproto/yandex/cloud/storage/v1;storage" +
-      "b\006proto3"
+      "Int64Value\022)\n\003tag\030\004 \001(\0132\034.yandex.cloud.s" +
+      "torage.v1.Tag\022K\n\014and_operator\030\005 \001(\01325.ya" +
+      "ndex.cloud.storage.v1.LifecycleRule.Rule" +
+      "Filter.And\032\273\001\n\003And\022\016\n\006prefix\030\001 \001(\t\022=\n\030ob" +
+      "ject_size_greater_than\030\002 \001(\0132\033.google.pr" +
+      "otobuf.Int64Value\022:\n\025object_size_less_th" +
+      "an\030\003 \001(\0132\033.google.protobuf.Int64Value\022)\n" +
+      "\003tag\030\004 \003(\0132\034.yandex.cloud.storage.v1.Tag" +
+      "\"\335\001\n\010Counters\022\032\n\022simple_object_size\030\001 \001(" +
+      "\003\022\033\n\023simple_object_count\030\002 \001(\003\022\032\n\022object" +
+      "s_parts_size\030\003 \001(\003\022\033\n\023objects_parts_coun" +
+      "t\030\004 \001(\003\022\036\n\026multipart_objects_size\030\005 \001(\003\022" +
+      "\037\n\027multipart_objects_count\030\006 \001(\003\022\036\n\026acti" +
+      "ve_multipart_count\030\007 \001(\003\"]\n\023OptionalSize" +
+      "ByClass\022\025\n\rstorage_class\030\001 \001(\t\022/\n\nclass_" +
+      "size\030\002 \001(\0132\033.google.protobuf.Int64Value\"" +
+      "8\n\013SizeByClass\022\025\n\rstorage_class\030\001 \001(\t\022\022\n" +
+      "\nclass_size\030\002 \001(\003\"]\n\017CountersByClass\022\025\n\r" +
+      "storage_class\030\001 \001(\t\0223\n\010counters\030\002 \001(\0132!." +
+      "yandex.cloud.storage.v1.Counters\"\252\004\n\013Buc" +
+      "ketStats\022\014\n\004name\030\001 \001(\t\022-\n\010max_size\030\002 \001(\013" +
+      "2\033.google.protobuf.Int64Value\022\021\n\tused_si" +
+      "ze\030\003 \001(\003\022M\n\027storage_class_max_sizes\030\004 \003(" +
+      "\0132,.yandex.cloud.storage.v1.OptionalSize" +
+      "ByClass\022F\n\030storage_class_used_sizes\030\005 \003(" +
+      "\0132$.yandex.cloud.storage.v1.SizeByClass\022" +
+      "H\n\026storage_class_counters\030\006 \003(\0132(.yandex" +
+      ".cloud.storage.v1.CountersByClass\022;\n\025def" +
+      "ault_storage_class\030\007 \001(\0132\034.google.protob" +
+      "uf.StringValue\022M\n\026anonymous_access_flags" +
+      "\030\010 \001(\0132-.yandex.cloud.storage.v1.Anonymo" +
+      "usAccessFlags\022.\n\ncreated_at\030\t \001(\0132\032.goog" +
+      "le.protobuf.Timestamp\022.\n\nupdated_at\030\n \001(" +
+      "\0132\032.google.protobuf.Timestamp\"\301\003\n\013HTTPSC" +
+      "onfig\022\014\n\004name\030\001 \001(\t\022D\n\013source_type\030\002 \001(\016" +
+      "2/.yandex.cloud.storage.v1.HTTPSConfig.S" +
+      "ourceType\022,\n\006issuer\030\003 \001(\0132\034.google.proto" +
+      "buf.StringValue\022-\n\007subject\030\004 \001(\0132\034.googl" +
+      "e.protobuf.StringValue\022\021\n\tdns_names\030\005 \003(" +
+      "\t\022.\n\nnot_before\030\006 \001(\0132\032.google.protobuf." +
+      "Timestamp\022-\n\tnot_after\030\007 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\022\026\n\016certificate_id\030\010 \001(\t" +
+      "\"w\n\nSourceType\022\033\n\027SOURCE_TYPE_UNSPECIFIE" +
+      "D\020\000\022\034\n\030SOURCE_TYPE_SELF_MANAGED\020\001\022.\n*SOU" +
+      "RCE_TYPE_MANAGED_BY_CERTIFICATE_MANAGER\020" +
+      "\002\"\363\003\n\nObjectLock\022D\n\006status\030\002 \001(\01624.yande" +
+      "x.cloud.storage.v1.ObjectLock.ObjectLock" +
+      "Status\022O\n\021default_retention\030\003 \001(\01324.yand" +
+      "ex.cloud.storage.v1.ObjectLock.DefaultRe" +
+      "tention\032\324\001\n\020DefaultRetention\022G\n\004mode\030\001 \001" +
+      "(\01629.yandex.cloud.storage.v1.ObjectLock." +
+      "DefaultRetention.Mode\022\016\n\004days\030\002 \001(\003H\000\022\017\n" +
+      "\005years\030\003 \001(\003H\000\"F\n\004Mode\022\024\n\020MODE_UNSPECIFI" +
+      "ED\020\000\022\023\n\017MODE_GOVERNANCE\020\001\022\023\n\017MODE_COMPLI" +
+      "ANCE\020\002B\016\n\006period\022\004\300\3011\001\"w\n\020ObjectLockStat" +
+      "us\022\"\n\036OBJECT_LOCK_STATUS_UNSPECIFIED\020\000\022\037" +
+      "\n\033OBJECT_LOCK_STATUS_DISABLED\020\001\022\036\n\032OBJEC" +
+      "T_LOCK_STATUS_ENABLED\020\002\"\223\001\n\nEncryption\022A" +
+      "\n\005rules\030\001 \003(\01322.yandex.cloud.storage.v1." +
+      "Encryption.EncryptionRule\032B\n\016EncryptionR" +
+      "ule\022\031\n\021kms_master_key_id\030\001 \001(\t\022\025\n\rsse_al" +
+      "gorithm\030\002 \001(\t*s\n\nVersioning\022\032\n\026VERSIONIN" +
+      "G_UNSPECIFIED\020\000\022\027\n\023VERSIONING_DISABLED\020\001" +
+      "\022\026\n\022VERSIONING_ENABLED\020\002\022\030\n\024VERSIONING_S" +
+      "USPENDED\020\003Bb\n\033yandex.cloud.api.storage.v" +
+      "1ZCgithub.com/yandex-cloud/go-genproto/y" +
+      "andex/cloud/storage/v1;storageb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -39885,7 +41772,13 @@ public final class BucketOuterClass {
     internal_static_yandex_cloud_storage_v1_LifecycleRule_RuleFilter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_storage_v1_LifecycleRule_RuleFilter_descriptor,
-        new java.lang.String[] { "Prefix", "ObjectSizeGreaterThan", "ObjectSizeLessThan", });
+        new java.lang.String[] { "Prefix", "ObjectSizeGreaterThan", "ObjectSizeLessThan", "Tag", "AndOperator", });
+    internal_static_yandex_cloud_storage_v1_LifecycleRule_RuleFilter_And_descriptor =
+      internal_static_yandex_cloud_storage_v1_LifecycleRule_RuleFilter_descriptor.getNestedTypes().get(0);
+    internal_static_yandex_cloud_storage_v1_LifecycleRule_RuleFilter_And_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_storage_v1_LifecycleRule_RuleFilter_And_descriptor,
+        new java.lang.String[] { "Prefix", "ObjectSizeGreaterThan", "ObjectSizeLessThan", "Tag", });
     internal_static_yandex_cloud_storage_v1_Counters_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_yandex_cloud_storage_v1_Counters_fieldAccessorTable = new

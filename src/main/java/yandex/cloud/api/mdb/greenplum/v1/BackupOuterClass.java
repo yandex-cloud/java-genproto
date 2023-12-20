@@ -141,6 +141,54 @@ public final class BackupOuterClass {
      * @return The size.
      */
     long getSize();
+
+    /**
+     * <pre>
+     * How this backup was created (manual/automatic/etc...)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.Backup.BackupCreationType type = 7;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    int getTypeValue();
+    /**
+     * <pre>
+     * How this backup was created (manual/automatic/etc...)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.Backup.BackupCreationType type = 7;</code>
+     * @return The type.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupCreationType getType();
+
+    /**
+     * <pre>
+     * Method of backup creation
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.Backup.BackupMethod method = 8;</code>
+     * @return The enum numeric value on the wire for method.
+     */
+    int getMethodValue();
+    /**
+     * <pre>
+     * Method of backup creation
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.Backup.BackupMethod method = 8;</code>
+     * @return The method.
+     */
+    yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupMethod getMethod();
+
+    /**
+     * <pre>
+     * Size of the journal associated with backup, in bytes
+     * </pre>
+     *
+     * <code>int64 journal_size = 9;</code>
+     * @return The journalSize.
+     */
+    long getJournalSize();
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.Backup}
@@ -158,6 +206,8 @@ public final class BackupOuterClass {
       id_ = "";
       folderId_ = "";
       sourceClusterId_ = "";
+      type_ = 0;
+      method_ = 0;
     }
 
     @java.lang.Override
@@ -239,6 +289,23 @@ public final class BackupOuterClass {
               size_ = input.readInt64();
               break;
             }
+            case 56: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
+              break;
+            }
+            case 64: {
+              int rawValue = input.readEnum();
+
+              method_ = rawValue;
+              break;
+            }
+            case 72: {
+
+              journalSize_ = input.readInt64();
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -269,6 +336,272 @@ public final class BackupOuterClass {
       return yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.internal_static_yandex_cloud_mdb_greenplum_v1_Backup_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.class, yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.greenplum.v1.Backup.BackupMethod}
+     */
+    public enum BackupMethod
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>BACKUP_METHOD_UNSPECIFIED = 0;</code>
+       */
+      BACKUP_METHOD_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Base backup
+       * </pre>
+       *
+       * <code>BASE = 1;</code>
+       */
+      BASE(1),
+      /**
+       * <pre>
+       * Delta (incremental) Greenplum backup
+       * </pre>
+       *
+       * <code>INCREMENTAL = 2;</code>
+       */
+      INCREMENTAL(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>BACKUP_METHOD_UNSPECIFIED = 0;</code>
+       */
+      public static final int BACKUP_METHOD_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Base backup
+       * </pre>
+       *
+       * <code>BASE = 1;</code>
+       */
+      public static final int BASE_VALUE = 1;
+      /**
+       * <pre>
+       * Delta (incremental) Greenplum backup
+       * </pre>
+       *
+       * <code>INCREMENTAL = 2;</code>
+       */
+      public static final int INCREMENTAL_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static BackupMethod valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static BackupMethod forNumber(int value) {
+        switch (value) {
+          case 0: return BACKUP_METHOD_UNSPECIFIED;
+          case 1: return BASE;
+          case 2: return INCREMENTAL;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<BackupMethod>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          BackupMethod> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<BackupMethod>() {
+              public BackupMethod findValueByNumber(int number) {
+                return BackupMethod.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final BackupMethod[] VALUES = values();
+
+      public static BackupMethod valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private BackupMethod(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.greenplum.v1.Backup.BackupMethod)
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.mdb.greenplum.v1.Backup.BackupCreationType}
+     */
+    public enum BackupCreationType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>BACKUP_CREATION_TYPE_UNSPECIFIED = 0;</code>
+       */
+      BACKUP_CREATION_TYPE_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Backup created by automated daily schedule
+       * </pre>
+       *
+       * <code>AUTOMATED = 1;</code>
+       */
+      AUTOMATED(1),
+      /**
+       * <pre>
+       * Backup created by user request
+       * </pre>
+       *
+       * <code>MANUAL = 2;</code>
+       */
+      MANUAL(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>BACKUP_CREATION_TYPE_UNSPECIFIED = 0;</code>
+       */
+      public static final int BACKUP_CREATION_TYPE_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Backup created by automated daily schedule
+       * </pre>
+       *
+       * <code>AUTOMATED = 1;</code>
+       */
+      public static final int AUTOMATED_VALUE = 1;
+      /**
+       * <pre>
+       * Backup created by user request
+       * </pre>
+       *
+       * <code>MANUAL = 2;</code>
+       */
+      public static final int MANUAL_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static BackupCreationType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static BackupCreationType forNumber(int value) {
+        switch (value) {
+          case 0: return BACKUP_CREATION_TYPE_UNSPECIFIED;
+          case 1: return AUTOMATED;
+          case 2: return MANUAL;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<BackupCreationType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          BackupCreationType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<BackupCreationType>() {
+              public BackupCreationType findValueByNumber(int number) {
+                return BackupCreationType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.getDescriptor().getEnumTypes().get(1);
+      }
+
+      private static final BackupCreationType[] VALUES = values();
+
+      public static BackupCreationType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private BackupCreationType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.mdb.greenplum.v1.Backup.BackupCreationType)
     }
 
     public static final int ID_FIELD_NUMBER = 1;
@@ -500,6 +833,75 @@ public final class BackupOuterClass {
       return size_;
     }
 
+    public static final int TYPE_FIELD_NUMBER = 7;
+    private int type_;
+    /**
+     * <pre>
+     * How this backup was created (manual/automatic/etc...)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.Backup.BackupCreationType type = 7;</code>
+     * @return The enum numeric value on the wire for type.
+     */
+    @java.lang.Override public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * How this backup was created (manual/automatic/etc...)
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.Backup.BackupCreationType type = 7;</code>
+     * @return The type.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupCreationType getType() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupCreationType result = yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupCreationType.valueOf(type_);
+      return result == null ? yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupCreationType.UNRECOGNIZED : result;
+    }
+
+    public static final int METHOD_FIELD_NUMBER = 8;
+    private int method_;
+    /**
+     * <pre>
+     * Method of backup creation
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.Backup.BackupMethod method = 8;</code>
+     * @return The enum numeric value on the wire for method.
+     */
+    @java.lang.Override public int getMethodValue() {
+      return method_;
+    }
+    /**
+     * <pre>
+     * Method of backup creation
+     * </pre>
+     *
+     * <code>.yandex.cloud.mdb.greenplum.v1.Backup.BackupMethod method = 8;</code>
+     * @return The method.
+     */
+    @java.lang.Override public yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupMethod getMethod() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupMethod result = yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupMethod.valueOf(method_);
+      return result == null ? yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupMethod.UNRECOGNIZED : result;
+    }
+
+    public static final int JOURNAL_SIZE_FIELD_NUMBER = 9;
+    private long journalSize_;
+    /**
+     * <pre>
+     * Size of the journal associated with backup, in bytes
+     * </pre>
+     *
+     * <code>int64 journal_size = 9;</code>
+     * @return The journalSize.
+     */
+    @java.lang.Override
+    public long getJournalSize() {
+      return journalSize_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -532,6 +934,15 @@ public final class BackupOuterClass {
       if (size_ != 0L) {
         output.writeInt64(6, size_);
       }
+      if (type_ != yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupCreationType.BACKUP_CREATION_TYPE_UNSPECIFIED.getNumber()) {
+        output.writeEnum(7, type_);
+      }
+      if (method_ != yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupMethod.BACKUP_METHOD_UNSPECIFIED.getNumber()) {
+        output.writeEnum(8, method_);
+      }
+      if (journalSize_ != 0L) {
+        output.writeInt64(9, journalSize_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -561,6 +972,18 @@ public final class BackupOuterClass {
       if (size_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(6, size_);
+      }
+      if (type_ != yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupCreationType.BACKUP_CREATION_TYPE_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(7, type_);
+      }
+      if (method_ != yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupMethod.BACKUP_METHOD_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(8, method_);
+      }
+      if (journalSize_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(9, journalSize_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -595,6 +1018,10 @@ public final class BackupOuterClass {
       }
       if (getSize()
           != other.getSize()) return false;
+      if (type_ != other.type_) return false;
+      if (method_ != other.method_) return false;
+      if (getJournalSize()
+          != other.getJournalSize()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -623,6 +1050,13 @@ public final class BackupOuterClass {
       hash = (37 * hash) + SIZE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getSize());
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      hash = (37 * hash) + METHOD_FIELD_NUMBER;
+      hash = (53 * hash) + method_;
+      hash = (37 * hash) + JOURNAL_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getJournalSize());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -776,6 +1210,12 @@ public final class BackupOuterClass {
         }
         size_ = 0L;
 
+        type_ = 0;
+
+        method_ = 0;
+
+        journalSize_ = 0L;
+
         return this;
       }
 
@@ -816,6 +1256,9 @@ public final class BackupOuterClass {
           result.startedAt_ = startedAtBuilder_.build();
         }
         result.size_ = size_;
+        result.type_ = type_;
+        result.method_ = method_;
+        result.journalSize_ = journalSize_;
         onBuilt();
         return result;
       }
@@ -884,6 +1327,15 @@ public final class BackupOuterClass {
         }
         if (other.getSize() != 0L) {
           setSize(other.getSize());
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        if (other.method_ != 0) {
+          setMethodValue(other.getMethodValue());
+        }
+        if (other.getJournalSize() != 0L) {
+          setJournalSize(other.getJournalSize());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1554,6 +2006,197 @@ public final class BackupOuterClass {
         onChanged();
         return this;
       }
+
+      private int type_ = 0;
+      /**
+       * <pre>
+       * How this backup was created (manual/automatic/etc...)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.Backup.BackupCreationType type = 7;</code>
+       * @return The enum numeric value on the wire for type.
+       */
+      @java.lang.Override public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * How this backup was created (manual/automatic/etc...)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.Backup.BackupCreationType type = 7;</code>
+       * @param value The enum numeric value on the wire for type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTypeValue(int value) {
+        
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * How this backup was created (manual/automatic/etc...)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.Backup.BackupCreationType type = 7;</code>
+       * @return The type.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupCreationType getType() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupCreationType result = yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupCreationType.valueOf(type_);
+        return result == null ? yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupCreationType.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * How this backup was created (manual/automatic/etc...)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.Backup.BackupCreationType type = 7;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
+       */
+      public Builder setType(yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupCreationType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * How this backup was created (manual/automatic/etc...)
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.Backup.BackupCreationType type = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int method_ = 0;
+      /**
+       * <pre>
+       * Method of backup creation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.Backup.BackupMethod method = 8;</code>
+       * @return The enum numeric value on the wire for method.
+       */
+      @java.lang.Override public int getMethodValue() {
+        return method_;
+      }
+      /**
+       * <pre>
+       * Method of backup creation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.Backup.BackupMethod method = 8;</code>
+       * @param value The enum numeric value on the wire for method to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethodValue(int value) {
+        
+        method_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Method of backup creation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.Backup.BackupMethod method = 8;</code>
+       * @return The method.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupMethod getMethod() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupMethod result = yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupMethod.valueOf(method_);
+        return result == null ? yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupMethod.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Method of backup creation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.Backup.BackupMethod method = 8;</code>
+       * @param value The method to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMethod(yandex.cloud.api.mdb.greenplum.v1.BackupOuterClass.Backup.BackupMethod value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        method_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Method of backup creation
+       * </pre>
+       *
+       * <code>.yandex.cloud.mdb.greenplum.v1.Backup.BackupMethod method = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMethod() {
+        
+        method_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long journalSize_ ;
+      /**
+       * <pre>
+       * Size of the journal associated with backup, in bytes
+       * </pre>
+       *
+       * <code>int64 journal_size = 9;</code>
+       * @return The journalSize.
+       */
+      @java.lang.Override
+      public long getJournalSize() {
+        return journalSize_;
+      }
+      /**
+       * <pre>
+       * Size of the journal associated with backup, in bytes
+       * </pre>
+       *
+       * <code>int64 journal_size = 9;</code>
+       * @param value The journalSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setJournalSize(long value) {
+        
+        journalSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Size of the journal associated with backup, in bytes
+       * </pre>
+       *
+       * <code>int64 journal_size = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearJournalSize() {
+        
+        journalSize_ = 0L;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1623,15 +2266,23 @@ public final class BackupOuterClass {
     java.lang.String[] descriptorData = {
       "\n*yandex/cloud/mdb/greenplum/v1/backup.p" +
       "roto\022\035yandex.cloud.mdb.greenplum.v1\032\037goo" +
-      "gle/protobuf/timestamp.proto\"\260\001\n\006Backup\022" +
+      "gle/protobuf/timestamp.proto\"\363\003\n\006Backup\022" +
       "\n\n\002id\030\001 \001(\t\022\021\n\tfolder_id\030\002 \001(\t\022.\n\ncreate" +
       "d_at\030\003 \001(\0132\032.google.protobuf.Timestamp\022\031" +
       "\n\021source_cluster_id\030\004 \001(\t\022.\n\nstarted_at\030" +
       "\005 \001(\0132\032.google.protobuf.Timestamp\022\014\n\004siz" +
-      "e\030\006 \001(\003Bp\n!yandex.cloud.api.mdb.greenplu" +
-      "m.v1ZKgithub.com/yandex-cloud/go-genprot" +
-      "o/yandex/cloud/mdb/greenplum/v1;greenplu" +
-      "mb\006proto3"
+      "e\030\006 \001(\003\022F\n\004type\030\007 \001(\01628.yandex.cloud.mdb" +
+      ".greenplum.v1.Backup.BackupCreationType\022" +
+      "B\n\006method\030\010 \001(\01622.yandex.cloud.mdb.green" +
+      "plum.v1.Backup.BackupMethod\022\024\n\014journal_s" +
+      "ize\030\t \001(\003\"H\n\014BackupMethod\022\035\n\031BACKUP_METH" +
+      "OD_UNSPECIFIED\020\000\022\010\n\004BASE\020\001\022\017\n\013INCREMENTA" +
+      "L\020\002\"U\n\022BackupCreationType\022$\n BACKUP_CREA" +
+      "TION_TYPE_UNSPECIFIED\020\000\022\r\n\tAUTOMATED\020\001\022\n" +
+      "\n\006MANUAL\020\002Bp\n!yandex.cloud.api.mdb.green" +
+      "plum.v1ZKgithub.com/yandex-cloud/go-genp" +
+      "roto/yandex/cloud/mdb/greenplum/v1;green" +
+      "plumb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1643,7 +2294,7 @@ public final class BackupOuterClass {
     internal_static_yandex_cloud_mdb_greenplum_v1_Backup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_Backup_descriptor,
-        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "SourceClusterId", "StartedAt", "Size", });
+        new java.lang.String[] { "Id", "FolderId", "CreatedAt", "SourceClusterId", "StartedAt", "Size", "Type", "Method", "JournalSize", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
