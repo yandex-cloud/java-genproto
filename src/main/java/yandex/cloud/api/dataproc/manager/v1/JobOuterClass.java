@@ -17143,6 +17143,2426 @@ public final class JobOuterClass {
 
   }
 
+  public interface SupportJobOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:yandex.cloud.dataproc.manager.v1.SupportJob)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Required. Unique ID of the Data Proc job.
+     * This ID is assigned by MDB in the process of creating Data Proc job.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * Required. Unique ID of the Data Proc job.
+     * This ID is assigned by MDB in the process of creating Data Proc job.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <pre>
+     * Required. Unique ID of the Data Proc cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 2;</code>
+     * @return The clusterId.
+     */
+    java.lang.String getClusterId();
+    /**
+     * <pre>
+     * Required. Unique ID of the Data Proc cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 2;</code>
+     * @return The bytes for clusterId.
+     */
+    com.google.protobuf.ByteString
+        getClusterIdBytes();
+
+    /**
+     * <pre>
+     * The time when the Data Proc job was created.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <pre>
+     * The time when the Data Proc job was created.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <pre>
+     * The time when the Data Proc job was created.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+
+    /**
+     * <pre>
+     * The time when the Data Proc job was started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp started_at = 4;</code>
+     * @return Whether the startedAt field is set.
+     */
+    boolean hasStartedAt();
+    /**
+     * <pre>
+     * The time when the Data Proc job was started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp started_at = 4;</code>
+     * @return The startedAt.
+     */
+    com.google.protobuf.Timestamp getStartedAt();
+    /**
+     * <pre>
+     * The time when the Data Proc job was started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp started_at = 4;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder();
+
+    /**
+     * <pre>
+     * The time when the Data Proc job was finished.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp finished_at = 5;</code>
+     * @return Whether the finishedAt field is set.
+     */
+    boolean hasFinishedAt();
+    /**
+     * <pre>
+     * The time when the Data Proc job was finished.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp finished_at = 5;</code>
+     * @return The finishedAt.
+     */
+    com.google.protobuf.Timestamp getFinishedAt();
+    /**
+     * <pre>
+     * The time when the Data Proc job was finished.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp finished_at = 5;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getFinishedAtOrBuilder();
+
+    /**
+     * <pre>
+     * Status.
+     * </pre>
+     *
+     * <code>.yandex.cloud.dataproc.manager.v1.SupportJob.Status status = 6;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <pre>
+     * Status.
+     * </pre>
+     *
+     * <code>.yandex.cloud.dataproc.manager.v1.SupportJob.Status status = 6;</code>
+     * @return The status.
+     */
+    yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob.Status getStatus();
+
+    /**
+     * <pre>
+     * Command.
+     * </pre>
+     *
+     * <code>string cmd = 7;</code>
+     * @return The cmd.
+     */
+    java.lang.String getCmd();
+    /**
+     * <pre>
+     * Command.
+     * </pre>
+     *
+     * <code>string cmd = 7;</code>
+     * @return The bytes for cmd.
+     */
+    com.google.protobuf.ByteString
+        getCmdBytes();
+
+    /**
+     * <pre>
+     * Execution timeout in seconds.
+     * </pre>
+     *
+     * <code>int64 timeout = 8;</code>
+     * @return The timeout.
+     */
+    long getTimeout();
+
+    /**
+     * <pre>
+     * The id of the user who created the job
+     * </pre>
+     *
+     * <code>string created_by = 9;</code>
+     * @return The createdBy.
+     */
+    java.lang.String getCreatedBy();
+    /**
+     * <pre>
+     * The id of the user who created the job
+     * </pre>
+     *
+     * <code>string created_by = 9;</code>
+     * @return The bytes for createdBy.
+     */
+    com.google.protobuf.ByteString
+        getCreatedByBytes();
+  }
+  /**
+   * <pre>
+   * Data Proc support job.
+   * </pre>
+   *
+   * Protobuf type {@code yandex.cloud.dataproc.manager.v1.SupportJob}
+   */
+  public static final class SupportJob extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:yandex.cloud.dataproc.manager.v1.SupportJob)
+      SupportJobOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SupportJob.newBuilder() to construct.
+    private SupportJob(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SupportJob() {
+      id_ = "";
+      clusterId_ = "";
+      status_ = 0;
+      cmd_ = "";
+      createdBy_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SupportJob();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SupportJob(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              clusterId_ = s;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (createdAt_ != null) {
+                subBuilder = createdAt_.toBuilder();
+              }
+              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createdAt_);
+                createdAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (startedAt_ != null) {
+                subBuilder = startedAt_.toBuilder();
+              }
+              startedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(startedAt_);
+                startedAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (finishedAt_ != null) {
+                subBuilder = finishedAt_.toBuilder();
+              }
+              finishedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(finishedAt_);
+                finishedAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 48: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              cmd_ = s;
+              break;
+            }
+            case 64: {
+
+              timeout_ = input.readInt64();
+              break;
+            }
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              createdBy_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return yandex.cloud.api.dataproc.manager.v1.JobOuterClass.internal_static_yandex_cloud_dataproc_manager_v1_SupportJob_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return yandex.cloud.api.dataproc.manager.v1.JobOuterClass.internal_static_yandex_cloud_dataproc_manager_v1_SupportJob_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob.class, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code yandex.cloud.dataproc.manager.v1.SupportJob.Status}
+     */
+    public enum Status
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>STATUS_UNSPECIFIED = 0;</code>
+       */
+      STATUS_UNSPECIFIED(0),
+      /**
+       * <pre>
+       * Job created in metadb and is waiting agent to acquire.
+       * </pre>
+       *
+       * <code>PROVISIONING = 1;</code>
+       */
+      PROVISIONING(1),
+      /**
+       * <pre>
+       * Job acquired by agent and is waiting for execution.
+       * </pre>
+       *
+       * <code>PENDING = 2;</code>
+       */
+      PENDING(2),
+      /**
+       * <pre>
+       * Job is running.
+       * </pre>
+       *
+       * <code>RUNNING = 3;</code>
+       */
+      RUNNING(3),
+      /**
+       * <pre>
+       * Job failed.
+       * </pre>
+       *
+       * <code>ERROR = 4;</code>
+       */
+      ERROR(4),
+      /**
+       * <pre>
+       * Job finished.
+       * </pre>
+       *
+       * <code>DONE = 5;</code>
+       */
+      DONE(5),
+      /**
+       * <pre>
+       * Job cancelled.
+       * </pre>
+       *
+       * <code>CANCELLED = 6;</code>
+       */
+      CANCELLED(6),
+      /**
+       * <pre>
+       * Job is waiting for cancellation.
+       * </pre>
+       *
+       * <code>CANCELLING = 7;</code>
+       */
+      CANCELLING(7),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>STATUS_UNSPECIFIED = 0;</code>
+       */
+      public static final int STATUS_UNSPECIFIED_VALUE = 0;
+      /**
+       * <pre>
+       * Job created in metadb and is waiting agent to acquire.
+       * </pre>
+       *
+       * <code>PROVISIONING = 1;</code>
+       */
+      public static final int PROVISIONING_VALUE = 1;
+      /**
+       * <pre>
+       * Job acquired by agent and is waiting for execution.
+       * </pre>
+       *
+       * <code>PENDING = 2;</code>
+       */
+      public static final int PENDING_VALUE = 2;
+      /**
+       * <pre>
+       * Job is running.
+       * </pre>
+       *
+       * <code>RUNNING = 3;</code>
+       */
+      public static final int RUNNING_VALUE = 3;
+      /**
+       * <pre>
+       * Job failed.
+       * </pre>
+       *
+       * <code>ERROR = 4;</code>
+       */
+      public static final int ERROR_VALUE = 4;
+      /**
+       * <pre>
+       * Job finished.
+       * </pre>
+       *
+       * <code>DONE = 5;</code>
+       */
+      public static final int DONE_VALUE = 5;
+      /**
+       * <pre>
+       * Job cancelled.
+       * </pre>
+       *
+       * <code>CANCELLED = 6;</code>
+       */
+      public static final int CANCELLED_VALUE = 6;
+      /**
+       * <pre>
+       * Job is waiting for cancellation.
+       * </pre>
+       *
+       * <code>CANCELLING = 7;</code>
+       */
+      public static final int CANCELLING_VALUE = 7;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Status valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static Status forNumber(int value) {
+        switch (value) {
+          case 0: return STATUS_UNSPECIFIED;
+          case 1: return PROVISIONING;
+          case 2: return PENDING;
+          case 3: return RUNNING;
+          case 4: return ERROR;
+          case 5: return DONE;
+          case 6: return CANCELLED;
+          case 7: return CANCELLING;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Status>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Status> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Status>() {
+              public Status findValueByNumber(int number) {
+                return Status.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Status[] VALUES = values();
+
+      public static Status valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Status(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:yandex.cloud.dataproc.manager.v1.SupportJob.Status)
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * Required. Unique ID of the Data Proc job.
+     * This ID is assigned by MDB in the process of creating Data Proc job.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. Unique ID of the Data Proc job.
+     * This ID is assigned by MDB in the process of creating Data Proc job.
+     * </pre>
+     *
+     * <code>string id = 1;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLUSTER_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object clusterId_;
+    /**
+     * <pre>
+     * Required. Unique ID of the Data Proc cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 2;</code>
+     * @return The clusterId.
+     */
+    @java.lang.Override
+    public java.lang.String getClusterId() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        clusterId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Required. Unique ID of the Data Proc cluster.
+     * </pre>
+     *
+     * <code>string cluster_id = 2;</code>
+     * @return The bytes for clusterId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getClusterIdBytes() {
+      java.lang.Object ref = clusterId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        clusterId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <pre>
+     * The time when the Data Proc job was created.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return Whether the createdAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <pre>
+     * The time when the Data Proc job was created.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <pre>
+     * The time when the Data Proc job was created.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp created_at = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return getCreatedAt();
+    }
+
+    public static final int STARTED_AT_FIELD_NUMBER = 4;
+    private com.google.protobuf.Timestamp startedAt_;
+    /**
+     * <pre>
+     * The time when the Data Proc job was started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp started_at = 4;</code>
+     * @return Whether the startedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartedAt() {
+      return startedAt_ != null;
+    }
+    /**
+     * <pre>
+     * The time when the Data Proc job was started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp started_at = 4;</code>
+     * @return The startedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getStartedAt() {
+      return startedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
+    }
+    /**
+     * <pre>
+     * The time when the Data Proc job was started.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp started_at = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder() {
+      return getStartedAt();
+    }
+
+    public static final int FINISHED_AT_FIELD_NUMBER = 5;
+    private com.google.protobuf.Timestamp finishedAt_;
+    /**
+     * <pre>
+     * The time when the Data Proc job was finished.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp finished_at = 5;</code>
+     * @return Whether the finishedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasFinishedAt() {
+      return finishedAt_ != null;
+    }
+    /**
+     * <pre>
+     * The time when the Data Proc job was finished.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp finished_at = 5;</code>
+     * @return The finishedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getFinishedAt() {
+      return finishedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : finishedAt_;
+    }
+    /**
+     * <pre>
+     * The time when the Data Proc job was finished.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp finished_at = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getFinishedAtOrBuilder() {
+      return getFinishedAt();
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 6;
+    private int status_;
+    /**
+     * <pre>
+     * Status.
+     * </pre>
+     *
+     * <code>.yandex.cloud.dataproc.manager.v1.SupportJob.Status status = 6;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <pre>
+     * Status.
+     * </pre>
+     *
+     * <code>.yandex.cloud.dataproc.manager.v1.SupportJob.Status status = 6;</code>
+     * @return The status.
+     */
+    @java.lang.Override public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob.Status getStatus() {
+      @SuppressWarnings("deprecation")
+      yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob.Status result = yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob.Status.valueOf(status_);
+      return result == null ? yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob.Status.UNRECOGNIZED : result;
+    }
+
+    public static final int CMD_FIELD_NUMBER = 7;
+    private volatile java.lang.Object cmd_;
+    /**
+     * <pre>
+     * Command.
+     * </pre>
+     *
+     * <code>string cmd = 7;</code>
+     * @return The cmd.
+     */
+    @java.lang.Override
+    public java.lang.String getCmd() {
+      java.lang.Object ref = cmd_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        cmd_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Command.
+     * </pre>
+     *
+     * <code>string cmd = 7;</code>
+     * @return The bytes for cmd.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCmdBytes() {
+      java.lang.Object ref = cmd_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cmd_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIMEOUT_FIELD_NUMBER = 8;
+    private long timeout_;
+    /**
+     * <pre>
+     * Execution timeout in seconds.
+     * </pre>
+     *
+     * <code>int64 timeout = 8;</code>
+     * @return The timeout.
+     */
+    @java.lang.Override
+    public long getTimeout() {
+      return timeout_;
+    }
+
+    public static final int CREATED_BY_FIELD_NUMBER = 9;
+    private volatile java.lang.Object createdBy_;
+    /**
+     * <pre>
+     * The id of the user who created the job
+     * </pre>
+     *
+     * <code>string created_by = 9;</code>
+     * @return The createdBy.
+     */
+    @java.lang.Override
+    public java.lang.String getCreatedBy() {
+      java.lang.Object ref = createdBy_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        createdBy_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The id of the user who created the job
+     * </pre>
+     *
+     * <code>string created_by = 9;</code>
+     * @return The bytes for createdBy.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCreatedByBytes() {
+      java.lang.Object ref = createdBy_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        createdBy_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, clusterId_);
+      }
+      if (createdAt_ != null) {
+        output.writeMessage(3, getCreatedAt());
+      }
+      if (startedAt_ != null) {
+        output.writeMessage(4, getStartedAt());
+      }
+      if (finishedAt_ != null) {
+        output.writeMessage(5, getFinishedAt());
+      }
+      if (status_ != yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob.Status.STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(6, status_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cmd_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, cmd_);
+      }
+      if (timeout_ != 0L) {
+        output.writeInt64(8, timeout_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdBy_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, createdBy_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clusterId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, clusterId_);
+      }
+      if (createdAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getCreatedAt());
+      }
+      if (startedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getStartedAt());
+      }
+      if (finishedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getFinishedAt());
+      }
+      if (status_ != yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob.Status.STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(6, status_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(cmd_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, cmd_);
+      }
+      if (timeout_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(8, timeout_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(createdBy_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, createdBy_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob)) {
+        return super.equals(obj);
+      }
+      yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob other = (yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob) obj;
+
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getClusterId()
+          .equals(other.getClusterId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
+      }
+      if (hasStartedAt() != other.hasStartedAt()) return false;
+      if (hasStartedAt()) {
+        if (!getStartedAt()
+            .equals(other.getStartedAt())) return false;
+      }
+      if (hasFinishedAt() != other.hasFinishedAt()) return false;
+      if (hasFinishedAt()) {
+        if (!getFinishedAt()
+            .equals(other.getFinishedAt())) return false;
+      }
+      if (status_ != other.status_) return false;
+      if (!getCmd()
+          .equals(other.getCmd())) return false;
+      if (getTimeout()
+          != other.getTimeout()) return false;
+      if (!getCreatedBy()
+          .equals(other.getCreatedBy())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + CLUSTER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterId().hashCode();
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
+      }
+      if (hasStartedAt()) {
+        hash = (37 * hash) + STARTED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getStartedAt().hashCode();
+      }
+      if (hasFinishedAt()) {
+        hash = (37 * hash) + FINISHED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getFinishedAt().hashCode();
+      }
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      hash = (37 * hash) + CMD_FIELD_NUMBER;
+      hash = (53 * hash) + getCmd().hashCode();
+      hash = (37 * hash) + TIMEOUT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getTimeout());
+      hash = (37 * hash) + CREATED_BY_FIELD_NUMBER;
+      hash = (53 * hash) + getCreatedBy().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Data Proc support job.
+     * </pre>
+     *
+     * Protobuf type {@code yandex.cloud.dataproc.manager.v1.SupportJob}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:yandex.cloud.dataproc.manager.v1.SupportJob)
+        yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJobOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return yandex.cloud.api.dataproc.manager.v1.JobOuterClass.internal_static_yandex_cloud_dataproc_manager_v1_SupportJob_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return yandex.cloud.api.dataproc.manager.v1.JobOuterClass.internal_static_yandex_cloud_dataproc_manager_v1_SupportJob_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob.class, yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob.Builder.class);
+      }
+
+      // Construct using yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        clusterId_ = "";
+
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+        if (startedAtBuilder_ == null) {
+          startedAt_ = null;
+        } else {
+          startedAt_ = null;
+          startedAtBuilder_ = null;
+        }
+        if (finishedAtBuilder_ == null) {
+          finishedAt_ = null;
+        } else {
+          finishedAt_ = null;
+          finishedAtBuilder_ = null;
+        }
+        status_ = 0;
+
+        cmd_ = "";
+
+        timeout_ = 0L;
+
+        createdBy_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return yandex.cloud.api.dataproc.manager.v1.JobOuterClass.internal_static_yandex_cloud_dataproc_manager_v1_SupportJob_descriptor;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob getDefaultInstanceForType() {
+        return yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob build() {
+        yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob buildPartial() {
+        yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob result = new yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob(this);
+        result.id_ = id_;
+        result.clusterId_ = clusterId_;
+        if (createdAtBuilder_ == null) {
+          result.createdAt_ = createdAt_;
+        } else {
+          result.createdAt_ = createdAtBuilder_.build();
+        }
+        if (startedAtBuilder_ == null) {
+          result.startedAt_ = startedAt_;
+        } else {
+          result.startedAt_ = startedAtBuilder_.build();
+        }
+        if (finishedAtBuilder_ == null) {
+          result.finishedAt_ = finishedAt_;
+        } else {
+          result.finishedAt_ = finishedAtBuilder_.build();
+        }
+        result.status_ = status_;
+        result.cmd_ = cmd_;
+        result.timeout_ = timeout_;
+        result.createdBy_ = createdBy_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob) {
+          return mergeFrom((yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob other) {
+        if (other == yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getClusterId().isEmpty()) {
+          clusterId_ = other.clusterId_;
+          onChanged();
+        }
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
+        }
+        if (other.hasStartedAt()) {
+          mergeStartedAt(other.getStartedAt());
+        }
+        if (other.hasFinishedAt()) {
+          mergeFinishedAt(other.getFinishedAt());
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (!other.getCmd().isEmpty()) {
+          cmd_ = other.cmd_;
+          onChanged();
+        }
+        if (other.getTimeout() != 0L) {
+          setTimeout(other.getTimeout());
+        }
+        if (!other.getCreatedBy().isEmpty()) {
+          createdBy_ = other.createdBy_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * Required. Unique ID of the Data Proc job.
+       * This ID is assigned by MDB in the process of creating Data Proc job.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Unique ID of the Data Proc job.
+       * This ID is assigned by MDB in the process of creating Data Proc job.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Unique ID of the Data Proc job.
+       * This ID is assigned by MDB in the process of creating Data Proc job.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Unique ID of the Data Proc job.
+       * This ID is assigned by MDB in the process of creating Data Proc job.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Unique ID of the Data Proc job.
+       * This ID is assigned by MDB in the process of creating Data Proc job.
+       * </pre>
+       *
+       * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object clusterId_ = "";
+      /**
+       * <pre>
+       * Required. Unique ID of the Data Proc cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 2;</code>
+       * @return The clusterId.
+       */
+      public java.lang.String getClusterId() {
+        java.lang.Object ref = clusterId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          clusterId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Unique ID of the Data Proc cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 2;</code>
+       * @return The bytes for clusterId.
+       */
+      public com.google.protobuf.ByteString
+          getClusterIdBytes() {
+        java.lang.Object ref = clusterId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          clusterId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Required. Unique ID of the Data Proc cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 2;</code>
+       * @param value The clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Unique ID of the Data Proc cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearClusterId() {
+        
+        clusterId_ = getDefaultInstance().getClusterId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Required. Unique ID of the Data Proc cluster.
+       * </pre>
+       *
+       * <code>string cluster_id = 2;</code>
+       * @param value The bytes for clusterId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setClusterIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        clusterId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <pre>
+       * The time when the Data Proc job was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return Whether the createdAt field is set.
+       */
+      public boolean hasCreatedAt() {
+        return createdAtBuilder_ != null || createdAt_ != null;
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       * @return The createdAt.
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (createdAt_ != null) {
+            createdAt_ =
+              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          } else {
+            createdAt_ = value;
+          }
+          onChanged();
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public Builder clearCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+          onChanged();
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        
+        onChanged();
+        return getCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was created.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp created_at = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp startedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startedAtBuilder_;
+      /**
+       * <pre>
+       * The time when the Data Proc job was started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 4;</code>
+       * @return Whether the startedAt field is set.
+       */
+      public boolean hasStartedAt() {
+        return startedAtBuilder_ != null || startedAt_ != null;
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 4;</code>
+       * @return The startedAt.
+       */
+      public com.google.protobuf.Timestamp getStartedAt() {
+        if (startedAtBuilder_ == null) {
+          return startedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
+        } else {
+          return startedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 4;</code>
+       */
+      public Builder setStartedAt(com.google.protobuf.Timestamp value) {
+        if (startedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startedAt_ = value;
+          onChanged();
+        } else {
+          startedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 4;</code>
+       */
+      public Builder setStartedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startedAtBuilder_ == null) {
+          startedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          startedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 4;</code>
+       */
+      public Builder mergeStartedAt(com.google.protobuf.Timestamp value) {
+        if (startedAtBuilder_ == null) {
+          if (startedAt_ != null) {
+            startedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(startedAt_).mergeFrom(value).buildPartial();
+          } else {
+            startedAt_ = value;
+          }
+          onChanged();
+        } else {
+          startedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 4;</code>
+       */
+      public Builder clearStartedAt() {
+        if (startedAtBuilder_ == null) {
+          startedAt_ = null;
+          onChanged();
+        } else {
+          startedAt_ = null;
+          startedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 4;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartedAtBuilder() {
+        
+        onChanged();
+        return getStartedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 4;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartedAtOrBuilder() {
+        if (startedAtBuilder_ != null) {
+          return startedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return startedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startedAt_;
+        }
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was started.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp started_at = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartedAtFieldBuilder() {
+        if (startedAtBuilder_ == null) {
+          startedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartedAt(),
+                  getParentForChildren(),
+                  isClean());
+          startedAt_ = null;
+        }
+        return startedAtBuilder_;
+      }
+
+      private com.google.protobuf.Timestamp finishedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> finishedAtBuilder_;
+      /**
+       * <pre>
+       * The time when the Data Proc job was finished.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp finished_at = 5;</code>
+       * @return Whether the finishedAt field is set.
+       */
+      public boolean hasFinishedAt() {
+        return finishedAtBuilder_ != null || finishedAt_ != null;
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was finished.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp finished_at = 5;</code>
+       * @return The finishedAt.
+       */
+      public com.google.protobuf.Timestamp getFinishedAt() {
+        if (finishedAtBuilder_ == null) {
+          return finishedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : finishedAt_;
+        } else {
+          return finishedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was finished.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp finished_at = 5;</code>
+       */
+      public Builder setFinishedAt(com.google.protobuf.Timestamp value) {
+        if (finishedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          finishedAt_ = value;
+          onChanged();
+        } else {
+          finishedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was finished.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp finished_at = 5;</code>
+       */
+      public Builder setFinishedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (finishedAtBuilder_ == null) {
+          finishedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          finishedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was finished.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp finished_at = 5;</code>
+       */
+      public Builder mergeFinishedAt(com.google.protobuf.Timestamp value) {
+        if (finishedAtBuilder_ == null) {
+          if (finishedAt_ != null) {
+            finishedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(finishedAt_).mergeFrom(value).buildPartial();
+          } else {
+            finishedAt_ = value;
+          }
+          onChanged();
+        } else {
+          finishedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was finished.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp finished_at = 5;</code>
+       */
+      public Builder clearFinishedAt() {
+        if (finishedAtBuilder_ == null) {
+          finishedAt_ = null;
+          onChanged();
+        } else {
+          finishedAt_ = null;
+          finishedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was finished.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp finished_at = 5;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getFinishedAtBuilder() {
+        
+        onChanged();
+        return getFinishedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was finished.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp finished_at = 5;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getFinishedAtOrBuilder() {
+        if (finishedAtBuilder_ != null) {
+          return finishedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return finishedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : finishedAt_;
+        }
+      }
+      /**
+       * <pre>
+       * The time when the Data Proc job was finished.
+       * </pre>
+       *
+       * <code>.google.protobuf.Timestamp finished_at = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getFinishedAtFieldBuilder() {
+        if (finishedAtBuilder_ == null) {
+          finishedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getFinishedAt(),
+                  getParentForChildren(),
+                  isClean());
+          finishedAt_ = null;
+        }
+        return finishedAtBuilder_;
+      }
+
+      private int status_ = 0;
+      /**
+       * <pre>
+       * Status.
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.manager.v1.SupportJob.Status status = 6;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <pre>
+       * Status.
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.manager.v1.SupportJob.Status status = 6;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status.
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.manager.v1.SupportJob.Status status = 6;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob.Status getStatus() {
+        @SuppressWarnings("deprecation")
+        yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob.Status result = yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob.Status.valueOf(status_);
+        return result == null ? yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob.Status.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Status.
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.manager.v1.SupportJob.Status status = 6;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob.Status value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Status.
+       * </pre>
+       *
+       * <code>.yandex.cloud.dataproc.manager.v1.SupportJob.Status status = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object cmd_ = "";
+      /**
+       * <pre>
+       * Command.
+       * </pre>
+       *
+       * <code>string cmd = 7;</code>
+       * @return The cmd.
+       */
+      public java.lang.String getCmd() {
+        java.lang.Object ref = cmd_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          cmd_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Command.
+       * </pre>
+       *
+       * <code>string cmd = 7;</code>
+       * @return The bytes for cmd.
+       */
+      public com.google.protobuf.ByteString
+          getCmdBytes() {
+        java.lang.Object ref = cmd_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cmd_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Command.
+       * </pre>
+       *
+       * <code>string cmd = 7;</code>
+       * @param value The cmd to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCmd(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        cmd_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Command.
+       * </pre>
+       *
+       * <code>string cmd = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCmd() {
+        
+        cmd_ = getDefaultInstance().getCmd();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Command.
+       * </pre>
+       *
+       * <code>string cmd = 7;</code>
+       * @param value The bytes for cmd to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCmdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        cmd_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long timeout_ ;
+      /**
+       * <pre>
+       * Execution timeout in seconds.
+       * </pre>
+       *
+       * <code>int64 timeout = 8;</code>
+       * @return The timeout.
+       */
+      @java.lang.Override
+      public long getTimeout() {
+        return timeout_;
+      }
+      /**
+       * <pre>
+       * Execution timeout in seconds.
+       * </pre>
+       *
+       * <code>int64 timeout = 8;</code>
+       * @param value The timeout to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTimeout(long value) {
+        
+        timeout_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Execution timeout in seconds.
+       * </pre>
+       *
+       * <code>int64 timeout = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTimeout() {
+        
+        timeout_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object createdBy_ = "";
+      /**
+       * <pre>
+       * The id of the user who created the job
+       * </pre>
+       *
+       * <code>string created_by = 9;</code>
+       * @return The createdBy.
+       */
+      public java.lang.String getCreatedBy() {
+        java.lang.Object ref = createdBy_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          createdBy_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The id of the user who created the job
+       * </pre>
+       *
+       * <code>string created_by = 9;</code>
+       * @return The bytes for createdBy.
+       */
+      public com.google.protobuf.ByteString
+          getCreatedByBytes() {
+        java.lang.Object ref = createdBy_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          createdBy_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The id of the user who created the job
+       * </pre>
+       *
+       * <code>string created_by = 9;</code>
+       * @param value The createdBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatedBy(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        createdBy_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The id of the user who created the job
+       * </pre>
+       *
+       * <code>string created_by = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreatedBy() {
+        
+        createdBy_ = getDefaultInstance().getCreatedBy();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The id of the user who created the job
+       * </pre>
+       *
+       * <code>string created_by = 9;</code>
+       * @param value The bytes for createdBy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreatedByBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        createdBy_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:yandex.cloud.dataproc.manager.v1.SupportJob)
+    }
+
+    // @@protoc_insertion_point(class_scope:yandex.cloud.dataproc.manager.v1.SupportJob)
+    private static final yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob();
+    }
+
+    public static yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SupportJob>
+        PARSER = new com.google.protobuf.AbstractParser<SupportJob>() {
+      @java.lang.Override
+      public SupportJob parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SupportJob(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SupportJob> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SupportJob> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public yandex.cloud.api.dataproc.manager.v1.JobOuterClass.SupportJob getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_yandex_cloud_dataproc_manager_v1_Job_descriptor;
   private static final 
@@ -17208,6 +19628,11 @@ public final class JobOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_yandex_cloud_dataproc_manager_v1_HiveJob_ScriptVariablesEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_yandex_cloud_dataproc_manager_v1_SupportJob_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_yandex_cloud_dataproc_manager_v1_SupportJob_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -17279,11 +19704,22 @@ public final class JobOuterClass {
       "roc.manager.v1.QueryListH\000\0321\n\017Properties" +
       "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0326\n" +
       "\024ScriptVariablesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t:\0028\001B\014\n\nquery_typeB}\n$yandex.cl" +
-      "oud.api.dataproc.manager.v1ZUgithub.com/" +
-      "yandex-cloud/go-genproto/yandex/cloud/da" +
-      "taproc/manager/v1;dataproc_managerb\006prot" +
-      "o3"
+      "lue\030\002 \001(\t:\0028\001B\014\n\nquery_type\"\267\003\n\nSupportJ" +
+      "ob\022\n\n\002id\030\001 \001(\t\022\022\n\ncluster_id\030\002 \001(\t\022.\n\ncr" +
+      "eated_at\030\003 \001(\0132\032.google.protobuf.Timesta" +
+      "mp\022.\n\nstarted_at\030\004 \001(\0132\032.google.protobuf" +
+      ".Timestamp\022/\n\013finished_at\030\005 \001(\0132\032.google" +
+      ".protobuf.Timestamp\022C\n\006status\030\006 \001(\01623.ya" +
+      "ndex.cloud.dataproc.manager.v1.SupportJo" +
+      "b.Status\022\013\n\003cmd\030\007 \001(\t\022\017\n\007timeout\030\010 \001(\003\022\022" +
+      "\n\ncreated_by\030\t \001(\t\"\200\001\n\006Status\022\026\n\022STATUS_" +
+      "UNSPECIFIED\020\000\022\020\n\014PROVISIONING\020\001\022\013\n\007PENDI" +
+      "NG\020\002\022\013\n\007RUNNING\020\003\022\t\n\005ERROR\020\004\022\010\n\004DONE\020\005\022\r" +
+      "\n\tCANCELLED\020\006\022\016\n\nCANCELLING\020\007B}\n$yandex." +
+      "cloud.api.dataproc.manager.v1ZUgithub.co" +
+      "m/yandex-cloud/go-genproto/yandex/cloud/" +
+      "dataproc/manager/v1;dataproc_managerb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17368,6 +19804,12 @@ public final class JobOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_dataproc_manager_v1_HiveJob_ScriptVariablesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
+    internal_static_yandex_cloud_dataproc_manager_v1_SupportJob_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_yandex_cloud_dataproc_manager_v1_SupportJob_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_yandex_cloud_dataproc_manager_v1_SupportJob_descriptor,
+        new java.lang.String[] { "Id", "ClusterId", "CreatedAt", "StartedAt", "FinishedAt", "Status", "Cmd", "Timeout", "CreatedBy", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 
