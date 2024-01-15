@@ -649,7 +649,7 @@ public final class VideoServiceOuterClass {
      * Value in quotes: `'` or `"`
      * Example: "key1='value' AND key2='value'"
      * Supported operators: ["AND"].
-     * Supported fields: ["title", "status"]
+     * Supported fields: ["title", "status", "visibility_status"]
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -664,7 +664,7 @@ public final class VideoServiceOuterClass {
      * Value in quotes: `'` or `"`
      * Example: "key1='value' AND key2='value'"
      * Supported operators: ["AND"].
-     * Supported fields: ["title", "status"]
+     * Supported fields: ["title", "status", "visibility_status"]
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -932,7 +932,7 @@ public final class VideoServiceOuterClass {
      * Value in quotes: `'` or `"`
      * Example: "key1='value' AND key2='value'"
      * Supported operators: ["AND"].
-     * Supported fields: ["title", "status"]
+     * Supported fields: ["title", "status", "visibility_status"]
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -959,7 +959,7 @@ public final class VideoServiceOuterClass {
      * Value in quotes: `'` or `"`
      * Example: "key1='value' AND key2='value'"
      * Supported operators: ["AND"].
-     * Supported fields: ["title", "status"]
+     * Supported fields: ["title", "status", "visibility_status"]
      * Both snake_case and camelCase are supported for fields.
      * </pre>
      *
@@ -1654,7 +1654,7 @@ public final class VideoServiceOuterClass {
        * Value in quotes: `'` or `"`
        * Example: "key1='value' AND key2='value'"
        * Supported operators: ["AND"].
-       * Supported fields: ["title", "status"]
+       * Supported fields: ["title", "status", "visibility_status"]
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1680,7 +1680,7 @@ public final class VideoServiceOuterClass {
        * Value in quotes: `'` or `"`
        * Example: "key1='value' AND key2='value'"
        * Supported operators: ["AND"].
-       * Supported fields: ["title", "status"]
+       * Supported fields: ["title", "status", "visibility_status"]
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1707,7 +1707,7 @@ public final class VideoServiceOuterClass {
        * Value in quotes: `'` or `"`
        * Example: "key1='value' AND key2='value'"
        * Supported operators: ["AND"].
-       * Supported fields: ["title", "status"]
+       * Supported fields: ["title", "status", "visibility_status"]
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1732,7 +1732,7 @@ public final class VideoServiceOuterClass {
        * Value in quotes: `'` or `"`
        * Example: "key1='value' AND key2='value'"
        * Supported operators: ["AND"].
-       * Supported fields: ["title", "status"]
+       * Supported fields: ["title", "status", "visibility_status"]
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
@@ -1752,7 +1752,7 @@ public final class VideoServiceOuterClass {
        * Value in quotes: `'` or `"`
        * Example: "key1='value' AND key2='value'"
        * Supported operators: ["AND"].
-       * Supported fields: ["title", "status"]
+       * Supported fields: ["title", "status", "visibility_status"]
        * Both snake_case and camelCase are supported for fields.
        * </pre>
        *
