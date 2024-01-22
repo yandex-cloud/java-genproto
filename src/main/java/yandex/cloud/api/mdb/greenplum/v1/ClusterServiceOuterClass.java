@@ -36791,6 +36791,47 @@ public final class ClusterServiceOuterClass {
      * @return The segmentInHost.
      */
     long getSegmentInHost();
+
+    /**
+     * <pre>
+     * List of databases and tables to restore
+     * </pre>
+     *
+     * <code>repeated string restore_only = 19 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#92;&#92;*_]*(&#92;&#92;/[a-zA-Z0-9&#92;&#92;*_]*){0,2}", (.yandex.cloud.size) = "&lt;=50", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return A list containing the restoreOnly.
+     */
+    java.util.List<java.lang.String>
+        getRestoreOnlyList();
+    /**
+     * <pre>
+     * List of databases and tables to restore
+     * </pre>
+     *
+     * <code>repeated string restore_only = 19 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#92;&#92;*_]*(&#92;&#92;/[a-zA-Z0-9&#92;&#92;*_]*){0,2}", (.yandex.cloud.size) = "&lt;=50", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The count of restoreOnly.
+     */
+    int getRestoreOnlyCount();
+    /**
+     * <pre>
+     * List of databases and tables to restore
+     * </pre>
+     *
+     * <code>repeated string restore_only = 19 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#92;&#92;*_]*(&#92;&#92;/[a-zA-Z0-9&#92;&#92;*_]*){0,2}", (.yandex.cloud.size) = "&lt;=50", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @param index The index of the element to return.
+     * @return The restoreOnly at the given index.
+     */
+    java.lang.String getRestoreOnly(int index);
+    /**
+     * <pre>
+     * List of databases and tables to restore
+     * </pre>
+     *
+     * <code>repeated string restore_only = 19 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#92;&#92;*_]*(&#92;&#92;/[a-zA-Z0-9&#92;&#92;*_]*){0,2}", (.yandex.cloud.size) = "&lt;=50", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the restoreOnly at the given index.
+     */
+    com.google.protobuf.ByteString
+        getRestoreOnlyBytes(int index);
   }
   /**
    * Protobuf type {@code yandex.cloud.mdb.greenplum.v1.RestoreClusterRequest}
@@ -36814,6 +36855,7 @@ public final class ClusterServiceOuterClass {
       securityGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       hostGroupIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       placementGroupId_ = "";
+      restoreOnly_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -37000,6 +37042,15 @@ public final class ClusterServiceOuterClass {
               segmentInHost_ = input.readInt64();
               break;
             }
+            case 154: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                restoreOnly_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              restoreOnly_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -37020,6 +37071,9 @@ public final class ClusterServiceOuterClass {
         }
         if (((mutable_bitField0_ & 0x00000004) != 0)) {
           hostGroupIds_ = hostGroupIds_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          restoreOnly_ = restoreOnly_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -37793,6 +37847,57 @@ public final class ClusterServiceOuterClass {
       return segmentInHost_;
     }
 
+    public static final int RESTORE_ONLY_FIELD_NUMBER = 19;
+    private com.google.protobuf.LazyStringList restoreOnly_;
+    /**
+     * <pre>
+     * List of databases and tables to restore
+     * </pre>
+     *
+     * <code>repeated string restore_only = 19 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#92;&#92;*_]*(&#92;&#92;/[a-zA-Z0-9&#92;&#92;*_]*){0,2}", (.yandex.cloud.size) = "&lt;=50", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return A list containing the restoreOnly.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getRestoreOnlyList() {
+      return restoreOnly_;
+    }
+    /**
+     * <pre>
+     * List of databases and tables to restore
+     * </pre>
+     *
+     * <code>repeated string restore_only = 19 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#92;&#92;*_]*(&#92;&#92;/[a-zA-Z0-9&#92;&#92;*_]*){0,2}", (.yandex.cloud.size) = "&lt;=50", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @return The count of restoreOnly.
+     */
+    public int getRestoreOnlyCount() {
+      return restoreOnly_.size();
+    }
+    /**
+     * <pre>
+     * List of databases and tables to restore
+     * </pre>
+     *
+     * <code>repeated string restore_only = 19 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#92;&#92;*_]*(&#92;&#92;/[a-zA-Z0-9&#92;&#92;*_]*){0,2}", (.yandex.cloud.size) = "&lt;=50", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @param index The index of the element to return.
+     * @return The restoreOnly at the given index.
+     */
+    public java.lang.String getRestoreOnly(int index) {
+      return restoreOnly_.get(index);
+    }
+    /**
+     * <pre>
+     * List of databases and tables to restore
+     * </pre>
+     *
+     * <code>repeated string restore_only = 19 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#92;&#92;*_]*(&#92;&#92;/[a-zA-Z0-9&#92;&#92;*_]*){0,2}", (.yandex.cloud.size) = "&lt;=50", (.yandex.cloud.length) = "&lt;=256"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the restoreOnly at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getRestoreOnlyBytes(int index) {
+      return restoreOnly_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -37863,6 +37968,9 @@ public final class ClusterServiceOuterClass {
       }
       if (segmentInHost_ != 0L) {
         output.writeInt64(18, segmentInHost_);
+      }
+      for (int i = 0; i < restoreOnly_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 19, restoreOnly_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -37953,6 +38061,14 @@ public final class ClusterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(18, segmentInHost_);
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < restoreOnly_.size(); i++) {
+          dataSize += computeStringSizeNoTag(restoreOnly_.getRaw(i));
+        }
+        size += dataSize;
+        size += 2 * getRestoreOnlyList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -38018,6 +38134,8 @@ public final class ClusterServiceOuterClass {
           != other.getSegmentHostCount()) return false;
       if (getSegmentInHost()
           != other.getSegmentInHost()) return false;
+      if (!getRestoreOnlyList()
+          .equals(other.getRestoreOnlyList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -38084,6 +38202,10 @@ public final class ClusterServiceOuterClass {
       hash = (37 * hash) + SEGMENT_IN_HOST_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getSegmentInHost());
+      if (getRestoreOnlyCount() > 0) {
+        hash = (37 * hash) + RESTORE_ONLY_FIELD_NUMBER;
+        hash = (53 * hash) + getRestoreOnlyList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -38294,6 +38416,8 @@ public final class ClusterServiceOuterClass {
 
         segmentInHost_ = 0L;
 
+        restoreOnly_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -38368,6 +38492,11 @@ public final class ClusterServiceOuterClass {
         }
         result.segmentHostCount_ = segmentHostCount_;
         result.segmentInHost_ = segmentInHost_;
+        if (((bitField0_ & 0x00000008) != 0)) {
+          restoreOnly_ = restoreOnly_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.restoreOnly_ = restoreOnly_;
         onBuilt();
         return result;
       }
@@ -38488,6 +38617,16 @@ public final class ClusterServiceOuterClass {
         }
         if (other.getSegmentInHost() != 0L) {
           setSegmentInHost(other.getSegmentInHost());
+        }
+        if (!other.restoreOnly_.isEmpty()) {
+          if (restoreOnly_.isEmpty()) {
+            restoreOnly_ = other.restoreOnly_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureRestoreOnlyIsMutable();
+            restoreOnly_.addAll(other.restoreOnly_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -40535,6 +40674,152 @@ public final class ClusterServiceOuterClass {
         onChanged();
         return this;
       }
+
+      private com.google.protobuf.LazyStringList restoreOnly_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureRestoreOnlyIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          restoreOnly_ = new com.google.protobuf.LazyStringArrayList(restoreOnly_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+      /**
+       * <pre>
+       * List of databases and tables to restore
+       * </pre>
+       *
+       * <code>repeated string restore_only = 19 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#92;&#92;*_]*(&#92;&#92;/[a-zA-Z0-9&#92;&#92;*_]*){0,2}", (.yandex.cloud.size) = "&lt;=50", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return A list containing the restoreOnly.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getRestoreOnlyList() {
+        return restoreOnly_.getUnmodifiableView();
+      }
+      /**
+       * <pre>
+       * List of databases and tables to restore
+       * </pre>
+       *
+       * <code>repeated string restore_only = 19 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#92;&#92;*_]*(&#92;&#92;/[a-zA-Z0-9&#92;&#92;*_]*){0,2}", (.yandex.cloud.size) = "&lt;=50", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return The count of restoreOnly.
+       */
+      public int getRestoreOnlyCount() {
+        return restoreOnly_.size();
+      }
+      /**
+       * <pre>
+       * List of databases and tables to restore
+       * </pre>
+       *
+       * <code>repeated string restore_only = 19 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#92;&#92;*_]*(&#92;&#92;/[a-zA-Z0-9&#92;&#92;*_]*){0,2}", (.yandex.cloud.size) = "&lt;=50", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param index The index of the element to return.
+       * @return The restoreOnly at the given index.
+       */
+      public java.lang.String getRestoreOnly(int index) {
+        return restoreOnly_.get(index);
+      }
+      /**
+       * <pre>
+       * List of databases and tables to restore
+       * </pre>
+       *
+       * <code>repeated string restore_only = 19 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#92;&#92;*_]*(&#92;&#92;/[a-zA-Z0-9&#92;&#92;*_]*){0,2}", (.yandex.cloud.size) = "&lt;=50", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the restoreOnly at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getRestoreOnlyBytes(int index) {
+        return restoreOnly_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * List of databases and tables to restore
+       * </pre>
+       *
+       * <code>repeated string restore_only = 19 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#92;&#92;*_]*(&#92;&#92;/[a-zA-Z0-9&#92;&#92;*_]*){0,2}", (.yandex.cloud.size) = "&lt;=50", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param index The index to set the value at.
+       * @param value The restoreOnly to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRestoreOnly(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRestoreOnlyIsMutable();
+        restoreOnly_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of databases and tables to restore
+       * </pre>
+       *
+       * <code>repeated string restore_only = 19 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#92;&#92;*_]*(&#92;&#92;/[a-zA-Z0-9&#92;&#92;*_]*){0,2}", (.yandex.cloud.size) = "&lt;=50", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The restoreOnly to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRestoreOnly(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureRestoreOnlyIsMutable();
+        restoreOnly_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of databases and tables to restore
+       * </pre>
+       *
+       * <code>repeated string restore_only = 19 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#92;&#92;*_]*(&#92;&#92;/[a-zA-Z0-9&#92;&#92;*_]*){0,2}", (.yandex.cloud.size) = "&lt;=50", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param values The restoreOnly to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllRestoreOnly(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureRestoreOnlyIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, restoreOnly_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of databases and tables to restore
+       * </pre>
+       *
+       * <code>repeated string restore_only = 19 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#92;&#92;*_]*(&#92;&#92;/[a-zA-Z0-9&#92;&#92;*_]*){0,2}", (.yandex.cloud.size) = "&lt;=50", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRestoreOnly() {
+        restoreOnly_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * List of databases and tables to restore
+       * </pre>
+       *
+       * <code>repeated string restore_only = 19 [(.yandex.cloud.pattern) = "[a-zA-Z0-9&#92;&#92;*_]*(&#92;&#92;/[a-zA-Z0-9&#92;&#92;*_]*){0,2}", (.yandex.cloud.size) = "&lt;=50", (.yandex.cloud.length) = "&lt;=256"];</code>
+       * @param value The bytes of the restoreOnly to add.
+       * @return This builder for chaining.
+       */
+      public Builder addRestoreOnlyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureRestoreOnlyIsMutable();
+        restoreOnly_.add(value);
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -41735,7 +42020,7 @@ public final class ClusterServiceOuterClass {
       ".v1.Backup\022\027\n\017next_page_token\030\002 \001(\t\"8\n\024B" +
       "ackupClusterRequest\022 \n\ncluster_id\030\001 \001(\tB" +
       "\014\350\3071\001\212\3101\004<=50\">\n\025BackupClusterMetadata\022\022" +
-      "\n\ncluster_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t\"\275\007" +
+      "\n\ncluster_id\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t\"\221\010" +
       "\n\025RestoreClusterRequest\022\027\n\tbackup_id\030\001 \001" +
       "(\tB\004\350\3071\001\022(\n\004time\030\020 \001(\0132\032.google.protobuf" +
       ".Timestamp\022\037\n\tfolder_id\030\002 \001(\tB\014\350\3071\001\212\3101\004<" +
@@ -41758,89 +42043,91 @@ public final class ClusterServiceOuterClass {
       "ment_group_id\030\016 \001(\t\022L\n\022maintenance_windo" +
       "w\030\017 \001(\01320.yandex.cloud.mdb.greenplum.v1." +
       "MaintenanceWindow\022\032\n\022segment_host_count\030" +
-      "\021 \001(\003\022\027\n\017segment_in_host\030\022 \001(\003\032-\n\013Labels" +
-      "Entry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"?\n" +
-      "\026RestoreClusterMetadata\022\022\n\ncluster_id\030\001 " +
-      "\001(\t\022\021\n\tbackup_id\030\002 \001(\t2\310\027\n\016ClusterServic" +
-      "e\022\224\001\n\003Get\0220.yandex.cloud.mdb.greenplum.v" +
-      "1.GetClusterRequest\032&.yandex.cloud.mdb.g" +
-      "reenplum.v1.Cluster\"3\202\323\344\223\002-\022+/managed-gr" +
-      "eenplum/v1/clusters/{cluster_id}\022\227\001\n\004Lis" +
-      "t\0222.yandex.cloud.mdb.greenplum.v1.ListCl" +
-      "ustersRequest\0323.yandex.cloud.mdb.greenpl" +
-      "um.v1.ListClustersResponse\"&\202\323\344\223\002 \022\036/man" +
-      "aged-greenplum/v1/clusters\022\257\001\n\006Create\0223." +
-      "yandex.cloud.mdb.greenplum.v1.CreateClus" +
-      "terRequest\032!.yandex.cloud.operation.Oper" +
-      "ation\"M\202\323\344\223\002#\"\036/managed-greenplum/v1/clu" +
-      "sters:\001*\262\322* \n\025CreateClusterMetadata\022\007Clu" +
-      "ster\022\274\001\n\006Update\0223.yandex.cloud.mdb.green" +
-      "plum.v1.UpdateClusterRequest\032!.yandex.cl" +
-      "oud.operation.Operation\"Z\202\323\344\223\00202+/manage" +
-      "d-greenplum/v1/clusters/{cluster_id}:\001*\262" +
-      "\322* \n\025UpdateClusterMetadata\022\007Cluster\022\276\001\n\006" +
-      "Expand\022,.yandex.cloud.mdb.greenplum.v1.E" +
-      "xpandRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"c\202\323\344\223\0027\"2/managed-greenplum/v1/c" +
-      "lusters/{cluster_id}/expand:\001*\262\322*\"\n\027AddC" +
-      "lusterHostsMetadata\022\007Cluster\022\307\001\n\006Delete\022" +
-      "3.yandex.cloud.mdb.greenplum.v1.DeleteCl" +
-      "usterRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"e\202\323\344\223\002-*+/managed-greenplum/v1/c" +
-      "lusters/{cluster_id}\262\322*.\n\025DeleteClusterM" +
-      "etadata\022\025google.protobuf.Empty\022\274\001\n\005Start" +
-      "\0222.yandex.cloud.mdb.greenplum.v1.StartCl" +
-      "usterRequest\032!.yandex.cloud.operation.Op" +
-      "eration\"\\\202\323\344\223\0023\"1/managed-greenplum/v1/c" +
-      "lusters/{cluster_id}:start\262\322*\037\n\024StartClu" +
-      "sterMetadata\022\007Cluster\022\270\001\n\004Stop\0221.yandex." +
-      "cloud.mdb.greenplum.v1.StopClusterReques" +
-      "t\032!.yandex.cloud.operation.Operation\"Z\202\323" +
-      "\344\223\0022\"0/managed-greenplum/v1/clusters/{cl" +
-      "uster_id}:stop\262\322*\036\n\023StopClusterMetadata\022" +
-      "\007Cluster\022\313\001\n\016ListOperations\022;.yandex.clo" +
-      "ud.mdb.greenplum.v1.ListClusterOperation" +
-      "sRequest\032<.yandex.cloud.mdb.greenplum.v1" +
-      ".ListClusterOperationsResponse\">\202\323\344\223\0028\0226" +
-      "/managed-greenplum/v1/clusters/{cluster_" +
-      "id}/operations\022\304\001\n\017ListMasterHosts\0226.yan" +
-      "dex.cloud.mdb.greenplum.v1.ListClusterHo" +
-      "stsRequest\0327.yandex.cloud.mdb.greenplum." +
-      "v1.ListClusterHostsResponse\"@\202\323\344\223\002:\0228/ma" +
+      "\021 \001(\003\022\027\n\017segment_in_host\030\022 \001(\003\022R\n\014restor" +
+      "e_only\030\023 \003(\tB<\202\3101\004<=50\212\3101\005<=256\362\3071\'[a-zA" +
+      "-Z0-9\\*_]*(\\/[a-zA-Z0-9\\*_]*){0,2}\032-\n\013La" +
+      "belsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028" +
+      "\001\"?\n\026RestoreClusterMetadata\022\022\n\ncluster_i" +
+      "d\030\001 \001(\t\022\021\n\tbackup_id\030\002 \001(\t2\310\027\n\016ClusterSe" +
+      "rvice\022\224\001\n\003Get\0220.yandex.cloud.mdb.greenpl" +
+      "um.v1.GetClusterRequest\032&.yandex.cloud.m" +
+      "db.greenplum.v1.Cluster\"3\202\323\344\223\002-\022+/manage" +
+      "d-greenplum/v1/clusters/{cluster_id}\022\227\001\n" +
+      "\004List\0222.yandex.cloud.mdb.greenplum.v1.Li" +
+      "stClustersRequest\0323.yandex.cloud.mdb.gre" +
+      "enplum.v1.ListClustersResponse\"&\202\323\344\223\002 \022\036" +
+      "/managed-greenplum/v1/clusters\022\257\001\n\006Creat" +
+      "e\0223.yandex.cloud.mdb.greenplum.v1.Create" +
+      "ClusterRequest\032!.yandex.cloud.operation." +
+      "Operation\"M\202\323\344\223\002#\"\036/managed-greenplum/v1" +
+      "/clusters:\001*\262\322* \n\025CreateClusterMetadata\022" +
+      "\007Cluster\022\274\001\n\006Update\0223.yandex.cloud.mdb.g" +
+      "reenplum.v1.UpdateClusterRequest\032!.yande" +
+      "x.cloud.operation.Operation\"Z\202\323\344\223\00202+/ma" +
       "naged-greenplum/v1/clusters/{cluster_id}" +
-      "/master-hosts\022\306\001\n\020ListSegmentHosts\0226.yan" +
-      "dex.cloud.mdb.greenplum.v1.ListClusterHo" +
-      "stsRequest\0327.yandex.cloud.mdb.greenplum." +
-      "v1.ListClusterHostsResponse\"A\202\323\344\223\002;\0229/ma" +
-      "naged-greenplum/v1/clusters/{cluster_id}" +
-      "/segment-hosts\022\263\001\n\010ListLogs\0225.yandex.clo" +
-      "ud.mdb.greenplum.v1.ListClusterLogsReque" +
-      "st\0326.yandex.cloud.mdb.greenplum.v1.ListC" +
-      "lusterLogsResponse\"8\202\323\344\223\0022\0220/managed-gre" +
-      "enplum/v1/clusters/{cluster_id}:logs\022\270\001\n" +
-      "\nStreamLogs\0227.yandex.cloud.mdb.greenplum" +
-      ".v1.StreamClusterLogsRequest\032..yandex.cl" +
-      "oud.mdb.greenplum.v1.StreamLogRecord\"?\202\323" +
-      "\344\223\0029\0227/managed-greenplum/v1/clusters/{cl" +
-      "uster_id}:stream_logs0\001\022\277\001\n\013ListBackups\022" +
-      "8.yandex.cloud.mdb.greenplum.v1.ListClus" +
-      "terBackupsRequest\0329.yandex.cloud.mdb.gre" +
-      "enplum.v1.ListClusterBackupsResponse\";\202\323" +
-      "\344\223\0025\0223/managed-greenplum/v1/clusters/{cl" +
-      "uster_id}/backups\022\300\001\n\006Backup\0223.yandex.cl" +
-      "oud.mdb.greenplum.v1.BackupClusterReques" +
-      "t\032!.yandex.cloud.operation.Operation\"^\202\323" +
-      "\344\223\0024\"2/managed-greenplum/v1/clusters/{cl" +
-      "uster_id}:backup\262\322* \n\025BackupClusterMetad" +
-      "ata\022\007Cluster\022\272\001\n\007Restore\0224.yandex.cloud." +
-      "mdb.greenplum.v1.RestoreClusterRequest\032!" +
-      ".yandex.cloud.operation.Operation\"V\202\323\344\223\002" +
-      "+\"&/managed-greenplum/v1/clusters:restor" +
-      "e:\001*\262\322*!\n\026RestoreClusterMetadata\022\007Cluste" +
-      "rBp\n!yandex.cloud.api.mdb.greenplum.v1ZK" +
-      "github.com/yandex-cloud/go-genproto/yand" +
-      "ex/cloud/mdb/greenplum/v1;greenplumb\006pro" +
-      "to3"
+      ":\001*\262\322* \n\025UpdateClusterMetadata\022\007Cluster\022" +
+      "\276\001\n\006Expand\022,.yandex.cloud.mdb.greenplum." +
+      "v1.ExpandRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"c\202\323\344\223\0027\"2/managed-greenplum/" +
+      "v1/clusters/{cluster_id}/expand:\001*\262\322*\"\n\027" +
+      "AddClusterHostsMetadata\022\007Cluster\022\307\001\n\006Del" +
+      "ete\0223.yandex.cloud.mdb.greenplum.v1.Dele" +
+      "teClusterRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"e\202\323\344\223\002-*+/managed-greenplum/" +
+      "v1/clusters/{cluster_id}\262\322*.\n\025DeleteClus" +
+      "terMetadata\022\025google.protobuf.Empty\022\274\001\n\005S" +
+      "tart\0222.yandex.cloud.mdb.greenplum.v1.Sta" +
+      "rtClusterRequest\032!.yandex.cloud.operatio" +
+      "n.Operation\"\\\202\323\344\223\0023\"1/managed-greenplum/" +
+      "v1/clusters/{cluster_id}:start\262\322*\037\n\024Star" +
+      "tClusterMetadata\022\007Cluster\022\270\001\n\004Stop\0221.yan" +
+      "dex.cloud.mdb.greenplum.v1.StopClusterRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"Z\202\323\344\223\0022\"0/managed-greenplum/v1/clusters" +
+      "/{cluster_id}:stop\262\322*\036\n\023StopClusterMetad" +
+      "ata\022\007Cluster\022\313\001\n\016ListOperations\022;.yandex" +
+      ".cloud.mdb.greenplum.v1.ListClusterOpera" +
+      "tionsRequest\032<.yandex.cloud.mdb.greenplu" +
+      "m.v1.ListClusterOperationsResponse\">\202\323\344\223" +
+      "\0028\0226/managed-greenplum/v1/clusters/{clus" +
+      "ter_id}/operations\022\304\001\n\017ListMasterHosts\0226" +
+      ".yandex.cloud.mdb.greenplum.v1.ListClust" +
+      "erHostsRequest\0327.yandex.cloud.mdb.greenp" +
+      "lum.v1.ListClusterHostsResponse\"@\202\323\344\223\002:\022" +
+      "8/managed-greenplum/v1/clusters/{cluster" +
+      "_id}/master-hosts\022\306\001\n\020ListSegmentHosts\0226" +
+      ".yandex.cloud.mdb.greenplum.v1.ListClust" +
+      "erHostsRequest\0327.yandex.cloud.mdb.greenp" +
+      "lum.v1.ListClusterHostsResponse\"A\202\323\344\223\002;\022" +
+      "9/managed-greenplum/v1/clusters/{cluster" +
+      "_id}/segment-hosts\022\263\001\n\010ListLogs\0225.yandex" +
+      ".cloud.mdb.greenplum.v1.ListClusterLogsR" +
+      "equest\0326.yandex.cloud.mdb.greenplum.v1.L" +
+      "istClusterLogsResponse\"8\202\323\344\223\0022\0220/managed" +
+      "-greenplum/v1/clusters/{cluster_id}:logs" +
+      "\022\270\001\n\nStreamLogs\0227.yandex.cloud.mdb.green" +
+      "plum.v1.StreamClusterLogsRequest\032..yande" +
+      "x.cloud.mdb.greenplum.v1.StreamLogRecord" +
+      "\"?\202\323\344\223\0029\0227/managed-greenplum/v1/clusters" +
+      "/{cluster_id}:stream_logs0\001\022\277\001\n\013ListBack" +
+      "ups\0228.yandex.cloud.mdb.greenplum.v1.List" +
+      "ClusterBackupsRequest\0329.yandex.cloud.mdb" +
+      ".greenplum.v1.ListClusterBackupsResponse" +
+      "\";\202\323\344\223\0025\0223/managed-greenplum/v1/clusters" +
+      "/{cluster_id}/backups\022\300\001\n\006Backup\0223.yande" +
+      "x.cloud.mdb.greenplum.v1.BackupClusterRe" +
+      "quest\032!.yandex.cloud.operation.Operation" +
+      "\"^\202\323\344\223\0024\"2/managed-greenplum/v1/clusters" +
+      "/{cluster_id}:backup\262\322* \n\025BackupClusterM" +
+      "etadata\022\007Cluster\022\272\001\n\007Restore\0224.yandex.cl" +
+      "oud.mdb.greenplum.v1.RestoreClusterReque" +
+      "st\032!.yandex.cloud.operation.Operation\"V\202" +
+      "\323\344\223\002+\"&/managed-greenplum/v1/clusters:re" +
+      "store:\001*\262\322*!\n\026RestoreClusterMetadata\022\007Cl" +
+      "usterBp\n!yandex.cloud.api.mdb.greenplum." +
+      "v1ZKgithub.com/yandex-cloud/go-genproto/" +
+      "yandex/cloud/mdb/greenplum/v1;greenplumb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -42067,7 +42354,7 @@ public final class ClusterServiceOuterClass {
     internal_static_yandex_cloud_mdb_greenplum_v1_RestoreClusterRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_yandex_cloud_mdb_greenplum_v1_RestoreClusterRequest_descriptor,
-        new java.lang.String[] { "BackupId", "Time", "FolderId", "Name", "Description", "Labels", "Environment", "Config", "MasterResources", "SegmentResources", "NetworkId", "SecurityGroupIds", "DeletionProtection", "HostGroupIds", "PlacementGroupId", "MaintenanceWindow", "SegmentHostCount", "SegmentInHost", });
+        new java.lang.String[] { "BackupId", "Time", "FolderId", "Name", "Description", "Labels", "Environment", "Config", "MasterResources", "SegmentResources", "NetworkId", "SecurityGroupIds", "DeletionProtection", "HostGroupIds", "PlacementGroupId", "MaintenanceWindow", "SegmentHostCount", "SegmentInHost", "RestoreOnly", });
     internal_static_yandex_cloud_mdb_greenplum_v1_RestoreClusterRequest_LabelsEntry_descriptor =
       internal_static_yandex_cloud_mdb_greenplum_v1_RestoreClusterRequest_descriptor.getNestedTypes().get(0);
     internal_static_yandex_cloud_mdb_greenplum_v1_RestoreClusterRequest_LabelsEntry_fieldAccessorTable = new

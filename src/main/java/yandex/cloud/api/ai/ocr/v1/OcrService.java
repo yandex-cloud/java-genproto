@@ -112,13 +112,7 @@ public final class OcrService {
 
     /**
      * <pre>
-     * Model to use for text detection. The maximum string length is 50 characters. Possible values:
-     ** `page` (default): this model is suitable for detecting multiple text entries in an image.
-     ** `passport`: passport, the main double-page spread.
-     ** `driver-license-front`: driver's license, the front side.
-     ** `driver-license-back`: driver's license, the reverse side.
-     ** `vehicle-registration-front`: front side of the vehicle registration certificate.
-     ** `vehicle-registration-back`: back side of the vehicle registration certificate.
+     * Model to use for text detection.
      * </pre>
      *
      * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -127,13 +121,7 @@ public final class OcrService {
     java.lang.String getModel();
     /**
      * <pre>
-     * Model to use for text detection. The maximum string length is 50 characters. Possible values:
-     ** `page` (default): this model is suitable for detecting multiple text entries in an image.
-     ** `passport`: passport, the main double-page spread.
-     ** `driver-license-front`: driver's license, the front side.
-     ** `driver-license-back`: driver's license, the reverse side.
-     ** `vehicle-registration-front`: front side of the vehicle registration certificate.
-     ** `vehicle-registration-back`: back side of the vehicle registration certificate.
+     * Model to use for text detection.
      * </pre>
      *
      * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -435,13 +423,7 @@ public final class OcrService {
     private volatile java.lang.Object model_;
     /**
      * <pre>
-     * Model to use for text detection. The maximum string length is 50 characters. Possible values:
-     ** `page` (default): this model is suitable for detecting multiple text entries in an image.
-     ** `passport`: passport, the main double-page spread.
-     ** `driver-license-front`: driver's license, the front side.
-     ** `driver-license-back`: driver's license, the reverse side.
-     ** `vehicle-registration-front`: front side of the vehicle registration certificate.
-     ** `vehicle-registration-back`: back side of the vehicle registration certificate.
+     * Model to use for text detection.
      * </pre>
      *
      * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -462,13 +444,7 @@ public final class OcrService {
     }
     /**
      * <pre>
-     * Model to use for text detection. The maximum string length is 50 characters. Possible values:
-     ** `page` (default): this model is suitable for detecting multiple text entries in an image.
-     ** `passport`: passport, the main double-page spread.
-     ** `driver-license-front`: driver's license, the front side.
-     ** `driver-license-back`: driver's license, the reverse side.
-     ** `vehicle-registration-front`: front side of the vehicle registration certificate.
-     ** `vehicle-registration-back`: back side of the vehicle registration certificate.
+     * Model to use for text detection.
      * </pre>
      *
      * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1234,13 +1210,7 @@ public final class OcrService {
       private java.lang.Object model_ = "";
       /**
        * <pre>
-       * Model to use for text detection. The maximum string length is 50 characters. Possible values:
-       ** `page` (default): this model is suitable for detecting multiple text entries in an image.
-       ** `passport`: passport, the main double-page spread.
-       ** `driver-license-front`: driver's license, the front side.
-       ** `driver-license-back`: driver's license, the reverse side.
-       ** `vehicle-registration-front`: front side of the vehicle registration certificate.
-       ** `vehicle-registration-back`: back side of the vehicle registration certificate.
+       * Model to use for text detection.
        * </pre>
        *
        * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1260,13 +1230,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * Model to use for text detection. The maximum string length is 50 characters. Possible values:
-       ** `page` (default): this model is suitable for detecting multiple text entries in an image.
-       ** `passport`: passport, the main double-page spread.
-       ** `driver-license-front`: driver's license, the front side.
-       ** `driver-license-back`: driver's license, the reverse side.
-       ** `vehicle-registration-front`: front side of the vehicle registration certificate.
-       ** `vehicle-registration-back`: back side of the vehicle registration certificate.
+       * Model to use for text detection.
        * </pre>
        *
        * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1287,13 +1251,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * Model to use for text detection. The maximum string length is 50 characters. Possible values:
-       ** `page` (default): this model is suitable for detecting multiple text entries in an image.
-       ** `passport`: passport, the main double-page spread.
-       ** `driver-license-front`: driver's license, the front side.
-       ** `driver-license-back`: driver's license, the reverse side.
-       ** `vehicle-registration-front`: front side of the vehicle registration certificate.
-       ** `vehicle-registration-back`: back side of the vehicle registration certificate.
+       * Model to use for text detection.
        * </pre>
        *
        * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1312,13 +1270,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * Model to use for text detection. The maximum string length is 50 characters. Possible values:
-       ** `page` (default): this model is suitable for detecting multiple text entries in an image.
-       ** `passport`: passport, the main double-page spread.
-       ** `driver-license-front`: driver's license, the front side.
-       ** `driver-license-back`: driver's license, the reverse side.
-       ** `vehicle-registration-front`: front side of the vehicle registration certificate.
-       ** `vehicle-registration-back`: back side of the vehicle registration certificate.
+       * Model to use for text detection.
        * </pre>
        *
        * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
@@ -1332,13 +1284,7 @@ public final class OcrService {
       }
       /**
        * <pre>
-       * Model to use for text detection. The maximum string length is 50 characters. Possible values:
-       ** `page` (default): this model is suitable for detecting multiple text entries in an image.
-       ** `passport`: passport, the main double-page spread.
-       ** `driver-license-front`: driver's license, the front side.
-       ** `driver-license-back`: driver's license, the reverse side.
-       ** `vehicle-registration-front`: front side of the vehicle registration certificate.
-       ** `vehicle-registration-back`: back side of the vehicle registration certificate.
+       * Model to use for text detection.
        * </pre>
        *
        * <code>string model = 4 [(.yandex.cloud.length) = "&lt;=50"];</code>
